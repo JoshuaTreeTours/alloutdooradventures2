@@ -2,12 +2,49 @@ import { Link } from "wouter";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
 
+const FEATURED_DESTINATIONS = [
+  {
+    name: "California",
+    description:
+      "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Arizona",
+    description:
+      "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Nevada",
+    description: "Wide-open basins, rugged ranges, and hidden hot springs.",
+    image:
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Utah",
+    description:
+      "Iconic arches, canyon slots, and sandstone trails made for exploration.",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Oregon",
+    description: "Waterfalls, misty forests, and volcanic peaks around every bend.",
+    image:
+      "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       <Header />
 
       <main>
+        {/* HERO */}
         <section
           className="relative mx-auto max-w-[1400px] px-6 pt-6"
           aria-label="Hero"
@@ -34,30 +71,30 @@ export default function Home() {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <Link
-                  href="/destinations"
-                  className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#294129] transition"
-                >
-                  Explore Destinations
+                <Link href="/destinations">
+                  <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#294129] transition">
+                    Explore Destinations
+                  </a>
                 </Link>
-                <Link
-                  href="/tours"
-                  className="inline-flex items-center justify-center rounded-md bg-white/25 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/40 hover:bg-white/30 transition"
-                >
-                  View Tours
+
+                <Link href="/tours">
+                  <a className="inline-flex items-center justify-center rounded-md bg-white/25 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/40 hover:bg-white/30 transition">
+                    View Tours
+                  </a>
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
+        {/* WHY CHOOSE */}
         <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
           <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
             Why Choose All Outdoor Adventures?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm md:text-base text-[#405040] leading-relaxed">
-            We curate the best outdoor experiences, vetted by locals and seasoned travelers.
-            No tourist traps—just authentic adventures.
+            We curate the best outdoor experiences, vetted by locals and seasoned
+            travelers. No tourist traps—just authentic adventures.
           </p>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -75,6 +112,46 @@ export default function Home() {
             />
           </div>
         </section>
+
+        {/* FEATURED DESTINATIONS (Codex section) */}
+        <section className="mx-auto max-w-6xl px-6 pb-20" aria-label="Featured destinations">
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+              Featured Destinations
+            </span>
+            <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+              Plan your next escape
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
+              Explore handcrafted itineraries across the West—each destination blends
+              signature landscapes with local-guided adventure.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {FEATURED_DESTINATIONS.map((destination) => (
+              <article
+                key={destination.name}
+                className="group relative overflow-hidden rounded-xl border border-black/10 bg-[#f7f3ea] shadow-sm"
+              >
+                <div
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${destination.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="relative flex h-56 flex-col justify-end p-6 text-white">
+                  <h3 className="text-xl font-semibold">{destination.name}</h3>
+                  <p className="mt-2 text-sm text-white/90">
+                    {destination.description}
+                  </p>
+                  <span className="mt-4 inline-flex w-fit items-center rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">
+                    Discover
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
       </main>
 
       <footer className="border-t border-black/10">
@@ -90,27 +167,28 @@ function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#f6f1e8]/95 backdrop-blur border-b border-black/10">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
-        <Link href="/" className="text-lg font-semibold text-[#1f2a1f]">
-          All Outdoor Adventures
+        <Link href="/">
+          <a className="text-lg font-semibold text-[#1f2a1f]">
+            All Outdoor Adventures
+          </a>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
-          <Link className="hover:text-[#1f2a1f]" href="/destinations">
-            Destinations
+          <Link href="/destinations">
+            <a className="hover:text-[#1f2a1f]">Destinations</a>
           </Link>
-          <Link className="hover:text-[#1f2a1f]" href="/tours">
-            Tours
+          <Link href="/tours">
+            <a className="hover:text-[#1f2a1f]">Tours</a>
           </Link>
-          <Link className="hover:text-[#1f2a1f]" href="/about">
-            About
+          <Link href="/about">
+            <a className="hover:text-[#1f2a1f]">About</a>
           </Link>
         </nav>
 
-        <Link
-          href="/tours"
-          className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition"
-        >
-          Find an Adventure
+        <Link href="/tours">
+          <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
+            Find an Adventure
+          </a>
         </Link>
       </div>
     </header>
