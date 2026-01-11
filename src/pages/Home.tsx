@@ -36,6 +36,13 @@ const FEATURED_DESTINATIONS = [
     image:
       "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
   },
+    {
+    name: "Washington",
+    description:
+      "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 export default function Home() {
