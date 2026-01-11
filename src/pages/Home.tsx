@@ -66,7 +66,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/35" />
 
             {/* Content */}
-            <div className="relative px-6 py-20 md:px-16 md:py-28 text-center text-white">
+            <div className="relative px-6 py-40 md:px-16 md:py-56 text-center text-white">
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
                 Find Your Next Adventure
               </h1>
