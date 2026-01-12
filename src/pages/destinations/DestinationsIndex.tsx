@@ -26,6 +26,11 @@ const STATES = [
     description: "Waterfalls, misty forests, and volcanic ridgelines.",
     href: "/destinations/states/oregon",
   },
+  {
+    name: "Washington",
+    description: "Rainforests, alpine lakes, and glacier-capped peaks.",
+    href: "/destinations/states/washington",
+  },
 ];
 
 export default function DestinationsIndex() {
