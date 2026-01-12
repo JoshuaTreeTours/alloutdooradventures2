@@ -31,7 +31,7 @@ export default function DestinationCard({
 
   return (
     <Link href={destination.href}>
-      <a className="group relative overflow-hidden rounded-xl border border-black/10 bg-[#f7f3ea] shadow-sm">
+      <a className="group relative h-56 overflow-hidden rounded-xl border border-black/10 bg-[#f7f3ea] shadow-sm">
         <div
           className={`absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 ${
             hasImage ? "" : "bg-[#b8a693]"
