@@ -145,10 +145,14 @@ export default function Home() {
             {FEATURED_DESTINATIONS.map((destination) => (
               <Link key={destination.name} href={destination.href}>
                 <a className="group relative overflow-hidden rounded-xl border border-black/10 bg-[#f7f3ea] shadow-sm">
-                  <div
-                    className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                    style={{ backgroundImage: `url(${destination.image})` }}
-                  />
+                  <div className="absolute inset-0">
+                    <img
+                      src={destination.image}
+                      alt={`${destination.name} landscape`}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                   <div className="relative flex h-56 flex-col justify-end p-6 text-white">
                     <h3 className="text-xl font-semibold">{destination.name}</h3>
