@@ -9,29 +9,6 @@ import Utah from "./pages/destinations/states/Utah";
 import Oregon from "./pages/destinations/states/Oregon";
 import Washington from "./pages/destinations/states/Washington";
 import ToursIndex from "./pages/ToursIndex";
-import { destinations } from "./data/destinations";
-import type { ComponentType } from "react";
-
-const DESTINATION_COMPONENTS: Record<string, ComponentType> = {
-  california: California,
-  arizona: Arizona,
-  nevada: Nevada,
-  utah: Utah,
-  oregon: Oregon,
-  washington: Washington,
-};
-
-const DESTINATION_ROUTES = destinations.map((destination) => {
-  const component = DESTINATION_COMPONENTS[destination.stateSlug];
-
-  if (!component) {
-    throw new Error(
-      `Missing destination route for state: ${destination.stateSlug}`,
-    );
-  }
-
-  return { path: destination.href, component };
-});
 
 export default function App() {
   return (
@@ -40,9 +17,12 @@ export default function App() {
 
       <Route path="/destinations" component={DestinationsIndex} />
 
-      {DESTINATION_ROUTES.map((route) => (
-        <Route key={route.path} path={route.path} component={route.component} />
-      ))}
+      <Route path="/destinations/states/california" component={California} />
+      <Route path="/destinations/states/arizona" component={Arizona} />
+      <Route path="/destinations/states/nevada" component={Nevada} />
+      <Route path="/destinations/states/utah" component={Utah} />
+      <Route path="/destinations/states/oregon" component={Oregon} />
+      <Route path="/destinations/states/washington" component={Washington} />
 
       <Route path="/tours" component={ToursIndex} />
 

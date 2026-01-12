@@ -1,9 +1,55 @@
 import { Link } from "wouter";
 
-import DestinationCard from "../components/DestinationCard";
-import { featuredDestinations } from "../data/destinations";
-
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+
+const FEATURED_DESTINATIONS = [
+  {
+    name: "California",
+    description:
+      "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/california",
+  },
+  {
+    name: "Arizona",
+    description:
+      "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/arizona",
+  },
+  {
+    name: "Nevada",
+    description: "Wide-open basins, rugged ranges, and hidden hot springs.",
+    image:
+      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/nevada",
+  },
+  {
+    name: "Utah",
+    description:
+      "Iconic arches, canyon slots, and sandstone trails made for exploration.",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/utah",
+  },
+  {
+    name: "Oregon",
+    description: "Waterfalls, misty forests, and volcanic peaks around every bend.",
+    image:
+      "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/oregon",
+  },
+  {
+    name: "Washington",
+    description:
+      "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations/states/washington",
+  },
+];
 
 export default function Home() {
   return (
@@ -96,14 +142,29 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {featuredDestinations.map((destination) => (
-              <DestinationCard
-                key={destination.name}
-                destination={destination}
-                ctaLabel="Discover"
-                headingLevel="h3"
-                descriptionVariant="featured"
-              />
+            {FEATURED_DESTINATIONS.map((destination) => (
+              <Link key={destination.name} href={destination.href}>
+                <a className="group relative overflow-hidden rounded-xl border border-black/10 bg-[#f7f3ea] shadow-sm">
+                  <div className="absolute inset-0">
+                    <img
+                      src={destination.image}
+                      alt={`${destination.name} landscape`}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  <div className="relative flex h-56 flex-col justify-end p-6 text-white">
+                    <h3 className="text-xl font-semibold">{destination.name}</h3>
+                    <p className="mt-2 text-sm text-white/90">
+                      {destination.description}
+                    </p>
+                    <span className="mt-4 inline-flex w-fit items-center rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">
+                      Discover
+                    </span>
+                  </div>
+                </a>
+              </Link>
             ))}
           </div>
         </section>
