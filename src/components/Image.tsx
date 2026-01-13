@@ -23,6 +23,11 @@ export default function Image({
 }: ImageProps) {
   const [location] = useLocation();
   const [currentSrc, setCurrentSrc] = useState(src);
+  const isDebugEnabled =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("debugImages") === "1" &&
+    import.meta.env.MODE !== "production" &&
+    import.meta.env.VERCEL_ENV !== "production";
 
   useEffect(() => {
     setCurrentSrc(src);
@@ -43,6 +48,10 @@ export default function Image({
       eventType: event.type,
       isTrusted: event.isTrusted,
     };
+
+    if (!isDebugEnabled) {
+      return;
+    }
 
     if (status === "error") {
       console.error("Image failed to load.", details, event);

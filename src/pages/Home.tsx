@@ -8,6 +8,11 @@ import { featuredDestinations } from "../data/destinations";
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
 
 export default function Home() {
+  const isDebugEnabled =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("debugImages") === "1" &&
+    import.meta.env.MODE !== "production" &&
+    import.meta.env.VERCEL_ENV !== "production";
   const debugImages = useMemo(
     () => [
       { label: "Hero", src: HERO_IMAGE_URL },
@@ -26,7 +31,7 @@ export default function Home() {
   >({});
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !isDebugEnabled) {
       return;
     }
 
@@ -74,7 +79,7 @@ export default function Home() {
     return () => {
       controller.abort();
     };
-  }, [debugImages]);
+  }, [debugImages, isDebugEnabled]);
 
   return (
     <div>
@@ -178,50 +183,52 @@ export default function Home() {
           </div>
         </section>
 
-        <section
-          className="mx-auto max-w-6xl px-6 pb-20"
-          aria-label="Image debug overlay"
-        >
-          <div className="rounded-lg border border-amber-200 bg-amber-50/80 p-6 text-sm text-amber-950 shadow-sm">
-            <h2 className="text-base font-semibold uppercase tracking-[0.2em] text-amber-800">
-              Image Debug Overlay
-            </h2>
-            <p className="mt-2 text-xs text-amber-800/80">
-              Shows resolved image URLs and HEAD status codes to diagnose Safari
-              loading issues.
-            </p>
-            <div className="mt-4 space-y-4">
-              {debugImages.map(({ label, src }) => {
-                const result = debugResults[label];
-                return (
-                  <div
-                    key={`${label}-${src}`}
-                    className="rounded-md border border-amber-200 bg-white/80 p-3"
-                  >
-                    <div className="text-xs font-semibold text-amber-900">
-                      {label}
+        {isDebugEnabled ? (
+          <section
+            className="mx-auto max-w-6xl px-6 pb-20"
+            aria-label="Image debug overlay"
+          >
+            <div className="rounded-lg border border-amber-200 bg-amber-50/80 p-6 text-sm text-amber-950 shadow-sm">
+              <h2 className="text-base font-semibold uppercase tracking-[0.2em] text-amber-800">
+                Image Debug Overlay
+              </h2>
+              <p className="mt-2 text-xs text-amber-800/80">
+                Shows resolved image URLs and HEAD status codes to diagnose Safari
+                loading issues.
+              </p>
+              <div className="mt-4 space-y-4">
+                {debugImages.map(({ label, src }) => {
+                  const result = debugResults[label];
+                  return (
+                    <div
+                      key={`${label}-${src}`}
+                      className="rounded-md border border-amber-200 bg-white/80 p-3"
+                    >
+                      <div className="text-xs font-semibold text-amber-900">
+                        {label}
+                      </div>
+                      <div className="mt-1 break-all text-[0.7rem] text-amber-800">
+                        src: <code>{src}</code>
+                      </div>
+                      <div className="mt-1 break-all text-[0.7rem] text-amber-800">
+                        resolved:{" "}
+                        <code>{result?.resolvedSrc ?? "Checking..."}</code>
+                      </div>
+                      <div className="mt-1 text-[0.7rem] text-amber-800">
+                        HEAD status:{" "}
+                        {result?.status !== undefined
+                          ? `${result.status}${result.ok ? " (ok)" : ""}`
+                          : result?.error
+                            ? `Error: ${result.error}`
+                            : "Checking..."}
+                      </div>
                     </div>
-                    <div className="mt-1 break-all text-[0.7rem] text-amber-800">
-                      src: <code>{src}</code>
-                    </div>
-                    <div className="mt-1 break-all text-[0.7rem] text-amber-800">
-                      resolved:{" "}
-                      <code>{result?.resolvedSrc ?? "Checking..."}</code>
-                    </div>
-                    <div className="mt-1 text-[0.7rem] text-amber-800">
-                      HEAD status:{" "}
-                      {result?.status !== undefined
-                        ? `${result.status}${result.ok ? " (ok)" : ""}`
-                        : result?.error
-                          ? `Error: ${result.error}`
-                          : "Checking..."}
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ) : null}
       </main>
 
       <footer className="border-t border-black/10">
