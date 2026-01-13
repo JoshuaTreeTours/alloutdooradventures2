@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import DestinationCard from "../components/DestinationCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
+import { buildBackgroundImageStyle } from "../utils/imagePaths";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -28,7 +29,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${state.heroImage})` }}
+          style={buildBackgroundImageStyle(state.heroImage)}
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 text-white">

@@ -5,14 +5,14 @@ import Hero from "../components/Hero";
 import IntroBlock from "../components/IntroBlock";
 import LogisticsBlock from "../components/LogisticsBlock";
 import WhyHereBlock from "../components/WhyHereBlock";
+import { buildCityHeroImages } from "../utils/imagePaths";
 
 const LOCATION_DATA = {
   hero: {
     title: "Mammoth Lakes Adventures",
     subtitle:
       "Volcanic vistas, sapphire lakes, and high-alpine trails make this a Sierra favorite.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+    imageUrl: buildCityHeroImages("california", "mammoth-lakes", 1)[0],
     ctaLabel: "Browse Mammoth tours",
     ctaHref: "/tours?region=mammoth",
   },
