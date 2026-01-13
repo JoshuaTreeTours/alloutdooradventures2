@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
+import Image from "../components/Image";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { City, StateDestination } from "../data/destinations";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
@@ -62,11 +63,11 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
               key={`${image}-${index}`}
               className="min-w-0 flex-[0_0_100%]"
             >
-              <div
-                className="h-72 w-full bg-cover bg-center md:h-[420px]"
-                style={{ backgroundImage: `url(${image})` }}
-                role="img"
-                aria-label={`${title} slide ${index + 1}`}
+              <Image
+                src={image}
+                fallbackSrc="/hero.jpg"
+                alt={`${title} slide ${index + 1}`}
+                className="h-72 w-full object-cover md:h-[420px]"
               />
             </div>
           ))}

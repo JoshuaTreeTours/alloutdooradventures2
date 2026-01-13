@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
+import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
@@ -16,9 +17,11 @@ export default function Home() {
         >
           <div className="relative overflow-hidden rounded-none md:rounded-md">
             {/* Background image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${HERO_IMAGE_URL})` }}
+            <Image
+              src={HERO_IMAGE_URL}
+              fallbackSrc="/hero.jpg"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover"
             />
             {/* Dark overlay for readable text */}
             <div className="absolute inset-0 bg-black/35" />
