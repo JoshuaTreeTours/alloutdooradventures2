@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import type { Destination } from "../data/destinations";
+import { PLACEHOLDER_IMAGE } from "../utils/images";
 
 const PLACEHOLDER_WARNING = "Image missing";
 
@@ -20,9 +21,7 @@ export default function DestinationCard({
   const { image } = destination;
   const trimmedImage = image?.trim();
   const hasImage = Boolean(trimmedImage);
-  const backgroundStyle = hasImage
-    ? { backgroundImage: `url(${trimmedImage})` }
-    : undefined;
+  const imageSrc = trimmedImage || PLACEHOLDER_IMAGE;
   const description =
     descriptionVariant === "featured"
       ? destination.featuredDescription ?? destination.description
@@ -31,12 +30,16 @@ export default function DestinationCard({
 
   return (
     <Link href={destination.href}>
-    <a className="group relative h-56 overflow-hidden rounded-xl ...">
-        <div
-          className={`absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 ${
+      <a className="group relative h-56 overflow-hidden rounded-xl ...">
+        <img
+          src={imageSrc}
+          alt={`${destination.name} destination`}
+          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 ${
             hasImage ? "" : "bg-[#b8a693]"
           }`}
-          style={backgroundStyle}
+          onError={(event) => {
+            event.currentTarget.src = PLACEHOLDER_IMAGE;
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <div className="relative flex h-56 flex-col justify-end p-6 text-white">
