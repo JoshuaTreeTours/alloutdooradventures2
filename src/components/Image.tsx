@@ -1,4 +1,8 @@
-import type { ComponentPropsWithoutRef, ReactEventHandler } from "react";
+import type {
+  ComponentPropsWithoutRef,
+  ReactEventHandler,
+  SyntheticEvent,
+} from "react";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 
@@ -13,17 +17,51 @@ export default function Image({
   src,
   fallbackSrc = DEFAULT_FALLBACK,
   onError,
+  onLoad,
   decoding = "async",
   ...props
 }: ImageProps) {
   const [location] = useLocation();
   const [currentSrc, setCurrentSrc] = useState(src);
+  const isDebugEnabled =
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("debugImages") === "1" &&
+    import.meta.env.MODE !== "production" &&
+    import.meta.env.VERCEL_ENV !== "production";
 
   useEffect(() => {
     setCurrentSrc(src);
   }, [src]);
 
+  const logImageEvent = (
+    event: SyntheticEvent<HTMLImageElement, Event>,
+    status: "load" | "error",
+  ) => {
+    const target = event.currentTarget;
+    const details = {
+      route: location,
+      src,
+      currentSrc,
+      resolvedCurrentSrc: target.currentSrc,
+      naturalWidth: target.naturalWidth,
+      naturalHeight: target.naturalHeight,
+      eventType: event.type,
+      isTrusted: event.isTrusted,
+    };
+
+    if (!isDebugEnabled) {
+      return;
+    }
+
+    if (status === "error") {
+      console.error("Image failed to load.", details, event);
+    } else {
+      console.info("Image loaded.", details);
+    }
+  };
+
   const handleError: ReactEventHandler<HTMLImageElement> = (event) => {
+    logImageEvent(event, "error");
     if (currentSrc === fallbackSrc) {
       return;
     }
@@ -33,11 +71,17 @@ export default function Image({
     onError?.(event);
   };
 
+  const handleLoad: ReactEventHandler<HTMLImageElement> = (event) => {
+    logImageEvent(event, "load");
+    onLoad?.(event);
+  };
+
   return (
     <img
       src={currentSrc}
       decoding={decoding}
       onError={handleError}
+      onLoad={handleLoad}
       {...props}
     />
   );
