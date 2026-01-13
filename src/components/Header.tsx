@@ -5,7 +5,13 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-[#f6f1e8]/95 backdrop-blur border-b border-black/10">
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
         <Link href="/">
-          <a className="text-lg font-semibold text-[#1f2a1f]">
+          <a className="flex items-center gap-3 text-lg font-semibold text-[#1f2a1f]">
+            <img
+              src="/logo.svg"
+              alt="Outdoor Adventures logo"
+              className="h-10 w-10"
+              loading="lazy"
+            />
             Outdoor Adventures
           </a>
         </Link>
