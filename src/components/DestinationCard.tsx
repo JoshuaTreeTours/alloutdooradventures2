@@ -27,6 +27,48 @@ export default function DestinationCard({
       : destination.description;
   const HeadingTag = headingLevel;
 
+  if (descriptionVariant === "featured") {
+    return (
+      <Link href={destination.href}>
+        <a className="group flex h-full flex-col overflow-hidden rounded-xl border border-[#e1e5dc] bg-white shadow-sm transition hover:shadow-md md:flex-row">
+          <div
+            className={`relative h-56 w-full flex-shrink-0 md:h-60 md:w-72 lg:w-80 ${
+              hasImage ? "" : "bg-[#b8a693]"
+            }`}
+          >
+            {hasImage ? (
+              <Image
+                src={trimmedImage ?? ""}
+                fallbackSrc="/hero.jpg"
+                alt=""
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            ) : null}
+          </div>
+          <div className="flex flex-1 flex-col justify-between gap-4 p-6 text-[#243424]">
+            <div>
+              <HeadingTag className="text-xl font-semibold text-[#2f4a2f]">
+                {destination.name}
+              </HeadingTag>
+              <p className="mt-3 text-sm text-[#405040]">{description}</p>
+            </div>
+            <div className="flex flex-wrap items-center gap-3">
+              {!hasImage ? (
+                <span className="inline-flex w-fit items-center rounded-full bg-amber-500/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-amber-950">
+                  {PLACEHOLDER_WARNING}
+                </span>
+              ) : null}
+              <span className="inline-flex w-fit items-center rounded-full bg-[#2f4a2f]/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                {ctaLabel}
+              </span>
+            </div>
+          </div>
+        </a>
+      </Link>
+    );
+  }
+
   return (
     <Link href={destination.href}>
       <a className="group relative h-56 overflow-hidden rounded-xl ...">
