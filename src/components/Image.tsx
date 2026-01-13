@@ -11,11 +11,16 @@ const DEFAULT_FALLBACK = "/hero.jpg";
 type ImageProps = Omit<ComponentPropsWithoutRef<"img">, "src"> & {
   src: string;
   fallbackSrc?: string;
+  sources?: Array<{
+    type: "image/avif" | "image/webp";
+    srcSet: string;
+  }>;
 };
 
 export default function Image({
   src,
   fallbackSrc = DEFAULT_FALLBACK,
+  sources,
   onError,
   onLoad,
   decoding = "async",
@@ -76,7 +81,7 @@ export default function Image({
     onLoad?.(event);
   };
 
-  return (
+  const imageElement = (
     <img
       src={currentSrc}
       decoding={decoding}
@@ -84,5 +89,18 @@ export default function Image({
       onLoad={handleLoad}
       {...props}
     />
+  );
+
+  if (!sources?.length) {
+    return imageElement;
+  }
+
+  return (
+    <picture>
+      {sources.map((source) => (
+        <source key={`${source.type}-${source.srcSet}`} {...source} />
+      ))}
+      {imageElement}
+    </picture>
   );
 }

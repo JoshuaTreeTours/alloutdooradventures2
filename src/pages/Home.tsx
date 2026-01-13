@@ -13,15 +13,19 @@ export default function Home() {
     new URLSearchParams(window.location.search).get("debugImages") === "1" &&
     import.meta.env.MODE !== "production" &&
     import.meta.env.VERCEL_ENV !== "production";
+  const featuredDestinationsPreview = useMemo(
+    () => featuredDestinations.slice(0, 6),
+    [],
+  );
   const debugImages = useMemo(
     () => [
       { label: "Hero", src: HERO_IMAGE_URL },
-      ...featuredDestinations.map((destination) => ({
+      ...featuredDestinationsPreview.map((destination) => ({
         label: `Featured: ${destination.name}`,
         src: destination.image,
       })),
     ],
-    [],
+    [featuredDestinationsPreview],
   );
   const [debugResults, setDebugResults] = useState<
     Record<
@@ -172,13 +176,14 @@ export default function Home() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {featuredDestinations.map((destination) => (
+            {featuredDestinationsPreview.map((destination) => (
               <DestinationCard
                 key={destination.name}
                 destination={destination}
                 ctaLabel="Discover"
                 headingLevel="h3"
                 descriptionVariant="featured"
+                imageLoading="eager"
               />
             ))}
           </div>

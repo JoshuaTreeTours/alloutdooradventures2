@@ -80,7 +80,7 @@ export const states: StateDestination[] = [
     featuredDescription:
       "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
     heroImage:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
     intro:
       "California is a choose-your-own-adventure state, pairing Pacific coastlines with desert basins and granite peaks in a single road trip.",
     longDescription: `California is a masterclass in variety for outdoor travelers. Within a single day you can watch dawn break over the Mojave Desert, spend an afternoon paddling a glassy alpine lake, and still catch sunset along the Pacific. The state stretches almost 800 miles from north to south, which means climates, ecosystems, and travel styles change quickly. That range creates the perfect playground for weekend escapes and weeklong epic loops alike. Whether you crave redwood shade, granite peaks, coastal cliffs, or sprawling desert basins, California delivers a layered itinerary that always feels new.
@@ -126,9 +126,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "San Diego blends beach-town energy with dramatic coastal trails and harbor adventures. It is ideal for travelers who want surf breaks in the morning and bluff-top hikes by late afternoon.",
         heroImages: [
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["coastal", "paddling", "biking"],
         whereItIs: [
@@ -206,9 +206,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Lake Tahoe is an alpine escape wrapped in pine forests and granite peaks. The lake’s cobalt water pairs with ridge hikes, paddle routes, and cozy mountain towns that make for a perfect basecamp.",
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "hiking", "paddling"],
         whereItIs: [
@@ -363,9 +363,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "San Francisco pairs classic city energy with quick access to rugged coastal trails and bayfront parks. It is ideal for travelers who want outdoor mornings and city evenings without long drives.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["coastal", "urban-trails", "scenic"],
         whereItIs: [
@@ -444,9 +444,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Los Angeles blends iconic city culture with easy access to beaches, canyon trails, and coastal viewpoints. It is a choose-your-own-pace destination with endless outdoor options.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["coastal", "hiking", "urban-trails"],
         whereItIs: [
@@ -526,8 +526,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
           "Palm Springs is a stylish desert basecamp surrounded by rugged mountains and palm-lined canyons. It is perfect for early hikes, poolside recovery, and scenic drives.",
         heroImages: [
           "/images/california/cities/palm-springs-hero.jpg",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["desert", "hot-springs", "scenic"],
         whereItIs: [
@@ -606,9 +606,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Yosemite is California’s granite cathedral, famous for towering cliffs, thundering waterfalls, and sweeping meadow views. It is a must for hikers who want iconic scenery.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "waterfalls", "hiking"],
         whereItIs: [
@@ -687,9 +687,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Big Sur is California’s iconic coastal stretch, where rugged cliffs drop into the Pacific and redwood groves hide inland trails. It is built for scenic drives and short, memorable hikes.",
         heroImages: [
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["coastal", "redwoods", "scenic"],
         whereItIs: [
@@ -765,7 +765,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
     featuredDescription:
       "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
     heroImage:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
     intro:
       "Arizona is defined by canyon country and high desert skies, offering red rock hikes, alpine forests, and legendary sunsets.",
     longDescription: `Arizona is a land of deep canyons, sculpted mesas, and sky that seems to stretch forever. It is a destination that rewards early starts and patient exploration, where the desert teaches a slower rhythm and the landscapes expand in every direction. The state’s outdoor appeal begins with the Grand Canyon, but the real magic lies in the layers—high plateaus, red-rock amphitheaters, pine forests, and hidden river corridors that invite you to explore beyond the obvious.
@@ -811,9 +811,9 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         intro:
           "Sedona is a red rock dreamscape with glowing canyon walls and sweeping trail systems. It is a top pick for sunrise hikes and layered desert panoramas.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["canyons", "hiking", "scenic"],
         whereItIs: [
@@ -895,9 +895,9 @@ Flagstaff is also a four-season adventure basecamp. Summer and early fall bring 
 
 Between outings, the historic Route 66 corridor and walkable downtown add brewery patios, local food, and easy post-adventure hangs. Sedona’s red-rock canyons are close enough for a half-day detour, so you can mix pine forest hikes with high-desert vistas and still make it back for dinner in town.`,
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1443890923422-7819ed4101c0?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "hiking", "volcanic"],
         whereItIs: [
@@ -981,9 +981,9 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
         intro:
           "Tucson is wrapped by saguaro cactus forests and rugged mountain ranges. It is a sun-soaked destination for desert hikes and scenic drives.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["desert", "wildlife", "scenic"],
         whereItIs: [
@@ -1059,7 +1059,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
     featuredDescription:
       "Remote hot springs, dark-sky nights, and wide-open desert basins.",
     heroImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
     intro:
       "Nevada is a high-desert playground of basin-and-range mountains, quiet hot springs, and wide-open horizons.",
     longDescription: `Nevada is the ultimate open-road adventure, a state built on vast basins, rugged mountain ranges, and desert skies that stretch forever. It is a destination that rewards explorers who love solitude, hot springs, and stargazing nights. Nevada’s landscapes are raw and dramatic, offering outdoor experiences that feel expansive and unhurried.
@@ -1105,9 +1105,9 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
         intro:
           "Reno is a lively basecamp with quick access to the Truckee River and Tahoe’s alpine playground. It is ideal for travelers who want trails by day and city energy by night.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "paddling", "hot-springs"],
         whereItIs: [
@@ -1185,9 +1185,9 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
         intro:
           "Las Vegas is the launchpad for red rock adventures, desert canyons, and scenic drives. Just beyond the Strip lies a world of sandstone trails and sunrise hikes.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["desert", "canyons", "climbing"],
         whereItIs: [
@@ -1265,9 +1265,9 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
         intro:
           "Baker is the quiet access point for Great Basin’s alpine trails, limestone caves, and bristlecone forests. It is perfect for travelers seeking remote mountain adventures.",
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "stargazing", "hiking"],
         whereItIs: [
@@ -1391,9 +1391,9 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         intro:
           "Moab is the adventure epicenter of Utah, surrounded by red rock cliffs and desert trails. It is the ideal base for mountain biking, canyon hikes, and river adventures.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["biking", "canyons", "rafting"],
         whereItIs: [
@@ -1471,9 +1471,9 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         intro:
           "Springdale sits at the entrance of Zion National Park, providing easy access to famous hikes and scenic canyon drives.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["canyons", "hiking", "scenic"],
         whereItIs: [
@@ -1551,9 +1551,9 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         intro:
           "Park City mixes mountain-town charm with accessible alpine trails. It is a cooler summer escape with easy hikes, biking, and scenic chairlift rides.",
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "biking", "hiking"],
         whereItIs: [
@@ -1629,7 +1629,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
     featuredDescription:
       "Waterfalls, misty forests, and volcanic peaks around every bend.",
     heroImage:
-      "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
     intro:
       "Oregon blends Pacific coastline with waterfall hikes and volcanic peaks, perfect for travelers who want a mix of forest, river, and ocean.",
     longDescription: `Oregon is a lush, storybook landscape of rainforests, volcanic peaks, and rugged coastline. It is a state where waterfalls tumble down mossy cliffs, where mist hangs in the trees, and where coastal winds sculpt dramatic shorelines. Oregon’s outdoor appeal is built on diversity and easy access, making it ideal for travelers who want to balance adventure with cozy, small-town charm.
@@ -1677,9 +1677,9 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Portland is the ideal launch point for waterfall hikes, forest walks, and river adventures. It pairs an outdoor-friendly city vibe with quick access to the Gorge and Mount Hood.",
         heroImages: [
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["waterfalls", "biking", "alpine"],
         whereItIs: [
@@ -1757,9 +1757,9 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Bend blends sunny high-desert weather with easy access to volcanic peaks and river adventures. It is a playground for biking, paddling, and casual hikes.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["biking", "paddling", "volcanic"],
         whereItIs: [
@@ -1837,9 +1837,9 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Cannon Beach is famous for Haystack Rock and a charming coastal vibe. It is perfect for beach walks, tide pooling, and sunset photography.",
         heroImages: [
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["coastal", "scenic", "wildlife"],
         whereItIs: [
@@ -1915,7 +1915,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
     featuredDescription:
       "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
     heroImage:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
     intro:
       "Washington is a landscape of misty rainforests and glacier-fed lakes, offering everything from coastal paddles to alpine hikes.",
     longDescription: `Washington is a state of lush contrasts—rainforests, rugged coastline, snow-capped peaks, and sparkling alpine lakes. It is a paradise for hikers, paddlers, and anyone who loves misty mornings and mountain silhouettes. From the Olympic Peninsula to the Cascade Range, Washington offers an outdoor itinerary that feels both wild and accessible.
@@ -1961,9 +1961,9 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         intro:
           "The Olympic Peninsula is a choose-your-own landscape—rainforest, mountains, and wild coastline all in one region. It is an unforgettable loop for hikers and photographers.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["rainforest", "coastal", "hiking"],
         whereItIs: [
@@ -2041,9 +2041,9 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         intro:
           "Leavenworth blends alpine scenery with a charming Bavarian village feel. Nearby trails and rivers provide quick outdoor escapes in a picturesque setting.",
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["alpine", "paddling", "scenic"],
         whereItIs: [
@@ -2121,9 +2121,9 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         intro:
           "Seattle is a vibrant city base with easy access to Puget Sound, mountain trails, and island escapes. It is perfect for mixing urban energy with outdoor excursions.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?fit=crop&w=1600&q=80&fm=jpg",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?fit=crop&w=1600&q=80&fm=jpg",
         ],
         activityTags: ["paddling", "urban-trails", "alpine"],
         whereItIs: [
