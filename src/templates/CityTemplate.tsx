@@ -4,6 +4,7 @@ import { Link } from "wouter";
 
 import MapEmbed from "../components/maps/MapEmbed";
 import type { City, StateDestination } from "../data/destinations";
+import { buildBackgroundImageStyle } from "../utils/imagePaths";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -63,7 +64,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
             >
               <div
                 className="h-72 w-full bg-cover bg-center md:h-[420px]"
-                style={{ backgroundImage: `url(${image})` }}
+                style={buildBackgroundImageStyle(image)}
                 role="img"
                 aria-label={`${title} slide ${index + 1}`}
               />

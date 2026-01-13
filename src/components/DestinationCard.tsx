@@ -1,6 +1,11 @@
 import { Link } from "wouter";
 
 import type { Destination } from "../data/destinations";
+import {
+  buildBackgroundImageStyle,
+  normalizeImagePath,
+  PLACEHOLDER_IMAGE,
+} from "../utils/imagePaths";
 
 const PLACEHOLDER_WARNING = "Image missing";
 
@@ -19,10 +24,9 @@ export default function DestinationCard({
 }: DestinationCardProps) {
   const { image } = destination;
   const trimmedImage = image?.trim();
-  const hasImage = Boolean(trimmedImage);
-  const backgroundStyle = hasImage
-    ? { backgroundImage: `url(${trimmedImage})` }
-    : undefined;
+  const imageUrl = normalizeImagePath(trimmedImage, PLACEHOLDER_IMAGE);
+  const hasImage = imageUrl !== PLACEHOLDER_IMAGE;
+  const backgroundStyle = buildBackgroundImageStyle(imageUrl);
   const description =
     descriptionVariant === "featured"
       ? destination.featuredDescription ?? destination.description

@@ -1,3 +1,5 @@
+import { buildBackgroundImageStyle } from "../utils/imagePaths";
+
 type HeroProps = {
   title?: string;
   subtitle?: string;
@@ -10,7 +12,7 @@ export default function Hero({
   title = "Explore the High Sierra",
   subtitle =
     "Granite peaks, alpine lakes, and legendary trails make this a dream basecamp.",
-  imageUrl = "/hero.jpg",
+  imageUrl = "/images/hero.jpg",
   ctaLabel = "View Experiences",
   ctaHref = "/tours",
 }: HeroProps) {
@@ -19,7 +21,7 @@ export default function Hero({
       <div className="relative overflow-hidden rounded-none md:rounded-md">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+          style={buildBackgroundImageStyle(imageUrl)}
         />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative px-6 py-28 md:px-16 md:py-44 text-center text-white">
