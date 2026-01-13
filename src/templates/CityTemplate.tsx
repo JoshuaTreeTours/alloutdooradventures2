@@ -4,6 +4,7 @@ import { Link } from "wouter";
 
 import MapEmbed from "../components/maps/MapEmbed";
 import type { City, StateDestination } from "../data/destinations";
+import { cityLongDescriptions } from "../data/cityLongDescriptions";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -109,6 +110,8 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 }
 
 export default function CityTemplate({ state, city }: CityTemplateProps) {
+  const longDescription = cityLongDescriptions[city.slug] ?? [];
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">
@@ -155,6 +158,26 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
           ))}
         </div>
       </section>
+
+      {longDescription.length > 0 && (
+        <section className="bg-white/60">
+          <div className="mx-auto max-w-5xl px-6 py-14">
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                City guide
+              </span>
+              <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+                A longer look at {city.name}
+              </h2>
+            </div>
+            <div className="mt-6 space-y-4 text-sm md:text-base text-[#405040] leading-relaxed">
+              {longDescription.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white/60">
         <div className="mx-auto max-w-6xl px-6 py-14">
