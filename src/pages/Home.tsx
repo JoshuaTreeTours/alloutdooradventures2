@@ -55,9 +55,13 @@ export default function Home() {
         </section>
 
         {/* WHY CHOOSE */}
-        <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
+        <section
+          id="about"
+          className="mx-auto max-w-6xl px-6 py-16"
+          aria-label="Why choose"
+        >
           <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-            Why Choose All Outdoor Adventures?
+            Why Choose Outdoor Adventures?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm md:text-base text-[#405040] leading-relaxed">
             We curate the best outdoor experiences, vetted by locals and seasoned
@@ -81,7 +85,11 @@ export default function Home() {
         </section>
 
         {/* FEATURED DESTINATIONS (Codex section) */}
-        <section className="mx-auto max-w-6xl px-6 pb-20" aria-label="Featured destinations">
+        <section
+          id="featured-destinations"
+          className="mx-auto max-w-6xl px-6 pb-20"
+          aria-label="Featured destinations"
+        >
           <div className="flex flex-col items-center text-center">
             <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
               Featured Destinations
@@ -109,9 +117,9 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-black/10">
+      <footer id="contact" className="border-t border-black/10">
         <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-[#405040]">
-          © {new Date().getFullYear()} All Outdoor Adventures
+          © {new Date().getFullYear()} Outdoor Adventures
         </div>
       </footer>
     </div>
@@ -121,30 +129,44 @@ export default function Home() {
 function Header() {
   return (
     <header className="sticky top-0 z-50 bg-[#f6f1e8]/95 backdrop-blur border-b border-black/10">
-      <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
+      <div className="mx-auto max-w-6xl px-6 py-4 flex flex-wrap items-center justify-between gap-4">
         <Link href="/">
           <a className="text-lg font-semibold text-[#1f2a1f]">
-            All Outdoor Adventures
+            Outdoor Adventures
           </a>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
-          <Link href="/destinations">
-            <a className="hover:text-[#1f2a1f]">Destinations</a>
-          </Link>
+        <div className="flex flex-wrap items-center gap-4 md:gap-6">
+          <nav className="hidden lg:flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+            <span className="text-[10px] font-semibold text-[#a0ab96]">
+              Company
+            </span>
+            <a className="hover:text-[#1f2a1f]" href="#about">
+              About
+            </a>
+            <a className="hover:text-[#1f2a1f]" href="#featured-destinations">
+              Highlights
+            </a>
+            <a className="hover:text-[#1f2a1f]" href="#contact">
+              Contact
+            </a>
+          </nav>
+
+          <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
+            <Link href="/destinations">
+              <a className="hover:text-[#1f2a1f]">Destinations</a>
+            </Link>
+            <Link href="/tours">
+              <a className="hover:text-[#1f2a1f]">Tours</a>
+            </Link>
+          </nav>
+
           <Link href="/tours">
-            <a className="hover:text-[#1f2a1f]">Tours</a>
+            <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
+              Find an Adventure
+            </a>
           </Link>
-          <Link href="/about">
-            <a className="hover:text-[#1f2a1f]">About</a>
-          </Link>
-        </nav>
-
-        <Link href="/tours">
-          <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
-            Find an Adventure
-          </a>
-        </Link>
+        </div>
       </div>
     </header>
   );
