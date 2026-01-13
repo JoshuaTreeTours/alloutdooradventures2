@@ -1,4 +1,4 @@
-import StatePage from "../../../templates/StatePage";
+import StateTemplate from "../../../templates/StateTemplate";
 import { getStateBySlug } from "../../../data/destinations";
 
 type StateRouteProps = {
@@ -22,5 +22,5 @@ export default function StateRoute({ params }: StateRouteProps) {
     );
   }
 
-  return <StatePage state={state} />;
+  return <StateTemplate state={state} />;
 }
