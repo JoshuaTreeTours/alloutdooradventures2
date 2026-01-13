@@ -285,11 +285,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         shortDescription: "Desert boulders, stargazing skies, and golden light.",
         intro:
           "Joshua Tree delivers otherworldly desert scenes with an easygoing town vibe. It is a haven for climbers, photographers, and anyone who wants wide-open silence and glowing sunsets.",
-        heroImages: [
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-        ],
+        heroImages: ["/images/california/cities/hero.jpg"],
         activityTags: ["desert", "climbing", "stargazing"],
         whereItIs: [
           "Joshua Tree sits where the Mojave and Colorado deserts meet, about two hours east of Los Angeles. The national park surrounds a small desert town, with wide-open skies and iconic Joshua trees dotting the landscape.",
