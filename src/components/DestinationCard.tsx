@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import type { Destination } from "../data/destinations";
+import Image from "./Image";
 
 const PLACEHOLDER_WARNING = "Image missing";
 
@@ -20,9 +21,6 @@ export default function DestinationCard({
   const { image } = destination;
   const trimmedImage = image?.trim();
   const hasImage = Boolean(trimmedImage);
-  const backgroundStyle = hasImage
-    ? { backgroundImage: `url(${trimmedImage})` }
-    : undefined;
   const description =
     descriptionVariant === "featured"
       ? destination.featuredDescription ?? destination.description
@@ -31,13 +29,22 @@ export default function DestinationCard({
 
   return (
     <Link href={destination.href}>
-    <a className="group relative h-56 overflow-hidden rounded-xl ...">
+      <a className="group relative h-56 overflow-hidden rounded-xl ...">
         <div
-          className={`absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 ${
+          className={`absolute inset-0 ${
             hasImage ? "" : "bg-[#b8a693]"
           }`}
-          style={backgroundStyle}
-        />
+        >
+          {hasImage ? (
+            <Image
+              src={trimmedImage ?? ""}
+              fallbackSrc="/hero.jpg"
+              alt=""
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          ) : null}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
         <div className="relative flex h-56 flex-col justify-end p-6 text-white">
           <HeadingTag className="text-xl font-semibold">

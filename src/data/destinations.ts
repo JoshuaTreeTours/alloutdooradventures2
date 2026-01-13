@@ -525,7 +525,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Palm Springs is a stylish desert basecamp surrounded by rugged mountains and palm-lined canyons. It is perfect for early hikes, poolside recovery, and scenic drives.",
         heroImages: [
-          "/images/california/cities/Palm%20Springs%20hero.jpg",
+          "/images/california/cities/palm-springs-hero.jpg",
           "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
           "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
         ],
@@ -1343,7 +1343,7 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
     featuredDescription:
       "Iconic arches, canyon slots, and sandstone trails made for exploration.",
     heroImage:
-      "/images/utah/Utah%20hero.webp",
+      "/images/utah/utah-hero.webp",
     intro:
       "Utah is the heart of canyon country, mixing red rock drama with alpine escapes in the Wasatch Range.",
     longDescription: `Utah is the crown jewel of canyon country, a state defined by sculpted sandstone, towering cliffs, and a landscape that feels like a national park on repeat. It is the place where arches span the sky, slot canyons glow with reflected light, and mesas rise like ships from the desert floor. For outdoor travelers, Utah is a dream: accessible trails, epic viewpoints, and a sense of wonder that appears around every bend.
