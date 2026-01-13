@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
 import MapEmbed from "../components/maps/MapEmbed";
+import { PLACEHOLDER_IMAGE } from "../utils/images";
 import type { City, StateDestination } from "../data/destinations";
 
 type CityTemplateProps = {
@@ -62,11 +63,19 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
               className="min-w-0 flex-[0_0_100%]"
             >
               <div
-                className="h-72 w-full bg-cover bg-center md:h-[420px]"
-                style={{ backgroundImage: `url(${image})` }}
+                className="h-72 w-full md:h-[420px]"
                 role="img"
                 aria-label={`${title} slide ${index + 1}`}
-              />
+              >
+                <img
+                  src={image}
+                  alt={`${title} slide ${index + 1}`}
+                  className="h-full w-full object-cover"
+                  onError={(event) => {
+                    event.currentTarget.src = PLACEHOLDER_IMAGE;
+                  }}
+                />
+              </div>
             </div>
           ))}
         </div>

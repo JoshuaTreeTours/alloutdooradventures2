@@ -45,6 +45,71 @@ Version 2 of AllOutdoorAdventures.com is designed for massive content expansion.
     App.tsx         # Main router configuration
 ```
 
+## 🖼️ Image assets
+
+All destination imagery is referenced via absolute `/images/...` paths and should be stored locally in `public/images`.
+
+### Required state hero images
+
+Place one hero image per state at:
+
+```
+public/images/<state>/hero.jpg
+```
+
+Required state folders:
+
+* `public/images/california/hero.jpg`
+* `public/images/arizona/hero.jpg`
+* `public/images/nevada/hero.jpg`
+* `public/images/utah/hero.jpg`
+* `public/images/oregon/hero.jpg`
+* `public/images/washington/hero.jpg`
+
+### Required city hero image sets
+
+Each city requires three images named `<city>-1.jpg`, `<city>-2.jpg`, and `<city>-3.jpg` inside its state folder:
+
+**California**
+* `public/images/california/san-diego-{1,2,3}.jpg`
+* `public/images/california/lake-tahoe-{1,2,3}.jpg`
+* `public/images/california/joshua-tree-{1,2,3}.jpg`
+* `public/images/california/san-francisco-{1,2,3}.jpg`
+* `public/images/california/los-angeles-{1,2,3}.jpg`
+* `public/images/california/palm-springs-{1,2,3}.jpg`
+* `public/images/california/yosemite-{1,2,3}.jpg`
+* `public/images/california/big-sur-{1,2,3}.jpg`
+* `public/images/california/mammoth-lakes-1.jpg` (used by the location hero)
+
+**Arizona**
+* `public/images/arizona/sedona-{1,2,3}.jpg`
+* `public/images/arizona/flagstaff-{1,2,3}.jpg`
+* `public/images/arizona/tucson-{1,2,3}.jpg`
+
+**Nevada**
+* `public/images/nevada/reno-{1,2,3}.jpg`
+* `public/images/nevada/las-vegas-{1,2,3}.jpg`
+* `public/images/nevada/baker-{1,2,3}.jpg`
+
+**Utah**
+* `public/images/utah/moab-{1,2,3}.jpg`
+* `public/images/utah/springdale-{1,2,3}.jpg`
+* `public/images/utah/park-city-{1,2,3}.jpg`
+
+**Oregon**
+* `public/images/oregon/portland-{1,2,3}.jpg`
+* `public/images/oregon/bend-{1,2,3}.jpg`
+* `public/images/oregon/cannon-beach-{1,2,3}.jpg`
+
+**Washington**
+* `public/images/washington/olympic-peninsula-{1,2,3}.jpg`
+* `public/images/washington/leavenworth-{1,2,3}.jpg`
+* `public/images/washington/seattle-{1,2,3}.jpg`
+
+### Placeholder
+
+If an image fails to load, the UI swaps to `/images/placeholder.jpg`, so add that file in `public/images/placeholder.jpg` when providing assets.
+
 ## 📝 How to Add Content
 
 The entire site is driven by `client/src/lib/data.ts`. To add new destinations, you simply add to the `destinations` array.

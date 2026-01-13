@@ -2,8 +2,7 @@ import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
 import { featuredDestinations } from "../data/destinations";
-
-const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+import { PLACEHOLDER_IMAGE, SITE_HERO_IMAGE } from "../utils/images";
 
 export default function Home() {
   return (
@@ -16,9 +15,13 @@ export default function Home() {
         >
           <div className="relative overflow-hidden rounded-none md:rounded-md">
             {/* Background image */}
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${HERO_IMAGE_URL})` }}
+            <img
+              src={SITE_HERO_IMAGE}
+              alt="Outdoor adventures hero"
+              className="absolute inset-0 h-full w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.src = PLACEHOLDER_IMAGE;
+              }}
             />
             {/* Dark overlay for readable text */}
             <div className="absolute inset-0 bg-black/35" />

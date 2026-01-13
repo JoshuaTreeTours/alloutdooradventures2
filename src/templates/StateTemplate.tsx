@@ -3,6 +3,10 @@ import { Link } from "wouter";
 import DestinationCard from "../components/DestinationCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
+import {
+  getCityHeroImages,
+  PLACEHOLDER_IMAGE,
+} from "../utils/images";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -11,7 +15,7 @@ const buildCityDestination = (
   name: city.name,
   stateSlug,
   description: city.shortDescription,
-  image: city.heroImages[0],
+  image: getCityHeroImages(stateSlug, city.slug)[0],
   href: `/destinations/states/${stateSlug}/cities/${city.slug}`,
 });
 
@@ -26,9 +30,13 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${state.heroImage})` }}
+        <img
+          src={state.heroImage}
+          alt={`${state.name} hero`}
+          className="absolute inset-0 h-full w-full object-cover"
+          onError={(event) => {
+            event.currentTarget.src = PLACEHOLDER_IMAGE;
+          }}
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 text-white">

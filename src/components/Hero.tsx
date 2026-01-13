@@ -1,3 +1,5 @@
+import { PLACEHOLDER_IMAGE, SITE_HERO_IMAGE } from "../utils/images";
+
 type HeroProps = {
   title?: string;
   subtitle?: string;
@@ -10,16 +12,20 @@ export default function Hero({
   title = "Explore the High Sierra",
   subtitle =
     "Granite peaks, alpine lakes, and legendary trails make this a dream basecamp.",
-  imageUrl = "/hero.jpg",
+  imageUrl = SITE_HERO_IMAGE,
   ctaLabel = "View Experiences",
   ctaHref = "/tours",
 }: HeroProps) {
   return (
     <section className="relative mx-auto max-w-[1400px] px-6 pt-6" aria-label="Hero">
       <div className="relative overflow-hidden rounded-none md:rounded-md">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${imageUrl})` }}
+        <img
+          src={imageUrl}
+          alt={title}
+          className="absolute inset-0 h-full w-full object-cover"
+          onError={(event) => {
+            event.currentTarget.src = PLACEHOLDER_IMAGE;
+          }}
         />
         <div className="absolute inset-0 bg-black/35" />
         <div className="relative px-6 py-28 md:px-16 md:py-44 text-center text-white">
