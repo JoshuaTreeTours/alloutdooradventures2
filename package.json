@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "prebuild": "tsx scripts/validate-featured-destinations.ts",
+    "prebuild": "tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "build": "vite build",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
