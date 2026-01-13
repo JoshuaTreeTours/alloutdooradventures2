@@ -21,6 +21,7 @@ export default function DestinationsIndex() {
             destination={state}
             ctaLabel="View adventures"
             headingLevel="h2"
+            imageLoading="eager"
           />
         ))}
       </section>

@@ -183,6 +183,7 @@ export default function Home() {
                 ctaLabel="Discover"
                 headingLevel="h3"
                 descriptionVariant="featured"
+                imageLoading="eager"
               />
             ))}
           </div>
