@@ -893,53 +893,63 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         lng: -111.6513,
         shortDescription: "Pine forests, volcanic peaks, and cool mountain air.",
         intro:
-          "Flagstaff is a high-elevation mountain town surrounded by pine forests and volcanic landscapes. It is a great summer escape from desert heat.",
+          `Flagstaff is a high-elevation mountain town surrounded by ponderosa pine forests, volcanic landscapes, and the soaring San Francisco Peaks. The altitude keeps days crisp and nights cool, making it a welcome escape when the desert heats up. Just as important, the city sits in the perfect position for day trips to the Grand Canyon South Rim, with trailheads and viewpoints close enough for a sunrise-to-sunset loop.
+
+Flagstaff is also a four-season adventure basecamp. Summer and early fall bring big hiking days, mountain bike loops, and wildflower meadows. Autumn colors light up the aspens on the peaks, while winter transforms the slopes into a snow-sport hub at Arizona Snowbowl. When daylight fades, the town’s dark-sky reputation delivers some of the best stargazing in the Southwest, whether you are at Lowell Observatory or on a forest road just outside town.
+
+Between outings, the historic Route 66 corridor and walkable downtown add brewery patios, local food, and easy post-adventure hangs. Sedona’s red-rock canyons are close enough for a half-day detour, so you can mix pine forest hikes with high-desert vistas and still make it back for dinner in town.`,
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1476611338391-6f395a0ebc6c?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1476611338391-6f395a0ebc6c?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1476611338391-6f395a0ebc6c?auto=format&fit=crop&w=1600&q=80",
         ],
         activityTags: ["alpine", "hiking", "volcanic"],
         whereItIs: [
-          "Flagstaff sits at 7,000 feet on the Colorado Plateau, surrounded by ponderosa pine forests and old volcanic fields. It is a natural base for exploring northern Arizona.",
-          "The town has a friendly, outdoorsy vibe with easy access to trailheads, breweries, and scenic drives.",
+          "Flagstaff sits at 7,000 feet on the Colorado Plateau, surrounded by ponderosa pine forests and old volcanic fields. The San Francisco Peaks rise directly north of town, creating an alpine skyline that feels more Rocky Mountain than desert Southwest.",
+          "The city is a natural base for exploring northern Arizona, especially for day trips to the Grand Canyon South Rim. You can be on the rim trail or an early shuttle before lunch, then return to town for dinner and breweries.",
+          "Downtown’s Route 66 corridor anchors a walkable core with coffee shops, breweries, and local food spots, making it easy to pair outdoor days with laid-back evenings.",
+          "If you want red rock scenery, Sedona is close enough for a half-day adventure, adding canyon hikes and scenic drives to your itinerary without changing lodges.",
         ],
         experiences: {
           mountains:
-            "Climb Humphreys Peak for Arizona’s highest summit and expansive views.",
+            "Climb Humphreys Peak for Arizona’s highest summit, or take a shorter alpine hike near the San Francisco Peaks for big views without the full ascent.",
           lakesWater:
-            "Head to nearby alpine lakes like Lake Mary for paddling and picnic time.",
+            "Head to nearby alpine lakes like Lake Mary for paddling, fishing, and picnic time when the afternoons heat up.",
           desertForest:
-            "Dense pine forests create shaded trails with cooler temperatures.",
+            "Dense pine forests create shaded trails with cooler temperatures, while nearby cinder cone landscapes add open, volcanic terrain.",
           cycling:
-            "Ride forest roads and mellow singletrack near Fort Tuthill.",
+            "Ride forest roads and mellow singletrack near Fort Tuthill, or connect longer loops through aspen groves in early fall.",
           scenicDrives:
-            "Drive to Sunset Crater and Wupatki for volcanic and pueblo history.",
+            "Drive to Sunset Crater and Wupatki for volcanic and pueblo history, or cruise Oak Creek Canyon for a dramatic descent into red-rock country.",
           seasonalNotes:
-            "Summer is peak hiking season; winter brings snow and cozy mountain-town vibes.",
+            "Summer is peak hiking season, fall brings glowing aspens, and winter turns Arizona Snowbowl into a snow-sport hub with powder days and cozy town evenings.",
         },
         thingsToDo: [
-          "Hike Humphreys Peak (advanced).",
-          "Visit Sunset Crater Volcano National Monument.",
-          "Bike forest trails near town.",
-          "Explore the Lowell Observatory.",
-          "Take a day trip to the Grand Canyon South Rim.",
+          "Plan a day trip to the Grand Canyon South Rim for rim walks and sunrise views.",
+          "Ride the Arizona Snowbowl gondola or ski the slopes in winter.",
+          "Hike Humphreys Peak or take a shorter San Francisco Peaks trail.",
+          "Mountain bike the Fort Tuthill trail system and forest roads.",
+          "Chase fall colors in the aspen groves near the peaks.",
+          "Explore Sunset Crater Volcano National Monument and nearby cinder cones.",
+          "Spend a dark-sky evening at Lowell Observatory or a nearby pullout.",
+          "Explore Route 66 downtown, breweries, and local food spots after your hike.",
+          "Take a quick day trip to Sedona for red-rock scenery and canyon hikes.",
         ],
         toursCopy: [
-          "Guided volcanic tours add geology context and easy trail access.",
-          "Local guides can customize alpine hikes for your pace and comfort.",
-          "Pair an observatory visit with a night-sky tour for stargazing.",
+          "Guided day trips to the Grand Canyon South Rim handle the logistics so you can focus on rim walks and viewpoints.",
+          "Local guides can customize alpine hikes in the San Francisco Peaks or build a mountain biking loop that matches your pace.",
+          "Pair an observatory visit with a dark-sky tour for unforgettable stargazing nights.",
         ],
         weekendItinerary: {
           dayOne: [
-            "Morning: Sunset Crater loop drive and short hikes.",
-            "Afternoon: lunch in town and brewery stop.",
-            "Evening: stargazing at Lowell Observatory.",
+            "Morning: day trip to the Grand Canyon South Rim for rim trails and viewpoints.",
+            "Afternoon: return to Flagstaff for late lunch and a Route 66 stroll.",
+            "Evening: brewery patio dinner and stargazing at Lowell Observatory.",
           ],
           dayTwo: [
-            "Morning: forest hike or Lake Mary paddle.",
-            "Afternoon: scenic drive to Oak Creek Canyon.",
-            "Evening: dinner downtown.",
+            "Morning: San Francisco Peaks hike or Arizona Snowbowl gondola ride.",
+            "Afternoon: mountain bike Fort Tuthill or paddle Lake Mary.",
+            "Evening: downtown dinner and local desserts before a night drive for dark skies.",
           ],
         },
         gettingThere: [
