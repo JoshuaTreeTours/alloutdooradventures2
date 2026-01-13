@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
-import Image from "../components/Image";
+import CanonicalImage from "../components/CanonicalImage";
 import { featuredDestinations } from "../data/destinations";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
@@ -96,11 +96,12 @@ export default function Home() {
           <div className="relative overflow-hidden rounded-none md:rounded-md min-h-[80vh] md:min-h-[70vh]">
 
             {/* Background image */}
-            <Image
+            <CanonicalImage
               src={HERO_IMAGE_URL}
               fallbackSrc="/hero.jpg"
               alt=""
               className="absolute inset-0 h-full w-full object-cover"
+              priority
             />
             {/* Dark overlay for readable text */}
             <div className="absolute inset-0 bg-black/35" />

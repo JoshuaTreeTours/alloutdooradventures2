@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
-import Image from "../components/Image";
+import CanonicalImage from "../components/CanonicalImage";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
 
@@ -27,11 +27,12 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <Image
+        <CanonicalImage
           src={state.heroImage}
           fallbackSrc="/hero.jpg"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
+          priority
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 text-white">
