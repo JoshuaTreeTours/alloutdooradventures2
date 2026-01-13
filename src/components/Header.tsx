@@ -6,7 +6,7 @@ export default function Header() {
       <div className="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between gap-4">
         <Link href="/">
           <a className="text-lg font-semibold text-[#1f2a1f]">
-            All Outdoor Adventures
+            Outdoor Adventures
           </a>
         </Link>
 

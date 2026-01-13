@@ -55,7 +55,7 @@ export default function Home() {
         {/* WHY CHOOSE */}
         <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
           <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-            Why Choose All Outdoor Adventures?
+            Why Choose Outdoor Adventures?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm md:text-base text-[#405040] leading-relaxed">
             We curate the best outdoor experiences, vetted by locals and seasoned
@@ -109,7 +109,7 @@ export default function Home() {
 
       <footer className="border-t border-black/10">
         <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-[#405040]">
-          © {new Date().getFullYear()} All Outdoor Adventures
+          © {new Date().getFullYear()} Outdoor Adventures
         </div>
       </footer>
     </div>
