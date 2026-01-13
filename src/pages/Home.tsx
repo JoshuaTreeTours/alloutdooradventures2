@@ -15,7 +15,8 @@ export default function Home() {
           className="relative mx-auto max-w-[1400px] px-6 pt-6"
           aria-label="Hero"
         >
-          <div className="relative overflow-hidden rounded-none md:rounded-md">
+          <div className="relative overflow-hidden rounded-none md:rounded-md min-h-[80vh] md:min-h-[70vh]">
+
             {/* Background image */}
             <Image
               src={HERO_IMAGE_URL}
