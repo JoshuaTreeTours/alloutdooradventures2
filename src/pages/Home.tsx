@@ -90,6 +90,8 @@ export default function Home() {
           aria-label="Hero"
         >
           <div className="relative min-h-[70vh] overflow-hidden rounded-none md:rounded-md">
+          <div className="relative overflow-hidden rounded-none md:rounded-md min-h-[80vh] md:min-h-[70vh]">
+
             {/* Background image */}
             <Image
               src={HERO_IMAGE_URL}
