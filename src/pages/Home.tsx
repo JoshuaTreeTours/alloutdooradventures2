@@ -89,7 +89,6 @@ export default function Home() {
           className="relative mx-auto max-w-[1400px] px-6 pt-6"
           aria-label="Hero"
         >
-          <div className="relative min-h-[70vh] overflow-hidden rounded-none md:rounded-md">
           <div className="relative overflow-hidden rounded-none md:rounded-md min-h-[80vh] md:min-h-[70vh]">
 
             {/* Background image */}
@@ -103,7 +102,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-black/35" />
 
             {/* Content */}
-            <div className="relative z-10 px-6 py-20 md:px-16 md:py-28 text-center text-white">
+            <div className="relative px-6 py-20 md:px-16 md:py-28 text-center text-white">
               <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
                 Find Your Next Adventure
               </h1>
