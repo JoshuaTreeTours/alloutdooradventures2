@@ -71,7 +71,7 @@ export default function DestinationCard({
 
   return (
     <Link href={destination.href}>
-      <a className="group relative h-56 overflow-hidden rounded-xl ...">
+      <a className="group relative h-48 overflow-hidden rounded-xl sm:h-56 ...">
         <div
           className={`absolute inset-0 ${
             hasImage ? "" : "bg-[#b8a693]"
@@ -88,7 +88,7 @@ export default function DestinationCard({
           ) : null}
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-        <div className="relative flex h-56 flex-col justify-end p-6 text-white">
+        <div className="relative flex h-48 flex-col justify-end p-6 text-white sm:h-56">
           <HeadingTag className="text-xl font-semibold">
             {destination.name}
           </HeadingTag>
