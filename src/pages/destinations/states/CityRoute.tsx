@@ -1,9 +1,5 @@
-import CityPage from "../../../templates/CityPage";
-import {
-  getCityBySlugs,
-  getStateBySlug,
-  tours,
-} from "../../../data/destinations";
+import CityTemplate from "../../../templates/CityTemplate";
+import { getCityBySlugs, getStateBySlug } from "../../../data/destinations";
 
 type CityRouteProps = {
   params: {
@@ -28,5 +24,5 @@ export default function CityRoute({ params }: CityRouteProps) {
     );
   }
 
-  return <CityPage state={state} city={city} tours={tours} />;
+  return <CityTemplate state={state} city={city} />;
 }

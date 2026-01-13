@@ -14,7 +14,7 @@ export default function App() {
       <Route path="/destinations" component={DestinationsIndex} />
 
       <Route
-        path="/destinations/states/:stateSlug/:citySlug"
+        path="/destinations/states/:stateSlug/cities/:citySlug"
         component={CityRoute}
       />
       <Route path="/destinations/states/:stateSlug" component={StateRoute} />

@@ -7,22 +7,48 @@ export type Destination = {
   href: string;
 };
 
-export type StateCategory = {
+export type StateRegion = {
   title: string;
   description: string;
+};
+
+export type CityExperience = {
+  mountains: string;
+  lakesWater: string;
+  desertForest: string;
+  cycling: string;
+  scenicDrives: string;
+  seasonalNotes: string;
+};
+
+export type WeekendItinerary = {
+  dayOne: string[];
+  dayTwo: string[];
+};
+
+export type CityFaq = {
+  question: string;
+  answer: string;
 };
 
 export type City = {
   name: string;
   slug: string;
   stateSlug: string;
+  region: string;
   lat: number;
   lng: number;
   shortDescription: string;
   intro: string;
-  activities: string[];
-  categoryTags: string[];
-  image: string;
+  heroImages: string[];
+  activityTags: string[];
+  whereItIs: string[];
+  experiences: CityExperience;
+  thingsToDo: string[];
+  toursCopy: string[];
+  weekendItinerary: WeekendItinerary;
+  gettingThere: string[];
+  faq: CityFaq[];
 };
 
 export type StateDestination = {
@@ -31,9 +57,9 @@ export type StateDestination = {
   description: string;
   featuredDescription?: string;
   heroImage: string;
+  intro: string;
   longDescription: string;
-  categories: StateCategory[];
-  specialCategories: StateCategory[];
+  topRegions: StateRegion[];
   cities: City[];
 };
 
@@ -55,6 +81,8 @@ export const states: StateDestination[] = [
       "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
     heroImage:
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "California is a choose-your-own-adventure state, pairing Pacific coastlines with desert basins and granite peaks in a single road trip.",
     longDescription: `California is a masterclass in variety for outdoor travelers. Within a single day you can watch dawn break over the Mojave Desert, spend an afternoon paddling a glassy alpine lake, and still catch sunset along the Pacific. The state stretches almost 800 miles from north to south, which means climates, ecosystems, and travel styles change quickly. That range creates the perfect playground for weekend escapes and weeklong epic loops alike. Whether you crave redwood shade, granite peaks, coastal cliffs, or sprawling desert basins, California delivers a layered itinerary that always feels new.
 
 Along the coast, the vibe is restless and cinematic. Tide pools, surf breaks, and headlands draw visitors into a world of salt air and dramatic sunsets. Highway drives reveal fog-wrapped coves, vineyards on coastal bluffs, and wildlife refuges where sea lions lounge in the sun. Kayaking in kelp forests or hiking along bluff-top trails is often paired with local seafood markets and small-town cafés. The Pacific acts as a constant companion, moderating temperatures and offering year-round trails with epic ocean views.
@@ -72,7 +100,7 @@ For families, California’s variety shines. You can pair a beach day with a sho
 Another reason California stands out is its shoulder season magic. Spring brings waterfalls and high-flow rivers. Early summer is peak wildflower time in the high country. Late summer and early fall reward travelers with warm days and uncrowded trails. Winter still offers coastline escapes and desert climbs even if alpine routes are snowed in. With thoughtful planning, there is always a trail, paddle, or viewpoint ready to go.
 
 California’s outdoor identity is a blend of rugged landscapes and thoughtful access. It is where scenic drives become outdoor classrooms, where an afternoon hike can end with a dip in a turquoise lake, and where desert silence and coastal energy co-exist. The state’s scale might feel intimidating at first, but its experience is best enjoyed in small arcs—choose a region, set a pace, and let the landscapes do the rest. California doesn’t ask you to choose between coast or mountains, beginner or expert, quick getaway or long expedition. It invites you to do it all, one inspiring trip at a time.`,
-    categories: [
+    topRegions: [
       {
         title: "Coastal Escapes",
         description: "Bluff hikes, sea caves, and surf culture along the Pacific edge.",
@@ -86,74 +114,651 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         description: "Joshua tree forests, slot canyons, and stargazing basins.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Coastal Adventures",
-        description: "Foggy headlands, wildlife cruises, and sunrise surf sessions.",
-      },
-      {
-        title: "Sierra Mountains",
-        description: "High-alpine lakes, granite domes, and summer trail loops.",
-      },
-      {
-        title: "Desert Escapes",
-        description: "Boulder fields, golden-hour hikes, and remote hot springs.",
-      },
-    ],
     cities: [
       {
         name: "San Diego",
         slug: "san-diego",
         stateSlug: "california",
+        region: "South Coast",
         lat: 32.7157,
         lng: -117.1611,
         shortDescription: "Coastal paddles, cliff walks, and sunny beach culture.",
         intro:
-          "San Diego blends beach-town energy with dramatic coastal trails and harbor adventures. Spend mornings on boardwalk rides, afternoons on sandstone bluffs, and evenings watching the sun drop into the Pacific.",
-        activities: [
-          "Kayak the sea caves of La Jolla",
-          "Hike Torrey Pines’ coastal ridges",
-          "Bike the bayside loop around Coronado",
+          "San Diego blends beach-town energy with dramatic coastal trails and harbor adventures. It is ideal for travelers who want surf breaks in the morning and bluff-top hikes by late afternoon.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["coastal", "paddling", "biking"],
-        image:
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["coastal", "paddling", "biking"],
+        whereItIs: [
+          "San Diego stretches along the southern California coast, close to the Mexican border and framed by the Pacific on one side and inland canyons on the other. The city’s neighborhoods flow from sandy beaches to urban mesas, which means you can move between waterfront promenades and trailheads without a long drive.",
+          "The vibe is laid-back and outdoor-first. Locals plan days around tide cycles, sunset hikes, and harbor breezes, making it a great basecamp for travelers who want ocean air with plenty of city comforts.",
+        ],
+        experiences: {
+          mountains:
+            "Pair coastal mornings with a drive east to the foothills for mellow ridge walks and canyon overlooks in the Cleveland National Forest.",
+          lakesWater:
+            "Launch a kayak in Mission Bay or La Jolla’s sea caves, then end with a calm paddle at sunset as the water turns coppery.",
+          desertForest:
+            "The inland scrublands around the city offer short hikes with wildflower bursts in spring and warm, open vistas year-round.",
+          cycling:
+            "Ride the Bayshore Bikeway for a mostly flat loop with skyline views, ferry crossings, and beach-town stops.",
+          scenicDrives:
+            "Cruise the coast on Highway 101 or take the Mount Laguna drive for a quick elevation change and pine-scented viewpoints.",
+          seasonalNotes:
+            "Fall and spring deliver the clearest skies and cooler trail temperatures, while summer is perfect for early-morning hikes and long beach days.",
+        },
+        thingsToDo: [
+          "Walk the Torrey Pines bluffs for ocean panoramas.",
+          "Kayak the La Jolla sea caves and kelp forests.",
+          "Bike the Coronado loop for skyline views.",
+          "Spend golden hour at Sunset Cliffs Natural Park.",
+          "Take a harbor cruise to spot sea lions and dolphins.",
+        ],
+        toursCopy: [
+          "For a classic ocean-first itinerary, pair a sunrise paddle with an afternoon cliff walk and a harbor sunset cruise.",
+          "Small-group guides can help you time tides and winds for the best experience on the water and on the bluffs.",
+          "If you prefer a flexible schedule, book a half-day outing and keep the rest of the day open for beach time or local food stops.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: coffee in Little Italy, then Torrey Pines coastal hike.",
+            "Afternoon: kayak La Jolla and picnic at the shore.",
+            "Evening: sunset at Sunset Cliffs and waterfront dinner.",
+          ],
+          dayTwo: [
+            "Morning: bike the Bayshore loop with a Coronado stop.",
+            "Afternoon: visit Balboa Park gardens and museums.",
+            "Evening: harbor stroll and casual seafood spot.",
+          ],
+        },
+        gettingThere: [
+          "San Diego International Airport is minutes from downtown and well connected for short domestic trips.",
+          "Driving from Los Angeles typically takes 2–3 hours depending on traffic and coastal detours.",
+        ],
+        faq: [
+          {
+            question: "Do I need a car in San Diego?",
+            answer:
+              "A car helps for trailheads, but many beach neighborhoods are walkable and rideshares cover the core areas.",
+          },
+          {
+            question: "Is the water warm enough for paddling?",
+            answer:
+              "Yes, but a light wetsuit is common outside of late summer.",
+          },
+          {
+            question: "What’s the best time for coastal hikes?",
+            answer:
+              "Late afternoon brings cooler temps and softer light for photos.",
+          },
+        ],
       },
       {
         name: "Lake Tahoe",
         slug: "lake-tahoe",
         stateSlug: "california",
+        region: "Sierra Nevada",
         lat: 39.0968,
         lng: -120.0324,
         shortDescription: "Crystal waters, alpine peaks, and year-round trails.",
         intro:
           "Lake Tahoe is an alpine escape wrapped in pine forests and granite peaks. The lake’s cobalt water pairs with ridge hikes, paddle routes, and cozy mountain towns that make for a perfect basecamp.",
-        activities: [
-          "Paddle Emerald Bay at sunrise",
-          "Hike to alpine viewpoints above the lake",
-          "Ride forest singletrack in summer",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "hiking", "paddling"],
-        image:
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "hiking", "paddling"],
+        whereItIs: [
+          "Lake Tahoe sits high in the Sierra Nevada, straddling the California-Nevada border. It is ringed by forested slopes, granite peaks, and alpine meadows that feel far removed from city life.",
+          "The lake’s towns provide quick access to shoreline beaches, hiking trails, and scenic drives, making it a hub for both summer and winter adventures.",
+        ],
+        experiences: {
+          mountains:
+            "Hike ridge trails like Mount Tallac for sweeping lake views and crisp alpine air.",
+          lakesWater:
+            "Paddle Emerald Bay early in the day when the water is glassy and the light is soft.",
+          desertForest:
+            "Forests dominate here, with fragrant pine and granite outcrops creating classic mountain scenery.",
+          cycling:
+            "Ride the Tahoe East Shore Trail or explore mellow forest singletrack near Truckee.",
+          scenicDrives:
+            "Cruise the West Shore and stop at viewpoints like Eagle Falls and Inspiration Point.",
+          seasonalNotes:
+            "Summer brings lake days and hikes; winter is prime for snow sports and snowy forest walks.",
+        },
+        thingsToDo: [
+          "Paddle or swim at Emerald Bay.",
+          "Hike to Eagle Lake for a short scenic outing.",
+          "Bike the East Shore multi-use trail.",
+          "Ride a gondola at Heavenly for panoramic views.",
+          "Watch sunset from Sand Harbor or Kings Beach.",
+        ],
+        toursCopy: [
+          "Guided paddles help you explore coves and hidden beaches without worrying about wind shifts.",
+          "A half-day hike with a local guide can unlock alpine viewpoints while keeping the pace comfortable.",
+          "Pair a scenic lake cruise with an easy shoreline walk for a relaxed day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: coffee in Tahoe City and a short hike to Eagle Lake.",
+            "Afternoon: paddle Emerald Bay or relax at Sand Harbor.",
+            "Evening: dinner with lake views and stargazing.",
+          ],
+          dayTwo: [
+            "Morning: drive the West Shore with quick photo stops.",
+            "Afternoon: bike the East Shore trail.",
+            "Evening: sunset picnic at Kings Beach.",
+          ],
+        },
+        gettingThere: [
+          "Reno-Tahoe International Airport is about 1–1.5 hours away by car.",
+          "From Sacramento, expect a 2–3 hour drive depending on mountain conditions.",
+        ],
+        faq: [
+          {
+            question: "Is Lake Tahoe good for beginners?",
+            answer:
+              "Yes. Many shoreline trails are short and well-marked, and the lake has plenty of easy-access beaches.",
+          },
+          {
+            question: "What time should I paddle?",
+            answer:
+              "Early morning is best for calm water and minimal wind.",
+          },
+          {
+            question: "Do I need to book lodging early?",
+            answer:
+              "Summer and winter weekends fill quickly, so booking ahead is smart.",
+          },
+        ],
       },
       {
         name: "Joshua Tree",
         slug: "joshua-tree",
         stateSlug: "california",
+        region: "High Desert",
         lat: 34.1347,
         lng: -116.3131,
         shortDescription: "Desert boulders, stargazing skies, and golden light.",
         intro:
           "Joshua Tree delivers otherworldly desert scenes with an easygoing town vibe. It is a haven for climbers, photographers, and anyone who wants wide-open silence and glowing sunsets.",
-        activities: [
-          "Scramble among the boulder fields",
-          "Drive scenic loops through desert vistas",
-          "Stargaze under the Milky Way",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["desert", "climbing", "stargazing"],
-        image:
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["desert", "climbing", "stargazing"],
+        whereItIs: [
+          "Joshua Tree sits where the Mojave and Colorado deserts meet, about two hours east of Los Angeles. The national park surrounds a small desert town, with wide-open skies and iconic Joshua trees dotting the landscape.",
+          "The atmosphere is calm and creative, with art installations, roadside cafés, and a steady flow of climbers and hikers planning their routes around sunrise and sunset.",
+        ],
+        experiences: {
+          mountains:
+            "The park’s rock piles double as mini-mountain climbs, offering short scrambles and panoramic viewpoints.",
+          lakesWater:
+            "Water is scarce, so plan for dry hikes and bring plenty of hydration; seasonal pools can appear after rain.",
+          desertForest:
+            "Joshua trees, creosote, and boulder fields create a unique desert ecosystem with endless photo opportunities.",
+          cycling:
+            "Ride the park roads for quiet, open desert cycling with steady grades and big views.",
+          scenicDrives:
+            "Drive Park Boulevard and stop at Keys View for a sweeping desert panorama.",
+          seasonalNotes:
+            "Fall through spring is prime for hiking, while summer favors early starts and night-sky sessions.",
+        },
+        thingsToDo: [
+          "Scramble among the boulder fields at Hidden Valley.",
+          "Watch sunset from Keys View.",
+          "Hike the Barker Dam loop for desert wildlife.",
+          "Photograph the Cholla Cactus Garden at sunrise.",
+          "Join a stargazing program after dark.",
+        ],
+        toursCopy: [
+          "Guided climbs and hikes help you navigate the boulder maze and learn about desert ecology.",
+          "Night-sky tours add astronomy storytelling and telescope views for a deeper experience.",
+          "If you are new to the desert, a guide can help you plan safe routes and timing.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: sunrise at the Cholla Cactus Garden.",
+            "Afternoon: Hidden Valley boulder hike and picnic.",
+            "Evening: stargazing session in the park.",
+          ],
+          dayTwo: [
+            "Morning: Ryan Mountain hike for big views.",
+            "Afternoon: explore local art galleries and cafés.",
+            "Evening: sunset at Keys View.",
+          ],
+        },
+        gettingThere: [
+          "Palm Springs International Airport is about 1–1.5 hours away by car.",
+          "Driving from Los Angeles typically takes 2–3 hours depending on traffic.",
+        ],
+        faq: [
+          {
+            question: "Is Joshua Tree good for beginners?",
+            answer:
+              "Yes, many short loops and roadside viewpoints make it easy to explore.",
+          },
+          {
+            question: "Do I need a permit?",
+            answer:
+              "A park entry pass is required; backcountry permits are only needed for overnight trips.",
+          },
+          {
+            question: "What should I pack?",
+            answer:
+              "Bring plenty of water, sun protection, and layers for cool desert nights.",
+          },
+        ],
+      },
+      {
+        // TODO: confirm city name
+        name: "San Francisco",
+        slug: "san-francisco",
+        stateSlug: "california",
+        region: "Bay Area & Marin Coast",
+        lat: 37.7749,
+        lng: -122.4194,
+        shortDescription: "Foggy headlands, bay trails, and iconic coastal views.",
+        intro:
+          "San Francisco pairs classic city energy with quick access to rugged coastal trails and bayfront parks. It is ideal for travelers who want outdoor mornings and city evenings without long drives.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["coastal", "urban-trails", "scenic"],
+        whereItIs: [
+          "San Francisco sits on a narrow peninsula between the Pacific Ocean and the San Francisco Bay. The city’s hills create instant viewpoints, while parks and waterfront promenades thread through iconic neighborhoods.",
+          "With Marin Headlands and Golden Gate National Recreation Area nearby, it is easy to hop from urban coffee stops to cliffside trails within minutes.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the Marin Headlands for rolling ridges and Golden Gate views that feel like a coastal mountain escape.",
+          lakesWater:
+            "Kayak or paddleboard in the calmer waters of the Bay, especially around Sausalito and Angel Island.",
+          desertForest:
+            "The region is defined by coastal scrub and eucalyptus groves, with shaded walks in Golden Gate Park.",
+          cycling:
+            "Cycle across the Golden Gate Bridge and return via the waterfront for a classic Bay Area route.",
+          scenicDrives:
+            "Drive Highway 1 north to Point Reyes or south toward Half Moon Bay for dramatic coastal scenery.",
+          seasonalNotes:
+            "Summer brings foggy mornings and crisp afternoons, while fall offers the clearest skies and warmest weather.",
+        },
+        thingsToDo: [
+          "Walk Lands End for oceanfront trails.",
+          "Bike the Golden Gate Bridge into Sausalito.",
+          "Explore Golden Gate Park gardens and lakes.",
+          "Visit Twin Peaks for a sweeping skyline view.",
+          "Take a day trip to Point Reyes for coastal hikes.",
+        ],
+        toursCopy: [
+          "Guided bike tours make the bridge crossing easy and include ferry returns for a relaxed finish.",
+          "Coastal hike guides can add history and wildlife spotting along the headlands.",
+          "Small-group bay cruises offer another perspective on the skyline and bridges.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: walk Lands End and Sutro Baths.",
+            "Afternoon: explore Golden Gate Park and museums.",
+            "Evening: sunset at Twin Peaks and dinner in the Mission.",
+          ],
+          dayTwo: [
+            "Morning: bike the Golden Gate Bridge to Sausalito.",
+            "Afternoon: ferry return and waterfront stroll.",
+            "Evening: North Beach cafés and city lights.",
+          ],
+        },
+        gettingThere: [
+          "San Francisco International Airport is 25–35 minutes from downtown by car or transit.",
+          "Oakland International Airport is a convenient alternative with easy BART access.",
+        ],
+        faq: [
+          {
+            question: "Do I need a car?",
+            answer:
+              "Not for the city core, but a car helps for coastal day trips and trailheads.",
+          },
+          {
+            question: "What should I wear?",
+            answer:
+              "Bring layers—weather can shift quickly between fog and sun.",
+          },
+          {
+            question: "Is it walkable?",
+            answer:
+              "Yes, but the hills are steep, so plan for extra time on foot.",
+          },
+        ],
+      },
+      {
+        // TODO: confirm city name
+        name: "Los Angeles",
+        slug: "los-angeles",
+        stateSlug: "california",
+        region: "Coastal Metro & Mountains",
+        lat: 34.0522,
+        lng: -118.2437,
+        shortDescription: "Urban energy with canyon hikes and beach sunsets.",
+        intro:
+          "Los Angeles blends iconic city culture with easy access to beaches, canyon trails, and coastal viewpoints. It is a choose-your-own-pace destination with endless outdoor options.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["coastal", "hiking", "urban-trails"],
+        whereItIs: [
+          "Los Angeles sprawls between the Santa Monica Mountains and the Pacific, which means trailheads and beaches are sprinkled across the city. Short drives can take you from downtown to canyon ridges or oceanfront bike paths.",
+          "The outdoor vibe is casual and social—think sunrise hikes, mid-day beach breaks, and sunset overlooks with skyline views.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Griffith Park or Runyon Canyon for city-meets-nature viewpoints and easy access to scenic overlooks.",
+          lakesWater:
+            "Head to the beach for surf lessons or paddleboarding in calmer marina waters.",
+          desertForest:
+            "The Santa Monica Mountains offer chaparral-covered trails and shaded canyons for quick escapes.",
+          cycling:
+            "Bike the Strand from Santa Monica to Manhattan Beach for a classic coastal ride.",
+          scenicDrives:
+            "Cruise Mulholland Drive or the Pacific Coast Highway for iconic viewpoints.",
+          seasonalNotes:
+            "Spring and fall offer the best hiking weather, while summer is ideal for long beach days.",
+        },
+        thingsToDo: [
+          "Hike to the Griffith Observatory for skyline views.",
+          "Bike the beach path from Santa Monica to Venice.",
+          "Drive the Pacific Coast Highway for golden-hour views.",
+          "Explore the Malibu bluffs and beaches.",
+          "Catch sunset at a coastal overlook in Palos Verdes.",
+        ],
+        toursCopy: [
+          "Guided canyon hikes add local context and the best viewpoints without the route planning.",
+          "Coastal tours can combine biking and beach stops for a flexible day.",
+          "If you want a highlight reel, book a half-day city-and-coast itinerary.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: hike Griffith Park and visit the observatory.",
+            "Afternoon: lunch in Silver Lake and a lakeside stroll.",
+            "Evening: sunset at Santa Monica Pier.",
+          ],
+          dayTwo: [
+            "Morning: beach bike ride on the Strand.",
+            "Afternoon: Malibu hike with ocean views.",
+            "Evening: dinner in Venice or Santa Monica.",
+          ],
+        },
+        gettingThere: [
+          "Los Angeles International Airport (LAX) is the main hub; Burbank and Long Beach are smaller alternatives.",
+          "Plan for traffic—driving times between neighborhoods can vary widely.",
+        ],
+        faq: [
+          {
+            question: "Is Los Angeles good without a car?",
+            answer:
+              "You can explore core neighborhoods with transit and rideshares, but a car helps for coastal and mountain access.",
+          },
+          {
+            question: "When is the best time to hike?",
+            answer:
+              "Early mornings are cooler and less crowded, especially in summer.",
+          },
+          {
+            question: "Do beaches get crowded?",
+            answer:
+              "Yes on summer weekends, so go early or choose quieter stretches like Malibu coves.",
+          },
+        ],
+      },
+      {
+        // TODO: confirm city name
+        name: "Palm Springs",
+        slug: "palm-springs",
+        stateSlug: "california",
+        region: "Coachella Valley",
+        lat: 33.8303,
+        lng: -116.5453,
+        shortDescription: "Mid-century oasis with desert hikes and palm oases.",
+        intro:
+          "Palm Springs is a stylish desert basecamp surrounded by rugged mountains and palm-lined canyons. It is perfect for early hikes, poolside recovery, and scenic drives.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["desert", "hot-springs", "scenic"],
+        whereItIs: [
+          "Palm Springs sits in the Coachella Valley beneath the San Jacinto Mountains, about two hours east of Los Angeles. The dramatic elevation shift means you can ride a tram into cool alpine air after a desert morning.",
+          "The town blends retro design with outdoor adventure, making it a favorite for travelers who want equal parts hiking and relaxation.",
+        ],
+        experiences: {
+          mountains:
+            "Ride the Palm Springs Aerial Tramway to alpine trails and cooler temperatures.",
+          lakesWater:
+            "Desert oases and resort pools are the main water escapes, with seasonal streams in nearby canyons.",
+          desertForest:
+            "Hike the Andreas Canyon or Indian Canyons for palm groves and desert cliffs.",
+          cycling:
+            "Cruise the flat valley roads for warm-weather cycling with big mountain views.",
+          scenicDrives:
+            "Drive Highway 74 for mountain switchbacks and lookout points above the valley.",
+          seasonalNotes:
+            "Winter and early spring offer the most comfortable hiking conditions; summer favors sunrise starts.",
+        },
+        thingsToDo: [
+          "Explore the Indian Canyons palm oases.",
+          "Take the aerial tramway to alpine trails.",
+          "Cycle the valley bike paths at sunrise.",
+          "Visit nearby hot springs for recovery.",
+          "Drive to Joshua Tree for a desert day trip.",
+        ],
+        toursCopy: [
+          "Guided canyon hikes add context about the Agua Caliente Band of Cahuilla Indians and the desert ecosystem.",
+          "A tram-to-trail combo tour delivers cool-air hikes without the logistics.",
+          "Desert stargazing sessions are a relaxing way to end the day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: hike Andreas Canyon or Tahquitz Canyon.",
+            "Afternoon: pool time and mid-century architecture stroll.",
+            "Evening: sunset drive along Highway 74.",
+          ],
+          dayTwo: [
+            "Morning: aerial tramway to alpine trails.",
+            "Afternoon: visit a local market and café.",
+            "Evening: stargazing or hot springs soak.",
+          ],
+        },
+        gettingThere: [
+          "Palm Springs International Airport is minutes from downtown.",
+          "Driving from Los Angeles takes about 2–2.5 hours depending on traffic.",
+        ],
+        faq: [
+          {
+            question: "Is Palm Springs too hot in summer?",
+            answer:
+              "It can be, so plan for early hikes and plenty of shade and water.",
+          },
+          {
+            question: "Do I need to book the tram ahead?",
+            answer:
+              "Advance tickets are recommended on weekends and holidays.",
+          },
+          {
+            question: "What is the best season?",
+            answer:
+              "October through April offers the most comfortable outdoor conditions.",
+          },
+        ],
+      },
+      {
+        // TODO: confirm city name
+        name: "Yosemite",
+        slug: "yosemite",
+        stateSlug: "california",
+        region: "Yosemite National Park",
+        lat: 37.8651,
+        lng: -119.5383,
+        shortDescription: "Granite icons, waterfall valleys, and alpine meadows.",
+        intro:
+          "Yosemite is California’s granite cathedral, famous for towering cliffs, thundering waterfalls, and sweeping meadow views. It is a must for hikers who want iconic scenery.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["alpine", "waterfalls", "hiking"],
+        whereItIs: [
+          "Yosemite National Park sits in the central Sierra Nevada, about 4–5 hours from the Bay Area. The Valley is the heart of the park, with iconic cliffs like El Capitan and Half Dome towering above.",
+          "The experience is immersive and awe-filled, with waterfalls in spring, high-country meadows in summer, and golden foliage in fall.",
+        ],
+        experiences: {
+          mountains:
+            "Climb to viewpoints like Glacier Point or Taft Point for classic granite vistas.",
+          lakesWater:
+            "Spring and early summer bring roaring waterfalls and refreshing riverside walks.",
+          desertForest:
+            "Giant sequoia groves and pine forests provide shaded trails and dramatic contrasts.",
+          cycling:
+            "Bike the Valley Loop for car-free views and easy access to trailheads.",
+          scenicDrives:
+            "Drive Tioga Road for high-country overlooks and alpine lakes (seasonal).",
+          seasonalNotes:
+            "Spring is waterfall season; summer is prime for high-country hikes; winter offers snowy valley quiet.",
+        },
+        thingsToDo: [
+          "Hike to Vernal and Nevada Falls via the Mist Trail.",
+          "Bike the Yosemite Valley Loop.",
+          "Visit Glacier Point for panoramic views (seasonal).",
+          "Walk the Tuolumne Meadows trails in summer.",
+          "Explore the Mariposa Grove of giant sequoias.",
+        ],
+        toursCopy: [
+          "Guided hikes help manage logistics and timing for popular trails.",
+          "Photography-focused walks are great for catching golden-hour light on granite walls.",
+          "If you want a multi-day feel without camping, book a full-day guided loop.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: sunrise at Tunnel View and a Valley loop walk.",
+            "Afternoon: Mist Trail to Vernal Fall.",
+            "Evening: picnic in El Capitan Meadow.",
+          ],
+          dayTwo: [
+            "Morning: Glacier Point or Taft Point hike.",
+            "Afternoon: explore Tuolumne Meadows (seasonal).",
+            "Evening: stargazing in the Valley.",
+          ],
+        },
+        gettingThere: [
+          "Major gateways include Fresno, Sacramento, and the Bay Area airports, all 3–5 hours away by car.",
+          "Entry reservations may be required in peak season—check ahead for access rules.",
+        ],
+        faq: [
+          {
+            question: "Do I need reservations?",
+            answer:
+              "Peak season may require an entry reservation; lodging and campsites book early.",
+          },
+          {
+            question: "Is Yosemite family friendly?",
+            answer:
+              "Yes, there are many easy valley walks and scenic viewpoints.",
+          },
+          {
+            question: "When is the best time to visit?",
+            answer:
+              "Late spring for waterfalls, summer for high-country access, and fall for lighter crowds.",
+          },
+        ],
+      },
+      {
+        // TODO: confirm city name
+        name: "Big Sur",
+        slug: "big-sur",
+        stateSlug: "california",
+        region: "Central Coast",
+        lat: 36.2704,
+        lng: -121.8081,
+        shortDescription: "Dramatic cliffs, redwood canyons, and ocean hikes.",
+        intro:
+          "Big Sur is California’s iconic coastal stretch, where rugged cliffs drop into the Pacific and redwood groves hide inland trails. It is built for scenic drives and short, memorable hikes.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["coastal", "redwoods", "scenic"],
+        whereItIs: [
+          "Big Sur stretches along Highway 1 between Carmel and San Simeon, with steep cliffs, ocean overlooks, and hidden redwood canyons. The area feels remote despite being just a few hours from major cities.",
+          "The pace is slow and scenic. Most visitors plan their days around viewpoints, short hikes, and cozy stops at cliffside cafés.",
+        ],
+        experiences: {
+          mountains:
+            "Short climbs at Pfeiffer Big Sur State Park deliver ridge views over the coastline.",
+          lakesWater:
+            "Creekside hikes and hidden waterfalls offer a cool contrast to the ocean views.",
+          desertForest:
+            "Redwood groves provide shaded trails and a serene forest atmosphere.",
+          cycling:
+            "Cyclists love Highway 1’s rolling climbs, but plan for narrow shoulders and coastal winds.",
+          scenicDrives:
+            "The Highway 1 drive is the main event, with dramatic pullouts at Bixby Bridge and Nepenthe.",
+          seasonalNotes:
+            "Spring brings wildflowers, while fall offers clear skies and fewer crowds.",
+        },
+        thingsToDo: [
+          "Stop at Bixby Bridge for iconic photos.",
+          "Hike to McWay Falls in Julia Pfeiffer Burns State Park.",
+          "Walk the Pfeiffer Beach shoreline.",
+          "Explore redwood trails in Pfeiffer Big Sur State Park.",
+          "Enjoy a sunset overlook from Nepenthe.",
+        ],
+        toursCopy: [
+          "Guided scenic drives provide local insight on geology, history, and the best viewpoints.",
+          "Small-group hikes help you navigate redwood trails and coastal cliffs safely.",
+          "A half-day itinerary blends waterfall stops with coastal overlooks for a relaxed pace.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: sunrise at Bixby Bridge.",
+            "Afternoon: hike to McWay Falls and picnic.",
+            "Evening: sunset at Nepenthe.",
+          ],
+          dayTwo: [
+            "Morning: redwood hike in Pfeiffer Big Sur State Park.",
+            "Afternoon: stop at Pfeiffer Beach.",
+            "Evening: scenic drive south with viewpoint stops.",
+          ],
+        },
+        gettingThere: [
+          "Nearest airports include Monterey Regional and San Jose, both about 1.5–2.5 hours away.",
+          "Highway 1 can close during storms, so check road conditions before traveling.",
+        ],
+        faq: [
+          {
+            question: "Is Big Sur a town?",
+            answer:
+              "It is more of a region with lodges and small stops rather than a single town center.",
+          },
+          {
+            question: "Do I need reservations?",
+            answer:
+              "Lodging and campgrounds book quickly—reserve well ahead for weekends.",
+          },
+          {
+            question: "Is cell service reliable?",
+            answer:
+              "Service is limited in many areas, so download maps ahead of time.",
+          },
+        ],
       },
     ],
   },
@@ -165,6 +770,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
       "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
     heroImage:
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "Arizona is defined by canyon country and high desert skies, offering red rock hikes, alpine forests, and legendary sunsets.",
     longDescription: `Arizona is a land of deep canyons, sculpted mesas, and sky that seems to stretch forever. It is a destination that rewards early starts and patient exploration, where the desert teaches a slower rhythm and the landscapes expand in every direction. The state’s outdoor appeal begins with the Grand Canyon, but the real magic lies in the layers—high plateaus, red-rock amphitheaters, pine forests, and hidden river corridors that invite you to explore beyond the obvious.
 
 In northern Arizona, pine-scented highlands create a cool escape from summer heat. Flagstaff serves as a mountain basecamp with easy access to volcanic cinder cones, alpine meadows, and canyon rim trails. Trails here are ideal for day hikes and mountain bike loops, with elevation keeping the air crisp even in the height of summer. Nearby, Sedona adds a surreal blend of red rock cathedrals and winding canyons, a haven for hikers, photographers, and travelers who love sunrise and sunset light.
@@ -182,7 +789,7 @@ Arizona’s seasons deliver different highlights. Winter is prime time for deser
 More than anything, Arizona invites you to slow down. The landscapes are expansive and the pace is unhurried, encouraging lingering looks and quiet moments. You can build an itinerary around sunrise hikes and evening canyon overlooks, or mix in cultural stops at heritage sites and historic towns. The state thrives on contrast—fiery red rocks and shadowed canyons, quiet desert washes and lively mountain towns, remote trails and accessible scenic drives.
 
 Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list moments and small, personal memories: a switchback trail, a desert breeze, a canyon echo. That balance makes Arizona a top-tier getaway for anyone who wants adventure with space to breathe, a place where every horizon promises a new route to explore.`,
-    categories: [
+    topRegions: [
       {
         title: "Canyon Country",
         description: "Rim hikes, river rafts, and sandstone amphitheaters.",
@@ -196,105 +803,280 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         description: "Saguaro trails, desert blooms, and warm winter hikes.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Red Rock Sanctuaries",
-        description: "Cathedral formations, sunrise hikes, and scenic overlooks.",
-      },
-      {
-        title: "Colorado River Adventures",
-        description: "Rafting trips, canyon beaches, and riverside camps.",
-      },
-      {
-        title: "Sky Island Escapes",
-        description: "High-elevation trails with sweeping desert views.",
-      },
-    ],
     cities: [
       {
         name: "Sedona",
         slug: "sedona",
         stateSlug: "arizona",
+        region: "Red Rock Country",
         lat: 34.8697,
-        lng: -111.7609,
-        shortDescription: "Red rock cathedrals, vortex hikes, and sunset vistas.",
+        lng: -111.761,
+        shortDescription: "Red rock trails, vortex viewpoints, and canyon sunsets.",
         intro:
-          "Sedona is defined by crimson cliffs and sculpted rock towers. It is the perfect basecamp for sunrise hikes, jeep tours, and quiet canyon walks lined with juniper and pine.",
-        activities: [
-          "Hike Cathedral Rock at dawn",
-          "Ride scenic backcountry jeep trails",
-          "Explore Oak Creek’s shaded canyon walks",
+          "Sedona is a red rock dreamscape with glowing canyon walls and sweeping trail systems. It is a top pick for sunrise hikes and layered desert panoramas.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["canyons", "hiking", "scenic"],
-        image:
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["canyons", "hiking", "scenic"],
+        whereItIs: [
+          "Sedona sits between the Coconino National Forest and a maze of red rock buttes, about two hours north of Phoenix. The town is nestled in a canyon basin, so every direction offers another viewpoint.",
+          "Its mix of art galleries, wellness culture, and trail access makes it easy to blend hiking days with relaxing evenings.",
+        ],
+        experiences: {
+          mountains:
+            "Climb Cathedral Rock or Doe Mountain for classic red rock panoramas.",
+          lakesWater:
+            "Oak Creek adds refreshing creekside hikes and shaded canyon walks.",
+          desertForest:
+            "Juniper and red rock landscapes dominate, with pockets of pine forest nearby.",
+          cycling:
+            "Sedona’s trail network is a mountain biking favorite with flowy sandstone routes.",
+          scenicDrives:
+            "Drive Red Rock Scenic Byway for easy pullouts and sunset light.",
+          seasonalNotes:
+            "Spring and fall offer the best temps; summer favors early starts and shady canyon hikes.",
+        },
+        thingsToDo: [
+          "Hike Cathedral Rock at sunrise.",
+          "Walk West Fork Trail along Oak Creek.",
+          "Drive the Red Rock Scenic Byway.",
+          "Visit Chapel of the Holy Cross viewpoint.",
+          "Explore Airport Mesa at sunset.",
+        ],
+        toursCopy: [
+          "Guided sunrise hikes help you time the best light on the red rocks.",
+          "Jeep tours access rugged viewpoints without the long climbs.",
+          "Pair a mellow canyon walk with a stargazing session for a full-day experience.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Cathedral Rock hike.",
+            "Afternoon: lunch in town and gallery stroll.",
+            "Evening: sunset at Airport Mesa.",
+          ],
+          dayTwo: [
+            "Morning: West Fork Trail in Oak Creek Canyon.",
+            "Afternoon: scenic drive toward Flagstaff.",
+            "Evening: dinner and stargazing.",
+          ],
+        },
+        gettingThere: [
+          "Phoenix Sky Harbor is about a 2-hour drive away.",
+          "Flagstaff Pulliam Airport offers limited regional flights and is about 45 minutes north.",
+        ],
+        faq: [
+          {
+            question: "Do trails get crowded?",
+            answer:
+              "Yes, especially in spring—start early for the quietest hikes.",
+          },
+          {
+            question: "Is Sedona good for beginners?",
+            answer:
+              "Absolutely—many trails are short and well-marked.",
+          },
+          {
+            question: "Are permits required?",
+            answer:
+              "Some trailheads require a Red Rock Pass, available locally.",
+          },
+        ],
       },
       {
         name: "Flagstaff",
         slug: "flagstaff",
         stateSlug: "arizona",
+        region: "High Country",
         lat: 35.1983,
         lng: -111.6513,
-        shortDescription: "Pine forests, volcanic peaks, and cool alpine air.",
+        shortDescription: "Pine forests, volcanic peaks, and cool mountain air.",
         intro:
-          "Flagstaff offers a mountain escape with quick access to alpine hikes, cinder cone climbs, and stargazing skies. It is a refreshing summer base with a vibrant downtown.",
-        activities: [
-          "Climb Sunset Crater’s lava fields",
-          "Bike the forest singletrack network",
-          "Catch the Milky Way at Lowell Observatory",
+          "Flagstaff is a high-elevation mountain town surrounded by pine forests and volcanic landscapes. It is a great summer escape from desert heat.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "biking", "stargazing"],
-        image:
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "hiking", "volcanic"],
+        whereItIs: [
+          "Flagstaff sits at 7,000 feet on the Colorado Plateau, surrounded by ponderosa pine forests and old volcanic fields. It is a natural base for exploring northern Arizona.",
+          "The town has a friendly, outdoorsy vibe with easy access to trailheads, breweries, and scenic drives.",
+        ],
+        experiences: {
+          mountains:
+            "Climb Humphreys Peak for Arizona’s highest summit and expansive views.",
+          lakesWater:
+            "Head to nearby alpine lakes like Lake Mary for paddling and picnic time.",
+          desertForest:
+            "Dense pine forests create shaded trails with cooler temperatures.",
+          cycling:
+            "Ride forest roads and mellow singletrack near Fort Tuthill.",
+          scenicDrives:
+            "Drive to Sunset Crater and Wupatki for volcanic and pueblo history.",
+          seasonalNotes:
+            "Summer is peak hiking season; winter brings snow and cozy mountain-town vibes.",
+        },
+        thingsToDo: [
+          "Hike Humphreys Peak (advanced).",
+          "Visit Sunset Crater Volcano National Monument.",
+          "Bike forest trails near town.",
+          "Explore the Lowell Observatory.",
+          "Take a day trip to the Grand Canyon South Rim.",
+        ],
+        toursCopy: [
+          "Guided volcanic tours add geology context and easy trail access.",
+          "Local guides can customize alpine hikes for your pace and comfort.",
+          "Pair an observatory visit with a night-sky tour for stargazing.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Sunset Crater loop drive and short hikes.",
+            "Afternoon: lunch in town and brewery stop.",
+            "Evening: stargazing at Lowell Observatory.",
+          ],
+          dayTwo: [
+            "Morning: forest hike or Lake Mary paddle.",
+            "Afternoon: scenic drive to Oak Creek Canyon.",
+            "Evening: dinner downtown.",
+          ],
+        },
+        gettingThere: [
+          "Flagstaff Pulliam Airport offers limited flights; Phoenix is about 2 hours away by car.",
+          "Driving from the Grand Canyon South Rim takes about 1.5 hours.",
+        ],
+        faq: [
+          {
+            question: "Is Flagstaff a good summer escape?",
+            answer:
+              "Yes, cooler temps make it popular for warm-weather hiking.",
+          },
+          {
+            question: "Are trails family friendly?",
+            answer:
+              "Many forest trails are gentle and shaded, great for families.",
+          },
+          {
+            question: "When is snow season?",
+            answer:
+              "Snow can arrive in late fall and lasts into early spring.",
+          },
+        ],
       },
       {
         name: "Tucson",
         slug: "tucson",
         stateSlug: "arizona",
+        region: "Sonoran Desert",
         lat: 32.2226,
         lng: -110.9747,
-        shortDescription: "Saguaro forests, desert loops, and mountain escapes.",
+        shortDescription: "Saguaro trails, desert sunsets, and mountain views.",
         intro:
-          "Tucson pairs Sonoran Desert trails with easy access to cooler mountain ridges. The region is perfect for sunrise hikes, desert drives, and outdoor dining under clear skies.",
-        activities: [
-          "Walk the Saguaro National Park loops",
-          "Drive the scenic Mount Lemmon Highway",
-          "Join a desert sunset tour",
+          "Tucson is wrapped by saguaro cactus forests and rugged mountain ranges. It is a sun-soaked destination for desert hikes and scenic drives.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["desert", "scenic", "wildlife"],
-        image:
-          "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["desert", "wildlife", "scenic"],
+        whereItIs: [
+          "Tucson sits in the heart of the Sonoran Desert, surrounded by Saguaro National Park and the Santa Catalina Mountains. The dramatic elevation change means you can hike deserts and pine forests in the same day.",
+          "The city is laid-back, with local markets, cultural sites, and easy access to trailheads on every side.",
+        ],
+        experiences: {
+          mountains:
+            "Drive to Mount Lemmon for cool pine forests and a high-elevation escape.",
+          lakesWater:
+            "Desert washes and seasonal streams add surprise greenery after rain.",
+          desertForest:
+            "Saguaro-studded trails deliver classic Sonoran desert scenery and wildlife spotting.",
+          cycling:
+            "Ride the Loop bike path for an easy, scenic circuit around the city.",
+          scenicDrives:
+            "Take the scenic drive through Saguaro National Park for sunrise or sunset.",
+          seasonalNotes:
+            "Winter and spring offer the best hiking temps; summer favors early mornings.",
+        },
+        thingsToDo: [
+          "Hike the Valley View Overlook in Saguaro National Park.",
+          "Drive the Mount Lemmon Scenic Byway.",
+          "Explore Sabino Canyon’s trails and tram.",
+          "Bike the Loop for an easy ride.",
+          "Watch sunset over Gates Pass.",
+        ],
+        toursCopy: [
+          "Guided desert walks help spot wildlife and learn about Sonoran ecology.",
+          "Scenic drive tours are great for catching golden-hour light without long hikes.",
+          "Pair a short hike with a cultural stop for a balanced day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: hike in Saguaro National Park (east side).",
+            "Afternoon: explore downtown and local markets.",
+            "Evening: sunset at Gates Pass.",
+          ],
+          dayTwo: [
+            "Morning: Sabino Canyon walk or tram ride.",
+            "Afternoon: drive Mount Lemmon for cooler air.",
+            "Evening: stargazing outside the city.",
+          ],
+        },
+        gettingThere: [
+          "Tucson International Airport is about 20 minutes from downtown.",
+          "Phoenix is about 2 hours away by car for more flight options.",
+        ],
+        faq: [
+          {
+            question: "Is Tucson too hot in summer?",
+            answer:
+              "It can be very hot, so plan early hikes and stay hydrated.",
+          },
+          {
+            question: "Are there shaded trails?",
+            answer:
+              "Sabino Canyon and higher elevations on Mount Lemmon offer more shade.",
+          },
+          {
+            question: "Do I need a park pass?",
+            answer:
+              "Saguaro National Park requires an entry fee or park pass.",
+          },
+        ],
       },
     ],
   },
   {
     slug: "nevada",
     name: "Nevada",
-    description: "Hidden hot springs, high desert trails, and open skies.",
-    featuredDescription: "Wide-open basins, rugged ranges, and hidden hot springs.",
+    description: "Wide-open basins, hot springs, and starry skies.",
+    featuredDescription:
+      "Remote hot springs, dark-sky nights, and wide-open desert basins.",
     heroImage:
-      "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=80",
-    longDescription: `Nevada is the quiet achiever of the West—vast, dramatic, and endlessly surprising. Beyond the neon lights of Las Vegas lies a landscape of high deserts, lonely mountain ranges, and remote hot springs. It is a place for travelers who crave space and solitude, where a scenic drive can mean hours of open road and a trail can lead to a viewpoint with no one else in sight. Nevada’s outdoor appeal is about scale and silence, about wide horizons and hidden pockets of life in the desert.
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "Nevada is a high-desert playground of basin-and-range mountains, quiet hot springs, and wide-open horizons.",
+    longDescription: `Nevada is the ultimate open-road adventure, a state built on vast basins, rugged mountain ranges, and desert skies that stretch forever. It is a destination that rewards explorers who love solitude, hot springs, and stargazing nights. Nevada’s landscapes are raw and dramatic, offering outdoor experiences that feel expansive and unhurried.
 
-The state’s geography is shaped by the Basin and Range, a series of parallel mountain ridges and broad valleys. That pattern creates endless opportunities for hiking, off-road exploration, and backcountry camping. The ranges rise abruptly from the desert floor, offering cooler temperatures and unexpected pockets of green. In spring and early summer, you might find alpine wildflowers on the peaks and sun-warmed sagebrush in the valleys below.
+Beyond Las Vegas, Nevada reveals its wild heart. The Great Basin region is a highlight, with alpine peaks, ancient bristlecone forests, and the dark skies of Great Basin National Park. The park’s Wheeler Peak trails provide high-elevation adventures and sweeping views, while Lehman Caves offer a cool underground escape. It is a surprising alpine side of the desert that feels refreshingly remote.
 
-Nevada’s hot springs are legendary. From developed resort pools to remote soak spots hidden in the hills, the state offers a unique way to unwind after a day of hiking. A well-planned road trip can string together hot springs, ghost towns, and scenic byways, making each day feel like a treasure hunt. These experiences are best enjoyed at a slower pace, with time to linger and appreciate the quiet.
+Northern Nevada centers around Reno and Lake Tahoe’s eastern slopes, where alpine lakes and desert valleys meet. The Truckee River provides paddling and walking paths, and nearby Tahoe offers crystal-clear waters and high-elevation hikes. The contrast of high desert and alpine environments makes the region perfect for travelers who want a mix of scenery in a single trip.
 
-The state is also rich with geological wonders. Great Basin National Park stands as a highlight with its limestone caves, high-elevation bristlecone pine groves, and dark night skies. The park’s remoteness is part of its magic; you can hike to alpine lakes, explore caves, and watch the Milky Way blaze overhead with minimal crowds. In the west, the Sierra Nevada spills into the state, bringing alpine lakes and forested slopes to places like Lake Tahoe’s Nevada shore.
+Southern Nevada is a playground for red rock canyons and desert drives. Red Rock Canyon, Valley of Fire, and the Mojave Desert create a dramatic backdrop for hikers and climbers. These areas shine at sunrise and sunset, when the sandstone glows in warm hues. Even a short hike here delivers classic desert vistas.
 
-Nevada’s desert offers a different kind of adventure. Long-distance trail runners and mountain bikers love the open terrain and rolling hills. Photographers chase the golden light that paints the basins at dusk. The desert’s minimalism becomes an asset—you can see weather systems rolling in from miles away and track the movement of light across the ranges. With proper planning and water, day hikes through canyons and washes are rewarding and surprisingly diverse.
+Hot springs are part of Nevada’s identity. Remote valleys hide natural soaking pools that pair well with long drives and star-filled nights. These experiences require planning and respect for the environment, but they add a unique, restorative layer to any itinerary.
 
-For travelers who prefer guided experiences, Nevada offers opportunities to explore with local expertise. Off-road tours, backcountry jeep excursions, and guided hikes help visitors safely navigate the remote terrain. Small towns and desert outposts provide the essentials, and the state’s friendly, frontier spirit shows through in local diners and small lodging spots.
+Nevada’s night skies are legendary. With low light pollution across much of the state, stargazing is a highlight everywhere you go. Dark-sky parks and open desert campsites offer some of the clearest views of the Milky Way in the country.
 
-Nevada’s seasons are distinct but manageable. Spring is ideal for exploring the deserts and lower ranges, while summer is best spent in higher elevations or on alpine lakes. Fall is crisp and golden, perfect for scenic drives and shoulder-season hiking. Winter brings snow to the mountains and a quiet hush to the basins, ideal for those seeking solitude and clear night skies.
+Outdoor adventures in Nevada are best enjoyed at a relaxed pace. The distances between towns are large, which means road trips become part of the experience. Scenic byways, open highways, and long desert drives are iconic here. Each stop feels like a new chapter in an epic route.
 
-The spirit of Nevada is one of adventure and self-reliance, yet it offers plenty of accessible experiences for first-time explorers. A sunrise hike to a high desert overlook, a soak in a natural hot spring, or a starlit camp in a remote basin can be life-changing without requiring extreme skills. The key is planning and respect for the environment, which rewards visitors with genuine quiet and open space.
+Nevada’s outdoor culture is a blend of rugged independence and welcoming small towns. You will find quirky diners, local outfitters, and friendly locals who know the back roads and hidden spots. That mix makes Nevada a great choice for travelers who want to explore beyond the usual destinations.
 
-Nevada might be understated, but for those who want a deeper, more contemplative outdoor getaway, it is extraordinary. The state invites you to slow down, to watch the light change across the desert, to linger in a hot spring as the stars come out, and to appreciate landscapes that feel untouched and timeless. It is an ideal destination for travelers who want to escape the noise and reconnect with the vastness of the West.`,
-    categories: [
+For those seeking quiet, open landscapes and a feeling of discovery, Nevada delivers. It is a state where adventure is defined by space, silence, and the thrill of finding beauty in the unexpected. Whether you are hiking alpine ridges or soaking in a desert hot spring, Nevada offers a unique outdoor escape that feels far from the everyday.`,
+    topRegions: [
       {
-        title: "High Desert Trails",
-        description: "Open landscapes, sagebrush basins, and rugged ridgelines.",
+        title: "High Desert Vistas",
+        description: "Open basins, mountain ranges, and epic road trips.",
       },
       {
         title: "Hot Springs Routes",
@@ -305,74 +1087,246 @@ Nevada might be understated, but for those who want a deeper, more contemplative
         description: "Alpine hikes, bristlecone pines, and star-filled skies.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Remote Soakaways",
-        description: "Quiet hot springs paired with desert sunsets.",
-      },
-      {
-        title: "Basin & Range Treks",
-        description: "Multi-range hiking loops and scenic ridge walks.",
-      },
-      {
-        title: "Dark Sky Adventures",
-        description: "Astronomy nights and moonlit desert camps.",
-      },
-    ],
     cities: [
       {
         name: "Reno",
         slug: "reno",
         stateSlug: "nevada",
+        region: "Tahoe Gateway",
         lat: 39.5296,
         lng: -119.8138,
         shortDescription: "Urban basecamp for Tahoe trails and river walks.",
         intro:
           "Reno is a lively basecamp with quick access to the Truckee River and Tahoe’s alpine playground. It is ideal for travelers who want trails by day and city energy by night.",
-        activities: [
-          "Paddle the Truckee River whitewater park",
-          "Day trip to Tahoe’s east shore beaches",
-          "Explore nearby desert hot springs",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "paddling", "hot-springs"],
-        image:
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "paddling", "hot-springs"],
+        whereItIs: [
+          "Reno sits along the Truckee River near the eastern edge of the Sierra Nevada. It is the quickest Nevada gateway to Lake Tahoe and alpine trailheads.",
+          "The city blends urban energy with outdoor access, so you can split your day between riverside walks and mountain hikes.",
+        ],
+        experiences: {
+          mountains:
+            "Drive to Tahoe for alpine trails and lake-view hikes like Mount Rose.",
+          lakesWater:
+            "Paddle the Truckee River or head to Tahoe’s east shore for lake time.",
+          desertForest:
+            "High desert landscapes surround the city, with sagebrush valleys and open skies.",
+          cycling:
+            "Bike the Truckee River path for a mellow, scenic ride.",
+          scenicDrives:
+            "Take Mount Rose Highway for sweeping views into Tahoe country.",
+          seasonalNotes:
+            "Summer is ideal for lake days; winter brings nearby skiing and snowshoeing.",
+        },
+        thingsToDo: [
+          "Paddle the Truckee River whitewater park.",
+          "Day trip to Tahoe’s east shore beaches.",
+          "Explore nearby desert hot springs.",
+          "Bike the river path downtown.",
+          "Take a scenic drive to Mount Rose.",
+        ],
+        toursCopy: [
+          "Guided river floats offer an easy way to experience the Truckee.",
+          "A Tahoe day tour can combine hiking with a lakeside picnic.",
+          "Hot spring excursions add a restorative finish to a trail-heavy day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: riverside walk and coffee downtown.",
+            "Afternoon: drive to Tahoe and paddle or swim.",
+            "Evening: dinner in Midtown Reno.",
+          ],
+          dayTwo: [
+            "Morning: hike Mount Rose or a nearby trail.",
+            "Afternoon: hot springs soak.",
+            "Evening: sunset walk along the river.",
+          ],
+        },
+        gettingThere: [
+          "Reno-Tahoe International Airport is about 10 minutes from downtown.",
+          "Driving from Sacramento takes about 2–2.5 hours depending on conditions.",
+        ],
+        faq: [
+          {
+            question: "Is Reno close to Lake Tahoe?",
+            answer:
+              "Yes, the north shore is about a 45-minute drive.",
+          },
+          {
+            question: "Is summer hot?",
+            answer:
+              "Days are warm but evenings cool down thanks to elevation.",
+          },
+          {
+            question: "Can I visit without skiing?",
+            answer:
+              "Absolutely—Reno is a year-round base for hiking and lake trips.",
+          },
+        ],
       },
       {
         name: "Las Vegas",
         slug: "las-vegas",
         stateSlug: "nevada",
+        region: "Mojave Desert",
         lat: 36.1699,
         lng: -115.1398,
         shortDescription: "Gateway to desert parks, canyons, and rock climbs.",
         intro:
-          "Las Vegas is the launchpad for red rock adventures, desert canyons, and scenic drives. Just beyond the strip lies a world of sandstone trails and sunrise hikes.",
-        activities: [
-          "Hike Red Rock Canyon’s calico trails",
-          "Kayak the Black Canyon of the Colorado",
-          "Climb the boulders of Calico Basin",
+          "Las Vegas is the launchpad for red rock adventures, desert canyons, and scenic drives. Just beyond the Strip lies a world of sandstone trails and sunrise hikes.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["desert", "canyons", "climbing"],
-        image:
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["desert", "canyons", "climbing"],
+        whereItIs: [
+          "Las Vegas sits in the Mojave Desert and acts as a convenient hub for Southern Nevada’s red rock landscapes. Trailheads at Red Rock Canyon and Valley of Fire are within an hour’s drive.",
+          "The city offers endless dining and lodging options, making it easy to pair outdoor adventures with comfortable evenings.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the escarpments at Red Rock Canyon for layered desert mountain views.",
+          lakesWater:
+            "Lake Mead and the Black Canyon offer paddling and cooling water escapes.",
+          desertForest:
+            "Joshua trees and desert flora mix with sandstone canyons for a classic Mojave feel.",
+          cycling:
+            "Ride the River Mountains Loop Trail for desert and lake scenery.",
+          scenicDrives:
+            "Drive the Red Rock Scenic Loop for quick access to trailheads and viewpoints.",
+          seasonalNotes:
+            "Fall through spring is best for hiking; summer favors early mornings and water activities.",
+        },
+        thingsToDo: [
+          "Hike Calico Tanks at Red Rock Canyon.",
+          "Explore Valley of Fire’s sandstone formations.",
+          "Kayak the Black Canyon on the Colorado River.",
+          "Drive the Red Rock Scenic Loop.",
+          "Catch sunset at Lake Mead overlooks.",
+        ],
+        toursCopy: [
+          "Guided canyon hikes help you navigate slickrock terrain and learn about desert geology.",
+          "A morning kayak trip on the Colorado River is a cool contrast to desert hikes.",
+          "For a full-day loop, pair Valley of Fire with a scenic drive at sunset.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Red Rock Canyon hike.",
+            "Afternoon: lunch in town and pool break.",
+            "Evening: sunset drive through the scenic loop.",
+          ],
+          dayTwo: [
+            "Morning: Valley of Fire exploration.",
+            "Afternoon: Lake Mead or Black Canyon paddle.",
+            "Evening: return to the Strip for dinner.",
+          ],
+        },
+        gettingThere: [
+          "Harry Reid International Airport is minutes from the Strip and major hotels.",
+          "Most trailheads require a car; rideshare can cover shorter distances.",
+        ],
+        faq: [
+          {
+            question: "Is it safe to hike in summer?",
+            answer:
+              "Only with early starts and plenty of water—temperatures rise quickly.",
+          },
+          {
+            question: "Do I need permits?",
+            answer:
+              "Red Rock Canyon has an entry fee; Valley of Fire has its own fee.",
+          },
+          {
+            question: "Can I get to trails without a car?",
+            answer:
+              "A car is recommended for most outdoor destinations around Las Vegas.",
+          },
+        ],
       },
       {
         name: "Baker",
         slug: "baker",
         stateSlug: "nevada",
+        region: "Great Basin",
         lat: 38.9833,
         lng: -114.1992,
         shortDescription: "Small-town gateway to Great Basin National Park.",
         intro:
           "Baker is the quiet access point for Great Basin’s alpine trails, limestone caves, and bristlecone forests. It is perfect for travelers seeking remote mountain adventures.",
-        activities: [
-          "Hike Wheeler Peak’s alpine switchbacks",
-          "Tour Lehman Caves’ underground chambers",
-          "Camp under Nevada’s darkest skies",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "stargazing", "hiking"],
-        image:
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "stargazing", "hiking"],
+        whereItIs: [
+          "Baker is a tiny town on the eastern edge of Nevada, tucked against the Snake Range. It serves as the primary gateway to Great Basin National Park.",
+          "The atmosphere is quiet and remote, with wide skies and minimal light pollution—ideal for stargazing and slow-paced exploration.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Wheeler Peak for alpine views and a true high-country experience.",
+          lakesWater:
+            "Alpine lakes dot the Snake Range and offer peaceful breaks along the trail.",
+          desertForest:
+            "Ancient bristlecone pines create a rare high-desert forest environment.",
+          cycling:
+            "Road cycling is popular on quiet highways with big open vistas.",
+          scenicDrives:
+            "Drive the Wheeler Peak Scenic Drive for elevation and vista pullouts.",
+          seasonalNotes:
+            "Summer is best for high-elevation hikes; winter brings snow and closed roads.",
+        },
+        thingsToDo: [
+          "Hike the Wheeler Peak trail (challenging).",
+          "Tour Lehman Caves for underground geology.",
+          "Visit the bristlecone pine groves.",
+          "Camp under some of the darkest skies in the West.",
+          "Take a scenic drive to alpine trailheads.",
+        ],
+        toursCopy: [
+          "Guided cave tours add history and geology to the Great Basin experience.",
+          "Small-group hikes help you tackle the long Wheeler Peak route safely.",
+          "Stargazing guides can point out constellations and seasonal meteor showers.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Lehman Caves tour.",
+            "Afternoon: bristlecone pine hike.",
+            "Evening: stargazing at a dark-sky site.",
+          ],
+          dayTwo: [
+            "Morning: Wheeler Peak hike or a shorter alpine trail.",
+            "Afternoon: scenic drive and picnic.",
+            "Evening: sunset over the Snake Range.",
+          ],
+        },
+        gettingThere: [
+          "The nearest major airports are in Las Vegas or Salt Lake City, each about 4–5 hours away by car.",
+          "Baker is remote, so plan fuel and supplies ahead of time.",
+        ],
+        faq: [
+          {
+            question: "Is Baker remote?",
+            answer:
+              "Yes, services are limited, which is part of the Great Basin’s appeal.",
+          },
+          {
+            question: "Do I need a reservation for caves?",
+            answer:
+              "Lehman Caves tours often require advance booking in summer.",
+          },
+          {
+            question: "When is stargazing best?",
+            answer:
+              "Moonless nights offer the darkest skies and brightest stars.",
+          },
+        ],
       },
     ],
   },
@@ -384,6 +1338,8 @@ Nevada might be understated, but for those who want a deeper, more contemplative
       "Iconic arches, canyon slots, and sandstone trails made for exploration.",
     heroImage:
       "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "Utah is the heart of canyon country, mixing red rock drama with alpine escapes in the Wasatch Range.",
     longDescription: `Utah is the crown jewel of canyon country, a state defined by sculpted sandstone, towering cliffs, and a landscape that feels like a national park on repeat. It is the place where arches span the sky, slot canyons glow with reflected light, and mesas rise like ships from the desert floor. For outdoor travelers, Utah is a dream: accessible trails, epic viewpoints, and a sense of wonder that appears around every bend.
 
 Southern Utah is home to the legendary “Mighty Five” national parks, but the appeal extends far beyond the park gates. Zion, Bryce, Arches, Capitol Reef, and Canyonlands each offer distinct experiences, from towering canyon walls to hoodoo amphitheaters. Visitors can choose between easy riverside walks, iconic overlooks, and adventurous slot canyon hikes. Even short hikes deliver dramatic scenery and unforgettable photo ops.
@@ -403,7 +1359,7 @@ The light in Utah is legendary, especially in the early morning and late afterno
 Utah’s outdoor experience is about balance. You can plan an ambitious itinerary of long hikes and technical adventures, or you can focus on scenic drives and easy trails. The state is forgiving and welcoming, and its landscapes are so dramatic that even a simple walk can feel extraordinary. For travelers who want a mix of iconic sights and quiet moments, Utah delivers every time.
 
 Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway through red rock country, Utah offers a sense of scale and adventure that is hard to match. It is a place where the outdoors feels larger than life, yet still accessible. With thoughtful planning, Utah becomes an outdoor playground that feels both epic and approachable, making it one of the best getaway states in the American West.`,
-    categories: [
+    topRegions: [
       {
         title: "Canyon Vistas",
         description: "Red rock overlooks, rim trails, and scenic byways.",
@@ -417,74 +1373,246 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         description: "Wasatch trails, mountain lakes, and summer wildflowers.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Moab Adventure Hub",
-        description: "Mountain biking, river trips, and desert jeep trails.",
-      },
-      {
-        title: "Zion & Bryce Highlights",
-        description: "Iconic viewpoints, hoodoo trails, and canyon hikes.",
-      },
-      {
-        title: "Wasatch Alpine Days",
-        description: "High-elevation lakes, ridge hikes, and cool air.",
-      },
-    ],
     cities: [
       {
         name: "Moab",
         slug: "moab",
         stateSlug: "utah",
+        region: "Canyon Country",
         lat: 38.5733,
         lng: -109.5498,
         shortDescription: "Red rock playground for biking, hiking, and rafting.",
         intro:
           "Moab is the adventure epicenter of Utah, surrounded by red rock cliffs and desert trails. It is the ideal base for mountain biking, canyon hikes, and river adventures.",
-        activities: [
-          "Ride the Slickrock Trail",
-          "Hike to Delicate Arch at sunrise",
-          "Raft the Colorado River’s gentle stretches",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["biking", "canyons", "rafting"],
-        image:
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["biking", "canyons", "rafting"],
+        whereItIs: [
+          "Moab sits along the Colorado River in southeastern Utah, surrounded by Arches and Canyonlands National Parks. It is a small town with outsized access to red rock scenery.",
+          "The town’s adventure culture is strong, with bike shops, guiding services, and easy access to trailheads.",
+        ],
+        experiences: {
+          mountains:
+            "Hike Delicate Arch or nearby slickrock trails for iconic desert vistas.",
+          lakesWater:
+            "Float or raft the Colorado River for a different perspective on the canyon walls.",
+          desertForest:
+            "Slickrock domes and desert mesas define the landscape, with scattered desert flora.",
+          cycling:
+            "Ride the Slickrock Trail or nearby singletrack networks.",
+          scenicDrives:
+            "Drive the Arches National Park loop or Shafer Trail for dramatic overlooks.",
+          seasonalNotes:
+            "Spring and fall bring the most comfortable temps; summer favors early rides and river trips.",
+        },
+        thingsToDo: [
+          "Hike to Delicate Arch at sunrise.",
+          "Bike the Slickrock Trail (intermediate+).",
+          "Raft a mellow stretch of the Colorado River.",
+          "Drive to Canyonlands’ Island in the Sky.",
+          "Watch sunset at Dead Horse Point.",
+        ],
+        toursCopy: [
+          "Guided bike rides help you navigate slickrock safely and efficiently.",
+          "River float tours offer a relaxed way to take in canyon scenery.",
+          "Jeep tours add access to remote overlooks and backcountry routes.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Delicate Arch hike.",
+            "Afternoon: lunch in town and bike ride.",
+            "Evening: sunset at Dead Horse Point.",
+          ],
+          dayTwo: [
+            "Morning: Canyonlands scenic drive.",
+            "Afternoon: Colorado River float.",
+            "Evening: stargazing in the desert.",
+          ],
+        },
+        gettingThere: [
+          "Moab has a small regional airport; most visitors fly into Grand Junction or Salt Lake City.",
+          "Driving from Salt Lake City takes about 4 hours.",
+        ],
+        faq: [
+          {
+            question: "Is Moab good for families?",
+            answer:
+              "Yes, there are easy hikes and scenic drives suitable for kids.",
+          },
+          {
+            question: "Do I need permits?",
+            answer:
+              "Some parks require timed entry in peak season; check ahead.",
+          },
+          {
+            question: "Can I visit in summer?",
+            answer:
+              "Yes, but plan early starts and plenty of water.",
+          },
+        ],
       },
       {
         name: "Springdale",
         slug: "springdale",
         stateSlug: "utah",
+        region: "Zion Gateway",
         lat: 37.1889,
         lng: -112.9989,
         shortDescription: "Gateway to Zion’s iconic canyon walls and hikes.",
         intro:
           "Springdale sits at the entrance of Zion National Park, providing easy access to famous hikes and scenic canyon drives.",
-        activities: [
-          "Walk the Riverside Walk into the Narrows",
-          "Take the Canyon Overlook Trail",
-          "Cycle the Pa’rus Trail at sunset",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["canyons", "hiking", "scenic"],
-        image:
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["canyons", "hiking", "scenic"],
+        whereItIs: [
+          "Springdale is a small town perched at the mouth of Zion Canyon in southern Utah. The park’s shuttle and trailheads are only minutes away.",
+          "The vibe is relaxed and park-focused, with lodges and cafés catering to hikers and photographers.",
+        ],
+        experiences: {
+          mountains:
+            "Zion’s canyon walls rise thousands of feet, creating dramatic vertical scenery.",
+          lakesWater:
+            "The Virgin River flows through the canyon and anchors the classic Riverside Walk.",
+          desertForest:
+            "Cottonwood groves and desert scrub mix along canyon floors and mesa tops.",
+          cycling:
+            "Bike the Pa’rus Trail for a car-free ride with canyon views.",
+          scenicDrives:
+            "Zion Canyon Scenic Drive delivers iconic views and pullouts.",
+          seasonalNotes:
+            "Spring and fall are ideal; summer brings heat and higher crowds.",
+        },
+        thingsToDo: [
+          "Walk the Riverside Walk into the Narrows.",
+          "Take the Canyon Overlook Trail.",
+          "Cycle the Pa’rus Trail at sunset.",
+          "Photograph the Watchman at golden hour.",
+          "Explore nearby Kolob Canyons for fewer crowds.",
+        ],
+        toursCopy: [
+          "Guided hikes help you navigate Zion’s most popular routes safely.",
+          "Canyoneering tours provide access to slot canyons beyond the main park road.",
+          "For a mellow day, book a scenic drive tour with short walks.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: early hike to Canyon Overlook.",
+            "Afternoon: Riverside Walk and shuttle stops.",
+            "Evening: sunset at the Watchman viewpoint.",
+          ],
+          dayTwo: [
+            "Morning: explore the Narrows (conditions permitting).",
+            "Afternoon: lunch in town and gallery stroll.",
+            "Evening: drive to Kolob Canyons.",
+          ],
+        },
+        gettingThere: [
+          "Las Vegas is about 2.5 hours away by car; St. George is the closest regional airport.",
+          "Parking in the park is limited—use the shuttle in peak season.",
+        ],
+        faq: [
+          {
+            question: "Do I need a permit for Zion?",
+            answer:
+              "The Narrows and certain routes may require permits; check current conditions.",
+          },
+          {
+            question: "Is Zion crowded?",
+            answer:
+              "It can be, so arrive early or visit shoulder seasons.",
+          },
+          {
+            question: "Are there easy hikes?",
+            answer:
+              "Yes, Riverside Walk and Pa’rus Trail are great for all levels.",
+          },
+        ],
       },
       {
         name: "Park City",
         slug: "park-city",
         stateSlug: "utah",
+        region: "Wasatch Mountains",
         lat: 40.6461,
         lng: -111.498,
         shortDescription: "Alpine trails, mountain bike parks, and summer festivals.",
         intro:
           "Park City mixes mountain-town charm with accessible alpine trails. It is a cooler summer escape with easy hikes, biking, and scenic chairlift rides.",
-        activities: [
-          "Hike the Wasatch Crest Trail",
-          "Bike resort singletrack routes",
-          "Ride a scenic chairlift for panoramic views",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "biking", "hiking"],
-        image:
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "biking", "hiking"],
+        whereItIs: [
+          "Park City sits in the Wasatch Range about 40 minutes from Salt Lake City. It is known for its ski resorts, which transform into summer hiking and biking hubs.",
+          "The town is walkable and lively, with historic streets and easy access to trailheads.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the Wasatch Crest Trail for high-alpine ridge views.",
+          lakesWater:
+            "Alpine reservoirs nearby offer paddle and picnic options.",
+          desertForest:
+            "Aspen groves and pine forests create cool, shaded trails.",
+          cycling:
+            "Ride lift-served mountain bike trails at the resort parks.",
+          scenicDrives:
+            "Drive Guardsman Pass for sweeping views across the Wasatch.",
+          seasonalNotes:
+            "Summer is prime for biking and hiking; fall brings golden aspens.",
+        },
+        thingsToDo: [
+          "Ride the resort chairlifts for scenic views.",
+          "Hike the Wasatch Crest Trail.",
+          "Bike resort downhill trails.",
+          "Stroll historic Main Street.",
+          "Drive Guardsman Pass for fall colors.",
+        ],
+        toursCopy: [
+          "Guided mountain bike tours help you choose the right trails and gear.",
+          "Alpine hikes with guides are great for learning about local flora and wildlife.",
+          "Combine a chairlift ride with a downhill hike for an easy adventure day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: coffee on Main Street and a short hike.",
+            "Afternoon: chairlift ride and ridge walk.",
+            "Evening: dinner downtown.",
+          ],
+          dayTwo: [
+            "Morning: mountain bike session at the resort.",
+            "Afternoon: picnic by an alpine reservoir.",
+            "Evening: sunset drive over Guardsman Pass.",
+          ],
+        },
+        gettingThere: [
+          "Salt Lake City International Airport is about 40 minutes away.",
+          "Mountain weather can change quickly, so pack layers even in summer.",
+        ],
+        faq: [
+          {
+            question: "Is Park City only for winter?",
+            answer:
+              "No, summer and fall are excellent for hiking and biking.",
+          },
+          {
+            question: "Are trails crowded?",
+            answer:
+              "Resort areas can be busy on weekends, so start early.",
+          },
+          {
+            question: "Do I need a bike pass?",
+            answer:
+              "Lift-served downhill parks require tickets; some trails are free.",
+          },
+        ],
       },
     ],
   },
@@ -496,6 +1624,8 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
       "Waterfalls, misty forests, and volcanic peaks around every bend.",
     heroImage:
       "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "Oregon blends Pacific coastline with waterfall hikes and volcanic peaks, perfect for travelers who want a mix of forest, river, and ocean.",
     longDescription: `Oregon is a lush, storybook landscape of rainforests, volcanic peaks, and rugged coastline. It is a state where waterfalls tumble down mossy cliffs, where mist hangs in the trees, and where coastal winds sculpt dramatic shorelines. Oregon’s outdoor appeal is built on diversity and easy access, making it ideal for travelers who want to balance adventure with cozy, small-town charm.
 
 The coast is a signature highlight. Scenic drives reveal towering sea stacks, hidden coves, and windswept beaches. Tide pools come alive with starfish and anemones, while cliffside trails offer sweeping ocean views. Visitors can pair a morning hike with afternoon clam chowder and sunset beach walks. The coast’s cool temperatures make it comfortable year-round, and the endless viewpoints ensure every stop feels like a discovery.
@@ -515,7 +1645,7 @@ For families, Oregon’s accessible trails and scenic drives are a perfect fit. 
 Oregon’s outdoor identity is rooted in its quiet beauty. The landscapes feel intimate and inviting, encouraging travelers to slow down and notice the details—moss-covered rocks, crashing surf, or the steady rush of a waterfall. It is a place where you can build a balanced itinerary of hiking, paddling, and scenic drives without ever feeling rushed.
 
 Whether you are exploring rainforest trails, watching the sun set over the Pacific, or paddling a calm alpine lake, Oregon delivers a sense of serenity and wonder. It is a destination that blends adventure with ease, offering natural beauty that feels both accessible and awe-inspiring. For anyone seeking a getaway filled with fresh air, scenic beauty, and a touch of coastal magic, Oregon is an ideal choice.`,
-    categories: [
+    topRegions: [
       {
         title: "Coastal Overlooks",
         description: "Sea stacks, tide pools, and windswept beach hikes.",
@@ -529,74 +1659,246 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         description: "Misty gorge trails and riverfront viewpoints.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Pacific Coast Drives",
-        description: "Scenic byways, beach towns, and sunset strolls.",
-      },
-      {
-        title: "High Desert Escapes",
-        description: "Sunny days, pine forests, and volcanic landscapes.",
-      },
-      {
-        title: "Rainforest Ramblers",
-        description: "Fern-lined trails and mossy canyon hikes.",
-      },
-    ],
     cities: [
       {
         name: "Portland",
         slug: "portland",
         stateSlug: "oregon",
+        region: "Columbia Gorge Gateway",
         lat: 45.5152,
         lng: -122.6784,
         shortDescription: "Urban gateway to the Columbia Gorge and forest trails.",
         intro:
           "Portland is the ideal launch point for waterfall hikes, forest walks, and river adventures. It pairs an outdoor-friendly city vibe with quick access to the Gorge and Mount Hood.",
-        activities: [
-          "Hike Multnomah Falls and nearby trails",
-          "Bike along the Willamette River",
-          "Day trip to Mount Hood’s alpine lakes",
+        heroImages: [
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["waterfalls", "biking", "alpine"],
-        image:
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["waterfalls", "biking", "alpine"],
+        whereItIs: [
+          "Portland sits on the Willamette River and is less than an hour from the Columbia River Gorge. It is the perfect mix of city comfort and quick nature access.",
+          "The city is bike-friendly, green, and packed with parks, making outdoor exploration easy even between trail days.",
+        ],
+        experiences: {
+          mountains:
+            "Day trip to Mount Hood for alpine hikes and summer wildflowers.",
+          lakesWater:
+            "The Willamette River offers paddling and riverside walks in the city core.",
+          desertForest:
+            "Forest Park’s dense trails provide a quick woodland escape inside the city.",
+          cycling:
+            "Ride waterfront paths or head to the Springwater Corridor for longer rides.",
+          scenicDrives:
+            "Drive the Historic Columbia River Highway for waterfall viewpoints.",
+          seasonalNotes:
+            "Spring is waterfall season; summer brings dry trails and outdoor patios.",
+        },
+        thingsToDo: [
+          "Hike Multnomah Falls and nearby trails.",
+          "Bike the Springwater Corridor.",
+          "Explore Forest Park’s trail network.",
+          "Day trip to Mount Hood’s alpine lakes.",
+          "Stroll the riverfront at sunset.",
+        ],
+        toursCopy: [
+          "Guided waterfall tours help you hit multiple Gorge highlights in one day.",
+          "Bike tours through the city provide a relaxed, outdoorsy intro to Portland neighborhoods.",
+          "Pair a Mount Hood hike with a local food stop for a full-day adventure.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Forest Park hike.",
+            "Afternoon: bike ride along the river.",
+            "Evening: food carts and brewery stop.",
+          ],
+          dayTwo: [
+            "Morning: Columbia Gorge waterfall loop.",
+            "Afternoon: picnic and scenic drive stops.",
+            "Evening: sunset at a riverfront park.",
+          ],
+        },
+        gettingThere: [
+          "Portland International Airport is about 20–30 minutes from downtown.",
+          "The Columbia Gorge is about a 45-minute drive east.",
+        ],
+        faq: [
+          {
+            question: "Is Portland walkable?",
+            answer:
+              "Yes, and it is also very bike-friendly with extensive paths.",
+          },
+          {
+            question: "When is waterfall season?",
+            answer:
+              "Late winter through spring offers the strongest flows.",
+          },
+          {
+            question: "Do I need a car?",
+            answer:
+              "You can explore the city without one, but a car helps for the Gorge and Mount Hood.",
+          },
+        ],
       },
       {
         name: "Bend",
         slug: "bend",
         stateSlug: "oregon",
+        region: "High Desert",
         lat: 44.0582,
         lng: -121.3153,
         shortDescription: "High desert trails, river floats, and volcanic vistas.",
         intro:
           "Bend blends sunny high-desert weather with easy access to volcanic peaks and river adventures. It is a playground for biking, paddling, and casual hikes.",
-        activities: [
-          "Float the Deschutes River",
-          "Mountain bike the Phil’s Trail network",
-          "Hike around the Cascade Lakes",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["biking", "paddling", "volcanic"],
-        image:
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["biking", "paddling", "volcanic"],
+        whereItIs: [
+          "Bend sits on the Deschutes River in Central Oregon, framed by volcanic peaks and high desert landscapes. The climate is sunny and dry, perfect for outdoor days.",
+          "The town has a fun, active vibe with breweries, bike shops, and quick access to trailheads.",
+        ],
+        experiences: {
+          mountains:
+            "Hike around the Three Sisters or Tumalo Mountain for volcanic views.",
+          lakesWater:
+            "Float the Deschutes River or paddle in the Cascade Lakes basin.",
+          desertForest:
+            "High desert pine forests blend with lava flows and open vistas.",
+          cycling:
+            "Ride the Phil’s Trail network for classic Bend singletrack.",
+          scenicDrives:
+            "Drive the Cascade Lakes Scenic Byway for lakes and mountain views.",
+          seasonalNotes:
+            "Summer is peak for river floats; fall brings crisp biking weather.",
+        },
+        thingsToDo: [
+          "Float the Deschutes River through town.",
+          "Mountain bike the Phil’s Trail network.",
+          "Hike around Sparks Lake or Todd Lake.",
+          "Drive the Cascade Lakes Scenic Byway.",
+          "Grab a post-hike drink at a local brewery.",
+        ],
+        toursCopy: [
+          "Guided bike tours help you navigate the best flow trails for your skill level.",
+          "River float guides can set up shuttle logistics for a stress-free paddle.",
+          "A day tour to the Cascade Lakes adds alpine scenery to your Bend base.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: bike the Phil’s Trail network.",
+            "Afternoon: float the Deschutes River.",
+            "Evening: dinner and brewery crawl.",
+          ],
+          dayTwo: [
+            "Morning: Cascade Lakes scenic drive and short hike.",
+            "Afternoon: paddle on Sparks Lake.",
+            "Evening: sunset at Pilot Butte.",
+          ],
+        },
+        gettingThere: [
+          "Redmond Municipal Airport is about 25 minutes from Bend.",
+          "Driving from Portland takes about 3 hours across the Cascades.",
+        ],
+        faq: [
+          {
+            question: "Is Bend good for beginners?",
+            answer:
+              "Yes, there are easy river floats and mellow hikes.",
+          },
+          {
+            question: "When is the river float season?",
+            answer:
+              "Typically late spring through early fall depending on flow.",
+          },
+          {
+            question: "Do I need a car?",
+            answer:
+              "A car is helpful for the Cascade Lakes and trailheads.",
+          },
+        ],
       },
       {
         name: "Cannon Beach",
         slug: "cannon-beach",
         stateSlug: "oregon",
+        region: "North Coast",
         lat: 45.8918,
         lng: -123.9615,
         shortDescription: "Sea stacks, sandy coves, and coastal strolls.",
         intro:
           "Cannon Beach is famous for Haystack Rock and a charming coastal vibe. It is perfect for beach walks, tide pooling, and sunset photography.",
-        activities: [
-          "Explore the tide pools at low tide",
-          "Walk the beach at golden hour",
-          "Hike Ecola State Park viewpoints",
+        heroImages: [
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["coastal", "scenic", "wildlife"],
-        image:
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["coastal", "scenic", "wildlife"],
+        whereItIs: [
+          "Cannon Beach sits on Oregon’s north coast, about 90 minutes from Portland. It is known for its wide sandy beach and the iconic Haystack Rock.",
+          "The town is walkable and relaxed, with easy access to tide pools, viewpoints, and nearby state parks.",
+        ],
+        experiences: {
+          mountains:
+            "Coastal headlands provide short climbs with big ocean views.",
+          lakesWater:
+            "The Pacific is the star here—tide pools, surf breaks, and cool ocean air.",
+          desertForest:
+            "Coastal forests and headlands offer mossy trails and sea-sprayed viewpoints.",
+          cycling:
+            "Ride coastal bike paths for gentle, scenic routes.",
+          scenicDrives:
+            "Drive to Ecola State Park for sweeping coastline overlooks.",
+          seasonalNotes:
+            "Summer brings calm beach days; winter is ideal for storm watching.",
+        },
+        thingsToDo: [
+          "Explore the tide pools at low tide.",
+          "Walk the beach at golden hour.",
+          "Hike Ecola State Park viewpoints.",
+          "Visit Haystack Rock wildlife viewing spots.",
+          "Take a scenic drive along Highway 101.",
+        ],
+        toursCopy: [
+          "Guided tide pool walks highlight the marine life hiding around Haystack Rock.",
+          "A coastal photography tour helps you plan for the best light and angles.",
+          "For a slow day, book a beach walk with a naturalist guide.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Ecola State Park hike.",
+            "Afternoon: tide pool exploration.",
+            "Evening: sunset beach walk.",
+          ],
+          dayTwo: [
+            "Morning: coffee and coastal stroll.",
+            "Afternoon: scenic drive with lookout stops.",
+            "Evening: seafood dinner in town.",
+          ],
+        },
+        gettingThere: [
+          "Portland is about 1.5 hours away by car.",
+          "Parking is easier early in the day, especially in summer.",
+        ],
+        faq: [
+          {
+            question: "When is the best tide for tide pools?",
+            answer:
+              "Low tide offers the best access—check tide charts before you go.",
+          },
+          {
+            question: "Is swimming possible?",
+            answer:
+              "The water is cold year-round, so most visitors stick to walks and wading.",
+          },
+          {
+            question: "Is it crowded in summer?",
+            answer:
+              "Yes, weekends are busy—arrive early for parking and quiet trails.",
+          },
+        ],
       },
     ],
   },
@@ -608,6 +1910,8 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
       "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
     heroImage:
       "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "Washington is a landscape of misty rainforests and glacier-fed lakes, offering everything from coastal paddles to alpine hikes.",
     longDescription: `Washington is a state of lush contrasts—rainforests, rugged coastline, snow-capped peaks, and sparkling alpine lakes. It is a paradise for hikers, paddlers, and anyone who loves misty mornings and mountain silhouettes. From the Olympic Peninsula to the Cascade Range, Washington offers an outdoor itinerary that feels both wild and accessible.
 
 The Olympic Peninsula is a standout for its diversity. In a single day you can walk along driftwood-lined beaches, wander through temperate rainforest, and hike alpine ridgelines. The Hoh Rainforest is a highlight with its moss-draped trees and quiet, misty trails. Coastal hikes bring sea stacks, tide pools, and dramatic sunsets. The peninsula’s remote feel makes it ideal for travelers who want a true sense of escape.
@@ -625,7 +1929,7 @@ Washington is also a dream for photographers and nature lovers. The interplay of
 For families, Washington offers easy day hikes, scenic drives, and ferry rides that add adventure to any itinerary. For more experienced travelers, multi-day backpacking routes and challenging summit hikes provide a deeper immersion. The state’s infrastructure makes it easy to plan, with well-marked trails, visitor centers, and abundant lodging options in gateway towns.
 
 Washington invites exploration with a sense of wonder. It is a state where the outdoors feels abundant and close at hand, where each region offers a new atmosphere, and where every trip can be tailored to your pace. Whether you are chasing alpine sunrises, coastal sunsets, or quiet forest walks, Washington delivers a balanced, awe-filled getaway that keeps outdoor lovers coming back.`,
-    categories: [
+    topRegions: [
       {
         title: "Rainforest Trails",
         description: "Mossy paths, fern-lined rivers, and misty hikes.",
@@ -639,74 +1943,246 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         description: "Sea stacks, tidal pools, and wind-swept beaches.",
       },
     ],
-    specialCategories: [
-      {
-        title: "Olympic Peninsula Loops",
-        description: "Rainforests, beaches, and alpine ridges in one region.",
-      },
-      {
-        title: "Cascade Summit Days",
-        description: "Glacier viewpoints and high-elevation trail loops.",
-      },
-      {
-        title: "Island + Sound Adventures",
-        description: "Ferry rides, kayaking routes, and coastal towns.",
-      },
-    ],
     cities: [
       {
-        name: "Seattle",
-        slug: "seattle",
+        name: "Olympic Peninsula",
+        slug: "olympic-peninsula",
         stateSlug: "washington",
-        lat: 47.6062,
-        lng: -122.3321,
-        shortDescription: "City basecamp for alpine lakes and island escapes.",
+        region: "Olympic National Park",
+        lat: 47.8021,
+        lng: -123.6044,
+        shortDescription: "Rainforest walks, rugged beaches, and alpine ridges.",
         intro:
-          "Seattle pairs waterfront energy with quick access to mountain trails and island ferries. It is the perfect hub for day trips to alpine lakes and coastal viewpoints.",
-        activities: [
-          "Hike to Rattlesnake Ledge",
-          "Take a ferry to Bainbridge Island",
-          "Kayak on Lake Union at sunset",
+          "The Olympic Peninsula is a choose-your-own landscape—rainforest, mountains, and wild coastline all in one region. It is an unforgettable loop for hikers and photographers.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "paddling", "scenic"],
-        image:
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80",
-      },
-      {
-        name: "Port Angeles",
-        slug: "port-angeles",
-        stateSlug: "washington",
-        lat: 48.1181,
-        lng: -123.4307,
-        shortDescription: "Gateway to Olympic rainforests and rugged coastline.",
-        intro:
-          "Port Angeles offers easy access to Olympic National Park’s rainforests, alpine ridges, and driftwood beaches. It is ideal for travelers who want quick access to wilderness.",
-        activities: [
-          "Hike Hurricane Ridge trails",
-          "Explore the Hoh Rainforest boardwalks",
-          "Drive out to Rialto Beach for sunset",
+        activityTags: ["rainforest", "coastal", "hiking"],
+        whereItIs: [
+          "The Olympic Peninsula sits west of Seattle, surrounded by the Pacific and Puget Sound. It is home to Olympic National Park’s rainforests, mountains, and beaches.",
+          "The region feels remote and wild, with long stretches of coastline and quiet forest trails.",
         ],
-        categoryTags: ["rainforest", "coastal", "hiking"],
-        image:
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+        experiences: {
+          mountains:
+            "Hike Hurricane Ridge for alpine views and wildflower meadows.",
+          lakesWater:
+            "Lake Crescent offers clear water and easy shoreline walks.",
+          desertForest:
+            "Temperate rainforests like Hoh and Quinault feel lush and otherworldly.",
+          cycling:
+            "Road cycling is popular on scenic highways, but trails are more hiking-focused.",
+          scenicDrives:
+            "Drive the 101 loop for beaches, forests, and mountain stops.",
+          seasonalNotes:
+            "Summer is best for alpine access; winter brings storm watching on the coast.",
+        },
+        thingsToDo: [
+          "Walk the Hoh Rainforest trails.",
+          "Visit Rialto Beach and its sea stacks.",
+          "Hike Hurricane Ridge viewpoints.",
+          "Explore Lake Crescent’s shoreline trails.",
+          "Drive the 101 loop for scenic stops.",
+        ],
+        toursCopy: [
+          "Guided rainforest walks add insight into the ecology and wildlife.",
+          "Coastal hikes with a guide help you time tides and find the best viewpoints.",
+          "A multi-day loop tour can handle logistics for a big Olympic Peninsula itinerary.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Hoh Rainforest trail loop.",
+            "Afternoon: Lake Crescent picnic and short hike.",
+            "Evening: sunset at Rialto Beach.",
+          ],
+          dayTwo: [
+            "Morning: Hurricane Ridge hike.",
+            "Afternoon: drive the coastal loop.",
+            "Evening: dinner in Port Angeles.",
+          ],
+        },
+        gettingThere: [
+          "Seattle is about 2.5–3.5 hours away depending on ferry and traffic.",
+          "Ferry routes can save time, but plan schedules in advance.",
+        ],
+        faq: [
+          {
+            question: "Is the Olympic Peninsula a day trip?",
+            answer:
+              "It is best as a 2–3 day loop to see multiple regions.",
+          },
+          {
+            question: "Are rainforests accessible year-round?",
+            answer:
+              "Yes, but expect wet trails outside of summer.",
+          },
+          {
+            question: "Do I need a park pass?",
+            answer:
+              "Olympic National Park requires an entry pass.",
+          },
+        ],
       },
       {
         name: "Leavenworth",
         slug: "leavenworth",
         stateSlug: "washington",
+        region: "Cascade Mountains",
         lat: 47.5962,
         lng: -120.6615,
-        shortDescription: "Alpine village with river trails and mountain views.",
+        shortDescription: "Alpine village charm with lake hikes and river floats.",
         intro:
           "Leavenworth blends alpine scenery with a charming Bavarian village feel. Nearby trails and rivers provide quick outdoor escapes in a picturesque setting.",
-        activities: [
-          "Hike to Colchuck Lake",
-          "Tube the Wenatchee River",
-          "Stroll the Icicle Gorge scenic drive",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
         ],
-        categoryTags: ["alpine", "paddling", "scenic"],
-        image:
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+        activityTags: ["alpine", "paddling", "scenic"],
+        whereItIs: [
+          "Leavenworth sits on the east side of the Cascades, surrounded by alpine peaks and forested valleys. It is a popular weekend getaway from Seattle.",
+          "The town’s Bavarian-inspired village adds charm, while trailheads and river access sit just outside town.",
+        ],
+        experiences: {
+          mountains:
+            "Hike to Colchuck Lake or nearby alpine trails for glacier views.",
+          lakesWater:
+            "Float the Wenatchee River for a relaxed summer paddle.",
+          desertForest:
+            "Dense pine forests surround the town, offering shaded hikes and scenic drives.",
+          cycling:
+            "Road bike along the Icicle Creek corridor for mountain views.",
+          scenicDrives:
+            "Drive the Icicle Gorge for quick pullouts and picnic spots.",
+          seasonalNotes:
+            "Summer is best for hiking; winter brings snow sports and festive village vibes.",
+        },
+        thingsToDo: [
+          "Hike to Colchuck Lake.",
+          "Tube or float the Wenatchee River.",
+          "Stroll the Icicle Gorge scenic drive.",
+          "Explore the Bavarian-style downtown.",
+          "Visit nearby alpine meadows in late summer.",
+        ],
+        toursCopy: [
+          "Guided alpine hikes help you navigate popular trails and parking logistics.",
+          "River float tours are perfect for a relaxing summer afternoon.",
+          "A local guide can combine scenic drives with short hikes for a mellow itinerary.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Colchuck Lake or a shorter alpine hike.",
+            "Afternoon: lunch in town and river float.",
+            "Evening: stroll the village for dinner.",
+          ],
+          dayTwo: [
+            "Morning: Icicle Gorge scenic drive.",
+            "Afternoon: winery or café stop.",
+            "Evening: sunset at a nearby viewpoint.",
+          ],
+        },
+        gettingThere: [
+          "Leavenworth is about 2.5 hours from Seattle by car.",
+          "Winter driving can require traction devices due to mountain passes.",
+        ],
+        faq: [
+          {
+            question: "Is Leavenworth good in summer?",
+            answer:
+              "Yes, alpine hiking and river floats are at their best.",
+          },
+          {
+            question: "Are hikes crowded?",
+            answer:
+              "Popular trails like Colchuck Lake are busy—start early.",
+          },
+          {
+            question: "Do I need a pass?",
+            answer:
+              "Many trailheads require a Northwest Forest Pass or similar permit.",
+          },
+        ],
+      },
+      {
+        name: "Seattle",
+        slug: "seattle",
+        stateSlug: "washington",
+        region: "Puget Sound",
+        lat: 47.6062,
+        lng: -122.3321,
+        shortDescription: "Waterfront trails, ferry rides, and quick mountain access.",
+        intro:
+          "Seattle is a vibrant city base with easy access to Puget Sound, mountain trails, and island escapes. It is perfect for mixing urban energy with outdoor excursions.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["paddling", "urban-trails", "alpine"],
+        whereItIs: [
+          "Seattle sits between Puget Sound and Lake Washington, with the Cascades rising to the east. It is a city where ferry rides and waterfront walks are part of daily life.",
+          "From downtown, you can reach mountain trailheads or island parks in just a couple of hours.",
+        ],
+        experiences: {
+          mountains:
+            "Day trip to Mount Rainier or the Cascade foothills for alpine hikes.",
+          lakesWater:
+            "Paddle Lake Union or head to Puget Sound for sea kayaking.",
+          desertForest:
+            "Dense evergreen forests and coastal parks offer easy nature escapes.",
+          cycling:
+            "Bike the Burke-Gilman Trail for an urban-to-nature ride.",
+          scenicDrives:
+            "Drive to Snoqualmie Pass for waterfalls and mountain viewpoints.",
+          seasonalNotes:
+            "Summer is dry and sunny, while fall offers crisp air and fall colors.",
+        },
+        thingsToDo: [
+          "Walk the waterfront and Pike Place Market.",
+          "Bike the Burke-Gilman Trail.",
+          "Take a ferry to Bainbridge Island.",
+          "Day trip to Snoqualmie Falls.",
+          "Hike a Cascade foothills trail.",
+        ],
+        toursCopy: [
+          "Guided kayak tours in Puget Sound offer wildlife spotting and skyline views.",
+          "A day hike tour to Mount Rainier handles logistics and timing.",
+          "Ferry-based excursions are a low-effort way to add island scenery.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Pike Place Market and waterfront stroll.",
+            "Afternoon: bike the Burke-Gilman Trail.",
+            "Evening: sunset at Kerry Park.",
+          ],
+          dayTwo: [
+            "Morning: ferry to Bainbridge Island.",
+            "Afternoon: hike a nearby foothills trail.",
+            "Evening: dinner in Capitol Hill.",
+          ],
+        },
+        gettingThere: [
+          "Seattle-Tacoma International Airport is about 25–35 minutes from downtown.",
+          "Traffic can be heavy—build extra time into your plans.",
+        ],
+        faq: [
+          {
+            question: "Do I need a car in Seattle?",
+            answer:
+              "You can explore the city without one, but a car helps for mountain day trips.",
+          },
+          {
+            question: "Is it rainy year-round?",
+            answer:
+              "Winters are wet, but summers are typically dry and sunny.",
+          },
+          {
+            question: "Are there easy hikes nearby?",
+            answer:
+              "Yes, the Cascade foothills have many beginner-friendly trails.",
+          },
+        ],
       },
     ],
   },
