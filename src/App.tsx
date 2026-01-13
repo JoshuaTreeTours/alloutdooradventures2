@@ -1,15 +1,17 @@
 import { Route, Switch } from "wouter";
 
+import Header from "./components/Header";
+import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
 import ToursIndex from "./pages/ToursIndex";
-import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 
 export default function App() {
   return (
     <>
+      <Header />
       <ScrollToTopOnRouteChange />
       <Switch>
         <Route path="/" component={Home} />
