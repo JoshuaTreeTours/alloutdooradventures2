@@ -1343,7 +1343,7 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
     featuredDescription:
       "Iconic arches, canyon slots, and sandstone trails made for exploration.",
     heroImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+      "/images/utah/Utah%20hero.webp",
     intro:
       "Utah is the heart of canyon country, mixing red rock drama with alpine escapes in the Wasatch Range.",
     longDescription: `Utah is the crown jewel of canyon country, a state defined by sculpted sandstone, towering cliffs, and a landscape that feels like a national park on repeat. It is the place where arches span the sky, slot canyons glow with reflected light, and mesas rise like ships from the desert floor. For outdoor travelers, Utah is a dream: accessible trails, epic viewpoints, and a sense of wonder that appears around every bend.
