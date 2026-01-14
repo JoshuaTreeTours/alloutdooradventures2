@@ -270,7 +270,7 @@ export default function Home() {
               Featured Destinations
             </span>
             <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-              Plan your next escape
+              Plan your next escape to visit the great American West
             </h2>
             <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
               Explore handcrafted itineraries across the West—each destination blends
