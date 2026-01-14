@@ -1829,9 +1829,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Cannon Beach is famous for Haystack Rock and a charming coastal vibe. It is perfect for beach walks, tide pooling, and sunset photography.",
         heroImages: [
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "/images/oregon/cities/canon-beach-hero.jpg",
         ],
         activityTags: ["coastal", "scenic", "wildlife"],
         whereItIs: [
