@@ -1675,9 +1675,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Portland is the ideal launch point for waterfall hikes, forest walks, and river adventures. It pairs an outdoor-friendly city vibe with quick access to the Gorge and Mount Hood.",
         heroImages: [
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "/images/oregon/cities/portland-hero.jpg",
         ],
         activityTags: ["waterfalls", "biking", "alpine"],
         whereItIs: [
