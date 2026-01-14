@@ -686,11 +686,9 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         shortDescription: "Dramatic cliffs, redwood canyons, and ocean hikes.",
         intro:
           "Big Sur is California’s iconic coastal stretch, where rugged cliffs drop into the Pacific and redwood groves hide inland trails. It is built for scenic drives and short, memorable hikes.",
-        heroImages: [
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-        ],
+       heroImages: [
+  "/images/california/cities/big-sur-hero.gif",
+],
         activityTags: ["coastal", "redwoods", "scenic"],
         whereItIs: [
           "Big Sur stretches along Highway 1 between Carmel and San Simeon, with steep cliffs, ocean overlooks, and hidden redwood canyons. The area feels remote despite being just a few hours from major cities.",
