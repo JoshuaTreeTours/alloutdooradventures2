@@ -7,6 +7,7 @@ import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
 import ToursIndex from "./pages/ToursIndex";
+import ToursCatalog from "./pages/ToursCatalog";
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/destinations/states/:stateSlug" component={StateRoute} />
 
         <Route path="/tours" component={ToursIndex} />
+        <Route path="/tours/catalog" component={ToursCatalog} />
 
         <Route>Not Found</Route>
       </Switch>
