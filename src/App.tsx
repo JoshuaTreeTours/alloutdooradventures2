@@ -13,6 +13,7 @@ import DayAdventuresTours from "./pages/tours/activities/DayAdventuresTours";
 import DetoursTours from "./pages/tours/activities/DetoursTours";
 import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
+import SailingBoatTours from "./pages/tours/activities/SailingBoatTours";
 
 export default function App() {
   return (
@@ -40,6 +41,10 @@ export default function App() {
         <Route path="/tours/activities/detours" component={DetoursTours} />
         <Route path="/tours/activities/hiking" component={HikingTours} />
         <Route path="/tours/activities/multi-day" component={MultiDayTours} />
+        <Route
+          path="/tours/activities/sailing-boat"
+          component={SailingBoatTours}
+        />
 
         <Route>Not Found</Route>
       </Switch>
