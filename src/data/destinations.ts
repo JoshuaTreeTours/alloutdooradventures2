@@ -1751,9 +1751,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         intro:
           "Bend blends sunny high-desert weather with easy access to volcanic peaks and river adventures. It is a playground for biking, paddling, and casual hikes.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "/images/oregon/cities/bend-hero.webp",
         ],
         activityTags: ["biking", "paddling", "volcanic"],
         whereItIs: [
