@@ -1053,6 +1053,205 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
     ],
   },
   {
+    slug: "new-mexico",
+    name: "New Mexico",
+    description: "High desert art towns, canyon trails, and starry skies.",
+    featuredDescription:
+      "High desert escapes with adobe towns, mountain trails, and open skies.",
+    heroImage:
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80",
+    intro:
+      "New Mexico blends high desert mesas, mountain forests, and adobe culture, creating a road-trip-ready state where outdoor adventure meets art and history.",
+    longDescription: `New Mexico feels like a meeting point of sky and earth. The light is luminous, the air is dry and clear, and the landscapes shift from wide-open mesas to pine-covered peaks. It is a state built for road trips, scenic byways, and slow, immersive exploration. Outdoor travelers come for the hiking and stargazing, but they stay for the balance of adventure, culture, and the quiet pace that defines the high desert.
+
+The Rio Grande is the state’s spine, running through bosque trails, canyon corridors, and riverside towns. Along the corridor you can paddle calm stretches of the river, cycle shaded greenways, and step into historic plazas that blend Indigenous, Spanish, and Southwestern influences. Albuquerque and Santa Fe sit along this route, each offering distinct energy: one a lively, wide-open city with mountain views, the other a smaller capital with art-filled streets and access to alpine trails.
+
+North of the Rio Grande, the Sangre de Cristo Mountains rise quickly, delivering alpine hikes, wildflower meadows, and golden aspen groves in fall. Trails around Santa Fe and Taos lead to high-elevation lakes, ridgeline viewpoints, and cool forests that provide a summer escape from the desert floor. Winter brings snow-dusted scenery and a quieter pace, with ski areas and snowshoe routes for travelers who like their adventures crisp and calm.
+
+The south and west bring a different mood: red rock mesas, lava fields, and wide-open basins that feel almost lunar. Scenic drives reveal dramatic canyon walls, petroglyph sites, and volcanic landscapes like El Malpais. The state’s public lands are broad, making it easy to find solitude, camp under the stars, and experience some of the darkest night skies in the country.
+
+New Mexico’s outdoor culture is deeply tied to its art, food, and history. After a day on the trail, you can wander adobe streets, visit local markets, or settle into a patio with green chile and sunset views. The pace is unhurried and the itineraries are flexible, which makes the state ideal for both quick weekend getaways and longer, wandering road trips.
+
+Each season delivers a different highlight. Spring brings desert blooms and mild hiking weather, summer favors mountain escapes, fall glows with aspens and crisp evenings, and winter offers snow sports plus clear, star-filled nights. With its blend of rugged landscapes and rich culture, New Mexico is a destination that feels both adventurous and soulful—built for travelers who want wide horizons and memorable stops along the way.`,
+    topRegions: [
+      {
+        title: "Rio Grande Corridor",
+        description: "Bosque trails, river paddles, and historic adobe towns.",
+      },
+      {
+        title: "Sangre de Cristo Highlands",
+        description: "Alpine hikes, aspen groves, and high-elevation lakes.",
+      },
+      {
+        title: "High Desert Plateaus",
+        description: "Mesas, volcanic fields, and vast stargazing skies.",
+      },
+    ],
+    cities: [
+      {
+        name: "Albuquerque",
+        slug: "albuquerque",
+        stateSlug: "new-mexico",
+        region: "Rio Grande Valley",
+        lat: 35.0844,
+        lng: -106.6504,
+        shortDescription:
+          "Desert trails, mountain views, and Rio Grande sunsets.",
+        intro:
+          "Albuquerque blends high desert landscapes with the green ribbon of the Rio Grande. From the Sandia Mountains to the bosque trails, it is a city built for sunrise hikes, bike rides, and wide-open skies.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1482192505345-5655af888cc4?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["desert", "rio-grande", "ballooning"],
+        whereItIs: [
+          "Albuquerque sits in the middle of New Mexico along the Rio Grande, framed by the Sandia Mountains to the east and volcanic mesas to the west. The city’s elevation keeps the air crisp, while the river corridor adds a lush greenway for trails and wildlife.",
+          "The vibe is open and adventurous. Old Town plazas, local breweries, and outdoor markets sit close to trailheads, making it easy to pair city comforts with desert hikes and scenic drives.",
+        ],
+        experiences: {
+          mountains:
+            "Take the Sandia Peak Tramway or hike La Luz Trail for panoramic views over the city and the Rio Grande Valley.",
+          lakesWater:
+            "Paddle calm stretches of the Rio Grande or visit nearby reservoirs for sunset kayaking and picnic time.",
+          desertForest:
+            "Explore Petroglyph National Monument’s volcanic trails and basalt escarpments for classic high desert scenery.",
+          cycling:
+            "Ride the Paseo del Bosque Trail, a shaded bike path that follows the river through cottonwood groves.",
+          scenicDrives:
+            "Cruise the Turquoise Trail to Madrid or drive to Sandia Crest for high-elevation overlooks.",
+          seasonalNotes:
+            "Fall brings Balloon Fiesta skies and crisp hiking weather, while spring is ideal for wildflower desert walks.",
+        },
+        thingsToDo: [
+          "Ride the Sandia Peak Tramway for sweeping skyline views.",
+          "Bike the Paseo del Bosque Trail through the river bosque.",
+          "Hike the Petroglyph National Monument trails.",
+          "Stroll Old Town Plaza and local markets.",
+          "Plan a sunrise stop for hot air balloons in early fall.",
+        ],
+        toursCopy: [
+          "Guided sunrise balloon experiences pair big skies with a celebratory breakfast afterward.",
+          "Small-group hikes in the Sandia foothills help you find the best overlooks without the logistics.",
+          "Pair a river-side bike ride with a cultural walking tour for a balanced day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Sandia foothills hike or tramway ride.",
+            "Afternoon: Old Town Plaza and local market lunch.",
+            "Evening: sunset at Sandia Crest or a riverfront stroll.",
+          ],
+          dayTwo: [
+            "Morning: bike the Paseo del Bosque Trail.",
+            "Afternoon: Petroglyph National Monument hike.",
+            "Evening: local brewery patio and stargazing outside town.",
+          ],
+        },
+        gettingThere: [
+          "Albuquerque International Sunport is minutes from downtown and offers easy connections.",
+          "Driving from Santa Fe takes about an hour via I-25.",
+        ],
+        faq: [
+          {
+            question: "Is Albuquerque good for first-time desert hikers?",
+            answer:
+              "Yes, many trails are short and well-marked with manageable elevation gain.",
+          },
+          {
+            question: "When is Balloon Fiesta?",
+            answer:
+              "The Albuquerque International Balloon Fiesta runs in early October.",
+          },
+          {
+            question: "Do I need a car?",
+            answer:
+              "A car helps for trailheads, but river paths and Old Town are easy to explore on foot or bike.",
+          },
+        ],
+      },
+      {
+        name: "Santa Fe",
+        slug: "santa-fe",
+        stateSlug: "new-mexico",
+        region: "Sangre de Cristo Foothills",
+        lat: 35.687,
+        lng: -105.9378,
+        shortDescription: "Adobe charm, high-desert trails, and alpine escapes.",
+        intro:
+          "Santa Fe is an art-forward capital set at 7,000 feet, where adobe streets meet mountain trailheads. It is perfect for travelers who want gallery strolls, scenic drives, and cool high-desert air.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["art-town", "high-desert", "hiking"],
+        whereItIs: [
+          "Santa Fe sits at the base of the Sangre de Cristo Mountains, an hour north of Albuquerque. The elevation keeps summers cooler and makes the city a natural jumping-off point for alpine trails and forest drives.",
+          "Its historic plaza, adobe architecture, and creative energy blend seamlessly with nearby wilderness, so you can move from gallery walks to trailheads in a single afternoon.",
+        ],
+        experiences: {
+          mountains:
+            "Hike to Aspen Vista or the Santa Fe Baldy overlook for alpine views and fall color.",
+          lakesWater:
+            "Visit Nambe Falls or nearby reservoirs for a cool, shaded escape on warm days.",
+          desertForest:
+            "Piñon-juniper high desert surrounds the city, while higher elevations bring pine and aspen forests.",
+          cycling:
+            "Ride the Santa Fe Rail Trail for a mellow path or explore mountain bike loops in the foothills.",
+          scenicDrives:
+            "Drive the High Road to Taos or the Turquoise Trail for classic New Mexico vistas.",
+          seasonalNotes:
+            "Summer is ideal for mountain hikes, fall glows with aspens, and winter brings light snow for cozy trail walks.",
+        },
+        thingsToDo: [
+          "Walk Canyon Road galleries and the historic Plaza.",
+          "Hike Aspen Vista for golden fall leaves.",
+          "Take the High Road to Taos for scenic overlooks.",
+          "Explore Hyde Memorial State Park trails.",
+          "Enjoy sunset views from Museum Hill.",
+        ],
+        toursCopy: [
+          "Guided art walks pair adobe history with local galleries and hidden courtyards.",
+          "A half-day hike in the Sangre de Cristo foothills keeps the day active without overextending.",
+          "Combine a scenic drive with a short nature walk to balance vistas and trail time.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Plaza stroll and coffee, then Canyon Road galleries.",
+            "Afternoon: Hyde Memorial State Park hike.",
+            "Evening: sunset at Museum Hill with dinner in town.",
+          ],
+          dayTwo: [
+            "Morning: Aspen Vista trail for mountain views.",
+            "Afternoon: scenic drive on the High Road to Taos.",
+            "Evening: return for adobe courtyard dining.",
+          ],
+        },
+        gettingThere: [
+          "Santa Fe Regional Airport offers limited direct flights.",
+          "Albuquerque International Sunport is about an hour south by car.",
+        ],
+        faq: [
+          {
+            question: "Is Santa Fe walkable?",
+            answer:
+              "Yes, the historic Plaza and nearby galleries are very walkable.",
+          },
+          {
+            question: "Do I need to worry about altitude?",
+            answer:
+              "The city sits above 7,000 feet, so plan a slower first day and stay hydrated.",
+          },
+          {
+            question: "When are fall colors best?",
+            answer:
+              "Late September through mid-October brings peak aspen color in the mountains.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "nevada",
     name: "Nevada",
     description: "Wide-open basins, hot springs, and starry skies.",
