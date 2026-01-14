@@ -1627,7 +1627,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
     featuredDescription:
       "Waterfalls, misty forests, and volcanic peaks around every bend.",
     heroImage:
-      "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
+      "/images/oregon/oregon-hero.JPG",
     intro:
       "Oregon blends Pacific coastline with waterfall hikes and volcanic peaks, perfect for travelers who want a mix of forest, river, and ocean.",
     longDescription: `Oregon is a lush, storybook landscape of rainforests, volcanic peaks, and rugged coastline. It is a state where waterfalls tumble down mossy cliffs, where mist hangs in the trees, and where coastal winds sculpt dramatic shorelines. Oregon’s outdoor appeal is built on diversity and easy access, making it ideal for travelers who want to balance adventure with cozy, small-town charm.
