@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 
 import type { Destination } from "../data/destinations";
-import Image from "./Image";
+import CanonicalImage from "./CanonicalImage";
 
 const PLACEHOLDER_WARNING = "Image missing";
 
@@ -37,11 +37,10 @@ export default function DestinationCard({
             }`}
           >
             {hasImage ? (
-              <Image
+              <CanonicalImage
                 src={trimmedImage ?? ""}
                 fallbackSrc="/hero.jpg"
                 alt=""
-                loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             ) : null}
@@ -78,11 +77,10 @@ export default function DestinationCard({
           }`}
         >
           {hasImage ? (
-            <Image
+            <CanonicalImage
               src={trimmedImage ?? ""}
               fallbackSrc="/hero.jpg"
               alt=""
-              loading="lazy"
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           ) : null}
