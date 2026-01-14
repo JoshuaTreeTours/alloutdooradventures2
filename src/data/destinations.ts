@@ -809,9 +809,7 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         intro:
           "Sedona is a red rock dreamscape with glowing canyon walls and sweeping trail systems. It is a top pick for sunrise hikes and layered desert panoramas.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "/images/arizona/cities/sedona-hero.jpg"
         ],
         activityTags: ["canyons", "hiking", "scenic"],
         whereItIs: [
