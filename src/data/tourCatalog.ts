@@ -39,6 +39,14 @@ export const ACTIVITY_PAGES = [
     image:
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80",
   },
+  {
+    slug: "sailing-boat",
+    title: "Sailing & Boat Tours",
+    description:
+      "Multi-day sailing excursions, island hops, and easygoing Carnival-style cruises.",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+  },
 ];
 
 export const US_STATES = [
