@@ -1,11 +1,69 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import CollectionGrid from "../components/CollectionGrid";
 import DestinationCard from "../components/DestinationCard";
+import DestinationFilterBar from "../components/DestinationFilterBar";
+import EditorialSpotlight from "../components/EditorialSpotlight";
 import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+
+const HOME_FILTERS = [
+  { label: "Coastal escapes", href: "/destinations?theme=coastal" },
+  { label: "High alpine", href: "/destinations?theme=alpine" },
+  { label: "Family friendly", href: "/destinations?theme=family" },
+  { label: "Road trips", href: "/destinations?theme=road-trip" },
+  { label: "Desert days", href: "/destinations?theme=desert" },
+  { label: "Waterfront", href: "/destinations?theme=waterfront" },
+];
+
+const COLLECTIONS = [
+  {
+    title: "Epic weekend loops",
+    description:
+      "Two- and three-day itineraries that maximize big views without the long haul.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=weekend-loops",
+    badge: "3 days",
+  },
+  {
+    title: "Iconic scenic drives",
+    description:
+      "Switchbacks, coastal byways, and sunrise pullouts that define the American West.",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=scenic-drives",
+    badge: "Road trip",
+  },
+  {
+    title: "Mountain town basecamps",
+    description:
+      "Stay in cozy trail towns with quick access to lakes, peaks, and hot springs.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=mountain-towns",
+    badge: "Basecamp",
+  },
+];
+
+const SPOTLIGHT = {
+  eyebrow: "Trip planning",
+  title: "Build a trip that feels custom, not cookie-cutter",
+  description:
+    "We mix local insight with flexible planning so you can stack the right hikes, drives, and tours into one seamless itinerary.",
+  bullets: [
+    "Seasonal guidance for trail access and weather shifts.",
+    "Mix-and-match day plans curated by local experts.",
+    "Suggested stays that keep you close to the action.",
+  ],
+  ctaLabel: "Start planning",
+  ctaHref: "/destinations",
+  image:
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+};
 
 export default function Home() {
   const isDebugEnabled =
@@ -133,6 +191,21 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <DestinationFilterBar
+          title="What kind of adventure are you after?"
+          description="Quickly jump into the right mood, from coastal escapes to rugged road trips."
+          filters={HOME_FILTERS}
+        />
+
+        <CollectionGrid
+          eyebrow="Curated collections"
+          title="Handpicked ways to explore"
+          description="Start with a curated collection, then fine-tune your trip once the inspiration strikes."
+          items={COLLECTIONS}
+        />
+
+        <EditorialSpotlight {...SPOTLIGHT} />
 
         {/* WHY CHOOSE */}
         <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
