@@ -1,11 +1,60 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import CollectionGrid from "../components/CollectionGrid";
 import DestinationCard from "../components/DestinationCard";
+import EditorialSpotlight from "../components/EditorialSpotlight";
 import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
+import { ACTIVITY_PAGES } from "../data/tourCatalog";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+
+const COLLECTIONS = [
+  {
+    title: "Epic weekend loops",
+    description:
+      "Two- and three-day itineraries that maximize big views without the long haul.",
+    image:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=weekend-loops",
+    badge: "3 days",
+  },
+  {
+    title: "Iconic scenic drives",
+    description:
+      "Switchbacks, coastal byways, and sunrise pullouts that define the American West.",
+    image:
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=scenic-drives",
+    badge: "Road trip",
+  },
+  {
+    title: "Mountain town basecamps",
+    description:
+      "Stay in cozy trail towns with quick access to lakes, peaks, and hot springs.",
+    image:
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+    href: "/destinations?collection=mountain-towns",
+    badge: "Basecamp",
+  },
+];
+
+const SPOTLIGHT = {
+  eyebrow: "Trip planning",
+  title: "Build a trip that feels custom, not cookie-cutter",
+  description:
+    "We mix local insight with flexible planning so you can stack the right hikes, drives, and tours into one seamless itinerary.",
+  bullets: [
+    "Seasonal guidance for trail access and weather shifts.",
+    "Mix-and-match day plans curated by local experts.",
+    "Suggested stays that keep you close to the action.",
+  ],
+  ctaLabel: "Start planning",
+  ctaHref: "/destinations",
+  image:
+    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+};
 
 export default function Home() {
   const isDebugEnabled =
@@ -133,6 +182,60 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-16">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Find your next tour
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              What adventure are you looking for?
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-[#405040] md:text-base">
+              Choose a tour style to explore the destinations and itineraries
+              that fit your pace.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {ACTIVITY_PAGES.map((activity) => (
+              <Link
+                key={activity.slug}
+                href={`/tours/activities/${activity.slug}`}
+              >
+                <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative h-44">
+                    <Image
+                      src={activity.image}
+                      fallbackSrc="/hero.jpg"
+                      alt=""
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-2 p-5">
+                    <h3 className="text-base font-semibold text-[#1f2a1f]">
+                      {activity.title}
+                    </h3>
+                    <p className="text-sm text-[#405040] leading-relaxed">
+                      {activity.description}
+                    </p>
+                    <span className="mt-auto text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                      Explore {activity.title} →
+                    </span>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <CollectionGrid
+          eyebrow="Curated collections"
+          title="Handpicked ways to explore"
+          description="Start with a curated collection, then fine-tune your trip once the inspiration strikes."
+          items={COLLECTIONS}
+        />
+
+        <EditorialSpotlight {...SPOTLIGHT} />
 
         {/* WHY CHOOSE */}
         <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
