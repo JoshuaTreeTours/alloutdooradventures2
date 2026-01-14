@@ -1909,7 +1909,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
     featuredDescription:
       "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
     heroImage:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+      "/images/washington/washington-hero.jpg",
     intro:
       "Washington is a landscape of misty rainforests and glacier-fed lakes, offering everything from coastal paddles to alpine hikes.",
     longDescription: `Washington is a state of lush contrasts—rainforests, rugged coastline, snow-capped peaks, and sparkling alpine lakes. It is a paradise for hikers, paddlers, and anyone who loves misty mornings and mountain silhouettes. From the Olympic Peninsula to the Cascade Range, Washington offers an outdoor itinerary that feels both wild and accessible.
