@@ -9,11 +9,11 @@ export const ACTIVITY_PAGES = [
   },
   {
     slug: "hiking",
-    title: "Hiking Day Adventures",
+    title: "Hiking Adventures",
     description:
       "Guided day hikes with big views, alpine lakes, and can’t-miss trailheads.",
     image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1400&q=80",
+      "/images/hiking-hero.jpg",
   },
   {
     slug: "day-adventures",
