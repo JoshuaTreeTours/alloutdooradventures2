@@ -8,7 +8,8 @@ import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
 import { ACTIVITY_PAGES } from "../data/tourCatalog";
 
-const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
+
 const HERO_ACTIVITY_SPOTLIGHTS = [
   {
     title: "Cycling",
@@ -85,10 +86,12 @@ export default function Home() {
     new URLSearchParams(window.location.search).get("debugImages") === "1" &&
     import.meta.env.MODE !== "production" &&
     import.meta.env.VERCEL_ENV !== "production";
+
   const featuredDestinationsPreview = useMemo(
     () => featuredDestinations.slice(0, 6),
-    [],
+    []
   );
+
   const debugImages = useMemo(
     () => [
       { label: "Hero", src: HERO_IMAGE_URL },
@@ -97,19 +100,15 @@ export default function Home() {
         src: destination.image,
       })),
     ],
-    [featuredDestinationsPreview],
+    [featuredDestinationsPreview]
   );
+
   const [debugResults, setDebugResults] = useState<
-    Record<
-      string,
-      { resolvedSrc: string; status?: number; ok?: boolean; error?: string }
-    >
+    Record<string, { resolvedSrc: string; status?: number; ok?: boolean; error?: string }>
   >({});
 
   useEffect(() => {
-    if (typeof window === "undefined" || !isDebugEnabled) {
-      return;
-    }
+    if (typeof window === "undefined" || !isDebugEnabled) return;
 
     const controller = new AbortController();
     const origin = window.location.origin;
@@ -117,9 +116,7 @@ export default function Home() {
     const checkImages = async () => {
       const results = await Promise.all(
         debugImages.map(async ({ label, src }) => {
-          const resolvedSrc = src.startsWith("http")
-            ? src
-            : new URL(src, origin).href;
+          const resolvedSrc = src.startsWith("http") ? src : new URL(src, origin).href;
 
           try {
             const response = await fetch(resolvedSrc, {
@@ -127,6 +124,7 @@ export default function Home() {
               cache: "no-store",
               signal: controller.signal,
             });
+
             return [
               label,
               {
@@ -144,7 +142,7 @@ export default function Home() {
               },
             ] as const;
           }
-        }),
+        })
       );
 
       setDebugResults(Object.fromEntries(results));
@@ -165,8 +163,7 @@ export default function Home() {
           className="relative mx-auto max-w-[1400px] px-6 pt-6"
           aria-label="Hero"
         >
-          <div className="relative overflow-hidden rounded-none md:rounded-md min-h-[80vh] md:min-h-[70vh]">
-
+          <div className="relative min-h-[80vh] overflow-hidden rounded-none md:min-h-[70vh] md:rounded-md">
             {/* Background image */}
             <Image
               src={HERO_IMAGE_URL}
@@ -174,30 +171,31 @@ export default function Home() {
               alt=""
               className="absolute inset-0 h-full w-full object-cover brightness-110 saturate-110"
             />
+
             {/* Light overlay for readable text */}
             <div className="absolute inset-0 bg-black/20" />
 
             {/* Content */}
-            <div className="relative px-6 py-20 md:px-16 md:py-28 text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+            <div className="relative px-6 py-20 text-center text-white md:px-16 md:py-28">
+              <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
                 Find Your Next Adventure
               </h1>
 
-              <p className="mx-auto mt-5 max-w-2xl text-base md:text-lg text-white/90 leading-relaxed">
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">
                 The ultimate field guide to outdoor experiences across America.
                 <br />
                 From desert canyons to mountain peaks, we help you explore the wild.
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link href="/destinations">
-                  <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-[#294129] transition">
+                  <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#294129]">
                     Explore Destinations
                   </a>
                 </Link>
 
                 <Link href="/tours">
-                  <a className="inline-flex items-center justify-center rounded-md bg-white/25 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/40 hover:bg-white/30 transition">
+                  <a className="inline-flex items-center justify-center rounded-md bg-white/25 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/40 transition hover:bg-white/30">
                     View Tours
                   </a>
                 </Link>
@@ -218,9 +216,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="space-y-1 px-4 py-3">
-                      <div className="text-sm font-semibold">
-                        {activity.title}
-                      </div>
+                      <div className="text-sm font-semibold">{activity.title}</div>
                       <div className="text-xs text-white/80">
                         {activity.description}
                       </div>
@@ -232,6 +228,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ACTIVITIES */}
         <section className="mx-auto max-w-6xl px-6 py-16">
           <div className="text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -241,16 +238,14 @@ export default function Home() {
               What adventure are you looking for?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-[#405040] md:text-base">
-              Choose a tour style to explore the destinations and itineraries
-              that fit your pace.
+              Choose a tour style to explore the destinations and itineraries that fit
+              your pace.
             </p>
           </div>
+
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {ACTIVITY_PAGES.map((activity) => (
-              <Link
-                key={activity.slug}
-                href={`/tours/activities/${activity.slug}`}
-              >
+              <Link key={activity.slug} href={`/tours/activities/${activity.slug}`}>
                 <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative h-44">
                     <Image
@@ -264,7 +259,7 @@ export default function Home() {
                     <h3 className="text-base font-semibold text-[#1f2a1f]">
                       {activity.title}
                     </h3>
-                    <p className="text-sm text-[#405040] leading-relaxed">
+                    <p className="text-sm leading-relaxed text-[#405040]">
                       {activity.description}
                     </p>
                     <span className="mt-auto text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
@@ -287,11 +282,14 @@ export default function Home() {
         <EditorialSpotlight {...SPOTLIGHT} />
 
         {/* WHY CHOOSE */}
-        <section className="mx-auto max-w-6xl px-6 py-16" aria-label="Why choose">
-          <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+        <section
+          className="mx-auto max-w-6xl px-6 py-16"
+          aria-label="Why choose"
+        >
+          <h2 className="text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
             Why Choose Outdoor Adventures?
           </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-sm md:text-base text-[#405040] leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-[#405040] md:text-base">
             We curate the best outdoor experiences, vetted by locals and seasoned
             travelers. No tourist traps—just authentic adventures.
           </p>
@@ -312,16 +310,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FEATURED DESTINATIONS (Codex section) */}
-        <section className="mx-auto max-w-6xl px-6 pb-20" aria-label="Featured destinations">
+        {/* FEATURED DESTINATIONS */}
+        <section
+          className="mx-auto max-w-6xl px-6 pb-20"
+          aria-label="Featured destinations"
+        >
           <div className="flex flex-col items-center text-center">
             <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
               Featured Destinations
             </span>
-            <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
               Plan your next escape to visit the great American West
             </h2>
-            <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#405040] md:text-base">
               Explore handcrafted itineraries across the West—each destination blends
               signature landscapes with local-guided adventure.
             </p>
@@ -353,9 +354,11 @@ export default function Home() {
                 Shows resolved image URLs and HEAD status codes to diagnose Safari
                 loading issues.
               </p>
+
               <div className="mt-4 space-y-4">
                 {debugImages.map(({ label, src }) => {
                   const result = debugResults[label];
+
                   return (
                     <div
                       key={`${label}-${src}`}
@@ -364,13 +367,16 @@ export default function Home() {
                       <div className="text-xs font-semibold text-amber-900">
                         {label}
                       </div>
+
                       <div className="mt-1 break-all text-[0.7rem] text-amber-800">
                         src: <code>{src}</code>
                       </div>
+
                       <div className="mt-1 break-all text-[0.7rem] text-amber-800">
                         resolved:{" "}
                         <code>{result?.resolvedSrc ?? "Checking..."}</code>
                       </div>
+
                       <div className="mt-1 text-[0.7rem] text-amber-800">
                         HEAD status:{" "}
                         {result?.status !== undefined
@@ -401,7 +407,7 @@ function Card({ title, body }: { title: string; body: string }) {
   return (
     <div className="rounded-lg border border-black/10 bg-white/55 p-6 shadow-sm">
       <h3 className="text-base font-semibold text-[#1f2a1f]">{title}</h3>
-      <p className="mt-2 text-sm text-[#405040] leading-relaxed">{body}</p>
+      <p className="mt-2 text-sm leading-relaxed text-[#405040]">{body}</p>
     </div>
   );
 }
