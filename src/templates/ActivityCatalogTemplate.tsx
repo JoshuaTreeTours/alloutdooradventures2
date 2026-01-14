@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
@@ -16,6 +17,16 @@ export default function ActivityCatalogTemplate({
   image,
   activitySlug,
 }: ActivityCatalogTemplateProps) {
+  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    if (!event.target.value) {
+      return;
+    }
+
+    window.location.assign(
+      `/tours/${activitySlug}/us/${slugify(event.target.value)}`
+    );
+  };
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
@@ -63,17 +74,30 @@ export default function ActivityCatalogTemplate({
             These links are placeholders until each state has its tour lineup.
           </p>
         </div>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {US_STATES.map((state) => (
-            <Link
-              key={state}
-              href={`/tours/${activitySlug}/us/${slugify(state)}`}
+        <div className="mx-auto mt-8 max-w-md">
+          <label
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
+            htmlFor={`${activitySlug}-state-select`}
+          >
+            Select a state
+          </label>
+          <div className="mt-2 rounded-xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm">
+            <select
+              id={`${activitySlug}-state-select`}
+              className="w-full bg-transparent text-sm font-semibold text-[#2f4a2f]"
+              defaultValue=""
+              onChange={handleStateChange}
             >
-              <a className="rounded-xl border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:border-[#2f4a2f]/40 hover:bg-white">
-                {state}
-              </a>
-            </Link>
-          ))}
+              <option value="" disabled>
+                Choose a state
+              </option>
+              {US_STATES.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </section>
 
@@ -89,15 +113,15 @@ export default function ActivityCatalogTemplate({
             Add tour listings to each city when partnerships are ready.
           </p>
         </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 space-y-4">
           {EUROPE_CITIES.map((region) => (
-            <div
+            <details
               key={region.region}
               className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm"
             >
-              <h3 className="text-base font-semibold text-[#1f2a1f]">
+              <summary className="cursor-pointer list-none text-base font-semibold text-[#1f2a1f]">
                 {region.region}
-              </h3>
+              </summary>
               <div className="mt-4 grid gap-2 sm:grid-cols-2">
                 {region.cities.map((city) => (
                   <Link
@@ -110,7 +134,7 @@ export default function ActivityCatalogTemplate({
                   </Link>
                 ))}
               </div>
-            </div>
+            </details>
           ))}
         </div>
       </section>

@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import {
@@ -8,6 +9,14 @@ import {
 } from "../data/tourCatalog";
 
 export default function ToursCatalog() {
+  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    if (!event.target.value) {
+      return;
+    }
+
+    window.location.assign(`/tours/us/${slugify(event.target.value)}`);
+  };
+
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
       <header className="space-y-4">
@@ -83,14 +92,30 @@ export default function ToursCatalog() {
             Link each state to a future tour hub as you build inventory.
           </p>
         </div>
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {US_STATES.map((state) => (
-            <Link key={state} href={`/tours/us/${slugify(state)}`}>
-              <a className="rounded-xl border border-black/10 bg-white/80 px-4 py-3 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:border-[#2f4a2f]/40 hover:bg-white">
-                {state}
-              </a>
-            </Link>
-          ))}
+        <div className="mx-auto mt-8 max-w-md">
+          <label
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
+            htmlFor="catalog-state-select"
+          >
+            Select a state
+          </label>
+          <div className="mt-2 rounded-xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm">
+            <select
+              id="catalog-state-select"
+              className="w-full bg-transparent text-sm font-semibold text-[#2f4a2f]"
+              defaultValue=""
+              onChange={handleStateChange}
+            >
+              <option value="" disabled>
+                Choose a state
+              </option>
+              {US_STATES.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
       </section>
 
@@ -106,28 +131,25 @@ export default function ToursCatalog() {
             Use these as placeholders for city pages and specific tour listings.
           </p>
         </div>
-        <div className="mt-8 grid gap-6 md:grid-cols-2">
+        <div className="mt-8 space-y-4">
           {EUROPE_CITIES.map((region) => (
-            <div
+            <details
               key={region.region}
               className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm"
             >
-              <h3 className="text-base font-semibold text-[#1f2a1f]">
+              <summary className="cursor-pointer list-none text-base font-semibold text-[#1f2a1f]">
                 {region.region}
-              </h3>
+              </summary>
               <div className="mt-4 grid gap-2 sm:grid-cols-2">
                 {region.cities.map((city) => (
-                  <Link
-                    key={city}
-                    href={`/tours/europe/${slugify(city)}`}
-                  >
+                  <Link key={city} href={`/tours/europe/${slugify(city)}`}>
                     <a className="rounded-lg border border-black/10 bg-white px-3 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:border-[#2f4a2f]/40 hover:bg-white/90">
                       {city}
                     </a>
                   </Link>
                 ))}
               </div>
-            </div>
+            </details>
           ))}
         </div>
       </section>
