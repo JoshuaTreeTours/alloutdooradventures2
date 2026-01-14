@@ -3,21 +3,12 @@ import { Link } from "wouter";
 
 import CollectionGrid from "../components/CollectionGrid";
 import DestinationCard from "../components/DestinationCard";
-import DestinationFilterBar from "../components/DestinationFilterBar";
 import EditorialSpotlight from "../components/EditorialSpotlight";
 import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
+import { ACTIVITY_PAGES } from "../data/tourCatalog";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
-
-const HOME_FILTERS = [
-  { label: "Coastal escapes", href: "/destinations?theme=coastal" },
-  { label: "High alpine", href: "/destinations?theme=alpine" },
-  { label: "Family friendly", href: "/destinations?theme=family" },
-  { label: "Road trips", href: "/destinations?theme=road-trip" },
-  { label: "Desert days", href: "/destinations?theme=desert" },
-  { label: "Waterfront", href: "/destinations?theme=waterfront" },
-];
 
 const COLLECTIONS = [
   {
@@ -192,11 +183,50 @@ export default function Home() {
           </div>
         </section>
 
-        <DestinationFilterBar
-          title="What kind of adventure are you after?"
-          description="Quickly jump into the right mood, from coastal escapes to rugged road trips."
-          filters={HOME_FILTERS}
-        />
+        <section className="mx-auto max-w-6xl px-6 py-16">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Find your next tour
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              What adventure are you looking for?
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm text-[#405040] md:text-base">
+              Choose a tour style to explore the destinations and itineraries
+              that fit your pace.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {ACTIVITY_PAGES.map((activity) => (
+              <Link
+                key={activity.slug}
+                href={`/tours/activities/${activity.slug}`}
+              >
+                <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+                  <div className="relative h-44">
+                    <Image
+                      src={activity.image}
+                      fallbackSrc="/hero.jpg"
+                      alt=""
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col gap-2 p-5">
+                    <h3 className="text-base font-semibold text-[#1f2a1f]">
+                      {activity.title}
+                    </h3>
+                    <p className="text-sm text-[#405040] leading-relaxed">
+                      {activity.description}
+                    </p>
+                    <span className="mt-auto text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                      Explore {activity.title} →
+                    </span>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <CollectionGrid
           eyebrow="Curated collections"

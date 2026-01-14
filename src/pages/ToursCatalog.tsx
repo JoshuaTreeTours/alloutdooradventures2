@@ -1,131 +1,11 @@
 import { Link } from "wouter";
 
-const ACTIVITY_CATEGORIES = [
-  {
-    title: "Hiking & trekking",
-    description: "Guided hikes, summit pushes, and scenic day walks.",
-    href: "/tours?activity=hiking",
-  },
-  {
-    title: "Cycling & MTB",
-    description: "Road rides, gravel routes, and mountain bike loops.",
-    href: "/tours?activity=cycling",
-  },
-  {
-    title: "Detours & day trips",
-    description: "Short add-ons, food stops, and half-day excursions.",
-    href: "/tours?activity=detours",
-  },
-  {
-    title: "Multi-day adventures",
-    description: "Overnights, hut trips, and multi-day guided loops.",
-    href: "/tours?activity=multi-day",
-  },
-];
-
-const US_STATES = [
-  "Alabama",
-  "Alaska",
-  "Arizona",
-  "Arkansas",
-  "California",
-  "Colorado",
-  "Connecticut",
-  "Delaware",
-  "Florida",
-  "Georgia",
-  "Hawaii",
-  "Idaho",
-  "Illinois",
-  "Indiana",
-  "Iowa",
-  "Kansas",
-  "Kentucky",
-  "Louisiana",
-  "Maine",
-  "Maryland",
-  "Massachusetts",
-  "Michigan",
-  "Minnesota",
-  "Mississippi",
-  "Missouri",
-  "Montana",
-  "Nebraska",
-  "Nevada",
-  "New Hampshire",
-  "New Jersey",
-  "New Mexico",
-  "New York",
-  "North Carolina",
-  "North Dakota",
-  "Ohio",
-  "Oklahoma",
-  "Oregon",
-  "Pennsylvania",
-  "Rhode Island",
-  "South Carolina",
-  "South Dakota",
-  "Tennessee",
-  "Texas",
-  "Utah",
-  "Vermont",
-  "Virginia",
-  "Washington",
-  "West Virginia",
-  "Wisconsin",
-  "Wyoming",
-];
-
-const EUROPE_CITIES = [
-  {
-    region: "United Kingdom",
-    cities: ["London", "Edinburgh", "Bath", "Manchester", "Bristol"],
-  },
-  {
-    region: "France",
-    cities: ["Paris", "Nice", "Lyon", "Bordeaux", "Chamonix"],
-  },
-  {
-    region: "Italy",
-    cities: ["Rome", "Florence", "Milan", "Venice", "Naples"],
-  },
-  {
-    region: "Spain",
-    cities: ["Barcelona", "Madrid", "Seville", "Valencia", "Bilbao"],
-  },
-  {
-    region: "Portugal",
-    cities: ["Lisbon", "Porto", "Madeira", "Faro"],
-  },
-  {
-    region: "Switzerland",
-    cities: ["Zurich", "Lucerne", "Interlaken", "Zermatt"],
-  },
-  {
-    region: "Germany",
-    cities: ["Berlin", "Munich", "Hamburg", "Cologne"],
-  },
-  {
-    region: "Netherlands",
-    cities: ["Amsterdam", "Rotterdam", "Utrecht"],
-  },
-  {
-    region: "Greece",
-    cities: ["Athens", "Santorini", "Crete"],
-  },
-  {
-    region: "Nordics",
-    cities: ["Copenhagen", "Stockholm", "Oslo", "Reykjavik", "Helsinki"],
-  },
-];
-
-const slugify = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^\w\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
+import {
+  ACTIVITY_PAGES,
+  EUROPE_CITIES,
+  US_STATES,
+  slugify,
+} from "../data/tourCatalog";
 
 export default function ToursCatalog() {
   return (
@@ -168,8 +48,11 @@ export default function ToursCatalog() {
           </h2>
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          {ACTIVITY_CATEGORIES.map((category) => (
-            <Link key={category.title} href={category.href}>
+          {ACTIVITY_PAGES.map((category) => (
+            <Link
+              key={category.title}
+              href={`/tours/activities/${category.slug}`}
+            >
               <a className="flex h-full flex-col justify-between rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                 <div>
                   <h3 className="text-base font-semibold text-[#1f2a1f]">
