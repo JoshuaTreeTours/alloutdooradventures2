@@ -9,6 +9,29 @@ import { featuredDestinations } from "../data/destinations";
 import { ACTIVITY_PAGES } from "../data/tourCatalog";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // put your hero image in /public/hero.jpg
+const HERO_ACTIVITY_SPOTLIGHTS = [
+  {
+    title: "Cycling",
+    description: "Road rides, gravel loops, and guided bike tours.",
+    image:
+      ACTIVITY_PAGES.find((activity) => activity.slug === "cycling")?.image ??
+      "/hero.jpg",
+  },
+  {
+    title: "Hiking",
+    description: "Trail days with alpine views and lakeside vistas.",
+    image:
+      ACTIVITY_PAGES.find((activity) => activity.slug === "hiking")?.image ??
+      "/hero.jpg",
+  },
+  {
+    title: "Canoeing",
+    description: "Paddle-ready lakes and calm water excursions.",
+    image:
+      ACTIVITY_PAGES.find((activity) => activity.slug === "sailing-boat")
+        ?.image ?? "/hero.jpg",
+  },
+];
 
 const COLLECTIONS = [
   {
@@ -149,10 +172,10 @@ export default function Home() {
               src={HERO_IMAGE_URL}
               fallbackSrc="/hero.jpg"
               alt=""
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover brightness-110 saturate-110"
             />
-            {/* Dark overlay for readable text */}
-            <div className="absolute inset-0 bg-black/35" />
+            {/* Light overlay for readable text */}
+            <div className="absolute inset-0 bg-black/20" />
 
             {/* Content */}
             <div className="relative px-6 py-20 md:px-16 md:py-28 text-center text-white">
@@ -178,6 +201,32 @@ export default function Home() {
                     View Tours
                   </a>
                 </Link>
+              </div>
+
+              <div className="mt-10 grid gap-4 sm:grid-cols-3">
+                {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
+                  <div
+                    key={activity.title}
+                    className="overflow-hidden rounded-2xl border border-white/20 bg-white/10 text-left shadow-lg backdrop-blur-sm"
+                  >
+                    <div className="relative h-28 sm:h-32">
+                      <Image
+                        src={activity.image}
+                        fallbackSrc="/hero.jpg"
+                        alt={activity.title}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div className="space-y-1 px-4 py-3">
+                      <div className="text-sm font-semibold">
+                        {activity.title}
+                      </div>
+                      <div className="text-xs text-white/80">
+                        {activity.description}
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
