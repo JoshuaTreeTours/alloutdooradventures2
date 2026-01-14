@@ -251,6 +251,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
             <MapEmbed
               title={`${state.name} featured cities map`}
               locations={mapLocations}
+              query={state.name}
             />
           </div>
         </div>
