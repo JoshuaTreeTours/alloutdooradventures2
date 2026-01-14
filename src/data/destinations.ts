@@ -1055,7 +1055,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
     featuredDescription:
       "Remote hot springs, dark-sky nights, and wide-open desert basins.",
     heroImage:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+      "/images/nevada/nevada-hero.png",
     intro:
       "Nevada is a high-desert playground of basin-and-range mountains, quiet hot springs, and wide-open horizons.",
     longDescription: `Nevada is the ultimate open-road adventure, a state built on vast basins, rugged mountain ranges, and desert skies that stretch forever. It is a destination that rewards explorers who love solitude, hot springs, and stargazing nights. Nevada’s landscapes are raw and dramatic, offering outdoor experiences that feel expansive and unhurried.
