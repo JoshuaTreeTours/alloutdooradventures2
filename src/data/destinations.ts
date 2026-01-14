@@ -80,7 +80,7 @@ export const states: StateDestination[] = [
     featuredDescription:
       "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
     heroImage:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "/images/california/california-hero.jpg",
     intro:
       "California is a choose-your-own-adventure state, pairing Pacific coastlines with desert basins and granite peaks in a single road trip.",
     longDescription: `California is a masterclass in variety for outdoor travelers. Within a single day you can watch dawn break over the Mojave Desert, spend an afternoon paddling a glassy alpine lake, and still catch sunset along the Pacific. The state stretches almost 800 miles from north to south, which means climates, ecosystems, and travel styles change quickly. That range creates the perfect playground for weekend escapes and weeklong epic loops alike. Whether you crave redwood shade, granite peaks, coastal cliffs, or sprawling desert basins, California delivers a layered itinerary that always feels new.
