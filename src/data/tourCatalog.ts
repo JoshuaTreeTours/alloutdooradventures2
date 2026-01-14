@@ -5,7 +5,7 @@ export const ACTIVITY_PAGES = [
     description:
       "Ride iconic roads, coastal loops, and cross-country routes with local guides.",
     image:
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1400&q=80",
+      "/images/cycling-hero.jpg",
   },
   {
     slug: "hiking",
