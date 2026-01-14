@@ -763,7 +763,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
     featuredDescription:
       "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
     heroImage:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+      "/images/arizona/arizona-hero.jpg",
     intro:
       "Arizona is defined by canyon country and high desert skies, offering red rock hikes, alpine forests, and legendary sunsets.",
     longDescription: `Arizona is a land of deep canyons, sculpted mesas, and sky that seems to stretch forever. It is a destination that rewards early starts and patient exploration, where the desert teaches a slower rhythm and the landscapes expand in every direction. The state’s outdoor appeal begins with the Grand Canyon, but the real magic lies in the layers—high plateaus, red-rock amphitheaters, pine forests, and hidden river corridors that invite you to explore beyond the obvious.
