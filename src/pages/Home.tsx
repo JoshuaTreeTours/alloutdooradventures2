@@ -26,10 +26,10 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
   },
   {
     title: "Canoeing",
-    description: "Paddle-ready lakes and calm water excursions.",
+    description: "Worldwide paddle adventures",
     image:
       ACTIVITY_PAGES.find((activity) => activity.slug === "sailing-boat")
-        ?.image ?? "/hero.jpg",
+        ?.image ?? "/images/canoe-hero.jpg",
   },
 ];
 
