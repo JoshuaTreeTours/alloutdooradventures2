@@ -184,6 +184,11 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="mx-auto max-w-4xl px-6 pb-16 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2f4a2f]/80 md:text-base">
+            think out of the box you must first get out of it
+          </p>
+        </section>
 
         {/* ACTIVITIES */}
         <section className="mx-auto max-w-6xl px-6 py-16">
