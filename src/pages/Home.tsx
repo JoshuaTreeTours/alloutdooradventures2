@@ -22,7 +22,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     description: "Trail days with alpine views and lakeside vistas.",
     slug: "hiking",
     image:
-      "/images/hiking-hero.jpg",
+      "/images/hiking-hero3.jpg",
   },
   {
     title: "Canoeing",
