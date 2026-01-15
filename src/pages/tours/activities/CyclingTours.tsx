@@ -1,7 +1,9 @@
 import ActivityCatalogTemplate from "../../../templates/ActivityCatalogTemplate";
-import { ACTIVITY_PAGES } from "../../../data/tourCatalog";
+import { ADVENTURE_ACTIVITY_PAGES } from "../../../data/tourCatalog";
 
-const cycling = ACTIVITY_PAGES.find((activity) => activity.slug === "cycling");
+const cycling = ADVENTURE_ACTIVITY_PAGES.find(
+  (activity) => activity.slug === "cycling"
+);
 
 export default function CyclingTours() {
   if (!cycling) {

@@ -1,7 +1,7 @@
 import ActivityCatalogTemplate from "../../../templates/ActivityCatalogTemplate";
-import { ACTIVITY_PAGES } from "../../../data/tourCatalog";
+import { ADVENTURE_ACTIVITY_PAGES } from "../../../data/tourCatalog";
 
-const sailingBoat = ACTIVITY_PAGES.find(
+const sailingBoat = ADVENTURE_ACTIVITY_PAGES.find(
   (activity) => activity.slug === "sailing-boat"
 );
 

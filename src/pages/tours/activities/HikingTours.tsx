@@ -1,7 +1,9 @@
 import ActivityCatalogTemplate from "../../../templates/ActivityCatalogTemplate";
-import { ACTIVITY_PAGES } from "../../../data/tourCatalog";
+import { ADVENTURE_ACTIVITY_PAGES } from "../../../data/tourCatalog";
 
-const hiking = ACTIVITY_PAGES.find((activity) => activity.slug === "hiking");
+const hiking = ADVENTURE_ACTIVITY_PAGES.find(
+  (activity) => activity.slug === "hiking"
+);
 
 export default function HikingTours() {
   if (!hiking) {
