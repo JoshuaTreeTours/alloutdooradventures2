@@ -2181,9 +2181,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         intro:
           "Seattle is a vibrant city base with easy access to Puget Sound, mountain trails, and island escapes. It is perfect for mixing urban energy with outdoor excursions.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "/images/washington/Seattle.jpg",
         ],
         activityTags: ["paddling", "urban-trails", "alpine"],
         whereItIs: [
