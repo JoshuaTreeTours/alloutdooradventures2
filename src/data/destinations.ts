@@ -520,9 +520,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Santa Barbara pairs Mediterranean-style charm with coastal trails and mellow ocean adventures. It is a relaxed basecamp where beach mornings, canyon hikes, and vineyard afternoons all fit in the same weekend.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "/images/california/cities/Santa-Barbara.jpg",
         ],
         activityTags: ["coastal", "hiking", "wine-country"],
         whereItIs: [
