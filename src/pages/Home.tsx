@@ -14,6 +14,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
   {
     title: "Cycling",
     description: "Road rides, gravel loops, and guided bike tours.",
+    slug: "cycling",
     image:
       ACTIVITY_PAGES.find((activity) => activity.slug === "cycling")?.image ??
       "/hero.jpg",
@@ -21,6 +22,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
   {
     title: "Hiking",
     description: "Trail days with alpine views and lakeside vistas.",
+    slug: "hiking",
     image:
       ACTIVITY_PAGES.find((activity) => activity.slug === "hiking")?.image ??
       "/hero.jpg",
@@ -28,6 +30,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
   {
     title: "Canoeing",
     description: "Worldwide paddle adventures",
+    slug: "sailing-boat",
     image:
       ACTIVITY_PAGES.find((activity) => activity.slug === "sailing-boat")
         ?.image ?? "/images/canoe-hero.jpg",
@@ -203,25 +206,29 @@ export default function Home() {
 
               <div className="mt-10 grid gap-4 sm:grid-cols-3">
                 {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
-                  <div
+                  <Link
                     key={activity.title}
-                    className="overflow-hidden rounded-2xl border border-white/20 bg-white/10 text-left shadow-lg backdrop-blur-sm"
+                    href={`/tours/activities/${activity.slug}`}
                   >
-                    <div className="relative h-28 sm:h-32">
-                      <Image
-                        src={activity.image}
-                        fallbackSrc="/hero.jpg"
-                        alt={activity.title}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div className="space-y-1 px-4 py-3">
-                      <div className="text-sm font-semibold">{activity.title}</div>
-                      <div className="text-xs text-white/80">
-                        {activity.description}
+                    <a className="group overflow-hidden rounded-2xl border border-white/20 bg-white/10 text-left shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:border-white/40 hover:bg-white/15">
+                      <div className="relative h-28 sm:h-32">
+                        <Image
+                          src={activity.image}
+                          fallbackSrc="/hero.jpg"
+                          alt={activity.title}
+                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                        />
                       </div>
-                    </div>
-                  </div>
+                      <div className="space-y-1 px-4 py-3">
+                        <div className="text-sm font-semibold">
+                          {activity.title}
+                        </div>
+                        <div className="text-xs text-white/80">
+                          {activity.description}
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
                 ))}
               </div>
             </div>
