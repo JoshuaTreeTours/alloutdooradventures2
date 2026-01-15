@@ -112,6 +112,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
 
 export default function CityTemplate({ state, city }: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
+  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -144,6 +145,13 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
                 {tag.replace(/-/g, " ")}
               </span>
             ))}
+          </div>
+          <div>
+            <Link href={toursHref}>
+              <a className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#2f4a2f] shadow-lg transition hover:bg-white/90">
+                Book tours
+              </a>
+            </Link>
           </div>
           <ImageSlider images={city.heroImages} title={city.name} />
         </div>
@@ -249,9 +257,9 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
             {city.toursCopy.map((paragraph) => (
               <p key={paragraph}>
                 {paragraph}{" "}
-                <Link href="/tours">
+                <Link href={toursHref}>
                   <a className="font-semibold text-[#2f4a2f]">
-                    TODO: link to tours
+                    Explore tours in {city.name}
                   </a>
                 </Link>
               </p>
