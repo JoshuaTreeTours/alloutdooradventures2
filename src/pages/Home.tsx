@@ -158,13 +158,11 @@ export default function Home() {
             {/* Content */}
             <div className="relative px-6 py-20 text-center text-white md:px-16 md:py-28">
               <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-                Find Your Next Adventure
+                To think out of the box, you must first have to step outside.
               </h1>
 
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">
-                The ultimate field guide to outdoor experiences across America.
-                <br />
-                From desert canyons to mountain peaks, we help you explore the wild.
+                To think out of the box, you must first get out of it.
               </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
