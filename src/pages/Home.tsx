@@ -183,7 +183,7 @@ export default function Home() {
 
             </div>
           </div>
-          <p className="mx-auto mt-6 max-w-3xl text-center text-4xl font-semibold text-[#2f4a2f] md:text-5xl">
+          <p className="mx-auto mt-6 max-w-3xl text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
             “To THINK out of the box, you must first GET OUT of the box.”
           </p>
         </section>
