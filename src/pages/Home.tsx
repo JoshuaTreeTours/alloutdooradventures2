@@ -6,7 +6,6 @@ import DestinationCard from "../components/DestinationCard";
 import EditorialSpotlight from "../components/EditorialSpotlight";
 import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
-import { ACTIVITY_PAGES } from "../data/tourCatalog";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
 
@@ -28,9 +27,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     title: "Canoeing",
     description: "Worldwide paddle adventures",
     slug: "sailing-boat",
-    image:
-      ACTIVITY_PAGES.find((activity) => activity.slug === "sailing-boat")
-        ?.image ?? "/images/canoe-hero.jpg",
+    image: "/images/canoe-hero.jpg",
   },
 ];
 
@@ -201,61 +198,24 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
-                  <Link
-                    key={activity.title}
-                    href={`/tours/activities/${activity.slug}`}
-                  >
-                    <a className="group overflow-hidden rounded-2xl border border-white/20 bg-white/10 text-left shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:border-white/40 hover:bg-white/15">
-                      <div className="relative h-28 sm:h-32">
-                        <Image
-                          src={activity.image}
-                          fallbackSrc="/hero.jpg"
-                          alt={activity.title}
-                          className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                      <div className="space-y-1 px-4 py-3">
-                        <div className="text-sm font-semibold">
-                          {activity.title}
-                        </div>
-                        <div className="text-xs text-white/80">
-                          {activity.description}
-                        </div>
-                      </div>
-                    </a>
-                  </Link>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
         {/* ACTIVITIES */}
         <section className="mx-auto max-w-6xl px-6 py-16">
-          <div className="text-center">
-            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-              Find your next tour
-            </span>
-            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              How Long?
-            </h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm text-[#405040] md:text-base">
-              Choose a tour style to explore the destinations and itineraries that fit
-              your pace.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {ACTIVITY_PAGES.map((activity) => (
-              <Link key={activity.slug} href={`/tours/activities/${activity.slug}`}>
-                <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+          <div className="grid gap-6 md:grid-cols-3">
+            {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
+              <Link
+                key={activity.title}
+                href={`/tours/activities/${activity.slug}`}
+              >
+                <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative h-44">
                     <Image
                       src={activity.image}
                       fallbackSrc="/hero.jpg"
-                      alt=""
+                      alt={activity.title}
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                   </div>
