@@ -3,7 +3,6 @@ import { Link } from "wouter";
 
 import CollectionGrid from "../components/CollectionGrid";
 import DestinationCard from "../components/DestinationCard";
-import EditorialSpotlight from "../components/EditorialSpotlight";
 import Image from "../components/Image";
 import { featuredDestinations } from "../data/destinations";
 
@@ -60,22 +59,6 @@ const COLLECTIONS = [
     badge: "Basecamp",
   },
 ];
-
-const SPOTLIGHT = {
-  eyebrow: "Trip planning",
-  title: "Build a trip that feels custom, not cookie-cutter",
-  description:
-    "We mix local insight with flexible planning so you can stack the right hikes, drives, and tours into one seamless itinerary.",
-  bullets: [
-    "Seasonal guidance for trail access and weather shifts.",
-    "Mix-and-match day plans curated by local experts.",
-    "Suggested stays that keep you close to the action.",
-  ],
-  ctaLabel: "Start planning",
-  ctaHref: "/destinations",
-  image:
-    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
-};
 
 export default function Home() {
   const isDebugEnabled =
@@ -242,8 +225,6 @@ export default function Home() {
           description="I’ll be featuring the best-selling tours."
           items={COLLECTIONS}
         />
-
-        <EditorialSpotlight {...SPOTLIGHT} />
 
         {/* WHY CHOOSE */}
         <section
