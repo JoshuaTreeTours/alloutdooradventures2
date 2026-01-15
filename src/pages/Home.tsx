@@ -162,7 +162,7 @@ export default function Home() {
               </h1>
 
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">
-                The ultimate field guide to outdoor experiences across America.
+                To think out of the box, you must first step outside.
                 <br />
                 From desert canyons to mountain peaks, we help you explore the wild.
               </p>
