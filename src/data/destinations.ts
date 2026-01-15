@@ -2337,7 +2337,7 @@ export const destinations: Destination[] = states.map((state) => ({
   description: state.description,
   featuredDescription: state.featuredDescription,
   image: state.heroImage,
-  href: `/destinations/${state.slug}`,
+  href: `/destinations/states/${state.slug}`,
 }));
 
 export const featuredDestinations = destinations;
