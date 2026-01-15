@@ -184,8 +184,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-4xl px-6 pb-16 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[#2f4a2f]/80 md:text-base">
+        <section className="mx-auto max-w-4xl px-6 py-12 text-center md:py-16">
+          <p className="text-base font-semibold uppercase tracking-[0.4em] text-[#2f4a2f]/80 md:text-xl">
             think out of the box you must first get out of it
           </p>
         </section>
