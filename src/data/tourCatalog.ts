@@ -1,21 +1,5 @@
 export const ACTIVITY_PAGES = [
   {
-    slug: "cycling",
-    title: "Cycling Adventures",
-    description:
-      "Ride iconic roads, coastal loops, and cross-country routes with local guides.",
-    image:
-      "/images/cycling-hero.jpg",
-  },
-  {
-    slug: "hiking",
-    title: "Hiking Adventures",
-    description:
-      "Guided day hikes with big views, alpine lakes, and can’t-miss trailheads.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
     slug: "day-adventures",
     title: "Day Adventures",
     description:
