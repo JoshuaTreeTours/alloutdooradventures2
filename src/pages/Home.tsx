@@ -15,17 +15,14 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     title: "Cycling",
     description: "Road rides, gravel loops, and guided bike tours.",
     slug: "cycling",
-    image:
-      ACTIVITY_PAGES.find((activity) => activity.slug === "cycling")?.image ??
-      "/hero.jpg",
+    image: "/images/cycling-hero.jpg",
   },
   {
     title: "Hiking",
     description: "Trail days with alpine views and lakeside vistas.",
     slug: "hiking",
     image:
-      ACTIVITY_PAGES.find((activity) => activity.slug === "hiking")?.image ??
-      "/hero.jpg",
+      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80",
   },
   {
     title: "Canoeing",
@@ -242,7 +239,7 @@ export default function Home() {
               Find your next tour
             </span>
             <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              What adventure are you looking for?
+              How Long?
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm text-[#405040] md:text-base">
               Choose a tour style to explore the destinations and itineraries that fit
@@ -281,8 +278,8 @@ export default function Home() {
 
         <CollectionGrid
           eyebrow="Curated collections"
-          title="Handpicked ways to explore"
-          description="Start with a curated collection, then fine-tune your trip once the inspiration strikes."
+          title="Trending tours"
+          description="I’ll be featuring the best-selling tours."
           items={COLLECTIONS}
         />
 
