@@ -15,9 +15,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     title: "Cycling",
     description: "Road rides, gravel loops, and guided bike tours.",
     slug: "cycling",
-    image:
-      ACTIVITY_PAGES.find((activity) => activity.slug === "cycling")?.image ??
-      "/hero.jpg",
+    image: "/images/cycling-hero.jpg",
   },
   {
     title: "Hiking",
