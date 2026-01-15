@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
+import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
 import ToursIndex from "./pages/ToursIndex";
@@ -14,6 +15,7 @@ import DetoursTours from "./pages/tours/activities/DetoursTours";
 import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import SailingBoatTours from "./pages/tours/activities/SailingBoatTours";
+import TourDetail from "./pages/tours/TourDetail";
 
 export default function App() {
   return (
@@ -30,6 +32,7 @@ export default function App() {
           component={CityRoute}
         />
         <Route path="/destinations/states/:stateSlug" component={StateRoute} />
+        <Route path="/destinations/:stateSlug" component={StateLandingRoute} />
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
@@ -45,6 +48,7 @@ export default function App() {
           path="/tours/activities/sailing-boat"
           component={SailingBoatTours}
         />
+        <Route path="/tours/:destination/:slug" component={TourDetail} />
 
         <Route>Not Found</Route>
       </Switch>
