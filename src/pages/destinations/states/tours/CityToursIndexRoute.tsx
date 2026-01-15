@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 
+import Image from "../../../../components/Image";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import { getCityTours } from "../../../../data/cityTours";
 
@@ -31,6 +32,7 @@ export default function CityToursIndexRoute({
   const tours = getCityTours(city.name);
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
+  const heroImage = city.heroImages[0] ?? "/hero.jpg";
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -64,7 +66,15 @@ export default function CityToursIndexRoute({
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
+          <Image
+            src={heroImage}
+            fallbackSrc="/hero.jpg"
+            alt={`${city.name} hero`}
+            className="h-64 w-full object-cover md:h-80"
+          />
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {tours.map((tour) => (
             <div
               key={tour.slug}

@@ -145,9 +145,11 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
                 {tag.replace(/-/g, " ")}
               </span>
             ))}
+          </div>
+          <div>
             <Link href={toursHref}>
-              <a className="rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-white/90">
-                Tours
+              <a className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#2f4a2f] shadow-lg transition hover:bg-white/90">
+                Book tours
               </a>
             </Link>
           </div>
