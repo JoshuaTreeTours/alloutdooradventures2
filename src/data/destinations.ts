@@ -442,9 +442,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Los Angeles blends iconic city culture with easy access to beaches, canyon trails, and coastal viewpoints. It is a choose-your-own-pace destination with endless outdoor options.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "/images/california/cities/los-angeles.jpg",
         ],
         activityTags: ["coastal", "hiking", "urban-trails"],
         whereItIs: [
