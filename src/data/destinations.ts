@@ -363,9 +363,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "San Francisco pairs classic city energy with quick access to rugged coastal trails and bayfront parks. It is ideal for travelers who want outdoor mornings and city evenings without long drives.",
         heroImages: [
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+          "/images/california/cities/san-francisco-hero.jpg",
         ],
         activityTags: ["coastal", "urban-trails", "scenic"],
         whereItIs: [
