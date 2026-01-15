@@ -64,7 +64,7 @@ export default function CollectionGrid({
       <div
         ref={sectionRef}
         className={`mt-10 grid gap-6 transition-all duration-[250ms] ease-out md:grid-cols-3 ${
-          isVisible ? "translate-x-0 opacity-100" : "translate-x-6 opacity-0"
+          isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         }`}
       >
         {items.map((item) => (
