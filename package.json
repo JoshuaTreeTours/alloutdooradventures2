@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "vite --host",
     "prebuild": "tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "vite build",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
