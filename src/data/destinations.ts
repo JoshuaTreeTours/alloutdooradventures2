@@ -606,9 +606,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         intro:
           "Yosemite is California’s granite cathedral, famous for towering cliffs, thundering waterfalls, and sweeping meadow views. It is a must for hikers who want iconic scenery.",
         heroImages: [
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "public/images/california/cities/yosemite.jpg",
         ],
         activityTags: ["alpine", "waterfalls", "hiking"],
         whereItIs: [
