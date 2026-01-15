@@ -510,6 +510,86 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         ],
       },
       {
+        name: "Santa Barbara",
+        slug: "santa-barbara",
+        stateSlug: "california",
+        region: "Central Coast",
+        lat: 34.4208,
+        lng: -119.6982,
+        shortDescription: "Coastal bluffs, wine-country days, and easygoing surf.",
+        intro:
+          "Santa Barbara pairs Mediterranean-style charm with coastal trails and mellow ocean adventures. It is a relaxed basecamp where beach mornings, canyon hikes, and vineyard afternoons all fit in the same weekend.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["coastal", "hiking", "wine-country"],
+        whereItIs: [
+          "Santa Barbara sits along the Central Coast between Los Angeles and Big Sur, backed by the Santa Ynez Mountains and fronted by a calm, south-facing stretch of the Pacific. The city’s beaches, bluffs, and harbor are all within a short drive of downtown.",
+          "The vibe is laid-back and sunlit, with palm-lined streets, Spanish-style architecture, and a steady rhythm of outdoor time mixed with cafés and wine tastings.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the Inspiration Point trail in the Santa Ynez Mountains for panoramic views of the coastline and Channel Islands.",
+          lakesWater:
+            "Launch a kayak or paddleboard from the harbor and glide along the waterfront with mountain views behind you.",
+          desertForest:
+            "Head into the Santa Ynez foothills for oak-lined trails and shaded canyon hikes that feel cooler than the coast.",
+          cycling:
+            "Ride the Cabrillo Bike Path for a scenic, mostly flat coastal loop past beaches and the wharf.",
+          scenicDrives:
+            "Cruise Highway 154 through the mountains to the Santa Ynez Valley for vineyards and lake overlooks.",
+          seasonalNotes:
+            "Spring and fall bring the clearest skies and mild temperatures, while summer favors early hikes and long beach days.",
+        },
+        thingsToDo: [
+          "Walk the bluffs and tide pools at Shoreline Park.",
+          "Paddle around the Santa Barbara Harbor and Stearns Wharf.",
+          "Hike Inspiration Point for sweeping coastal views.",
+          "Explore the Funk Zone for wine tasting and local art.",
+          "Spend a day in the Santa Ynez Valley vineyards.",
+        ],
+        toursCopy: [
+          "Guided coastal paddles keep you close to shore while spotting sea lions and seabirds.",
+          "A small-group hiking tour can pair canyon trails with a post-hike tasting room visit.",
+          "If you want a relaxed mix, book a half-day outing and keep the afternoon open for the beach.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: coastal walk at Shoreline Park and coffee downtown.",
+            "Afternoon: harbor paddle or sail and lunch on the waterfront.",
+            "Evening: sunset at East Beach and dinner in the Funk Zone.",
+          ],
+          dayTwo: [
+            "Morning: hike Inspiration Point or Rattlesnake Canyon.",
+            "Afternoon: drive to Santa Ynez Valley for wine tasting.",
+            "Evening: casual dinner on State Street.",
+          ],
+        },
+        gettingThere: [
+          "Santa Barbara Airport offers short regional flights and is about 15 minutes from downtown.",
+          "Driving from Los Angeles takes about 1.5–2.5 hours depending on traffic and coastal stops.",
+        ],
+        faq: [
+          {
+            question: "Do I need a car in Santa Barbara?",
+            answer:
+              "A car helps for mountain trails and wine country, but the waterfront and downtown are bikeable and walkable.",
+          },
+          {
+            question: "What is the best time to visit?",
+            answer:
+              "Spring and fall bring mild weather and fewer crowds, with clear skies for coastal views.",
+          },
+          {
+            question: "Is it easy to combine beach time and hiking?",
+            answer:
+              "Yes, trailheads sit just above the city, so you can hike in the morning and be at the beach by afternoon.",
+          },
+        ],
+      },
+      {
         // TODO: confirm city name
         name: "Palm Springs",
         slug: "palm-springs",
