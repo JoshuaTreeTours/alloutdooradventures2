@@ -7,7 +7,6 @@ import {
 } from "../../../../data/tourFallbacks";
 import {
   getAffiliateDisclosure,
-  getBookCtaUrl,
   getTourBySlugs,
 } from "../../../../data/tours";
 
@@ -145,19 +144,11 @@ export default function CityTourBookingRoute({
             Having trouble with the embed? Use the booking button to open the
             reservation page in a new tab.
           </p>
-          <a
-            href={getBookCtaUrl(tour)}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            onClick={() =>
-              console.log(
-                `[Open booking in new tab] ${city.name} · ${tour.title}`,
-              )
-            }
-          >
-            BOOK
-          </a>
+          <Link href={`${toursHref}/${tour.slug}`}>
+            <a className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+              BOOK
+            </a>
+          </Link>
           {disclosure ? (
             <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
           ) : null}
