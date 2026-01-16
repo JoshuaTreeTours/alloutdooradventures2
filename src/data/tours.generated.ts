@@ -32,7 +32,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/107822/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Jolla Cove 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -65,7 +65,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Jolla Cove Kelp Forest 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -98,7 +98,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PRIVATE La Jolla 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -131,7 +131,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "DC's Ultimate Refresher Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -162,7 +162,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/group3aviation/items/53931/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/group3aviation/items/53931/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/group3aviation/items/53931/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Coast & Canyons Helicopter Tour is a curated experience in Los Angeles, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -195,7 +195,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Night Dive 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -228,7 +228,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/227193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Open Water Diver Referral Program is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -256,7 +256,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/614474/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Advanced Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -284,7 +284,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/663868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PRIVATE La Jolla 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -317,7 +317,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/107835/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -350,7 +350,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/226915/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Basic/Intro To Freedive Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -383,7 +383,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/622922/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -411,7 +411,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/highcountryexpeditions/items/602025/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/highcountryexpeditions/items/602025/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/highcountryexpeditions/items/602025/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Day California Salmon Rafting Expedition is a curated experience in McKenzie Bridge, Oregon designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -444,7 +444,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109487/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Advanced Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -477,7 +477,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Master Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -505,7 +505,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/653430/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Southern California Italian Winery & Culinary Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -533,7 +533,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/actiontoursbigbear/items/12398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12398/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Zipline Tour is a curated experience in Big Bear Lake, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -564,7 +564,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wineroutebaja/items/193220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Bufadora Tour in Baja California is a curated experience in Ensenada, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -597,7 +597,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333236/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baycitybike/items/333236/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333236/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private California Sunset Tour is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -625,7 +625,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/388635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388635/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "15 passengers Open Ocean Coastal is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -653,7 +653,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388669/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/388669/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388669/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "15 Passengers Harbor Cruise Weekend is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -681,7 +681,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/479885/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/479885/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/479885/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Promo Weekday Harbor Cruise is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -709,7 +709,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/46445/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/46445/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/46445/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Surf Lessons is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -737,7 +737,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/margarita-adventures/items/476135/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/margarita-adventures/items/476135/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/margarita-adventures/items/476135/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Wild Kids Camp is a curated experience in Santa Margarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -765,7 +765,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/59588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/59588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/59588/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Public Group Surf Lesson is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -793,7 +793,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/156101/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/156101/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/156101/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -825,7 +825,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westpearltours/items/273866/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westpearltours/items/273866/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westpearltours/items/273866/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Mojave Desert, Mount Charleston Lodge    and Resort Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -858,7 +858,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/423373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423373/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Kings Canyon Hiking Tour is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -890,7 +890,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bayareafirearms/items/290181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bayareafirearms/items/290181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bayareafirearms/items/290181/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Classes is a curated experience in Burlingame, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -921,7 +921,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548645/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Cavern Walking Tour is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -952,7 +952,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548651/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548651/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548651/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mammoth Cave Expedition is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -983,7 +983,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baycitybike/items/10201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Sunset Tour is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1011,7 +1011,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283851/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Train and Trolley Rides is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1043,7 +1043,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423379/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/423379/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423379/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Sequoia National Park Tour is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1071,7 +1071,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/98392/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/98392/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/98392/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1099,7 +1099,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283796/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Holstrom Park is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1127,7 +1127,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283810/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Party Caboose Rental is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1158,7 +1158,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667718/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667718/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667718/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Gran Aventura en la Península De Baja California is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1186,7 +1186,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/197747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/197747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/197747/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "1 Hour RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1219,7 +1219,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/290059/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/yosemite-tours/items/290059/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/290059/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Redwoods and California Wine Country Tour is a curated experience in San Bruno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1247,7 +1247,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/307123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/307123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/307123/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hrs. RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1278,7 +1278,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386943/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386943/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386943/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Three Day National Park Tour- Yosemite, Kings Canyon and Sequoia National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1311,7 +1311,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/470345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/470345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/470345/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1342,7 +1342,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667682/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667682/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667682/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 4 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1373,7 +1373,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667686/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667686/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667686/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 5 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1404,7 +1404,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667694/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667694/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667694/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 6 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1435,7 +1435,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667720/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667720/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667720/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Escapada a VIÑEDOS y PLAYA de Baja California is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1466,7 +1466,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667730/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667730/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667730/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ruta de las Misiones de Baja California con Viñedos is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1497,7 +1497,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/469274/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/469274/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/469274/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Three Day National Park Tour- Private is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1525,7 +1525,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/mauichocolatetour/items/612849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/mauichocolatetour/items/612849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mauichocolatetour/items/612849/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Wine & Weave: Benefitting the Hawaiian Civic Clubs of Lahaina and Southern California (Los Angeles, Orange County & San Diego) is a curated experience in Lahaina, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1558,7 +1558,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394248/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/394248/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394248/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Kings Canyon National Park Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1586,7 +1586,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/312483/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/312483/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/312483/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1614,7 +1614,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/412617/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/412617/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/412617/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Hrs. RENTAL RESEVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1647,7 +1647,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pv-yachts/items/537238/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pv-yachts/items/537238/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pv-yachts/items/537238/calendar/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Charter on California 60' | My Christopher is a curated experience in Puerto Vallarta, Jalisco designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1675,7 +1675,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/77116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/77116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/77116/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1703,7 +1703,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/326675/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/326675/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/326675/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Weekend Cab and Caboose Ride is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1735,7 +1735,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386725/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Yosemite Valley HikingTour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1766,7 +1766,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Yosemite Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1794,7 +1794,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485462/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485462/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485462/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Tours is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1822,7 +1822,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283745/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283745/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283745/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • Locomotives is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1850,7 +1850,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283750/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • Electric Streetcars is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1878,7 +1878,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283806/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283806/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283806/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Town Hall is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1906,7 +1906,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283808/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283808/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283808/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Carhouse 4 Rental is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1934,7 +1934,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283813/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283813/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283813/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Charters is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1962,7 +1962,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283823/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Photo/Film Shoot Booking is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -1990,7 +1990,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283853/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283853/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283853/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Museum: Hosted Tours is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2022,7 +2022,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313657/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/313657/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313657/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2054,7 +2054,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386964/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386964/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386964/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private National Park  Day Trip for Central Valley Locals is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2085,7 +2085,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424268/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/424268/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424268/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Central Coast Day Trip- Monterey Bay is a curated experience in Monterey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2116,7 +2116,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424269/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/424269/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424269/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Old Town Sacramento with River Fox Train is a curated experience in Sacramento, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2149,7 +2149,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485366/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485366/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485366/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Wolf Conservation Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2177,7 +2177,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485416/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Enrichment Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2205,7 +2205,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548655/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Middle Earth Cave Expedition is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2236,7 +2236,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386935/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386935/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386935/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Central Coast DayTrip with Kayaking is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2268,7 +2268,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419927/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419927/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419927/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Tour of Kings Canyon National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2299,7 +2299,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westernogc/items/658712/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westernogc/items/658712/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westernogc/items/658712/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Halibut - Pacific & California is a curated experience in Crescent City, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2327,7 +2327,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283831/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283831/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283831/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Dinosaur Express- Featuring Buddy the Dinosaur! is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2360,7 +2360,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394234/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/394234/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394234/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Sequoia National Park Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2388,7 +2388,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/94783/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/94783/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/94783/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Overnight Surf Camp | Laguna Beach is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2416,7 +2416,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284870/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Clearly Explorer | Clear Kayak Charter is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2448,7 +2448,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Tour of Sequoia National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2476,7 +2476,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/572664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/572664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/572664/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Eco Canoe Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2507,7 +2507,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667716/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667716/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667716/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Baja California Viñedos y Ballena Gris Express 4 días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2535,7 +2535,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34228/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34228/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34228/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Hour Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2563,7 +2563,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284520/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/284520/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284520/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "BBQ Boots and Brew: General Admission is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2591,7 +2591,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458850/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/458850/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458850/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sizzling Summer Nights is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2619,7 +2619,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Valley Full Day Small Group Tour & Hike is a curated experience in Oakhurst, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2647,7 +2647,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/603116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/603116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/603116/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Feeding Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2679,7 +2679,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419966/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419966/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419966/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Yosemite Valley Floor Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2707,7 +2707,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519508/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519508/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519508/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite High Country & Mariposa Grove Full Day Small Group Tour & Hike is a curated experience in Oakhurst, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2735,7 +2735,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/415992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/415992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/415992/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Merit Badge Program is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2763,7 +2763,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/521284/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/521284/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/521284/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Fall Victorian Tea is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2791,7 +2791,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12410/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/actiontoursbigbear/items/12410/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12410/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Snowshoe Tour is a curated experience in Big Bear Lake, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2819,7 +2819,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477443/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/477443/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477443/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Perris Appreciation Day is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2847,7 +2847,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519505/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519505/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519505/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2875,7 +2875,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519506/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Two Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2906,7 +2906,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623804/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623804/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623804/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "In-Person California CCW Course - Re-Qualify - Humboldt/Del Norte/Trinity is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2937,7 +2937,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667699/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667699/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667699/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Enamórate de Baja California - Tour Básico - 4 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2965,7 +2965,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34225/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -2993,7 +2993,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34233/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "4hr Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3021,7 +3021,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/37772/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/37772/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/37772/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "One hour gold panning family special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3049,7 +3049,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283846/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Railroadiana Fall Swap Meet is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3077,7 +3077,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/416495/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/416495/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/416495/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "After School Surf Program is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3105,7 +3105,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519500/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519500/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519500/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kings Canyon Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3133,7 +3133,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519502/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sequoia Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3161,7 +3161,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519503/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sequoia & Kings Canyon Two Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3187,7 +3187,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/566132/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/566132/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/566132/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Surfboard and Wetsuit Rentals is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3218,7 +3218,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630597/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaoutdoorfun/items/630597/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630597/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2-Hour ATV or UTV Rental (Unguided) is a curated experience in Phelan, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3249,7 +3249,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632958/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to Napa Wine Country is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3280,7 +3280,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632960/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632960/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632960/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mexico Day Trip with visit to Tijuana, Rosarito, Puerto Nuevo is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3308,7 +3308,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283828/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283828/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283828/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Railroadiana Spring Swap Meet and Pacific Electric Day is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3336,7 +3336,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283841/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Antique Truck Show is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3367,7 +3367,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313667/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/313667/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313667/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private/Group Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3399,7 +3399,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/399992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/399992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/399992/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Two Day Tour- Sequoia and Kings National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3427,7 +3427,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/412193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Turkey Cuddle Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3455,7 +3455,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485499/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485499/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485499/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "School Group Tours is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3486,7 +3486,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/killeryachts/items/570611/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/killeryachts/items/570611/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/killeryachts/items/570611/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "70' Hotel California is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3517,7 +3517,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/609612/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/609612/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/609612/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Business Class Departures is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3548,7 +3548,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630802/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaoutdoorfun/items/630802/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630802/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Walk-Up 2-Hour Rental is a curated experience in Phelan, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3579,7 +3579,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632941/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632941/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632941/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Diego City Driving Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3610,7 +3610,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632947/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632947/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632947/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Los Angeles City Driving Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3641,7 +3641,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632948/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to the City of Las Vegas is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3672,7 +3672,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632951/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to the City of San Francisco is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3703,7 +3703,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632957/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632957/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632957/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to Yosemite National Park is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3735,7 +3735,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/2841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/2841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/2841/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Diego Brewery Tours: California Sunset Brew Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3767,7 +3767,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386983/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Destination Tours: Yolo County Sunflower Getaway is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3798,7 +3798,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386993/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386993/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386993/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Best of Fresno and Clovis Dinner Add On is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3826,7 +3826,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "School Groups - Wolf Conservation Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3854,7 +3854,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283833/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283833/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283833/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Behind the Scenes is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3885,7 +3885,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623820/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Humboldt/Del Norte/Trinity is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3913,7 +3913,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199899/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199899/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199899/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "General Admission Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3941,7 +3941,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199923/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199923/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199923/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -3969,7 +3969,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199924/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199924/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199924/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Treasure Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4000,7 +4000,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419963/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419963/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419963/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Private Yosemite Valley Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4028,7 +4028,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/488267/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/justgetwet/items/488267/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/488267/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Thanksgiving Spearfishing Retreat - Baja California Sur is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4059,7 +4059,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645801/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/lockedandloadeddefense/items/645801/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645801/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW 16-hour INITIAL Permit Course is a curated experience in Gardena, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4087,7 +4087,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/discoverbransonmo/items/298590/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/discoverbransonmo/items/298590/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/discoverbransonmo/items/298590/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Beach Boys California Dreamin' is a curated experience in Branson, Missouri designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4115,7 +4115,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485421/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485421/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485421/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Specialty Tours - Holiday Themed is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4143,7 +4143,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14214/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kayak Rolling (Richmond Plunge) is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4171,7 +4171,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/581571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/581571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/581571/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Fred Harvey Experience is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4202,7 +4202,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95504/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pacificoutfitters-eureka/items/95504/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95504/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Concealed Weapons Course is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4233,7 +4233,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pacificoutfitters-eureka/items/95509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95509/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Re-Qualification - California Concealed Weapons Course is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4261,7 +4261,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394017/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394017/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394017/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Jet Ski Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4292,7 +4292,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623795/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623795/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623795/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "In-Person California CCW Course - Initial - Humboldt/Del Norte/Trinity is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4320,7 +4320,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284863/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "LED Glow Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4348,7 +4348,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/412195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412195/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Equine Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4377,7 +4377,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/565769/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/yosemite-tours/items/565769/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/565769/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Redwoods and California WIne Country Tour with Lunch is a curated experience in San Bruno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4408,7 +4408,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/lockedandloadeddefense/items/645810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645810/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW 8-Hour RENEWAL Permit Course is a curated experience in Gardena, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4436,7 +4436,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/38141/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/38141/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/38141/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Sea Kayak Rescues and Towing Skills Clinic is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4464,7 +4464,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/77003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/77003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/77003/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Packrafting Rescue & Skills Lesson – Richmond Plunge is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4492,7 +4492,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381165/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381165/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381165/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Public Sunday is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4520,7 +4520,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381218/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381218/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381218/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Cow Hug Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4548,7 +4548,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381219/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Party Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4576,7 +4576,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394030/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394030/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394030/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Jet Ski Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4604,7 +4604,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553679/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Pontoon Boat Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4632,7 +4632,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553680/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Pontoon Boat Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4660,7 +4660,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553682/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553682/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553682/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Pontoon Boat Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4688,7 +4688,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553683/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553683/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553683/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Pontoon Boat Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4716,7 +4716,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636069/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636069/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636069/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Lake Tulloch is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4744,7 +4744,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/637979/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/jeffsullivanphotography/items/637979/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/637979/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California North Coast (Redwoods and Rhododendrens) is a curated experience in Gardnerville, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4772,7 +4772,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63610/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63610/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63610/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Sedan is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4800,7 +4800,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63645/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Mini-Van is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4828,7 +4828,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63653/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63653/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63653/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Shuttle is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4856,7 +4856,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63658/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Bus is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4884,7 +4884,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/217727/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/217727/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/217727/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: INTRO to TIDES & CURRENTS SKILL COURSE is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4912,7 +4912,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/244615/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/244615/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/244615/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Advanced Surf Coaching Group Lesson is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4940,7 +4940,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283754/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283754/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283754/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • The Steam Experience is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4968,7 +4968,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283837/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283837/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283837/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2024 Night Photoshoot - Vintage Glow: Night Shoot with LA's Yellow Cars is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -4996,7 +4996,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/284507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "BBQ Boots and Brew: TEAM REGISTRATION is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5024,7 +5024,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284864/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284864/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284864/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "LED Stargazing Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5052,7 +5052,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381196/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381196/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381196/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Family Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5080,7 +5080,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381217/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381217/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381217/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "All-Day Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5108,7 +5108,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/382507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/382507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/382507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Corporate Executive Bus is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5136,7 +5136,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394034/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394034/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394034/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Jet Ski Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5164,7 +5164,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394036/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394036/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394036/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Jet Ski Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5192,7 +5192,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/450252/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/450252/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/450252/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Online Coaching & Trip Planning is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5220,7 +5220,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/454478/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/454478/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/454478/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mini-Run One is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5248,7 +5248,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/458894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458894/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sizzling Summer Nights: Vehicle Registration is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5276,7 +5276,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/466577/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/466577/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/466577/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Virtual Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5304,7 +5304,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477438/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/477438/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477438/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Model Train Workshop is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5332,7 +5332,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/522271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/522271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/522271/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Third Fridays is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5360,7 +5360,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/523784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/523784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/523784/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "First Class Departures is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5388,7 +5388,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630370/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630370/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630370/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Initial - Mendocino County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5416,7 +5416,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630372/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630372/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630372/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initial - Trinity County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5444,7 +5444,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630374/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630374/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630374/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Del Norte County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5472,7 +5472,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630375/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630375/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630375/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initial - Glenn County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5500,7 +5500,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630376/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Tehama County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5528,7 +5528,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630377/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630377/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630377/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Marin County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5556,7 +5556,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Mendocino County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5584,7 +5584,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630387/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630387/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630387/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Glenn County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5612,7 +5612,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630388/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630388/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630388/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Tehama County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5640,7 +5640,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630389/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630389/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630389/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Del Norte County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5668,7 +5668,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630390/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630390/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630390/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Trinity County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5696,7 +5696,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630405/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630405/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630405/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Marin County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5724,7 +5724,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635699/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635699/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635699/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • New Melones Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5752,7 +5752,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635932/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Union Valley Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5780,7 +5780,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635934/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635934/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635934/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Don Pedro Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5808,7 +5808,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635936/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635936/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635936/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Lake Tullloch is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5836,7 +5836,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635937/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635937/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635937/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Shasta Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5864,7 +5864,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635939/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635939/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635939/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Woodward Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5892,7 +5892,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635945/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635945/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635945/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Lake Oroville is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5920,7 +5920,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635971/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635971/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635971/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • New Melones Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5948,7 +5948,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635974/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635974/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635974/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Union Valley Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -5976,7 +5976,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635975/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Don Pedro Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6004,7 +6004,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636072/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636072/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636072/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Shasta Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6032,7 +6032,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636074/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636074/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636074/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Lake Oroville is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6060,7 +6060,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636077/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636077/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636077/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Woodward Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6091,7 +6091,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14297/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14297/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14297/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Custom Kayak Instruction (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6119,7 +6119,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/18220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/18220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/18220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "GUIDED GROUP TRIP (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6147,7 +6147,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381216/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6175,7 +6175,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Field Trip is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6203,7 +6203,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630399/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630399/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630399/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Mendocino County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6231,7 +6231,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630400/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630400/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630400/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Trinity County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6259,7 +6259,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630401/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630401/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630401/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Del Norte County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6287,7 +6287,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630402/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630402/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630402/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Glenn County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6315,7 +6315,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630403/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630403/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630403/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Tehama County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6343,7 +6343,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630404/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Marin County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6371,7 +6371,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/147466/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/147466/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/147466/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Warm Water Sea Kayak Rescue (Richmond Plunge) is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6399,7 +6399,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448618/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/tikibikeshack/items/448618/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448618/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Men's Longboard California Cruiser is a curated experience in Gulf Shores, Alabama designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6427,7 +6427,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448624/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/tikibikeshack/items/448624/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448624/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ladies Longboard California Cruiser is a curated experience in Gulf Shores, Alabama designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6455,7 +6455,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sierra Nevada Hotels & Glamping Adventure is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6483,7 +6483,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629920/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629920/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629920/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kings Canyon National Park Advanced Backpacking is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6511,7 +6511,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629926/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629926/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629926/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Camping: Good Trip Scouts is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6539,7 +6539,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cali-exp/items/177148/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cali-exp/items/177148/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cali-exp/items/177148/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Georgetown Shuttle Day Pass is a curated experience in Georgetown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6567,7 +6567,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284867/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Haunted LED Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6595,7 +6595,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548660/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548660/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548660/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Reservations is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6623,7 +6623,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/685606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/685606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/685606/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Santa Maria, California is a curated experience in Santa Maria, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6651,7 +6651,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362160/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Horse Connections is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6679,7 +6679,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362162/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362162/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362162/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Horse Riding Lessons is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6712,7 +6712,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/64270/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/64270/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/64270/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Whale Watching in Baja California is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6740,7 +6740,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/400670/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/adventurewesttours/items/400670/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/400670/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Four Days in Beautiful San Diego, California is a curated experience in Phoenix, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6768,7 +6768,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519464/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Death Valley Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6796,7 +6796,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14223/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14223/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14223/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L1: Kayak Basics  (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6824,7 +6824,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14852/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14852/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14852/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Self Sufficient Bay Paddler Pt. 2 (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6852,7 +6852,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sdmaritime/items/23912/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/sdmaritime/items/23912/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdmaritime/items/23912/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Tall Ship Adventure aboard Californian is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6880,7 +6880,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/222031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/222031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/222031/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: Intro to Coastal Journey is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6908,7 +6908,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519437/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6936,7 +6936,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519450/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519450/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519450/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Sunset & Stargazing Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6962,7 +6962,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/636160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/636160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/636160/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Special On-Site Guest is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -6990,7 +6990,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14249/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: TIDAL CURRENT & ROUGH WATER SKILL COURSE is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7018,7 +7018,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14304/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14304/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14304/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: 55+ Beginning Sea Kayaking Skill Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7046,7 +7046,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/46011/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/46011/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/46011/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Women's Beginning Sea Kayaking Skill Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7074,7 +7074,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/127480/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/127480/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/127480/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Self Sufficient Bay Paddler Prt. 1 (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7102,7 +7102,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/143281/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/143281/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/143281/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "I ♥️Oakland Alameda Estuary Cleanup RENTAL (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7133,7 +7133,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/318386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/318386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/318386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Interactive Sailing is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7161,7 +7161,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/485884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/485884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/485884/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Clearly Explorer Excursion is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7189,7 +7189,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/631457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/631457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/631457/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Elk Grove, California is a curated experience in Elk Grove, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7217,7 +7217,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660433/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Santa Rosa, California is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7245,7 +7245,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660442/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660442/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660442/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Napa, California is a curated experience in Napa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7273,7 +7273,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660527/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ukiah , California is a curated experience in Ukiah, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7301,7 +7301,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660528/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ventura, California is a curated experience in Ventura, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7329,7 +7329,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/670195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/670195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/670195/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Monterey, California is a curated experience in Monterey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7357,7 +7357,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/229177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baltimorechefshop/items/229177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/229177/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sushi (California Roll) Dinner INGREDIENTS KIT is a curated experience in Baltimore, Maryland designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7388,7 +7388,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/360526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/360526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/360526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The California Grill with Chef Mat is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7416,7 +7416,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/missionpacific-seabirdhotels/items/413654/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/missionpacific-seabirdhotels/items/413654/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/missionpacific-seabirdhotels/items/413654/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Tour of California Surf Museum is a curated experience in Oceanside, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7444,7 +7444,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/545857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/545857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/545857/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Seasonal California with Chef Mat is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7472,7 +7472,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/640010/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/640010/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/640010/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Truckee, California is a curated experience in Truckee, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7500,7 +7500,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14235/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14235/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14235/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Beginning Sea Kayaking Skills Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7528,7 +7528,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14250/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14250/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14250/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: Intro to Surf Zone is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7556,7 +7556,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/15475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/15475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/15475/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "DISCOVER OAK WATERFRONT TOUR is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7584,7 +7584,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/knobhillranch/items/323142/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/knobhillranch/items/323142/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/knobhillranch/items/323142/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Scenic California Riding & Hiking Trail is a curated experience in Yucca Valley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7612,7 +7612,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14245/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14245/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14245/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Sea Kayaking II (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7640,7 +7640,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/38277/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/38277/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/38277/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Sit-On-Top Kayak Skills and Rescue Course (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7668,7 +7668,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362158/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362158/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362158/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Horse Riding Lessons is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7699,7 +7699,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180875/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/180875/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180875/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Private Sail from the Santa Cruz Harbor - Resolute is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7730,7 +7730,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180876/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/180876/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180876/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Private Sunset Sail from the Santa Cruz Harbor - Resolute is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7758,7 +7758,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nolimitsscuba/items/107414/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nolimitsscuba/items/107414/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nolimitsscuba/items/107414/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Avalon Harbor Underwater Cleanup, California is a curated experience in Tempe, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7786,7 +7786,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381449/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381449/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381449/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Gentle Thanksgiving is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7814,7 +7814,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/458933/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/adventurewesttours/items/458933/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/458933/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Escape the Heat! 4 Days in Beautiful San Diego, California is a curated experience in Phoenix, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7842,7 +7842,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/377704/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/377704/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/377704/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Seasonal California with Chef Mat is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7870,7 +7870,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/croteausurfexcursions/items/205464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/croteausurfexcursions/items/205464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/croteausurfexcursions/items/205464/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Excursion is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7898,7 +7898,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207641/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/207641/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207641/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run This Town: Red Rock Canyon is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7926,7 +7926,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207649/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/207649/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207649/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Thrill Seeker: Caverns and Canyons is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7954,7 +7954,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/267482/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/267482/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/267482/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run This Town: Dripping Cave is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -7982,7 +7982,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/278355/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baltimorechefshop/items/278355/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/278355/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Brunch is a curated experience in Baltimore, Maryland designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8010,7 +8010,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaphotosafaris/items/484066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484066/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Francisco Cable Car Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8038,7 +8038,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaphotosafaris/items/484084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484084/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Venice Beach Sunset Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8066,7 +8066,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/508002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/508002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/508002/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Night of Lights- Christmas Light Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8094,7 +8094,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fortcross/items/602373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fortcross/items/602373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fortcross/items/602373/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California History - Open Sign Up is a curated experience in Santa Ysabel, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8122,7 +8122,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362166/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362166/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362166/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Interactive Clinics is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8150,7 +8150,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/rpmadventurestours/items/408787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/rpmadventurestours/items/408787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rpmadventurestours/items/408787/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Coast Adventure Tour 350 is a curated experience in Paso Robles, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8178,7 +8178,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/408878/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/408878/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/408878/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Italian with Chef David is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8206,7 +8206,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cybexotics/items/512408/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cybexotics/items/512408/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cybexotics/items/512408/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ferrari California T Convertible is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8234,7 +8234,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sweetescapegame/items/477126/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/sweetescapegame/items/477126/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sweetescapegame/items/477126/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Science Center Family Field Trip is a curated experience in San Bernardino, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8262,7 +8262,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/243838/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/243838/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/243838/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "FREE Trail Day is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8290,7 +8290,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/615189/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/615189/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/615189/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sunday - Walk Up is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8323,7 +8323,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/163820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/alohahawaiitours/items/163820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alohahawaiitours/items/163820/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pearl Harbor City Tour / USS Arizona Memorial is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8355,7 +8355,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/polyad-activities/items/280747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/polyad-activities/items/280747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/polyad-activities/items/280747/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Arizona Memorial, Pearl Harbor and Honolulu City Highlights Tour (2B) is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8386,7 +8386,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/hawaiireisetipps/items/70395/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/hawaiireisetipps/items/70395/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/hawaiireisetipps/items/70395/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pearl Harbor & USS Arizona with Downtown Honolulu is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8418,7 +8418,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/138848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/138848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/138848/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "USS Arizona Narrated Tour / Virtual Reality Combo is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8449,7 +8449,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/560427/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westwindairservice/items/560427/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/560427/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ultimate Tour of Northern Arizona (ULT) is a curated experience in Phoenix, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8480,7 +8480,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/561717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westwindairservice/items/561717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/561717/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ultimate Tour of Northern Arizona From Sedona S-ULT is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8511,7 +8511,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/561718/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westwindairservice/items/561718/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westwindairservice/items/561718/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ultimate Tour of Northern Arizona From Flagstaff F-ULT is a curated experience in Flagstaff, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8543,7 +8543,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/428334/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/428334/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/428334/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "WALK THE DECK of the USS Arizona VR Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8571,7 +8571,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pimaair/items/652479/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pimaair/items/652479/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pimaair/items/652479/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Admission is a curated experience in Tucson, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8604,7 +8604,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/43397/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/43397/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/43397/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "USS Arizona Deluxe Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8637,7 +8637,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316328/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/alohasunshinetours/items/316328/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316328/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3H- Arizona Memorial Pearl Harbor and Historic Honolulu City Tour Departing from the Big Island is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8670,7 +8670,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/416151/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/416151/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/416151/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "USS Arizona Commander's Multimedia Narrated Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8703,7 +8703,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/416153/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/416153/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/416153/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "USS Arizona Captain's Multimedia Narrated Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8736,7 +8736,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/214393/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/winetoursofsedona/items/214393/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/214393/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Arizona Hopful Beer Tour is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8769,7 +8769,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/216881/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/winetoursofsedona/items/216881/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/216881/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sedona Arizona Wine Tasting Experience is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8802,7 +8802,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/309146/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/alohasunshinetours/items/309146/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/309146/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3A - Arizona Memorial Pearl Harbor and Historic Honolulu City Tour Departing from Waikiki Area is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8835,7 +8835,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/alohasunshinetours/items/316216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316216/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3M- Arizona Memorial Pearl Harbor and Historic Honolulu City Tour Departing from Maui is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8868,7 +8868,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316329/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/alohasunshinetours/items/316329/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alohasunshinetours/items/316329/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3K- Arizona Memorial Pearl Harbor and Historic Honolulu City Tour Departing from Kauai is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8901,7 +8901,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/416150/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/416150/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/416150/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "USS Arizona Chief's Multimedia Narrated Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8933,7 +8933,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/phptours/items/428345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/phptours/items/428345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/phptours/items/428345/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "EXPLORE the USS Arizona Today VR Tour is a curated experience in Honolulu, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8961,7 +8961,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/595439/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/595439/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/595439/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ancient Ruins - Guided UTV Tour is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -8989,7 +8989,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/626811/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/626811/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/626811/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sniper Recon UTV Tour is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9020,7 +9020,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bearizona/items/649382/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bearizona/items/649382/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bearizona/items/649382/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP Bearizona Bus Tour is a curated experience in Williams, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9048,7 +9048,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190146/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/190146/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190146/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ride and Shoot Combo is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9076,7 +9076,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190321/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/190321/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190321/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": ".50 Cal Experience 💥 is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9104,7 +9104,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/safarijeeptours/items/444071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/safarijeeptours/items/444071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/safarijeeptours/items/444071/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The \"Ultimate\" Sedona Experience Jeep Tour is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9137,7 +9137,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/597123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/winetoursofsedona/items/597123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/winetoursofsedona/items/597123/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Experience the Terroir of Arizona & Build a Keepsake Sedona Shadowbox is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9165,7 +9165,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/610796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/610796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/610796/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "SMG Experience is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9193,7 +9193,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190310/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/arizonaoutdoorfun/items/190310/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/arizonaoutdoorfun/items/190310/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Black Ops Package is a curated experience in New River, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9221,7 +9221,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/safarijeeptours/items/222009/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/safarijeeptours/items/222009/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/safarijeeptours/items/222009/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Archaeology Hiking Jeep Tour is a curated experience in Sedona, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9252,7 +9252,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/lamplightersadventuringsociety/items/619655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/lamplightersadventuringsociety/items/619655/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mist Trail: Vernal and Nevada Falls is a curated experience in TUOLUMNE MEADOWS, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9280,7 +9280,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/ethelm/items/95787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/ethelm/items/95787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/ethelm/items/95787/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Chocolate Tasting Events- Henderson, Nevada is a curated experience in Henderson, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9308,7 +9308,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/ethelm/items/207526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/ethelm/items/207526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/ethelm/items/207526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Valentine's Day Tasting - Henderson, Nevada is a curated experience in Henderson, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9336,7 +9336,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/461457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cheersnevada/items/461457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/461457/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP Craft Brewery Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9364,7 +9364,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/685578/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/685578/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/685578/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Vintage Vegas Home Tour: Express Check-In is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9392,7 +9392,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/429177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cheersnevada/items/429177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/429177/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "\"CRAFT BEER & BOURBON EXPERIENCE\" is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9420,7 +9420,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/689791/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/689791/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/689791/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sadie Hawkins Sock Hop is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9448,7 +9448,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/685975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/685975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/685975/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Preservation 101: What Does Historic Designation mean? is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9476,7 +9476,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/690558/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/690558/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/690558/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Atomic Ranch: Viva Mod Vegas is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9504,7 +9504,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/stripperclipz/items/498582/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/stripperclipz/items/498582/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/stripperclipz/items/498582/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Las Vegas: Outdoor Shooting in Southern Nevada is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9532,7 +9532,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/476044/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cheersnevada/items/476044/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/476044/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Martini Classic Vegas Tour & Fremont Street Experience is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9560,7 +9560,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/684605/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/684605/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/684605/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Vintage Vegas Home Tour 2026 is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9588,7 +9588,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/yosemiteflights/items/298178/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/yosemiteflights/items/298178/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yosemiteflights/items/298178/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sierra Nevada - Yosemite Scenic Tour is a curated experience in Groveland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9616,7 +9616,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/660698/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/660698/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/660698/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pedaling Through Paradise: A Paradise Palms Bike Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9644,7 +9644,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/587492/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/587492/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/587492/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Cocktails & True Tales: An Oral History Happy Hour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9675,7 +9675,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/649333/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/649333/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/649333/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Coffee & Cruising Bike Tour: Lost Motels and Lawyer’s Row is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9703,7 +9703,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/608698/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/608698/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/608698/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Historic Westside School Walking Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9731,7 +9731,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/488530/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cheersnevada/items/488530/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/488530/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Las Vegas Arts District Tour featuring Local Wine Tastings is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9759,7 +9759,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/610429/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/610429/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/610429/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Bringing Your Vintage Dream to Life: Sourcing for Your Period Renovation II is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9787,7 +9787,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sierra Nevada Hotels & Glamping Adventure is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9815,7 +9815,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/690491/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/690491/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/690491/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Henderson Speaks is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9843,7 +9843,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/592249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/592249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/592249/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Stroll Through the Decades: 90 Years of Architectural Styles in One Neighborhood is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9871,7 +9871,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/604417/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/604417/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/604417/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Historic Henderson Bus Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9899,7 +9899,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/683028/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/jeffsullivanphotography/items/683028/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/683028/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Nevada Backroads Adventure is a curated experience in Gardnerville, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9927,7 +9927,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/491691/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cheersnevada/items/491691/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cheersnevada/items/491691/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Custom Tours | Private Events is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9955,7 +9955,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/610432/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/610432/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/610432/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Right Plant, Right Place: Sustainable Landscaping for Mid-Century Homes is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -9983,7 +9983,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gunshopinlasvegas/items/320846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gunshopinlasvegas/items/320846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gunshopinlasvegas/items/320846/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Nevada 8 Hour CCW Class is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10011,7 +10011,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/rockcreekpackstation/items/70329/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/rockcreekpackstation/items/70329/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rockcreekpackstation/items/70329/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Natural History of the Sierra Nevada is a curated experience in Lone Pine, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10039,7 +10039,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/592239/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/592239/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/592239/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Booming Las Vegas is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10067,7 +10067,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/654551/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nevada-preservation/items/654551/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nevada-preservation/items/654551/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mall Walk Through the Eras: Boulevard Mall is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10100,7 +10100,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/107822/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Jolla Cove 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10133,7 +10133,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Jolla Cove Kelp Forest 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10166,7 +10166,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PRIVATE La Jolla 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10199,7 +10199,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "DC's Ultimate Refresher Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10230,7 +10230,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/group3aviation/items/53931/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/group3aviation/items/53931/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/group3aviation/items/53931/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Coast & Canyons Helicopter Tour is a curated experience in Los Angeles, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10263,7 +10263,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Night Dive 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10296,7 +10296,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/227193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Open Water Diver Referral Program is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10324,7 +10324,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/614474/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Advanced Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10352,7 +10352,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/663868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PRIVATE La Jolla 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10385,7 +10385,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/107835/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10418,7 +10418,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/226915/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Basic/Intro To Freedive Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10451,7 +10451,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/622922/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10479,7 +10479,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/highcountryexpeditions/items/602025/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/highcountryexpeditions/items/602025/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/highcountryexpeditions/items/602025/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Day California Salmon Rafting Expedition is a curated experience in McKenzie Bridge, Oregon designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10512,7 +10512,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/109487/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Advanced Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10545,7 +10545,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divecalifornia/items/110584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "PADI Master Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10573,7 +10573,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/653430/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Southern California Italian Winery & Culinary Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10601,7 +10601,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/actiontoursbigbear/items/12398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12398/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Zipline Tour is a curated experience in Big Bear Lake, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10632,7 +10632,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wineroutebaja/items/193220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wineroutebaja/items/193220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Bufadora Tour in Baja California is a curated experience in Ensenada, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10665,7 +10665,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333236/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baycitybike/items/333236/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/333236/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private California Sunset Tour is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10693,7 +10693,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/388635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388635/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "15 passengers Open Ocean Coastal is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10721,7 +10721,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388669/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/388669/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/388669/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "15 Passengers Harbor Cruise Weekend is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10749,7 +10749,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/479885/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamtours/items/479885/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamtours/items/479885/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Promo Weekday Harbor Cruise is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10777,7 +10777,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/46445/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/46445/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/46445/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Surf Lessons is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10805,7 +10805,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/margarita-adventures/items/476135/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/margarita-adventures/items/476135/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/margarita-adventures/items/476135/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Wild Kids Camp is a curated experience in Santa Margarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10833,7 +10833,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/59588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/59588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/59588/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Public Group Surf Lesson is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10861,7 +10861,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/156101/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/156101/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/156101/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10893,7 +10893,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westpearltours/items/273866/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westpearltours/items/273866/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westpearltours/items/273866/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Mojave Desert, Mount Charleston Lodge    and Resort Tour is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10926,7 +10926,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/423373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423373/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Kings Canyon Hiking Tour is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10958,7 +10958,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bayareafirearms/items/290181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bayareafirearms/items/290181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bayareafirearms/items/290181/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Classes is a curated experience in Burlingame, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -10989,7 +10989,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548645/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Cavern Walking Tour is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11020,7 +11020,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548651/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548651/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548651/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mammoth Cave Expedition is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11051,7 +11051,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baycitybike/items/10201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitybike/items/10201/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Sunset Tour is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11079,7 +11079,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283851/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Train and Trolley Rides is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11111,7 +11111,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423379/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/423379/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/423379/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Sequoia National Park Tour is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11139,7 +11139,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/98392/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/98392/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/98392/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11167,7 +11167,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283796/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Holstrom Park is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11195,7 +11195,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283810/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Party Caboose Rental is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11226,7 +11226,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667718/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667718/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667718/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "La Gran Aventura en la Península De Baja California is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11254,7 +11254,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/197747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/197747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/197747/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "1 Hour RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11287,7 +11287,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/290059/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/yosemite-tours/items/290059/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/290059/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Redwoods and California Wine Country Tour is a curated experience in San Bruno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11315,7 +11315,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/307123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/307123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/307123/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hrs. RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11346,7 +11346,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386943/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386943/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386943/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Three Day National Park Tour- Yosemite, Kings Canyon and Sequoia National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11379,7 +11379,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/470345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/470345/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/470345/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11410,7 +11410,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667682/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667682/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667682/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 4 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11441,7 +11441,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667686/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667686/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667686/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 5 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11472,7 +11472,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667694/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667694/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667694/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Viñedos de Baja California - 6 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11503,7 +11503,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667720/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667720/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667720/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Escapada a VIÑEDOS y PLAYA de Baja California is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11534,7 +11534,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667730/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667730/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667730/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ruta de las Misiones de Baja California con Viñedos is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11565,7 +11565,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/469274/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/469274/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/469274/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Three Day National Park Tour- Private is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11593,7 +11593,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/mauichocolatetour/items/612849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/mauichocolatetour/items/612849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mauichocolatetour/items/612849/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Wine & Weave: Benefitting the Hawaiian Civic Clubs of Lahaina and Southern California (Los Angeles, Orange County & San Diego) is a curated experience in Lahaina, Hawaii designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11626,7 +11626,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394248/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/394248/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394248/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Kings Canyon National Park Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11654,7 +11654,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/312483/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/312483/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/312483/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day RENTAL RESERVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11682,7 +11682,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/412617/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/412617/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/412617/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Hrs. RENTAL RESEVATION (Jack London Sq.) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11715,7 +11715,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pv-yachts/items/537238/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pv-yachts/items/537238/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pv-yachts/items/537238/calendar/?asn=fhdn-cad&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Charter on California 60' | My Christopher is a curated experience in Puerto Vallarta, Jalisco designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11743,7 +11743,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/77116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/77116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/77116/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Day Dig is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11771,7 +11771,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/326675/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/326675/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/326675/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Weekend Cab and Caboose Ride is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11803,7 +11803,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386725/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Yosemite Valley HikingTour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11834,7 +11834,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Yosemite Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11862,7 +11862,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485462/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485462/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485462/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Tours is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11890,7 +11890,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283745/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283745/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283745/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • Locomotives is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11918,7 +11918,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283750/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • Electric Streetcars is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11946,7 +11946,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283806/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283806/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283806/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Town Hall is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -11974,7 +11974,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283808/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283808/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283808/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Carhouse 4 Rental is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12002,7 +12002,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283813/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283813/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283813/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Charters is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12030,7 +12030,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283823/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Photo/Film Shoot Booking is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12058,7 +12058,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283853/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283853/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283853/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Museum: Hosted Tours is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12090,7 +12090,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313657/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/313657/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313657/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12122,7 +12122,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386964/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386964/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386964/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private National Park  Day Trip for Central Valley Locals is a curated experience in Fresno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12153,7 +12153,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424268/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/424268/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424268/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Central Coast Day Trip- Monterey Bay is a curated experience in Monterey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12184,7 +12184,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424269/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/424269/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/424269/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Old Town Sacramento with River Fox Train is a curated experience in Sacramento, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12217,7 +12217,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485366/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485366/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485366/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Wolf Conservation Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12245,7 +12245,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485416/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Enrichment Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12273,7 +12273,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548655/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548655/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Middle Earth Cave Expedition is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12304,7 +12304,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386935/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386935/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386935/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Central Coast DayTrip with Kayaking is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12336,7 +12336,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419927/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419927/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419927/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Tour of Kings Canyon National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12367,7 +12367,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/westernogc/items/658712/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/westernogc/items/658712/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/westernogc/items/658712/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Halibut - Pacific & California is a curated experience in Crescent City, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12395,7 +12395,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283831/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283831/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283831/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Dinosaur Express- Featuring Buddy the Dinosaur! is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12428,7 +12428,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394234/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/394234/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/394234/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Semi Private Sequoia National Park Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12456,7 +12456,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/94783/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/94783/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/94783/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Overnight Surf Camp | Laguna Beach is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12484,7 +12484,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284870/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Clearly Explorer | Clear Kayak Charter is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12516,7 +12516,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Tour of Sequoia National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12544,7 +12544,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/572664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/572664/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/572664/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Eco Canoe Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12575,7 +12575,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667716/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667716/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667716/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Baja California Viñedos y Ballena Gris Express 4 días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12603,7 +12603,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34228/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34228/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34228/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "3 Hour Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12631,7 +12631,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284520/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/284520/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284520/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "BBQ Boots and Brew: General Admission is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12659,7 +12659,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458850/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/458850/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458850/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sizzling Summer Nights is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12687,7 +12687,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Valley Full Day Small Group Tour & Hike is a curated experience in Oakhurst, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12715,7 +12715,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/603116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/603116/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/603116/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Feeding Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12747,7 +12747,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419966/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419966/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419966/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Semi Private Yosemite Valley Floor Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12775,7 +12775,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519508/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519508/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519508/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite High Country & Mariposa Grove Full Day Small Group Tour & Hike is a curated experience in Oakhurst, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12803,7 +12803,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/415992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/415992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/415992/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Merit Badge Program is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12831,7 +12831,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/521284/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/521284/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/521284/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Fall Victorian Tea is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12859,7 +12859,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12410/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/actiontoursbigbear/items/12410/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actiontoursbigbear/items/12410/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Snowshoe Tour is a curated experience in Big Bear Lake, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12887,7 +12887,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477443/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/477443/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477443/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Perris Appreciation Day is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12915,7 +12915,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519505/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519505/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519505/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12943,7 +12943,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519506/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Yosemite Two Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -12974,7 +12974,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623804/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623804/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623804/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "In-Person California CCW Course - Re-Qualify - Humboldt/Del Norte/Trinity is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13005,7 +13005,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cucapah/items/667699/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cucapah/items/667699/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cucapah/items/667699/calendar/?asn=fhdn-mxn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Enamórate de Baja California - Tour Básico - 4 Días is a curated experience in Tijuana, Baja California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13033,7 +13033,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34225/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13061,7 +13061,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/34233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/34233/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "4hr Sluicing, and Panning Family Special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13089,7 +13089,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/37772/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cagoldpanning/items/37772/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cagoldpanning/items/37772/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "One hour gold panning family special is a curated experience in Jamestown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13117,7 +13117,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283846/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283846/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Railroadiana Fall Swap Meet is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13145,7 +13145,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/416495/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/416495/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/416495/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "After School Surf Program is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13173,7 +13173,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519500/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519500/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519500/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kings Canyon Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13201,7 +13201,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519502/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sequoia Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13229,7 +13229,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519503/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sequoia & Kings Canyon Two Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13255,7 +13255,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/566132/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/566132/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/566132/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Surfboard and Wetsuit Rentals is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13286,7 +13286,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630597/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaoutdoorfun/items/630597/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630597/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2-Hour ATV or UTV Rental (Unguided) is a curated experience in Phelan, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13317,7 +13317,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632958/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to Napa Wine Country is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13348,7 +13348,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632960/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632960/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632960/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mexico Day Trip with visit to Tijuana, Rosarito, Puerto Nuevo is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13376,7 +13376,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283828/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283828/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283828/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Railroadiana Spring Swap Meet and Pacific Electric Day is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13404,7 +13404,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283841/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Antique Truck Show is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13435,7 +13435,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313667/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/farmsanctuary-california/items/313667/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/farmsanctuary-california/items/313667/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private/Group Sanctuary Tour is a curated experience in Acton, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13467,7 +13467,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/399992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/399992/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/399992/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Two Day Tour- Sequoia and Kings National Park is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13495,7 +13495,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/412193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Turkey Cuddle Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13523,7 +13523,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485499/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485499/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485499/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "School Group Tours is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13554,7 +13554,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/killeryachts/items/570611/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/killeryachts/items/570611/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/killeryachts/items/570611/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "70' Hotel California is a curated experience in Marina del Rey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13585,7 +13585,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/609612/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/609612/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/609612/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Business Class Departures is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13616,7 +13616,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630802/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaoutdoorfun/items/630802/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaoutdoorfun/items/630802/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Walk-Up 2-Hour Rental is a curated experience in Phelan, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13647,7 +13647,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632941/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632941/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632941/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Diego City Driving Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13678,7 +13678,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632947/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632947/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632947/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Los Angeles City Driving Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13709,7 +13709,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632948/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to the City of Las Vegas is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13740,7 +13740,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632951/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to the City of San Francisco is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13771,7 +13771,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632957/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiadreamvacation/items/632957/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiadreamvacation/items/632957/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Visit to Yosemite National Park is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13803,7 +13803,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/2841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/2841/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/2841/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Diego Brewery Tours: California Sunset Brew Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13835,7 +13835,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386983/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Destination Tours: Yolo County Sunflower Getaway is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13866,7 +13866,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386993/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/386993/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/386993/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Best of Fresno and Clovis Dinner Add On is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13894,7 +13894,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "School Groups - Wolf Conservation Tour is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13922,7 +13922,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283833/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283833/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283833/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Behind the Scenes is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13953,7 +13953,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623820/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Humboldt/Del Norte/Trinity is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -13981,7 +13981,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199899/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199899/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199899/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "General Admission Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14009,7 +14009,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199923/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199923/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199923/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14037,7 +14037,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199924/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/piratesdinneradventure-california/items/199924/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/piratesdinneradventure-california/items/199924/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Treasure Tickets is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14068,7 +14068,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419963/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/419963/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/419963/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Winter Wonderland- Private Yosemite Valley Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14096,7 +14096,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/488267/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/justgetwet/items/488267/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/488267/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Thanksgiving Spearfishing Retreat - Baja California Sur is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14127,7 +14127,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645801/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/lockedandloadeddefense/items/645801/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645801/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW 16-hour INITIAL Permit Course is a curated experience in Gardena, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14155,7 +14155,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/discoverbransonmo/items/298590/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/discoverbransonmo/items/298590/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/discoverbransonmo/items/298590/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Beach Boys California Dreamin' is a curated experience in Branson, Missouri designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14183,7 +14183,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485421/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiawolfcenter/items/485421/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiawolfcenter/items/485421/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Specialty Tours - Holiday Themed is a curated experience in Julian, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14211,7 +14211,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14214/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kayak Rolling (Richmond Plunge) is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14239,7 +14239,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/581571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/581571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/581571/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Fred Harvey Experience is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14270,7 +14270,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95504/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pacificoutfitters-eureka/items/95504/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95504/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Concealed Weapons Course is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14301,7 +14301,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/pacificoutfitters-eureka/items/95509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificoutfitters-eureka/items/95509/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Re-Qualification - California Concealed Weapons Course is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14329,7 +14329,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394017/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394017/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394017/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Jet Ski Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14360,7 +14360,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623795/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/623795/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/623795/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "In-Person California CCW Course - Initial - Humboldt/Del Norte/Trinity is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14388,7 +14388,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284863/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "LED Glow Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14416,7 +14416,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/412195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/412195/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Equine Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14445,7 +14445,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/565769/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/yosemite-tours/items/565769/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yosemite-tours/items/565769/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Redwoods and California WIne Country Tour with Lunch is a curated experience in San Bruno, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14476,7 +14476,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/lockedandloadeddefense/items/645810/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/lockedandloadeddefense/items/645810/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW 8-Hour RENEWAL Permit Course is a curated experience in Gardena, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14504,7 +14504,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/38141/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/38141/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/38141/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Sea Kayak Rescues and Towing Skills Clinic is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14532,7 +14532,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/77003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/77003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/77003/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Packrafting Rescue & Skills Lesson – Richmond Plunge is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14560,7 +14560,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381165/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381165/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381165/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Public Sunday is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14588,7 +14588,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381218/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381218/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381218/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Cow Hug Therapy is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14616,7 +14616,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381219/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Party Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14644,7 +14644,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394030/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394030/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394030/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Jet Ski Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14672,7 +14672,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553679/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Pontoon Boat Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14700,7 +14700,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553680/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Pontoon Boat Rentals • Greater Sacramento is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14728,7 +14728,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553682/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553682/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553682/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Pontoon Boat Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14756,7 +14756,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553683/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/553683/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/553683/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Pontoon Boat Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14784,7 +14784,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636069/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636069/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636069/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Lake Tulloch is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14812,7 +14812,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/637979/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/jeffsullivanphotography/items/637979/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jeffsullivanphotography/items/637979/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California North Coast (Redwoods and Rhododendrens) is a curated experience in Gardnerville, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14840,7 +14840,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63610/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63610/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63610/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Sedan is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14868,7 +14868,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63645/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63645/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Mini-Van is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14896,7 +14896,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63653/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63653/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63653/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Shuttle is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14924,7 +14924,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/63658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/63658/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Transportation - Bus is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14952,7 +14952,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/217727/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/217727/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/217727/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: INTRO to TIDES & CURRENTS SKILL COURSE is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -14980,7 +14980,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/244615/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/244615/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/244615/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Advanced Surf Coaching Group Lesson is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15008,7 +15008,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283754/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283754/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283754/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run One Program • The Steam Experience is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15036,7 +15036,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283837/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/283837/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/283837/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2024 Night Photoshoot - Vintage Glow: Night Shoot with LA's Yellow Cars is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15064,7 +15064,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/284507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/284507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "BBQ Boots and Brew: TEAM REGISTRATION is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15092,7 +15092,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284864/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284864/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284864/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "LED Stargazing Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15120,7 +15120,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381196/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381196/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381196/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Family Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15148,7 +15148,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381217/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381217/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381217/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "All-Day Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15176,7 +15176,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/382507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiacomforttransportation/items/382507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiacomforttransportation/items/382507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Corporate Executive Bus is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15204,7 +15204,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394034/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394034/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394034/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Full Day Jet Ski Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15232,7 +15232,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394036/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/394036/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/394036/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Jet Ski Rentals • South Lake Tahoe is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15260,7 +15260,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/450252/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiasurfexperience/items/450252/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiasurfexperience/items/450252/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Online Coaching & Trip Planning is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15288,7 +15288,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/454478/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/454478/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/454478/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mini-Run One is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15316,7 +15316,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/458894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/458894/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sizzling Summer Nights: Vehicle Registration is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15344,7 +15344,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/466577/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/466577/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/466577/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Virtual Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15372,7 +15372,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477438/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/477438/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/477438/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Model Train Workshop is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15400,7 +15400,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/522271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/522271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/522271/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Third Fridays is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15428,7 +15428,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/socalrailway/items/523784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/socalrailway/items/523784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/socalrailway/items/523784/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "First Class Departures is a curated experience in Perris, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15456,7 +15456,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630370/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630370/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630370/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Initial - Mendocino County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15484,7 +15484,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630372/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630372/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630372/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initial - Trinity County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15512,7 +15512,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630374/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630374/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630374/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Del Norte County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15540,7 +15540,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630375/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630375/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630375/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initial - Glenn County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15568,7 +15568,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630376/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Tehama County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15596,7 +15596,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630377/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630377/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630377/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Conceal Weapons Course - Initail - Marin County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15624,7 +15624,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Mendocino County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15652,7 +15652,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630387/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630387/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630387/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Glenn County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15680,7 +15680,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630388/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630388/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630388/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Tehama County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15708,7 +15708,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630389/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630389/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630389/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Del Norte County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15736,7 +15736,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630390/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630390/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630390/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Trinity County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15764,7 +15764,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630405/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630405/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630405/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California CCW Course - Re-Qualify - Marin County is a curated experience in Eureka, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15792,7 +15792,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635699/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635699/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635699/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • New Melones Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15820,7 +15820,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635932/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Union Valley Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15848,7 +15848,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635934/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635934/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635934/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Don Pedro Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15876,7 +15876,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635936/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635936/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635936/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Lake Tullloch is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15904,7 +15904,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635937/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635937/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635937/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Shasta Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15932,7 +15932,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635939/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635939/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635939/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Woodward Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15960,7 +15960,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635945/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635945/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635945/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Jet Ski Rentals • Lake Oroville is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -15988,7 +15988,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635971/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635971/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635971/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • New Melones Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16016,7 +16016,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635974/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635974/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635974/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Union Valley Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16044,7 +16044,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/635975/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/635975/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Don Pedro Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16072,7 +16072,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636072/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636072/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636072/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Shasta Lake is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16100,7 +16100,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636074/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636074/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636074/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Lake Oroville is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16128,7 +16128,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636077/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/northerncaliforniajetskirentals/items/636077/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/northerncaliforniajetskirentals/items/636077/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Pontoon Boat Rentals • Woodward Reservoir is a curated experience in Portsmouth, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16159,7 +16159,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14297/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14297/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14297/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Custom Kayak Instruction (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16187,7 +16187,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/18220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/18220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/18220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "GUIDED GROUP TRIP (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16215,7 +16215,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381216/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381216/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Tour is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16243,7 +16243,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381220/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381220/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Field Trip is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16271,7 +16271,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630399/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630399/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630399/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Mendocino County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16299,7 +16299,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630400/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630400/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630400/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Trinity County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16327,7 +16327,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630401/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630401/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630401/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Del Norte County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16355,7 +16355,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630402/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630402/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630402/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Glenn County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16383,7 +16383,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630403/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630403/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630403/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Tehama County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16411,7 +16411,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/bigfootfirearmstraining/items/630404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigfootfirearmstraining/items/630404/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Modify your California CCW/Add a gun - Marin County is a curated experience in Arcata, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16439,7 +16439,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/147466/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/147466/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/147466/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Warm Water Sea Kayak Rescue (Richmond Plunge) is a curated experience in Richmond, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16467,7 +16467,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448618/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/tikibikeshack/items/448618/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448618/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Men's Longboard California Cruiser is a curated experience in Gulf Shores, Alabama designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16495,7 +16495,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448624/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/tikibikeshack/items/448624/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikibikeshack/items/448624/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ladies Longboard California Cruiser is a curated experience in Gulf Shores, Alabama designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16523,7 +16523,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629916/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sierra Nevada Hotels & Glamping Adventure is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16551,7 +16551,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629920/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629920/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629920/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Kings Canyon National Park Advanced Backpacking is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16579,7 +16579,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629926/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/629926/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/629926/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Camping: Good Trip Scouts is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16607,7 +16607,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cali-exp/items/177148/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cali-exp/items/177148/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cali-exp/items/177148/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Georgetown Shuttle Day Pass is a curated experience in Georgetown, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16635,7 +16635,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/284867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/284867/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Haunted LED Tour is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16663,7 +16663,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548660/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cavetouring/items/548660/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cavetouring/items/548660/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Reservations is a curated experience in Mountain Ranch, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16691,7 +16691,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/685606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/685606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/685606/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Santa Maria, California is a curated experience in Santa Maria, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16719,7 +16719,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362160/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Horse Connections is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16747,7 +16747,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362162/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362162/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362162/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Group Horse Riding Lessons is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16780,7 +16780,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/64270/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fivestartours/items/64270/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/64270/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Whale Watching in Baja California is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16808,7 +16808,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/400670/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/adventurewesttours/items/400670/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/400670/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Four Days in Beautiful San Diego, California is a curated experience in Phoenix, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16836,7 +16836,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519464/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Death Valley Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16864,7 +16864,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14223/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14223/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14223/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L1: Kayak Basics  (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16892,7 +16892,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14852/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14852/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14852/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Self Sufficient Bay Paddler Pt. 2 (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16920,7 +16920,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sdmaritime/items/23912/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/sdmaritime/items/23912/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdmaritime/items/23912/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Tall Ship Adventure aboard Californian is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16948,7 +16948,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/222031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/222031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/222031/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: Intro to Coastal Journey is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -16976,7 +16976,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519437/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Full Day Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17004,7 +17004,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519450/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goodtripadventures-california/items/519450/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goodtripadventures-california/items/519450/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Joshua Tree Sunset & Stargazing Private Tour & Hike is a curated experience in Belgrade, Montana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17030,7 +17030,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/636160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/636160/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/636160/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Special On-Site Guest is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17058,7 +17058,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14249/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14249/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: TIDAL CURRENT & ROUGH WATER SKILL COURSE is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17086,7 +17086,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14304/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14304/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14304/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: 55+ Beginning Sea Kayaking Skill Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17114,7 +17114,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/46011/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/46011/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/46011/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Women's Beginning Sea Kayaking Skill Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17142,7 +17142,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/127480/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/127480/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/127480/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Self Sufficient Bay Paddler Prt. 1 (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17170,7 +17170,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/143281/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/143281/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/143281/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "I ♥️Oakland Alameda Estuary Cleanup RENTAL (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17201,7 +17201,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/318386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/318386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/318386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Interactive Sailing is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17229,7 +17229,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/485884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/clearlytahoecali/items/485884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/clearlytahoecali/items/485884/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Clearly Explorer Excursion is a curated experience in South Lake Tahoe, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17257,7 +17257,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/631457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/631457/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/631457/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Elk Grove, California is a curated experience in Elk Grove, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17285,7 +17285,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660433/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Santa Rosa, California is a curated experience in Santa Rosa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17313,7 +17313,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660442/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660442/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660442/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Napa, California is a curated experience in Napa, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17341,7 +17341,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660527/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ukiah , California is a curated experience in Ukiah, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17369,7 +17369,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/660528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/660528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/660528/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ventura, California is a curated experience in Ventura, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17397,7 +17397,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/670195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/670195/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/670195/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Monterey, California is a curated experience in Monterey, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17425,7 +17425,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/229177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baltimorechefshop/items/229177/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/229177/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sushi (California Roll) Dinner INGREDIENTS KIT is a curated experience in Baltimore, Maryland designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17456,7 +17456,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/360526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/360526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/360526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The California Grill with Chef Mat is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17484,7 +17484,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/missionpacific-seabirdhotels/items/413654/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/missionpacific-seabirdhotels/items/413654/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/missionpacific-seabirdhotels/items/413654/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Tour of California Surf Museum is a curated experience in Oceanside, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17512,7 +17512,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/545857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/545857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/545857/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Seasonal California with Chef Mat is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17540,7 +17540,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/zoppe/items/640010/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/zoppe/items/640010/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zoppe/items/640010/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Truckee, California is a curated experience in Truckee, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17568,7 +17568,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14235/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14235/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14235/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Beginning Sea Kayaking Skills Course is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17596,7 +17596,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14250/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14250/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14250/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L4: Intro to Surf Zone is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17624,7 +17624,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/15475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/15475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/15475/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "DISCOVER OAK WATERFRONT TOUR is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17652,7 +17652,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/knobhillranch/items/323142/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/knobhillranch/items/323142/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/knobhillranch/items/323142/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "The Scenic California Riding & Hiking Trail is a curated experience in Yucca Valley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17680,7 +17680,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/14245/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/14245/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/14245/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L3: Sea Kayaking II (Oakland @ JLS) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17708,7 +17708,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/calkayak/items/38277/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/calkayak/items/38277/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/calkayak/items/38277/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "L2: Sit-On-Top Kayak Skills and Rescue Course (Jack London Square) is a curated experience in Oakland, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17736,7 +17736,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362158/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362158/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362158/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Horse Riding Lessons is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17767,7 +17767,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180875/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/180875/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180875/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Private Sail from the Santa Cruz Harbor - Resolute is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17798,7 +17798,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180876/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaclassicsail/items/180876/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaclassicsail/items/180876/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "2 Hour Private Sunset Sail from the Santa Cruz Harbor - Resolute is a curated experience in Santa Cruz, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17826,7 +17826,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/nolimitsscuba/items/107414/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/nolimitsscuba/items/107414/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/nolimitsscuba/items/107414/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Avalon Harbor Underwater Cleanup, California is a curated experience in Tempe, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17854,7 +17854,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381449/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/381449/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/381449/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Gentle Thanksgiving is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17882,7 +17882,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/458933/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/adventurewesttours/items/458933/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventurewesttours/items/458933/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Escape the Heat! 4 Days in Beautiful San Diego, California is a curated experience in Phoenix, Arizona designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17910,7 +17910,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/377704/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/377704/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/377704/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Seasonal California with Chef Mat is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17938,7 +17938,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/croteausurfexcursions/items/205464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/croteausurfexcursions/items/205464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/croteausurfexcursions/items/205464/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Excursion is a curated experience in Laguna Beach, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17966,7 +17966,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207641/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/207641/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207641/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run This Town: Red Rock Canyon is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -17994,7 +17994,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207649/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/207649/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/207649/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Thrill Seeker: Caverns and Canyons is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18022,7 +18022,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/267482/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/267482/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/267482/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Run This Town: Dripping Cave is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18050,7 +18050,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/278355/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/baltimorechefshop/items/278355/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baltimorechefshop/items/278355/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Brunch is a curated experience in Baltimore, Maryland designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18078,7 +18078,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaphotosafaris/items/484066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484066/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "San Francisco Cable Car Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18106,7 +18106,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiaphotosafaris/items/484084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiaphotosafaris/items/484084/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Venice Beach Sunset Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18134,7 +18134,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/508002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/authenticadventurescencal/items/508002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/authenticadventurescencal/items/508002/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Night of Lights- Christmas Light Tour is a curated experience in Kingsburg, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18162,7 +18162,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/fortcross/items/602373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/fortcross/items/602373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fortcross/items/602373/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California History - Open Sign Up is a curated experience in Santa Ysabel, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18190,7 +18190,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362166/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/californiahaflingers/items/362166/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/californiahaflingers/items/362166/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Interactive Clinics is a curated experience in Redding, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18218,7 +18218,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/rpmadventurestours/items/408787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/rpmadventurestours/items/408787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rpmadventurestours/items/408787/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Coast Adventure Tour 350 is a curated experience in Paso Robles, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18246,7 +18246,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/408878/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/kitchenonfire/items/408878/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/kitchenonfire/items/408878/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Italian with Chef David is a curated experience in Berkeley, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18274,7 +18274,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cybexotics/items/512408/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cybexotics/items/512408/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cybexotics/items/512408/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Ferrari California T Convertible is a curated experience in Las Vegas, Nevada designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18302,7 +18302,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/sweetescapegame/items/477126/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/sweetescapegame/items/477126/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sweetescapegame/items/477126/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "California Science Center Family Field Trip is a curated experience in San Bernardino, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18330,7 +18330,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/243838/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/wecaliforniatours/items/243838/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wecaliforniatours/items/243838/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "FREE Trail Day is a curated experience in Buena Park, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18358,7 +18358,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/615189/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/gentlebarn/items/615189/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gentlebarn/items/615189/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sunday - Walk Up is a curated experience in Santa Clarita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18389,7 +18389,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650479/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/southernutahscuba/items/650479/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650479/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Dive Sand Hollow in Greater Zion is a curated experience in Hurricane, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18422,7 +18422,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578819/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578819/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578819/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "General Admission is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18455,7 +18455,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/madmooserentals/items/430832/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/madmooserentals/items/430832/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/madmooserentals/items/430832/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Southern Utah UTV Overnight Tour is a curated experience in Hurricane, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18483,7 +18483,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/196621/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahproflyfishing/items/196621/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/196621/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Wade Fly Fishing Trip is a curated experience in Heber City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18511,7 +18511,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/304750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahproflyfishing/items/304750/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/304750/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Local Lakes Half Day Fly and Light Tackle Guided Tour is a curated experience in Heber City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18542,7 +18542,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578916/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578916/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Field Trips is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18573,7 +18573,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578861/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578861/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578861/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Junior Zookeeper Program is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18604,7 +18604,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650440/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/southernutahscuba/items/650440/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650440/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Intro to Scuba is a curated experience in Hurricane, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18632,7 +18632,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/eastzionadventures/items/170198/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/eastzionadventures/items/170198/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/eastzionadventures/items/170198/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VR Soaring Utah is a curated experience in Orderville, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18663,7 +18663,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahdinosaurs/items/667289/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahdinosaurs/items/667289/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahdinosaurs/items/667289/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Fossil Discoveries is a curated experience in St. George, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18694,7 +18694,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578857/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578857/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Classic Party Room Package is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18725,7 +18725,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650451/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/southernutahscuba/items/650451/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/southernutahscuba/items/650451/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Scuba Refresher is a curated experience in Hurricane, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18753,7 +18753,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/citysightsutah/items/45606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/citysightsutah/items/45606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/citysightsutah/items/45606/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "World's Largest Copper Mine is a curated experience in Salt Lake City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18781,7 +18781,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/216851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahproflyfishing/items/216851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/216851/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Fly Fishing Float Trip is a curated experience in Heber City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18809,7 +18809,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/471363/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahtourhelicopters/items/471363/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/471363/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Antelope Island Tour is a curated experience in Woods Cross, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18837,7 +18837,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/472513/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahtourhelicopters/items/472513/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/472513/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Wasatch Mountains Tour is a curated experience in Woods Cross, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18868,7 +18868,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578836/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578836/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578836/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mega Party Room Package (ALL INCLUSIVE) is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18899,7 +18899,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578868/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP 1.5 Hour Tour is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18932,7 +18932,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578870/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578870/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP 2 Hour Tour + Big \"Slither\" Experience is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18965,7 +18965,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578871/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578871/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578871/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP 2 Hour Tour + Big \"Squeeze\" Experience is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -18998,7 +18998,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578911/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578911/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578911/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP 2 Hour Tour + Big \"Thrash\" Experience is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19029,7 +19029,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/ovrride/items/285932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/ovrride/items/285932/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/ovrride/items/285932/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Utah Red-eye Weekend at Snowbird is a curated experience in New York, New York designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19062,7 +19062,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578904/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/scalesandtailsutah/items/578904/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/scalesandtailsutah/items/578904/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "VIP 2 Hour Tour + Big \"Rattle\" Experience is a curated experience in Kearns, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19090,7 +19090,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/thebackcountrypros/items/170868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/thebackcountrypros/items/170868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/thebackcountrypros/items/170868/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Southern Utah Canyoneering Adventure is a curated experience in Green River, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19118,7 +19118,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/197358/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahproflyfishing/items/197358/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/197358/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Wade Fly Fishing Trip is a curated experience in Heber City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19146,7 +19146,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/472522/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahtourhelicopters/items/472522/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahtourhelicopters/items/472522/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mountainside Salt lake City Tour is a curated experience in Woods Cross, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19177,7 +19177,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/goldenhourfarmutah/items/580643/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/goldenhourfarmutah/items/580643/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/goldenhourfarmutah/items/580643/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Horseback Ride is a curated experience in Hyrum, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19205,7 +19205,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/citysightsutah/items/45601/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/citysightsutah/items/45601/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/citysightsutah/items/45601/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Salt Lake City Tour is a curated experience in Salt Lake City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19233,7 +19233,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/216860/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/utahproflyfishing/items/216860/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/utahproflyfishing/items/216860/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half Day Fly Fishing Float Trip is a curated experience in Heber City, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19261,7 +19261,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/allwaysadventure/items/517391/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/allwaysadventure/items/517391/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/allwaysadventure/items/517391/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Hiking: Utah’s Famous Slot Canyons (4 Hour) is a curated experience in Kanab, Utah designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19294,7 +19294,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/418794/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/undergrounddonutour/items/418794/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/418794/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Historic Donut Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19322,7 +19322,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/seathecity/items/485125/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/seathecity/items/485125/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seathecity/items/485125/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Single Tub - Washington DC Hot Tub Boat Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19354,7 +19354,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/502944/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/undergrounddonutour/items/502944/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/502944/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Holiday Donut Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19385,7 +19385,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201015/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201015/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201015/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Monuments @ Nite Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19418,7 +19418,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/316003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/316003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/316003/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC: Best of Capitol Hill Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19450,7 +19450,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/segwaythedoor/items/3991/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/segwaythedoor/items/3991/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/segwaythedoor/items/3991/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Half-Day Adventure on Washington Island Segway Tour is a curated experience in Fish Creek, Wisconsin designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19481,7 +19481,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353620/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/newageproductions-hom/items/353620/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353620/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Hunk-O-Mania Male Revue Show - Washington, D.C. is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19512,7 +19512,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/monumentaltoursinc/items/397884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/monumentaltoursinc/items/397884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/monumentaltoursinc/items/397884/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Tour of George Washington's Mount Vernon Estate and Old Town Alexandria is a curated experience in Alexandria, Virginia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19543,7 +19543,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437170/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cruisenh/items/437170/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437170/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sunset Dinner Cruise is a curated experience in Laconia, New Hampshire designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19574,7 +19574,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201023/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201023/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201023/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Private Washington DC Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19607,7 +19607,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/amigotoursusa/items/105809/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/amigotoursusa/items/105809/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/amigotoursusa/items/105809/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington and Philadelphia in One Day From New York City is a curated experience in New York, New York designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19638,7 +19638,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/divaroyale/items/349746/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/divaroyale/items/349746/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divaroyale/items/349746/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Diva Royale - Drag Queen Show Washington DC is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19670,7 +19670,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437122/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cruisenh/items/437122/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437122/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Narrated Scenic Tour from Alton Bay is a curated experience in Alton, New Hampshire designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19701,7 +19701,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437206/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cruisenh/items/437206/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437206/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Independence Day Dinner Cruise is a curated experience in Laconia, New Hampshire designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19733,7 +19733,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437415/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/cruisenh/items/437415/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruisenh/items/437415/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Halloween Masquerade Ball is a curated experience in Laconia, New Hampshire designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19764,7 +19764,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/comedywalksdc/items/119237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/comedywalksdc/items/119237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/comedywalksdc/items/119237/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Comedy Walks© Washington D.C. is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19792,7 +19792,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588893/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/babyloncitytours-dc/items/588893/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588893/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Family Friendly National Archives Museum Tour - Private is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19820,7 +19820,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/babyloncitytours-dc/items/588894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588894/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Family Friendly Smithsonian’s National Air and Space Museum Tour - Private is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19848,7 +19848,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588897/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/babyloncitytours-dc/items/588897/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/588897/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Family Friendly Smithsonian National Museum of Natural History Tour - Private is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19881,7 +19881,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201012/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201012/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201012/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Monumental Electric Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19912,7 +19912,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201014/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201014/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201014/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Monuments and Memorials Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19943,7 +19943,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201029/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201029/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201029/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Bike Rentals is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -19974,7 +19974,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/washingtonphotosafari/items/223138/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/washingtonphotosafari/items/223138/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/washingtonphotosafari/items/223138/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Photo Critiques: In-Person or Virually! is a curated experience in Washington, United States designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20002,7 +20002,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/seathecity/items/549741/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/seathecity/items/549741/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seathecity/items/549741/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sunset Tours: Single Tub - Washington DC Hot Tub Boat Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20030,7 +20030,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/seathecity/items/549742/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/seathecity/items/549742/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seathecity/items/549742/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Sunset Tours: Both Tubs - Private Washington DC Hot Tub Boat Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20061,7 +20061,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/customtoursofdc/items/643553/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/customtoursofdc/items/643553/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/customtoursofdc/items/643553/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Welcome to Washington- Half-Day Private Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20092,7 +20092,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201026/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/unlimitedbiking/items/201026/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/201026/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Washington DC Cherry Blossoms by Bike Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20120,7 +20120,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/seathecity/items/516197/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/seathecity/items/516197/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seathecity/items/516197/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Single Tub - Washington DC Cherry Blossom Hot Tub Boat Tour is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20148,7 +20148,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/internationalmountainclimbingschool/items/631416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/internationalmountainclimbingschool/items/631416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/internationalmountainclimbingschool/items/631416/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Mt. Washington Ascent: Spring, Summer, and Fall is a curated experience in Conway, New Hampshire designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
@@ -20181,7 +20181,7 @@ export const toursGenerated: Tour[] = [
     ],
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/78356/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "bookingWidgetUrl": "https://fareharbor.com/embeds/calendar/babyloncitytours-dc/items/78356/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/babyloncitytours-dc/items/78356/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Combo: DC National Mall + Capitol Hill Walking Tour – Semi-Private is a curated experience in Washington, District of Columbia designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   }
 ];
