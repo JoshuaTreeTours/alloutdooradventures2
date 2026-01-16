@@ -8,7 +8,7 @@ const DATA_DIR = path.resolve("data");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
-  { filename: "cycling.csv", activitySlug: "cycling" },
+  { filename: "cycling2.csv", activitySlug: "cycling" },
   { filename: "hiking.csv", activitySlug: "hiking" },
   { filename: "canoeing.csv", activitySlug: "canoeing" },
   { filename: "san-francisco.csv", activitySlug: "detours" },
@@ -126,10 +126,7 @@ const parseTags = (rawTags: string) =>
 const mapActivitySlugs = (activitySlug: string) => [activitySlug];
 
 const buildLongDescription = (title: string, city: string, state: string) =>
-  [
-    `${title} is a curated experience in ${city}, ${state} designed for travelers who want a guided, outdoors-first outing.`,
-    "Expect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery.",
-  ].join("\n\n");
+  `${title} is a guided outdoor experience based in ${city}, ${state} that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.`;
 
 const parseNumber = (value: string) => {
   const parsed = Number.parseFloat(value);
