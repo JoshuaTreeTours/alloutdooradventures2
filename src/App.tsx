@@ -19,6 +19,7 @@ import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
+import ActivityStateTours from "./pages/tours/ActivityStateTours";
 
 export default function App() {
   return (
@@ -66,6 +67,10 @@ export default function App() {
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />
+        <Route
+          path="/tours/:activitySlug/us/:stateSlug"
+          component={ActivityStateTours}
+        />
         <Route path="/tours/activities/cycling" component={CyclingTours} />
         <Route
           path="/tours/activities/day-adventures"
