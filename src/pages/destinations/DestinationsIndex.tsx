@@ -18,6 +18,9 @@ export default function DestinationsIndex() {
     },
     {},
   );
+  const rockyMountainStates = destinations.filter(
+    (destination) => destination.stateSlug === "montana"
+  );
 
   return (
     <main className="mx-auto max-w-6xl px-6 pb-20 pt-16">
@@ -36,6 +39,29 @@ export default function DestinationsIndex() {
       </section>
 
       <section className="mt-10 space-y-12" aria-label="States">
+        {rockyMountainStates.length > 0 ? (
+          <div className="space-y-6">
+            <div className="text-center">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Rocky Mountain
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                Featured Rocky Mountain States
+              </h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {rockyMountainStates.map((state) => (
+                <DestinationCard
+                  key={`rocky-mountain-${state.name}`}
+                  destination={state}
+                  ctaLabel="Discover"
+                  headingLevel="h3"
+                  descriptionVariant="featured"
+                />
+              ))}
+            </div>
+          </div>
+        ) : null}
         {regionOrder
           .filter((region) => destinationsByRegion[region]?.length)
           .map((region) => (
