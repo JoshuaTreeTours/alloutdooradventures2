@@ -2720,9 +2720,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         intro:
           "Bozeman is a lively basecamp with quick access to the Gallatin Valley, mountain trails, and Yellowstone day trips.",
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+          "/images/bozeman.jpg",
         ],
         activityTags: ["hiking", "cycling", "canoeing"],
         whereItIs: [
