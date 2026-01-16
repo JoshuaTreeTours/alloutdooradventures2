@@ -13,6 +13,12 @@ import {
   getToursByCity,
   getTourBySlugs,
 } from "../../../../data/tours";
+import {
+  getActivityLabel,
+  getExpandedTourDescription,
+  getSkillLevelLabel,
+  getTourReviewSummary,
+} from "../../../../data/tourNarratives";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -76,6 +82,9 @@ export default function CityTourDetailRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
+  const activityLabel = getActivityLabel(tour);
+  const skillLevel = getSkillLevelLabel(tour);
+  const reviewSummary = getTourReviewSummary(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -137,12 +146,18 @@ export default function CityTourDetailRoute({
           </div>
           <div className="flex flex-wrap gap-3">
             <a
-              className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-white/90"
+              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
               href={tour.bookingUrl}
               rel="noreferrer"
               target="_blank"
             >
-              Book this tour
+              BOOK
+            </a>
+            <a
+              className="inline-flex items-center justify-center rounded-md border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
+              href="#outdoor-adventures-review"
+            >
+              Review summary
             </a>
             <Link
               href={toursHref}
@@ -169,7 +184,7 @@ export default function CityTourDetailRoute({
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            {tour.longDescription.split("\n\n").map((paragraph) => (
+            {getExpandedTourDescription(tour).map((paragraph) => (
               <p
                 key={paragraph}
                 className="mt-4 text-sm text-[#405040] leading-relaxed"
@@ -178,44 +193,74 @@ export default function CityTourDetailRoute({
               </p>
             ))}
           </div>
-          <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-            <h3 className="text-base font-semibold text-[#1f2a1f]">
-              Tour snapshot
-            </h3>
-            <div className="mt-4 space-y-3 text-sm text-[#405040]">
-              <div className="flex items-center justify-between">
-                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                  Rating
-                </span>
-                <span className="font-semibold text-[#1f2a1f]">
-                  {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
-                </span>
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-[#1f2a1f]">
+                Tour snapshot
+              </h3>
+              <div className="mt-4 space-y-3 text-sm text-[#405040]">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Rating
+                  </span>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Reviews
+                  </span>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    {tour.badges.reviewCount ?? "—"}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Duration
+                  </span>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    {tour.badges.duration ?? "Check booking page"}
+                  </span>
+                </div>
+                {tour.badges.likelyToSellOut ? (
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
+                    Likely to sell out
+                  </p>
+                ) : null}
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                  Reviews
-                </span>
-                <span className="font-semibold text-[#1f2a1f]">
-                  {tour.badges.reviewCount ?? "—"}
-                </span>
-              </div>
-              <div className="flex items-center justify-between">
-                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                  Duration
-                </span>
-                <span className="font-semibold text-[#1f2a1f]">
-                  {tour.badges.duration ?? "Check booking page"}
-                </span>
-              </div>
-              {tour.badges.likelyToSellOut ? (
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
-                  Likely to sell out
-                </p>
+              {disclosure ? (
+                <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
               ) : null}
             </div>
-            {disclosure ? (
-              <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
-            ) : null}
+            <div
+              id="outdoor-adventures-review"
+              className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-base font-semibold text-[#1f2a1f]">
+                  Outdoor Adventures review
+                </h3>
+                <span className="rounded-full bg-[#e6f4ea] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2f8a3d]">
+                  Approved
+                </span>
+              </div>
+              <p className="mt-3 text-sm text-[#405040]">{reviewSummary}</p>
+              <div className="mt-4 space-y-2 text-xs text-[#405040]">
+                <p>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    Skill level:
+                  </span>{" "}
+                  {skillLevel}
+                </p>
+                <p>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    Activity focus:
+                  </span>{" "}
+                  {activityLabel}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {tour.galleryImages?.length ? (

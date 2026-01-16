@@ -31,6 +31,14 @@ export default function TourCard({ tour, href }: TourCardProps) {
           className="h-full w-full object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <a
+          className="absolute bottom-3 right-3 inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md transition hover:bg-[#287a35]"
+          href={tour.bookingUrl}
+          rel="noreferrer"
+          target="_blank"
+        >
+          BOOK
+        </a>
         <div className="absolute left-3 top-3 flex flex-wrap items-center gap-2">
           {ratingLabel && (
             <span className="inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-xs font-semibold text-[#1f2a1f] shadow-sm">
@@ -76,7 +84,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <div className="mt-auto">
           <Link href={detailHref}>
             <a className="inline-flex items-center text-sm font-semibold text-[#2f4a2f]">
-              View tour
+              View tour details
             </a>
           </Link>
         </div>

@@ -148,14 +148,14 @@ export default function CityTourBookingRoute({
             href={tour.bookingUrl}
             target="_blank"
             rel="noreferrer"
-            className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]"
+            className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
             onClick={() =>
               console.log(
                 `[Open booking in new tab] ${city.name} · ${tour.title}`,
               )
             }
           >
-            Open booking in a new tab
+            BOOK
           </a>
           {disclosure ? (
             <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
