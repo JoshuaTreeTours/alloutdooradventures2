@@ -23,6 +23,24 @@ export const ACTIVITY_PAGES = [
     image:
       "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80",
   },
+  {
+    slug: "cycling",
+    title: "Cycling",
+    description: "Road rides, gravel loops, and guided bike tours.",
+    image: "/images/cycling-hero.jpg",
+  },
+  {
+    slug: "hiking",
+    title: "Hiking",
+    description: "Trail days with alpine views and lakeside vistas.",
+    image: "/images/hiking-hero3.jpg",
+  },
+  {
+    slug: "sailing-boat",
+    title: "Canoeing",
+    description: "Worldwide paddle adventures.",
+    image: "/images/canoe-hero.jpg",
+  },
 ];
 
 export const ADVENTURE_ACTIVITY_PAGES = [
