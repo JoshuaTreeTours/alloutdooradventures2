@@ -8,6 +8,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Massachusetts.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Massachusetts's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/FzwUWNvdReSk5W0dxfxu",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Massachusetts with guided tours and local experts.",
     "longDescription": "Massachusetts delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Massachusetts will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -501,14 +502,13 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Sharon.",
-        "intro": "Sharon is a strong basecamp for hiking, canoeing in Massachusetts.",
+        "intro": "Sharon is a strong basecamp for canoeing in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/v4SL69VGTmecvruy4PeJ",
           "https://cdn.filestackcontent.com/IONGJI84QDqLrIWB9VeE",
           "https://cdn.filestackcontent.com/Z8e0mTZsSTiM4577b1yK"
         ],
         "activityTags": [
-          "hiking",
           "canoeing"
         ],
         "whereItIs": [
@@ -524,7 +524,6 @@ export const northeastStates: StateDestination[] = [
           "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Sharon."
         },
         "thingsToDo": [
-          "Hike a scenic trail with views around Sharon.",
           "Plan a paddle or canoe outing near Sharon.",
           "Explore a local park or nature preserve near Sharon.",
           "Catch golden hour at a nearby viewpoint.",
@@ -533,7 +532,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Sharon's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Sharon."
+          "Use activity filters to compare canoeing departures in Sharon."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1036,15 +1035,15 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Newton.",
-        "intro": "Newton is a strong basecamp for hiking, canoeing in Massachusetts.",
+        "intro": "Newton is a strong basecamp for canoeing, hiking in Massachusetts.",
         "heroImages": [
           "https://cdn.filestackcontent.com/Ry5eOkqREGAbzaxLOxRI",
           "https://cdn.filestackcontent.com/3NCaxkoURwi6vZF4DZQz",
           "https://cdn.filestackcontent.com/bZv743PqTEmndHfZLRCs"
         ],
         "activityTags": [
-          "hiking",
-          "canoeing"
+          "canoeing",
+          "hiking"
         ],
         "whereItIs": [
           "Newton sits within Massachusetts, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -1059,8 +1058,8 @@ export const northeastStates: StateDestination[] = [
           "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Newton."
         },
         "thingsToDo": [
-          "Hike a scenic trail with views around Newton.",
           "Plan a paddle or canoe outing near Newton.",
+          "Hike a scenic trail with views around Newton.",
           "Explore a local park or nature preserve near Newton.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Newton."
@@ -1068,7 +1067,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Newton's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking, canoeing departures in Newton."
+          "Use activity filters to compare canoeing, hiking departures in Newton."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -1635,6 +1634,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across District of Columbia.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across District of Columbia's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/uLfzGU37QhWxqv5OaUN5",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across District of Columbia with guided tours and local experts.",
     "longDescription": "District of Columbia delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in District of Columbia will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -1729,6 +1729,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Rhode Island.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Rhode Island's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/9mpbD58NR7Kuyt7elTkK",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Rhode Island with guided tours and local experts.",
     "longDescription": "Rhode Island delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Rhode Island will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -1821,6 +1822,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across New York.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across New York's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/oxMhq87NSn2wBId9oeIK",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across New York with guided tours and local experts.",
     "longDescription": "New York delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in New York will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -2372,6 +2374,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across New Jersey.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across New Jersey's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/jgoql9gnQnWKynWP5Xg6",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across New Jersey with guided tours and local experts.",
     "longDescription": "New Jersey delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in New Jersey will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -3114,12 +3117,12 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Middletown Township.",
-        "intro": "Middletown Township is a strong basecamp for hiking in New Jersey.",
+        "intro": "Middletown Township is a strong basecamp for canoeing in New Jersey.",
         "heroImages": [
           "/hero.jpg"
         ],
         "activityTags": [
-          "hiking"
+          "canoeing"
         ],
         "whereItIs": [
           "Middletown Township sits within New Jersey, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -3134,7 +3137,7 @@ export const northeastStates: StateDestination[] = [
           "seasonalNotes": "Spring and fall deliver mild temperatures and crisp skies around Middletown Township."
         },
         "thingsToDo": [
-          "Hike a scenic trail with views around Middletown Township.",
+          "Plan a paddle or canoe outing near Middletown Township.",
           "Explore a local park or nature preserve near Middletown Township.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Middletown Township."
@@ -3142,7 +3145,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Middletown Township's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Middletown Township."
+          "Use activity filters to compare canoeing departures in Middletown Township."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -3179,6 +3182,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Connecticut.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Connecticut's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/ufopg11ATw62UvrmAxrV",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Connecticut with guided tours and local experts.",
     "longDescription": "Connecticut delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Connecticut will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -3932,6 +3936,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Maine.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Maine's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/R5BerKQASjCijJdxZCt7",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Maine with guided tours and local experts.",
     "longDescription": "Maine delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Maine will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -4155,6 +4160,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across New Hampshire.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across New Hampshire's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/wwWZTiFsRFiXPqVulnVh",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across New Hampshire with guided tours and local experts.",
     "longDescription": "New Hampshire delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in New Hampshire will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -4506,6 +4512,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Maryland.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Maryland's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/wS6OwdypSJeGv4b8W9Uy",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Maryland with guided tours and local experts.",
     "longDescription": "Maryland delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Maryland will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -4531,14 +4538,15 @@ export const northeastStates: StateDestination[] = [
         "lat": -75.07762566666666,
         "lng": 38.357751666666665,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Ocean City.",
-        "intro": "Ocean City is a strong basecamp for hiking in Maryland.",
+        "intro": "Ocean City is a strong basecamp for hiking, canoeing in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/wS6OwdypSJeGv4b8W9Uy",
           "https://cdn.filestackcontent.com/eE1B5PXjRibxiVOcUKNs",
           "https://cdn.filestackcontent.com/2iwH0NKRuSofZ895o9So"
         ],
         "activityTags": [
-          "hiking"
+          "hiking",
+          "canoeing"
         ],
         "whereItIs": [
           "Ocean City sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4554,6 +4562,7 @@ export const northeastStates: StateDestination[] = [
         },
         "thingsToDo": [
           "Hike a scenic trail with views around Ocean City.",
+          "Plan a paddle or canoe outing near Ocean City.",
           "Explore a local park or nature preserve near Ocean City.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Ocean City."
@@ -4561,7 +4570,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Ocean City's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Ocean City."
+          "Use activity filters to compare hiking, canoeing departures in Ocean City."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -4931,14 +4940,15 @@ export const northeastStates: StateDestination[] = [
         "lat": null,
         "lng": null,
         "shortDescription": "Guided adventures, scenic routes, and outdoor escapes around Lusby.",
-        "intro": "Lusby is a strong basecamp for hiking in Maryland.",
+        "intro": "Lusby is a strong basecamp for hiking, canoeing in Maryland.",
         "heroImages": [
           "https://cdn.filestackcontent.com/93pHi4t0QkyIWCwNJf4U",
           "https://cdn.filestackcontent.com/lM4ipwtgQy6OmBVMiq5X",
           "https://cdn.filestackcontent.com/10YEXGUCQhb4p5KxgDwC"
         ],
         "activityTags": [
-          "hiking"
+          "hiking",
+          "canoeing"
         ],
         "whereItIs": [
           "Lusby sits within Maryland, offering quick access to trailheads, waterfront paths, and local parks.",
@@ -4954,6 +4964,7 @@ export const northeastStates: StateDestination[] = [
         },
         "thingsToDo": [
           "Hike a scenic trail with views around Lusby.",
+          "Plan a paddle or canoe outing near Lusby.",
           "Explore a local park or nature preserve near Lusby.",
           "Catch golden hour at a nearby viewpoint.",
           "Stroll a waterfront trail or greenway in Lusby."
@@ -4961,7 +4972,7 @@ export const northeastStates: StateDestination[] = [
         "toursCopy": [
           "Plan a half-day tour to get oriented with Lusby's outdoor highlights.",
           "Pair a guided adventure with free time for local food and neighborhoods.",
-          "Use activity filters to compare hiking departures in Lusby."
+          "Use activity filters to compare hiking, canoeing departures in Lusby."
         ],
         "weekendItinerary": {
           "dayOne": [
@@ -5130,6 +5141,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Pennsylvania.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Pennsylvania's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/S2hjpM09R3aXwmJ56f7W",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Pennsylvania with guided tours and local experts.",
     "longDescription": "Pennsylvania delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Pennsylvania will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [
@@ -5812,6 +5824,7 @@ export const northeastStates: StateDestination[] = [
     "description": "Outdoor experiences across Vermont.",
     "featuredDescription": "Plan hiking, cycling, and canoeing escapes across Vermont's Northeast landscapes.",
     "heroImage": "https://cdn.filestackcontent.com/xAtSDpRT6eCb4eGQ5uOT",
+    "region": "Northeast",
     "intro": "Plan multi-activity getaways across Vermont with guided tours and local experts.",
     "longDescription": "Vermont delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in Vermont will highlight its local specialties so travelers can book with confidence.",
     "topRegions": [

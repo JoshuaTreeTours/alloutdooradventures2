@@ -3,7 +3,9 @@ import { Link } from "wouter";
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import MapEmbed from "../components/maps/MapEmbed";
+import TourCard from "../components/TourCard";
 import type { Destination, StateDestination } from "../data/destinations";
+import { getCityTourDetailPath, getToursByState } from "../data/tours";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -30,6 +32,21 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     lng: city.lng,
   }));
   const historyHighlights = buildStateHistory(state.name);
+  const stateTours = getToursByState(state.slug);
+  const categorizedTours = [
+    {
+      title: "Hiking Tours",
+      tours: stateTours.filter((tour) => tour.activitySlugs.includes("hiking")),
+    },
+    {
+      title: "Cycling Tours",
+      tours: stateTours.filter((tour) => tour.activitySlugs.includes("cycling")),
+    },
+    {
+      title: "Canoeing Tours",
+      tours: stateTours.filter((tour) => tour.activitySlugs.includes("canoeing")),
+    },
+  ].filter((section) => section.tours.length > 0);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -239,6 +256,42 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           ))}
         </div>
       </section>
+
+      {categorizedTours.length > 0 && (
+        <section className="bg-white/60">
+          <div className="mx-auto max-w-6xl px-6 py-16">
+            <div className="flex flex-col gap-2 text-center">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Tours by category
+              </span>
+              <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                Book tours across {state.name}
+              </h2>
+              <p className="text-sm text-[#405040] md:text-base">
+                Compare guided adventures by activity and find your ideal pace.
+              </p>
+            </div>
+            <div className="mt-10 space-y-12">
+              {categorizedTours.map((section) => (
+                <div key={section.title}>
+                  <h3 className="text-xl font-semibold text-[#2f4a2f]">
+                    {section.title}
+                  </h3>
+                  <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    {section.tours.map((tour) => (
+                      <TourCard
+                        key={tour.id}
+                        tour={tour}
+                        href={getCityTourDetailPath(tour)}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="bg-white/60">
         <div className="mx-auto max-w-6xl px-6 py-16">

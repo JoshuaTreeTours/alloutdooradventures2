@@ -1,3 +1,4 @@
+import { deepSouthStates } from "./deepSouth.generated";
 import { northeastStates } from "./northeast.generated";
 
 export type Destination = {
@@ -7,6 +8,7 @@ export type Destination = {
   featuredDescription?: string;
   image: string;
   href: string;
+  region?: string;
 };
 
 export type StateRegion = {
@@ -59,6 +61,7 @@ export type StateDestination = {
   description: string;
   featuredDescription?: string;
   heroImage: string;
+  region: string;
   intro: string;
   longDescription: string;
   topRegions: StateRegion[];
@@ -84,6 +87,7 @@ const westStates: StateDestination[] = [
       "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
     heroImage:
       "/images/california/california-hero.jpg",
+    region: "West",
     intro:
       "California is a choose-your-own-adventure state, pairing Pacific coastlines with desert basins and granite peaks in a single road trip.",
     longDescription: `California is a masterclass in variety for outdoor travelers. Within a single day you can watch dawn break over the Mojave Desert, spend an afternoon paddling a glassy alpine lake, and still catch sunset along the Pacific. The state stretches almost 800 miles from north to south, which means climates, ecosystems, and travel styles change quickly. That range creates the perfect playground for weekend escapes and weeklong epic loops alike. Whether you crave redwood shade, granite peaks, coastal cliffs, or sprawling desert basins, California delivers a layered itinerary that always feels new.
@@ -839,6 +843,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
       "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
     heroImage:
       "/images/arizona/arizona-hero.jpg",
+    region: "West",
     intro:
       "Arizona is defined by canyon country and high desert skies, offering red rock hikes, alpine forests, and legendary sunsets.",
     longDescription: `Arizona is a land of deep canyons, sculpted mesas, and sky that seems to stretch forever. It is a destination that rewards early starts and patient exploration, where the desert teaches a slower rhythm and the landscapes expand in every direction. The state’s outdoor appeal begins with the Grand Canyon, but the real magic lies in the layers—high plateaus, red-rock amphitheaters, pine forests, and hidden river corridors that invite you to explore beyond the obvious.
@@ -1129,6 +1134,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
       "Remote hot springs, dark-sky nights, and wide-open desert basins.",
     heroImage:
       "/images/nevada/nevada-hero.png",
+    region: "West",
     intro:
       "Nevada is a high-desert playground of basin-and-range mountains, quiet hot springs, and wide-open horizons.",
     longDescription: `Nevada is the ultimate open-road adventure, a state built on vast basins, rugged mountain ranges, and desert skies that stretch forever. It is a destination that rewards explorers who love solitude, hot springs, and stargazing nights. Nevada’s landscapes are raw and dramatic, offering outdoor experiences that feel expansive and unhurried.
@@ -1413,6 +1419,7 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
       "Iconic arches, canyon slots, and sandstone trails made for exploration.",
     heroImage:
       "/images/utah/utah-hero.webp",
+    region: "West",
     intro:
       "Utah is the heart of canyon country, mixing red rock drama with alpine escapes in the Wasatch Range.",
     longDescription: `Utah is the crown jewel of canyon country, a state defined by sculpted sandstone, towering cliffs, and a landscape that feels like a national park on repeat. It is the place where arches span the sky, slot canyons glow with reflected light, and mesas rise like ships from the desert floor. For outdoor travelers, Utah is a dream: accessible trails, epic viewpoints, and a sense of wonder that appears around every bend.
@@ -1699,6 +1706,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
       "Waterfalls, misty forests, and volcanic peaks around every bend.",
     heroImage:
       "/images/oregon/oregon-hero.JPG",
+    region: "West",
     intro:
       "Oregon blends Pacific coastline with waterfall hikes and volcanic peaks, perfect for travelers who want a mix of forest, river, and ocean.",
     longDescription: `Oregon is a lush, storybook landscape of rainforests, volcanic peaks, and rugged coastline. It is a state where waterfalls tumble down mossy cliffs, where mist hangs in the trees, and where coastal winds sculpt dramatic shorelines. Oregon’s outdoor appeal is built on diversity and easy access, making it ideal for travelers who want to balance adventure with cozy, small-town charm.
@@ -1979,6 +1987,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
       "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
     heroImage:
       "/images/washington/washington-hero.jpg",
+    region: "West",
     intro:
       "Washington is a landscape of misty rainforests and glacier-fed lakes, offering everything from coastal paddles to alpine hikes.",
     longDescription: `Washington is a state of lush contrasts—rainforests, rugged coastline, snow-capped peaks, and sparkling alpine lakes. It is a paradise for hikers, paddlers, and anyone who loves misty mornings and mountain silhouettes. From the Olympic Peninsula to the Cascade Range, Washington offers an outdoor itinerary that feels both wild and accessible.
@@ -2402,7 +2411,11 @@ export const tours: Tour[] = [
   },
 ];
 
-export const states: StateDestination[] = [...westStates, ...northeastStates];
+export const states: StateDestination[] = [
+  ...westStates,
+  ...northeastStates,
+  ...deepSouthStates,
+];
 
 export const destinations: Destination[] = states.map((state) => ({
   name: state.name,
@@ -2411,6 +2424,7 @@ export const destinations: Destination[] = states.map((state) => ({
   featuredDescription: state.featuredDescription,
   image: state.heroImage,
   href: `/destinations/states/${state.slug}`,
+  region: state.region,
 }));
 
 export const featuredDestinations = destinations;

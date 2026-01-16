@@ -67,9 +67,28 @@ export default function Home() {
     import.meta.env.MODE !== "production" &&
     import.meta.env.VERCEL_ENV !== "production";
 
+  const featuredDestinationsByRegion = useMemo(() => {
+    const regionOrder = ["West", "Northeast", "Deep South"];
+    const grouped = featuredDestinations.reduce<
+      Record<string, typeof featuredDestinations>
+    >((accumulator, destination) => {
+      const region = destination.region ?? "Other";
+      accumulator[region] = accumulator[region] ?? [];
+      accumulator[region].push(destination);
+      return accumulator;
+    }, {});
+
+    return regionOrder
+      .map((region) => ({
+        region,
+        destinations: (grouped[region] ?? []).slice(0, 2),
+      }))
+      .filter((group) => group.destinations.length > 0);
+  }, []);
+
   const featuredDestinationsPreview = useMemo(
-    () => featuredDestinations.slice(0, 6),
-    []
+    () => featuredDestinationsByRegion.flatMap((group) => group.destinations),
+    [featuredDestinationsByRegion]
   );
 
   const debugImages = useMemo(
@@ -265,23 +284,38 @@ export default function Home() {
               Featured Destinations
             </span>
             <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              Plan your next escape to visit the great American West
+              Plan your next escape across the American West, Northeast, and
+              Deep South
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#405040] md:text-base">
-              Explore handcrafted itineraries across the West—each destination blends
-              signature landscapes with local-guided adventure.
+              Explore handcrafted itineraries across three regions—each destination
+              blends signature landscapes with local-guided adventure.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {featuredDestinationsPreview.map((destination) => (
-              <DestinationCard
-                key={destination.name}
-                destination={destination}
-                ctaLabel="Discover"
-                headingLevel="h3"
-                descriptionVariant="featured"
-              />
+          <div className="mt-10 space-y-10">
+            {featuredDestinationsByRegion.map((group) => (
+              <div key={group.region} className="space-y-6">
+                <div className="text-center">
+                  <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                    {group.region}
+                  </span>
+                  <h3 className="mt-2 text-xl font-semibold text-[#2f4a2f] md:text-2xl">
+                    Featured {group.region} states
+                  </h3>
+                </div>
+                <div className="grid gap-6 md:grid-cols-2">
+                  {group.destinations.map((destination) => (
+                    <DestinationCard
+                      key={`${group.region}-${destination.name}`}
+                      destination={destination}
+                      ctaLabel="Discover"
+                      headingLevel="h4"
+                      descriptionVariant="featured"
+                    />
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
