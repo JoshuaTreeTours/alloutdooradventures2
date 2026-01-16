@@ -12,6 +12,7 @@ import {
   getActivityLabel,
   getExpandedTourDescription,
   getSkillLevelLabel,
+  getTourHighlights,
   getTourReviewSummary,
 } from "../../data/tourNarratives";
 
@@ -44,6 +45,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
   const reviewSummary = getTourReviewSummary(tour);
+  const highlights = getTourHighlights(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -180,6 +182,16 @@ export default function TourDetail({ params }: TourDetailProps) {
           </div>
         </div>
         <div className="mt-10 space-y-4 text-sm text-[#405040] md:text-base">
+          <div className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm">
+            <h2 className="text-base font-semibold text-[#1f2a1f]">
+              Tour highlights
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040] md:text-base">
+              {highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+          </div>
           {getExpandedTourDescription(tour).map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
