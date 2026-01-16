@@ -2262,6 +2262,268 @@ Washington invites exploration with a sense of wonder. It is a state where the o
       },
     ],
   },
+  {
+    slug: "montana",
+    name: "Montana",
+    description: "Big-sky valleys, glacier lakes, and trail-first towns.",
+    featuredDescription:
+      "Plan hiking, cycling, and canoeing days across Montana's mountain gateways.",
+    heroImage:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+    region: "Heartland",
+    intro:
+      "Montana pairs rugged ranges with wide-open rivers, making it a natural fit for multi-activity trips.",
+    longDescription: `Montana is defined by dramatic mountain backdrops, long river valleys, and towns that serve as easy basecamps for outdoor travel. From Yellowstone gateways in the south to glacier-carved lakes in the north, the state rewards travelers who want trail time, scenic drives, and quiet water days in the same trip.
+
+Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while letting you mix guided outings with self-guided exploration. Distances are big, so plan for drive time, but the pay-off is a steady stream of viewpoints, riverside trails, and uncrowded paddling routes.`,
+    topRegions: [
+      {
+        title: "Yellowstone Gateway",
+        description:
+          "Wildlife corridors, geothermal landscapes, and big-sky trailheads near the park boundary.",
+      },
+      {
+        title: "Flathead & Glacier",
+        description:
+          "Alpine lakes, forested ridgelines, and iconic drives around Glacier National Park.",
+      },
+      {
+        title: "River Valleys",
+        description:
+          "Clark Fork and Bitterroot river corridors with easy paddling access and bike-friendly paths.",
+      },
+    ],
+    cities: [
+      {
+        name: "Bozeman",
+        slug: "bozeman",
+        stateSlug: "montana",
+        region: "Southwest Montana",
+        lat: 45.6769,
+        lng: -111.0429,
+        shortDescription:
+          "College-town energy with rivers, trailheads, and Yellowstone access.",
+        intro:
+          "Bozeman is a lively basecamp with quick access to the Gallatin Valley, mountain trails, and Yellowstone day trips.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["hiking", "cycling", "canoeing"],
+        whereItIs: [
+          "Bozeman sits in the Gallatin Valley, about 90 minutes from the north entrance to Yellowstone National Park.",
+          "Trailheads, river access points, and scenic drives are all within a short drive of downtown.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the Bridger Range or Gallatin foothills for panoramic valley views.",
+          lakesWater:
+            "Paddle Hyalite Reservoir or float mellow stretches of the Gallatin River.",
+          desertForest:
+            "Forested trails around the valley offer shaded hikes and wildlife spotting.",
+          cycling:
+            "Ride quiet valley roads or connect to gravel routes outside town.",
+          scenicDrives:
+            "Plan a Yellowstone day trip or loop through Paradise Valley.",
+          seasonalNotes:
+            "Late spring through early fall brings the best hiking and paddling weather.",
+        },
+        thingsToDo: [
+          "Hike a Bridger Range trail.",
+          "Plan a Yellowstone day tour.",
+          "Bike a Gallatin Valley loop.",
+          "Paddle or float the Gallatin River.",
+          "Catch sunset at a mountain overlook.",
+        ],
+        toursCopy: [
+          "Guided Yellowstone outings help with timing and logistics for first-time visitors.",
+          "Paddling rentals make it easy to fit in a self-guided lake day.",
+          "Small-group bike tours are a simple way to see town and nearby trails.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: coffee downtown and a local bike or walking tour.",
+            "Afternoon: paddle Hyalite or take a short hike.",
+            "Evening: dinner downtown and sunset views.",
+          ],
+          dayTwo: [
+            "Morning: Yellowstone day trip or Gallatin hike.",
+            "Afternoon: river float or scenic drive.",
+            "Evening: relaxed meal in town.",
+          ],
+        },
+        gettingThere: [
+          "Bozeman Yellowstone International Airport is 20 minutes from downtown.",
+          "Rental cars help for park trips and trailheads outside town.",
+        ],
+        faq: [
+          {
+            question: "How far is Yellowstone from Bozeman?",
+            answer:
+              "The north entrance is about 90 minutes away by car, depending on stops.",
+          },
+          {
+            question: "Do I need a car?",
+            answer:
+              "A car helps for trailheads and park access, but guided tours can cover major highlights.",
+          },
+        ],
+      },
+      {
+        name: "Missoula",
+        slug: "missoula",
+        stateSlug: "montana",
+        region: "Western Montana",
+        lat: 46.8721,
+        lng: -113.994,
+        shortDescription:
+          "Riverfront trails, bike paths, and easy access to the Bitterroot.",
+        intro:
+          "Missoula is a relaxed river city that pairs downtown access with nearby mountain trails and paddling routes.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["canoeing", "cycling", "hiking"],
+        whereItIs: [
+          "Missoula sits where the Clark Fork and Bitterroot rivers meet in western Montana.",
+          "Trail systems and river access points start close to downtown.",
+        ],
+        experiences: {
+          mountains:
+            "Head to the Rattlesnake National Recreation Area for quick hikes.",
+          lakesWater:
+            "Float the Clark Fork River or paddle nearby reservoirs.",
+          desertForest:
+            "Forested foothills provide shaded trails and wildlife sightings.",
+          cycling:
+            "Use the Riverfront and Bitterroot paths for easy miles.",
+          scenicDrives:
+            "Drive south along the Bitterroot Valley for quiet views.",
+          seasonalNotes:
+            "Summer is prime for river floats, while fall offers cooler hiking temps.",
+        },
+        thingsToDo: [
+          "Walk the Clark Fork Riverfront Trail.",
+          "Plan a mellow river float.",
+          "Bike the Bitterroot Trail.",
+          "Hike in the Rattlesnake area.",
+          "Explore downtown food and coffee spots.",
+        ],
+        toursCopy: [
+          "River float options keep paddling simple without extra planning.",
+          "Bike services help you prep gear before longer rides.",
+          "Mix a short hike with a river afternoon for a balanced day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: riverfront walk and coffee.",
+            "Afternoon: float the Clark Fork or paddle a calm stretch.",
+            "Evening: dinner downtown.",
+          ],
+          dayTwo: [
+            "Morning: ride the Bitterroot Trail.",
+            "Afternoon: quick hike in the Rattlesnake area.",
+            "Evening: sunset along the river.",
+          ],
+        },
+        gettingThere: [
+          "Missoula International Airport is about 15 minutes from downtown.",
+          "The city is walkable, but a car helps for trailheads outside town.",
+        ],
+        faq: [
+          {
+            question: "Is Missoula good for river time?",
+            answer:
+              "Yes, the Clark Fork River is central to the city and easy to access.",
+          },
+          {
+            question: "Are bike paths beginner-friendly?",
+            answer:
+              "The riverfront and Bitterroot paths are mostly flat and easy to ride.",
+          },
+        ],
+      },
+      {
+        name: "Whitefish",
+        slug: "whitefish",
+        stateSlug: "montana",
+        region: "Flathead Valley",
+        lat: 48.4111,
+        lng: -114.3376,
+        shortDescription:
+          "Glacier access, lake paddles, and alpine climbing routes.",
+        intro:
+          "Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["hiking", "canoeing"],
+        whereItIs: [
+          "Whitefish sits in the Flathead Valley, about 30 minutes from Glacier National Park.",
+          "Whitefish Lake and alpine trailheads are minutes from downtown.",
+        ],
+        experiences: {
+          mountains:
+            "Hike or climb in nearby alpine zones before heading into Glacier.",
+          lakesWater:
+            "Paddle Whitefish Lake for a calm evening on the water.",
+          desertForest:
+            "Dense pine forests around town keep trails shaded and cool.",
+          cycling:
+            "Ride the Whitefish Trail network for quick singletrack loops.",
+          scenicDrives:
+            "Drive toward Glacier for iconic pullouts and viewpoints.",
+          seasonalNotes:
+            "Summer and early fall are best for lake paddles and Glacier access.",
+        },
+        thingsToDo: [
+          "Paddle Whitefish Lake at sunset.",
+          "Take a Glacier day trip.",
+          "Hike a section of the Whitefish Trail.",
+          "Book a guided climb.",
+          "Explore downtown shops and cafés.",
+        ],
+        toursCopy: [
+          "Evening lake tours are ideal for relaxed paddling and golden light.",
+          "Climbing outings pair well with Glacier day trips.",
+          "Half-day options keep schedules flexible for park drives.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Whitefish Trail hike.",
+            "Afternoon: lake paddle or guided climb.",
+            "Evening: dinner in town.",
+          ],
+          dayTwo: [
+            "Morning: Glacier National Park drive.",
+            "Afternoon: short hike near the park boundary.",
+            "Evening: sunset at the lake.",
+          ],
+        },
+        gettingThere: [
+          "Glacier Park International Airport is about 20 minutes away.",
+          "A car is helpful for Glacier access and regional trailheads.",
+        ],
+        faq: [
+          {
+            question: "How far is Glacier National Park?",
+            answer:
+              "The west entrance is about 30 minutes from downtown Whitefish.",
+          },
+          {
+            question: "Is Whitefish Lake easy to access?",
+            answer:
+              "Yes, public access points and rentals are close to town.",
+          },
+        ],
+      },
+    ],
+  },
 ];
 
 export const tours: Tour[] = [
