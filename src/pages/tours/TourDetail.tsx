@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import Image from "../../components/Image";
 import {
   getAffiliateDisclosure,
+  getBookCtaUrl,
   getProviderLabel,
   getTourBySlugs,
 } from "../../data/tours";
@@ -130,7 +131,7 @@ export default function TourDetail({ params }: TourDetailProps) {
               </p>
               <a
                 className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-                href={tour.bookingUrl}
+                href={getBookCtaUrl(tour)}
                 rel="noreferrer"
                 target="_blank"
               >

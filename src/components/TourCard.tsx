@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 
 import type { Tour } from "../data/tours.types";
-import { getTourDetailPath } from "../data/tours";
+import { getBookCtaUrl, getTourDetailPath } from "../data/tours";
 import Image from "./Image";
 
 type TourCardProps = {
@@ -33,7 +33,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         <a
           className="absolute bottom-3 right-3 inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white shadow-md transition hover:bg-[#287a35]"
-          href={tour.bookingUrl}
+          href={getBookCtaUrl(tour)}
           rel="noreferrer"
           target="_blank"
         >

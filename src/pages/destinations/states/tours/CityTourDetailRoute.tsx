@@ -9,6 +9,7 @@ import {
 } from "../../../../data/tourFallbacks";
 import {
   getAffiliateDisclosure,
+  getBookCtaUrl,
   getCityTourDetailPath,
   getToursByCity,
   getTourBySlugs,
@@ -147,7 +148,7 @@ export default function CityTourDetailRoute({
           <div className="flex flex-wrap gap-3">
             <a
               className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-              href={tour.bookingUrl}
+              href={getBookCtaUrl(tour)}
               rel="noreferrer"
               target="_blank"
             >

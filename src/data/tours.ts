@@ -60,6 +60,14 @@ export const getCityTourDetailPath = (tour: Tour) =>
 export const getCityTourBookingPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}/book`;
 
+export const getBookCtaUrl = (tour: Tour) => {
+  if (tour.bookingProvider === "fareharbor") {
+    return tour.bookingUrl;
+  }
+
+  return tour.bookingUrl;
+};
+
 export const getAffiliateDisclosure = (tour: Tour) =>
   PROVIDER_CONFIG[tour.bookingProvider].affiliateDisclosure;
 
