@@ -61,6 +61,13 @@ const COLLECTIONS = [
 ];
 
 export default function Home() {
+  const getFeaturedRegionLabel = (region: string) => {
+    if (region === "West") return "West Coast";
+    if (region === "Northeast") return "East Coast";
+    if (region === "Deep South") return "Southern";
+    return region;
+  };
+
   const isDebugEnabled =
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debugImages") === "1" &&
@@ -298,10 +305,10 @@ export default function Home() {
               <div key={group.region} className="space-y-6">
                 <div className="text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-                    {group.region}
+                    {getFeaturedRegionLabel(group.region)}
                   </span>
                   <h3 className="mt-2 text-xl font-semibold text-[#2f4a2f] md:text-2xl">
-                    Featured {group.region} states
+                    Featured {getFeaturedRegionLabel(group.region)} States
                   </h3>
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">

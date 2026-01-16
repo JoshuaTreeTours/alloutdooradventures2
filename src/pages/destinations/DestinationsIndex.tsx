@@ -2,6 +2,12 @@ import DestinationCard from "../../components/DestinationCard";
 import { destinations } from "../../data/destinations";
 
 export default function DestinationsIndex() {
+  const getRegionLabel = (region: string) => {
+    if (region === "West") return "West Coast";
+    if (region === "Northeast") return "East Coast";
+    return region;
+  };
+
   const regionOrder = ["West", "Northeast", "Deep South"];
   const destinationsByRegion = destinations.reduce<Record<string, typeof destinations>>(
     (accumulator, destination) => {
@@ -36,10 +42,10 @@ export default function DestinationsIndex() {
             <div key={region} className="space-y-6">
               <div className="text-center">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-                  {region}
+                  {getRegionLabel(region)}
                 </span>
                 <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-                  {region} destinations
+                  {getRegionLabel(region)} destinations
                 </h2>
               </div>
               <div className="grid gap-6">
