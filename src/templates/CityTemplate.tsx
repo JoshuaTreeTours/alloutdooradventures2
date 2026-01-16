@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
 import MapEmbed from "../components/maps/MapEmbed";
+import { getActivityLabelFromSlug } from "../data/activityLabels";
 import type { City, StateDestination } from "../data/destinations";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
@@ -133,7 +134,7 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
       ),
     },
     {
-      title: "Canoeing Tours",
+      title: "Paddle Sports Tours",
       tours: cityTours.filter((tour) =>
         tour.activitySlugs.includes("canoeing"),
       ),
@@ -170,7 +171,7 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
                 key={tag}
                 className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
               >
-                {tag.replace(/-/g, " ")}
+                {getActivityLabelFromSlug(tag)}
               </span>
             ))}
           </div>

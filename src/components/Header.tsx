@@ -30,7 +30,7 @@ export default function Header() {
             <a className="hover:text-[#1f2a1f]">Hiking</a>
           </Link>
           <Link href="/tours/canoeing">
-            <a className="hover:text-[#1f2a1f]">Canoeing</a>
+            <a className="hover:text-[#1f2a1f]">Paddle Sports</a>
           </Link>
           <Link href="/about">
             <a className="hover:text-[#1f2a1f]">About</a>

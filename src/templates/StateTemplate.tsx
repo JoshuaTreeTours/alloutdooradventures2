@@ -1,12 +1,9 @@
-import { useState } from "react";
 import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import MapEmbed from "../components/maps/MapEmbed";
-import TourCard from "../components/TourCard";
 import type { Destination, StateDestination } from "../data/destinations";
-import { getCityTourDetailPath, getToursByState } from "../data/tours";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -33,16 +30,6 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     lng: city.lng,
   }));
   const historyHighlights = buildStateHistory(state.name);
-  const stateTours = getToursByState(state.slug);
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
-  const filterOptions = [
-    { label: "Cycling", slug: "cycling" },
-    { label: "Hiking", slug: "hiking" },
-    { label: "Paddle Sports", slug: "canoeing" },
-  ];
-  const filteredTours = activeFilter
-    ? stateTours.filter((tour) => tour.activitySlugs.includes(activeFilter))
-    : stateTours;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -133,7 +120,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           ))}
         </div>
         <div className="mt-8 flex justify-center">
-          <Link href="#state-tours">
+          <Link href={`/destinations/states/${state.slug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
               See tours
             </a>
@@ -253,62 +240,6 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
         </div>
       </section>
 
-      {stateTours.length > 0 && (
-        <section id="state-tours" className="bg-white/60">
-          <div className="mx-auto max-w-6xl px-6 py-16">
-            <div className="flex flex-col gap-2 text-center">
-              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-                All tours in {state.name}
-              </span>
-              <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-                Explore every adventure in {state.name}
-              </h2>
-              <p className="text-sm text-[#405040] md:text-base">
-                Browse every tour in this state, or jump to a specific activity.
-              </p>
-            </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-3">
-              {filterOptions.map((filter) => {
-                const isActive = activeFilter === filter.slug;
-                return (
-                  <button
-                    key={filter.slug}
-                    type="button"
-                    onClick={() =>
-                      setActiveFilter((current) =>
-                        current === filter.slug ? null : filter.slug
-                      )
-                    }
-                    className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
-                      isActive
-                        ? "border-[#2f4a2f] bg-[#2f4a2f] text-white"
-                        : "border-black/10 bg-white text-[#2f4a2f] hover:border-[#2f4a2f]"
-                    }`}
-                  >
-                    {filter.label}
-                  </button>
-                );
-              })}
-            </div>
-            <div className="mt-6 text-center text-sm text-[#405040]">
-              {activeFilter
-                ? `Showing ${filteredTours.length} ${filterOptions.find(
-                    (filter) => filter.slug === activeFilter
-                  )?.label.toLowerCase()} tours`
-                : `Showing all ${stateTours.length} tours`}
-            </div>
-            <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {filteredTours.map((tour) => (
-                <TourCard
-                  key={tour.id}
-                  tour={tour}
-                  href={getCityTourDetailPath(tour)}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       <section className="bg-white/60">
         <div className="mx-auto max-w-6xl px-6 py-16">

@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import type { Tour } from "../data/tours.types";
+import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import Image from "./Image";
 
@@ -14,7 +15,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
   const shortDescription = tour.shortDescription?.trim();
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
-  const categoryLabel = getCategoryLabel(categorySource);
+  const categoryLabel = getActivityLabelFromSlug(categorySource);
   const subtitle = shortDescription || categoryLabel;
 
   return (
@@ -72,24 +73,4 @@ export default function TourCard({ tour, href }: TourCardProps) {
       </div>
     </article>
   );
-}
-
-function getCategoryLabel(slug?: string) {
-  if (!slug) {
-    return "";
-  }
-
-  switch (slug) {
-    case "canoeing":
-      return "Paddle Sports";
-    case "cycling":
-      return "Cycling";
-    case "hiking":
-      return "Hiking";
-    default:
-      return slug
-        .split("-")
-        .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
-        .join(" ");
-  }
 }
