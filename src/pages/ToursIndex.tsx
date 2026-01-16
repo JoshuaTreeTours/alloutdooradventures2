@@ -65,12 +65,6 @@ export default function ToursIndex() {
 
         <div className="mt-6 flex flex-wrap gap-3">
           <Link
-            href="/tours/catalog"
-            className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition"
-          >
-            View tour catalog
-          </Link>
-          <Link
             href="/destinations"
             className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition"
           >
