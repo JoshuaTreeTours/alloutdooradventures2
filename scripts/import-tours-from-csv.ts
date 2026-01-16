@@ -11,6 +11,11 @@ const CATEGORY_FILES = [
   { filename: "cycling.csv", activitySlug: "cycling" },
   { filename: "hiking.csv", activitySlug: "hiking" },
   { filename: "canoeing.csv", activitySlug: "canoeing" },
+  { filename: "san-francisco.csv", activitySlug: "detours" },
+  { filename: "san-diego.csv", activitySlug: "detours" },
+  { filename: "santa-barbara.csv", activitySlug: "detours" },
+  { filename: "palm-springs.csv", activitySlug: "detours" },
+  { filename: "joshua-tree.csv", activitySlug: "detours" },
 ] as const;
 
 const REQUIRED_COLUMNS = [
