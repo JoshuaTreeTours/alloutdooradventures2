@@ -10,6 +10,7 @@ import {
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
+  getCityTourBookingPath,
   getToursByCity,
   getTourBySlugs,
 } from "../../../../data/tours";
@@ -145,7 +146,7 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href={getCityTourDetailPath(tour)}>
+            <Link href={getCityTourBookingPath(tour)}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 BOOK
               </a>

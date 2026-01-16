@@ -4,6 +4,7 @@ import Image from "../../components/Image";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
+  getCityTourBookingPath,
   getTourDetailPath,
   getTourBySlugs,
 } from "../../data/tours";
@@ -129,7 +130,7 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
-              <Link href={getTourDetailPath(tour)}>
+              <Link href={getCityTourBookingPath(tour)}>
                 <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                   BOOK
                 </a>
