@@ -95,8 +95,8 @@ export default function Home() {
 
   const rockyMountainDestinations = useMemo(
     () =>
-      featuredDestinations.filter(
-        (destination) => destination.stateSlug === "montana"
+      featuredDestinations.filter((destination) =>
+        ["montana", "colorado"].includes(destination.stateSlug)
       ),
     []
   );
