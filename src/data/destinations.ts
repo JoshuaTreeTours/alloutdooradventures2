@@ -2263,6 +2263,420 @@ Washington invites exploration with a sense of wonder. It is a state where the o
     ],
   },
   {
+    slug: "colorado",
+    name: "Colorado",
+    description: "Front Range foothills, alpine peaks, and red-rock vistas.",
+    featuredDescription:
+      "Plan hiking and cycling days with mountain towns and Front Range basecamps.",
+    heroImage:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+    region: "Heartland",
+    intro:
+      "Colorado delivers high-elevation trails, scenic drives, and easygoing cities that keep adventure planning simple.",
+    longDescription: `Colorado is a classic mountain state with a little bit of everything. The Front Range lines up big peaks with city comforts, while the high country brings alpine lakes, winding passes, and cool summer trail conditions. Whether you want a short urban walk or a full-day hike, the scenery ramps up fast once you leave town.
+
+Denver, Boulder, Colorado Springs, Fort Collins, and Durango make reliable basecamps, each with quick access to foothills routes, bike paths, and day trips. Distances can add up, so plan for drive time, but the payback is a mix of skyline views, mountain air, and small-town food stops along the way.`,
+    topRegions: [
+      {
+        title: "Front Range",
+        description:
+          "Foothill trails, bike paths, and quick access to the Rockies from Denver north to Fort Collins.",
+      },
+      {
+        title: "High Country",
+        description:
+          "Elevated lakes, scenic passes, and alpine hikes around Colorado’s central mountains.",
+      },
+      {
+        title: "Southwest Colorado",
+        description:
+          "San Juan Mountain scenery, historic rail towns, and canyon drives around Durango.",
+      },
+    ],
+    cities: [
+      {
+        name: "Denver",
+        slug: "denver",
+        stateSlug: "colorado",
+        region: "Front Range",
+        lat: 39.7392,
+        lng: -104.9903,
+        shortDescription:
+          "Urban basecamp with foothills trails, bike routes, and neighborhood walking tours.",
+        intro:
+          "Denver is Colorado’s biggest hub, pairing easy city logistics with fast access to nearby foothills and day-trip trailheads.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["hiking", "cycling", "food-tours"],
+        whereItIs: [
+          "Denver sits at the base of the Rocky Mountain foothills, about 30 minutes from trailheads around Golden and Red Rocks.",
+          "The city center is compact and walkable, while bike paths follow the South Platte River and connect to surrounding neighborhoods.",
+        ],
+        experiences: {
+          mountains:
+            "Head west toward the foothills for quick hikes and skyline views at parks like Red Rocks and Mount Falcon.",
+          lakesWater:
+            "Nearby reservoirs and rivers make for easy morning paddles or waterside walks just outside the metro area.",
+          desertForest:
+            "Short drives bring you to open foothills trails with scrubby pines and wide-open panoramas.",
+          cycling:
+            "Use the Cherry Creek and South Platte trails for city rides, or connect to foothills roads for longer loops.",
+          scenicDrives:
+            "Plan a half-day drive along the Lariat Loop or to Lookout Mountain for classic Front Range scenery.",
+          seasonalNotes:
+            "Spring and fall offer the best hiking temps, while summer mornings are ideal for rides before the heat builds.",
+        },
+        thingsToDo: [
+          "Walk the LoDo district and Union Station area.",
+          "Bike the Cherry Creek Trail.",
+          "Take a short foothills hike near Red Rocks.",
+          "Explore RiNo street art and food stops.",
+          "Plan a sunset viewpoint stop on Lookout Mountain.",
+        ],
+        toursCopy: [
+          "Guided walking tours are a simple way to pair downtown history with local food stops.",
+          "Bike tours help you cover more neighborhoods without the hassle of city driving.",
+          "If you want trail time, add a foothills hike before returning for dinner in the city.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: downtown walk and coffee.",
+            "Afternoon: bike ride on the Cherry Creek path.",
+            "Evening: brewery or food hall stop.",
+          ],
+          dayTwo: [
+            "Morning: foothills hike near Red Rocks.",
+            "Afternoon: explore RiNo art district.",
+            "Evening: sunset viewpoint drive.",
+          ],
+        },
+        gettingThere: [
+          "Denver International Airport is about 35–45 minutes from downtown.",
+          "Light rail and rideshares cover the core, but a car helps for trailheads.",
+        ],
+        faq: [
+          {
+            question: "Do I need a car in Denver?",
+            answer:
+              "You can explore downtown without one, but a car makes foothill and mountain day trips easier.",
+          },
+          {
+            question: "How close are the mountains?",
+            answer:
+              "Foothill trailheads are about 30–45 minutes west of the city.",
+          },
+        ],
+      },
+      {
+        name: "Colorado Springs",
+        slug: "colorado-springs",
+        stateSlug: "colorado",
+        region: "Pikes Peak Region",
+        lat: 38.8339,
+        lng: -104.8214,
+        shortDescription:
+          "Pikes Peak views, red-rock parks, and walkable downtown food tours.",
+        intro:
+          "Colorado Springs mixes dramatic mountain backdrops with accessible trailheads and a compact downtown.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["hiking", "cycling", "food-tours"],
+        whereItIs: [
+          "Colorado Springs sits at the base of Pikes Peak, about 70 miles south of Denver along the Front Range.",
+          "Garden of the Gods and nearby trail networks are minutes from downtown, making it easy to mix city time with outdoor stops.",
+        ],
+        experiences: {
+          mountains:
+            "Ride or hike toward Pikes Peak for big alpine views and cool-air escapes in summer.",
+          lakesWater:
+            "Local reservoirs and park ponds offer relaxed shoreline walks and picnic-friendly stops.",
+          desertForest:
+            "Red-rock parks and foothill trails provide rugged scenery without long drives.",
+          cycling:
+            "E-bike outings and paved paths keep cycling approachable for all skill levels.",
+          scenicDrives:
+            "The drive to Pikes Peak Highway delivers iconic vistas and elevation changes.",
+          seasonalNotes:
+            "Late spring through early fall brings the best mix of trail access and comfortable temps.",
+        },
+        thingsToDo: [
+          "Walk the Garden of the Gods loop.",
+          "Visit downtown for a food-focused walking tour.",
+          "Cycle a foothills route with mountain views.",
+          "Plan a Pikes Peak scenic drive.",
+          "Catch sunset over red-rock formations.",
+        ],
+        toursCopy: [
+          "Walking food tours are a simple way to explore downtown without a long itinerary.",
+          "Guided e-bike trips help you cover more ground while keeping the pace relaxed.",
+          "Pair a quick park hike with a scenic drive for a balanced day.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Garden of the Gods walk.",
+            "Afternoon: downtown food tour.",
+            "Evening: sunset viewpoints near the foothills.",
+          ],
+          dayTwo: [
+            "Morning: e-bike ride with mountain views.",
+            "Afternoon: visit a local museum or park.",
+            "Evening: casual dinner downtown.",
+          ],
+        },
+        gettingThere: [
+          "Colorado Springs Airport is about 20 minutes from downtown.",
+          "Driving from Denver takes roughly 1.5 hours without heavy traffic.",
+        ],
+        faq: [
+          {
+            question: "How long should I plan for Garden of the Gods?",
+            answer:
+              "Most visitors spend 2–3 hours for short hikes and overlooks.",
+          },
+          {
+            question: "Is Colorado Springs walkable?",
+            answer:
+              "Downtown is compact, but a car helps for parks and trailheads.",
+          },
+        ],
+      },
+      {
+        name: "Boulder",
+        slug: "boulder",
+        stateSlug: "colorado",
+        region: "Front Range Foothills",
+        lat: 40.015,
+        lng: -105.2705,
+        shortDescription:
+          "College-town energy with creek paths, bike routes, and nearby foothill trails.",
+        intro:
+          "Boulder is a compact, outdoorsy city known for walkable downtown streets and quick access to the Flatirons.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["cycling", "hiking", "creek-paths"],
+        whereItIs: [
+          "Boulder sits about 30 minutes northwest of Denver at the base of the Flatirons.",
+          "Multi-use paths and creek corridors thread through town, linking downtown with parks and trailheads.",
+        ],
+        experiences: {
+          mountains:
+            "Hike the Flatirons or nearby canyons for fast elevation gain and big views.",
+          lakesWater:
+            "Creekside paths and nearby reservoirs make for easy walks and picnic stops.",
+          desertForest:
+            "Foothill trails mix open views with shaded sections close to town.",
+          cycling:
+            "Boulder’s bike infrastructure makes it easy to tour downtown and connect to scenic loops.",
+          scenicDrives:
+            "Take a short drive up Boulder Canyon or toward Nederland for alpine scenery.",
+          seasonalNotes:
+            "Spring and fall bring crisp air for hiking; summer mornings are best for rides.",
+        },
+        thingsToDo: [
+          "Ride the Boulder Creek Path.",
+          "Walk Pearl Street and its cafés.",
+          "Hike a Flatirons trail.",
+          "Plan an e-bike tour of town.",
+          "Catch sunset from a foothill overlook.",
+        ],
+        toursCopy: [
+          "E-bike tours are a fun way to connect downtown with surrounding parks and paths.",
+          "If you prefer flexibility, rentals keep the day open for self-guided exploration.",
+          "Pair a short hike with a relaxed downtown evening for a balanced visit.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Pearl Street coffee and stroll.",
+            "Afternoon: e-bike tour of local highlights.",
+            "Evening: sunset at a nearby overlook.",
+          ],
+          dayTwo: [
+            "Morning: Flatirons hike.",
+            "Afternoon: Boulder Creek path ride.",
+            "Evening: casual dinner downtown.",
+          ],
+        },
+        gettingThere: [
+          "Boulder is about 40 minutes from Denver International Airport.",
+          "Local buses connect to Denver, but a car helps for canyon drives.",
+        ],
+        faq: [
+          {
+            question: "Is Boulder bike friendly?",
+            answer:
+              "Yes, multi-use paths and bike lanes make cycling around town easy.",
+          },
+          {
+            question: "How long do Flatirons hikes take?",
+            answer:
+              "Most popular hikes range from 1–3 hours depending on the route.",
+          },
+        ],
+      },
+      {
+        name: "Fort Collins",
+        slug: "fort-collins",
+        stateSlug: "colorado",
+        region: "Northern Front Range",
+        lat: 40.5853,
+        lng: -105.0844,
+        shortDescription:
+          "Relaxed college town with river paths, brewery stops, and trail access.",
+        intro:
+          "Fort Collins offers a slower-paced basecamp with bike trails, riverside walks, and easy access to northern Front Range trails.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["cycling", "hiking", "riverwalks"],
+        whereItIs: [
+          "Fort Collins sits north of Denver along the Front Range, about 90 minutes from the capital city.",
+          "The Poudre River runs through town, connecting parks, bike paths, and greenways.",
+        ],
+        experiences: {
+          mountains:
+            "Quick drives lead to Horsetooth Mountain and foothill trails with panoramic views.",
+          lakesWater:
+            "Horsetooth Reservoir and the Poudre River offer easy waterside walks and picnic spots.",
+          desertForest:
+            "Foothill trail networks bring open terrain and seasonal wildflowers close to town.",
+          cycling:
+            "Use the Spring Creek and Poudre trails for low-stress rides across town.",
+          scenicDrives:
+            "Drive toward Poudre Canyon for river scenery and overlook pull-offs.",
+          seasonalNotes:
+            "Summer and early fall are ideal for bike rides and foothill hikes.",
+        },
+        thingsToDo: [
+          "Bike the Poudre Trail.",
+          "Hike near Horsetooth Rock.",
+          "Explore Old Town Fort Collins.",
+          "Plan a scenic drive through Poudre Canyon.",
+          "Pair a riverside walk with a local brewery stop.",
+        ],
+        toursCopy: [
+          "Fort Collins is a good choice for visitors who want mellow trails and bike paths.",
+          "Build a day around a foothills hike and an easy downtown evening.",
+          "Add a river walk or scenic drive to keep logistics simple.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: Old Town stroll and coffee.",
+            "Afternoon: bike ride along the Poudre.",
+            "Evening: dinner and brewery stop.",
+          ],
+          dayTwo: [
+            "Morning: Horsetooth hike.",
+            "Afternoon: Poudre Canyon scenic drive.",
+            "Evening: relaxed meal downtown.",
+          ],
+        },
+        gettingThere: [
+          "Fort Collins is about 1.5 hours from Denver International Airport.",
+          "A car is recommended for trailheads and canyon drives.",
+        ],
+        faq: [
+          {
+            question: "Is Fort Collins walkable?",
+            answer:
+              "Old Town is walkable, but a bike or car helps for trailheads.",
+          },
+          {
+            question: "What’s nearby for hiking?",
+            answer:
+              "Horsetooth Mountain and foothill trails are the closest options.",
+          },
+        ],
+      },
+      {
+        name: "Durango",
+        slug: "durango",
+        stateSlug: "colorado",
+        region: "Southwest Colorado",
+        lat: 37.2753,
+        lng: -107.8801,
+        shortDescription:
+          "Historic rail town with San Juan scenery, bike rentals, and canyon drives.",
+        intro:
+          "Durango anchors southwest Colorado with a walkable downtown and fast access to the San Juan Mountains.",
+        heroImages: [
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["cycling", "hiking", "scenic-drives"],
+        whereItIs: [
+          "Durango sits in southwest Colorado near the Animas River and the San Juan Mountain foothills.",
+          "It is a convenient base for scenic drives, rail journeys, and trailheads outside town.",
+        ],
+        experiences: {
+          mountains:
+            "Head into the San Juans for alpine drives and high-country trail options.",
+          lakesWater:
+            "The Animas River corridor offers riverside walks and easy access to calm-water outings.",
+          desertForest:
+            "Canyon drives and mesa viewpoints add a different texture to mountain-focused days.",
+          cycling:
+            "E-bike rentals make it simple to explore town and nearby bike paths at your own pace.",
+          scenicDrives:
+            "Take the drive toward Mesa Verde or mountain passes for standout viewpoints.",
+          seasonalNotes:
+            "Late spring through fall is best for riding and day hikes, with cooler evenings.",
+        },
+        thingsToDo: [
+          "Ride the Animas River Trail.",
+          "Explore downtown Durango shops and cafés.",
+          "Take a scenic drive toward Mesa Verde.",
+          "Plan an e-bike rental day.",
+          "Catch sunset at a nearby overlook.",
+        ],
+        toursCopy: [
+          "E-bike rentals keep Durango exploration flexible without committing to a full-day tour.",
+          "Combine a short hike with a scenic drive for an easy itinerary.",
+          "Guided options can help you balance town time with mountain views.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: downtown stroll and coffee.",
+            "Afternoon: e-bike ride along the river.",
+            "Evening: dinner downtown.",
+          ],
+          dayTwo: [
+            "Morning: short hike outside town.",
+            "Afternoon: scenic drive toward Mesa Verde.",
+            "Evening: sunset viewpoint stop.",
+          ],
+        },
+        gettingThere: [
+          "Durango-La Plata County Airport is about 20 minutes from downtown.",
+          "A car is recommended for canyon drives and national park visits.",
+        ],
+        faq: [
+          {
+            question: "Is Durango a good base for Mesa Verde?",
+            answer:
+              "Yes, Mesa Verde National Park is about 45 minutes away by car.",
+          },
+          {
+            question: "Can I get around without a car?",
+            answer:
+              "Downtown is walkable, but a car helps for trailheads and scenic drives.",
+          },
+        ],
+      },
+    ],
+  },
+  {
     slug: "montana",
     name: "Montana",
     description: "Big-sky valleys, glacier lakes, and trail-first towns.",

@@ -50,6 +50,68 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
 // 1 Day Tool Rentals; 2 Day Tool Rentals; 3 Day Tool Rentals; 4 Day Tool Rentals;
 // 5 Day Tool Rentals; 6 Day Tool Rentals; 7 Day Tool Rentals.
 // Whitefish: Polaris Indy 650 (Single Rider).
+// TODO: Remaining Colorado tours in data/heartland/colorado.csv not yet added.
+// Denver: Explore the Museum on Your Own!; Field Trips at the Molly Brown House Museum;
+// Private Denver Foothills Tour; Private Tour of Pike's Peak & Garden of the Gods;
+// Denver History & Highlights; Denver Step on Guide Service; Denver Cocktails Tour;
+// Hunk-O-Mania Male Revue Show - Denver; Classroom Programs; Denver Foothills Tour;
+// Rocky Mountain National Park Tour; Guided Tours; Diva Royale - Drag Queen Show Denver;
+// Denver Graffiti Original Tour; Clock Tower Self-Guided Tours; Boneless Bodies: Outreach Program;
+// Private Mount Blue Sky & Red Rocks Tour; Denver City Private Driving Tour;
+// Pikes Peak & Garden of the Gods Tour; Colorado: Gateway to the Rockies Driving Tour;
+// Denver Graffiti Happy Hour Tour.
+// Colorado Springs: Foothills and Garden of the Gods Jeep Tour; Holly Jolly Christmas Trolley;
+// Garden of the Gods Segway Tour; 2.5-Hour Downtown Brewery & Bites Tour;
+// Ski Shuttle to Breckenridge; Sunrise Hot Air Balloon Adventure;
+// Pikes Peak and Garden of the Gods Jeep Tour; Cozy Coach Ride;
+// Scenic Tour of the Pikes Peak Highway; Private Red Rocks Concert Transportation;
+// South Platte Classic Climbs; Colorado Springs Regular Climb; Colorado Springs Full Day Climb;
+// Denver/Golden Regular Climb; Red Rocks Amphitheatre Shuttle;
+// Introduction to Rock Climbing/Gym To Crag Class; Boulder Half Day Climbs;
+// Boulder Regular Day Climbs; Eldorado Canyon Classic Climbs; Flatiron Classic Climbs;
+// Denver/Golden Half Day Climb; Clear Creek Classic Climbs; Garden of the Gods Classic Climbs;
+// Cheyenne Canyon Classic Climbs; Grand Junction Half Day Climb; Grand Junction Regular Climb;
+// Gunnison Half Day Climb; Gunnison Regular Climb; Gunnison Full Day Climb;
+// San Juan Half Day Climb; Grand Junction Full Day Climb;
+// Colorado National Monument Classic Climbs; Unaweep Canyon Classic Climbs;
+// Lake City Classic Descents; Lake City Full Day Backcountry Ski/Splitboard Touring;
+// Silverton Regular Day Ski/Splitboard Touring; Silverton Full Day Backcountry Ski/Splitboard Touring;
+// Silverton Classic Backcountry Areas; Ouray Regular Day Ski/Splitboard touring;
+// Rocky Mountain NP Regular Day Backcountry Skiing/Splitboarding;
+// Rocky Mountain NP Full Day Backcountry Skiing/Splitboarding;
+// Huerfano Valley Climbs (Blanca and Ellingwood); Denver/Golden Area Half Day Guided Ice Climbing;
+// Denver/Golden Area Regular Day Guided Ice Climbing; Denver/Golden Area Full Day Guided Ice Climbing;
+// Colorado Springs Area Half Day Guided Ice Climbing; Colorado Springs Regular Day Guided Ice Climbing;
+// Colorado Springs Full Day Guided Ice Climbing; Lake City Half Day Guided Ice Climbing;
+// Lake City Regular Day Guided Ice Climbing; Lake City Full Day Guided Ice Climbing;
+// Silverton Half Day Guided Ice Climbing; Silverton Regular Day Guided Ice Climbing;
+// Silverton Full Day Guided Ice Climbing; Telluride Half Day Guided Ice Climbing;
+// Telluride Regular Day Guided Ice Climbing; Telluride Full Day Guided Ice Climbing;
+// Silverton Classic Ice Climbs; Telluride Classic Ice Climbs; Lake City Classic Ice Climbs;
+// Scenic Ride to the Shrine; Crack and Slab Technique Instruction;
+// Introduction to Snow Climbing Skills; Crevasse Rescue and Glacier Travel;
+// Expedition Preparation and Climbing Skills; Intro to Ice Climbing;
+// Steep Ice and Mixed Technique; Learn to Lead Ice; Learn to Lead Traditional Climbs;
+// Multipitch Skills and Self Rescue Skills; Big Wall and Aid Climbing Instruction;
+// Denver/Golden Full Day Climb; Colorado Springs Half Day Climb; Black Canyon NP Classic Climbs;
+// San Juan Regular Climb; San Juan Full Day Climb; Silverton Classic Climbs;
+// Private Custom Avalanche Instructions; Boulder/ Estes Park Half Day Guided Ice Climbing;
+// Boulder/Estes Park Regular Day Guided Ice Climbing; Boulder/Estes Park Full Day Guided Ice Climbing;
+// Ouray Half Day Guided Ice Climbing; Ouray Regular Day Guided Ice Climbing;
+// Ouray Full Day Guided Ice Climbing; Rocky Mountain National Park Classic Ice Climbs;
+// Ouray Classic Ice Climbs; Denali National Park Ice Climbing; Moab: 1/2 Day Rock Climbing;
+// Private Pikes Peak Highway Tour; Ski Shuttle to Keystone and Arapahoe Basin;
+// Introduction to Alpine Climbing Skills; Multipitch and Backcountry Ice;
+// Toprope and Anchor Building Class; Learn to Lead Sport Climb Outdoors;
+// North Cascades Backcountry Skiing; Intro To Back Country Skiing and Splitboarding.
+// Boulder: Private Rocky Mountain National Park Tour; Private Boulder Explorer Tour.
+// Durango: River Walk + Picnic + SUP Package | 3 Hrs.; Snow Sled Rentals;
+// Durango "Splash & Dash" Raft Trip; Scenic Waterfall Jeep Tour; Moab Daily Half-Day Trip;
+// La Plata Canyon Half-Day Jeep Tour; Custom Safari Jeep Trail Tour ~ 5 Hours;
+// Mesa Verde Express Tour with Cliff Palace Tickets; Day-long SUP Rental; Mid Week Flight;
+// PRIVATE ~ Ultimate Mesa Verde Experience National Park Tour; Private Tour of Canyons of the Ancients;
+// Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
+// Durango Snowdown Fight.
 const MANUAL_TOURS: Tour[] = [
   {
     id: "yellowstoneexcursions-425563",

@@ -18,8 +18,8 @@ export default function DestinationsIndex() {
     },
     {},
   );
-  const rockyMountainStates = destinations.filter(
-    (destination) => destination.stateSlug === "montana"
+  const rockyMountainStates = destinations.filter((destination) =>
+    ["montana", "colorado"].includes(destination.stateSlug),
   );
 
   return (
