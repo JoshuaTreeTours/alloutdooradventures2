@@ -39,7 +39,7 @@ export const ADVENTURE_ACTIVITY_PAGES = [
     image: "/images/hiking-hero3.jpg",
   },
   {
-    slug: "sailing-boat",
+    slug: "canoeing",
     title: "Canoeing",
     description: "Worldwide paddle adventures.",
     image: "/images/canoe-hero.jpg",

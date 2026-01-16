@@ -1,5 +1,9 @@
 import CityTemplate from "../../../templates/CityTemplate";
 import { getCityBySlugs, getStateBySlug } from "../../../data/destinations";
+import {
+  getFallbackCityBySlugs,
+  getFallbackStateBySlug,
+} from "../../../data/tourFallbacks";
 
 type CityRouteProps = {
   params: {
@@ -9,8 +13,12 @@ type CityRouteProps = {
 };
 
 export default function CityRoute({ params }: CityRouteProps) {
-  const state = getStateBySlug(params.stateSlug);
-  const city = getCityBySlugs(params.stateSlug, params.citySlug);
+  const state =
+    getStateBySlug(params.stateSlug) ??
+    getFallbackStateBySlug(params.stateSlug);
+  const city =
+    getCityBySlugs(params.stateSlug, params.citySlug) ??
+    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   if (!state || !city) {
     return (

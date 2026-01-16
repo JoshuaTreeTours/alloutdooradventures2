@@ -3,6 +3,10 @@ import { Link } from "wouter";
 import Image from "../../../../components/Image";
 import TourCard from "../../../../components/TourCard";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
+import {
+  getFallbackCityBySlugs,
+  getFallbackStateBySlug,
+} from "../../../../data/tourFallbacks";
 import { getCityTourDetailPath, getToursByCity } from "../../../../data/tours";
 
 type CityToursIndexRouteProps = {
@@ -15,8 +19,12 @@ type CityToursIndexRouteProps = {
 export default function CityToursIndexRoute({
   params,
 }: CityToursIndexRouteProps) {
-  const state = getStateBySlug(params.stateSlug);
-  const city = getCityBySlugs(params.stateSlug, params.citySlug);
+  const state =
+    getStateBySlug(params.stateSlug) ??
+    getFallbackStateBySlug(params.stateSlug);
+  const city =
+    getCityBySlugs(params.stateSlug, params.citySlug) ??
+    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   if (!state || !city) {
     return (
@@ -32,6 +40,9 @@ export default function CityToursIndexRoute({
 
   const tours = getToursByCity(state.slug, city.slug);
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const stateHref = state.isFallback
+    ? "/destinations"
+    : `/destinations/states/${state.slug}`;
   const heroImage = city.heroImages[0] ?? "/hero.jpg";
 
   return (
@@ -43,7 +54,7 @@ export default function CityToursIndexRoute({
               <a>Destinations</a>
             </Link>
             <span>/</span>
-            <Link href={`/destinations/states/${state.slug}`}>
+            <Link href={stateHref}>
               <a>{state.name}</a>
             </Link>
             <span>/</span>

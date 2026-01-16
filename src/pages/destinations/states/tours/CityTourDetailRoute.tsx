@@ -4,6 +4,10 @@ import Image from "../../../../components/Image";
 import TourCard from "../../../../components/TourCard";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
+  getFallbackCityBySlugs,
+  getFallbackStateBySlug,
+} from "../../../../data/tourFallbacks";
+import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
   getToursByCity,
@@ -21,8 +25,12 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const state = getStateBySlug(params.stateSlug);
-  const city = getCityBySlugs(params.stateSlug, params.citySlug);
+  const state =
+    getStateBySlug(params.stateSlug) ??
+    getFallbackStateBySlug(params.stateSlug);
+  const city =
+    getCityBySlugs(params.stateSlug, params.citySlug) ??
+    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   if (!state || !city) {
     return (
@@ -63,6 +71,9 @@ export default function CityTourDetailRoute({
     (item) => item.slug !== tour.slug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const stateHref = state.isFallback
+    ? "/destinations"
+    : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
 
@@ -75,7 +86,7 @@ export default function CityTourDetailRoute({
               <a>Destinations</a>
             </Link>
             <span>/</span>
-            <Link href={`/destinations/states/${state.slug}`}>
+            <Link href={stateHref}>
               <a>{state.name}</a>
             </Link>
             <span>/</span>

@@ -7,20 +7,20 @@ import type { Tour } from "../src/data/tours.types";
 const DATA_DIR = path.resolve("data");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
-const AFFILIATE_SHORT_NAME = "alloutdooradventures";
+const CATEGORY_FILES = [
+  { filename: "cycling.csv", activitySlug: "cycling" },
+  { filename: "hiking.csv", activitySlug: "hiking" },
+  { filename: "canoeing.csv", activitySlug: "canoeing" },
+] as const;
 
 const REQUIRED_COLUMNS = [
-  "company_name",
   "company_shortname",
   "location",
   "item_id",
   "item_name",
-  "tags",
   "image_url",
   "calendar_link",
   "regular_link",
-  "availability_count",
-  "quality_score",
 ] as const;
 
 const slugify = (value: string) =>
@@ -118,32 +118,7 @@ const parseTags = (rawTags: string) =>
     .map((tag) => tag.trim())
     .filter(Boolean);
 
-const mapActivitySlugs = (title: string, tags: string[]) => {
-  const haystack = [title, ...tags].join(" ").toLowerCase();
-  const slugs = new Set<string>();
-
-  if (/(bike|biking|cycling|e-bike)/i.test(haystack)) {
-    slugs.add("cycling");
-  }
-
-  if (/(hike|hiking|trail)/i.test(haystack)) {
-    slugs.add("hiking");
-  }
-
-  if (
-    /(canoe|kayak|rafting|paddle|boat|snorkel|dive|water activities)/i.test(
-      haystack,
-    )
-  ) {
-    slugs.add("sailing-boat");
-  }
-
-  if (!slugs.size) {
-    slugs.add("day-adventures");
-  }
-
-  return Array.from(slugs);
-};
+const mapActivitySlugs = (activitySlug: string) => [activitySlug];
 
 const buildLongDescription = (title: string, city: string, state: string) =>
   [
@@ -163,15 +138,6 @@ const buildRating = (qualityScore?: number) => {
 
   const rating = Math.round((qualityScore / 20) * 10) / 10;
   return Math.min(Math.max(rating, 1), 5);
-};
-
-const hasAffiliateParams = (bookingUrl: string) => {
-  const url = new URL(bookingUrl);
-  return (
-    url.searchParams.has("asn") &&
-    url.searchParams.has("asn-ref") &&
-    url.searchParams.has("ref")
-  );
 };
 
 const requiredColumnsMissing = (header: string[]) =>
@@ -203,9 +169,9 @@ export const normalizeBookingUrl = (rawUrl: string) => {
       parsedUrl.pathname = `/embeds/book/${bookCalendarMatch[1]}/items/${bookCalendarMatch[2]}/`;
     }
 
-    parsedUrl.searchParams.set("branding", "no");
-    parsedUrl.searchParams.set("asn-ref", AFFILIATE_SHORT_NAME);
-    parsedUrl.searchParams.set("ref", AFFILIATE_SHORT_NAME);
+    if (!parsedUrl.searchParams.has("branding")) {
+      parsedUrl.searchParams.append("branding", "no");
+    }
   }
 
   return parsedUrl.toString();
@@ -235,7 +201,7 @@ const normalizeCalendarUrl = (rawUrl: string) => {
 
 const rowToTour = (
   row: Record<string, string>,
-  missingAffiliateParams: string[],
+  activitySlug: string,
 ): Tour => {
   const destination = parseLocation(row.location);
   const tags = parseTags(row.tags);
@@ -247,15 +213,11 @@ const rowToTour = (
   const bookingUrl = (calendarLink || row.regular_link).trim();
   const availabilityCount = parseNumber(row.availability_count);
   const qualityScore = parseNumber(row.quality_score);
+  const latitude = parseNumber(row.location_lat);
+  const longitude = parseNumber(row.location_long);
 
   if (!bookingUrl) {
     throw new Error(`Missing booking URL for item ${row.item_id} (${title}).`);
-  }
-
-  if (!hasAffiliateParams(bookingUrl)) {
-    missingAffiliateParams.push(
-      `${row.item_id} (${title}) missing affiliate params`,
-    );
   }
 
   const normalizedBookingUrl = normalizeBookingUrl(bookingUrl);
@@ -270,7 +232,11 @@ const rowToTour = (
     id: `${row.company_shortname}-${itemId}`,
     slug,
     title,
-    destination,
+    destination: {
+      ...destination,
+      lat: latitude,
+      lng: longitude,
+    },
     heroImage: row.image_url || PLACEHOLDER_IMAGE,
     galleryImages: row.image_url ? [row.image_url] : [],
     badges: {
@@ -280,7 +246,7 @@ const rowToTour = (
       tagline: tags[0],
     },
     tagPills: tags.slice(0, 3),
-    activitySlugs: mapActivitySlugs(title, tags),
+    activitySlugs: mapActivitySlugs(activitySlug),
     bookingProvider: "fareharbor",
     bookingUrl: normalizedBookingUrl,
     bookingWidgetUrl: normalizedCalendarLink,
@@ -302,16 +268,21 @@ export const toursGenerated: Tour[] = ${JSON.stringify(tours, null, 2)};
 };
 
 const run = async () => {
-  const files = await readdir(DATA_DIR);
-  const csvFiles = files.filter((file) => file.endsWith(".csv"));
+  const files = new Set(await readdir(DATA_DIR));
+  const csvFiles = CATEGORY_FILES.filter((entry) =>
+    files.has(entry.filename),
+  );
 
   if (!csvFiles.length) {
-    throw new Error(`No CSV files found in ${DATA_DIR}.`);
+    throw new Error(
+      `No category CSV files found in ${DATA_DIR}. Expected: ${CATEGORY_FILES.map(
+        (entry) => entry.filename,
+      ).join(", ")}`,
+    );
   }
 
   const tours: Tour[] = [];
-  const missingAffiliateParams: string[] = [];
-  const invalidRows: string[] = [];
+  const skippedRows: string[] = [];
   const seenItems = new Map<
     string,
     {
@@ -324,25 +295,55 @@ const run = async () => {
     }
   >();
 
-  for (const csvFile of csvFiles) {
-    const csvPath = path.join(DATA_DIR, csvFile);
+  for (const { filename, activitySlug } of csvFiles) {
+    const csvPath = path.join(DATA_DIR, filename);
     const contents = await readFile(csvPath, "utf8");
     const { header, records } = parseCsv(contents);
     const missingColumns = requiredColumnsMissing(header);
 
     if (missingColumns.length) {
       throw new Error(
-        `${csvFile} is missing required columns: ${missingColumns.join(", ")}`,
+        `${filename} is missing required columns: ${missingColumns.join(", ")}`,
       );
     }
 
-    records.forEach((row) => {
-      if (!row.item_id || !row.item_name) {
+    records.forEach((row, index) => {
+      const rowIdentifier = row.item_id
+        ? `${row.company_shortname}-${row.item_id}`
+        : `row ${index + 2}`;
+      const missingFields: string[] = [];
+      const location = row.location?.trim() ?? "";
+      const { state, city } = parseLocation(location);
+      const bookingUrl = (row.calendar_link || row.regular_link || "").trim();
+
+      if (!row.item_id?.trim()) {
+        missingFields.push("item_id");
+      }
+      if (!row.item_name?.trim()) {
+        missingFields.push("title");
+      }
+      if (!location || state === "Unknown" || city === "Unknown") {
+        missingFields.push("city/state");
+      }
+      if (!row.image_url?.trim()) {
+        missingFields.push("image_url");
+      }
+      if (!bookingUrl) {
+        missingFields.push("booking_url");
+      }
+
+      if (missingFields.length) {
+        const message = `${filename}: ${rowIdentifier} missing ${missingFields.join(
+          ", ",
+        )}`;
+        console.warn(`[import] Skipping ${message}`);
+        skippedRows.push(message);
         return;
       }
+
       const itemKey = `${row.company_shortname}-${row.item_id}`;
       const nextSnapshot = {
-        source: csvFile,
+        source: filename,
         location: row.location,
         title: row.item_name,
         calendarLink: row.calendar_link,
@@ -360,31 +361,29 @@ const run = async () => {
           previousSnapshot.imageUrl !== nextSnapshot.imageUrl;
 
         if (hasConflict) {
-          invalidRows.push(
-            `${csvFile}: ${itemKey} conflicts with ${previousSnapshot.source}`,
-          );
+          const message = `${filename}: ${itemKey} conflicts with ${previousSnapshot.source}`;
+          console.warn(`[import] Skipping ${message}`);
+          skippedRows.push(message);
         }
         return;
       }
 
       seenItems.set(itemKey, nextSnapshot);
       try {
-        tours.push(rowToTour(row, missingAffiliateParams));
+        tours.push(rowToTour(row, activitySlug));
       } catch (error) {
         const message =
           error instanceof Error ? error.message : "Unknown error";
-        invalidRows.push(`${csvFile}: ${message}`);
+        const warning = `${filename}: ${message}`;
+        console.warn(`[import] Skipping ${warning}`);
+        skippedRows.push(warning);
       }
     });
   }
 
-  if (invalidRows.length) {
-    throw new Error(`Invalid tour rows:\n${invalidRows.join("\n")}`);
-  }
-
-  if (missingAffiliateParams.length) {
-    throw new Error(
-      `Affiliate tracking missing for:\n${missingAffiliateParams.join("\n")}`,
+  if (skippedRows.length) {
+    console.warn(
+      `[import] Skipped ${skippedRows.length} rows due to missing or invalid data.`,
     );
   }
 

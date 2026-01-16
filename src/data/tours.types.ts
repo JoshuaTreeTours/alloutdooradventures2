@@ -14,6 +14,8 @@ export type TourDestination = {
   stateSlug: string;
   city: string;
   citySlug: string;
+  lat?: number;
+  lng?: number;
 };
 
 export type Tour = {
