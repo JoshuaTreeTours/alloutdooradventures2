@@ -11,6 +11,11 @@ type TourCardProps = {
 
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
+  const shortDescription = tour.shortDescription?.trim();
+  const categorySource =
+    tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
+  const categoryLabel = getCategoryLabel(categorySource);
+  const subtitle = shortDescription || categoryLabel;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -51,9 +56,9 @@ export default function TourCard({ tour, href }: TourCardProps) {
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}
           </h3>
-          {tour.badges.tagline ? (
+          {subtitle ? (
             <p className="mt-2 text-sm text-[#405040]">
-              {tour.badges.tagline}
+              {subtitle}
             </p>
           ) : null}
         </div>
@@ -67,4 +72,24 @@ export default function TourCard({ tour, href }: TourCardProps) {
       </div>
     </article>
   );
+}
+
+function getCategoryLabel(slug?: string) {
+  if (!slug) {
+    return "";
+  }
+
+  switch (slug) {
+    case "canoeing":
+      return "Paddle Sports";
+    case "cycling":
+      return "Cycling";
+    case "hiking":
+      return "Hiking";
+    default:
+      return slug
+        .split("-")
+        .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
+        .join(" ");
+  }
 }
