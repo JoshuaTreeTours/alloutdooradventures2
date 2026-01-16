@@ -2,7 +2,9 @@ import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import TourCard from "../components/TourCard";
 import { EUROPE_CITIES, US_STATES, slugify } from "../data/tourCatalog";
+import { getToursByActivity } from "../data/tours";
 
 type ActivityCatalogTemplateProps = {
   title: string;
@@ -17,6 +19,7 @@ export default function ActivityCatalogTemplate({
   image,
   activitySlug,
 }: ActivityCatalogTemplateProps) {
+  const activityTours = getToursByActivity(activitySlug);
   const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
     if (!event.target.value) {
       return;
@@ -99,6 +102,32 @@ export default function ActivityCatalogTemplate({
             </select>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-16">
+        <div className="text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+            Featured tours
+          </span>
+          <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+            {title} tours you can book now
+          </h2>
+          <p className="mt-3 text-sm text-[#405040] md:text-base">
+            Filtered from the live tour inventory so each activity page stays
+            up to date.
+          </p>
+        </div>
+        {activityTours.length ? (
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {activityTours.map((tour) => (
+              <TourCard key={tour.id} tour={tour} />
+            ))}
+          </div>
+        ) : (
+          <p className="mt-8 text-center text-sm text-[#405040]">
+            New {title.toLowerCase()} tours are on the way. Check back soon.
+          </p>
+        )}
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-16">

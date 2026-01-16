@@ -47,12 +47,12 @@ Version 2 of AllOutdoorAdventures.com is designed for massive content expansion.
 
 ## 📝 How to Add Content
 
-The entire site is driven by `client/src/lib/data.ts`. To add new destinations, you simply add to the `destinations` array.
+The entire site is driven by `src/data/destinations.ts`. To add new destinations, you simply add to the `states` array.
 
 ### Adding a New State
 
-1.  Open `client/src/lib/data.ts`.
-2.  Add a new object to the `destinations` array:
+1.  Open `src/data/destinations.ts`.
+2.  Add a new object to the `states` array:
 
 ```typescript
 {
@@ -110,6 +110,65 @@ Inside a City object's `tours` array:
   fareharborId: "12345"
 }
 ```
+
+## 🧭 Tours (Data-Driven + CSV)
+
+Tours are now powered by a single data source that is generated at build time.
+
+* **Source of truth (generated):** `src/data/tours.generated.ts`
+* **Manual overrides (optional):** `src/data/tours.ts` → `MANUAL_TOURS`
+* **CSV import script:** `scripts/import-tours-from-csv.ts`
+
+### Adding a New Tour (manual entry)
+
+1. Open `src/data/tours.ts`.
+2. Add a new object to `MANUAL_TOURS` using the `Tour` shape from `src/data/tours.types.ts`.
+3. Ensure `bookingUrl` includes your affiliate tracking parameters.
+
+### How to add/edit tours via CSV
+
+1. Drop a CSV file into `/data` (for example: `data/California.csv`).
+2. Run `npm run prebuild` (or `npx tsx scripts/import-tours-from-csv.ts`) to regenerate `src/data/tours.generated.ts`.
+3. Build/deploy as usual.
+
+**Please implement CSV parsing at build time (prebuild) so it works on Vercel without needing a backend.**
+
+#### Required CSV columns
+
+* `company_name`
+* `company_shortname`
+* `location`
+* `item_id`
+* `item_name`
+* `tags`
+* `image_url`
+* `calendar_link`
+* `regular_link`
+* `availability_count`
+* `quality_score`
+
+#### Optional columns
+
+Any other CSV columns will be ignored by the importer (they can be added later as needed).
+
+#### CSV mapping table
+
+| CSV column | Internal field |
+| --- | --- |
+| `company_shortname` + `item_id` | `id` |
+| `item_name` | `title` |
+| `item_id` | `slug` (used to keep slugs unique) |
+| `location` | `destination.state`, `destination.city` |
+| `image_url` | `heroImage`, `galleryImages[0]` |
+| `tags` | `tagPills[]`, `badges.tagline`, `activitySlugs[]` |
+| `quality_score` | `badges.rating` |
+| `availability_count` | `badges.reviewCount`, `badges.likelyToSellOut` |
+| `regular_link` | `bookingUrl` |
+| `calendar_link` | `bookingWidgetUrl` |
+
+### Affiliate disclosure
+
+Affiliate disclosure text is configured in `src/data/tours.ts` for each provider and displayed on the Tour detail + booking pages when required.
 
 ## 🎨 Design Philosophy: "The Modern Naturalist"
 

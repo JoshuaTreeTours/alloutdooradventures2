@@ -1,7 +1,14 @@
 import { Link } from "wouter";
 
+import Image from "../../../../components/Image";
+import TourCard from "../../../../components/TourCard";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
-import { getCityTours, getTourBySlug } from "../../../../data/cityTours";
+import {
+  getAffiliateDisclosure,
+  getCityTourDetailPath,
+  getToursByCity,
+  getTourBySlugs,
+} from "../../../../data/tours";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -29,7 +36,7 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const tour = getTourBySlug(city.name, params.tourSlug);
+  const tour = getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
     return (
@@ -52,11 +59,12 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const relatedTours = getCityTours(city.name).filter(
-    (item) => item.slug !== tour.slug
+  const relatedTours = getToursByCity(state.slug, city.slug).filter(
+    (item) => item.slug !== tour.slug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
+  const disclosure = getAffiliateDisclosure(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -81,34 +89,50 @@ export default function CityTourDetailRoute({
               <a>Tours</a>
             </Link>
             <span>/</span>
-            <span className="text-white">{tour.name}</span>
+            <span className="text-white">{tour.title}</span>
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              {tour.duration}
+              {tour.destination.city}, {tour.destination.state}
             </p>
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
-              {tour.name}
+              {tour.title}
             </h1>
-            <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-              {tour.summary}
-            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
+              {tour.badges.rating ? (
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
+                  ⭐ {tour.badges.rating}
+                  {tour.badges.reviewCount
+                    ? ` (${tour.badges.reviewCount})`
+                    : ""}
+                </span>
+              ) : null}
+              {tour.badges.duration ? (
+                <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
+                  {tour.badges.duration}
+                </span>
+              ) : null}
+              {tour.badges.likelyToSellOut ? (
+                <span className="inline-flex items-center rounded-full bg-[#ffedd5] px-3 py-1 text-[#9a3412]">
+                  Likely to sell out
+                </span>
+              ) : null}
+            </div>
+            {tour.badges.tagline ? (
+              <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
+                {tour.badges.tagline}
+              </p>
+            ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={`${toursHref}/${tour.slug}/book`}
+            <a
+              className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-white/90"
+              href={tour.bookingUrl}
+              rel="noreferrer"
+              target="_blank"
             >
-              <a
-                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-white/90"
-                onClick={() =>
-                  console.log(
-                    `[Book click] ${city.name} · ${tour.name} (detail)`
-                  )
-                }
-              >
-                Book this tour
-              </a>
-            </Link>
+              Book this tour
+            </a>
             <Link
               href={toursHref}
             >
@@ -123,38 +147,83 @@ export default function CityTourDetailRoute({
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
-            <h2 className="text-2xl font-semibold text-[#2f4a2f]">
+            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+              <Image
+                src={tour.heroImage}
+                fallbackSrc="/hero.jpg"
+                alt={tour.title}
+                className="h-64 w-full object-cover md:h-80"
+              />
+            </div>
+            <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            <p className="mt-4 text-sm text-[#405040] leading-relaxed">
-              This is a lightweight mock tour detail page so you can validate
-              booking flow and affiliate attribution. Use it to confirm that the
-              FareHarbor embed retains the short name across the iOS Safari
-              checkout.
-            </p>
-            <p className="mt-4 text-sm text-[#405040] leading-relaxed">
-              Expect a mix of guided time, scenic stops, and local context from
-              your guide. The experience is designed to be approachable for
-              most travelers.
-            </p>
+            {tour.longDescription.split("\n\n").map((paragraph) => (
+              <p
+                key={paragraph}
+                className="mt-4 text-sm text-[#405040] leading-relaxed"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
           <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
             <h3 className="text-base font-semibold text-[#1f2a1f]">
-              Highlights
+              Tour snapshot
             </h3>
-            <ul className="mt-4 space-y-2 text-sm text-[#405040]">
-              {tour.highlights.map((highlight) => (
-                <li key={highlight}>• {highlight}</li>
-              ))}
-            </ul>
-            <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-              Duration
-            </p>
-            <p className="mt-2 text-sm font-semibold text-[#1f2a1f]">
-              {tour.duration}
-            </p>
+            <div className="mt-4 space-y-3 text-sm text-[#405040]">
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                  Rating
+                </span>
+                <span className="font-semibold text-[#1f2a1f]">
+                  {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                  Reviews
+                </span>
+                <span className="font-semibold text-[#1f2a1f]">
+                  {tour.badges.reviewCount ?? "—"}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                  Duration
+                </span>
+                <span className="font-semibold text-[#1f2a1f]">
+                  {tour.badges.duration ?? "Check booking page"}
+                </span>
+              </div>
+              {tour.badges.likelyToSellOut ? (
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
+                  Likely to sell out
+                </p>
+              ) : null}
+            </div>
+            {disclosure ? (
+              <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
+            ) : null}
           </div>
         </div>
+        {tour.galleryImages?.length ? (
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {tour.galleryImages.map((image) => (
+              <div
+                key={image}
+                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
+              >
+                <Image
+                  src={image}
+                  fallbackSrc="/hero.jpg"
+                  alt={`${tour.title} gallery`}
+                  className="h-56 w-full object-cover md:h-64"
+                />
+              </div>
+            ))}
+          </div>
+        ) : null}
       </section>
 
       {relatedTours.length > 0 && (
@@ -165,43 +234,11 @@ export default function CityTourDetailRoute({
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {relatedTours.map((related) => (
-                <div
+                <TourCard
                   key={related.slug}
-                  className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
-                >
-                  <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-                    {related.duration}
-                  </p>
-                  <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
-                    {related.name}
-                  </h3>
-                  <p className="mt-3 text-sm text-[#405040]">
-                    {related.summary}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-3">
-                    <Link
-                      href={`${toursHref}/${related.slug}`}
-                    >
-                      <a className="inline-flex items-center justify-center rounded-md bg-black/5 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-black/10">
-                        Tour details
-                      </a>
-                    </Link>
-                    <Link
-                      href={`${toursHref}/${related.slug}/book`}
-                    >
-                      <a
-                        className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]"
-                        onClick={() =>
-                          console.log(
-                            `[Book click] ${city.name} · ${related.name} (related)`
-                          )
-                        }
-                      >
-                        Book
-                      </a>
-                    </Link>
-                  </div>
-                </div>
+                  tour={related}
+                  href={getCityTourDetailPath(related)}
+                />
               ))}
             </div>
           </div>

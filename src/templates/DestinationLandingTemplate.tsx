@@ -3,11 +3,11 @@ import { Link } from "wouter";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
 import type { StateDestination } from "../data/destinations";
-import type { TourRegistryEntry } from "../data/tourRegistry";
+import type { Tour } from "../data/tours.types";
 
 type DestinationLandingTemplateProps = {
   state: StateDestination;
-  tours: TourRegistryEntry[];
+  tours: Tour[];
 };
 
 export default function DestinationLandingTemplate({
@@ -84,8 +84,8 @@ export default function DestinationLandingTemplate({
               {state.name} tour picks
             </h2>
             <p className="text-sm text-[#405040] md:text-base">
-              Each tour is curated from our Viator Partner API ingestion with
-              adventure-first categories.
+              Tours are curated from our live booking feeds and tagged by
+              adventure category to keep the list fresh.
             </p>
           </div>
           {tours.length ? (

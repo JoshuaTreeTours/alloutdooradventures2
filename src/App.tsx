@@ -75,7 +75,10 @@ export default function App() {
           path="/tours/activities/sailing-boat"
           component={SailingBoatTours}
         />
-        <Route path="/tours/:destination/:slug" component={TourDetail} />
+        <Route
+          path="/tours/:stateSlug/:citySlug/:slug"
+          component={TourDetail}
+        />
 
         <Route>Not Found</Route>
       </Switch>

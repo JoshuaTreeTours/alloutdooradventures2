@@ -1,0 +1,33 @@
+export type BookingProvider = "fareharbor" | "viator";
+
+export type TourBadges = {
+  rating?: number;
+  reviewCount?: number;
+  priceFrom?: string;
+  duration?: string;
+  likelyToSellOut?: boolean;
+  tagline?: string;
+};
+
+export type TourDestination = {
+  state: string;
+  stateSlug: string;
+  city: string;
+  citySlug: string;
+};
+
+export type Tour = {
+  id: string;
+  slug: string;
+  title: string;
+  destination: TourDestination;
+  heroImage: string;
+  galleryImages?: string[];
+  badges: TourBadges;
+  tagPills?: string[];
+  activitySlugs: string[];
+  bookingProvider: BookingProvider;
+  bookingUrl: string;
+  bookingWidgetUrl?: string;
+  longDescription: string;
+};
