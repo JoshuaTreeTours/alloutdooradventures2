@@ -23,7 +23,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
       "/images/hiking-hero3.jpg",
   },
   {
-    title: "Canoeing",
+    title: "Paddle Sports",
     description: "Worldwide paddle adventures",
     slug: "canoeing",
     image: "/images/canoe-hero.jpg",

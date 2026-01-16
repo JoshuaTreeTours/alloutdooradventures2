@@ -1,13 +1,7 @@
 import type { Tour } from "./tours.types";
+import { getActivityLabels, getActivityLabelFromSlug } from "./activityLabels";
 
-const ACTIVITY_LABELS: Record<string, string> = {
-  cycling: "Cycling",
-  hiking: "Hiking",
-  canoeing: "Canoeing",
-  detours: "Scenic touring",
-  "day-adventures": "Day adventure",
-  "multi-day": "Multi-day adventure",
-};
+const ACTIVITY_LABELS = getActivityLabels();
 
 const SKILL_LEVELS: Record<string, string> = {
   cycling: "Beginner to intermediate fitness",
@@ -25,7 +19,7 @@ const getPrimaryActivitySlug = (tour: Tour) =>
 
 export const getActivityLabel = (tour: Tour) => {
   const primarySlug = getPrimaryActivitySlug(tour);
-  return ACTIVITY_LABELS[primarySlug] ?? "Outdoor adventure";
+  return getActivityLabelFromSlug(primarySlug) || "Outdoor adventure";
 };
 
 export const getSkillLevelLabel = (tour: Tour) => {

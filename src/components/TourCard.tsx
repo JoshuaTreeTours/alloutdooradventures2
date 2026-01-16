@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import type { Tour } from "../data/tours.types";
+import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import Image from "./Image";
 
@@ -11,6 +12,11 @@ type TourCardProps = {
 
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
+  const shortDescription = tour.shortDescription?.trim();
+  const categorySource =
+    tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
+  const categoryLabel = getActivityLabelFromSlug(categorySource);
+  const subtitle = shortDescription || categoryLabel;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -51,9 +57,9 @@ export default function TourCard({ tour, href }: TourCardProps) {
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}
           </h3>
-          {tour.badges.tagline ? (
+          {subtitle ? (
             <p className="mt-2 text-sm text-[#405040]">
-              {tour.badges.tagline}
+              {subtitle}
             </p>
           ) : null}
         </div>
