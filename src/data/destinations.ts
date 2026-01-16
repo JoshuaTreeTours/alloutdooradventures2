@@ -61,6 +61,7 @@ export type StateDestination = {
   longDescription: string;
   topRegions: StateRegion[];
   cities: City[];
+  isFallback?: boolean;
 };
 
 export type Tour = {

@@ -25,7 +25,7 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
   {
     title: "Canoeing",
     description: "Worldwide paddle adventures",
-    slug: "sailing-boat",
+    slug: "canoeing",
     image: "/images/canoe-hero.jpg",
   },
 ];
@@ -191,7 +191,7 @@ export default function Home() {
             {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
               <Link
                 key={activity.title}
-                href={`/tours/activities/${activity.slug}`}
+                href={`/tours/${activity.slug}`}
               >
                 <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
                   <div className="relative h-44">
