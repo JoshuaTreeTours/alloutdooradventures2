@@ -99,6 +99,7 @@ const buildFallbackState = (
   name: stateName,
   description: `Outdoor experiences across ${stateName}.`,
   heroImage: "/hero.jpg",
+  region: "Featured destination",
   intro: `Plan multi-activity getaways across ${stateName} with guided tours and local experts.`,
   longDescription: `${stateName} delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in ${stateName} will highlight its local specialties so travelers can book with confidence.`,
   topRegions: [

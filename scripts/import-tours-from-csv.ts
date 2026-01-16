@@ -6,8 +6,10 @@ import type { Tour } from "../src/data/tours.types";
 
 const DATA_DIR = path.resolve("data");
 const NORTHEAST_DIR = path.resolve("data/northeast");
+const DEEP_SOUTH_DIR = path.resolve("data/deep-south");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const NORTHEAST_OUTPUT_PATH = path.resolve("src/data/northeast.generated.ts");
+const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
   { filename: "cycling2.csv", activitySlug: "cycling" },
@@ -52,6 +54,14 @@ const NORTHEAST_STATE_SLUGS = new Set([
   "rhode-island",
   "vermont",
 ]);
+const DEEP_SOUTH_STATE_SLUGS = new Set([
+  "florida",
+  "georgia",
+  "louisiana",
+  "north-carolina",
+  "south-carolina",
+  "tennessee",
+]);
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   hiking: [
     "hike",
@@ -59,9 +69,12 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
     "trek",
     "trail",
     "walking",
+    "nature walk",
     "summit",
     "canyon",
     "mountain",
+    "ridge",
+    "overlook",
   ],
   cycling: [
     "bike",
@@ -81,6 +94,9 @@ const CATEGORY_KEYWORDS: Record<string, string[]> = {
     "river trip",
     "lake paddle",
     "water trail",
+    "swamp paddle",
+    "bayou paddle",
+    "kayak",
   ],
 };
 
@@ -312,7 +328,7 @@ type StateSeed = {
   cities: Map<string, CitySeed>;
 };
 
-const addNortheastSeed = (
+const addRegionSeed = (
   stateMap: Map<string, StateSeed>,
   {
     state,
@@ -406,7 +422,7 @@ const buildThingsToDo = (cityName: string, tags: string[]) => {
   return Array.from(new Set(items)).slice(0, 5);
 };
 
-const buildCityNarrative = (city: CitySeed) => {
+const buildCityNarrative = (city: CitySeed, regionName: string) => {
   const activityTags = buildActivityTags(Array.from(city.activitySlugs));
   const activityList = activityTags.join(", ");
   const heroImages = Array.from(city.heroImages).slice(0, 3);
@@ -419,7 +435,7 @@ const buildCityNarrative = (city: CitySeed) => {
     name: city.name,
     slug: city.slug,
     stateSlug: city.stateSlug,
-    region: "Northeast",
+    region: regionName,
     lat,
     lng,
     shortDescription: `Guided adventures, scenic routes, and outdoor escapes around ${city.name}.`,
@@ -474,9 +490,9 @@ const buildCityNarrative = (city: CitySeed) => {
   };
 };
 
-const buildStateNarrative = (state: StateSeed) => {
+const buildStateNarrative = (state: StateSeed, regionName: string) => {
   const cities = Array.from(state.cities.values()).map((city) =>
-    buildCityNarrative(city),
+    buildCityNarrative(city, regionName),
   );
   const heroImage = cities[0]?.heroImages?.[0] ?? PLACEHOLDER_IMAGE;
 
@@ -484,8 +500,9 @@ const buildStateNarrative = (state: StateSeed) => {
     slug: state.slug,
     name: state.name,
     description: `Outdoor experiences across ${state.name}.`,
-    featuredDescription: `Plan hiking, cycling, and canoeing escapes across ${state.name}'s Northeast landscapes.`,
+    featuredDescription: `Plan hiking, cycling, and canoeing escapes across ${state.name}'s ${regionName} landscapes.`,
     heroImage,
+    region: regionName,
     intro: `Plan multi-activity getaways across ${state.name} with guided tours and local experts.`,
     longDescription: `${state.name} delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in ${state.name} will highlight its local specialties so travelers can book with confidence.`,
     topRegions: [
@@ -673,6 +690,7 @@ const run = async () => {
     activitySlug: entry.activitySlug,
     csvPath: path.join(DATA_DIR, entry.filename),
     isNortheast: false,
+    isDeepSouth: false,
   }));
   const northeastCsvFiles = (await listCsvFiles(NORTHEAST_DIR)).map(
     (csvPath) => ({
@@ -680,9 +698,19 @@ const run = async () => {
       activitySlug: undefined,
       csvPath,
       isNortheast: true,
+      isDeepSouth: false,
     }),
   );
-  const csvFiles = [...categoryCsvFiles, ...northeastCsvFiles];
+  const deepSouthCsvFiles = (await listCsvFiles(DEEP_SOUTH_DIR)).map(
+    (csvPath) => ({
+      source: path.relative(DATA_DIR, csvPath),
+      activitySlug: undefined,
+      csvPath,
+      isNortheast: false,
+      isDeepSouth: true,
+    }),
+  );
+  const csvFiles = [...categoryCsvFiles, ...northeastCsvFiles, ...deepSouthCsvFiles];
 
   if (!csvFiles.length) {
     throw new Error(
@@ -695,6 +723,7 @@ const run = async () => {
   const tours: Tour[] = [];
   const skippedRows: string[] = [];
   const northeastSeeds = new Map<string, StateSeed>();
+  const deepSouthSeeds = new Map<string, StateSeed>();
   const seenItems = new Map<
     string,
     {
@@ -707,7 +736,13 @@ const run = async () => {
     }
   >();
 
-  for (const { source, activitySlug, csvPath, isNortheast } of csvFiles) {
+  for (const {
+    source,
+    activitySlug,
+    csvPath,
+    isNortheast,
+    isDeepSouth,
+  } of csvFiles) {
     const contents = await readFile(csvPath, "utf8");
     const { header, records } = parseCsv(contents);
     const missingColumns = requiredColumnsMissing(header);
@@ -800,7 +835,20 @@ const run = async () => {
         tours.push(tour);
 
         if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
-          addNortheastSeed(northeastSeeds, {
+          addRegionSeed(northeastSeeds, {
+            state,
+            stateSlug: tour.destination.stateSlug,
+            city,
+            citySlug: tour.destination.citySlug,
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
+            heroImage: tour.heroImage,
+            activitySlugs: tour.activitySlugs,
+          });
+        }
+
+        if (isDeepSouth && DEEP_SOUTH_STATE_SLUGS.has(tour.destination.stateSlug)) {
+          addRegionSeed(deepSouthSeeds, {
             state,
             stateSlug: tour.destination.stateSlug,
             city,
@@ -828,7 +876,10 @@ const run = async () => {
   }
 
   const northeastStates = Array.from(northeastSeeds.values()).map((state) =>
-    buildStateNarrative(state),
+    buildStateNarrative(state, "Northeast"),
+  );
+  const deepSouthStates = Array.from(deepSouthSeeds.values()).map((state) =>
+    buildStateNarrative(state, "Deep South"),
   );
 
   await writeGeneratedFile(tours);
@@ -845,8 +896,21 @@ export const northeastStates: StateDestination[] = ${JSON.stringify(
 `,
     "utf8",
   );
+  await writeFile(
+    DEEP_SOUTH_OUTPUT_PATH,
+    `import type { StateDestination } from "./destinations";
+
+// This file is auto-generated by scripts/import-tours-from-csv.ts. Do not edit manually.
+export const deepSouthStates: StateDestination[] = ${JSON.stringify(
+      deepSouthStates,
+      null,
+      2,
+    )};
+`,
+    "utf8",
+  );
   console.log(
-    `Generated ${tours.length} tours and ${northeastStates.length} northeast states.`,
+    `Generated ${tours.length} tours, ${northeastStates.length} northeast states, and ${deepSouthStates.length} deep south states.`,
   );
 };
 

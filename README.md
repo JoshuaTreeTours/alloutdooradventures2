@@ -127,8 +127,8 @@ Tours are now powered by a single data source that is generated at build time.
 
 ### How to add/edit tours via CSV
 
-1. Drop a CSV file into `/data` or `data/northeast` (nested folders are supported under `data/northeast`).
-2. Run `npm run prebuild` (or `npx tsx scripts/import-tours-from-csv.ts`) to regenerate `src/data/tours.generated.ts` and `src/data/northeast.generated.ts`.
+1. Drop a CSV file into `/data`, `data/northeast`, or `data/deep-south` (nested folders are supported under the regional directories).
+2. Run `npm run prebuild` (or `npx tsx scripts/import-tours-from-csv.ts`) to regenerate `src/data/tours.generated.ts` plus the regional destination files.
 3. Build/deploy as usual.
 
 **Please implement CSV parsing at build time (prebuild) so it works on Vercel without needing a backend.**
@@ -143,6 +143,8 @@ Tours are now powered by a single data source that is generated at build time.
 * `item_id`
 * `company_name`
 * `company_shortname`
+* `location_lat`
+* `location_long`
 * `category`
 * `tags`
 * `image_url`
@@ -176,6 +178,11 @@ Tours are now powered by a single data source that is generated at build time.
 
 * Place additional CSVs anywhere under `data/northeast/` (nested folders are fine).
 * The importer will auto-detect them, infer categories (Hiking/Cycling/Canoeing), and build/update Northeast state + city pages automatically on the next `npm run prebuild`.
+
+#### Adding more Deep South CSVs
+
+* Place additional CSVs anywhere under `data/deep-south/` (nested folders are fine).
+* The importer will auto-detect them, infer categories (Hiking/Cycling/Canoeing), and build/update Deep South state + city pages automatically on the next `npm run prebuild`.
 
 ### Affiliate disclosure
 
