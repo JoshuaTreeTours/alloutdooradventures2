@@ -690,6 +690,7 @@ const rowToTour = (
   activitySlug: string | undefined,
   logPrefix: string,
 ): Tour => {
+  const galleryImage = sanitizeCsvText(row.image_url);
   const parsedRow = parseCsvRow(row);
   const destination = parseLocation(parsedRow.location);
   const slugBase = slugify(parsedRow.title);
@@ -739,7 +740,7 @@ const rowToTour = (
       lng: parsedRow.longitude,
     },
     heroImage: parsedRow.heroImage,
-    galleryImages: row.image_url?.trim() ? [row.image_url.trim()] : [],
+    galleryImages: galleryImage ? [galleryImage] : [],
     badges: {
       rating: buildRating(parsedRow.qualityScore),
       reviewCount: parsedRow.availabilityCount,

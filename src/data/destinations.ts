@@ -2870,7 +2870,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         intro:
           `Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.`,
         heroImages: [
-          "/images/whitefish.jpg
+          "/images/whitefish.jpg",
         ],
         activityTags: ["hiking", "canoeing"],
         whereItIs: [
