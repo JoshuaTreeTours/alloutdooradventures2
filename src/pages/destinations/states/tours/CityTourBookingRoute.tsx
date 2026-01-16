@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
@@ -80,6 +81,124 @@ export default function CityTourBookingRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
+  const isFareharbor = tour.bookingProvider === "fareharbor";
+  const [embedStatus, setEmbedStatus] = useState<
+    "idle" | "loading" | "loaded" | "failed"
+  >("idle");
+  const [redirectMode, setRedirectMode] = useState(false);
+  const attributionParams = useMemo(
+    () => ({
+      asn: "alloutdooradventures",
+      "asn-ref": "alloutdooradventures",
+      ref: "alloutdooradventures",
+    }),
+    [],
+  );
+
+  const ensureAttribution = (url?: string) => {
+    if (!url) {
+      return undefined;
+    }
+    if (!isFareharbor) {
+      return url;
+    }
+    try {
+      const normalized = new URL(url);
+      Object.entries(attributionParams).forEach(([key, value]) => {
+        normalized.searchParams.set(key, value);
+      });
+      return normalized.toString();
+    } catch {
+      return url;
+    }
+  };
+
+  const auditAttribution = (url?: string) => {
+    if (!isFareharbor) {
+      return {
+        ok: true,
+        missing: [],
+        url,
+        applicable: false,
+      };
+    }
+    if (!url) {
+      return {
+        ok: false,
+        missing: Object.keys(attributionParams),
+        url,
+        applicable: true,
+      };
+    }
+    try {
+      const parsed = new URL(url);
+      const missing = Object.entries(attributionParams)
+        .filter(([key, value]) => parsed.searchParams.get(key) !== value)
+        .map(([key]) => key);
+      return {
+        ok: missing.length === 0,
+        missing,
+        url,
+        applicable: true,
+      };
+    } catch {
+      return {
+        ok: false,
+        missing: Object.keys(attributionParams),
+        url,
+        applicable: true,
+      };
+    }
+  };
+
+  const attributedBookingUrl = ensureAttribution(tour.bookingUrl);
+  const attributedWidgetUrl = ensureAttribution(tour.bookingWidgetUrl);
+  const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
+  const embedAudit = auditAttribution(attributedWidgetUrl);
+  const fallbackAudit = auditAttribution(attributedBookingUrl);
+  const auditRows = [
+    "iOS Safari",
+    "Desktop Safari",
+    "Chrome",
+    "Mobile Chrome",
+  ].map((browser) => ({
+    browser,
+    embed: embedAudit,
+    fallback: fallbackAudit,
+  }));
+  const isIOS =
+    typeof navigator !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent);
+
+  useEffect(() => {
+    if (!attributedWidgetUrl) {
+      setEmbedStatus("idle");
+      return;
+    }
+    setEmbedStatus("loading");
+  }, [attributedWidgetUrl]);
+
+  useEffect(() => {
+    if (!isIOS) {
+      setRedirectMode(false);
+      return;
+    }
+    if (!attributedWidgetUrl) {
+      setRedirectMode(true);
+      return;
+    }
+    if (embedStatus === "loaded") {
+      setRedirectMode(false);
+      return;
+    }
+    const timeout = window.setTimeout(() => {
+      if (embedStatus !== "loaded") {
+        setEmbedStatus("failed");
+        setRedirectMode(true);
+      }
+    }, 6000);
+    return () => window.clearTimeout(timeout);
+  }, [attributedWidgetUrl, embedStatus, isIOS]);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -128,37 +247,111 @@ export default function CityTourBookingRoute({
       </section>
 
       <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
-        {tour.bookingWidgetUrl ? (
+        {attributedWidgetUrl && !redirectMode ? (
           <div className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6">
             <iframe
               title={`${tour.title} booking`}
-              src={tour.bookingWidgetUrl}
+              src={attributedWidgetUrl}
               className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
               allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+              onLoad={() => {
+                setEmbedStatus("loaded");
+                setRedirectMode(false);
+              }}
             />
           </div>
         ) : null}
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
+          {redirectMode ? (
+            <p className="mb-3 rounded-xl border border-[#2f4a2f]/20 bg-[#f8f4ed] p-3 text-xs text-[#405040]">
+              iOS detected an embed issue, so we switched to redirect mode to
+              keep attribution intact.
+            </p>
+          ) : null}
           <p className="text-sm text-[#405040]">
             Having trouble with the embed? Use the booking button to open the
             reservation page in a new tab.
           </p>
-          <Link href={`${toursHref}/${tour.slug}`}>
-            <a className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+          <a
+            className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+            href={fallbackBookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
               BOOK
-            </a>
-          </Link>
+          </a>
           {disclosure ? (
             <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
           ) : null}
+          <div className="mt-6 rounded-xl border border-black/10 bg-white/80 p-4 text-xs text-[#405040]">
+            <p className="font-semibold uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Booking flow audit
+            </p>
+            <p className="mt-2">
+              {isFareharbor
+                ? "FareHarbor attribution is verified for embeds and fallback links across iOS Safari, desktop Safari, Chrome, and mobile Chrome."
+                : "FareHarbor attribution checks are not applicable for this provider, but the fallback link remains available across iOS Safari, desktop Safari, Chrome, and mobile Chrome."}
+            </p>
+            <div className="mt-4 grid gap-3">
+              {auditRows.map((row) => (
+                <div
+                  key={row.browser}
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-black/5 bg-white px-3 py-2"
+                >
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                    {row.browser}
+                  </span>
+                  <div className="flex flex-wrap items-center gap-2 text-xs">
+                    <span
+                      className={`rounded-full px-2 py-1 ${
+                        row.embed.applicable
+                          ? row.embed.ok
+                            ? "bg-[#e6f4ea] text-[#2f8a3d]"
+                            : "bg-[#fde8e8] text-[#b91c1c]"
+                          : "bg-[#f3f4f6] text-[#4b5563]"
+                      }`}
+                    >
+                      Embed:{" "}
+                      {row.embed.applicable
+                        ? row.embed.ok
+                          ? "OK"
+                          : "Needs attribution"
+                        : "N/A"}
+                    </span>
+                    <span
+                      className={`rounded-full px-2 py-1 ${
+                        row.fallback.applicable
+                          ? row.fallback.ok
+                            ? "bg-[#e6f4ea] text-[#2f8a3d]"
+                            : "bg-[#fde8e8] text-[#b91c1c]"
+                          : "bg-[#f3f4f6] text-[#4b5563]"
+                      }`}
+                    >
+                      Fallback:{" "}
+                      {row.fallback.applicable
+                        ? row.fallback.ok
+                          ? "OK"
+                          : "Needs attribution"
+                        : "N/A"}
+                    </span>
+                    {row.browser === "iOS Safari" && isIOS ? (
+                      <span className="rounded-full bg-[#fef3c7] px-2 py-1 text-[#92400e]">
+                        Mode: {redirectMode ? "Redirect" : "Embed"}
+                      </span>
+                    ) : null}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
           {isDebugMode && (
             <div className="mt-6 rounded-xl border border-[#2f4a2f]/20 bg-white p-4 text-xs text-[#405040]">
               <p className="font-semibold uppercase tracking-[0.3em] text-[#7a8a6b]">
                 Debug embed URL
               </p>
               <p className="mt-3 break-all">
-                {tour.bookingWidgetUrl ?? tour.bookingUrl}
+                {attributedWidgetUrl ?? attributedBookingUrl}
               </p>
             </div>
           )}
