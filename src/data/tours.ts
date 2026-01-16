@@ -623,7 +623,17 @@ export const getTourBySlugs = (
   );
 
 export const getToursByActivity = (activitySlug: string) =>
-  tours.filter((tour) => tour.activitySlugs.includes(activitySlug));
+  tours.filter((tour) => {
+    if (!tour.activitySlugs.includes(activitySlug)) {
+      return false;
+    }
+
+    if (activitySlug === "hiking") {
+      return !tour.activitySlugs.includes("cycling");
+    }
+
+    return true;
+  });
 
 export const getTourDetailPath = (tour: Tour) =>
   `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
