@@ -2868,7 +2868,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         shortDescription:
           "Glacier access, lake paddles, and alpine climbing routes.",
         intro:
-          "Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.",
+          `Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.`,
         heroImages: [
           "/images/whitefish.jpg
         ],
