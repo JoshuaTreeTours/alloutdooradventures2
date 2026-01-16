@@ -2683,7 +2683,7 @@ Denver, Boulder, Colorado Springs, Fort Collins, and Durango make reliable basec
     featuredDescription:
       "Plan hiking, cycling, and canoeing days across Montana's mountain gateways.",
     heroImage:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+      "/images/montana-hero.jpg",
     region: "Heartland",
     intro:
       "Montana pairs rugged ranges with wide-open rivers, making it a natural fit for multi-activity trips.",
