@@ -14,7 +14,11 @@ const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
   { filename: "cycling2.csv", activitySlug: "cycling" },
-  { filename: "hiking.csv", activitySlug: "hiking" },
+  {
+    filename: "hiking2.csv",
+    activitySlug: "hiking",
+    forceCategory: "hiking",
+  },
   { filename: "canoeing.csv", activitySlug: "canoeing" },
   { filename: "san-francisco.csv", activitySlug: "detours" },
   { filename: "san-diego.csv", activitySlug: "detours" },
@@ -350,6 +354,7 @@ const sortByPriority = (categories: string[]) =>
 const resolveActivitySlugs = ({
   fallbackActivity,
   explicitCategory,
+  forceCategory,
   title,
   shortDescription,
   tags,
@@ -357,11 +362,19 @@ const resolveActivitySlugs = ({
 }: {
   fallbackActivity?: string;
   explicitCategory?: string;
+  forceCategory?: string;
   title: string;
   shortDescription?: string;
   tags: string[];
   logPrefix: string;
 }) => {
+  if (forceCategory) {
+    return {
+      activitySlugs: [forceCategory],
+      primaryCategory: forceCategory,
+    };
+  }
+
   const inferred = inferCategoriesFromText(
     [title, shortDescription, tags.join(" ")].filter(Boolean).join(" "),
   );
@@ -688,6 +701,7 @@ const normalizeCalendarUrl = (rawUrl: string) => {
 const rowToTour = (
   row: Record<string, string>,
   activitySlug: string | undefined,
+  forceCategory: string | undefined,
   logPrefix: string,
 ): Tour => {
   const galleryImage = sanitizeCsvText(row.image_url);
@@ -700,6 +714,7 @@ const rowToTour = (
   const { activitySlugs, primaryCategory } = resolveActivitySlugs({
     fallbackActivity: activitySlug,
     explicitCategory: parsedRow.explicitCategory,
+    forceCategory,
     title: parsedRow.title,
     shortDescription: parsedRow.shortDescription,
     tags: parsedRow.tags,
@@ -776,6 +791,7 @@ const run = async () => {
   ).map((entry) => ({
     source: entry.filename,
     activitySlug: entry.activitySlug,
+    forceCategory: "forceCategory" in entry ? entry.forceCategory : undefined,
     csvPath: path.join(DATA_DIR, entry.filename),
     isNortheast: false,
     isDeepSouth: false,
@@ -839,6 +855,7 @@ const run = async () => {
   for (const {
     source,
     activitySlug,
+    forceCategory,
     csvPath,
     isNortheast,
     isDeepSouth,
@@ -931,7 +948,7 @@ const run = async () => {
       seenItems.set(itemKey, nextSnapshot);
       try {
         const logPrefix = `${source}: ${rowIdentifier}`;
-        const tour = rowToTour(row, activitySlug, logPrefix);
+        const tour = rowToTour(row, activitySlug, forceCategory, logPrefix);
         tours.push(tour);
 
         if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
