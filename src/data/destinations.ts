@@ -2269,7 +2269,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
     featuredDescription:
       "Plan hiking and cycling days with mountain towns and Front Range basecamps.",
     heroImage:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+      "/images/colorado-hero.jpg",
     region: "Heartland",
     intro:
       "Colorado delivers high-elevation trails, scenic drives, and easygoing cities that keep adventure planning simple.",
