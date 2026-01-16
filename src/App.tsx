@@ -10,6 +10,7 @@ import CityRoute from "./pages/destinations/states/CityRoute";
 import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursIndexRoute";
 import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
 import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBookingRoute";
+import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursIndex from "./pages/ToursIndex";
 import ToursCatalog from "./pages/ToursCatalog";
 import CyclingTours from "./pages/tours/activities/CyclingTours";
@@ -42,6 +43,10 @@ export default function App() {
         <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours"
           component={CityToursIndexRoute}
+        />
+        <Route
+          path="/destinations/states/:stateSlug/tours"
+          component={StateToursRoute}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
