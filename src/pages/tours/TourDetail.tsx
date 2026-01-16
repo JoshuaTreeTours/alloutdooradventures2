@@ -46,6 +46,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   const skillLevel = getSkillLevelLabel(tour);
   const reviewSummary = getTourReviewSummary(tour);
   const highlights = getTourHighlights(tour);
+  const suppressReviews = tour.suppressReviews ?? true;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -79,7 +80,7 @@ export default function TourDetail({ params }: TourDetailProps) {
                 {tour.title}
               </h1>
               <div className="flex flex-wrap gap-2 text-xs font-semibold text-[#1f2a1f]">
-                {tour.badges.rating ? (
+                {!suppressReviews && tour.badges.rating ? (
                   <span className="inline-flex items-center gap-1 rounded-full bg-[#fef3c7] px-3 py-1">
                     ⭐ {tour.badges.rating}
                     {tour.badges.reviewCount

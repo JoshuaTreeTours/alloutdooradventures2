@@ -86,6 +86,7 @@ export default function CityTourDetailRoute({
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
   const reviewSummary = getTourReviewSummary(tour);
+  const suppressReviews = tour.suppressReviews ?? true;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -120,7 +121,7 @@ export default function CityTourDetailRoute({
               {tour.title}
             </h1>
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
-              {tour.badges.rating ? (
+              {!suppressReviews && tour.badges.rating ? (
                 <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
                   ⭐ {tour.badges.rating}
                   {tour.badges.reviewCount
@@ -197,22 +198,26 @@ export default function CityTourDetailRoute({
                 Tour snapshot
               </h3>
               <div className="mt-4 space-y-3 text-sm text-[#405040]">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                    Rating
-                  </span>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                    Reviews
-                  </span>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    {tour.badges.reviewCount ?? "—"}
-                  </span>
-                </div>
+                {!suppressReviews ? (
+                  <>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                        Rating
+                      </span>
+                      <span className="font-semibold text-[#1f2a1f]">
+                        {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                        Reviews
+                      </span>
+                      <span className="font-semibold text-[#1f2a1f]">
+                        {tour.badges.reviewCount ?? "—"}
+                      </span>
+                    </div>
+                  </>
+                ) : null}
                 <div className="flex items-center justify-between">
                   <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
                     Duration
