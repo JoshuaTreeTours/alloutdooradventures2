@@ -9,12 +9,12 @@ export default function DestinationsIndex() {
           Destinations
         </span>
         <h1 className="mt-3 text-3xl md:text-4xl font-semibold text-[#2f4a2f]">
-          Explore the American West
+          Explore U.S. outdoor destinations
         </h1>
         <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
-          Explore our curated destinations across the American West. Each state
-          is packed with signature landscapes, iconic trails, and local favorites
-          ready for your next adventure.
+          Explore our curated destinations across the American West and
+          Northeast. Each state is packed with signature landscapes, iconic
+          trails, and local favorites ready for your next adventure.
         </p>
       </section>
 
