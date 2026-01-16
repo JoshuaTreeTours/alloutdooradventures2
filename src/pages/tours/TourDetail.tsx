@@ -4,8 +4,16 @@ import Image from "../../components/Image";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
+  getCityTourBookingPath,
+  getTourDetailPath,
   getTourBySlugs,
 } from "../../data/tours";
+import {
+  getActivityLabel,
+  getExpandedTourDescription,
+  getSkillLevelLabel,
+  getTourReviewSummary,
+} from "../../data/tourNarratives";
 
 type TourDetailProps = {
   params: {
@@ -33,6 +41,9 @@ export default function TourDetail({ params }: TourDetailProps) {
   const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
+  const activityLabel = getActivityLabel(tour);
+  const skillLevel = getSkillLevelLabel(tour);
+  const reviewSummary = getTourReviewSummary(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -109,32 +120,67 @@ export default function TourDetail({ params }: TourDetailProps) {
               ) : null}
             </div>
           </div>
-          <div className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm">
-            <h2 className="text-lg font-semibold text-[#1f2a1f]">
-              Ready to book?
-            </h2>
-            <p className="mt-3 text-sm text-[#405040]">
-              Book instantly through our {providerLabel} partner link. You’ll be
-              taken to the official booking page for availability and pricing.
-            </p>
-            <a
-              className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white"
-              href={tour.bookingUrl}
-              rel="noreferrer"
-              target="_blank"
-            >
-              Book now
-            </a>
-            <div className="mt-6 space-y-2 text-xs text-[#405040]">
-              {disclosure ? <p>{disclosure}</p> : null}
-              <p className="rounded-xl border border-dashed border-black/10 bg-white/60 p-4">
-                Provider: <span className="font-semibold">{providerLabel}</span>
+          <div className="space-y-6">
+            <div className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm">
+              <h2 className="text-lg font-semibold text-[#1f2a1f]">
+                Ready to book?
+              </h2>
+              <p className="mt-3 text-sm text-[#405040]">
+                Book instantly through our {providerLabel} partner link. You’ll
+                be taken to the official booking page for availability and
+                pricing.
               </p>
+              <Link href={getCityTourBookingPath(tour)}>
+                <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                  BOOK
+                </a>
+              </Link>
+              <a
+                className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-[#2f4a2f]/20 bg-white px-6 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#2f4a2f] transition hover:bg-[#f5f2ec]"
+                href="#outdoor-adventures-review"
+              >
+                Review summary
+              </a>
+              <div className="mt-6 space-y-2 text-xs text-[#405040]">
+                {disclosure ? <p>{disclosure}</p> : null}
+                <p className="rounded-xl border border-dashed border-black/10 bg-white/60 p-4">
+                  Provider:{" "}
+                  <span className="font-semibold">{providerLabel}</span>
+                </p>
+              </div>
+            </div>
+            <div
+              id="outdoor-adventures-review"
+              className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm"
+            >
+              <div className="flex items-center justify-between gap-4">
+                <h2 className="text-lg font-semibold text-[#1f2a1f]">
+                  Outdoor Adventures review
+                </h2>
+                <span className="rounded-full bg-[#e6f4ea] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f8a3d]">
+                  Approved
+                </span>
+              </div>
+              <p className="mt-3 text-sm text-[#405040]">{reviewSummary}</p>
+              <div className="mt-4 grid gap-2 text-xs text-[#405040]">
+                <p>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    Skill level:
+                  </span>{" "}
+                  {skillLevel}
+                </p>
+                <p>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    Activity focus:
+                  </span>{" "}
+                  {activityLabel}
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div className="mt-10 space-y-4 text-sm text-[#405040] md:text-base">
-          {tour.longDescription.split("\n\n").map((paragraph) => (
+          {getExpandedTourDescription(tour).map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>

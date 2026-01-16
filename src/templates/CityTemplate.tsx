@@ -176,8 +176,8 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
           </div>
           <div>
             <Link href={toursHref}>
-              <a className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-[#2f4a2f] shadow-lg transition hover:bg-white/90">
-                Book tours
+              <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white shadow-lg transition hover:bg-[#287a35]">
+                SEE TOURS
               </a>
             </Link>
           </div>
@@ -416,6 +416,11 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
             <Link href="/destinations">
               <a className="inline-flex items-center justify-center rounded-md bg-black/5 px-4 py-2 text-sm font-semibold text-[#2f4a2f] hover:bg-black/10 transition">
                 All destinations
+              </a>
+            </Link>
+            <Link href={toursHref}>
+              <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#287a35]">
+                SEE TOURS
               </a>
             </Link>
           </div>

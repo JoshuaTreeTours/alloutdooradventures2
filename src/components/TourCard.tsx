@@ -76,7 +76,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <div className="mt-auto">
           <Link href={detailHref}>
             <a className="inline-flex items-center text-sm font-semibold text-[#2f4a2f]">
-              View tour
+              View tour details
             </a>
           </Link>
         </div>
