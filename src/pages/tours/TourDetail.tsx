@@ -1,17 +1,22 @@
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
-import { getTourBySlug } from "../../data/tourRegistry";
+import {
+  getAffiliateDisclosure,
+  getProviderLabel,
+  getTourBySlugs,
+} from "../../data/tours";
 
 type TourDetailProps = {
   params: {
-    destination: string;
+    stateSlug: string;
+    citySlug: string;
     slug: string;
   };
 };
 
 export default function TourDetail({ params }: TourDetailProps) {
-  const tour = getTourBySlug(params.destination, params.slug);
+  const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
 
   if (!tour) {
     return (
@@ -25,24 +30,29 @@ export default function TourDetail({ params }: TourDetailProps) {
     );
   }
 
-  const destinationLabel = tour.destination
-    .split("-")
-    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
-    .join(" ");
+  const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
+  const disclosure = getAffiliateDisclosure(tour);
+  const providerLabel = getProviderLabel(tour.bookingProvider);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <Link href={`/destinations/${tour.destination}`}>
-          <a className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-            Back to {destinationLabel}
-          </a>
-        </Link>
+        <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+          <Link href="/tours">
+            <a>Back to tours</a>
+          </Link>
+          <span>/</span>
+          <Link
+            href={`/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours`}
+          >
+            <a>{destinationLabel}</a>
+          </Link>
+        </div>
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
               <Image
-                src={tour.image}
+                src={tour.heroImage}
                 fallbackSrc="/hero.jpg"
                 alt={tour.title}
                 className="h-72 w-full object-cover"
@@ -50,14 +60,53 @@ export default function TourDetail({ params }: TourDetailProps) {
             </div>
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                {tour.categories.join(" • ")}
+                {destinationLabel}
               </p>
               <h1 className="text-3xl font-semibold text-[#2f4a2f] md:text-4xl">
                 {tour.title}
               </h1>
-              <p className="text-sm text-[#405040] md:text-base">
-                {tour.blurb}
-              </p>
+              <div className="flex flex-wrap gap-2 text-xs font-semibold text-[#1f2a1f]">
+                {tour.badges.rating ? (
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#fef3c7] px-3 py-1">
+                    ⭐ {tour.badges.rating}
+                    {tour.badges.reviewCount
+                      ? ` (${tour.badges.reviewCount})`
+                      : ""}
+                  </span>
+                ) : null}
+                {tour.badges.duration ? (
+                  <span className="inline-flex items-center rounded-full bg-white px-3 py-1">
+                    {tour.badges.duration}
+                  </span>
+                ) : null}
+                {tour.badges.priceFrom ? (
+                  <span className="inline-flex items-center rounded-full bg-white px-3 py-1">
+                    From {tour.badges.priceFrom}
+                  </span>
+                ) : null}
+                {tour.badges.likelyToSellOut ? (
+                  <span className="inline-flex items-center rounded-full bg-[#ffedd5] px-3 py-1 text-[#9a3412]">
+                    Likely to sell out
+                  </span>
+                ) : null}
+              </div>
+              {tour.badges.tagline ? (
+                <p className="text-sm text-[#405040] md:text-base">
+                  {tour.badges.tagline}
+                </p>
+              ) : null}
+              {tour.tagPills?.length ? (
+                <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]">
+                  {tour.tagPills.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-[#2f4a2f]/20 bg-white px-3 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
           <div className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm">
@@ -65,23 +114,47 @@ export default function TourDetail({ params }: TourDetailProps) {
               Ready to book?
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              Book instantly through our Viator partner link. You’ll be taken to
-              the official booking page for availability and pricing.
+              Book instantly through our {providerLabel} partner link. You’ll be
+              taken to the official booking page for availability and pricing.
             </p>
             <a
               className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white"
-              href={tour.outboundUrl}
+              href={tour.bookingUrl}
               rel="noreferrer"
               target="_blank"
             >
               Book now
             </a>
-            <div className="mt-6 rounded-xl border border-dashed border-black/10 bg-white/60 p-4 text-xs text-[#405040]">
-              Viator product code:{" "}
-              <span className="font-semibold">{tour.viatorProductCode}</span>
+            <div className="mt-6 space-y-2 text-xs text-[#405040]">
+              {disclosure ? <p>{disclosure}</p> : null}
+              <p className="rounded-xl border border-dashed border-black/10 bg-white/60 p-4">
+                Provider: <span className="font-semibold">{providerLabel}</span>
+              </p>
             </div>
           </div>
         </div>
+        <div className="mt-10 space-y-4 text-sm text-[#405040] md:text-base">
+          {tour.longDescription.split("\n\n").map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+        {tour.galleryImages?.length ? (
+          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            {tour.galleryImages.map((image) => (
+              <div
+                key={image}
+                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
+              >
+                <Image
+                  src={image}
+                  fallbackSrc="/hero.jpg"
+                  alt={`${tour.title} gallery`}
+                  className="h-56 w-full object-cover md:h-72"
+                />
+              </div>
+            ))}
+          </div>
+        ) : null}
       </section>
     </main>
   );

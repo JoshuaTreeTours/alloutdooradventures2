@@ -1,6 +1,6 @@
 import DestinationLandingTemplate from "../../templates/DestinationLandingTemplate";
 import { getStateBySlug } from "../../data/destinations";
-import { getToursByDestination } from "../../data/tourRegistry";
+import { getToursByState } from "../../data/tours";
 
 type StateLandingRouteProps = {
   params: {
@@ -23,7 +23,7 @@ export default function StateLandingRoute({ params }: StateLandingRouteProps) {
     );
   }
 
-  const tours = getToursByDestination(state.slug);
+  const tours = getToursByState(state.slug);
 
   return <DestinationLandingTemplate state={state} tours={tours} />;
 }
