@@ -186,14 +186,48 @@ export const normalizeBookingUrl = (rawUrl: string) => {
   }
 
   if (parsedUrl.hostname === "fareharbor.com") {
+    const calendarMatch = parsedUrl.pathname.match(
+      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+    );
+    const bookCalendarMatch = parsedUrl.pathname.match(
+      /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/,
+    );
     const itemMatch = parsedUrl.pathname.match(/\/items\/(\d+)/);
     if (!itemMatch?.[1]) {
       throw new Error(`FareHarbor URL missing item id: ${rawUrl}`);
     }
 
+    if (calendarMatch?.[1] && calendarMatch?.[2]) {
+      parsedUrl.pathname = `/embeds/book/${calendarMatch[1]}/items/${calendarMatch[2]}/`;
+    } else if (bookCalendarMatch?.[1] && bookCalendarMatch?.[2]) {
+      parsedUrl.pathname = `/embeds/book/${bookCalendarMatch[1]}/items/${bookCalendarMatch[2]}/`;
+    }
+
     parsedUrl.searchParams.set("branding", "no");
     parsedUrl.searchParams.set("asn-ref", AFFILIATE_SHORT_NAME);
     parsedUrl.searchParams.set("ref", AFFILIATE_SHORT_NAME);
+  }
+
+  return parsedUrl.toString();
+};
+
+const normalizeCalendarUrl = (rawUrl: string) => {
+  const normalizedUrl = normalizeBookingUrl(rawUrl);
+  const parsedUrl = new URL(normalizedUrl);
+
+  if (parsedUrl.hostname === "fareharbor.com") {
+    const calendarMatch = parsedUrl.pathname.match(
+      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+    );
+    const bookMatch = parsedUrl.pathname.match(
+      /\/embeds\/book\/([^/]+)\/items\/(\d+)/,
+    );
+
+    if (calendarMatch?.[1] && calendarMatch?.[2]) {
+      parsedUrl.pathname = `/embeds/book/${calendarMatch[1]}/items/${calendarMatch[2]}/calendar/`;
+    } else if (bookMatch?.[1] && bookMatch?.[2]) {
+      parsedUrl.pathname = `/embeds/book/${bookMatch[1]}/items/${bookMatch[2]}/calendar/`;
+    }
   }
 
   return parsedUrl.toString();
@@ -209,8 +243,8 @@ const rowToTour = (
   const title = row.item_name.trim() || "Untitled Tour";
   const slugBase = slugify(title);
   const slug = `${slugBase}-${itemId}`;
-  const bookingUrl = (row.regular_link || row.calendar_link).trim();
   const calendarLink = row.calendar_link.trim();
+  const bookingUrl = (calendarLink || row.regular_link).trim();
   const availabilityCount = parseNumber(row.availability_count);
   const qualityScore = parseNumber(row.quality_score);
 
@@ -226,7 +260,7 @@ const rowToTour = (
 
   const normalizedBookingUrl = normalizeBookingUrl(bookingUrl);
   const normalizedCalendarLink = calendarLink
-    ? normalizeBookingUrl(calendarLink)
+    ? normalizeCalendarUrl(calendarLink)
     : undefined;
 
   const likelyToSellOut =
@@ -278,6 +312,17 @@ const run = async () => {
   const tours: Tour[] = [];
   const missingAffiliateParams: string[] = [];
   const invalidRows: string[] = [];
+  const seenItems = new Map<
+    string,
+    {
+      source: string;
+      location: string;
+      title: string;
+      calendarLink: string;
+      regularLink: string;
+      imageUrl: string;
+    }
+  >();
 
   for (const csvFile of csvFiles) {
     const csvPath = path.join(DATA_DIR, csvFile);
@@ -295,6 +340,34 @@ const run = async () => {
       if (!row.item_id || !row.item_name) {
         return;
       }
+      const itemKey = `${row.company_shortname}-${row.item_id}`;
+      const nextSnapshot = {
+        source: csvFile,
+        location: row.location,
+        title: row.item_name,
+        calendarLink: row.calendar_link,
+        regularLink: row.regular_link,
+        imageUrl: row.image_url,
+      };
+      const previousSnapshot = seenItems.get(itemKey);
+
+      if (previousSnapshot) {
+        const hasConflict =
+          previousSnapshot.location !== nextSnapshot.location ||
+          previousSnapshot.title !== nextSnapshot.title ||
+          previousSnapshot.calendarLink !== nextSnapshot.calendarLink ||
+          previousSnapshot.regularLink !== nextSnapshot.regularLink ||
+          previousSnapshot.imageUrl !== nextSnapshot.imageUrl;
+
+        if (hasConflict) {
+          invalidRows.push(
+            `${csvFile}: ${itemKey} conflicts with ${previousSnapshot.source}`,
+          );
+        }
+        return;
+      }
+
+      seenItems.set(itemKey, nextSnapshot);
       try {
         tours.push(rowToTour(row, missingAffiliateParams));
       } catch (error) {
