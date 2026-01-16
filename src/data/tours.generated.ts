@@ -6780,5 +6780,15626 @@ export const toursGenerated: Tour[] = [
     "bookingUrl": "https://fareharbor.com/embeds/book/greenrivercanoing/items/535588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/greenrivercanoing/items/535588/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "longDescription": "Munfordville -> Houchin Ferry – Overnight is a curated experience in Park City, Kentucky designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "baycitykayak-901001",
+    "slug": "golden-gate-kayak-adventure-901001",
+    "title": "Golden Gate Kayak Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Francisco",
+      "citySlug": "san-francisco",
+      "lat": 37.808,
+      "lng": -122.4177
+    },
+    "heroImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.7,
+      "reviewCount": 120,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Kayak",
+      "Water Activities"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baycitykayak/items/901001/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Golden Gate Kayak Adventure is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fogcitybiketours-901002",
+    "slug": "golden-gate-bridge-electric-bike-tour-901002",
+    "title": "Golden Gate Bridge Electric Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Francisco",
+      "citySlug": "san-francisco",
+      "lat": 37.8021,
+      "lng": -122.4483
+    },
+    "heroImage": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Bike Tour"
+    },
+    "tagPills": [
+      "Bike Tour",
+      "City Tour",
+      "Guided Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fogcitybiketours/items/901002/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Golden Gate Bridge Electric Bike Tour is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "baynightadventures-901003",
+    "slug": "san-francisco-sunset-cruise-901003",
+    "title": "San Francisco Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Francisco",
+      "citySlug": "san-francisco",
+      "lat": 37.7946,
+      "lng": -122.395
+    },
+    "heroImage": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.6,
+      "reviewCount": 90,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Sunset",
+      "Wildlife"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/baynightadventures/items/901003/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/baynightadventures/items/901003/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Francisco Sunset Cruise is a curated experience in San Francisco, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-107822",
+    "slug": "la-jolla-cove-2-tank-guided-shore-dives-107822",
+    "title": "La Jolla Cove 2-Tank Guided Shore Dives",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.272598,
+      "lng": 32.850174
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V26IHeHFRGe7gOczLHbw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V26IHeHFRGe7gOczLHbw"
+    ],
+    "badges": {
+      "rating": 5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Private",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107822/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Jolla Cove 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-109205",
+    "slug": "la-jolla-cove-kelp-forest-1-tank-guided-shore-dive-109205",
+    "title": "La Jolla Cove Kelp Forest 1-Tank Guided Shore Dive",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.272598,
+      "lng": 32.850174
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9Sh512PXTqitedJNZDWF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9Sh512PXTqitedJNZDWF"
+    ],
+    "badges": {
+      "rating": 5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Private",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Jolla Cove Kelp Forest 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-110311",
+    "slug": "private-la-jolla-2-tank-guided-shore-dives-110311",
+    "title": "PRIVATE La Jolla 2-Tank Guided Shore Dives",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.272598,
+      "lng": 32.850174
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5QPmlKkGQmC4rlweGfWy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5QPmlKkGQmC4rlweGfWy"
+    ],
+    "badges": {
+      "rating": 5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Private",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110311/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PRIVATE La Jolla 2-Tank Guided Shore Dives is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-451191",
+    "slug": "sip-savor-and-sea---la-jolla-451191",
+    "title": "Sip, Savor and Sea - La Jolla",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8k9gCvdQvCesfpIkS77g",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8k9gCvdQvCesfpIkS77g"
+    ],
+    "badges": {
+      "rating": 5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "History Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/451191/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/451191/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sip, Savor and Sea - La Jolla is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdwhalewatch-79931",
+    "slug": "whale-watch-and-dolphin-tour-79931",
+    "title": "Whale Watch & Dolphin Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237842,
+      "lng": 32.764688
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wPtUHgnSxGMunzpHCUPw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wPtUHgnSxGMunzpHCUPw"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 408,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/79931/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/79931/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watch & Dolphin Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-342095",
+    "slug": "december-night-lights-342095",
+    "title": "December Night Lights",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UC2lY0fVTWmmn1Sz6rYM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UC2lY0fVTWmmn1Sz6rYM"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/342095/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/342095/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "December Night Lights is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-358226",
+    "slug": "pizza-pasta-and-piazzas-358226",
+    "title": "Pizza, Pasta and Piazzas",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KuP8cdb5RiW3MteLq0jy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KuP8cdb5RiW3MteLq0jy"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 102,
+      "likelyToSellOut": false,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing",
+      "Food Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/358226/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/358226/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pizza, Pasta and Piazzas is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "netzeroexpeditions-431944",
+    "slug": "signature-whale-and-dolphin-watching-tour-3hrs-431944",
+    "title": "Signature Whale and Dolphin Watching Tour (3Hrs)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.236586,
+      "lng": 32.763837
+    },
+    "heroImage": "https://cdn.filestackcontent.com/xkovIxXaREmqeEcVjn9U",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xkovIxXaREmqeEcVjn9U"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 360,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Dolphin",
+      "Eco Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/431944/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/431944/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Signature Whale and Dolphin Watching Tour (3Hrs) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-633948",
+    "slug": "bare-boat-rental---pontoon-boat-bay-cruise-633948",
+    "title": "Bare Boat Rental - Pontoon Boat Bay Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.240555,
+      "lng": 32.774109
+    },
+    "heroImage": "https://cdn.filestackcontent.com/PHqehgdeQqCj39AgEOa3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/PHqehgdeQqCj39AgEOa3"
+    ],
+    "badges": {
+      "rating": 4.8,
+      "reviewCount": 74,
+      "likelyToSellOut": false,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/633948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/633948/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bare Boat Rental - Pontoon Boat Bay Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-110581",
+    "slug": "dcs-ultimate-refresher-course-110581",
+    "title": "DC's Ultimate Refresher Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.256794,
+      "lng": 32.856288
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gMUVFDxZT1yMsWZNb8sg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gMUVFDxZT1yMsWZNb8sg"
+    ],
+    "badges": {
+      "rating": 4.7,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Rentals"
+    },
+    "tagPills": [
+      "Rentals",
+      "Scuba",
+      "Sports"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110581/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "DC's Ultimate Refresher Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-157643",
+    "slug": "tequila-tacos-and-tombstones-157643",
+    "title": "Tequila, Tacos and Tombstones",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.194388,
+      "lng": 32.752151
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pDBBGDoZQvqNLPRvrCsU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pDBBGDoZQvqNLPRvrCsU"
+    ],
+    "badges": {
+      "rating": 4.7,
+      "reviewCount": 360,
+      "likelyToSellOut": false,
+      "tagline": "Distillery"
+    },
+    "tagPills": [
+      "Distillery",
+      "Events",
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/157643/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/157643/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tequila, Tacos and Tombstones is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-109626",
+    "slug": "night-dive-1-tank-guided-shore-dive-109626",
+    "title": "Night Dive 1-Tank Guided Shore Dive",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.256794,
+      "lng": 32.856288
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3GGuoyfRR9ajh6q2XBjj",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3GGuoyfRR9ajh6q2XBjj"
+    ],
+    "badges": {
+      "rating": 4.6,
+      "reviewCount": 104,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Private",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109626/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Night Dive 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-157650",
+    "slug": "vino-vino-little-italy-wine-tour-157650",
+    "title": "Vino! Vino! Little Italy Wine Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/f9rB3YcRIme77LUSmthc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/f9rB3YcRIme77LUSmthc"
+    ],
+    "badges": {
+      "rating": 4.6,
+      "reviewCount": 78,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "History Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/157650/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/157650/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Vino! Vino! Little Italy Wine Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-439580",
+    "slug": "interactive-animal-encounter-439580",
+    "title": "Interactive Animal Encounter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SGnMaNG6Tm6sM6k2LURj",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SGnMaNG6Tm6sM6k2LURj"
+    ],
+    "badges": {
+      "rating": 4.5,
+      "reviewCount": 403,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439580/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439580/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Interactive Animal Encounter is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-575650",
+    "slug": "howloween-harvest-adventure-575650",
+    "title": "HowlOWeen Harvest Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar",
+      "lat": -117.194333,
+      "lng": 32.997606
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NGv5KcQnTWCW0aG7qxgt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NGv5KcQnTWCW0aG7qxgt"
+    ],
+    "badges": {
+      "rating": 4.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575650/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575650/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "HowlOWeen Harvest Adventure is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-227193",
+    "slug": "padi-open-water-diver-referral-program-227193",
+    "title": "PADI Open Water Diver Referral Program",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.256794,
+      "lng": 32.856288
+    },
+    "heroImage": "https://cdn.filestackcontent.com/mxVG8tSmSKSKOhQQPlVp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mxVG8tSmSKSKOhQQPlVp"
+    ],
+    "badges": {
+      "rating": 4.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Rentals"
+    },
+    "tagPills": [
+      "Rentals",
+      "Scuba",
+      "Sports"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/227193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Open Water Diver Referral Program is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-614474",
+    "slug": "padi-advanced-open-water-diver-course-614474",
+    "title": "PADI Advanced Open Water Diver Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.256794,
+      "lng": 32.856288
+    },
+    "heroImage": "https://cdn.filestackcontent.com/hNX6sl2mTLSGrpBrL5GU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hNX6sl2mTLSGrpBrL5GU"
+    ],
+    "badges": {
+      "rating": 4.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/614474/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Advanced Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-663868",
+    "slug": "private-la-jolla-1-tank-guided-shore-dive-663868",
+    "title": "PRIVATE La Jolla 1-Tank Guided Shore Dive",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.272598,
+      "lng": 32.850174
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GJ5r1RqSISCYTeA1e3Tt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GJ5r1RqSISCYTeA1e3Tt"
+    ],
+    "badges": {
+      "rating": 4.3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/663868/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PRIVATE La Jolla 1-Tank Guided Shore Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-4958",
+    "slug": "san-diego-who-dunnit-gaslamp-quarter-4958",
+    "title": "San Diego: Who Dunnit? Gaslamp Quarter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.160288,
+      "lng": 32.711934
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Px1sPtSRmGNFSZbIbtFq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Px1sPtSRmGNFSZbIbtFq"
+    ],
+    "badges": {
+      "rating": 4.3,
+      "reviewCount": 538,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/4958/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/4958/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: Who Dunnit? Gaslamp Quarter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-85506",
+    "slug": "sunset-cruise-85506",
+    "title": "Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237803,
+      "lng": 32.764673
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fQ91OzwwSmGwe6s6UFEO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fQ91OzwwSmGwe6s6UFEO"
+    ],
+    "badges": {
+      "rating": 4.3,
+      "reviewCount": 111,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/85506/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/85506/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-157600",
+    "slug": "brothels-bites-and-booze-157600",
+    "title": "Brothels, Bites and Booze",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/R12g15mLSPKjXi5Llonh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/R12g15mLSPKjXi5Llonh"
+    ],
+    "badges": {
+      "rating": 4.3,
+      "reviewCount": 413,
+      "likelyToSellOut": false,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "Food Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/157600/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/157600/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Brothels, Bites and Booze is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-60331",
+    "slug": "san-diego-historic-true-crime-tour-60331",
+    "title": "San Diego: Historic True Crime Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/OIJwq1YQayP3SPUVNEXx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OIJwq1YQayP3SPUVNEXx"
+    ],
+    "badges": {
+      "rating": 4.2,
+      "reviewCount": 358,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/60331/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/60331/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: Historic True Crime Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-257108",
+    "slug": "25-hour-harbor-cruise-257108",
+    "title": "2.5 Hour Harbor Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/PzVcdlJFQz6y36vuNWDP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/PzVcdlJFQz6y36vuNWDP"
+    ],
+    "badges": {
+      "rating": 4.2,
+      "reviewCount": 300,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/257108/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/257108/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2.5 Hour Harbor Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-439587",
+    "slug": "girl-scouts-badges-439587",
+    "title": "Girl Scouts Badges",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DqZj3FAvQnmXgt9TpCCE"
+    ],
+    "badges": {
+      "rating": 4.1,
+      "reviewCount": 403,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439587/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/439587/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Girl Scouts Badges is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mattarellocooking-632518",
+    "slug": "night-cooking-class---make-your-own-pasta-632518",
+    "title": "Night Cooking Class - Make Your Own Pasta!",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9MBAVEkrRxW2At9bpzkX",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9MBAVEkrRxW2At9bpzkX"
+    ],
+    "badges": {
+      "rating": 4.1,
+      "reviewCount": 410,
+      "likelyToSellOut": false,
+      "tagline": "Cooking Class"
+    },
+    "tagPills": [
+      "Cooking Class"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632518/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632518/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Night Cooking Class - Make Your Own Pasta! is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-656688",
+    "slug": "jeanneau-leader-40---downtown-captain-charter-656688",
+    "title": "Jeanneau Leader 40' - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cSXDX03USeWaNqvUOEvw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cSXDX03USeWaNqvUOEvw"
+    ],
+    "badges": {
+      "rating": 4.1,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/656688/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/656688/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jeanneau Leader 40' - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-439302",
+    "slug": "best-of-san-diego-ebike-tour-439302",
+    "title": "Best of San Diego eBike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/m192tskPQ0KwAEsoQK52",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/m192tskPQ0KwAEsoQK52"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "E",
+      "Bike"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/439302/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/439302/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Best of San Diego eBike Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-587560",
+    "slug": "private-asa-request-587560",
+    "title": "Private ASA Request",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/LHwyBtlS469EvvKRn3Oa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LHwyBtlS469EvvKRn3Oa"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/587560/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/587560/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private ASA Request is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-599055",
+    "slug": "birthday-party---park-599055",
+    "title": "Birthday Party - Park",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar",
+      "lat": -117.194333,
+      "lng": 32.997606
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1xZETI05Tp6fLiS8kgK9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1xZETI05Tp6fLiS8kgK9"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 169,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/599055/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/599055/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Birthday Party - Park is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-107835",
+    "slug": "padi-freediver-course-107835",
+    "title": "PADI Freediver Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pM4ImyjbQlOjNeFxwYez",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pM4ImyjbQlOjNeFxwYez"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 2,
+      "likelyToSellOut": true,
+      "tagline": "Free Diving"
+    },
+    "tagPills": [
+      "Free Diving",
+      "Rentals",
+      "Snorkel"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/107835/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "catcafesd-127707",
+    "slug": "reserved-admission-127707",
+    "title": "Reserved Admission",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/tEIjfiaGTBSXv74e8iw4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tEIjfiaGTBSXv74e8iw4"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 1246,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/catcafesd/items/127707/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/catcafesd/items/127707/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Reserved Admission is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-394599",
+    "slug": "san-diego-electric-bike-rentals-394599",
+    "title": "San Diego Electric Bike Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161539,
+      "lng": 32.708643
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MQAREDK2SVOXU43QssrH",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MQAREDK2SVOXU43QssrH"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 1800,
+      "likelyToSellOut": false,
+      "tagline": "Bike Tour"
+    },
+    "tagPills": [
+      "Bike Tour",
+      "E",
+      "Bike"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394599/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394599/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Electric Bike Rentals is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-446272",
+    "slug": "custom-scout-trip-446272",
+    "title": "Custom Scout Trip",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ORGmE8VqTkqejgzHtkTV"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 403,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/446272/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/446272/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Custom Scout Trip is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453959",
+    "slug": "kids-beach-cruise-bike-453959",
+    "title": "Kids Beach Cruise Bike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MLrbt6PReGD6gVSKbPaR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MLrbt6PReGD6gVSKbPaR"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Kids Beach Cruise Bike is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-483273",
+    "slug": "onsite-field-trips-483273",
+    "title": "Onsite Field Trips",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4b9vaH9SQ1awioxUlbe7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4b9vaH9SQ1awioxUlbe7"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 403,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/483273/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/483273/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Onsite Field Trips is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mattarellocooking-631718",
+    "slug": "pasta-class-631718",
+    "title": "Pasta Class",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UWAbgwQdSGOeuQoirnvi",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UWAbgwQdSGOeuQoirnvi"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 460,
+      "likelyToSellOut": false,
+      "tagline": "Cooking Class"
+    },
+    "tagPills": [
+      "Cooking Class"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/631718/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/631718/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pasta Class is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671725",
+    "slug": "jeanneau-leader-40---multi-day-charter-671725",
+    "title": "Jeanneau Leader 40' - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/mhhfnfgRxGZ0oOEqCe7y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mhhfnfgRxGZ0oOEqCe7y"
+    ],
+    "badges": {
+      "rating": 4,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671725/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jeanneau Leader 40' - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailliberty-19763",
+    "slug": "san-diego-bay-afternoon-sail-aboard-a-classic-yacht-19763",
+    "title": "San Diego Bay Afternoon Sail Aboard A Classic Yacht",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.192025,
+      "lng": 32.725253
+    },
+    "heroImage": "https://www.filepicker.io/api/file/BCwPj2kTOuqLLGGKHtCA",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/BCwPj2kTOuqLLGGKHtCA"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 117,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailliberty/items/19763/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailliberty/items/19763/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Afternoon Sail Aboard A Classic Yacht is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tikitimebaytours-588758",
+    "slug": "private-charter-for-up-to-13-people-588758",
+    "title": "Private Charter for up to 13 people",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fr3LmG9JRg6Ac2RBwvG0",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fr3LmG9JRg6Ac2RBwvG0"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 541,
+      "likelyToSellOut": false,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/588758/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/588758/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Charter for up to 13 people is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671141",
+    "slug": "bali-44---multi-day-charter-671141",
+    "title": "Bali 4.4 - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aeQoYm2nSHGNYF68dDEt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aeQoYm2nSHGNYF68dDEt"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671141/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671141/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bali 4.4 - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailliberty-8683",
+    "slug": "san-diego-bay-sunset-sail-aboard-a-classic-yacht-8683",
+    "title": "San Diego Bay Sunset Sail Aboard A Classic Yacht",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.192025,
+      "lng": 32.725253
+    },
+    "heroImage": "https://www.filepicker.io/api/file/FyehBAUuSqK5SQa011u2",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/FyehBAUuSqK5SQa011u2"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 146,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailliberty/items/8683/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailliberty/items/8683/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Sunset Sail Aboard A Classic Yacht is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "newageproductions-hom-353603",
+    "slug": "hunk-o-mania-male-revue-show---san-diego-353603",
+    "title": "Hunk-O-Mania Male Revue Show - San Diego",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Bonita",
+      "citySlug": "bonita",
+      "lat": -117.021069,
+      "lng": 32.67026
+    },
+    "heroImage": "https://cdn.filestackcontent.com/TSPXITUSrSfeovaiqelg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/TSPXITUSrSfeovaiqelg"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 52,
+      "likelyToSellOut": false,
+      "tagline": "Events"
+    },
+    "tagPills": [
+      "Events"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353603/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/newageproductions-hom/items/353603/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hunk-O-Mania Male Revue Show - San Diego is a curated experience in Bonita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-608415",
+    "slug": "birthday-party---pollinator-608415",
+    "title": "Birthday Party - Pollinator",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar",
+      "lat": -117.194333,
+      "lng": 32.997606
+    },
+    "heroImage": "https://cdn.filestackcontent.com/j6xA6IQRQAaW7qYeAfyS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j6xA6IQRQAaW7qYeAfyS"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 173,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/608415/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/608415/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Birthday Party - Pollinator is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "yachtamerica-34415",
+    "slug": "whale-watching-34415",
+    "title": "Whale Watching",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sltb7uSDSeeUDmV8eOhx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sltb7uSDSeeUDmV8eOhx"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 156,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/yachtamerica/items/34415/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/yachtamerica/items/34415/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watching is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-211494",
+    "slug": "private-sup-pup-expereince-211494",
+    "title": "Private SUP Pup Expereince",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rptToGRIe3MzlqRG9LwZ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rptToGRIe3MzlqRG9LwZ"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 832,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/211494/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/211494/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private SUP Pup Expereince is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-226915",
+    "slug": "basicintro-to-freedive-course-226915",
+    "title": "Basic/Intro To Freedive Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gOeFIddSP2AArVxuBY7I",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gOeFIddSP2AArVxuBY7I"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Free Diving"
+    },
+    "tagPills": [
+      "Free Diving",
+      "Private",
+      "Snorkel"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/226915/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Basic/Intro To Freedive Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "netzeroexpeditions-264188",
+    "slug": "blue-and-mako-shark-snorkeling-expedition-6hrs-264188",
+    "title": "Blue and Mako Shark Snorkeling Expedition (6Hrs)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KDtkzO70TOSt9YjET41o",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KDtkzO70TOSt9YjET41o"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Rentals",
+      "Scuba"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/264188/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/264188/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Blue and Mako Shark Snorkeling Expedition (6Hrs) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "netzeroexpeditions-264194",
+    "slug": "pelagic-wildlife-expedition-6-hrs-264194",
+    "title": "Pelagic Wildlife Expedition (6 Hrs)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sCZPZAWRRiQTbeVxMS4A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sCZPZAWRRiQTbeVxMS4A"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Scuba"
+    },
+    "tagPills": [
+      "Scuba"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/264194/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/264194/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pelagic Wildlife Expedition (6 Hrs) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-312798",
+    "slug": "firework-cruise-312798",
+    "title": "Firework Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GtmEbskIR0WGqcmRbYL9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GtmEbskIR0WGqcmRbYL9"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Events"
+    },
+    "tagPills": [
+      "Events"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/312798/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/312798/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Firework Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "legacycruisessd-324726",
+    "slug": "private-yacht-charter-on-the-sirara-324726",
+    "title": "Private Yacht Charter on the Sirara",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IsKPfJQMy5nOoRFKx9Ng",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IsKPfJQMy5nOoRFKx9Ng"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 4303,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Events",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/legacycruisessd/items/324726/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/legacycruisessd/items/324726/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Yacht Charter on the Sirara is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-469706",
+    "slug": "tour-en-bicicleta-elctrica-por-lo-mejor-de-san-diego-espaol-469706",
+    "title": "Tour en bicicleta eléctrica por lo mejor de San Diego (Español)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8g20c4VrSTK1ezBeKwXq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8g20c4VrSTK1ezBeKwXq"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "E",
+      "Bike"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/469706/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/469706/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tour en bicicleta eléctrica por lo mejor de San Diego (Español) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-633989",
+    "slug": "bare-boat-rental---speed-boat-tour-633989",
+    "title": "Bare Boat Rental - Speed Boat Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OJiNPwlYQlaHDU6gDwva"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 2792,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/633989/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/633989/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bare Boat Rental - Speed Boat Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-652363",
+    "slug": "bali-44---bareboat-charter-652363",
+    "title": "Bali 44 - Bareboat Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fYhqUdo7QOph5oQxTdFF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fYhqUdo7QOph5oQxTdFF"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/652363/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/652363/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bali 44 - Bareboat Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-652381",
+    "slug": "bali-44---harbor-island-captain-charter-652381",
+    "title": "Bali 44 - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/g3UbjYbTumfwRqGgg0vE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/g3UbjYbTumfwRqGgg0vE"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 2900,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/652381/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/652381/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bali 44 - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-461127",
+    "slug": "outreaches-461127",
+    "title": "Outreaches",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NRimou5cQOqV2aIXQ10i"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/461127/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/461127/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Outreaches is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-616356",
+    "slug": "private-sailing-yacht-1-14-guests-616356",
+    "title": "Private Sailing Yacht: 1-14 Guests",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/XE9zp1UGQBi2YdsiC34U",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XE9zp1UGQBi2YdsiC34U"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 3761,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/616356/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/616356/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sailing Yacht: 1-14 Guests is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-622922",
+    "slug": "padi-open-water-diver-course-622922",
+    "title": "PADI Open Water Diver Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.256794,
+      "lng": 32.856288
+    },
+    "heroImage": "https://cdn.filestackcontent.com/z4SVMt7TwqlKH2wIafxU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/z4SVMt7TwqlKH2wIafxU"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private",
+      "Rentals",
+      "Scuba"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/622922/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Open Water Diver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-630910",
+    "slug": "private-sailing-yacht-15-22-guests-630910",
+    "title": "Private Sailing Yacht: 15-22 Guests",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MMdbUxClRWq36GyZNbqk"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 3740,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/630910/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/630910/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sailing Yacht: 15-22 Guests is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638459",
+    "slug": "pontoon-16---loews-638459",
+    "title": "Pontoon 16 - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WPJ63ZDKRkiAxVIAKtvo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WPJ63ZDKRkiAxVIAKtvo"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 2469,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638459/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638459/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pontoon 16 - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegospeedboatadventures-2710",
+    "slug": "speed-boat-adventure-tour-2710",
+    "title": "Speed Boat Adventure Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jkzoy56QMmF8Cib3xqIk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jkzoy56QMmF8Cib3xqIk"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 887,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegospeedboatadventures/items/2710/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegospeedboatadventures/items/2710/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Speed Boat Adventure Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280415",
+    "slug": "6-passenger-golf-cart---long-term-rentals-280415",
+    "title": "6 Passenger Golf Cart - Long Term Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/iRop2zQATUKSyyrp6yqi",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/iRop2zQATUKSyyrp6yqi"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280415/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280415/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6 Passenger Golf Cart - Long Term Rentals is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-313747",
+    "slug": "san-diego-gaslamp-quarter-ghost-tour-313747",
+    "title": "San Diego: Gaslamp Quarter Ghost Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/LVFaHGaQrqhthHJb0IRw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LVFaHGaQrqhthHJb0IRw"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Ghost Tour"
+    },
+    "tagPills": [
+      "Ghost Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/313747/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/313747/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: Gaslamp Quarter Ghost Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "alanacharters-391944",
+    "slug": "alana-ticketed-cruise-391944",
+    "title": "Alana Ticketed Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.228225,
+      "lng": 32.721163
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Y1xSqkUTQGOXp5fFjIda",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Y1xSqkUTQGOXp5fFjIda"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alanacharters/items/391944/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alanacharters/items/391944/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Alana Ticketed Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-626368",
+    "slug": "bachelor-sail-626368",
+    "title": "Bachelor Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/n0DTIrFbQbCcpZjO5vSg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/n0DTIrFbQbCcpZjO5vSg"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/626368/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/626368/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bachelor Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-674588",
+    "slug": "fountaine-pajot-45-elba---multi-day-charter-674588",
+    "title": "Fountaine Pajot 45' Elba - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ubxGW89RRniG4WqhSenb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ubxGW89RRniG4WqhSenb"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/674588/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/674588/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Fountaine Pajot 45' Elba - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tikitimebaytours-588376",
+    "slug": "private-charter-for-14-30-people-588376",
+    "title": "Private Charter for 14-30 people",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1khSO4ejRUeUqF50rcLF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1khSO4ejRUeUqF50rcLF"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 542,
+      "likelyToSellOut": false,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/588376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/588376/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Charter for 14-30 people is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-627352",
+    "slug": "birthday-sail-627352",
+    "title": "Birthday Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GMHxxUgcRGa4uvV9Ukui",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GMHxxUgcRGa4uvV9Ukui"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/627352/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/627352/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Birthday Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-221768",
+    "slug": "2-sup-pups-lessons-package-221768",
+    "title": "2 SUP Pups Lessons Package",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IDOoCPK6SPib40y1y3G4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IDOoCPK6SPib40y1y3G4"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 922,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/221768/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/221768/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2 SUP Pups Lessons Package is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-454013",
+    "slug": "electric-bike-e-bike-454013",
+    "title": "Electric Bike (E-Bike)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ycTrbfQQmeIcLbaVNlrQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ycTrbfQQmeIcLbaVNlrQ"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454013/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454013/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Electric Bike (E-Bike) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-454025",
+    "slug": "single-surrey-454025",
+    "title": "Single Surrey",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RVG5UJcASLuK2feMj2SI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RVG5UJcASLuK2feMj2SI"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454025/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454025/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Surrey is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-454029",
+    "slug": "triple-surrey-454029",
+    "title": "Triple Surrey",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/evNk1Y7SV2ZTYVrNetaT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/evNk1Y7SV2ZTYVrNetaT"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 2784,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454029/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454029/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Triple Surrey is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "keeneradventures-463661",
+    "slug": "north-san-diego-bay---private-sunset-cruise-463661",
+    "title": "North San Diego Bay - Private Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/o9NnEjRBSN2ERN77Lwkm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/o9NnEjRBSN2ERN77Lwkm"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Private",
+      "Sightseeing Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/463661/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/463661/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "North San Diego Bay - Private Sunset Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "vitapurayoga-509885",
+    "slug": "san-diego-beach-yoga-hiking-tour-509885",
+    "title": "San Diego Beach Yoga Hiking Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7it8wpIoR46WiTMGe1Wq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7it8wpIoR46WiTMGe1Wq"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 540,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/509885/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/509885/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Beach Yoga Hiking Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-516845",
+    "slug": "private-sailing-lessons-516845",
+    "title": "Private Sailing Lessons",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CtkMYbAuSfazT4VuhwYi",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CtkMYbAuSfazT4VuhwYi"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/516845/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/516845/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sailing Lessons is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "hoteldelcoronado-580033",
+    "slug": "skating-by-the-sea-580033",
+    "title": "Skating by the Sea",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wxUQ41z5SkG2viG2Ur0a"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hoteldelcoronado/items/580033/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/hoteldelcoronado/items/580033/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Skating by the Sea is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "undergrounddonutour-581238",
+    "slug": "san-diego-and-little-italy-donut-tour-581238",
+    "title": "San Diego & Little Italy Donut Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2UsdQDSsOL663ytyReNw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2UsdQDSsOL663ytyReNw"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/581238/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/581238/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego & Little Italy Donut Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-587460",
+    "slug": "beneteau-39---downtown-captain-charter-587460",
+    "title": "Beneteau 39 - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/kbDSBX3bRRabGqSPc1ol",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kbDSBX3bRRabGqSPc1ol"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 1981,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/587460/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/587460/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beneteau 39 - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-655952",
+    "slug": "the-mimosa-club-655952",
+    "title": "The Mimosa Club",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/tfm28EniR1e5TTaty7Jz",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tfm28EniR1e5TTaty7Jz"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 52,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/655952/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/655952/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "The Mimosa Club is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671452",
+    "slug": "catalina-420---multi-day-charter-671452",
+    "title": "Catalina 420 - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sZmo4RSiRsW2f42ZR5jU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sZmo4RSiRsW2f42ZR5jU"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671452/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671452/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 420 - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-315509",
+    "slug": "san-diego-embarcadero-waterfront-ghost-tour-315509",
+    "title": "San Diego: Embarcadero Waterfront Ghost Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p1PAiNvGTWqISFlmfGJ0",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p1PAiNvGTWqISFlmfGJ0"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 78,
+      "likelyToSellOut": false,
+      "tagline": "Ghost Tour"
+    },
+    "tagPills": [
+      "Ghost Tour",
+      "History Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/315509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/315509/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: Embarcadero Waterfront Ghost Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453953",
+    "slug": "adult-beach-cruise-bike-453953",
+    "title": "Adult Beach Cruise Bike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JxnaHx8RHDLEHDFkMlfw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JxnaHx8RHDLEHDFkMlfw"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 2872,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453953/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453953/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Adult Beach Cruise Bike is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-454028",
+    "slug": "tandem-surrey-454028",
+    "title": "Tandem Surrey",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.239603,
+      "lng": 32.773637
+    },
+    "heroImage": "https://cdn.filestackcontent.com/lSt4jjrLQGa1KBMiRjpU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lSt4jjrLQGa1KBMiRjpU"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454028/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/454028/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Surrey is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-109487",
+    "slug": "padi-advanced-freediver-course-109487",
+    "title": "PADI Advanced Freediver Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gZaXkIXeRlKDB94e1yEK",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gZaXkIXeRlKDB94e1yEK"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Free Diving"
+    },
+    "tagPills": [
+      "Free Diving",
+      "Rentals",
+      "Snorkel"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/109487/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Advanced Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280336",
+    "slug": "4-passenger-golf-cart---hourly-rental-280336",
+    "title": "4 Passenger Golf Cart - Hourly Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/w0uoDye0SPSMZ0hcUZgM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/w0uoDye0SPSMZ0hcUZgM"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 982,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280336/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280336/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "4 Passenger Golf Cart - Hourly Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280399",
+    "slug": "6-passenger-golf-cart---multi-day-rentals-280399",
+    "title": "6 Passenger Golf Cart - Multi Day Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CRFYDSoBTSGIlk34Tkfx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CRFYDSoBTSGIlk34Tkfx"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280399/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280399/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6 Passenger Golf Cart - Multi Day Rentals is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-371251",
+    "slug": "daytime-booze-cruise-371251",
+    "title": "Daytime Booze Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ylo9jeJpQLuGNWnNDhzX",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ylo9jeJpQLuGNWnNDhzX"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Dolphin"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/371251/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/371251/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Daytime Booze Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-481283",
+    "slug": "howloween-harvest-family-festival-481283",
+    "title": "HowlOWeen Harvest Family Festival",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/14TeaaaLR7St7gA8WAoW"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/481283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/481283/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "HowlOWeen Harvest Family Festival is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-493047",
+    "slug": "wild-winter-family-festival-493047",
+    "title": "Wild Winter Family Festival",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar",
+      "lat": -117.194333,
+      "lng": 32.997606
+    },
+    "heroImage": "https://cdn.filestackcontent.com/bk2Mj1xS3Ktcw3gVIpQw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bk2Mj1xS3Ktcw3gVIpQw"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/493047/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/493047/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Wild Winter Family Festival is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mattarellocooking-632548",
+    "slug": "italian-lasagna-632548",
+    "title": "Italian Lasagna",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GmuJCHT2Q3eYqGCUGHJW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GmuJCHT2Q3eYqGCUGHJW"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 154,
+      "likelyToSellOut": false,
+      "tagline": "Cooking Class"
+    },
+    "tagPills": [
+      "Cooking Class"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632548/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632548/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Italian Lasagna is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-634337",
+    "slug": "fountaine-pajot-45---downtown-captain-charter-634337",
+    "title": "Fountaine-Pajot 45 - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/VM9LLB0WRomaOAHfFigT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/VM9LLB0WRomaOAHfFigT"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/634337/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/634337/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Fountaine-Pajot 45 - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divecalifornia-110584",
+    "slug": "padi-master-freediver-course-110584",
+    "title": "PADI Master Freediver Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/j73M51ZRBW4SMc3WgY8k",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j73M51ZRBW4SMc3WgY8k"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Free Diving"
+    },
+    "tagPills": [
+      "Free Diving",
+      "Rentals",
+      "Snorkel"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divecalifornia/items/110584/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "PADI Master Freediver Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "divaroyale-349453",
+    "slug": "diva-royale---drag-queen-show-san-diego-349453",
+    "title": "Diva Royale - Drag Queen Show San Diego",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Bonita",
+      "citySlug": "bonita",
+      "lat": -117.021069,
+      "lng": 32.67026
+    },
+    "heroImage": "https://cdn.filestackcontent.com/XAbeehQTToatnJpaEfsz",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XAbeehQTToatnJpaEfsz"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 104,
+      "likelyToSellOut": false,
+      "tagline": "Rentals"
+    },
+    "tagPills": [
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/divaroyale/items/349453/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/divaroyale/items/349453/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Diva Royale - Drag Queen Show San Diego is a curated experience in Bonita, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailliberty-451927",
+    "slug": "san-diego-bay-private-sail-aboard-a-classic-yacht-451927",
+    "title": "San Diego Bay Private Sail Aboard  A Classic Yacht",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ovm2Yu3mRxmAII6WxeWL",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ovm2Yu3mRxmAII6WxeWL"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 265,
+      "likelyToSellOut": false,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailliberty/items/451927/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailliberty/items/451927/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Private Sail Aboard  A Classic Yacht is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-652175",
+    "slug": "san-diego-vineyard-and-winery-tour-private-652175",
+    "title": "San Diego Vineyard and Winery Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8mwHuExgR3WD0zTUTv0A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8mwHuExgR3WD0zTUTv0A"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652175/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652175/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Vineyard and Winery Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-652797",
+    "slug": "san-diego-ranchos-and-winery-private-tour-private-652797",
+    "title": "​San Diego Ranchos & Winery Private Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3bGFtrorQA2qkHbak8Ct",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3bGFtrorQA2qkHbak8Ct"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652797/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652797/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "​San Diego Ranchos & Winery Private Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-652805",
+    "slug": "san-diego-sailboat-and-winery-private-tour-private-652805",
+    "title": "San Diego Sailboat & Winery Private Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pSWgNBCGTa6wBJoPH4PQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pSWgNBCGTa6wBJoPH4PQ"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652805/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652805/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Sailboat & Winery Private Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-652807",
+    "slug": "temecula-vineyard-and-winery-private-tour-private-652807",
+    "title": "Temecula Vineyard & Winery Private Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BX2eYetzT6GJTGamaNf8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BX2eYetzT6GJTGamaNf8"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652807/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/652807/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Temecula Vineyard & Winery Private Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-653430",
+    "slug": "southern-california-italian-winery-and-culinary-tour-private-653430",
+    "title": "Southern California Italian Winery & Culinary Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/INg05j5iSqrIdvCjuMtl",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/INg05j5iSqrIdvCjuMtl"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653430/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Southern California Italian Winery & Culinary Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-653439",
+    "slug": "baja-mexico-vineyard-and-winery-tour-private-653439",
+    "title": "Baja Mexico Vineyard & Winery Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MmDOTiPSgKPID0CjmQgn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MmDOTiPSgKPID0CjmQgn"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653439/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653439/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Baja Mexico Vineyard & Winery Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-653444",
+    "slug": "baja-mexico-female-winemakers-and-behind-the-scenes-winery-tour-private-653444",
+    "title": "Baja Mexico Female Winemakers & Behind-the-Scenes Winery Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FdjK8c2dQPqzHTtUt8y3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FdjK8c2dQPqzHTtUt8y3"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653444/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653444/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Baja Mexico Female Winemakers & Behind-the-Scenes Winery Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-653453",
+    "slug": "baja-mexico-michelin-star-guided-wine-and-culinary-private-experience-private-653453",
+    "title": "Baja Mexico Michelin-Star Guided Wine & Culinary Private Experience (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/0bS7J0MKQTyvdRGBC6Ky",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0bS7J0MKQTyvdRGBC6Ky"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653453/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/653453/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Baja Mexico Michelin-Star Guided Wine & Culinary Private Experience (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "colettasportfishing-672364",
+    "slug": "san-diego-lobster-charter-hoop-netting-adventure-672364",
+    "title": "San Diego Lobster Charter Hoop Netting Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6m0MPfY4QYieQW1ZxzxP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6m0MPfY4QYieQW1ZxzxP"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 62,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/672364/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/672364/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Lobster Charter Hoop Netting Adventure is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-19944",
+    "slug": "sup-pups-19944",
+    "title": "SUP Pups",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gN02gHHJQxclEXPwvPm2",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gN02gHHJQxclEXPwvPm2"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 720,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/19944/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/19944/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP Pups is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419353",
+    "slug": "catalina-320---downtown-bareboat-rental-419353",
+    "title": "Catalina 320 - Downtown Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nFx9r6b8TZWNbjhqlbiU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nFx9r6b8TZWNbjhqlbiU"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419353/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419353/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Downtown Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419561",
+    "slug": "catalina-320---harbor-island-bareboat-rental-419561",
+    "title": "Catalina 320 - Harbor Island  Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pxDwB9SPST6m2IupG1vp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pxDwB9SPST6m2IupG1vp"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419561/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419561/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Harbor Island  Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419562",
+    "slug": "catalina-320---harbor-island-captain-charter-419562",
+    "title": "Catalina 320 - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/tnRDquNLTCGlq8mh2lte",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tnRDquNLTCGlq8mh2lte"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2979,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419562/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419562/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419627",
+    "slug": "beneteau-40---coronado-captain-charter-419627",
+    "title": "Beneteau 40  - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bkSuBlENTERitPqjdNh8"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2954,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419627/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419627/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beneteau 40  - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419629",
+    "slug": "beneteau-40---coronado-bareboat-rental-419629",
+    "title": "Beneteau 40 - Coronado Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xeVT6giaRFOQY0D0OkRm"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419629/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419629/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beneteau 40 - Coronado Bareboat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419639",
+    "slug": "lagoon-380---coronado-bareboat-rental-419639",
+    "title": "Lagoon 380 - Coronado Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Pptxj3IQkCmX9LORAujC"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419639/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419639/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380 - Coronado Bareboat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419640",
+    "slug": "lagoon-380---coronado-captain-charter-419640",
+    "title": "Lagoon 380  - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BUIQVkTZTG6e8CUx28fy"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419640/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419640/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380  - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419794",
+    "slug": "catalina-420---harbor-island-captain-charter-419794",
+    "title": "Catalina 420 - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/D3VzhQGjQT2rRvsPFCER",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/D3VzhQGjQT2rRvsPFCER"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419794/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419794/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 420 - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-439314",
+    "slug": "private-san-diego-electric-bike-tour-439314",
+    "title": "Private San Diego Electric Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/zktelNgnT2nmkxZyDTkw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zktelNgnT2nmkxZyDTkw"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 1620,
+      "likelyToSellOut": false,
+      "tagline": "Bike Tour"
+    },
+    "tagPills": [
+      "Bike Tour",
+      "Private"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/439314/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/439314/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private San Diego Electric Bike Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-467066",
+    "slug": "aquata-charters-luxury-and-speed-467066",
+    "title": "Aquata Charters | Luxury and Speed!",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K5rOUudISYq28nAS23yV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K5rOUudISYq28nAS23yV"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2341,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/467066/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/467066/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata Charters | Luxury and Speed! is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bluebillcharters-636071",
+    "slug": "yoga-float-and-flow-636071",
+    "title": "Yoga Float & Flow",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.238794,
+      "lng": 32.759156
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ERsuSIh4RJyEgyTEJFEL",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ERsuSIh4RJyEgyTEJFEL"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 1800,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bluebillcharters/items/636071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bluebillcharters/items/636071/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Yoga Float & Flow is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638904",
+    "slug": "trophy-18---coronado-638904",
+    "title": "Trophy 18 - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cBR0Vm18TNOd9nQEf00y"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 650,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638904/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638904/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Trophy 18 - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-648519",
+    "slug": "beneteau-37---harbor-island-captain-charter-648519",
+    "title": "Beneteau 37  - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/0KNTBWoTQIKApxjzBCRn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0KNTBWoTQIKApxjzBCRn"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 2932,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/648519/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/648519/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beneteau 37  - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-648523",
+    "slug": "beneteau-37---harbor-island-bareboat-rental-648523",
+    "title": "Beneteau 37 - Harbor Island Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IyizjhxWQ3KMgkcRozSR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IyizjhxWQ3KMgkcRozSR"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/648523/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/648523/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beneteau 37 - Harbor Island Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sodiego-651385",
+    "slug": "art-of-balboa-park-walking-tour-651385",
+    "title": "Art of Balboa Park Walking Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MNBrnbkxRJi5zwhZaF8Q",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MNBrnbkxRJi5zwhZaF8Q"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sodiego/items/651385/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sodiego/items/651385/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Art of Balboa Park Walking Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671123",
+    "slug": "lagoon-380-coronado---multi-day-charter-671123",
+    "title": "Lagoon 380 Coronado - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/l4ArMo6pR7y0K9YuBoVM"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671123/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671123/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380 Coronado - Multi Day Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671205",
+    "slug": "lagoon-380-harbor-island---multi-day-charter-671205",
+    "title": "Lagoon 380 Harbor Island - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rzd4T2URVyK9iUwgNyR8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rzd4T2URVyK9iUwgNyR8"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380 Harbor Island - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-679820",
+    "slug": "marquis-70-coronado---multi-day-charter-679820",
+    "title": "Marquis 70 Coronado - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kz3Zxu9rT4yOjYAlyo5V"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679820/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679820/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Marquis 70 Coronado - Multi Day Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-680888",
+    "slug": "marquis-70-downtown---multi-day-charter-680888",
+    "title": "Marquis 70 Downtown - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jkfQ5NJgQfiEaPt1zWRO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jkfQ5NJgQfiEaPt1zWRO"
+    ],
+    "badges": {
+      "rating": 3.4,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/680888/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/680888/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Marquis 70 Downtown - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdwhalewatch-294524",
+    "slug": "live-beach-cleanup-294524",
+    "title": "LIVE Beach Cleanup",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/qkL8BECmQRyU6ZjqZeu9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qkL8BECmQRyU6ZjqZeu9"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2,
+      "likelyToSellOut": true,
+      "tagline": "Whale Watch"
+    },
+    "tagPills": [
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/294524/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/294524/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "LIVE Beach Cleanup is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418008",
+    "slug": "catalina-270---harbor-island-bareboat-rental-418008",
+    "title": "Catalina 270 - Harbor Island Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dFVpR9zTjioBLqC1e28Q",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dFVpR9zTjioBLqC1e28Q"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418008/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418008/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Harbor Island Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418533",
+    "slug": "catalina-270---harbor-island-captain-charter-418533",
+    "title": "Catalina 270 - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/trvMC6OcT7CrKDoIceVk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/trvMC6OcT7CrKDoIceVk"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418533/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418533/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418568",
+    "slug": "hurricane-20---downtown-rental-418568",
+    "title": "Hurricane 20 - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GRYPRpjQJmnePdMYiQ0A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GRYPRpjQJmnePdMYiQ0A"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2299,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418568/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418568/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hurricane 20 - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418569",
+    "slug": "sylvan-18---coronado-rental-418569",
+    "title": "Sylvan 18 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nq0L48GScS0b8h1WYOng"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2657,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418569/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418569/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sylvan 18 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418604",
+    "slug": "sylvan-18---mission-bay-418604",
+    "title": "Sylvan 18 - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/U67FeLvfRJKlXFBifXL2",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/U67FeLvfRJKlXFBifXL2"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2657,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418604/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418604/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sylvan 18 - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418666",
+    "slug": "bayliner-19---coronado-rental-418666",
+    "title": "Bayliner 19 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0VgQg1jmRCq257wH8SOf"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1941,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418666/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418666/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bayliner 19 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418688",
+    "slug": "hurricane-20---coronado-rental-418688",
+    "title": "Hurricane 20 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Dp5T2EhxQWWWIkdZzwuq"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2299,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418688/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418688/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hurricane 20 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418694",
+    "slug": "bayliner-19---downtown-rental-418694",
+    "title": "Bayliner 19 - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SpQStXQaaf5Y6IwdOkHQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SpQStXQaaf5Y6IwdOkHQ"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1941,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418694/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418694/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bayliner 19 - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418732",
+    "slug": "hurricane-20---mission-bay-rental-418732",
+    "title": "Hurricane 20 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8UVDmN2URBijMyzLqf3n",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8UVDmN2URBijMyzLqf3n"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2299,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418732/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418732/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hurricane 20 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418883",
+    "slug": "tritoon-25---coronado-rental-418883",
+    "title": "Tritoon 25 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cK8tzkUmQZOG6JXE4KVn"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2566,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418883/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418883/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tritoon 25 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419394",
+    "slug": "catalina-320---downtown-captain-charter-419394",
+    "title": "Catalina 320 - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/iiLQUIXFQf2AwN7Owdg8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/iiLQUIXFQf2AwN7Owdg8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419394/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419394/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419398",
+    "slug": "catalina-320---coronado-bareboat-rental-419398",
+    "title": "Catalina 320 - Coronado Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Vew4gR0PTiKS1HfVa0gl"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419398/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Coronado Bareboat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419404",
+    "slug": "catalina-320---coronado-captain-charter-419404",
+    "title": "Catalina 320 - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/drkQPtVsQ1moczlQiday"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2849,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419404/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419404/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 320 - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419498",
+    "slug": "catalina-270---downtown-captain-charter-419498",
+    "title": "Catalina 270 - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MVFvhMoTTaEjN4Z7FZPk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MVFvhMoTTaEjN4Z7FZPk"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419498/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419498/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419500",
+    "slug": "catalina-270---downtown-bareboat-rental-419500",
+    "title": "Catalina 270 - Downtown Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RISdJQRSPC3gmDab6a6v",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RISdJQRSPC3gmDab6a6v"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 209,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419500/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419500/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Downtown Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419502",
+    "slug": "catalina-270---coronado-captain-charter-419502",
+    "title": "Catalina 270 - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/zRohrQFiS6uLxiDL37fI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zRohrQFiS6uLxiDL37fI"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2963,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419502/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419502/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419503",
+    "slug": "catalina-270---coronado-bareboat-rental-419503",
+    "title": "Catalina 270 - Coronado Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4JmOhcM2T9WSPSDHpJkW"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419503/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419503/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 270 - Coronado Bareboat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419526",
+    "slug": "gemini-37---loews-captain-charter-419526",
+    "title": "Gemini 37  - Loews Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2s7nL2K0QaKHkjHkODmc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2s7nL2K0QaKHkjHkODmc"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2271,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Gemini 37  - Loews Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419527",
+    "slug": "gemini-37---loews-bareboat-rental-419527",
+    "title": "Gemini 37 - Loews Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dTKNxVoHSEC0pfT76If8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dTKNxVoHSEC0pfT76If8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 166,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419527/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Gemini 37 - Loews Bareboat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419558",
+    "slug": "catalina-350---harbor-island-captain-charter-419558",
+    "title": "Catalina 350  - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7ztmhwAqTdGeqXYyaAsk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7ztmhwAqTdGeqXYyaAsk"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1700,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419558/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419558/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 350  - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419658",
+    "slug": "nautitech-40-erasmus---coronado-captain-charter-419658",
+    "title": "Nautitech 40 \"Erasmus\" - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4gizDVaoSRWPjonTM955"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1092,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419658/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419658/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Nautitech 40 \"Erasmus\" - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419679",
+    "slug": "jeanneau-349---harbor-island-bareboat-rental-419679",
+    "title": "Jeanneau 349 - Harbor Island Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/np83e75iR6RCwSBPJB1x",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/np83e75iR6RCwSBPJB1x"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419679/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jeanneau 349 - Harbor Island Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419680",
+    "slug": "jeanneau-349---harbor-island-captain-charter-419680",
+    "title": "Jeanneau 349  - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4h9RcusrScCwm6TUQA3o",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4h9RcusrScCwm6TUQA3o"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419680/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jeanneau 349  - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419707",
+    "slug": "nautitech-40-paradise---coronado-captain-charter-419707",
+    "title": "Nautitech 40 \"Paradise\" - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/J89AB3oRvO7bf13HCTnA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/J89AB3oRvO7bf13HCTnA"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419707/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419707/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Nautitech 40 \"Paradise\" - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419793",
+    "slug": "catalina-420---harbor-island-bareboat-rental-419793",
+    "title": "Catalina 420 - Harbor Island Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/17YmPNIQkePgBURAd74j",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/17YmPNIQkePgBURAd74j"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419793/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419793/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 420 - Harbor Island Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419824",
+    "slug": "jeanneau-410---downtown-captain-charter-419824",
+    "title": "Jeanneau 410  - Downtown Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/v9EWYrR0RS22BgDgUteV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/v9EWYrR0RS22BgDgUteV"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1981,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419824/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419824/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jeanneau 410  - Downtown Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419951",
+    "slug": "aquila-44-catastic---coronado-captain-charter-419951",
+    "title": "Aquila 44 \"Catastic\" - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JVmYKt0IRp6pu4Da5fYx"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419951/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419951/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquila 44 \"Catastic\" - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-420143",
+    "slug": "29-nc-895---mission-bay-captain-charter-420143",
+    "title": "29' NC 895 - Mission Bay Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AI6BzsOSSiqafS5ZNvr8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AI6BzsOSSiqafS5ZNvr8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2967,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420143/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420143/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "29' NC 895 - Mission Bay Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-420173",
+    "slug": "sunset-sail---coronado-420173",
+    "title": "Sunset Sail - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/iNGdUkTQR0OvXZBJungg"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 178,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420173/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420173/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sail - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-420180",
+    "slug": "sunset-sail---downtown-420180",
+    "title": "Sunset Sail - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ebqq2pmRQH0lEjXLtiJg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ebqq2pmRQH0lEjXLtiJg"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420180/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420180/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sail - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424591",
+    "slug": "tandem-kayak---coronado-424591",
+    "title": "Tandem Kayak - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RtpiSqQRbymF9gSYiCuQ"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2679,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424591/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424591/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-443620",
+    "slug": "15-day-spearfishing-charter-443620",
+    "title": "1.5 Day Spearfishing Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SEGxaPERwuCS3CcgxwEC",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SEGxaPERwuCS3CcgxwEC"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/443620/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/443620/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "1.5 Day Spearfishing Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-510524",
+    "slug": "lagoon-380---harbor-island-bareboat-charter-510524",
+    "title": "Lagoon 380 - Harbor Island Bareboat Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ozqMRU8vRJS9ifF1BkMF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ozqMRU8vRJS9ifF1BkMF"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/510524/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/510524/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380 - Harbor Island Bareboat Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-510526",
+    "slug": "lagoon-380---harbor-island-captain-charter-510526",
+    "title": "Lagoon 380 - Harbor Island Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GWTH4pGpS5GuhdssWTxd",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GWTH4pGpS5GuhdssWTxd"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2955,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/510526/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/510526/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lagoon 380 - Harbor Island Captain Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-515356",
+    "slug": "catalina-350---harbor-island-bareboat-rental-515356",
+    "title": "Catalina 350 - Harbor Island Bareboat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/j65bCRpDSQW3hrsDyRgA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j65bCRpDSQW3hrsDyRgA"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 167,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/515356/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/515356/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 350 - Harbor Island Bareboat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "globalescapesd-581360",
+    "slug": "police-room-581360",
+    "title": "Police Room",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1Pgb5ehUQOCZ4SaN0iiq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1Pgb5ehUQOCZ4SaN0iiq"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1338,
+      "likelyToSellOut": false,
+      "tagline": "Escape Room"
+    },
+    "tagPills": [
+      "Escape Room"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/globalescapesd/items/581360/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/globalescapesd/items/581360/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Police Room is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638466",
+    "slug": "capri-22---loews-638466",
+    "title": "Capri 22 - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/N0ocbngSA650HEa57O1Q",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/N0ocbngSA650HEa57O1Q"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2467,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638466/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638466/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Capri 22 - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "wildpacificwhalewatch-639191",
+    "slug": "whale-watch-639191",
+    "title": "Whale Watch",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5VN5yjVgT8CUngdzqQ0A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5VN5yjVgT8CUngdzqQ0A"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 310,
+      "likelyToSellOut": false,
+      "tagline": "Whale Watch"
+    },
+    "tagPills": [
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/wildpacificwhalewatch/items/639191/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/wildpacificwhalewatch/items/639191/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watch is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-639205",
+    "slug": "limo-boat---coronado-639205",
+    "title": "Limo Boat - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/np5K2nyTNSOAZ1nurQNh"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 3006,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Limo Boat - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-671734",
+    "slug": "catalina-350---multi-day-charter-671734",
+    "title": "Catalina 350 - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JdknygRkS1iwTU8iJWFs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JdknygRkS1iwTU8iJWFs"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671734/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/671734/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 350 - Multi Day Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-673429",
+    "slug": "aquata---2-hour-charter-673429",
+    "title": "Aquata - 2 Hour Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aaOvrrlMTluXiMdOJNwM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aaOvrrlMTluXiMdOJNwM"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2341,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673429/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673429/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata - 2 Hour Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-673432",
+    "slug": "aquata---3-hour-charter-673432",
+    "title": "Aquata - 3 Hour Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5HaLOjT2SG6q6YrhRFkQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5HaLOjT2SG6q6YrhRFkQ"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2160,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673432/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673432/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata - 3 Hour Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-673433",
+    "slug": "aquata---4-hour-charter-673433",
+    "title": "Aquata - 4 Hour Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/j3OgPQ5yqC1GRoWpPCgA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j3OgPQ5yqC1GRoWpPCgA"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1980,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673433/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata - 4 Hour Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-673434",
+    "slug": "aquata---6-hour-charter-673434",
+    "title": "Aquata - 6 Hour Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oUtLjE61QJGn33cwmR9E",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oUtLjE61QJGn33cwmR9E"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673434/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673434/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata - 6 Hour Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-673435",
+    "slug": "aquata---8-hour-charter-673435",
+    "title": "Aquata - 8 Hour Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BD9kO85sRlmabfxEQ6np",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BD9kO85sRlmabfxEQ6np"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1260,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673435/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/673435/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquata - 8 Hour Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-679193",
+    "slug": "luxury-sunset-cruise---nc-895-679193",
+    "title": "Luxury Sunset Cruise - NC 895",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Dqw0p9eNSlapI6gvtA2x",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Dqw0p9eNSlapI6gvtA2x"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679193/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/679193/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Luxury Sunset Cruise - NC 895 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-680237",
+    "slug": "hollywood-dreams-and-los-angeles-highlights-tour-public-680237",
+    "title": "Hollywood Dreams & Los Angeles Highlights Tour Public",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AyUwrAEsQAmrWU3pFqA9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AyUwrAEsQAmrWU3pFqA9"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 78,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/680237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/680237/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hollywood Dreams & Los Angeles Highlights Tour Public is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-681715",
+    "slug": "hollywood-dreams-and-los-angeles-highlights-tour-private-681715",
+    "title": "Hollywood Dreams & Los Angeles Highlights Tour Private",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cnQqSpM8Rwi8ODymshzY",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cnQqSpM8Rwi8ODymshzY"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/681715/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/681715/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hollywood Dreams & Los Angeles Highlights Tour Private is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisetriketours-37973",
+    "slug": "coronado-island-37973",
+    "title": "Coronado Island",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.165814,
+      "lng": 32.694876
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cIQ0hupEQFeo1K6Rgylq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cIQ0hupEQFeo1K6Rgylq"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Ferry"
+    },
+    "tagPills": [
+      "Ferry",
+      "Wellness",
+      "Train"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/37973/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/37973/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coronado Island is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-85551",
+    "slug": "reserve-vip-area-bow-85551",
+    "title": "Reserve VIP Area (Bow)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237803,
+      "lng": 32.764673
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SQI3ymPOTC8YOTk1jrrG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SQI3ymPOTC8YOTk1jrrG"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/85551/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/85551/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Reserve VIP Area (Bow) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-143288",
+    "slug": "chauffeured-vineyards-adventure-143288",
+    "title": "Chauffeured Vineyards Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/X5TRjMtOQzO29xENlKuu",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/X5TRjMtOQzO29xENlKuu"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 123,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/143288/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/143288/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Chauffeured Vineyards Adventure is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280337",
+    "slug": "6-passenger-golf-cart---hourly-rental-280337",
+    "title": "6 Passenger Golf Cart - Hourly Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p3FwE6iiTZa8PS6bARnR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p3FwE6iiTZa8PS6bARnR"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 760,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280337/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280337/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6 Passenger Golf Cart - Hourly Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280338",
+    "slug": "8-passenger-golf-cart---hourly-rental-280338",
+    "title": "8 Passenger Golf Cart - Hourly Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/D7x5SOdfSFeU9xGLd4sN",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/D7x5SOdfSFeU9xGLd4sN"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 336,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280338/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280338/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "8 Passenger Golf Cart - Hourly Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280398",
+    "slug": "4-passenger-golf-cart---multi-day-rental-280398",
+    "title": "4 Passenger Golf Cart - Multi Day Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6BEDOhQOSTeJELq5CMZx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6BEDOhQOSTeJELq5CMZx"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280398/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280398/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "4 Passenger Golf Cart - Multi Day Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280400",
+    "slug": "8-passenger-golf-cart---multi-day-rental-280400",
+    "title": "8 Passenger Golf Cart - Multi Day Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/0UklhkgRXSOFPyxt9tV8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0UklhkgRXSOFPyxt9tV8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280400/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280400/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "8 Passenger Golf Cart - Multi Day Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280414",
+    "slug": "4-passenger-golf-cart---long-term-rental-280414",
+    "title": "4 Passenger Golf Cart - Long Term Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V7Tr8JM2RquVxgKmtJP8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V7Tr8JM2RquVxgKmtJP8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280414/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280414/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "4 Passenger Golf Cart - Long Term Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-280416",
+    "slug": "8-passenger-golf-cart---long-term-rental-280416",
+    "title": "8 Passenger Golf Cart - Long Term Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jMhgjnsiQQuzt4vFVvZb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jMhgjnsiQQuzt4vFVvZb"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 136,
+      "likelyToSellOut": false,
+      "tagline": "Golf"
+    },
+    "tagPills": [
+      "Golf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280416/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/280416/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "8 Passenger Golf Cart - Long Term Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-369140",
+    "slug": "2-hr-gocar-coronado-tour-369140",
+    "title": "2 Hr. GoCar Coronado Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K6NhXGrSn60WWrBcWwxc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K6NhXGrSn60WWrBcWwxc"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Ferry",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/369140/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/369140/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2 Hr. GoCar Coronado Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-372044",
+    "slug": "gocar-after-dark---2-hr-gaslamp-and-balboa-park-tour-372044",
+    "title": "GoCar After Dark - 2 hr. Gaslamp and Balboa Park Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AzNpvy1bRxWrfFcESeyM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AzNpvy1bRxWrfFcESeyM"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 721,
+      "likelyToSellOut": false,
+      "tagline": "Attraction"
+    },
+    "tagPills": [
+      "Attraction",
+      "Boat Tour",
+      "City Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/372044/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/372044/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GoCar After Dark - 2 hr. Gaslamp and Balboa Park Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-393427",
+    "slug": "1-hour-gaslamp-and-embarcadero-tour-393427",
+    "title": "1 Hour Gaslamp and Embarcadero Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2cYMMzZgRrmC10iL9phk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2cYMMzZgRrmC10iL9phk"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "History Tour",
+      "Museum"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/393427/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/393427/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "1 Hour Gaslamp and Embarcadero Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-400254",
+    "slug": "night-owl-special-save-big-400254",
+    "title": "Night Owl Special:  Save Big!",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yTU8TVcQRiu4kzYSaFz8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yTU8TVcQRiu4kzYSaFz8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Museum"
+    },
+    "tagPills": [
+      "Museum",
+      "Zoo"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/400254/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/400254/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Night Owl Special:  Save Big! is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-417972",
+    "slug": "sylvan-18---downtown-rental-417972",
+    "title": "Sylvan 18 - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aVoeWvDsR6uKdaERfRty",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aVoeWvDsR6uKdaERfRty"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2657,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/417972/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/417972/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sylvan 18 - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418012",
+    "slug": "sunset-sail---harbor-island-418012",
+    "title": "Sunset Sail - Harbor Island",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SVrp8TAsQnCgTeoVNeEb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SVrp8TAsQnCgTeoVNeEb"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 165,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418012/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418012/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sail - Harbor Island is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418802",
+    "slug": "monterey-21---downtown-rental-418802",
+    "title": "Monterey 21 - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4KyqBSwKQheFoAHoEahs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4KyqBSwKQheFoAHoEahs"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2581,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418802/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418802/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Monterey 21 - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418874",
+    "slug": "catalina-250---coronado-rental-418874",
+    "title": "Catalina 250 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/art6pHCRQaYIxbZkUg43"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2709,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418874/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418874/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 250 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418924",
+    "slug": "catalina-250---mission-bay-rental-418924",
+    "title": "Catalina 250 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9JBgnfDpSxqIli4Hy4Ad",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9JBgnfDpSxqIli4Hy4Ad"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2739,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418924/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418924/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 250 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419001",
+    "slug": "catalina-250---harbor-island-rental-419001",
+    "title": "Catalina 250 - Harbor Island Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p0SWuBETGKjdaXDJClOE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p0SWuBETGKjdaXDJClOE"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2385,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419001/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419001/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Catalina 250 - Harbor Island Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419219",
+    "slug": "capri-22---downtown-rental-419219",
+    "title": "Capri 22 - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/42qhsAKfTsmRkoMt9oqF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/42qhsAKfTsmRkoMt9oqF"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2738,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419219/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Capri 22 - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419256",
+    "slug": "capri-22---coronado-rental-419256",
+    "title": "Capri 22 - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Eg1eF1xjQfupVMJPQDiF"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419256/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419256/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Capri 22 - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419271",
+    "slug": "capri-22---harbor-island-rental-419271",
+    "title": "Capri 22 - Harbor Island Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YfbQ4oCBQOgx06aNHhQR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YfbQ4oCBQOgx06aNHhQR"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2451,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419271/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Capri 22 - Harbor Island Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419373",
+    "slug": "merit-25---mission-bay-rental-419373",
+    "title": "Merit 25 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/QIjWZe6WQKO2jC9xAWIU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/QIjWZe6WQKO2jC9xAWIU"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2651,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419373/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419373/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Merit 25 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-419405",
+    "slug": "colgate-26---harbor-island-419405",
+    "title": "Colgate 26 - Harbor Island",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YQfPnzvXQOydb0INKF4R",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YQfPnzvXQOydb0INKF4R"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2385,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419405/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/419405/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Colgate 26 - Harbor Island is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-420801",
+    "slug": "limo-boat---downtown-420801",
+    "title": "Limo Boat - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YnLeOdUQTMy6gtc5Z7XU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YnLeOdUQTMy6gtc5Z7XU"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 3017,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420801/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420801/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Limo Boat - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-420811",
+    "slug": "party-cat---mission-bay-420811",
+    "title": "Party Cat  - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IcolFVMKR86ZNb7u5nUt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IcolFVMKR86ZNb7u5nUt"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1136,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420811/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/420811/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Party Cat  - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-423717",
+    "slug": "100-dock---coronado---pick-up-or-one-way-423717",
+    "title": "100' Dock - Coronado - Pick Up (or one way)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K79iquH8Syy1Y2Z4tAbj"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 4298,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/423717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/423717/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "100' Dock - Coronado - Pick Up (or one way) is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424571",
+    "slug": "sup---downtown-424571",
+    "title": "SUP - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HyX9sggRyR4lJDS4qZAy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HyX9sggRyR4lJDS4qZAy"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2475,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424571/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424571/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424572",
+    "slug": "sup---coronado-424572",
+    "title": "SUP - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WtLh0RjtRBS1DcmcwxJx"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2644,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424572/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424572/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424576",
+    "slug": "sup---mission-bay-424576",
+    "title": "SUP - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uFvAXjaBSyci7hdHubGA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uFvAXjaBSyci7hdHubGA"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2585,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424576/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424576/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424599",
+    "slug": "single-kayak---coronado-rental-424599",
+    "title": "Single Kayak - Coronado Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7ajgLh9oT3WFNgt9miw8"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2642,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424599/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424599/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayak - Coronado Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-426233",
+    "slug": "seachaser-18---coronado-426233",
+    "title": "Seachaser 18 - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/k1rOmDgvTIm5HjnjAcI3"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 541,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426233/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426233/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Seachaser 18 - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-426581",
+    "slug": "double-decker-captain-charter---mission-bay-426581",
+    "title": "Double Decker Captain Charter - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aKI38GTQwOWLaxqo9jcY",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aKI38GTQwOWLaxqo9jcY"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1392,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426581/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426581/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Double Decker Captain Charter - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-466554",
+    "slug": "monterey-21---coronado-466554",
+    "title": "Monterey 21 - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Tw8rOh9TTGY6c72pUOBt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Tw8rOh9TTGY6c72pUOBt"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2566,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/466554/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/466554/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Monterey 21 - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "superhuman-501774",
+    "slug": "urban-road-bike-e-bike-rental-501774",
+    "title": "Urban Road Bike E Bike Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7z55ii6eSuy4mGFEVHzs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7z55ii6eSuy4mGFEVHzs"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1260,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/superhuman/items/501774/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/superhuman/items/501774/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Urban Road Bike E Bike Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503336",
+    "slug": "private-midday-sail-503336",
+    "title": "Private Midday Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9kba7YEkRt6pulJ0s9Cr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9kba7YEkRt6pulJ0s9Cr"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503336/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503336/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Midday Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503348",
+    "slug": "private-sunset-sail-503348",
+    "title": "Private Sunset Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/TnfJlyJ9SaKH74FJUEhh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/TnfJlyJ9SaKH74FJUEhh"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 197,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503348/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503348/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sunset Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-514444",
+    "slug": "tritoon-25---downtown-514444",
+    "title": "Tritoon 25 - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2gGNTRO0SOKzWkJBPcl1",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2gGNTRO0SOKzWkJBPcl1"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2567,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/514444/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/514444/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tritoon 25 - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-516807",
+    "slug": "bachelorette-sail-516807",
+    "title": "Bachelorette Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/l4UDcNPR5W9E9sLBZXFW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/l4UDcNPR5W9E9sLBZXFW"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/516807/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/516807/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bachelorette Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-529512",
+    "slug": "above-board-stand-up-paddle-tours-sup-529512",
+    "title": "Above Board Stand Up Paddle Tours \"SUP\"",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ZuJGIFUnQJyiDGhZbhgT"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/529512/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/529512/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Above Board Stand Up Paddle Tours \"SUP\" is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-540225",
+    "slug": "lux-cart---hourly-rental-540225",
+    "title": "LUX Cart - Hourly Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.177799,
+      "lng": 32.682945
+    },
+    "heroImage": "https://cdn.filestackcontent.com/zCJk7K0uQ1G3uK8ozCkH",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zCJk7K0uQ1G3uK8ozCkH"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/540225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/540225/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "LUX Cart - Hourly Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-553977",
+    "slug": "the-pretty-kalavera---seaforth-boat-rental-553977",
+    "title": "The Pretty Kalavera - Seaforth Boat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6EqSESqTfyLvLQS0BHLs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6EqSESqTfyLvLQS0BHLs"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 783,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/553977/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/553977/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "The Pretty Kalavera - Seaforth Boat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-561192",
+    "slug": "romance-on-the-bay-561192",
+    "title": "Romance on the Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cGVW1ub8RJWsCgMc5tgV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cGVW1ub8RJWsCgMc5tgV"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/561192/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/561192/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Romance on the Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-607180",
+    "slug": "marquis-70-607180",
+    "title": "Marquis 70",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WT22JKYWRmeYsSVkOVYk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WT22JKYWRmeYsSVkOVYk"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1253,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/607180/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/607180/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Marquis 70 is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-626153",
+    "slug": "race-sup-lesson-626153",
+    "title": "Race SUP Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/LZ1GlYaVQm27FY6oXLu7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LZ1GlYaVQm27FY6oXLu7"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/626153/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/626153/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Race SUP Lesson is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-628675",
+    "slug": "seabound-social-yacht-party-628675",
+    "title": "Seabound Social Yacht Party",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/j5cHfqeQluf8anOEpRyJ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/j5cHfqeQluf8anOEpRyJ"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2148,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/628675/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/628675/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Seabound Social Yacht Party is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mattarellocooking-632541",
+    "slug": "italian-bread-making-632541",
+    "title": "Italian Bread Making",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2tSYYJpQx68DweXc4Xne",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2tSYYJpQx68DweXc4Xne"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 57,
+      "likelyToSellOut": false,
+      "tagline": "Cooking Class"
+    },
+    "tagPills": [
+      "Cooking Class"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632541/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mattarellocooking/items/632541/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Italian Bread Making is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638469",
+    "slug": "sup---loews-638469",
+    "title": "SUP - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6e7ir0CYQ7G2JzaFdOT3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6e7ir0CYQ7G2JzaFdOT3"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2164,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638469/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638469/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-656686",
+    "slug": "two-hour-private-charter-656686",
+    "title": "Two Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oTc8x8fDSzm6FqKEaCYy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oTc8x8fDSzm6FqKEaCYy"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2253,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/656686/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/656686/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Two Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-658230",
+    "slug": "three-hour-private-charter-658230",
+    "title": "Three Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3TJFFAJFSviMoe4L1yjZ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3TJFFAJFSviMoe4L1yjZ"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 2077,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/658230/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/658230/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Three Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-658231",
+    "slug": "four-hour-private-charter-658231",
+    "title": "Four Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sI8RZyKSTeWnSalzvWGa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sI8RZyKSTeWnSalzvWGa"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 1903,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/658231/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/658231/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Four Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-669395",
+    "slug": "proposal-on-the-bay---coronado-669395",
+    "title": "Proposal on the Bay - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.174336,
+      "lng": 32.679057
+    },
+    "heroImage": "https://cdn.filestackcontent.com/llCvLevPSnq0FVoNntSM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/llCvLevPSnq0FVoNntSM"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 844,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669395/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669395/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Proposal on the Bay - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-669413",
+    "slug": "proposal-on-the-bay---downtown-669413",
+    "title": "Proposal on the Bay - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5FYJ89cqR9GOvCsUXSTg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5FYJ89cqR9GOvCsUXSTg"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 844,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669413/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669413/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Proposal on the Bay - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681680",
+    "slug": "private-group-charter-large-wooden-sailboat-65-stephens-brothers-yawl-2-hours-681680",
+    "title": "Private Group Charter Large Wooden Sailboat (65' Stephens Brothers Yawl) • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GtGBQe2RZGXtJ4ov56UG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GtGBQe2RZGXtJ4ov56UG"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681680/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Group Charter Large Wooden Sailboat (65' Stephens Brothers Yawl) • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681687",
+    "slug": "private-group-charter-large-wooden-sailboat-55-twin-masted-ketch-2-hours-681687",
+    "title": "Private Group Charter Large Wooden Sailboat (55' Twin Masted Ketch) • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/QRWC7uIoRQWdWsR9HCnT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/QRWC7uIoRQWdWsR9HCnT"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681687/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681687/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Group Charter Large Wooden Sailboat (55' Twin Masted Ketch) • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681691",
+    "slug": "private-party-yacht-2-hours-681691",
+    "title": "Private Party Yacht  • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4teaRRh1RCuhQkvLQjKf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4teaRRh1RCuhQkvLQjKf"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681691/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681691/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Party Yacht  • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681695",
+    "slug": "private-group-large-catamaran-charter-2-hours-681695",
+    "title": "Private Group Large Catamaran Charter  • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UfzfGvlRqyNCm1s14wax",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UfzfGvlRqyNCm1s14wax"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681695/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681695/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Group Large Catamaran Charter  • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681706",
+    "slug": "luxury-vip-party-yacht-3-hours-681706",
+    "title": "Luxury Vip Party Yacht • 3 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ytupJXugRcezhTk19YDb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ytupJXugRcezhTk19YDb"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681706/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681706/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Luxury Vip Party Yacht • 3 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681718",
+    "slug": "private-whale-watching-tour-3-hours-681718",
+    "title": "Private Whale Watching Tour • 3 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WLB8mEeNQuWv8fxqutQV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WLB8mEeNQuWv8fxqutQV"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 360,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681718/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681718/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Whale Watching Tour • 3 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-55086",
+    "slug": "bachelorette-andor-bachelor-party-for-1-14-guests-55086",
+    "title": "Bachelorette and/or Bachelor Party for 1-14 Guests",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Q1hdsCVDTvSCt2N9Z4k4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Q1hdsCVDTvSCt2N9Z4k4"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "Guided Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/55086/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/55086/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bachelorette and/or Bachelor Party for 1-14 Guests is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-147831",
+    "slug": "race-paddle-board-rental-147831",
+    "title": "Race Paddle Board Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CI2MbLAVQSW2AD7FSQgy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CI2MbLAVQSW2AD7FSQgy"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 392,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/147831/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/147831/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Race Paddle Board Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424574",
+    "slug": "single-kayak---downtown-rental-424574",
+    "title": "Single Kayak - Downtown Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RALH0lQwTV2OjtMDKb72",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RALH0lQwTV2OjtMDKb72"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2491,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424574/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424574/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayak - Downtown Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424595",
+    "slug": "tandem-kayak---mission-bay-424595",
+    "title": "Tandem Kayak - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vspbrx0RT7CHjifEoq7E",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vspbrx0RT7CHjifEoq7E"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2655,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424595/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424595/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-425335",
+    "slug": "bay-skiff---coronado-425335",
+    "title": "Bay Skiff - Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MAyrk85TKylSYDTOiGgO"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 1692,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425335/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425335/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bay Skiff - Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-425385",
+    "slug": "bay-skiff---mission-bay-425385",
+    "title": "Bay Skiff - Mission Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237384,
+      "lng": 32.764409
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FJAXS7mQRXe5Cwkk2sq3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FJAXS7mQRXe5Cwkk2sq3"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 1692,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425385/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425385/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bay Skiff - Mission Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-507393",
+    "slug": "whale-watching-excursion-507393",
+    "title": "Whale Watching Excursion",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5zYoq7TPTYymbUp3vkzq",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5zYoq7TPTYymbUp3vkzq"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/507393/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/507393/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watching Excursion is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-528181",
+    "slug": "blue-bridge-kayak-tour-528181",
+    "title": "Blue Bridge Kayak Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6ws5WBATOWR6yzrbzd44"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/528181/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/528181/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Blue Bridge Kayak Tour is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638480",
+    "slug": "tandem-kayak---loews-638480",
+    "title": "Tandem Kayak - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Z79dh5HNTIVXX5yqKK8t",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Z79dh5HNTIVXX5yqKK8t"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2115,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638480/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638480/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-644326",
+    "slug": "sailing-yacht-charter---loews-644326",
+    "title": "Sailing Yacht Charter - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/LrxiFLAQKiWzCzzvPo5v",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LrxiFLAQKiWzCzzvPo5v"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 112,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/644326/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/644326/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sailing Yacht Charter - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-653602",
+    "slug": "single-kayak---loews-653602",
+    "title": "Single Kayak - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oYkFOISxTQmlvlirREGp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oYkFOISxTQmlvlirREGp"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2115,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/653602/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/653602/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayak - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-667594",
+    "slug": "100-dock---coronado---drop-off-667594",
+    "title": "100' Dock - Coronado - Drop Off",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KhVoKgm0QRaF9stJ7PCe"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 4835,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/667594/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/667594/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "100' Dock - Coronado - Drop Off is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681632",
+    "slug": "public-dolphin-seal-sailing-cruise-2-hours-681632",
+    "title": "Public Dolphin / Seal Sailing Cruise • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BU0GavJXSKeeQZNmZFvQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BU0GavJXSKeeQZNmZFvQ"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681632/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681632/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Public Dolphin / Seal Sailing Cruise • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681635",
+    "slug": "public-sight-seeing-sailing-cruise-2-hours-681635",
+    "title": "Public Sight Seeing Sailing Cruise • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CDSM0grdQ3KPxVBYWJSg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CDSM0grdQ3KPxVBYWJSg"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681635/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Public Sight Seeing Sailing Cruise • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681637",
+    "slug": "private-sunset-sailing-cruise-2-hours-681637",
+    "title": "Private Sunset Sailing Cruise • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gnhBqaxETjSVcy3wVIg1",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gnhBqaxETjSVcy3wVIg1"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681637/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681637/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sunset Sailing Cruise • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681690",
+    "slug": "private-group-charter-luxury-power-yacht-2-hours-681690",
+    "title": "Private Group Charter Luxury Power Yacht • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1e8ItvcYS5KXS2uzn0Hm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1e8ItvcYS5KXS2uzn0Hm"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681690/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681690/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Group Charter Luxury Power Yacht • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681702",
+    "slug": "70-luxury-power-yacht-with-hot-tub-2-hours-681702",
+    "title": "70' Luxury Power Yacht with Hot Tub • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3HI4mhbJQN2DLziJDeQf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3HI4mhbJQN2DLziJDeQf"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681702/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681702/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "70' Luxury Power Yacht with Hot Tub • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681717",
+    "slug": "memorial-ash-spreading-2-hours-681717",
+    "title": "Memorial Ash Spreading • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/XJxKBa9BTlObu6nwthxV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XJxKBa9BTlObu6nwthxV"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681717/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Memorial Ash Spreading • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681720",
+    "slug": "charcuterie-tray-wine-cruise-2-hours-681720",
+    "title": "Charcuterie Tray Wine Cruise • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5ru7jIJ3TMaWBhaqzT0s",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5ru7jIJ3TMaWBhaqzT0s"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681720/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681720/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Charcuterie Tray Wine Cruise • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegospeedboatadventures-106781",
+    "slug": "gps-guided-scooter-speedboat-adventure-combo-tour-106781",
+    "title": "GPS-Guided Scooter + Speedboat Adventure Combo Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Jq0Rb448TkaPjM1xVSQ4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Jq0Rb448TkaPjM1xVSQ4"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 707,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegospeedboatadventures/items/106781/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegospeedboatadventures/items/106781/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GPS-Guided Scooter + Speedboat Adventure Combo Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gonewhalewatching-262420",
+    "slug": "signature-dolphin-and-whale-watching-trip-aboard-hana-hou-25hrs-approx-262420",
+    "title": "Signature Dolphin and Whale Watching Trip Aboard Hana Hou (2.5hrs approx.)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rgnIddz1TeipdzgtSNFh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rgnIddz1TeipdzgtSNFh"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 142,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/262420/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/262420/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Signature Dolphin and Whale Watching Trip Aboard Hana Hou (2.5hrs approx.) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-394598",
+    "slug": "san-diego-bike-rentals-394598",
+    "title": "San Diego Bike Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9tF440VSN64oDAez3xJn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9tF440VSN64oDAez3xJn"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 1800,
+      "likelyToSellOut": false,
+      "tagline": "Bike Tour"
+    },
+    "tagPills": [
+      "Bike Tour",
+      "E",
+      "Bike"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394598/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/394598/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bike Rentals is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "alanacharters-425625",
+    "slug": "san-diego-bay-parade-of-lights-on-alana-charters-425625",
+    "title": "San Diego Bay Parade of Lights on Alana Charters⛵️🎄",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.228225,
+      "lng": 32.721163
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Wpt8sLsQVOtB9yObqBLR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Wpt8sLsQVOtB9yObqBLR"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alanacharters/items/425625/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alanacharters/items/425625/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Parade of Lights on Alana Charters⛵️🎄 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453576",
+    "slug": "21-hurricane-powerboat-453576",
+    "title": "21’ Hurricane Powerboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/t5QVDxWkQ6QMLnp771TK",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/t5QVDxWkQ6QMLnp771TK"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2914,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453576/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453576/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "21’ Hurricane Powerboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453615",
+    "slug": "pontoon-boat-453615",
+    "title": "Pontoon Boat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/a76TVnGUQaOlT1PnlDlB",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/a76TVnGUQaOlT1PnlDlB"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453615/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453615/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pontoon Boat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453644",
+    "slug": "20-hurricane-powerboat-453644",
+    "title": "20’ Hurricane Powerboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yTirvRBPQdeUw7679Yh0",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yTirvRBPQdeUw7679Yh0"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2824,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453644/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453644/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "20’ Hurricane Powerboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453676",
+    "slug": "18-hurricane-powerboat-453676",
+    "title": "18’ Hurricane Powerboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rojjNZaSRpaAyemXbme7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rojjNZaSRpaAyemXbme7"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453676/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453676/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "18’ Hurricane Powerboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453696",
+    "slug": "21-duffy-453696",
+    "title": "21’ Duffy",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RwgN8LWSvGM3x8cPzgFD",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RwgN8LWSvGM3x8cPzgFD"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453696/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453696/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "21’ Duffy is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453703",
+    "slug": "21-duffy-wsundeck-453703",
+    "title": "21’ Duffy w/Sundeck",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/byrZLrRDCCVZU0xaw34g",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/byrZLrRDCCVZU0xaw34g"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453703/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453703/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "21’ Duffy w/Sundeck is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453715",
+    "slug": "yamaha-waverunner-453715",
+    "title": "Yamaha Waverunner",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/F62caOEREOZBuqWMrRpI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/F62caOEREOZBuqWMrRpI"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453715/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453715/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Yamaha Waverunner is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453863",
+    "slug": "18-capri-sailboat-453863",
+    "title": "18’ Capri Sailboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/D0AdNJQUOSX52V6hgJQl",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/D0AdNJQUOSX52V6hgJQl"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453863/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453863/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "18’ Capri Sailboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453882",
+    "slug": "22-capri-sailboat-453882",
+    "title": "22’ Capri Sailboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3z1jOaSISwqGbyw14ivi",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3z1jOaSISwqGbyw14ivi"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453882/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453882/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "22’ Capri Sailboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453941",
+    "slug": "funcat-electric-catamaran-lounge-chair-453941",
+    "title": "FunCat Electric Catamaran Lounge Chair",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6wmpD2QYT4y1utF9R7KA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6wmpD2QYT4y1utF9R7KA"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453941/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453941/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "FunCat Electric Catamaran Lounge Chair is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-644836",
+    "slug": "group-coronado-island-e-bike-tour-644836",
+    "title": "Group Coronado Island E-Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dQLDfHRSCc4jpLHWoZEg"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/644836/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/644836/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Group Coronado Island E-Bike Tour is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-654219",
+    "slug": "private-coronado-island-e-bike-tour-654219",
+    "title": "Private Coronado Island E-Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DiwKjcwGQei2Is1sDISj"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 720,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/654219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/654219/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Coronado Island E-Bike Tour is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "alanacharters-658237",
+    "slug": "two-hour-private-charter-658237",
+    "title": "Two Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.228225,
+      "lng": 32.721163
+    },
+    "heroImage": "https://cdn.filestackcontent.com/PK6xUQI0RRWjTjiHKHWJ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/PK6xUQI0RRWjTjiHKHWJ"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2334,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658237/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Two Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "alanacharters-658238",
+    "slug": "three-hour-private-charter-658238",
+    "title": "Three Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.228225,
+      "lng": 32.721163
+    },
+    "heroImage": "https://cdn.filestackcontent.com/voz7kht4SqKIEbJfcZpy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/voz7kht4SqKIEbJfcZpy"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2154,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658238/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658238/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Three Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "alanacharters-658239",
+    "slug": "four-hour-private-charter-658239",
+    "title": "Four Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.228225,
+      "lng": 32.721163
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KF03HPVLQPSxHhdODWW9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KF03HPVLQPSxHhdODWW9"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 1973,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658239/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/alanacharters/items/658239/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Four Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gonewhalewatching-664169",
+    "slug": "6-passenger-capacity-signature-dolphin-and-whale-watching-trip-25hrs-approx-664169",
+    "title": "6-Passenger Capacity Signature Dolphin and Whale Watching Trip (2.5hrs approx.)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7H1A0RpwQyifN08NzvOt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7H1A0RpwQyifN08NzvOt"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 129,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/664169/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/664169/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6-Passenger Capacity Signature Dolphin and Whale Watching Trip (2.5hrs approx.) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681639",
+    "slug": "ranger-race-yacht-sailing-cruise-2-hours-681639",
+    "title": "Ranger Race Yacht Sailing Cruise • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jSx5c7ncQx2x4xOsOwIk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jSx5c7ncQx2x4xOsOwIk"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681639/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681639/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ranger Race Yacht Sailing Cruise • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681677",
+    "slug": "private-catamaran-sightseeing-charter-2-hours-681677",
+    "title": "Private Catamaran Sightseeing Charter • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/b7GGSYZXTu26GmMZdfMI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/b7GGSYZXTu26GmMZdfMI"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681677/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681677/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Catamaran Sightseeing Charter • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681678",
+    "slug": "private-duffy-coronado-bay-bridge-city-skyline-aircraft-carrier-tour-2-hours-681678",
+    "title": "Private Duffy Coronado Bay Bridge, City Skyline, Aircraft Carrier Tour • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/51rIQlJeQjK1mtPrkWBS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/51rIQlJeQjK1mtPrkWBS"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681678/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681678/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Duffy Coronado Bay Bridge, City Skyline, Aircraft Carrier Tour • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681679",
+    "slug": "private-duffy-sub-base-sea-lion-colony-point-loma-lighthouse-bay-tour-3-hours-681679",
+    "title": "Private Duffy Sub Base, Sea Lion Colony, Point Loma Lighthouse Bay Tour • 3 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GYT3X0adSZuVH0iei5ZA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GYT3X0adSZuVH0iei5ZA"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681679/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Duffy Sub Base, Sea Lion Colony, Point Loma Lighthouse Bay Tour • 3 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-690094",
+    "slug": "aquila-44-coronado---multi-day-charter-690094",
+    "title": "Aquila 44 Coronado - Multi Day Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uMFTZjxxSlubGKGIdVoz"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 172,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690094/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690094/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquila 44 Coronado - Multi Day Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-690112",
+    "slug": "aquila-44-catitude---coronado-captain-charter-690112",
+    "title": "Aquila 44 \"Catitude\" - Coronado Captain Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ecAfCh5yTnW3BBQh6L0S"
+    ],
+    "badges": {
+      "rating": 3.2,
+      "reviewCount": 2931,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690112/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/690112/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Aquila 44 \"Catitude\" - Coronado Captain Charter is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "colettasportfishing-54150",
+    "slug": "coletta-sport-fishing---34-day-local-charter-54150",
+    "title": "Coletta Sport Fishing - 3/4 Day Local Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dzS0PvkqQ3SSjuORmNkd",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dzS0PvkqQ3SSjuORmNkd"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54150/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54150/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coletta Sport Fishing - 3/4 Day Local Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453896",
+    "slug": "stand-up-paddle-sup-board-453896",
+    "title": "Stand Up Paddle (SUP) Board",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453896/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Stand Up Paddle (SUP) Board is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453906",
+    "slug": "single-kayaks-453906",
+    "title": "Single Kayaks",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IKvjLV4NR9mVwCQEjNWp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IKvjLV4NR9mVwCQEjNWp"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453906/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453906/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayaks is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-453921",
+    "slug": "tandem-kayak-453921",
+    "title": "Tandem Kayak",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oG21NrxORpyA3iEknmpt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oG21NrxORpyA3iEknmpt"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 2870,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453921/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453921/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdwhalewatch-671214",
+    "slug": "extended-whale-watch-and-dolphin-tour-671214",
+    "title": "Extended Whale Watch & Dolphin Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237842,
+      "lng": 32.764688
+    },
+    "heroImage": "https://cdn.filestackcontent.com/N09YbUCER46uy0gfkSLs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/N09YbUCER46uy0gfkSLs"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/671214/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdwhalewatch/items/671214/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Extended Whale Watch & Dolphin Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "colettasportfishing-54148",
+    "slug": "coletta-sport-fishing---12-day-local-charter-54148",
+    "title": "Coletta Sport Fishing - 1/2 Day Local Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/58fE9kpxSuC7Qzzuw7yt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/58fE9kpxSuC7Qzzuw7yt"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54148/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54148/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coletta Sport Fishing - 1/2 Day Local Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "colettasportfishing-54164",
+    "slug": "coletta-sport-fishing-full-day-offshore-fishing-charter-54164",
+    "title": "Coletta Sport Fishing Full Day Offshore Fishing Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/PjKG66yZQ5mwkcXmVWr7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/PjKG66yZQ5mwkcXmVWr7"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 182,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54164/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/54164/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coletta Sport Fishing Full Day Offshore Fishing Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-55087",
+    "slug": "bachelorette-andor-bachelor-party-for-15-28-guests-55087",
+    "title": "Bachelorette and/or Bachelor Party for 15-28 Guests",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Fdp8NwVmQdSowdUcmKIA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Fdp8NwVmQdSowdUcmKIA"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "Guided Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/55087/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/55087/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Bachelorette and/or Bachelor Party for 15-28 Guests is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-kraken-253871",
+    "slug": "barbie-doll-253871",
+    "title": "Barbie Doll",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237929,
+      "lng": 32.764744
+    },
+    "heroImage": "https://cdn.filestackcontent.com/94j2uO8ORfyryDGaarMG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/94j2uO8ORfyryDGaarMG"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 1443,
+      "likelyToSellOut": false,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kraken/items/253871/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kraken/items/253871/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Barbie Doll is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-304583",
+    "slug": "adopt-me-donation-paddle-with-rescue-pup-304583",
+    "title": "Adopt Me Donation Paddle with Rescue Pup",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rMbykzMNR0rpT7IqI24A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rMbykzMNR0rpT7IqI24A"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 542,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/304583/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/304583/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Adopt Me Donation Paddle with Rescue Pup is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-353912",
+    "slug": "valentines-day-sunset-charter-353912",
+    "title": "Valentine's Day Sunset Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/swl5lj1T0WyQ8HclSrmI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/swl5lj1T0WyQ8HclSrmI"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/353912/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/353912/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Valentine's Day Sunset Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-372115",
+    "slug": "gocar-after-dark---2hr-coronado-tour-372115",
+    "title": "GoCar After Dark - 2HR Coronado Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vEcXKTAJSbe2o8Ebl3Yh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vEcXKTAJSbe2o8Ebl3Yh"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 901,
+      "likelyToSellOut": false,
+      "tagline": "Sightseeing Tour"
+    },
+    "tagPills": [
+      "Sightseeing Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/372115/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/372115/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GoCar After Dark - 2HR Coronado Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-486330",
+    "slug": "pretty-pink-duffy---seaforth-boat-rental-486330",
+    "title": "Pretty Pink Duffy - Seaforth Boat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/prJeuisARiuJfGDdwAtm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/prJeuisARiuJfGDdwAtm"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 2651,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/486330/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/486330/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pretty Pink Duffy - Seaforth Boat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "keeneradventures-489736",
+    "slug": "la-playa-cove---private-duffy-cruise-489736",
+    "title": "La Playa Cove - Private Duffy Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vT4wxMFqRJOEncP5UbYP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vT4wxMFqRJOEncP5UbYP"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/489736/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/489736/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Playa Cove - Private Duffy Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-kingtriton-548980",
+    "slug": "king-triton-548980",
+    "title": "King Triton",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.238238,
+      "lng": 32.764827
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NkmTSVWGTASNFVK4YPtk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NkmTSVWGTASNFVK4YPtk"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 360,
+      "likelyToSellOut": false,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kingtriton/items/548980/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kingtriton/items/548980/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "King Triton is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "diveinscuba-630326",
+    "slug": "la-jolla-1-tank-guided-dive-630326",
+    "title": "La Jolla 1 Tank  Guided Dive",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.273781,
+      "lng": 32.84941
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IwcJrQvvT1SC33ydbcDm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IwcJrQvvT1SC33ydbcDm"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Scuba"
+    },
+    "tagPills": [
+      "Scuba"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/diveinscuba/items/630326/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/diveinscuba/items/630326/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Jolla 1 Tank  Guided Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-630819",
+    "slug": "dog-swim-lesson-experience-630819",
+    "title": "Dog Swim Lesson Experience",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gbpnLQ7yR9Cmf5XjdSYM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gbpnLQ7yR9Cmf5XjdSYM"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/630819/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/630819/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Dog Swim Lesson Experience is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "colettasportfishing-644556",
+    "slug": "private-coastal-catch-and-cruise-644556",
+    "title": "Private Coastal Catch & Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3pWVLveMSVfRgj3xatKg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3pWVLveMSVfRgj3xatKg"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 540,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/644556/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/colettasportfishing/items/644556/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Coastal Catch & Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "undergrounddonutour-654851",
+    "slug": "san-diego-and-little-italy-holiday-donut-tour-654851",
+    "title": "San Diego & Little Italy Holiday Donut Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1JwczhOFReCGyA7VwaDz",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1JwczhOFReCGyA7VwaDz"
+    ],
+    "badges": {
+      "rating": 3.1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/654851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/undergrounddonutour/items/654851/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego & Little Italy Holiday Donut Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-5226",
+    "slug": "chauffeured-brewery-tour-5226",
+    "title": "Chauffeured Brewery Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://www.filepicker.io/api/file/qwbPbGJJSQKc9eHfiNYT",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/qwbPbGJJSQKc9eHfiNYT"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Brewery"
+    },
+    "tagPills": [
+      "Brewery",
+      "Guided Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/5226/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/5226/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Chauffeured Brewery Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-320733",
+    "slug": "san-diego-bay-parade-of-lights-on-triton-charters-320733",
+    "title": "San Diego Bay Parade of Lights on Triton Charters⛵️🎄",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/krKVqOYGQWWfj11vOZo8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/krKVqOYGQWWfj11vOZo8"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/320733/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/320733/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Parade of Lights on Triton Charters⛵️🎄 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-329091",
+    "slug": "san-diego-lgbtq-history-tour-329091",
+    "title": "San Diego: LGBTQ+ History Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IMCzWQyHS3CRSsbvgsh5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IMCzWQyHS3CRSsbvgsh5"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Events"
+    },
+    "tagPills": [
+      "Events",
+      "History Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/329091/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/329091/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: LGBTQ+ History Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tikiboatmdr-423092",
+    "slug": "62ft-island-boat-sd-san-diego-sunset-duo-423092",
+    "title": "62ft Island Boat SD: 📍San Diego (Sunset Duo)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fykXRrjmQfev34luxlic",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fykXRrjmQfev34luxlic"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 4862,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour",
+      "Sports"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikiboatmdr/items/423092/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikiboatmdr/items/423092/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "62ft Island Boat SD: 📍San Diego (Sunset Duo) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-454824",
+    "slug": "ohana-surf-lesson-454824",
+    "title": "Ohana Surf Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/EAHoqb1QbyG0jAyHYuiQ"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 900,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454824/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454824/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ohana Surf Lesson is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-454829",
+    "slug": "group-surf-lesson-454829",
+    "title": "Group Surf Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qbl5LDsRrAgLl7vDQtQI"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454829/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454829/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Group Surf Lesson is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-502768",
+    "slug": "zookeeper-camp-502768",
+    "title": "Zookeeper Camp",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ibmlLd4tT2201W0hqxks"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 2,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502768/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502768/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Zookeeper Camp is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-502778",
+    "slug": "veterinarian-camp---half-day-502778",
+    "title": "Veterinarian Camp - Half Day",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/goB3rdXSFW4gMJNAvkTc"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 1,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502778/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502778/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Veterinarian Camp - Half Day is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-502784",
+    "slug": "veterinarian-camp---full-day-502784",
+    "title": "Veterinarian Camp - Full Day",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CFihp53ZRhWtTGzA5RyZ"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 2,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/502784/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Veterinarian Camp - Full Day is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "globalescapesd-581364",
+    "slug": "wizard-school-room-581364",
+    "title": "Wizard School Room",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/kdVMtPN5Rm6nxIYkCstr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kdVMtPN5Rm6nxIYkCstr"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 1338,
+      "likelyToSellOut": false,
+      "tagline": "Escape Room"
+    },
+    "tagPills": [
+      "Escape Room"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/globalescapesd/items/581364/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/globalescapesd/items/581364/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Wizard School Room is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-648512",
+    "slug": "del-club-members-daily-group-surf-lesson-648512",
+    "title": "Del Club Members Daily Group Surf Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V9NEqkYSGtLVUL982Uyg"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/648512/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/648512/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Del Club Members Daily Group Surf Lesson is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-19948",
+    "slug": "sup-rental-19948",
+    "title": "SUP Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/bPdTsXYHTqiQ6njpdMN3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bPdTsXYHTqiQ6njpdMN3"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 784,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/19948/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/19948/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-60603",
+    "slug": "san-diego-whale-watching-cruise-60603",
+    "title": "San Diego Whale Watching Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sAU7BSh9Tpe0mkLgku0W",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sAU7BSh9Tpe0mkLgku0W"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 184,
+      "likelyToSellOut": false,
+      "tagline": "Dolphin"
+    },
+    "tagPills": [
+      "Dolphin",
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60603/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60603/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Whale Watching Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116920",
+    "slug": "wake-early-save-big-early-bird-tour-116920",
+    "title": "Wake Early : Save Big! Early Bird Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/bnODfn2QQwOMMBrzS6NG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bnODfn2QQwOMMBrzS6NG"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 358,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116920/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116920/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Wake Early : Save Big! Early Bird Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-117043",
+    "slug": "gocar-san-diego-full-day-tour-117043",
+    "title": "GoCar: San Diego Full Day Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/zyRdWpRxTHqbrDLTSSLc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zyRdWpRxTHqbrDLTSSLc"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 716,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/117043/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/117043/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GoCar: San Diego Full Day Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "zovargo-231271",
+    "slug": "zoo-animal-party-1-15-attendees-231271",
+    "title": "Zoo Animal Party (1-15 Attendees)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santee",
+      "citySlug": "santee"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HEJvpgMhT3qY2Q3shLPI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HEJvpgMhT3qY2Q3shLPI"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 360,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/zovargo/items/231271/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zovargo/items/231271/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Zoo Animal Party (1-15 Attendees) is a curated experience in Santee, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-236983",
+    "slug": "basketball-reservation-236983",
+    "title": "Basketball Reservation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wvlWNxKtTsur54Cl9miw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wvlWNxKtTsur54Cl9miw"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 3240,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236983/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Basketball Reservation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "zovargo-359106",
+    "slug": "zoo-animal-party-16-35-attendees-359106",
+    "title": "Zoo Animal Party (16-35 Attendees)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santee",
+      "citySlug": "santee"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Mc1r5VPISk1M6wJSNHYQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Mc1r5VPISk1M6wJSNHYQ"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 307,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/zovargo/items/359106/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/zovargo/items/359106/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Zoo Animal Party (16-35 Attendees) is a curated experience in Santee, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-421299",
+    "slug": "rental-gear-421299",
+    "title": "Rental Gear",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.252299,
+      "lng": 32.782989
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6Fhdfi1SpaLuLIvxGHha",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6Fhdfi1SpaLuLIvxGHha"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 904,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/421299/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/421299/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Rental Gear is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424934",
+    "slug": "asa-101--basic-keelboat-sailing-class--harbor-island-424934",
+    "title": "ASA 101- Basic Keelboat Sailing  Class- Harbor Island",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DLh2nw2mRAO3J2Y8kGC6",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DLh2nw2mRAO3J2Y8kGC6"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 20,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424934/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424934/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "ASA 101- Basic Keelboat Sailing  Class- Harbor Island is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-506946",
+    "slug": "private-all-day-sail-506946",
+    "title": "Private All Day Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/J0RP2bLT6e1cdKRyc11M",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/J0RP2bLT6e1cdKRyc11M"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 726,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/506946/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/506946/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private All Day Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-509720",
+    "slug": "spring-buddies-family-festival-509720",
+    "title": "Spring Buddies Family Festival",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9eSCWtx6Q8K3nSG6Zxe0",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9eSCWtx6Q8K3nSG6Zxe0"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 2,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/509720/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/509720/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Spring Buddies Family Festival is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-549725",
+    "slug": "prone-board-rental-549725",
+    "title": "Prone Board Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CI2MbLAVQSW2AD7FSQgy",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CI2MbLAVQSW2AD7FSQgy"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 776,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/549725/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/549725/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Prone Board Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-594390",
+    "slug": "25-day-offshore-spearfishing-charter-594390",
+    "title": "2.5 Day Offshore Spearfishing Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FAHCLOaoTeyFNMgGdGig",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FAHCLOaoTeyFNMgGdGig"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/594390/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/594390/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2.5 Day Offshore Spearfishing Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "adventuresscatamaran-615826",
+    "slug": "private-custom-yacht-charters-615826",
+    "title": "Private Custom Yacht Charters",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8mvnq6uCQOOyZMkcWc27",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8mvnq6uCQOOyZMkcWc27"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 4609,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/adventuresscatamaran/items/615826/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventuresscatamaran/items/615826/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Custom Yacht Charters is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-623892",
+    "slug": "advance-technique-and-speed-sup-lesson-623892",
+    "title": "Advance Technique & Speed SUP Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/LKSt1nqFRLmjTA9HH6Po",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/LKSt1nqFRLmjTA9HH6Po"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623892/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623892/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Advance Technique & Speed SUP Lesson is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-623895",
+    "slug": "footwork-and-play-sup-lesson-623895",
+    "title": "Footwork & Play SUP Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BsohhrBpQPqCdrBgrJd5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BsohhrBpQPqCdrBgrJd5"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623895/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623895/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Footwork & Play SUP Lesson is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-623896",
+    "slug": "sup-cub-kid-lessons-623896",
+    "title": "SUP CUB Kid Lessons",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yZxsbTV5TVawQl2STYD5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yZxsbTV5TVawQl2STYD5"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/623896/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP CUB Kid Lessons is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-626730",
+    "slug": "inflatable-sup-pup-lesson-101-626730",
+    "title": "Inflatable SUP Pup Lesson 101",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oOymds1HTQOxcWju7QUr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oOymds1HTQOxcWju7QUr"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/626730/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/626730/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Inflatable SUP Pup Lesson 101 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-630809",
+    "slug": "inflatable-sup-lesson-101-630809",
+    "title": "Inflatable SUP Lesson 101",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/msAQfeHpSc6G3fVkD3fR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/msAQfeHpSc6G3fVkD3fR"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 822,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/630809/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/630809/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Inflatable SUP Lesson 101 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638437",
+    "slug": "learn-to-sail---loews-638437",
+    "title": "Learn to Sail - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rPcocIGBQzuH4wHSpUds",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rPcocIGBQzuH4wHSpUds"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 171,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638437/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Learn to Sail - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-644000",
+    "slug": "san-diego-tourschasing-sunsets-tour---private-experience-644000",
+    "title": "San Diego Tours:Chasing Sunsets Tour - Private Experience",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GGjkjPKTTDqtC1ptquQ8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GGjkjPKTTDqtC1ptquQ8"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644000/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644000/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours:Chasing Sunsets Tour - Private Experience is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-665636",
+    "slug": "25-day-san-clemente-island-charter-665636",
+    "title": "2.5 Day San Clemente Island Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/oQV9taRBmlK6Ae1kxAAV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/oQV9taRBmlK6Ae1kxAAV"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/665636/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/665636/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2.5 Day San Clemente Island Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-669376",
+    "slug": "learn-to-sail---bower-669376",
+    "title": "Learn to Sail - Bower",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.174336,
+      "lng": 32.679057
+    },
+    "heroImage": "https://cdn.filestackcontent.com/26XHuMQrQhBxD2ZMwLOg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/26XHuMQrQhBxD2ZMwLOg"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669376/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/669376/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Learn to Sail - Bower is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "desertpaddleboards-672122",
+    "slug": "floating-soundbath-at-the-plunge-san-diego-672122",
+    "title": "Floating Soundbath at the PLUNGE San Diego",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.252685,
+      "lng": 32.770158
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yJSsRqPHQf6288mJ153k",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yJSsRqPHQf6288mJ153k"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Events"
+    },
+    "tagPills": [
+      "Events",
+      "SUP"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/desertpaddleboards/items/672122/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/desertpaddleboards/items/672122/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Floating Soundbath at the PLUNGE San Diego is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-681624",
+    "slug": "sunset-sail---del-marina-681624",
+    "title": "Sunset Sail - Del Marina",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.174336,
+      "lng": 32.679057
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UBbX8mnNS92dDsSLPdev",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UBbX8mnNS92dDsSLPdev"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 50,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/681624/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/681624/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sail - Del Marina is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116839",
+    "slug": "1-hr-gocar-harbor-and-gaslamp-quarter-tour-116839",
+    "title": "1 hr. GoCar Harbor & Gaslamp Quarter Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wvjtDvw9Rime53dnnTim",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wvjtDvw9Rime53dnnTim"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 3413,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116839/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116839/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "1 hr. GoCar Harbor & Gaslamp Quarter Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116903",
+    "slug": "2-hr-gocar-old-meets-new-downtown-old-town-tour-116903",
+    "title": "2 hr. GoCar \"Old Meets New\" Downtown + Old Town Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K0Psj26yRBOOb1Tk5ded",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K0Psj26yRBOOb1Tk5ded"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 3053,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116903/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116903/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2 hr. GoCar \"Old Meets New\" Downtown + Old Town Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-182052",
+    "slug": "signature-bonfire-experience-182052",
+    "title": "Signature Bonfire Experience",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Qeb8j7NhThm1MCto75pb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Qeb8j7NhThm1MCto75pb"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 206,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/182052/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/182052/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Signature Bonfire Experience is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-221767",
+    "slug": "paddle-board-basics-experience-221767",
+    "title": "Paddle Board Basics Experience",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vOkzTEkiS0ezulT34yvF",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vOkzTEkiS0ezulT34yvF"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 922,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/221767/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/221767/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Paddle Board Basics Experience is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-421397",
+    "slug": "half-day-spearfishing-charter-421397",
+    "title": "Half Day Spearfishing Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237025,
+      "lng": 32.765511
+    },
+    "heroImage": "https://cdn.filestackcontent.com/eCCdGUUuRPmhpi7yQdtV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/eCCdGUUuRPmhpi7yQdtV"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/421397/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/421397/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Half Day Spearfishing Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-452617",
+    "slug": "pau-hana-2025-452617",
+    "title": "Pau Hana 2025",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/gQGBlXdgQVOw3oDVXT2A",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/gQGBlXdgQVOw3oDVXT2A"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/452617/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/452617/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pau Hana 2025 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegocrawling-497027",
+    "slug": "gaslamp-pub-crawl-497027",
+    "title": "Gaslamp Pub Crawl",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.1604,
+      "lng": 32.709578
+    },
+    "heroImage": "https://cdn.filestackcontent.com/8gquPKK3R3eyEencUwP7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/8gquPKK3R3eyEencUwP7"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 540,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegocrawling/items/497027/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegocrawling/items/497027/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Gaslamp Pub Crawl is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-515137",
+    "slug": "freediving-instructor-course-515137",
+    "title": "Freediving Instructor Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.252299,
+      "lng": 32.782989
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BweuJDLUTAqbbGpbUT83",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BweuJDLUTAqbbGpbUT83"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/515137/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/515137/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Freediving Instructor Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bigbluephotoexpeditions-567520",
+    "slug": "half-day-whale-watch-567520",
+    "title": "Half Day Whale Watch",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/xdFKOanTuGP9WIUAK9mA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xdFKOanTuGP9WIUAK9mA"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bigbluephotoexpeditions/items/567520/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigbluephotoexpeditions/items/567520/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Half Day Whale Watch is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "frequencytours-575320",
+    "slug": "meditation-and-mountain-hike-tour-800-am-575320",
+    "title": "Meditation and Mountain Hike Tour 8:00 AM",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KVDrCYk8QCemECQpImb9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KVDrCYk8QCemECQpImb9"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Walking Tour"
+    },
+    "tagPills": [
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/frequencytours/items/575320/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/frequencytours/items/575320/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Meditation and Mountain Hike Tour 8:00 AM is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "animalcenter-575652",
+    "slug": "spring-adventure-575652",
+    "title": "Spring Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Del Mar",
+      "citySlug": "del-mar"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/c6rJ6prCRVOZI8EAAKkp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/c6rJ6prCRVOZI8EAAKkp"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 414,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575652/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/animalcenter/items/575652/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Spring Adventure is a curated experience in Del Mar, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-643238",
+    "slug": "couples-2-sup-pups-lessons-package-643238",
+    "title": "Couples 2 SUP Pups Lessons Package",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WNrDsP5HTmuoIB6zSGiI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WNrDsP5HTmuoIB6zSGiI"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 922,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/643238/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/643238/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Couples 2 SUP Pups Lessons Package is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-148858",
+    "slug": "rock-painting-at-tidal-beach-148858",
+    "title": "Rock Painting at Tidal Beach",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6aRKrHeRDG8le11GMiKv",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6aRKrHeRDG8le11GMiKv"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 77,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/148858/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/148858/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Rock Painting at Tidal Beach is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-155330",
+    "slug": "build-a-buddy-155330",
+    "title": "Build-A-Buddy",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wXftMbEySJqaLJ56OkbP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wXftMbEySJqaLJ56OkbP"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 52,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/155330/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/155330/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Build-A-Buddy is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-256889",
+    "slug": "champagne-brunch-cruise-256889",
+    "title": "Champagne Brunch Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Yz42bEnRcm4SxlPf4nOC",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Yz42bEnRcm4SxlPf4nOC"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 48,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/256889/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/256889/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Champagne Brunch Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503300",
+    "slug": "ticketed-midday-sail-503300",
+    "title": "Ticketed Midday Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nKnRiBkT92H8S3wUGVZ8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nKnRiBkT92H8S3wUGVZ8"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503300/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503300/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ticketed Midday Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-510020",
+    "slug": "gocar-after-dark---2hr-holiday-lights-tour-510020",
+    "title": "GoCar After Dark - 2hr. Holiday Lights Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jmTXvXmTnGvyH1CrRn6G",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jmTXvXmTnGvyH1CrRn6G"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/510020/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/510020/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GoCar After Dark - 2hr. Holiday Lights Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-556647",
+    "slug": "basketball-pick-up-game-556647",
+    "title": "Basketball Pick Up Game",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9EeMPtjlR7mZiWX7AOrM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9EeMPtjlR7mZiWX7AOrM"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/556647/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/556647/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Basketball Pick Up Game is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "frequencytours-608893",
+    "slug": "mountain-hike-tour-meditation-optional-1030-am-608893",
+    "title": "Mountain Hike Tour (meditation optional) 10:30 AM",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fn6WTc1sTEm81E8S9DF8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fn6WTc1sTEm81E8S9DF8"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 122,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/frequencytours/items/608893/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/frequencytours/items/608893/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Mountain Hike Tour (meditation optional) 10:30 AM is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "actionsportrentals-paradisepointresort-614180",
+    "slug": "25-catalina-sailboat-614180",
+    "title": "25’ Catalina Sailboat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JUL8uUOsQwWrLXwTmHIw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JUL8uUOsQwWrLXwTmHIw"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 2334,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/614180/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/614180/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "25’ Catalina Sailboat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-624568",
+    "slug": "burial-at-sea-624568",
+    "title": "Burial at Sea",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uT6YcD5CQkO4aXvEW28X",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uT6YcD5CQkO4aXvEW28X"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/624568/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/624568/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Burial at Sea is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-659422",
+    "slug": "temecula-vineyard-and-winery-private-tour-public-659422",
+    "title": "Temecula Vineyard & Winery Private Tour (Public)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.169523,
+      "lng": 32.716607
+    },
+    "heroImage": "https://cdn.filestackcontent.com/BduOvRGsTrHMRJtB61PL",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/BduOvRGsTrHMRJtB61PL"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 26,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/659422/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/659422/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Temecula Vineyard & Winery Private Tour (Public) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-60626",
+    "slug": "south-harbor-tour-1-hour-60626",
+    "title": "South Harbor Tour (1 Hour)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/47HX9fbTVWa24bt4zMKo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/47HX9fbTVWa24bt4zMKo"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 540,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Food Tour",
+      "Photography Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60626/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "South Harbor Tour (1 Hour) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "adventuressandiego-151155",
+    "slug": "scenic-san-diego-advanced-segway-tour-151155",
+    "title": "Scenic San Diego Advanced Segway Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.15692,
+      "lng": 32.711203
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1bOmmCYSYaNz8Fp7U2dA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1bOmmCYSYaNz8Fp7U2dA"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Segway"
+    },
+    "tagPills": [
+      "Segway"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/adventuressandiego/items/151155/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/adventuressandiego/items/151155/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Scenic San Diego Advanced Segway Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-237011",
+    "slug": "tie-dye-fun-237011",
+    "title": "Tie-Dye Fun",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yZUB8SFZSSuPhKImSedb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yZUB8SFZSSuPhKImSedb"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/237011/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/237011/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tie-Dye Fun is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-240433",
+    "slug": "sea-shell-painting-at-tidal-beach-240433",
+    "title": "Sea Shell Painting at Tidal Beach",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HOFH4FpxRWyYH8Zuiore",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HOFH4FpxRWyYH8Zuiore"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 103,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/240433/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/240433/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sea Shell Painting at Tidal Beach is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-437545",
+    "slug": "pretty-pink-boat---seaforth-boat-rental-437545",
+    "title": "Pretty Pink Boat - Seaforth Boat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/OoJ7yofxSK2zGZUt4l4w",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OoJ7yofxSK2zGZUt4l4w"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 1133,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/437545/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/437545/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pretty Pink Boat - Seaforth Boat Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "jobsurfexperience-sd-454816",
+    "slug": "private-surf-lesson-454816",
+    "title": "Private Surf Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XYQxKFyOQCWnHJgZKhJQ"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 900,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454816/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/jobsurfexperience-sd/items/454816/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Surf Lesson is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiego-jetskirentals-528464",
+    "slug": "pontoon-boat-rental-528464",
+    "title": "Pontoon Boat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4E1YU1GqSK4mSyKy9uY0",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4E1YU1GqSK4mSyKy9uY0"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/528464/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/528464/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pontoon Boat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-644671",
+    "slug": "san-diego-tours-tijuana-culture-and-culinary-tour-private-644671",
+    "title": "San Diego Tours: Tijuana Culture & Culinary Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9LZPyGi3Qu2cwSyVue8J",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9LZPyGi3Qu2cwSyVue8J"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 231,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644671/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644671/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours: Tijuana Culture & Culinary Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-644674",
+    "slug": "san-diego-toursbaja-lobster-art-and-vibes-tour-from-san-diego-private-644674",
+    "title": "San Diego Tours:Baja Lobster, Art and Vibes Tour from San Diego (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4eUJKZ9HSeWaIBcN69ew",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4eUJKZ9HSeWaIBcN69ew"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 231,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644674/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644674/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours:Baja Lobster, Art and Vibes Tour from San Diego (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-644680",
+    "slug": "san-diego-toursensenada-pacific-coastline-tour-from-san-diego-private-644680",
+    "title": "San Diego Tours:Ensenada Pacific Coastline Tour from San Diego (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3oUJ9TqQImZaKf79EqTw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3oUJ9TqQImZaKf79EqTw"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 231,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644680/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644680/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours:Ensenada Pacific Coastline Tour from San Diego (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-60605",
+    "slug": "patriot-jet-boat-thrill-ride-60605",
+    "title": "Patriot Jet Boat Thrill Ride",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/IxBvntFT1OdCLUGMEykp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/IxBvntFT1OdCLUGMEykp"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 526,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60605/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60605/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Patriot Jet Boat Thrill Ride is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-167679",
+    "slug": "small-group-event-167679",
+    "title": "Small Group Event",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/U0KfZgqBQCWItBtKwQxG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/U0KfZgqBQCWItBtKwQxG"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 390,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167679/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167679/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Small Group Event is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-167690",
+    "slug": "large-group-event-167690",
+    "title": "Large Group Event",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/bhytUR52TMSoGVsq1w66",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/bhytUR52TMSoGVsq1w66"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 390,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167690/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167690/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Large Group Event is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-167692",
+    "slug": "medium-group-event-167692",
+    "title": "Medium Group Event",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/lt0ra0sHSIXTu2RgUXLX",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lt0ra0sHSIXTu2RgUXLX"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 391,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167692/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167692/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Medium Group Event is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-167694",
+    "slug": "corporate-group-event-167694",
+    "title": "Corporate Group Event",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cvOmoiSjG3v1ofi6wJlA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cvOmoiSjG3v1ofi6wJlA"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 390,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167694/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/167694/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Corporate Group Event is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gonewhalewatching-173008",
+    "slug": "6-passenger-capacity-premium-5-hour-whale-watch-targeting-10-species-of-cetaceans-173008",
+    "title": "6-Passenger Capacity Premium 5 Hour Whale Watch | Targeting 10+ Species of Cetaceans",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pLnZThORRtqGbep1HrjB",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pLnZThORRtqGbep1HrjB"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 47,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/173008/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/173008/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6-Passenger Capacity Premium 5 Hour Whale Watch | Targeting 10+ Species of Cetaceans is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "coronadogolfcars-339050",
+    "slug": "delivery---4-passenger-multi-day-339050",
+    "title": "DELIVERY - 4 Passenger (multi-day)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Yz1tMgwR7uspImEsf7Je"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/339050/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/coronadogolfcars/items/339050/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "DELIVERY - 4 Passenger (multi-day) is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "foodelicioustours-354061",
+    "slug": "libations-on-the-east-side-a-food-and-drink-journey-through-san-diegos-east-village-354061",
+    "title": "Libations on the East Side: A Food and Drink Journey Through San Diego's East Village",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.151677,
+      "lng": 32.710308
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K3hwGQpqL6FmSe81YDQR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K3hwGQpqL6FmSe81YDQR"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 101,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354061/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354061/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Libations on the East Side: A Food and Drink Journey Through San Diego's East Village is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "foodelicioustours-354071",
+    "slug": "north-park-beerucation-354071",
+    "title": "North Park Beerucation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.128386,
+      "lng": 32.748313
+    },
+    "heroImage": "https://cdn.filestackcontent.com/teBgCVSKCudcdCellSQ9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/teBgCVSKCudcdCellSQ9"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354071/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "North Park Beerucation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "foodelicioustours-354072",
+    "slug": "little-italy-booze-and-bar-bites-354072",
+    "title": "Little Italy Booze and Bar Bites",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.167996,
+      "lng": 32.722811
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JUvOFygQRnyNReAYhaG2",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JUvOFygQRnyNReAYhaG2"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 25,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354072/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/foodelicioustours/items/354072/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Little Italy Booze and Bar Bites is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-393428",
+    "slug": "gocar-after-dark---1hr-gaslamp-and-embarcadero-tour-393428",
+    "title": "GoCar After Dark -  1Hr Gaslamp and Embarcadero Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/u0bKJFu6SkCcDv4dapz7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/u0bKJFu6SkCcDv4dapz7"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 901,
+      "likelyToSellOut": false,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "History Tour",
+      "Museum"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/393428/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/393428/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "GoCar After Dark -  1Hr Gaslamp and Embarcadero Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "unlimitedbiking-395134",
+    "slug": "san-diego-road-bike-rentals-395134",
+    "title": "San Diego Road Bike Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://www.filepicker.io/api/file/TNQvnsGLTL2aAnPDeuRk",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/TNQvnsGLTL2aAnPDeuRk"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 1800,
+      "likelyToSellOut": false,
+      "tagline": "Bike Rental"
+    },
+    "tagPills": [
+      "Bike Rental",
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/395134/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/unlimitedbiking/items/395134/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Road Bike Rentals is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-417996",
+    "slug": "capri-22---mission-bay-rental-417996",
+    "title": "Capri 22 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/kETXdlSTEeXsyvt86zbp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kETXdlSTEeXsyvt86zbp"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 2918,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/417996/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/417996/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Capri 22 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418823",
+    "slug": "pontoon-25---mission-bay-rental-418823",
+    "title": "Pontoon 25 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/R8PjzdRaGXOrcLbXpwgc",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/R8PjzdRaGXOrcLbXpwgc"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 2568,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418823/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pontoon 25 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-418943",
+    "slug": "duffy---mission-bay-rental-418943",
+    "title": "Duffy - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/3rJPgJVATIWpMtLl2dt3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/3rJPgJVATIWpMtLl2dt3"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 2654,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418943/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/418943/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Duffy - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-426219",
+    "slug": "pontoon-16---mission-bay-rental-426219",
+    "title": "Pontoon 16 - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fIqkLnJBS72JdW61gz4y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fIqkLnJBS72JdW61gz4y"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 2568,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426219/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/426219/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pontoon 16 - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisetriketours-437843",
+    "slug": "coronado-electric-bike-tour-437843",
+    "title": "Coronado Electric Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OQxZEuOMSJCL4Lio1Ys5"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Bike Tour"
+    },
+    "tagPills": [
+      "Bike Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/437843/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/437843/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coronado Electric Bike Tour is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiego-jetskirentals-471073",
+    "slug": "jet-ski-rentals-471073",
+    "title": "Jet Ski Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RCHpN1muTHaQFchZfvs6",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RCHpN1muTHaQFchZfvs6"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 116,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/471073/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/471073/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jet Ski Rentals is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-483473",
+    "slug": "discover-freediving-tour-483473",
+    "title": "Discover Freediving Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/lzm7JLd0RYu755ZxUgwe",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lzm7JLd0RYu755ZxUgwe"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 9,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/483473/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/483473/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Discover Freediving Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiego-jetskirentals-527560",
+    "slug": "speed-boat-rental-527560",
+    "title": "Speed Boat Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wjKZQvjS9OD7SG3BQNQX",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wjKZQvjS9OD7SG3BQNQX"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 81,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/527560/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiego-jetskirentals/items/527560/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Speed Boat Rental is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "temjeep-576531",
+    "slug": "temecula-valley-wine-tour-public-576531",
+    "title": "Temecula Valley Wine Tour (Public)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Temecula",
+      "citySlug": "temecula",
+      "lat": -117.1023,
+      "lng": 33.514298
+    },
+    "heroImage": "https://cdn.filestackcontent.com/hDKBA8gXSOWj4LzleIBg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hDKBA8gXSOWj4LzleIBg"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Wine"
+    },
+    "tagPills": [
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/temjeep/items/576531/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/temjeep/items/576531/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Temecula Valley Wine Tour (Public) is a curated experience in Temecula, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "diveinscuba-630332",
+    "slug": "la-jolla-2-tank-guided-dive-630332",
+    "title": "La Jolla 2 Tank  Guided Dive",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.273781,
+      "lng": 32.84941
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SkyMevBS4iFhJJLP7zw8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SkyMevBS4iFhJJLP7zw8"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 360,
+      "likelyToSellOut": false,
+      "tagline": "Scuba"
+    },
+    "tagPills": [
+      "Scuba"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/diveinscuba/items/630332/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/diveinscuba/items/630332/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Jolla 2 Tank  Guided Dive is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-644008",
+    "slug": "san-diego-tourshighligths-tour-private-644008",
+    "title": "San Diego Tours:Highligths Tour (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rYaGZM7QvSBV4Lxp7NYo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rYaGZM7QvSBV4Lxp7NYo"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 283,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644008/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/644008/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours:Highligths Tour (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-645787",
+    "slug": "san-diego-bay-tour---loews-645787",
+    "title": "San Diego Bay Tour - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/llSXMCJkSSKB9YU0GiiB",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/llSXMCJkSSKB9YU0GiiB"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/645787/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/645787/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Bay Tour - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificasailingcharters-681714",
+    "slug": "private-sailing-lesson-2-hours-681714",
+    "title": "Private Sailing Lesson • 2 Hours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ldKyysQDWm9khv1pClHQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ldKyysQDWm9khv1pClHQ"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 540,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681714/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificasailingcharters/items/681714/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sailing Lesson • 2 Hours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-681731",
+    "slug": "holiday-lights-and-coastal-tour-san-diegos-best-christmas-experience-private-681731",
+    "title": "✨ Holiday Lights & Coastal Tour – San Diego’s Best Christmas Experience (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dmkfwCV2RzqCSPG9s3HD",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dmkfwCV2RzqCSPG9s3HD"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/681731/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/681731/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "✨ Holiday Lights & Coastal Tour – San Diego’s Best Christmas Experience (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-60606",
+    "slug": "north-harbor-tour-1-hour-60606",
+    "title": "North Harbor Tour (1 Hour)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/51WNSQJuRH24mrpy1LtJ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/51WNSQJuRH24mrpy1LtJ"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 594,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Food Tour",
+      "Photography Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60606/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60606/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "North Harbor Tour (1 Hour) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116897",
+    "slug": "2-hr-the-ultimate-san-diego-adventure-gaslamp-old-town-and-balboa-park-gocar-tour-116897",
+    "title": "2 HR | The Ultimate San Diego Adventure: Gaslamp, Old Town & Balboa Park GoCar Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Lge78zWoTrSauLFewM6U",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Lge78zWoTrSauLFewM6U"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 3053,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116897/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116897/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2 HR | The Ultimate San Diego Adventure: Gaslamp, Old Town & Balboa Park GoCar Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116908",
+    "slug": "3-hr-gocar-sunset-cliffs-and-beaches-adventure-tour-116908",
+    "title": "3 hr. GoCar Sunset Cliffs and Beaches Adventure Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GBZ260hwQLi4r5LCZk9i",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GBZ260hwQLi4r5LCZk9i"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 1436,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116908/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116908/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "3 hr. GoCar Sunset Cliffs and Beaches Adventure Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-sundance-167386",
+    "slug": "little-g-private-six-pack-charter---sdtf-167386",
+    "title": "Little G Private Six Pack Charter - SDTF",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nyvoh6aaSqogl8sVcUfw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nyvoh6aaSqogl8sVcUfw"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-sundance/items/167386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-sundance/items/167386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Little G Private Six Pack Charter - SDTF is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegowhalesanddolphins-331472",
+    "slug": "classic-whale-and-dolphin-tours-331472",
+    "title": "Classic Whale & Dolphin Tours",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.23923,
+      "lng": 32.759039
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DSKXunjOTei0hUTu1QwA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DSKXunjOTei0hUTu1QwA"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 398,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegowhalesanddolphins/items/331472/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegowhalesanddolphins/items/331472/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Classic Whale & Dolphin Tours is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424583",
+    "slug": "tandem-kayak---downtown-424583",
+    "title": "Tandem Kayak - Downtown",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.166233,
+      "lng": 32.709114
+    },
+    "heroImage": "https://cdn.filestackcontent.com/JfeL6wMST7eBrHiWrFUn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/JfeL6wMST7eBrHiWrFUn"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 2475,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424583/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424583/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak - Downtown is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-424602",
+    "slug": "single-kayak---mission-bay-rental-424602",
+    "title": "Single Kayak - Mission Bay Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/iVkSbQ3KQGGefK3vV5KT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/iVkSbQ3KQGGefK3vV5KT"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 2655,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424602/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/424602/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayak - Mission Bay Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503302",
+    "slug": "ticketed-sunset-sail-503302",
+    "title": "Ticketed Sunset Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/RSHDkrbcS2rhQneIoDKA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/RSHDkrbcS2rhQneIoDKA"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 196,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503302/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503302/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ticketed Sunset Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-523537",
+    "slug": "trivialicious-523537",
+    "title": "Trivialicious",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/TgfAbAiSLS5N2QUquojA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/TgfAbAiSLS5N2QUquojA"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 51,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/523537/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/523537/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Trivialicious is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "temjeep-576539",
+    "slug": "private-wine-tour-of-temecula-valley-576539",
+    "title": "Private Wine Tour of Temecula Valley",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Temecula",
+      "citySlug": "temecula",
+      "lat": -117.1023,
+      "lng": 33.514298
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5MvZFWK6RlZnbkiE0Reu",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5MvZFWK6RlZnbkiE0Reu"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Wine"
+    },
+    "tagPills": [
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/temjeep/items/576539/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/temjeep/items/576539/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Wine Tour of Temecula Valley is a curated experience in Temecula, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-603784",
+    "slug": "brunch-on-the-bay-603784",
+    "title": "Brunch on the Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rGtvDvi1RtGneNXY4SQA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rGtvDvi1RtGneNXY4SQA"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/603784/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/603784/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Brunch on the Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-604734",
+    "slug": "tritons-love-boat-sunset-charter-604734",
+    "title": "Triton's Love Boat Sunset Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/0Tnaq6KSlSt2sJnjYvu8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/0Tnaq6KSlSt2sJnjYvu8"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/604734/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/604734/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Triton's Love Boat Sunset Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638431",
+    "slug": "kayak-the-cays-638431",
+    "title": "Kayak the Cays",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UX23jv2R7yEQ3xtSxijs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UX23jv2R7yEQ3xtSxijs"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638431/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638431/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Kayak the Cays is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638453",
+    "slug": "electracraft-182---loews-638453",
+    "title": "Electracraft 182 - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/xC1kXM7pTSNMYChDz2cL",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xC1kXM7pTSNMYChDz2cL"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 2633,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638453/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638453/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Electracraft 182 - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-644261",
+    "slug": "power-yacht-charter---loews-644261",
+    "title": "Power Yacht Charter - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/mT4PH3BVSxGZ2KMkOsZ5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mT4PH3BVSxGZ2KMkOsZ5"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 112,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/644261/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/644261/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Power Yacht Charter - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-30077",
+    "slug": "single-kayak-rental-30077",
+    "title": "Single Kayak Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/seTceFoySGSR4EvjsWBu",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/seTceFoySGSR4EvjsWBu"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 858,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/30077/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/30077/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Single Kayak Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-60627",
+    "slug": "full-bay-tour-2-hours-60627",
+    "title": "Full Bay Tour (2 Hours)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/T02BvfWETnGHiC9F0SkX",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/T02BvfWETnGHiC9F0SkX"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 954,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Photography Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60627/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/60627/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Full Bay Tour (2 Hours) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegosuprentals-94887",
+    "slug": "tandem-kayak-rental-94887",
+    "title": "Tandem Kayak Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215565,
+      "lng": 32.730702
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V2Ic3BHSXC0Adf7T2HfT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V2Ic3BHSXC0Adf7T2HfT"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 868,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/94887/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegosuprentals/items/94887/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tandem Kayak Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-297942",
+    "slug": "mothers-day-brunch-on-san-diegos-largest-catamaran-297942",
+    "title": "Mother's Day Brunch on San Diego's Largest Catamaran! 🌸",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p5cJr3QzT9mi5Qx9sloA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p5cJr3QzT9mi5Qx9sloA"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/297942/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/297942/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Mother's Day Brunch on San Diego's Largest Catamaran! 🌸 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-371891",
+    "slug": "easter-sunday-brunch-cruise-371891",
+    "title": "Easter Sunday Brunch Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/OpkxJvFUSMK7rKggYzmw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/OpkxJvFUSMK7rKggYzmw"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/371891/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/371891/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Easter Sunday Brunch Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-373834",
+    "slug": "fathers-day-brunch-cruise-373834",
+    "title": "Father's Day Brunch Cruise 💙",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HBb9SmLRXuKSlylzpF2g",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HBb9SmLRXuKSlylzpF2g"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/373834/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/373834/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Father's Day Brunch Cruise 💙 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-550122",
+    "slug": "pacific-dream-550122",
+    "title": "Pacific Dream",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/yv5vdn5XTiqUq0Lj4yEW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/yv5vdn5XTiqUq0Lj4yEW"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/550122/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/550122/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pacific Dream is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seamonkeyadventures-598263",
+    "slug": "private-sunset-sail-598263",
+    "title": "Private Sunset Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V5k7SLlgR4uDusTRu5kP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V5k7SLlgR4uDusTRu5kP"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 51,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598263/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598263/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sunset Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seamonkeyadventures-598267",
+    "slug": "private-day-sail-598267",
+    "title": "Private Day Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4H4dCyWgQvO8RJrqFtUm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4H4dCyWgQvO8RJrqFtUm"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 75,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598267/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598267/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Day Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seamonkeyadventures-598268",
+    "slug": "private-morning-sail-598268",
+    "title": "Private Morning Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/qwgxuTCLSuChbK2bd0Ii",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qwgxuTCLSuChbK2bd0Ii"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 75,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598268/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598268/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Morning Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seamonkeyadventures-598280",
+    "slug": "4-hour-sail-and-swim-598280",
+    "title": "4 hour Sail and Swim",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ZZ5jP86rSvyG3QUavOcp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ZZ5jP86rSvyG3QUavOcp"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598280/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598280/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "4 hour Sail and Swim is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seamonkeyadventures-598281",
+    "slug": "all-day-sail-598281",
+    "title": "All Day Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/b7Gw6TaQFi1eHyS7dDYC",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/b7Gw6TaQFi1eHyS7dDYC"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598281/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seamonkeyadventures/items/598281/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "All Day Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "suppupsusa-619736",
+    "slug": "sup-pups-experience-with-pup-instructor-rick-619736",
+    "title": "SUP Pups Experience with Pup Instructor Rick",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.215708,
+      "lng": 32.730804
+    },
+    "heroImage": "https://cdn.filestackcontent.com/M5DnvSGLQpqfe2r9FZPf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/M5DnvSGLQpqfe2r9FZPf"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/619736/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/suppupsusa/items/619736/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "SUP Pups Experience with Pup Instructor Rick is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sterlingsails-633918",
+    "slug": "that-special-someone-633918",
+    "title": "That Special Someone",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SW3qvS0RNCV6rED5y7Kf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SW3qvS0RNCV6rED5y7Kf"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 1723,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sterlingsails/items/633918/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sterlingsails/items/633918/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "That Special Someone is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-638493",
+    "slug": "sunset-yacht-charter---loews-638493",
+    "title": "Sunset Yacht Charter - Loews",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.134353,
+      "lng": 32.631923
+    },
+    "heroImage": "https://cdn.filestackcontent.com/VmGjvGfRmChPmXCPkXM5",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/VmGjvGfRmChPmXCPkXM5"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 179,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638493/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/638493/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Yacht Charter - Loews is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-647067",
+    "slug": "san-diego-toursbaja-wine-and-vineyard-tour-from-san-diego-private-647067",
+    "title": "San Diego Tours:Baja Wine and Vineyard  Tour from San Diego (Private)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cqjxWxNPTsuzwJX3oRBO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cqjxWxNPTsuzwJX3oRBO"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/647067/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/647067/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours:Baja Wine and Vineyard  Tour from San Diego (Private) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tikitimebaytours-688905",
+    "slug": "rum-sun-and-tiki-fun-688905",
+    "title": "Rum, Sun &  Tiki Fun 🌴",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.227602,
+      "lng": 32.723522
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CqaLpgKAT3C7MMyBBvjb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CqaLpgKAT3C7MMyBBvjb"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 233,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Eco Tour",
+      "Sightseeing Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/688905/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/688905/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Rum, Sun &  Tiki Fun 🌴 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "powaytrailcompany-71811",
+    "slug": "trail-rides-71811",
+    "title": "Trail Rides",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Poway",
+      "citySlug": "poway"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p2Azwg8QYWt6Wc57rZVA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p2Azwg8QYWt6Wc57rZVA"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 580,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/powaytrailcompany/items/71811/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/powaytrailcompany/items/71811/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Trail Rides is a curated experience in Poway, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesandiegofoodtours-221453",
+    "slug": "little-italy-food-tour-221453",
+    "title": "Little Italy Food Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.1688,
+      "lng": 32.724565
+    },
+    "heroImage": "https://cdn.filestackcontent.com/lBIw9mKjSUmE9Phg4HUs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lBIw9mKjSUmE9Phg4HUs"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 97,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesandiegofoodtours/items/221453/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesandiegofoodtours/items/221453/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Little Italy Food Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-313397",
+    "slug": "san-diego-embarcadero-history-and-photo-tour-313397",
+    "title": "San Diego: Embarcadero History & Photo Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1aYOy8GfQkBasl79VVTr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1aYOy8GfQkBasl79VVTr"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Events"
+    },
+    "tagPills": [
+      "Events",
+      "Food Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/313397/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/313397/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego: Embarcadero History & Photo Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-626043",
+    "slug": "freedive-yogaandbreathwork-workshop-626043",
+    "title": "Freedive Yoga&Breathwork Workshop",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/F3MDrgtjRRaU5fQ5l3oU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/F3MDrgtjRRaU5fQ5l3oU"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/626043/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/626043/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Freedive Yoga&Breathwork Workshop is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-4883",
+    "slug": "chauffeured-winery-tour-4883",
+    "title": "Chauffeured Winery Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://www.filepicker.io/api/file/L9P3zwUpS1KKWtjavOQj",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/L9P3zwUpS1KKWtjavOQj"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "Guided Tour",
+      "Winery"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/4883/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/4883/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Chauffeured Winery Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-118469",
+    "slug": "iride-scooter-rentals-118469",
+    "title": "IRide Scooter Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/A17czXW9TiGxLRkZYgve",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/A17czXW9TiGxLRkZYgve"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 1616,
+      "likelyToSellOut": false,
+      "tagline": "Scooter"
+    },
+    "tagPills": [
+      "Scooter"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/118469/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/118469/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "IRide Scooter Rentals is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-nomad-220384",
+    "slug": "nomad-private-charter-220384",
+    "title": "Nomad Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237861,
+      "lng": 32.764802
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ywBbSL5oRF6WH2cAQlU3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ywBbSL5oRF6WH2cAQlU3"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-nomad/items/220384/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-nomad/items/220384/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Nomad Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-349050",
+    "slug": "2-hr-coronado-gocar-tour-for-two-349050",
+    "title": "2 hr. Coronado GoCar Tour For Two",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Zb3kiZu2R4qtrODBnwXo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Zb3kiZu2R4qtrODBnwXo"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 2516,
+      "likelyToSellOut": false,
+      "tagline": "Transportation"
+    },
+    "tagPills": [
+      "Transportation"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/349050/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/349050/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2 hr. Coronado GoCar Tour For Two is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "vitapurayoga-389069",
+    "slug": "5-day-yoga-and-hiking-retreat-in-san-diego-389069",
+    "title": "5 Day Yoga & Hiking Retreat in San Diego",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.24380049999999,
+      "lng": 32.9017901
+    },
+    "heroImage": "https://cdn.filestackcontent.com/klhtZt3GQv6yZK6xpJUn",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/klhtZt3GQv6yZK6xpJUn"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/389069/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/389069/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "5 Day Yoga & Hiking Retreat in San Diego is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "keeneradventures-451232",
+    "slug": "mission-bay---private-sunset-cruise-451232",
+    "title": "Mission Bay - Private Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/m8HKq5jaTKN7I6NKRBbG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/m8HKq5jaTKN7I6NKRBbG"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/451232/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/451232/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Mission Bay - Private Sunset Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-474361",
+    "slug": "jacksonville-spirits-and-spirits-ghost-hunt-474361",
+    "title": "Jacksonville: Spirits & Spirits Ghost Hunt",
+    "destination": {
+      "state": "Florida",
+      "stateSlug": "florida",
+      "city": "Jacksonville",
+      "citySlug": "jacksonville",
+      "lat": -81.659968,
+      "lng": 30.330107
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WQdeFKLaTvO6gxoaXWUe",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WQdeFKLaTvO6gxoaXWUe"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/474361/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/474361/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jacksonville: Spirits & Spirits Ghost Hunt is a curated experience in Jacksonville, Florida designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-497509",
+    "slug": "tarot-reading-497509",
+    "title": "Tarot Reading",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/tfDleAkwRZay5XjgD1Ah",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/tfDleAkwRZay5XjgD1Ah"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Walking Tour"
+    },
+    "tagPills": [
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/497509/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/497509/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tarot Reading is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503294",
+    "slug": "ticketed-morning-sail-503294",
+    "title": "Ticketed Morning Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NoabAUpRNKYQDQnOZXBE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NoabAUpRNKYQDQnOZXBE"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503294/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503294/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ticketed Morning Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "netzeroexpeditions-518959",
+    "slug": "blue-whale-expedition-2025-518959",
+    "title": "Blue Whale Expedition 2025",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/K6O4cR7WQ26t67CdoVTS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/K6O4cR7WQ26t67CdoVTS"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 61,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/518959/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/netzeroexpeditions/items/518959/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Blue Whale Expedition 2025 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-552110",
+    "slug": "sound-bath-and-meditation-552110",
+    "title": "Sound Bath & Meditation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YIm1RhA2Q2aE97buArGw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YIm1RhA2Q2aE97buArGw"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 20,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/552110/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/552110/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sound Bath & Meditation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-601167",
+    "slug": "dominica-sperm-whales-freedivingandyoga-retreat-601167",
+    "title": "Dominica Sperm Whales, Freediving&Yoga Retreat",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9gjFaFJjQW6BTd91cwqh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9gjFaFJjQW6BTd91cwqh"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/601167/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/601167/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Dominica Sperm Whales, Freediving&Yoga Retreat is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-646978",
+    "slug": "san-diego-tours-highlights-tour-daily-646978",
+    "title": "San Diego Tours: Highlights Tour (Daily)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/URwWqYY7TVypIup4IkGf",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/URwWqYY7TVypIup4IkGf"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 103,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/646978/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/646978/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours: Highlights Tour (Daily) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-647015",
+    "slug": "san-diego-tours-tijuana-culture-and-culinary-tour-daily-647015",
+    "title": "San Diego Tours: Tijuana Culture & Culinary Tour (Daily)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/xRzPvfNVRcGGNpX3S7pY",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/xRzPvfNVRcGGNpX3S7pY"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 51,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/647015/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/647015/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Tours: Tijuana Culture & Culinary Tour (Daily) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "vitapurayoga-647361",
+    "slug": "san-diego-beach-yoga-private-class-647361",
+    "title": "San Diego Beach Yoga (Private Class)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/t1JTsKlQFOncSszoMKQe",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/t1JTsKlQFOncSszoMKQe"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/647361/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/vitapurayoga/items/647361/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Beach Yoga (Private Class) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdfunrunners-667283",
+    "slug": "cruise-san-diego-bay-667283",
+    "title": "Cruise San Diego Bay",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/UTGFq1wKRliUvybXBF5l",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/UTGFq1wKRliUvybXBF5l"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdfunrunners/items/667283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdfunrunners/items/667283/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Cruise San Diego Bay is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-687225",
+    "slug": "san-diego-parade-of-lights-687225",
+    "title": "San Diego Parade of Lights",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jj0TQzNATEOhLMa8Wno7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jj0TQzNATEOhLMa8Wno7"
+    ],
+    "badges": {
+      "rating": 2.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/687225/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/687225/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "San Diego Parade of Lights is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "runningtourssandiego-114823",
+    "slug": "la-jolla-coastal-5k-running-tour-114823",
+    "title": "La Jolla Coastal 5K Running Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.272943,
+      "lng": 32.850389
+    },
+    "heroImage": "https://cdn.filestackcontent.com/hccGUA5KSMOBXS0lH2uw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hccGUA5KSMOBXS0lH2uw"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 78,
+      "likelyToSellOut": false,
+      "tagline": "History Tour"
+    },
+    "tagPills": [
+      "History Tour",
+      "Photography Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/runningtourssandiego/items/114823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/runningtourssandiego/items/114823/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Jolla Coastal 5K Running Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-130626",
+    "slug": "island-yoga-130626",
+    "title": "Island Yoga",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vgmR504lR5CR9fS9Nfs4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vgmR504lR5CR9fS9Nfs4"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 52,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/130626/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/130626/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Island Yoga is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "fivestartours-157164",
+    "slug": "potato-chip-rock-hiking-157164",
+    "title": "Potato Chip Rock Hiking",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.169523,
+      "lng": 32.716607
+    },
+    "heroImage": "https://cdn.filestackcontent.com/QmGuqz3uQzaiBbanMCFa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/QmGuqz3uQzaiBbanMCFa"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Attraction"
+    },
+    "tagPills": [
+      "Attraction",
+      "Transportation"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/fivestartours/items/157164/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/fivestartours/items/157164/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Potato Chip Rock Hiking is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-237048",
+    "slug": "mission-bay-bike-tour-237048",
+    "title": "Mission Bay Bike Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pxmUy3VuQSOEVW74XY3u",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pxmUy3VuQSOEVW74XY3u"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 51,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/237048/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/237048/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Mission Bay Bike Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-322965",
+    "slug": "island-yoga-with-meditation-322965",
+    "title": "Island Yoga with Meditation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/qN99Ym93Qs6ahlSDq2rI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qN99Ym93Qs6ahlSDq2rI"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 26,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/322965/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/322965/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Island Yoga with Meditation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "hyattmissionbay-356491",
+    "slug": "food-and-drink-amenities-356491",
+    "title": "Food and Drink Amenities",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.241381,
+      "lng": 32.764518
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ieu3N6NOSICTWyytHt1E",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ieu3N6NOSICTWyytHt1E"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/hyattmissionbay/items/356491/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/hyattmissionbay/items/356491/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Food and Drink Amenities is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-425031",
+    "slug": "asa-103104-combination-class---harbor-island-425031",
+    "title": "ASA 103/104 Combination Class - Harbor Island",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.191918,
+      "lng": 32.72519
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ems8UkZXRxSuNM7V82cr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ems8UkZXRxSuNM7V82cr"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 7,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/425031/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "ASA 103/104 Combination Class - Harbor Island is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bowtiecharters-473205",
+    "slug": "2hr-sunset-cruise-473205",
+    "title": "2hr Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/y22gj42kSamXk9grvgcu",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/y22gj42kSamXk9grvgcu"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 102,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473205/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473205/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "2hr Sunset Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bowtiecharters-473211",
+    "slug": "3hr-yacht-rental-473211",
+    "title": "3hr Yacht Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aoKRyGGNQTOvAf0QFgJ3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aoKRyGGNQTOvAf0QFgJ3"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 537,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473211/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473211/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "3hr Yacht Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bowtiecharters-473212",
+    "slug": "6hr-yacht-rental-473212",
+    "title": "6hr Yacht Rental",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/94SGHRDvSISnTIHNBF3q",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/94SGHRDvSISnTIHNBF3q"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 358,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473212/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bowtiecharters/items/473212/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "6hr Yacht Rental is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-522092",
+    "slug": "cruise-to-i-do-522092",
+    "title": "Cruise to \"I Do\"",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237803,
+      "lng": 32.764673
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ZWkAxEM4QeMJgLQ9Z1nt",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ZWkAxEM4QeMJgLQ9Z1nt"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/522092/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/522092/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Cruise to \"I Do\" is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "bigbluephotoexpeditions-565843",
+    "slug": "snorkel-safari-565843",
+    "title": "Snorkel Safari",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/hNq8kCNeSOqd2cjaEYFO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/hNq8kCNeSOqd2cjaEYFO"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/bigbluephotoexpeditions/items/565843/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/bigbluephotoexpeditions/items/565843/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Snorkel Safari is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-600215",
+    "slug": "valentines-day-sail-600215",
+    "title": "Valentine's Day Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WpFU0W3ESoG7e2y26T8o",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WpFU0W3ESoG7e2y26T8o"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 6,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/600215/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/600215/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Valentine's Day Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tikitimebaytours-602816",
+    "slug": "valentines-day-on-the-bay-602816",
+    "title": "Valentine's Day on the Bay 💘",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/cRzUWR4sQeefISSbYf9E",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/cRzUWR4sQeefISSbYf9E"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/602816/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tikitimebaytours/items/602816/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Valentine's Day on the Bay 💘 is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "seaforthboatrental-639100",
+    "slug": "evening-bay-cruise-639100",
+    "title": "Evening Bay Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CZ9nmdIUQ3a7sEuWojVR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CZ9nmdIUQ3a7sEuWojVR"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 8,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639100/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/seaforthboatrental/items/639100/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Evening Bay Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "letournola-664528",
+    "slug": "segway-adventure-through-nola-664528",
+    "title": "Segway Adventure Through NOLA",
+    "destination": {
+      "state": "Louisiana",
+      "stateSlug": "louisiana",
+      "city": "New Orleans",
+      "citySlug": "new-orleans"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/V1Pyze3S5m5f6larAqiN",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/V1Pyze3S5m5f6larAqiN"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 128,
+      "likelyToSellOut": false,
+      "tagline": "Segway"
+    },
+    "tagPills": [
+      "Segway"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/letournola/items/664528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/letournola/items/664528/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Segway Adventure Through NOLA is a curated experience in New Orleans, Louisiana designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatrentalsandiego-668273",
+    "slug": "two-hour-private-charter-668273",
+    "title": "Two Hour Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.242396,
+      "lng": 32.790757
+    },
+    "heroImage": "https://cdn.filestackcontent.com/p81VJHRvSD2yFbDzdnwa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/p81VJHRvSD2yFbDzdnwa"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatrentalsandiego/items/668273/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatrentalsandiego/items/668273/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Two Hour Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "runningtourssandiego-114826",
+    "slug": "balboa-park-5k-running-tour-114826",
+    "title": "Balboa Park 5K Running Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.147346,
+      "lng": 32.733546
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FJ1vNQvZSJuWbh9VqHwN",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FJ1vNQvZSJuWbh9VqHwN"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 78,
+      "likelyToSellOut": false,
+      "tagline": "Rentals"
+    },
+    "tagPills": [
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/runningtourssandiego/items/114826/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/runningtourssandiego/items/114826/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Balboa Park 5K Running Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "rays-rentals-missionbeach-115475",
+    "slug": "foam-surfboard-115475",
+    "title": "Foam Surfboard",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/WKrIVhMsQvDh09DFrVBg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/WKrIVhMsQvDh09DFrVBg"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rays-rentals-missionbeach/items/115475/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rays-rentals-missionbeach/items/115475/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Foam Surfboard is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "gocartours-sandiego-116929",
+    "slug": "land-and-sea-gocar-tour-speedboat-adventure-116929",
+    "title": "Land & Sea: GoCar Tour + Speedboat Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HNcouHPKQiO48PkhUNNK",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HNcouHPKQiO48PkhUNNK"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 2513,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour",
+      "Bus Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116929/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gocartours-sandiego/items/116929/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Land & Sea: GoCar Tour + Speedboat Adventure is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "cruise-sd-123115",
+    "slug": "valentine-sunset-cruise-123115",
+    "title": "Valentine Sunset Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237803,
+      "lng": 32.764673
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FBTJS9VRM2ISgPSI09YE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FBTJS9VRM2ISgPSI09YE"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 2,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/123115/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/cruise-sd/items/123115/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Valentine Sunset Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-kraken-180050",
+    "slug": "kraken-private-charter-180050",
+    "title": "Kraken Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.237929,
+      "lng": 32.764744
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wiaToXGScCIjQeU0MdLg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wiaToXGScCIjQeU0MdLg"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour",
+      "Private"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kraken/items/180050/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-kraken/items/180050/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Kraken Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-192837",
+    "slug": "ferry-tickets-192837",
+    "title": "Ferry Tickets",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fSZs4GIXRfOZiJ2rOg7y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fSZs4GIXRfOZiJ2rOg7y"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Attraction"
+    },
+    "tagPills": [
+      "Attraction",
+      "Ferry",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/192837/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/192837/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ferry Tickets is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-228402",
+    "slug": "virtual-group-tasting-party---private-flexible-start-times-228402",
+    "title": "Virtual Group Tasting Party - Private (Flexible Start Times)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/A7SYc7HRBGQIFRUeN3Xs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/A7SYc7HRBGQIFRUeN3Xs"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private",
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/228402/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/228402/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Virtual Group Tasting Party - Private (Flexible Start Times) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-236967",
+    "slug": "corn-hole-reservation-236967",
+    "title": "Corn Hole Reservation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NIFXPEQWCKrJ3sWvrqhw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NIFXPEQWCKrJ3sWvrqhw"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236967/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236967/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Corn Hole Reservation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-236977",
+    "slug": "ping-pong-reservation-236977",
+    "title": "Ping Pong Reservation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/NidqybO5SWpt1qEKhfow",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/NidqybO5SWpt1qEKhfow"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236977/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236977/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Ping Pong Reservation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-236981",
+    "slug": "putt-putt-golf-236981",
+    "title": "Putt Putt Golf",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/jXFlNrkIQa2XTjcCm9Tb",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/jXFlNrkIQa2XTjcCm9Tb"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236981/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/236981/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Putt Putt Golf is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-240386",
+    "slug": "tennis-rentals-240386",
+    "title": "Tennis Rentals",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uk9rNCwTpSCbAkqfWi70",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uk9rNCwTpSCbAkqfWi70"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/240386/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/240386/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Tennis Rentals is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "flagshipsd-256867",
+    "slug": "harbor-dinner-cruise-weekdays-256867",
+    "title": "Harbor Dinner Cruise (Weekdays)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nMyf3blIRuWVZ7ZA2MNw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nMyf3blIRuWVZ7ZA2MNw"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 55,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/256867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/flagshipsd/items/256867/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Harbor Dinner Cruise (Weekdays) is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sdbeerwinetours-280305",
+    "slug": "virtual-wine-tasting-party-280305",
+    "title": "Virtual Wine Tasting Party",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/1AE2CISoQV6QuBmBlUnz",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/1AE2CISoQV6QuBmBlUnz"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Wine"
+    },
+    "tagPills": [
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/280305/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sdbeerwinetours/items/280305/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Virtual Wine Tasting Party is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-286894",
+    "slug": "football-on-the-beach-286894",
+    "title": "Football On The Beach",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/G5JYN1LTRVKuWyVO9B5i",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/G5JYN1LTRVKuWyVO9B5i"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/286894/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/286894/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Football On The Beach is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "triton-charters-320731",
+    "slug": "yo-ho-yo-ho-its-tritons-halloween-party-for-me-320731",
+    "title": "Yo Ho, Yo Ho! 🔱🏴‍☠️ It’s Triton’s Halloween Party For Me!",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/qem4iQYRHWrkK52MkCsQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/qem4iQYRHWrkK52MkCsQ"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/triton-charters/items/320731/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/triton-charters/items/320731/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Yo Ho, Yo Ho! 🔱🏴‍☠️ It’s Triton’s Halloween Party For Me! is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sidewalkfoodtours-344700",
+    "slug": "gaslamp-quarter-food-tour-344700",
+    "title": "Gaslamp Quarter Food Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.161084,
+      "lng": 32.715738
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FYYBaF3AQlQnv2rMtd13",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FYYBaF3AQlQnv2rMtd13"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 103,
+      "likelyToSellOut": false,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "Food Tour",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/344700/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sidewalkfoodtours/items/344700/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Gaslamp Quarter Food Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-372237",
+    "slug": "spikeball-reservations-372237",
+    "title": "Spikeball Reservations",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Ak4PXGGlT665jbtw9jbP",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Ak4PXGGlT665jbtw9jbP"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/372237/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/372237/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Spikeball Reservations is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisetriketours-389507",
+    "slug": "deluxe-tour-coronado-389507",
+    "title": "Deluxe Tour Coronado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Coronado",
+      "citySlug": "coronado",
+      "lat": -117.165814,
+      "lng": 32.694876
+    },
+    "heroImage": "https://cdn.filestackcontent.com/F9f95DBCTbSnrEMvbkDS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/F9f95DBCTbSnrEMvbkDS"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Ferry",
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/389507/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisetriketours/items/389507/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Deluxe Tour Coronado is a curated experience in Coronado, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-422717",
+    "slug": "beginner-spearfishing-course-422717",
+    "title": "Beginner Spearfishing Course",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YXxFyViSO6YP1YV12J6q",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YXxFyViSO6YP1YV12J6q"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 26,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/422717/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/422717/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Beginner Spearfishing Course is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "murdernmayhem-423884",
+    "slug": "jacksonville-historic-true-crime-tour-423884",
+    "title": "Jacksonville: Historic True Crime Tour",
+    "destination": {
+      "state": "Florida",
+      "stateSlug": "florida",
+      "city": "Jacksonville",
+      "citySlug": "jacksonville"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/EBhF769JTtWxjT65MbBY",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/EBhF769JTtWxjT65MbBY"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/423884/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/murdernmayhem/items/423884/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Jacksonville: Historic True Crime Tour is a curated experience in Jacksonville, Florida designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "keeneradventures-481723",
+    "slug": "north-san-diego-bay---sea-lion-photo-and-information-cruise-481723",
+    "title": "North San Diego Bay - Sea Lion Photo and Information Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vSRVHDuMTjqYQdfnglWT",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vSRVHDuMTjqYQdfnglWT"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/481723/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/keeneradventures/items/481723/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "North San Diego Bay - Sea Lion Photo and Information Cruise is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "paradisepointsandiego-484334",
+    "slug": "pickleball-reservation-484334",
+    "title": "Pickleball Reservation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/x9TgJ2X8QZSwJn43VfqE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/x9TgJ2X8QZSwJn43VfqE"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 1620,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/484334/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/paradisepointsandiego/items/484334/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pickleball Reservation is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sailsandiego-503305",
+    "slug": "private-morning-sail-503305",
+    "title": "Private Morning Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/y7vTamvkTQe8a5cF9deO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/y7vTamvkTQe8a5cF9deO"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503305/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sailsandiego/items/503305/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Morning Sail is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "portlandicecreamtour-548510",
+    "slug": "pizza-and-gelato-tour-548510",
+    "title": "Pizza and Gelato Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.167984,
+      "lng": 32.723122
+    },
+    "heroImage": "https://cdn.filestackcontent.com/g3GIIDAHRyygotbqxrFs",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/g3GIIDAHRyygotbqxrFs"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 180,
+      "likelyToSellOut": false,
+      "tagline": "Walking Tour"
+    },
+    "tagPills": [
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/portlandicecreamtour/items/548510/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/portlandicecreamtour/items/548510/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pizza and Gelato Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sandiegofishing-seasniper2-549018",
+    "slug": "sea-sniper-2---private-charter-549018",
+    "title": "Sea Sniper 2 - Private Charter",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": -117.227602,
+      "lng": 32.723522
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Jj4PEgINR12HUkYqEglj",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Jj4PEgINR12HUkYqEglj"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 721,
+      "likelyToSellOut": false,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sandiegofishing-seasniper2/items/549018/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sandiegofishing-seasniper2/items/549018/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sea Sniper 2 - Private Charter is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "justgetwet-556020",
+    "slug": "spearfishing-shore-tour-556020",
+    "title": "Spearfishing Shore Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/suvL2lciS9gQyjWejqoA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/suvL2lciS9gQyjWejqoA"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/justgetwet/items/556020/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/justgetwet/items/556020/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Spearfishing Shore Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "pacificpaddleco-901101",
+    "slug": "mission-bay-guided-paddleboard-tour-901101",
+    "title": "Mission Bay Guided Paddleboard Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "San Diego",
+      "citySlug": "san-diego",
+      "lat": 32.7011,
+      "lng": -117.1696
+    },
+    "heroImage": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.5,
+      "reviewCount": 140,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Paddleboard",
+      "Water Activities"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/pacificpaddleco/items/901101/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/pacificpaddleco/items/901101/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Mission Bay Guided Paddleboard Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "red-jeep-34849",
+    "slug": "shared-san-andreas-fault-jeep-tour-34849",
+    "title": "Shared San Andreas Fault Jeep Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Indio",
+      "citySlug": "indio",
+      "lat": -116.238253,
+      "lng": 33.765378
+    },
+    "heroImage": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"
+    ],
+    "badges": {
+      "rating": 4.9,
+      "reviewCount": 542,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Jeep",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Shared San Andreas Fault Jeep Tour is a curated experience in Indio, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "deserttastytours-290437",
+    "slug": "palm-canyon-tour-290437",
+    "title": "Palm Canyon Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Palm Springs",
+      "citySlug": "palm-springs"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/mB6twBZ8SYGBeZUPYBkW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mB6twBZ8SYGBeZUPYBkW"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 103,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/deserttastytours/items/290437/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/deserttastytours/items/290437/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Palm Canyon Tour is a curated experience in Palm Springs, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "oceansidesailingtours-367207",
+    "slug": "afternoon-sail-367207",
+    "title": "Afternoon Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Oceanside",
+      "citySlug": "oceanside",
+      "lat": -117.396087,
+      "lng": 33.211446
+    },
+    "heroImage": "https://cdn.filestackcontent.com/fZRV0LpSR7axf2xGg0rG",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/fZRV0LpSR7axf2xGg0rG"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 168,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Dolphin",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367207/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367207/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Afternoon Sail is a curated experience in Oceanside, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "oceansidesailingtours-367215",
+    "slug": "sunset-sail-367215",
+    "title": "Sunset Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Oceanside",
+      "citySlug": "oceanside",
+      "lat": -117.396087,
+      "lng": 33.211446
+    },
+    "heroImage": "https://cdn.filestackcontent.com/q4c9FixSo2ElpnGj3k33",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/q4c9FixSo2ElpnGj3k33"
+    ],
+    "badges": {
+      "rating": 2.5,
+      "reviewCount": 165,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Dolphin",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367215/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367215/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sail is a curated experience in Oceanside, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "oceansidesailingtours-367185",
+    "slug": "morning-sail-367185",
+    "title": "Morning Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Oceanside",
+      "citySlug": "oceanside",
+      "lat": -117.396087,
+      "lng": 33.211446
+    },
+    "heroImage": "https://cdn.filestackcontent.com/iN6yZOlCTGaD9iBDFNBO",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/iN6yZOlCTGaD9iBDFNBO"
+    ],
+    "badges": {
+      "rating": 2.4,
+      "reviewCount": 168,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Dolphin",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367185/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/oceansidesailingtours/items/367185/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Morning Sail is a curated experience in Oceanside, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "canyonbreezehikes-901201",
+    "slug": "palm-springs-oasis-canyon-hike-901201",
+    "title": "Palm Springs Oasis Canyon Hike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Palm Springs",
+      "citySlug": "palm-springs",
+      "lat": 33.8303,
+      "lng": -116.5453
+    },
+    "heroImage": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.6,
+      "reviewCount": 60,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Hiking",
+      "Nature"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/canyonbreezehikes/items/901201/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/canyonbreezehikes/items/901201/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Palm Springs Oasis Canyon Hike is a curated experience in Palm Springs, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeconnectivity-568118",
+    "slug": "desert-nature-walk-soundbath-meditation-cacao-ceremony-568118",
+    "title": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree",
+      "lat": -116.315824,
+      "lng": 34.131631
+    },
+    "heroImage": "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I"
+    ],
+    "badges": {
+      "rating": 2.4,
+      "reviewCount": 52,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568118/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568118/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-475058",
+    "slug": "pony-ride-475058",
+    "title": "Pony Ride",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29"
+    ],
+    "badges": {
+      "rating": 2.4,
+      "reviewCount": 63,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475058/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475058/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Pony Ride is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-402194",
+    "slug": "sunset-trail-ride-402194",
+    "title": "Sunset Trail Ride",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij"
+    ],
+    "badges": {
+      "rating": 2.2,
+      "reviewCount": 72,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/402194/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/402194/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Trail Ride is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-528426",
+    "slug": "photography-hike-528426",
+    "title": "Photography Hike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa"
+    ],
+    "badges": {
+      "rating": 2.1,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/528426/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/528426/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Photography Hike is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-513079",
+    "slug": "el-dorado-513079",
+    "title": "El Dorado",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI"
+    ],
+    "badges": {
+      "rating": 2,
+      "reviewCount": 179,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/513079/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/513079/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "El Dorado is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-514091",
+    "slug": "la-luna-514091",
+    "title": "La Luna",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA"
+    ],
+    "badges": {
+      "rating": 2,
+      "reviewCount": 44,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514091/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514091/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "La Luna is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-514094",
+    "slug": "durango-514094",
+    "title": "Durango",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg"
+    ],
+    "badges": {
+      "rating": 2,
+      "reviewCount": 179,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514094/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514094/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Durango is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeconnectivity-568106",
+    "slug": "soundbath-under-the-stars-joshua-tree-568106",
+    "title": "Soundbath Under The Stars-Joshua Tree",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree",
+      "lat": -116.313066,
+      "lng": 34.134728
+    },
+    "heroImage": "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo"
+    ],
+    "badges": {
+      "rating": 2,
+      "reviewCount": 30,
+      "likelyToSellOut": true,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568106/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568106/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Soundbath Under The Stars-Joshua Tree is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-475064",
+    "slug": "natural-horsemanship-and-basic-riding-lessons-475064",
+    "title": "Natural Horsemanship & Basic Riding Lessons",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY"
+    ],
+    "badges": {
+      "rating": 1.9,
+      "reviewCount": 178,
+      "likelyToSellOut": false,
+      "tagline": "Private"
+    },
+    "tagPills": [
+      "Private"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475064/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475064/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Natural Horsemanship & Basic Riding Lessons is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-598562",
+    "slug": "morning-trail-ride-598562",
+    "title": "Morning Trail Ride",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE"
+    ],
+    "badges": {
+      "rating": 1.7,
+      "reviewCount": 178,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/598562/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/598562/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Morning Trail Ride is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-515026",
+    "slug": "campsite-6-515026",
+    "title": "Campsite #6",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N"
+    ],
+    "badges": {
+      "rating": 1.6,
+      "reviewCount": 166,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/515026/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/515026/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Campsite #6 is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459544",
+    "slug": "sightseeing-tour-459544",
+    "title": "Sightseeing Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS"
+    ],
+    "badges": {
+      "rating": 1.5,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459544/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459544/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sightseeing Tour is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459554",
+    "slug": "sunset-hike-dinner-and-night-sky-presentation-459554",
+    "title": "Sunset Hike, Dinner, & Night Sky Presentation",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C"
+    ],
+    "badges": {
+      "rating": 1.5,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459554/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459554/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Hike, Dinner, & Night Sky Presentation is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459591",
+    "slug": "hike-and-climb-459591",
+    "title": "Hike & Climb",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr"
+    ],
+    "badges": {
+      "rating": 1.5,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Hike & Climb is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459584",
+    "slug": "private-stargazing-with-an-astronomer-459584",
+    "title": "Private Stargazing with an Astronomer",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8"
+    ],
+    "badges": {
+      "rating": 1.4,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459584/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459584/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Stargazing with an Astronomer is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459589",
+    "slug": "private-morning-hike-459589",
+    "title": "Private Morning Hike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA"
+    ],
+    "badges": {
+      "rating": 1.4,
+      "reviewCount": 180,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Morning Hike is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-520036",
+    "slug": "campsite-7-520036",
+    "title": "Campsite #7",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8"
+    ],
+    "badges": {
+      "rating": 1.4,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/520036/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/520036/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Campsite #7 is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-404983",
+    "slug": "1-hour-visitor-pass-404983",
+    "title": "1 Hour Visitor Pass",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl"
+    ],
+    "badges": {
+      "rating": 1.4,
+      "reviewCount": 177,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/404983/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/404983/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "1 Hour Visitor Pass is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-512102",
+    "slug": "custom-groups-512102",
+    "title": "Custom groups",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D"
+    ],
+    "badges": {
+      "rating": 1.2,
+      "reviewCount": 181,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/512102/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/512102/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Custom groups is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-587300",
+    "slug": "in-the-company-of-horses-and-wine-587300",
+    "title": "In the Company of Horses & Wine",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC"
+    ],
+    "badges": {
+      "rating": 1.2,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "In the Company of Horses & Wine is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-444127",
+    "slug": "interactive-equine-visitor-pass-444127",
+    "title": "Interactive Equine Visitor Pass",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo"
+    ],
+    "badges": {
+      "rating": 1,
+      "reviewCount": 178,
+      "likelyToSellOut": false,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/444127/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/444127/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Interactive Equine Visitor Pass is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-476256",
+    "slug": "photoshoot-476256",
+    "title": "Photoshoot",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3"
+    ],
+    "badges": {
+      "rating": 1,
+      "reviewCount": 1,
+      "likelyToSellOut": true,
+      "tagline": "Horse"
+    },
+    "tagPills": [
+      "Horse"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/476256/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/476256/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Photoshoot is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-646142",
+    "slug": "sunset-sound-bath-with-wild-horses-646142",
+    "title": "Sunset Sound Bath with Wild Horses",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh"
+    ],
+    "badges": {
+      "rating": 1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/646142/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/646142/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Sound Bath with Wild Horses is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "mustangsanctuary-365796",
+    "slug": "equine-therapy-365796",
+    "title": "Equine Therapy",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P"
+    ],
+    "badges": {
+      "rating": 1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/365796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/365796/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Equine Therapy is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "joshuatreeexcursions-459590",
+    "slug": "private-sunset-hike-459590",
+    "title": "Private Sunset Hike",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu"
+    ],
+    "badges": {
+      "rating": 1,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459590/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459590/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Sunset Hike is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "stargazejoshua-901301",
+    "slug": "joshua-tree-stargazing-night-walk-901301",
+    "title": "Joshua Tree Stargazing Night Walk",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Joshua Tree",
+      "citySlug": "joshua-tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "heroImage": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "badges": {
+      "rating": 4.5,
+      "reviewCount": 75,
+      "likelyToSellOut": false,
+      "tagline": "Guided Tour"
+    },
+    "tagPills": [
+      "Guided Tour",
+      "Stargazing",
+      "Night"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Joshua Tree Stargazing Night Walk is a curated experience in Joshua Tree, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   }
 ];
