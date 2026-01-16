@@ -93,6 +93,14 @@ export default function Home() {
       .filter((group) => group.destinations.length > 0);
   }, []);
 
+  const rockyMountainDestinations = useMemo(
+    () =>
+      featuredDestinations.filter(
+        (destination) => destination.stateSlug === "montana"
+      ),
+    []
+  );
+
   const featuredDestinationsPreview = useMemo(
     () => featuredDestinationsByRegion.flatMap((group) => group.destinations),
     [featuredDestinationsByRegion]
@@ -324,6 +332,29 @@ export default function Home() {
                 </div>
               </div>
             ))}
+            {rockyMountainDestinations.length > 0 ? (
+              <div className="space-y-6">
+                <div className="text-center">
+                  <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                    Rocky Mountain
+                  </span>
+                  <h3 className="mt-2 text-xl font-semibold text-[#2f4a2f] md:text-2xl">
+                    Featured Rocky Mountain States
+                  </h3>
+                </div>
+                <div className="grid gap-6 md:grid-cols-2">
+                  {rockyMountainDestinations.map((destination) => (
+                    <DestinationCard
+                      key={`rocky-mountain-${destination.name}`}
+                      destination={destination}
+                      ctaLabel="Discover"
+                      headingLevel="h4"
+                      descriptionVariant="featured"
+                    />
+                  ))}
+                </div>
+              </div>
+            ) : null}
           </div>
         </section>
 
