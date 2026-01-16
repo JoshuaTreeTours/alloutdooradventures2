@@ -243,8 +243,8 @@ const rowToTour = (
   const title = row.item_name.trim() || "Untitled Tour";
   const slugBase = slugify(title);
   const slug = `${slugBase}-${itemId}`;
-  const bookingUrl = (row.regular_link || row.calendar_link).trim();
   const calendarLink = row.calendar_link.trim();
+  const bookingUrl = (calendarLink || row.regular_link).trim();
   const availabilityCount = parseNumber(row.availability_count);
   const qualityScore = parseNumber(row.quality_score);
 
@@ -312,6 +312,17 @@ const run = async () => {
   const tours: Tour[] = [];
   const missingAffiliateParams: string[] = [];
   const invalidRows: string[] = [];
+  const seenItems = new Map<
+    string,
+    {
+      source: string;
+      location: string;
+      title: string;
+      calendarLink: string;
+      regularLink: string;
+      imageUrl: string;
+    }
+  >();
 
   for (const csvFile of csvFiles) {
     const csvPath = path.join(DATA_DIR, csvFile);
@@ -329,6 +340,34 @@ const run = async () => {
       if (!row.item_id || !row.item_name) {
         return;
       }
+      const itemKey = `${row.company_shortname}-${row.item_id}`;
+      const nextSnapshot = {
+        source: csvFile,
+        location: row.location,
+        title: row.item_name,
+        calendarLink: row.calendar_link,
+        regularLink: row.regular_link,
+        imageUrl: row.image_url,
+      };
+      const previousSnapshot = seenItems.get(itemKey);
+
+      if (previousSnapshot) {
+        const hasConflict =
+          previousSnapshot.location !== nextSnapshot.location ||
+          previousSnapshot.title !== nextSnapshot.title ||
+          previousSnapshot.calendarLink !== nextSnapshot.calendarLink ||
+          previousSnapshot.regularLink !== nextSnapshot.regularLink ||
+          previousSnapshot.imageUrl !== nextSnapshot.imageUrl;
+
+        if (hasConflict) {
+          invalidRows.push(
+            `${csvFile}: ${itemKey} conflicts with ${previousSnapshot.source}`,
+          );
+        }
+        return;
+      }
+
+      seenItems.set(itemKey, nextSnapshot);
       try {
         tours.push(rowToTour(row, missingAffiliateParams));
       } catch (error) {
