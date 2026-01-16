@@ -37,4 +37,5 @@ export type Tour = {
   bookingUrl: string;
   bookingWidgetUrl?: string;
   longDescription: string;
+  suppressReviews?: boolean;
 };
