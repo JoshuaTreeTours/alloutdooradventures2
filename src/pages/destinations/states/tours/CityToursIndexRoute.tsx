@@ -8,6 +8,7 @@ import {
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
 import { getCityTourDetailPath, getToursByCity } from "../../../../data/tours";
+import { flagstaffTours } from "../../../../data/cities/flagstaff";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -38,7 +39,10 @@ export default function CityToursIndexRoute({
     );
   }
 
-  const tours = getToursByCity(state.slug, city.slug);
+  const tours =
+    state.slug === "arizona" && city.slug === "flagstaff"
+      ? flagstaffTours
+      : getToursByCity(state.slug, city.slug);
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
