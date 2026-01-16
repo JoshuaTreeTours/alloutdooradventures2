@@ -1,3 +1,5 @@
+import { northeastStates } from "./northeast.generated";
+
 export type Destination = {
   name: string;
   stateSlug: string;
@@ -73,7 +75,7 @@ export type Tour = {
   tags: string[];
 };
 
-export const states: StateDestination[] = [
+const westStates: StateDestination[] = [
   {
     slug: "california",
     name: "California",
@@ -2399,6 +2401,8 @@ export const tours: Tour[] = [
     tags: ["paddling", "coastal"],
   },
 ];
+
+export const states: StateDestination[] = [...westStates, ...northeastStates];
 
 export const destinations: Destination[] = states.map((state) => ({
   name: state.name,

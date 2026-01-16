@@ -5,7 +5,9 @@ import { fileURLToPath } from "node:url";
 import type { Tour } from "../src/data/tours.types";
 
 const DATA_DIR = path.resolve("data");
+const NORTHEAST_DIR = path.resolve("data/northeast");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
+const NORTHEAST_OUTPUT_PATH = path.resolve("src/data/northeast.generated.ts");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
   { filename: "cycling2.csv", activitySlug: "cycling" },
@@ -18,15 +20,69 @@ const CATEGORY_FILES = [
   { filename: "joshua-tree.csv", activitySlug: "detours" },
 ] as const;
 
-const REQUIRED_COLUMNS = [
+const REQUIRED_COLUMNS = ["location", "item_name"] as const;
+const OPTIONAL_COLUMNS = [
+  "company_name",
   "company_shortname",
-  "location",
+  "location_lat",
+  "location_long",
   "item_id",
-  "item_name",
+  "category",
+  "tags",
   "image_url",
   "calendar_link",
   "regular_link",
+  "booking_url",
+  "short_description",
+  "operator",
+  "availability_count",
+  "quality_score",
 ] as const;
+const CATEGORY_PRIORITY = ["canoeing", "cycling", "hiking"] as const;
+const NORTHEAST_STATE_SLUGS = new Set([
+  "connecticut",
+  "district-of-columbia",
+  "maine",
+  "maryland",
+  "massachusetts",
+  "new-hampshire",
+  "new-jersey",
+  "new-york",
+  "pennsylvania",
+  "rhode-island",
+  "vermont",
+]);
+const CATEGORY_KEYWORDS: Record<string, string[]> = {
+  hiking: [
+    "hike",
+    "hiking",
+    "trek",
+    "trail",
+    "walking",
+    "summit",
+    "canyon",
+    "mountain",
+  ],
+  cycling: [
+    "bike",
+    "biking",
+    "cycling",
+    "e-bike",
+    "ebike",
+    "road ride",
+    "gravel",
+    "mtb",
+    "mountain bike",
+  ],
+  canoeing: [
+    "canoe",
+    "paddling",
+    "paddle",
+    "river trip",
+    "lake paddle",
+    "water trail",
+  ],
+};
 
 const slugify = (value: string) =>
   value
@@ -35,6 +91,22 @@ const slugify = (value: string) =>
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+
+const listCsvFiles = async (directory: string): Promise<string[]> => {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const files: string[] = [];
+
+  for (const entry of entries) {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await listCsvFiles(fullPath)));
+    } else if (entry.isFile() && entry.name.endsWith(".csv")) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+};
 
 const splitCsvLine = (text: string) => {
   const rows: string[][] = [];
@@ -108,7 +180,8 @@ const parseCsv = (contents: string) => {
 const parseLocation = (location: string) => {
   const segments = location.split("/").map((segment) => segment.trim());
   const city = segments.at(-1) || "Unknown";
-  const state = segments.at(-2) || "Unknown";
+  const state =
+    segments.length >= 3 ? segments[1] || "Unknown" : segments.at(-2) || "Unknown";
   return {
     state,
     stateSlug: slugify(state),
@@ -119,11 +192,85 @@ const parseLocation = (location: string) => {
 
 const parseTags = (rawTags: string) =>
   rawTags
-    .split("-")
+    .split(/[-|,]/)
     .map((tag) => tag.trim())
     .filter(Boolean);
 
-const mapActivitySlugs = (activitySlug: string) => [activitySlug];
+const normalizeCategory = (value?: string) => {
+  if (!value) {
+    return undefined;
+  }
+  const normalized = value.toLowerCase().trim();
+  if (CATEGORY_KEYWORDS.canoeing.some((keyword) => normalized.includes(keyword))) {
+    return "canoeing";
+  }
+  if (CATEGORY_KEYWORDS.cycling.some((keyword) => normalized.includes(keyword))) {
+    return "cycling";
+  }
+  if (CATEGORY_KEYWORDS.hiking.some((keyword) => normalized.includes(keyword))) {
+    return "hiking";
+  }
+  return undefined;
+};
+
+const inferCategoriesFromText = (text: string) => {
+  const normalized = text.toLowerCase();
+  return Object.entries(CATEGORY_KEYWORDS)
+    .filter(([, keywords]) =>
+      keywords.some((keyword) => normalized.includes(keyword)),
+    )
+    .map(([category]) => category);
+};
+
+const sortByPriority = (categories: string[]) =>
+  Array.from(new Set(categories)).sort(
+    (a, b) =>
+      CATEGORY_PRIORITY.indexOf(a as (typeof CATEGORY_PRIORITY)[number]) -
+      CATEGORY_PRIORITY.indexOf(b as (typeof CATEGORY_PRIORITY)[number]),
+  );
+
+const resolveActivitySlugs = ({
+  fallbackActivity,
+  explicitCategory,
+  title,
+  shortDescription,
+  tags,
+  logPrefix,
+}: {
+  fallbackActivity?: string;
+  explicitCategory?: string;
+  title: string;
+  shortDescription?: string;
+  tags: string[];
+  logPrefix: string;
+}) => {
+  const inferred = inferCategoriesFromText(
+    [title, shortDescription, tags.join(" ")].filter(Boolean).join(" "),
+  );
+  const normalizedExplicit = normalizeCategory(explicitCategory) ?? fallbackActivity;
+  const categories = new Set<string>([
+    ...(normalizedExplicit ? [normalizedExplicit] : []),
+    ...inferred,
+  ]);
+
+  if (categories.size === 0) {
+    console.warn(
+      `[import] ${logPrefix} missing category keywords; defaulting to hiking.`,
+    );
+    categories.add("hiking");
+  }
+
+  const ordered = sortByPriority(Array.from(categories));
+  const primary =
+    normalizedExplicit ??
+    CATEGORY_PRIORITY.find((category) => categories.has(category)) ??
+    ordered[0];
+
+  return {
+    activitySlugs: primary ? [primary, ...ordered.filter((slug) => slug !== primary)] : ordered,
+    primaryCategory: primary ?? ordered[0],
+  };
+};
 
 const buildLongDescription = (title: string, city: string, state: string) =>
   `${title} is a guided outdoor experience based in ${city}, ${state} that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape.`;
@@ -144,6 +291,220 @@ const buildRating = (qualityScore?: number) => {
 
 const requiredColumnsMissing = (header: string[]) =>
   REQUIRED_COLUMNS.filter((column) => !header.includes(column));
+
+const optionalColumnsMissing = (header: string[]) =>
+  OPTIONAL_COLUMNS.filter((column) => !header.includes(column));
+
+type CitySeed = {
+  name: string;
+  slug: string;
+  stateName: string;
+  stateSlug: string;
+  latValues: number[];
+  lngValues: number[];
+  heroImages: Set<string>;
+  activitySlugs: Set<string>;
+};
+
+type StateSeed = {
+  name: string;
+  slug: string;
+  cities: Map<string, CitySeed>;
+};
+
+const addNortheastSeed = (
+  stateMap: Map<string, StateSeed>,
+  {
+    state,
+    stateSlug,
+    city,
+    citySlug,
+    lat,
+    lng,
+    heroImage,
+    activitySlugs,
+  }: {
+    state: string;
+    stateSlug: string;
+    city: string;
+    citySlug: string;
+    lat?: number;
+    lng?: number;
+    heroImage?: string;
+    activitySlugs: string[];
+  },
+) => {
+  if (!state || !city || state === "Unknown" || city === "Unknown") {
+    return;
+  }
+
+  const stateEntry =
+    stateMap.get(stateSlug) ??
+    (() => {
+      const next = { name: state, slug: stateSlug, cities: new Map() };
+      stateMap.set(stateSlug, next);
+      return next;
+    })();
+
+  const cityEntry =
+    stateEntry.cities.get(citySlug) ??
+    (() => {
+      const next: CitySeed = {
+        name: city,
+        slug: citySlug,
+        stateName: state,
+        stateSlug,
+        latValues: [],
+        lngValues: [],
+        heroImages: new Set(),
+        activitySlugs: new Set(),
+      };
+      stateEntry.cities.set(citySlug, next);
+      return next;
+    })();
+
+  if (typeof lat === "number") {
+    cityEntry.latValues.push(lat);
+  }
+  if (typeof lng === "number") {
+    cityEntry.lngValues.push(lng);
+  }
+  if (heroImage) {
+    cityEntry.heroImages.add(heroImage);
+  }
+  activitySlugs.forEach((slug) => cityEntry.activitySlugs.add(slug));
+};
+
+const buildAverageCoordinate = (values: number[]) => {
+  const valid = values.filter((value) => Number.isFinite(value));
+  if (!valid.length) {
+    return Number.NaN;
+  }
+  const sum = valid.reduce((total, value) => total + value, 0);
+  return sum / valid.length;
+};
+
+const buildActivityTags = (slugs: string[]) =>
+  slugs.length ? slugs : ["cycling", "hiking", "canoeing"];
+
+const buildThingsToDo = (cityName: string, tags: string[]) => {
+  const items = [
+    ...tags.map((tag) => {
+      if (tag === "cycling") {
+        return `Ride a scenic bike loop around ${cityName}.`;
+      }
+      if (tag === "canoeing") {
+        return `Plan a paddle or canoe outing near ${cityName}.`;
+      }
+      return `Hike a scenic trail with views around ${cityName}.`;
+    }),
+    `Explore a local park or nature preserve near ${cityName}.`,
+    `Catch golden hour at a nearby viewpoint.`,
+    `Stroll a waterfront trail or greenway in ${cityName}.`,
+  ];
+
+  return Array.from(new Set(items)).slice(0, 5);
+};
+
+const buildCityNarrative = (city: CitySeed) => {
+  const activityTags = buildActivityTags(Array.from(city.activitySlugs));
+  const activityList = activityTags.join(", ");
+  const heroImages = Array.from(city.heroImages).slice(0, 3);
+  const heroImagesWithFallback =
+    heroImages.length > 0 ? heroImages : [PLACEHOLDER_IMAGE];
+  const lat = buildAverageCoordinate(city.latValues);
+  const lng = buildAverageCoordinate(city.lngValues);
+
+  return {
+    name: city.name,
+    slug: city.slug,
+    stateSlug: city.stateSlug,
+    region: "Northeast",
+    lat,
+    lng,
+    shortDescription: `Guided adventures, scenic routes, and outdoor escapes around ${city.name}.`,
+    intro: `${city.name} is a strong basecamp for ${activityList} in ${city.stateName}.`,
+    heroImages: heroImagesWithFallback,
+    activityTags,
+    whereItIs: [
+      `${city.name} sits within ${city.stateName}, offering quick access to trailheads, waterfront paths, and local parks.`,
+      `Travelers can mix guided tours with self-guided exploration, using ${city.name} as a comfortable launch point for day trips.`,
+    ],
+    experiences: {
+      mountains: `Seek out ridge walks and lookout points just outside ${city.name}.`,
+      lakesWater: `Plan a calm-water paddle or lakeside stroll near ${city.name}.`,
+      desertForest: `Nearby forests and greenways around ${city.name} provide easy escape time in nature.`,
+      cycling: `Bike paths and guided rides offer a relaxed way to explore ${city.name}.`,
+      scenicDrives: `Short scenic drives from ${city.name} reveal overlooks and seasonal color.`,
+      seasonalNotes: `Spring and fall deliver mild temperatures and crisp skies around ${city.name}.`,
+    },
+    thingsToDo: buildThingsToDo(city.name, activityTags),
+    toursCopy: [
+      `Plan a half-day tour to get oriented with ${city.name}'s outdoor highlights.`,
+      `Pair a guided adventure with free time for local food and neighborhoods.`,
+      `Use activity filters to compare ${activityList} departures in ${city.name}.`,
+    ],
+    weekendItinerary: {
+      dayOne: [
+        `Morning: grab coffee in ${city.name} and start a guided tour.`,
+        `Afternoon: unwind on a waterfront path or shaded trail.`,
+        `Evening: explore downtown ${city.name} for dinner.`,
+      ],
+      dayTwo: [
+        `Morning: hit a scenic trail or bike path.`,
+        `Afternoon: visit a nearby park or market.`,
+        `Evening: finish with a sunset viewpoint or easy stroll.`,
+      ],
+    },
+    gettingThere: [
+      `Fly or drive into ${city.name}, then use rideshare or a rental car to reach trailheads.`,
+      `Many tours depart from central pickup points near downtown ${city.name}.`,
+    ],
+    faq: [
+      {
+        question: `When is the best time to visit ${city.name}?`,
+        answer: `Late spring through early fall delivers the best weather for outdoor activities in ${city.name}.`,
+      },
+      {
+        question: `Do I need to book tours in advance?`,
+        answer:
+          "Popular departures fill quickly, so reserving ahead is recommended for peak travel dates.",
+      },
+    ],
+  };
+};
+
+const buildStateNarrative = (state: StateSeed) => {
+  const cities = Array.from(state.cities.values()).map((city) =>
+    buildCityNarrative(city),
+  );
+  const heroImage = cities[0]?.heroImages?.[0] ?? PLACEHOLDER_IMAGE;
+
+  return {
+    slug: state.slug,
+    name: state.name,
+    description: `Outdoor experiences across ${state.name}.`,
+    featuredDescription: `Plan hiking, cycling, and canoeing escapes across ${state.name}'s Northeast landscapes.`,
+    heroImage,
+    intro: `Plan multi-activity getaways across ${state.name} with guided tours and local experts.`,
+    longDescription: `${state.name} delivers a mix of easy access trail networks, scenic drives, and waterside adventures. Use a city basecamp to mix guided tours with free exploration, keeping the itinerary flexible while you explore the best of the region.\n\nAs tour inventory grows, each city in ${state.name} will highlight its local specialties so travelers can book with confidence.`,
+    topRegions: [
+      {
+        title: "Trail networks",
+        description: `Find day hikes, scenic lookouts, and local parks across ${state.name}.`,
+      },
+      {
+        title: "Waterways",
+        description: `Paddling routes and calm water escapes are easy to reach in ${state.name}.`,
+      },
+      {
+        title: "Scenic drives",
+        description: `Short drives from city centers reveal iconic views and seasonal highlights.`,
+      },
+    ],
+    cities,
+  };
+};
 
 export const normalizeBookingUrl = (rawUrl: string) => {
   let parsedUrl: URL;
@@ -203,20 +564,49 @@ const normalizeCalendarUrl = (rawUrl: string) => {
 
 const rowToTour = (
   row: Record<string, string>,
-  activitySlug: string,
+  activitySlug: string | undefined,
+  logPrefix: string,
 ): Tour => {
   const destination = parseLocation(row.location);
-  const tags = parseTags(row.tags);
-  const itemId = row.item_id.trim();
-  const title = row.item_name.trim() || "Untitled Tour";
+  const tags = parseTags(row.tags || "");
+  const itemId = row.item_id?.trim() ?? "";
+  const title = row.item_name?.trim() || "Untitled Tour";
+  const operator =
+    row.operator?.trim() ||
+    row.company_name?.trim() ||
+    row.company_shortname?.trim();
+  const shortDescription = row.short_description?.trim();
+  const explicitCategory = row.category?.trim();
   const slugBase = slugify(title);
-  const slug = `${slugBase}-${itemId}`;
-  const calendarLink = row.calendar_link.trim();
-  const bookingUrl = (calendarLink || row.regular_link).trim();
+  const slug = itemId
+    ? `${slugBase}-${itemId}`
+    : `${slugBase}-${destination.citySlug}`;
+  const calendarLink = row.calendar_link?.trim() ?? "";
+  const bookingUrl = (
+    row.booking_url ||
+    calendarLink ||
+    row.regular_link ||
+    ""
+  ).trim();
   const availabilityCount = parseNumber(row.availability_count);
   const qualityScore = parseNumber(row.quality_score);
   const latitude = parseNumber(row.location_lat);
   const longitude = parseNumber(row.location_long);
+  const { activitySlugs, primaryCategory } = resolveActivitySlugs({
+    fallbackActivity: activitySlug,
+    explicitCategory,
+    title,
+    shortDescription,
+    tags,
+    logPrefix,
+  });
+  const idSource = row.id?.trim() || itemId;
+  const idFallback = slugify(
+    [title, destination.city, operator].filter(Boolean).join(" "),
+  );
+  const id = idSource
+    ? `${slugify(operator ?? title)}-${idSource}`
+    : idFallback || slugBase;
 
   if (!bookingUrl) {
     throw new Error(`Missing booking URL for item ${row.item_id} (${title}).`);
@@ -231,16 +621,21 @@ const rowToTour = (
     typeof availabilityCount === "number" && availabilityCount <= 30;
 
   return {
-    id: `${row.company_shortname}-${itemId}`,
+    id,
     slug,
     title,
+    shortDescription,
+    operator,
+    categories: activitySlugs,
+    primaryCategory,
+    tags,
     destination: {
       ...destination,
       lat: latitude,
       lng: longitude,
     },
-    heroImage: row.image_url || PLACEHOLDER_IMAGE,
-    galleryImages: row.image_url ? [row.image_url] : [],
+    heroImage: row.image_url?.trim() || PLACEHOLDER_IMAGE,
+    galleryImages: row.image_url?.trim() ? [row.image_url.trim()] : [],
     badges: {
       rating: buildRating(qualityScore),
       reviewCount: availabilityCount,
@@ -248,7 +643,7 @@ const rowToTour = (
       tagline: tags[0],
     },
     tagPills: tags.slice(0, 3),
-    activitySlugs: mapActivitySlugs(activitySlug),
+    activitySlugs,
     bookingProvider: "fareharbor",
     bookingUrl: normalizedBookingUrl,
     bookingWidgetUrl: normalizedCalendarLink,
@@ -271,20 +666,35 @@ export const toursGenerated: Tour[] = ${JSON.stringify(tours, null, 2)};
 
 const run = async () => {
   const files = new Set(await readdir(DATA_DIR));
-  const csvFiles = CATEGORY_FILES.filter((entry) =>
+  const categoryCsvFiles = CATEGORY_FILES.filter((entry) =>
     files.has(entry.filename),
+  ).map((entry) => ({
+    source: entry.filename,
+    activitySlug: entry.activitySlug,
+    csvPath: path.join(DATA_DIR, entry.filename),
+    isNortheast: false,
+  }));
+  const northeastCsvFiles = (await listCsvFiles(NORTHEAST_DIR)).map(
+    (csvPath) => ({
+      source: path.relative(DATA_DIR, csvPath),
+      activitySlug: undefined,
+      csvPath,
+      isNortheast: true,
+    }),
   );
+  const csvFiles = [...categoryCsvFiles, ...northeastCsvFiles];
 
   if (!csvFiles.length) {
     throw new Error(
-      `No category CSV files found in ${DATA_DIR}. Expected: ${CATEGORY_FILES.map(
+      `No CSV files found in ${DATA_DIR}. Expected category files: ${CATEGORY_FILES.map(
         (entry) => entry.filename,
-      ).join(", ")}`,
+      ).join(", ")}.`,
     );
   }
 
   const tours: Tour[] = [];
   const skippedRows: string[] = [];
+  const northeastSeeds = new Map<string, StateSeed>();
   const seenItems = new Map<
     string,
     {
@@ -297,15 +707,23 @@ const run = async () => {
     }
   >();
 
-  for (const { filename, activitySlug } of csvFiles) {
-    const csvPath = path.join(DATA_DIR, filename);
+  for (const { source, activitySlug, csvPath, isNortheast } of csvFiles) {
     const contents = await readFile(csvPath, "utf8");
     const { header, records } = parseCsv(contents);
     const missingColumns = requiredColumnsMissing(header);
+    const missingOptionalColumns = optionalColumnsMissing(header);
 
     if (missingColumns.length) {
       throw new Error(
-        `${filename} is missing required columns: ${missingColumns.join(", ")}`,
+        `${source} is missing required columns: ${missingColumns.join(", ")}`,
+      );
+    }
+
+    if (missingOptionalColumns.length) {
+      console.warn(
+        `[import] ${source} is missing optional columns: ${missingOptionalColumns.join(
+          ", ",
+        )}`,
       );
     }
 
@@ -316,26 +734,25 @@ const run = async () => {
       const missingFields: string[] = [];
       const location = row.location?.trim() ?? "";
       const { state, city } = parseLocation(location);
-      const bookingUrl = (row.calendar_link || row.regular_link || "").trim();
+      const bookingUrl = (
+        row.booking_url ||
+        row.calendar_link ||
+        row.regular_link ||
+        ""
+      ).trim();
 
-      if (!row.item_id?.trim()) {
-        missingFields.push("item_id");
-      }
       if (!row.item_name?.trim()) {
         missingFields.push("title");
       }
       if (!location || state === "Unknown" || city === "Unknown") {
         missingFields.push("city/state");
       }
-      if (!row.image_url?.trim()) {
-        missingFields.push("image_url");
-      }
       if (!bookingUrl) {
         missingFields.push("booking_url");
       }
 
       if (missingFields.length) {
-        const message = `${filename}: ${rowIdentifier} missing ${missingFields.join(
+        const message = `${source}: ${rowIdentifier} missing ${missingFields.join(
           ", ",
         )}`;
         console.warn(`[import] Skipping ${message}`);
@@ -343,9 +760,15 @@ const run = async () => {
         return;
       }
 
-      const itemKey = `${row.company_shortname}-${row.item_id}`;
+      const itemKey = row.item_id?.trim()
+        ? `${row.company_shortname}-${row.item_id}`
+        : slugify(
+            [row.item_name, row.location, row.company_shortname]
+              .filter(Boolean)
+              .join(" "),
+          );
       const nextSnapshot = {
-        source: filename,
+        source,
         location: row.location,
         title: row.item_name,
         calendarLink: row.calendar_link,
@@ -363,7 +786,7 @@ const run = async () => {
           previousSnapshot.imageUrl !== nextSnapshot.imageUrl;
 
         if (hasConflict) {
-          const message = `${filename}: ${itemKey} conflicts with ${previousSnapshot.source}`;
+          const message = `${source}: ${itemKey} conflicts with ${previousSnapshot.source}`;
           console.warn(`[import] Skipping ${message}`);
           skippedRows.push(message);
         }
@@ -372,11 +795,26 @@ const run = async () => {
 
       seenItems.set(itemKey, nextSnapshot);
       try {
-        tours.push(rowToTour(row, activitySlug));
+        const logPrefix = `${source}: ${rowIdentifier}`;
+        const tour = rowToTour(row, activitySlug, logPrefix);
+        tours.push(tour);
+
+        if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
+          addNortheastSeed(northeastSeeds, {
+            state,
+            stateSlug: tour.destination.stateSlug,
+            city,
+            citySlug: tour.destination.citySlug,
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
+            heroImage: tour.heroImage,
+            activitySlugs: tour.activitySlugs,
+          });
+        }
       } catch (error) {
         const message =
           error instanceof Error ? error.message : "Unknown error";
-        const warning = `${filename}: ${message}`;
+        const warning = `${source}: ${message}`;
         console.warn(`[import] Skipping ${warning}`);
         skippedRows.push(warning);
       }
@@ -389,8 +827,27 @@ const run = async () => {
     );
   }
 
+  const northeastStates = Array.from(northeastSeeds.values()).map((state) =>
+    buildStateNarrative(state),
+  );
+
   await writeGeneratedFile(tours);
-  console.log(`Generated ${tours.length} tours.`);
+  await writeFile(
+    NORTHEAST_OUTPUT_PATH,
+    `import type { StateDestination } from "./destinations";
+
+// This file is auto-generated by scripts/import-tours-from-csv.ts. Do not edit manually.
+export const northeastStates: StateDestination[] = ${JSON.stringify(
+      northeastStates,
+      null,
+      2,
+    )};
+`,
+    "utf8",
+  );
+  console.log(
+    `Generated ${tours.length} tours and ${northeastStates.length} northeast states.`,
+  );
 };
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

@@ -3,9 +3,9 @@ import { describe, expect, it } from "vitest";
 import { normalizeBookingUrl } from "./import-tours-from-csv";
 
 describe("normalizeBookingUrl", () => {
-  it("forces branding=no and affiliate params for FareHarbor URLs", () => {
+  it("adds branding=no when missing and preserves existing params", () => {
     const input =
-      "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=old&ref=old&branding=yes&bookable-only=yes";
+      "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes";
     const normalized = normalizeBookingUrl(input);
     const url = new URL(normalized);
 
@@ -14,6 +14,16 @@ describe("normalizeBookingUrl", () => {
     expect(url.searchParams.get("asn-ref")).toBe("alloutdooradventures");
     expect(url.searchParams.get("ref")).toBe("alloutdooradventures");
     expect(url.searchParams.get("bookable-only")).toBe("yes");
+  });
+
+  it("keeps existing branding params intact", () => {
+    const input =
+      "https://fareharbor.com/embeds/book/red-jeep/items/34849/?branding=yes&asn=fhdn";
+    const normalized = normalizeBookingUrl(input);
+    const url = new URL(normalized);
+
+    expect(url.searchParams.get("branding")).toBe("yes");
+    expect(url.searchParams.get("asn")).toBe("fhdn");
   });
 
   it("preserves non-FareHarbor URLs", () => {

@@ -22,6 +22,11 @@ export type Tour = {
   id: string;
   slug: string;
   title: string;
+  shortDescription?: string;
+  operator?: string;
+  tags?: string[];
+  categories?: string[];
+  primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
   galleryImages?: string[];

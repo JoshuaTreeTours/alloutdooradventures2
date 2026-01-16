@@ -127,44 +127,55 @@ Tours are now powered by a single data source that is generated at build time.
 
 ### How to add/edit tours via CSV
 
-1. Drop a CSV file into `/data` (for example: `data/California.csv`).
-2. Run `npm run prebuild` (or `npx tsx scripts/import-tours-from-csv.ts`) to regenerate `src/data/tours.generated.ts`.
+1. Drop a CSV file into `/data` or `data/northeast` (nested folders are supported under `data/northeast`).
+2. Run `npm run prebuild` (or `npx tsx scripts/import-tours-from-csv.ts`) to regenerate `src/data/tours.generated.ts` and `src/data/northeast.generated.ts`.
 3. Build/deploy as usual.
 
 **Please implement CSV parsing at build time (prebuild) so it works on Vercel without needing a backend.**
 
 #### Required CSV columns
 
-* `company_name`
-* `company_shortname`
 * `location`
-* `item_id`
 * `item_name`
-* `tags`
-* `image_url`
-* `calendar_link`
-* `regular_link`
-* `availability_count`
-* `quality_score`
 
 #### Optional columns
 
-Any other CSV columns will be ignored by the importer (they can be added later as needed).
+* `item_id`
+* `company_name`
+* `company_shortname`
+* `category`
+* `tags`
+* `image_url`
+* `booking_url`
+* `calendar_link`
+* `regular_link`
+* `short_description`
+* `operator`
+* `availability_count`
+* `quality_score`
 
 #### CSV mapping table
 
 | CSV column | Internal field |
 | --- | --- |
-| `company_shortname` + `item_id` | `id` |
+| `item_id` or `item_name` + `location` + `operator` | `id` |
 | `item_name` | `title` |
 | `item_id` | `slug` (used to keep slugs unique) |
 | `location` | `destination.state`, `destination.city` |
 | `image_url` | `heroImage`, `galleryImages[0]` |
-| `tags` | `tagPills[]`, `badges.tagline`, `activitySlugs[]` |
+| `tags` | `tagPills[]`, `badges.tagline`, `tags[]` |
+| `category` + inferred keywords | `activitySlugs[]`, `primaryCategory` |
+| `short_description` | `shortDescription` |
+| `company_name`/`operator` | `operator` |
 | `quality_score` | `badges.rating` |
 | `availability_count` | `badges.reviewCount`, `badges.likelyToSellOut` |
-| `regular_link` | `bookingUrl` |
+| `booking_url` or `regular_link` | `bookingUrl` |
 | `calendar_link` | `bookingWidgetUrl` |
+
+#### Adding more Northeast CSVs
+
+* Place additional CSVs anywhere under `data/northeast/` (nested folders are fine).
+* The importer will auto-detect them, infer categories (Hiking/Cycling/Canoeing), and build/update Northeast state + city pages automatically on the next `npm run prebuild`.
 
 ### Affiliate disclosure
 

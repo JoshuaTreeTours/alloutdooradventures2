@@ -121,15 +121,15 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
   const cityTours = getToursByCity(state.slug, city.slug);
   const categorizedTours = [
     {
-      title: "Cycling Tours",
-      tours: cityTours.filter((tour) =>
-        tour.activitySlugs.includes("cycling"),
-      ),
-    },
-    {
       title: "Hiking Tours",
       tours: cityTours.filter((tour) =>
         tour.activitySlugs.includes("hiking"),
+      ),
+    },
+    {
+      title: "Cycling Tours",
+      tours: cityTours.filter((tour) =>
+        tour.activitySlugs.includes("cycling"),
       ),
     },
     {
