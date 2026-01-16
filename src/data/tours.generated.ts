@@ -21428,6 +21428,987 @@ export const toursGenerated: Tour[] = [
     "longDescription": "Mission Bay Guided Paddleboard Tour is a curated experience in San Diego, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
   },
   {
+    "id": "eatthisshootthat-247379",
+    "slug": "solvang-food-and-photo-tour-247379",
+    "title": "Solvang Food & Photo Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Solvang",
+      "citySlug": "solvang"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/kUbmRz1oQGmmRcHOV1ft",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/kUbmRz1oQGmmRcHOV1ft"
+    ],
+    "badges": {
+      "rating": 4.4,
+      "reviewCount": 28,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/eatthisshootthat/items/247379/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/eatthisshootthat/items/247379/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Solvang Food & Photo Tour is a curated experience in Solvang, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesantabarbarafoodtours-157635",
+    "slug": "the-original-downtown-santa-barbara-food-tour-157635",
+    "title": "The Original Downtown Santa Barbara Food Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.699806,
+      "lng": 34.420171
+    },
+    "heroImage": "https://cdn.filestackcontent.com/wXGKDDSDQhyHoHQnkQED",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/wXGKDDSDQhyHoHQnkQED"
+    ],
+    "badges": {
+      "rating": 4.3,
+      "reviewCount": 66,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/157635/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/157635/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "The Original Downtown Santa Barbara Food Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "eatthisshootthat-247375",
+    "slug": "funk-zone-food-and-photo-tour-247375",
+    "title": "Funk Zone Food & Photo Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/o15je2L0T961BQj8hM6y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/o15je2L0T961BQj8hM6y"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 50,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/eatthisshootthat/items/247375/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/eatthisshootthat/items/247375/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Funk Zone Food & Photo Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620777",
+    "slug": "coastal-cruise-and-sunset-tour-620777",
+    "title": "Coastal Cruise & Sunset Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/aZUPC7t8QGa8BCbOn48Y"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620777/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620777/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coastal Cruise & Sunset Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620790",
+    "slug": "full-day-island-cruise-620790",
+    "title": "Full Day Island Cruise",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/DdERKY6NTpSKtyyCN09w",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/DdERKY6NTpSKtyyCN09w"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620790/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620790/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Full Day Island Cruise is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620803",
+    "slug": "whale-watching-620803",
+    "title": "Whale Watching",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/4zeuizmRe2pQ8HsOwvAU",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/4zeuizmRe2pQ8HsOwvAU"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Whale Watch"
+    },
+    "tagPills": [
+      "Whale Watch"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620803/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620803/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watching is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620851",
+    "slug": "spear-fishing-620851",
+    "title": "Spear Fishing",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Ujyk3vJHR3fiz2NZXuc9",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Ujyk3vJHR3fiz2NZXuc9"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620851/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620851/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Spear Fishing is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620861",
+    "slug": "foiling-620861",
+    "title": "Foiling",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/7FvwfgHKQ2CZ3jIGcBmk",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/7FvwfgHKQ2CZ3jIGcBmk"
+    ],
+    "badges": {
+      "rating": 3.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Water Activities"
+    },
+    "tagPills": [
+      "Water Activities"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620861/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620861/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Foiling is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620823",
+    "slug": "sport-fishing-620823",
+    "title": "Sport Fishing",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/9OikEBoTy5j82XrQLhdQ",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/9OikEBoTy5j82XrQLhdQ"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Fishing"
+    },
+    "tagPills": [
+      "Fishing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620823/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620823/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sport Fishing is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesantabarbarafoodtours-501957",
+    "slug": "the-original-downtown-food-tour-mini-501957",
+    "title": "The Original Downtown Food Tour (Mini)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.706555,
+      "lng": 34.424563
+    },
+    "heroImage": "https://cdn.filestackcontent.com/40Hj0pzTCSAXKArUUACR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/40Hj0pzTCSAXKArUUACR"
+    ],
+    "badges": {
+      "rating": 3.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "City Tour"
+    },
+    "tagPills": [
+      "City Tour",
+      "Food Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/501957/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/501957/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "The Original Downtown Food Tour (Mini) is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "celebrationsantabarbara-4241",
+    "slug": "coastal-cruise-azure-seas-4241",
+    "title": "Coastal Cruise (Azure Seas)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.698935,
+      "lng": 34.420285
+    },
+    "heroImage": "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 246,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/4241/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/4241/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coastal Cruise (Azure Seas) is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sunsweptsailing-449796",
+    "slug": "santa-barbara-sunset-sail-449796",
+    "title": "Santa Barbara Sunset Sail",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.6931225,
+      "lng": 34.403629099999996
+    },
+    "heroImage": "https://cdn.filestackcontent.com/AffuY1RgSSOXJuk5KmKp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/AffuY1RgSSOXJuk5KmKp"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 722,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour",
+      "Sailing"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449796/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449796/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Santa Barbara Sunset Sail is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesantabarbarafoodtours-303239",
+    "slug": "the-santa-barbara-taco-tour-303239",
+    "title": "The Santa Barbara Taco Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Cabd5fGlRWP1tjMaOCSm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Cabd5fGlRWP1tjMaOCSm"
+    ],
+    "badges": {
+      "rating": 3.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Rentals"
+    },
+    "tagPills": [
+      "Rentals"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/303239/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/303239/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "The Santa Barbara Taco Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "maddogsenglishmen-464867",
+    "slug": "montecito-coastline-dog-friendly-electric-bike-and-sidecar-guided-tour-464867",
+    "title": "Montecito Coastline Dog Friendly Electric Bike and Sidecar Guided Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/ni4aC3fSeW3tHkLViOh7",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/ni4aC3fSeW3tHkLViOh7"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 0,
+      "likelyToSellOut": true
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/maddogsenglishmen/items/464867/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/maddogsenglishmen/items/464867/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Montecito Coastline Dog Friendly Electric Bike and Sidecar Guided Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sunsweptsailing-449804",
+    "slug": "coastal-adventure-449804",
+    "title": "Coastal Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.6931225,
+      "lng": 34.403629099999996
+    },
+    "heroImage": "https://cdn.filestackcontent.com/mc2F6C5IR4eJpMg3azdm",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/mc2F6C5IR4eJpMg3azdm"
+    ],
+    "badges": {
+      "rating": 3.6,
+      "reviewCount": 2101,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449804/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449804/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Coastal Adventure is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sunsweptsailing-449817",
+    "slug": "santa-barbara-harbor-and-waterfront-tour-449817",
+    "title": "Santa Barbara Harbor and Waterfront Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.6931225,
+      "lng": 34.403629099999996
+    },
+    "heroImage": "https://cdn.filestackcontent.com/vFHUDNt9SFSCsRa8adxS",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/vFHUDNt9SFSCsRa8adxS"
+    ],
+    "badges": {
+      "rating": 3.5,
+      "reviewCount": 712,
+      "likelyToSellOut": false,
+      "tagline": "Boat Rental"
+    },
+    "tagPills": [
+      "Boat Rental",
+      "Boat Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449817/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449817/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Santa Barbara Harbor and Waterfront Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "isurfschool-336389",
+    "slug": "e-foil-lessons-336389",
+    "title": "E-Foil Lessons",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Carpinteria",
+      "citySlug": "carpinteria",
+      "lat": -119.52851,
+      "lng": 34.395329
+    },
+    "heroImage": "https://cdn.filestackcontent.com/112RdkpQrSAllUs4ojHW",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/112RdkpQrSAllUs4ojHW"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Surf"
+    },
+    "tagPills": [
+      "Surf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/isurfschool/items/336389/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/isurfschool/items/336389/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "E-Foil Lessons is a curated experience in Carpinteria, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesantabarbarafoodtours-354419",
+    "slug": "wine-and-walking-tour-santa-barbara-354419",
+    "title": "Wine & Walking Tour Santa Barbara",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Pz1ymZmT1qtraW4grqp4",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Pz1ymZmT1qtraW4grqp4"
+    ],
+    "badges": {
+      "rating": 3.3,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "History Tour",
+      "Walking Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/354419/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/354419/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Wine & Walking Tour Santa Barbara is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "rootedvinetours-4364",
+    "slug": "private-wine-tour-4364",
+    "title": "Private Wine Tour",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://www.filepicker.io/api/file/YDoSTY9jRQXLYUvq246B",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/YDoSTY9jRQXLYUvq246B"
+    ],
+    "badges": {
+      "rating": 3,
+      "reviewCount": 173,
+      "likelyToSellOut": false,
+      "tagline": "Food Tour"
+    },
+    "tagPills": [
+      "Food Tour",
+      "Transportation",
+      "Winery"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/4364/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/4364/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Private Wine Tour is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "rootedvinetours-4363",
+    "slug": "santa-barbara-wine-country-tour-shared-tour-4363",
+    "title": "Santa Barbara Wine Country Tour  (Shared Tour)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://www.filepicker.io/api/file/cFn5sb9bSGGHNk8cKQZm",
+    "galleryImages": [
+      "https://www.filepicker.io/api/file/cFn5sb9bSGGHNk8cKQZm"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 175,
+      "likelyToSellOut": false,
+      "tagline": "Winery"
+    },
+    "tagPills": [
+      "Winery"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/4363/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/4363/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Santa Barbara Wine Country Tour  (Shared Tour) is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "sunsweptsailing-449815",
+    "slug": "whale-watching-449815",
+    "title": "Whale Watching",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.6931225,
+      "lng": 34.403629099999996
+    },
+    "heroImage": "https://cdn.filestackcontent.com/KunjyMBsQwW1OZMtVIuh",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/KunjyMBsQwW1OZMtVIuh"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 1070,
+      "likelyToSellOut": false
+    },
+    "tagPills": [],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449815/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/sunsweptsailing/items/449815/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Whale Watching is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "rootedvinetours-490109",
+    "slug": "corporate-wine-tours-and-team-building-490109",
+    "title": "Corporate Wine Tours & Team Building",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/SoFqeF2XRAK9xN5hJHLM",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/SoFqeF2XRAK9xN5hJHLM"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Wine"
+    },
+    "tagPills": [
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/490109/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/490109/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Corporate Wine Tours & Team Building is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "portugalfarmexperience-611821",
+    "slug": "lourinh-wine-tasting-tour---3-wines-611821",
+    "title": "Lourinhã Wine Tasting Tour - 3 Wines",
+    "destination": {
+      "state": "Lisboa",
+      "stateSlug": "lisboa",
+      "city": "Santa Bárbara",
+      "citySlug": "santa-brbara",
+      "lat": -9.313678,
+      "lng": 39.195739
+    },
+    "heroImage": "https://cdn.filestackcontent.com/x8MuFTOuQZuQkAtnuzMp",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/x8MuFTOuQZuQkAtnuzMp"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 447,
+      "likelyToSellOut": false,
+      "tagline": "Farm"
+    },
+    "tagPills": [
+      "Farm",
+      "Winery",
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/611821/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/611821/calendar/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lourinhã Wine Tasting Tour - 3 Wines is a curated experience in Santa Bárbara, Lisboa designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "portugalfarmexperience-612227",
+    "slug": "lourinh-wine-tasting-tour---6-wines-612227",
+    "title": "Lourinhã Wine Tasting Tour - 6 Wines",
+    "destination": {
+      "state": "Lisboa",
+      "stateSlug": "lisboa",
+      "city": "Santa Bárbara",
+      "citySlug": "santa-brbara",
+      "lat": -9.313678,
+      "lng": 39.195739
+    },
+    "heroImage": "https://cdn.filestackcontent.com/YyVCkAI3So6hioLNeC73",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/YyVCkAI3So6hioLNeC73"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 447,
+      "likelyToSellOut": false,
+      "tagline": "Farm"
+    },
+    "tagPills": [
+      "Farm",
+      "Winery",
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/612227/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/612227/calendar/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lourinhã Wine Tasting Tour - 6 Wines is a curated experience in Santa Bárbara, Lisboa designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "portugalfarmexperience-612241",
+    "slug": "lourinh-picnic-winery-experience-612241",
+    "title": "Lourinhã Picnic Winery Experience",
+    "destination": {
+      "state": "Lisboa",
+      "stateSlug": "lisboa",
+      "city": "Santa Bárbara",
+      "citySlug": "santa-brbara",
+      "lat": -9.313678,
+      "lng": 39.195739
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Lsb2mus8RiunMTblSo89",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Lsb2mus8RiunMTblSo89"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 298,
+      "likelyToSellOut": false,
+      "tagline": "Farm"
+    },
+    "tagPills": [
+      "Farm",
+      "Winery",
+      "Wine"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/612241/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/portugalfarmexperience/items/612241/calendar/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Lourinhã Picnic Winery Experience is a curated experience in Santa Bárbara, Lisboa designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "boatcharterssb-620872",
+    "slug": "create-your-own-adventure-620872",
+    "title": "Create Your Own Adventure",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.692438,
+      "lng": 34.40778
+    },
+    "heroImage": "https://cdn.filestackcontent.com/MiZTa8OMQp27FKZzIbz3",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/MiZTa8OMQp27FKZzIbz3"
+    ],
+    "badges": {
+      "rating": 2.9,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Water Activities"
+    },
+    "tagPills": [
+      "Water Activities"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620872/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/boatcharterssb/items/620872/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Create Your Own Adventure is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "tastesantabarbarafoodtours-284350",
+    "slug": "virtual-tour-of-downtown-santa-barbara-284350",
+    "title": "Virtual Tour of Downtown Santa Barbara",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/FKLAT5gOTmeQfmOFpXNV",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/FKLAT5gOTmeQfmOFpXNV"
+    ],
+    "badges": {
+      "rating": 2.8,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "History Tour"
+    },
+    "tagPills": [
+      "History Tour"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/284350/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/tastesantabarbarafoodtours/items/284350/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Virtual Tour of Downtown Santa Barbara is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "celebrationsantabarbara-2387",
+    "slug": "sunset-cruise-azure-seas-2387",
+    "title": "Sunset Cruise (Azure Seas)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara",
+      "lat": -119.698935,
+      "lng": 34.420285
+    },
+    "heroImage": "https://cdn.filestackcontent.com/nRnLXTniSguacDiObXVR",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/nRnLXTniSguacDiObXVR"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 156,
+      "likelyToSellOut": false,
+      "tagline": "Boat Tour"
+    },
+    "tagPills": [
+      "Boat Tour",
+      "Events"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/2387/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/2387/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Sunset Cruise (Azure Seas) is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "rootedvinetours-5525",
+    "slug": "transportation-only-non-tour-driver-for-hire-service-5525",
+    "title": "Transportation Only (Non-Tour/ Driver For Hire Service)",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Santa Barbara",
+      "citySlug": "santa-barbara"
+    },
+    "heroImage": "https://cdn.filestackcontent.com/zwAduZidTnaQImuAOnto",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/zwAduZidTnaQImuAOnto"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 179,
+      "likelyToSellOut": false,
+      "tagline": "Service"
+    },
+    "tagPills": [
+      "Service"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/5525/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/rootedvinetours/items/5525/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "Transportation Only (Non-Tour/ Driver For Hire Service) is a curated experience in Santa Barbara, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
+    "id": "isurfschool-260766",
+    "slug": "vsl-group-lesson-260766",
+    "title": "VSL Group Lesson",
+    "destination": {
+      "state": "California",
+      "stateSlug": "california",
+      "city": "Ventura",
+      "citySlug": "ventura",
+      "lat": -119.293126,
+      "lng": 34.280841
+    },
+    "heroImage": "https://cdn.filestackcontent.com/Ws24x7cRIWmWr0H83nFw",
+    "galleryImages": [
+      "https://cdn.filestackcontent.com/Ws24x7cRIWmWr0H83nFw"
+    ],
+    "badges": {
+      "rating": 2.7,
+      "reviewCount": 0,
+      "likelyToSellOut": true,
+      "tagline": "Surf"
+    },
+    "tagPills": [
+      "Surf"
+    ],
+    "activitySlugs": [
+      "detours"
+    ],
+    "bookingProvider": "fareharbor",
+    "bookingUrl": "https://fareharbor.com/embeds/book/isurfschool/items/260766/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "bookingWidgetUrl": "https://fareharbor.com/embeds/book/isurfschool/items/260766/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    "longDescription": "VSL Group Lesson is a curated experience in Ventura, California designed for travelers who want a guided, outdoors-first outing.\n\nExpect local insights, well-paced stops, and an itinerary that balances adventure with comfort. Your guide handles the logistics so you can focus on the scenery."
+  },
+  {
     "id": "red-jeep-34849",
     "slug": "shared-san-andreas-fault-jeep-tour-34849",
     "title": "Shared San Andreas Fault Jeep Tour",

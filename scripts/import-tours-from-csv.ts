@@ -13,6 +13,7 @@ const CATEGORY_FILES = [
   { filename: "canoeing.csv", activitySlug: "canoeing" },
   { filename: "san-francisco.csv", activitySlug: "detours" },
   { filename: "san-diego.csv", activitySlug: "detours" },
+  { filename: "santa-barbara.csv", activitySlug: "detours" },
   { filename: "palm-springs.csv", activitySlug: "detours" },
   { filename: "joshua-tree.csv", activitySlug: "detours" },
 ] as const;
