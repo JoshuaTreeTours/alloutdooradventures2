@@ -7,6 +7,7 @@ import type { Tour } from "../src/data/tours.types";
 const DATA_DIR = path.resolve("data");
 const NORTHEAST_DIR = path.resolve("data/northeast");
 const DEEP_SOUTH_DIR = path.resolve("data/deep-south");
+const HEARTLAND_DIR = path.resolve("data/heartland");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const NORTHEAST_OUTPUT_PATH = path.resolve("src/data/northeast.generated.ts");
 const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
@@ -191,6 +192,43 @@ const parseCsv = (contents: string) => {
   });
 
   return { header, records };
+};
+
+const parseCsvRow = (row: Record<string, string>) => {
+  const location = row.location?.trim() ?? "";
+  const itemId = row.item_id?.trim() ?? "";
+  const title = row.item_name?.trim() || "Untitled Tour";
+  const operator =
+    row.operator?.trim() ||
+    row.company_name?.trim() ||
+    row.company_shortname?.trim();
+  const shortDescription = row.short_description?.trim();
+  const explicitCategory = row.category?.trim();
+  const calendarLink = row.calendar_link?.trim() ?? "";
+  const bookingUrl = (
+    row.booking_url ||
+    calendarLink ||
+    row.regular_link ||
+    ""
+  ).trim();
+
+  return {
+    location,
+    itemId,
+    title,
+    operator,
+    shortDescription,
+    explicitCategory,
+    tags: parseTags(row.tags || ""),
+    calendarLink,
+    bookingUrl,
+    availabilityCount: parseNumber(row.availability_count),
+    qualityScore: parseNumber(row.quality_score),
+    latitude: parseNumber(row.location_lat),
+    longitude: parseNumber(row.location_long),
+    heroImage: row.image_url?.trim() || PLACEHOLDER_IMAGE,
+    idSource: row.id?.trim() || itemId,
+  };
 };
 
 const parseLocation = (location: string) => {
@@ -523,6 +561,29 @@ const buildStateNarrative = (state: StateSeed, regionName: string) => {
   };
 };
 
+const sanitizeFareHarborUrl = (parsedUrl: URL, rawUrl: string) => {
+  const calendarMatch = parsedUrl.pathname.match(
+    /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+  );
+  const bookCalendarMatch = parsedUrl.pathname.match(
+    /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/,
+  );
+  const itemMatch = parsedUrl.pathname.match(/\/items\/(\d+)/);
+  if (!itemMatch?.[1]) {
+    throw new Error(`FareHarbor URL missing item id: ${rawUrl}`);
+  }
+
+  if (calendarMatch?.[1] && calendarMatch?.[2]) {
+    parsedUrl.pathname = `/embeds/book/${calendarMatch[1]}/items/${calendarMatch[2]}/`;
+  } else if (bookCalendarMatch?.[1] && bookCalendarMatch?.[2]) {
+    parsedUrl.pathname = `/embeds/book/${bookCalendarMatch[1]}/items/${bookCalendarMatch[2]}/`;
+  }
+
+  if (!parsedUrl.searchParams.has("branding")) {
+    parsedUrl.searchParams.append("branding", "no");
+  }
+};
+
 export const normalizeBookingUrl = (rawUrl: string) => {
   let parsedUrl: URL;
   try {
@@ -532,26 +593,7 @@ export const normalizeBookingUrl = (rawUrl: string) => {
   }
 
   if (parsedUrl.hostname === "fareharbor.com") {
-    const calendarMatch = parsedUrl.pathname.match(
-      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
-    );
-    const bookCalendarMatch = parsedUrl.pathname.match(
-      /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/,
-    );
-    const itemMatch = parsedUrl.pathname.match(/\/items\/(\d+)/);
-    if (!itemMatch?.[1]) {
-      throw new Error(`FareHarbor URL missing item id: ${rawUrl}`);
-    }
-
-    if (calendarMatch?.[1] && calendarMatch?.[2]) {
-      parsedUrl.pathname = `/embeds/book/${calendarMatch[1]}/items/${calendarMatch[2]}/`;
-    } else if (bookCalendarMatch?.[1] && bookCalendarMatch?.[2]) {
-      parsedUrl.pathname = `/embeds/book/${bookCalendarMatch[1]}/items/${bookCalendarMatch[2]}/`;
-    }
-
-    if (!parsedUrl.searchParams.has("branding")) {
-      parsedUrl.searchParams.append("branding", "no");
-    }
+    sanitizeFareHarborUrl(parsedUrl, rawUrl);
   }
 
   return parsedUrl.toString();
@@ -584,88 +626,69 @@ const rowToTour = (
   activitySlug: string | undefined,
   logPrefix: string,
 ): Tour => {
-  const destination = parseLocation(row.location);
-  const tags = parseTags(row.tags || "");
-  const itemId = row.item_id?.trim() ?? "";
-  const title = row.item_name?.trim() || "Untitled Tour";
-  const operator =
-    row.operator?.trim() ||
-    row.company_name?.trim() ||
-    row.company_shortname?.trim();
-  const shortDescription = row.short_description?.trim();
-  const explicitCategory = row.category?.trim();
-  const slugBase = slugify(title);
-  const slug = itemId
-    ? `${slugBase}-${itemId}`
+  const parsedRow = parseCsvRow(row);
+  const destination = parseLocation(parsedRow.location);
+  const slugBase = slugify(parsedRow.title);
+  const slug = parsedRow.itemId
+    ? `${slugBase}-${parsedRow.itemId}`
     : `${slugBase}-${destination.citySlug}`;
-  const calendarLink = row.calendar_link?.trim() ?? "";
-  const bookingUrl = (
-    row.booking_url ||
-    calendarLink ||
-    row.regular_link ||
-    ""
-  ).trim();
-  const availabilityCount = parseNumber(row.availability_count);
-  const qualityScore = parseNumber(row.quality_score);
-  const latitude = parseNumber(row.location_lat);
-  const longitude = parseNumber(row.location_long);
   const { activitySlugs, primaryCategory } = resolveActivitySlugs({
     fallbackActivity: activitySlug,
-    explicitCategory,
-    title,
-    shortDescription,
-    tags,
+    explicitCategory: parsedRow.explicitCategory,
+    title: parsedRow.title,
+    shortDescription: parsedRow.shortDescription,
+    tags: parsedRow.tags,
     logPrefix,
   });
-  const idSource = row.id?.trim() || itemId;
   const idFallback = slugify(
-    [title, destination.city, operator].filter(Boolean).join(" "),
+    [parsedRow.title, destination.city, parsedRow.operator].filter(Boolean).join(" "),
   );
-  const id = idSource
-    ? `${slugify(operator ?? title)}-${idSource}`
+  const id = parsedRow.idSource
+    ? `${slugify(parsedRow.operator ?? parsedRow.title)}-${parsedRow.idSource}`
     : idFallback || slugBase;
 
-  if (!bookingUrl) {
-    throw new Error(`Missing booking URL for item ${row.item_id} (${title}).`);
+  if (!parsedRow.bookingUrl) {
+    throw new Error(`Missing booking URL for item ${parsedRow.itemId} (${parsedRow.title}).`);
   }
 
-  const normalizedBookingUrl = normalizeBookingUrl(bookingUrl);
-  const normalizedCalendarLink = calendarLink
-    ? normalizeCalendarUrl(calendarLink)
+  const normalizedBookingUrl = normalizeBookingUrl(parsedRow.bookingUrl);
+  const normalizedCalendarLink = parsedRow.calendarLink
+    ? normalizeCalendarUrl(parsedRow.calendarLink)
     : undefined;
 
   const likelyToSellOut =
-    typeof availabilityCount === "number" && availabilityCount <= 30;
+    typeof parsedRow.availabilityCount === "number" &&
+    parsedRow.availabilityCount <= 30;
 
   return {
     id,
     slug,
-    title,
-    shortDescription,
-    operator,
+    title: parsedRow.title,
+    shortDescription: parsedRow.shortDescription,
+    operator: parsedRow.operator,
     categories: activitySlugs,
     primaryCategory,
-    tags,
+    tags: parsedRow.tags,
     destination: {
       ...destination,
-      lat: latitude,
-      lng: longitude,
+      lat: parsedRow.latitude,
+      lng: parsedRow.longitude,
     },
-    heroImage: row.image_url?.trim() || PLACEHOLDER_IMAGE,
+    heroImage: parsedRow.heroImage,
     galleryImages: row.image_url?.trim() ? [row.image_url.trim()] : [],
     badges: {
-      rating: buildRating(qualityScore),
-      reviewCount: availabilityCount,
+      rating: buildRating(parsedRow.qualityScore),
+      reviewCount: parsedRow.availabilityCount,
       likelyToSellOut,
-      tagline: tags[0],
+      tagline: parsedRow.tags[0],
     },
-    tagPills: tags.slice(0, 3),
+    tagPills: parsedRow.tags.slice(0, 3),
     activitySlugs,
     bookingProvider: "fareharbor",
     bookingUrl: normalizedBookingUrl,
     bookingWidgetUrl: normalizedCalendarLink,
     longDescription: buildLongDescription(
-      title,
+      parsedRow.title,
       destination.city,
       destination.state,
     ),
@@ -710,7 +733,19 @@ const run = async () => {
       isDeepSouth: true,
     }),
   );
-  const csvFiles = [...categoryCsvFiles, ...northeastCsvFiles, ...deepSouthCsvFiles];
+  const heartlandCsvFiles = (await listCsvFiles(HEARTLAND_DIR)).map((csvPath) => ({
+    source: path.relative(DATA_DIR, csvPath),
+    activitySlug: undefined,
+    csvPath,
+    isNortheast: false,
+    isDeepSouth: false,
+  }));
+  const csvFiles = [
+    ...categoryCsvFiles,
+    ...northeastCsvFiles,
+    ...deepSouthCsvFiles,
+    ...heartlandCsvFiles,
+  ];
 
   if (!csvFiles.length) {
     throw new Error(
