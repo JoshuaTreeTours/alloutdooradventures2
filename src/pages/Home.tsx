@@ -1,10 +1,18 @@
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  type FocusEvent,
+  type KeyboardEvent,
+} from "react";
 import { Link } from "wouter";
 
-import CollectionGrid from "../components/CollectionGrid";
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
+import TourCard from "../components/TourCard";
 import { featuredDestinations } from "../data/destinations";
+import { getToursByCity } from "../data/tours";
+import type { Tour } from "../data/tours.types";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
 
@@ -27,36 +35,6 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     description: "Worldwide paddle adventures",
     slug: "canoeing",
     image: "/images/canoe-hero.jpg",
-  },
-];
-
-const COLLECTIONS = [
-  {
-    title: "Epic weekend loops",
-    description:
-      "Two- and three-day itineraries that maximize big views without the long haul.",
-    image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-    href: "/destinations?collection=weekend-loops",
-    badge: "3 days",
-  },
-  {
-    title: "Iconic scenic drives",
-    description:
-      "Switchbacks, coastal byways, and sunrise pullouts that define the American West.",
-    image:
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
-    href: "/destinations?collection=scenic-drives",
-    badge: "Road trip",
-  },
-  {
-    title: "Mountain town basecamps",
-    description:
-      "Stay in cozy trail towns with quick access to lakes, peaks, and hot springs.",
-    image:
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-    href: "/destinations?collection=mountain-towns",
-    badge: "Basecamp",
   },
 ];
 
@@ -120,6 +98,73 @@ export default function Home() {
   const [debugResults, setDebugResults] = useState<
     Record<string, { resolvedSrc: string; status?: number; ok?: boolean; error?: string }>
   >({});
+
+  const featuredSantaBarbaraTours = useMemo(
+    () => getToursByCity("california", "santa-barbara").slice(0, 6),
+    []
+  );
+  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [activePage, setActivePage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const featuredTourPages = useMemo(() => {
+    const pages: Tour[][] = [];
+    for (let i = 0; i < featuredSantaBarbaraTours.length; i += itemsPerPage) {
+      pages.push(featuredSantaBarbaraTours.slice(i, i + itemsPerPage));
+    }
+    return pages.length ? pages : [featuredSantaBarbaraTours];
+  }, [featuredSantaBarbaraTours, itemsPerPage]);
+
+  const totalPages = featuredTourPages.length;
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const getResponsiveCount = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) return 3;
+      if (window.matchMedia("(min-width: 640px)").matches) return 2;
+      return 1;
+    };
+    const updateItemsPerPage = () => setItemsPerPage(getResponsiveCount());
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
+  useEffect(() => {
+    setActivePage((prev) => Math.min(prev, totalPages - 1));
+  }, [totalPages]);
+
+  useEffect(() => {
+    if (isPaused || totalPages <= 1) return;
+    const interval = window.setInterval(() => {
+      setActivePage((prev) => (prev + 1) % totalPages);
+    }, 5000);
+    return () => window.clearInterval(interval);
+  }, [isPaused, totalPages]);
+
+  const handlePrevious = () => {
+    setActivePage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  const handleNext = () => {
+    setActivePage((prev) => (prev + 1) % totalPages);
+  };
+
+  const handleCarouselKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      handlePrevious();
+    }
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      handleNext();
+    }
+  };
+
+  const handleCarouselBlur = (event: FocusEvent<HTMLDivElement>) => {
+    if (event.currentTarget.contains(event.relatedTarget)) return;
+    setIsPaused(false);
+  };
 
   useEffect(() => {
     if (typeof window === "undefined" || !isDebugEnabled) return;
@@ -253,12 +298,87 @@ export default function Home() {
           </div>
         </section>
 
-        <CollectionGrid
-          eyebrow="Curated collections"
-          title="Trending tours"
-          description="I’ll be featuring the best-selling tours."
-          items={COLLECTIONS}
-        />
+        <section
+          className="mx-auto max-w-6xl px-6 py-16"
+          aria-label="Featured Santa Barbara tours"
+        >
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+              This week’s specials
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              Featured Santa Barbara Tours
+            </h2>
+          </div>
+
+          <div
+            className="mt-10 flex flex-col gap-6"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onFocusCapture={() => setIsPaused(true)}
+            onBlurCapture={handleCarouselBlur}
+            onKeyDown={handleCarouselKeyDown}
+            tabIndex={0}
+            role="group"
+            aria-roledescription="carousel"
+            aria-label="Featured Santa Barbara tours carousel"
+          >
+            <div className="flex items-center justify-end gap-3">
+              <button
+                type="button"
+                onClick={handlePrevious}
+                aria-label="View previous tours"
+                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-white px-4 py-2 text-sm font-semibold text-[#2f4a2f] shadow-sm transition hover:-translate-y-0.5 hover:shadow"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                onClick={handleNext}
+                aria-label="View next tours"
+                className="inline-flex items-center justify-center rounded-full border border-black/10 bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#294129]"
+              >
+                Next
+              </button>
+            </div>
+
+            <div className="overflow-hidden rounded-3xl">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activePage * 100}%)` }}
+              >
+                {featuredTourPages.map((page, pageIndex) => (
+                  <div
+                    key={`featured-page-${pageIndex}`}
+                    className="w-full flex-shrink-0"
+                    aria-hidden={activePage !== pageIndex}
+                  >
+                    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                      {page.map((tour) => (
+                        <TourCard key={tour.id} tour={tour} />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex justify-center gap-2" role="tablist">
+              {featuredTourPages.map((_, index) => (
+                <button
+                  key={`featured-dot-${index}`}
+                  type="button"
+                  onClick={() => setActivePage(index)}
+                  aria-label={`Go to slide ${index + 1}`}
+                  aria-pressed={activePage === index}
+                  className={`h-2.5 w-2.5 rounded-full transition ${
+                    activePage === index ? "bg-[#2f4a2f]" : "bg-[#c9d4c0]"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* WHY CHOOSE */}
         <section
