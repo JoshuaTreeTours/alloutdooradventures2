@@ -3,7 +3,6 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../data/flagstaffTours";
-import { getSedonaTourDetailPath, sedonaTours } from "../../../data/sedonaTours";
 
 export default function Arizona() {
   return (
@@ -35,29 +34,6 @@ export default function Arizona() {
               key={tour.id}
               tour={tour}
               href={getFlagstaffTourDetailPath(tour)}
-            />
-          ))}
-        </div>
-      </section>
-      <section className="mt-12">
-        <div className="text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-            Sedona tours
-          </span>
-          <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-            Sedona adventures to book now
-          </h2>
-          <p className="mt-3 text-sm md:text-base text-[#405040]">
-            See the curated Sedona tours, from red rock hikes to wine-country
-            outings.
-          </p>
-        </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {sedonaTours.map((tour) => (
-            <TourCard
-              key={tour.id}
-              tour={tour}
-              href={getSedonaTourDetailPath(tour)}
             />
           ))}
         </div>

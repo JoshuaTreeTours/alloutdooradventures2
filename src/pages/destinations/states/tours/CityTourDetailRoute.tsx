@@ -7,7 +7,6 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import { getCityTourConfig } from "../../../../data/cityTourRegistry";
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
@@ -15,6 +14,13 @@ import {
   getToursByCity,
   getTourBySlugs,
 } from "../../../../data/tours";
+import {
+  flagstaffTours,
+  getFlagstaffTourBookingPath,
+  getFlagstaffTourBySlug,
+  getFlagstaffTourDetailPath,
+  getFlagstaffTourSlug,
+} from "../../../../data/flagstaffTours";
 import {
   getActivityLabel,
   getExpandedTourDescription,
@@ -52,9 +58,9 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const cityConfig = getCityTourConfig(city.slug);
-  const tour = cityConfig
-    ? cityConfig.getTourBySlug(params.tourSlug)
+  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
+  const tour = isFlagstaff
+    ? getFlagstaffTourBySlug(params.tourSlug)
     : getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
@@ -78,13 +84,13 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const tourSlug = cityConfig ? cityConfig.getTourSlug(tour) : tour.slug;
-  const relatedTours = (cityConfig
-    ? cityConfig.tours
+  const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
+  const relatedTours = (isFlagstaff
+    ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
   ).filter((item) =>
-    cityConfig
-      ? cityConfig.getTourSlug(item) !== tourSlug
+    isFlagstaff
+      ? getFlagstaffTourSlug(item) !== tourSlug
       : item.slug !== tour.slug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
@@ -159,8 +165,8 @@ export default function CityTourDetailRoute({
           <div className="flex flex-wrap gap-3">
             <Link
               href={
-                cityConfig
-                  ? cityConfig.getTourBookingPath(tour)
+                isFlagstaff
+                  ? getFlagstaffTourBookingPath(tour)
                   : getCityTourBookingPath(tour)
               }
             >
@@ -313,8 +319,8 @@ export default function CityTourDetailRoute({
                   key={related.slug}
                   tour={related}
                   href={
-                    cityConfig
-                      ? cityConfig.getTourDetailPath(related)
+                    isFlagstaff
+                      ? getFlagstaffTourDetailPath(related)
                       : getCityTourDetailPath(related)
                   }
                 />
