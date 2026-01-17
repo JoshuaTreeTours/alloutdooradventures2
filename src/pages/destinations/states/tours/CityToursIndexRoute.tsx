@@ -8,10 +8,7 @@ import {
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
 import { getCityTourDetailPath, getToursByCity } from "../../../../data/tours";
-import {
-  flagstaffTours,
-  getFlagstaffTourDetailPath,
-} from "../../../../data/flagstaffTours";
+import { getCityTourConfig } from "../../../../data/cityTourRegistry";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -42,15 +39,17 @@ export default function CityToursIndexRoute({
     );
   }
 
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tours = isFlagstaff
-    ? flagstaffTours
+  const cityConfig = getCityTourConfig(city.slug);
+  const tours = cityConfig
+    ? cityConfig.tours
     : getToursByCity(state.slug, city.slug);
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const heroImage = city.heroImages[0] ?? "/hero.jpg";
+  const getTourHref = (tour: (typeof tours)[number]) =>
+    cityConfig ? cityConfig.getTourDetailPath(tour) : getCityTourDetailPath(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -98,11 +97,7 @@ export default function CityToursIndexRoute({
               <TourCard
                 key={tour.slug}
                 tour={tour}
-                href={
-                  isFlagstaff
-                    ? getFlagstaffTourDetailPath(tour)
-                    : getCityTourDetailPath(tour)
-                }
+                href={getTourHref(tour)}
               />
             ))}
           </div>

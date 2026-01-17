@@ -1131,7 +1131,7 @@ export const getFlagstaffTourBySlug = (slug: string) =>
   );
 
 export const getFlagstaffTourDetailPath = (tour: Tour) =>
-  `/tours/${getFlagstaffTourSlug(tour)}`;
+  `/tours/flagstaff/${getFlagstaffTourSlug(tour)}`;
 
 export const getFlagstaffTourBookingPath = (tour: Tour) =>
-  `/tours/${getFlagstaffTourSlug(tour)}/book`;
+  `/tours/flagstaff/${getFlagstaffTourSlug(tour)}/book`;
