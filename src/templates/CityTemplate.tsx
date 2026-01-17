@@ -7,12 +7,15 @@ import TourCard from "../components/TourCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import type { City, StateDestination } from "../data/destinations";
+import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
+import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 
 type CityTemplateProps = {
   state: StateDestination;
   city: City;
+  toursOverride?: Tour[];
 };
 
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
@@ -113,13 +116,17 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
   );
 }
 
-export default function CityTemplate({ state, city }: CityTemplateProps) {
+export default function CityTemplate({
+  state,
+  city,
+  toursOverride,
+}: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
-  const cityTours = getToursByCity(state.slug, city.slug);
+  const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
   const categorizedTours = [
     {
       title: "Hiking Tours",
@@ -296,6 +303,31 @@ export default function CityTemplate({ state, city }: CityTemplateProps) {
           </div>
         </div>
       </section>
+
+      {toursOverride && toursOverride.length > 0 && (
+        <section className="mx-auto max-w-6xl px-6 py-14">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Flagstaff tours
+            </span>
+            <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+              Flagstaff adventures to book now
+            </h2>
+            <p className="mt-3 text-sm md:text-base text-[#405040]">
+              Explore the curated set of tours available for Flagstaff.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {toursOverride.map((tour) => (
+              <TourCard
+                key={tour.id}
+                tour={tour}
+                href={getFlagstaffTourDetailPath(tour)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
 
       {categorizedTours.length > 0 && (
         <section className="mx-auto max-w-6xl px-6 py-14">

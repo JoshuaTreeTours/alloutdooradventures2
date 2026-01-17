@@ -4,6 +4,7 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
+import { flagstaffTours } from "../../../data/flagstaffTours";
 
 type CityRouteProps = {
   params: {
@@ -32,5 +33,10 @@ export default function CityRoute({ params }: CityRouteProps) {
     );
   }
 
-  return <CityTemplate state={state} city={city} />;
+  const toursOverride =
+    state.slug === "arizona" && city.slug === "flagstaff"
+      ? flagstaffTours
+      : undefined;
+
+  return <CityTemplate state={state} city={city} toursOverride={toursOverride} />;
 }
