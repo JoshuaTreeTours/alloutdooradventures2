@@ -1,4 +1,5 @@
 import type { BookingProvider, Tour } from "./tours.types";
+import { flagstaffTours } from "./flagstaffTours";
 import { toursGenerated } from "./tours.generated";
 
 type ProviderConfig = {
@@ -598,7 +599,11 @@ const MANUAL_TOURS: Tour[] = [
   },
 ];
 
-export const tours: Tour[] = [...toursGenerated, ...MANUAL_TOURS];
+export const tours: Tour[] = [
+  ...toursGenerated,
+  ...MANUAL_TOURS,
+  ...flagstaffTours,
+];
 
 export const getToursByState = (stateSlug: string) =>
   tours.filter((tour) => tour.destination.stateSlug === stateSlug);
