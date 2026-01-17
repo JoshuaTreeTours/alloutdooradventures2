@@ -1,67 +1,55 @@
 import { Link } from "wouter";
 
-import Image from "../../../../components/Image";
-import TourCard from "../../../../components/TourCard";
-import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
+import Image from "../../components/Image";
+import TourCard from "../../components/TourCard";
+import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
-} from "../../../../data/tourFallbacks";
+} from "../../data/tourFallbacks";
+import { getAffiliateDisclosure } from "../../data/tours";
 import {
-  getAffiliateDisclosure,
-  getCityTourDetailPath,
-  getCityTourBookingPath,
-  getToursByCity,
-  getTourBySlugs,
-} from "../../../../data/tours";
+  getActivityLabel,
+  getExpandedTourDescription,
+  getSkillLevelLabel,
+  getTourReviewSummary,
+} from "../../data/tourNarratives";
 import {
   flagstaffTours,
   getFlagstaffTourBookingPath,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
-} from "../../../../data/flagstaffTours";
-import {
-  getActivityLabel,
-  getExpandedTourDescription,
-  getSkillLevelLabel,
-  getTourReviewSummary,
-} from "../../../../data/tourNarratives";
+} from "../../data/flagstaffTours";
 
-type CityTourDetailRouteProps = {
+type FlagstaffTourDetailRouteProps = {
   params: {
-    stateSlug: string;
-    citySlug: string;
     tourSlug: string;
   };
 };
 
-export default function CityTourDetailRoute({
+export default function FlagstaffTourDetailRoute({
   params,
-}: CityTourDetailRouteProps) {
+}: FlagstaffTourDetailRouteProps) {
   const state =
-    getStateBySlug(params.stateSlug) ??
-    getFallbackStateBySlug(params.stateSlug);
+    getStateBySlug("arizona") ?? getFallbackStateBySlug("arizona");
   const city =
-    getCityBySlugs(params.stateSlug, params.citySlug) ??
-    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
+    getCityBySlugs("arizona", "flagstaff") ??
+    getFallbackCityBySlugs("arizona", "flagstaff");
 
   if (!state || !city) {
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
         <h1 className="text-2xl font-semibold">Tour not found</h1>
         <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that city. Head back to destinations to keep
+          We couldn’t find that destination. Head back to destinations to keep
           exploring.
         </p>
       </main>
     );
   }
 
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tour = isFlagstaff
-    ? getFlagstaffTourBySlug(params.tourSlug)
-    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
+  const tour = getFlagstaffTourBySlug(params.tourSlug);
 
   if (!tour) {
     return (
@@ -72,9 +60,7 @@ export default function CityTourDetailRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${state.slug}/${city.slug}/tours`}
-          >
+          <Link href="/destinations/arizona/flagstaff/tours">
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -84,14 +70,9 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
-  const relatedTours = (isFlagstaff
-    ? flagstaffTours
-    : getToursByCity(state.slug, city.slug)
-  ).filter((item) =>
-    isFlagstaff
-      ? getFlagstaffTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug,
+  const tourSlug = getFlagstaffTourSlug(tour);
+  const relatedTours = flagstaffTours.filter(
+    (item) => getFlagstaffTourSlug(item) !== tourSlug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
@@ -121,9 +102,7 @@ export default function CityTourDetailRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -163,15 +142,9 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={
-                isFlagstaff
-                  ? getFlagstaffTourBookingPath(tour)
-                  : getCityTourBookingPath(tour)
-              }
-            >
+            <Link href={getFlagstaffTourBookingPath(tour)}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                BOOK
+                Book Now
               </a>
             </Link>
             <a
@@ -180,9 +153,7 @@ export default function CityTourDetailRoute({
             >
               Review summary
             </a>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>
@@ -318,11 +289,7 @@ export default function CityTourDetailRoute({
                 <TourCard
                   key={related.slug}
                   tour={related}
-                  href={
-                    isFlagstaff
-                      ? getFlagstaffTourDetailPath(related)
-                      : getCityTourDetailPath(related)
-                  }
+                  href={getFlagstaffTourDetailPath(related)}
                 />
               ))}
             </div>

@@ -21,6 +21,8 @@ import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
+import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
+import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 
 export default function App() {
   return (
@@ -87,6 +89,14 @@ export default function App() {
         <Route
           path="/tours/activities/canoeing"
           component={CanoeingTours}
+        />
+        <Route
+          path="/tours/:tourSlug/book"
+          component={FlagstaffTourBookingRoute}
+        />
+        <Route
+          path="/tours/:tourSlug"
+          component={FlagstaffTourDetailRoute}
         />
         <Route
           path="/tours/:stateSlug/:citySlug/:slug"

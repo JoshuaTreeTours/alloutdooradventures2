@@ -10,6 +10,7 @@ import type { City, StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
+import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -321,7 +322,7 @@ export default function CityTemplate({
               <TourCard
                 key={tour.id}
                 tour={tour}
-                href={getCityTourDetailPath(tour)}
+                href={getFlagstaffTourDetailPath(tour)}
               />
             ))}
           </div>

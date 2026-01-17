@@ -1,37 +1,32 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
-import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
+import FAQBlock from "../../components/FAQBlock";
+import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
-} from "../../../../data/tourFallbacks";
-import {
-  getAffiliateDisclosure,
-  getTourBySlugs,
-} from "../../../../data/tours";
+} from "../../data/tourFallbacks";
+import { getAffiliateDisclosure } from "../../data/tours";
 import {
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
-} from "../../../../data/flagstaffTours";
+} from "../../data/flagstaffTours";
 
-type CityTourBookingRouteProps = {
+type FlagstaffTourBookingRouteProps = {
   params: {
-    stateSlug: string;
-    citySlug: string;
     tourSlug: string;
   };
 };
 
-export default function CityTourBookingRoute({
+export default function FlagstaffTourBookingRoute({
   params,
-}: CityTourBookingRouteProps) {
+}: FlagstaffTourBookingRouteProps) {
   const state =
-    getStateBySlug(params.stateSlug) ??
-    getFallbackStateBySlug(params.stateSlug);
+    getStateBySlug("arizona") ?? getFallbackStateBySlug("arizona");
   const city =
-    getCityBySlugs(params.stateSlug, params.citySlug) ??
-    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
+    getCityBySlugs("arizona", "flagstaff") ??
+    getFallbackCityBySlugs("arizona", "flagstaff");
 
   if (!state || !city) {
     return (
@@ -42,9 +37,7 @@ export default function CityTourBookingRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
-          >
+          <Link href="/destinations/arizona/flagstaff/tours">
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -54,10 +47,7 @@ export default function CityTourBookingRoute({
     );
   }
 
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tour = isFlagstaff
-    ? getFlagstaffTourBySlug(params.tourSlug)
-    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
+  const tour = getFlagstaffTourBySlug(params.tourSlug);
 
   if (!tour) {
     return (
@@ -68,9 +58,7 @@ export default function CityTourBookingRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
-          >
+          <Link href="/destinations/arizona/flagstaff/tours">
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -87,9 +75,7 @@ export default function CityTourBookingRoute({
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const tourDetailHref = isFlagstaff
-    ? getFlagstaffTourDetailPath(tour)
-    : `${toursHref}/${tour.slug}`;
+  const tourDetailHref = getFlagstaffTourDetailPath(tour);
   const disclosure = getAffiliateDisclosure(tour);
   const isFareharbor = tour.bookingProvider === "fareharbor";
   const [embedStatus, setEmbedStatus] = useState<
@@ -115,7 +101,9 @@ export default function CityTourBookingRoute({
     try {
       const normalized = new URL(url);
       Object.entries(attributionParams).forEach(([key, value]) => {
-        normalized.searchParams.set(key, value);
+        if (normalized.searchParams.get(key) !== value) {
+          normalized.searchParams.set(key, value);
+        }
       });
       return normalized.toString();
     } catch {
@@ -227,9 +215,7 @@ export default function CityTourBookingRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -287,7 +273,7 @@ export default function CityTourBookingRoute({
             target="_blank"
             rel="noopener noreferrer"
           >
-              BOOK
+            BOOK
           </a>
           {disclosure ? (
             <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
@@ -365,6 +351,7 @@ export default function CityTourBookingRoute({
           )}
         </div>
       </section>
+      <FAQBlock />
     </main>
   );
 }

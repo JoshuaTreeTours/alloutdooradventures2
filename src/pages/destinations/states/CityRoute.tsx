@@ -4,7 +4,7 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../data/tourFallbacks";
-import { flagstaffTours } from "../../../data/cities/flagstaff";
+import { flagstaffTours } from "../../../data/flagstaffTours";
 
 type CityRouteProps = {
   params: {

@@ -1,6 +1,8 @@
 import TourCard from "../../../components/TourCard";
-import { flagstaffTours } from "../../../data/cities/flagstaff";
-import { getCityTourDetailPath } from "../../../data/tours";
+import {
+  flagstaffTours,
+  getFlagstaffTourDetailPath,
+} from "../../../data/flagstaffTours";
 
 export default function Arizona() {
   return (
@@ -31,7 +33,7 @@ export default function Arizona() {
             <TourCard
               key={tour.id}
               tour={tour}
-              href={getCityTourDetailPath(tour)}
+              href={getFlagstaffTourDetailPath(tour)}
             />
           ))}
         </div>
