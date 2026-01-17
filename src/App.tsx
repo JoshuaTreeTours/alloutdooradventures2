@@ -93,6 +93,14 @@ export default function App() {
           component={CanoeingTours}
         />
         <Route
+          path="/tours/los-angeles/:tourSlug/book"
+          component={ToursCityTourBookingRoute}
+        />
+        <Route
+          path="/tours/los-angeles/:tourSlug"
+          component={ToursCityTourDetailRoute}
+        />
+        <Route
           path="/tours/:citySlug/:tourSlug/book"
           component={ToursCityTourBookingRoute}
         />
