@@ -23,6 +23,8 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import ToursCityTourDetailRoute from "./pages/tours/CityTourDetailRoute";
 import ToursCityTourBookingRoute from "./pages/tours/CityTourBookingRoute";
+import LosAngelesTourDetailRoute from "./pages/tours/LosAngelesTourDetailRoute";
+import LosAngelesTourBookingRoute from "./pages/tours/LosAngelesTourBookingRoute";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 
@@ -93,12 +95,12 @@ export default function App() {
           component={CanoeingTours}
         />
         <Route
-          path="/tours/los-angeles/:tourSlug/book"
-          component={ToursCityTourBookingRoute}
+          path="/tours/los-angeles/:slug/book"
+          component={LosAngelesTourBookingRoute}
         />
         <Route
-          path="/tours/los-angeles/:tourSlug"
-          component={ToursCityTourDetailRoute}
+          path="/tours/los-angeles/:slug"
+          component={LosAngelesTourDetailRoute}
         />
         <Route
           path="/tours/:citySlug/:tourSlug/book"
