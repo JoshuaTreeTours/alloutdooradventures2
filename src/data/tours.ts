@@ -1,9 +1,7 @@
 import type { BookingProvider, Tour } from "./tours.types";
 import { flagstaffTours } from "./flagstaffTours";
-import { losAngelesTours } from "./losAngelesTours";
 import { sedonaTours } from "./sedonaTours";
 import { toursGenerated } from "./tours.generated";
-import { getCityTourConfig } from "./cityTourRegistry";
 
 type ProviderConfig = {
   label: string;
@@ -607,7 +605,6 @@ export const tours: Tour[] = [
   ...MANUAL_TOURS,
   ...flagstaffTours,
   ...sedonaTours,
-  ...losAngelesTours,
 ];
 
 export const getToursByState = (stateSlug: string) =>
@@ -645,15 +642,8 @@ export const getToursByActivity = (activitySlug: string) =>
     return true;
   });
 
-export const getTourDetailPath = (tour: Tour) => {
-  const cityConfig = getCityTourConfig(tour.destination.citySlug);
-
-  if (cityConfig) {
-    return cityConfig.getTourDetailPath(tour);
-  }
-
-  return `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
-};
+export const getTourDetailPath = (tour: Tour) =>
+  `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
 
 export const getCityTourDetailPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
