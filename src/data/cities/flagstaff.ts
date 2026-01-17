@@ -388,10 +388,10 @@ export const flagstaffTours: Tour[] = [
       "Eco Tour"
     ],
     destination: {
-      state: "Alberta",
-      stateSlug: "alberta",
-      city: "Calgary",
-      citySlug: "calgary",
+      state: "Arizona",
+      stateSlug: "arizona",
+      city: "Flagstaff",
+      citySlug: "flagstaff",
       lat: -114.052099,
       lng: 51.046433
     },
@@ -411,7 +411,7 @@ export const flagstaffTours: Tour[] = [
     bookingProvider: "fareharbor",
     bookingUrl: "https://fareharbor.com/embeds/book/infiniteadventures/items/418264/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
     bookingWidgetUrl: "https://fareharbor.com/embeds/calendar/infiniteadventures/items/418264/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
-    longDescription: "Canada Gold Rush Trail Adventure is a guided experience based in Calgary, Alberta that keeps the focus on the local highlights and an easy-to-book schedule.",
+    longDescription: "Canada Gold Rush Trail Adventure is a guided experience based in Flagstaff, Arizona that keeps the focus on the local highlights and an easy-to-book schedule.",
   },
   {
     id: "infiniteadventures-418263",
