@@ -10,7 +10,7 @@ import type { City, StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
-import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
+import { getCityTourConfig } from "../data/cityTourRegistry";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -127,6 +127,7 @@ export default function CityTemplate({
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
+  const cityConfig = getCityTourConfig(city.slug);
   const categorizedTours = [
     {
       title: "Hiking Tours",
@@ -308,13 +309,13 @@ export default function CityTemplate({
         <section className="mx-auto max-w-6xl px-6 py-14">
           <div className="text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-              Flagstaff tours
+              {city.name} tours
             </span>
             <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
-              Flagstaff adventures to book now
+              {city.name} adventures to book now
             </h2>
             <p className="mt-3 text-sm md:text-base text-[#405040]">
-              Explore the curated set of tours available for Flagstaff.
+              Explore the curated set of tours available for {city.name}.
             </p>
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -322,7 +323,11 @@ export default function CityTemplate({
               <TourCard
                 key={tour.id}
                 tour={tour}
-                href={getFlagstaffTourDetailPath(tour)}
+                href={
+                  cityConfig
+                    ? cityConfig.getTourDetailPath(tour)
+                    : getCityTourDetailPath(tour)
+                }
               />
             ))}
           </div>

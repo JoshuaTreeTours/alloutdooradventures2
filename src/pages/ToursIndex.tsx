@@ -2,8 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import TourCard from "../components/TourCard";
-import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
-import { getSedonaTourDetailPath } from "../data/sedonaTours";
+import { getCityTourConfig } from "../data/cityTourRegistry";
 import { tours } from "../data/tours";
 import { ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
 
@@ -54,15 +53,8 @@ export default function ToursIndex() {
     [selectedState, selectedCity, selectedActivity],
   );
   const getTourHref = (tour: (typeof tours)[number]) => {
-    if (tour.destination.stateSlug === "arizona") {
-      if (tour.destination.citySlug === "flagstaff") {
-        return getFlagstaffTourDetailPath(tour);
-      }
-      if (tour.destination.citySlug === "sedona") {
-        return getSedonaTourDetailPath(tour);
-      }
-    }
-    return undefined;
+    const cityConfig = getCityTourConfig(tour.destination.citySlug);
+    return cityConfig ? cityConfig.getTourDetailPath(tour) : undefined;
   };
 
   return (
