@@ -943,6 +943,158 @@ const MANUAL_TOURS: Tour[] = [
     longDescription:
       "1-Hour Walk of Fame Guided Tour is a guided walking outing based in Los Angeles, California that focuses on the Hollywood Walk of Fame.",
   },
+  {
+    id: "graveline-680528",
+    slug: "death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+    title: "Death Becomes Her Funeral Limo Tour of Los Angeles",
+    operator: "Grave Line Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
+    galleryImages: ["https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs"],
+    badges: {
+      tagline: "History Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680528/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Death Becomes Her Funeral Limo Tour of Los Angeles is a guided history-focused outing based in Los Angeles, California that explores notorious stories and landmarks.",
+  },
+  {
+    id: "graveline-680529",
+    slug: "hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+    title: "Hollywood Horror Story: The Black Dahlia Funeral Limo Tour",
+    operator: "Grave Line Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
+    galleryImages: ["https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh"],
+    badges: {
+      tagline: "History Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680529/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680529/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Hollywood Horror Story: The Black Dahlia Funeral Limo Tour is a guided history-focused outing based in Los Angeles, California centered on the Black Dahlia case.",
+  },
+  {
+    id: "sunsetexotictour-324799",
+    slug: "beverly-hills-tour-1h15-minutes-324799",
+    title: "Beverly Hills Tour 1h15 minutes",
+    operator: "Sunset Exotic Tour",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Factory Tour",
+      "Photography Tour",
+      "Sightseeing Tour",
+      "Theater",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg",
+    galleryImages: ["https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Factory Tour",
+      "Photography Tour",
+      "Sightseeing Tour",
+      "Theater",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Beverly Hills Tour 1h15 minutes is a guided sightseeing outing based in Los Angeles, California highlighting Beverly Hills and luxury landmarks.",
+  },
+  {
+    id: "sunsetexotictour-382848",
+    slug: "the-beach-tour-4-hours-382848",
+    title: "The Beach Tour 4 Hours",
+    operator: "Sunset Exotic Tour",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Attraction", "Exotic Car", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA",
+    galleryImages: ["https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Attraction", "Exotic Car", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "The Beach Tour 4 Hours is a guided sightseeing outing based in Los Angeles, California that cruises coastal highlights and beach scenery.",
+  },
 ];
 
 export const tours: Tour[] = [
