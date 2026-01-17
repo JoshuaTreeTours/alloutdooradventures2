@@ -129,6 +129,12 @@ export default function CityTemplate({
   const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
   const categorizedTours = [
     {
+      title: "Day Tours & Highlights",
+      tours: cityTours.filter((tour) =>
+        tour.activitySlugs.includes("detours"),
+      ),
+    },
+    {
       title: "Hiking Tours",
       tours: cityTours.filter((tour) =>
         tour.activitySlugs.includes("hiking"),
