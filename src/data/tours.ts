@@ -598,6 +598,503 @@ const MANUAL_TOURS: Tour[] = [
     longDescription:
       "Rock Rescue 101 is a Whitefish, Montana skills-focused climbing session centered on safety fundamentals.",
   },
+  {
+    id: "hollywoodbustoursla-333382",
+    slug: "a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+    title: "A Taste of LA: Half Day Tour of the BEST of Los Angeles",
+    operator: "Hollywood Bus Tours, LLC",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["City Tour", "Museum", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD",
+    galleryImages: ["https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["City Tour", "Museum", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "A Taste of LA: Half Day Tour of the BEST of Los Angeles is a guided sightseeing outing based in Los Angeles, California that highlights iconic neighborhoods and museum stops on a half-day itinerary.",
+  },
+  {
+    id: "alldayla-205984",
+    slug: "1-hr---real-hollywood-sign-tour-205984",
+    title: "1 Hr - Real Hollywood Sign Tour",
+    operator: "Golden Ticket LA",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.339056,
+      lng: 34.101413,
+    },
+    heroImage: "https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4",
+    galleryImages: ["https://cdn.filestackcontent.com/s4urjGMMSEObSWnyZ5E4"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/205984/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/205984/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "1 Hr - Real Hollywood Sign Tour is a guided sightseeing outing based in Los Angeles, California that spotlights the Hollywood Sign and nearby landmarks.",
+  },
+  {
+    id: "alldayla-168579",
+    slug: "la-essential-star-homes-tour-168579",
+    title: "LA Essential Star Homes Tour",
+    operator: "Golden Ticket LA",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.339056,
+      lng: 34.101413,
+    },
+    heroImage: "https://cdn.filestackcontent.com/JwJyljguTkKDCCITcTMe",
+    galleryImages: ["https://cdn.filestackcontent.com/JwJyljguTkKDCCITcTMe"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/168579/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/168579/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "LA Essential Star Homes Tour is a guided sightseeing outing based in Los Angeles, California that visits celebrity homes and classic neighborhoods.",
+  },
+  {
+    id: "parlorcartours-495929",
+    slug: "hollywood-sightseeing-trolley-tour-495929",
+    title: "Hollywood Sightseeing Trolley Tour",
+    operator: "Parlor Car Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Bus Tour", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.329989,
+      lng: 34.102766,
+    },
+    heroImage: "https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck",
+    galleryImages: ["https://cdn.filestackcontent.com/Md0xFxXARTGbe5OsbTck"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Bus Tour", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/parlorcartours/items/495929/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/parlorcartours/items/495929/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Hollywood Sightseeing Trolley Tour is a guided sightseeing outing based in Los Angeles, California that rolls through iconic Hollywood stops by trolley.",
+  },
+  {
+    id: "alldayla-518084",
+    slug: "private-los-angeles-tour-beverly-hills-518084",
+    title: "Private Los Angeles Tour (Beverly Hills)",
+    operator: "Golden Ticket LA",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["City Tour", "Private", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.339056,
+      lng: 34.101413,
+    },
+    heroImage: "https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y",
+    galleryImages: ["https://cdn.filestackcontent.com/8b9pyGF6QB0UiK7Yoc2y"],
+    badges: {
+      tagline: "Private Tour",
+    },
+    tagPills: ["City Tour", "Private", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/518084/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/alldayla/items/518084/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Private Los Angeles Tour (Beverly Hills) is a guided sightseeing outing based in Los Angeles, California tailored to Beverly Hills highlights.",
+  },
+  {
+    id: "graveline-680527",
+    slug: "manson-family-murders-funeral-limo-tour-of-la-680527",
+    title: "Manson Family Murders Funeral Limo Tour of LA",
+    operator: "Grave Line Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG",
+    galleryImages: ["https://cdn.filestackcontent.com/mehLbyeBRDmhWg9xAAlG"],
+    badges: {
+      tagline: "History Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680527/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680527/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Manson Family Murders Funeral Limo Tour of LA is a guided history-focused outing based in Los Angeles, California that explores infamous true-crime sites.",
+  },
+  {
+    id: "hollywoodhikes-471721",
+    slug: "the-official-hollywood-sign-walking-tour-in-los-angeles-free-waters-471721",
+    title: "The Official Hollywood Sign Walking Tour in Los Angeles-Free Waters!",
+    operator: "Hollywood Hikes, LLC",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Walking Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.327127,
+      lng: 34.130221,
+    },
+    heroImage: "https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g",
+    galleryImages: ["https://cdn.filestackcontent.com/L7s2PXn7TyLI9DkUDV7g"],
+    badges: {
+      tagline: "Walking Tour",
+    },
+    tagPills: ["Walking Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/hollywoodhikes/items/471721/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/hollywoodhikes/items/471721/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "The Official Hollywood Sign Walking Tour in Los Angeles-Free Waters! is a guided walking outing based in Los Angeles, California with close-up views of the Hollywood Sign.",
+  },
+  {
+    id: "hollywoodhikes-471726",
+    slug: "the-official-hollywood-sign-express-walking-tour-in-los-angeles-free-waters-471726",
+    title: "The Official Hollywood Sign Express Walking Tour in Los Angeles-Free Waters!",
+    operator: "Hollywood Hikes, LLC",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Walking Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.327127,
+      lng: 34.130221,
+    },
+    heroImage: "https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR",
+    galleryImages: ["https://cdn.filestackcontent.com/jL1Pe9qMQF67SxBKhFNR"],
+    badges: {
+      tagline: "Walking Tour",
+    },
+    tagPills: ["Walking Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/hollywoodhikes/items/471726/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/hollywoodhikes/items/471726/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "The Official Hollywood Sign Express Walking Tour in Los Angeles-Free Waters! is a guided walking outing based in Los Angeles, California with a quicker-paced route to the Hollywood Sign.",
+  },
+  {
+    id: "takemeoutla-629071",
+    slug: "venices-finest-a-daytime-experience-629071",
+    title: "Venice’s Finest: A Daytime Experience",
+    operator: "Take Me Out LA",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Walking Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP",
+    galleryImages: ["https://cdn.filestackcontent.com/xxTGErtvSvidZOPPQrkP"],
+    badges: {
+      tagline: "Walking Tour",
+    },
+    tagPills: ["Walking Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/takemeoutla/items/629071/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/takemeoutla/items/629071/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Venice’s Finest: A Daytime Experience is a guided walking outing based in Los Angeles, California that explores Venice's daytime highlights.",
+  },
+  {
+    id: "hollywooddreamtours-349518",
+    slug: "sightseeing-hollywood-tours-349518",
+    title: "Sightseeing Hollywood Tours",
+    operator: "Hollywood LA Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+      lat: -118.242643,
+      lng: 34.054908,
+    },
+    heroImage: "/hero.jpg",
+    galleryImages: ["/hero.jpg"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/hollywooddreamtours/items/349518/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/hollywooddreamtours/items/349518/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Sightseeing Hollywood Tours is a guided sightseeing outing based in Los Angeles, California that covers classic Hollywood highlights.",
+  },
+  {
+    id: "walkandridetours-547525",
+    slug: "1-hour-walk-of-fame-guided-tour-547525",
+    title: "1-Hour Walk of Fame Guided Tour",
+    operator: "Walk and Ride Hollywood",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Walking Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/nOED5MVjRYhdCqre6IVt",
+    galleryImages: ["https://cdn.filestackcontent.com/nOED5MVjRYhdCqre6IVt"],
+    badges: {
+      tagline: "Walking Tour",
+    },
+    tagPills: ["Walking Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/walkandridetours/items/547525/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/walkandridetours/items/547525/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "1-Hour Walk of Fame Guided Tour is a guided walking outing based in Los Angeles, California that focuses on the Hollywood Walk of Fame.",
+  },
+  {
+    id: "graveline-680528",
+    slug: "death-becomes-her-funeral-limo-tour-of-los-angeles-680528",
+    title: "Death Becomes Her Funeral Limo Tour of Los Angeles",
+    operator: "Grave Line Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs",
+    galleryImages: ["https://cdn.filestackcontent.com/4tVjDoPQt2rowJhpeefs"],
+    badges: {
+      tagline: "History Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680528/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680528/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Death Becomes Her Funeral Limo Tour of Los Angeles is a guided history-focused outing based in Los Angeles, California that explores notorious stories and landmarks.",
+  },
+  {
+    id: "graveline-680529",
+    slug: "hollywood-horror-story-the-black-dahlia-funeral-limo-tour-680529",
+    title: "Hollywood Horror Story: The Black Dahlia Funeral Limo Tour",
+    operator: "Grave Line Tours",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh",
+    galleryImages: ["https://cdn.filestackcontent.com/CWNoiwruT76kvMxjomkh"],
+    badges: {
+      tagline: "History Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Ghost Tour",
+      "Guided Tour",
+      "History Tour",
+      "Sightseeing Tour",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680529/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/graveline/items/680529/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Hollywood Horror Story: The Black Dahlia Funeral Limo Tour is a guided history-focused outing based in Los Angeles, California centered on the Black Dahlia case.",
+  },
+  {
+    id: "sunsetexotictour-324799",
+    slug: "beverly-hills-tour-1h15-minutes-324799",
+    title: "Beverly Hills Tour 1h15 minutes",
+    operator: "Sunset Exotic Tour",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: [
+      "City Tour",
+      "Factory Tour",
+      "Photography Tour",
+      "Sightseeing Tour",
+      "Theater",
+    ],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg",
+    galleryImages: ["https://cdn.filestackcontent.com/A5HYYN3KRu3fM4sGixJg"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: [
+      "City Tour",
+      "Factory Tour",
+      "Photography Tour",
+      "Sightseeing Tour",
+      "Theater",
+    ],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/324799/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "Beverly Hills Tour 1h15 minutes is a guided sightseeing outing based in Los Angeles, California highlighting Beverly Hills and luxury landmarks.",
+  },
+  {
+    id: "sunsetexotictour-382848",
+    slug: "the-beach-tour-4-hours-382848",
+    title: "The Beach Tour 4 Hours",
+    operator: "Sunset Exotic Tour",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["Attraction", "Exotic Car", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA",
+    galleryImages: ["https://cdn.filestackcontent.com/PINfVSoeSmcZfeHnz5EA"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["Attraction", "Exotic Car", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/sunsetexotictour/items/382848/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "The Beach Tour 4 Hours is a guided sightseeing outing based in Los Angeles, California that cruises coastal highlights and beach scenery.",
+  },
 ];
 
 export const tours: Tour[] = [
