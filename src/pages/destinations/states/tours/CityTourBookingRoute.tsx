@@ -1,6 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
+import {
+  auditBookingAttribution,
+  ensureBookingAttribution,
+} from "../../../../data/bookingAttribution";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -11,9 +15,8 @@ import {
   getTourBySlugs,
 } from "../../../../data/tours";
 import {
-  getFlagstaffTourBySlug,
-  getFlagstaffTourDetailPath,
-} from "../../../../data/flagstaffTours";
+  getCityTourConfig,
+} from "../../../../data/cityTourRegistry";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -54,9 +57,9 @@ export default function CityTourBookingRoute({
     );
   }
 
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tour = isFlagstaff
-    ? getFlagstaffTourBySlug(params.tourSlug)
+  const cityConfig = getCityTourConfig(city.slug);
+  const tour = cityConfig
+    ? cityConfig.getTourBySlug(params.tourSlug)
     : getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
@@ -87,85 +90,31 @@ export default function CityTourBookingRoute({
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const tourDetailHref = isFlagstaff
-    ? getFlagstaffTourDetailPath(tour)
+  const tourDetailHref = cityConfig
+    ? cityConfig.getTourDetailPath(tour)
     : `${toursHref}/${tour.slug}`;
   const disclosure = getAffiliateDisclosure(tour);
-  const isFareharbor = tour.bookingProvider === "fareharbor";
   const [embedStatus, setEmbedStatus] = useState<
     "idle" | "loading" | "loaded" | "failed"
   >("idle");
   const [redirectMode, setRedirectMode] = useState(false);
-  const attributionParams = useMemo(
-    () => ({
-      "asn-ref": "alloutdooradventures",
-      ref: "alloutdooradventures",
-      branding: "no",
-    }),
-    [],
+  const attributedBookingUrl = ensureBookingAttribution(
+    tour.bookingUrl,
+    tour.bookingProvider,
   );
-
-  const ensureAttribution = (url?: string) => {
-    if (!url) {
-      return undefined;
-    }
-    if (!isFareharbor) {
-      return url;
-    }
-    try {
-      const normalized = new URL(url);
-      Object.entries(attributionParams).forEach(([key, value]) => {
-        normalized.searchParams.set(key, value);
-      });
-      return normalized.toString();
-    } catch {
-      return url;
-    }
-  };
-
-  const auditAttribution = (url?: string) => {
-    if (!isFareharbor) {
-      return {
-        ok: true,
-        missing: [],
-        url,
-        applicable: false,
-      };
-    }
-    if (!url) {
-      return {
-        ok: false,
-        missing: Object.keys(attributionParams),
-        url,
-        applicable: true,
-      };
-    }
-    try {
-      const parsed = new URL(url);
-      const missing = Object.entries(attributionParams)
-        .filter(([key, value]) => parsed.searchParams.get(key) !== value)
-        .map(([key]) => key);
-      return {
-        ok: missing.length === 0,
-        missing,
-        url,
-        applicable: true,
-      };
-    } catch {
-      return {
-        ok: false,
-        missing: Object.keys(attributionParams),
-        url,
-        applicable: true,
-      };
-    }
-  };
-
-  const attributedBookingUrl = ensureAttribution(tour.bookingUrl);
-  const attributedWidgetUrl = ensureAttribution(tour.bookingWidgetUrl);
+  const attributedWidgetUrl = ensureBookingAttribution(
+    tour.bookingWidgetUrl,
+    tour.bookingProvider,
+  );
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
-  const embedAudit = auditAttribution(attributedWidgetUrl);
-  const fallbackAudit = auditAttribution(attributedBookingUrl);
+  const embedAudit = auditBookingAttribution(
+    attributedWidgetUrl,
+    tour.bookingProvider,
+  );
+  const fallbackAudit = auditBookingAttribution(
+    attributedBookingUrl,
+    tour.bookingProvider,
+  );
   const auditRows = [
     "iOS Safari",
     "Desktop Safari",

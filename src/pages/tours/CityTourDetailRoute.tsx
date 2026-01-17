@@ -1,30 +1,23 @@
 import { Link } from "wouter";
 
-import Image from "../../../../components/Image";
-import TourCard from "../../../../components/TourCard";
-import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
+import Image from "../../components/Image";
+import TourCard from "../../components/TourCard";
+import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
-} from "../../../../data/tourFallbacks";
-import { getCityTourConfig } from "../../../../data/cityTourRegistry";
-import {
-  getAffiliateDisclosure,
-  getCityTourDetailPath,
-  getCityTourBookingPath,
-  getToursByCity,
-  getTourBySlugs,
-} from "../../../../data/tours";
+} from "../../data/tourFallbacks";
+import { getAffiliateDisclosure } from "../../data/tours";
 import {
   getActivityLabel,
   getExpandedTourDescription,
   getSkillLevelLabel,
   getTourReviewSummary,
-} from "../../../../data/tourNarratives";
+} from "../../data/tourNarratives";
+import { getCityTourConfig } from "../../data/cityTourRegistry";
 
 type CityTourDetailRouteProps = {
   params: {
-    stateSlug: string;
     citySlug: string;
     tourSlug: string;
   };
@@ -33,29 +26,40 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const state =
-    getStateBySlug(params.stateSlug) ??
-    getFallbackStateBySlug(params.stateSlug);
-  const city =
-    getCityBySlugs(params.stateSlug, params.citySlug) ??
-    getFallbackCityBySlugs(params.stateSlug, params.citySlug);
+  const cityConfig = getCityTourConfig(params.citySlug);
 
-  if (!state || !city) {
+  if (!cityConfig) {
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
         <h1 className="text-2xl font-semibold">Tour not found</h1>
         <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that city. Head back to destinations to keep
+          We couldn’t find that destination. Head back to destinations to keep
           exploring.
         </p>
       </main>
     );
   }
 
-  const cityConfig = getCityTourConfig(city.slug);
-  const tour = cityConfig
-    ? cityConfig.getTourBySlug(params.tourSlug)
-    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
+  const state =
+    getStateBySlug(cityConfig.stateSlug) ??
+    getFallbackStateBySlug(cityConfig.stateSlug);
+  const city =
+    getCityBySlugs(cityConfig.stateSlug, cityConfig.citySlug) ??
+    getFallbackCityBySlugs(cityConfig.stateSlug, cityConfig.citySlug);
+
+  if (!state || !city) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+        <h1 className="text-2xl font-semibold">Tour not found</h1>
+        <p className="mt-4 text-sm text-[#405040]">
+          We couldn’t find that destination. Head back to destinations to keep
+          exploring.
+        </p>
+      </main>
+    );
+  }
+
+  const tour = cityConfig.getTourBySlug(params.tourSlug);
 
   if (!tour) {
     return (
@@ -66,9 +70,7 @@ export default function CityTourDetailRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${state.slug}/${city.slug}/tours`}
-          >
+          <Link href={`/destinations/${state.slug}/${city.slug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -78,14 +80,9 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const tourSlug = cityConfig ? cityConfig.getTourSlug(tour) : tour.slug;
-  const relatedTours = (cityConfig
-    ? cityConfig.tours
-    : getToursByCity(state.slug, city.slug)
-  ).filter((item) =>
-    cityConfig
-      ? cityConfig.getTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug,
+  const tourSlug = cityConfig.getTourSlug(tour);
+  const relatedTours = cityConfig.tours.filter(
+    (item) => cityConfig.getTourSlug(item) !== tourSlug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
@@ -115,9 +112,7 @@ export default function CityTourDetailRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -157,15 +152,9 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={
-                cityConfig
-                  ? cityConfig.getTourBookingPath(tour)
-                  : getCityTourBookingPath(tour)
-              }
-            >
+            <Link href={cityConfig.getTourBookingPath(tour)}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                BOOK
+                Book Now
               </a>
             </Link>
             <a
@@ -174,9 +163,7 @@ export default function CityTourDetailRoute({
             >
               Review summary
             </a>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>
@@ -242,87 +229,85 @@ export default function CityTourDetailRoute({
                     {tour.badges.duration ?? "Check booking page"}
                   </span>
                 </div>
-                {tour.badges.likelyToSellOut ? (
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
-                    Likely to sell out
-                  </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Activity
+                  </span>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    {activityLabel ?? tour.badges.tagline ?? "Guided tour"}
+                  </span>
+                </div>
+                {skillLevel ? (
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                      Skill level
+                    </span>
+                    <span className="font-semibold text-[#1f2a1f]">
+                      {skillLevel}
+                    </span>
+                  </div>
                 ) : null}
               </div>
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-[#1f2a1f]">
+                Ready to book?
+              </h3>
+              <p className="mt-3 text-sm text-[#405040]">
+                Reserve instantly through our verified booking partner.
+              </p>
+              <Link href={cityConfig.getTourBookingPath(tour)}>
+                <a className="mt-4 inline-flex w-full items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                  Book Now
+                </a>
+              </Link>
               {disclosure ? (
-                <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
+                <p className="mt-4 text-xs text-[#7a8a6b]">
+                  {disclosure}
+                </p>
               ) : null}
             </div>
-            <div
-              id="outdoor-adventures-review"
-              className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
-            >
-              <div className="flex items-center justify-between gap-3">
+            {!suppressReviews && reviewSummary ? (
+              <div
+                id="outdoor-adventures-review"
+                className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
+              >
                 <h3 className="text-base font-semibold text-[#1f2a1f]">
-                  Outdoor Adventures review
+                  Review summary
                 </h3>
-                <span className="rounded-full bg-[#e6f4ea] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2f8a3d]">
-                  Approved
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-[#405040]">{reviewSummary}</p>
-              <div className="mt-4 space-y-2 text-xs text-[#405040]">
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Skill level:
-                  </span>{" "}
-                  {skillLevel}
-                </p>
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Activity focus:
-                  </span>{" "}
-                  {activityLabel}
+                <p className="mt-3 text-sm text-[#405040]">
+                  {reviewSummary}
                 </p>
               </div>
-            </div>
+            ) : null}
           </div>
         </div>
-        {tour.galleryImages?.length ? (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
-              <div
-                key={image}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
-              >
-                <Image
-                  src={image}
-                  fallbackSrc="/hero.jpg"
-                  alt={`${tour.title} gallery`}
-                  className="h-56 w-full object-cover md:h-64"
-                />
-              </div>
-            ))}
-          </div>
-        ) : null}
       </section>
 
-      {relatedTours.length > 0 && (
-        <section className="bg-white/60">
-          <div className="mx-auto max-w-6xl px-6 py-14">
-            <h2 className="text-2xl font-semibold text-[#2f4a2f]">
-              More tours in {city.name}
+      {relatedTours.length ? (
+        <section className="mx-auto max-w-6xl px-6 pb-16">
+          <div className="text-center">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              More adventures
+            </span>
+            <h2 className="mt-2 text-2xl md:text-3xl font-semibold text-[#2f4a2f]">
+              Similar tours in {city.name}
             </h2>
-            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map((related) => (
-                <TourCard
-                  key={related.slug}
-                  tour={related}
-                  href={
-                    cityConfig
-                      ? cityConfig.getTourDetailPath(related)
-                      : getCityTourDetailPath(related)
-                  }
-                />
-              ))}
-            </div>
+            <p className="mt-3 text-sm md:text-base text-[#405040]">
+              Compare a few more options before you book.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {relatedTours.slice(0, 6).map((related) => (
+              <TourCard
+                key={related.id}
+                tour={related}
+                href={cityConfig.getTourDetailPath(related)}
+              />
+            ))}
           </div>
         </section>
-      )}
+      ) : null}
     </main>
   );
 }
