@@ -23,6 +23,7 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
+import { generatedCityRoutes } from "./pages/generatedCityRoutes";
 
 export default function App() {
   return (
@@ -68,6 +69,10 @@ export default function App() {
         />
         <Route path="/destinations/states/:stateSlug" component={StateRoute} />
         <Route path="/destinations/:stateSlug" component={StateLandingRoute} />
+
+        {generatedCityRoutes.map((route) => (
+          <Route key={route.path} path={route.path} component={route.component} />
+        ))}
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
