@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 import TourCard from "../components/TourCard";
 import { tours } from "../data/tours";
-import { ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
+import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
 
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
@@ -26,14 +26,13 @@ export default function ToursIndex() {
     return Array.from(new Set(filtered.map((tour) => tour.destination.city))).sort();
   }, [selectedState]);
 
-  const activityOptions = useMemo(
-    () =>
-      ADVENTURE_ACTIVITY_PAGES.map((activity) => ({
-        slug: activity.slug,
-        label: activity.title,
-      })),
-    [],
-  );
+  const activityOptions = useMemo(() => {
+    const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
+    return activities.map((activity) => ({
+      slug: activity.slug,
+      label: activity.title,
+    }));
+  }, []);
 
   const filteredTours = useMemo(
     () =>

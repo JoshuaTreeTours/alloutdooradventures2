@@ -96,7 +96,7 @@ export default function CityToursIndexRoute({
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {tours.map((tour) => (
               <TourCard
-                key={tour.slug}
+                key={tour.id}
                 tour={tour}
                 href={
                   isFlagstaff
