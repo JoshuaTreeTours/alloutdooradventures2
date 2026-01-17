@@ -15,6 +15,13 @@ import {
   getTourBySlugs,
 } from "../../../../data/tours";
 import {
+  flagstaffTours,
+  getFlagstaffTourBookingPath,
+  getFlagstaffTourBySlug,
+  getFlagstaffTourDetailPath,
+  getFlagstaffTourSlug,
+} from "../../../../data/cities/flagstaff";
+import {
   getActivityLabel,
   getExpandedTourDescription,
   getSkillLevelLabel,
@@ -51,7 +58,10 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const tour = getTourBySlugs(state.slug, city.slug, params.tourSlug);
+  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
+  const tour = isFlagstaff
+    ? getFlagstaffTourBySlug(params.tourSlug)
+    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
     return (
@@ -74,8 +84,14 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const relatedTours = getToursByCity(state.slug, city.slug).filter(
-    (item) => item.slug !== tour.slug,
+  const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
+  const relatedTours = (isFlagstaff
+    ? flagstaffTours
+    : getToursByCity(state.slug, city.slug)
+  ).filter((item) =>
+    isFlagstaff
+      ? getFlagstaffTourSlug(item) !== tourSlug
+      : item.slug !== tour.slug,
   );
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
@@ -147,7 +163,13 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href={getCityTourBookingPath(tour)}>
+            <Link
+              href={
+                isFlagstaff
+                  ? getFlagstaffTourBookingPath(tour)
+                  : getCityTourBookingPath(tour)
+              }
+            >
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 BOOK
               </a>
@@ -296,7 +318,11 @@ export default function CityTourDetailRoute({
                 <TourCard
                   key={related.slug}
                   tour={related}
-                  href={getCityTourDetailPath(related)}
+                  href={
+                    isFlagstaff
+                      ? getFlagstaffTourDetailPath(related)
+                      : getCityTourDetailPath(related)
+                  }
                 />
               ))}
             </div>

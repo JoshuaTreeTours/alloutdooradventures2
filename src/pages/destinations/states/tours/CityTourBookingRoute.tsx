@@ -10,6 +10,10 @@ import {
   getAffiliateDisclosure,
   getTourBySlugs,
 } from "../../../../data/tours";
+import {
+  getFlagstaffTourBySlug,
+  getFlagstaffTourDetailPath,
+} from "../../../../data/cities/flagstaff";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -50,7 +54,10 @@ export default function CityTourBookingRoute({
     );
   }
 
-  const tour = getTourBySlugs(state.slug, city.slug, params.tourSlug);
+  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
+  const tour = isFlagstaff
+    ? getFlagstaffTourBySlug(params.tourSlug)
+    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
     return (
@@ -80,6 +87,9 @@ export default function CityTourBookingRoute({
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
+  const tourDetailHref = isFlagstaff
+    ? getFlagstaffTourDetailPath(tour)
+    : `${toursHref}/${tour.slug}`;
   const disclosure = getAffiliateDisclosure(tour);
   const isFareharbor = tour.bookingProvider === "fareharbor";
   const [embedStatus, setEmbedStatus] = useState<
@@ -91,6 +101,7 @@ export default function CityTourBookingRoute({
       asn: "alloutdooradventures",
       "asn-ref": "alloutdooradventures",
       ref: "alloutdooradventures",
+      branding: "no",
     }),
     [],
   );
@@ -223,9 +234,7 @@ export default function CityTourBookingRoute({
               <a>Tours</a>
             </Link>
             <span>/</span>
-            <Link
-              href={`${toursHref}/${tour.slug}`}
-            >
+            <Link href={tourDetailHref}>
               <a>{tour.title}</a>
             </Link>
             <span>/</span>
