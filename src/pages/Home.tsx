@@ -264,9 +264,42 @@ export default function Home() {
           </div>
         </section>
 
+        {/* WHY CHOOSE */}
+        <section
+          className="mx-auto max-w-6xl px-6 py-16"
+          aria-label="Why choose"
+        >
+          <h2 className="text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+            Why Choose Outdoor Adventures?
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-[#405040] md:text-base">
+            We curate the best outdoor experiences, vetted by locals and seasoned
+            travelers. No tourist traps—just authentic adventures.
+          </p>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <Card
+              title="Curated Experiences"
+              body="Handpicked tours and activities with a focus on quality, safety, and unforgettable scenery."
+            />
+            <Card
+              title="Local Knowledge"
+              body="We work with operators who know their terrain—so you get the real story, not brochure fluff."
+            />
+            <Card
+              title="Easy Discovery"
+              body="Browse destinations and tours fast, then book with confidence. Simple choices, great outcomes."
+            />
+          </div>
+        </section>
+
+        <h2 className="text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+          Choose Your Adventure
+        </h2>
+
         {/* ACTIVITIES */}
         <section className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
             {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
               <Link
                 key={activity.title}
@@ -377,35 +410,6 @@ export default function Home() {
                 />
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* WHY CHOOSE */}
-        <section
-          className="mx-auto max-w-6xl px-6 py-16"
-          aria-label="Why choose"
-        >
-          <h2 className="text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-            Why Choose Outdoor Adventures?
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-[#405040] md:text-base">
-            We curate the best outdoor experiences, vetted by locals and seasoned
-            travelers. No tourist traps—just authentic adventures.
-          </p>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <Card
-              title="Curated Experiences"
-              body="Handpicked tours and activities with a focus on quality, safety, and unforgettable scenery."
-            />
-            <Card
-              title="Local Knowledge"
-              body="We work with operators who know their terrain—so you get the real story, not brochure fluff."
-            />
-            <Card
-              title="Easy Discovery"
-              body="Browse destinations and tours fast, then book with confidence. Simple choices, great outcomes."
-            />
           </div>
         </section>
 
