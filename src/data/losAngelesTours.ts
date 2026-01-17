@@ -436,5 +436,8 @@ export const getLosAngelesTourBySlug = (slug: string) =>
 export const getLosAngelesTourDetailPath = (tour: Tour) =>
   `/tours/los-angeles/${getLosAngelesTourSlug(tour)}`;
 
+export const getLosAngelesTourBookingPathFromSlug = (slug: string) =>
+  `/tours/los-angeles/${slug}/book`;
+
 export const getLosAngelesTourBookingPath = (tour: Tour) =>
-  `/tours/los-angeles/${getLosAngelesTourSlug(tour)}/book`;
+  getLosAngelesTourBookingPathFromSlug(getLosAngelesTourSlug(tour));
