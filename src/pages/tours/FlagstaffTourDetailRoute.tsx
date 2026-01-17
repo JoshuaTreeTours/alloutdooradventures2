@@ -8,12 +8,7 @@ import {
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
 import { getAffiliateDisclosure } from "../../data/tours";
-import {
-  getActivityLabel,
-  getExpandedTourDescription,
-  getSkillLevelLabel,
-  getTourReviewSummary,
-} from "../../data/tourNarratives";
+import { getExpandedTourDescription } from "../../data/tourNarratives";
 import {
   flagstaffTours,
   getFlagstaffTourBookingPath,
@@ -80,10 +75,6 @@ export default function FlagstaffTourDetailRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
-  const activityLabel = getActivityLabel(tour);
-  const skillLevel = getSkillLevelLabel(tour);
-  const reviewSummary = getTourReviewSummary(tour);
-  const suppressReviews = tour.suppressReviews ?? true;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -116,14 +107,6 @@ export default function FlagstaffTourDetailRoute({
               {tour.title}
             </h1>
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
-              {!suppressReviews && tour.badges.rating ? (
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1">
-                  ⭐ {tour.badges.rating}
-                  {tour.badges.reviewCount
-                    ? ` (${tour.badges.reviewCount})`
-                    : ""}
-                </span>
-              ) : null}
               {tour.badges.duration ? (
                 <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
                   {tour.badges.duration}
@@ -147,12 +130,6 @@ export default function FlagstaffTourDetailRoute({
                 Book Now
               </a>
             </Link>
-            <a
-              className="inline-flex items-center justify-center rounded-md border border-white/40 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/20"
-              href="#outdoor-adventures-review"
-            >
-              Review summary
-            </a>
             <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
@@ -191,26 +168,6 @@ export default function FlagstaffTourDetailRoute({
                 Tour snapshot
               </h3>
               <div className="mt-4 space-y-3 text-sm text-[#405040]">
-                {!suppressReviews ? (
-                  <>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                        Rating
-                      </span>
-                      <span className="font-semibold text-[#1f2a1f]">
-                        {tour.badges.rating ? `${tour.badges.rating} ★` : "—"}
-                      </span>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                        Reviews
-                      </span>
-                      <span className="font-semibold text-[#1f2a1f]">
-                        {tour.badges.reviewCount ?? "—"}
-                      </span>
-                    </div>
-                  </>
-                ) : null}
                 <div className="flex items-center justify-between">
                   <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
                     Duration
@@ -228,34 +185,6 @@ export default function FlagstaffTourDetailRoute({
               {disclosure ? (
                 <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
               ) : null}
-            </div>
-            <div
-              id="outdoor-adventures-review"
-              className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm"
-            >
-              <div className="flex items-center justify-between gap-3">
-                <h3 className="text-base font-semibold text-[#1f2a1f]">
-                  Outdoor Adventures review
-                </h3>
-                <span className="rounded-full bg-[#e6f4ea] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#2f8a3d]">
-                  Approved
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-[#405040]">{reviewSummary}</p>
-              <div className="mt-4 space-y-2 text-xs text-[#405040]">
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Skill level:
-                  </span>{" "}
-                  {skillLevel}
-                </p>
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Activity focus:
-                  </span>{" "}
-                  {activityLabel}
-                </p>
-              </div>
             </div>
           </div>
         </div>

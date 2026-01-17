@@ -9,11 +9,8 @@ import {
   getTourBySlugs,
 } from "../../data/tours";
 import {
-  getActivityLabel,
   getExpandedTourDescription,
-  getSkillLevelLabel,
   getTourHighlights,
-  getTourReviewSummary,
 } from "../../data/tourNarratives";
 
 type TourDetailProps = {
@@ -42,11 +39,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
-  const activityLabel = getActivityLabel(tour);
-  const skillLevel = getSkillLevelLabel(tour);
-  const reviewSummary = getTourReviewSummary(tour);
   const highlights = getTourHighlights(tour);
-  const suppressReviews = tour.suppressReviews ?? true;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -80,14 +73,6 @@ export default function TourDetail({ params }: TourDetailProps) {
                 {tour.title}
               </h1>
               <div className="flex flex-wrap gap-2 text-xs font-semibold text-[#1f2a1f]">
-                {!suppressReviews && tour.badges.rating ? (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-[#fef3c7] px-3 py-1">
-                    ⭐ {tour.badges.rating}
-                    {tour.badges.reviewCount
-                      ? ` (${tour.badges.reviewCount})`
-                      : ""}
-                  </span>
-                ) : null}
                 {tour.badges.duration ? (
                   <span className="inline-flex items-center rounded-full bg-white px-3 py-1">
                     {tour.badges.duration}
@@ -138,45 +123,11 @@ export default function TourDetail({ params }: TourDetailProps) {
                   BOOK
                 </a>
               </Link>
-              <a
-                className="mt-3 inline-flex w-full items-center justify-center rounded-full border border-[#2f4a2f]/20 bg-white px-6 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-[#2f4a2f] transition hover:bg-[#f5f2ec]"
-                href="#outdoor-adventures-review"
-              >
-                Review summary
-              </a>
               <div className="mt-6 space-y-2 text-xs text-[#405040]">
                 {disclosure ? <p>{disclosure}</p> : null}
                 <p className="rounded-xl border border-dashed border-black/10 bg-white/60 p-4">
                   Provider:{" "}
                   <span className="font-semibold">{providerLabel}</span>
-                </p>
-              </div>
-            </div>
-            <div
-              id="outdoor-adventures-review"
-              className="rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm"
-            >
-              <div className="flex items-center justify-between gap-4">
-                <h2 className="text-lg font-semibold text-[#1f2a1f]">
-                  Outdoor Adventures review
-                </h2>
-                <span className="rounded-full bg-[#e6f4ea] px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f8a3d]">
-                  Approved
-                </span>
-              </div>
-              <p className="mt-3 text-sm text-[#405040]">{reviewSummary}</p>
-              <div className="mt-4 grid gap-2 text-xs text-[#405040]">
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Skill level:
-                  </span>{" "}
-                  {skillLevel}
-                </p>
-                <p>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    Activity focus:
-                  </span>{" "}
-                  {activityLabel}
                 </p>
               </div>
             </div>
