@@ -1,6 +1,5 @@
 import type { BookingProvider, Tour } from "./tours.types";
 import { flagstaffTours } from "./flagstaffTours";
-import { sedonaTours } from "./sedonaTours";
 import { toursGenerated } from "./tours.generated";
 
 type ProviderConfig = {
@@ -604,7 +603,6 @@ export const tours: Tour[] = [
   ...toursGenerated,
   ...MANUAL_TOURS,
   ...flagstaffTours,
-  ...sedonaTours,
 ];
 
 export const getToursByState = (stateSlug: string) =>
