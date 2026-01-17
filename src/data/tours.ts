@@ -598,6 +598,35 @@ const MANUAL_TOURS: Tour[] = [
     longDescription:
       "Rock Rescue 101 is a Whitefish, Montana skills-focused climbing session centered on safety fundamentals.",
   },
+  {
+    id: "hollywoodbustoursla-333382",
+    slug: "a-taste-of-la-half-day-tour-of-the-best-of-los-angeles-333382",
+    title: "A Taste of LA: Half Day Tour of the BEST of Los Angeles",
+    operator: "Hollywood Bus Tours, LLC",
+    categories: ["detours"],
+    primaryCategory: "detours",
+    tags: ["City Tour", "Museum", "Sightseeing Tour"],
+    destination: {
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    heroImage: "https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD",
+    galleryImages: ["https://cdn.filestackcontent.com/T5WYAXrVScjR4SNHb0BD"],
+    badges: {
+      tagline: "Sightseeing Tour",
+    },
+    tagPills: ["City Tour", "Museum", "Sightseeing Tour"],
+    activitySlugs: ["detours"],
+    bookingProvider: "fareharbor",
+    bookingUrl:
+      "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    bookingWidgetUrl:
+      "https://fareharbor.com/embeds/book/hollywoodbustoursla/items/333382/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
+    longDescription:
+      "A Taste of LA: Half Day Tour of the BEST of Los Angeles is a guided sightseeing outing based in Los Angeles, California that highlights iconic neighborhoods and museum stops on a half-day itinerary.",
+  },
 ];
 
 export const tours: Tour[] = [
