@@ -1,5 +1,6 @@
 import type { Tour } from "./tours.types";
 import { getActivityLabels, getActivityLabelFromSlug } from "./activityLabels";
+import { stripReviewMentions } from "../utils/text";
 
 const ACTIVITY_LABELS = getActivityLabels();
 
@@ -27,14 +28,6 @@ export const getSkillLevelLabel = (tour: Tour) => {
   return SKILL_LEVELS[primarySlug] ?? "All levels with guide support";
 };
 
-export const getTourReviewSummary = (tour: Tour) => {
-  const activityLabel = getActivityLabel(tour).toLowerCase();
-  const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
-  const durationLabel = tour.badges.duration ?? "a flexible half-day window";
-
-  return `Our Outdoor Adventures team sees ${tour.title} as a confident, well-paced way to experience ${destinationLabel}. The tour balances guided storytelling with plenty of space to settle into the scenery, making it ideal for travelers who want ${activityLabel} without the hassle of planning every turn. The experience is structured around ${durationLabel}, with a rhythm that favors comfort, steady exploration, and clear guidance from local experts.`;
-};
-
 export const getExpandedTourDescription = (tour: Tour) => {
   const baseParagraphs = tour.longDescription
     .split("\n\n")
@@ -43,19 +36,18 @@ export const getExpandedTourDescription = (tour: Tour) => {
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
   const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
-  const durationLabel =
-    tour.badges.duration ?? "a flexible half-day window";
-  const ratingLabel = tour.badges.rating
-    ? `Recent travelers highlight a ${tour.badges.rating.toFixed(1)} out of 5 experience.`
-    : "Guest feedback often points to the balance of guidance and freedom.";
+  const durationLabel = tour.badges.duration ?? "a flexible half-day window";
 
   const expandedParagraphs = [
     `${tour.title} delivers a guided ${activityLabel.toLowerCase()} experience with a relaxed, scenic pace. Starting in ${destinationLabel}, the route focuses on standout viewpoints and comfortable timing so you can enjoy the setting without feeling rushed.`,
     `We classify the skill level as ${skillLevel}, with the day structured around ${durationLabel}. Guides adapt the flow for the group, offering helpful context and optional pauses while keeping the outing smooth and approachable.`,
-    `Scenery and local insight are the highlights. ${ratingLabel} Expect thoughtful stops, clear guidance, and a route that balances exploration with comfort.`,
+    "Scenery and local insight are the highlights. Expect thoughtful stops, clear guidance, and a route that balances exploration with comfort.",
   ];
 
-  return [...baseParagraphs, ...expandedParagraphs];
+  return [...baseParagraphs, ...expandedParagraphs]
+    .map(stripReviewMentions)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
 };
 
 export const getTourHighlights = (tour: Tour) => {
@@ -70,5 +62,8 @@ export const getTourHighlights = (tour: Tour) => {
     `${activityLabel} focus in ${destinationLabel}.`,
     `${durationLabel} with ${skillLevel.toLowerCase()}.`,
     highlightSource,
-  ];
+  ]
+    .map(stripReviewMentions)
+    .map((highlight) => highlight.trim())
+    .filter(Boolean);
 };
