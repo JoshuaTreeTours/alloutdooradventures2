@@ -1,3 +1,4 @@
+import { slugify } from "../tourCatalog";
 import type { Tour } from "../tours.types";
 
 export const flagstaffTours: Tour[] = [
@@ -1110,3 +1111,27 @@ export const flagstaffTours: Tour[] = [
     longDescription: "Starry Stories Planetarium Show is a guided experience based in Flagstaff, Arizona that keeps the focus on the local highlights and an easy-to-book schedule.",
   },
 ];
+
+export const getFlagstaffTourSlug = (tour: Tour) =>
+  tour.slug?.trim() ? tour.slug : slugify(`${tour.title}-flagstaff`);
+
+const getFlagstaffTourSlugCandidates = (tour: Tour) => {
+  const baseSlug = getFlagstaffTourSlug(tour);
+  const titleSlug = slugify(tour.title);
+  const titleFlagstaffSlug = slugify(`${tour.title}-flagstaff`);
+
+  return Array.from(
+    new Set([baseSlug, titleSlug, titleFlagstaffSlug].filter(Boolean)),
+  );
+};
+
+export const getFlagstaffTourBySlug = (slug: string) =>
+  flagstaffTours.find((tour) =>
+    getFlagstaffTourSlugCandidates(tour).includes(slug),
+  );
+
+export const getFlagstaffTourDetailPath = (tour: Tour) =>
+  `/tours/${getFlagstaffTourSlug(tour)}`;
+
+export const getFlagstaffTourBookingPath = (tour: Tour) =>
+  `/tours/${getFlagstaffTourSlug(tour)}/book`;
