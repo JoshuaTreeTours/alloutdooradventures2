@@ -14,6 +14,7 @@ import {
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
+import { getFareharborParams, normalizeFareharborUrl } from "../../../../lib/fareharbor";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -96,31 +97,16 @@ export default function CityTourBookingRoute({
     "idle" | "loading" | "loaded" | "failed"
   >("idle");
   const [redirectMode, setRedirectMode] = useState(false);
-  const attributionParams = useMemo(
-    () => ({
-      "asn-ref": "alloutdooradventures",
-      ref: "alloutdooradventures",
-      branding: "no",
-    }),
-    [],
-  );
+  const fareharborParams = useMemo(() => getFareharborParams(), []);
 
-  const ensureAttribution = (url?: string) => {
+  const ensureFareharborParams = (url?: string) => {
     if (!url) {
       return undefined;
     }
     if (!isFareharbor) {
       return url;
     }
-    try {
-      const normalized = new URL(url);
-      Object.entries(attributionParams).forEach(([key, value]) => {
-        normalized.searchParams.set(key, value);
-      });
-      return normalized.toString();
-    } catch {
-      return url;
-    }
+    return normalizeFareharborUrl(url);
   };
 
   const auditAttribution = (url?: string) => {
@@ -135,15 +121,15 @@ export default function CityTourBookingRoute({
     if (!url) {
       return {
         ok: false,
-        missing: Object.keys(attributionParams),
+        missing: Object.keys(fareharborParams),
         url,
         applicable: true,
       };
     }
     try {
       const parsed = new URL(url);
-      const missing = Object.entries(attributionParams)
-        .filter(([key, value]) => parsed.searchParams.get(key) !== value)
+      const missing = Object.entries(fareharborParams)
+        .filter(([key, value]) => !parsed.searchParams.getAll(key).includes(value))
         .map(([key]) => key);
       return {
         ok: missing.length === 0,
@@ -154,15 +140,16 @@ export default function CityTourBookingRoute({
     } catch {
       return {
         ok: false,
-        missing: Object.keys(attributionParams),
+        missing: Object.keys(fareharborParams),
         url,
         applicable: true,
       };
     }
   };
 
-  const attributedBookingUrl = ensureAttribution(tour.bookingUrl);
-  const attributedWidgetUrl = ensureAttribution(tour.bookingWidgetUrl);
+  const embedSourceUrl = isFareharbor ? tour.bookingUrl : tour.bookingWidgetUrl;
+  const attributedBookingUrl = ensureFareharborParams(tour.bookingUrl);
+  const attributedWidgetUrl = ensureFareharborParams(embedSourceUrl);
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
   const embedAudit = auditAttribution(attributedWidgetUrl);
   const fallbackAudit = auditAttribution(attributedBookingUrl);
@@ -179,6 +166,11 @@ export default function CityTourBookingRoute({
   const isIOS =
     typeof navigator !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent);
+  const startingAt = tour.badges.priceFrom;
+  const departureLocation =
+    tour.destination.city !== "Unknown" && tour.destination.state !== "Unknown"
+      ? `${tour.destination.city}, ${tour.destination.state}`
+      : undefined;
 
   useEffect(() => {
     if (!attributedWidgetUrl) {
@@ -250,6 +242,30 @@ export default function CityTourBookingRoute({
               Reserve your spot on the official booking page. If the embedded
               calendar doesn’t load, use the direct booking link below.
             </p>
+            {startingAt || departureLocation ? (
+              <dl className="mt-6 grid gap-4 text-sm text-white/90 sm:grid-cols-2">
+                {startingAt ? (
+                  <div>
+                    <dt className="text-xs uppercase tracking-[0.3em] text-white/70">
+                      Starting at
+                    </dt>
+                    <dd className="mt-2 text-base font-semibold text-white">
+                      {startingAt}
+                    </dd>
+                  </div>
+                ) : null}
+                {departureLocation ? (
+                  <div>
+                    <dt className="text-xs uppercase tracking-[0.3em] text-white/70">
+                      Departure location
+                    </dt>
+                    <dd className="mt-2 text-base font-semibold text-white">
+                      {departureLocation}
+                    </dd>
+                  </div>
+                ) : null}
+              </dl>
+            ) : null}
           </div>
         </div>
       </section>
