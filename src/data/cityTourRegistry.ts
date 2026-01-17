@@ -13,13 +13,6 @@ import {
   getSedonaTourSlug,
   sedonaTours,
 } from "./sedonaTours";
-import {
-  getLosAngelesTourBookingPath,
-  getLosAngelesTourBySlug,
-  getLosAngelesTourDetailPath,
-  getLosAngelesTourSlug,
-  losAngelesTours,
-} from "./losAngelesTours";
 
 type CityTourConfig = {
   stateSlug: string;
@@ -49,15 +42,6 @@ const CITY_TOUR_REGISTRY: Record<string, CityTourConfig> = {
     getTourSlug: getSedonaTourSlug,
     getTourDetailPath: getSedonaTourDetailPath,
     getTourBookingPath: getSedonaTourBookingPath,
-  },
-  "los-angeles": {
-    stateSlug: "california",
-    citySlug: "los-angeles",
-    tours: losAngelesTours,
-    getTourBySlug: getLosAngelesTourBySlug,
-    getTourSlug: getLosAngelesTourSlug,
-    getTourDetailPath: getLosAngelesTourDetailPath,
-    getTourBookingPath: getLosAngelesTourBookingPath,
   },
 };
 
