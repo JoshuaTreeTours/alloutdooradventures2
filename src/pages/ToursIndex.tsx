@@ -6,19 +6,13 @@ import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
 import { tours } from "../data/tours";
 import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
-import { worldCountriesWithTours } from "../data/worldIndex";
 
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivity, setSelectedActivity] = useState("");
   const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
-  const [selectedWorldCountry, setSelectedWorldCountry] = useState("");
   const europeCountryOptions = countriesWithTours.map((country) => ({
-    name: country.name,
-    slug: country.slug,
-  }));
-  const worldCountryOptions = worldCountriesWithTours.map((country) => ({
     name: country.name,
     slug: country.slug,
   }));
@@ -153,22 +147,6 @@ export default function ToursIndex() {
             onSelect={(slug) => setSelectedActivity(slug)}
           />
         </div>
-      </section>
-
-      <section className="mt-6 rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
-        <RegionDropdownButton
-          label="Select a country…"
-          options={worldCountryOptions}
-          selectedName={
-            worldCountryOptions.find(
-              (country) => country.slug === selectedWorldCountry,
-            )?.name
-          }
-          onSelect={(slug) => {
-            setSelectedWorldCountry(slug);
-            window.location.assign(`/destinations/world/${slug}`);
-          }}
-        />
       </section>
 
       <section className="mt-10">
