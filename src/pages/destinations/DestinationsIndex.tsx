@@ -1,9 +1,6 @@
 import DestinationCard from "../../components/DestinationCard";
-import {
-  EUROPE_COUNTRIES,
-  WORLD_DESTINATIONS,
-  slugify,
-} from "../../data/tourCatalog";
+import { countriesWithTours } from "../../data/europeIndex";
+import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { destinations } from "../../data/destinations";
 
 export default function DestinationsIndex() {
@@ -124,13 +121,13 @@ export default function DestinationsIndex() {
               coastal rides.
             </p>
             <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
-              {EUROPE_COUNTRIES.map((country) => (
-                <li key={country}>
+              {countriesWithTours.map((country) => (
+                <li key={country.slug}>
                   <a
                     className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-                    href={`/tours/europe/${slugify(country)}`}
+                    href={`/destinations/europe/${country.slug}`}
                   >
-                    {country}
+                    {country.name}
                   </a>
                 </li>
               ))}
