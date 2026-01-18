@@ -3,14 +3,14 @@ import type { Tour } from "../data/tours.types";
 
 const PADDLE_KEYWORDS = ["canoe", "kayak", "paddle", "rafting"];
 
-const getCategoryMatch = (activitySlug: string) => {
-  if (activitySlug === "cycling") {
+const matchesCategory = (category: EuropeDropdownProps["category"]) => {
+  if (category === "cycling") {
     return (tour: Tour) => tour.activitySlugs.includes("cycling");
   }
-  if (activitySlug === "hiking") {
+  if (category === "hiking") {
     return (tour: Tour) => tour.activitySlugs.includes("hiking");
   }
-  if (activitySlug === "canoeing") {
+  if (category === "paddle-sports") {
     return (tour: Tour) => {
       if (tour.activitySlugs.includes("canoeing")) {
         return true;
@@ -19,26 +19,23 @@ const getCategoryMatch = (activitySlug: string) => {
       return PADDLE_KEYWORDS.some((keyword) => tagText.includes(keyword));
     };
   }
-  return () => false;
+  return (tour: Tour) => Boolean(tour);
 };
 
-const getEuropeCategorySlug = (activitySlug: string) =>
-  activitySlug === "canoeing" ? "paddle-sports" : activitySlug;
-
-type CategoryDestinationDropdownProps = {
-  activitySlug: string;
+type EuropeDropdownProps = {
+  category: "all" | "cycling" | "hiking" | "paddle-sports";
 };
 
-export default function CategoryDestinationDropdown({
-  activitySlug,
-}: CategoryDestinationDropdownProps) {
-  const matchesCategory = getCategoryMatch(activitySlug);
-  const europeCategorySlug = getEuropeCategorySlug(activitySlug);
-  const europeCountries = countriesWithTours.filter((country) =>
-    (toursByCountry[country.slug] ?? []).some((tour) =>
-      matchesCategory(tour),
-    ),
-  );
+export default function EuropeDropdown({ category }: EuropeDropdownProps) {
+  const categoryMatcher = matchesCategory(category);
+  const europeCountries =
+    category === "all"
+      ? countriesWithTours
+      : countriesWithTours.filter((country) =>
+          (toursByCountry[country.slug] ?? []).some((tour) =>
+            categoryMatcher(tour),
+          ),
+        );
 
   if (!europeCountries.length) {
     return null;
@@ -54,7 +51,7 @@ export default function CategoryDestinationDropdown({
           Explore Europe by country
         </h2>
         <p className="mt-3 text-sm text-[#405040] md:text-base">
-          Jump to country-specific {activitySlug.replace("-", " ")} tours.
+          Jump to country hubs with live tours across Europe.
         </p>
       </div>
 
@@ -69,14 +66,18 @@ export default function CategoryDestinationDropdown({
           </span>
         </summary>
         <p className="mt-2 text-sm text-[#405040] md:text-base">
-          Browse country hubs with live {activitySlug.replace("-", " ")} tours.
+          Browse country hubs with live tours ready to book.
         </p>
         <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
           {europeCountries.map((country) => (
             <li key={country.slug}>
               <a
                 className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-                href={`/destinations/europe/${country.slug}/${europeCategorySlug}`}
+                href={
+                  category === "all"
+                    ? `/destinations/europe/${country.slug}/tours`
+                    : `/destinations/europe/${country.slug}/${category}`
+                }
               >
                 {country.name}
               </a>

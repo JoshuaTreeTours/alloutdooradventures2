@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
-import CategoryDestinationDropdown from "../components/CategoryDestinationDropdown";
+import EuropeDropdown from "../components/EuropeDropdown";
 import { countriesWithTours } from "../data/europeIndex";
 import {
   US_STATES,
@@ -27,6 +27,8 @@ export default function ActivityCatalogTemplate({
   activitySlug,
 }: ActivityCatalogTemplateProps) {
   const activityTours = getToursByActivity(activitySlug);
+  const europeCategory =
+    activitySlug === "canoeing" ? "paddle-sports" : activitySlug;
   const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
     if (!event.target.value) {
       return;
@@ -72,10 +74,6 @@ export default function ActivityCatalogTemplate({
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6">
-        <CategoryDestinationDropdown activitySlug={activitySlug} />
-      </section>
-
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -113,6 +111,10 @@ export default function ActivityCatalogTemplate({
             </select>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6">
+        <EuropeDropdown category={europeCategory} />
       </section>
 
       <section className="mx-auto max-w-6xl px-6 pb-16">

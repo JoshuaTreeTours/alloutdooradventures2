@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import TourCard from "../components/TourCard";
+import EuropeDropdown from "../components/EuropeDropdown";
 import { tours } from "../data/tours";
 import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
 
@@ -147,6 +148,10 @@ export default function ToursIndex() {
             </select>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-0">
+        <EuropeDropdown category="all" />
       </section>
 
       <section className="mt-10">
