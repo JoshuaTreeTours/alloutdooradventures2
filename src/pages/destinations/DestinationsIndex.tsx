@@ -1,5 +1,4 @@
 import DestinationCard from "../../components/DestinationCard";
-import HorizontalLinkSlider from "../../components/HorizontalLinkSlider";
 import {
   EUROPE_COUNTRIES,
   WORLD_DESTINATIONS,
@@ -95,7 +94,7 @@ export default function DestinationsIndex() {
           ))}
       </section>
 
-      <section className="mt-16 space-y-12" aria-label="International destinations">
+      <section className="mt-16 space-y-8" aria-label="International destinations">
         <div className="text-center">
           <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
             International
@@ -109,27 +108,63 @@ export default function DestinationsIndex() {
           </p>
         </div>
 
-        <HorizontalLinkSlider
-          eyebrow="Europe"
-          title="All European countries"
-          description="Browse every country we plan to support, from alpine escapes to coastal rides."
-          ariaLabel="European destinations"
-          items={EUROPE_COUNTRIES.map((country) => ({
-            label: country,
-            href: `/tours/europe/${slugify(country)}`,
-          }))}
-        />
+        <div className="space-y-6">
+          <details className="group rounded-2xl border border-[#d6decf] bg-white/80 p-6 shadow-sm">
+            <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-[#2f4a2f]">
+              <span>Europe</span>
+              <span
+                aria-hidden="true"
+                className="text-[#7a8a6b] transition-transform duration-200 group-open:rotate-180"
+              >
+                ▾
+              </span>
+            </summary>
+            <p className="mt-2 text-sm text-[#405040] md:text-base">
+              Browse every country we plan to support, from alpine escapes to
+              coastal rides.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
+              {EUROPE_COUNTRIES.map((country) => (
+                <li key={country}>
+                  <a
+                    className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
+                    href={`/tours/europe/${slugify(country)}`}
+                  >
+                    {country}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
 
-        <HorizontalLinkSlider
-          eyebrow="Worldwide"
-          title="Other world destinations"
-          description="Keep an eye on the next wave of global tour hubs and partner regions."
-          ariaLabel="World destinations"
-          items={WORLD_DESTINATIONS.map((destination) => ({
-            label: destination,
-            href: `/tours/world/${slugify(destination)}`,
-          }))}
-        />
+          <details className="group rounded-2xl border border-[#d6decf] bg-white/80 p-6 shadow-sm">
+            <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-[#2f4a2f]">
+              <span>All other countries</span>
+              <span
+                aria-hidden="true"
+                className="text-[#7a8a6b] transition-transform duration-200 group-open:rotate-180"
+              >
+                ▾
+              </span>
+            </summary>
+            <p className="mt-2 text-sm text-[#405040] md:text-base">
+              Keep an eye on the next wave of global tour hubs and partner
+              regions.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
+              {WORLD_DESTINATIONS.map((destination) => (
+                <li key={destination}>
+                  <a
+                    className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
+                    href={`/tours/world/${slugify(destination)}`}
+                  >
+                    {destination}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
       </section>
     </main>
   );
