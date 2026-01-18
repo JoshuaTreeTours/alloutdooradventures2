@@ -2,11 +2,13 @@ import { Link } from "wouter";
 
 import Image from "../../../components/Image";
 import TourCard from "../../../components/TourCard";
+import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import { countriesWithTours, toursByCountry } from "../../../data/europeIndex";
 
 type EuropeCountryRouteProps = {
   params: {
     countrySlug: string;
+    categorySlug?: string;
   };
 };
 
@@ -17,6 +19,16 @@ export default function EuropeCountryRoute({
     (entry) => entry.slug === params.countrySlug,
   );
   const countryTours = toursByCountry[params.countrySlug] ?? [];
+  const categorySlug = params.categorySlug;
+  const categoryLabel = getActivityLabelFromSlug(categorySlug);
+  const filteredTours = categorySlug
+    ? countryTours.filter(
+        (tour) =>
+          tour.activitySlugs.includes(categorySlug) ||
+          tour.categories?.includes(categorySlug) ||
+          tour.primaryCategory === categorySlug,
+      )
+    : countryTours;
 
   if (!country) {
     return (
@@ -61,6 +73,12 @@ export default function EuropeCountryRoute({
               Browse guided adventures across {country.name}, updated from our
               live European inventory.
             </p>
+            {categorySlug ? (
+              <p className="text-sm text-white/80">
+                Filtered by{" "}
+                <span className="font-semibold">{categoryLabel}</span>.
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
@@ -75,12 +93,19 @@ export default function EuropeCountryRoute({
               Explore active tours in {country.name}
             </h2>
             <p className="text-sm text-[#405040]">
-              Showing {countryTours.length} tours
+              Showing {filteredTours.length} tours
             </p>
+            {categorySlug ? (
+              <Link href={`/destinations/europe/${country.slug}`}>
+                <a className="text-sm font-semibold text-[#2f4a2f]">
+                  View all {country.name} tours →
+                </a>
+              </Link>
+            ) : null}
           </div>
-          {countryTours.length ? (
+          {filteredTours.length ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {countryTours.map((tour) => (
+              {filteredTours.map((tour) => (
                 <TourCard key={tour.id} tour={tour} />
               ))}
             </div>

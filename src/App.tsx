@@ -40,6 +40,10 @@ export default function App() {
           component={EuropeCountryRoute}
         />
         <Route
+          path="/destinations/europe/:countrySlug/:categorySlug"
+          component={EuropeCountryRoute}
+        />
+        <Route
           path="/destinations/europe/:countrySlug"
           component={EuropeCountryRoute}
         />
