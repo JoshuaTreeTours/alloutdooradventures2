@@ -153,7 +153,7 @@ export default function DestinationsIndex() {
                 <li key={destination}>
                   <a
                     className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-                    href={`/tours/world/${slugify(destination)}`}
+                    href={`/destinations/world/${slugify(destination)}`}
                   >
                     {destination}
                   </a>

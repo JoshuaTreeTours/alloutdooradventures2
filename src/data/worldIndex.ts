@@ -14,7 +14,6 @@ const usStateSlugs = new Set(US_STATES.map((state) => slugify(state)));
 const excludedCountrySlugs = new Set([
   ...europeCountrySlugs,
   ...usStateSlugs,
-  "australia",
   "united-states",
 ]);
 
