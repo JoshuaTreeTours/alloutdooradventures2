@@ -2,6 +2,7 @@ import type { BookingProvider, Tour } from "./tours.types";
 import { flagstaffTours } from "./flagstaffTours";
 import { sedonaTours } from "./sedonaTours";
 import { toursGenerated } from "./tours.generated";
+import { europeCyclingTours } from "./europeCyclingTours";
 
 type ProviderConfig = {
   label: string;
@@ -1102,6 +1103,7 @@ export const tours: Tour[] = [
   ...MANUAL_TOURS,
   ...flagstaffTours,
   ...sedonaTours,
+  ...europeCyclingTours,
 ];
 
 export const getToursByState = (stateSlug: string) =>
