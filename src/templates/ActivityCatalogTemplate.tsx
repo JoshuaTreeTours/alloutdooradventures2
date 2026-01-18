@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 
-import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
@@ -119,28 +118,80 @@ export default function ActivityCatalogTemplate({
         )}
       </section>
 
-      <section className="mx-auto max-w-6xl space-y-12 px-6 pb-16">
-        <HorizontalLinkSlider
-          eyebrow="Europe"
-          title="Every country in Europe"
-          description="Add tour listings to each country hub as partnerships are ready."
-          ariaLabel="European tour destinations"
-          items={countriesWithTours.map((country) => ({
-            label: country.name,
-            href: `/destinations/europe/${country.slug}`,
-          }))}
-        />
+      <section
+        className="mx-auto max-w-6xl space-y-8 px-6 pb-16"
+        aria-label="International destinations"
+      >
+        <div className="text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+            International
+          </span>
+          <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+            Explore global destinations
+          </h2>
+          <p className="mt-3 text-sm text-[#405040] md:text-base">
+            Preview upcoming country hubs to inspire your next adventure beyond
+            the United States.
+          </p>
+        </div>
 
-        <HorizontalLinkSlider
-          eyebrow="Worldwide"
-          title="Other global destinations"
-          description="Prepare for future activity hubs beyond Europe."
-          ariaLabel="World tour destinations"
-          items={WORLD_DESTINATIONS.map((destination) => ({
-            label: destination,
-            href: `/tours/${activitySlug}/world/${slugify(destination)}`,
-          }))}
-        />
+        <div className="space-y-6">
+          <details className="group rounded-2xl border border-[#d6decf] bg-white/80 p-6 shadow-sm">
+            <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-[#2f4a2f]">
+              <span>Europe</span>
+              <span
+                aria-hidden="true"
+                className="text-[#7a8a6b] transition-transform duration-200 group-open:rotate-180"
+              >
+                ▾
+              </span>
+            </summary>
+            <p className="mt-2 text-sm text-[#405040] md:text-base">
+              Browse every country we plan to support, from alpine escapes to
+              coastal rides.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
+              {countriesWithTours.map((country) => (
+                <li key={country.slug}>
+                  <a
+                    className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
+                    href={`/destinations/europe/${country.slug}`}
+                  >
+                    {country.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+
+          <details className="group rounded-2xl border border-[#d6decf] bg-white/80 p-6 shadow-sm">
+            <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-[#2f4a2f]">
+              <span>Other International Countries</span>
+              <span
+                aria-hidden="true"
+                className="text-[#7a8a6b] transition-transform duration-200 group-open:rotate-180"
+              >
+                ▾
+              </span>
+            </summary>
+            <p className="mt-2 text-sm text-[#405040] md:text-base">
+              Keep an eye on the next wave of global tour hubs and partner
+              regions.
+            </p>
+            <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
+              {WORLD_DESTINATIONS.map((destination) => (
+                <li key={destination}>
+                  <a
+                    className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
+                    href={`/tours/${activitySlug}/world/${slugify(destination)}`}
+                  >
+                    {destination}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </div>
       </section>
     </main>
   );
