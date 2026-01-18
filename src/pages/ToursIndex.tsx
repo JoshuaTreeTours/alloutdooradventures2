@@ -111,41 +111,46 @@ export default function ToursIndex() {
           ) : null}
         </div>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
-          <RegionDropdownButton
-            label="Choose a state"
-            options={stateOptions.map((state) => ({
-              name: state,
-              slug: state,
-            }))}
-            selectedName={selectedState || undefined}
-            onSelect={(slug) => {
-              setSelectedState(slug);
-              setSelectedCity("");
-            }}
-          />
-          <RegionDropdownButton
-            label="Choose a city"
-            options={cityOptions.map((city) => ({
-              name: city,
-              slug: city,
-            }))}
-            selectedName={selectedCity || undefined}
-            onSelect={(slug) => setSelectedCity(slug)}
-          />
-          <RegionDropdownButton
-            label="Choose an activity"
-            options={activityOptions.map((activity) => ({
-              name: activity.label,
-              slug: activity.slug,
-            }))}
-            selectedName={
-              activityOptions.find(
-                (activity) => activity.slug === selectedActivity,
-              )?.label
-            }
-            onSelect={(slug) => setSelectedActivity(slug)}
-          />
+        <div className="mt-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+            United States
+          </p>
+          <div className="mt-3 grid gap-4 md:grid-cols-3">
+            <RegionDropdownButton
+              label="Choose a state"
+              options={stateOptions.map((state) => ({
+                name: state,
+                slug: state,
+              }))}
+              selectedName={selectedState || undefined}
+              onSelect={(slug) => {
+                setSelectedState(slug);
+                setSelectedCity("");
+              }}
+            />
+            <RegionDropdownButton
+              label="Choose a city"
+              options={cityOptions.map((city) => ({
+                name: city,
+                slug: city,
+              }))}
+              selectedName={selectedCity || undefined}
+              onSelect={(slug) => setSelectedCity(slug)}
+            />
+            <RegionDropdownButton
+              label="Choose an activity"
+              options={activityOptions.map((activity) => ({
+                name: activity.label,
+                slug: activity.slug,
+              }))}
+              selectedName={
+                activityOptions.find(
+                  (activity) => activity.slug === selectedActivity,
+                )?.label
+              }
+              onSelect={(slug) => setSelectedActivity(slug)}
+            />
+          </div>
         </div>
       </section>
 
