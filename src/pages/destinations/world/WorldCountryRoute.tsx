@@ -1,4 +1,4 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 import Image from "../../../components/Image";
 import TourCard from "../../../components/TourCard";
@@ -7,6 +7,13 @@ import {
   worldCountriesWithTours,
   worldToursByCountry,
 } from "../../../data/worldIndex";
+
+const FILTER_OPTIONS = [
+  { label: "All tours", routeSlug: "all" },
+  { label: "Cycling", routeSlug: "cycling" },
+  { label: "Hiking", routeSlug: "hiking" },
+  { label: "Paddle Sports", routeSlug: "paddle-sports", activitySlug: "canoeing" },
+];
 
 type WorldCountryRouteProps = {
   params: {
@@ -18,12 +25,17 @@ type WorldCountryRouteProps = {
 export default function WorldCountryRoute({
   params,
 }: WorldCountryRouteProps) {
+  const [, setLocation] = useLocation();
   const country = worldCountriesWithTours.find(
     (entry) => entry.slug === params.countrySlug,
   );
   const countryTours = worldToursByCountry[params.countrySlug] ?? [];
   const categorySlug = params.categorySlug;
-  const categoryLabel = getActivityLabelFromSlug(categorySlug);
+  const activeFilter =
+    categorySlug === "canoeing" ? "paddle-sports" : categorySlug ?? "all";
+  const filterActivitySlug =
+    categorySlug === "paddle-sports" ? "canoeing" : categorySlug;
+  const categoryLabel = getActivityLabelFromSlug(filterActivitySlug);
 
   if (!country) {
     return (
@@ -37,12 +49,12 @@ export default function WorldCountryRoute({
   }
 
   const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
-  const filteredTours = categorySlug
+  const filteredTours = filterActivitySlug
     ? countryTours.filter(
         (tour) =>
-          tour.activitySlugs.includes(categorySlug) ||
-          tour.categories?.includes(categorySlug) ||
-          tour.primaryCategory === categorySlug,
+          tour.activitySlugs.includes(filterActivitySlug) ||
+          tour.categories?.includes(filterActivitySlug) ||
+          tour.primaryCategory === filterActivitySlug,
       )
     : countryTours;
 
@@ -93,16 +105,38 @@ export default function WorldCountryRoute({
             <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
               Explore active tours in {country.name}
             </h2>
-            <p className="text-sm text-[#405040]">
-              Showing {filteredTours.length} tours
-            </p>
-            {categorySlug ? (
-              <Link href={`/destinations/world/${country.slug}`}>
-                <a className="text-sm font-semibold text-[#2f4a2f]">
-                  View all {country.name} tours →
-                </a>
-              </Link>
-            ) : null}
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            {FILTER_OPTIONS.map((filter) => {
+              const isActive = activeFilter === filter.routeSlug;
+              const href =
+                filter.routeSlug === "all"
+                  ? `/destinations/world/${country.slug}`
+                  : `/destinations/world/${country.slug}/${filter.routeSlug}`;
+              return (
+                <button
+                  key={filter.routeSlug}
+                  type="button"
+                  onClick={() => setLocation(href)}
+                  className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                    isActive
+                      ? "border-[#2f4a2f] bg-[#2f4a2f] text-white"
+                      : "border-black/10 bg-white text-[#2f4a2f] hover:border-[#2f4a2f]"
+                  }`}
+                >
+                  {filter.label}
+                </button>
+              );
+            })}
+          </div>
+          <div className="mt-6 text-center text-sm text-[#405040]">
+            {activeFilter === "all"
+              ? `Showing all ${countryTours.length} tours`
+              : `Showing ${filteredTours.length} ${
+                  FILTER_OPTIONS.find(
+                    (filter) => filter.routeSlug === activeFilter,
+                  )?.label.toLowerCase() ?? ""
+                } tours`}
           </div>
           {filteredTours.length ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
