@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
+import CategoryDestinationDropdown from "../components/CategoryDestinationDropdown";
 import { countriesWithTours } from "../data/europeIndex";
 import {
   US_STATES,
@@ -69,6 +70,10 @@ export default function ActivityCatalogTemplate({
             </Link>
           </div>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6">
+        <CategoryDestinationDropdown activitySlug={activitySlug} />
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
