@@ -702,12 +702,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {featuredBestSellingHighlights.map(({ tour, href }) => (
-              <TourCard key={`featured-highlight-${tour.id}`} tour={tour} href={href} />
-            ))}
-          </div>
         </section>
 
         {/* FEATURED DESTINATIONS */}
