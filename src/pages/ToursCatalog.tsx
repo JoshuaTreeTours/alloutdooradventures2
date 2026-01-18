@@ -1,6 +1,6 @@
-import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
+import AccordionSelect from "../components/AccordionSelect";
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import { countriesWithTours } from "../data/europeIndex";
 import {
@@ -11,12 +11,12 @@ import {
 } from "../data/tourCatalog";
 
 export default function ToursCatalog() {
-  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    if (!event.target.value) {
+  const handleStateChange = (value: string) => {
+    if (!value) {
       return;
     }
 
-    window.location.assign(`/tours/us/${slugify(event.target.value)}`);
+    window.location.assign(`/tours/us/${slugify(value)}`);
   };
 
   return (
@@ -95,29 +95,16 @@ export default function ToursCatalog() {
           </p>
         </div>
         <div className="mx-auto mt-8 max-w-md">
-          <label
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            htmlFor="catalog-state-select"
-          >
-            Select a state
-          </label>
-          <div className="mt-2 rounded-xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm">
-            <select
-              id="catalog-state-select"
-              className="w-full bg-transparent text-sm font-semibold text-[#2f4a2f]"
-              defaultValue=""
-              onChange={handleStateChange}
-            >
-              <option value="" disabled>
-                Choose a state
-              </option>
-              {US_STATES.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </div>
+          <AccordionSelect
+            id="catalog-state-select"
+            label="Select a state"
+            placeholder="Choose a state"
+            options={US_STATES.map((state) => ({
+              label: state,
+              value: state,
+            }))}
+            onSelect={handleStateChange}
+          />
         </div>
       </section>
 

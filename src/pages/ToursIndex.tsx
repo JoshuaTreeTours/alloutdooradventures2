@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import AccordionSelect from "../components/AccordionSelect";
 import TourCard from "../components/TourCard";
 import { tours } from "../data/tours";
 import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
@@ -80,72 +81,51 @@ export default function ToursIndex() {
 
       <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
         <div className="grid gap-4 md:grid-cols-3">
-          <div>
-            <label
-              htmlFor="tours-state"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              State
-            </label>
-            <select
-              id="tours-state"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedState}
-              onChange={(event) => {
-                setSelectedState(event.target.value);
-                setSelectedCity("");
-              }}
-            >
-              <option value="">All states</option>
-              {stateOptions.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label
-              htmlFor="tours-city"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              City
-            </label>
-            <select
-              id="tours-city"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedCity}
-              onChange={(event) => setSelectedCity(event.target.value)}
-            >
-              <option value="">All cities</option>
-              {cityOptions.map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label
-              htmlFor="tours-activity"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              Activity
-            </label>
-            <select
-              id="tours-activity"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedActivity}
-              onChange={(event) => setSelectedActivity(event.target.value)}
-            >
-              <option value="">All activities</option>
-              {activityOptions.map((activity) => (
-                <option key={activity.slug} value={activity.slug}>
-                  {activity.label}
-                </option>
-              ))}
-            </select>
-          </div>
+          <AccordionSelect
+            id="tours-state"
+            label="State"
+            placeholder="All states"
+            value={selectedState}
+            options={[
+              { label: "All states", value: "" },
+              ...stateOptions.map((state) => ({
+                label: state,
+                value: state,
+              })),
+            ]}
+            onSelect={(value) => {
+              setSelectedState(value);
+              setSelectedCity("");
+            }}
+          />
+          <AccordionSelect
+            id="tours-city"
+            label="City"
+            placeholder="All cities"
+            value={selectedCity}
+            options={[
+              { label: "All cities", value: "" },
+              ...cityOptions.map((city) => ({
+                label: city,
+                value: city,
+              })),
+            ]}
+            onSelect={(value) => setSelectedCity(value)}
+          />
+          <AccordionSelect
+            id="tours-activity"
+            label="Activity"
+            placeholder="All activities"
+            value={selectedActivity}
+            options={[
+              { label: "All activities", value: "" },
+              ...activityOptions.map((activity) => ({
+                label: activity.label,
+                value: activity.slug,
+              })),
+            ]}
+            onSelect={(value) => setSelectedActivity(value)}
+          />
         </div>
       </section>
 

@@ -1,6 +1,6 @@
-import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
+import AccordionSelect from "../components/AccordionSelect";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
@@ -25,14 +25,12 @@ export default function ActivityCatalogTemplate({
   activitySlug,
 }: ActivityCatalogTemplateProps) {
   const activityTours = getToursByActivity(activitySlug);
-  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    if (!event.target.value) {
+  const handleStateChange = (value: string) => {
+    if (!value) {
       return;
     }
 
-    window.location.assign(
-      `/tours/${activitySlug}/us/${slugify(event.target.value)}`
-    );
+    window.location.assign(`/tours/${activitySlug}/us/${slugify(value)}`);
   };
 
   return (
@@ -83,29 +81,16 @@ export default function ActivityCatalogTemplate({
           </p>
         </div>
         <div className="mx-auto mt-8 max-w-md">
-          <label
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            htmlFor={`${activitySlug}-state-select`}
-          >
-            Select a state
-          </label>
-          <div className="mt-2 rounded-xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm">
-            <select
-              id={`${activitySlug}-state-select`}
-              className="w-full bg-transparent text-sm font-semibold text-[#2f4a2f]"
-              defaultValue=""
-              onChange={handleStateChange}
-            >
-              <option value="" disabled>
-                Choose a state
-              </option>
-              {US_STATES.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </div>
+          <AccordionSelect
+            id={`${activitySlug}-state-select`}
+            label="Select a state"
+            placeholder="Choose a state"
+            options={US_STATES.map((state) => ({
+              label: state,
+              value: state,
+            }))}
+            onSelect={handleStateChange}
+          />
         </div>
       </section>
 
