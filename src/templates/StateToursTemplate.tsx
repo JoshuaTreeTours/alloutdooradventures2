@@ -11,7 +11,6 @@ const FILTER_OPTIONS = [
   { label: "Cycling", slug: "cycling" },
   { label: "Hiking", slug: "hiking" },
   { label: "Paddle Sports", slug: "canoeing" },
-  { label: "Day Tours & Highlights", slug: "detours" },
 ];
 
 export default function StateToursTemplate({
