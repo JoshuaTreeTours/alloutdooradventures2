@@ -1,8 +1,10 @@
+import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 
 const buildTourSlug = (title: string, id: string) =>
   slugify(`${title}-${id}`);
+const normalizeBookingUrl = (url: string) => normalizeFareharborUrl(url) ?? url;
 
 export const europeCyclingTours: Tour[] = [
   {
@@ -178,5 +180,101 @@ export const europeCyclingTours: Tour[] = [
       "https://fareharbor.com/embeds/calendar/golocalsansebastian/items/183031/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
     longDescription:
       "Classic E-Bike Tour (Tour in English) is a guided ride around Donostia, Spain featuring beachfront routes and cultural landmarks with the ease of e-bikes.",
+  },
+  {
+    id: "hollandbikestoursandrentalsparis-539390",
+    slug: buildTourSlug("Lyon Highlights Tour", "539390"),
+    title: "Lyon Highlights Tour",
+    operator: "Holland Bikes Tours and Rentals",
+    categories: ["cycling"],
+    primaryCategory: "cycling",
+    tags: ["Bike Tour"],
+    destination: {
+      state: "France",
+      stateSlug: "france",
+      city: "Lyon",
+      citySlug: "lyon",
+    },
+    heroImage: "https://cdn.filestackcontent.com/QH3hKtgQkmDEgwrSJNFy",
+    galleryImages: ["https://cdn.filestackcontent.com/QH3hKtgQkmDEgwrSJNFy"],
+    badges: {
+      tagline: "Bike Tour",
+    },
+    tagPills: ["Bike Tour"],
+    activitySlugs: ["cycling"],
+    bookingProvider: "fareharbor",
+    bookingUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/book/hollandbikestoursandrentalsparis/items/539390/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    bookingWidgetUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/calendar/hollandbikestoursandrentalsparis/items/539390/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    longDescription:
+      "Lyon Highlights Tour is a guided ride through Lyon, France that combines riverside paths, historic squares, and the city’s culinary landmarks.",
+  },
+  {
+    id: "cognac-tasting-tour-592787",
+    slug: buildTourSlug(
+      "Balade VAE guidée dans le vignoble de Cognac - Demi-journée",
+      "592787",
+    ),
+    title: "Balade VAE guidée dans le vignoble de Cognac - Demi-journée",
+    operator: "Cognac Tasting Tour",
+    categories: ["cycling"],
+    primaryCategory: "cycling",
+    tags: ["Bike Tour"],
+    destination: {
+      state: "France",
+      stateSlug: "france",
+      city: "Saint-Preuil",
+      citySlug: slugify("Saint-Preuil"),
+    },
+    heroImage: "https://cdn.filestackcontent.com/w1w2i3ZbQZiSRMbHVNFB",
+    galleryImages: ["https://cdn.filestackcontent.com/w1w2i3ZbQZiSRMbHVNFB"],
+    badges: {
+      tagline: "Bike Tour",
+    },
+    tagPills: ["Bike Tour"],
+    activitySlugs: ["cycling"],
+    bookingProvider: "fareharbor",
+    bookingUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/book/cognac-tasting-tour/items/592787/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    bookingWidgetUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/calendar/cognac-tasting-tour/items/592787/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    longDescription:
+      "Balade VAE guidée dans le vignoble de Cognac - Demi-journée pairs scenic vineyard lanes near Saint-Preuil with a relaxed electric bike pace.",
+  },
+  {
+    id: "nicecitytour-223953",
+    slug: buildTourSlug("Le French Riviera Tour - 45 min. - 16 monuments", "223953"),
+    title: "Le French Riviera Tour - 45 min. - 16 monuments",
+    operator: "Happymoov Nice Vélotaxis",
+    categories: ["cycling"],
+    primaryCategory: "cycling",
+    tags: ["Bike Tour"],
+    destination: {
+      state: "France",
+      stateSlug: "france",
+      city: "Nice",
+      citySlug: "nice",
+    },
+    heroImage: "https://cdn.filestackcontent.com/hH6TcqrfT5WLXs6NQDSo",
+    galleryImages: ["https://cdn.filestackcontent.com/hH6TcqrfT5WLXs6NQDSo"],
+    badges: {
+      tagline: "Bike Tour",
+    },
+    tagPills: ["Bike Tour"],
+    activitySlugs: ["cycling"],
+    bookingProvider: "fareharbor",
+    bookingUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/book/nicecitytour/items/223953/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    bookingWidgetUrl: normalizeBookingUrl(
+      "https://fareharbor.com/embeds/calendar/nicecitytour/items/223953/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+    ),
+    longDescription:
+      "Le French Riviera Tour - 45 min. - 16 monuments is a quick, guided ride around Nice, France highlighting seaside promenades and landmark stops.",
   },
 ];

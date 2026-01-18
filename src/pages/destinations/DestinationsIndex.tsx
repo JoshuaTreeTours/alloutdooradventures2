@@ -128,7 +128,11 @@ export default function DestinationsIndex() {
                 <li key={country}>
                   <a
                     className="flex items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-                    href={`/tours/europe/${slugify(country)}`}
+                    href={
+                      country === "France"
+                        ? "/destinations/europe/france"
+                        : `/tours/europe/${slugify(country)}`
+                    }
                   >
                     {country}
                   </a>
