@@ -4,8 +4,8 @@ import { Link } from "wouter";
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
+import { countriesWithTours } from "../data/europeIndex";
 import {
-  EUROPE_COUNTRIES,
   US_STATES,
   WORLD_DESTINATIONS,
   slugify,
@@ -142,9 +142,9 @@ export default function ActivityCatalogTemplate({
           title="Every country in Europe"
           description="Add tour listings to each country hub as partnerships are ready."
           ariaLabel="European tour destinations"
-          items={EUROPE_COUNTRIES.map((country) => ({
-            label: country,
-            href: `/tours/${activitySlug}/europe/${slugify(country)}`,
+          items={countriesWithTours.map((country) => ({
+            label: country.name,
+            href: `/destinations/europe/${country.slug}`,
           }))}
         />
 
