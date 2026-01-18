@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
-import FranceTours from "./pages/destinations/europe/FranceTours";
+import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
 import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
@@ -35,8 +35,8 @@ export default function App() {
 
         <Route path="/destinations" component={DestinationsIndex} />
         <Route
-          path="/destinations/europe/france"
-          component={FranceTours}
+          path="/destinations/europe/:countrySlug"
+          component={EuropeCountryRoute}
         />
 
         <Route

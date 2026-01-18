@@ -2,9 +2,9 @@ import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
+import { countriesWithTours } from "../data/europeIndex";
 import {
   ACTIVITY_PAGES,
-  EUROPE_COUNTRIES,
   US_STATES,
   WORLD_DESTINATIONS,
   slugify,
@@ -127,9 +127,9 @@ export default function ToursCatalog() {
           title="Every country in Europe"
           description="Add tours to each country hub as partnerships go live."
           ariaLabel="European tour destinations"
-          items={EUROPE_COUNTRIES.map((country) => ({
-            label: country,
-            href: `/tours/europe/${slugify(country)}`,
+          items={countriesWithTours.map((country) => ({
+            label: country.name,
+            href: `/destinations/europe/${country.slug}`,
           }))}
         />
 

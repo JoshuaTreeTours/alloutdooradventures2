@@ -2,14 +2,36 @@ import { Link } from "wouter";
 
 import Image from "../../../components/Image";
 import TourCard from "../../../components/TourCard";
-import { tours } from "../../../data/tours";
+import { countriesWithTours, toursByCountry } from "../../../data/europeIndex";
 
-const franceTours = tours.filter(
-  (tour) => tour.destination.stateSlug === "france",
-);
-const heroImage = franceTours[0]?.heroImage ?? "/hero.jpg";
+type EuropeCountryRouteProps = {
+  params: {
+    countrySlug: string;
+  };
+};
 
-export default function FranceTours() {
+export default function EuropeCountryRoute({
+  params,
+}: EuropeCountryRouteProps) {
+  const country = countriesWithTours.find(
+    (entry) => entry.slug === params.countrySlug,
+  );
+  const countryTours = toursByCountry[params.countrySlug] ?? [];
+
+  if (!country) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+        <h1 className="text-2xl font-semibold">Destination not found</h1>
+        <p className="mt-4 text-sm text-[#405040]">
+          We couldn’t find that destination. Head back to Europe to keep
+          exploring.
+        </p>
+      </main>
+    );
+  }
+
+  const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
@@ -26,18 +48,18 @@ export default function FranceTours() {
               <a>Destinations</a>
             </Link>
             <span>/</span>
-            <span className="text-white">France</span>
+            <span className="text-white">{country.name}</span>
           </div>
           <div className="space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-white/80">
               Europe country hub
             </p>
             <h1 className="text-3xl font-semibold md:text-5xl">
-              France tours
+              {country.name} tours
             </h1>
             <p className="max-w-2xl text-sm text-white/90 md:text-base">
-              Browse guided cycling experiences across France, from Riviera
-              highlights to vineyard routes.
+              Browse guided adventures across {country.name}, updated from our
+              live European inventory.
             </p>
           </div>
         </div>
@@ -47,21 +69,24 @@ export default function FranceTours() {
         <div className="mx-auto max-w-6xl px-6 py-16">
           <div className="flex flex-col gap-2 text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-              France tours
+              {country.name} tours
             </span>
             <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              Explore active tours across France
+              Explore active tours in {country.name}
             </h2>
+            <p className="text-sm text-[#405040]">
+              Showing {countryTours.length} tours
+            </p>
           </div>
-          {franceTours.length ? (
+          {countryTours.length ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {franceTours.map((tour) => (
+              {countryTours.map((tour) => (
                 <TourCard key={tour.id} tour={tour} />
               ))}
             </div>
           ) : (
             <p className="mt-10 text-center text-sm text-[#405040]">
-              New France tours are on the way. Check back soon.
+              New {country.name} tours are on the way. Check back soon.
             </p>
           )}
         </div>
