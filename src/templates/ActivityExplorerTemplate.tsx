@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import RegionDropdownButton from "../components/RegionDropdownButton";
 import { countriesWithTours } from "../data/europeIndex";
 import { US_STATES, slugify } from "../data/tourCatalog";
 import { getToursByActivity } from "../data/tours";
@@ -12,9 +13,9 @@ type ActivityExplorerTemplateProps = {
   activitySlug: string;
 };
 
-type GeoLink = {
-  label: string;
-  href: string;
+type GeoOption = {
+  name: string;
+  slug: string;
 };
 
 const getDestinationSlug = (destinationState: string, stateSlug?: string) =>
@@ -56,26 +57,26 @@ export default function ActivityExplorerTemplate({
     }
   });
 
-  const usLinks: GeoLink[] = Array.from(usStateSlugs)
+  const usOptions: GeoOption[] = Array.from(usStateSlugs)
     .map((slug) => ({
-      label: usStateMap.get(slug) ?? slug,
-      href: `/tours/${activitySlug}/us/${slug}`,
+      name: usStateMap.get(slug) ?? slug,
+      slug,
     }))
-    .sort((a, b) => a.label.localeCompare(b.label));
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  const europeLinks: GeoLink[] = Array.from(europeCountrySlugs)
+  const europeOptions: GeoOption[] = Array.from(europeCountrySlugs)
     .map((slug) => ({
-      label: europeMap.get(slug) ?? slug,
-      href: `/destinations/europe/${slug}/${activitySlug}`,
+      name: europeMap.get(slug) ?? slug,
+      slug,
     }))
-    .sort((a, b) => a.label.localeCompare(b.label));
+    .sort((a, b) => a.name.localeCompare(b.name));
 
-  const worldLinks: GeoLink[] = Array.from(worldCountryMap.entries())
-    .map(([slug, label]) => ({
-      label,
-      href: `/destinations/world/${slug}/${activitySlug}`,
+  const worldOptions: GeoOption[] = Array.from(worldCountryMap.entries())
+    .map(([slug, name]) => ({
+      name,
+      slug,
     }))
-    .sort((a, b) => a.label.localeCompare(b.label));
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -124,16 +125,15 @@ export default function ActivityExplorerTemplate({
             Choose a state to explore active tours in this activity.
           </p>
         </div>
-        {usLinks.length ? (
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {usLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a className="flex h-full items-center justify-between rounded-2xl border border-black/10 bg-white/80 px-5 py-4 text-sm font-semibold text-[#1f2a1f] shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                  <span>{link.label}</span>
-                  <span className="text-[#2f4a2f]">→</span>
-                </a>
-              </Link>
-            ))}
+        {usOptions.length ? (
+          <div className="mt-8">
+            <RegionDropdownButton
+              label="Choose a state"
+              options={usOptions}
+              onSelect={(slug) => {
+                window.location.assign(`/tours/${activitySlug}/us/${slug}`);
+              }}
+            />
           </div>
         ) : (
           <p className="mt-8 text-center text-sm text-[#405040]">
@@ -155,16 +155,17 @@ export default function ActivityExplorerTemplate({
             Browse European country hubs for this activity.
           </p>
         </div>
-        {europeLinks.length ? (
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {europeLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a className="flex h-full items-center justify-between rounded-2xl border border-black/10 bg-white/80 px-5 py-4 text-sm font-semibold text-[#1f2a1f] shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                  <span>{link.label}</span>
-                  <span className="text-[#2f4a2f]">→</span>
-                </a>
-              </Link>
-            ))}
+        {europeOptions.length ? (
+          <div className="mt-8">
+            <RegionDropdownButton
+              label="Select a country…"
+              options={europeOptions}
+              onSelect={(slug) => {
+                window.location.assign(
+                  `/destinations/europe/${slug}/${activitySlug}`,
+                );
+              }}
+            />
           </div>
         ) : (
           <p className="mt-8 text-center text-sm text-[#405040]">
@@ -185,16 +186,17 @@ export default function ActivityExplorerTemplate({
             Explore non-US, non-European countries offering this activity.
           </p>
         </div>
-        {worldLinks.length ? (
-          <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {worldLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a className="flex h-full items-center justify-between rounded-2xl border border-black/10 bg-white/80 px-5 py-4 text-sm font-semibold text-[#1f2a1f] shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-                  <span>{link.label}</span>
-                  <span className="text-[#2f4a2f]">→</span>
-                </a>
-              </Link>
-            ))}
+        {worldOptions.length ? (
+          <div className="mt-8">
+            <RegionDropdownButton
+              label="Select a country…"
+              options={worldOptions}
+              onSelect={(slug) => {
+                window.location.assign(
+                  `/destinations/world/${slug}/${activitySlug}`,
+                );
+              }}
+            />
           </div>
         ) : (
           <p className="mt-8 text-center text-sm text-[#405040]">

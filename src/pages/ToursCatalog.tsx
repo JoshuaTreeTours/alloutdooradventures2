@@ -1,7 +1,7 @@
-import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
+import RegionDropdownButton from "../components/RegionDropdownButton";
 import { countriesWithTours } from "../data/europeIndex";
 import {
   ACTIVITY_PAGES,
@@ -11,12 +11,12 @@ import {
 } from "../data/tourCatalog";
 
 export default function ToursCatalog() {
-  const handleStateChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    if (!event.target.value) {
+  const handleStateChange = (slug: string) => {
+    if (!slug) {
       return;
     }
 
-    window.location.assign(`/tours/us/${slugify(event.target.value)}`);
+    window.location.assign(`/tours/us/${slugify(slug)}`);
   };
 
   return (
@@ -94,30 +94,15 @@ export default function ToursCatalog() {
             Link each state to a future tour hub as you build inventory.
           </p>
         </div>
-        <div className="mx-auto mt-8 max-w-md">
-          <label
-            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            htmlFor="catalog-state-select"
-          >
-            Select a state
-          </label>
-          <div className="mt-2 rounded-xl border border-black/10 bg-white/80 px-4 py-3 shadow-sm">
-            <select
-              id="catalog-state-select"
-              className="w-full bg-transparent text-sm font-semibold text-[#2f4a2f]"
-              defaultValue=""
-              onChange={handleStateChange}
-            >
-              <option value="" disabled>
-                Choose a state
-              </option>
-              {US_STATES.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="mx-auto mt-8 w-full max-w-md">
+          <RegionDropdownButton
+            label="Choose a state"
+            options={US_STATES.map((state) => ({
+              name: state,
+              slug: state,
+            }))}
+            onSelect={handleStateChange}
+          />
         </div>
       </section>
 
