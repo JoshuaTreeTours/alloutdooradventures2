@@ -530,7 +530,7 @@ export default function Home() {
                 Find Your Next Adventure
               </h1>
 
-             <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/10 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white md:text-lg">
+             <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/5 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white md:text-lg">
   Unforgettable experiences around the world,
   <br />
   from desert canyons to mountain peaks, we help you explore the wild.
