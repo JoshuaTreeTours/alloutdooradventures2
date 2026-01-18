@@ -1,14 +1,27 @@
 import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
+import { countriesWithTours } from "../data/europeIndex";
 import { tours } from "../data/tours";
 import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
+import { worldCountriesWithTours } from "../data/worldIndex";
 
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivity, setSelectedActivity] = useState("");
+  const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
+  const [selectedWorldCountry, setSelectedWorldCountry] = useState("");
+  const europeCountryOptions = countriesWithTours.map((country) => ({
+    name: country.name,
+    slug: country.slug,
+  }));
+  const worldCountryOptions = worldCountriesWithTours.map((country) => ({
+    name: country.name,
+    slug: country.slug,
+  }));
 
   const stateOptions = useMemo(() => {
     const uniqueStates = Array.from(
@@ -79,74 +92,83 @@ export default function ToursIndex() {
       </header>
 
       <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
-        <div className="grid gap-4 md:grid-cols-3">
-          <div>
-            <label
-              htmlFor="tours-state"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              State
-            </label>
-            <select
-              id="tours-state"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedState}
-              onChange={(event) => {
-                setSelectedState(event.target.value);
-                setSelectedCity("");
-              }}
-            >
-              <option value="">All states</option>
-              {stateOptions.map((state) => (
-                <option key={state} value={state}>
-                  {state}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label
-              htmlFor="tours-city"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              City
-            </label>
-            <select
-              id="tours-city"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedCity}
-              onChange={(event) => setSelectedCity(event.target.value)}
-            >
-              <option value="">All cities</option>
-              {cityOptions.map((city) => (
-                <option key={city} value={city}>
-                  {city}
-                </option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label
-              htmlFor="tours-activity"
-              className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
-            >
-              Activity
-            </label>
-            <select
-              id="tours-activity"
-              className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
-              value={selectedActivity}
-              onChange={(event) => setSelectedActivity(event.target.value)}
-            >
-              <option value="">All activities</option>
-              {activityOptions.map((activity) => (
-                <option key={activity.slug} value={activity.slug}>
-                  {activity.label}
-                </option>
-              ))}
-            </select>
-          </div>
+        <div className="space-y-4">
+          <RegionDropdownButton
+            label="Select a country…"
+            options={europeCountryOptions}
+            selectedName={
+              europeCountryOptions.find(
+                (country) => country.slug === selectedEuropeCountry,
+              )?.name
+            }
+            onSelect={(slug) => {
+              setSelectedEuropeCountry(slug);
+              window.location.assign(`/destinations/europe/${slug}`);
+            }}
+          />
+          {selectedEuropeCountry ? (
+            <div className="mt-2">
+              <Link href={`/destinations/europe/${selectedEuropeCountry}/tours`}>
+                <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                  View all Europe tours →
+                </a>
+              </Link>
+            </div>
+          ) : null}
         </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <RegionDropdownButton
+            label="Choose a state"
+            options={stateOptions.map((state) => ({
+              name: state,
+              slug: state,
+            }))}
+            selectedName={selectedState || undefined}
+            onSelect={(slug) => {
+              setSelectedState(slug);
+              setSelectedCity("");
+            }}
+          />
+          <RegionDropdownButton
+            label="Choose a city"
+            options={cityOptions.map((city) => ({
+              name: city,
+              slug: city,
+            }))}
+            selectedName={selectedCity || undefined}
+            onSelect={(slug) => setSelectedCity(slug)}
+          />
+          <RegionDropdownButton
+            label="Choose an activity"
+            options={activityOptions.map((activity) => ({
+              name: activity.label,
+              slug: activity.slug,
+            }))}
+            selectedName={
+              activityOptions.find(
+                (activity) => activity.slug === selectedActivity,
+              )?.label
+            }
+            onSelect={(slug) => setSelectedActivity(slug)}
+          />
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+        <RegionDropdownButton
+          label="Select a country…"
+          options={worldCountryOptions}
+          selectedName={
+            worldCountryOptions.find(
+              (country) => country.slug === selectedWorldCountry,
+            )?.name
+          }
+          onSelect={(slug) => {
+            setSelectedWorldCountry(slug);
+            window.location.assign(`/destinations/world/${slug}`);
+          }}
+        />
       </section>
 
       <section className="mt-10">

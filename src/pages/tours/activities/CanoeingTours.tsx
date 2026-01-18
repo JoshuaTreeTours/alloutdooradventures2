@@ -1,4 +1,4 @@
-import ActivityCatalogTemplate from "../../../templates/ActivityCatalogTemplate";
+import ActivityExplorerTemplate from "../../../templates/ActivityExplorerTemplate";
 import { ADVENTURE_ACTIVITY_PAGES } from "../../../data/tourCatalog";
 
 const canoeing = ADVENTURE_ACTIVITY_PAGES.find(
@@ -11,7 +11,7 @@ export default function CanoeingTours() {
   }
 
   return (
-    <ActivityCatalogTemplate
+    <ActivityExplorerTemplate
       title={canoeing.title}
       description={canoeing.description}
       image={canoeing.image}
