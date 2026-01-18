@@ -144,11 +144,11 @@ export default function ActivityCatalogTemplate({
             International
           </span>
           <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-            Find {title.toLowerCase()} tours worldwide
+            Explore global destinations
           </h2>
           <p className="mt-3 text-sm text-[#405040] md:text-base">
-            Jump into Europe or explore other global destinations as we expand
-            our activity catalog.
+            Preview upcoming country hubs to inspire your next adventure beyond
+            the United States.
           </p>
         </div>
 
@@ -183,7 +183,7 @@ export default function ActivityCatalogTemplate({
 
           <details className="group rounded-2xl border border-[#d6decf] bg-white/80 p-6 shadow-sm">
             <summary className="flex cursor-pointer list-none items-center justify-between text-lg font-semibold text-[#2f4a2f]">
-              <span>Other international countries</span>
+              <span>Other International Countries</span>
               <span
                 aria-hidden="true"
                 className="text-[#7a8a6b] transition-transform duration-200 group-open:rotate-180"
