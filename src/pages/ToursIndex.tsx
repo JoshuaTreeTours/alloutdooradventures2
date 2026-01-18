@@ -2,13 +2,19 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import TourCard from "../components/TourCard";
+import { countriesWithTours } from "../data/europeIndex";
 import { tours } from "../data/tours";
 import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
+import { worldCountriesWithTours } from "../data/worldIndex";
 
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivity, setSelectedActivity] = useState("");
+  const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
+  const [selectedWorldCountry, setSelectedWorldCountry] = useState("");
+  const europeCountryOptions = countriesWithTours;
+  const worldCountryOptions = worldCountriesWithTours;
 
   const stateOptions = useMemo(() => {
     const uniqueStates = Array.from(
@@ -79,7 +85,44 @@ export default function ToursIndex() {
       </header>
 
       <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div>
+          <label
+            htmlFor="tours-europe"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
+          >
+            Europe
+          </label>
+          <select
+            id="tours-europe"
+            className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
+            value={selectedEuropeCountry}
+            onChange={(event) => {
+              const value = event.target.value;
+              setSelectedEuropeCountry(value);
+              if (value) {
+                window.location.assign(`/destinations/europe/${value}`);
+              }
+            }}
+          >
+            <option value="">Select a country…</option>
+            {europeCountryOptions.map((country) => (
+              <option key={country.slug} value={country.slug}>
+                {country.name}
+              </option>
+            ))}
+          </select>
+          {selectedEuropeCountry ? (
+            <div className="mt-2">
+              <Link href={`/destinations/europe/${selectedEuropeCountry}/tours`}>
+                <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                  View all Europe tours →
+                </a>
+              </Link>
+            </div>
+          ) : null}
+        </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div>
             <label
               htmlFor="tours-state"
@@ -146,6 +189,36 @@ export default function ToursIndex() {
               ))}
             </select>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-6 rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+        <div>
+          <label
+            htmlFor="tours-world"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]"
+          >
+            International (non-Europe)
+          </label>
+          <select
+            id="tours-world"
+            className="mt-2 w-full rounded-xl border border-black/10 bg-white/80 px-4 py-2 text-sm font-semibold text-[#2f4a2f]"
+            value={selectedWorldCountry}
+            onChange={(event) => {
+              const value = event.target.value;
+              setSelectedWorldCountry(value);
+              if (value) {
+                window.location.assign(`/destinations/world/${value}`);
+              }
+            }}
+          >
+            <option value="">Select a country…</option>
+            {worldCountryOptions.map((country) => (
+              <option key={country.slug} value={country.slug}>
+                {country.name}
+              </option>
+            ))}
+          </select>
         </div>
       </section>
 
