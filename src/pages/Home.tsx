@@ -526,9 +526,9 @@ export default function Home() {
 
             {/* Content */}
             <div className="relative px-6 py-20 text-center text-white md:px-16 md:py-28">
-              <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-                Find Your Next Adventure
-              </h1>
+             <h1 className="text-4xl font-semibold tracking-tight text-white drop-shadow-md md:text-6xl">
+  Find Your Next Adventure
+</h1>
 
     <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/5 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white drop-shadow md:text-lg">
   Unforgettable experiences around the world,
