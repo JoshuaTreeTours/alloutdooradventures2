@@ -11,7 +11,6 @@ import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
 import { featuredDestinations } from "../data/destinations";
-import { getToursByCity } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
@@ -35,6 +34,293 @@ const HERO_ACTIVITY_SPOTLIGHTS = [
     description: "Worldwide paddle adventures",
     slug: "canoeing",
     image: "/images/canoe-hero.jpg",
+  },
+];
+
+type FeaturedTourEntry = {
+  href: string;
+  tour: Tour;
+};
+
+const FEATURED_BEST_SELLING_TOURS: FeaturedTourEntry[] = [
+  {
+    href:
+      "https://www.alloutdooradventures.com/destinations/montana/kalispell/tours/4-nights-3-days-all-inclusive-snowbike-adventure-268283",
+    tour: {
+      id: "snowbikenation-268283",
+      slug: "4-nights-3-days-all-inclusive-snowbike-adventure-268283",
+      title: "4 Nights / 3 Days All-Inclusive Snowbike Adventure",
+      operator: "SnowBike Nation",
+      categories: ["snowmobile-winter-activities"],
+      primaryCategory: "snowmobile-winter-activities",
+      destination: {
+        state: "Montana",
+        stateSlug: "montana",
+        city: "Kalispell",
+        citySlug: "kalispell",
+      },
+      heroImage: "https://cdn.filestackcontent.com/4TkuKhVREm0gY04ZHZsg",
+      galleryImages: ["https://cdn.filestackcontent.com/4TkuKhVREm0gY04ZHZsg"],
+      badges: {
+        tagline: "Snowmobile winter activities",
+      },
+      activitySlugs: ["snowmobile-winter-activities"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/snowbikenation/items/268283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/snowbikenation/items/268283/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "4 Nights / 3 Days All-Inclusive Snowbike Adventure is a multi-day winter experience based in Kalispell, Montana.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/hawaii/honolulu/canoe-surfing-68065",
+    tour: {
+      id: "waikikibeachservices-68065",
+      slug: "canoe-surfing-68065",
+      title: "Canoe Surfing",
+      operator: "Waikiki Beach Services",
+      categories: ["canoe-surf"],
+      primaryCategory: "canoe-surf",
+      destination: {
+        state: "Hawaii",
+        stateSlug: "hawaii",
+        city: "Honolulu",
+        citySlug: "honolulu",
+      },
+      heroImage: "https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL",
+      galleryImages: ["https://cdn.filestackcontent.com/Rzl3DMG0StG5dCHeGclL"],
+      badges: {
+        tagline: "Canoe surf",
+      },
+      activitySlugs: ["canoe-surf"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/waikikibeachservices/items/68065/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/waikikibeachservices/items/68065/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Canoe Surfing is a guided ocean adventure based in Honolulu, Hawaii that highlights Waikiki waters.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/monument-valley-air-ground-tour-f-mvj-164143",
+    tour: {
+      id: "westwindairservice-164143",
+      slug: "monument-valley-air-ground-tour-f-mvj-164143",
+      title: "Monument Valley Air & Ground Tour (F-MVJ)",
+      operator: "Westwind Air Service",
+      categories: ["guided-tour"],
+      primaryCategory: "guided-tour",
+      destination: {
+        state: "Arizona",
+        stateSlug: "arizona",
+        city: "Flagstaff",
+        citySlug: "flagstaff",
+      },
+      heroImage: "https://cdn.filestackcontent.com/V8REZ4EpRc22gTUzzgXx",
+      galleryImages: ["https://cdn.filestackcontent.com/V8REZ4EpRc22gTUzzgXx"],
+      badges: {
+        tagline: "Guided tour",
+      },
+      activitySlugs: ["guided-tour"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/westwindairservice/items/164143/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/westwindairservice/items/164143/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Monument Valley Air & Ground Tour (F-MVJ) is a guided air and land experience based in Flagstaff, Arizona.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/vermont/hartford/quechee-balloon-festival-e-bike-ride-625942",
+    tour: {
+      id: "vtbikeandbrew-625942",
+      slug: "quechee-balloon-festival-e-bike-ride-625942",
+      title: "Quechee Balloon Festival E-Bike Ride",
+      operator: "Vermont Bike and Brew",
+      categories: ["e-bike"],
+      primaryCategory: "e-bike",
+      destination: {
+        state: "Vermont",
+        stateSlug: "vermont",
+        city: "Hartford",
+        citySlug: "hartford",
+      },
+      heroImage: "https://cdn.filestackcontent.com/9oH85KRaWWcqX4Zv1XZQ",
+      galleryImages: ["https://cdn.filestackcontent.com/9oH85KRaWWcqX4Zv1XZQ"],
+      badges: {
+        tagline: "E-bike ride",
+      },
+      activitySlugs: ["e-bike"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/vtbikeandbrew/items/625942/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/vtbikeandbrew/items/625942/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Quechee Balloon Festival E-Bike Ride is a guided e-bike outing based in Hartford, Vermont.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/destinations/colorado/denver/tours/switzerland-trail-tour-656031",
+    tour: {
+      id: "mountainhighbicycletours-656031",
+      slug: "switzerland-trail-tour-656031",
+      title: "Switzerland Trail Tour",
+      operator: "Mountain High Bicycle Tours LLC",
+      categories: ["bike-tour"],
+      primaryCategory: "bike-tour",
+      destination: {
+        state: "Colorado",
+        stateSlug: "colorado",
+        city: "Denver",
+        citySlug: "denver",
+      },
+      heroImage: "https://cdn.filestackcontent.com/7eE3CbORiiBd6vh2rR45",
+      galleryImages: ["https://cdn.filestackcontent.com/7eE3CbORiiBd6vh2rR45"],
+      badges: {
+        tagline: "Bike tour",
+      },
+      activitySlugs: ["bike-tour"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/mountainhighbicycletours/items/656031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/mountainhighbicycletours/items/656031/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Switzerland Trail Tour is a guided cycling adventure based in Denver, Colorado.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/destinations/california/santa-barbara/tours/coastal-cruise-azure-seas-4241",
+    tour: {
+      id: "celebrationsantabarbara-4241",
+      slug: "coastal-cruise-azure-seas-4241",
+      title: "Coastal Cruise (Azure Seas)",
+      operator: "Celebration Cruises",
+      categories: ["boat-tour"],
+      primaryCategory: "boat-tour",
+      destination: {
+        state: "California",
+        stateSlug: "california",
+        city: "Santa Barbara",
+        citySlug: "santa-barbara",
+      },
+      heroImage: "https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS",
+      galleryImages: ["https://cdn.filestackcontent.com/CpdZ3KojRiatNhscNdHS"],
+      badges: {
+        tagline: "Boat tour",
+      },
+      activitySlugs: ["boat-tour"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/celebrationsantabarbara/items/4241/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/celebrationsantabarbara/items/4241/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Coastal Cruise (Azure Seas) is a coastal sightseeing escape based in Santa Barbara, California.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/italy/la-spezia/mountain-e-bike-private-tour-la-spezia---cinque-terre-119344",
+    tour: {
+      id: "arbaspaa-119344",
+      slug: "mountain-e-bike-private-tour-la-spezia---cinque-terre-119344",
+      title: "Mountain E-Bike Private tour: La Spezia - Cinque Terre",
+      operator: "Arbaspaa",
+      categories: ["bike-tour", "e-bike", "train"],
+      primaryCategory: "e-bike",
+      destination: {
+        state: "Italy",
+        stateSlug: "italy",
+        city: "La Spezia",
+        citySlug: "la-spezia",
+      },
+      heroImage: "https://cdn.filestackcontent.com/dMQQ1xKTRiY2cOpIYZED",
+      galleryImages: ["https://cdn.filestackcontent.com/dMQQ1xKTRiY2cOpIYZED"],
+      badges: {
+        tagline: "E-bike tour",
+      },
+      activitySlugs: ["e-bike", "bike-tour"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/arbaspaa/items/119344/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/arbaspaa/items/119344/?asn=fhdn-eur&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Mountain E-Bike Private tour: La Spezia - Cinque Terre is a private cycling experience based in La Spezia, Italy.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/switzerland/interlaken/grand-tour-of-interlaken-617564",
+    tour: {
+      id: "alpinbikes-617564",
+      slug: "grand-tour-of-interlaken-617564",
+      title: "Grand Tour of Interlaken",
+      operator: "AlpinBike Adventures",
+      categories: ["bike-tour"],
+      primaryCategory: "bike-tour",
+      destination: {
+        state: "Switzerland",
+        stateSlug: "switzerland",
+        city: "Interlaken",
+        citySlug: "interlaken",
+      },
+      heroImage: "https://cdn.filestackcontent.com/18yO7MQtS4Ga9RQ0wHt6",
+      galleryImages: ["https://cdn.filestackcontent.com/18yO7MQtS4Ga9RQ0wHt6"],
+      badges: {
+        tagline: "Bike tour",
+      },
+      activitySlugs: ["bike-tour"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/alpinbikes/items/617564/?asn=fhdn-chf&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/alpinbikes/items/617564/?asn=fhdn-chf&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Grand Tour of Interlaken is a guided cycling experience based in Interlaken, Switzerland.",
+    },
+  },
+  {
+    href:
+      "https://www.alloutdooradventures.com/tours/california/san-diego/stand-up-paddle-sup-board-453896",
+    tour: {
+      id: "actionsportrentals-paradisepointresort-453896",
+      slug: "stand-up-paddle-sup-board-453896",
+      title: "Stand Up Paddle (SUP) Board",
+      operator: "Action Sport Rentals - Paradise Point Resort",
+      categories: ["sup"],
+      primaryCategory: "sup",
+      destination: {
+        state: "California",
+        stateSlug: "california",
+        city: "San Diego",
+        citySlug: "san-diego",
+      },
+      heroImage: "https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk",
+      galleryImages: ["https://cdn.filestackcontent.com/uWaG3LcTDKPYbvtVaXFk"],
+      badges: {
+        tagline: "Stand up paddle",
+      },
+      activitySlugs: ["sup"],
+      bookingProvider: "fareharbor",
+      bookingUrl:
+        "https://fareharbor.com/embeds/book/actionsportrentals-paradisepointresort/items/453896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      bookingWidgetUrl:
+        "https://fareharbor.com/embeds/calendar/actionsportrentals-paradisepointresort/items/453896/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no",
+      longDescription:
+        "Stand Up Paddle (SUP) Board is a water rental experience based in San Diego, California.",
+    },
   },
 ];
 
@@ -99,8 +385,12 @@ export default function Home() {
     Record<string, { resolvedSrc: string; status?: number; ok?: boolean; error?: string }>
   >({});
 
-  const featuredSantaBarbaraTours = useMemo(
-    () => getToursByCity("california", "santa-barbara").slice(0, 6),
+  const featuredBestSellingTours = useMemo(
+    () => FEATURED_BEST_SELLING_TOURS,
+    []
+  );
+  const featuredBestSellingHighlights = useMemo(
+    () => FEATURED_BEST_SELLING_TOURS.slice(0, 3),
     []
   );
   const [itemsPerPage, setItemsPerPage] = useState(3);
@@ -108,12 +398,12 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false);
 
   const featuredTourPages = useMemo(() => {
-    const pages: Tour[][] = [];
-    for (let i = 0; i < featuredSantaBarbaraTours.length; i += itemsPerPage) {
-      pages.push(featuredSantaBarbaraTours.slice(i, i + itemsPerPage));
+    const pages: FeaturedTourEntry[][] = [];
+    for (let i = 0; i < featuredBestSellingTours.length; i += itemsPerPage) {
+      pages.push(featuredBestSellingTours.slice(i, i + itemsPerPage));
     }
-    return pages.length ? pages : [featuredSantaBarbaraTours];
-  }, [featuredSantaBarbaraTours, itemsPerPage]);
+    return pages.length ? pages : [featuredBestSellingTours];
+  }, [featuredBestSellingTours, itemsPerPage]);
 
   const totalPages = featuredTourPages.length;
 
@@ -334,14 +624,14 @@ export default function Home() {
 
         <section
           className="mx-auto max-w-6xl px-6 py-16"
-          aria-label="Featured Santa Barbara tours"
+          aria-label="Featured best selling tours"
         >
           <div className="text-center">
             <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
               This week’s specials
             </span>
             <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              Featured Santa Barbara Tours
+              Featured Best Selling Tours
             </h2>
           </div>
 
@@ -355,7 +645,7 @@ export default function Home() {
             tabIndex={0}
             role="group"
             aria-roledescription="carousel"
-            aria-label="Featured Santa Barbara tours carousel"
+            aria-label="Featured best selling tours carousel"
           >
             <div className="flex items-center justify-end gap-3">
               <button
@@ -388,8 +678,8 @@ export default function Home() {
                     aria-hidden={activePage !== pageIndex}
                   >
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                      {page.map((tour) => (
-                        <TourCard key={tour.id} tour={tour} />
+                      {page.map(({ tour, href }) => (
+                        <TourCard key={tour.id} tour={tour} href={href} />
                       ))}
                     </div>
                   </div>
@@ -411,6 +701,12 @@ export default function Home() {
                 />
               ))}
             </div>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {featuredBestSellingHighlights.map(({ tour, href }) => (
+              <TourCard key={`featured-highlight-${tour.id}`} tour={tour} href={href} />
+            ))}
           </div>
         </section>
 
