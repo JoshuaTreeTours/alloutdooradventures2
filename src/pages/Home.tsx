@@ -240,7 +240,7 @@ export default function Home() {
                 Find Your Next Adventure
               </h1>
 
-              <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/90 md:text-lg">
+              <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/45 px-5 py-4 text-base leading-relaxed text-white/90 md:text-lg">
                 To think out of the box, you must first step outside.
                 <br />
                 From desert canyons to mountain peaks, we help you explore the wild.
@@ -295,7 +295,12 @@ export default function Home() {
 
         {/* ACTIVITIES */}
         <section className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="text-center">
+            <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              Choose Your Adventure
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {HERO_ACTIVITY_SPOTLIGHTS.map((activity) => (
               <Link
                 key={activity.title}
