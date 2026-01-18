@@ -26,4 +26,5 @@ export const countriesWithTours: EuropeCountrySummary[] = Object.entries(
   slug,
   tourCount: tours.length,
 }))
+  .filter((country) => country.slug !== "australia")
   .sort((a, b) => a.name.localeCompare(b.name));
