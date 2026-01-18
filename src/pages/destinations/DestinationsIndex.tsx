@@ -1,4 +1,10 @@
 import DestinationCard from "../../components/DestinationCard";
+import HorizontalLinkSlider from "../../components/HorizontalLinkSlider";
+import {
+  EUROPE_COUNTRIES,
+  WORLD_DESTINATIONS,
+  slugify,
+} from "../../data/tourCatalog";
 import { destinations } from "../../data/destinations";
 
 export default function DestinationsIndex() {
@@ -87,6 +93,43 @@ export default function DestinationsIndex() {
               </div>
             </div>
           ))}
+      </section>
+
+      <section className="mt-16 space-y-12" aria-label="International destinations">
+        <div className="text-center">
+          <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+            International
+          </span>
+          <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+            Explore global destinations
+          </h2>
+          <p className="mt-3 text-sm text-[#405040] md:text-base">
+            Preview upcoming country hubs to inspire your next adventure beyond
+            the United States.
+          </p>
+        </div>
+
+        <HorizontalLinkSlider
+          eyebrow="Europe"
+          title="All European countries"
+          description="Browse every country we plan to support, from alpine escapes to coastal rides."
+          ariaLabel="European destinations"
+          items={EUROPE_COUNTRIES.map((country) => ({
+            label: country,
+            href: `/tours/europe/${slugify(country)}`,
+          }))}
+        />
+
+        <HorizontalLinkSlider
+          eyebrow="Worldwide"
+          title="Other world destinations"
+          description="Keep an eye on the next wave of global tour hubs and partner regions."
+          ariaLabel="World destinations"
+          items={WORLD_DESTINATIONS.map((destination) => ({
+            label: destination,
+            href: `/tours/world/${slugify(destination)}`,
+          }))}
+        />
       </section>
     </main>
   );

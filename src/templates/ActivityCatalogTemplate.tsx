@@ -1,9 +1,15 @@
 import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
+import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
-import { EUROPE_CITIES, US_STATES, slugify } from "../data/tourCatalog";
+import {
+  EUROPE_COUNTRIES,
+  US_STATES,
+  WORLD_DESTINATIONS,
+  slugify,
+} from "../data/tourCatalog";
 import { getToursByActivity } from "../data/tours";
 
 type ActivityCatalogTemplateProps = {
@@ -130,42 +136,28 @@ export default function ActivityCatalogTemplate({
         )}
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 pb-16">
-        <div className="text-center">
-          <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-            Europe
-          </span>
-          <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-            Major cities to populate next
-          </h2>
-          <p className="mt-3 text-sm text-[#405040] md:text-base">
-            Add tour listings to each city when partnerships are ready.
-          </p>
-        </div>
-        <div className="mt-8 space-y-4">
-          {EUROPE_CITIES.map((region) => (
-            <details
-              key={region.region}
-              className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm"
-            >
-              <summary className="cursor-pointer list-none text-base font-semibold text-[#1f2a1f]">
-                {region.region}
-              </summary>
-              <div className="mt-4 grid gap-2 sm:grid-cols-2">
-                {region.cities.map((city) => (
-                  <Link
-                    key={city}
-                    href={`/tours/${activitySlug}/europe/${slugify(city)}`}
-                  >
-                    <a className="rounded-lg border border-black/10 bg-white px-3 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:border-[#2f4a2f]/40 hover:bg-white/90">
-                      {city}
-                    </a>
-                  </Link>
-                ))}
-              </div>
-            </details>
-          ))}
-        </div>
+      <section className="mx-auto max-w-6xl space-y-12 px-6 pb-16">
+        <HorizontalLinkSlider
+          eyebrow="Europe"
+          title="Every country in Europe"
+          description="Add tour listings to each country hub as partnerships are ready."
+          ariaLabel="European tour destinations"
+          items={EUROPE_COUNTRIES.map((country) => ({
+            label: country,
+            href: `/tours/${activitySlug}/europe/${slugify(country)}`,
+          }))}
+        />
+
+        <HorizontalLinkSlider
+          eyebrow="Worldwide"
+          title="Other global destinations"
+          description="Prepare for future activity hubs beyond Europe."
+          ariaLabel="World tour destinations"
+          items={WORLD_DESTINATIONS.map((destination) => ({
+            label: destination,
+            href: `/tours/${activitySlug}/world/${slugify(destination)}`,
+          }))}
+        />
       </section>
     </main>
   );
