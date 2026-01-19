@@ -6,15 +6,15 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import {
-  getAffiliateDisclosure,
-  getTourBySlugs,
-} from "../../../../data/tours";
+import { getAffiliateDisclosure, getTourBySlugs } from "../../../../data/tours";
 import {
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
-import { getFareharborParams, normalizeFareharborUrl } from "../../../../lib/fareharbor";
+import {
+  getFareharborParams,
+  normalizeFareharborUrl,
+} from "../../../../lib/fareharbor";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -28,8 +28,7 @@ export default function CityTourBookingRoute({
   params,
 }: CityTourBookingRouteProps) {
   const state =
-    getStateBySlug(params.stateSlug) ??
-    getFallbackStateBySlug(params.stateSlug);
+    getStateBySlug(params.stateSlug) ?? getFallbackStateBySlug(params.stateSlug);
   const city =
     getCityBySlugs(params.stateSlug, params.citySlug) ??
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
@@ -43,9 +42,7 @@ export default function CityTourBookingRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
-          >
+          <Link href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -69,9 +66,7 @@ export default function CityTourBookingRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
-          >
+          <Link href={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -81,96 +76,43 @@ export default function CityTourBookingRoute({
     );
   }
 
-  const searchParams = new URLSearchParams(window.location.search);
-  const isDebugMode = searchParams.get("debug") === "1";
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
-  const stateHref = state.isFallback
-    ? "/destinations"
-    : `/destinations/states/${state.slug}`;
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const tourDetailHref = isFlagstaff
-    ? getFlagstaffTourDetailPath(tour)
-    : `${toursHref}/${tour.slug}`;
-  const disclosure = getAffiliateDisclosure(tour);
-  const isFareharbor = tour.bookingProvider === "fareharbor";
-  const [embedStatus, setEmbedStatus] = useState<
-    "idle" | "loading" | "loaded" | "failed"
-  >("idle");
-  const [redirectMode, setRedirectMode] = useState(false);
+  // NOTE: useMemo ensures params are captured once per mount.
   const fareharborParams = useMemo(() => getFareharborParams(), []);
+  const isFareharbor = tour.bookingProvider === "fareharbor";
 
   const ensureFareharborParams = (url?: string) => {
-    if (!url) {
-      return undefined;
-    }
-    if (!isFareharbor) {
-      return url;
-    }
+    if (!url) return undefined;
+    if (!isFareharbor) return url;
     return normalizeFareharborUrl(url);
-  };
-
-  const auditAttribution = (url?: string) => {
-    if (!isFareharbor) {
-      return {
-        ok: true,
-        missing: [],
-        url,
-        applicable: false,
-      };
-    }
-    if (!url) {
-      return {
-        ok: false,
-        missing: Object.keys(fareharborParams),
-        url,
-        applicable: true,
-      };
-    }
-    try {
-      const parsed = new URL(url);
-      const missing = Object.entries(fareharborParams)
-        .filter(([key, value]) => !parsed.searchParams.getAll(key).includes(value))
-        .map(([key]) => key);
-      return {
-        ok: missing.length === 0,
-        missing,
-        url,
-        applicable: true,
-      };
-    } catch {
-      return {
-        ok: false,
-        missing: Object.keys(fareharborParams),
-        url,
-        applicable: true,
-      };
-    }
   };
 
   const embedSourceUrl = isFareharbor ? tour.bookingUrl : tour.bookingWidgetUrl;
   const attributedBookingUrl = ensureFareharborParams(tour.bookingUrl);
   const attributedWidgetUrl = ensureFareharborParams(embedSourceUrl);
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
-  const embedAudit = auditAttribution(attributedWidgetUrl);
-  const fallbackAudit = auditAttribution(attributedBookingUrl);
-  const auditRows = [
-    "iOS Safari",
-    "Desktop Safari",
-    "Chrome",
-    "Mobile Chrome",
-  ].map((browser) => ({
-    browser,
-    embed: embedAudit,
-    fallback: fallbackAudit,
-  }));
+
+  const disclosure = getAffiliateDisclosure(tour);
+
+  const [embedStatus, setEmbedStatus] = useState<
+    "idle" | "loading" | "loaded" | "failed"
+  >("idle");
+  const [redirectMode, setRedirectMode] = useState(false);
+
   const isIOS =
-    typeof navigator !== "undefined" &&
-    /iPad|iPhone|iPod/.test(navigator.userAgent);
+    typeof navigator !== "undefined" && /iPad|iPhone|iPod/.test(navigator.userAgent);
+
   const startingAt = tour.badges.priceFrom;
   const departureLocation =
     tour.destination.city !== "Unknown" && tour.destination.state !== "Unknown"
       ? `${tour.destination.city}, ${tour.destination.state}`
       : undefined;
+
+  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const stateHref = state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`;
+  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
+  const tourDetailHref = isFlagstaff
+    ? getFlagstaffTourDetailPath(tour)
+    : `${toursHref}/${tour.slug}`;
 
   useEffect(() => {
     if (!attributedWidgetUrl) {
@@ -219,9 +161,7 @@ export default function CityTourBookingRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -231,6 +171,7 @@ export default function CityTourBookingRoute({
             <span>/</span>
             <span className="text-white">Book</span>
           </div>
+
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
               Booking
@@ -242,6 +183,7 @@ export default function CityTourBookingRoute({
               Reserve your spot on the official booking page. If the embedded
               calendar doesn’t load, use the direct booking link below.
             </p>
+
             {startingAt || departureLocation ? (
               <dl className="mt-6 grid gap-4 text-sm text-white/90 sm:grid-cols-2">
                 {startingAt ? (
@@ -254,6 +196,7 @@ export default function CityTourBookingRoute({
                     </dd>
                   </div>
                 ) : null}
+
                 {departureLocation ? (
                   <div>
                     <dt className="text-xs uppercase tracking-[0.3em] text-white/70">
@@ -286,6 +229,7 @@ export default function CityTourBookingRoute({
             />
           </div>
         ) : null}
+
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
           {redirectMode ? (
             <p className="mb-3 rounded-xl border border-[#2f4a2f]/20 bg-[#f8f4ed] p-3 text-xs text-[#405040]">
@@ -293,92 +237,26 @@ export default function CityTourBookingRoute({
               keep attribution intact.
             </p>
           ) : null}
+
           <p className="text-sm text-[#405040]">
             Having trouble with the embed? Use the booking button to open the
             reservation page in a new tab.
           </p>
+
           <a
             className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
             href={fallbackBookingUrl}
             target="_blank"
             rel="noopener noreferrer"
           >
-              BOOK
+            BOOK
           </a>
+
           {disclosure ? (
             <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
           ) : null}
-          <div className="mt-6 rounded-xl border border-black/10 bg-white/80 p-4 text-xs text-[#405040]">
-            <p className="font-semibold uppercase tracking-[0.3em] text-[#7a8a6b]">
-              Booking flow audit
-            </p>
-            <p className="mt-2">
-              {isFareharbor
-                ? "FareHarbor attribution is verified for embeds and fallback links across iOS Safari, desktop Safari, Chrome, and mobile Chrome."
-                : "FareHarbor attribution checks are not applicable for this provider, but the fallback link remains available across iOS Safari, desktop Safari, Chrome, and mobile Chrome."}
-            </p>
-            <div className="mt-4 grid gap-3">
-              {auditRows.map((row) => (
-                <div
-                  key={row.browser}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-black/5 bg-white px-3 py-2"
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-                    {row.browser}
-                  </span>
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
-                    <span
-                      className={`rounded-full px-2 py-1 ${
-                        row.embed.applicable
-                          ? row.embed.ok
-                            ? "bg-[#e6f4ea] text-[#2f8a3d]"
-                            : "bg-[#fde8e8] text-[#b91c1c]"
-                          : "bg-[#f3f4f6] text-[#4b5563]"
-                      }`}
-                    >
-                      Embed:{" "}
-                      {row.embed.applicable
-                        ? row.embed.ok
-                          ? "OK"
-                          : "Needs attribution"
-                        : "N/A"}
-                    </span>
-                    <span
-                      className={`rounded-full px-2 py-1 ${
-                        row.fallback.applicable
-                          ? row.fallback.ok
-                            ? "bg-[#e6f4ea] text-[#2f8a3d]"
-                            : "bg-[#fde8e8] text-[#b91c1c]"
-                          : "bg-[#f3f4f6] text-[#4b5563]"
-                      }`}
-                    >
-                      Fallback:{" "}
-                      {row.fallback.applicable
-                        ? row.fallback.ok
-                          ? "OK"
-                          : "Needs attribution"
-                        : "N/A"}
-                    </span>
-                    {row.browser === "iOS Safari" && isIOS ? (
-                      <span className="rounded-full bg-[#fef3c7] px-2 py-1 text-[#92400e]">
-                        Mode: {redirectMode ? "Redirect" : "Embed"}
-                      </span>
-                    ) : null}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {isDebugMode && (
-            <div className="mt-6 rounded-xl border border-[#2f4a2f]/20 bg-white p-4 text-xs text-[#405040]">
-              <p className="font-semibold uppercase tracking-[0.3em] text-[#7a8a6b]">
-                Debug embed URL
-              </p>
-              <p className="mt-3 break-all">
-                {attributedWidgetUrl ?? attributedBookingUrl}
-              </p>
-            </div>
-          )}
+
+          {/* Booking flow audit UI removed */}
         </div>
       </section>
     </main>
