@@ -43,8 +43,10 @@ export default function Header() {
               Find an Adventure
             </a>
           </Link>
-          <span className="text-xs font-medium text-[#405040]">
-            Call us:{" "}
+          <span className="text-sm font-medium text-[#405040] md:text-base">
+            <span className="mr-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#2f4a2f]/10 text-[#2f4a2f]">
+              📞
+            </span>
             <a
               href="tel:+18553148687"
               className="font-semibold text-[#2f4a2f] underline decoration-[#2f4a2f]/70 underline-offset-2 transition hover:text-[#294129]"
