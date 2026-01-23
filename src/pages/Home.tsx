@@ -526,18 +526,14 @@ export default function Home() {
 
             {/* Content */}
             <div className="relative px-6 py-20 text-center text-white md:px-16 md:py-28">
-             <h1 className="text-4xl font-semibold tracking-tight text-white drop-shadow-md md:text-6xl">
-  Find Your Next Adventure
-</h1>
-
-    <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/4 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white drop-shadow md:text-lg">
-  Unforgettable experiences around the world,
-  <br />
-  from desert canyons to mountain peaks.
-</p>
-
-
-
+              <h1 className="text-4xl font-semibold tracking-tight text-white drop-shadow-md md:text-6xl">
+                Find Your Next Adventure
+              </h1>
+              <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/4 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white drop-shadow md:text-lg">
+                Unforgettable experiences around the world,
+                <br />
+                from desert canyons to mountain peaks.
+              </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link href="/destinations">
                   <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#294129]">
