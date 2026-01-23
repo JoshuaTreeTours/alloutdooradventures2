@@ -42,7 +42,7 @@ export default function ToursIndex() {
 
   const usTours = useMemo(
     () => tours.filter((tour) => isUSState(tour.destination?.state)),
-    [US_STATE_SET],
+    [tours, US_STATE_SET],
   );
 
   const cityOptions = useMemo(() => {
@@ -84,7 +84,10 @@ export default function ToursIndex() {
     }
   }, [selectedCity, cityOptions]);
 
-  const baseTours = isUSState(selectedState) ? usTours : tours;
+  const baseTours = useMemo(() => {
+    return isUSState(selectedState) ? usTours : tours;
+  }, [selectedState, usTours, tours]);
+
   const filteredTours = useMemo(() => {
     return baseTours.filter((tour) => {
       const matchesState = selectedState
