@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import RegionDropdownButton from "../components/RegionDropdownButton";
@@ -14,7 +14,7 @@ import {
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [selectedActivity, setSelectedActivity] = useState("");
+  const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
   const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
   const europeCountryOptions = countriesWithTours.map((country) => ({
     name: country.name,
@@ -22,6 +22,21 @@ export default function ToursIndex() {
   }));
 
   const stateOptions = useMemo(() => US_STATES, []);
+
+  const normalizeActivitySlug = (slugOrLabel: string) => {
+    const labelToSlug: Record<string, string> = {
+      Hiking: "hiking",
+      Cycling: "cycling",
+      "Paddle Sports": "paddle-sports",
+      "Day Tours": "day-tours",
+    };
+    const slugToSlug: Record<string, string> = {
+      canoeing: "paddle-sports",
+      detours: "day-tours",
+      "day-adventures": "day-tours",
+    };
+    return slugToSlug[slugOrLabel] ?? labelToSlug[slugOrLabel] ?? slugOrLabel;
+  };
 
   const cityOptions = useMemo(() => {
     const filtered = tours.filter((tour) =>
@@ -34,11 +49,21 @@ export default function ToursIndex() {
 
   const activityOptions = useMemo(() => {
     const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
-    return activities.map((activity) => ({
-      slug: activity.slug,
+    const mapped = activities.map((activity) => ({
+      slug: normalizeActivitySlug(activity.slug),
       label: activity.title,
     }));
+    const uniqueBySlug = new Map<string, { slug: string; label: string }>();
+    mapped.forEach((activity) => {
+      if (!uniqueBySlug.has(activity.slug)) {
+        uniqueBySlug.set(activity.slug, activity);
+      }
+    });
+    return Array.from(uniqueBySlug.values());
   }, []);
+
+  const getTourActivitySlug = (tour: (typeof tours)[number]) =>
+    normalizeActivitySlug(tour.primaryCategory ?? tour.activitySlugs[0] ?? "");
 
   const filteredTours = useMemo(
     () =>
@@ -49,13 +74,31 @@ export default function ToursIndex() {
         const matchesCity = selectedCity
           ? tour.destination.city === selectedCity
           : true;
-        const matchesActivity = selectedActivity
-          ? tour.activitySlugs.includes(selectedActivity)
+        const matchesActivity = selectedActivitySlug
+          ? getTourActivitySlug(tour) === selectedActivitySlug
           : true;
         return matchesState && matchesCity && matchesActivity;
       }),
-    [selectedState, selectedCity, selectedActivity],
+    [selectedState, selectedCity, selectedActivitySlug],
   );
+
+  useEffect(() => {
+    if (!import.meta.env.DEV) {
+      return;
+    }
+    if (selectedActivitySlug !== "hiking") {
+      return;
+    }
+    filteredTours.forEach((tour) => {
+      if (getTourActivitySlug(tour) !== "hiking") {
+        console.error(
+          "[ToursIndex] Hiking filter violation:",
+          tour.slug,
+          tour.title,
+        );
+      }
+    });
+  }, [filteredTours, selectedActivitySlug]);
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
@@ -144,10 +187,10 @@ export default function ToursIndex() {
               }))}
               selectedName={
                 activityOptions.find(
-                  (activity) => activity.slug === selectedActivity,
+                  (activity) => activity.slug === selectedActivitySlug,
                 )?.label
               }
-              onSelect={(slug) => setSelectedActivity(slug)}
+              onSelect={(slug) => setSelectedActivitySlug(normalizeActivitySlug(slug))}
             />
           </div>
         </div>
