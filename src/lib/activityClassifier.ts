@@ -8,7 +8,7 @@ type ActivityClassification = {
   hasWalkingIntent: boolean;
   hasDisqualifier: boolean;
   isHiking: boolean;
-  nonWalkingCategory?: "cycling" | "canoeing" | "day-adventures" | "detours";
+  nonWalkingCategory?: "cycling" | "canoeing" | "day-adventures";
   isFoodOnly: boolean;
   matches: {
     walkingIntent: string[];
@@ -20,124 +20,70 @@ type ActivityClassification = {
 const WALKING_INTENT_KEYWORDS = [
   "hike",
   "hiking",
-  "day hike",
   "trek",
+  "trekking",
   "trail",
+  "trails",
+  "nature walk",
   "walk",
   "walking",
   "walking tour",
   "guided walk",
-  "guided hike",
-  "nature walk",
+  "rainforest walk",
+  "canyon hike",
   "summit",
-  "canyon",
-  "mountain",
-  "ridge",
-  "overlook",
+  "peak",
+  "waterfall hike",
+  "national park hike",
+  "bushwalk",
+  "ramble",
+  "stroll",
 ];
 
-const CYCLING_KEYWORDS = [
-  "bike",
-  "biking",
-  "cycling",
-  "e-bike",
-  "ebike",
-  "road ride",
-  "gravel",
-  "mtb",
-  "mountain bike",
-];
+const CYCLING_KEYWORDS = ["bike", "bicycle", "cycling", "e-bike", "ebike"];
 
 const WATER_KEYWORDS = [
-  "canoe",
-  "paddling",
-  "paddle",
-  "river trip",
-  "lake paddle",
-  "water trail",
-  "swamp paddle",
-  "bayou paddle",
   "kayak",
+  "canoe",
   "rafting",
-  "raft",
-  "float",
+  "sup",
+  "paddle",
   "boat",
-  "snorkel",
-  "snorkeling",
+  "cruise",
   "sailing",
-  "river cruise",
-  "lake cruise",
+  "snorkel",
+  "scuba",
+  "fishing",
 ];
 
 const DAY_ADVENTURE_KEYWORDS = [
+  "hummer",
   "jeep",
-  "off-road",
-  "off road",
-  "4x4",
   "atv",
-  "utv",
-  "motorized",
+  "buggy",
   "helicopter",
-  "flight",
-  "air tour",
-  "airboat",
-  "bus",
-  "train",
-  "rail",
-  "safari",
-  "snowmobile",
-  "sled",
-  "tram",
-  "gondola",
+  "segway",
+  "motorcycle",
+  "horse",
 ];
 
 const FOOD_KEYWORDS = [
+  "food",
   "food tour",
   "food crawl",
-  "food tasting",
-  "tasting",
-  "wine",
-  "winery",
-  "wine tasting",
-  "beer",
-  "brewery",
-  "brewpub",
-  "distillery",
-  "whiskey",
-  "bourbon",
-  "tequila",
   "cocktail",
   "bar crawl",
   "donut",
+  "donuts",
   "taco",
-  "dinner",
+  "pizza",
+  "brunch",
+  "beer",
+  "brewery",
+  "wine",
+  "tasting",
   "lunch",
-  "breakfast",
-  "culinary",
-  "cuisine",
-  "restaurant",
-  "cheese",
-  "chocolate",
-  "coffee",
-  "dessert",
-  "market",
-];
-
-const NON_HIKING_ATTRACTION_KEYWORDS = [
-  "art",
-  "workshop",
-  "class",
-  "studio",
-  "museum",
-  "zoo",
-  "aquarium",
-  "festival",
-  "event",
-  "show",
-  "concert",
-  "attraction",
-  "hunt",
-  "hunting",
+  "dinner",
 ];
 
 const HIKING_DISQUALIFY_KEYWORDS = [
@@ -145,7 +91,6 @@ const HIKING_DISQUALIFY_KEYWORDS = [
   ...WATER_KEYWORDS,
   ...DAY_ADVENTURE_KEYWORDS,
   ...FOOD_KEYWORDS,
-  ...NON_HIKING_ATTRACTION_KEYWORDS,
 ];
 
 const normalizeText = (value: string) => value.toLowerCase();
@@ -177,7 +122,7 @@ export const classifyActivity = (
       ? "canoeing"
       : hasDayAdventure
         ? "day-adventures"
-        : "detours";
+        : "day-adventures";
   const isFoodOnly = hasFood && !hasCycling && !hasWater && !hasDayAdventure;
 
   return {

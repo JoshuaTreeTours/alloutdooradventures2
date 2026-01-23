@@ -994,7 +994,8 @@ const run = async () => {
         let tour = rowToTour(row, parsedRow, activitySlug, forceCategory, logPrefix);
 
         if (tour.primaryCategory === "hiking" && !classification.isHiking) {
-          const reclassifiedCategory = classification.nonWalkingCategory ?? "detours";
+          const reclassifiedCategory =
+            classification.nonWalkingCategory ?? "day-adventures";
           const nextActivitySlugs = [
             reclassifiedCategory,
             ...tour.activitySlugs.filter(

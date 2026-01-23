@@ -22,6 +22,8 @@ export default function ToursIndex() {
   }));
 
   const stateOptions = useMemo(() => US_STATES, []);
+  const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
+  const isUSState = (state?: string) => !!state && US_STATE_SET.has(state);
 
   const normalizeActivitySlug = (slugOrLabel: string) => {
     const labelToSlug: Record<string, string> = {
@@ -38,14 +40,21 @@ export default function ToursIndex() {
     return slugToSlug[slugOrLabel] ?? labelToSlug[slugOrLabel] ?? slugOrLabel;
   };
 
+  const usTours = useMemo(
+    () => tours.filter((tour) => isUSState(tour.destination?.state)),
+    [US_STATE_SET],
+  );
+
   const cityOptions = useMemo(() => {
-    const filtered = tours.filter((tour) =>
-      selectedState
-        ? tour.destination.state === selectedState
-        : true,
-    );
-    return Array.from(new Set(filtered.map((tour) => tour.destination.city))).sort();
-  }, [selectedState]);
+    if (!selectedState || !isUSState(selectedState)) {
+      return [];
+    }
+    const cities = usTours
+      .filter((tour) => tour.destination?.state === selectedState)
+      .map((tour) => tour.destination?.city)
+      .filter(Boolean);
+    return Array.from(new Set(cities)).sort();
+  }, [usTours, selectedState]);
 
   const activityOptions = useMemo(() => {
     const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
@@ -60,27 +69,37 @@ export default function ToursIndex() {
       }
     });
     return Array.from(uniqueBySlug.values());
-  }, []);
+  }, [normalizeActivitySlug]);
 
   const getTourActivitySlug = (tour: (typeof tours)[number]) =>
     normalizeActivitySlug(tour.primaryCategory ?? tour.activitySlugs[0] ?? "");
 
-  const filteredTours = useMemo(
-    () =>
-      tours.filter((tour) => {
-        const matchesState = selectedState
-          ? tour.destination.state === selectedState
-          : true;
-        const matchesCity = selectedCity
-          ? tour.destination.city === selectedCity
-          : true;
-        const matchesActivity = selectedActivitySlug
-          ? getTourActivitySlug(tour) === selectedActivitySlug
-          : true;
-        return matchesState && matchesCity && matchesActivity;
-      }),
-    [selectedState, selectedCity, selectedActivitySlug],
-  );
+  useEffect(() => {
+    setSelectedCity("");
+  }, [selectedState]);
+
+  useEffect(() => {
+    if (selectedCity && !cityOptions.includes(selectedCity)) {
+      setSelectedCity("");
+    }
+  }, [selectedCity, cityOptions]);
+
+  const baseTours = isUSState(selectedState) ? usTours : tours;
+  const filteredTours = useMemo(() => {
+    return baseTours.filter((tour) => {
+      const matchesState = selectedState
+        ? tour.destination?.state === selectedState
+        : true;
+      const matchesCity = selectedCity
+        ? tour.destination?.city === selectedCity
+        : true;
+      const activitySlug = getTourActivitySlug(tour);
+      const matchesActivity = selectedActivitySlug
+        ? activitySlug === selectedActivitySlug
+        : true;
+      return matchesState && matchesCity && matchesActivity;
+    });
+  }, [baseTours, selectedState, selectedCity, selectedActivitySlug]);
 
   useEffect(() => {
     if (!import.meta.env.DEV) {
