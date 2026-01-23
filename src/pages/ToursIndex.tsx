@@ -17,16 +17,19 @@ export default function ToursIndex() {
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
-  const countryOptions = [
-    ...countriesWithTours.map((country) => ({
-      name: country.name,
-      slug: `europe:${country.slug}`,
-    })),
-    ...worldCountriesWithTours.map((country) => ({
-      name: country.name,
-      slug: `world:${country.slug}`,
-    })),
-  ];
+  const countryOptions = useMemo(() => {
+    const options = [
+      ...countriesWithTours.map((country) => ({
+        name: country.name,
+        slug: `europe:${country.slug}`,
+      })),
+      ...worldCountriesWithTours.map((country) => ({
+        name: country.name,
+        slug: `world:${country.slug}`,
+      })),
+    ];
+    return options.sort((a, b) => a.name.localeCompare(b.name));
+  }, []);
 
   const stateOptions = useMemo(() => US_STATES, []);
   const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
