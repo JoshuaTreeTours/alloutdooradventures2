@@ -24,6 +24,10 @@ export default function ToursIndex() {
   const stateOptions = useMemo(() => US_STATES, []);
   const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
   const isUSState = (state?: string) => !!state && US_STATE_SET.has(state);
+  const isUSTour = (tour: (typeof tours)[number]) => {
+    const country = tour?.destination?.country as string | undefined;
+    return !country || country === "United States" || country === "USA";
+  };
 
   const normalizeActivitySlug = (slugOrLabel: string) => {
     const labelToSlug: Record<string, string> = {
@@ -40,21 +44,27 @@ export default function ToursIndex() {
     return slugToSlug[slugOrLabel] ?? labelToSlug[slugOrLabel] ?? slugOrLabel;
   };
 
-  const usTours = useMemo(
-    () => tours.filter((tour) => isUSState(tour.destination?.state)),
-    [tours, US_STATE_SET],
-  );
+  const baseTours = useMemo(() => {
+    if (!isUSState(selectedState)) {
+      return tours;
+    }
+
+    return tours.filter(
+      (tour) =>
+        tour?.destination?.state === selectedState &&
+        isUSTour(tour),
+    );
+  }, [tours, selectedState, US_STATE_SET]);
 
   const cityOptions = useMemo(() => {
     if (!selectedState || !isUSState(selectedState)) {
       return [];
     }
-    const cities = usTours
-      .filter((tour) => tour.destination?.state === selectedState)
+    const cities = baseTours
       .map((tour) => tour.destination?.city)
       .filter(Boolean);
     return Array.from(new Set(cities)).sort();
-  }, [usTours, selectedState]);
+  }, [baseTours, selectedState]);
 
   const activityOptions = useMemo(() => {
     const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
@@ -84,15 +94,8 @@ export default function ToursIndex() {
     }
   }, [selectedCity, cityOptions]);
 
-  const baseTours = useMemo(() => {
-    return isUSState(selectedState) ? usTours : tours;
-  }, [selectedState, usTours, tours]);
-
   const filteredTours = useMemo(() => {
     return baseTours.filter((tour) => {
-      const matchesState = selectedState
-        ? tour.destination?.state === selectedState
-        : true;
       const matchesCity = selectedCity
         ? tour.destination?.city === selectedCity
         : true;
@@ -100,13 +103,22 @@ export default function ToursIndex() {
       const matchesActivity = selectedActivitySlug
         ? activitySlug === selectedActivitySlug
         : true;
-      return matchesState && matchesCity && matchesActivity;
+      return matchesCity && matchesActivity;
     });
-  }, [baseTours, selectedState, selectedCity, selectedActivitySlug]);
+  }, [baseTours, selectedCity, selectedActivitySlug]);
 
   useEffect(() => {
     if (!import.meta.env.DEV) {
       return;
+    }
+    const anomalies = tours.filter(
+      (tour) => isUSState(tour?.destination?.state) && !isUSTour(tour),
+    );
+    if (anomalies.length > 0) {
+      console.error(
+        "[ToursIndex] US state tours with non-US country detected:",
+        anomalies.map((tour) => `${tour.slug} (${tour.title})`),
+      );
     }
     if (selectedActivitySlug !== "hiking") {
       return;
