@@ -227,6 +227,19 @@ export const getCountryDestinationHref = (countrySlug: string) =>
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;
 
+const getInternationalCityBasePath = (
+  countrySlug: string,
+  citySlug: string,
+) =>
+  EUROPE_COUNTRY_SLUGS.has(countrySlug)
+    ? `/destinations/europe/${countrySlug}/cities/${citySlug}`
+    : `/destinations/world/${countrySlug}/cities/${citySlug}`;
+
+const getInternationalCityToursPath = (
+  countrySlug: string,
+  citySlug: string,
+) => `${getInternationalCityBasePath(countrySlug, citySlug)}/tours`;
+
 const buildBestTimeToVisit = (placeName: string) =>
   `Tour availability in ${placeName} varies by operator and activity, so check live calendars and choose dates that match your preferred pace.`;
 
@@ -363,8 +376,8 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
   const destinationHref = getCountryDestinationHref(countrySlug);
 
   const cityLinks = highlightCities.map((city) => ({
-    label: city.name,
-    href: `/guides/world/${countrySlug}/${city.slug}`,
+    label: `${city.name} city page`,
+    href: getInternationalCityBasePath(countrySlug, city.slug),
   }));
 
   const destinationLink = {
@@ -459,7 +472,7 @@ export const buildCityGuide = ({
   const activityLinks = buildActivityLinks(cityTours, (slug) =>
     regionType === "state"
       ? `/destinations/states/${parentSlug}/cities/${citySlug}/tours?activity=${slug}`
-      : `/tours/activities/${slug}`,
+      : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${slug}`,
   );
   const activityLabels = activityLinks.map((activity) => activity.label).slice(0, 4);
 
@@ -473,7 +486,10 @@ export const buildCityGuide = ({
           label: "All city tours",
           href: `/destinations/states/${parentSlug}/cities/${citySlug}/tours`,
         }
-      : null;
+      : {
+          label: "All city tours",
+          href: getInternationalCityToursPath(parentSlug, citySlug),
+        };
   const primaryActivitySlug = getActivitySlugs(cityTours)[0];
   const categoryLinks = primaryActivitySlug
     ? [
@@ -482,7 +498,7 @@ export const buildCityGuide = ({
           href:
             regionType === "state"
               ? `/destinations/states/${parentSlug}/cities/${citySlug}/tours?activity=${primaryActivitySlug}`
-              : `/tours/activities/${primaryActivitySlug}`,
+              : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${primaryActivitySlug}`,
         },
       ]
     : [];

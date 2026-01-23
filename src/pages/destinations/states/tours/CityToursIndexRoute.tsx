@@ -19,10 +19,12 @@ type CityToursIndexRouteProps = {
     stateSlug: string;
     citySlug: string;
   };
+  basePathOverride?: string;
 };
 
 export default function CityToursIndexRoute({
   params,
+  basePathOverride,
 }: CityToursIndexRouteProps) {
   const state =
     getStateBySlug(params.stateSlug) ??
@@ -57,10 +59,11 @@ export default function CityToursIndexRoute({
   const activityLabel = activityFilter
     ? getActivityLabelFromSlug(activityFilter)
     : null;
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
-  const stateHref = state.isFallback
-    ? "/destinations"
-    : `/destinations/states/${state.slug}`;
+  const basePath =
+    basePathOverride ??
+    (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
+  const cityHref = `${basePath}/cities/${city.slug}`;
+  const stateHref = basePath;
   const heroImage = city.heroImages[0] ?? "/hero.jpg";
 
   return (

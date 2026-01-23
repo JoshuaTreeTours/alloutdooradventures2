@@ -5,7 +5,11 @@ import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
+import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
+import EuropeCityToursRoute from "./pages/destinations/europe/EuropeCityToursRoute";
 import WorldCountryRoute from "./pages/destinations/world/WorldCountryRoute";
+import WorldCityRoute from "./pages/destinations/world/WorldCityRoute";
+import WorldCityToursRoute from "./pages/destinations/world/WorldCityToursRoute";
 import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
@@ -42,6 +46,14 @@ export default function App() {
 
         <Route path="/destinations" component={DestinationsIndex} />
         <Route
+          path="/destinations/europe/:countrySlug/cities/:citySlug/tours"
+          component={EuropeCityToursRoute}
+        />
+        <Route
+          path="/destinations/europe/:countrySlug/cities/:citySlug"
+          component={EuropeCityRoute}
+        />
+        <Route
           path="/destinations/europe/:countrySlug/tours"
           component={EuropeCountryRoute}
         />
@@ -52,6 +64,14 @@ export default function App() {
         <Route
           path="/destinations/europe/:countrySlug"
           component={EuropeCountryRoute}
+        />
+        <Route
+          path="/destinations/world/:countrySlug/cities/:citySlug/tours"
+          component={WorldCityToursRoute}
+        />
+        <Route
+          path="/destinations/world/:countrySlug/cities/:citySlug"
+          component={WorldCityRoute}
         />
         <Route
           path="/destinations/world/:countrySlug/:categorySlug"
