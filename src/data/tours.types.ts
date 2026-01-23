@@ -10,6 +10,7 @@ export type TourBadges = {
 };
 
 export type TourDestination = {
+  country?: string;
   state: string;
   stateSlug: string;
   city: string;

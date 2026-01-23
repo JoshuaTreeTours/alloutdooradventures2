@@ -17,6 +17,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
   const categoryLabel = getActivityLabelFromSlug(categorySource);
   const subtitle = shortDescription || categoryLabel;
+  const regionLabel =
+    tour.destination.state || tour.destination.country || "";
+  const locationLabel = regionLabel
+    ? `${tour.destination.city}, ${regionLabel}`
+    : tour.destination.city;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -52,7 +57,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
       <div className="flex flex-1 flex-col gap-4 p-5">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-            {tour.destination.city}, {tour.destination.state}
+            {locationLabel}
           </p>
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}

@@ -1,5 +1,6 @@
 import type { Tour } from "./tours.types";
 import { tours } from "./tours";
+import { australiaTours } from "./australiaTours";
 import { countriesWithTours } from "./europeIndex";
 import { US_STATES, slugify } from "./tourCatalog";
 
@@ -17,10 +18,15 @@ const excludedCountrySlugs = new Set([
   "united-states",
 ]);
 
-const getDestinationSlug = (tour: Tour) =>
-  tour.destination.stateSlug || slugify(tour.destination.state);
+const getDestinationName = (tour: Tour) =>
+  tour.destination.country || tour.destination.state;
 
-export const worldTours = tours.filter(
+const getDestinationSlug = (tour: Tour) =>
+  tour.destination.country
+    ? slugify(tour.destination.country)
+    : tour.destination.stateSlug || slugify(tour.destination.state);
+
+export const worldTours = [...tours, ...australiaTours].filter(
   (tour) => !excludedCountrySlugs.has(getDestinationSlug(tour)),
 );
 
@@ -39,7 +45,7 @@ export const worldToursByCountry = worldTours.reduce<Record<string, Tour[]>>(
 export const worldCountriesWithTours: WorldCountrySummary[] = Object.entries(
   worldToursByCountry,
 ).map(([slug, toursForCountry]) => ({
-  name: toursForCountry[0]?.destination.state ?? slug,
+  name: toursForCountry[0] ? getDestinationName(toursForCountry[0]) : slug,
   slug,
   tourCount: toursForCountry.length,
 }))

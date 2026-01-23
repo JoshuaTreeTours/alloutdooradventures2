@@ -36,7 +36,11 @@ export default function TourDetail({ params }: TourDetailProps) {
     );
   }
 
-  const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
+  const regionLabel =
+    tour.destination.state || tour.destination.country || "";
+  const destinationLabel = regionLabel
+    ? `${tour.destination.city}, ${regionLabel}`
+    : tour.destination.city;
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
