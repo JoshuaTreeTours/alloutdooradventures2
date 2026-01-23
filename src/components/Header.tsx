@@ -43,12 +43,15 @@ export default function Header() {
               Find an Adventure
             </a>
           </Link>
-          <span className="inline-flex items-center gap-2 text-xs font-medium text-[#405040] md:text-sm whitespace-nowrap">
+          <a
+            href="tel:18553148687"
+            className="inline-flex items-center gap-2 text-xs font-medium text-[#405040] whitespace-nowrap hover:underline md:text-sm"
+          >
             <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#2f4a2f]/10 text-[#2f4a2f]">
               <svg
                 aria-hidden="true"
                 viewBox="0 0 24 24"
-                className="h-3.5 w-3.5"
+                className="h-4 w-4"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
@@ -58,13 +61,10 @@ export default function Header() {
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.86 19.86 0 0 1-3.07-8.66A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.86.35 1.7.68 2.5a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.58-1.25a2 2 0 0 1 2.11-.45c.8.33 1.64.56 2.5.68A2 2 0 0 1 22 16.92z" />
               </svg>
             </span>
-            <a
-              href="tel:+18553148687"
-              className="font-semibold text-[#2f4a2f] underline decoration-[#2f4a2f]/70 underline-offset-2 transition hover:text-[#294129]"
-            >
+            <span className="font-semibold text-[#2f4a2f]">
               855-314-TOUR
-            </a>
-          </span>
+            </span>
+          </a>
         </div>
       </div>
     </header>
