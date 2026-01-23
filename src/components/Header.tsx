@@ -37,11 +37,22 @@ export default function Header() {
           </Link>
         </nav>
 
-        <Link href="/tours">
-          <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
-            Find an Adventure
-          </a>
-        </Link>
+        <div className="flex flex-col items-end gap-1">
+          <Link href="/tours">
+            <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
+              Find an Adventure
+            </a>
+          </Link>
+          <span className="text-xs font-medium text-[#405040]">
+            Call us:{" "}
+            <a
+              href="tel:+18553148687"
+              className="font-semibold text-[#2f4a2f] underline decoration-[#2f4a2f]/70 underline-offset-2 transition hover:text-[#294129]"
+            >
+              855-314-TOUR
+            </a>
+          </span>
+        </div>
       </div>
     </header>
   );

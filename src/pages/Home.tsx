@@ -529,15 +529,6 @@ export default function Home() {
               <h1 className="text-4xl font-semibold tracking-tight text-white drop-shadow-md md:text-6xl">
                 Find Your Next Adventure
               </h1>
-              <p className="mt-3 text-lg font-medium text-white/80 drop-shadow md:text-xl">
-                Call us:{" "}
-                <a
-                  href="tel:+18553148687"
-                  className="font-semibold text-[#2f4a2f] underline decoration-[#2f4a2f]/70 underline-offset-4 transition hover:text-[#294129]"
-                >
-                  855-314-TOUR
-                </a>
-              </p>
               <p className="mx-auto mt-5 max-w-2xl rounded-lg bg-black/4 backdrop-blur-sm px-5 py-4 text-base leading-relaxed text-white drop-shadow md:text-lg">
                 Unforgettable experiences around the world,
                 <br />
