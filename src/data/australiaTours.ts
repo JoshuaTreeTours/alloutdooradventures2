@@ -1,3 +1,4 @@
+import { classifyActivity } from "../lib/activityClassifier";
 import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
@@ -6,44 +7,7 @@ import australiaCsv from "../../data/australia.csv?raw";
 
 type CsvRow = Record<string, string>;
 
-const CATEGORY_PRIORITY = ["canoeing", "cycling", "hiking"] as const;
-const CATEGORY_KEYWORDS: Record<string, string[]> = {
-  hiking: [
-    "hike",
-    "hiking",
-    "trek",
-    "trail",
-    "walking",
-    "nature walk",
-    "summit",
-    "canyon",
-    "mountain",
-    "ridge",
-    "overlook",
-  ],
-  cycling: [
-    "bike",
-    "biking",
-    "cycling",
-    "e-bike",
-    "ebike",
-    "road ride",
-    "gravel",
-    "mtb",
-    "mountain bike",
-  ],
-  canoeing: [
-    "canoe",
-    "paddling",
-    "paddle",
-    "river trip",
-    "lake paddle",
-    "water trail",
-    "swamp paddle",
-    "bayou paddle",
-    "kayak",
-  ],
-};
+const CATEGORY_PRIORITY = ["cycling", "canoeing", "hiking", "day-adventures"] as const;
 
 const sanitizeText = (value?: string) =>
   value?.replace(/\r/g, " ").replace(/\n/g, " ").trim() ?? "";
@@ -120,15 +84,6 @@ const splitTags = (value?: string) =>
     .map((tag) => tag.trim())
     .filter(Boolean);
 
-const inferCategoriesFromText = (text: string) => {
-  const normalized = text.toLowerCase();
-  return Object.entries(CATEGORY_KEYWORDS)
-    .filter(([, keywords]) =>
-      keywords.some((keyword) => normalized.includes(keyword)),
-    )
-    .map(([category]) => category);
-};
-
 const sortByPriority = (categories: string[]) =>
   Array.from(new Set(categories)).sort(
     (a, b) =>
@@ -137,12 +92,21 @@ const sortByPriority = (categories: string[]) =>
   );
 
 const resolveActivitySlugs = (title: string, tags: string[]) => {
-  const inferred = inferCategoriesFromText([title, tags.join(" ")].join(" "));
-  const categories = inferred.length ? inferred : ["hiking"];
+  const classification = classifyActivity({ title, tags });
+  const categories: string[] = [];
+
+  if (classification.nonWalkingCategory === "cycling") {
+    categories.push("cycling");
+  } else if (classification.nonWalkingCategory === "canoeing") {
+    categories.push("canoeing");
+  } else if (classification.isHiking) {
+    categories.push("hiking");
+  } else {
+    categories.push("day-adventures");
+  }
+
   const ordered = sortByPriority(categories);
-  const primary =
-    CATEGORY_PRIORITY.find((category) => categories.includes(category)) ??
-    ordered[0];
+  const primary = ordered[0];
 
   return {
     activitySlugs: primary
