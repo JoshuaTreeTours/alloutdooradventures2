@@ -1130,15 +1130,11 @@ export const getTourBySlugs = (
 
 export const getToursByActivity = (activitySlug: string) =>
   tours.filter((tour) => {
-    if (!tour.activitySlugs.includes(activitySlug)) {
-      return false;
-    }
-
     if (activitySlug === "hiking") {
-      return !tour.activitySlugs.includes("cycling");
+      return tour.primaryCategory === "hiking";
     }
 
-    return true;
+    return tour.activitySlugs.includes(activitySlug);
   });
 
 export const getTourDetailPath = (tour: Tour) =>

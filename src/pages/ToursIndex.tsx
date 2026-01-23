@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import RegionDropdownButton from "../components/RegionDropdownButton";
@@ -14,7 +14,7 @@ import {
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
-  const [selectedActivity, setSelectedActivity] = useState("");
+  const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
   const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
   const europeCountryOptions = countriesWithTours.map((country) => ({
     name: country.name,
@@ -22,40 +22,117 @@ export default function ToursIndex() {
   }));
 
   const stateOptions = useMemo(() => US_STATES, []);
+  const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
+  const isUSState = (state?: string) => !!state && US_STATE_SET.has(state);
+  const isUSTour = (tour: (typeof tours)[number]) => {
+    const country = tour?.destination?.country as string | undefined;
+    return !country || country === "United States" || country === "USA";
+  };
+
+  const normalizeActivitySlug = (slugOrLabel: string) => {
+    const labelToSlug: Record<string, string> = {
+      Hiking: "hiking",
+      Cycling: "cycling",
+      "Paddle Sports": "paddle-sports",
+      "Day Tours": "day-tours",
+    };
+    const slugToSlug: Record<string, string> = {
+      canoeing: "paddle-sports",
+      detours: "day-tours",
+      "day-adventures": "day-tours",
+    };
+    return slugToSlug[slugOrLabel] ?? labelToSlug[slugOrLabel] ?? slugOrLabel;
+  };
+
+  const baseTours = useMemo(() => {
+    if (!isUSState(selectedState)) {
+      return tours;
+    }
+
+    return tours.filter(
+      (tour) =>
+        tour?.destination?.state === selectedState &&
+        isUSTour(tour),
+    );
+  }, [tours, selectedState, US_STATE_SET]);
 
   const cityOptions = useMemo(() => {
-    const filtered = tours.filter((tour) =>
-      selectedState
-        ? tour.destination.state === selectedState
-        : true,
-    );
-    return Array.from(new Set(filtered.map((tour) => tour.destination.city))).sort();
-  }, [selectedState]);
+    if (!selectedState || !isUSState(selectedState)) {
+      return [];
+    }
+    const cities = baseTours
+      .map((tour) => tour.destination?.city)
+      .filter(Boolean);
+    return Array.from(new Set(cities)).sort();
+  }, [baseTours, selectedState]);
 
   const activityOptions = useMemo(() => {
     const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
-    return activities.map((activity) => ({
-      slug: activity.slug,
+    const mapped = activities.map((activity) => ({
+      slug: normalizeActivitySlug(activity.slug),
       label: activity.title,
     }));
-  }, []);
+    const uniqueBySlug = new Map<string, { slug: string; label: string }>();
+    mapped.forEach((activity) => {
+      if (!uniqueBySlug.has(activity.slug)) {
+        uniqueBySlug.set(activity.slug, activity);
+      }
+    });
+    return Array.from(uniqueBySlug.values());
+  }, [normalizeActivitySlug]);
 
-  const filteredTours = useMemo(
-    () =>
-      tours.filter((tour) => {
-        const matchesState = selectedState
-          ? tour.destination.state === selectedState
-          : true;
-        const matchesCity = selectedCity
-          ? tour.destination.city === selectedCity
-          : true;
-        const matchesActivity = selectedActivity
-          ? tour.activitySlugs.includes(selectedActivity)
-          : true;
-        return matchesState && matchesCity && matchesActivity;
-      }),
-    [selectedState, selectedCity, selectedActivity],
-  );
+  const getTourActivitySlug = (tour: (typeof tours)[number]) =>
+    normalizeActivitySlug(tour.primaryCategory ?? tour.activitySlugs[0] ?? "");
+
+  useEffect(() => {
+    setSelectedCity("");
+  }, [selectedState]);
+
+  useEffect(() => {
+    if (selectedCity && !cityOptions.includes(selectedCity)) {
+      setSelectedCity("");
+    }
+  }, [selectedCity, cityOptions]);
+
+  const filteredTours = useMemo(() => {
+    return baseTours.filter((tour) => {
+      const matchesCity = selectedCity
+        ? tour.destination?.city === selectedCity
+        : true;
+      const activitySlug = getTourActivitySlug(tour);
+      const matchesActivity = selectedActivitySlug
+        ? activitySlug === selectedActivitySlug
+        : true;
+      return matchesCity && matchesActivity;
+    });
+  }, [baseTours, selectedCity, selectedActivitySlug]);
+
+  useEffect(() => {
+    if (!import.meta.env.DEV) {
+      return;
+    }
+    const anomalies = tours.filter(
+      (tour) => isUSState(tour?.destination?.state) && !isUSTour(tour),
+    );
+    if (anomalies.length > 0) {
+      console.error(
+        "[ToursIndex] US state tours with non-US country detected:",
+        anomalies.map((tour) => `${tour.slug} (${tour.title})`),
+      );
+    }
+    if (selectedActivitySlug !== "hiking") {
+      return;
+    }
+    filteredTours.forEach((tour) => {
+      if (getTourActivitySlug(tour) !== "hiking") {
+        console.error(
+          "[ToursIndex] Hiking filter violation:",
+          tour.slug,
+          tour.title,
+        );
+      }
+    });
+  }, [filteredTours, selectedActivitySlug]);
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
@@ -144,10 +221,10 @@ export default function ToursIndex() {
               }))}
               selectedName={
                 activityOptions.find(
-                  (activity) => activity.slug === selectedActivity,
+                  (activity) => activity.slug === selectedActivitySlug,
                 )?.label
               }
-              onSelect={(slug) => setSelectedActivity(slug)}
+              onSelect={(slug) => setSelectedActivitySlug(normalizeActivitySlug(slug))}
             />
           </div>
         </div>
