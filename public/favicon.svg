@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Outdoor Adventures favicon">
+  <rect width="64" height="64" rx="12" fill="#F6F1E8" />
+  <circle cx="46" cy="18" r="6" fill="#E3B341" />
+  <path d="M8 46L26 20L36 34L44 26L56 46H8Z" fill="#2F4A2F" />
+  <path d="M26 20L36 34L40 30L32 26L26 20Z" fill="#D7E4D2" />
+  <path d="M36 34L44 26L50 34H36Z" fill="#C7D6C1" />
+  <path d="M10 50H54" stroke="#1F2A1F" stroke-width="3" stroke-linecap="round" />
+</svg>
