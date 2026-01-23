@@ -3,6 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import type { Tour } from "../src/data/tours.types";
+import { classifyActivity } from "../src/lib/activityClassifier";
 
 const DATA_DIR = path.resolve("data");
 const NORTHEAST_DIR = path.resolve("data/northeast");
@@ -700,12 +701,12 @@ const normalizeCalendarUrl = (rawUrl: string) => {
 
 const rowToTour = (
   row: Record<string, string>,
+  parsedRow: ReturnType<typeof parseCsvRow>,
   activitySlug: string | undefined,
   forceCategory: string | undefined,
   logPrefix: string,
 ): Tour => {
   const galleryImage = sanitizeCsvText(row.image_url);
-  const parsedRow = parseCsvRow(row);
   const destination = parseLocation(parsedRow.location);
   const slugBase = slugify(parsedRow.title);
   const slug = parsedRow.itemId
@@ -838,6 +839,19 @@ const run = async () => {
 
   const tours: Tour[] = [];
   const skippedRows: string[] = [];
+  const reclassifiedTours: Array<{
+    source: string;
+    itemId: string;
+    title: string;
+    fromCategory: string;
+    toCategory: string;
+  }> = [];
+  const deletedTours: Array<{
+    source: string;
+    itemId: string;
+    title: string;
+    reason: string;
+  }> = [];
   const northeastSeeds = new Map<string, StateSeed>();
   const deepSouthSeeds = new Map<string, StateSeed>();
   const seenItems = new Map<
@@ -948,7 +962,51 @@ const run = async () => {
       seenItems.set(itemKey, nextSnapshot);
       try {
         const logPrefix = `${source}: ${rowIdentifier}`;
-        const tour = rowToTour(row, activitySlug, forceCategory, logPrefix);
+        const parsedRow = parseCsvRow(row);
+        const classification = classifyActivity({
+          title: parsedRow.title,
+          description: parsedRow.shortDescription,
+          tags: parsedRow.tags,
+          explicitCategory: parsedRow.explicitCategory,
+        });
+
+        if (classification.isFoodOnly) {
+          deletedTours.push({
+            source,
+            itemId: parsedRow.itemId || rowIdentifier,
+            title: parsedRow.title,
+            reason: "food-only",
+          });
+          return;
+        }
+
+        let tour = rowToTour(row, parsedRow, activitySlug, forceCategory, logPrefix);
+
+        if (tour.primaryCategory === "hiking" && !classification.isHiking) {
+          const reclassifiedCategory = classification.nonWalkingCategory;
+          if (reclassifiedCategory) {
+            const nextActivitySlugs = [
+              reclassifiedCategory,
+              ...tour.activitySlugs.filter(
+                (slug) => slug !== "hiking" && slug !== reclassifiedCategory,
+              ),
+            ];
+            tour = {
+              ...tour,
+              primaryCategory: reclassifiedCategory,
+              categories: nextActivitySlugs,
+              activitySlugs: nextActivitySlugs,
+            };
+            reclassifiedTours.push({
+              source,
+              itemId: parsedRow.itemId || rowIdentifier,
+              title: parsedRow.title,
+              fromCategory: "hiking",
+              toCategory: reclassifiedCategory,
+            });
+          }
+        }
+
         tours.push(tour);
 
         if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
@@ -1021,6 +1079,16 @@ export const deepSouthStates: StateDestination[] = ${stringifyForTs(
     )};
 `,
     "utf8",
+  );
+  console.log(
+    JSON.stringify(
+      {
+        reclassifiedTours,
+        deletedTours,
+      },
+      null,
+      2,
+    ),
   );
   console.log(
     `Generated ${tours.length} tours, ${northeastStates.length} northeast states, and ${deepSouthStates.length} deep south states.`,
