@@ -12,6 +12,7 @@ const HEARTLAND_DIR = path.resolve("data/heartland");
 const OUTPUT_PATH = path.resolve("src/data/tours.generated.ts");
 const NORTHEAST_OUTPUT_PATH = path.resolve("src/data/northeast.generated.ts");
 const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
+const IMPORT_REPORT_PATH = path.resolve("data/import-audit.json");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
   { filename: "cycling2.csv", activitySlug: "cycling" },
@@ -444,6 +445,12 @@ type StateSeed = {
   cities: Map<string, CitySeed>;
 };
 
+type ImportReportEntry = {
+  source: string;
+  itemId: string;
+  title: string;
+};
+
 const addRegionSeed = (
   stateMap: Map<string, StateSeed>,
   {
@@ -839,19 +846,24 @@ const run = async () => {
 
   const tours: Tour[] = [];
   const skippedRows: string[] = [];
-  const reclassifiedTours: Array<{
-    source: string;
-    itemId: string;
-    title: string;
-    fromCategory: string;
-    toCategory: string;
-  }> = [];
-  const deletedTours: Array<{
-    source: string;
-    itemId: string;
-    title: string;
-    reason: string;
-  }> = [];
+  const reclassifiedTours: Array<
+    ImportReportEntry & {
+      fromCategory: string;
+      toCategory: string;
+    }
+  > = [];
+  const deletedTours: Array<
+    ImportReportEntry & {
+      reason: string;
+    }
+  > = [];
+  const hikingViolations: Array<
+    ImportReportEntry & {
+      reasons: string[];
+      disqualifiers: string[];
+      walkingIntent: string[];
+    }
+  > = [];
   const northeastSeeds = new Map<string, StateSeed>();
   const deepSouthSeeds = new Map<string, StateSeed>();
   const seenItems = new Map<
@@ -967,7 +979,6 @@ const run = async () => {
           title: parsedRow.title,
           description: parsedRow.shortDescription,
           tags: parsedRow.tags,
-          explicitCategory: parsedRow.explicitCategory,
         });
 
         if (classification.isFoodOnly) {
@@ -983,28 +994,26 @@ const run = async () => {
         let tour = rowToTour(row, parsedRow, activitySlug, forceCategory, logPrefix);
 
         if (tour.primaryCategory === "hiking" && !classification.isHiking) {
-          const reclassifiedCategory = classification.nonWalkingCategory;
-          if (reclassifiedCategory) {
-            const nextActivitySlugs = [
-              reclassifiedCategory,
-              ...tour.activitySlugs.filter(
-                (slug) => slug !== "hiking" && slug !== reclassifiedCategory,
-              ),
-            ];
-            tour = {
-              ...tour,
-              primaryCategory: reclassifiedCategory,
-              categories: nextActivitySlugs,
-              activitySlugs: nextActivitySlugs,
-            };
-            reclassifiedTours.push({
-              source,
-              itemId: parsedRow.itemId || rowIdentifier,
-              title: parsedRow.title,
-              fromCategory: "hiking",
-              toCategory: reclassifiedCategory,
-            });
-          }
+          const reclassifiedCategory = classification.nonWalkingCategory ?? "detours";
+          const nextActivitySlugs = [
+            reclassifiedCategory,
+            ...tour.activitySlugs.filter(
+              (slug) => slug !== "hiking" && slug !== reclassifiedCategory,
+            ),
+          ];
+          tour = {
+            ...tour,
+            primaryCategory: reclassifiedCategory,
+            categories: nextActivitySlugs,
+            activitySlugs: nextActivitySlugs,
+          };
+          reclassifiedTours.push({
+            source,
+            itemId: parsedRow.itemId || rowIdentifier,
+            title: parsedRow.title,
+            fromCategory: "hiking",
+            toCategory: reclassifiedCategory,
+          });
         }
 
         tours.push(tour);
@@ -1056,6 +1065,48 @@ const run = async () => {
   const deepSouthStates = Array.from(deepSouthSeeds.values()).map((state) =>
     buildStateNarrative(state, "Deep South"),
   );
+  for (const tour of tours) {
+    if (tour.primaryCategory !== "hiking") {
+      continue;
+    }
+
+    const audit = classifyActivity({
+      title: tour.title,
+      description: tour.shortDescription,
+      tags: tour.tags,
+    });
+    const reasons: string[] = [];
+    if (!audit.hasWalkingIntent) {
+      reasons.push("missing walking intent");
+    }
+    if (audit.hasDisqualifier) {
+      reasons.push("contains disqualifier keywords");
+    }
+
+    if (reasons.length > 0) {
+      hikingViolations.push({
+        source: "generated",
+        itemId: tour.id,
+        title: tour.title,
+        reasons,
+        disqualifiers: audit.matches.disqualifiers,
+        walkingIntent: audit.matches.walkingIntent,
+      });
+    }
+  }
+
+  const importReport = {
+    reclassifiedTours,
+    deletedTours,
+    hikingViolations,
+  };
+  await writeFile(IMPORT_REPORT_PATH, JSON.stringify(importReport, null, 2), "utf8");
+
+  if (hikingViolations.length > 0) {
+    throw new Error(
+      `Hiking audit failed: ${hikingViolations.length} tours violate hiking rules. See ${IMPORT_REPORT_PATH}.`,
+    );
+  }
 
   await writeGeneratedFile(tours);
   await writeFile(
@@ -1080,16 +1131,7 @@ export const deepSouthStates: StateDestination[] = ${stringifyForTs(
 `,
     "utf8",
   );
-  console.log(
-    JSON.stringify(
-      {
-        reclassifiedTours,
-        deletedTours,
-      },
-      null,
-      2,
-    ),
-  );
+  console.log(JSON.stringify(importReport, null, 2));
   console.log(
     `Generated ${tours.length} tours, ${northeastStates.length} northeast states, and ${deepSouthStates.length} deep south states.`,
   );

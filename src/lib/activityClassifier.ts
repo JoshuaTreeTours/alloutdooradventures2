@@ -2,22 +2,32 @@ type ActivityClassifierInput = {
   title: string;
   description?: string;
   tags?: string[];
-  explicitCategory?: string;
 };
 
 type ActivityClassification = {
+  hasWalkingIntent: boolean;
+  hasDisqualifier: boolean;
   isHiking: boolean;
-  nonWalkingCategory?: "cycling" | "canoeing";
+  nonWalkingCategory?: "cycling" | "canoeing" | "day-adventures" | "detours";
   isFoodOnly: boolean;
+  matches: {
+    walkingIntent: string[];
+    disqualifiers: string[];
+    food: string[];
+  };
 };
 
-const HIKING_ALLOW_KEYWORDS = [
+const WALKING_INTENT_KEYWORDS = [
   "hike",
   "hiking",
+  "day hike",
   "trek",
   "trail",
-  "walking",
   "walk",
+  "walking",
+  "walking tour",
+  "guided walk",
+  "guided hike",
   "nature walk",
   "summit",
   "canyon",
@@ -38,7 +48,7 @@ const CYCLING_KEYWORDS = [
   "mountain bike",
 ];
 
-const CANOEING_KEYWORDS = [
+const WATER_KEYWORDS = [
   "canoe",
   "paddling",
   "paddle",
@@ -52,45 +62,43 @@ const CANOEING_KEYWORDS = [
   "raft",
   "float",
   "boat",
+  "snorkel",
+  "snorkeling",
+  "sailing",
+  "river cruise",
+  "lake cruise",
 ];
 
-const HIKING_DISQUALIFY_KEYWORDS = [
-  ...CYCLING_KEYWORDS,
-  ...CANOEING_KEYWORDS,
-];
-
-const NON_WALKING_ACTIVITY_KEYWORDS = [
-  ...HIKING_DISQUALIFY_KEYWORDS,
-  "horseback",
-  "horseback ride",
-  "atv",
-  "utv",
-  "4x4",
+const DAY_ADVENTURE_KEYWORDS = [
   "jeep",
   "off-road",
+  "off road",
+  "4x4",
+  "atv",
+  "utv",
   "motorized",
   "helicopter",
   "flight",
-  "sky",
   "air tour",
-  "zipline",
-  "climb",
-  "climbing",
-  "ski",
+  "airboat",
+  "bus",
+  "train",
+  "rail",
+  "safari",
   "snowmobile",
+  "sled",
   "tram",
   "gondola",
-  "rail",
-  "train",
-  "bus",
 ];
 
-const FOOD_ONLY_KEYWORDS = [
+const FOOD_KEYWORDS = [
   "food tour",
+  "food crawl",
   "food tasting",
   "tasting",
   "wine",
   "winery",
+  "wine tasting",
   "beer",
   "brewery",
   "brewpub",
@@ -99,6 +107,9 @@ const FOOD_ONLY_KEYWORDS = [
   "bourbon",
   "tequila",
   "cocktail",
+  "bar crawl",
+  "donut",
+  "taco",
   "dinner",
   "lunch",
   "breakfast",
@@ -112,43 +123,73 @@ const FOOD_ONLY_KEYWORDS = [
   "market",
 ];
 
+const NON_HIKING_ATTRACTION_KEYWORDS = [
+  "art",
+  "workshop",
+  "class",
+  "studio",
+  "museum",
+  "zoo",
+  "aquarium",
+  "festival",
+  "event",
+  "show",
+  "concert",
+  "attraction",
+  "hunt",
+  "hunting",
+];
+
+const HIKING_DISQUALIFY_KEYWORDS = [
+  ...CYCLING_KEYWORDS,
+  ...WATER_KEYWORDS,
+  ...DAY_ADVENTURE_KEYWORDS,
+  ...FOOD_KEYWORDS,
+  ...NON_HIKING_ATTRACTION_KEYWORDS,
+];
+
 const normalizeText = (value: string) => value.toLowerCase();
 
-const buildClassifierText = ({
-  title,
-  description,
-  tags,
-  explicitCategory,
-}: ActivityClassifierInput) =>
-  normalizeText(
-    [title, description, tags?.join(" "), explicitCategory].filter(Boolean).join(" "),
-  );
+const buildClassifierText = ({ title, description, tags }: ActivityClassifierInput) =>
+  normalizeText([title, description, tags?.join(" ")].filter(Boolean).join(" "));
 
-const includesAny = (text: string, keywords: string[]) =>
-  keywords.some((keyword) => text.includes(keyword));
+const getMatches = (text: string, keywords: string[]) =>
+  keywords.filter((keyword) => text.includes(keyword));
 
 export const classifyActivity = (
   input: ActivityClassifierInput,
 ): ActivityClassification => {
   const text = buildClassifierText(input);
-  const hasHikingAllow = includesAny(text, HIKING_ALLOW_KEYWORDS);
-  const hasCycling = includesAny(text, CYCLING_KEYWORDS);
-  const hasCanoeing = includesAny(text, CANOEING_KEYWORDS);
-  const hasHikingDisqualifier = includesAny(text, HIKING_DISQUALIFY_KEYWORDS);
-  const hasNonWalking = includesAny(text, NON_WALKING_ACTIVITY_KEYWORDS);
-  const hasFood = includesAny(text, FOOD_ONLY_KEYWORDS);
+  const walkingIntentMatches = getMatches(text, WALKING_INTENT_KEYWORDS);
+  const disqualifierMatches = getMatches(text, HIKING_DISQUALIFY_KEYWORDS);
+  const foodMatches = getMatches(text, FOOD_KEYWORDS);
+  const hasWalkingIntent = walkingIntentMatches.length > 0;
+  const hasDisqualifier = disqualifierMatches.length > 0;
+  const hasCycling = getMatches(text, CYCLING_KEYWORDS).length > 0;
+  const hasWater = getMatches(text, WATER_KEYWORDS).length > 0;
+  const hasDayAdventure = getMatches(text, DAY_ADVENTURE_KEYWORDS).length > 0;
+  const hasFood = foodMatches.length > 0;
 
-  const isHiking = hasHikingAllow && !hasHikingDisqualifier;
+  const isHiking = hasWalkingIntent && !hasDisqualifier;
   const nonWalkingCategory = hasCycling
     ? "cycling"
-    : hasCanoeing
+    : hasWater
       ? "canoeing"
-      : undefined;
-  const isFoodOnly = hasFood && !(hasHikingAllow || hasNonWalking);
+      : hasDayAdventure
+        ? "day-adventures"
+        : "detours";
+  const isFoodOnly = hasFood && !hasCycling && !hasWater && !hasDayAdventure;
 
   return {
+    hasWalkingIntent,
+    hasDisqualifier,
     isHiking,
-    nonWalkingCategory,
+    nonWalkingCategory: isHiking ? undefined : nonWalkingCategory,
     isFoodOnly,
+    matches: {
+      walkingIntent: walkingIntentMatches,
+      disqualifiers: disqualifierMatches,
+      food: foodMatches,
+    },
   };
 };
