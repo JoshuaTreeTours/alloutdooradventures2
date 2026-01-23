@@ -15,6 +15,12 @@ import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBook
 import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursIndex from "./pages/ToursIndex";
 import ToursCatalog from "./pages/ToursCatalog";
+import GuidesIndex from "./pages/guides/GuidesIndex";
+import StateGuideRoute from "./pages/guides/StateGuideRoute";
+import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
+import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
+import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
+import Faqs from "./pages/Faqs";
 import CyclingTours from "./pages/tours/activities/CyclingTours";
 import DayAdventuresTours from "./pages/tours/activities/DayAdventuresTours";
 import DetoursTours from "./pages/tours/activities/DetoursTours";
@@ -93,6 +99,21 @@ export default function App() {
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
+        <Route path="/guides" component={GuidesIndex} />
+        <Route
+          path="/guides/us/:stateSlug/:citySlug"
+          component={CityGuideUsRoute}
+        />
+        <Route path="/guides/us/:stateSlug" component={StateGuideRoute} />
+        <Route
+          path="/guides/world/:countrySlug/:citySlug"
+          component={CityGuideWorldRoute}
+        />
+        <Route
+          path="/guides/world/:countrySlug"
+          component={CountryGuideRoute}
+        />
+        <Route path="/faqs" component={Faqs} />
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />
