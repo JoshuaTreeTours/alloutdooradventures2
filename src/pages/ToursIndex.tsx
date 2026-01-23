@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
+import { worldCountriesWithTours } from "../data/worldIndex";
 import { tours } from "../data/tours";
 import {
   ACTIVITY_PAGES,
@@ -15,11 +16,17 @@ export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
-  const [selectedEuropeCountry, setSelectedEuropeCountry] = useState("");
-  const europeCountryOptions = countriesWithTours.map((country) => ({
-    name: country.name,
-    slug: country.slug,
-  }));
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const countryOptions = [
+    ...countriesWithTours.map((country) => ({
+      name: country.name,
+      slug: `europe:${country.slug}`,
+    })),
+    ...worldCountriesWithTours.map((country) => ({
+      name: country.name,
+      slug: `world:${country.slug}`,
+    })),
+  ];
 
   const stateOptions = useMemo(() => US_STATES, []);
   const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
@@ -165,22 +172,33 @@ export default function ToursIndex() {
         <div className="space-y-4">
           <RegionDropdownButton
             label="Select a country…"
-            options={europeCountryOptions}
+            options={countryOptions}
             selectedName={
-              europeCountryOptions.find(
-                (country) => country.slug === selectedEuropeCountry,
-              )?.name
+              countryOptions.find((country) => country.slug === selectedCountry)
+                ?.name
             }
             onSelect={(slug) => {
-              setSelectedEuropeCountry(slug);
-              window.location.assign(`/destinations/europe/${slug}`);
+              const [region, countrySlug] = slug.split(":");
+              if (!countrySlug) {
+                return;
+              }
+              setSelectedCountry(slug);
+              const basePath =
+                region === "world" ? "/destinations/world" : "/destinations/europe";
+              window.location.assign(`${basePath}/${countrySlug}`);
             }}
           />
-          {selectedEuropeCountry ? (
+          {selectedCountry ? (
             <div className="mt-2">
-              <Link href={`/destinations/europe/${selectedEuropeCountry}/tours`}>
+              <Link
+                href={
+                  selectedCountry.startsWith("world:")
+                    ? `/destinations/world/${selectedCountry.replace("world:", "")}`
+                    : `/destinations/europe/${selectedCountry.replace("europe:", "")}/tours`
+                }
+              >
                 <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-                  View all Europe tours →
+                  View all country tours →
                 </a>
               </Link>
             </div>
