@@ -5,7 +5,11 @@ import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
 import { tours } from "../data/tours";
-import { ACTIVITY_PAGES, ADVENTURE_ACTIVITY_PAGES } from "../data/tourCatalog";
+import {
+  ACTIVITY_PAGES,
+  ADVENTURE_ACTIVITY_PAGES,
+  US_STATES,
+} from "../data/tourCatalog";
 
 export default function ToursIndex() {
   const [selectedState, setSelectedState] = useState("");
@@ -17,12 +21,7 @@ export default function ToursIndex() {
     slug: country.slug,
   }));
 
-  const stateOptions = useMemo(() => {
-    const uniqueStates = Array.from(
-      new Set(tours.map((tour) => tour.destination.state)),
-    );
-    return uniqueStates.sort();
-  }, [tours]);
+  const stateOptions = useMemo(() => US_STATES, []);
 
   const cityOptions = useMemo(() => {
     const filtered = tours.filter((tour) =>
