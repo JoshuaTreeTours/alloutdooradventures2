@@ -138,14 +138,22 @@ const buildSitemap = async () => {
 
 const run = async () => {
   const { xml, urls } = await buildSitemap();
-  const outputPath = path.resolve(__dirname, "../public/sitemap.xml");
+  const distOutputPath = path.resolve(__dirname, "../dist/sitemap.xml");
+  const publicOutputPath = path.resolve(__dirname, "../public/sitemap.xml");
 
-  await mkdir(path.dirname(outputPath), { recursive: true });
-  await writeFile(outputPath, xml, "utf8");
+  await mkdir(path.dirname(distOutputPath), { recursive: true });
+  await writeFile(distOutputPath, xml, "utf8");
+
+  try {
+    await mkdir(path.dirname(publicOutputPath), { recursive: true });
+    await writeFile(publicOutputPath, xml, "utf8");
+  } catch {
+    // Optional secondary output; ignore failures.
+  }
 
   const sample = urls.slice(0, 5).join(", ");
   console.log(`Sitemap URLs: ${urls.length}`);
-  console.log(`Sitemap output: ${outputPath}`);
+  console.log(`Sitemap output: ${distOutputPath}`);
   console.log(`Sitemap samples: ${sample}`);
 };
 
