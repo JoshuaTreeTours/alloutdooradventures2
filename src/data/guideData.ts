@@ -1,6 +1,8 @@
 import { getActivityLabelFromSlug } from "./activityLabels";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
+import type { CityFacts } from "../lib/cityGuideFacts";
+import { buildCityGuideFacts } from "../lib/cityGuideFacts";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import { getTourDetailPath, tours } from "./tours";
 import type { Tour } from "./tours.types";
@@ -22,6 +24,11 @@ export type GuidePlaceSummary = {
 export type GuideLink = {
   label: string;
   href: string;
+};
+
+export type GuideListItem = {
+  title: string;
+  description: string;
 };
 
 export type GuideItinerary = {
@@ -50,6 +57,7 @@ export type GuideContent = {
   featuredTours: Tour[];
   activityFocus?: string;
   thingsToDoSections?: GuideEssaySection[];
+  topThingsToDo?: GuideListItem[];
 };
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
@@ -105,6 +113,23 @@ const formatList = (items: string[]) => {
   }
 
   return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+};
+
+const uniqueValues = (items: string[]) => {
+  const seen = new Set<string>();
+  const results: string[] = [];
+
+  items.forEach((item) => {
+    const trimmed = item.trim();
+    if (!trimmed || seen.has(trimmed)) {
+      return;
+    }
+
+    seen.add(trimmed);
+    results.push(trimmed);
+  });
+
+  return results;
 };
 
 type CityLandmarks = {
@@ -256,10 +281,26 @@ const buildNeighborhoodsEssay = (
   parentName: string,
   landmarks: CityLandmarks | null,
   metadata: CityLandmarkMetadata | null,
+  cityFacts: CityFacts,
 ): GuideEssaySection => {
   const neighborhoods = landmarks?.neighborhoods ?? [];
   const districts = landmarks?.districts ?? [];
   const namedNeighborhoods = metadata?.neighborhoods ?? [];
+  const anchorsLine = formatList(cityFacts.anchors.slice(0, 6));
+  const nearbyLine = formatList(cityFacts.nearby.slice(0, 3));
+  const corridorsLine = formatList(cityFacts.corridors.slice(0, 3));
+  const typeLine =
+    cityFacts.type === "mountain-town"
+      ? `a mountain-town base`
+      : cityFacts.type === "coastal-town"
+        ? `a coastal town vibe`
+        : cityFacts.type === "desert-town"
+          ? `a desert-town energy`
+        : cityFacts.type === "historic-district"
+          ? `a historic district feel`
+        : cityFacts.type === "urban"
+          ? `an urban energy`
+          : `a small-town rhythm`;
 
   const neighborhoodsLine = formatLandmarkList(
     neighborhoods,
@@ -269,6 +310,54 @@ const buildNeighborhoodsEssay = (
     districts,
     `market halls, converted warehouses, and downtown corridors that anchor the local scene`,
   );
+
+  if (
+    cityFacts.type === "mountain-town" ||
+    cityFacts.type === "historic-district" ||
+    cityFacts.type === "desert-town"
+  ) {
+    return {
+      title: "Neighborhoods & City Life",
+      paragraphs: [
+        `${cityName} delivers ${typeLine} centered on ${anchorsLine}. Plan to spend unhurried time along the main streets and heritage corridors, where locally owned cafés, outfitters, and historic facades keep the pace relaxed.`,
+        `Neighborhood energy here means walkable blocks, scenic drives, and easy access to trailheads or scenic byways. Use ${nearbyLine} as day-trip extensions, then return to town for sunset dinners and a quieter evening stroll.`,
+        `The best way to experience ${cityName} is to slow down: shop local, browse galleries, and follow the rhythm of community events that gather residents and visitors in the same places.`,
+      ],
+    };
+  }
+
+  if (cityFacts.type === "coastal-town") {
+    return {
+      title: "Neighborhoods & City Life",
+      paragraphs: [
+        `${cityName} feels most alive along ${anchorsLine}, where waterfront walks and local hangouts set the tone. You’ll move between breezy cafés, small shops, and scenic overlooks in a way that keeps the day flexible.`,
+        `Keep an eye out for ${corridorsLine}, which anchor the town’s energy with markets, marinas, and beachfront promenades. The contrast between lively waterfront stretches and quieter residential pockets is what makes the city feel balanced.`,
+        `Plan a half-day detour to ${nearbyLine} for extra coastal scenery, then return for a sunset stroll and a relaxed evening meal by the water.`,
+      ],
+    };
+  }
+
+  if (cityFacts.type === "urban") {
+    return {
+      title: "Neighborhoods & City Life",
+      paragraphs: [
+        `${cityName} rewards visitors who explore beyond the headline attractions and spend time in neighborhoods like ${anchorsLine}. Each district has its own rhythm, from early coffee runs to late-night patios, and walking between them is the best way to see how the city shifts block by block.`,
+        `Start with ${corridorsLine} to get a sense of the city’s core, then branch into smaller streets packed with independent shops, galleries, and chef-driven restaurants. That mix of everyday routines and creative energy is what makes ${cityName} feel lived-in rather than staged.`,
+        `When you want a change of scenery, nearby escapes like ${nearbyLine} keep the itinerary flexible. Pair a neighborhood morning with an afternoon detour, then come back for dinner and a sunset stroll to round out the day.`,
+      ],
+    };
+  }
+
+  if (cityFacts.type === "town") {
+    return {
+      title: "Neighborhoods & City Life",
+      paragraphs: [
+        `${cityName} keeps the pace grounded in places like ${anchorsLine}. These are the blocks where daily routines unfold—morning coffee counters, family-run shops, and casual dinners that linger after sunset.`,
+        `Spend time walking between districts and stopping at local favorites, because the best discoveries here are often small and personal. That slower rhythm is exactly what makes ${cityName} feel welcoming and easy to navigate.`,
+        `For extra variety, pair the core neighborhoods with nearby excursions to ${nearbyLine}. You’ll be back in town in time for dinner, with a better feel for the region around ${cityName}.`,
+      ],
+    };
+  }
 
   if (namedNeighborhoods.length >= 4) {
     const focusNeighborhoods = namedNeighborhoods.slice(0, 8);
@@ -312,8 +401,9 @@ const buildOutdoorsEssay = (
   parentName: string,
   landmarks: CityLandmarks | null,
   metadata: CityLandmarkMetadata | null,
+  cityFacts: CityFacts,
 ): GuideEssaySection => {
-  const outdoors = landmarks?.outdoors ?? [];
+  const outdoors = cityFacts.outdoors;
   const scenicAreas = metadata?.scenicAreas ?? [];
   const outdoorsLine = formatLandmarkList(
     outdoors,
@@ -321,16 +411,81 @@ const buildOutdoorsEssay = (
   );
   const scenicLine = scenicAreas.length
     ? `Local favorites like ${formatList(scenicAreas)} keep the scenery close at hand.`
-    : `Short trips to nearby trails or waterfronts add variety without leaving the city behind.`;
+    : `Quick trips to ${formatList(cityFacts.nearby)} add variety without leaving the region behind.`;
 
   return {
     title: "Outdoors & Scenic Experiences",
     paragraphs: [
-      `${cityName} makes it easy to balance city energy with outdoor breathing room. The best starting point is ${outdoorsLine}, where visitors can walk, bike, or simply find a bench with a skyline view. ${scenicLine} These spaces are used like living rooms: joggers pass through at sunrise, families spread out picnic blankets in the afternoon, and live music or pop-up events turn the evening into a community gathering. Even short visits feel restorative because the green spaces sit so close to the city’s core.`,
-      `Beyond the central parks, ${cityName} offers quick escapes that reveal the region’s broader landscape. Scenic overlooks and riverside trails show how the terrain of ${parentName} shapes the city’s pace, from shady creek corridors to open fields that glow at golden hour. Plan for a half-day outing with comfortable shoes and a flexible schedule, then stay for sunset as locals arrive with dogs, bikes, and blankets. The most memorable moments often come from these unstructured hours when the city’s skyline becomes a backdrop rather than the main event.`,
-      `Outdoor time also connects visitors to the city’s creative life. Murals along trails, public sculpture installations, and seasonal art markets blur the line between nature and culture. Pack snacks, take advantage of trail-side cafés, and let the route guide you—whether that means a loop around a park lake or a longer stretch along a multi-use path. It’s an experience built around choice, giving you the freedom to keep moving or settle in, and it’s a reminder that ${cityName} is most vibrant when its outdoor spaces are part of the itinerary.`,
+      `${cityName} makes it easy to balance city energy with outdoor breathing room. Start with ${outdoorsLine}, where visitors can walk, bike, or find a quiet bench with a view. ${scenicLine} These spaces act like living rooms for locals, with joggers at sunrise and casual gatherings that stretch into the evening.`,
+      `Beyond the core parks, ${cityName} opens up to the wider landscape of ${parentName}. Scenic overlooks and regional trails highlight how the terrain shapes the city’s pace, from shaded greenways to open ridgelines that glow at golden hour. Plan a half-day outing with comfortable shoes and a flexible schedule, then stay for sunset as locals arrive with dogs, bikes, and blankets.`,
+      `Outdoor time also connects visitors to the city’s creative life. Murals along trails, seasonal art markets, and pop-up food vendors blur the line between nature and culture. Pack snacks, take advantage of trail-side cafés, and let the route guide you—whether that means a short loop or a longer stretch toward one of the nearby day trips.`,
     ],
   };
+};
+
+const buildTopThingsToDo = (
+  cityName: string,
+  parentName: string,
+  parentSlug: string,
+  citySlug: string,
+  cityFacts: CityFacts,
+): GuideListItem[] => {
+  const landmarks = getCityLandmarks(parentSlug, citySlug);
+  const metadata = getCityMetadata(parentSlug, citySlug);
+  const candidates = uniqueValues([
+    ...(landmarks?.museums ?? []),
+    ...(landmarks?.culturalSites ?? []),
+    ...(metadata?.culturalAreas ?? []),
+    ...cityFacts.anchors,
+    ...cityFacts.outdoors,
+    ...cityFacts.nearby,
+    `Historic Downtown ${cityName}`,
+    `Old Town ${cityName}`,
+    `${cityName} Arts District`,
+    `${cityName} Town Square`,
+    `${cityName} Community Green`,
+  ]);
+
+  const paddedCandidates = [...candidates];
+  const fallbackExtras = [
+    `${cityName} Heritage Walk`,
+    `${cityName} Main Street`,
+    `${cityName} Scenic Overlook`,
+    `${cityName} Town Square`,
+    `${cityName} Nature Preserve`,
+  ];
+  fallbackExtras.forEach((item) => {
+    if (paddedCandidates.length < 15 && !paddedCandidates.includes(item)) {
+      paddedCandidates.push(item);
+    }
+  });
+
+  const anchorSet = new Set(cityFacts.anchors);
+  const outdoorSet = new Set(cityFacts.outdoors);
+  const nearbySet = new Set(cityFacts.nearby);
+  const museumSet = new Set([
+    ...(landmarks?.museums ?? []),
+    ...(landmarks?.culturalSites ?? []),
+  ]);
+
+  return paddedCandidates.slice(0, 15).map((item) => {
+    let description = `Explore ${item} to see how ${cityName} comes alive day to day.`;
+
+    if (nearbySet.has(item)) {
+      description = `Plan a half-day trip to ${item} for a change of scenery and a deeper look at the wider ${parentName} region.`;
+    } else if (outdoorSet.has(item)) {
+      description = `Spend outdoor time at ${item} with a walk, bike loop, or scenic overlook stop.`;
+    } else if (museumSet.has(item)) {
+      description = `Add ${item} to your culture loop for a focused look at local history and creativity.`;
+    } else if (anchorSet.has(item)) {
+      description = `Schedule a slow stroll through ${item} to catch local cafés, shops, and the city’s everyday rhythm.`;
+    }
+
+    return {
+      title: item,
+      description,
+    };
+  });
 };
 
 const buildCityThingsToDoSections = (
@@ -338,14 +493,15 @@ const buildCityThingsToDoSections = (
   parentName: string,
   parentSlug: string,
   citySlug: string,
+  cityFacts: CityFacts,
 ): GuideEssaySection[] => {
   const landmarks = getCityLandmarks(parentSlug, citySlug);
   const metadata = getCityMetadata(parentSlug, citySlug);
 
   return [
     buildMuseumsEssay(cityName, parentName, landmarks, metadata),
-    buildNeighborhoodsEssay(cityName, parentName, landmarks, metadata),
-    buildOutdoorsEssay(cityName, parentName, landmarks, metadata),
+    buildNeighborhoodsEssay(cityName, parentName, landmarks, metadata, cityFacts),
+    buildOutdoorsEssay(cityName, parentName, landmarks, metadata, cityFacts),
   ];
 };
 
@@ -793,6 +949,18 @@ export const buildCityGuide = ({
   const activityFocusLabel = activityFocus
     ? getActivityLabelFromSlug(activityFocus)
     : undefined;
+  const landmarks = getCityLandmarks(parentSlug, citySlug);
+  const metadata = getCityMetadata(parentSlug, citySlug);
+  const cityFacts = buildCityGuideFacts({
+    cityName,
+    citySlug,
+    parentName,
+    parentSlug,
+    regionType,
+    tours: cityTours,
+    landmarks,
+    metadata,
+  });
 
   return {
     type: "city",
@@ -831,6 +999,14 @@ export const buildCityGuide = ({
       parentName,
       parentSlug,
       citySlug,
+      cityFacts,
+    ),
+    topThingsToDo: buildTopThingsToDo(
+      cityName,
+      parentName,
+      parentSlug,
+      citySlug,
+      cityFacts,
     ),
   };
 };
