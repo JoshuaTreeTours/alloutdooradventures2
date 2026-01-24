@@ -49,6 +49,9 @@ export type GuideContent = {
   type: "state" | "country" | "city";
   name: string;
   slug: string;
+  parentName?: string;
+  parentSlug?: string;
+  regionType?: "state" | "country";
   intro: string;
   breadcrumbs: GuideLink[];
   topCities?: GuideCitySummary[];
@@ -969,6 +972,9 @@ export const buildCityGuide = ({
     type: "city",
     name: cityName,
     slug: citySlug,
+    parentName,
+    parentSlug,
+    regionType,
     intro: `${cityName} is a base for ${toursToShow.length} tours in ${parentName}, featuring ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
