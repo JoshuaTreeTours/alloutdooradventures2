@@ -5,11 +5,7 @@ import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
-import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
-import EuropeCityToursRoute from "./pages/destinations/europe/EuropeCityToursRoute";
 import WorldCountryRoute from "./pages/destinations/world/WorldCountryRoute";
-import WorldCityRoute from "./pages/destinations/world/WorldCityRoute";
-import WorldCityToursRoute from "./pages/destinations/world/WorldCityToursRoute";
 import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
@@ -19,18 +15,6 @@ import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBook
 import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursIndex from "./pages/ToursIndex";
 import ToursCatalog from "./pages/ToursCatalog";
-import GuidesIndex from "./pages/guides/GuidesIndex";
-import StateGuideRoute from "./pages/guides/StateGuideRoute";
-import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
-import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
-import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
-import Faqs from "./pages/Faqs";
-import Journeys from "./pages/Journeys";
-import DayToursIndex from "./pages/tours/day/DayToursIndex";
-import DayCyclingTours from "./pages/tours/day/DayCyclingTours";
-import DayHikingTours from "./pages/tours/day/DayHikingTours";
-import DayPaddleTours from "./pages/tours/day/DayPaddleTours";
-import MultiDayLanding from "./pages/tours/MultiDayLanding";
 import CyclingTours from "./pages/tours/activities/CyclingTours";
 import DayAdventuresTours from "./pages/tours/activities/DayAdventuresTours";
 import DetoursTours from "./pages/tours/activities/DetoursTours";
@@ -52,14 +36,6 @@ export default function App() {
 
         <Route path="/destinations" component={DestinationsIndex} />
         <Route
-          path="/destinations/europe/:countrySlug/cities/:citySlug/tours"
-          component={EuropeCityToursRoute}
-        />
-        <Route
-          path="/destinations/europe/:countrySlug/cities/:citySlug"
-          component={EuropeCityRoute}
-        />
-        <Route
           path="/destinations/europe/:countrySlug/tours"
           component={EuropeCountryRoute}
         />
@@ -70,14 +46,6 @@ export default function App() {
         <Route
           path="/destinations/europe/:countrySlug"
           component={EuropeCountryRoute}
-        />
-        <Route
-          path="/destinations/world/:countrySlug/cities/:citySlug/tours"
-          component={WorldCityToursRoute}
-        />
-        <Route
-          path="/destinations/world/:countrySlug/cities/:citySlug"
-          component={WorldCityRoute}
         />
         <Route
           path="/destinations/world/:countrySlug/:categorySlug"
@@ -125,28 +93,6 @@ export default function App() {
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
-        <Route path="/tours/day" component={DayToursIndex} />
-        <Route path="/tours/day/cycling" component={DayCyclingTours} />
-        <Route path="/tours/day/hiking" component={DayHikingTours} />
-        <Route path="/tours/day/paddle" component={DayPaddleTours} />
-        <Route path="/tours/multi-day" component={MultiDayLanding} />
-        <Route path="/guides" component={GuidesIndex} />
-        <Route
-          path="/guides/us/:stateSlug/:citySlug"
-          component={CityGuideUsRoute}
-        />
-        <Route path="/guides/us/:stateSlug" component={StateGuideRoute} />
-        <Route
-          path="/guides/world/:countrySlug/:citySlug"
-          component={CityGuideWorldRoute}
-        />
-        <Route
-          path="/guides/world/:countrySlug"
-          component={CountryGuideRoute}
-        />
-        <Route path="/faqs" component={Faqs} />
-        <Route path="/faq" component={Faqs} />
-        <Route path="/journeys" component={Journeys} />
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />
