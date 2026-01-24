@@ -1,12 +1,14 @@
 import { Route, Switch } from "wouter";
 
 import Header from "./components/Header";
+import RouteRedirect from "./components/RouteRedirect";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
 import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
 import EuropeCityToursRoute from "./pages/destinations/europe/EuropeCityToursRoute";
+import UnitedKingdomRoute from "./pages/destinations/europe/UnitedKingdomRoute";
 import WorldCountryRoute from "./pages/destinations/world/WorldCountryRoute";
 import WorldCityRoute from "./pages/destinations/world/WorldCityRoute";
 import WorldCityToursRoute from "./pages/destinations/world/WorldCityToursRoute";
@@ -43,6 +45,8 @@ import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 
+const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
+
 export default function App() {
   return (
     <>
@@ -50,6 +54,8 @@ export default function App() {
       <ScrollToTopOnRouteChange />
       <Switch>
         <Route path="/" component={Home} />
+        <Route path="/england" component={EnglandRedirect} />
+        <Route path="/united-kingdom" component={UnitedKingdomRoute} />
 
         <Route path="/destinations" component={DestinationsIndex} />
         <Route
