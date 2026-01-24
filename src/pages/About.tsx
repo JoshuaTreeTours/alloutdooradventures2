@@ -43,34 +43,37 @@ export default function About() {
               Meet the Owner: Jerry Sybers
             </h2>
             <p className="mt-4 text-sm text-[#405040] md:text-base">
-              Founded in 1999, Outdoor Adventures reflects Jerry Sybers&apos; life
-              as a geologist, avid hiker, and naturalist who believes that
-              happiness and health come from an Epicurean way of life rooted in
-              time outdoors. He&apos;s dedicated to helping guests see deeper than
-              the surface—blending geology, ecology, and storytelling so
-              landscapes become living classrooms.
+              Outdoor Adventures was founded in 1999 as an expression of Jerry
+              Sybers&apos; life in the field—part geologist, part naturalist, part
+              wanderer. For Jerry, happiness is not a luxury product; it is a
+              discipline. Rooted in Epicurean philosophy, his work is built on a
+              simple truth: well-being comes from clarity, moderation,
+              friendship, and time spent in the real world. The outdoors is not
+              an escape—it is a return.
             </p>
             <p className="mt-4 text-sm text-[#405040] md:text-base">
-              Jerry&apos;s fieldwork stretches from Colorado&apos;s alpine terrain to the
-              stark beauty of the Mojave Desert, a contrast that shaped his
+              Jerry&apos;s tours invite guests to see beyond the postcard surface of
+              Joshua Tree and the desert Southwest. Through geology, ecology,
+              and story, landscapes become living classrooms. Rocks are no
+              longer inert; they become chapters in Earth&apos;s autobiography. A
+              wash is not just a dry riverbed, but a memory of water and time.
+              The desert becomes intelligible, intimate, and alive.
+            </p>
+            <p className="mt-4 text-sm text-[#405040] md:text-base">
+              His fieldwork spans the alpine environments of Colorado and the
+              stark immensity of the Mojave Desert—two extremes that shaped his
               guiding philosophy. He assisted with Desert Institute programs,
-              training guides to interpret desert ecosystems with care and
-              curiosity. His tours encourage us, as a species, to understand the
-              Earth and all living things, to recognize the fine balance we must
-              maintain, and to see how unsustainable actions carry real
-              consequences for nature.
+              helping train guides to interpret fragile ecosystems with both
+              rigor and reverence. These experiences taught him that
+              understanding precedes stewardship. We protect what we comprehend.
             </p>
             <p className="mt-4 text-sm text-[#405040] md:text-base">
-              As we pursue happiness and liberty, Jerry reminds guests that
-              resources are scarce, just as our lives are scarce, and that our
-              time here will one day end. Two roads remain—and he closes with
-              Walt Whitman&apos;s words from Leaves of Rain: “Two roads diverged in a
-              yellow wood.”
+              Every tour carries a deeper message: we are a species embedded in
+              systems far older and more patient than ourselves. The Earth is
+              not a backdrop; it is the stage, the script, and the limit.
+              Resources are finite. Time is finite. Our lives, like these
+              landscapes, are temporary arrangements of matter.
             </p>
-            <blockquote className="mt-6 border-l-2 border-[#2f4a2f]/40 pl-4 text-sm italic text-[#2f4a2f] md:text-base">
-              “To THINK out of the box, one must first GET OUT of the box.” —
-              Jerry Sybers
-            </blockquote>
           </div>
         </div>
       </section>
