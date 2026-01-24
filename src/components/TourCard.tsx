@@ -8,10 +8,21 @@ import Image from "./Image";
 type TourCardProps = {
   tour: Tour;
   href?: string;
+  cardHref?: string;
+  cardLabel?: string;
+  hint?: string;
 };
 
-export default function TourCard({ tour, href }: TourCardProps) {
+export default function TourCard({
+  tour,
+  href,
+  cardHref,
+  cardLabel,
+  hint,
+}: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
+  const overlayHref = cardHref ?? detailHref;
+  const isClickable = Boolean(overlayHref);
   const shortDescription = tour.shortDescription?.trim();
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
@@ -24,14 +35,28 @@ export default function TourCard({ tour, href }: TourCardProps) {
     : tour.destination.city;
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+    <article
+      className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm${
+        isClickable
+          ? " cursor-pointer transition hover:-translate-y-1 hover:shadow-lg"
+          : ""
+      }`}
+    >
+      {overlayHref ? (
+        <Link href={overlayHref}>
+          <a
+            className="absolute inset-0 z-10"
+            aria-label={cardLabel ?? `View ${tour.title}`}
+          />
+        </Link>
+      ) : null}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={tour.heroImage}
           fallbackSrc="/hero.jpg"
           alt={tour.title}
           loading="lazy"
-          className="h-full w-full object-cover"
+          className={`h-full w-full object-cover${isClickable ? " transition duration-500 group-hover:scale-105" : ""}`}
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         {tour.badges.likelyToSellOut && (
@@ -54,7 +79,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
           </div>
         ) : null}
       </div>
-      <div className="flex flex-1 flex-col gap-4 p-5">
+      <div className="relative z-20 flex flex-1 flex-col gap-4 p-5">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
             {locationLabel}
@@ -62,6 +87,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}
           </h3>
+          {hint ? (
+            <p className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f8a3d]">
+              {hint}
+            </p>
+          ) : null}
           {subtitle ? (
             <p className="mt-2 text-sm text-[#405040]">
               {subtitle}
