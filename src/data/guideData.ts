@@ -1,4 +1,6 @@
 import { getActivityLabelFromSlug } from "./activityLabels";
+import { cityLandmarks } from "./cityLandmarks";
+import type { CityLandmarkMetadata } from "./cityLandmarks";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import { getTourDetailPath, tours } from "./tours";
 import type { Tour } from "./tours.types";
@@ -145,10 +147,72 @@ const CITY_LANDMARKS: Record<string, CityLandmarks> = {
   },
 };
 
+const STATE_ABBREVIATIONS: Record<string, string> = {
+  alabama: "al",
+  alaska: "ak",
+  arizona: "az",
+  arkansas: "ar",
+  california: "ca",
+  colorado: "co",
+  connecticut: "ct",
+  delaware: "de",
+  florida: "fl",
+  georgia: "ga",
+  hawaii: "hi",
+  idaho: "id",
+  illinois: "il",
+  indiana: "in",
+  iowa: "ia",
+  kansas: "ks",
+  kentucky: "ky",
+  louisiana: "la",
+  maine: "me",
+  maryland: "md",
+  massachusetts: "ma",
+  michigan: "mi",
+  minnesota: "mn",
+  mississippi: "ms",
+  missouri: "mo",
+  montana: "mt",
+  nebraska: "ne",
+  nevada: "nv",
+  "new-hampshire": "nh",
+  "new-jersey": "nj",
+  "new-mexico": "nm",
+  "new-york": "ny",
+  "north-carolina": "nc",
+  "north-dakota": "nd",
+  ohio: "oh",
+  oklahoma: "ok",
+  oregon: "or",
+  pennsylvania: "pa",
+  "rhode-island": "ri",
+  "south-carolina": "sc",
+  "south-dakota": "sd",
+  tennessee: "tn",
+  texas: "tx",
+  utah: "ut",
+  vermont: "vt",
+  virginia: "va",
+  washington: "wa",
+  "west-virginia": "wv",
+  wisconsin: "wi",
+  wyoming: "wy",
+  "district-of-columbia": "dc",
+};
+
 const getCityLandmarks = (
   parentSlug: string,
   citySlug: string,
 ): CityLandmarks | null => CITY_LANDMARKS[`${parentSlug}/${citySlug}`] ?? null;
+
+const getCityMetadata = (
+  stateSlug: string,
+  citySlug: string,
+): CityLandmarkMetadata | null => {
+  const stateAbbreviation = STATE_ABBREVIATIONS[stateSlug] ?? stateSlug;
+  return cityLandmarks[`${citySlug}-${stateAbbreviation}`] ?? null;
+};
 
 const formatLandmarkList = (items: string[], fallback: string) =>
   items.length ? formatList(items) : fallback;
@@ -157,9 +221,11 @@ const buildMuseumsEssay = (
   cityName: string,
   parentName: string,
   landmarks: CityLandmarks | null,
+  metadata: CityLandmarkMetadata | null,
 ): GuideEssaySection => {
   const museums = landmarks?.museums ?? [];
   const culturalSites = landmarks?.culturalSites ?? [];
+  const culturalAreas = metadata?.culturalAreas ?? [];
 
   const museumsLine = formatLandmarkList(
     museums,
@@ -169,12 +235,17 @@ const buildMuseumsEssay = (
     culturalSites,
     `heritage sites that frame the city’s founding stories and modern identity`,
   );
+  const culturalAreasLine =
+    culturalAreas.length > 0
+      ? `Neighborhoods and cultural districts like ${formatList(culturalAreas)} add another layer, with theaters, live music rooms, and creative studios that stay busy well into the evening.`
+      : `Neighborhood stages, pop-up galleries, and creative studios add another layer, with performances and openings that keep the cultural calendar full.`;
 
   return {
     title: `Museums & Culture in ${cityName}`,
     paragraphs: [
       `${cityName}’s cultural scene reflects the wider story of ${parentName}: a place where regional history, migration, and creative ambition keep rewriting the city’s identity. Start by spending an unhurried morning in ${museumsLine}. Visitors typically move from grand galleries to intimate collections, with docents and interpretive signage turning each stop into a narrative about the city’s evolving personality. Even if you arrive with a single institution in mind, the best experience comes from pacing your visit with time to linger in sculpture gardens, café courtyards, and gallery wings that highlight both local voices and international works.`,
       `History is woven into the streets just as tightly as it is in museum halls. In ${cityName}, sites like ${culturalLine} connect civil rights stories, civic milestones, and the everyday lives of residents who shaped the city’s modern character. These are places where visitors are encouraged to slow down, read the details, and let the context set the tone for the rest of the trip. Walking tours, audio guides, and temporary exhibitions often bridge the gap between past and present, showing how the city’s neighborhoods, music, and food traditions are linked to deeper civic narratives.`,
+      culturalAreasLine,
       `Culture also lives outside institutional walls. Evening performances, gallery openings, and seasonal festivals keep the calendar full, but the rhythm is always the same: locals gathering in shared spaces, conversations spilling onto patios, and a sense that the city is best experienced in community. Plan time to pair an exhibit visit with live music or an indie film screening, then end the night at a chef-driven restaurant that highlights regional ingredients. That blend of big-ticket institutions and neighborhood energy is what makes ${cityName} feel like a destination rather than a checklist.`,
     ],
   };
@@ -184,9 +255,11 @@ const buildNeighborhoodsEssay = (
   cityName: string,
   parentName: string,
   landmarks: CityLandmarks | null,
+  metadata: CityLandmarkMetadata | null,
 ): GuideEssaySection => {
   const neighborhoods = landmarks?.neighborhoods ?? [];
   const districts = landmarks?.districts ?? [];
+  const namedNeighborhoods = metadata?.neighborhoods ?? [];
 
   const neighborhoodsLine = formatLandmarkList(
     neighborhoods,
@@ -196,6 +269,33 @@ const buildNeighborhoodsEssay = (
     districts,
     `market halls, converted warehouses, and downtown corridors that anchor the local scene`,
   );
+
+  if (namedNeighborhoods.length >= 4) {
+    const focusNeighborhoods = namedNeighborhoods.slice(0, 8);
+    const walkableCore = focusNeighborhoods.slice(0, 2);
+    const artsyCorridor = focusNeighborhoods.slice(2, 4);
+    const historicSide = focusNeighborhoods.slice(4, 6);
+    const residentialEscape = focusNeighborhoods.slice(6, 8);
+    const walkableLine = formatList(walkableCore);
+    const artsyLine = artsyCorridor.length ? formatList(artsyCorridor) : null;
+    const historicLine = historicSide.length ? formatList(historicSide) : null;
+    const residentialLine = residentialEscape.length
+      ? formatList(residentialEscape)
+      : null;
+
+    return {
+      title: "Neighborhoods & City Life",
+      paragraphs: [
+        `${cityName} feels most alive when you move between its neighborhoods instead of sticking to a single district. Start in ${walkableLine}, where cafés, boutiques, and older buildings keep the streets busy from morning into the evening.${artsyLine ? ` From there, head toward ${artsyLine} for murals, music venues, and the creative energy that shows up in vintage shops and chef-driven restaurants.` : ""}${historicLine ? ` ${historicLine} offers a more residential pace, with leafy blocks, historic homes, and local parks that make it easy to slow down.` : ""}`,
+        `${
+          residentialLine
+            ? `If you still have time, spend a few hours in ${residentialLine} for a quieter look at how residents live day to day.`
+            : "If you still have time, wander a quieter residential pocket for a look at how residents live day to day."
+        } The contrast between walkable cores, artsy corridors, and residential pockets is what makes ${cityName} feel layered—you can move from a bustling café row to a calm neighborhood greenway in a matter of minutes. Plan to stop often, because the best discoveries come from corner bakeries, local bookstores, and small galleries that anchor each district.`,
+        `Getting between neighborhoods is part of the experience. Many of ${cityName}’s districts are close enough for walking or biking, especially along the main commercial corridors, and transit lines make it easy to hop between neighborhoods without a car. Use a bike share for a midday loop, then ride transit to dinner or a late-night show. That easy movement keeps the itinerary flexible and lets you experience multiple sides of the city in a single day.`,
+      ],
+    };
+  }
 
   return {
     title: "Neighborhoods & City Life",
@@ -211,17 +311,22 @@ const buildOutdoorsEssay = (
   cityName: string,
   parentName: string,
   landmarks: CityLandmarks | null,
+  metadata: CityLandmarkMetadata | null,
 ): GuideEssaySection => {
   const outdoors = landmarks?.outdoors ?? [];
+  const scenicAreas = metadata?.scenicAreas ?? [];
   const outdoorsLine = formatLandmarkList(
     outdoors,
     `a mix of greenways, riverfront paths, and hillside viewpoints that frame the skyline`,
   );
+  const scenicLine = scenicAreas.length
+    ? `Local favorites like ${formatList(scenicAreas)} keep the scenery close at hand.`
+    : `Short trips to nearby trails or waterfronts add variety without leaving the city behind.`;
 
   return {
     title: "Outdoors & Scenic Experiences",
     paragraphs: [
-      `${cityName} makes it easy to balance city energy with outdoor breathing room. The best starting point is ${outdoorsLine}, where visitors can walk, bike, or simply find a bench with a skyline view. These spaces are used like living rooms: joggers pass through at sunrise, families spread out picnic blankets in the afternoon, and live music or pop-up events turn the evening into a community gathering. Even short visits feel restorative because the green spaces sit so close to the city’s core.`,
+      `${cityName} makes it easy to balance city energy with outdoor breathing room. The best starting point is ${outdoorsLine}, where visitors can walk, bike, or simply find a bench with a skyline view. ${scenicLine} These spaces are used like living rooms: joggers pass through at sunrise, families spread out picnic blankets in the afternoon, and live music or pop-up events turn the evening into a community gathering. Even short visits feel restorative because the green spaces sit so close to the city’s core.`,
       `Beyond the central parks, ${cityName} offers quick escapes that reveal the region’s broader landscape. Scenic overlooks and riverside trails show how the terrain of ${parentName} shapes the city’s pace, from shady creek corridors to open fields that glow at golden hour. Plan for a half-day outing with comfortable shoes and a flexible schedule, then stay for sunset as locals arrive with dogs, bikes, and blankets. The most memorable moments often come from these unstructured hours when the city’s skyline becomes a backdrop rather than the main event.`,
       `Outdoor time also connects visitors to the city’s creative life. Murals along trails, public sculpture installations, and seasonal art markets blur the line between nature and culture. Pack snacks, take advantage of trail-side cafés, and let the route guide you—whether that means a loop around a park lake or a longer stretch along a multi-use path. It’s an experience built around choice, giving you the freedom to keep moving or settle in, and it’s a reminder that ${cityName} is most vibrant when its outdoor spaces are part of the itinerary.`,
     ],
@@ -235,11 +340,12 @@ const buildCityThingsToDoSections = (
   citySlug: string,
 ): GuideEssaySection[] => {
   const landmarks = getCityLandmarks(parentSlug, citySlug);
+  const metadata = getCityMetadata(parentSlug, citySlug);
 
   return [
-    buildMuseumsEssay(cityName, parentName, landmarks),
-    buildNeighborhoodsEssay(cityName, parentName, landmarks),
-    buildOutdoorsEssay(cityName, parentName, landmarks),
+    buildMuseumsEssay(cityName, parentName, landmarks, metadata),
+    buildNeighborhoodsEssay(cityName, parentName, landmarks, metadata),
+    buildOutdoorsEssay(cityName, parentName, landmarks, metadata),
   ];
 };
 
