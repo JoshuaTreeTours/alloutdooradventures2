@@ -72,10 +72,10 @@ export default function Header() {
 
         <div className="flex items-center gap-4">
           <a
-            href="tel:+18006883667"
+            href="tel:+18553148687"
             className="hidden text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] md:inline-flex"
           >
-            1-800-OUTDOOR
+            1-855-314-TOUR
           </a>
           <Link href="/tours">
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition">
