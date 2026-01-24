@@ -1,5 +1,4 @@
-import { Link } from "wouter";
-
+import RegionDropdownButton from "../../components/RegionDropdownButton";
 import { getGuideCountries, getGuideStates } from "../../data/guideData";
 
 export default function GuidesIndex() {
@@ -13,51 +12,55 @@ export default function GuidesIndex() {
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
             Guides
           </p>
-          <h1 className="text-3xl font-semibold md:text-5xl">
-            Outdoor Adventure Guides
-          </h1>
+          <h1 className="text-3xl font-semibold md:text-5xl">Guides</h1>
           <p className="max-w-3xl text-sm text-white/90 md:text-base">
-            Plan your next journey with destination-specific itineraries and
-            tips.
+            Explore destinations with expert insight before you plan your next
+            escape.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-10">
-          <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
+      <section className="mx-auto max-w-5xl px-6 py-14">
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-8">
             <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-              United States
+              US States
             </h2>
             <p className="mt-2 text-sm text-[#405040]">
-              Explore every U.S. state where tours are currently available.
+              Choose a state to review local guides, cities, and tour ideas.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {states.map((state) => (
-                <Link key={state.slug} href={`/guides/us/${state.slug}`}>
-                  <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-                    {state.name}
-                  </a>
-                </Link>
-              ))}
+            <div className="mt-4">
+              <RegionDropdownButton
+                label="Choose a state"
+                options={states.map((state) => ({
+                  name: state.name,
+                  slug: state.slug,
+                }))}
+                onSelect={(slug) => {
+                  window.location.assign(`/guides/us/${slug}`);
+                }}
+              />
             </div>
           </div>
 
-          <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
+          <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-8">
             <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-              International
+              International Destinations
             </h2>
             <p className="mt-2 text-sm text-[#405040]">
-              Global destinations with outdoor experiences available now.
+              Browse expert-led destination guides across the globe.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              {countries.map((country) => (
-                <Link key={country.slug} href={`/guides/world/${country.slug}`}>
-                  <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-                    {country.name}
-                  </a>
-                </Link>
-              ))}
+            <div className="mt-4">
+              <RegionDropdownButton
+                label="Choose a destination"
+                options={countries.map((country) => ({
+                  name: country.name,
+                  slug: country.slug,
+                }))}
+                onSelect={(slug) => {
+                  window.location.assign(`/guides/world/${slug}`);
+                }}
+              />
             </div>
           </div>
         </div>

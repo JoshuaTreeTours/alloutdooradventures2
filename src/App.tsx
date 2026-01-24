@@ -26,6 +26,7 @@ import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import Faqs from "./pages/Faqs";
 import Journeys from "./pages/Journeys";
+import About from "./pages/About";
 import DayToursIndex from "./pages/tours/day/DayToursIndex";
 import DayCyclingTours from "./pages/tours/day/DayCyclingTours";
 import DayHikingTours from "./pages/tours/day/DayHikingTours";
@@ -147,6 +148,7 @@ export default function App() {
         <Route path="/faqs" component={Faqs} />
         <Route path="/faq" component={Faqs} />
         <Route path="/journeys" component={Journeys} />
+        <Route path="/about" component={About} />
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />
