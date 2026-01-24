@@ -2,6 +2,8 @@ import { getActivityLabelFromSlug } from "./activityLabels";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import { getTourDetailPath, tours } from "./tours";
 import type { Tour } from "./tours.types";
+import { generateCityGuide } from "../lib/guides/generateCityGuide";
+import type { CityGuideContent } from "../lib/guides/generateCityGuide";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 
 export type GuideCitySummary = {
@@ -42,6 +44,7 @@ export type GuideContent = {
   whatToPack: string;
   featuredTours: Tour[];
   activityFocus?: string;
+  cityGuide?: CityGuideContent;
 };
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
@@ -491,6 +494,7 @@ export const buildCityGuide = ({
           href: getInternationalCityToursPath(parentSlug, citySlug),
         };
   const primaryActivitySlug = getActivitySlugs(cityTours)[0];
+  const categoriesPresent = getActivitySlugs(cityTours);
   const categoryLinks = primaryActivitySlug
     ? [
         {
@@ -576,5 +580,10 @@ export const buildCityGuide = ({
     whatToPack: buildWhatToPack(),
     featuredTours: toursToShow.slice(0, 12),
     activityFocus: activityFocusLabel,
+    cityGuide: generateCityGuide({
+      cityName,
+      stateName: parentName,
+      categoriesPresent,
+    }),
   };
 };
