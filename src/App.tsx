@@ -25,6 +25,12 @@ import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
 import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import Faqs from "./pages/Faqs";
+import Journeys from "./pages/Journeys";
+import DayToursIndex from "./pages/tours/day/DayToursIndex";
+import DayCyclingTours from "./pages/tours/day/DayCyclingTours";
+import DayHikingTours from "./pages/tours/day/DayHikingTours";
+import DayPaddleTours from "./pages/tours/day/DayPaddleTours";
+import MultiDayLanding from "./pages/tours/MultiDayLanding";
 import CyclingTours from "./pages/tours/activities/CyclingTours";
 import DayAdventuresTours from "./pages/tours/activities/DayAdventuresTours";
 import DetoursTours from "./pages/tours/activities/DetoursTours";
@@ -119,6 +125,11 @@ export default function App() {
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
+        <Route path="/tours/day" component={DayToursIndex} />
+        <Route path="/tours/day/cycling" component={DayCyclingTours} />
+        <Route path="/tours/day/hiking" component={DayHikingTours} />
+        <Route path="/tours/day/paddle" component={DayPaddleTours} />
+        <Route path="/tours/multi-day" component={MultiDayLanding} />
         <Route path="/guides" component={GuidesIndex} />
         <Route
           path="/guides/us/:stateSlug/:citySlug"
@@ -134,6 +145,8 @@ export default function App() {
           component={CountryGuideRoute}
         />
         <Route path="/faqs" component={Faqs} />
+        <Route path="/faq" component={Faqs} />
+        <Route path="/journeys" component={Journeys} />
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />

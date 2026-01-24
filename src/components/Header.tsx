@@ -17,20 +17,53 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 text-sm text-[#405040]">
-          <Link href="/destinations">
-            <a className="hover:text-[#1f2a1f]">Destinations</a>
+          <div className="relative group">
+            <Link href="/tours">
+              <a className="hover:text-[#1f2a1f]">Tours</a>
+            </Link>
+            <div className="absolute left-0 top-full hidden w-64 rounded-2xl border border-black/10 bg-white p-4 shadow-lg group-hover:block">
+              <div className="space-y-4 text-sm text-[#405040]">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Day Tours
+                  </p>
+                  <div className="mt-2 space-y-2">
+                    <Link href="/tours/day/cycling">
+                      <a className="block hover:text-[#1f2a1f]">Cycling</a>
+                    </Link>
+                    <Link href="/tours/day/hiking">
+                      <a className="block hover:text-[#1f2a1f]">Hiking</a>
+                    </Link>
+                    <Link href="/tours/day/paddle">
+                      <a className="block hover:text-[#1f2a1f]">
+                        Paddle Sports
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#7a8a6b]">
+                    Multi-Day Adventures
+                  </p>
+                  <div className="mt-2">
+                    <Link href="/tours/multi-day">
+                      <a className="block hover:text-[#1f2a1f]">
+                        Explore multi-day
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Link href="/guides">
+            <a className="hover:text-[#1f2a1f]">Guides</a>
           </Link>
-          <Link href="/tours">
-            <a className="hover:text-[#1f2a1f]">Tours</a>
+          <Link href="/faq">
+            <a className="hover:text-[#1f2a1f]">FAQ</a>
           </Link>
-          <Link href="/tours/cycling">
-            <a className="hover:text-[#1f2a1f]">Cycling</a>
-          </Link>
-          <Link href="/tours/hiking">
-            <a className="hover:text-[#1f2a1f]">Hiking</a>
-          </Link>
-          <Link href="/tours/canoeing">
-            <a className="hover:text-[#1f2a1f]">Paddle Sports</a>
+          <Link href="/journeys">
+            <a className="hover:text-[#1f2a1f]">Journeys</a>
           </Link>
           <Link href="/about">
             <a className="hover:text-[#1f2a1f]">About</a>
