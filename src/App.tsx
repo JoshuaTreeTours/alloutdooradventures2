@@ -1,6 +1,7 @@
 import { Route, Switch } from "wouter";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import RouteRedirect from "./components/RouteRedirect";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
 import Home from "./pages/Home";
@@ -9,6 +10,7 @@ import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
 import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
 import EuropeCityToursRoute from "./pages/destinations/europe/EuropeCityToursRoute";
 import UnitedKingdomRoute from "./pages/destinations/europe/UnitedKingdomRoute";
+import EuropeIndex from "./pages/destinations/europe/EuropeIndex";
 import WorldCountryRoute from "./pages/destinations/world/WorldCountryRoute";
 import WorldCityRoute from "./pages/destinations/world/WorldCityRoute";
 import WorldCityToursRoute from "./pages/destinations/world/WorldCityToursRoute";
@@ -29,6 +31,11 @@ import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import Faqs from "./pages/Faqs";
 import Journeys from "./pages/Journeys";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
+import Disclosure from "./pages/Disclosure";
 import DayToursIndex from "./pages/tours/day/DayToursIndex";
 import DayCyclingTours from "./pages/tours/day/DayCyclingTours";
 import DayHikingTours from "./pages/tours/day/DayHikingTours";
@@ -58,6 +65,7 @@ export default function App() {
         <Route path="/united-kingdom" component={UnitedKingdomRoute} />
 
         <Route path="/destinations" component={DestinationsIndex} />
+        <Route path="/destinations/europe" component={EuropeIndex} />
         <Route
           path="/destinations/europe/:countrySlug/cities/:citySlug/tours"
           component={EuropeCityToursRoute}
@@ -155,6 +163,11 @@ export default function App() {
         <Route path="/faq" component={Faqs} />
         <Route path="/journeys" component={Journeys} />
         <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/privacy" component={Privacy} />
+        <Route path="/terms" component={Terms} />
+        <Route path="/cookies" component={Cookies} />
+        <Route path="/disclosure" component={Disclosure} />
         <Route path="/tours/cycling" component={CyclingTours} />
         <Route path="/tours/hiking" component={HikingTours} />
         <Route path="/tours/canoeing" component={CanoeingTours} />
@@ -189,6 +202,7 @@ export default function App() {
 
         <Route>Not Found</Route>
       </Switch>
+      <Footer />
     </>
   );
 }

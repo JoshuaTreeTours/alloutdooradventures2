@@ -887,12 +887,6 @@ export default function Home() {
           </section>
         ) : null}
       </main>
-
-      <footer className="border-t border-black/10">
-        <div className="mx-auto max-w-6xl px-6 py-10 text-sm text-[#405040]">
-          © {new Date().getFullYear()} Outdoor Adventures
-        </div>
-      </footer>
     </div>
   );
 }
