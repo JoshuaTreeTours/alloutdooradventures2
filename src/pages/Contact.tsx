@@ -10,6 +10,10 @@ export default function Contact() {
         Contact Outdoor Adventures
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
+        All Outdoor Adventures is a Santa Barbara–based service business
+        offering curated tours and custom journeys worldwide.
+      </p>
+      <p className="mt-4 text-sm text-[#405040] md:text-base">
         We design custom journeys, private group experiences, and multi-day
         adventures tailored to your pace and interests. Tell us what you&apos;re
         dreaming about, and we&apos;ll build a plan around it.
@@ -38,9 +42,9 @@ export default function Contact() {
           </p>
           <a
             href="mailto:jerry@alloutdooradventures.com"
-            className="mt-4 inline-flex items-center rounded-full border border-[#2f4a2f]/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
+            className="mt-4 inline-flex items-center text-sm font-semibold text-[#2f4a2f] underline"
           >
-            jerry@alloutdooradventures.com
+            Email us
           </a>
         </div>
       </section>
