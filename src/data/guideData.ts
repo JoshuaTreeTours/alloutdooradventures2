@@ -29,6 +29,11 @@ export type GuideItinerary = {
   links: GuideLink[];
 };
 
+export type GuideEssaySection = {
+  title: string;
+  paragraphs: string[];
+};
+
 export type GuideContent = {
   type: "state" | "country" | "city";
   name: string;
@@ -42,6 +47,7 @@ export type GuideContent = {
   whatToPack: string;
   featuredTours: Tour[];
   activityFocus?: string;
+  thingsToDoSections?: GuideEssaySection[];
 };
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
@@ -97,6 +103,144 @@ const formatList = (items: string[]) => {
   }
 
   return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+};
+
+type CityLandmarks = {
+  museums: string[];
+  culturalSites: string[];
+  neighborhoods: string[];
+  districts: string[];
+  outdoors: string[];
+};
+
+const CITY_LANDMARKS: Record<string, CityLandmarks> = {
+  "georgia/atlanta": {
+    museums: [
+      "High Museum of Art",
+      "Atlanta History Center",
+      "Fernbank Museum of Natural History",
+      "Michael C. Carlos Museum",
+    ],
+    culturalSites: [
+      "Martin Luther King Jr. National Historical Park",
+      "National Center for Civil and Human Rights",
+      "Fox Theatre",
+    ],
+    neighborhoods: [
+      "Midtown",
+      "Old Fourth Ward",
+      "Inman Park",
+      "Virginia-Highland",
+      "Little Five Points",
+      "Buckhead",
+    ],
+    districts: ["Ponce City Market", "Krog Street Market", "Sweet Auburn"],
+    outdoors: [
+      "Atlanta BeltLine",
+      "Piedmont Park",
+      "Atlanta Botanical Garden",
+      "Chattahoochee River National Recreation Area",
+      "Stone Mountain Park",
+    ],
+  },
+};
+
+const getCityLandmarks = (
+  parentSlug: string,
+  citySlug: string,
+): CityLandmarks | null => CITY_LANDMARKS[`${parentSlug}/${citySlug}`] ?? null;
+
+const formatLandmarkList = (items: string[], fallback: string) =>
+  items.length ? formatList(items) : fallback;
+
+const buildMuseumsEssay = (
+  cityName: string,
+  parentName: string,
+  landmarks: CityLandmarks | null,
+): GuideEssaySection => {
+  const museums = landmarks?.museums ?? [];
+  const culturalSites = landmarks?.culturalSites ?? [];
+
+  const museumsLine = formatLandmarkList(
+    museums,
+    `flagship art collections, regional history museums, and design-focused galleries`,
+  );
+  const culturalLine = formatLandmarkList(
+    culturalSites,
+    `heritage sites that frame the city’s founding stories and modern identity`,
+  );
+
+  return {
+    title: `Museums & Culture in ${cityName}`,
+    paragraphs: [
+      `${cityName}’s cultural scene reflects the wider story of ${parentName}: a place where regional history, migration, and creative ambition keep rewriting the city’s identity. Start by spending an unhurried morning in ${museumsLine}. Visitors typically move from grand galleries to intimate collections, with docents and interpretive signage turning each stop into a narrative about the city’s evolving personality. Even if you arrive with a single institution in mind, the best experience comes from pacing your visit with time to linger in sculpture gardens, café courtyards, and gallery wings that highlight both local voices and international works.`,
+      `History is woven into the streets just as tightly as it is in museum halls. In ${cityName}, sites like ${culturalLine} connect civil rights stories, civic milestones, and the everyday lives of residents who shaped the city’s modern character. These are places where visitors are encouraged to slow down, read the details, and let the context set the tone for the rest of the trip. Walking tours, audio guides, and temporary exhibitions often bridge the gap between past and present, showing how the city’s neighborhoods, music, and food traditions are linked to deeper civic narratives.`,
+      `Culture also lives outside institutional walls. Evening performances, gallery openings, and seasonal festivals keep the calendar full, but the rhythm is always the same: locals gathering in shared spaces, conversations spilling onto patios, and a sense that the city is best experienced in community. Plan time to pair an exhibit visit with live music or an indie film screening, then end the night at a chef-driven restaurant that highlights regional ingredients. That blend of big-ticket institutions and neighborhood energy is what makes ${cityName} feel like a destination rather than a checklist.`,
+    ],
+  };
+};
+
+const buildNeighborhoodsEssay = (
+  cityName: string,
+  parentName: string,
+  landmarks: CityLandmarks | null,
+): GuideEssaySection => {
+  const neighborhoods = landmarks?.neighborhoods ?? [];
+  const districts = landmarks?.districts ?? [];
+
+  const neighborhoodsLine = formatLandmarkList(
+    neighborhoods,
+    `historic neighborhoods with tree-lined streets, creative districts, and café-filled corners`,
+  );
+  const districtsLine = formatLandmarkList(
+    districts,
+    `market halls, converted warehouses, and downtown corridors that anchor the local scene`,
+  );
+
+  return {
+    title: "Neighborhoods & City Life",
+    paragraphs: [
+      `${cityName} rewards visitors who explore beyond the main attractions and spend time in the neighborhoods where daily life unfolds. Start with ${neighborhoodsLine}, where the mood shifts block by block—from leafy residential avenues to pocket parks and café patios that fill up by late morning. These areas are perfect for a slow walk with room for detours: indie bookstores, corner bakeries, and pocket galleries that give the city its lived-in feel. Even without a fixed plan, you’ll notice how architecture, street art, and small businesses signal the different eras that shaped ${cityName}.`,
+      `The city’s social heartbeat often comes alive around ${districtsLine}. These hubs are where locals meet after work, where visiting chefs host pop-ups, and where a visitor can sample the city’s flavors without needing a reservation at every stop. Look for multi-vendor food halls, late-night dessert counters, and patios that double as people-watching spots. The rhythm is casual and welcoming—arrive with curiosity, ask for recommendations, and allow the day to stretch out as you move from lunch to a local shop to an unexpected live set.`,
+      `Neighborhoods also tell the story of how ${cityName} sees itself today. Some districts emphasize preservation, keeping historic homes and community gardens intact; others are in the middle of reinvention, with new hotels, galleries, and public art projects rising alongside legacy businesses. Travelers who spend time in both get the full picture: a city that honors its roots while experimenting with new energy. Whether you’re biking between districts or riding transit to a late-night show, the shared experience is the same—people choosing to stay out a little longer because the atmosphere feels easy and genuinely local.`,
+    ],
+  };
+};
+
+const buildOutdoorsEssay = (
+  cityName: string,
+  parentName: string,
+  landmarks: CityLandmarks | null,
+): GuideEssaySection => {
+  const outdoors = landmarks?.outdoors ?? [];
+  const outdoorsLine = formatLandmarkList(
+    outdoors,
+    `a mix of greenways, riverfront paths, and hillside viewpoints that frame the skyline`,
+  );
+
+  return {
+    title: "Outdoors & Scenic Experiences",
+    paragraphs: [
+      `${cityName} makes it easy to balance city energy with outdoor breathing room. The best starting point is ${outdoorsLine}, where visitors can walk, bike, or simply find a bench with a skyline view. These spaces are used like living rooms: joggers pass through at sunrise, families spread out picnic blankets in the afternoon, and live music or pop-up events turn the evening into a community gathering. Even short visits feel restorative because the green spaces sit so close to the city’s core.`,
+      `Beyond the central parks, ${cityName} offers quick escapes that reveal the region’s broader landscape. Scenic overlooks and riverside trails show how the terrain of ${parentName} shapes the city’s pace, from shady creek corridors to open fields that glow at golden hour. Plan for a half-day outing with comfortable shoes and a flexible schedule, then stay for sunset as locals arrive with dogs, bikes, and blankets. The most memorable moments often come from these unstructured hours when the city’s skyline becomes a backdrop rather than the main event.`,
+      `Outdoor time also connects visitors to the city’s creative life. Murals along trails, public sculpture installations, and seasonal art markets blur the line between nature and culture. Pack snacks, take advantage of trail-side cafés, and let the route guide you—whether that means a loop around a park lake or a longer stretch along a multi-use path. It’s an experience built around choice, giving you the freedom to keep moving or settle in, and it’s a reminder that ${cityName} is most vibrant when its outdoor spaces are part of the itinerary.`,
+    ],
+  };
+};
+
+const buildCityThingsToDoSections = (
+  cityName: string,
+  parentName: string,
+  parentSlug: string,
+  citySlug: string,
+): GuideEssaySection[] => {
+  const landmarks = getCityLandmarks(parentSlug, citySlug);
+
+  return [
+    buildMuseumsEssay(cityName, parentName, landmarks),
+    buildNeighborhoodsEssay(cityName, parentName, landmarks),
+    buildOutdoorsEssay(cityName, parentName, landmarks),
+  ];
 };
 
 const getActivitySlugs = (tourList: Tour[]) =>
@@ -576,5 +720,11 @@ export const buildCityGuide = ({
     whatToPack: buildWhatToPack(),
     featuredTours: toursToShow.slice(0, 12),
     activityFocus: activityFocusLabel,
+    thingsToDoSections: buildCityThingsToDoSections(
+      cityName,
+      parentName,
+      parentSlug,
+      citySlug,
+    ),
   };
 };

@@ -132,6 +132,31 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           </div>
         </Section>
 
+        {guide.type === "city" && guide.thingsToDoSections?.length ? (
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
+              Things to do in {guide.name}
+            </h2>
+            <div className="mt-6 space-y-8">
+              {guide.thingsToDoSections.map((section) => (
+                <article
+                  key={section.title}
+                  className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10"
+                >
+                  <h3 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
+                    {section.title}
+                  </h3>
+                  <div className="mt-4 space-y-4 text-sm text-[#405040] leading-relaxed md:text-base">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
         <div className="grid gap-6 md:grid-cols-2">
           <Section title={guide.type === "city" ? "When to go" : "Best time to visit"}>
             <p>{guide.bestTimeToVisit}</p>
