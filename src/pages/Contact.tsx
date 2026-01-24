@@ -17,6 +17,9 @@ export default function Contact() {
         We design custom journeys, private group experiences, and multi-day
         adventures tailored to your pace and interests. Tell us what you&apos;re
         dreaming about, and we&apos;ll build a plan around it.
+        {" "}
+        All Outdoor Adventures is a Santa Barbara–based service business
+        offering curated tours and custom journeys worldwide.
       </p>
 
       <section className="mt-10 grid gap-6 md:grid-cols-2">
