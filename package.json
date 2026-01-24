@@ -11,8 +11,7 @@
     "dev": "vite --host",
     "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
-    "build": "vite build",
-    "postbuild": "node scripts/generate-sitemap.mjs || true",
+    "build": "node scripts/generate-sitemap.mjs && vite build",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."

@@ -6,7 +6,7 @@ import { tsImport } from "tsx/esm/api";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const BASE_URL = (process.env.SITE_URL || "https://www.alloutdooradventures.com").replace(
+const BASE_URL = (process.env.SITE_URL || "https://alloutdooradventures.com").replace(
   /\/+$/,
   "",
 );
@@ -145,7 +145,6 @@ const run = async () => {
 
   const sample = urls.slice(0, 5).join(", ");
   console.log(`Sitemap URLs: ${urls.length}`);
-  console.log(`Sitemap output: ${outputPath}`);
   console.log(`Sitemap samples: ${sample}`);
 };
 
