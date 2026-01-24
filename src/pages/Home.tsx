@@ -9,9 +9,12 @@ import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
+import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
 import { featuredDestinations } from "../data/destinations";
+import { countriesWithTours } from "../data/europeIndex";
 import type { Tour } from "../data/tours.types";
+import { worldCountriesWithTours } from "../data/worldIndex";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
 
@@ -370,6 +373,20 @@ export default function Home() {
     [featuredDestinationsByRegion]
   );
 
+  const internationalDestinationOptions = useMemo(() => {
+    const options = [
+      ...countriesWithTours.map((country) => ({
+        name: country.name,
+        slug: `europe:${country.slug}`,
+      })),
+      ...worldCountriesWithTours.map((country) => ({
+        name: country.name,
+        slug: `world:${country.slug}`,
+      })),
+    ];
+    return options.sort((a, b) => a.name.localeCompare(b.name));
+  }, []);
+
   const debugImages = useMemo(
     () => [
       { label: "Hero", src: HERO_IMAGE_URL },
@@ -396,6 +413,16 @@ export default function Home() {
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const [activePage, setActivePage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [selectedInternationalDestination, setSelectedInternationalDestination] =
+    useState("");
+
+  const selectedInternationalName = useMemo(
+    () =>
+      internationalDestinationOptions.find(
+        (option) => option.slug === selectedInternationalDestination,
+      )?.name,
+    [internationalDestinationOptions, selectedInternationalDestination],
+  );
 
   const featuredTourPages = useMemo(() => {
     const pages: FeaturedTourEntry[][] = [];
@@ -768,6 +795,43 @@ export default function Home() {
                 </div>
               </div>
             ) : null}
+          </div>
+        </section>
+
+        <section
+          className="mx-auto max-w-6xl px-6 pb-20"
+          aria-label="International tours"
+        >
+          <div className="flex flex-col items-center text-center">
+            <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+              International
+            </span>
+            <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              International Tours
+            </h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[#405040] md:text-base">
+              Explore tours across Europe, Latin America, and beyond.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-8 w-full max-w-md">
+            <RegionDropdownButton
+              label="Select a country…"
+              options={internationalDestinationOptions}
+              selectedName={selectedInternationalName}
+              onSelect={(slug) => {
+                const [region, countrySlug] = slug.split(":");
+                if (!countrySlug) {
+                  return;
+                }
+                setSelectedInternationalDestination(slug);
+                const basePath =
+                  region === "world"
+                    ? "/destinations/world"
+                    : "/destinations/europe";
+                window.location.assign(`${basePath}/${countrySlug}`);
+              }}
+            />
           </div>
         </section>
 
