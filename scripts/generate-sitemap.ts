@@ -221,13 +221,7 @@ const addGuideRoutes = () => {
   });
 };
 
-const buildSitemapXml = () => {
-  const urls = Array.from(urlSet).sort();
-
-  if (!urls.length) {
-    throw new Error("Sitemap generation produced zero URLs.");
-  }
-
+const buildSitemapXml = (urls: string[]) => {
   const entries = urls
     .map((value) => {
       const url = new URL(value, BASE_URL).href;
@@ -248,7 +242,16 @@ const run = async () => {
   addDestinationRoutes();
   addGuideRoutes();
 
-  const sitemapXml = buildSitemapXml();
+  const urls = Array.from(urlSet).sort();
+  const sitemapXml = buildSitemapXml(urls);
+
+  const publicDir = path.resolve(process.cwd(), "public");
+  if (!OUTPUT_PATH.startsWith(publicDir)) {
+    console.warn(
+      `[sitemap] output path (${OUTPUT_PATH}) is outside ${publicDir}; skipping write.`,
+    );
+    return;
+  }
 
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true });
   await writeFile(OUTPUT_PATH, sitemapXml, "utf8");
@@ -257,6 +260,12 @@ const run = async () => {
   console.log(
     `[sitemap] total URLs: ${total} (static: ${counts.static}, activities: ${counts.activities}, tours: ${counts.tours}, bookings: ${counts.bookings}, destinations: ${counts.destinations}, guides: ${counts.guides})`,
   );
+  if (!total) {
+    console.warn("[sitemap] no URLs found; wrote empty sitemap.");
+  } else {
+    const sampleUrls = urls.slice(0, 5).join(", ");
+    console.log(`[sitemap] sample URLs: ${sampleUrls}`);
+  }
   console.log(`[sitemap] wrote ${OUTPUT_PATH}`);
 };
 
