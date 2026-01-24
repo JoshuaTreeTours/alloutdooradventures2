@@ -68,19 +68,22 @@ export default function RegionDropdownButton({
           ▾
         </span>
       </summary>
-      <ul className="mt-4 grid gap-2 text-sm text-[#2f4a2f] sm:grid-cols-2 lg:grid-cols-3">
-        {options.map((option) => (
-          <li key={option.slug}>
-            <button
-              type="button"
-              onClick={() => handleSelect(option.slug)}
-              className="flex w-full items-center gap-2 rounded-full border border-[#d6decf] px-4 py-2 text-left transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]"
-            >
-              {option.name}
-            </button>
-          </li>
-        ))}
-      </ul>
+      <div className="mt-4 max-h-64 overflow-y-auto rounded-xl border border-[#d6decf] bg-white/90 p-2">
+        <ul className="flex flex-col gap-1 text-sm text-[#2f4a2f]">
+          {options.map((option) => (
+            <li key={option.slug}>
+              <button
+                type="button"
+                onClick={() => handleSelect(option.slug)}
+                className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left transition hover:bg-[#f2f5ee] hover:text-[#1f2a1f]"
+              >
+                <span>{option.name}</span>
+                <span className="text-xs text-[#7a8a6b]">→</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
     </details>
   );
 }
