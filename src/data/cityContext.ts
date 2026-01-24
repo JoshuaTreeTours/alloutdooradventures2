@@ -31,4 +31,16 @@ export const cityContext: Record<
     anchors: ["NW / Nob Hill", "Pearl District", "Hawthorne"],
     nearby: ["Columbia River Gorge", "Mount Hood"],
   },
+  "denver-co": {
+    type: "urban",
+    anchors: [
+      "LoDo",
+      "RiNo",
+      "Capitol Hill",
+      "Cherry Creek",
+      "Highlands",
+      "Platte River Trail",
+    ],
+    nearby: ["Boulder", "Golden", "Red Rocks", "Front Range foothills"],
+  },
 };

@@ -132,6 +132,19 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           </div>
         </Section>
 
+        {guide.type === "city" && guide.topThingsToDo?.length ? (
+          <Section title={`Top 15 things to do in ${guide.name}`}>
+            <ol className="list-decimal space-y-3 pl-5">
+              {guide.topThingsToDo.map((item) => (
+                <li key={item.title}>
+                  <p className="font-semibold text-[#1f2a1f]">{item.title}</p>
+                  <p className="text-sm text-[#405040]">{item.description}</p>
+                </li>
+              ))}
+            </ol>
+          </Section>
+        ) : null}
+
         {guide.type === "city" && guide.thingsToDoSections?.length ? (
           <section className="mt-12">
             <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
