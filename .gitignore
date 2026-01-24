@@ -6,7 +6,6 @@
 dist/
 build/
 *.dist
-public/sitemap.xml
 
 # Environment variables
 .env
