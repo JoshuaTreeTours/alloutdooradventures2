@@ -1,8 +1,10 @@
 import type { ReactNode } from "react";
 import { Link } from "wouter";
 
+import Image from "../components/Image";
 import TourCard from "../components/TourCard";
 import type { GuideContent, GuideLink } from "../data/guideData";
+import type { GuideImage } from "../data/guideImages";
 import { getGuideTourDetailPath } from "../data/guideData";
 
 type GuideTemplateProps = {
@@ -32,6 +34,16 @@ const LinkPill = ({ link }: { link: GuideLink }) => (
   </Link>
 );
 
+const GuideImageBlock = ({ image }: { image: GuideImage }) => (
+  <div className="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      className="h-64 w-full object-cover md:h-96"
+    />
+  </div>
+);
+
 export default function GuideTemplate({ guide }: GuideTemplateProps) {
   const cityPills =
     guide.topCities?.map((city) => ({
@@ -41,6 +53,9 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           ? `/guides/us/${guide.slug}/${city.slug}`
           : `/guides/world/${guide.slug}/${city.slug}`,
     })) ?? [];
+
+  const guideImages =
+    guide.type === "city" ? guide.guideImages ?? [] : [];
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -85,6 +100,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
+        {guideImages[0] ? <GuideImageBlock image={guideImages[0]} /> : null}
         {guide.type === "city" && guide.activities?.length ? (
           <Section title={`Best ways to explore ${guide.name}`}>
             <div className="flex flex-wrap gap-3">
@@ -170,6 +186,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           </section>
         ) : null}
 
+        {guideImages[1] ? <GuideImageBlock image={guideImages[1]} /> : null}
+
         <div className="grid gap-6 md:grid-cols-2">
           <Section title={guide.type === "city" ? "When to go" : "Best time to visit"}>
             <p>{guide.bestTimeToVisit}</p>
@@ -178,6 +196,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
             <p>{guide.whatToPack}</p>
           </Section>
         </div>
+
+        {guideImages[2] ? <GuideImageBlock image={guideImages[2]} /> : null}
 
         <Section
           title={

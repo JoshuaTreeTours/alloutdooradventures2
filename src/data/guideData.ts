@@ -4,6 +4,8 @@ import type { CityLandmarkMetadata } from "./cityLandmarks";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { buildCityGuideFacts } from "../lib/cityGuideFacts";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
+import type { GuideImage } from "./guideImages";
+import { getGuideImages } from "./guideImages";
 import { getTourDetailPath, tours } from "./tours";
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
@@ -58,6 +60,7 @@ export type GuideContent = {
   activityFocus?: string;
   thingsToDoSections?: GuideEssaySection[];
   topThingsToDo?: GuideListItem[];
+  guideImages?: GuideImage[];
 };
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
@@ -994,6 +997,11 @@ export const buildCityGuide = ({
     whatToPack: buildWhatToPack(),
     featuredTours: toursToShow.slice(0, 12),
     activityFocus: activityFocusLabel,
+    guideImages: getGuideImages(
+      citySlug,
+      regionType === "state" ? parentSlug : undefined,
+      regionType === "country" ? parentSlug : undefined,
+    ),
     thingsToDoSections: buildCityThingsToDoSections(
       cityName,
       parentName,
