@@ -2,7 +2,6 @@ import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
 import TourCard from "../../../../components/TourCard";
-import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -19,12 +18,10 @@ type CityToursIndexRouteProps = {
     stateSlug: string;
     citySlug: string;
   };
-  basePathOverride?: string;
 };
 
 export default function CityToursIndexRoute({
   params,
-  basePathOverride,
 }: CityToursIndexRouteProps) {
   const state =
     getStateBySlug(params.stateSlug) ??
@@ -49,21 +46,10 @@ export default function CityToursIndexRoute({
   const tours = isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug);
-  const activityFilter =
-    typeof window !== "undefined"
-      ? new URLSearchParams(window.location.search).get("activity")
-      : null;
-  const filteredTours = activityFilter
-    ? tours.filter((tour) => tour.activitySlugs.includes(activityFilter))
-    : tours;
-  const activityLabel = activityFilter
-    ? getActivityLabelFromSlug(activityFilter)
-    : null;
-  const basePath =
-    basePathOverride ??
-    (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
-  const cityHref = `${basePath}/cities/${city.slug}`;
-  const stateHref = basePath;
+  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const stateHref = state.isFallback
+    ? "/destinations"
+    : `/destinations/states/${state.slug}`;
   const heroImage = city.heroImages[0] ?? "/hero.jpg";
 
   return (
@@ -87,8 +73,7 @@ export default function CityToursIndexRoute({
           </div>
           <div>
             <h1 className="text-3xl font-semibold md:text-5xl">
-              {activityLabel ? `${activityLabel} tours in ` : "Tours in "}
-              {city.name}
+              Tours in {city.name}
             </h1>
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
               Browse guided experiences with live booking links and activity
@@ -107,9 +92,9 @@ export default function CityToursIndexRoute({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
-        {filteredTours.length ? (
+        {tours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredTours.map((tour) => (
+            {tours.map((tour) => (
               <TourCard
                 key={tour.id}
                 tour={tour}

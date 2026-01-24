@@ -16,7 +16,6 @@ type CityTemplateProps = {
   state: StateDestination;
   city: City;
   toursOverride?: Tour[];
-  stateHrefOverride?: string;
 };
 
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
@@ -121,13 +120,12 @@ export default function CityTemplate({
   state,
   city,
   toursOverride,
-  stateHrefOverride,
 }: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const stateHref =
-    stateHrefOverride ??
-    (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
+  const stateHref = state.isFallback
+    ? "/destinations"
+    : `/destinations/states/${state.slug}`;
   const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
   const categorizedTours = [
     {
