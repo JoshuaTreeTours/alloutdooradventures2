@@ -13,6 +13,9 @@ export default function Contact() {
         We design custom journeys, private group experiences, and multi-day
         adventures tailored to your pace and interests. Tell us what you&apos;re
         dreaming about, and we&apos;ll build a plan around it.
+        {" "}
+        All Outdoor Adventures is a Santa Barbara–based service business
+        offering curated tours and custom journeys worldwide.
       </p>
 
       <section className="mt-10 grid gap-6 md:grid-cols-2">
@@ -29,15 +32,15 @@ export default function Contact() {
           </a>
         </div>
         <div className="rounded-3xl border border-black/5 bg-white/70 p-6 shadow-sm">
-          <h2 className="text-lg font-semibold text-[#2f4a2f]">Email us</h2>
+          <h2 className="text-lg font-semibold text-[#2f4a2f]">Email Us</h2>
           <p className="mt-2 text-sm text-[#405040]">
             Send us the dates, group size, and your must-see highlights.
           </p>
           <a
-            href="mailto:hello@alloutdooradventures.com"
+            href="mailto:jerry@alloutdooradventures.com"
             className="mt-4 inline-flex items-center rounded-full border border-[#2f4a2f]/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
           >
-            hello@alloutdooradventures.com
+            jerry@alloutdooradventures.com
           </a>
         </div>
       </section>
