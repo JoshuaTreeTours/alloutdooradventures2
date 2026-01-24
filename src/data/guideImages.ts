@@ -9,16 +9,6 @@ export type GuideImage = {
   category: "cityscape" | "lifestyle" | "scenic";
 };
 
-const FALLBACK_IMAGES = [
-  "/hero.jpg",
-  "/images/hiking-hero3.jpg",
-  "/images/cycling-hero.jpg",
-  "/images/canoe-hero.jpg",
-  "/images/hiking-hero.jpg",
-  "/images/hiking-hero2.jpg",
-  "/images/connecticut.webp",
-];
-
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
 
 const isUsStateTour = (tour: Tour) => {
@@ -57,6 +47,18 @@ const getCityTours = (
 
     return false;
   });
+
+const isCountryMatch = (tour: Tour, countrySlug: string) => {
+  if (tour.destination.country) {
+    return slugify(tour.destination.country) === countrySlug;
+  }
+
+  if (!isUsStateTour(tour) && tour.destination.stateSlug) {
+    return tour.destination.stateSlug === countrySlug;
+  }
+
+  return false;
+};
 
 const uniqueImages = (images: Array<string | undefined>) => {
   const seen = new Set<string>();
@@ -110,24 +112,22 @@ const buildAltText = (cityName: string, category: GuideImage["category"]) => {
   }
 };
 
-const pickImage = (
-  candidates: string[],
-  fallback: string[],
-  seen: Set<string>,
-) => {
-  const pool = [...candidates, ...fallback];
+const getTourImages = (tourPool: Tour[]) =>
+  uniqueImages(
+    tourPool.flatMap((tour) => [tour.heroImage, ...(tour.galleryImages ?? [])]),
+  );
 
-  for (const image of pool) {
-    if (!image || seen.has(image)) {
-      continue;
-    }
+const getStateTours = (stateSlug: string) =>
+  tours.filter((tour) => tour.destination.stateSlug === stateSlug);
 
-    seen.add(image);
-    return image;
-  }
+const getCountryTours = (countrySlug: string) =>
+  tours.filter((tour) => isCountryMatch(tour, countrySlug));
 
-  return null;
-};
+const getRegionTours = (region: string) =>
+  tours.filter((tour) => {
+    const state = getStateBySlug(tour.destination.stateSlug);
+    return state?.region === region;
+  });
 
 export const getGuideImages = (
   citySlug: string,
@@ -135,78 +135,27 @@ export const getGuideImages = (
   countrySlug?: string,
 ): GuideImage[] => {
   const cityName = getCityDisplayName(citySlug, stateSlug, countrySlug);
-  const city = stateSlug ? getCityBySlugs(stateSlug, citySlug) : null;
   const state = stateSlug ? getStateBySlug(stateSlug) : null;
-  const tourImages = uniqueImages(
-    getCityTours(citySlug, stateSlug, countrySlug).flatMap((tour) => [
-      tour.heroImage,
-      ...(tour.galleryImages ?? []),
-    ]),
+  const region = state?.region;
+  const cityImages = getTourImages(
+    getCityTours(citySlug, stateSlug, countrySlug),
   );
-  const cityImages = uniqueImages(city?.heroImages ?? []);
-  const stateImage = state?.heroImage;
-  const fallbackImages = uniqueImages([stateImage, ...FALLBACK_IMAGES]);
-  const seen = new Set<string>();
+  const stateImages = stateSlug
+    ? getTourImages(getStateTours(stateSlug))
+    : countrySlug
+      ? getTourImages(getCountryTours(countrySlug))
+      : [];
+  const regionImages = region ? getTourImages(getRegionTours(region)) : [];
+  const pool = uniqueImages([...cityImages, ...stateImages, ...regionImages]);
+  const categories: GuideImage["category"][] = [
+    "cityscape",
+    "lifestyle",
+    "scenic",
+  ];
 
-  const selections: GuideImage[] = [];
-
-  const cityscape = pickImage(
-    [...tourImages, ...cityImages],
-    fallbackImages,
-    seen,
-  );
-  if (cityscape) {
-    selections.push({
-      src: cityscape,
-      alt: buildAltText(cityName, "cityscape"),
-      category: "cityscape",
-    });
-  }
-
-  const lifestyle = pickImage(
-    [...cityImages, ...tourImages],
-    fallbackImages,
-    seen,
-  );
-  if (lifestyle) {
-    selections.push({
-      src: lifestyle,
-      alt: buildAltText(cityName, "lifestyle"),
-      category: "lifestyle",
-    });
-  }
-
-  const scenic = pickImage(
-    [stateImage ?? "", ...tourImages],
-    fallbackImages,
-    seen,
-  );
-  if (scenic) {
-    selections.push({
-      src: scenic,
-      alt: buildAltText(cityName, "scenic"),
-      category: "scenic",
-    });
-  }
-
-  if (selections.length < 3) {
-    for (const image of fallbackImages) {
-      if (selections.length >= 3) {
-        break;
-      }
-
-      if (!image || seen.has(image)) {
-        continue;
-      }
-
-      seen.add(image);
-      selections.push({
-        src: image,
-        alt: `${cityName} travel highlight`,
-        category: "scenic",
-      });
-    }
-  }
-
-  return selections.slice(0, 3);
+  return pool.slice(0, 3).map((src, index) => ({
+    src,
+    alt: buildAltText(cityName, categories[index] ?? "scenic"),
+    category: categories[index] ?? "scenic",
+  }));
 };
