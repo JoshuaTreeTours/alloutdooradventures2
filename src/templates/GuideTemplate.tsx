@@ -1,11 +1,10 @@
 import type { ReactNode } from "react";
 import { Link } from "wouter";
 
+import GuideInternalLinks from "../components/GuideInternalLinks";
 import Image from "../components/Image";
-import TourCard from "../components/TourCard";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
-import { getGuideTourDetailPath } from "../data/guideData";
 
 type GuideTemplateProps = {
   guide: GuideContent;
@@ -88,6 +87,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
               {guide.intro}
             </p>
+            <GuideInternalLinks guide={guide} variant="intro" />
           </div>
           {guide.type !== "city" && guide.activities?.length ? (
             <div className="flex flex-wrap gap-3">
@@ -100,6 +100,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
+        <GuideInternalLinks guide={guide} variant="primary" />
         {guideImages[0] ? <GuideImageBlock image={guideImages[0]} /> : null}
         {guide.type === "city" && guide.activities?.length ? (
           <Section title={`Best ways to explore ${guide.name}`}>
@@ -147,6 +148,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
             ))}
           </div>
         </Section>
+
+        <GuideInternalLinks guide={guide} variant="top-tours" />
 
         {guide.type === "city" && guide.topThingsToDo?.length ? (
           <Section title={`Top 15 things to do in ${guide.name}`}>
@@ -199,29 +202,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
 
         {guideImages[2] ? <GuideImageBlock image={guideImages[2]} /> : null}
 
-        <Section
-          title={
-            guide.type === "city"
-              ? `Top tours in ${guide.name}`
-              : "Featured tours"
-          }
-        >
-          {guide.featuredTours.length ? (
-            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {guide.featuredTours.map((tour) => (
-                <TourCard
-                  key={tour.id}
-                  tour={tour}
-                  href={getGuideTourDetailPath(tour)}
-                />
-              ))}
-            </div>
-          ) : (
-            <p className="mt-4 text-sm text-[#405040]">
-              More tours are coming soon.
-            </p>
-          )}
-        </Section>
+        <GuideInternalLinks guide={guide} variant="nearby" />
       </section>
     </main>
   );
