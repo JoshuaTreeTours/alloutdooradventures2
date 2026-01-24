@@ -60,13 +60,22 @@ const escapeXml = (value) =>
     }
   });
 
-const buildUrlsetXml = (urls) => {
+const buildUrlsetXml = (entries) => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
   const urlsetOpen =
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   const urlsetClose = "</urlset>\n";
-  const urlEntries = urls
-    .map((url) => `  <url><loc>${escapeXml(`${BASE_URL}${url}`)}</loc></url>`)
+  const urlEntries = entries
+    .map((entry) => {
+      const segments = [`<loc>${escapeXml(entry.loc)}</loc>`];
+      if (entry.lastmod) {
+        segments.push(`<lastmod>${escapeXml(entry.lastmod)}</lastmod>`);
+      }
+      if (entry.priority !== undefined) {
+        segments.push(`<priority>${entry.priority.toFixed(1)}</priority>`);
+      }
+      return `  <url>${segments.join("")}</url>`;
+    })
     .join("\n");
 
   return `${xml}${urlsetOpen}${urlEntries}\n${urlsetClose}`;
@@ -280,63 +289,73 @@ const buildSitemap = async () => {
   );
   const tours = await buildTourSummaries(catalogModule);
 
-  const urls = new Set();
+  const pages = new Set();
+  const toursUrls = new Set();
+  const bookingUrls = new Set();
+  const cityUrls = new Set();
+  const guideUrls = new Set();
+  const destinationUrls = new Set();
+  const categoryUrls = new Set();
   const stateSlugSet = getStateSlugSet(catalogModule);
 
-  addUrl(urls, "/");
-  addUrl(urls, "/tours");
-  addUrl(urls, "/tours/catalog");
-  addUrl(urls, "/tours/day");
-  addUrl(urls, "/tours/day/cycling");
-  addUrl(urls, "/tours/day/hiking");
-  addUrl(urls, "/tours/day/paddle");
-  addUrl(urls, "/tours/multi-day");
-  addUrl(urls, "/tours/cycling");
-  addUrl(urls, "/tours/hiking");
-  addUrl(urls, "/tours/canoeing");
-  addUrl(urls, "/guides");
-  addUrl(urls, "/faqs");
-  addUrl(urls, "/journeys");
-  addUrl(urls, "/about");
-  addUrl(urls, "/contact");
-  addUrl(urls, "/privacy");
-  addUrl(urls, "/terms");
-  addUrl(urls, "/cookies");
-  addUrl(urls, "/disclosure");
+  addUrl(pages, "/");
+  addUrl(pages, "/faqs");
+  addUrl(pages, "/journeys");
+  addUrl(pages, "/about");
+  addUrl(pages, "/contact");
+  addUrl(pages, "/privacy");
+  addUrl(pages, "/terms");
+  addUrl(pages, "/cookies");
+  addUrl(pages, "/disclosure");
+
+  addUrl(categoryUrls, "/tours");
+  addUrl(categoryUrls, "/tours/catalog");
+  addUrl(categoryUrls, "/tours/day");
+  addUrl(categoryUrls, "/tours/day/cycling");
+  addUrl(categoryUrls, "/tours/day/hiking");
+  addUrl(categoryUrls, "/tours/day/paddle");
+  addUrl(categoryUrls, "/tours/multi-day");
+  addUrl(categoryUrls, "/tours/cycling");
+  addUrl(categoryUrls, "/tours/hiking");
+  addUrl(categoryUrls, "/tours/canoeing");
+
+  addUrl(guideUrls, "/guides");
 
   if (Array.isArray(catalogModule.ACTIVITY_PAGES)) {
     catalogModule.ACTIVITY_PAGES.forEach((activity) => {
-      addUrl(urls, `/tours/activities/${activity.slug}`);
+      addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
     });
   }
 
   if (Array.isArray(catalogModule.ADVENTURE_ACTIVITY_PAGES)) {
     catalogModule.ADVENTURE_ACTIVITY_PAGES.forEach((activity) => {
-      addUrl(urls, `/tours/activities/${activity.slug}`);
-      addUrl(urls, `/tours/${activity.slug}`);
+      addUrl(categoryUrls, `/tours/activities/${activity.slug}`);
+      addUrl(categoryUrls, `/tours/${activity.slug}`);
     });
   }
 
-  addUrl(urls, "/destinations");
-  addUrl(urls, "/destinations/europe");
+  addUrl(destinationUrls, "/destinations");
+  addUrl(destinationUrls, "/destinations/europe");
 
   if (Array.isArray(destinationsModule.destinations)) {
     destinationsModule.destinations.forEach((destination) => {
-      addUrl(urls, destination.href);
+      addUrl(destinationUrls, destination.href);
     });
   }
 
   if (Array.isArray(destinationsModule.states)) {
     destinationsModule.states.forEach((state) => {
-      addUrl(urls, `/destinations/${state.slug}`);
-      addUrl(urls, `/destinations/states/${state.slug}`);
-      addUrl(urls, `/destinations/states/${state.slug}/tours`);
+      addUrl(destinationUrls, `/destinations/states/${state.slug}`);
+      addUrl(destinationUrls, `/destinations/states/${state.slug}/tours`);
 
       if (Array.isArray(state.cities)) {
         state.cities.forEach((city) => {
-          addUrl(urls, `/destinations/states/${state.slug}/cities/${city.slug}`);
           addUrl(
-            urls,
+            cityUrls,
+            `/destinations/states/${state.slug}/cities/${city.slug}`,
+          );
+          addUrl(
+            cityUrls,
             `/destinations/states/${state.slug}/cities/${city.slug}/tours`,
           );
         });
@@ -349,14 +368,19 @@ const buildSitemap = async () => {
       return;
     }
     addUrl(
-      urls,
+      toursUrls,
       `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
+    );
+    addUrl(
+      bookingUrls,
+      `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}/book`,
     );
   });
 
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
-      addUrl(urls, flagstaffModule.getFlagstaffTourDetailPath(tour));
+      addUrl(toursUrls, flagstaffModule.getFlagstaffTourDetailPath(tour));
+      addUrl(bookingUrls, flagstaffModule.getFlagstaffTourBookingPath(tour));
     });
   }
 
@@ -386,7 +410,7 @@ const buildSitemap = async () => {
 
   activityByState.forEach((stateSlugs, activitySlug) => {
     stateSlugs.forEach((stateSlug) => {
-      addUrl(urls, `/tours/${activitySlug}/us/${stateSlug}`);
+      addUrl(categoryUrls, `/tours/${activitySlug}/us/${stateSlug}`);
     });
   });
 
@@ -420,25 +444,31 @@ const buildSitemap = async () => {
   });
 
   europeCitiesByCountry.forEach((cities, countrySlug) => {
-    addUrl(urls, `/destinations/europe/${countrySlug}`);
-    addUrl(urls, `/destinations/europe/${countrySlug}/tours`);
+    addUrl(destinationUrls, `/destinations/europe/${countrySlug}`);
+    addUrl(destinationUrls, `/destinations/europe/${countrySlug}/tours`);
 
     cities.forEach((citySlug) => {
-      addUrl(urls, `/destinations/europe/${countrySlug}/cities/${citySlug}`);
       addUrl(
-        urls,
+        cityUrls,
+        `/destinations/europe/${countrySlug}/cities/${citySlug}`,
+      );
+      addUrl(
+        cityUrls,
         `/destinations/europe/${countrySlug}/cities/${citySlug}/tours`,
       );
     });
   });
 
   worldCitiesByCountry.forEach((cities, countrySlug) => {
-    addUrl(urls, `/destinations/world/${countrySlug}`);
+    addUrl(destinationUrls, `/destinations/world/${countrySlug}`);
 
     cities.forEach((citySlug) => {
-      addUrl(urls, `/destinations/world/${countrySlug}/cities/${citySlug}`);
       addUrl(
-        urls,
+        cityUrls,
+        `/destinations/world/${countrySlug}/cities/${citySlug}`,
+      );
+      addUrl(
+        cityUrls,
         `/destinations/world/${countrySlug}/cities/${citySlug}/tours`,
       );
     });
@@ -476,28 +506,40 @@ const buildSitemap = async () => {
   });
 
   guideStates.forEach((cities, stateSlug) => {
-    addUrl(urls, `/guides/us/${stateSlug}`);
+    addUrl(guideUrls, `/guides/us/${stateSlug}`);
     cities.forEach((citySlug) => {
-      addUrl(urls, `/guides/us/${stateSlug}/${citySlug}`);
+      addUrl(guideUrls, `/guides/us/${stateSlug}/${citySlug}`);
     });
   });
 
   guideCountries.forEach((cities, countrySlug) => {
-    addUrl(urls, `/guides/world/${countrySlug}`);
+    addUrl(guideUrls, `/guides/world/${countrySlug}`);
     cities.forEach((citySlug) => {
-      addUrl(urls, `/guides/world/${countrySlug}/${citySlug}`);
+      addUrl(guideUrls, `/guides/world/${countrySlug}/${citySlug}`);
     });
   });
 
-  const sortedUrls = Array.from(urls).sort((a, b) => a.localeCompare(b));
-
   return {
-    urls: sortedUrls,
+    pages,
+    toursUrls,
+    bookingUrls,
+    cityUrls,
+    guideUrls,
+    destinationUrls,
+    categoryUrls,
   };
 };
 
 const run = async () => {
-  const { urls } = await buildSitemap();
+  const {
+    pages,
+    toursUrls,
+    bookingUrls,
+    cityUrls,
+    guideUrls,
+    destinationUrls,
+    categoryUrls,
+  } = await buildSitemap();
   const outputDir = path.resolve(__dirname, "../public");
   const sitemapIndexPath = path.join(outputDir, "sitemap.xml");
 
@@ -510,30 +552,67 @@ const run = async () => {
       .map((file) => unlink(path.join(outputDir, file))),
   );
 
-  if (urls.length <= MAX_URLS_PER_SITEMAP) {
-    const xml = buildUrlsetXml(urls);
-    await writeFile(sitemapIndexPath, xml, "utf8");
-  } else {
-    const chunks = [];
-    for (let i = 0; i < urls.length; i += MAX_URLS_PER_SITEMAP) {
-      chunks.push(urls.slice(i, i + MAX_URLS_PER_SITEMAP));
+  const toEntries = (values, options = {}) =>
+    Array.from(values)
+      .sort((a, b) => a.localeCompare(b))
+      .map((url) => ({
+        loc: `${BASE_URL}${url}`,
+        lastmod: options.lastmod,
+        priority: options.priority,
+      }));
+
+  const writeUrlsetFiles = async (slug, entries) => {
+    if (!entries.length) {
+      return [];
     }
 
-    const sitemapFiles = await Promise.all(
+    const chunks = [];
+    for (let i = 0; i < entries.length; i += MAX_URLS_PER_SITEMAP) {
+      chunks.push(entries.slice(i, i + MAX_URLS_PER_SITEMAP));
+    }
+
+    return Promise.all(
       chunks.map(async (chunk, index) => {
-        const filename = `sitemap-${index + 1}.xml`;
+        const filename =
+          chunks.length === 1
+            ? `sitemap-${slug}.xml`
+            : `sitemap-${slug}-${index + 1}.xml`;
         const filepath = path.join(outputDir, filename);
         await writeFile(filepath, buildUrlsetXml(chunk), "utf8");
         return `${BASE_URL}/${filename}`;
       }),
     );
+  };
 
-    await writeFile(sitemapIndexPath, buildSitemapIndexXml(sitemapFiles), "utf8");
-  }
+  const pagesEntries = toEntries(pages, { priority: 0.4 });
+  const tourEntries = toEntries(toursUrls, { priority: 0.8 });
+  const bookingEntries = toEntries(bookingUrls, { priority: 0.6 });
+  const cityEntries = toEntries(cityUrls, { priority: 0.6 });
+  const guideEntries = toEntries(guideUrls, { priority: 0.5 });
+  const destinationEntries = toEntries(destinationUrls, { priority: 0.6 });
+  const categoryEntries = toEntries(categoryUrls, { priority: 0.5 });
 
-  const sample = urls.slice(0, 5).join(", ");
-  console.log(`Sitemap URLs: ${urls.length}`);
-  console.log(`Sitemap samples: ${sample}`);
+  const sitemapFiles = (
+    await Promise.all([
+      writeUrlsetFiles("pages", pagesEntries),
+      writeUrlsetFiles("tours", tourEntries),
+      writeUrlsetFiles("booking", bookingEntries),
+      writeUrlsetFiles("cities", cityEntries),
+      writeUrlsetFiles("guides", guideEntries),
+      writeUrlsetFiles("destinations", destinationEntries),
+      writeUrlsetFiles("categories", categoryEntries),
+    ])
+  ).flat();
+
+  await writeFile(sitemapIndexPath, buildSitemapIndexXml(sitemapFiles), "utf8");
+
+  console.log(`Sitemap pages: ${pagesEntries.length}`);
+  console.log(`Sitemap tours: ${tourEntries.length}`);
+  console.log(`Sitemap booking: ${bookingEntries.length}`);
+  console.log(`Sitemap cities: ${cityEntries.length}`);
+  console.log(`Sitemap guides: ${guideEntries.length}`);
+  console.log(`Sitemap destinations: ${destinationEntries.length}`);
+  console.log(`Sitemap categories: ${categoryEntries.length}`);
 };
 
 try {
