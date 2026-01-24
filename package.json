@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts && tsx scripts/generate-sitemap.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/generate-sitemap.mjs && vite build",
     "preview": "vite preview --host",
