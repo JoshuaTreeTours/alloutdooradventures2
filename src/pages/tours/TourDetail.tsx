@@ -14,7 +14,7 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { buildMetaDescription } from "../../utils/seo";
+import { buildTourMetaDescription } from "../../utils/seo";
 
 type TourDetailProps = {
   params: {
@@ -45,10 +45,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
   const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-  const description = buildMetaDescription(
-    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-    `Book ${tour.title} in ${destinationLabel} with curated outdoor tours and trusted local guides.`,
-  );
+  const description = buildTourMetaDescription(tour);
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
