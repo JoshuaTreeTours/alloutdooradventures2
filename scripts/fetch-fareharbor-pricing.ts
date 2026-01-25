@@ -334,5 +334,5 @@ const run = async () => {
 
 run().catch((error) => {
   console.error("Failed to update FareHarbor pricing cache.", error);
-  process.exitCode = 1;
+  process.exitCode = 0;
 });
