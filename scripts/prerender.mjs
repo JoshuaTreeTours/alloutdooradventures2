@@ -111,31 +111,30 @@ const readSitemapUrls = async () => {
 
 const main = async () => {
   const template = await readFile(templatePath, "utf8");
-  const [
-    toursModule,
-    flagstaffModule,
-    destinationsModule,
-    fallbackModule,
-    seoModule,
-  ] = await Promise.all([
-    tsImport("../src/data/tours.ts", import.meta.url),
+  const [toursGeneratedModule, flagstaffModule, seoModule] = await Promise.all([
+    tsImport("../src/data/tours.generated.ts", import.meta.url),
     tsImport("../src/data/flagstaffTours.ts", import.meta.url),
-    tsImport("../src/data/destinations.ts", import.meta.url),
-    tsImport("../src/data/tourFallbacks.ts", import.meta.url),
     tsImport("../src/utils/seo.ts", import.meta.url),
   ]);
 
-  const {
-    getTourBySlugs,
-    getTourDetailPath,
-    getCityTourDetailPath,
-  } = toursModule;
+  const tours = Array.isArray(toursGeneratedModule.toursGenerated)
+    ? toursGeneratedModule.toursGenerated
+    : [];
+  const getTourBySlugs = (stateSlug, citySlug, tourSlug) =>
+    tours.find(
+      (tour) =>
+        tour.destination.stateSlug === stateSlug &&
+        tour.destination.citySlug === citySlug &&
+        tour.slug === tourSlug,
+    );
+  const getTourDetailPath = (tour) =>
+    `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
+  const getCityTourDetailPath = (tour) =>
+    `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
   const {
     getFlagstaffTourBySlug,
     getFlagstaffTourDetailPath,
   } = flagstaffModule;
-  const { getCityBySlugs, getStateBySlug } = destinationsModule;
-  const { getFallbackCityBySlugs, getFallbackStateBySlug } = fallbackModule;
   const {
     DEFAULT_SEO,
     buildMetaDescription,
@@ -175,19 +174,12 @@ const main = async () => {
     } else if (segments[0] === "tours" && segments.length === 2) {
       const tour = getFlagstaffTourBySlug(segments[1]);
       if (tour) {
-        const state =
-          getStateBySlug("arizona") ?? getFallbackStateBySlug("arizona");
-        const city =
-          getCityBySlugs("arizona", "flagstaff") ??
-          getFallbackCityBySlugs("arizona", "flagstaff");
-        if (state && city) {
-          seo.title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-          seo.description = buildMetaDescription(
-            tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-            `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-          );
-          seo.url = buildCanonicalUrl(getFlagstaffTourDetailPath(tour));
-        }
+        seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
+        seo.description = buildMetaDescription(
+          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
+        );
+        seo.url = buildCanonicalUrl(getFlagstaffTourDetailPath(tour));
       }
     } else if (
       segments[0] === "destinations" &&
@@ -195,20 +187,15 @@ const main = async () => {
       segments.length === 5
     ) {
       const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
-      const state =
-        getStateBySlug(stateSlug) ?? getFallbackStateBySlug(stateSlug);
-      const city =
-        getCityBySlugs(stateSlug, citySlug) ??
-        getFallbackCityBySlugs(stateSlug, citySlug);
       const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
       const tour = isFlagstaff
         ? getFlagstaffTourBySlug(tourSlug)
         : getTourBySlugs(stateSlug, citySlug, tourSlug);
-      if (state && city && tour) {
-        seo.title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
+      if (tour) {
+        seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
         seo.description = buildMetaDescription(
           tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
         );
         seo.url = buildCanonicalUrl(
           isFlagstaff
@@ -226,20 +213,15 @@ const main = async () => {
       const stateSlug = segments[2];
       const citySlug = segments[5];
       const tourSlug = segments[7];
-      const state =
-        getStateBySlug(stateSlug) ?? getFallbackStateBySlug(stateSlug);
-      const city =
-        getCityBySlugs(stateSlug, citySlug) ??
-        getFallbackCityBySlugs(stateSlug, citySlug);
       const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
       const tour = isFlagstaff
         ? getFlagstaffTourBySlug(tourSlug)
         : getTourBySlugs(stateSlug, citySlug, tourSlug);
-      if (state && city && tour) {
-        seo.title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
+      if (tour) {
+        seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
         seo.description = buildMetaDescription(
           tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
         );
         seo.url = buildCanonicalUrl(
           isFlagstaff
