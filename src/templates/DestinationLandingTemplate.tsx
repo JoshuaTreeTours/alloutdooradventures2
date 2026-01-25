@@ -1,9 +1,11 @@
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
+import { buildMetaDescription } from "../utils/seo";
 
 type DestinationLandingTemplateProps = {
   state: StateDestination;
@@ -15,9 +17,19 @@ export default function DestinationLandingTemplate({
   tours,
 }: DestinationLandingTemplateProps) {
   const paragraphs = state.longDescription.split("\n\n");
+  const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
+  const description = buildMetaDescription(
+    state.intro,
+    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={title}
+        description={description}
+        url={`/destinations/${state.slug}`}
+      />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={state.heroImage}

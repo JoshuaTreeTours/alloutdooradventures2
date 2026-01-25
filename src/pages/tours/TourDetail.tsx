@@ -1,17 +1,20 @@
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
+import Seo from "../../components/Seo";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
   getCityTourBookingPath,
   getTourBySlugs,
+  getTourDetailPath,
 } from "../../data/tours";
 import { formatStartingPrice } from "../../lib/pricing";
 import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
+import { buildMetaDescription } from "../../utils/seo";
 
 type TourDetailProps = {
   params: {
@@ -41,6 +44,11 @@ export default function TourDetail({ params }: TourDetailProps) {
   const destinationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
+  const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
+  const description = buildMetaDescription(
+    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+    `Book ${tour.title} in ${destinationLabel} with curated outdoor tours and trusted local guides.`,
+  );
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
@@ -51,6 +59,11 @@ export default function TourDetail({ params }: TourDetailProps) {
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={title}
+        description={description}
+        url={getTourDetailPath(tour)}
+      />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           <Link href="/tours">

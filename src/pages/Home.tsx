@@ -10,11 +10,13 @@ import { Link } from "wouter";
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import RegionDropdownButton from "../components/RegionDropdownButton";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { featuredDestinations } from "../data/destinations";
 import { countriesWithTours } from "../data/europeIndex";
 import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
+import { DEFAULT_SEO } from "../utils/seo";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
 
@@ -533,6 +535,11 @@ export default function Home() {
 
   return (
     <div>
+      <Seo
+        title={DEFAULT_SEO.title}
+        description={DEFAULT_SEO.description}
+        url="/"
+      />
       <main>
         {/* HERO */}
         <section
