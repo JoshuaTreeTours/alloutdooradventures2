@@ -32,7 +32,17 @@ jobs:
       - name: Fetch FareHarbor pricing cache
         run: npm run fetch:fareharbor-prices
 
+      - name: Check for pricing cache updates
+        id: pricing_changes
+        run: |
+          if git diff --quiet -- src/data/fareharborPricing.ts; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Create pricing cache PR
+        if: steps.pricing_changes.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "Update cached FareHarbor starting prices"
