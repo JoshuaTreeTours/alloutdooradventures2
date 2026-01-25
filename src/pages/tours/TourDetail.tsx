@@ -5,9 +5,9 @@ import {
   getAffiliateDisclosure,
   getProviderLabel,
   getCityTourBookingPath,
-  getTourDetailPath,
   getTourBySlugs,
 } from "../../data/tours";
+import { formatStartingPrice } from "../../lib/pricing";
 import {
   getExpandedTourDescription,
   getTourHighlights,
@@ -44,6 +44,10 @@ export default function TourDetail({ params }: TourDetailProps) {
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
+  const startingPriceLabel = formatStartingPrice(
+    tour.startingPrice,
+    tour.currency,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -82,11 +86,6 @@ export default function TourDetail({ params }: TourDetailProps) {
                     {tour.badges.duration}
                   </span>
                 ) : null}
-                {tour.badges.priceFrom ? (
-                  <span className="inline-flex items-center rounded-full bg-white px-3 py-1">
-                    From {tour.badges.priceFrom}
-                  </span>
-                ) : null}
                 {tour.badges.likelyToSellOut ? (
                   <span className="inline-flex items-center rounded-full bg-[#ffedd5] px-3 py-1 text-[#9a3412]">
                     Likely to sell out
@@ -122,6 +121,11 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
+              {startingPriceLabel ? (
+                <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
+                  From {startingPriceLabel}
+                </p>
+              ) : null}
               <Link href={getCityTourBookingPath(tour)}>
                 <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                   BOOK

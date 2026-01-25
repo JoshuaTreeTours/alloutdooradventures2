@@ -16,6 +16,7 @@ import {
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
+import { formatStartingPrice } from "../../lib/pricing";
 
 type FlagstaffTourDetailRouteProps = {
   params: {
@@ -75,6 +76,10 @@ export default function FlagstaffTourDetailRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
+  const startingPriceLabel = formatStartingPrice(
+    tour.startingPrice,
+    tour.currency,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -121,6 +126,11 @@ export default function FlagstaffTourDetailRoute({
             {tour.badges.tagline ? (
               <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
                 {tour.badges.tagline}
+              </p>
+            ) : null}
+            {startingPriceLabel ? (
+              <p className="mt-3 text-sm font-semibold text-white/90">
+                From {startingPriceLabel}
               </p>
             ) : null}
           </div>

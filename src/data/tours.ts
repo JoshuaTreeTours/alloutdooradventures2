@@ -4,6 +4,7 @@ import { sedonaTours } from "./sedonaTours";
 import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
+import { applyTourPricing } from "./tourPricing";
 
 export { australiaTours } from "./australiaTours";
 
@@ -1108,7 +1109,7 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-];
+].map(applyTourPricing);
 
 export const getToursByState = (stateSlug: string) =>
   tours.filter((tour) => tour.destination.stateSlug === stateSlug);
