@@ -44,6 +44,7 @@ const replaceMeta = (html, seo) => {
   const description = escapeAttribute(seo.description);
   const url = escapeAttribute(seo.url);
   const type = escapeAttribute(seo.type);
+  const image = escapeAttribute(seo.image);
 
   return html
     .replace(/<title>[^<]*<\/title>/, `<title>${title}</title>`)
@@ -70,6 +71,30 @@ const replaceMeta = (html, seo) => {
     .replace(
       /<link rel="canonical" href="[^"]*"\s*\/?>/,
       `<link rel="canonical" href="${url}" />`,
+    )
+    .replace(
+      /<meta name="robots" content="[^"]*"\s*\/?>/,
+      `<meta name="robots" content="index,follow,max-image-preview:large" />`,
+    )
+    .replace(
+      /<meta property="og:image" content="[^"]*"\s*\/?>/,
+      `<meta property="og:image" content="${image}" />`,
+    )
+    .replace(
+      /<meta name="twitter:card" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:card" content="summary_large_image" />`,
+    )
+    .replace(
+      /<meta name="twitter:title" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:title" content="${title}" />`,
+    )
+    .replace(
+      /<meta name="twitter:description" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:description" content="${description}" />`,
+    )
+    .replace(
+      /<meta name="twitter:image" content="[^"]*"\s*\/?>/,
+      `<meta name="twitter:image" content="${image}" />`,
     );
 };
 
@@ -166,6 +191,7 @@ const main = async () => {
     DEFAULT_SEO,
     buildMetaDescription,
     buildCanonicalUrl,
+    buildImageUrl,
   } = seoModule;
 
   const urls = await readSitemapUrls();
@@ -181,6 +207,7 @@ const main = async () => {
       description: DEFAULT_SEO.description,
       url: buildCanonicalUrl(pathname),
       type: DEFAULT_SEO.type,
+      image: buildImageUrl(DEFAULT_SEO.image),
     };
 
     if (segments[0] === "tours" && segments.length === 4) {
@@ -197,6 +224,7 @@ const main = async () => {
           `Book ${tour.title} in ${destinationLabel} with curated outdoor tours and trusted local guides.`,
         );
         seo.url = buildCanonicalUrl(getTourDetailPath(tour));
+        seo.image = buildImageUrl(tour.heroImage);
       }
     } else if (segments[0] === "tours" && segments.length === 2) {
       const tour = getFlagstaffTourBySlug(segments[1]);
@@ -207,6 +235,7 @@ const main = async () => {
           `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
         );
         seo.url = buildCanonicalUrl(getFlagstaffTourDetailPath(tour));
+        seo.image = buildImageUrl(tour.heroImage);
       }
     } else if (
       segments[0] === "destinations" &&
@@ -229,6 +258,7 @@ const main = async () => {
             ? getFlagstaffTourDetailPath(tour)
             : getCityTourDetailPath(tour),
         );
+        seo.image = buildImageUrl(tour.heroImage);
       }
     } else if (
       segments[0] === "destinations" &&
@@ -255,6 +285,7 @@ const main = async () => {
             ? getFlagstaffTourDetailPath(tour)
             : getCityTourDetailPath(tour),
         );
+        seo.image = buildImageUrl(tour.heroImage);
       }
     } else {
       seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title);

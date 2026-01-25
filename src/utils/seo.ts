@@ -8,6 +8,7 @@ export const DEFAULT_SEO = {
     "Discover unforgettable outdoor adventures across the United States and beyond. From national park tours and desert safaris to sailing, hiking, and wildlife experiences, All Outdoor Adventures curates the world’s best outdoor tours in one place.",
   url: `${SITE_URL}/`,
   type: "website",
+  image: "/hero.jpg",
 } as const;
 
 const normalizeText = (text: string) => text.replace(/\s+/g, " ").trim();
@@ -155,4 +156,16 @@ export const buildCanonicalUrl = (path: string) => {
   const normalized = path.startsWith("/") ? path : `/${path}`;
 
   return `${SITE_URL}${normalized}`;
+};
+
+export const buildImageUrl = (image?: string) => {
+  if (!image) {
+    return buildCanonicalUrl(DEFAULT_SEO.image);
+  }
+
+  if (image.startsWith("http")) {
+    return image;
+  }
+
+  return buildCanonicalUrl(image);
 };
