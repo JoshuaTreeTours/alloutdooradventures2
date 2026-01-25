@@ -118,6 +118,8 @@ Tours are now powered by a single data source that is generated at build time.
 * **Source of truth (generated):** `src/data/tours.generated.ts`
 * **Manual overrides (optional):** `src/data/tours.ts` → `MANUAL_TOURS`
 * **CSV import script:** `scripts/import-tours-from-csv.ts`
+* **Pricing cache refresh:** Run `npm run fetch:fareharbor-prices` after adding new tours to update cached FareHarbor starting prices.
+* **Automated refresh:** A scheduled GitHub Action keeps `src/data/fareharborPricing.ts` up to date.
 
 ### Adding a New Tour (manual entry)
 

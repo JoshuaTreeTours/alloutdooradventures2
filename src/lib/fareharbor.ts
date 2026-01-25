@@ -69,3 +69,31 @@ export const normalizeFareharborUrl = (url?: string) => {
     return url;
   }
 };
+
+export const getFareharborItemFromUrl = (url?: string) => {
+  if (!url) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname !== "fareharbor.com") {
+      return null;
+    }
+
+    const match =
+      parsed.pathname.match(/\/embeds\/book\/([^/]+)\/items\/(\d+)/) ??
+      parsed.pathname.match(/\/embeds\/calendar\/([^/]+)\/items\/(\d+)/);
+
+    if (!match?.[1] || !match?.[2]) {
+      return null;
+    }
+
+    return {
+      companyShortname: match[1],
+      itemId: match[2],
+    };
+  } catch {
+    return null;
+  }
+};
