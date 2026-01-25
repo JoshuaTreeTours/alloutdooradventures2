@@ -32,6 +32,8 @@ export type Tour = {
   heroImage: string;
   galleryImages?: string[];
   badges: TourBadges;
+  startingPrice?: number;
+  currency?: string;
   tagPills?: string[];
   activitySlugs: string[];
   bookingProvider: BookingProvider;

@@ -16,6 +16,7 @@ import {
   getFareharborParams,
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
+import { formatStartingPrice } from "../../lib/pricing";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -165,7 +166,7 @@ export default function FlagstaffTourBookingRoute({
     typeof navigator !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const startingAt = tour.badges.priceFrom;
+  const startingAt = formatStartingPrice(tour.startingPrice, tour.currency);
   const departureLocation =
     tour.destination.city !== "Unknown" && tour.destination.state !== "Unknown"
       ? `${tour.destination.city}, ${tour.destination.state}`
@@ -246,7 +247,7 @@ export default function FlagstaffTourBookingRoute({
                 {startingAt ? (
                   <div>
                     <dt className="text-xs uppercase tracking-[0.3em] text-white/70">
-                      Starting at
+                      From
                     </dt>
                     <dd className="mt-2 text-base font-semibold text-white">
                       {startingAt}
