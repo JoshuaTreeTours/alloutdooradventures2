@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
+import { formatStartingPrice } from "../lib/pricing";
 import Image from "./Image";
 
 type TourCardProps = {
@@ -22,6 +23,10 @@ export default function TourCard({ tour, href }: TourCardProps) {
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
+  const startingPriceLabel = formatStartingPrice(
+    tour.startingPrice,
+    tour.currency,
+  );
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -65,6 +70,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
           {subtitle ? (
             <p className="mt-2 text-sm text-[#405040]">
               {subtitle}
+            </p>
+          ) : null}
+          {startingPriceLabel ? (
+            <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
+              From {startingPriceLabel}
             </p>
           ) : null}
         </div>

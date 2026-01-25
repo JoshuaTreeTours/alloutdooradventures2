@@ -1,5 +1,5 @@
 import type { Tour } from "./tours.types";
-import { FAREHARBOR_PRICE_CACHE } from "./fareharborPricing";
+import { fareharborPricing } from "./fareharborPricing";
 import { getFareharborItemFromUrl } from "../lib/fareharbor";
 
 const buildFareharborCacheKey = (companyShortname: string, itemId: string) =>
@@ -15,7 +15,7 @@ export const getFareharborCachedPrice = (bookingUrl?: string) => {
     reference.companyShortname,
     reference.itemId,
   );
-  return FAREHARBOR_PRICE_CACHE[key] ?? null;
+  return fareharborPricing[key] ?? null;
 };
 
 export const applyTourPricing = (tour: Tour): Tour => {
