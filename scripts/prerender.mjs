@@ -75,11 +75,22 @@ const replaceMeta = (html, seo) => {
 
 const buildOutputPath = (pathname) => {
   if (!pathname || pathname === "/") {
-    return templatePath;
+    return { outputPath: templatePath, shouldWrite: true };
   }
 
   const normalized = pathname.replace(/^\/+|\/+$/g, "");
-  return path.join(distDir, normalized, "index.html");
+
+  if (path.extname(normalized)) {
+    return {
+      outputPath: path.join(distDir, normalized),
+      shouldWrite: false,
+    };
+  }
+
+  return {
+    outputPath: path.join(distDir, normalized, "index.html"),
+    shouldWrite: true,
+  };
 };
 
 const readSitemapUrls = async () => {
@@ -237,8 +248,14 @@ const main = async () => {
       );
     }
 
-    const outputPath = buildOutputPath(pathname);
-    await mkdir(path.dirname(outputPath), { recursive: true });
+    const { outputPath, shouldWrite } = buildOutputPath(pathname);
+
+    if (!shouldWrite) {
+      continue;
+    }
+
+    const dir = path.dirname(outputPath);
+    await mkdir(dir, { recursive: true });
     await writeFile(outputPath, replaceMeta(template, seo), "utf8");
   }
 };
