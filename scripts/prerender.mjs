@@ -190,6 +190,7 @@ const main = async () => {
   const {
     DEFAULT_SEO,
     buildMetaDescription,
+    buildTourMetaDescription,
     buildCanonicalUrl,
     buildImageUrl,
   } = seoModule;
@@ -219,10 +220,7 @@ const main = async () => {
           ? `${tour.destination.city}, ${regionLabel}`
           : tour.destination.city;
         seo.title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-        seo.description = buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${destinationLabel} with curated outdoor tours and trusted local guides.`,
-        );
+        seo.description = buildTourMetaDescription(tour);
         seo.url = buildCanonicalUrl(getTourDetailPath(tour));
         seo.image = buildImageUrl(tour.heroImage);
       }
@@ -230,10 +228,7 @@ const main = async () => {
       const tour = getFlagstaffTourBySlug(segments[1]);
       if (tour) {
         seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
-        seo.description = buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
-        );
+        seo.description = buildTourMetaDescription(tour);
         seo.url = buildCanonicalUrl(getFlagstaffTourDetailPath(tour));
         seo.image = buildImageUrl(tour.heroImage);
       }
@@ -249,10 +244,7 @@ const main = async () => {
         : getTourBySlugs(stateSlug, citySlug, tourSlug);
       if (tour) {
         seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
-        seo.description = buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
-        );
+        seo.description = buildTourMetaDescription(tour);
         seo.url = buildCanonicalUrl(
           isFlagstaff
             ? getFlagstaffTourDetailPath(tour)
@@ -276,10 +268,7 @@ const main = async () => {
         : getTourBySlugs(stateSlug, citySlug, tourSlug);
       if (tour) {
         seo.title = `${tour.title} | ${tour.destination.city}, ${tour.destination.state} Outdoor Tour`;
-        seo.description = buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${tour.destination.city}, ${tour.destination.state} with trusted guides and curated outdoor experiences.`,
-        );
+        seo.description = buildTourMetaDescription(tour);
         seo.url = buildCanonicalUrl(
           isFlagstaff
             ? getFlagstaffTourDetailPath(tour)
