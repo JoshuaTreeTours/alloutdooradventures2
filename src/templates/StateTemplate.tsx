@@ -2,8 +2,10 @@ import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
+import { buildMetaDescription } from "../utils/seo";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -30,9 +32,19 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     lng: city.lng,
   }));
   const historyHighlights = buildStateHistory(state.name);
+  const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
+  const description = buildMetaDescription(
+    state.intro,
+    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={title}
+        description={description}
+        url={`/destinations/states/${state.slug}`}
+      />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={state.heroImage}

@@ -1,12 +1,14 @@
 import { Link, useLocation } from "wouter";
 
 import Image from "../../../components/Image";
+import Seo from "../../../components/Seo";
 import TourCard from "../../../components/TourCard";
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import {
   worldCountriesWithTours,
   worldToursByCountry,
 } from "../../../data/worldIndex";
+import { buildMetaDescription } from "../../../utils/seo";
 
 const FILTER_OPTIONS = [
   { label: "All tours", routeSlug: "all" },
@@ -57,9 +59,19 @@ export default function WorldCountryRoute({
           tour.primaryCategory === filterActivitySlug,
       )
     : countryTours;
+  const title = filterActivitySlug
+    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | All Outdoor Adventures`
+    : `${country.name} Outdoor Adventures | Curated Tours & Experiences`;
+  const description = buildMetaDescription(
+    filterActivitySlug
+      ? `Discover ${categoryLabel ?? "outdoor"} tours in ${country.name}, with guided experiences that highlight local landscapes and culture.`
+      : `Explore ${countryTours.length} curated tours across ${country.name}, from adventure highlights to relaxed outdoor escapes.`,
+    `Plan your ${country.name} adventure with curated tours, regional highlights, and trusted local operators.`,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={heroImage}

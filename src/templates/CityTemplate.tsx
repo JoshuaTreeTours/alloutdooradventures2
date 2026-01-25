@@ -3,6 +3,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
@@ -11,12 +12,14 @@ import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
+import { buildMetaDescription } from "../utils/seo";
 
 type CityTemplateProps = {
   state: StateDestination;
   city: City;
   toursOverride?: Tour[];
   stateHrefOverride?: string;
+  seoUrlOverride?: string;
 };
 
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
@@ -122,6 +125,7 @@ export default function CityTemplate({
   city,
   toursOverride,
   stateHrefOverride,
+  seoUrlOverride,
 }: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
@@ -129,6 +133,11 @@ export default function CityTemplate({
     stateHrefOverride ??
     (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
   const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
+  const title = `${city.name}, ${state.name} Outdoor Adventures | Tours & City Guide`;
+  const description = buildMetaDescription(
+    city.shortDescription,
+    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,
+  );
   const categorizedTours = [
     {
       title: "Day Tours & Highlights",
@@ -160,6 +169,14 @@ export default function CityTemplate({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={title}
+        description={description}
+        url={
+          seoUrlOverride ??
+          `/destinations/states/${state.slug}/cities/${city.slug}`
+        }
+      />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

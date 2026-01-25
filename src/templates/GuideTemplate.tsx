@@ -3,8 +3,10 @@ import { Link } from "wouter";
 
 import GuideInternalLinks from "../components/GuideInternalLinks";
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
+import { buildMetaDescription } from "../utils/seo";
 
 type GuideTemplateProps = {
   guide: GuideContent;
@@ -55,9 +57,26 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
 
   const guideImages =
     guide.type === "city" ? guide.guideImages ?? [] : [];
+  const guideTitle =
+    guide.type === "city" && guide.parentName
+      ? `${guide.name}, ${guide.parentName} Outdoor Adventure Guide | Tours & Tips`
+      : `${guide.name} Outdoor Adventure Guide | Tours & Tips`;
+  const guideDescription = buildMetaDescription(
+    guide.intro,
+    `Plan your ${guide.name} adventure with curated tours, itineraries, and local guide highlights.`,
+  );
+  const guideUrl =
+    guide.type === "state"
+      ? `/guides/us/${guide.slug}`
+      : guide.type === "country"
+        ? `/guides/world/${guide.slug}`
+        : guide.regionType === "state"
+          ? `/guides/us/${guide.parentSlug}/${guide.slug}`
+          : `/guides/world/${guide.parentSlug}/${guide.slug}`;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={guideTitle} description={guideDescription} url={guideUrl} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

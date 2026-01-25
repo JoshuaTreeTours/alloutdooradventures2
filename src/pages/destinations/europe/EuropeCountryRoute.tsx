@@ -1,9 +1,11 @@
 import { Link, useLocation } from "wouter";
 
 import Image from "../../../components/Image";
+import Seo from "../../../components/Seo";
 import TourCard from "../../../components/TourCard";
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import { countriesWithTours, toursByCountry } from "../../../data/europeIndex";
+import { buildMetaDescription } from "../../../utils/seo";
 
 const FILTER_OPTIONS = [
   { label: "All tours", routeSlug: "all" },
@@ -34,14 +36,13 @@ export default function EuropeCountryRoute({
     categorySlug === "paddle-sports" ? "canoeing" : categorySlug;
   const categoryLabel = getActivityLabelFromSlug(filterActivitySlug);
   const filteredTours = filterActivitySlug
-    ? countryTours.filter(
+      ? countryTours.filter(
         (tour) =>
           tour.activitySlugs.includes(filterActivitySlug) ||
           tour.categories?.includes(filterActivitySlug) ||
           tour.primaryCategory === filterActivitySlug,
       )
     : countryTours;
-
   if (!country) {
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
@@ -55,9 +56,19 @@ export default function EuropeCountryRoute({
   }
 
   const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
+  const title = filterActivitySlug
+    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | All Outdoor Adventures`
+    : `${country.name} Outdoor Adventures | Curated Tours & Experiences`;
+  const description = buildMetaDescription(
+    filterActivitySlug
+      ? `Discover ${categoryLabel ?? "outdoor"} tours in ${country.name}, featuring guided experiences, scenic routes, and local favorites.`
+      : `Explore ${countryTours.length} curated tours across ${country.name}, from classic highlights to adventure-focused itineraries.`,
+    `Plan your ${country.name} adventure with curated tours, regional highlights, and trusted local operators.`,
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={heroImage}
