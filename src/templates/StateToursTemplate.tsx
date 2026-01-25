@@ -2,9 +2,11 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import type { StateDestination } from "../data/destinations";
 import { getCityTourDetailPath, getToursByState } from "../data/tours";
+import { buildMetaDescription } from "../utils/seo";
 
 const FILTER_OPTIONS = [
   { label: "All", slug: "all" },
@@ -19,6 +21,11 @@ export default function StateToursTemplate({
   state: StateDestination;
 }) {
   const stateTours = getToursByState(state.slug);
+  const title = `${state.name} Tours | All Outdoor Adventures`;
+  const description = buildMetaDescription(
+    `Browse every outdoor tour in ${state.name}, from day trips to multi-day adventures.`,
+    `Compare ${state.name} destinations, trusted guides, and curated itineraries to plan your next trip.`,
+  );
   const [activeFilter, setActiveFilter] = useState("all");
   const filteredTours = useMemo(() => {
     if (activeFilter === "all") {
@@ -31,6 +38,11 @@ export default function StateToursTemplate({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={title}
+        description={description}
+        url={`/destinations/states/${state.slug}/tours`}
+      />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={state.heroImage}

@@ -1,10 +1,19 @@
 import { Link } from "wouter";
 
+import Seo from "../../../components/Seo";
 import { countriesWithTours } from "../../../data/europeIndex";
+import { buildMetaDescription } from "../../../utils/seo";
 
 export default function EuropeIndex() {
+  const title = "Europe Tours & Destinations | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Browse European tour hubs with curated outdoor adventures, from alpine escapes to coastal journeys across top countries.",
+    "Explore Europe destinations with active tour inventory and plan trips with trusted local guides and booking-ready experiences.",
+  );
+
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/destinations/europe" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Europe
       </p>

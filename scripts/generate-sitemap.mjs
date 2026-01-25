@@ -274,7 +274,7 @@ const buildTourSummaries = async (catalogModule) => {
   return tours;
 };
 
-const buildSitemap = async () => {
+export const buildRouteSets = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
     import.meta.url,
@@ -300,6 +300,7 @@ const buildSitemap = async () => {
 
   addUrl(pages, "/");
   addUrl(pages, "/faqs");
+  addUrl(pages, "/faq");
   addUrl(pages, "/journeys");
   addUrl(pages, "/about");
   addUrl(pages, "/contact");
@@ -539,7 +540,7 @@ const run = async () => {
     guideUrls,
     destinationUrls,
     categoryUrls,
-  } = await buildSitemap();
+  } = await buildRouteSets();
   const outputDir = path.resolve(__dirname, "../public");
   const sitemapIndexPath = path.join(outputDir, "sitemap.xml");
 

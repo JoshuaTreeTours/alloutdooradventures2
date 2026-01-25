@@ -1,14 +1,20 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import Seo from "../../../../components/Seo";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import { getAffiliateDisclosure, getTourBySlugs } from "../../../../data/tours";
+import {
+  getAffiliateDisclosure,
+  getCityTourBookingPath,
+  getTourBySlugs,
+} from "../../../../data/tours";
 import {
   getFlagstaffTourBySlug,
+  getFlagstaffTourBookingPath,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import {
@@ -16,6 +22,7 @@ import {
   normalizeFareharborUrl,
 } from "../../../../lib/fareharbor";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { buildMetaDescription } from "../../../../utils/seo";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -76,6 +83,15 @@ export default function CityTourBookingRoute({
       </main>
     );
   }
+
+  const title = `Book ${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
+  const description = buildMetaDescription(
+    `Reserve ${tour.title} in ${city.name}, ${state.name} with curated outdoor tours and trusted local guides.`,
+    `Secure availability, pricing, and booking details for ${tour.title} before your trip.`,
+  );
+  const canonicalUrl = isFlagstaff
+    ? getFlagstaffTourBookingPath(tour)
+    : getCityTourBookingPath(tour);
 
   // NOTE: useMemo ensures params are captured once per mount.
   const fareharborParams = useMemo(() => getFareharborParams(), []);
@@ -147,6 +163,7 @@ export default function CityTourBookingRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url={canonicalUrl} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

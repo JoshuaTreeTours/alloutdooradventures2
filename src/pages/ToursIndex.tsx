@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import RegionDropdownButton from "../components/RegionDropdownButton";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
 import { worldCountriesWithTours } from "../data/worldIndex";
@@ -11,8 +12,14 @@ import {
   ADVENTURE_ACTIVITY_PAGES,
   US_STATES,
 } from "../data/tourCatalog";
+import { buildMetaDescription } from "../utils/seo";
 
 export default function ToursIndex() {
+  const title = "All Tours | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Browse every outdoor tour in our catalog, with filters for activity, destination, and local guide partners.",
+    "Find curated experiences, from day tours to multi-day adventures, across the United States and worldwide.",
+  );
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
@@ -118,7 +125,7 @@ export default function ToursIndex() {
   }, [baseTours, selectedCity, selectedActivitySlug]);
 
   useEffect(() => {
-    if (!import.meta.env.DEV) {
+    if (!import.meta.env?.DEV) {
       return;
     }
     const anomalies = tours.filter(
@@ -146,6 +153,7 @@ export default function ToursIndex() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <Seo title={title} description={description} url="/tours" />
       <header className="mb-10">
         <h1 className="text-3xl md:text-4xl font-semibold text-[#2f4a2f]">
           Tours

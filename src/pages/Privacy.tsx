@@ -1,6 +1,16 @@
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function Privacy() {
+  const title = "Privacy Policy | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Read how All Outdoor Adventures collects, uses, and protects your information when you browse destinations or book tours.",
+    "Learn about data handling, cookies, and privacy choices for travelers planning outdoor experiences with our partners.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/privacy" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Privacy Policy
       </p>

@@ -1,6 +1,16 @@
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function Cookies() {
+  const title = "Cookie Policy | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Learn how All Outdoor Adventures uses cookies to improve site performance, personalize content, and analyze travel interest.",
+    "Review cookie settings, analytics tools, and your options for managing data preferences while browsing tours.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/cookies" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Cookie Policy
       </p>

@@ -1,6 +1,16 @@
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function Disclosure() {
+  const title = "Affiliate Disclosure | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Read our affiliate disclosure to understand how All Outdoor Adventures partners with tour operators and booking platforms.",
+    "Learn how affiliate links support curated outdoor experiences and transparent tour recommendations.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/disclosure" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Disclosure
       </p>

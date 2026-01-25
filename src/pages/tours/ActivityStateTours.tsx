@@ -1,9 +1,11 @@
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
+import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
 import { tours } from "../../data/tours";
 import { ADVENTURE_ACTIVITY_PAGES, slugify } from "../../data/tourCatalog";
+import { buildMetaDescription } from "../../utils/seo";
 
 type ActivityStateToursProps = {
   params: {
@@ -36,9 +38,16 @@ export default function ActivityStateTours({
       slugify(tour.destination.state) === params.stateSlug,
   );
   const stateName = stateTours[0]?.destination.state ?? "this state";
+  const title = `${activity.title} Tours in ${stateName} | All Outdoor Adventures`;
+  const description = buildMetaDescription(
+    `Browse ${activity.title.toLowerCase()} tours in ${stateName} with local guides and live booking links.`,
+    `Discover outdoor experiences across ${stateName}, including day tours and multi-day adventures.`,
+  );
+  const seoUrl = `/tours/${activity.slug}/us/${params.stateSlug}`;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url={seoUrl} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={activity.image}

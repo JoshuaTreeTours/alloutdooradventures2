@@ -1,12 +1,20 @@
 import RegionDropdownButton from "../../components/RegionDropdownButton";
+import Seo from "../../components/Seo";
 import { getGuideCountries, getGuideStates } from "../../data/guideData";
+import { buildMetaDescription } from "../../utils/seo";
 
 export default function GuidesIndex() {
+  const title = "Destination Guides | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Explore destination guides with local insights, city highlights, and outdoor activity ideas from trusted experts.",
+    "Browse US states and international guidebooks to plan itineraries, pick tour operators, and discover seasonal tips.",
+  );
   const states = getGuideStates();
   const countries = getGuideCountries();
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/guides" />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12">
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">

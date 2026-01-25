@@ -1,8 +1,18 @@
 import { Link } from "wouter";
 
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function About() {
+  const title = "About Outdoor Adventures | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Learn about All Outdoor Adventures, a curated marketplace connecting travelers with local guides, outdoor destinations, and trusted tour partners.",
+    "Meet the team behind our tours, explore our guiding philosophy, and see how we curate unforgettable outdoor experiences worldwide.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/about" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         About
       </p>

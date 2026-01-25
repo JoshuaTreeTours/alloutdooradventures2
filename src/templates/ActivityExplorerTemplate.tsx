@@ -1,10 +1,12 @@
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import { countriesWithTours } from "../data/europeIndex";
 import { US_STATES, slugify } from "../data/tourCatalog";
 import { getToursByActivity } from "../data/tours";
+import { buildMetaDescription } from "../utils/seo";
 
 type ActivityExplorerTemplateProps = {
   title: string;
@@ -27,6 +29,11 @@ export default function ActivityExplorerTemplate({
   image,
   activitySlug,
 }: ActivityExplorerTemplateProps) {
+  const pageTitle = `${title} Tours | All Outdoor Adventures`;
+  const pageDescription = buildMetaDescription(
+    description,
+    `Browse ${title.toLowerCase()} tours, local guides, and handpicked outdoor experiences across top destinations.`,
+  );
   const activityTours = getToursByActivity(activitySlug);
   const usStateMap = new Map(
     US_STATES.map((state) => [slugify(state), state]),
@@ -80,6 +87,7 @@ export default function ActivityExplorerTemplate({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={pageTitle} description={pageDescription} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={image}

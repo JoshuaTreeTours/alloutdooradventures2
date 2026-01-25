@@ -2,11 +2,13 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import RegionDropdownButton from "../../components/RegionDropdownButton";
+import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
 import { countriesWithTours } from "../../data/europeIndex";
 import { tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import { US_STATES, slugify } from "../../data/tourCatalog";
+import { buildMetaDescription } from "../../utils/seo";
 
 const multiDayTriggers = ["multi-day", "multi day", "overnight"];
 
@@ -86,6 +88,11 @@ const getTourRegionName = (tour: Tour) =>
   tour.destination.country || tour.destination.state || "Unknown";
 
 export default function MultiDayLanding() {
+  const title = "Multi-day Tours | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Plan multi-day outdoor tours with immersive itineraries, guided experiences, and scenic routes across top destinations.",
+    "Browse longer adventures by region, compare itineraries, and book multi-day tours curated by local experts.",
+  );
   const [selectedState, setSelectedState] = useState("");
   const [selectedEurope, setSelectedEurope] = useState("");
   const [selectedWorld, setSelectedWorld] = useState("");
@@ -182,6 +189,7 @@ export default function MultiDayLanding() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/tours/multi-day" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Tours
       </p>
