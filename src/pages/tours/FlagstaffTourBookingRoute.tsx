@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import FAQBlock from "../../components/FAQBlock";
+import Seo from "../../components/Seo";
 import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -10,6 +11,7 @@ import {
 import { getAffiliateDisclosure } from "../../data/tours";
 import {
   getFlagstaffTourBySlug,
+  getFlagstaffTourBookingPath,
   getFlagstaffTourDetailPath,
 } from "../../data/flagstaffTours";
 import {
@@ -17,6 +19,7 @@ import {
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
 import { formatStartingPrice } from "../../lib/pricing";
+import { buildMetaDescription } from "../../utils/seo";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -71,6 +74,13 @@ export default function FlagstaffTourBookingRoute({
       </main>
     );
   }
+
+  const title = `Book ${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
+  const description = buildMetaDescription(
+    `Reserve ${tour.title} in ${city.name}, ${state.name} with curated outdoor tours and trusted local guides.`,
+    `Check availability, pricing, and booking details for ${tour.title} before your trip.`,
+  );
+  const canonicalUrl = getFlagstaffTourBookingPath(tour);
 
   // Safe in SSR/build contexts.
   const isDebugMode =
@@ -204,6 +214,7 @@ export default function FlagstaffTourBookingRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url={canonicalUrl} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

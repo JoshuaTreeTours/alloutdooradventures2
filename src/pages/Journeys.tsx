@@ -2,8 +2,10 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import { getCityTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
+import { buildMetaDescription } from "../utils/seo";
 
 const JOURNEYS_FALLBACK_IMAGE = "/hero.jpg";
 
@@ -188,6 +190,11 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
 };
 
 export default function Journeys() {
+  const title = "Multi-day Journeys | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Discover curated multi-day journeys with immersive itineraries, handpicked guides, and outdoor adventures across top destinations.",
+    "Plan longer outdoor trips with scenic routes, trusted tour partners, and destination highlights tailored to your travel style.",
+  );
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedDuration, setSelectedDuration] = useState("all");
@@ -267,6 +274,7 @@ export default function Journeys() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/journeys" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Journeys
       </p>

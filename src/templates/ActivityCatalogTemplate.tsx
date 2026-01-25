@@ -2,6 +2,7 @@ import { Link } from "wouter";
 
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
@@ -11,6 +12,7 @@ import {
   slugify,
 } from "../data/tourCatalog";
 import { getToursByActivity } from "../data/tours";
+import { buildMetaDescription } from "../utils/seo";
 
 type ActivityCatalogTemplateProps = {
   title: string;
@@ -26,6 +28,11 @@ export default function ActivityCatalogTemplate({
   activitySlug,
 }: ActivityCatalogTemplateProps) {
   const activityTours = getToursByActivity(activitySlug);
+  const pageTitle = `${title} Tours | All Outdoor Adventures`;
+  const pageDescription = buildMetaDescription(
+    description,
+    `Explore ${title.toLowerCase()} tours by destination, with booking-ready picks and outdoor ideas tailored to your pace.`,
+  );
   const handleStateChange = (slug: string) => {
     if (!slug) {
       return;
@@ -36,6 +43,7 @@ export default function ActivityCatalogTemplate({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={pageTitle} description={pageDescription} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image
           src={image}

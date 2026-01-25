@@ -1,3 +1,6 @@
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 const FAQ_SECTIONS = [
   {
     title: "Planning & Booking",
@@ -82,8 +85,15 @@ const FAQ_SECTIONS = [
 ];
 
 export default function Faqs() {
+  const title = "FAQs | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Find answers to common questions about booking, cancellations, tour logistics, and travel planning with All Outdoor Adventures.",
+    "Review our most frequently asked questions for guidance on outdoor tours, safety policies, and partner communications.",
+  );
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/faqs" />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12">
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">

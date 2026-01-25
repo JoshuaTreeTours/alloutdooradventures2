@@ -1,8 +1,18 @@
 import { Link } from "wouter";
 
+import Seo from "../../../components/Seo";
+import { buildMetaDescription } from "../../../utils/seo";
+
 export default function DayPaddleTours() {
+  const title = "Paddle Sports Day Tours | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Browse paddle sports day tours with kayaking, canoeing, and SUP adventures led by local guides.",
+    "Discover half-day and full-day paddle tours across rivers, lakes, and coastal waterways.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/tours/day/paddle" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Day Tours
       </p>

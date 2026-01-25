@@ -26,8 +26,8 @@ export default function Image({
   const isDebugEnabled =
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debugImages") === "1" &&
-    import.meta.env.MODE !== "production" &&
-    import.meta.env.VERCEL_ENV !== "production";
+    import.meta.env?.MODE !== "production" &&
+    import.meta.env?.VERCEL_ENV !== "production";
 
   useEffect(() => {
     setCurrentSrc(src);

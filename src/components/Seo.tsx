@@ -2,6 +2,7 @@ import { useLayoutEffect } from "react";
 import { useLocation } from "wouter";
 
 import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
+import { useSeoCollector } from "./SeoContext";
 
 type SeoProps = {
   title?: string;
@@ -46,7 +47,17 @@ export default function Seo({
   type = DEFAULT_SEO.type,
 }: SeoProps) {
   const [location] = useLocation();
+  const seoCollector = useSeoCollector();
   const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
+
+  if (typeof document === "undefined" && seoCollector) {
+    seoCollector.set({
+      title,
+      description,
+      url: canonicalUrl,
+      type,
+    });
+  }
 
   useLayoutEffect(() => {
     document.title = title;

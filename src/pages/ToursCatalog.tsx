@@ -2,6 +2,7 @@ import { Link } from "wouter";
 
 import HorizontalLinkSlider from "../components/HorizontalLinkSlider";
 import RegionDropdownButton from "../components/RegionDropdownButton";
+import Seo from "../components/Seo";
 import { countriesWithTours } from "../data/europeIndex";
 import {
   ACTIVITY_PAGES,
@@ -9,8 +10,14 @@ import {
   WORLD_DESTINATIONS,
   slugify,
 } from "../data/tourCatalog";
+import { buildMetaDescription } from "../utils/seo";
 
 export default function ToursCatalog() {
+  const title = "Tour Catalog | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Browse tours by activity and destination, with curated categories for cycling, hiking, paddling, and multi-day adventures.",
+    "Explore the full tour catalog to discover outdoor experiences by region, activity, and local guide partners.",
+  );
   const handleStateChange = (slug: string) => {
     if (!slug) {
       return;
@@ -21,6 +28,7 @@ export default function ToursCatalog() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <Seo title={title} description={description} url="/tours/catalog" />
       <header className="space-y-4">
         <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           Tour catalog

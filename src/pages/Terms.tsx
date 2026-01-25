@@ -1,6 +1,16 @@
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function Terms() {
+  const title = "Terms of Service | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Review the terms and conditions for using All Outdoor Adventures, including booking details, partner responsibilities, and site policies.",
+    "Understand the guidelines for accessing tours, guides, and travel resources through our outdoor adventure marketplace.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/terms" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Terms of Use
       </p>

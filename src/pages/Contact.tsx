@@ -1,8 +1,18 @@
 import { Link } from "wouter";
 
+import Seo from "../components/Seo";
+import { buildMetaDescription } from "../utils/seo";
+
 export default function Contact() {
+  const title = "Contact All Outdoor Adventures | Plan Your Trip";
+  const description = buildMetaDescription(
+    "Reach the All Outdoor Adventures team for trip planning support, partnership inquiries, or questions about tours, destinations, and booking details.",
+    "Send a message to our support team to get help with outdoor tour recommendations, itinerary ideas, and partner connections.",
+  );
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
+      <Seo title={title} description={description} url="/contact" />
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
         Contact
       </p>

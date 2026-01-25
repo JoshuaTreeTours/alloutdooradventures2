@@ -340,8 +340,8 @@ export default function Home() {
   const isDebugEnabled =
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debugImages") === "1" &&
-    import.meta.env.MODE !== "production" &&
-    import.meta.env.VERCEL_ENV !== "production";
+    import.meta.env?.MODE !== "production" &&
+    import.meta.env?.VERCEL_ENV !== "production";
 
   const featuredDestinationsByRegion = useMemo(() => {
     const regionOrder = ["West", "Northeast", "Deep South"];

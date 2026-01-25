@@ -1,9 +1,16 @@
 import DestinationCard from "../../components/DestinationCard";
+import Seo from "../../components/Seo";
 import { countriesWithTours } from "../../data/europeIndex";
 import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { destinations } from "../../data/destinations";
+import { buildMetaDescription } from "../../utils/seo";
 
 export default function DestinationsIndex() {
+  const title = "Outdoor Destinations | All Outdoor Adventures";
+  const description = buildMetaDescription(
+    "Explore curated outdoor destinations across the United States, from alpine escapes to desert adventures and coastal retreats.",
+    "Discover state-by-state guides, featured cities, and handpicked tours to plan your next outdoor trip.",
+  );
   const getRegionLabel = (region: string) => {
     if (region === "West") return "West Coast";
     if (region === "Northeast") return "East Coast";
@@ -26,6 +33,7 @@ export default function DestinationsIndex() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 pb-20 pt-16">
+      <Seo title={title} description={description} url="/destinations" />
       <section className="flex flex-col items-center text-center">
         <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
           Destinations

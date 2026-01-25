@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
+import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
@@ -13,6 +14,7 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
+import { buildMetaDescription } from "../../../../utils/seo";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -65,9 +67,16 @@ export default function CityToursIndexRoute({
   const cityHref = `${basePath}/cities/${city.slug}`;
   const stateHref = basePath;
   const heroImage = city.heroImages[0] ?? "/hero.jpg";
+  const title = `${activityLabel ? `${activityLabel} Tours` : "Tours"} in ${city.name}, ${state.name} | All Outdoor Adventures`;
+  const description = buildMetaDescription(
+    `Browse ${activityLabel ? activityLabel.toLowerCase() : "outdoor"} tours in ${city.name}, ${state.name} with live booking links and curated experiences.`,
+    `Explore top ${city.name} adventures, local guide picks, and seasonal favorites for your next trip.`,
+  );
+  const seoUrl = `${basePath}/cities/${city.slug}/tours`;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={title} description={description} url={seoUrl} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
