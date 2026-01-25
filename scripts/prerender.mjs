@@ -1,4 +1,4 @@
-import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { tsImport } from "tsx/esm/api";
@@ -79,8 +79,9 @@ const buildOutputPath = (pathname) => {
   }
 
   const normalized = pathname.replace(/^\/+|\/+$/g, "");
+  const ext = path.extname(normalized);
 
-  if (path.extname(normalized)) {
+  if (ext) {
     return {
       outputPath: path.join(distDir, normalized),
       shouldWrite: false,
@@ -91,6 +92,21 @@ const buildOutputPath = (pathname) => {
     outputPath: path.join(distDir, normalized, "index.html"),
     shouldWrite: true,
   };
+};
+
+const ensureDirectory = async (dir) => {
+  try {
+    const stats = await stat(dir);
+    if (!stats.isDirectory()) {
+      return false;
+    }
+  } catch (error) {
+    if (error.code !== "ENOENT") {
+      throw error;
+    }
+    await mkdir(dir, { recursive: true });
+  }
+  return true;
 };
 
 const readSitemapUrls = async () => {
@@ -250,12 +266,15 @@ const main = async () => {
 
     const { outputPath, shouldWrite } = buildOutputPath(pathname);
 
-    if (!shouldWrite) {
+    if (!shouldWrite || path.basename(outputPath) !== "index.html") {
       continue;
     }
 
     const dir = path.dirname(outputPath);
-    await mkdir(dir, { recursive: true });
+    const canWrite = await ensureDirectory(dir);
+    if (!canWrite) {
+      continue;
+    }
     await writeFile(outputPath, replaceMeta(template, seo), "utf8");
   }
 };
