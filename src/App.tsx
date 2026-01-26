@@ -54,6 +54,7 @@ import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
+const ContactRedirect = () => <RouteRedirect to="/contact" />;
 
 export default function App() {
   return (
@@ -162,6 +163,9 @@ export default function App() {
         />
         <Route path="/faqs" component={Faqs} />
         <Route path="/faq" component={FaqRedirect} />
+        <Route path="/contact-us" component={ContactRedirect} />
+        <Route path="/custom-tour" component={ContactRedirect} />
+        <Route path="/inquire" component={ContactRedirect} />
         <Route path="/journeys" component={Journeys} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
