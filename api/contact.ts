@@ -1,5 +1,3 @@
-import nodemailer from "nodemailer";
-
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const RATE_LIMIT_MAX = 5;
 
@@ -100,37 +98,6 @@ const sendWithResend = async (options: {
   }
 };
 
-const sendWithSmtp = async (options: {
-  host: string;
-  port: number;
-  user: string;
-  pass: string;
-  from: string;
-  to: string;
-  subject: string;
-  text: string;
-  replyTo: string;
-  secure: boolean;
-}) => {
-  const transport = nodemailer.createTransport({
-    host: options.host,
-    port: options.port,
-    secure: options.secure,
-    auth: {
-      user: options.user,
-      pass: options.pass,
-    },
-  });
-
-  await transport.sendMail({
-    from: options.from,
-    to: options.to,
-    subject: options.subject,
-    text: options.text,
-    replyTo: options.replyTo,
-  });
-};
-
 export default async function handler(request: any, response: any) {
   if (request.method !== "POST") {
     response.status(405).json({ ok: false });
@@ -209,26 +176,15 @@ export default async function handler(request: any, response: any) {
   const contactToEmail =
     process.env.CONTACT_TO_EMAIL || "jerry@alloutdooradventures.com";
   const resendApiKey = process.env.RESEND_API_KEY || "";
-  const smtpHost = process.env.SMTP_HOST || "";
-  const smtpPort = Number(process.env.SMTP_PORT || "0");
-  const smtpUser = process.env.SMTP_USER || "";
-  const smtpPass = process.env.SMTP_PASS || "";
-  const smtpFrom = process.env.SMTP_FROM || "";
-  const smtpSecure = process.env.SMTP_SECURE === "true" || smtpPort === 465;
 
   const messageSubject = subject || `New contact request from ${name}`;
   const messageText = `Name: ${name}\nEmail: ${email}\nSubject: ${subject || "(none)"}\n\n${message}`;
 
-  const sender =
-    smtpFrom || "All Outdoor Adventures <no-reply@alloutdooradventures.com>";
-
-  const smtpConfigured = Boolean(smtpHost && smtpPort && smtpUser && smtpPass);
-
   const resendConfigured = Boolean(resendApiKey);
 
-  if (!resendConfigured && !smtpConfigured) {
+  if (!resendConfigured) {
     console.error(
-      "Contact form submission could not be delivered because no email provider is configured.",
+      "Contact form submission could not be delivered because RESEND_API_KEY is not configured.",
       {
         name,
         email,
@@ -241,35 +197,20 @@ export default async function handler(request: any, response: any) {
   }
 
   try {
-    if (resendConfigured) {
-      await sendWithResend({
-        apiKey: resendApiKey,
-        to: contactToEmail,
-        from: "All Outdoor Adventures <onboarding@resend.dev>",
-        subject: messageSubject,
-        text: messageText,
-        replyTo: email,
-      });
-    } else if (smtpConfigured) {
-      await sendWithSmtp({
-        host: smtpHost,
-        port: smtpPort,
-        user: smtpUser,
-        pass: smtpPass,
-        from: sender,
-        to: contactToEmail,
-        subject: messageSubject,
-        text: messageText,
-        replyTo: email,
-        secure: smtpSecure,
-      });
-    }
+    await sendWithResend({
+      apiKey: resendApiKey,
+      to: contactToEmail,
+      from: "All Outdoor Adventures <onboarding@resend.dev>",
+      subject: messageSubject,
+      text: messageText,
+      replyTo: email,
+    });
 
     response.status(200).json({ ok: true });
   } catch (error) {
     console.warn("Contact form delivery failed.", {
       error,
-      provider: resendConfigured ? "resend" : "smtp",
+      provider: "resend",
     });
     response.status(500).json({ ok: false });
   }
