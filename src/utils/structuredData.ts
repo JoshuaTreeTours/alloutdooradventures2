@@ -12,7 +12,7 @@ type StructuredDataValue =
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
 export const SITE_BUSINESS_ID = `${SITE_URL}/#business`;
 
-const URL_FIELDS = new Set(["url", "item", "logo", "image", "urlTemplate"]);
+const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
 const ID_FIELDS = new Set(["@id"]);
 
 const toAbsoluteUrl = (value: string) => {
@@ -194,14 +194,6 @@ export const getSiteStructuredDataNodes = () => {
       },
       about: {
         "@id": SITE_BUSINESS_ID,
-      },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${SITE_URL}/tours?query={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
       },
     },
   ];
