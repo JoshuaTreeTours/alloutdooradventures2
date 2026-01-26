@@ -358,22 +358,20 @@ export default function Journeys() {
             with the right pace, lodging, and adventure mix.
           </p>
           <div className="mt-6 flex justify-center">
-            <a
-              href="tel:+18553148687"
-              aria-label="Contact us for a custom tour. Call 855-314-TOUR"
-              className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]"
-            >
-              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-                <svg
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4 fill-white"
-                >
-                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-.91 1 19.91 19.91 0 01-8.68-2.36 19.58 19.58 0 01-6-6A19.91 19.91 0 012 5.91a1 1 0 011-.91H6.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
-                </svg>
-              </span>
-              Contact us for a custom tour
-            </a>
+            <Link href="/contact">
+              <a className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    className="h-4 w-4 fill-white"
+                  >
+                    <path d="M12 3a9 9 0 0 0-9 9v5a2 2 0 0 0 2 2h3v-7H5a7 7 0 1 1 14 0h-3v7h3a2 2 0 0 0 2-2v-5a9 9 0 0 0-9-9z" />
+                  </svg>
+                </span>
+                Start a custom journey
+              </a>
+            </Link>
           </div>
         </section>
       </main>
