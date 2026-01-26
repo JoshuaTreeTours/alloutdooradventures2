@@ -25,8 +25,13 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { buildMetaDescription } from "../../../../utils/seo";
-import { buildTourProductStructuredData } from "../../../../utils/structuredData";
+import { buildMetaDescription, SITE_URL } from "../../../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildTourProductStructuredData,
+  buildTourTripStructuredData,
+  SITE_ORGANIZATION_ID,
+} from "../../../../utils/structuredData";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -70,19 +75,61 @@ export default function CityTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const cityHref = state && city
+    ? `/destinations/states/${state.slug}/cities/${city.slug}`
+    : "";
+  const stateHref = state
+    ? state.isFallback
+      ? "/destinations"
+      : `/destinations/states/${state.slug}`
+    : "";
+  const toursHref =
+    state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
   const structuredDataNodes = useMemo(() => {
     if (!tour || !canonicalUrl || !bookingUrl) {
       return null;
     }
     return [
+      {
+        "@type": "WebPage",
+        "@id": `${canonicalUrl}#webpage`,
+        url: canonicalUrl,
+        name: tour.title,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${canonicalUrl}#trip` },
+        publisher: { "@id": SITE_ORGANIZATION_ID },
+      },
       buildTourProductStructuredData({
         tour,
         detailUrl: canonicalUrl,
         bookingUrl,
         description: productDescription,
       }),
+      buildTourTripStructuredData({
+        tour,
+        detailUrl: canonicalUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+      buildBreadcrumbList([
+        { name: "Destinations", url: "/destinations" },
+        ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
+        ...(cityHref ? [{ name: city?.name ?? "", url: cityHref }] : []),
+        ...(toursHref ? [{ name: "Tours", url: toursHref }] : []),
+        { name: tour.title, url: canonicalUrl },
+      ]),
     ];
-  }, [bookingUrl, canonicalUrl, productDescription, tour]);
+  }, [
+    bookingUrl,
+    canonicalUrl,
+    city?.name,
+    cityHref,
+    productDescription,
+    state?.name,
+    stateHref,
+    tour,
+    toursHref,
+  ]);
 
   useStructuredData(structuredDataNodes);
 
@@ -133,11 +180,6 @@ export default function CityTourDetailRoute({
       ? getFlagstaffTourSlug(item) !== tourSlug
       : item.slug !== tour.slug,
   );
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
-  const stateHref = state.isFallback
-    ? "/destinations"
-    : `/destinations/states/${state.slug}`;
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
 
   return (
