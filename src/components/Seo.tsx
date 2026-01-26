@@ -1,13 +1,16 @@
 import { useLayoutEffect } from "react";
 import { useLocation } from "wouter";
 
-import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
+import { buildCanonicalUrl, buildImageUrl, DEFAULT_SEO } from "../utils/seo";
 
 type SeoProps = {
   title?: string;
   description?: string;
   url?: string;
   type?: string;
+  image?: string;
+  robots?: string;
+  googlebot?: string;
 };
 
 const upsertMetaTag = (selector: string, attributes: Record<string, string>) => {
@@ -44,9 +47,13 @@ export default function Seo({
   description = DEFAULT_SEO.description,
   url,
   type = DEFAULT_SEO.type,
+  image = DEFAULT_SEO.image,
+  robots = "index,follow,max-image-preview:large",
+  googlebot = "index,follow,max-image-preview:large",
 }: SeoProps) {
   const [location] = useLocation();
   const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
+  const resolvedImage = buildImageUrl(image);
 
   useLayoutEffect(() => {
     document.title = title;
@@ -71,11 +78,39 @@ export default function Seo({
       property: "og:url",
       content: canonicalUrl,
     });
+    upsertMetaTag("meta[property=\"og:image\"]", {
+      property: "og:image",
+      content: resolvedImage,
+    });
+    upsertMetaTag("meta[name=\"twitter:card\"]", {
+      name: "twitter:card",
+      content: "summary_large_image",
+    });
+    upsertMetaTag("meta[name=\"twitter:title\"]", {
+      name: "twitter:title",
+      content: title,
+    });
+    upsertMetaTag("meta[name=\"twitter:description\"]", {
+      name: "twitter:description",
+      content: description,
+    });
+    upsertMetaTag("meta[name=\"twitter:image\"]", {
+      name: "twitter:image",
+      content: resolvedImage,
+    });
+    upsertMetaTag("meta[name=\"robots\"]", {
+      name: "robots",
+      content: robots,
+    });
+    upsertMetaTag("meta[name=\"googlebot\"]", {
+      name: "googlebot",
+      content: googlebot,
+    });
     upsertLinkTag("link[rel=\"canonical\"]", {
       rel: "canonical",
       href: canonicalUrl,
     });
-  }, [canonicalUrl, description, title, type]);
+  }, [canonicalUrl, description, googlebot, resolvedImage, robots, title, type]);
 
   return null;
 }

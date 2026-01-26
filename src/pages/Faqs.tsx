@@ -1,3 +1,8 @@
+import { useLocation } from "wouter";
+
+import Seo from "../components/Seo";
+import { getStaticPageSeo } from "../utils/seo";
+
 const FAQ_SECTIONS = [
   {
     title: "Planning & Booking",
@@ -82,52 +87,65 @@ const FAQ_SECTIONS = [
 ];
 
 export default function Faqs() {
-  return (
-    <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <section className="bg-[#2f4a2f] text-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12">
-          <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-            FAQs
-          </p>
-          <h1 className="text-3xl font-semibold md:text-5xl">
-            Travel & Booking Questions
-          </h1>
-          <p className="max-w-3xl text-sm text-white/90 md:text-base">
-            Clear answers to common planning questions so you can book with
-            confidence.
-          </p>
-        </div>
-      </section>
+  const [location] = useLocation();
+  const seo = getStaticPageSeo(location ?? "/faq") ?? getStaticPageSeo("/faq");
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-8">
-          {FAQ_SECTIONS.map((section) => (
-            <div
-              key={section.title}
-              className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10"
-            >
-              <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-                {section.title}
-              </h2>
-              <div className="mt-6 grid gap-4">
-                {section.items.map((item) => (
-                  <div
-                    key={item.question}
-                    className="rounded-2xl border border-black/5 bg-white p-5"
-                  >
-                    <h3 className="text-base font-semibold text-[#1f2a1f]">
-                      {item.question}
-                    </h3>
-                    <p className="mt-2 text-sm text-[#405040]">
-                      {item.answer}
-                    </p>
-                  </div>
-                ))}
+  return (
+    <>
+      {seo ? (
+        <Seo
+          title={seo.title}
+          description={seo.description}
+          url={seo.url}
+          image={seo.image}
+        />
+      ) : null}
+      <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+        <section className="bg-[#2f4a2f] text-white">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-12">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/70">
+              FAQs
+            </p>
+            <h1 className="text-3xl font-semibold md:text-5xl">
+              Travel & Booking Questions
+            </h1>
+            <p className="max-w-3xl text-sm text-white/90 md:text-base">
+              Clear answers to common planning questions so you can book with
+              confidence.
+            </p>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-14">
+          <div className="grid gap-8">
+            {FAQ_SECTIONS.map((section) => (
+              <div
+                key={section.title}
+                className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10"
+              >
+                <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
+                  {section.title}
+                </h2>
+                <div className="mt-6 grid gap-4">
+                  {section.items.map((item) => (
+                    <div
+                      key={item.question}
+                      className="rounded-2xl border border-black/5 bg-white p-5"
+                    >
+                      <h3 className="text-base font-semibold text-[#1f2a1f]">
+                        {item.question}
+                      </h3>
+                      <p className="mt-2 text-sm text-[#405040]">
+                        {item.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-    </main>
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

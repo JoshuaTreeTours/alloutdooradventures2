@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import RegionDropdownButton from "../components/RegionDropdownButton";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { countriesWithTours } from "../data/europeIndex";
 import { worldCountriesWithTours } from "../data/worldIndex";
@@ -11,8 +12,10 @@ import {
   ADVENTURE_ACTIVITY_PAGES,
   US_STATES,
 } from "../data/tourCatalog";
+import { getStaticPageSeo } from "../utils/seo";
 
 export default function ToursIndex() {
+  const seo = getStaticPageSeo("/tours");
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
   const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
@@ -145,127 +148,137 @@ export default function ToursIndex() {
   }, [filteredTours, selectedActivitySlug]);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16">
-      <header className="mb-10">
-        <h1 className="text-3xl md:text-4xl font-semibold text-[#2f4a2f]">
-          Tours
-        </h1>
-        <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
-          Browse tours by destination or activity. Filter the live inventory
-          below to see which adventures are available in each city.
-        </p>
-
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/destinations"
-            className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition"
-          >
-            Explore Destinations
-          </Link>
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center rounded-md bg-black/5 px-4 py-2 text-sm font-semibold text-[#2f4a2f] hover:bg-black/10 transition"
-          >
-            Home
-          </Link>
-        </div>
-      </header>
-
-      <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
-        <div className="space-y-4">
-          <RegionDropdownButton
-            label="Select a country…"
-            options={countryOptions}
-            selectedName={
-              countryOptions.find((country) => country.slug === selectedCountry)
-                ?.name
-            }
-            onSelect={(slug) => {
-              const [region, countrySlug] = slug.split(":");
-              if (!countrySlug) {
-                return;
-              }
-              setSelectedCountry(slug);
-              const basePath =
-                region === "world" ? "/destinations/world" : "/destinations/europe";
-              window.location.assign(`${basePath}/${countrySlug}`);
-            }}
-          />
-          {selectedCountry ? (
-            <div className="mt-2">
-              <Link
-                href={
-                  selectedCountry.startsWith("world:")
-                    ? `/destinations/world/${selectedCountry.replace("world:", "")}`
-                    : `/destinations/europe/${selectedCountry.replace("europe:", "")}/tours`
-                }
-              >
-                <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-                  View all country tours →
-                </a>
-              </Link>
-            </div>
-          ) : null}
-        </div>
-
-        <div className="mt-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-            United States
+    <>
+      {seo ? (
+        <Seo
+          title={seo.title}
+          description={seo.description}
+          url={seo.url}
+          image={seo.image}
+        />
+      ) : null}
+      <main className="mx-auto max-w-6xl px-6 py-16">
+        <header className="mb-10">
+          <h1 className="text-3xl md:text-4xl font-semibold text-[#2f4a2f]">
+            Tours
+          </h1>
+          <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
+            Browse tours by destination or activity. Filter the live inventory
+            below to see which adventures are available in each city.
           </p>
-          <div className="mt-3 grid gap-4 md:grid-cols-3">
+
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href="/destinations"
+              className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white hover:bg-[#294129] transition"
+            >
+              Explore Destinations
+            </Link>
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-md bg-black/5 px-4 py-2 text-sm font-semibold text-[#2f4a2f] hover:bg-black/10 transition"
+            >
+              Home
+            </Link>
+          </div>
+        </header>
+
+        <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+          <div className="space-y-4">
             <RegionDropdownButton
-              label="Choose a state"
-              options={stateOptions.map((state) => ({
-                name: state,
-                slug: state,
-              }))}
-              selectedName={selectedState || undefined}
+              label="Select a country…"
+              options={countryOptions}
+              selectedName={
+                countryOptions.find((country) => country.slug === selectedCountry)
+                  ?.name
+              }
               onSelect={(slug) => {
-                setSelectedState(slug);
-                setSelectedCity("");
+                const [region, countrySlug] = slug.split(":");
+                if (!countrySlug) {
+                  return;
+                }
+                setSelectedCountry(slug);
+                const basePath =
+                  region === "world" ? "/destinations/world" : "/destinations/europe";
+                window.location.assign(`${basePath}/${countrySlug}`);
               }}
             />
-            <RegionDropdownButton
-              label="Choose a city"
-              options={cityOptions.map((city) => ({
-                name: city,
-                slug: city,
-              }))}
-              selectedName={selectedCity || undefined}
-              onSelect={(slug) => setSelectedCity(slug)}
-            />
-            <RegionDropdownButton
-              label="Choose an activity"
-              options={activityOptions.map((activity) => ({
-                name: activity.label,
-                slug: activity.slug,
-              }))}
-              selectedName={
-                activityOptions.find(
-                  (activity) => activity.slug === selectedActivitySlug,
-                )?.label
-              }
-              onSelect={(slug) => setSelectedActivitySlug(normalizeActivitySlug(slug))}
-            />
+            {selectedCountry ? (
+              <div className="mt-2">
+                <Link
+                  href={
+                    selectedCountry.startsWith("world:")
+                      ? `/destinations/world/${selectedCountry.replace("world:", "")}`
+                      : `/destinations/europe/${selectedCountry.replace("europe:", "")}/tours`
+                  }
+                >
+                  <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                    View all country tours →
+                  </a>
+                </Link>
+              </div>
+            ) : null}
           </div>
-        </div>
-      </section>
 
-      <section className="mt-10">
-        <div className="flex items-center justify-between text-sm text-[#405040]">
-          <p className="font-semibold">
-            {filteredTours.length} tours available
-          </p>
-          <Link href="/destinations">
-            <a className="font-semibold text-[#2f4a2f]">Browse destinations →</a>
-          </Link>
-        </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filteredTours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} />
-          ))}
-        </div>
-      </section>
-    </main>
+          <div className="mt-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              United States
+            </p>
+            <div className="mt-3 grid gap-4 md:grid-cols-3">
+              <RegionDropdownButton
+                label="Choose a state"
+                options={stateOptions.map((state) => ({
+                  name: state,
+                  slug: state,
+                }))}
+                selectedName={selectedState || undefined}
+                onSelect={(slug) => {
+                  setSelectedState(slug);
+                  setSelectedCity("");
+                }}
+              />
+              <RegionDropdownButton
+                label="Choose a city"
+                options={cityOptions.map((city) => ({
+                  name: city,
+                  slug: city,
+                }))}
+                selectedName={selectedCity || undefined}
+                onSelect={(slug) => setSelectedCity(slug)}
+              />
+              <RegionDropdownButton
+                label="Choose an activity"
+                options={activityOptions.map((activity) => ({
+                  name: activity.label,
+                  slug: activity.slug,
+                }))}
+                selectedName={
+                  activityOptions.find(
+                    (activity) => activity.slug === selectedActivitySlug,
+                  )?.label
+                }
+                onSelect={(slug) => setSelectedActivitySlug(normalizeActivitySlug(slug))}
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-10">
+          <div className="flex items-center justify-between text-sm text-[#405040]">
+            <p className="font-semibold">
+              {filteredTours.length} tours available
+            </p>
+            <Link href="/destinations">
+              <a className="font-semibold text-[#2f4a2f]">Browse destinations →</a>
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {filteredTours.map((tour) => (
+              <TourCard key={tour.id} tour={tour} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
