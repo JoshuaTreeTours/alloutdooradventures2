@@ -3,149 +3,79 @@ import { Link } from "wouter";
 
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import Seo from "../components/Seo";
-import TourCard from "../components/TourCard";
-import { countriesWithTours } from "../data/europeIndex";
-import { worldCountriesWithTours } from "../data/worldIndex";
-import { tours } from "../data/tours";
-import {
-  ACTIVITY_PAGES,
-  ADVENTURE_ACTIVITY_PAGES,
-  US_STATES,
-} from "../data/tourCatalog";
+import { states } from "../data/destinations";
+import { EUROPE_COUNTRIES, WORLD_DESTINATIONS, slugify } from "../data/tourCatalog";
 import { getStaticPageSeo } from "../utils/seo";
 
 export default function ToursIndex() {
   const seo = getStaticPageSeo("/tours");
-  const [selectedState, setSelectedState] = useState("");
-  const [selectedCity, setSelectedCity] = useState("");
-  const [selectedActivitySlug, setSelectedActivitySlug] = useState("");
+  const [selectedStateSlug, setSelectedStateSlug] = useState("");
+  const [selectedCitySlug, setSelectedCitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
   const countryOptions = useMemo(() => {
-    const options = [
-      ...countriesWithTours.map((country) => ({
-        name: country.name,
-        slug: `europe:${country.slug}`,
-      })),
-      ...worldCountriesWithTours.map((country) => ({
-        name: country.name,
-        slug: `world:${country.slug}`,
-      })),
-    ];
-    return options.sort((a, b) => a.name.localeCompare(b.name));
+    const europeOptions = EUROPE_COUNTRIES.map((country) => ({
+      name: country,
+      slug: `europe:${slugify(country)}`,
+    }));
+    const worldOptions = WORLD_DESTINATIONS.map((country) => ({
+      name: country,
+      slug: `world:${slugify(country)}`,
+    }));
+    return [...europeOptions, ...worldOptions].sort((a, b) =>
+      a.name.localeCompare(b.name),
+    );
   }, []);
 
-  const stateOptions = useMemo(() => US_STATES, []);
-  const US_STATE_SET = useMemo(() => new Set(US_STATES), []);
-  const isUSState = (state?: string) => !!state && US_STATE_SET.has(state);
-  const isUSTour = (tour: (typeof tours)[number]) => {
-    const country = tour?.destination?.country as string | undefined;
-    return !country || country === "United States" || country === "USA";
-  };
+  const stateOptions = useMemo(
+    () =>
+      states
+        .map((state) => ({
+          name: state.name,
+          slug: state.slug,
+          cities: state.cities,
+        }))
+        .sort((a, b) => a.name.localeCompare(b.name)),
+    [],
+  );
 
-  const normalizeActivitySlug = (slugOrLabel: string) => {
-    const labelToSlug: Record<string, string> = {
-      Hiking: "hiking",
-      Cycling: "cycling",
-      "Paddle Sports": "paddle-sports",
-      "Day Tours": "day-tours",
-    };
-    const slugToSlug: Record<string, string> = {
-      canoeing: "paddle-sports",
-      detours: "day-tours",
-      "day-adventures": "day-tours",
-    };
-    return slugToSlug[slugOrLabel] ?? labelToSlug[slugOrLabel] ?? slugOrLabel;
-  };
-
-  const baseTours = useMemo(() => {
-    if (!isUSState(selectedState)) {
-      return tours;
-    }
-
-    return tours.filter(
-      (tour) =>
-        tour?.destination?.state === selectedState &&
-        isUSTour(tour),
-    );
-  }, [tours, selectedState, US_STATE_SET]);
+  const selectedState = useMemo(
+    () => stateOptions.find((state) => state.slug === selectedStateSlug),
+    [stateOptions, selectedStateSlug],
+  );
 
   const cityOptions = useMemo(() => {
-    if (!selectedState || !isUSState(selectedState)) {
+    if (!selectedState) {
       return [];
     }
-    const cities = baseTours
-      .map((tour) => tour.destination?.city)
-      .filter(Boolean);
-    return Array.from(new Set(cities)).sort();
-  }, [baseTours, selectedState]);
-
-  const activityOptions = useMemo(() => {
-    const activities = [...ADVENTURE_ACTIVITY_PAGES, ...ACTIVITY_PAGES];
-    const mapped = activities.map((activity) => ({
-      slug: normalizeActivitySlug(activity.slug),
-      label: activity.title,
-    }));
-    const uniqueBySlug = new Map<string, { slug: string; label: string }>();
-    mapped.forEach((activity) => {
-      if (!uniqueBySlug.has(activity.slug)) {
-        uniqueBySlug.set(activity.slug, activity);
-      }
-    });
-    return Array.from(uniqueBySlug.values());
-  }, [normalizeActivitySlug]);
-
-  const getTourActivitySlug = (tour: (typeof tours)[number]) =>
-    normalizeActivitySlug(tour.primaryCategory ?? tour.activitySlugs[0] ?? "");
-
-  useEffect(() => {
-    setSelectedCity("");
+    return selectedState.cities
+      .map((city) => ({
+        name: city.name,
+        slug: city.slug,
+      }))
+      .sort((a, b) => a.name.localeCompare(b.name));
   }, [selectedState]);
 
   useEffect(() => {
-    if (selectedCity && !cityOptions.includes(selectedCity)) {
-      setSelectedCity("");
-    }
-  }, [selectedCity, cityOptions]);
-
-  const filteredTours = useMemo(() => {
-    return baseTours.filter((tour) => {
-      const matchesCity = selectedCity
-        ? tour.destination?.city === selectedCity
-        : true;
-      const activitySlug = getTourActivitySlug(tour);
-      const matchesActivity = selectedActivitySlug
-        ? activitySlug === selectedActivitySlug
-        : true;
-      return matchesCity && matchesActivity;
-    });
-  }, [baseTours, selectedCity, selectedActivitySlug]);
+    setSelectedCitySlug("");
+  }, [selectedStateSlug]);
 
   useEffect(() => {
-    if (!import.meta.env.DEV) {
-      return;
+    if (
+      selectedCitySlug &&
+      !cityOptions.some((city) => city.slug === selectedCitySlug)
+    ) {
+      setSelectedCitySlug("");
     }
-    const anomalies = tours.filter(
-      (tour) => isUSState(tour?.destination?.state) && !isUSTour(tour),
-    );
-    if (anomalies.length > 0) {
-      console.error(
-        "[ToursIndex] US state tours with non-US country detected:",
-        anomalies.map((tour) => `${tour.slug} (${tour.title})`),
-      );
-    }
-    if (selectedActivitySlug !== "hiking") {
-      return;
-    }
-    filteredTours.forEach((tour) => {
-      if (getTourActivitySlug(tour) !== "hiking") {
-        console.error(
-          "[ToursIndex] Hiking filter violation:",
-          tour.slug,
-          tour.title,
-        );
-      }
-    });
-  }, [filteredTours, selectedActivitySlug]);
+  }, [selectedCitySlug, cityOptions]);
+
+  const popularDestinations = [
+    { label: "California", href: "/destinations/states/california" },
+    { label: "Arizona", href: "/destinations/states/arizona" },
+    { label: "Colorado", href: "/destinations/states/colorado" },
+    { label: "France", href: "/destinations/europe/france" },
+    { label: "Italy", href: "/destinations/europe/italy" },
+    { label: "Japan", href: "/destinations/world/japan" },
+  ];
 
   return (
     <>
@@ -163,8 +93,9 @@ export default function ToursIndex() {
             Tours
           </h1>
           <p className="mt-3 max-w-2xl text-sm md:text-base text-[#405040] leading-relaxed">
-            Browse tours by destination or activity. Filter the live inventory
-            below to see which adventures are available in each city.
+            Use the destination directory below to jump straight to country and
+            state guides. Select a location to explore destination pages with
+            local highlights and available tours.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -184,7 +115,7 @@ export default function ToursIndex() {
         </header>
 
         <section className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
-          <div className="space-y-4">
+          <div className="space-y-6">
             <RegionDropdownButton
               label="Select a country…"
               options={countryOptions}
@@ -203,79 +134,65 @@ export default function ToursIndex() {
                 window.location.assign(`${basePath}/${countrySlug}`);
               }}
             />
-            {selectedCountry ? (
-              <div className="mt-2">
-                <Link
-                  href={
-                    selectedCountry.startsWith("world:")
-                      ? `/destinations/world/${selectedCountry.replace("world:", "")}`
-                      : `/destinations/europe/${selectedCountry.replace("europe:", "")}/tours`
-                  }
-                >
-                  <a className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-                    View all country tours →
-                  </a>
-                </Link>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                Popular destinations
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {popularDestinations.map((destination) => (
+                  <Link key={destination.href} href={destination.href}>
+                    <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-3 py-1 text-xs font-semibold text-[#2f4a2f] hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
+                      {destination.label}
+                    </a>
+                  </Link>
+                ))}
               </div>
-            ) : null}
+            </div>
           </div>
 
           <div className="mt-6">
             <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
               United States
             </p>
-            <div className="mt-3 grid gap-4 md:grid-cols-3">
+            <div className="mt-3 grid gap-4 md:grid-cols-2">
               <RegionDropdownButton
                 label="Choose a state"
                 options={stateOptions.map((state) => ({
-                  name: state,
-                  slug: state,
+                  name: state.name,
+                  slug: state.slug,
                 }))}
-                selectedName={selectedState || undefined}
+                selectedName={selectedState?.name || undefined}
                 onSelect={(slug) => {
-                  setSelectedState(slug);
-                  setSelectedCity("");
+                  setSelectedStateSlug(slug);
                 }}
               />
               <RegionDropdownButton
                 label="Choose a city"
-                options={cityOptions.map((city) => ({
-                  name: city,
-                  slug: city,
-                }))}
-                selectedName={selectedCity || undefined}
-                onSelect={(slug) => setSelectedCity(slug)}
-              />
-              <RegionDropdownButton
-                label="Choose an activity"
-                options={activityOptions.map((activity) => ({
-                  name: activity.label,
-                  slug: activity.slug,
-                }))}
+                options={cityOptions}
                 selectedName={
-                  activityOptions.find(
-                    (activity) => activity.slug === selectedActivitySlug,
-                  )?.label
+                  cityOptions.find((city) => city.slug === selectedCitySlug)?.name
                 }
-                onSelect={(slug) => setSelectedActivitySlug(normalizeActivitySlug(slug))}
+                onSelect={(slug) => setSelectedCitySlug(slug)}
               />
             </div>
-          </div>
-        </section>
-
-        <section className="mt-10">
-          <div className="flex items-center justify-between text-sm text-[#405040]">
-            <p className="font-semibold">
-              {filteredTours.length} tours available
-            </p>
-            <Link href="/destinations">
-              <a className="font-semibold text-[#2f4a2f]">Browse destinations →</a>
-            </Link>
-          </div>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredTours.map((tour) => (
-              <TourCard key={tour.id} tour={tour} />
-            ))}
+            <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold text-[#2f4a2f]">
+              {selectedState ? (
+                <Link href={`/destinations/states/${selectedState.slug}`}>
+                  <a className="inline-flex items-center gap-2 rounded-md border border-[#2f4a2f]/20 px-3 py-1.5 hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
+                    View {selectedState.name} →
+                  </a>
+                </Link>
+              ) : null}
+              {selectedState && selectedCitySlug ? (
+                <Link
+                  href={`/destinations/states/${selectedState.slug}/cities/${selectedCitySlug}`}
+                >
+                  <a className="inline-flex items-center gap-2 rounded-md border border-[#2f4a2f]/20 px-3 py-1.5 hover:border-[#2f4a2f]/40 hover:bg-[#2f4a2f]/5 transition">
+                    View city →
+                  </a>
+                </Link>
+              ) : null}
+            </div>
           </div>
         </section>
       </main>
