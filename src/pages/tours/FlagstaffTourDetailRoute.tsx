@@ -1,8 +1,10 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -19,6 +21,7 @@ import {
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
 import { buildMetaDescription } from "../../utils/seo";
+import { buildTourProductStructuredData } from "../../utils/structuredData";
 
 type FlagstaffTourDetailRouteProps = {
   params: {
@@ -48,6 +51,26 @@ export default function FlagstaffTourDetailRoute({
   }
 
   const tour = getFlagstaffTourBySlug(params.tourSlug);
+  const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
+  const bookingUrl = tour ? getFlagstaffTourBookingPath(tour) : "";
+  const productDescription = tour
+    ? getExpandedTourDescription(tour)[0]
+    : undefined;
+  const structuredDataNodes = useMemo(() => {
+    if (!tour || !detailUrl || !bookingUrl) {
+      return null;
+    }
+    return [
+      buildTourProductStructuredData({
+        tour,
+        detailUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+    ];
+  }, [bookingUrl, detailUrl, productDescription, tour]);
+
+  useStructuredData(structuredDataNodes);
 
   if (!tour) {
     return (
@@ -93,7 +116,7 @@ export default function FlagstaffTourDetailRoute({
       <Seo
         title={title}
         description={description}
-        url={getFlagstaffTourDetailPath(tour)}
+        url={detailUrl}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -147,7 +170,7 @@ export default function FlagstaffTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link href={getFlagstaffTourBookingPath(tour)}>
+            <Link href={bookingUrl}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 Book Now
               </a>

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RouteRedirect from "./components/RouteRedirect";
 import ScrollToTopOnRouteChange from "./components/ScrollToTopOnRouteChange";
+import { StructuredDataProvider } from "./components/StructuredDataProvider";
 import Home from "./pages/Home";
 import DestinationsIndex from "./pages/destinations/DestinationsIndex";
 import EuropeCountryRoute from "./pages/destinations/europe/EuropeCountryRoute";
@@ -58,7 +59,7 @@ const ContactRedirect = () => <RouteRedirect to="/contact" />;
 
 export default function App() {
   return (
-    <>
+    <StructuredDataProvider>
       <Header />
       <ScrollToTopOnRouteChange />
       <Switch>
@@ -208,6 +209,6 @@ export default function App() {
         <Route>Not Found</Route>
       </Switch>
       <Footer />
-    </>
+    </StructuredDataProvider>
   );
 }

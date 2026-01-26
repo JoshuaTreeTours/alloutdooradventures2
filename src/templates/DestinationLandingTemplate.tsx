@@ -1,11 +1,15 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
+import { getTourDetailPath } from "../data/tours";
 import { buildMetaDescription } from "../utils/seo";
+import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
 
 type DestinationLandingTemplateProps = {
   state: StateDestination;
@@ -22,6 +26,24 @@ export default function DestinationLandingTemplate({
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
   );
+  const structuredDataNodes = useMemo(() => {
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: state.name, url: `/destinations/${state.slug}` },
+    ]);
+    const itemListItems = tours.map((tour) => ({
+      name: tour.title,
+      url: getTourDetailPath(tour),
+      image: tour.heroImage ? [tour.heroImage] : undefined,
+    }));
+    const nodes = [breadcrumbs];
+    if (itemListItems.length) {
+      nodes.push(buildItemList(itemListItems));
+    }
+    return nodes;
+  }, [state.name, state.slug, tours]);
+
+  useStructuredData(structuredDataNodes);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
