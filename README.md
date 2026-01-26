@@ -22,6 +22,11 @@ Version 2 of AllOutdoorAdventures.com is designed for massive content expansion.
 *   **Icons**: Lucide React
 *   **Fonts**: Inter Tight (Headings), Newsreader (Body), JetBrains Mono (Data)
 
+## 🔐 Environment Variables
+
+*   `CONTACT_TO_EMAIL`: Destination address for contact form submissions.
+*   `RESEND_API_KEY`: Resend API key used to deliver contact form emails. If omitted, submissions are logged server-side.
+
 ## 📂 Project Structure
 
 ```
