@@ -92,6 +92,10 @@ const sendWithResend = async (options: {
 
   if (!response.ok) {
     const details = await response.text();
+    console.error("Resend delivery failed.", {
+      status: response.status,
+      body: details,
+    });
     throw new Error(`Resend error: ${response.status} ${details}`);
   }
 };
@@ -241,7 +245,7 @@ export default async function handler(request: any, response: any) {
       await sendWithResend({
         apiKey: resendApiKey,
         to: contactToEmail,
-        from: sender,
+        from: "All Outdoor Adventures <onboarding@resend.dev>",
         subject: messageSubject,
         text: messageText,
         replyTo: email,
