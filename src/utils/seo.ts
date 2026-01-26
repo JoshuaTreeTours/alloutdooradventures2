@@ -11,6 +11,44 @@ export const DEFAULT_SEO = {
   image: "/hero.jpg",
 } as const;
 
+export const STATIC_PAGE_SEO = {
+  "/faqs": {
+    title: "FAQs | All Outdoor Adventures",
+    description:
+      "Get answers about booking, cancellations, and tour logistics so you can plan your outdoor adventure with confidence.",
+  },
+  "/contact": {
+    title: "Contact | All Outdoor Adventures",
+    description:
+      "Connect with our travel team to plan custom journeys, private group experiences, and curated outdoor tours.",
+  },
+  "/tours": {
+    title: "Tours | All Outdoor Adventures",
+    description:
+      "Browse curated tours by destination and activity, with live availability and trusted local operators.",
+  },
+  "/destinations": {
+    title: "Destinations | All Outdoor Adventures",
+    description:
+      "Explore curated outdoor destinations across the U.S. and preview upcoming international tour hubs.",
+  },
+  "/guides": {
+    title: "Guides | All Outdoor Adventures",
+    description:
+      "Discover destination guides with expert insights to help you plan your next outdoor escape.",
+  },
+  "/journeys": {
+    title: "Journeys | All Outdoor Adventures",
+    description:
+      "Plan multi-day journeys and custom itineraries built around iconic landscapes and local expertise.",
+  },
+  "/about": {
+    title: "About | All Outdoor Adventures",
+    description:
+      "Learn about the team behind All Outdoor Adventures and our mission to curate unforgettable experiences.",
+  },
+} as const;
+
 const normalizeText = (text: string) => text.replace(/\s+/g, " ").trim();
 
 const clampDescription = (text: string, maxLength = 160) => {
@@ -168,4 +206,31 @@ export const buildImageUrl = (image?: string) => {
   }
 
   return buildCanonicalUrl(image);
+};
+
+const normalizePathname = (pathname: string) => {
+  if (!pathname) {
+    return "/";
+  }
+  const trimmed = pathname.trim();
+  if (!trimmed || trimmed === "/") {
+    return "/";
+  }
+  return `/${trimmed.replace(/^\/+|\/+$/g, "")}`;
+};
+
+export const getStaticPageSeo = (pathname: string) => {
+  const normalized = normalizePathname(pathname);
+  const entry = STATIC_PAGE_SEO[normalized as keyof typeof STATIC_PAGE_SEO];
+  if (!entry) {
+    return null;
+  }
+
+  return {
+    title: entry.title,
+    description: entry.description,
+    url: buildCanonicalUrl(normalized),
+    type: DEFAULT_SEO.type,
+    image: buildImageUrl(entry.image ?? DEFAULT_SEO.image),
+  };
 };

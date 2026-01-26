@@ -150,6 +150,19 @@ const ensureDirectory = async (dir) => {
   return true;
 };
 
+const ensurePrerenderedFile = async (pathname) => {
+  const { outputPath, shouldWrite } = buildOutputPath(pathname);
+  if (!shouldWrite) {
+    return false;
+  }
+  try {
+    const stats = await stat(outputPath);
+    return stats.isFile();
+  } catch {
+    return false;
+  }
+};
+
 const readSitemapUrls = async () => {
   let files = [];
 
@@ -192,6 +205,9 @@ const STATIC_PATHS = new Set([
   "/journeys",
   "/about",
   "/contact",
+  "/tours",
+  "/destinations",
+  "/guides",
   "/privacy",
   "/terms",
   "/cookies",
@@ -406,6 +422,153 @@ const verifyPrerenderedPage = async ({
     });
     throw new Error("Prerender verification failed.");
   }
+
+  const ogTitleTag = findTag(html, "meta", "property", "og:title");
+  const ogTitleValue = extractAttribute(ogTitleTag, "content");
+  if (!ogTitleValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:title",
+      details: "Missing og:title content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (ogTitleValue.trim() !== titleValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:title",
+      details: `Expected og:title to match title (${titleValue}).`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const ogDescriptionTag = findTag(html, "meta", "property", "og:description");
+  const ogDescriptionValue = extractAttribute(ogDescriptionTag, "content");
+  if (!ogDescriptionValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:description",
+      details: "Missing og:description content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (ogDescriptionValue.trim() !== descriptionValue.trim()) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:description",
+      details: "Expected og:description to match meta description.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const ogUrlTag = findTag(html, "meta", "property", "og:url");
+  const ogUrlValue = extractAttribute(ogUrlTag, "content");
+  if (!ogUrlValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:url",
+      details: "Missing og:url content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (ogUrlValue !== expectedUrl) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:url",
+      details: `Expected og:url ${expectedUrl} but found ${ogUrlValue}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const twitterTitleTag = findTag(html, "meta", "name", "twitter:title");
+  const twitterTitleValue = extractAttribute(twitterTitleTag, "content");
+  if (!twitterTitleValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "twitter:title",
+      details: "Missing twitter:title content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (twitterTitleValue.trim() !== titleValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "twitter:title",
+      details: `Expected twitter:title to match title (${titleValue}).`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const twitterDescriptionTag = findTag(
+    html,
+    "meta",
+    "name",
+    "twitter:description",
+  );
+  const twitterDescriptionValue = extractAttribute(
+    twitterDescriptionTag,
+    "content",
+  );
+  if (!twitterDescriptionValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "twitter:description",
+      details: "Missing twitter:description content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (twitterDescriptionValue.trim() !== descriptionValue.trim()) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "twitter:description",
+      details: "Expected twitter:description to match meta description.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const ogImageTag = findTag(html, "meta", "property", "og:image");
+  const ogImageValue = extractAttribute(ogImageTag, "content");
+  if (!ogImageValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "og:image",
+      details: "Missing og:image content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const twitterImageTag = findTag(html, "meta", "name", "twitter:image");
+  const twitterImageValue = extractAttribute(twitterImageTag, "content");
+  if (!twitterImageValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "twitter:image",
+      details: "Missing twitter:image content.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  if (ogImageValue !== twitterImageValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "image",
+      details: "og:image and twitter:image do not match.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
 };
 
 
@@ -443,6 +606,7 @@ const main = async () => {
     buildTourMetaDescription,
     buildCanonicalUrl,
     buildImageUrl,
+    getStaticPageSeo,
   } = seoModule;
 
   const urls = await readSitemapUrls();
@@ -527,11 +691,19 @@ const main = async () => {
         seo.image = buildImageUrl(tour.heroImage);
       }
     } else {
-      seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title);
-      seo.description = buildFallbackDescription(
-        segments,
-        DEFAULT_SEO.description,
-      );
+      const staticSeo = getStaticPageSeo(pathname);
+      if (staticSeo) {
+        seo.title = staticSeo.title;
+        seo.description = staticSeo.description;
+        seo.url = staticSeo.url;
+        seo.image = staticSeo.image;
+      } else {
+        seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title);
+        seo.description = buildFallbackDescription(
+          segments,
+          DEFAULT_SEO.description,
+        );
+      }
     }
 
     const { outputPath, shouldWrite } = buildOutputPath(pathname);
@@ -587,7 +759,10 @@ const main = async () => {
     },
     {
       label: "Static",
-      url: findUrl(isStatic),
+      url: findUrl(
+        (pathname) =>
+          normalizePathname(pathname) === "/faqs" || isStatic(pathname),
+      ),
     },
   ];
 
@@ -603,10 +778,22 @@ const main = async () => {
     }
   });
 
+  const faqPath = "/faqs";
+  const faqPrerendered = await ensurePrerenderedFile(faqPath);
+  if (!faqPrerendered) {
+    logVerificationFailure({
+      label: "FAQ",
+      url: buildCanonicalUrl(faqPath),
+      assertion: "prerender",
+      details: "Missing prerendered FAQ HTML output.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
   for (const target of verificationTargets) {
     const pathname = normalizePathname(new URL(target.url).pathname);
     const expectedUrl = buildCanonicalUrl(pathname);
-    const allowDefaultSeo = isHome(pathname) || isStatic(pathname);
+    const allowDefaultSeo = isHome(pathname);
 
     await verifyPrerenderedPage({
       pathname,

@@ -2,8 +2,10 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import { getCityTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
+import { getStaticPageSeo } from "../utils/seo";
 
 const JOURNEYS_FALLBACK_IMAGE = "/hero.jpg";
 
@@ -188,6 +190,7 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
 };
 
 export default function Journeys() {
+  const seo = getStaticPageSeo("/journeys");
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("all");
   const [selectedDuration, setSelectedDuration] = useState("all");
@@ -266,104 +269,114 @@ export default function Journeys() {
   }, [multiDayTours, searchTerm, selectedDuration, selectedRegion]);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
-      <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-        Journeys
-      </p>
-      <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-        Multi-day tours
-      </h1>
-      <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
-        Browse our curated list of multi-day tours spanning the US and international
-        destinations. Use the search tools to find the perfect itinerary by location,
-        duration, or tour name.
-      </p>
-
-      <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
-          <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-            Search
-            <input
-              type="search"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-              placeholder="Search multi-day tours by location or name…"
-              className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
-            />
-          </label>
-          <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-            Region
-            <select
-              value={selectedRegion}
-              onChange={(event) => setSelectedRegion(event.target.value)}
-              className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
-            >
-              <option value="all">All regions</option>
-              {regionOptions.map((region) => (
-                <option key={region} value={region}>
-                  {region}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-            Duration
-            <select
-              value={selectedDuration}
-              onChange={(event) => setSelectedDuration(event.target.value)}
-              className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
-            >
-              <option value="all">All durations</option>
-              {durationBuckets.map((bucket) => (
-                <option key={bucket.value} value={bucket.value}>
-                  {bucket.label}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <p className="mt-4 text-sm text-[#405040]">
-          Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
+    <>
+      {seo ? (
+        <Seo
+          title={seo.title}
+          description={seo.description}
+          url={seo.url}
+          image={seo.image}
+        />
+      ) : null}
+      <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+          Journeys
         </p>
-      </section>
-
-      <section className="mt-10 grid gap-6 md:grid-cols-2">
-        {filteredTours.map(({ tour, durationDays }) => (
-          <JourneyCard
-            key={tour.id}
-            tour={tour}
-            durationDays={durationDays}
-          />
-        ))}
-      </section>
-
-      <section className="mt-16 rounded-3xl border border-[#2f8a3d]/30 bg-[#f3fbf5] px-6 py-10 text-center">
-        <h2 className="text-2xl font-semibold text-[#1f2a1f]">
-          Design a journey that’s entirely yours
-        </h2>
-        <p className="mt-3 text-sm text-[#405040]">
-          Tell us what you have in mind and we’ll craft a custom multi-day itinerary
-          with the right pace, lodging, and adventure mix.
+        <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
+          Multi-day tours
+        </h1>
+        <p className="mt-4 max-w-3xl text-sm text-[#405040] md:text-base">
+          Browse our curated list of multi-day tours spanning the US and international
+          destinations. Use the search tools to find the perfect itinerary by location,
+          duration, or tour name.
         </p>
-        <div className="mt-6 flex justify-center">
-          <a
-            href="tel:+18553148687"
-            aria-label="Contact us for a custom tour. Call 855-314-TOUR"
-            className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]"
-          >
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-4 w-4 fill-white"
+
+        <section className="mt-10 rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
+            <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              Search
+              <input
+                type="search"
+                value={searchTerm}
+                onChange={(event) => setSearchTerm(event.target.value)}
+                placeholder="Search multi-day tours by location or name…"
+                className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
+              />
+            </label>
+            <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              Region
+              <select
+                value={selectedRegion}
+                onChange={(event) => setSelectedRegion(event.target.value)}
+                className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
               >
-                <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-.91 1 19.91 19.91 0 01-8.68-2.36 19.58 19.58 0 01-6-6A19.91 19.91 0 012 5.91a1 1 0 011-.91H6.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
-              </svg>
-            </span>
-            Contact us for a custom tour
-          </a>
-        </div>
-      </section>
-    </main>
+                <option value="all">All regions</option>
+                {regionOptions.map((region) => (
+                  <option key={region} value={region}>
+                    {region}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="flex flex-1 flex-col gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              Duration
+              <select
+                value={selectedDuration}
+                onChange={(event) => setSelectedDuration(event.target.value)}
+                className="w-full rounded-2xl border border-black/10 bg-white px-4 py-3 text-sm font-normal text-[#1f2a1f] shadow-sm focus:border-[#2f4a2f] focus:outline-none"
+              >
+                <option value="all">All durations</option>
+                {durationBuckets.map((bucket) => (
+                  <option key={bucket.value} value={bucket.value}>
+                    {bucket.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <p className="mt-4 text-sm text-[#405040]">
+            Showing {filteredTours.length} multi-day tour{filteredTours.length === 1 ? "" : "s"}.
+          </p>
+        </section>
+
+        <section className="mt-10 grid gap-6 md:grid-cols-2">
+          {filteredTours.map(({ tour, durationDays }) => (
+            <JourneyCard
+              key={tour.id}
+              tour={tour}
+              durationDays={durationDays}
+            />
+          ))}
+        </section>
+
+        <section className="mt-16 rounded-3xl border border-[#2f8a3d]/30 bg-[#f3fbf5] px-6 py-10 text-center">
+          <h2 className="text-2xl font-semibold text-[#1f2a1f]">
+            Design a journey that’s entirely yours
+          </h2>
+          <p className="mt-3 text-sm text-[#405040]">
+            Tell us what you have in mind and we’ll craft a custom multi-day itinerary
+            with the right pace, lodging, and adventure mix.
+          </p>
+          <div className="mt-6 flex justify-center">
+            <a
+              href="tel:+18553148687"
+              aria-label="Contact us for a custom tour. Call 855-314-TOUR"
+              className="inline-flex items-center gap-2 rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-sm transition hover:bg-[#287a35]"
+            >
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4 fill-white"
+                >
+                  <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1v3.49a1 1 0 01-.91 1 19.91 19.91 0 01-8.68-2.36 19.58 19.58 0 01-6-6A19.91 19.91 0 012 5.91a1 1 0 011-.91H6.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z" />
+                </svg>
+              </span>
+              Contact us for a custom tour
+            </a>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

@@ -62,7 +62,7 @@ export default function Header() {
             <Link href="/guides">
               <a className="hover:text-[#1f2a1f]">Guides</a>
             </Link>
-            <Link href="/faq">
+            <Link href="/faqs">
               <a className="hover:text-[#1f2a1f]">FAQs</a>
             </Link>
             <Link href="/journeys">
@@ -179,7 +179,7 @@ export default function Header() {
                   Guides
                 </a>
               </Link>
-              <Link href="/faq">
+              <Link href="/faqs">
                 <a onClick={closeMobileMenu} className="font-medium text-[#1f2a1f]">
                   FAQs
                 </a>

@@ -144,7 +144,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/faq">
+                <Link href="/faqs">
                   <a className="transition hover:text-white">FAQ</a>
                 </Link>
               </li>
