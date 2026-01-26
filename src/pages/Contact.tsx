@@ -145,7 +145,7 @@ export default function Contact() {
       }
 
       setStatus("success");
-      setStatusMessage("Thanks! Your message has been sent.");
+      setStatusMessage("An agent will reply to you within the next 24 hours.");
       setFormState({
         name: "",
         email: "",
@@ -317,9 +317,6 @@ export default function Contact() {
                 >
                   {status === "submitting" ? "Sending..." : "Send message"}
                 </button>
-                <p className="mt-2 text-xs text-[#7a8a6b]">
-                  Spam is filtered automatically.
-                </p>
               </div>
               <p className="text-xs text-[#7a8a6b]">
                 We&apos;ll reply by email as soon as possible.

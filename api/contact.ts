@@ -202,7 +202,8 @@ export default async function handler(request: any, response: any) {
     return;
   }
 
-  const contactToEmail = process.env.CONTACT_TO_EMAIL || "";
+  const contactToEmail =
+    process.env.CONTACT_TO_EMAIL || "jerry@alloutdooradventures.com";
   const resendApiKey = process.env.RESEND_API_KEY || "";
   const smtpHost = process.env.SMTP_HOST || "";
   const smtpPort = Number(process.env.SMTP_PORT || "0");
@@ -217,15 +218,13 @@ export default async function handler(request: any, response: any) {
   const sender =
     smtpFrom || "All Outdoor Adventures <no-reply@alloutdooradventures.com>";
 
-  const smtpConfigured = Boolean(
-    smtpHost && smtpPort && smtpUser && smtpPass && contactToEmail
-  );
+  const smtpConfigured = Boolean(smtpHost && smtpPort && smtpUser && smtpPass);
 
-  const resendConfigured = Boolean(resendApiKey && contactToEmail);
+  const resendConfigured = Boolean(resendApiKey);
 
   if (!resendConfigured && !smtpConfigured) {
-    console.warn(
-      "Contact form submission received but no email provider is configured.",
+    console.error(
+      "Contact form submission could not be delivered because no email provider is configured.",
       {
         name,
         email,
@@ -233,7 +232,7 @@ export default async function handler(request: any, response: any) {
         messageLength: message.length,
       }
     );
-    response.status(200).json({ ok: true });
+    response.status(500).json({ ok: false });
     return;
   }
 
