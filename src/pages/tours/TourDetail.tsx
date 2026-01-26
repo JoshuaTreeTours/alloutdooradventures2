@@ -16,8 +16,13 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { buildTourMetaDescription } from "../../utils/seo";
-import { buildTourProductStructuredData } from "../../utils/structuredData";
+import { buildTourMetaDescription, SITE_URL } from "../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildTourProductStructuredData,
+  buildTourTripStructuredData,
+  SITE_ORGANIZATION_ID,
+} from "../../utils/structuredData";
 
 type TourDetailProps = {
   params: {
@@ -39,12 +44,31 @@ export default function TourDetail({ params }: TourDetailProps) {
       return null;
     }
     return [
+      {
+        "@type": "WebPage",
+        "@id": `${detailUrl}#webpage`,
+        url: detailUrl,
+        name: tour.title,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${detailUrl}#trip` },
+        publisher: { "@id": SITE_ORGANIZATION_ID },
+      },
       buildTourProductStructuredData({
         tour,
         detailUrl,
         bookingUrl,
         description: productDescription,
       }),
+      buildTourTripStructuredData({
+        tour,
+        detailUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+      buildBreadcrumbList([
+        { name: "Tours", url: "/tours" },
+        { name: tour.title, url: detailUrl },
+      ]),
     ];
   }, [bookingUrl, detailUrl, productDescription, tour]);
 

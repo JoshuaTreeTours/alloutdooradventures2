@@ -20,8 +20,13 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import { buildMetaDescription } from "../../utils/seo";
-import { buildTourProductStructuredData } from "../../utils/structuredData";
+import { buildMetaDescription, SITE_URL } from "../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildTourProductStructuredData,
+  buildTourTripStructuredData,
+  SITE_ORGANIZATION_ID,
+} from "../../utils/structuredData";
 
 type FlagstaffTourDetailRouteProps = {
   params: {
@@ -56,19 +61,56 @@ export default function FlagstaffTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
+  const stateHref = state.isFallback
+    ? "/destinations"
+    : `/destinations/states/${state.slug}`;
+  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !detailUrl || !bookingUrl) {
       return null;
     }
     return [
+      {
+        "@type": "WebPage",
+        "@id": `${detailUrl}#webpage`,
+        url: detailUrl,
+        name: tour.title,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": `${detailUrl}#trip` },
+        publisher: { "@id": SITE_ORGANIZATION_ID },
+      },
       buildTourProductStructuredData({
         tour,
         detailUrl,
         bookingUrl,
         description: productDescription,
       }),
+      buildTourTripStructuredData({
+        tour,
+        detailUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+      buildBreadcrumbList([
+        { name: "Destinations", url: "/destinations" },
+        { name: state.name, url: stateHref },
+        { name: city.name, url: cityHref },
+        { name: "Tours", url: toursHref },
+        { name: tour.title, url: detailUrl },
+      ]),
     ];
-  }, [bookingUrl, detailUrl, productDescription, tour]);
+  }, [
+    bookingUrl,
+    city.name,
+    cityHref,
+    detailUrl,
+    productDescription,
+    state.name,
+    stateHref,
+    tour,
+    toursHref,
+  ]);
 
   useStructuredData(structuredDataNodes);
 
@@ -100,11 +142,6 @@ export default function FlagstaffTourDetailRoute({
   const relatedTours = flagstaffTours.filter(
     (item) => getFlagstaffTourSlug(item) !== tourSlug,
   );
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
-  const stateHref = state.isFallback
-    ? "/destinations"
-    : `/destinations/states/${state.slug}`;
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const disclosure = getAffiliateDisclosure(tour);
   const startingPriceLabel = formatStartingPrice(
     tour.startingPrice,
