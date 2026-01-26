@@ -1,7 +1,9 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
 import TourCard from "../../../../components/TourCard";
+import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
@@ -13,6 +15,7 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
+import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -33,22 +36,14 @@ export default function CityToursIndexRoute({
     getCityBySlugs(params.stateSlug, params.citySlug) ??
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
-  if (!state || !city) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
-        <h1 className="text-2xl font-semibold">Tours not found</h1>
-        <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that city. Head back to destinations to keep
-          exploring.
-        </p>
-      </main>
-    );
-  }
-
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tours = isFlagstaff
-    ? flagstaffTours
-    : getToursByCity(state.slug, city.slug);
+  const isFlagstaff = Boolean(
+    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+  );
+  const tours = state && city
+    ? isFlagstaff
+      ? flagstaffTours
+      : getToursByCity(state.slug, city.slug)
+    : [];
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
@@ -61,10 +56,57 @@ export default function CityToursIndexRoute({
     : null;
   const basePath =
     basePathOverride ??
-    (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
-  const cityHref = `${basePath}/cities/${city.slug}`;
+    (state?.isFallback ? "/destinations" : `/destinations/states/${state?.slug ?? ""}`);
+  const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
-  const heroImage = city.heroImages[0] ?? "/hero.jpg";
+  const heroImage = city?.heroImages[0] ?? "/hero.jpg";
+
+  const toursHref = `${cityHref}/tours`;
+  const structuredDataNodes = useMemo(() => {
+    if (!state || !city) {
+      return null;
+    }
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: state.name, url: stateHref },
+      { name: city.name, url: cityHref },
+      { name: "Tours", url: toursHref },
+    ]);
+    const itemListItems = filteredTours.map((tour) => ({
+      name: tour.title,
+      url: isFlagstaff
+        ? getFlagstaffTourDetailPath(tour)
+        : getCityTourDetailPath(tour),
+      image: tour.heroImage ? [tour.heroImage] : undefined,
+    }));
+    const nodes = [breadcrumbs];
+    if (itemListItems.length) {
+      nodes.push(buildItemList(itemListItems));
+    }
+    return nodes;
+  }, [
+    city,
+    cityHref,
+    filteredTours,
+    isFlagstaff,
+    state,
+    stateHref,
+    toursHref,
+  ]);
+
+  useStructuredData(structuredDataNodes);
+
+  if (!state || !city) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+        <h1 className="text-2xl font-semibold">Tours not found</h1>
+        <p className="mt-4 text-sm text-[#405040]">
+          We couldn’t find that city. Head back to destinations to keep
+          exploring.
+        </p>
+      </main>
+    );
+  }
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">

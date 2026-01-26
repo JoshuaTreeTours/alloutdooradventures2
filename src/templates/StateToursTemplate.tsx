@@ -3,8 +3,10 @@ import { Link } from "wouter";
 
 import Image from "../components/Image";
 import TourCard from "../components/TourCard";
+import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import { getCityTourDetailPath, getToursByState } from "../data/tours";
+import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
 
 const FILTER_OPTIONS = [
   { label: "All", slug: "all" },
@@ -28,6 +30,24 @@ export default function StateToursTemplate({
       tour.activitySlugs.includes(activeFilter)
     );
   }, [activeFilter, stateTours]);
+  const structuredDataNodes = useMemo(() => {
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: state.name, url: `/destinations/states/${state.slug}` },
+    ]);
+    const itemListItems = filteredTours.map((tour) => ({
+      name: tour.title,
+      url: getCityTourDetailPath(tour),
+      image: tour.heroImage ? [tour.heroImage] : undefined,
+    }));
+    const nodes = [breadcrumbs];
+    if (itemListItems.length) {
+      nodes.push(buildItemList(itemListItems));
+    }
+    return nodes;
+  }, [filteredTours, state.name, state.slug]);
+
+  useStructuredData(structuredDataNodes);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">

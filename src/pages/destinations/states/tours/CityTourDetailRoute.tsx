@@ -1,8 +1,10 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
 import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
+import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -24,6 +26,7 @@ import {
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { buildMetaDescription } from "../../../../utils/seo";
+import { buildTourProductStructuredData } from "../../../../utils/structuredData";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -43,6 +46,46 @@ export default function CityTourDetailRoute({
     getCityBySlugs(params.stateSlug, params.citySlug) ??
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
+  const isFlagstaff = Boolean(
+    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+  );
+  const tour = state && city
+    ? isFlagstaff
+      ? getFlagstaffTourBySlug(params.tourSlug)
+      : getTourBySlugs(state.slug, city.slug, params.tourSlug)
+    : null;
+
+  const canonicalUrl =
+    tour && isFlagstaff
+      ? getFlagstaffTourDetailPath(tour)
+      : tour
+        ? getCityTourDetailPath(tour)
+        : "";
+  const bookingUrl =
+    tour && isFlagstaff
+      ? getFlagstaffTourBookingPath(tour)
+      : tour
+        ? getCityTourBookingPath(tour)
+        : "";
+  const productDescription = tour
+    ? getExpandedTourDescription(tour)[0]
+    : undefined;
+  const structuredDataNodes = useMemo(() => {
+    if (!tour || !canonicalUrl || !bookingUrl) {
+      return null;
+    }
+    return [
+      buildTourProductStructuredData({
+        tour,
+        detailUrl: canonicalUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+    ];
+  }, [bookingUrl, canonicalUrl, productDescription, tour]);
+
+  useStructuredData(structuredDataNodes);
+
   if (!state || !city) {
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
@@ -54,11 +97,6 @@ export default function CityTourDetailRoute({
       </main>
     );
   }
-
-  const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tour = isFlagstaff
-    ? getFlagstaffTourBySlug(params.tourSlug)
-    : getTourBySlugs(state.slug, city.slug, params.tourSlug);
 
   if (!tour) {
     return (
@@ -87,9 +125,6 @@ export default function CityTourDetailRoute({
     tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
     `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
   );
-  const canonicalUrl = isFlagstaff
-    ? getFlagstaffTourDetailPath(tour)
-    : getCityTourDetailPath(tour);
   const relatedTours = (isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
@@ -158,11 +193,7 @@ export default function CityTourDetailRoute({
           </div>
           <div className="flex flex-wrap gap-3">
             <Link
-              href={
-                isFlagstaff
-                  ? getFlagstaffTourBookingPath(tour)
-                  : getCityTourBookingPath(tour)
-              }
+              href={bookingUrl}
             >
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 BOOK

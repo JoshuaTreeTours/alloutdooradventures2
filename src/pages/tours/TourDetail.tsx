@@ -1,7 +1,9 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
@@ -15,6 +17,7 @@ import {
   getTourHighlights,
 } from "../../data/tourNarratives";
 import { buildTourMetaDescription } from "../../utils/seo";
+import { buildTourProductStructuredData } from "../../utils/structuredData";
 
 type TourDetailProps = {
   params: {
@@ -26,6 +29,26 @@ type TourDetailProps = {
 
 export default function TourDetail({ params }: TourDetailProps) {
   const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
+  const bookingUrl = tour ? getCityTourBookingPath(tour) : "";
+  const detailUrl = tour ? getTourDetailPath(tour) : "";
+  const productDescription = tour
+    ? getExpandedTourDescription(tour)[0]
+    : undefined;
+  const structuredDataNodes = useMemo(() => {
+    if (!tour || !bookingUrl || !detailUrl) {
+      return null;
+    }
+    return [
+      buildTourProductStructuredData({
+        tour,
+        detailUrl,
+        bookingUrl,
+        description: productDescription,
+      }),
+    ];
+  }, [bookingUrl, detailUrl, productDescription, tour]);
+
+  useStructuredData(structuredDataNodes);
 
   if (!tour) {
     return (
@@ -59,7 +82,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       <Seo
         title={title}
         description={description}
-        url={getTourDetailPath(tour)}
+        url={detailUrl}
       />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -136,7 +159,7 @@ export default function TourDetail({ params }: TourDetailProps) {
                   From {startingPriceLabel}
                 </p>
               ) : null}
-              <Link href={getCityTourBookingPath(tour)}>
+              <Link href={bookingUrl}>
                 <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                   BOOK
                 </a>

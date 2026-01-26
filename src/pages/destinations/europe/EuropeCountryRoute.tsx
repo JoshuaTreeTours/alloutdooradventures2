@@ -1,11 +1,15 @@
+import { useMemo } from "react";
 import { Link, useLocation } from "wouter";
 
 import Image from "../../../components/Image";
 import Seo from "../../../components/Seo";
 import TourCard from "../../../components/TourCard";
+import { useStructuredData } from "../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
 import { countriesWithTours, toursByCountry } from "../../../data/europeIndex";
+import { getTourDetailPath } from "../../../data/tours";
 import { buildMetaDescription } from "../../../utils/seo";
+import { buildBreadcrumbList, buildItemList } from "../../../utils/structuredData";
 
 const FILTER_OPTIONS = [
   { label: "All tours", routeSlug: "all" },
@@ -43,6 +47,29 @@ export default function EuropeCountryRoute({
           tour.primaryCategory === filterActivitySlug,
       )
     : countryTours;
+  const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
+  const structuredDataNodes = useMemo(() => {
+    if (!country) {
+      return null;
+    }
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: country.name, url: `/destinations/europe/${country.slug}` },
+    ]);
+    const itemListItems = filteredTours.map((tour) => ({
+      name: tour.title,
+      url: getTourDetailPath(tour),
+      image: tour.heroImage ? [tour.heroImage] : undefined,
+    }));
+    const nodes = [breadcrumbs];
+    if (itemListItems.length) {
+      nodes.push(buildItemList(itemListItems));
+    }
+    return nodes;
+  }, [country, filteredTours]);
+
+  useStructuredData(structuredDataNodes);
+
   if (!country) {
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
@@ -55,7 +82,6 @@ export default function EuropeCountryRoute({
     );
   }
 
-  const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
   const title = filterActivitySlug
     ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | All Outdoor Adventures`
     : `${country.name} Outdoor Adventures | Curated Tours & Experiences`;
