@@ -10,7 +10,8 @@ import {
   WORLD_DESTINATIONS,
   slugify,
 } from "../data/tourCatalog";
-import { getToursByActivity } from "../data/tours";
+import { getToursByActivity, tours } from "../data/tours";
+import { buildJourneyLinkForTour, getMultiDayTours } from "../utils/journeys";
 
 type ActivityCatalogTemplateProps = {
   title: string;
@@ -26,6 +27,18 @@ export default function ActivityCatalogTemplate({
   activitySlug,
 }: ActivityCatalogTemplateProps) {
   const activityTours = getToursByActivity(activitySlug);
+  const multiDayTourSlugs =
+    activitySlug === "multi-day"
+      ? new Set(getMultiDayTours(tours).map(({ tour }) => tour.slug))
+      : null;
+  const displayedTours =
+    activitySlug === "multi-day" && multiDayTourSlugs
+      ? activityTours.filter((tour) => multiDayTourSlugs.has(tour.slug))
+      : activityTours;
+  const toursToRender =
+    activitySlug === "multi-day" && displayedTours.length === 0
+      ? activityTours
+      : displayedTours;
   const handleStateChange = (slug: string) => {
     if (!slug) {
       return;
@@ -106,11 +119,26 @@ export default function ActivityCatalogTemplate({
             up to date.
           </p>
         </div>
-        {activityTours.length ? (
+        {toursToRender.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {activityTours.map((tour) => (
-              <TourCard key={tour.id} tour={tour} />
-            ))}
+            {toursToRender.map((tour) => {
+              const journeyHref =
+                activitySlug === "multi-day"
+                  ? buildJourneyLinkForTour(tour)
+                  : undefined;
+              const hint =
+                activitySlug === "multi-day" ? "View in Journeys" : undefined;
+
+              return (
+                <TourCard
+                  key={tour.id}
+                  tour={tour}
+                  href={journeyHref}
+                  cardHref={journeyHref}
+                  hint={hint}
+                />
+              );
+            })}
           </div>
         ) : (
           <p className="mt-8 text-center text-sm text-[#405040]">
