@@ -29,6 +29,9 @@ const buildFallbackTitle = (segments, defaultTitle) => {
   return `${label} | All Outdoor Adventures`;
 };
 
+const escapeRegExp = (value) =>
+  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
 const buildFallbackDescription = (segments, defaultDescription) => {
   if (!segments.length) {
     return defaultDescription;
@@ -37,6 +40,58 @@ const buildFallbackDescription = (segments, defaultDescription) => {
   const label = segments.map(toTitleCase).join(" ");
 
   return `Discover ${label} tours, guides, and outdoor experiences curated by All Outdoor Adventures.`;
+};
+
+const replaceTagAttribute = (tag, attrName, placeholder) => {
+  const attributePattern = new RegExp(
+    `${attrName}\\s*=\\s*["'][^"']*["']`,
+    "i",
+  );
+  return tag.replace(attributePattern, `${attrName}="${placeholder}"`);
+};
+
+const ensureTemplatePlaceholders = (template) => {
+  if (template.includes("__SEO_TITLE__") && template.includes("__SEO_CANONICAL__")) {
+    return template;
+  }
+
+  let normalized = template.replace(
+    /<title[^>]*>[\s\S]*?<\/title>/i,
+    "<title>__SEO_TITLE__</title>",
+  );
+
+  const metaPlaceholders = [
+    ["name", "description", "__SEO_DESCRIPTION__"],
+    ["property", "og:title", "__SEO_OG_TITLE__"],
+    ["property", "og:description", "__SEO_OG_DESCRIPTION__"],
+    ["property", "og:url", "__SEO_OG_URL__"],
+    ["property", "og:image", "__SEO_OG_IMAGE__"],
+    ["name", "twitter:title", "__SEO_TWITTER_TITLE__"],
+    ["name", "twitter:description", "__SEO_TWITTER_DESCRIPTION__"],
+    ["name", "twitter:image", "__SEO_TWITTER_IMAGE__"],
+  ];
+
+  metaPlaceholders.forEach(([attrName, attrValue, placeholder]) => {
+    const tagPattern = new RegExp(
+      `<meta\\s+[^>]*${attrName}\\s*=\\s*["']${escapeRegExp(
+        attrValue,
+      )}["'][^>]*>`,
+      "i",
+    );
+    normalized = normalized.replace(tagPattern, (tag) =>
+      replaceTagAttribute(tag, "content", placeholder),
+    );
+  });
+
+  const canonicalPattern = new RegExp(
+    `<link\\s+[^>]*rel\\s*=\\s*["']canonical["'][^>]*>`,
+    "i",
+  );
+  normalized = normalized.replace(canonicalPattern, (tag) =>
+    replaceTagAttribute(tag, "href", "__SEO_CANONICAL__"),
+  );
+
+  return normalized;
 };
 
 const replaceMeta = (html, seo) => {
@@ -121,13 +176,92 @@ const readSitemapUrls = async () => {
   return Array.from(urls);
 };
 
-const escapeRegExp = (value) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-
-const assertHtmlContains = (html, matcher, message) => {
-  if (!matcher.test(html)) {
-    throw new Error(message);
+const normalizePathname = (pathname) => {
+  if (!pathname) {
+    return "/";
   }
+  const trimmed = pathname.trim();
+  if (!trimmed || trimmed === "/") {
+    return "/";
+  }
+  return `/${trimmed.replace(/^\/+|\/+$/g, "")}`;
+};
+
+const STATIC_PATHS = new Set([
+  "/faqs",
+  "/journeys",
+  "/about",
+  "/contact",
+  "/privacy",
+  "/terms",
+  "/cookies",
+  "/disclosure",
+]);
+
+const isHome = (pathname) => normalizePathname(pathname) === "/";
+
+const isStatic = (pathname) =>
+  STATIC_PATHS.has(normalizePathname(pathname));
+
+const isTour = (pathname) => {
+  const normalized = normalizePathname(pathname);
+  return (
+    /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized) ||
+    /^\/tours\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+      normalized,
+    ) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+      normalized,
+    )
+  );
+};
+
+const isDestination = (pathname) => {
+  const normalized = normalizePathname(pathname);
+  return (
+    normalized.startsWith("/destinations") &&
+    !/^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) &&
+    !/^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+      normalized,
+    )
+  );
+};
+
+const logVerificationFailure = ({ label, url, assertion, details }) => {
+  console.error("[prerender-verify] Verification failed");
+  console.error(`  label: ${label}`);
+  console.error(`  url: ${url}`);
+  console.error(`  assertion: ${assertion}`);
+  if (details) {
+    console.error(`  details: ${details}`);
+  }
+};
+
+const findTag = (html, tagName, attrName, attrValue) => {
+  const pattern = new RegExp(
+    `<${tagName}\\s+[^>]*${attrName}\\s*=\\s*["']${escapeRegExp(
+      attrValue,
+    )}["'][^>]*>`,
+    "i",
+  );
+  const match = html.match(pattern);
+  if (!match) {
+    return null;
+  }
+  return match[0];
+};
+
+const extractAttribute = (tag, attrName) => {
+  if (!tag) {
+    return null;
+  }
+  const pattern = new RegExp(`${attrName}\\s*=\\s*["']([^"']+)["']`, "i");
+  const match = tag.match(pattern);
+  if (!match || !match[1]) {
+    return null;
+  }
+  return match[1];
 };
 
 const verifyPrerenderedPage = async ({
@@ -136,60 +270,149 @@ const verifyPrerenderedPage = async ({
   defaultTitle,
   defaultDescription,
   label,
+  allowDefaultSeo = false,
 }) => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
   if (!shouldWrite) {
-    throw new Error(`${label} page did not produce a prerendered HTML file.`);
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "prerender",
+      details: "No prerendered HTML output was generated.",
+    });
+    throw new Error("Prerender verification failed.");
   }
 
   const html = await readFile(outputPath, "utf8");
-  const robotsPattern =
-    /<meta\s+name=["']robots["'][^>]*content=["']index,follow,max-image-preview:large["'][^>]*>/i;
-  const googlebotPattern =
-    /<meta\s+name=["']googlebot["'][^>]*content=["']index,follow,max-image-preview:large["'][^>]*>/i;
-  const canonicalPattern = new RegExp(
-    `<link[^>]*rel=["']canonical["'][^>]*href=["']${escapeRegExp(
-      expectedUrl,
-    )}["'][^>]*>`,
-    "i",
-  );
-  const titleMatch = html.match(/<title>(.*?)<\/title>/i);
-  const descriptionMatch = html.match(
-    /<meta\s+name=["']description["'][^>]*content=["']([^"']*)["'][^>]*>/i,
-  );
+  const robotsTag = findTag(html, "meta", "name", "robots");
+  if (!robotsTag) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "robots",
+      details: "Missing <meta name=\"robots\">.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const robotsContent = extractAttribute(robotsTag, "content");
+  if (robotsContent !== "index,follow,max-image-preview:large") {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "robots",
+      details: `Unexpected robots content: ${robotsContent ?? "missing"}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
 
-  assertHtmlContains(
-    html,
-    robotsPattern,
-    `${label} page is missing the robots meta tag.`,
-  );
-  assertHtmlContains(
-    html,
-    googlebotPattern,
-    `${label} page is missing the googlebot meta tag.`,
-  );
-  assertHtmlContains(
-    html,
-    canonicalPattern,
-    `${label} page is missing the expected canonical URL.`,
-  );
+  const googlebotTag = findTag(html, "meta", "name", "googlebot");
+  if (!googlebotTag) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "googlebot",
+      details: "Missing <meta name=\"googlebot\">.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const googlebotContent = extractAttribute(googlebotTag, "content");
+  if (googlebotContent !== "index,follow,max-image-preview:large") {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "googlebot",
+      details: `Unexpected googlebot content: ${googlebotContent ?? "missing"}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
 
-  if (!titleMatch?.[1]) {
-    throw new Error(`${label} page is missing a title tag.`);
+  const canonicalTag = findTag(html, "link", "rel", "canonical");
+  if (!canonicalTag) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "canonical",
+      details: "Missing <link rel=\"canonical\">.",
+    });
+    throw new Error("Prerender verification failed.");
   }
-  if (titleMatch[1].trim() === defaultTitle) {
-    throw new Error(`${label} page is using the default title.`);
+  const canonicalHref = extractAttribute(canonicalTag, "href");
+  if (!canonicalHref) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "canonical",
+      details: "Canonical tag is missing an href attribute.",
+    });
+    throw new Error("Prerender verification failed.");
   }
-  if (!descriptionMatch?.[1]) {
-    throw new Error(`${label} page is missing a meta description.`);
+  if (canonicalHref !== expectedUrl) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "canonical",
+      details: `Expected ${expectedUrl} but found ${canonicalHref}.`,
+    });
+    throw new Error("Prerender verification failed.");
   }
-  if (descriptionMatch[1].trim() === defaultDescription) {
-    throw new Error(`${label} page is using the default description.`);
+
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  if (!titleMatch || !titleMatch[1]) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "title",
+      details: "Missing <title> tag.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const titleValue = titleMatch[1].trim();
+  if (!allowDefaultSeo && titleValue === defaultTitle) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "title",
+      details: "Using the default title.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const descriptionTag = findTag(html, "meta", "name", "description");
+  if (!descriptionTag) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "description",
+      details: "Missing <meta name=\"description\">.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const descriptionValue = extractAttribute(descriptionTag, "content");
+  if (!descriptionValue) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "description",
+      details: "Meta description is empty.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (!allowDefaultSeo && descriptionValue.trim() === defaultDescription) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "description",
+      details: "Using the default description.",
+    });
+    throw new Error("Prerender verification failed.");
   }
 };
 
+
 const main = async () => {
-  const template = await readFile(templatePath, "utf8");
+  const template = ensureTemplatePlaceholders(
+    await readFile(templatePath, "utf8"),
+  );
   const [toursGeneratedModule, flagstaffModule, seoModule] = await Promise.all([
     tsImport("../src/data/tours.generated.ts", import.meta.url),
     tsImport("../src/data/flagstaffTours.ts", import.meta.url),
@@ -325,43 +548,75 @@ const main = async () => {
     await writeFile(outputPath, replaceMeta(template, seo), "utf8");
   }
 
-  const tourUrl = urls.find((url) => {
-    const pathname = new URL(url).pathname;
-    return (
-      /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(pathname) ||
-      /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+$/.test(pathname) ||
-      /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+$/.test(
-        pathname,
-      )
-    );
-  });
-  const destinationStateUrl = urls.find((url) =>
-    /^\/destinations\/states\/[^/]+$/.test(new URL(url).pathname),
-  );
+  const findUrl = (predicate) =>
+    urls.find((url) => predicate(normalizePathname(new URL(url).pathname)));
 
-  if (!tourUrl) {
-    throw new Error("No tour detail URL found for prerender verification.");
-  }
-  if (!destinationStateUrl) {
-    throw new Error(
-      "No destination state URL found for prerender verification.",
-    );
-  }
+  const verificationTargets = [
+    {
+      label: "Homepage",
+      url: findUrl(isHome),
+    },
+    {
+      label: "Tour",
+      url: findUrl(isTour),
+    },
+    {
+      label: "Destination state",
+      url: findUrl((pathname) =>
+        /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname)),
+      ),
+    },
+    {
+      label: "Destination city",
+      url: findUrl((pathname) =>
+        /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
+          normalizePathname(pathname),
+        ),
+      ),
+    },
+    {
+      label: "Destination tour",
+      url: findUrl((pathname) =>
+        /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+          normalizePathname(pathname),
+        ) ||
+        /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+          normalizePathname(pathname),
+        ),
+      ),
+    },
+    {
+      label: "Static",
+      url: findUrl(isStatic),
+    },
+  ];
 
-  await verifyPrerenderedPage({
-    pathname: new URL(tourUrl).pathname,
-    expectedUrl: buildCanonicalUrl(new URL(tourUrl).pathname),
-    defaultTitle: DEFAULT_SEO.title,
-    defaultDescription: DEFAULT_SEO.description,
-    label: "Tour",
+  verificationTargets.forEach((target) => {
+    if (!target.url) {
+      logVerificationFailure({
+        label: target.label,
+        url: "unknown",
+        assertion: "route",
+        details: "No matching URL found in sitemap.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
   });
-  await verifyPrerenderedPage({
-    pathname: new URL(destinationStateUrl).pathname,
-    expectedUrl: buildCanonicalUrl(new URL(destinationStateUrl).pathname),
-    defaultTitle: DEFAULT_SEO.title,
-    defaultDescription: DEFAULT_SEO.description,
-    label: "Destination state",
-  });
+
+  for (const target of verificationTargets) {
+    const pathname = normalizePathname(new URL(target.url).pathname);
+    const expectedUrl = buildCanonicalUrl(pathname);
+    const allowDefaultSeo = isHome(pathname) || isStatic(pathname);
+
+    await verifyPrerenderedPage({
+      pathname,
+      expectedUrl,
+      defaultTitle: DEFAULT_SEO.title,
+      defaultDescription: DEFAULT_SEO.description,
+      label: target.label,
+      allowDefaultSeo,
+    });
+  }
 };
 
 main().catch((error) => {
