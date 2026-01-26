@@ -41,4 +41,5 @@ export type Tour = {
   bookingWidgetUrl?: string;
   longDescription: string;
   suppressReviews?: boolean;
+  durationDays?: number;
 };

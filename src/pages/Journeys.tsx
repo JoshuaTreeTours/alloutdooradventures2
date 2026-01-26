@@ -2,7 +2,11 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
-import { getCityTourBookingPath, getTourDetailPath, tours } from "../data/tours";
+import {
+  getCityTourBookingPath,
+  getMultiDayJourneys,
+  getTourDetailPath,
+} from "../data/tours";
 import type { Tour } from "../data/tours.types";
 
 const JOURNEYS_FALLBACK_IMAGE = "/hero.jpg";
@@ -12,76 +16,6 @@ const durationBuckets = [
   { label: "4–7 days", value: "4-7" },
   { label: "8+ days", value: "8+" },
 ];
-
-const multiDayTriggers = ["multi-day", "multi day", "overnight"];
-
-const extractDurationDays = (text?: string) => {
-  if (!text) {
-    return undefined;
-  }
-
-  const normalized = text.toLowerCase();
-  const overnightMatch = normalized.match(/(\d+)\s*d\s*\/\s*(\d+)\s*n/);
-  if (overnightMatch) {
-    const days = Number(overnightMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
-
-  const rangeMatch = normalized.match(/(\d+)\s*-\s*(\d+)\s*day/);
-  if (rangeMatch) {
-    const days = Number(rangeMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
-
-  const dayMatch = normalized.match(/\b(\d+)\s*day/);
-  if (dayMatch) {
-    const days = Number(dayMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
-
-  const compactMatch = normalized.match(/\b(\d+)\s*d\b/);
-  if (compactMatch) {
-    const days = Number(compactMatch[1]);
-    return Number.isNaN(days) ? undefined : days;
-  }
-
-  return undefined;
-};
-
-const getTourDurationDays = (tour: Tour) => {
-  const sources = [
-    tour.badges?.duration,
-    tour.badges?.tagline,
-    tour.title,
-    tour.slug?.replace(/-/g, " "),
-  ];
-
-  for (const source of sources) {
-    const durationDays = extractDurationDays(source);
-    if (durationDays !== undefined) {
-      return durationDays;
-    }
-  }
-
-  if (multiDayTriggers.some((trigger) => tour.title.toLowerCase().includes(trigger))) {
-    return 2;
-  }
-
-  return undefined;
-};
-
-const isMultiDayTour = (tour: Tour, durationDays?: number) => {
-  if (durationDays !== undefined) {
-    return durationDays > 1;
-  }
-
-  const combined = `${tour.title} ${tour.slug}`.toLowerCase();
-  if (combined.includes("full day") || combined.includes("day-long")) {
-    return false;
-  }
-
-  return multiDayTriggers.some((trigger) => combined.includes(trigger));
-};
 
 const getCarouselImages = (tour: Tour) => {
   const images = [tour.heroImage, ...(tour.galleryImages ?? [])]
@@ -193,16 +127,7 @@ export default function Journeys() {
   const [selectedDuration, setSelectedDuration] = useState("all");
 
   const multiDayTours = useMemo(() => {
-    return tours
-      .map((tour) => {
-        const durationDays = getTourDurationDays(tour);
-        return {
-          tour,
-          durationDays,
-          isMultiDay: isMultiDayTour(tour, durationDays),
-        };
-      })
-      .filter(({ isMultiDay }) => isMultiDay);
+    return getMultiDayJourneys();
   }, []);
 
   const regionOptions = useMemo(() => {

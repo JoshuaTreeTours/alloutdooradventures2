@@ -10,7 +10,7 @@ import {
   WORLD_DESTINATIONS,
   slugify,
 } from "../data/tourCatalog";
-import { getToursByActivity } from "../data/tours";
+import { getMultiDayJourneys, getToursByActivity } from "../data/tours";
 
 type ActivityCatalogTemplateProps = {
   title: string;
@@ -25,7 +25,41 @@ export default function ActivityCatalogTemplate({
   image,
   activitySlug,
 }: ActivityCatalogTemplateProps) {
-  const activityTours = getToursByActivity(activitySlug);
+  const isMultiDay = activitySlug === "multi-day";
+  const multiDayJourneys = isMultiDay ? getMultiDayJourneys() : null;
+  const activityTours = multiDayJourneys
+    ? multiDayJourneys.map(({ tour }) => tour)
+    : getToursByActivity(activitySlug);
+  const journeyStates = multiDayJourneys
+    ? Array.from(
+        new Set(
+          multiDayJourneys
+            .filter(({ tour }) => !tour.destination.country)
+            .map(({ tour }) => tour.destination.state)
+            .filter(Boolean),
+        ),
+      ).sort((a, b) => a.localeCompare(b))
+    : US_STATES;
+  const journeyCountries = multiDayJourneys
+    ? Array.from(
+        new Set(
+          multiDayJourneys
+            .map(({ tour }) => tour.destination.country)
+            .filter(Boolean),
+        ),
+      ).sort((a, b) => a.localeCompare(b))
+    : WORLD_DESTINATIONS;
+  const europeCountries = multiDayJourneys
+    ? countriesWithTours.filter((country) =>
+        journeyCountries.includes(country.name),
+      )
+    : countriesWithTours;
+  const worldCountries = multiDayJourneys
+    ? journeyCountries.filter(
+        (country) =>
+          !europeCountries.some((europe) => europe.name === country),
+      )
+    : WORLD_DESTINATIONS;
   const handleStateChange = (slug: string) => {
     if (!slug) {
       return;
@@ -78,13 +112,15 @@ export default function ActivityCatalogTemplate({
             {title} by state
           </h2>
           <p className="mt-3 text-sm text-[#405040] md:text-base">
-            These links are placeholders until each state has its tour lineup.
+            {isMultiDay
+              ? "States shown here are pulled directly from our multi-day journeys."
+              : "These links are placeholders until each state has its tour lineup."}
           </p>
         </div>
         <div className="mx-auto mt-8 w-full max-w-md">
           <RegionDropdownButton
             label="Choose a state"
-            options={US_STATES.map((state) => ({
+            options={journeyStates.map((state) => ({
               name: state,
               slug: state,
             }))}
@@ -125,7 +161,7 @@ export default function ActivityCatalogTemplate({
           title="Every country in Europe"
           description="Add tour listings to each country hub as partnerships are ready."
           ariaLabel="European tour destinations"
-          items={countriesWithTours.map((country) => ({
+          items={europeCountries.map((country) => ({
             label: country.name,
             href: `/destinations/europe/${country.slug}`,
           }))}
@@ -136,7 +172,7 @@ export default function ActivityCatalogTemplate({
           title="Other global destinations"
           description="Prepare for future activity hubs beyond Europe."
           ariaLabel="World tour destinations"
-          items={WORLD_DESTINATIONS.map((destination) => ({
+          items={worldCountries.map((destination) => ({
             label: destination,
             href: `/tours/${activitySlug}/world/${slugify(destination)}`,
           }))}

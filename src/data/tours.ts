@@ -14,6 +14,21 @@ type ProviderConfig = {
   affiliateDisclosure?: string;
 };
 
+const multiDayTriggers = ["multi-day", "multi day", "overnight"];
+const nonMultiDayTriggers = [
+  "full day",
+  "day-long",
+  "day long",
+  "half day",
+  "half-day",
+  "halfday",
+  "single day",
+  "single-day",
+  "1 day",
+  "1-day",
+  "one day",
+];
+
 const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
   fareharbor: {
     label: "FareHarbor",
@@ -1110,6 +1125,109 @@ export const tours: Tour[] = [
   ...europeTours,
   ...australiaTours,
 ].map(applyTourPricing);
+
+const extractDurationDays = (text?: string) => {
+  if (!text) {
+    return undefined;
+  }
+
+  const normalized = text.toLowerCase();
+  if (normalized.includes("half day") || normalized.includes("half-day")) {
+    return 0.5;
+  }
+
+  if (
+    normalized.includes("full day") ||
+    normalized.includes("day-long") ||
+    normalized.includes("day long")
+  ) {
+    return 1;
+  }
+
+  const overnightMatch = normalized.match(/(\d+)\s*d\s*\/\s*(\d+)\s*n/);
+  if (overnightMatch) {
+    const days = Number(overnightMatch[1]);
+    return Number.isNaN(days) ? undefined : days;
+  }
+
+  const rangeMatch = normalized.match(/(\d+)\s*-\s*(\d+)\s*day/);
+  if (rangeMatch) {
+    const days = Number(rangeMatch[1]);
+    return Number.isNaN(days) ? undefined : days;
+  }
+
+  const dayMatch = normalized.match(/\b(\d+)\s*day/);
+  if (dayMatch) {
+    const days = Number(dayMatch[1]);
+    return Number.isNaN(days) ? undefined : days;
+  }
+
+  const compactMatch = normalized.match(/\b(\d+)\s*d\b/);
+  if (compactMatch) {
+    const days = Number(compactMatch[1]);
+    return Number.isNaN(days) ? undefined : days;
+  }
+
+  return undefined;
+};
+
+const getTourDurationDays = (tour: Tour) => {
+  if (tour.durationDays !== undefined) {
+    return tour.durationDays;
+  }
+
+  const sources = [
+    tour.badges?.duration,
+    tour.badges?.tagline,
+    tour.title,
+    tour.slug?.replace(/-/g, " "),
+  ];
+
+  for (const source of sources) {
+    const durationDays = extractDurationDays(source);
+    if (durationDays !== undefined) {
+      return durationDays;
+    }
+  }
+
+  const combined = `${tour.title} ${tour.slug}`.toLowerCase();
+  if (multiDayTriggers.some((trigger) => combined.includes(trigger))) {
+    return 2;
+  }
+
+  return undefined;
+};
+
+const isMultiDayTour = (tour: Tour, durationDays?: number) => {
+  if (durationDays !== undefined) {
+    return durationDays >= 2;
+  }
+
+  const combined = `${tour.title} ${tour.slug}`.toLowerCase();
+  if (nonMultiDayTriggers.some((trigger) => combined.includes(trigger))) {
+    return false;
+  }
+
+  return multiDayTriggers.some((trigger) => combined.includes(trigger));
+};
+
+export type MultiDayJourney = {
+  tour: Tour;
+  durationDays?: number;
+};
+
+export const getMultiDayJourneys = (): MultiDayJourney[] =>
+  tours
+    .map((tour) => {
+      const durationDays = getTourDurationDays(tour);
+      return {
+        tour,
+        durationDays,
+        isMultiDay: isMultiDayTour(tour, durationDays),
+      };
+    })
+    .filter(({ isMultiDay }) => isMultiDay)
+    .map(({ tour, durationDays }) => ({ tour, durationDays }));
 
 export const getToursByState = (stateSlug: string) =>
   tours.filter((tour) => tour.destination.stateSlug === stateSlug);
