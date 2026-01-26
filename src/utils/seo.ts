@@ -25,7 +25,7 @@ export const STATIC_PAGE_SEO = {
   "/tours": {
     title: "Tours | All Outdoor Adventures",
     description:
-      "Browse curated tours by destination and activity, with live availability and trusted local operators.",
+      "Navigate outdoor destinations by country or state and jump straight to local guides and tours.",
   },
   "/destinations": {
     title: "Destinations | All Outdoor Adventures",
