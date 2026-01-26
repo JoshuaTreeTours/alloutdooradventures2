@@ -1,5 +1,3 @@
-import { useLocation } from "wouter";
-
 import Seo from "../components/Seo";
 import { getStaticPageSeo } from "../utils/seo";
 
@@ -87,8 +85,7 @@ const FAQ_SECTIONS = [
 ];
 
 export default function Faqs() {
-  const [location] = useLocation();
-  const seo = getStaticPageSeo(location ?? "/faq") ?? getStaticPageSeo("/faq");
+  const seo = getStaticPageSeo("/faqs");
 
   return (
     <>

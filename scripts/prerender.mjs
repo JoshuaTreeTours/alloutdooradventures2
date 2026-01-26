@@ -150,6 +150,19 @@ const ensureDirectory = async (dir) => {
   return true;
 };
 
+const ensurePrerenderedFile = async (pathname) => {
+  const { outputPath, shouldWrite } = buildOutputPath(pathname);
+  if (!shouldWrite) {
+    return false;
+  }
+  try {
+    const stats = await stat(outputPath);
+    return stats.isFile();
+  } catch {
+    return false;
+  }
+};
+
 const readSitemapUrls = async () => {
   let files = [];
 
@@ -188,7 +201,6 @@ const normalizePathname = (pathname) => {
 };
 
 const STATIC_PATHS = new Set([
-  "/faq",
   "/faqs",
   "/journeys",
   "/about",
@@ -749,9 +761,7 @@ const main = async () => {
       label: "Static",
       url: findUrl(
         (pathname) =>
-          normalizePathname(pathname) === "/faq" ||
-          normalizePathname(pathname) === "/faqs" ||
-          isStatic(pathname),
+          normalizePathname(pathname) === "/faqs" || isStatic(pathname),
       ),
     },
   ];
@@ -767,6 +777,18 @@ const main = async () => {
       throw new Error("Prerender verification failed.");
     }
   });
+
+  const faqPath = "/faqs";
+  const faqPrerendered = await ensurePrerenderedFile(faqPath);
+  if (!faqPrerendered) {
+    logVerificationFailure({
+      label: "FAQ",
+      url: buildCanonicalUrl(faqPath),
+      assertion: "prerender",
+      details: "Missing prerendered FAQ HTML output.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
 
   for (const target of verificationTargets) {
     const pathname = normalizePathname(new URL(target.url).pathname);

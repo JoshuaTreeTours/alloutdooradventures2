@@ -12,11 +12,6 @@ export const DEFAULT_SEO = {
 } as const;
 
 export const STATIC_PAGE_SEO = {
-  "/faq": {
-    title: "FAQs | All Outdoor Adventures",
-    description:
-      "Get answers about booking, cancellations, and tour logistics so you can plan your outdoor adventure with confidence.",
-  },
   "/faqs": {
     title: "FAQs | All Outdoor Adventures",
     description:
