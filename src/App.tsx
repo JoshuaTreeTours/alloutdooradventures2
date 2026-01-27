@@ -52,6 +52,7 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
+import { generatedCityRoutes } from "./pages/generatedCityRoutes";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
@@ -140,6 +141,10 @@ export default function App() {
         />
         <Route path="/destinations/states/:stateSlug" component={StateRoute} />
         <Route path="/destinations/:stateSlug" component={StateLandingRoute} />
+
+        {generatedCityRoutes.map((route) => (
+          <Route key={route.path} path={route.path} component={route.component} />
+        ))}
 
         <Route path="/tours" component={ToursIndex} />
         <Route path="/tours/catalog" component={ToursCatalog} />
