@@ -971,7 +971,7 @@ Flagstaff is also a four-season adventure basecamp. Summer and early fall bring 
 
 Between outings, the historic Route 66 corridor and walkable downtown add brewery patios, local food, and easy post-adventure hangs. Sedona’s red-rock canyons are close enough for a half-day detour, so you can mix pine forest hikes with high-desert vistas and still make it back for dinner in town.`,
         heroImages: [
-          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
           "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
           "https://images.unsplash.com/photo-1443890923422-7819ed4101c0?auto=format&fit=crop&w=1600&q=80",
         ],
