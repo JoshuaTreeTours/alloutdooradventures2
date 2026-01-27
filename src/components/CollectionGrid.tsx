@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "./Image";
@@ -23,6 +24,30 @@ export default function CollectionGrid({
   description,
   items,
 }: CollectionGridProps) {
+  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const element = sectionRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="text-center">
@@ -36,7 +61,12 @@ export default function CollectionGrid({
           {description}
         </p>
       </div>
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div
+        ref={sectionRef}
+        className={`mt-10 grid gap-6 transition-all duration-[250ms] ease-out md:grid-cols-3 ${
+          isVisible ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
+        }`}
+      >
         {items.map((item) => (
           <Link key={item.title} href={item.href}>
             <a className="group flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/80 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
