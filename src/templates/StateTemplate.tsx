@@ -9,12 +9,16 @@ import { buildMetaDescription } from "../utils/seo";
 
 const buildCityDestination = (
   stateSlug: string,
+  stateHeroImage: string,
   city: StateDestination["cities"][number]
 ): Destination => ({
   name: city.name,
   stateSlug,
   description: city.shortDescription,
-  image: city.heroImages[0],
+  image:
+    city.heroImages.find((image) => image?.trim()) ||
+    stateHeroImage ||
+    "/hero.jpg",
   href: `/destinations/states/${stateSlug}/cities/${city.slug}`,
 });
 
@@ -243,7 +247,11 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           {state.cities.map((city) => (
             <DestinationCard
               key={city.slug}
-              destination={buildCityDestination(state.slug, city)}
+              destination={buildCityDestination(
+                state.slug,
+                state.heroImage,
+                city
+              )}
               ctaLabel="Explore city"
               headingLevel="h3"
               descriptionVariant="featured"
