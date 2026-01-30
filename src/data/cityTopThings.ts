@@ -4,13 +4,14 @@ import { isTier1City } from "./cityTier1";
 import { cityLocalPois, type LocalPoi } from "./cityLocalPois";
 import { getTier1PoisForCity } from "./cityPois/tier1";
 import { getTier1IntlPoisForCity } from "./cityPois/tier1Intl";
-import { states } from "./destinations";
+import { getCityBySlugs, getStateBySlug, states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
 
 export const MAX_DRIVE_HOURS = 2;
 export const ASSUMED_AVG_MPH = 55;
-export const MAX_NEARBY_MILES = 60;
+export const MAX_NEARBY_DESTINATION_MILES = 60;
+export const MAX_NEARBY_MILES = MAX_NEARBY_DESTINATION_MILES;
 export const MIN_TIER1_DESCRIPTION_LENGTH = 240;
 export const MIN_TIER1_ITEMS = 8;
 
@@ -19,9 +20,9 @@ const TIER1_CITY_RADIUS_MILES: Record<string, number> = {
   "san-diego": 20,
   "san-francisco": 20,
   "san-jose": 20,
-  "sacramento": 20,
-  "seattle": 20,
-  "portland": 20,
+  sacramento: 20,
+  seattle: 20,
+  portland: 20,
   "las-vegas": 20,
   phoenix: 20,
   denver: 20,
@@ -63,6 +64,14 @@ export const TOP_THINGS_DENYLIST = [
   "desert overlook",
 ];
 
+export const TOP_THINGS_BANNED_PHRASES = [
+  "take a short drive from",
+  "easy change of scenery",
+  "quick way to add variety",
+  "add variety to your trip",
+  "quick way to add variety to your trip",
+];
+
 const GENERIC_PLACEHOLDER_PHRASES = [
   "central plaza",
   "arts quarter",
@@ -73,6 +82,7 @@ const GENERIC_PLACEHOLDER_PHRASES = [
 
 export type TopThingSource =
   | "local-poi"
+  | "nearby-poi"
   | "nearby-destination"
   | "fallback"
   | "archetype";
@@ -99,6 +109,8 @@ export type NearbyDestination = {
   lng: number;
   distanceMiles: number;
 };
+
+type NearbyPoi = LocalPoi & { distanceMiles: number };
 
 const TITLE_CASE_LOWER_WORDS = new Set([
   "and",
@@ -194,8 +206,189 @@ const RIVER_HINT_STATES = new Set([
   "washington",
 ]);
 
+const US_STATE_NEIGHBORS: Record<string, string[]> = {
+  alabama: ["florida", "georgia", "mississippi", "tennessee"],
+  alaska: [],
+  arizona: ["california", "nevada", "new-mexico", "utah"],
+  arkansas: [
+    "louisiana",
+    "mississippi",
+    "missouri",
+    "oklahoma",
+    "tennessee",
+    "texas",
+  ],
+  california: ["arizona", "nevada", "oregon"],
+  colorado: [
+    "arizona",
+    "kansas",
+    "nebraska",
+    "new-mexico",
+    "oklahoma",
+    "utah",
+    "wyoming",
+  ],
+  connecticut: ["massachusetts", "new-york", "rhode-island"],
+  delaware: ["maryland", "new-jersey", "pennsylvania"],
+  florida: ["alabama", "georgia"],
+  georgia: [
+    "alabama",
+    "florida",
+    "north-carolina",
+    "south-carolina",
+    "tennessee",
+  ],
+  hawaii: [],
+  idaho: ["montana", "nevada", "oregon", "utah", "washington", "wyoming"],
+  illinois: [
+    "indiana",
+    "iowa",
+    "kentucky",
+    "michigan",
+    "missouri",
+    "wisconsin",
+  ],
+  indiana: ["illinois", "kentucky", "michigan", "ohio"],
+  iowa: [
+    "illinois",
+    "minnesota",
+    "missouri",
+    "nebraska",
+    "south-dakota",
+    "wisconsin",
+  ],
+  kansas: ["colorado", "missouri", "nebraska", "oklahoma"],
+  kentucky: [
+    "illinois",
+    "indiana",
+    "missouri",
+    "ohio",
+    "tennessee",
+    "virginia",
+    "west-virginia",
+  ],
+  louisiana: ["arkansas", "mississippi", "texas"],
+  maine: ["new-hampshire"],
+  maryland: [
+    "delaware",
+    "district-of-columbia",
+    "pennsylvania",
+    "virginia",
+    "west-virginia",
+  ],
+  massachusetts: [
+    "connecticut",
+    "new-hampshire",
+    "new-york",
+    "rhode-island",
+    "vermont",
+  ],
+  michigan: ["indiana", "ohio", "wisconsin"],
+  minnesota: ["iowa", "north-dakota", "south-dakota", "wisconsin"],
+  mississippi: ["alabama", "arkansas", "louisiana", "tennessee"],
+  missouri: [
+    "arkansas",
+    "illinois",
+    "iowa",
+    "kansas",
+    "kentucky",
+    "nebraska",
+    "oklahoma",
+    "tennessee",
+  ],
+  montana: ["idaho", "north-dakota", "south-dakota", "wyoming"],
+  nebraska: [
+    "colorado",
+    "iowa",
+    "kansas",
+    "missouri",
+    "south-dakota",
+    "wyoming",
+  ],
+  nevada: ["arizona", "california", "idaho", "oregon", "utah"],
+  "new-hampshire": ["maine", "massachusetts", "vermont"],
+  "new-jersey": ["delaware", "new-york", "pennsylvania"],
+  "new-mexico": ["arizona", "colorado", "oklahoma", "texas", "utah"],
+  "new-york": [
+    "connecticut",
+    "massachusetts",
+    "new-jersey",
+    "pennsylvania",
+    "vermont",
+  ],
+  "north-carolina": ["georgia", "south-carolina", "tennessee", "virginia"],
+  "north-dakota": ["minnesota", "montana", "south-dakota"],
+  ohio: ["indiana", "kentucky", "michigan", "pennsylvania", "west-virginia"],
+  oklahoma: [
+    "arkansas",
+    "colorado",
+    "kansas",
+    "missouri",
+    "new-mexico",
+    "texas",
+  ],
+  oregon: ["california", "idaho", "nevada", "washington"],
+  pennsylvania: [
+    "delaware",
+    "maryland",
+    "new-jersey",
+    "new-york",
+    "ohio",
+    "west-virginia",
+  ],
+  "rhode-island": ["connecticut", "massachusetts"],
+  "south-carolina": ["georgia", "north-carolina"],
+  "south-dakota": [
+    "iowa",
+    "minnesota",
+    "montana",
+    "nebraska",
+    "north-dakota",
+    "wyoming",
+  ],
+  tennessee: [
+    "alabama",
+    "arkansas",
+    "georgia",
+    "kentucky",
+    "mississippi",
+    "missouri",
+    "north-carolina",
+    "virginia",
+  ],
+  texas: ["arkansas", "louisiana", "new-mexico", "oklahoma"],
+  utah: ["arizona", "colorado", "idaho", "nevada", "new-mexico", "wyoming"],
+  vermont: ["massachusetts", "new-hampshire", "new-york"],
+  virginia: [
+    "district-of-columbia",
+    "kentucky",
+    "maryland",
+    "north-carolina",
+    "tennessee",
+    "west-virginia",
+  ],
+  washington: ["idaho", "oregon"],
+  "west-virginia": ["kentucky", "maryland", "ohio", "pennsylvania", "virginia"],
+  wisconsin: ["illinois", "iowa", "michigan", "minnesota"],
+  wyoming: ["colorado", "idaho", "montana", "nebraska", "south-dakota", "utah"],
+  "district-of-columbia": ["maryland", "virginia"],
+};
+
 const buildCityKey = (parentSlug: string, citySlug: string) =>
   `${parentSlug}/${citySlug}`;
+
+export const getAllowedNeighborStates = (stateSlug: string) =>
+  new Set([stateSlug, ...(US_STATE_NEIGHBORS[stateSlug] ?? [])]);
+
+const hasValidCoordinates = (
+  lat: number | null | undefined,
+  lng: number | null | undefined
+) => Number.isFinite(lat) && Number.isFinite(lng);
+
+export const containsBannedTopThingPhrase = (text: string) => {
+  const lower = text.toLowerCase();
+  return TOP_THINGS_BANNED_PHRASES.some(phrase => lower.includes(phrase));
+};
 
 const toTitleCase = (name: string) =>
   name.replace(/\b([A-Za-z][A-Za-z']*)\b/g, (match, word, offset) => {
@@ -215,14 +408,14 @@ const toTitleCase = (name: string) =>
 
 export const isDenylistedTopThing = (name: string) => {
   const lower = name.toLowerCase();
-  return TOP_THINGS_DENYLIST.some((phrase) => lower.includes(phrase));
+  return TOP_THINGS_DENYLIST.some(phrase => lower.includes(phrase));
 };
 
 export const isGenericPlaceholderName = (name: string, cityName: string) => {
   const lower = name.toLowerCase();
   const cityLower = cityName.toLowerCase();
 
-  if (GENERIC_PLACEHOLDER_PHRASES.some((phrase) => lower.includes(phrase))) {
+  if (GENERIC_PLACEHOLDER_PHRASES.some(phrase => lower.includes(phrase))) {
     return true;
   }
 
@@ -243,24 +436,53 @@ export const isGenericPlaceholderName = (name: string, cityName: string) => {
 
 export const getLocalPoisForCity = (parentSlug: string, citySlug: string) =>
   cityLocalPois.filter(
-    (poi) => poi.citySlug === citySlug && poi.stateSlug === parentSlug,
+    poi => poi.citySlug === citySlug && poi.stateSlug === parentSlug
   );
 
-const buildLocalPoiNameSet = (pois: LocalPoi[]) =>
-  new Set(pois.map((poi) => normalizePlaceName(poi.name)));
+const getNearbyPoisForCity = (
+  parentSlug: string,
+  citySlug: string,
+  maxMiles = MAX_NEARBY_MILES
+): NearbyPoi[] => {
+  const origin = getCityCoordinates(parentSlug, citySlug);
+  if (!origin) {
+    return [];
+  }
+
+  return cityLocalPois
+    .filter(
+      poi =>
+        poi.stateSlug === parentSlug &&
+        poi.citySlug !== citySlug &&
+        hasValidCoordinates(poi.lat, poi.lng)
+    )
+    .map(poi => ({
+      ...poi,
+      distanceMiles: haversineMiles(origin, { lat: poi.lat, lng: poi.lng }),
+    }))
+    .filter(poi => poi.distanceMiles <= maxMiles)
+    .sort((a, b) => a.distanceMiles - b.distanceMiles);
+};
+
+const buildLocalPoiNameSet = (pois: ReadonlyArray<LocalPoi>) =>
+  new Set(pois.map(poi => normalizePlaceName(poi.name)));
 
 const buildDestinationList = () =>
-  states.flatMap((state) =>
-    state.cities.map((city) => ({
+  states.flatMap(state =>
+    state.cities.map(city => ({
       name: city.name,
       citySlug: city.slug,
       stateSlug: state.slug,
       lat: city.lat,
       lng: city.lng,
-    })),
+    }))
   );
 
 let destinationList: ReturnType<typeof buildDestinationList> | null = null;
+let destinationNameIndex: Map<
+  string,
+  ReturnType<typeof buildDestinationList>
+> | null = null;
 
 const getDestinationList = () => {
   if (!destinationList) {
@@ -270,21 +492,51 @@ const getDestinationList = () => {
   return destinationList;
 };
 
+const getDestinationNameIndex = () => {
+  if (!destinationNameIndex) {
+    const index = new Map<
+      string,
+      ReturnType<typeof buildDestinationList>[number][]
+    >();
+    getDestinationList().forEach(destination => {
+      const key = normalizePlaceName(destination.name);
+      const matches = index.get(key) ?? [];
+      matches.push(destination);
+      index.set(key, matches);
+    });
+    destinationNameIndex = index;
+  }
+
+  return destinationNameIndex;
+};
+
+const getStateName = (stateSlug: string) =>
+  getStateBySlug(stateSlug)?.name ?? "";
+
+const getCityName = (stateSlug: string, citySlug: string) =>
+  getCityBySlugs(stateSlug, citySlug)?.name ?? "";
+
 export const getNearbyDestinations = (
   parentSlug: string,
   citySlug: string,
-  maxMiles = MAX_NEARBY_MILES,
+  maxMiles = MAX_NEARBY_DESTINATION_MILES
 ): NearbyDestination[] => {
   const origin = getCityCoordinates(parentSlug, citySlug);
   if (!origin) {
     return [];
   }
 
+  const allowedStates = getAllowedNeighborStates(parentSlug);
   const nearbyMap = new Map<string, NearbyDestination>();
 
   getDestinationList()
-    .filter((destination) => destination.citySlug !== citySlug)
-    .forEach((destination) => {
+    .filter(
+      destination =>
+        destination.citySlug !== citySlug &&
+        allowedStates.has(destination.stateSlug) &&
+        hasValidCoordinates(destination.lat, destination.lng)
+    )
+    .forEach(destination => {
       const distanceMiles = haversineMiles(origin, {
         lat: destination.lat,
         lng: destination.lng,
@@ -306,21 +558,21 @@ export const getNearbyDestinations = (
     });
 
   return Array.from(nearbyMap.values()).sort(
-    (a, b) => a.distanceMiles - b.distanceMiles,
+    (a, b) => a.distanceMiles - b.distanceMiles
   );
 };
 
 export const applyTopThingsBackfill = (
   items: TopThingCandidate[],
   fallbackNames: string[],
-  localPoiNames: Set<string>,
+  curatedPoiNames: Set<string>,
   nearbyDestinationNames: Set<string>,
-  minItems = 10,
+  minItems = 10
 ) => {
   const results = [...items];
-  const seen = new Set(results.map((item) => normalizePlaceName(item.name)));
+  const seen = new Set(results.map(item => normalizePlaceName(item.name)));
 
-  fallbackNames.forEach((name) => {
+  fallbackNames.forEach(name => {
     if (results.length >= minItems) {
       return;
     }
@@ -330,7 +582,7 @@ export const applyTopThingsBackfill = (
       return;
     }
 
-    if (localPoiNames.has(normalized)) {
+    if (curatedPoiNames.has(normalized)) {
       results.push({ name, source: "fallback" });
       seen.add(normalized);
       return;
@@ -347,12 +599,12 @@ export const applyTopThingsBackfill = (
 
 export const filterTopThingsByRules = (
   candidates: TopThingCandidate[],
-  localPoiNames: Set<string>,
-  cityName?: string,
+  curatedPoiNames: Set<string>,
+  cityName?: string
 ) => {
   const seen = new Set<string>();
 
-  return candidates.filter((candidate) => {
+  return candidates.filter(candidate => {
     const normalized = normalizePlaceName(candidate.name);
     if (!normalized || seen.has(normalized)) {
       return false;
@@ -361,7 +613,7 @@ export const filterTopThingsByRules = (
     if (
       candidate.source !== "archetype" &&
       isDenylistedTopThing(candidate.name) &&
-      !localPoiNames.has(normalized)
+      !curatedPoiNames.has(normalized)
     ) {
       return false;
     }
@@ -369,7 +621,7 @@ export const filterTopThingsByRules = (
     if (
       cityName &&
       isGenericPlaceholderName(candidate.name, cityName) &&
-      !localPoiNames.has(normalized)
+      !curatedPoiNames.has(normalized)
     ) {
       return false;
     }
@@ -379,39 +631,298 @@ export const filterTopThingsByRules = (
   });
 };
 
-const buildLocalPoiDescription = (
+type DestinationTrait =
+  | "coastal"
+  | "waterfront"
+  | "historic"
+  | "mountain"
+  | "desert"
+  | "lake"
+  | "river"
+  | "arts"
+  | "food"
+  | "family"
+  | "boardwalk"
+  | "island"
+  | "parks"
+  | "wine"
+  | "college"
+  | "music";
+
+const DESTINATION_TRAIT_OVERRIDES: Record<string, DestinationTrait[]> = {
+  "new-jersey/atlantic-highlands": ["coastal", "waterfront"],
+  "new-jersey/ocean-city": ["coastal", "boardwalk", "family"],
+  "new-jersey/atlantic-city": ["coastal", "boardwalk", "food", "music"],
+  "new-york/new-york": ["arts", "food", "waterfront"],
+};
+
+const ACTIVITY_TAG_TRAITS: Record<string, DestinationTrait> = {
+  beach: "coastal",
+  coastal: "coastal",
+  hiking: "parks",
+  paddling: "waterfront",
+  cycling: "parks",
+  historic: "historic",
+  culture: "arts",
+  arts: "arts",
+  food: "food",
+  family: "family",
+  mountain: "mountain",
+  desert: "desert",
+  lake: "lake",
+  river: "river",
+  wine: "wine",
+  college: "college",
+  music: "music",
+};
+
+const DESTINATION_TRAIT_PRIORITY: DestinationTrait[] = [
+  "coastal",
+  "boardwalk",
+  "waterfront",
+  "lake",
+  "river",
+  "mountain",
+  "desert",
+  "historic",
+  "arts",
+  "food",
+  "wine",
+  "music",
+  "college",
+  "parks",
+  "family",
+  "island",
+];
+
+const inferTraitsFromName = (name: string): DestinationTrait[] => {
+  const lower = name.toLowerCase();
+  const traits: DestinationTrait[] = [];
+  if (/(beach|shore|bay|harbor|harbour|port|coast|seaside|cove)/.test(lower)) {
+    traits.push("coastal", "waterfront");
+  }
+  if (/(island|key)/.test(lower)) {
+    traits.push("island", "waterfront");
+  }
+  if (/(lake|lakes)/.test(lower)) {
+    traits.push("lake", "waterfront");
+  }
+  if (/(river|falls)/.test(lower)) {
+    traits.push("river", "waterfront");
+  }
+  if (/(mountain|ridge|peak|summit|mesa)/.test(lower)) {
+    traits.push("mountain");
+  }
+  if (/(historic|heritage)/.test(lower)) {
+    traits.push("historic");
+  }
+  if (/(arts|gallery|theater|theatre)/.test(lower)) {
+    traits.push("arts");
+  }
+  if (/(wine|vineyard)/.test(lower)) {
+    traits.push("wine");
+  }
+  if (/(college|university)/.test(lower)) {
+    traits.push("college");
+  }
+  if (/(boardwalk|pier)/.test(lower)) {
+    traits.push("boardwalk", "coastal");
+  }
+  return traits;
+};
+
+const buildPoiDescription = (
   name: string,
   category: LocalPoi["category"] | undefined,
   cityName: string,
-  parentName?: string,
+  parentName: string | undefined,
+  options?: {
+    poiCityName?: string;
+    distanceMiles?: number;
+    localHook?: string;
+  }
 ) => {
-  const regionLabel = parentName ? `${parentName} region` : "surrounding landscape";
+  const regionLabel = parentName ? `${parentName} area` : "surrounding region";
+  const placeLabel = options?.poiCityName
+    ? `${options.poiCityName} area`
+    : `${cityName} area`;
+  const distanceNote =
+    options?.distanceMiles && options.distanceMiles > 1
+      ? `about ${Math.round(options.distanceMiles)} miles from ${cityName}`
+      : undefined;
+  const localHook = options?.localHook;
+
+  const hooks = localHook ? `Pair it with ${localHook}.` : undefined;
 
   switch (category) {
     case "viewpoint":
-      return `${name} delivers panoramic viewpoints over ${cityName} and the ${regionLabel}. Visit near sunrise or sunset for softer light and the best photo angles.`;
+      return [
+        `${name} is a scenic overlook in the ${placeLabel} with wide views over the ${regionLabel}.`,
+        distanceNote
+          ? `It sits ${distanceNote} and is ideal for sunrise or sunset photos.`
+          : "Visit near sunrise or sunset for the best light and open-sky panoramas.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     case "trail":
-      return `Start at ${name} for a signature trail that highlights the outdoor character of ${cityName}. Expect well-marked paths with scenic overlooks and plenty of space to slow down and explore.`;
+      return [
+        `${name} is a go-to trail in the ${placeLabel} that showcases the outdoor side of ${cityName}.`,
+        distanceNote
+          ? `The trailhead is ${distanceNote}, making it an easy half-day outing.`
+          : "Expect well-marked paths, natural viewpoints, and a steady pace for a relaxed hike.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     case "boulder-area":
-      return `Explore the rock formations around ${name} for a classic scramble-and-photo stop near ${cityName}. The boulder fields create short, adventurous routes with big scenery.`;
+      return [
+        `${name} features iconic rock formations in the ${placeLabel} for short scrambles and photo stops.`,
+        distanceNote
+          ? `It is ${distanceNote} and rewards a quick detour with big scenery.`
+          : "The boulder fields create quick, adventurous routes without a long trek.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     case "visitor-center":
-      return `Stop by ${name} to pick up maps, trail updates, and ranger tips for exploring around ${cityName}. It is the best place to confirm conditions before you head out.`;
+      return [
+        `${name} is the best starting point in the ${placeLabel} for maps, ranger tips, and trail updates.`,
+        distanceNote
+          ? `It is ${distanceNote}, so you can stop in before heading out.`
+          : "Use it to confirm conditions before exploring nearby parks and trails.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     case "historic-site":
-      return `Spend time at ${name} to connect with ${cityName}'s cultural history and architecture. Plan for a relaxed stroll with photo stops and any seasonal exhibits.`;
+      return [
+        `${name} highlights the historic side of the ${placeLabel} with preserved architecture and local stories.`,
+        distanceNote
+          ? `It sits ${distanceNote} and makes an easy cultural stop.`
+          : "Plan time for interpretive exhibits, guided tours, or a slow photo walk.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     case "park":
-      return `Plan a visit to ${name} for a mix of easy walks, picnic spots, and signature landscapes near ${cityName}. It is a low-effort outing that still feels immersive.`;
+      return [
+        `${name} is a local park in the ${placeLabel} with easy walking loops and picnic-friendly spaces.`,
+        distanceNote
+          ? `It is ${distanceNote}, perfect for a quick outdoor reset.`
+          : "Expect open lawns, shaded paths, and a relaxed pace close to town.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
     default:
-      return `Add ${name} to your list for a focused highlight while exploring ${cityName}. It is a simple way to experience the local scenery without a long drive.`;
+      return [
+        `${name} is a standout stop in the ${placeLabel} that adds variety to your time in ${cityName}.`,
+        distanceNote
+          ? `It is ${distanceNote}, so it fits easily into a half-day plan.`
+          : "Plan for a short visit that still feels tied to the local landscape.",
+        hooks,
+      ]
+        .filter(Boolean)
+        .join(" ");
   }
 };
 
 const buildNearbyDestinationDescription = (
-  name: string,
+  destination: NearbyDestination,
   cityName: string,
-  parentName?: string,
+  parentName?: string
 ) => {
-  const regionLabel = parentName ? `the ${parentName} area` : "the surrounding region";
-  return `Take a short drive from ${cityName} to ${name} for an easy change of scenery. It is a quick way to add variety to your trip while staying close to ${regionLabel}.`;
+  const destinationName = destination.name;
+  const destinationKey = `${destination.stateSlug}/${destination.citySlug}`;
+  const destinationMeta = getCityBySlugs(
+    destination.stateSlug,
+    destination.citySlug
+  );
+  const stateName = getStateName(destination.stateSlug);
+  const traits = new Set<DestinationTrait>([
+    ...(DESTINATION_TRAIT_OVERRIDES[destinationKey] ?? []),
+    ...inferTraitsFromName(destinationName),
+    ...(destinationMeta?.activityTags
+      ?.map(tag => ACTIVITY_TAG_TRAITS[tag])
+      .filter(Boolean) ?? []),
+  ]);
+
+  if (COASTAL_STATE_SLUGS.has(destination.stateSlug)) {
+    traits.add("coastal");
+  }
+  if (MOUNTAIN_STATE_SLUGS.has(destination.stateSlug)) {
+    traits.add("mountain");
+  }
+  if (DESERT_STATE_SLUGS.has(destination.stateSlug)) {
+    traits.add("desert");
+  }
+
+  const primaryTrait =
+    DESTINATION_TRAIT_PRIORITY.find(trait => traits.has(trait)) ?? "parks";
+  const distance = Math.round(destination.distanceMiles);
+  const tripType =
+    destination.distanceMiles <= 30 ? "half-day escape" : "day trip";
+  const regionLabel = parentName ? `${parentName} area` : "surrounding region";
+
+  const traitLabelMap: Record<DestinationTrait, string> = {
+    coastal: "coastal town",
+    waterfront: "waterfront stop",
+    historic: "historic district",
+    mountain: "mountain gateway",
+    desert: "desert outpost",
+    lake: "lakefront spot",
+    river: "riverfront stop",
+    arts: "arts-forward downtown",
+    food: "food-focused destination",
+    family: "family-friendly stop",
+    boardwalk: "boardwalk town",
+    island: "island escape",
+    parks: "outdoor basecamp",
+    wine: "wine-country stop",
+    college: "college-town escape",
+    music: "music-forward downtown",
+  };
+
+  const activityLabelMap: Record<DestinationTrait, string> = {
+    coastal: "beach walks, salty-air viewpoints, and breezy shoreline paths",
+    waterfront: "harbor views, waterfront promenades, and casual seafood stops",
+    historic:
+      "historic blocks, local museums, and architecture-focused strolls",
+    mountain: "trailheads, scenic overlooks, and cooler highland air",
+    desert: "sunset viewpoints, open-sky drives, and quiet desert trails",
+    lake: "lakefront walks, calm-water paddling, and picnic-ready shorelines",
+    river: "riverwalks, bridge views, and shaded park paths",
+    arts: "galleries, markets, and creative neighborhoods",
+    food: "local cafés, markets, and signature restaurants",
+    family: "boardwalk games, easy walks, and low-key activities",
+    boardwalk: "boardwalk strolls, classic shoreline snacks, and ocean breezes",
+    island: "beach access, scenic overlooks, and a slower pace",
+    parks: "park loops, easy trails, and scenic green space",
+    wine: "tasting rooms, vineyard views, and relaxed afternoon pacing",
+    college: "campus walks, bookshops, and local cafés",
+    music: "live-music venues, nightlife, and walkable downtown blocks",
+  };
+
+  const description = [
+    `${destinationName} is a ${traitLabelMap[primaryTrait]} in ${
+      stateName || regionLabel
+    }, about ${distance} miles from ${cityName}.`,
+    `Plan time for ${activityLabelMap[primaryTrait]}.`,
+    `It makes a solid ${tripType} when you want a change of scenery without leaving the ${regionLabel}.`,
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  if (containsBannedTopThingPhrase(description)) {
+    return [
+      `${destinationName} sits ${distance} miles from ${cityName} and offers a distinct change in scenery.`,
+      `The area is known for ${activityLabelMap[primaryTrait]}.`,
+      `Keep it as a ${tripType} and return to ${cityName} by evening.`,
+    ].join(" ");
+  }
+
+  return description;
 };
 
 type CityLookup = {
@@ -422,7 +933,7 @@ type CityLookup = {
 
 export const isPoiInCity = (
   poi: { lat: number; lng: number },
-  city: CityLookup,
+  city: CityLookup
 ) => {
   const origin = getCityCoordinates(city.parentSlug, city.citySlug);
   if (!origin) {
@@ -432,7 +943,7 @@ export const isPoiInCity = (
   const distance = haversineMiles(origin, { lat: poi.lat, lng: poi.lng });
   const maxMiles =
     city.tier === 1
-      ? TIER1_CITY_RADIUS_MILES[city.citySlug] ?? 15
+      ? (TIER1_CITY_RADIUS_MILES[city.citySlug] ?? 15)
       : MAX_NEARBY_MILES;
 
   return distance <= maxMiles;
@@ -470,7 +981,7 @@ type ArchetypeDefinition = {
 const getSettlementType = (
   cityFacts: CityFacts | undefined,
   regionType: "state" | "country",
-  parentSlug: string,
+  parentSlug: string
 ): CityFacts["type"] => {
   if (cityFacts?.type) {
     return cityFacts.type;
@@ -491,7 +1002,9 @@ const getSettlementType = (
   return "town";
 };
 
-const buildArchetypeCandidates = (context: ArchetypeContext): TopThingCandidate[] => {
+const buildArchetypeCandidates = (
+  context: ArchetypeContext
+): TopThingCandidate[] => {
   const definitions: ArchetypeDefinition[] = [
     {
       title: "Historic Downtown Walking Routes",
@@ -512,7 +1025,9 @@ const buildArchetypeCandidates = (context: ArchetypeContext): TopThingCandidate[
       activityType: "archetype",
       appliesTo: () => true,
       buildDescription: ({ cityName, parentName }) => {
-        const regionLabel = parentName ? `the ${parentName} area` : "the surrounding region";
+        const regionLabel = parentName
+          ? `the ${parentName} area`
+          : "the surrounding region";
         return `Plan a scenic drive loop around ${cityName} to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of ${regionLabel} without committing to a long hike.`;
       },
     },
@@ -603,8 +1118,8 @@ const buildArchetypeCandidates = (context: ArchetypeContext): TopThingCandidate[
   ];
 
   return definitions
-    .filter((definition) => definition.appliesTo(context))
-    .map((definition) => ({
+    .filter(definition => definition.appliesTo(context))
+    .map(definition => ({
       name: definition.title,
       source: "archetype",
       description: definition.buildDescription(context),
@@ -616,7 +1131,7 @@ export const buildTopThingsToDo = (
   cityName: string,
   parentSlug: string,
   citySlug: string,
-  maxItemsOrOptions: number | BuildTopThingsOptions = {},
+  maxItemsOrOptions: number | BuildTopThingsOptions = {}
 ): TopThingListItem[] => {
   const options =
     typeof maxItemsOrOptions === "number"
@@ -637,23 +1152,27 @@ export const buildTopThingsToDo = (
         ? getTier1IntlPoisForCity(parentSlug, citySlug)
         : getTier1PoisForCity(parentSlug, citySlug);
     const filteredPois = tier1Pois.filter(
-      (poi) =>
+      poi =>
         isPoiInCity(poi, { parentSlug, citySlug, tier }) &&
-        poi.description.trim().length >= MIN_TIER1_DESCRIPTION_LENGTH,
+        poi.description.trim().length >= MIN_TIER1_DESCRIPTION_LENGTH
     );
 
     if (filteredPois.length < MIN_TIER1_ITEMS) {
       console.warn(
-        `Tier-1 POI coverage warning for ${parentSlug}/${citySlug}: ${filteredPois.length} items.`,
+        `Tier-1 POI coverage warning for ${parentSlug}/${citySlug}: ${filteredPois.length} items.`
       );
     }
 
-    return filteredPois.slice(0, maxItems).map((poi) => ({
+    return filteredPois.slice(0, maxItems).map(poi => ({
       title: poi.name,
       description: poi.description.trim(),
     }));
   }
-  const settlementType = getSettlementType(options.cityFacts, regionType, parentSlug);
+  const settlementType = getSettlementType(
+    options.cityFacts,
+    regionType,
+    parentSlug
+  );
   const archetypeContext: ArchetypeContext = {
     cityName,
     parentName,
@@ -669,28 +1188,36 @@ export const buildTopThingsToDo = (
   };
 
   const localPois = getLocalPoisForCity(parentSlug, citySlug);
+  const nearbyPois = getNearbyPoisForCity(parentSlug, citySlug);
   const localPoiNames = buildLocalPoiNameSet(localPois);
+  const nearbyPoiNames = buildLocalPoiNameSet(nearbyPois);
+  const curatedPoiNames = new Set([...localPoiNames, ...nearbyPoiNames]);
   const nearbyDestinations = getNearbyDestinations(parentSlug, citySlug);
   const nearbyDestinationNames = new Set(
-    nearbyDestinations.map((destination) => normalizePlaceName(destination.name)),
+    nearbyDestinations.map(destination => normalizePlaceName(destination.name))
   );
 
-  const localPoiCandidates: TopThingCandidate[] = localPois.map((poi) => ({
+  const localPoiCandidates: TopThingCandidate[] = localPois.map(poi => ({
     name: poi.name,
     source: "local-poi",
     category: poi.category,
   }));
+  const nearbyPoiCandidates: TopThingCandidate[] = nearbyPois.map(poi => ({
+    name: poi.name,
+    source: "nearby-poi",
+    category: poi.category,
+  }));
   const nearbyCandidates: TopThingCandidate[] = nearbyDestinations.map(
-    (destination) => ({
+    destination => ({
       name: destination.name,
       source: "nearby-destination",
-    }),
+    })
   );
 
   const candidates = filterTopThingsByRules(
-    [...localPoiCandidates, ...nearbyCandidates],
-    localPoiNames,
-    cityName,
+    [...localPoiCandidates, ...nearbyPoiCandidates, ...nearbyCandidates],
+    curatedPoiNames,
+    cityName
   );
 
   const fallbackNames =
@@ -698,8 +1225,8 @@ export const buildTopThingsToDo = (
   const withBackfill = applyTopThingsBackfill(
     candidates,
     fallbackNames,
-    localPoiNames,
-    nearbyDestinationNames,
+    curatedPoiNames,
+    nearbyDestinationNames
   );
 
   const withArchetypes = (() => {
@@ -709,10 +1236,10 @@ export const buildTopThingsToDo = (
 
     const archetypes = buildArchetypeCandidates(archetypeContext);
     const seen = new Set(
-      withBackfill.map((item) => normalizePlaceName(item.name)),
+      withBackfill.map(item => normalizePlaceName(item.name))
     );
     const combined = [...withBackfill];
-    archetypes.forEach((archetype) => {
+    archetypes.forEach(archetype => {
       if (combined.length >= minItems) {
         return;
       }
@@ -727,20 +1254,54 @@ export const buildTopThingsToDo = (
     return combined;
   })();
 
-  return withArchetypes.slice(0, maxItems).map((candidate) => {
+  return withArchetypes.slice(0, maxItems).map(candidate => {
     const title = toTitleCase(candidate.name);
+    const normalizedName = normalizePlaceName(candidate.name);
     const localPoi = localPois.find(
-      (poi) => normalizePlaceName(poi.name) === normalizePlaceName(candidate.name),
+      poi => normalizePlaceName(poi.name) === normalizedName
     );
+    const nearbyPoi = nearbyPois.find(
+      poi => normalizePlaceName(poi.name) === normalizedName
+    );
+    const nearbyDestination = nearbyDestinations.find(
+      destination => normalizePlaceName(destination.name) === normalizedName
+    );
+    const localHook =
+      options.cityFacts?.outdoors?.[0] ??
+      options.cityFacts?.anchors?.[0] ??
+      options.cityFacts?.corridors?.[0];
     const description =
       candidate.description ??
-      (localPoi
-        ? buildLocalPoiDescription(title, localPoi.category, cityName, parentName)
-        : buildNearbyDestinationDescription(title, cityName, parentName));
+      (localPoi || nearbyPoi
+        ? buildPoiDescription(title, candidate.category, cityName, parentName, {
+            poiCityName: nearbyPoi
+              ? getCityName(nearbyPoi.stateSlug, nearbyPoi.citySlug)
+              : undefined,
+            distanceMiles: nearbyPoi?.distanceMiles,
+            localHook,
+          })
+        : nearbyDestination
+          ? buildNearbyDestinationDescription(
+              nearbyDestination,
+              cityName,
+              parentName
+            )
+          : buildPoiDescription(
+              title,
+              candidate.category,
+              cityName,
+              parentName,
+              {
+                localHook,
+              }
+            ));
+    const safeDescription = containsBannedTopThingPhrase(description)
+      ? `Spend time at ${title} to experience the scenery and local character around ${cityName}. Plan for a focused visit that fits easily into a half-day outing.`
+      : description;
 
     return {
       title,
-      description,
+      description: safeDescription,
       activityType: candidate.activityType,
     };
   });
@@ -748,16 +1309,20 @@ export const buildTopThingsToDo = (
 
 export const getTopThingAuditContext = (
   parentSlug: string,
-  citySlug: string,
+  citySlug: string
 ) => {
   const origin = getCityCoordinates(parentSlug, citySlug);
   const localPois = getLocalPoisForCity(parentSlug, citySlug);
   const localPoiNames = buildLocalPoiNameSet(localPois);
   const allDestinations = getDestinationList();
+  const destinationNameMatches = getDestinationNameIndex();
   const destinationDistanceMap = new Map<string, number>();
 
   if (origin) {
-    allDestinations.forEach((destination) => {
+    allDestinations.forEach(destination => {
+      if (!hasValidCoordinates(destination.lat, destination.lng)) {
+        return;
+      }
       const distance = haversineMiles(origin, {
         lat: destination.lat,
         lng: destination.lng,
@@ -774,6 +1339,7 @@ export const getTopThingAuditContext = (
   return {
     origin,
     localPoiNames,
+    destinationNameMatches,
     destinationDistanceMap,
   };
 };

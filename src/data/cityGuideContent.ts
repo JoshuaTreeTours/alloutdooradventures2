@@ -1,5 +1,8 @@
 import {
-  MAX_NEARBY_MILES,
+  MAX_NEARBY_DESTINATION_MILES,
+  TOP_THINGS_BANNED_PHRASES,
+  containsBannedTopThingPhrase,
+  getAllowedNeighborStates,
   getTopThingAuditContext,
   isDenylistedTopThing,
   isGenericPlaceholderName,
@@ -12,7 +15,7 @@ import {
   getTier1IntlPoiNameSet,
   getTier1IntlPoisForCity,
 } from "./cityPois/tier1Intl";
-import { normalizePlaceName } from "../utils/geo";
+import { haversineMiles, normalizePlaceName } from "../utils/geo";
 
 export type CityGuideIssue = {
   issueType: string;
@@ -55,6 +58,46 @@ const getTier1PoiNameSetForContext = (context: CityGuideAuditContext) =>
     ? getTier1IntlPoiNameSet(context.parentSlug, context.citySlug)
     : getTier1PoiNameSet(context.parentSlug, context.citySlug);
 
+type DestinationMatch = {
+  name: string;
+  citySlug: string;
+  stateSlug: string;
+  lat: number | null;
+  lng: number | null;
+};
+
+const getClosestDestinationMatch = (
+  matches: DestinationMatch[] | undefined,
+  origin: { lat: number; lng: number } | null
+) => {
+  if (!matches?.length) {
+    return null;
+  }
+
+  if (!origin) {
+    return matches[0] ?? null;
+  }
+
+  let closest: DestinationMatch | null = null;
+  let closestDistance = Number.POSITIVE_INFINITY;
+
+  matches.forEach(match => {
+    if (!Number.isFinite(match.lat) || !Number.isFinite(match.lng)) {
+      return;
+    }
+    const distance = haversineMiles(origin, {
+      lat: match.lat ?? 0,
+      lng: match.lng ?? 0,
+    });
+    if (distance < closestDistance) {
+      closest = match;
+      closestDistance = distance;
+    }
+  });
+
+  return closest;
+};
+
 const RIVERWALK_ALLOWLIST = new Set(["san-antonio", "chicago", "tampa"]);
 
 const DAY_TRIP_DENYLIST: Array<{
@@ -77,11 +120,21 @@ const DAY_TRIP_DENYLIST: Array<{
   },
   {
     destination: "grand canyon",
-    allowCities: new Set(["flagstaff", "tusayan", "grand-canyon-village", "page"]),
+    allowCities: new Set([
+      "flagstaff",
+      "tusayan",
+      "grand-canyon-village",
+      "page",
+    ]),
   },
   {
     destination: "yellowstone",
-    allowCities: new Set(["jackson", "west-yellowstone", "bozeman", "gardiner"]),
+    allowCities: new Set([
+      "jackson",
+      "west-yellowstone",
+      "bozeman",
+      "gardiner",
+    ]),
   },
   {
     destination: "glacier national park",
@@ -150,7 +203,7 @@ const STATE_NAME_TO_SLUG = new Map(
     ["wisconsin", "wisconsin"],
     ["wyoming", "wyoming"],
     ["district of columbia", "district-of-columbia"],
-  ].map(([name, slug]) => [name, slug]),
+  ].map(([name, slug]) => [name, slug])
 );
 
 const DAY_TRIP_REGEX = /day[-\s]trip(?:s)? to\s+([^.,;:()]+)/gi;
@@ -169,15 +222,18 @@ const collectTextEntries = (content: CityGuideTextContent) => {
     content.intro,
     content.bestTimeToVisit,
     content.whatToPack,
-    ...(content.itineraries?.flatMap((itinerary) => [
+    ...(content.itineraries?.flatMap(itinerary => [
       itinerary.title,
       itinerary.description,
     ]) ?? []),
-    ...(content.thingsToDoSections?.flatMap((section) => [
+    ...(content.thingsToDoSections?.flatMap(section => [
       section.title,
       ...(section.paragraphs ?? []),
     ]) ?? []),
-    ...(content.topThingsToDo?.flatMap((item) => [item.title, item.description]) ?? []),
+    ...(content.topThingsToDo?.flatMap(item => [
+      item.title,
+      item.description,
+    ]) ?? []),
     ...(content.extraText ?? []),
   ].filter(Boolean);
 
@@ -185,7 +241,8 @@ const collectTextEntries = (content: CityGuideTextContent) => {
 };
 
 const getDayTripMatches = (text: string) => {
-  const matches: Array<{ index: number; phrase: string; destination: string }> = [];
+  const matches: Array<{ index: number; phrase: string; destination: string }> =
+    [];
   DAY_TRIP_REGEX.lastIndex = 0;
   let match: RegExpExecArray | null = null;
   while ((match = DAY_TRIP_REGEX.exec(text)) !== null) {
@@ -206,11 +263,11 @@ const isDayTripDenied = (
   citySlug: string,
   parentSlug: string,
   regionType: "state" | "country",
-  sentence: string,
+  sentence: string
 ) => {
   const destinationLower = destination.toLowerCase();
-  const denyMatch = DAY_TRIP_DENYLIST.find((entry) =>
-    destinationLower.includes(entry.destination),
+  const denyMatch = DAY_TRIP_DENYLIST.find(entry =>
+    destinationLower.includes(entry.destination)
   );
   if (denyMatch && !denyMatch.allowCities.has(citySlug)) {
     return true;
@@ -231,21 +288,24 @@ const isDayTripDenied = (
   return false;
 };
 
-const isRiverwalkAllowed = (citySlug: string) => RIVERWALK_ALLOWLIST.has(citySlug);
+const isRiverwalkAllowed = (citySlug: string) =>
+  RIVERWALK_ALLOWLIST.has(citySlug);
 
 const getMustSeeIssues = (
   sentence: string,
   knownPois: Set<string>,
   issueType: string,
   severity: CityGuideIssue["severity"],
-  suggestedFix?: string,
+  suggestedFix?: string
 ) => {
   if (!MUST_SEE_REGEX.test(sentence)) {
     return [];
   }
 
   const sentenceLower = sentence.toLowerCase();
-  const hasKnownPoi = Array.from(knownPois).some((poi) => sentenceLower.includes(poi));
+  const hasKnownPoi = Array.from(knownPois).some(poi =>
+    sentenceLower.includes(poi)
+  );
 
   if (hasKnownPoi) {
     return [];
@@ -266,17 +326,17 @@ const sanitizeSentence = (
   sentence: string,
   context: CityGuideAuditContext,
   knownPois: Set<string>,
-  changes: string[],
+  changes: string[]
 ) => {
   const dayTripMatches = getDayTripMatches(sentence);
-  const hasDeniedDayTrip = dayTripMatches.some((match) =>
+  const hasDeniedDayTrip = dayTripMatches.some(match =>
     isDayTripDenied(
       match.destination,
       context.citySlug,
       context.parentSlug,
       context.regionType,
-      sentence,
-    ),
+      sentence
+    )
   );
 
   if (hasDeniedDayTrip) {
@@ -289,7 +349,7 @@ const sanitizeSentence = (
     knownPois,
     "Unverified POI claim",
     "info",
-    "Replace with a general highlight statement.",
+    "Replace with a general highlight statement."
   );
   if (mustSeeIssues.length) {
     changes.push("must-see");
@@ -301,7 +361,7 @@ const sanitizeSentence = (
 
 export const sanitizeCityGuideContent = (
   content: CityGuideTextContent,
-  context: CityGuideAuditContext,
+  context: CityGuideAuditContext
 ) => {
   const changes: string[] = [];
   const knownPois = context.knownPois ?? new Set<string>();
@@ -312,14 +372,17 @@ export const sanitizeCityGuideContent = (
     }
 
     let updated = text;
-    if (!isRiverwalkAllowed(context.citySlug) && RIVERWALK_TEST_REGEX.test(updated)) {
+    if (
+      !isRiverwalkAllowed(context.citySlug) &&
+      RIVERWALK_TEST_REGEX.test(updated)
+    ) {
       updated = updated.replace(RIVERWALK_REGEX, "riverfront walk");
       changes.push("riverwalk");
     }
 
     const sentences = updated.split(/(?<=[.!?])\s+/);
-    const sanitizedSentences = sentences.map((sentence) =>
-      sanitizeSentence(sentence, context, knownPois, changes),
+    const sanitizedSentences = sentences.map(sentence =>
+      sanitizeSentence(sentence, context, knownPois, changes)
     );
     return sanitizedSentences.join(" ");
   };
@@ -330,23 +393,25 @@ export const sanitizeCityGuideContent = (
       intro: sanitizeText(content.intro),
       bestTimeToVisit: sanitizeText(content.bestTimeToVisit),
       whatToPack: sanitizeText(content.whatToPack),
-      itineraries: content.itineraries?.map((itinerary) => ({
+      itineraries: content.itineraries?.map(itinerary => ({
         ...itinerary,
         title: sanitizeText(itinerary.title),
         description: sanitizeText(itinerary.description),
       })),
-      thingsToDoSections: content.thingsToDoSections?.map((section) => ({
+      thingsToDoSections: content.thingsToDoSections?.map(section => ({
         ...section,
         title: sanitizeText(section.title),
-        paragraphs: section.paragraphs?.map((paragraph) => sanitizeText(paragraph) ?? paragraph),
+        paragraphs: section.paragraphs?.map(
+          paragraph => sanitizeText(paragraph) ?? paragraph
+        ),
       })),
-      topThingsToDo: content.topThingsToDo?.map((item) => ({
+      topThingsToDo: content.topThingsToDo?.map(item => ({
         ...item,
         title: sanitizeText(item.title),
         description: sanitizeText(item.description),
         activityType: item.activityType,
       })),
-      extraText: content.extraText?.map((text) => sanitizeText(text) ?? text),
+      extraText: content.extraText?.map(text => sanitizeText(text) ?? text),
     },
     changes,
   };
@@ -364,13 +429,13 @@ type TopThingsAuditMetrics = {
 
 export const buildTopThingsAuditMetrics = (
   content: CityGuideTextContent,
-  context: CityGuideAuditContext,
+  context: CityGuideAuditContext
 ): TopThingsAuditMetrics => {
   const topThings = content.topThingsToDo ?? [];
   const total = topThings.length;
   const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
     context.parentSlug,
-    context.citySlug,
+    context.citySlug
   );
   const tier1PoiNames =
     context.tier === 1
@@ -384,7 +449,7 @@ export const buildTopThingsAuditMetrics = (
   let farAwayTrips = false;
   let totalDescriptionLength = 0;
 
-  topThings.forEach((item) => {
+  topThings.forEach(item => {
     const title = item.title ?? "";
     const normalized = normalizePlaceName(title);
     const isTier1Poi = tier1PoiNames.has(normalized);
@@ -412,14 +477,17 @@ export const buildTopThingsAuditMetrics = (
 
     if (
       destinationDistance !== undefined &&
-      destinationDistance > MAX_NEARBY_MILES
+      destinationDistance > MAX_NEARBY_DESTINATION_MILES
     ) {
       farAwayTrips = true;
     }
 
     const descriptionLength = item.description?.trim().length ?? 0;
     totalDescriptionLength += descriptionLength;
-    if (context.tier === 1 && descriptionLength < MIN_TIER1_DESCRIPTION_LENGTH) {
+    if (
+      context.tier === 1 &&
+      descriptionLength < MIN_TIER1_DESCRIPTION_LENGTH
+    ) {
       shortDescriptionTitles.push(title);
     }
   });
@@ -441,22 +509,22 @@ export const buildTopThingsAuditMetrics = (
 
 export const auditCityGuideContent = (
   content: CityGuideTextContent,
-  context: CityGuideAuditContext,
+  context: CityGuideAuditContext
 ) => {
   const issues: CityGuideIssue[] = [];
   const inferredPois = new Set(
     [
-      ...(content.topThingsToDo?.map((item) => item.title) ?? []),
-      ...(content.thingsToDoSections?.map((section) => section.title) ?? []),
+      ...(content.topThingsToDo?.map(item => item.title) ?? []),
+      ...(content.thingsToDoSections?.map(section => section.title) ?? []),
     ]
       .filter(Boolean)
-      .map((item) => item.toLowerCase()),
+      .map(item => item.toLowerCase())
   );
   const knownPois = context.knownPois ?? inferredPois;
 
   const textEntries = collectTextEntries(content);
 
-  textEntries.forEach((text) => {
+  textEntries.forEach(text => {
     if (!isRiverwalkAllowed(context.citySlug)) {
       RIVERWALK_REGEX.lastIndex = 0;
       let match: RegExpExecArray | null = null;
@@ -472,14 +540,14 @@ export const auditCityGuideContent = (
     }
 
     const dayTripMatches = getDayTripMatches(text);
-    dayTripMatches.forEach((match) => {
+    dayTripMatches.forEach(match => {
       if (
         isDayTripDenied(
           match.destination,
           context.citySlug,
           context.parentSlug,
           context.regionType,
-          text,
+          text
         )
       ) {
         issues.push({
@@ -494,25 +562,33 @@ export const auditCityGuideContent = (
     });
 
     const sentences = text.split(/(?<=[.!?])\s+/);
-    sentences.forEach((sentence) => {
+    sentences.forEach(sentence => {
       const mustSeeIssues = getMustSeeIssues(
         sentence,
         knownPois,
         "Unverified POI claim",
         "info",
-        "Replace with a general highlight statement.",
+        "Replace with a general highlight statement."
       );
-      mustSeeIssues.forEach((issue) => issues.push(issue));
+      mustSeeIssues.forEach(issue => issues.push(issue));
     });
   });
 
   if (content.topThingsToDo?.length) {
-    const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
-      context.parentSlug,
-      context.citySlug,
-    );
+    const {
+      localPoiNames,
+      destinationDistanceMap,
+      destinationNameMatches,
+      origin,
+    } = getTopThingAuditContext(context.parentSlug, context.citySlug);
+    const allowedNeighborStates =
+      context.regionType === "state"
+        ? getAllowedNeighborStates(context.parentSlug)
+        : null;
+    const descriptionPrefixMap = new Map<string, string[]>();
+    const bannedPhraseMatches: string[] = [];
 
-    content.topThingsToDo.forEach((item) => {
+    content.topThingsToDo.forEach(item => {
       if (!item.title) {
         return;
       }
@@ -520,6 +596,13 @@ export const auditCityGuideContent = (
       const normalized = normalizePlaceName(item.title);
       const isLocalPoi = localPoiNames.has(normalized);
       const destinationDistance = destinationDistanceMap.get(normalized);
+      const destinationMatches = destinationNameMatches.get(normalized);
+      const destinationMatch = getClosestDestinationMatch(
+        destinationMatches,
+        origin
+      );
+      const isDestination =
+        !isLocalPoi && (destinationMatches?.length ?? 0) > 0;
       const isArchetype = item.activityType?.startsWith("archetype") ?? false;
 
       if (isDenylistedTopThing(item.title) && !isLocalPoi) {
@@ -549,19 +632,86 @@ export const auditCityGuideContent = (
         }
       }
 
+      if (isDestination && !origin) {
+        issues.push({
+          issueType: "Top thing missing coordinates",
+          matchedText: item.title,
+          contextSnippet: item.title,
+          severity: "error",
+          suggestedFix:
+            "Provide coordinates for the city center or remove nearby destinations.",
+        });
+      }
+
       if (
         destinationDistance !== undefined &&
-        destinationDistance > MAX_NEARBY_MILES
+        destinationDistance > MAX_NEARBY_DESTINATION_MILES
       ) {
         issues.push({
           issueType: "Top thing too far",
           matchedText: item.title,
           contextSnippet: item.title,
           severity: "error",
-          suggestedFix: "Swap for a destination within 110 miles.",
+          suggestedFix: `Swap for a destination within ${MAX_NEARBY_DESTINATION_MILES} miles.`,
         });
       }
+
+      if (
+        allowedNeighborStates &&
+        isDestination &&
+        destinationMatch &&
+        !allowedNeighborStates.has(destinationMatch.stateSlug)
+      ) {
+        issues.push({
+          issueType: "Top thing outside allowed state",
+          matchedText: item.title,
+          contextSnippet: `${item.title} (${destinationMatch.stateSlug})`,
+          severity: "error",
+          suggestedFix:
+            "Swap for a destination in-state or a neighboring state.",
+        });
+      }
+
+      const description = item.description?.trim() ?? "";
+      if (description) {
+        if (containsBannedTopThingPhrase(description)) {
+          bannedPhraseMatches.push(item.title);
+        }
+        const prefix = description
+          .split(/\s+/)
+          .slice(0, 10)
+          .join(" ")
+          .toLowerCase();
+        if (prefix) {
+          const entries = descriptionPrefixMap.get(prefix) ?? [];
+          entries.push(item.title);
+          descriptionPrefixMap.set(prefix, entries);
+        }
+      }
     });
+
+    const repeatedPrefixes = Array.from(descriptionPrefixMap.entries()).filter(
+      ([, titles]) => titles.length > 2
+    );
+    repeatedPrefixes.forEach(([prefix, titles]) => {
+      issues.push({
+        issueType: "Top things boilerplate",
+        matchedText: prefix,
+        contextSnippet: titles.slice(0, 3).join(", "),
+        severity: "error",
+        suggestedFix: "Replace repeated wrapper text with grounded details.",
+      });
+    });
+
+    if (bannedPhraseMatches.length) {
+      issues.push({
+        issueType: "Top things banned phrase",
+        matchedText: bannedPhraseMatches.join(", "),
+        contextSnippet: `Banned phrases: ${TOP_THINGS_BANNED_PHRASES.join("; ")}`,
+        severity: "error",
+        suggestedFix: "Rewrite descriptions with specific local details.",
+      });
+    }
   }
 
   const topThingsMetrics = buildTopThingsAuditMetrics(content, context);
@@ -589,7 +739,7 @@ export const auditCityGuideContent = (
       });
     }
 
-    topThingsMetrics.nonPoiTitles.forEach((title) => {
+    topThingsMetrics.nonPoiTitles.forEach(title => {
       if (!title) {
         return;
       }
@@ -602,7 +752,7 @@ export const auditCityGuideContent = (
       });
     });
 
-    topThingsMetrics.shortDescriptionTitles.forEach((title) => {
+    topThingsMetrics.shortDescriptionTitles.forEach(title => {
       if (!title) {
         return;
       }
@@ -637,10 +787,10 @@ export const auditCityGuideContent = (
 
     if (content.topThingsToDo?.length) {
       const poiByName = new Map(
-        tier1Pois.map((poi) => [normalizePlaceName(poi.name), poi]),
+        tier1Pois.map(poi => [normalizePlaceName(poi.name), poi])
       );
 
-      content.topThingsToDo.forEach((item) => {
+      content.topThingsToDo.forEach(item => {
         if (!item.title) {
           return;
         }

@@ -7,7 +7,10 @@ import {
 } from "../src/data/cityGuideContent";
 import { isTier1IntlCity } from "../src/data/cityTier1Intl";
 import { isTier1City } from "../src/data/cityTier1";
-import { buildCityOverrideRoute, cityOverrides } from "../src/data/cityOverrides";
+import {
+  buildCityOverrideRoute,
+  cityOverrides,
+} from "../src/data/cityOverrides";
 import { buildTopThingsToDo } from "../src/data/cityTopThings";
 import { allCityGuideRecords } from "../src/data/cityGuideRegistry.node";
 import { buildCityGuideFacts } from "../src/lib/cityGuideFacts";
@@ -19,7 +22,7 @@ const toCsvValue = (value: string) => {
 
 const runAudit = () => {
   const strict = process.argv.includes("--strict");
-  const findings = allCityGuideRecords.flatMap((record) => {
+  const findings = allCityGuideRecords.flatMap(record => {
     const cityFacts = buildCityGuideFacts({
       cityName: record.city,
       citySlug: record.citySlug,
@@ -42,7 +45,7 @@ const runAudit = () => {
           parentName: record.state,
           regionType: record.regionType,
           cityFacts,
-        },
+        }
       ),
       extraText: [
         cityData?.shortDescription,
@@ -54,7 +57,7 @@ const runAudit = () => {
         ...(cityData?.weekendItinerary?.dayOne ?? []),
         ...(cityData?.weekendItinerary?.dayTwo ?? []),
         ...(cityData?.gettingThere ?? []),
-        ...(cityData?.faq?.map((item) => item.answer) ?? []),
+        ...(cityData?.faq?.map(item => item.answer) ?? []),
         ...cityFacts.anchors,
         ...cityFacts.outdoors,
         ...cityFacts.nearby,
@@ -72,15 +75,15 @@ const runAudit = () => {
           intro: override.intro,
           bestTimeToVisit: override.bestTimeToVisit,
           whatToPack: override.whatToPack,
-          itineraries: override.itineraries?.map((itinerary) => ({
+          itineraries: override.itineraries?.map(itinerary => ({
             title: itinerary.title,
             description: itinerary.description,
           })),
-          thingsToDoSections: override.thingsToDoSections?.map((section) => ({
+          thingsToDoSections: override.thingsToDoSections?.map(section => ({
             title: section.title,
             paragraphs: section.paragraphs,
           })),
-          topThingsToDo: override.topThingsToDo?.map((item) => ({
+          topThingsToDo: override.topThingsToDo?.map(item => ({
             title: item.title,
             description: item.description,
             activityType: item.activityType,
@@ -91,7 +94,8 @@ const runAudit = () => {
     const content: CityGuideTextContent = {
       ...baseContent,
       ...overrideContent,
-      topThingsToDo: overrideContent?.topThingsToDo ?? baseContent.topThingsToDo,
+      topThingsToDo:
+        overrideContent?.topThingsToDo ?? baseContent.topThingsToDo,
     };
 
     const tier =
@@ -117,7 +121,7 @@ const runAudit = () => {
       tier,
     });
 
-    return issues.map((issue) => ({
+    return issues.map(issue => ({
       country: record.country,
       state: record.state,
       city: record.city,
@@ -161,7 +165,7 @@ const runAudit = () => {
   ];
   const csvLines = [
     header.join(","),
-    ...findings.map((finding) =>
+    ...findings.map(finding =>
       [
         finding.country,
         finding.state,
@@ -178,13 +182,13 @@ const runAudit = () => {
         finding.hasGenericPlaceholders,
         finding.hasFarAwayTrips,
       ]
-        .map((value) => toCsvValue(String(value ?? "")))
-        .join(","),
+        .map(value => toCsvValue(String(value ?? "")))
+        .join(",")
     ),
   ];
   fs.writeFileSync(csvPath, csvLines.join("\n"), "utf8");
 
-  const failingFindings = findings.filter((finding) => {
+  const failingFindings = findings.filter(finding => {
     if (finding.severity === "error") {
       return true;
     }
@@ -200,13 +204,26 @@ const runAudit = () => {
   console.log(`JSON: ${jsonPath}`);
   console.log(`CSV: ${csvPath}`);
 
-  if (strict && errorCount > 0) {
+  if (failingFindings.length) {
+    const byRoute = new Map<string, typeof failingFindings>();
+    failingFindings.forEach(finding => {
+      const routeFindings = byRoute.get(finding.route) ?? [];
+      routeFindings.push(finding);
+      byRoute.set(finding.route, routeFindings);
+    });
+
+    const topRoutes = Array.from(byRoute.entries())
+      .sort((a, b) => b[1].length - a[1].length)
+      .slice(0, 5);
+
     console.log("Top failing routes:");
-    failingFindings
-      .slice(0, 20)
-      .forEach((finding) =>
-        console.log(`- ${finding.route}: ${finding.issueType}`),
-      );
+    topRoutes.forEach(([route, routeFindings]) => {
+      const samples = routeFindings
+        .slice(0, 3)
+        .map(finding => `${finding.issueType}: ${finding.matchedText}`)
+        .join(" | ");
+      console.log(`- ${route} (${routeFindings.length} issues) -> ${samples}`);
+    });
   }
 
   if (strict && errorCount > 0) {
