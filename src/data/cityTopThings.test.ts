@@ -4,6 +4,7 @@ import {
   buildTopThingsToDo,
   filterTopThingsByRules,
   getNearbyDestinations,
+  getNearbyDestinationAllowlist,
   getAllowedNeighborStates,
   isGenericPlaceholderName,
   MAX_NEARBY_DESTINATION_MILES,
@@ -72,6 +73,13 @@ describe("city top things rules", () => {
       "brick-township"
     );
     const nearby = getNearbyDestinations("new-jersey", "brick-township");
+    const allowlist = getNearbyDestinationAllowlist(
+      "new-jersey",
+      "state"
+    );
+    const allowlistedNearby = nearby.filter(destination =>
+      allowlist.has(normalizePlaceName(destination.name))
+    );
     const allowedStates = getAllowedNeighborStates("new-jersey");
 
     nearby.forEach(destination => {
@@ -90,6 +98,16 @@ describe("city top things rules", () => {
 
     const titles = items.map(item => item.title).join(" ");
     expect(titles).not.toMatch(/Natick|Nantucket|Quincy/);
+
+    const allowlistedNames = new Set(
+      allowlistedNearby.map(destination => destination.name)
+    );
+    items.forEach(item => {
+      if (!allowlistedNames.has(item.title)) {
+        return;
+      }
+      expect(/nearby|day trip/i.test(item.description)).toBe(true);
+    });
   });
 
   it("allows neighbor-state destinations near New York within the max distance", () => {
