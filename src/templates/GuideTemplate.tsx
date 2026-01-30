@@ -106,6 +106,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
               {guide.intro}
             </p>
+            <GuideInternalLinks guide={guide} variant="area" />
             <GuideInternalLinks guide={guide} variant="intro" />
           </div>
           {guide.type !== "city" && guide.activities?.length ? (

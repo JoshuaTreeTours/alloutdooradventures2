@@ -3,8 +3,11 @@ import { Link } from "wouter";
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
+import TourCard from "../components/TourCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
+import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
+import { getTopToursForPlace } from "../data/tourIndex";
 import { buildMetaDescription } from "../utils/seo";
 
 const buildCityDestination = (
@@ -32,6 +35,12 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     lng: city.lng,
   }));
   const historyHighlights = buildStateHistory(state.name);
+  const guideState = getGuideStateBySlug(state.slug);
+  const guideCities = guideState?.cities.slice(0, 8) ?? [];
+  const topTours = getTopToursForPlace(
+    { type: "state", slug: state.slug, name: state.name },
+    { min: 3, max: 6 },
+  );
   const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
   const description = buildMetaDescription(
     state.intro,
@@ -249,6 +258,74 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
               descriptionVariant="featured"
             />
           ))}
+        </div>
+      </section>
+
+      <section className="bg-white/60">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Guides in {state.name}
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f]">
+                Explore {state.name} guides
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Jump into the main guide or explore city-specific planning tips.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+                <Link href={`/guides/us/${state.slug}`}>
+                  <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
+                    {state.name} guide
+                  </a>
+                </Link>
+                {guideCities.map((city) => (
+                  <Link key={city.slug} href={`/guides/us/${state.slug}/${city.slug}`}>
+                    <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                      {city.name} guide
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              {guideCities.length ? (
+                <div className="mt-4">
+                  <Link href={`/guides/us/${state.slug}`}>
+                    <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                      View all {state.name} guides
+                    </a>
+                  </Link>
+                </div>
+              ) : null}
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Tours in {state.name}
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f]">
+                Book tours across {state.name}
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Compare top-rated tours and browse live availability by city.
+              </p>
+              <div className="mt-6 grid gap-5 md:grid-cols-2">
+                {topTours.map((tour) => (
+                  <TourCard
+                    key={tour.id}
+                    tour={tour}
+                    href={getGuideTourDetailPath(tour)}
+                  />
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link href={`/destinations/states/${state.slug}/tours`}>
+                  <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                    View all {state.name} tours
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

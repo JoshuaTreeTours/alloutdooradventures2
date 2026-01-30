@@ -1,8 +1,11 @@
+import { Link } from "wouter";
+
 import DestinationCard from "../../components/DestinationCard";
 import Seo from "../../components/Seo";
 import { countriesWithTours } from "../../data/europeIndex";
-import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { destinations } from "../../data/destinations";
+import { getGuideStates } from "../../data/guideData";
+import { WORLD_DESTINATIONS, slugify } from "../../data/tourCatalog";
 import { getStaticPageSeo } from "../../utils/seo";
 
 export default function DestinationsIndex() {
@@ -26,6 +29,9 @@ export default function DestinationsIndex() {
   const rockyMountainStates = destinations.filter((destination) =>
     ["montana", "colorado"].includes(destination.stateSlug),
   );
+  const guideStates = getGuideStates();
+  const guideHighlights = guideStates.slice(0, 10);
+  const tourStates = [...destinations].sort((a, b) => a.name.localeCompare(b.name)).slice(0, 10);
 
   return (
     <>
@@ -50,6 +56,68 @@ export default function DestinationsIndex() {
             and Deep South. Each state is packed with signature landscapes, iconic
             trails, and local favorites ready for your next adventure.
           </p>
+        </section>
+
+        <section className="mt-10">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Guides in the United States
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                Explore U.S. guides
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Start with a state guide or drill into city-specific planning.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+                {guideHighlights.map((state) => (
+                  <Link key={state.slug} href={`/guides/us/${state.slug}`}>
+                    <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
+                      {state.name} guide
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-4">
+                <Link href="/guides">
+                  <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                    View all guides
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Tours in the United States
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                Browse U.S. tours by state
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Jump into state tour hubs or browse the full tour index.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+                {tourStates.map((state) => (
+                  <Link
+                    key={state.stateSlug}
+                    href={`/destinations/states/${state.stateSlug}/tours`}
+                  >
+                    <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                      {state.name} tours
+                    </a>
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-4">
+                <Link href="/tours">
+                  <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                    View all tours
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="mt-10 space-y-12" aria-label="States">
