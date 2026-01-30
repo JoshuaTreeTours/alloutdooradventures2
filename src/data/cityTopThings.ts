@@ -6,6 +6,7 @@ import { getTier1PoisForCity } from "./cityPois/tier1";
 import { getTier1IntlPoisForCity } from "./cityPois/tier1/world";
 import { getCityBySlugs, getStateBySlug, states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
+import { tours } from "./tours";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
 
 export const MAX_DRIVE_HOURS = 2;
@@ -380,6 +381,64 @@ const buildCityKey = (parentSlug: string, citySlug: string) =>
 export const getAllowedNeighborStates = (stateSlug: string) =>
   new Set([stateSlug, ...(US_STATE_NEIGHBORS[stateSlug] ?? [])]);
 
+const US_STATE_SLUGS = new Set(states.map(state => state.slug));
+
+let tourCityNameAllowlist: Map<string, Set<string>> | null = null;
+
+const buildTourCityNameAllowlist = () => {
+  const allowlist = new Map<string, Set<string>>();
+  tours.forEach(tour => {
+    const stateSlug = tour.destination.stateSlug;
+    const cityName = tour.destination.city;
+    if (!US_STATE_SLUGS.has(stateSlug) || !cityName) {
+      return;
+    }
+    const normalized = normalizePlaceName(cityName);
+    if (!normalized) {
+      return;
+    }
+    const entry = allowlist.get(stateSlug) ?? new Set<string>();
+    entry.add(normalized);
+    allowlist.set(stateSlug, entry);
+  });
+  return allowlist;
+};
+
+const getTourCityNameAllowlist = () => {
+  if (!tourCityNameAllowlist) {
+    tourCityNameAllowlist = buildTourCityNameAllowlist();
+  }
+  return tourCityNameAllowlist;
+};
+
+export const getNearbyDestinationAllowlist = (
+  parentSlug: string,
+  regionType: "state" | "country",
+  cityFacts?: CityFacts
+) => {
+  if (regionType !== "state") {
+    return new Set<string>();
+  }
+
+  const allowlist = new Set<string>();
+  const allowedStates = getAllowedNeighborStates(parentSlug);
+  const tourAllowlist = getTourCityNameAllowlist();
+
+  allowedStates.forEach(stateSlug => {
+    const stateAllowlist = tourAllowlist.get(stateSlug);
+    stateAllowlist?.forEach(name => allowlist.add(name));
+  });
+
+  cityFacts?.nearby?.forEach(name => {
+    const normalized = normalizePlaceName(name);
+    if (normalized) {
+      allowlist.add(normalized);
+    }
+  });
+
+  return allowlist;
+};
+
 const hasValidCoordinates = (
   lat: number | null | undefined,
   lng: number | null | undefined
@@ -439,7 +498,7 @@ export const getLocalPoisForCity = (parentSlug: string, citySlug: string) =>
     poi => poi.citySlug === citySlug && poi.stateSlug === parentSlug
   );
 
-const getNearbyPoisForCity = (
+export const getNearbyPoisForCity = (
   parentSlug: string,
   citySlug: string,
   maxMiles = MAX_NEARBY_MILES
@@ -831,7 +890,11 @@ const buildPoiDescription = (
 const buildNearbyDestinationDescription = (
   destination: NearbyDestination,
   cityName: string,
-  parentName?: string
+  parentName?: string,
+  options?: {
+    regionType?: "state" | "country";
+    cityFacts?: CityFacts;
+  }
 ) => {
   const destinationName = destination.name;
   const destinationKey = `${destination.stateSlug}/${destination.citySlug}`;
@@ -861,9 +924,19 @@ const buildNearbyDestinationDescription = (
   const primaryTrait =
     DESTINATION_TRAIT_PRIORITY.find(trait => traits.has(trait)) ?? "parks";
   const distance = Math.round(destination.distanceMiles);
+  const driveBucket =
+    destination.distanceMiles <= 25
+      ? "quick hop"
+      : destination.distanceMiles <= 45
+        ? "short drive"
+        : "longer day trip";
   const tripType =
     destination.distanceMiles <= 30 ? "half-day escape" : "day trip";
   const regionLabel = parentName ? `${parentName} area` : "surrounding region";
+  const localHook =
+    options?.cityFacts?.outdoors?.[0] ??
+    options?.cityFacts?.anchors?.[0] ??
+    options?.cityFacts?.corridors?.[0];
 
   const traitLabelMap: Record<DestinationTrait, string> = {
     coastal: "coastal town",
@@ -905,20 +978,24 @@ const buildNearbyDestinationDescription = (
   };
 
   const description = [
-    `${destinationName} is a ${traitLabelMap[primaryTrait]} in ${
-      stateName || regionLabel
-    }, about ${distance} miles from ${cityName}.`,
-    `Plan time for ${activityLabelMap[primaryTrait]}.`,
-    `It makes a solid ${tripType} when you want a change of scenery without leaving the ${regionLabel}.`,
+    `Nearby day trip: ${destinationName} is a ${
+      traitLabelMap[primaryTrait]
+    } in ${stateName || regionLabel}, about ${distance} miles from ${cityName}.`,
+    `It is a ${driveBucket} from ${cityName} with time for ${activityLabelMap[primaryTrait]}.`,
+    localHook
+      ? `Back in ${cityName}, pair the outing with ${localHook}.`
+      : `Plan it as a ${tripType} and return to ${cityName} by evening.`,
   ]
     .filter(Boolean)
     .join(" ");
 
   if (containsBannedTopThingPhrase(description)) {
     return [
-      `${destinationName} sits ${distance} miles from ${cityName} and offers a distinct change in scenery.`,
-      `The area is known for ${activityLabelMap[primaryTrait]}.`,
-      `Keep it as a ${tripType} and return to ${cityName} by evening.`,
+      `Nearby day trip: ${destinationName} sits ${distance} miles from ${cityName}.`,
+      `Expect ${activityLabelMap[primaryTrait]} on a ${driveBucket}.`,
+      localHook
+        ? `Finish back in ${cityName} with ${localHook}.`
+        : `Keep it to a ${tripType} and return to ${cityName} by evening.`,
     ].join(" ");
   }
 
@@ -1192,7 +1269,19 @@ export const buildTopThingsToDo = (
   const localPoiNames = buildLocalPoiNameSet(localPois);
   const nearbyPoiNames = buildLocalPoiNameSet(nearbyPois);
   const curatedPoiNames = new Set([...localPoiNames, ...nearbyPoiNames]);
-  const nearbyDestinations = getNearbyDestinations(parentSlug, citySlug);
+  const nearbyDestinationAllowlist =
+    tier === 2 && regionType === "state"
+      ? getNearbyDestinationAllowlist(parentSlug, regionType, options.cityFacts)
+      : null;
+  const nearbyDestinations = getNearbyDestinations(parentSlug, citySlug).filter(
+    destination => {
+      if (!nearbyDestinationAllowlist) {
+        return true;
+      }
+      const normalized = normalizePlaceName(destination.name);
+      return normalized && nearbyDestinationAllowlist.has(normalized);
+    }
+  );
   const nearbyDestinationNames = new Set(
     nearbyDestinations.map(destination => normalizePlaceName(destination.name))
   );
@@ -1284,7 +1373,11 @@ export const buildTopThingsToDo = (
           ? buildNearbyDestinationDescription(
               nearbyDestination,
               cityName,
-              parentName
+              parentName,
+              {
+                regionType,
+                cityFacts: options.cityFacts,
+              }
             )
           : buildPoiDescription(
               title,
@@ -1296,7 +1389,12 @@ export const buildTopThingsToDo = (
               }
             ));
     const safeDescription = containsBannedTopThingPhrase(description)
-      ? `Spend time at ${title} to experience the scenery and local character around ${cityName}. Plan for a focused visit that fits easily into a half-day outing.`
+      ? nearbyDestination
+        ? buildNearbyDestinationDescription(nearbyDestination, cityName, parentName, {
+            regionType,
+            cityFacts: options.cityFacts,
+          })
+        : `Spend time at ${title} to experience the scenery and local character around ${cityName}. Plan for a focused visit that fits easily into a half-day outing.`
       : description;
 
     return {
@@ -1309,17 +1407,37 @@ export const buildTopThingsToDo = (
 
 export const getTopThingAuditContext = (
   parentSlug: string,
-  citySlug: string
+  citySlug: string,
+  options?: { allowedStates?: Set<string> | null }
 ) => {
   const origin = getCityCoordinates(parentSlug, citySlug);
   const localPois = getLocalPoisForCity(parentSlug, citySlug);
   const localPoiNames = buildLocalPoiNameSet(localPois);
   const allDestinations = getDestinationList();
-  const destinationNameMatches = getDestinationNameIndex();
+  const allowedStates = options?.allowedStates;
+  const destinationNameMatches = (() => {
+    const index = getDestinationNameIndex();
+    if (!allowedStates) {
+      return index;
+    }
+    const filtered = new Map<string, DestinationMatch[]>();
+    index.forEach((matches, key) => {
+      const allowedMatches = matches.filter(match =>
+        allowedStates.has(match.stateSlug)
+      );
+      if (allowedMatches.length) {
+        filtered.set(key, allowedMatches);
+      }
+    });
+    return filtered;
+  })();
   const destinationDistanceMap = new Map<string, number>();
 
   if (origin) {
     allDestinations.forEach(destination => {
+      if (allowedStates && !allowedStates.has(destination.stateSlug)) {
+        return;
+      }
       if (!hasValidCoordinates(destination.lat, destination.lng)) {
         return;
       }

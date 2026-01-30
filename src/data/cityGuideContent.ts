@@ -3,6 +3,9 @@ import {
   TOP_THINGS_BANNED_PHRASES,
   containsBannedTopThingPhrase,
   getAllowedNeighborStates,
+  getNearbyDestinationAllowlist,
+  getNearbyPoisForCity,
+  getLocalPoisForCity,
   getTopThingAuditContext,
   isDenylistedTopThing,
   isGenericPlaceholderName,
@@ -15,7 +18,9 @@ import {
   getTier1IntlPoiNameSet,
   getTier1IntlPoisForCity,
 } from "./cityPois/tier1/world";
+import { getCityBySlugs } from "./destinations";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
+import type { CityFacts } from "../lib/cityGuideFacts";
 
 export type CityGuideIssue = {
   issueType: string;
@@ -46,6 +51,7 @@ type CityGuideAuditContext = {
   regionType: "state" | "country";
   tier: 1 | 2;
   knownPois?: Set<string>;
+  cityFacts?: CityFacts;
 };
 
 const getTier1PoisForContext = (context: CityGuideAuditContext) =>
@@ -68,20 +74,26 @@ type DestinationMatch = {
 
 const getClosestDestinationMatch = (
   matches: DestinationMatch[] | undefined,
-  origin: { lat: number; lng: number } | null
+  origin: { lat: number; lng: number } | null,
+  allowedStates?: Set<string> | null
 ) => {
-  if (!matches?.length) {
+  const filteredMatches =
+    allowedStates && matches?.length
+      ? matches.filter(match => allowedStates.has(match.stateSlug))
+      : matches;
+
+  if (!filteredMatches?.length) {
     return null;
   }
 
   if (!origin) {
-    return matches[0] ?? null;
+    return filteredMatches[0] ?? null;
   }
 
   let closest: DestinationMatch | null = null;
   let closestDistance = Number.POSITIVE_INFINITY;
 
-  matches.forEach(match => {
+  filteredMatches.forEach(match => {
     if (!Number.isFinite(match.lat) || !Number.isFinite(match.lng)) {
       return;
     }
@@ -433,9 +445,14 @@ export const buildTopThingsAuditMetrics = (
 ): TopThingsAuditMetrics => {
   const topThings = content.topThingsToDo ?? [];
   const total = topThings.length;
+  const allowedStates =
+    context.regionType === "state"
+      ? getAllowedNeighborStates(context.parentSlug)
+      : null;
   const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
     context.parentSlug,
-    context.citySlug
+    context.citySlug,
+    { allowedStates }
   );
   const tier1PoiNames =
     context.tier === 1
@@ -575,16 +592,32 @@ export const auditCityGuideContent = (
   });
 
   if (content.topThingsToDo?.length) {
+    const allowedNeighborStates =
+      context.regionType === "state"
+        ? getAllowedNeighborStates(context.parentSlug)
+        : null;
     const {
       localPoiNames,
       destinationDistanceMap,
       destinationNameMatches,
       origin,
-    } = getTopThingAuditContext(context.parentSlug, context.citySlug);
-    const allowedNeighborStates =
-      context.regionType === "state"
-        ? getAllowedNeighborStates(context.parentSlug)
-        : null;
+    } = getTopThingAuditContext(context.parentSlug, context.citySlug, {
+      allowedStates: allowedNeighborStates,
+    });
+    const isNonTierUs = context.regionType === "state" && context.tier === 2;
+    const nearbyDestinationAllowlist = isNonTierUs
+      ? getNearbyDestinationAllowlist(
+          context.parentSlug,
+          context.regionType,
+          context.cityFacts
+        )
+      : null;
+    const localPois = isNonTierUs
+      ? getLocalPoisForCity(context.parentSlug, context.citySlug)
+      : [];
+    const nearbyPois = isNonTierUs
+      ? getNearbyPoisForCity(context.parentSlug, context.citySlug)
+      : [];
     const descriptionPrefixMap = new Map<string, string[]>();
     const bannedPhraseMatches: string[] = [];
 
@@ -597,12 +630,18 @@ export const auditCityGuideContent = (
       const isLocalPoi = localPoiNames.has(normalized);
       const destinationDistance = destinationDistanceMap.get(normalized);
       const destinationMatches = destinationNameMatches.get(normalized);
+      const allowedMatches =
+        allowedNeighborStates && destinationMatches?.length
+          ? destinationMatches.filter(match =>
+              allowedNeighborStates.has(match.stateSlug)
+            )
+          : destinationMatches;
       const destinationMatch = getClosestDestinationMatch(
         destinationMatches,
-        origin
+        origin,
+        allowedNeighborStates
       );
-      const isDestination =
-        !isLocalPoi && (destinationMatches?.length ?? 0) > 0;
+      const isDestination = !isLocalPoi && (allowedMatches?.length ?? 0) > 0;
       const isArchetype = item.activityType?.startsWith("archetype") ?? false;
 
       if (
@@ -686,7 +725,65 @@ export const auditCityGuideContent = (
         });
       }
 
+      if (isNonTierUs && isDestination && nearbyDestinationAllowlist) {
+        if (!nearbyDestinationAllowlist.has(normalized)) {
+          issues.push({
+            issueType: "Nearby destination not allowlisted",
+            matchedText: item.title,
+            contextSnippet: item.title,
+            severity: "error",
+            suggestedFix: "Use an allowlisted nearby destination name.",
+          });
+        }
+      }
+
       const description = item.description?.trim() ?? "";
+      if (isNonTierUs && description) {
+        const descriptionLower = description.toLowerCase();
+        if (isDestination && !/(nearby|day trip)/i.test(description)) {
+          issues.push({
+            issueType: "Nearby destination missing label",
+            matchedText: item.title,
+            contextSnippet: description.slice(0, 120),
+            severity: "error",
+            suggestedFix: "Label nearby destinations as a nearby or day-trip item.",
+          });
+        }
+
+        if (!isDestination) {
+          const localPoi = localPois.find(
+            poi => normalizePlaceName(poi.name) === normalized
+          );
+          const nearbyPoi = nearbyPois.find(
+            poi => normalizePlaceName(poi.name) === normalized
+          );
+          const hasPoiCoordinates = Boolean(localPoi || nearbyPoi);
+          if (hasPoiCoordinates) {
+            const cityMatch = descriptionLower.includes(
+              context.cityName.toLowerCase()
+            );
+            const poiCityMatch = nearbyPoi
+              ? descriptionLower.includes(
+                  (
+                    getCityBySlugs(nearbyPoi.stateSlug, nearbyPoi.citySlug)
+                      ?.name ?? ""
+                  ).toLowerCase()
+                )
+              : false;
+
+            if (!cityMatch && !poiCityMatch) {
+              issues.push({
+                issueType: "POI description not city-specific",
+                matchedText: item.title,
+                contextSnippet: description.slice(0, 120),
+                severity: "error",
+                suggestedFix: `Reference ${context.cityName} or the nearby POI city in the description.`,
+              });
+            }
+          }
+        }
+      }
+
       if (description) {
         if (containsBannedTopThingPhrase(description)) {
           bannedPhraseMatches.push(item.title);
