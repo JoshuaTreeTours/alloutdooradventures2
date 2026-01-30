@@ -4,7 +4,10 @@ import {
   buildTopThingsToDo,
   filterTopThingsByRules,
   getNearbyDestinations,
+  getAllowedNeighborStates,
+  MAX_NEARBY_DESTINATION_MILES,
   MIN_TIER1_DESCRIPTION_LENGTH,
+  TOP_THINGS_BANNED_PHRASES,
 } from "./cityTopThings";
 import { auditCityGuideContent } from "./cityGuideContent";
 import { getTier1PoisForCity } from "./cityPois/tier1";
@@ -14,7 +17,7 @@ import { normalizePlaceName } from "../utils/geo";
 describe("city top things rules", () => {
   it("filters Monterey out of nearby destinations for Joshua Tree", () => {
     const nearby = getNearbyDestinations("california", "joshua-tree");
-    const names = nearby.map((destination) => destination.name);
+    const names = nearby.map(destination => destination.name);
     expect(names).not.toContain("Monterey");
   });
 
@@ -29,7 +32,7 @@ describe("city top things rules", () => {
     const allowed = filterTopThingsByRules(
       [{ name: "Coastal Bluffs", source: "local-poi" }],
       curatedSet,
-      "Test City",
+      "Test City"
     );
     expect(allowed).toHaveLength(1);
   });
@@ -48,28 +51,77 @@ describe("city top things rules", () => {
       "Palm Springs",
     ];
     const localPoiNames = new Set(
-      fallbackNames.map((name) => normalizePlaceName(name)),
+      fallbackNames.map(name => normalizePlaceName(name))
     );
     const backfilled = applyTopThingsBackfill(
       [],
       fallbackNames,
       localPoiNames,
       new Set(),
-      10,
+      10
     );
     expect(backfilled).toHaveLength(10);
   });
 
+  it("keeps Brick Township nearby destinations in-state and avoids banned phrases", () => {
+    const items = buildTopThingsToDo(
+      "Brick Township",
+      "new-jersey",
+      "brick-township"
+    );
+    const nearby = getNearbyDestinations("new-jersey", "brick-township");
+    const allowedStates = getAllowedNeighborStates("new-jersey");
+
+    nearby.forEach(destination => {
+      expect(allowedStates.has(destination.stateSlug)).toBe(true);
+      expect(destination.distanceMiles).toBeLessThanOrEqual(
+        MAX_NEARBY_DESTINATION_MILES
+      );
+    });
+
+    items.forEach(item => {
+      const lower = item.description.toLowerCase();
+      TOP_THINGS_BANNED_PHRASES.forEach(phrase => {
+        expect(lower).not.toContain(phrase);
+      });
+    });
+
+    const titles = items.map(item => item.title).join(" ");
+    expect(titles).not.toMatch(/Natick|Nantucket|Quincy/);
+  });
+
+  it("allows neighbor-state destinations near New York within the max distance", () => {
+    const nearby = getNearbyDestinations("new-york", "new-york");
+    const allowedStates = getAllowedNeighborStates("new-york");
+
+    expect(nearby.length).toBeGreaterThan(0);
+
+    nearby.forEach(destination => {
+      expect(allowedStates.has(destination.stateSlug)).toBe(true);
+      expect(destination.distanceMiles).toBeLessThanOrEqual(
+        MAX_NEARBY_DESTINATION_MILES
+      );
+    });
+
+    expect(
+      nearby.some(destination => destination.stateSlug !== "new-york")
+    ).toBe(true);
+  });
+
   it("returns POI-only Palm Springs top things and passes strict checks", () => {
-    const items = buildTopThingsToDo("Palm Springs", "california", "palm-springs");
+    const items = buildTopThingsToDo(
+      "Palm Springs",
+      "california",
+      "palm-springs"
+    );
     const poiNames = new Set(
-      getTier1PoisForCity("california", "palm-springs").map((poi) => poi.name),
+      getTier1PoisForCity("california", "palm-springs").map(poi => poi.name)
     );
 
-    items.forEach((item) => {
+    items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
       expect(item.description.length).toBeGreaterThanOrEqual(
-        MIN_TIER1_DESCRIPTION_LENGTH,
+        MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
 
@@ -81,26 +133,26 @@ describe("city top things rules", () => {
         parentSlug: "california",
         regionType: "state",
         tier: 1,
-      },
+      }
     );
-    expect(issues.filter((issue) => issue.severity === "error")).toHaveLength(0);
+    expect(issues.filter(issue => issue.severity === "error")).toHaveLength(0);
   });
 
   it("uses only Tier-1 POIs for Newport Beach with rich descriptions", () => {
     const items = buildTopThingsToDo(
       "Newport Beach",
       "california",
-      "newport-beach",
+      "newport-beach"
     );
     const poiNames = new Set(
-      getTier1PoisForCity("california", "newport-beach").map((poi) => poi.name),
+      getTier1PoisForCity("california", "newport-beach").map(poi => poi.name)
     );
-    const titles = items.map((item) => item.title);
+    const titles = items.map(item => item.title);
 
-    items.forEach((item) => {
+    items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
       expect(item.description.length).toBeGreaterThanOrEqual(
-        MIN_TIER1_DESCRIPTION_LENGTH,
+        MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
 
@@ -112,14 +164,14 @@ describe("city top things rules", () => {
       regionType: "country",
     });
     const poiNames = new Set(
-      getTier1IntlPoisForCity("italy", "rome").map((poi) => poi.name),
+      getTier1IntlPoisForCity("italy", "rome").map(poi => poi.name)
     );
 
     expect(items.length).toBeGreaterThanOrEqual(8);
-    items.forEach((item) => {
+    items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
       expect(item.description.length).toBeGreaterThanOrEqual(
-        MIN_TIER1_DESCRIPTION_LENGTH,
+        MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
   });
@@ -129,14 +181,14 @@ describe("city top things rules", () => {
       regionType: "country",
     });
     const poiNames = new Set(
-      getTier1IntlPoisForCity("australia", "sydney").map((poi) => poi.name),
+      getTier1IntlPoisForCity("australia", "sydney").map(poi => poi.name)
     );
 
     expect(items.length).toBeGreaterThanOrEqual(8);
-    items.forEach((item) => {
+    items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
       expect(item.description.length).toBeGreaterThanOrEqual(
-        MIN_TIER1_DESCRIPTION_LENGTH,
+        MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
   });
