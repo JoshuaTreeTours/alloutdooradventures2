@@ -1,5 +1,5 @@
-import { normalizePlaceName } from "../../../utils/geo";
-import type { IntlCityPoi } from "./types";
+import { normalizePlaceName } from "../../../../utils/geo";
+import type { Tier1WorldCityPoi } from "./types";
 import { pois as edinburgh } from "./united-kingdom/edinburgh";
 import { pois as rome } from "./italy/rome";
 import { pois as florence } from "./italy/florence";
@@ -11,43 +11,28 @@ import { pois as berlin } from "./germany/berlin";
 import { pois as vienna } from "./austria/vienna";
 import { pois as sydney } from "./australia/sydney";
 
-export type { IntlCityPoi } from "./types";
+export type { Tier1WorldCityPoi } from "./types";
 
-export const tier1IntlCityPois: IntlCityPoi[] = [
-  ...edinburgh,
-  ...rome,
-  ...florence,
-  ...barcelona,
-  ...madrid,
-  ...lisbon,
-  ...amsterdam,
-  ...berlin,
-  ...vienna,
-  ...sydney,
-];
-
-const buildPoiIndex = () => {
-  const index = new Map<string, IntlCityPoi[]>();
-  tier1IntlCityPois.forEach((poi) => {
-    const key = `${poi.countrySlug}/${poi.citySlug}`;
-    const list = index.get(key) ?? [];
-    list.push(poi);
-    index.set(key, list);
-  });
-  return index;
+const tier1IntlPoiMap: Record<string, Tier1WorldCityPoi[]> = {
+  "united-kingdom/edinburgh": edinburgh,
+  "italy/rome": rome,
+  "italy/florence": florence,
+  "spain/barcelona": barcelona,
+  "spain/madrid": madrid,
+  "portugal/lisbon": lisbon,
+  "netherlands/amsterdam": amsterdam,
+  "germany/berlin": berlin,
+  "austria/vienna": vienna,
+  "australia/sydney": sydney,
 };
 
-let poiIndex: Map<string, IntlCityPoi[]> | null = null;
+export const tier1IntlCityPois = Object.values(tier1IntlPoiMap).flat();
 
 export const getTier1IntlPoisForCity = (
   countrySlug: string,
   citySlug: string,
 ) => {
-  if (!poiIndex) {
-    poiIndex = buildPoiIndex();
-  }
-
-  return poiIndex.get(`${countrySlug}/${citySlug}`) ?? [];
+  return tier1IntlPoiMap[`${countrySlug}/${citySlug}`] ?? [];
 };
 
 export const getTier1IntlPoiNameSet = (

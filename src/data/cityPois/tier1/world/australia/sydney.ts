@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "sydney-opera-house",
     name: "Sydney Opera House",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8568,
     lng: 151.2153,
     categories: ["landmark", "architecture", "harbor"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "sydney-harbour-bridge",
     name: "Sydney Harbour Bridge",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8523,
     lng: 151.2108,
     categories: ["landmark", "viewpoint", "harbor"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "the-rocks",
     name: "The Rocks",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8599,
     lng: 151.2093,
     categories: ["historic", "neighborhood", "market"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "bondi-beach",
     name: "Bondi Beach",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8908,
     lng: 151.2743,
     categories: ["beach", "outdoors", "surf"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "manly-beach",
     name: "Manly Beach",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.7969,
     lng: 151.2870,
     categories: ["beach", "outdoors", "waterfront"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "royal-botanic-garden-sydney",
     name: "Royal Botanic Garden Sydney",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8642,
     lng: 151.2166,
     categories: ["garden", "outdoors", "harbor"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "darling-harbour",
     name: "Darling Harbour",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8748,
     lng: 151.1987,
     categories: ["waterfront", "family", "dining"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "taronga-zoo",
     name: "Taronga Zoo",
-    countrySlug: "australia",
-    citySlug: "sydney",
     lat: -33.8430,
     lng: 151.2417,
     categories: ["zoo", "family", "viewpoint"],

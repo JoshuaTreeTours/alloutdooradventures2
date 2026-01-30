@@ -14,7 +14,7 @@ import { getTier1PoiNameSet, getTier1PoisForCity } from "./cityPois/tier1";
 import {
   getTier1IntlPoiNameSet,
   getTier1IntlPoisForCity,
-} from "./cityPois/tier1Intl";
+} from "./cityPois/tier1/world";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
 
 export type CityGuideIssue = {
@@ -604,6 +604,20 @@ export const auditCityGuideContent = (
       const isDestination =
         !isLocalPoi && (destinationMatches?.length ?? 0) > 0;
       const isArchetype = item.activityType?.startsWith("archetype") ?? false;
+
+      if (
+        context.tier === 1 &&
+        context.regionType === "country" &&
+        isArchetype
+      ) {
+        issues.push({
+          issueType: "Tier-1 archetype token",
+          matchedText: item.title,
+          contextSnippet: item.title,
+          severity: "error",
+          suggestedFix: "Replace with a named, in-city POI.",
+        });
+      }
 
       if (isDenylistedTopThing(item.title) && !isLocalPoi) {
         issues.push({

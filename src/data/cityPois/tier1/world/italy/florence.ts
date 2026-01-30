@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "florence-duomo",
     name: "Cathedral of Santa Maria del Fiore (Duomo)",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7731,
     lng: 11.2560,
     categories: ["historic", "architecture", "landmark"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "uffizi-gallery",
     name: "Uffizi Gallery",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7687,
     lng: 11.2550,
     categories: ["museum", "art", "historic"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "ponte-vecchio",
     name: "Ponte Vecchio",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7679,
     lng: 11.2531,
     categories: ["historic", "landmark", "bridge"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "palazzo-pitti",
     name: "Palazzo Pitti",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7636,
     lng: 11.2497,
     categories: ["museum", "historic", "palace"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "piazzale-michelangelo",
     name: "Piazzale Michelangelo",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7629,
     lng: 11.2657,
     categories: ["viewpoint", "landmark", "park"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "galleria-dell-accademia",
     name: "Galleria dell’Accademia",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7761,
     lng: 11.2589,
     categories: ["museum", "art", "historic"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "basilica-di-santa-croce",
     name: "Basilica di Santa Croce",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7685,
     lng: 11.2625,
     categories: ["historic", "architecture", "landmark"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "boboli-gardens",
     name: "Boboli Gardens",
-    countrySlug: "italy",
-    citySlug: "florence",
     lat: 43.7644,
     lng: 11.2486,
     categories: ["garden", "viewpoint", "historic"],

@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "prado-museum",
     name: "Museo del Prado",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4138,
     lng: -3.6921,
     categories: ["museum", "art", "historic"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "retiro-park",
     name: "El Retiro Park",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4153,
     lng: -3.6844,
     categories: ["park", "outdoors", "lake"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "royal-palace-madrid",
     name: "Royal Palace of Madrid",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4179,
     lng: -3.7143,
     categories: ["historic", "palace", "landmark"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "plaza-mayor",
     name: "Plaza Mayor",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4155,
     lng: -3.7074,
     categories: ["plaza", "historic", "architecture"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "reina-sofia-museum",
     name: "Museo Reina Sofía",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4078,
     lng: -3.6945,
     categories: ["museum", "art", "modern"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "mercado-de-san-miguel",
     name: "Mercado de San Miguel",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4154,
     lng: -3.7089,
     categories: ["market", "food", "historic"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "gran-via",
     name: "Gran Vía",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4200,
     lng: -3.7058,
     categories: ["neighborhood", "shopping", "architecture"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "temple-of-debod",
     name: "Temple of Debod",
-    countrySlug: "spain",
-    citySlug: "madrid",
     lat: 40.4240,
     lng: -3.7179,
     categories: ["historic", "viewpoint", "landmark"],

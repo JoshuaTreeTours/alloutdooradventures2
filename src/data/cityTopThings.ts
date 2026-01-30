@@ -3,7 +3,7 @@ import { isTier1IntlCity } from "./cityTier1Intl";
 import { isTier1City } from "./cityTier1";
 import { cityLocalPois, type LocalPoi } from "./cityLocalPois";
 import { getTier1PoisForCity } from "./cityPois/tier1";
-import { getTier1IntlPoisForCity } from "./cityPois/tier1Intl";
+import { getTier1IntlPoisForCity } from "./cityPois/tier1/world";
 import { getCityBySlugs, getStateBySlug, states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
