@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "rijksmuseum",
     name: "Rijksmuseum",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3600,
     lng: 4.8852,
     categories: ["museum", "art", "historic"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "van-gogh-museum",
     name: "Van Gogh Museum",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3584,
     lng: 4.8811,
     categories: ["museum", "art", "historic"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "anne-frank-house",
     name: "Anne Frank House",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3752,
     lng: 4.8839,
     categories: ["historic", "museum", "landmark"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "jordaan",
     name: "Jordaan District",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3762,
     lng: 4.8830,
     categories: ["neighborhood", "walking", "food"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "dam-square",
     name: "Dam Square",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3731,
     lng: 4.8922,
     categories: ["plaza", "historic", "landmark"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "vondelpark",
     name: "Vondelpark",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3579,
     lng: 4.8681,
     categories: ["park", "outdoors", "walking"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "heineken-experience",
     name: "Heineken Experience",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3579,
     lng: 4.8910,
     categories: ["museum", "food", "tour"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "nemo-science-museum",
     name: "NEMO Science Museum",
-    countrySlug: "netherlands",
-    citySlug: "amsterdam",
     lat: 52.3740,
     lng: 4.9123,
     categories: ["museum", "family", "architecture"],

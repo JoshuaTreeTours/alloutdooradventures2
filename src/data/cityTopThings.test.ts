@@ -5,13 +5,15 @@ import {
   filterTopThingsByRules,
   getNearbyDestinations,
   getAllowedNeighborStates,
+  isGenericPlaceholderName,
   MAX_NEARBY_DESTINATION_MILES,
   MIN_TIER1_DESCRIPTION_LENGTH,
+  MIN_TIER1_ITEMS,
   TOP_THINGS_BANNED_PHRASES,
 } from "./cityTopThings";
 import { auditCityGuideContent } from "./cityGuideContent";
 import { getTier1PoisForCity } from "./cityPois/tier1";
-import { getTier1IntlPoisForCity } from "./cityPois/tier1Intl";
+import { getTier1IntlPoisForCity } from "./cityPois/tier1/world";
 import { normalizePlaceName } from "../utils/geo";
 
 describe("city top things rules", () => {
@@ -167,13 +169,28 @@ describe("city top things rules", () => {
       getTier1IntlPoisForCity("italy", "rome").map(poi => poi.name)
     );
 
-    expect(items.length).toBeGreaterThanOrEqual(8);
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
     items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Rome")).toBe(false);
       expect(item.description.length).toBeGreaterThanOrEqual(
         MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Rome",
+        citySlug: "rome",
+        parentSlug: "italy",
+        regionType: "country",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
   });
 
   it("uses only Tier-1 POIs for Sydney with rich descriptions", () => {
@@ -184,12 +201,27 @@ describe("city top things rules", () => {
       getTier1IntlPoisForCity("australia", "sydney").map(poi => poi.name)
     );
 
-    expect(items.length).toBeGreaterThanOrEqual(8);
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
     items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Sydney")).toBe(false);
       expect(item.description.length).toBeGreaterThanOrEqual(
         MIN_TIER1_DESCRIPTION_LENGTH
       );
     });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Sydney",
+        citySlug: "sydney",
+        parentSlug: "australia",
+        regionType: "country",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
   });
 });

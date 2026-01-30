@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "edinburgh-castle",
     name: "Edinburgh Castle",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9486,
     lng: -3.1999,
     categories: ["historic", "viewpoint", "landmark"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "royal-mile",
     name: "Royal Mile",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9497,
     lng: -3.1900,
     categories: ["historic", "neighborhood", "walking"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "palace-of-holyroodhouse",
     name: "Palace of Holyroodhouse",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9526,
     lng: -3.1722,
     categories: ["historic", "palace", "museum"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "arthurs-seat",
     name: "Arthur’s Seat",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9445,
     lng: -3.1618,
     categories: ["hike", "viewpoint", "park"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "calton-hill",
     name: "Calton Hill",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9550,
     lng: -3.1825,
     categories: ["viewpoint", "landmark", "historic"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "national-museum-of-scotland",
     name: "National Museum of Scotland",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9469,
     lng: -3.1900,
     categories: ["museum", "historic", "family"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "dean-village",
     name: "Dean Village",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9529,
     lng: -3.2191,
     categories: ["neighborhood", "historic", "walking"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "royal-botanic-garden-edinburgh",
     name: "Royal Botanic Garden Edinburgh",
-    countrySlug: "united-kingdom",
-    citySlug: "edinburgh",
     lat: 55.9656,
     lng: -3.2096,
     categories: ["garden", "nature", "family"],

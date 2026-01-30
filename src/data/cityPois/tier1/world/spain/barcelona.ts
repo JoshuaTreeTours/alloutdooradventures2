@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "sagrada-familia",
     name: "Basílica de la Sagrada Família",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.4036,
     lng: 2.1744,
     categories: ["architecture", "landmark", "historic"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "park-guell",
     name: "Park Güell",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.4145,
     lng: 2.1527,
     categories: ["park", "viewpoint", "architecture"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "casa-batllo",
     name: "Casa Batlló",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3917,
     lng: 2.1649,
     categories: ["architecture", "museum", "landmark"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "la-rambla",
     name: "La Rambla",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3809,
     lng: 2.1730,
     categories: ["neighborhood", "walking", "market"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "gothic-quarter",
     name: "Gothic Quarter (Barri Gòtic)",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3839,
     lng: 2.1769,
     categories: ["historic", "neighborhood", "walking"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "barceloneta-beach",
     name: "Barceloneta Beach",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3786,
     lng: 2.1925,
     categories: ["beach", "waterfront", "outdoors"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "montjuic-castle",
     name: "Montjuïc Castle",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3641,
     lng: 2.1699,
     categories: ["historic", "viewpoint", "landmark"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "picasso-museum",
     name: "Picasso Museum",
-    countrySlug: "spain",
-    citySlug: "barcelona",
     lat: 41.3852,
     lng: 2.1809,
     categories: ["museum", "art", "historic"],

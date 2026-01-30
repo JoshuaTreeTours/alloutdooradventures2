@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "brandenburg-gate",
     name: "Brandenburg Gate",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5163,
     lng: 13.3777,
     categories: ["landmark", "historic", "architecture"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "reichstag-building",
     name: "Reichstag Building",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5186,
     lng: 13.3762,
     categories: ["historic", "architecture", "landmark"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "museum-island",
     name: "Museum Island",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5169,
     lng: 13.4010,
     categories: ["museum", "historic", "art"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "east-side-gallery",
     name: "East Side Gallery",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5050,
     lng: 13.4394,
     categories: ["historic", "art", "landmark"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "berlin-cathedral",
     name: "Berlin Cathedral (Berliner Dom)",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5192,
     lng: 13.4010,
     categories: ["historic", "architecture", "landmark"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "checkpoint-charlie",
     name: "Checkpoint Charlie",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5076,
     lng: 13.3904,
     categories: ["historic", "landmark", "museum"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "mauerpark",
     name: "Mauerpark",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5415,
     lng: 13.4020,
     categories: ["park", "market", "neighborhood"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "charlottenburg-palace",
     name: "Charlottenburg Palace",
-    countrySlug: "germany",
-    citySlug: "berlin",
     lat: 52.5208,
     lng: 13.2950,
     categories: ["historic", "palace", "garden"],

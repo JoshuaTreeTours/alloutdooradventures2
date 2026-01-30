@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "colosseum",
     name: "Colosseum",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.8902,
     lng: 12.4922,
     categories: ["historic", "landmark", "museum"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "roman-forum",
     name: "Roman Forum",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.8925,
     lng: 12.4853,
     categories: ["historic", "archaeology", "landmark"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "pantheon",
     name: "Pantheon",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.8986,
     lng: 12.4768,
     categories: ["historic", "architecture", "landmark"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "vatican-museums",
     name: "Vatican Museums",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.9065,
     lng: 12.4536,
     categories: ["museum", "art", "historic"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "st-peters-basilica",
     name: "St. Peter’s Basilica",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.9022,
     lng: 12.4539,
     categories: ["historic", "architecture", "landmark"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "trevi-fountain",
     name: "Trevi Fountain",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.9009,
     lng: 12.4833,
     categories: ["landmark", "historic", "fountain"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "piazza-navona",
     name: "Piazza Navona",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.8992,
     lng: 12.4731,
     categories: ["historic", "plaza", "architecture"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "trastevere",
     name: "Trastevere",
-    countrySlug: "italy",
-    citySlug: "rome",
     lat: 41.8897,
     lng: 12.4700,
     categories: ["neighborhood", "food", "historic"],

@@ -1,4 +1,4 @@
-import { normalizePlaceName } from "../../utils/geo";
+import { normalizePlaceName } from "../../../utils/geo";
 
 export type CityPoi = {
   id: string;

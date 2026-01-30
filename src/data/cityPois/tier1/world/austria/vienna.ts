@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "schonbrunn-palace",
     name: "Schönbrunn Palace",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.1845,
     lng: 16.3122,
     categories: ["historic", "palace", "garden"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "st-stephens-cathedral",
     name: "St. Stephen’s Cathedral",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.2082,
     lng: 16.3738,
     categories: ["historic", "architecture", "landmark"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "hofburg-palace",
     name: "Hofburg Palace",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.2064,
     lng: 16.3656,
     categories: ["historic", "palace", "museum"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "belvedere-palace",
     name: "Belvedere Palace",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.1914,
     lng: 16.3803,
     categories: ["museum", "art", "historic"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "museumsquartier",
     name: "MuseumsQuartier",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.2030,
     lng: 16.3582,
     categories: ["museum", "art", "neighborhood"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "prater",
     name: "Prater & Giant Ferris Wheel",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.2167,
     lng: 16.3958,
     categories: ["park", "viewpoint", "family"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "naschmarkt",
     name: "Naschmarkt",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.1986,
     lng: 16.3610,
     categories: ["market", "food", "neighborhood"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "vienna-state-opera",
     name: "Vienna State Opera",
-    countrySlug: "austria",
-    citySlug: "vienna",
     lat: 48.2030,
     lng: 16.3695,
     categories: ["historic", "architecture", "landmark"],

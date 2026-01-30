@@ -1,11 +1,9 @@
-import type { IntlCityPoi } from "../types";
+import type { Tier1WorldCityPoi } from "../types";
 
-export const pois: IntlCityPoi[] = [
+export const pois: Tier1WorldCityPoi[] = [
   {
     id: "belem-tower",
     name: "Belém Tower",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.6916,
     lng: -9.2159,
     categories: ["historic", "landmark", "waterfront"],
@@ -15,8 +13,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "jeronimos-monastery",
     name: "Jerónimos Monastery",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.6984,
     lng: -9.2065,
     categories: ["historic", "architecture", "landmark"],
@@ -26,8 +22,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "alfama-district",
     name: "Alfama District",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7139,
     lng: -9.1277,
     categories: ["neighborhood", "historic", "walking"],
@@ -37,8 +31,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "castelo-de-sao-jorge",
     name: "Castelo de São Jorge",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7139,
     lng: -9.1335,
     categories: ["historic", "viewpoint", "landmark"],
@@ -48,8 +40,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "praca-do-comercio",
     name: "Praça do Comércio",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7077,
     lng: -9.1366,
     categories: ["plaza", "historic", "waterfront"],
@@ -59,8 +49,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "lx-factory",
     name: "LX Factory",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7030,
     lng: -9.1782,
     categories: ["market", "food", "shopping"],
@@ -70,8 +58,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "chiado",
     name: "Chiado",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7106,
     lng: -9.1425,
     categories: ["neighborhood", "shopping", "historic"],
@@ -81,8 +67,6 @@ export const pois: IntlCityPoi[] = [
   {
     id: "miradouro-senhora-do-monte",
     name: "Miradouro da Senhora do Monte",
-    countrySlug: "portugal",
-    citySlug: "lisbon",
     lat: 38.7190,
     lng: -9.1327,
     categories: ["viewpoint", "landmark", "walking"],
