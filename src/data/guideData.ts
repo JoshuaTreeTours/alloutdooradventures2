@@ -6,6 +6,7 @@ import {
 } from "./cityGuideContent";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
+import { isTier1City } from "./cityTier1";
 import { buildTopThingsToDo } from "./cityTopThings";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { buildCityGuideFacts } from "../lib/cityGuideFacts";
@@ -1037,9 +1038,11 @@ export const buildCityGuide = ({
   const { content: sanitizedContent, changes } = sanitizeCityGuideContent(
     toCityGuideTextContent(guide),
     {
+      cityName,
       citySlug,
       parentSlug,
       regionType,
+      tier: isTier1City(citySlug) ? 1 : 2,
       knownPois,
     },
   );

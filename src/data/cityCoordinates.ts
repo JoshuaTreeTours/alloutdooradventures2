@@ -7,6 +7,14 @@ export type CityCoordinates = {
 
 const CITY_COORDINATE_OVERRIDES: Record<string, CityCoordinates> = {
   "california/joshua-tree": { lat: 34.1347, lng: -116.3131 },
+  "california/newport-beach": { lat: 33.6189, lng: -117.9298 },
+  "california/laguna-beach": { lat: 33.5427, lng: -117.7854 },
+  "california/anaheim": { lat: 33.8366, lng: -117.9143 },
+  "california/long-beach": { lat: 33.7701, lng: -118.1937 },
+  "california/san-jose": { lat: 37.3382, lng: -121.8863 },
+  "california/sacramento": { lat: 38.5816, lng: -121.4944 },
+  "illinois/chicago": { lat: 41.8781, lng: -87.6298 },
+  "arizona/phoenix": { lat: 33.4484, lng: -112.074 },
 };
 
 const buildCityCoordinateIndex = () => {

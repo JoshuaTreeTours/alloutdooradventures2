@@ -1,5 +1,7 @@
 import { getCityCoordinates } from "./cityCoordinates";
+import { isTier1City } from "./cityTier1";
 import { cityLocalPois, type LocalPoi } from "./cityLocalPois";
+import { getTier1PoisForCity } from "./cityPois/tier1";
 import { states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
@@ -7,6 +9,36 @@ import { haversineMiles, normalizePlaceName } from "../utils/geo";
 export const MAX_DRIVE_HOURS = 2;
 export const ASSUMED_AVG_MPH = 55;
 export const MAX_NEARBY_MILES = 60;
+export const MIN_TIER1_DESCRIPTION_LENGTH = 240;
+export const MIN_TIER1_ITEMS = 8;
+
+const TIER1_CITY_RADIUS_MILES: Record<string, number> = {
+  "los-angeles": 20,
+  "san-diego": 20,
+  "san-francisco": 20,
+  "san-jose": 20,
+  "sacramento": 20,
+  "seattle": 20,
+  "portland": 20,
+  "las-vegas": 20,
+  phoenix: 20,
+  denver: 20,
+  chicago: 20,
+  "new-york": 20,
+  miami: 20,
+  boston: 20,
+  washington: 20,
+  philadelphia: 20,
+  orlando: 20,
+  anaheim: 15,
+  "long-beach": 15,
+  nashville: 15,
+  "palm-springs": 12,
+  "joshua-tree": 12,
+  "santa-barbara": 12,
+  "newport-beach": 12,
+  "laguna-beach": 12,
+};
 
 export const TOP_THINGS_DENYLIST = [
   "riverfront",
@@ -17,6 +49,14 @@ export const TOP_THINGS_DENYLIST = [
   "arts district",
   "scenic loop",
   "desert overlook",
+];
+
+const GENERIC_PLACEHOLDER_PHRASES = [
+  "central plaza",
+  "arts quarter",
+  "riverfront walk",
+  "regional parklands",
+  "scenic viewpoint loop",
 ];
 
 export type TopThingSource =
@@ -166,6 +206,29 @@ export const isDenylistedTopThing = (name: string) => {
   return TOP_THINGS_DENYLIST.some((phrase) => lower.includes(phrase));
 };
 
+export const isGenericPlaceholderName = (name: string, cityName: string) => {
+  const lower = name.toLowerCase();
+  const cityLower = cityName.toLowerCase();
+
+  if (GENERIC_PLACEHOLDER_PHRASES.some((phrase) => lower.includes(phrase))) {
+    return true;
+  }
+
+  if (
+    lower.includes("historic downtown") &&
+    cityLower &&
+    lower.includes(cityLower)
+  ) {
+    return true;
+  }
+
+  if (lower.includes("downtown") && lower.includes(cityLower)) {
+    return true;
+  }
+
+  return false;
+};
+
 export const getLocalPoisForCity = (parentSlug: string, citySlug: string) =>
   cityLocalPois.filter(
     (poi) => poi.citySlug === citySlug && poi.stateSlug === parentSlug,
@@ -273,6 +336,7 @@ export const applyTopThingsBackfill = (
 export const filterTopThingsByRules = (
   candidates: TopThingCandidate[],
   localPoiNames: Set<string>,
+  cityName?: string,
 ) => {
   const seen = new Set<string>();
 
@@ -285,6 +349,14 @@ export const filterTopThingsByRules = (
     if (
       candidate.source !== "archetype" &&
       isDenylistedTopThing(candidate.name) &&
+      !localPoiNames.has(normalized)
+    ) {
+      return false;
+    }
+
+    if (
+      cityName &&
+      isGenericPlaceholderName(candidate.name, cityName) &&
       !localPoiNames.has(normalized)
     ) {
       return false;
@@ -328,6 +400,30 @@ const buildNearbyDestinationDescription = (
 ) => {
   const regionLabel = parentName ? `the ${parentName} area` : "the surrounding region";
   return `Take a short drive from ${cityName} to ${name} for an easy change of scenery. It is a quick way to add variety to your trip while staying close to ${regionLabel}.`;
+};
+
+type CityLookup = {
+  parentSlug: string;
+  citySlug: string;
+  tier: 1 | 2;
+};
+
+export const isPoiInCity = (
+  poi: { lat: number; lng: number },
+  city: CityLookup,
+) => {
+  const origin = getCityCoordinates(city.parentSlug, city.citySlug);
+  if (!origin) {
+    return city.tier !== 1;
+  }
+
+  const distance = haversineMiles(origin, { lat: poi.lat, lng: poi.lng });
+  const maxMiles =
+    city.tier === 1
+      ? TIER1_CITY_RADIUS_MILES[city.citySlug] ?? 15
+      : MAX_NEARBY_MILES;
+
+  return distance <= maxMiles;
 };
 
 type BuildTopThingsOptions = {
@@ -518,6 +614,27 @@ export const buildTopThingsToDo = (
   const minItems = options.minItems ?? 10;
   const regionType = options.regionType ?? "state";
   const parentName = options.parentName;
+  const tier = isTier1City(citySlug) ? 1 : 2;
+
+  if (tier === 1) {
+    const tier1Pois = getTier1PoisForCity(parentSlug, citySlug);
+    const filteredPois = tier1Pois.filter(
+      (poi) =>
+        isPoiInCity(poi, { parentSlug, citySlug, tier }) &&
+        poi.description.trim().length >= MIN_TIER1_DESCRIPTION_LENGTH,
+    );
+
+    if (filteredPois.length < MIN_TIER1_ITEMS) {
+      console.warn(
+        `Tier-1 POI coverage warning for ${parentSlug}/${citySlug}: ${filteredPois.length} items.`,
+      );
+    }
+
+    return filteredPois.slice(0, maxItems).map((poi) => ({
+      title: poi.name,
+      description: poi.description.trim(),
+    }));
+  }
   const settlementType = getSettlementType(options.cityFacts, regionType, parentSlug);
   const archetypeContext: ArchetypeContext = {
     cityName,
@@ -555,6 +672,7 @@ export const buildTopThingsToDo = (
   const candidates = filterTopThingsByRules(
     [...localPoiCandidates, ...nearbyCandidates],
     localPoiNames,
+    cityName,
   );
 
   const fallbackNames =

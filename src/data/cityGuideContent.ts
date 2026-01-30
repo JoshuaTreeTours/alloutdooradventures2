@@ -2,7 +2,11 @@ import {
   MAX_NEARBY_MILES,
   getTopThingAuditContext,
   isDenylistedTopThing,
+  isGenericPlaceholderName,
+  MIN_TIER1_DESCRIPTION_LENGTH,
+  MIN_TIER1_ITEMS,
 } from "./cityTopThings";
+import { getTier1PoiNameSet, getTier1PoisForCity } from "./cityPois/tier1";
 import { normalizePlaceName } from "../utils/geo";
 
 export type CityGuideIssue = {
@@ -28,9 +32,11 @@ export type CityGuideTextContent = {
 };
 
 type CityGuideAuditContext = {
+  cityName: string;
   citySlug: string;
   parentSlug: string;
   regionType: "state" | "country";
+  tier: 1 | 2;
   knownPois?: Set<string>;
 };
 
@@ -331,6 +337,93 @@ export const sanitizeCityGuideContent = (
   };
 };
 
+type TopThingsAuditMetrics = {
+  topThingsPoiBackedPct: number;
+  topThingsAvgDescriptionLength: number;
+  hasGenericPlaceholders: boolean;
+  hasFarAwayTrips: boolean;
+  poiBackedTitles: string[];
+  nonPoiTitles: string[];
+  shortDescriptionTitles: string[];
+};
+
+export const buildTopThingsAuditMetrics = (
+  content: CityGuideTextContent,
+  context: CityGuideAuditContext,
+): TopThingsAuditMetrics => {
+  const topThings = content.topThingsToDo ?? [];
+  const total = topThings.length;
+  const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
+    context.parentSlug,
+    context.citySlug,
+  );
+  const tier1PoiNames =
+    context.tier === 1
+      ? getTier1PoiNameSet(context.parentSlug, context.citySlug)
+      : new Set<string>();
+
+  const poiBackedTitles: string[] = [];
+  const nonPoiTitles: string[] = [];
+  const shortDescriptionTitles: string[] = [];
+  const genericPlaceholderTitles: string[] = [];
+  let farAwayTrips = false;
+  let totalDescriptionLength = 0;
+
+  topThings.forEach((item) => {
+    const title = item.title ?? "";
+    const normalized = normalizePlaceName(title);
+    const isTier1Poi = tier1PoiNames.has(normalized);
+    const isKnownLocal = localPoiNames.has(normalized);
+    const destinationDistance = destinationDistanceMap.get(normalized);
+    const isBacked =
+      context.tier === 1
+        ? isTier1Poi
+        : isKnownLocal || destinationDistance !== undefined;
+
+    if (isBacked) {
+      poiBackedTitles.push(title);
+    } else {
+      nonPoiTitles.push(title);
+    }
+
+    if (
+      title &&
+      isGenericPlaceholderName(title, context.cityName) &&
+      !isKnownLocal &&
+      !isTier1Poi
+    ) {
+      genericPlaceholderTitles.push(title);
+    }
+
+    if (
+      destinationDistance !== undefined &&
+      destinationDistance > MAX_NEARBY_MILES
+    ) {
+      farAwayTrips = true;
+    }
+
+    const descriptionLength = item.description?.trim().length ?? 0;
+    totalDescriptionLength += descriptionLength;
+    if (context.tier === 1 && descriptionLength < MIN_TIER1_DESCRIPTION_LENGTH) {
+      shortDescriptionTitles.push(title);
+    }
+  });
+
+  return {
+    topThingsPoiBackedPct: total
+      ? Math.round((poiBackedTitles.length / total) * 100)
+      : 0,
+    topThingsAvgDescriptionLength: total
+      ? Math.round(totalDescriptionLength / total)
+      : 0,
+    hasGenericPlaceholders: genericPlaceholderTitles.length > 0,
+    hasFarAwayTrips: farAwayTrips,
+    poiBackedTitles,
+    nonPoiTitles,
+    shortDescriptionTitles,
+  };
+};
+
 export const auditCityGuideContent = (
   content: CityGuideTextContent,
   context: CityGuideAuditContext,
@@ -454,6 +547,80 @@ export const auditCityGuideContent = (
         });
       }
     });
+  }
+
+  const topThingsMetrics = buildTopThingsAuditMetrics(content, context);
+  const tier1PoiCount =
+    context.tier === 1
+      ? getTier1PoisForCity(context.parentSlug, context.citySlug).length
+      : 0;
+
+  if (context.tier === 1) {
+    if (tier1PoiCount < MIN_TIER1_ITEMS) {
+      issues.push({
+        issueType: "Tier-1 POI registry mismatch",
+        matchedText: `${tier1PoiCount}`,
+        contextSnippet: `${context.parentSlug}/${context.citySlug}`,
+        severity: "error",
+        suggestedFix: `Add at least ${MIN_TIER1_ITEMS} Tier-1 POIs or remove the city from the Tier-1 list.`,
+      });
+    }
+
+    if ((content.topThingsToDo?.length ?? 0) < MIN_TIER1_ITEMS) {
+      issues.push({
+        issueType: "insufficient_poi_coverage",
+        matchedText: String(content.topThingsToDo?.length ?? 0),
+        contextSnippet: "Top Things to Do",
+        severity: "warn",
+        suggestedFix: "Add more Tier-1 POIs to meet minimum coverage.",
+      });
+    }
+
+    topThingsMetrics.nonPoiTitles.forEach((title) => {
+      if (!title) {
+        return;
+      }
+      issues.push({
+        issueType: "Tier-1 top thing not POI-backed",
+        matchedText: title,
+        contextSnippet: title,
+        severity: "error",
+        suggestedFix: "Replace with a curated Tier-1 POI entry.",
+      });
+    });
+
+    topThingsMetrics.shortDescriptionTitles.forEach((title) => {
+      if (!title) {
+        return;
+      }
+      issues.push({
+        issueType: "Tier-1 top thing description too short",
+        matchedText: title,
+        contextSnippet: title,
+        severity: "error",
+        suggestedFix: "Expand the description to 2–4 SEO-rich sentences.",
+      });
+    });
+
+    if (topThingsMetrics.hasGenericPlaceholders) {
+      issues.push({
+        issueType: "Tier-1 generic placeholder",
+        matchedText: "Generic placeholder detected",
+        contextSnippet: "Top Things to Do",
+        severity: "error",
+        suggestedFix: "Replace with a named POI from the Tier-1 registry.",
+      });
+    }
+
+    if (topThingsMetrics.hasFarAwayTrips) {
+      issues.push({
+        issueType: "Tier-1 far-away top thing",
+        matchedText: "Top thing too far",
+        contextSnippet: "Top Things to Do",
+        severity: "error",
+        suggestedFix: "Remove far-away destinations from Tier-1 lists.",
+      });
+    }
   }
 
   return issues;
