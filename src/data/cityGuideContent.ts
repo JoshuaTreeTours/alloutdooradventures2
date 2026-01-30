@@ -1,3 +1,10 @@
+import {
+  MAX_NEARBY_MILES,
+  getTopThingAuditContext,
+  isDenylistedTopThing,
+} from "./cityTopThings";
+import { normalizePlaceName } from "../utils/geo";
+
 export type CityGuideIssue = {
   issueType: string;
   matchedText: string;
@@ -385,6 +392,58 @@ export const auditCityGuideContent = (
       mustSeeIssues.forEach((issue) => issues.push(issue));
     });
   });
+
+  if (content.topThingsToDo?.length) {
+    const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
+      context.parentSlug,
+      context.citySlug,
+    );
+
+    content.topThingsToDo.forEach((item) => {
+      if (!item.title) {
+        return;
+      }
+
+      const normalized = normalizePlaceName(item.title);
+      const isLocalPoi = localPoiNames.has(normalized);
+      const destinationDistance = destinationDistanceMap.get(normalized);
+
+      if (isDenylistedTopThing(item.title) && !isLocalPoi) {
+        issues.push({
+          issueType: "Denylisted top thing",
+          matchedText: item.title,
+          contextSnippet: item.title,
+          severity: "error",
+          suggestedFix: "Replace with a curated local POI or nearby destination.",
+        });
+      }
+
+      if (!isLocalPoi && destinationDistance === undefined) {
+        issues.push({
+          issueType: "Unverified top thing",
+          matchedText: item.title,
+          contextSnippet: item.title,
+          severity: "error",
+          suggestedFix:
+            "Replace with a curated local POI or a nearby destination within two hours.",
+        });
+        return;
+      }
+
+      if (
+        destinationDistance !== undefined &&
+        destinationDistance > MAX_NEARBY_MILES
+      ) {
+        issues.push({
+          issueType: "Top thing too far",
+          matchedText: item.title,
+          contextSnippet: item.title,
+          severity: "error",
+          suggestedFix: "Swap for a destination within 110 miles.",
+        });
+      }
+    });
+  }
 
   return issues;
 };

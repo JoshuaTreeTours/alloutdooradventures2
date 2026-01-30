@@ -15,6 +15,7 @@
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host",
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
+    "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },

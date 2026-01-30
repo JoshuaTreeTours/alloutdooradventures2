@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { auditCityGuideContent, type CityGuideTextContent } from "../src/data/cityGuideContent";
 import { buildCityOverrideRoute, cityOverrides } from "../src/data/cityOverrides";
+import { buildTopThingsToDo } from "../src/data/cityTopThings";
 import { allCityGuideRecords } from "../src/data/cityGuideRegistry.node";
 import { buildCityGuideFacts } from "../src/lib/cityGuideFacts";
 
@@ -11,6 +12,7 @@ const toCsvValue = (value: string) => {
 };
 
 const runAudit = () => {
+  const strict = process.argv.includes("--strict");
   const findings = allCityGuideRecords.flatMap((record) => {
     const cityFacts = buildCityGuideFacts({
       cityName: record.city,
@@ -25,6 +27,11 @@ const runAudit = () => {
 
     const baseContent: CityGuideTextContent = {
       intro: record.cityData.intro,
+      topThingsToDo: buildTopThingsToDo(
+        record.city,
+        record.stateSlug,
+        record.citySlug,
+      ),
       extraText: [
         record.cityData.shortDescription,
         record.cityData.intro,
@@ -68,7 +75,11 @@ const runAudit = () => {
         }
       : null;
 
-    const content = overrideContent ?? baseContent;
+    const content: CityGuideTextContent = {
+      ...baseContent,
+      ...overrideContent,
+      topThingsToDo: overrideContent?.topThingsToDo ?? baseContent.topThingsToDo,
+    };
 
     const issues = auditCityGuideContent(content, {
       citySlug: record.citySlug,
@@ -127,9 +138,16 @@ const runAudit = () => {
   ];
   fs.writeFileSync(csvPath, csvLines.join("\n"), "utf8");
 
+  const errorCount = findings.filter((finding) => finding.severity === "error").length;
+
   console.log(`Audit complete. Findings: ${findings.length}`);
+  console.log(`Errors: ${errorCount}`);
   console.log(`JSON: ${jsonPath}`);
   console.log(`CSV: ${csvPath}`);
+
+  if (strict && errorCount > 0) {
+    process.exitCode = 1;
+  }
 };
 
 runAudit();
