@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
-import { auditCityGuideContent, type CityGuideTextContent } from "../src/data/cityGuideContent";
+import {
+  auditCityGuideContent,
+  buildTopThingsAuditMetrics,
+  type CityGuideTextContent,
+} from "../src/data/cityGuideContent";
+import { isTier1City } from "../src/data/cityTier1";
 import { buildCityOverrideRoute, cityOverrides } from "../src/data/cityOverrides";
 import { buildTopThingsToDo } from "../src/data/cityTopThings";
 import { allCityGuideRecords } from "../src/data/cityGuideRegistry.node";
@@ -87,22 +92,39 @@ const runAudit = () => {
       topThingsToDo: overrideContent?.topThingsToDo ?? baseContent.topThingsToDo,
     };
 
+    const tier = isTier1City(record.citySlug) ? 1 : 2;
     const issues = auditCityGuideContent(content, {
+      cityName: record.city,
       citySlug: record.citySlug,
       parentSlug: record.stateSlug,
       regionType: record.regionType,
+      tier,
+    });
+
+    const topThingsMetrics = buildTopThingsAuditMetrics(content, {
+      cityName: record.city,
+      citySlug: record.citySlug,
+      parentSlug: record.stateSlug,
+      regionType: record.regionType,
+      tier,
     });
 
     return issues.map((issue) => ({
       country: record.country,
       state: record.state,
       city: record.city,
+      tier,
       route: record.route,
       issueType: issue.issueType,
       severity: issue.severity,
       matchedText: issue.matchedText,
       contextSnippet: issue.contextSnippet,
       suggestedFix: issue.suggestedFix ?? "",
+      topThingsPoiBackedPct: topThingsMetrics.topThingsPoiBackedPct,
+      topThingsAvgDescriptionLength:
+        topThingsMetrics.topThingsAvgDescriptionLength,
+      hasGenericPlaceholders: topThingsMetrics.hasGenericPlaceholders,
+      hasFarAwayTrips: topThingsMetrics.hasFarAwayTrips,
     }));
   });
 
@@ -117,12 +139,17 @@ const runAudit = () => {
     "country",
     "state",
     "city",
+    "tier",
     "route",
     "issueType",
     "severity",
     "matchedText",
     "contextSnippet",
     "suggestedFix",
+    "topThingsPoiBackedPct",
+    "topThingsAvgDescriptionLength",
+    "hasGenericPlaceholders",
+    "hasFarAwayTrips",
   ];
   const csvLines = [
     header.join(","),
@@ -131,12 +158,17 @@ const runAudit = () => {
         finding.country,
         finding.state,
         finding.city,
+        finding.tier,
         finding.route,
         finding.issueType,
         finding.severity,
         finding.matchedText,
         finding.contextSnippet,
         finding.suggestedFix,
+        finding.topThingsPoiBackedPct,
+        finding.topThingsAvgDescriptionLength,
+        finding.hasGenericPlaceholders,
+        finding.hasFarAwayTrips,
       ]
         .map((value) => toCsvValue(String(value ?? "")))
         .join(","),
@@ -144,7 +176,15 @@ const runAudit = () => {
   ];
   fs.writeFileSync(csvPath, csvLines.join("\n"), "utf8");
 
-  const errorCount = findings.filter((finding) => finding.severity === "error").length;
+  const errorCount = findings.filter((finding) => {
+    if (finding.severity === "error") {
+      return true;
+    }
+    if (strict && finding.severity === "warn" && finding.tier === 1) {
+      return true;
+    }
+    return false;
+  }).length;
 
   console.log(`Audit complete. Findings: ${findings.length}`);
   console.log(`Errors: ${errorCount}`);

@@ -4,7 +4,10 @@ import {
   buildTopThingsToDo,
   filterTopThingsByRules,
   getNearbyDestinations,
+  MIN_TIER1_DESCRIPTION_LENGTH,
 } from "./cityTopThings";
+import { auditCityGuideContent } from "./cityGuideContent";
+import { getTier1PoisForCity } from "./cityPois/tier1";
 import { normalizePlaceName } from "../utils/geo";
 
 describe("city top things rules", () => {
@@ -18,13 +21,14 @@ describe("city top things rules", () => {
     const candidates = [
       { name: "Coastal Bluffs", source: "nearby-destination" as const },
     ];
-    const filtered = filterTopThingsByRules(candidates, new Set());
+    const filtered = filterTopThingsByRules(candidates, new Set(), "Test City");
     expect(filtered).toHaveLength(0);
 
     const curatedSet = new Set([normalizePlaceName("Coastal Bluffs")]);
     const allowed = filterTopThingsByRules(
       [{ name: "Coastal Bluffs", source: "local-poi" }],
       curatedSet,
+      "Test City",
     );
     expect(allowed).toHaveLength(1);
   });
@@ -55,11 +59,50 @@ describe("city top things rules", () => {
     expect(backfilled).toHaveLength(10);
   });
 
-  it("returns 15 Palm Springs items without far metros", () => {
+  it("returns POI-only Palm Springs top things and passes strict checks", () => {
     const items = buildTopThingsToDo("Palm Springs", "california", "palm-springs");
+    const poiNames = new Set(
+      getTier1PoisForCity("california", "palm-springs").map((poi) => poi.name),
+    );
+
+    items.forEach((item) => {
+      expect(poiNames.has(item.title)).toBe(true);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH,
+      );
+    });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Palm Springs",
+        citySlug: "palm-springs",
+        parentSlug: "california",
+        regionType: "state",
+        tier: 1,
+      },
+    );
+    expect(issues.filter((issue) => issue.severity === "error")).toHaveLength(0);
+  });
+
+  it("uses only Tier-1 POIs for Newport Beach with rich descriptions", () => {
+    const items = buildTopThingsToDo(
+      "Newport Beach",
+      "california",
+      "newport-beach",
+    );
+    const poiNames = new Set(
+      getTier1PoisForCity("california", "newport-beach").map((poi) => poi.name),
+    );
     const titles = items.map((item) => item.title);
-    expect(items).toHaveLength(15);
-    expect(titles).not.toContain("San Diego");
-    expect(titles).not.toContain("Los Angeles");
+
+    items.forEach((item) => {
+      expect(poiNames.has(item.title)).toBe(true);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH,
+      );
+    });
+
+    expect(titles.join(" ")).not.toMatch(/Monterey|Big Sur|Napa/);
   });
 });
