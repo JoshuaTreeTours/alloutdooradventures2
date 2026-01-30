@@ -1,4 +1,9 @@
 import { getActivityLabelFromSlug } from "./activityLabels";
+import { buildCityOverrideRoute, cityOverrides } from "./cityOverrides";
+import {
+  sanitizeCityGuideContent,
+  type CityGuideTextContent,
+} from "./cityGuideContent";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
 import type { CityFacts } from "../lib/cityGuideFacts";
@@ -65,6 +70,9 @@ export type GuideContent = {
   topThingsToDo?: GuideListItem[];
   guideImages?: GuideImage[];
 };
+
+export type { CityGuideIssue } from "./cityGuideContent";
+export { auditCityGuideContent } from "./cityGuideContent";
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
 const EUROPE_COUNTRY_SLUGS = new Set(
@@ -137,6 +145,65 @@ const uniqueValues = (items: string[]) => {
 
   return results;
 };
+
+const buildKnownPoiSet = (cityName: string, cityFacts: CityFacts) => {
+  const basePois = [
+    ...cityFacts.anchors,
+    ...cityFacts.outdoors,
+    ...cityFacts.nearby,
+    `Historic Downtown ${cityName}`,
+    `Old Town ${cityName}`,
+    `${cityName} Riverfront`,
+    `${cityName} Waterfront`,
+    `${cityName} Greenway`,
+  ];
+
+  return new Set(basePois.map((item) => item.toLowerCase()));
+};
+
+const toCityGuideTextContent = (guide: GuideContent): CityGuideTextContent => ({
+  intro: guide.intro,
+  bestTimeToVisit: guide.bestTimeToVisit,
+  whatToPack: guide.whatToPack,
+  itineraries: guide.itineraries.map((itinerary) => ({
+    title: itinerary.title,
+    description: itinerary.description,
+  })),
+  thingsToDoSections: guide.thingsToDoSections?.map((section) => ({
+    title: section.title,
+    paragraphs: section.paragraphs,
+  })),
+  topThingsToDo: guide.topThingsToDo?.map((item) => ({
+    title: item.title,
+    description: item.description,
+  })),
+});
+
+const applyCityGuideTextContent = (
+  guide: GuideContent,
+  content: CityGuideTextContent,
+): GuideContent => ({
+  ...guide,
+  intro: content.intro ?? guide.intro,
+  bestTimeToVisit: content.bestTimeToVisit ?? guide.bestTimeToVisit,
+  whatToPack: content.whatToPack ?? guide.whatToPack,
+  itineraries: guide.itineraries.map((itinerary, index) => ({
+    ...itinerary,
+    title: content.itineraries?.[index]?.title ?? itinerary.title,
+    description: content.itineraries?.[index]?.description ?? itinerary.description,
+  })),
+  thingsToDoSections: guide.thingsToDoSections?.map((section, index) => ({
+    ...section,
+    title: content.thingsToDoSections?.[index]?.title ?? section.title,
+    paragraphs: content.thingsToDoSections?.[index]?.paragraphs ?? section.paragraphs,
+  })),
+  topThingsToDo: guide.topThingsToDo?.map((item, index) => ({
+    ...item,
+    title: content.topThingsToDo?.[index]?.title ?? item.title,
+    description: content.topThingsToDo?.[index]?.description ?? item.description,
+  })),
+});
+const sanitizationLogs = new Set<string>();
 
 type CityLandmarks = {
   museums: string[];
@@ -847,11 +914,13 @@ export const buildCityGuide = ({
   citySlug,
   regionType,
   activityFocus,
+  sanitize = true,
 }: {
   parentSlug: string;
   citySlug: string;
   regionType: "state" | "country";
   activityFocus?: string;
+  sanitize?: boolean;
 }): GuideContent | null => {
   const cityTours = tours.filter((tour) => {
     if (tour.destination.citySlug !== citySlug) {
@@ -968,7 +1037,7 @@ export const buildCityGuide = ({
     metadata,
   });
 
-  return {
+  const guide: GuideContent = {
     type: "city",
     name: cityName,
     slug: citySlug,
@@ -1023,4 +1092,42 @@ export const buildCityGuide = ({
       cityFacts,
     ),
   };
+
+  const overrideRoute = buildCityOverrideRoute({
+    regionType,
+    parentSlug,
+    citySlug,
+  });
+  const override = cityOverrides[overrideRoute];
+  if (override) {
+    return { ...guide, ...override };
+  }
+
+  if (!sanitize) {
+    return guide;
+  }
+
+  const knownPois = buildKnownPoiSet(cityName, cityFacts);
+  const { content: sanitizedContent, changes } = sanitizeCityGuideContent(
+    toCityGuideTextContent(guide),
+    {
+      citySlug,
+      parentSlug,
+      regionType,
+      knownPois,
+    },
+  );
+
+  if (
+    changes.length &&
+    typeof window === "undefined" &&
+    !sanitizationLogs.has(overrideRoute)
+  ) {
+    sanitizationLogs.add(overrideRoute);
+    console.info(
+      `[city-guide-sanitize] ${overrideRoute}: ${Array.from(new Set(changes)).join(", ")}`,
+    );
+  }
+
+  return applyCityGuideTextContent(guide, sanitizedContent);
 };

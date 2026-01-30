@@ -118,6 +118,19 @@ Inside a City object's `tours` array:
 
 ## 🧭 Tours (Data-Driven + CSV)
 
+## ✅ Content QA (City Guides)
+
+Run the automated audit to flag hallucinated attractions or unrealistic day trips in city guide copy:
+
+```bash
+npm run audit:city-guides
+```
+
+The script writes reports to:
+
+* `reports/city-content-audit.json`
+* `reports/city-content-audit.csv`
+
 Tours are now powered by a single data source that is generated at build time.
 
 * **Source of truth (generated):** `src/data/tours.generated.ts`
