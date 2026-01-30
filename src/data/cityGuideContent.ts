@@ -6,7 +6,7 @@ import {
   MIN_TIER1_DESCRIPTION_LENGTH,
   MIN_TIER1_ITEMS,
 } from "./cityTopThings";
-import { getTier1PoiNameSet } from "./cityPois/tier1";
+import { getTier1PoiNameSet, getTier1PoisForCity } from "./cityPois/tier1";
 import { normalizePlaceName } from "../utils/geo";
 
 export type CityGuideIssue = {
@@ -550,8 +550,22 @@ export const auditCityGuideContent = (
   }
 
   const topThingsMetrics = buildTopThingsAuditMetrics(content, context);
+  const tier1PoiCount =
+    context.tier === 1
+      ? getTier1PoisForCity(context.parentSlug, context.citySlug).length
+      : 0;
 
   if (context.tier === 1) {
+    if (tier1PoiCount < MIN_TIER1_ITEMS) {
+      issues.push({
+        issueType: "Tier-1 POI registry mismatch",
+        matchedText: `${tier1PoiCount}`,
+        contextSnippet: `${context.parentSlug}/${context.citySlug}`,
+        severity: "error",
+        suggestedFix: `Add at least ${MIN_TIER1_ITEMS} Tier-1 POIs or remove the city from the Tier-1 list.`,
+      });
+    }
+
     if ((content.topThingsToDo?.length ?? 0) < MIN_TIER1_ITEMS) {
       issues.push({
         issueType: "insufficient_poi_coverage",
