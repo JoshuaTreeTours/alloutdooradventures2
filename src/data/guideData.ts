@@ -6,6 +6,7 @@ import {
 } from "./cityGuideContent";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
+import { buildTopThingsToDo } from "./cityTopThings";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { buildCityGuideFacts } from "../lib/cityGuideFacts";
 import { getFlagstaffTourDetailPath } from "./flagstaffTours";
@@ -127,23 +128,6 @@ const formatList = (items: string[]) => {
   }
 
   return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
-};
-
-const uniqueValues = (items: string[]) => {
-  const seen = new Set<string>();
-  const results: string[] = [];
-
-  items.forEach((item) => {
-    const trimmed = item.trim();
-    if (!trimmed || seen.has(trimmed)) {
-      return;
-    }
-
-    seen.add(trimmed);
-    results.push(trimmed);
-  });
-
-  return results;
 };
 
 const buildKnownPoiSet = (cityName: string, cityFacts: CityFacts) => {
@@ -496,70 +480,6 @@ const buildOutdoorsEssay = (
   };
 };
 
-const buildTopThingsToDo = (
-  cityName: string,
-  parentName: string,
-  parentSlug: string,
-  citySlug: string,
-  cityFacts: CityFacts,
-): GuideListItem[] => {
-  const landmarks = getCityLandmarks(parentSlug, citySlug);
-  const metadata = getCityMetadata(parentSlug, citySlug);
-  const candidates = uniqueValues([
-    ...(landmarks?.museums ?? []),
-    ...(landmarks?.culturalSites ?? []),
-    ...(metadata?.culturalAreas ?? []),
-    ...cityFacts.anchors,
-    ...cityFacts.outdoors,
-    ...cityFacts.nearby,
-    `Historic Downtown ${cityName}`,
-    `Old Town ${cityName}`,
-    `${cityName} Arts District`,
-    `${cityName} Town Square`,
-    `${cityName} Community Green`,
-  ]);
-
-  const paddedCandidates = [...candidates];
-  const fallbackExtras = [
-    `${cityName} Heritage Walk`,
-    `${cityName} Main Street`,
-    `${cityName} Scenic Overlook`,
-    `${cityName} Town Square`,
-    `${cityName} Nature Preserve`,
-  ];
-  fallbackExtras.forEach((item) => {
-    if (paddedCandidates.length < 15 && !paddedCandidates.includes(item)) {
-      paddedCandidates.push(item);
-    }
-  });
-
-  const anchorSet = new Set(cityFacts.anchors);
-  const outdoorSet = new Set(cityFacts.outdoors);
-  const nearbySet = new Set(cityFacts.nearby);
-  const museumSet = new Set([
-    ...(landmarks?.museums ?? []),
-    ...(landmarks?.culturalSites ?? []),
-  ]);
-
-  return paddedCandidates.slice(0, 15).map((item) => {
-    let description = `Explore ${item} to see how ${cityName} comes alive day to day.`;
-
-    if (nearbySet.has(item)) {
-      description = `Plan a half-day trip to ${item} for a change of scenery and a deeper look at the wider ${parentName} region.`;
-    } else if (outdoorSet.has(item)) {
-      description = `Spend outdoor time at ${item} with a walk, bike loop, or scenic overlook stop.`;
-    } else if (museumSet.has(item)) {
-      description = `Add ${item} to your culture loop for a focused look at local history and creativity.`;
-    } else if (anchorSet.has(item)) {
-      description = `Schedule a slow stroll through ${item} to catch local cafés, shops, and the city’s everyday rhythm.`;
-    }
-
-    return {
-      title: item,
-      description,
-    };
-  });
-};
 
 const buildCityThingsToDoSections = (
   cityName: string,
@@ -1086,10 +1006,8 @@ export const buildCityGuide = ({
     ),
     topThingsToDo: buildTopThingsToDo(
       cityName,
-      parentName,
       parentSlug,
       citySlug,
-      cityFacts,
     ),
   };
 
