@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { cityContext } from "../data/cityContext";
 import type { GuideContent, GuideLink } from "../data/guideData";
-import { getGuideTourDetailPath } from "../data/guideData";
+import { getCountryDestinationHref, getGuideTourDetailPath } from "../data/guideData";
 import {
   getAllToursHref,
   getTopCitiesForPlace,
@@ -16,7 +16,7 @@ import TourCard from "./TourCard";
 
 type GuideInternalLinksProps = {
   guide: GuideContent;
-  variant: "intro" | "primary" | "top-tours" | "nearby";
+  variant: "intro" | "area" | "primary" | "top-tours" | "nearby";
 };
 
 const ACTIVITY_LINKS = [
@@ -163,6 +163,60 @@ const buildPrimaryLinks = (guide: GuideContent): GuideLink[] => {
   return links;
 };
 
+const buildAreaLinks = (guide: GuideContent): GuideLink[] => {
+  const links: GuideLink[] = [];
+
+  if (guide.type === "city") {
+    if (guide.regionType === "state") {
+      links.push({ label: "United States destinations", href: "/destinations" });
+      if (guide.parentSlug && guide.parentName) {
+        links.push({
+          label: `${guide.parentName} destinations`,
+          href: `/destinations/states/${guide.parentSlug}`,
+        });
+      }
+      if (guide.parentSlug) {
+        links.push({
+          label: `${guide.name} destination`,
+          href: `/destinations/states/${guide.parentSlug}/cities/${guide.slug}`,
+        });
+      }
+      return links;
+    }
+
+    if (guide.parentSlug && guide.parentName) {
+      links.push({
+        label: `${guide.parentName} destinations`,
+        href: getCountryDestinationHref(guide.parentSlug),
+      });
+    }
+    if (guide.parentSlug) {
+      links.push({
+        label: `${guide.name} destination`,
+        href: isEuropeCountrySlug(guide.parentSlug)
+          ? `/destinations/europe/${guide.parentSlug}/cities/${guide.slug}`
+          : `/destinations/world/${guide.parentSlug}/cities/${guide.slug}`,
+      });
+    }
+    return links;
+  }
+
+  if (guide.type === "state") {
+    links.push({ label: "United States destinations", href: "/destinations" });
+    links.push({
+      label: `${guide.name} destinations`,
+      href: `/destinations/states/${guide.slug}`,
+    });
+    return links;
+  }
+
+  links.push({
+    label: `${guide.name} destinations`,
+    href: getCountryDestinationHref(guide.slug),
+  });
+  return links;
+};
+
 const buildNearbyLinks = (guide: GuideContent): GuideLink[] => {
   if (guide.type === "city") {
     const parentPlace =
@@ -219,6 +273,7 @@ export default function GuideInternalLinks({
   const place = buildGuidePlace(guide);
   const placeLabel = buildPlaceLabel(guide);
   const primaryLinks = buildPrimaryLinks(guide);
+  const areaLinks = buildAreaLinks(guide);
   const nearbyLinks = buildNearbyLinks(guide);
   const topTours = getTopToursForPlace(place, { min: 3, max: 8 });
 
@@ -263,6 +318,30 @@ export default function GuideInternalLinks({
           ))}
         </div>
       </section>
+    );
+  }
+
+  if (variant === "area") {
+    if (!areaLinks.length) {
+      return null;
+    }
+
+    return (
+      <div className="mt-4 rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-xs text-white/90 md:text-sm">
+        <p className="text-[0.6rem] uppercase tracking-[0.3em] text-white/70 md:text-xs">
+          Explore this area
+        </p>
+        <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
+          {areaLinks.map((link, index) => (
+            <span key={link.href} className="flex items-center gap-2">
+              <Link href={link.href}>
+                <a className="underline underline-offset-2">{link.label}</a>
+              </Link>
+              {index < areaLinks.length - 1 ? <span>/</span> : null}
+            </span>
+          ))}
+        </div>
+      </div>
     );
   }
 

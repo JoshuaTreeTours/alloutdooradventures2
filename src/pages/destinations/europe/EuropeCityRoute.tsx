@@ -33,6 +33,8 @@ export default function EuropeCityRoute({ params }: EuropeCityRouteProps) {
       city={city}
       stateHrefOverride={`/destinations/europe/${params.countrySlug}`}
       seoUrlOverride={`/destinations/europe/${params.countrySlug}/cities/${params.citySlug}`}
+      guideParentSlugOverride={params.countrySlug}
+      guideRegionTypeOverride="country"
     />
   );
 }

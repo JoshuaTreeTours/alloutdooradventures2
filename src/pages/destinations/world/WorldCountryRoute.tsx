@@ -6,6 +6,7 @@ import Seo from "../../../components/Seo";
 import TourCard from "../../../components/TourCard";
 import { useStructuredData } from "../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../data/activityLabels";
+import { getGuideCountryBySlug } from "../../../data/guideData";
 import {
   worldCountriesWithTours,
   worldToursByCountry,
@@ -42,6 +43,8 @@ export default function WorldCountryRoute({
   const filterActivitySlug =
     categorySlug === "paddle-sports" ? "canoeing" : categorySlug;
   const categoryLabel = getActivityLabelFromSlug(filterActivitySlug);
+  const guideCountry = getGuideCountryBySlug(params.countrySlug);
+  const guideCities = guideCountry?.cities.slice(0, 8) ?? [];
 
   const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
   const filteredTours = filterActivitySlug
@@ -129,6 +132,48 @@ export default function WorldCountryRoute({
               <p className="text-sm text-white/80">
                 Filtered by <span className="font-semibold">{categoryLabel}</span>.
               </p>
+            ) : null}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white/60">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Guides in {country.name}
+            </span>
+            <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              Explore {country.name} guides
+            </h2>
+            <p className="mt-3 text-sm text-[#405040] md:text-base">
+              Start with the country guide or dive into city-level planning tips.
+            </p>
+            <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+              <Link href={`/guides/world/${country.slug}`}>
+                <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
+                  {country.name} guide
+                </a>
+              </Link>
+              {guideCities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={`/guides/world/${country.slug}/${city.slug}`}
+                >
+                  <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                    {city.name} guide
+                  </a>
+                </Link>
+              ))}
+            </div>
+            {guideCities.length ? (
+              <div className="mt-4">
+                <Link href={`/guides/world/${country.slug}`}>
+                  <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                    View all {country.name} guides
+                  </a>
+                </Link>
+              </div>
             ) : null}
           </div>
         </div>

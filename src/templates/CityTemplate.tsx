@@ -8,6 +8,8 @@ import TourCard from "../components/TourCard";
 import MapEmbed from "../components/maps/MapEmbed";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import type { City, StateDestination } from "../data/destinations";
+import { getGuideTourDetailPath } from "../data/guideData";
+import { getTopToursForPlace } from "../data/tourIndex";
 import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
@@ -20,6 +22,8 @@ type CityTemplateProps = {
   toursOverride?: Tour[];
   stateHrefOverride?: string;
   seoUrlOverride?: string;
+  guideParentSlugOverride?: string;
+  guideRegionTypeOverride?: "state" | "country";
 };
 
 function ImageSlider({ images, title }: { images: string[]; title: string }) {
@@ -126,13 +130,31 @@ export default function CityTemplate({
   toursOverride,
   stateHrefOverride,
   seoUrlOverride,
+  guideParentSlugOverride,
+  guideRegionTypeOverride,
 }: CityTemplateProps) {
   const longDescription = cityLongDescriptions[city.slug] ?? [];
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const stateHref =
     stateHrefOverride ??
     (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
+  const guideParentSlug = guideParentSlugOverride ?? state.slug;
+  const guideRegionType =
+    guideRegionTypeOverride ?? (state.isFallback ? "country" : "state");
+  const guideBasePath =
+    guideRegionType === "state" ? "/guides/us" : "/guides/world";
   const cityTours = toursOverride ?? getToursByCity(state.slug, city.slug);
+  const topTours = getTopToursForPlace(
+    {
+      type: "city",
+      slug: city.slug,
+      name: city.name,
+      parentSlug: guideParentSlug,
+      parentName: state.name,
+      regionType: guideRegionType,
+    },
+    { min: 3, max: 6 },
+  );
   const title = `${city.name}, ${state.name} Outdoor Adventures | Tours & City Guide`;
   const description = buildMetaDescription(
     city.shortDescription,
@@ -215,6 +237,64 @@ export default function CityTemplate({
             </Link>
           </div>
           <ImageSlider images={city.heroImages} title={city.name} />
+        </div>
+      </section>
+
+      <section className="bg-white/60">
+        <div className="mx-auto max-w-6xl px-6 py-14">
+          <div className="grid gap-10 lg:grid-cols-2">
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Guides in {city.name}
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f]">
+                Explore {city.name} guides
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Review the city guide and explore broader planning tips for the
+                region.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+                <Link href={`${guideBasePath}/${guideParentSlug}`}>
+                  <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-[#f0f4ee]">
+                    {state.name} guide
+                  </a>
+                </Link>
+                <Link href={`${guideBasePath}/${guideParentSlug}/${city.slug}`}>
+                  <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                    {city.name} guide
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
+              <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+                Tours in {city.name}
+              </span>
+              <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f]">
+                Book tours around {city.name}
+              </h2>
+              <p className="mt-3 text-sm text-[#405040] md:text-base">
+                Compare top-rated experiences and browse live availability.
+              </p>
+              <div className="mt-6 grid gap-5 md:grid-cols-2">
+                {topTours.map((tour) => (
+                  <TourCard
+                    key={tour.id}
+                    tour={tour}
+                    href={getGuideTourDetailPath(tour)}
+                  />
+                ))}
+              </div>
+              <div className="mt-5">
+                <Link href={toursHref}>
+                  <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+                    View all {city.name} tours
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

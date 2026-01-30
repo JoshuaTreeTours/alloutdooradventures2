@@ -33,6 +33,8 @@ export default function WorldCityRoute({ params }: WorldCityRouteProps) {
       city={city}
       stateHrefOverride={`/destinations/world/${params.countrySlug}`}
       seoUrlOverride={`/destinations/world/${params.countrySlug}/cities/${params.citySlug}`}
+      guideParentSlugOverride={params.countrySlug}
+      guideRegionTypeOverride="country"
     />
   );
 }
