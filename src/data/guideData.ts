@@ -37,6 +37,7 @@ export type GuideLink = {
 export type GuideListItem = {
   title: string;
   description: string;
+  activityType?: string;
 };
 
 export type GuideItinerary = {
@@ -160,6 +161,7 @@ const toCityGuideTextContent = (guide: GuideContent): CityGuideTextContent => ({
   topThingsToDo: guide.topThingsToDo?.map((item) => ({
     title: item.title,
     description: item.description,
+    activityType: item.activityType,
   })),
 });
 
@@ -185,6 +187,7 @@ const applyCityGuideTextContent = (
     ...item,
     title: content.topThingsToDo?.[index]?.title ?? item.title,
     description: content.topThingsToDo?.[index]?.description ?? item.description,
+    activityType: content.topThingsToDo?.[index]?.activityType ?? item.activityType,
   })),
 });
 const sanitizationLogs = new Set<string>();
@@ -1008,6 +1011,11 @@ export const buildCityGuide = ({
       cityName,
       parentSlug,
       citySlug,
+      {
+        parentName,
+        regionType,
+        cityFacts,
+      },
     ),
   };
 
