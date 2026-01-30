@@ -1,16 +1,10 @@
 import { normalizePlaceName } from "../../../utils/geo";
+import type { Tier1UsCityPoi } from "./us/types";
+import { pois as boston } from "./us/massachusetts/boston";
+import { pois as portland } from "./us/oregon/portland";
+import { pois as seattle } from "./us/washington/seattle";
 
-export type CityPoi = {
-  id: string;
-  name: string;
-  citySlug: string;
-  state: string;
-  lat: number;
-  lng: number;
-  categories: string[];
-  description: string;
-  website?: string;
-};
+export type CityPoi = Tier1UsCityPoi;
 
 export const tier1CityPois: CityPoi[] = [
   {
@@ -1070,182 +1064,6 @@ export const tier1CityPois: CityPoi[] = [
       "Sacramento Riverfront offers easy walking paths with views of the Tower Bridge and the historic waterfront district. The promenade connects to parks, cafés, and Old Sacramento, making it an easy scenic stroll. It is a simple way to see the city’s riverside character.",
   },
   {
-    id: "pike-place-market",
-    name: "Pike Place Market",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6097,
-    lng: -122.3425,
-    categories: ["market", "food"],
-    description:
-      "Pike Place Market is Seattle’s iconic public market, filled with fresh seafood stalls, flower vendors, and local eateries. The multilevel halls make it easy to graze and explore, with constant harbor views just outside. It is a must for first-time visitors who want the city’s flavor in one stop.",
-  },
-  {
-    id: "space-needle",
-    name: "Space Needle",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6205,
-    lng: -122.3493,
-    categories: ["landmark", "viewpoint"],
-    description:
-      "The Space Needle delivers panoramic views of downtown Seattle, Puget Sound, and Mount Rainier on clear days. The observation deck is a quick visit with big payoff, especially at sunset. It is an iconic skyline marker and a classic part of any Seattle itinerary.",
-  },
-  {
-    id: "chihuly-garden-glass",
-    name: "Chihuly Garden and Glass",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6206,
-    lng: -122.3505,
-    categories: ["museum", "art"],
-    description:
-      "Chihuly Garden and Glass showcases vibrant blown-glass installations paired with a lush outdoor garden. The exhibits are immersive and colorful, making it an easy highlight next to the Space Needle. It is a strong indoor option for a rainy Seattle afternoon.",
-  },
-  {
-    id: "museum-of-pop-culture",
-    name: "Museum of Pop Culture",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6215,
-    lng: -122.3481,
-    categories: ["museum", "music"],
-    description:
-      "The Museum of Pop Culture dives into music, film, and gaming with immersive exhibits and bold architecture. The galleries highlight Seattle’s grunge roots alongside broader pop culture history. It is a fun, high-energy stop near Seattle Center.",
-  },
-  {
-    id: "kerry-park",
-    name: "Kerry Park",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6295,
-    lng: -122.3597,
-    categories: ["viewpoint", "park"],
-    description:
-      "Kerry Park offers one of Seattle’s most famous skyline views, with the Space Needle framed against downtown and Mount Rainier in the distance. The small park is perfect for quick photo stops and sunset viewing. It is an easy, high-impact viewpoint just above the city.",
-  },
-  {
-    id: "seattle-waterfront",
-    name: "Seattle Waterfront",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6045,
-    lng: -122.3392,
-    categories: ["waterfront", "walk"],
-    description:
-      "Seattle Waterfront features piers, seafood spots, and bay views along Elliott Bay. The promenade is ideal for an easy stroll between attractions like the Great Wheel and the Aquarium. It is a scenic, accessible way to experience Seattle’s maritime energy.",
-  },
-  {
-    id: "discovery-park",
-    name: "Discovery Park",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6598,
-    lng: -122.4058,
-    categories: ["park", "trail"],
-    description:
-      "Discovery Park is Seattle’s largest green space, with forested trails, meadow overlooks, and a rugged shoreline. The loop hikes deliver a true outdoors feel without leaving city limits. It is a top choice for travelers who want a longer nature walk and coastal scenery.",
-  },
-  {
-    id: "gas-works-park",
-    name: "Gas Works Park",
-    citySlug: "seattle",
-    state: "washington",
-    lat: 47.6456,
-    lng: -122.3344,
-    categories: ["park", "viewpoint"],
-    description:
-      "Gas Works Park sits on the north shore of Lake Union with sweeping views of the skyline and a unique industrial backdrop. The grassy hill is perfect for picnics, and the setting is especially photogenic at sunset. It is a relaxed, local-favorite stop close to downtown.",
-  },
-  {
-    id: "washington-park",
-    name: "Washington Park",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5155,
-    lng: -122.7163,
-    categories: ["park", "garden"],
-    description:
-      "Washington Park is a sprawling hillside park that hosts the Oregon Zoo, Japanese Garden, and miles of wooded trails. The park’s variety makes it easy to customize a half-day of nature and culture in one area. It is one of Portland’s most versatile outdoor destinations.",
-  },
-  {
-    id: "international-rose-test-garden",
-    name: "International Rose Test Garden",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5193,
-    lng: -122.7063,
-    categories: ["garden", "viewpoint"],
-    description:
-      "International Rose Test Garden showcases thousands of rose varieties with city and mountain views in the background. The terraces are peak Portland in late spring and summer when the blooms are at their best. It is an easy, fragrant stroll with a big scenic payoff.",
-  },
-  {
-    id: "powells-city-of-books",
-    name: "Powell's City of Books",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5231,
-    lng: -122.6813,
-    categories: ["bookstore", "culture"],
-    description:
-      "Powell's City of Books is a legendary multi-level bookstore that spans an entire city block in downtown Portland. The color-coded rooms make it fun to browse, and the on-site café invites you to linger. It is a quintessential Portland stop for book lovers and curious wanderers.",
-  },
-  {
-    id: "portland-japanese-garden",
-    name: "Portland Japanese Garden",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.518,
-    lng: -122.7069,
-    categories: ["garden", "culture"],
-    description:
-      "Portland Japanese Garden is a tranquil escape with koi ponds, stone paths, and carefully curated landscapes. The garden’s elevated setting adds quiet views across the city, and the tea house creates a meditative atmosphere. It is a peaceful, highly photogenic stop within Washington Park.",
-  },
-  {
-    id: "pittock-mansion",
-    name: "Pittock Mansion",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5254,
-    lng: -122.7167,
-    categories: ["historic", "viewpoint"],
-    description:
-      "Pittock Mansion is a historic estate perched above Portland with panoramic views of the city and Mount Hood on clear days. The mansion tour offers insight into Portland’s early history, and the grounds are great for a short walk. It is a rewarding stop for history and skyline views.",
-  },
-  {
-    id: "tom-mccall-waterfront-park",
-    name: "Tom McCall Waterfront Park",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5183,
-    lng: -122.6703,
-    categories: ["park", "river"],
-    description:
-      "Tom McCall Waterfront Park stretches along the Willamette River with flat paths, fountains, and skyline views. The park is ideal for a casual walk or bike ride, especially during weekend markets and festivals. It is a central, easy way to experience Portland’s riverside energy.",
-  },
-  {
-    id: "lan-su-chinese-garden",
-    name: "Lan Su Chinese Garden",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5251,
-    lng: -122.6732,
-    categories: ["garden", "culture"],
-    description:
-      "Lan Su Chinese Garden is a walled urban oasis with ponds, pavilions, and traditional landscaping inspired by classical gardens in China. The compact size makes it easy to visit in under two hours, and the tea house encourages a slow pause. It is a serene cultural stop in Old Town Portland.",
-  },
-  {
-    id: "forest-park",
-    name: "Forest Park",
-    citySlug: "portland",
-    state: "oregon",
-    lat: 45.5727,
-    lng: -122.7406,
-    categories: ["park", "trail"],
-    description:
-      "Forest Park is one of the country’s largest urban forests, with a vast network of trails through mossy evergreens. The paths range from easy strolls to longer hikes, offering a true nature escape without leaving Portland. It is a top pick for travelers who want quiet, wooded trails near the city.",
-  },
-  {
     id: "las-vegas-strip",
     name: "Las Vegas Strip",
     citySlug: "las-vegas",
@@ -1774,94 +1592,6 @@ export const tier1CityPois: CityPoi[] = [
       "Bayfront Park is a downtown waterfront green space with bay views, palm-lined paths, and open lawns for relaxing. The park hosts concerts and events, and it is a convenient stop near Bayside Marketplace. It is an easy way to get a slice of open space while staying close to downtown.",
   },
   {
-    id: "freedom-trail",
-    name: "Freedom Trail",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3554,
-    lng: -71.0651,
-    categories: ["historic", "walk"],
-    description:
-      "The Freedom Trail is a red-brick walking route that links Boston’s most important Revolutionary-era landmarks. The 2.5-mile path is self-guided and easy to follow, making it a great way to explore the city on foot. It is the best introduction to Boston’s history and walkable downtown.",
-  },
-  {
-    id: "boston-common",
-    name: "Boston Common and Public Garden",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3543,
-    lng: -71.0656,
-    categories: ["park", "landmark"],
-    description:
-      "Boston Common and the adjacent Public Garden form the city’s central green space, with shaded paths, historic monuments, and the famous Swan Boats. The area is perfect for a relaxed stroll or picnic between museum visits. It is a classic Boston stop in every season.",
-  },
-  {
-    id: "faneuil-hall",
-    name: "Faneuil Hall Marketplace",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3601,
-    lng: -71.0568,
-    categories: ["market", "historic"],
-    description:
-      "Faneuil Hall Marketplace blends historic architecture with food stalls, shops, and lively street performers. The plazas are busy and energetic, and the area is easy to reach from the waterfront. It is a great place to grab a quick bite while sightseeing downtown.",
-  },
-  {
-    id: "new-england-aquarium",
-    name: "New England Aquarium",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3592,
-    lng: -71.0498,
-    categories: ["aquarium", "family"],
-    description:
-      "New England Aquarium is a compact but engaging waterfront attraction with a giant ocean tank and a variety of marine exhibits. The harbor setting adds an easy scenic bonus, and the museum layout is family-friendly. It is a reliable stop for rainy days or kid-friendly plans.",
-  },
-  {
-    id: "museum-of-fine-arts-boston",
-    name: "Museum of Fine Arts, Boston",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3394,
-    lng: -71.0942,
-    categories: ["museum", "art"],
-    description:
-      "The Museum of Fine Arts, Boston houses an expansive collection spanning ancient artifacts, European masters, and contemporary pieces. The galleries are well-organized, making it easy to tailor a visit to your interests. It is a major cultural anchor for the city.",
-  },
-  {
-    id: "gardner-museum",
-    name: "Isabella Stewart Gardner Museum",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3384,
-    lng: -71.0995,
-    categories: ["museum", "historic"],
-    description:
-      "Isabella Stewart Gardner Museum is an intimate, Venetian-style museum with a lush central courtyard and eclectic collections. The setting is as memorable as the artworks, offering a tranquil break from the city. It is a must for travelers who appreciate unique museum experiences.",
-  },
-  {
-    id: "uss-constitution-museum",
-    name: "USS Constitution Museum",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3725,
-    lng: -71.0551,
-    categories: ["museum", "historic"],
-    description:
-      "USS Constitution Museum explores the history of \"Old Ironsides\" and Boston’s maritime heritage. The exhibits are hands-on and easy to navigate, with the historic ship docked nearby for an added sense of place. It is a strong stop for families and history fans alike.",
-  },
-  {
-    id: "boston-harborwalk",
-    name: "Boston Harborwalk",
-    citySlug: "boston",
-    state: "massachusetts",
-    lat: 42.3607,
-    lng: -71.0479,
-    categories: ["waterfront", "walk"],
-    description:
-      "Boston Harborwalk is a series of connected paths along the waterfront, linking parks, piers, and historic sites. The walk offers skyline views and fresh harbor air, making it an easy scenic break from downtown. It is a flexible route for a short stroll or a longer waterfront wander.",
-  },
-  {
     id: "national-mall",
     name: "National Mall",
     citySlug: "washington",
@@ -2213,6 +1943,9 @@ export const tier1CityPois: CityPoi[] = [
     description:
       "Spruce Street Harbor Park is a seasonal waterfront hangout with hammocks, food vendors, and colorful lights along the Delaware River. The laid-back vibe makes it a fun evening stop in warmer months. It is a great place to relax by the water after a day of sightseeing.",
   },
+  ...seattle,
+  ...portland,
+  ...boston,
 ];
 
 const buildPoiIndex = () => {

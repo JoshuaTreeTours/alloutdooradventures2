@@ -179,6 +179,70 @@ describe("city top things rules", () => {
     expect(titles.join(" ")).not.toMatch(/Monterey|Big Sur|Napa/);
   });
 
+  it("uses only Tier-1 POIs for Seattle with in-city coordinates", () => {
+    const items = buildTopThingsToDo("Seattle", "washington", "seattle");
+    const pois = getTier1PoisForCity("washington", "seattle");
+    const poiMap = new Map(pois.map(poi => [poi.name, poi]));
+
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
+    items.forEach(item => {
+      const poi = poiMap.get(item.title);
+      expect(poi).toBeDefined();
+      expect(Number.isFinite(poi?.lat)).toBe(true);
+      expect(Number.isFinite(poi?.lng)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Seattle")).toBe(false);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH
+      );
+    });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Seattle",
+        citySlug: "seattle",
+        parentSlug: "washington",
+        regionType: "state",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
+  });
+
+  it("uses only Tier-1 POIs for Boston with in-city coordinates", () => {
+    const items = buildTopThingsToDo("Boston", "massachusetts", "boston");
+    const pois = getTier1PoisForCity("massachusetts", "boston");
+    const poiMap = new Map(pois.map(poi => [poi.name, poi]));
+
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
+    items.forEach(item => {
+      const poi = poiMap.get(item.title);
+      expect(poi).toBeDefined();
+      expect(Number.isFinite(poi?.lat)).toBe(true);
+      expect(Number.isFinite(poi?.lng)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Boston")).toBe(false);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH
+      );
+    });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Boston",
+        citySlug: "boston",
+        parentSlug: "massachusetts",
+        regionType: "state",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
+  });
+
   it("uses only Tier-1 POIs for Rome with rich descriptions", () => {
     const items = buildTopThingsToDo("Rome", "italy", "rome", {
       regionType: "country",
@@ -202,6 +266,74 @@ describe("city top things rules", () => {
         cityName: "Rome",
         citySlug: "rome",
         parentSlug: "italy",
+        regionType: "country",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
+  });
+
+  it("uses only Tier-1 POIs for Amsterdam with rich descriptions", () => {
+    const items = buildTopThingsToDo("Amsterdam", "netherlands", "amsterdam", {
+      regionType: "country",
+    });
+    const pois = getTier1IntlPoisForCity("netherlands", "amsterdam");
+    const poiMap = new Map(pois.map(poi => [poi.name, poi]));
+
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
+    items.forEach(item => {
+      const poi = poiMap.get(item.title);
+      expect(poi).toBeDefined();
+      expect(Number.isFinite(poi?.lat)).toBe(true);
+      expect(Number.isFinite(poi?.lng)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Amsterdam")).toBe(false);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH
+      );
+    });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Amsterdam",
+        citySlug: "amsterdam",
+        parentSlug: "netherlands",
+        regionType: "country",
+        tier: 1,
+      }
+    );
+    expect(
+      issues.filter(issue => issue.issueType === "Tier-1 archetype token")
+    ).toHaveLength(0);
+  });
+
+  it("uses only Tier-1 POIs for Lisbon with rich descriptions", () => {
+    const items = buildTopThingsToDo("Lisbon", "portugal", "lisbon", {
+      regionType: "country",
+    });
+    const pois = getTier1IntlPoisForCity("portugal", "lisbon");
+    const poiMap = new Map(pois.map(poi => [poi.name, poi]));
+
+    expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
+    items.forEach(item => {
+      const poi = poiMap.get(item.title);
+      expect(poi).toBeDefined();
+      expect(Number.isFinite(poi?.lat)).toBe(true);
+      expect(Number.isFinite(poi?.lng)).toBe(true);
+      expect(isGenericPlaceholderName(item.title, "Lisbon")).toBe(false);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH
+      );
+    });
+
+    const issues = auditCityGuideContent(
+      { topThingsToDo: items },
+      {
+        cityName: "Lisbon",
+        citySlug: "lisbon",
+        parentSlug: "portugal",
         regionType: "country",
         tier: 1,
       }
