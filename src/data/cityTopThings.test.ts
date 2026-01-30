@@ -8,6 +8,7 @@ import {
 } from "./cityTopThings";
 import { auditCityGuideContent } from "./cityGuideContent";
 import { getTier1PoisForCity } from "./cityPois/tier1";
+import { getTier1IntlPoisForCity } from "./cityPois/tier1Intl";
 import { normalizePlaceName } from "../utils/geo";
 
 describe("city top things rules", () => {
@@ -104,5 +105,39 @@ describe("city top things rules", () => {
     });
 
     expect(titles.join(" ")).not.toMatch(/Monterey|Big Sur|Napa/);
+  });
+
+  it("uses only Tier-1 POIs for Rome with rich descriptions", () => {
+    const items = buildTopThingsToDo("Rome", "italy", "rome", {
+      regionType: "country",
+    });
+    const poiNames = new Set(
+      getTier1IntlPoisForCity("italy", "rome").map((poi) => poi.name),
+    );
+
+    expect(items.length).toBeGreaterThanOrEqual(8);
+    items.forEach((item) => {
+      expect(poiNames.has(item.title)).toBe(true);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH,
+      );
+    });
+  });
+
+  it("uses only Tier-1 POIs for Sydney with rich descriptions", () => {
+    const items = buildTopThingsToDo("Sydney", "australia", "sydney", {
+      regionType: "country",
+    });
+    const poiNames = new Set(
+      getTier1IntlPoisForCity("australia", "sydney").map((poi) => poi.name),
+    );
+
+    expect(items.length).toBeGreaterThanOrEqual(8);
+    items.forEach((item) => {
+      expect(poiNames.has(item.title)).toBe(true);
+      expect(item.description.length).toBeGreaterThanOrEqual(
+        MIN_TIER1_DESCRIPTION_LENGTH,
+      );
+    });
   });
 });

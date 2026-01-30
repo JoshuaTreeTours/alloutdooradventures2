@@ -3,10 +3,15 @@ import {
   getTopThingAuditContext,
   isDenylistedTopThing,
   isGenericPlaceholderName,
+  isPoiInCity,
   MIN_TIER1_DESCRIPTION_LENGTH,
   MIN_TIER1_ITEMS,
 } from "./cityTopThings";
 import { getTier1PoiNameSet, getTier1PoisForCity } from "./cityPois/tier1";
+import {
+  getTier1IntlPoiNameSet,
+  getTier1IntlPoisForCity,
+} from "./cityPois/tier1Intl";
 import { normalizePlaceName } from "../utils/geo";
 
 export type CityGuideIssue = {
@@ -39,6 +44,16 @@ type CityGuideAuditContext = {
   tier: 1 | 2;
   knownPois?: Set<string>;
 };
+
+const getTier1PoisForContext = (context: CityGuideAuditContext) =>
+  context.regionType === "country"
+    ? getTier1IntlPoisForCity(context.parentSlug, context.citySlug)
+    : getTier1PoisForCity(context.parentSlug, context.citySlug);
+
+const getTier1PoiNameSetForContext = (context: CityGuideAuditContext) =>
+  context.regionType === "country"
+    ? getTier1IntlPoiNameSet(context.parentSlug, context.citySlug)
+    : getTier1PoiNameSet(context.parentSlug, context.citySlug);
 
 const RIVERWALK_ALLOWLIST = new Set(["san-antonio", "chicago", "tampa"]);
 
@@ -359,7 +374,7 @@ export const buildTopThingsAuditMetrics = (
   );
   const tier1PoiNames =
     context.tier === 1
-      ? getTier1PoiNameSet(context.parentSlug, context.citySlug)
+      ? getTier1PoiNameSetForContext(context)
       : new Set<string>();
 
   const poiBackedTitles: string[] = [];
@@ -550,10 +565,8 @@ export const auditCityGuideContent = (
   }
 
   const topThingsMetrics = buildTopThingsAuditMetrics(content, context);
-  const tier1PoiCount =
-    context.tier === 1
-      ? getTier1PoisForCity(context.parentSlug, context.citySlug).length
-      : 0;
+  const tier1Pois = context.tier === 1 ? getTier1PoisForContext(context) : [];
+  const tier1PoiCount = context.tier === 1 ? tier1Pois.length : 0;
 
   if (context.tier === 1) {
     if (tier1PoiCount < MIN_TIER1_ITEMS) {
@@ -619,6 +632,36 @@ export const auditCityGuideContent = (
         contextSnippet: "Top Things to Do",
         severity: "error",
         suggestedFix: "Remove far-away destinations from Tier-1 lists.",
+      });
+    }
+
+    if (content.topThingsToDo?.length) {
+      const poiByName = new Map(
+        tier1Pois.map((poi) => [normalizePlaceName(poi.name), poi]),
+      );
+
+      content.topThingsToDo.forEach((item) => {
+        if (!item.title) {
+          return;
+        }
+        const normalized = normalizePlaceName(item.title);
+        const poi = poiByName.get(normalized);
+        if (
+          poi &&
+          !isPoiInCity(poi, {
+            parentSlug: context.parentSlug,
+            citySlug: context.citySlug,
+            tier: 1,
+          })
+        ) {
+          issues.push({
+            issueType: "Tier-1 POI out of bounds",
+            matchedText: item.title,
+            contextSnippet: item.title,
+            severity: "error",
+            suggestedFix: "Replace with a POI within city radius.",
+          });
+        }
       });
     }
   }

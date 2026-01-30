@@ -1,7 +1,9 @@
 import { getCityCoordinates } from "./cityCoordinates";
+import { isTier1IntlCity } from "./cityTier1Intl";
 import { isTier1City } from "./cityTier1";
 import { cityLocalPois, type LocalPoi } from "./cityLocalPois";
 import { getTier1PoisForCity } from "./cityPois/tier1";
+import { getTier1IntlPoisForCity } from "./cityPois/tier1Intl";
 import { states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
 import { haversineMiles, normalizePlaceName } from "../utils/geo";
@@ -38,6 +40,16 @@ const TIER1_CITY_RADIUS_MILES: Record<string, number> = {
   "santa-barbara": 12,
   "newport-beach": 12,
   "laguna-beach": 12,
+  edinburgh: 12,
+  rome: 15,
+  florence: 12,
+  barcelona: 15,
+  madrid: 15,
+  lisbon: 15,
+  amsterdam: 12,
+  berlin: 15,
+  vienna: 12,
+  sydney: 20,
 };
 
 export const TOP_THINGS_DENYLIST = [
@@ -614,10 +626,16 @@ export const buildTopThingsToDo = (
   const minItems = options.minItems ?? 10;
   const regionType = options.regionType ?? "state";
   const parentName = options.parentName;
-  const tier = isTier1City(citySlug) ? 1 : 2;
+  const isTier1Us = regionType === "state" && isTier1City(citySlug);
+  const isTier1Intl =
+    regionType === "country" && isTier1IntlCity(parentSlug, citySlug);
+  const tier = isTier1Us || isTier1Intl ? 1 : 2;
 
   if (tier === 1) {
-    const tier1Pois = getTier1PoisForCity(parentSlug, citySlug);
+    const tier1Pois =
+      regionType === "country"
+        ? getTier1IntlPoisForCity(parentSlug, citySlug)
+        : getTier1PoisForCity(parentSlug, citySlug);
     const filteredPois = tier1Pois.filter(
       (poi) =>
         isPoiInCity(poi, { parentSlug, citySlug, tier }) &&
