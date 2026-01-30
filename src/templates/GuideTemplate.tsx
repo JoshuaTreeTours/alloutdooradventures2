@@ -5,6 +5,7 @@ import GuideInternalLinks from "../components/GuideInternalLinks";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import type { GuideContent, GuideLink } from "../data/guideData";
+import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -44,6 +45,52 @@ const GuideImageBlock = ({ image }: { image: GuideImage }) => (
     />
   </div>
 );
+
+const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
+  if (guide.type !== "city" || !guide.parentSlug || !guide.parentName) {
+    return null;
+  }
+
+  const maxSiblingGuides = 4;
+  const parentGuide =
+    guide.regionType === "country"
+      ? getGuideCountryBySlug(guide.parentSlug)
+      : getGuideStateBySlug(guide.parentSlug);
+  const siblingCities =
+    parentGuide?.cities
+      .filter((city) => city.slug !== guide.slug)
+      .sort((a, b) => a.name.localeCompare(b.name)) ?? [];
+  const showSiblingGuides =
+    siblingCities.length > 0 && siblingCities.length <= maxSiblingGuides;
+  const guideBasePath = guide.regionType === "country" ? "/guides/world" : "/guides/us";
+
+  return (
+    <section className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+      <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+        Explore More Guides Nearby
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+        <Link href={`${guideBasePath}/${guide.parentSlug}`}>
+          <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+            {guide.parentName} travel guide
+          </a>
+        </Link>
+        {showSiblingGuides
+          ? siblingCities.map((city) => (
+              <Link
+                key={`${guide.parentSlug}-${city.slug}`}
+                href={`${guideBasePath}/${guide.parentSlug}/${city.slug}`}
+              >
+                <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                  {city.name} guide
+                </a>
+              </Link>
+            ))
+          : null}
+      </div>
+    </section>
+  );
+};
 
 export default function GuideTemplate({ guide }: GuideTemplateProps) {
   const cityPills =
@@ -120,6 +167,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-14">
+        <CityGuideLinks guide={guide} />
         <GuideInternalLinks guide={guide} variant="primary" />
         {guideImages[0] ? <GuideImageBlock image={guideImages[0]} /> : null}
         {guide.type === "city" && guide.activities?.length ? (
@@ -169,7 +217,9 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           </div>
         </Section>
 
-        <GuideInternalLinks guide={guide} variant="top-tours" />
+        {guide.type !== "city" ? (
+          <GuideInternalLinks guide={guide} variant="top-tours" />
+        ) : null}
 
         {guide.type === "city" && guide.topThingsToDo?.length ? (
           <Section
@@ -224,7 +274,12 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
 
         {guideImages[2] ? <GuideImageBlock image={guideImages[2]} /> : null}
 
-        <GuideInternalLinks guide={guide} variant="nearby" />
+        {guide.type !== "city" ? (
+          <GuideInternalLinks guide={guide} variant="nearby" />
+        ) : null}
+        {guide.type === "city" ? (
+          <GuideInternalLinks guide={guide} variant="top-tours" />
+        ) : null}
       </section>
     </main>
   );

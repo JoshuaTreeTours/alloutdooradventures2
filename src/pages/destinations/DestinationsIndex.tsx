@@ -15,6 +15,10 @@ export default function DestinationsIndex() {
     if (region === "Northeast") return "East Coast";
     return region;
   };
+  const guideStateLookup = new Map(
+    getGuideStates().map((state) => [state.slug, state]),
+  );
+  const guideCityLimit = 6;
 
   const regionOrder = ["West", "Northeast", "Deep South"];
   const destinationsByRegion = destinations.reduce<Record<string, typeof destinations>>(
@@ -29,9 +33,42 @@ export default function DestinationsIndex() {
   const rockyMountainStates = destinations.filter((destination) =>
     ["montana", "colorado"].includes(destination.stateSlug),
   );
-  const guideStates = getGuideStates();
-  const guideHighlights = guideStates.slice(0, 10);
+  const guideHighlights = Array.from(guideStateLookup.values()).slice(0, 10);
   const tourStates = [...destinations].sort((a, b) => a.name.localeCompare(b.name)).slice(0, 10);
+
+  const renderGuideLinks = (stateSlug: string, stateName: string) => {
+    const guideState = guideStateLookup.get(stateSlug);
+    if (!guideState?.cities.length) {
+      return null;
+    }
+
+    const visibleCities = guideState.cities.slice(0, guideCityLimit);
+    const hasMoreGuides = guideState.cities.length > guideCityLimit;
+
+    return (
+      <div className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+          Available Guides in {stateName}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+          {visibleCities.map((city) => (
+            <Link key={`${stateSlug}-${city.slug}`} href={`/guides/us/${stateSlug}/${city.slug}`}>
+              <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
+                {city.name} guide
+              </a>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-4">
+          <Link href={`/guides/us/${stateSlug}`}>
+            <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
+              {hasMoreGuides ? `View all ${stateName} guides` : `${stateName} travel guide`}
+            </a>
+          </Link>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <>
@@ -133,13 +170,15 @@ export default function DestinationsIndex() {
               </div>
               <div className="grid gap-6 md:grid-cols-2">
                 {rockyMountainStates.map((state) => (
-                  <DestinationCard
-                    key={`rocky-mountain-${state.name}`}
-                    destination={state}
-                    ctaLabel="Discover"
-                    headingLevel="h3"
-                    descriptionVariant="featured"
-                  />
+                  <div key={`rocky-mountain-${state.name}`} className="space-y-4">
+                    <DestinationCard
+                      destination={state}
+                      ctaLabel="Discover"
+                      headingLevel="h3"
+                      descriptionVariant="featured"
+                    />
+                    {renderGuideLinks(state.stateSlug, state.name)}
+                  </div>
                 ))}
               </div>
             </div>
@@ -158,13 +197,15 @@ export default function DestinationsIndex() {
                 </div>
                 <div className="grid gap-6">
                   {destinationsByRegion[region].map((state) => (
-                    <DestinationCard
-                      key={`${region}-${state.name}`}
-                      destination={state}
-                      ctaLabel="View adventures"
-                      headingLevel="h3"
-                      descriptionVariant="featured"
-                    />
+                    <div key={`${region}-${state.name}`} className="space-y-4">
+                      <DestinationCard
+                        destination={state}
+                        ctaLabel="View adventures"
+                        headingLevel="h3"
+                        descriptionVariant="featured"
+                      />
+                      {renderGuideLinks(state.stateSlug, state.name)}
+                    </div>
                   ))}
                 </div>
               </div>

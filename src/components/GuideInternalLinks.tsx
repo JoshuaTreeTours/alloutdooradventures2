@@ -350,10 +350,15 @@ export default function GuideInternalLinks({
       return null;
     }
 
+    const tourTitle =
+      guide.type === "city"
+        ? `Tours & Experiences in ${guide.name}`
+        : `Top tours in ${placeLabel}`;
+
     return (
       <section className="mt-12 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
         <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-          Top tours in {placeLabel}
+          {tourTitle}
         </h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {topTours.map((tour) => (
