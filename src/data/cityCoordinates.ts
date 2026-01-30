@@ -1,3 +1,4 @@
+import { CITY_TIER1_INTL } from "./cityTier1Intl";
 import { states } from "./destinations";
 
 export type CityCoordinates = {
@@ -28,6 +29,15 @@ const buildCityCoordinateIndex = () => {
 
   Object.entries(CITY_COORDINATE_OVERRIDES).forEach(([key, value]) => {
     index.set(key, value);
+  });
+
+  CITY_TIER1_INTL.forEach((city) => {
+    if (city.lat !== undefined && city.lng !== undefined) {
+      index.set(`${city.countrySlug}/${city.citySlug}`, {
+        lat: city.lat,
+        lng: city.lng,
+      });
+    }
   });
 
   return index;

@@ -5,6 +5,7 @@ import {
   buildTopThingsAuditMetrics,
   type CityGuideTextContent,
 } from "../src/data/cityGuideContent";
+import { isTier1IntlCity } from "../src/data/cityTier1Intl";
 import { isTier1City } from "../src/data/cityTier1";
 import { buildCityOverrideRoute, cityOverrides } from "../src/data/cityOverrides";
 import { buildTopThingsToDo } from "../src/data/cityTopThings";
@@ -24,14 +25,15 @@ const runAudit = () => {
       citySlug: record.citySlug,
       parentName: record.state,
       parentSlug: record.stateSlug,
-      regionType: "state",
+      regionType: record.regionType,
       tours: [],
       landmarks: null,
       metadata: null,
     });
 
+    const cityData = record.cityData;
     const baseContent: CityGuideTextContent = {
-      intro: record.cityData.intro,
+      intro: cityData?.intro,
       topThingsToDo: buildTopThingsToDo(
         record.city,
         record.stateSlug,
@@ -43,16 +45,16 @@ const runAudit = () => {
         },
       ),
       extraText: [
-        record.cityData.shortDescription,
-        record.cityData.intro,
-        ...record.cityData.whereItIs,
-        ...record.cityData.thingsToDo,
-        ...record.cityData.toursCopy,
-        ...Object.values(record.cityData.experiences ?? {}),
-        ...record.cityData.weekendItinerary.dayOne,
-        ...record.cityData.weekendItinerary.dayTwo,
-        ...record.cityData.gettingThere,
-        ...record.cityData.faq.map((item) => item.answer),
+        cityData?.shortDescription,
+        cityData?.intro,
+        ...(cityData?.whereItIs ?? []),
+        ...(cityData?.thingsToDo ?? []),
+        ...(cityData?.toursCopy ?? []),
+        ...Object.values(cityData?.experiences ?? {}),
+        ...(cityData?.weekendItinerary?.dayOne ?? []),
+        ...(cityData?.weekendItinerary?.dayTwo ?? []),
+        ...(cityData?.gettingThere ?? []),
+        ...(cityData?.faq?.map((item) => item.answer) ?? []),
         ...cityFacts.anchors,
         ...cityFacts.outdoors,
         ...cityFacts.nearby,
@@ -92,7 +94,13 @@ const runAudit = () => {
       topThingsToDo: overrideContent?.topThingsToDo ?? baseContent.topThingsToDo,
     };
 
-    const tier = isTier1City(record.citySlug) ? 1 : 2;
+    const tier =
+      record.regionType === "country" &&
+      isTier1IntlCity(record.stateSlug, record.citySlug)
+        ? 1
+        : isTier1City(record.citySlug)
+          ? 1
+          : 2;
     const issues = auditCityGuideContent(content, {
       cityName: record.city,
       citySlug: record.citySlug,
@@ -176,7 +184,7 @@ const runAudit = () => {
   ];
   fs.writeFileSync(csvPath, csvLines.join("\n"), "utf8");
 
-  const errorCount = findings.filter((finding) => {
+  const failingFindings = findings.filter((finding) => {
     if (finding.severity === "error") {
       return true;
     }
@@ -184,12 +192,22 @@ const runAudit = () => {
       return true;
     }
     return false;
-  }).length;
+  });
+  const errorCount = failingFindings.length;
 
   console.log(`Audit complete. Findings: ${findings.length}`);
   console.log(`Errors: ${errorCount}`);
   console.log(`JSON: ${jsonPath}`);
   console.log(`CSV: ${csvPath}`);
+
+  if (strict && errorCount > 0) {
+    console.log("Top failing routes:");
+    failingFindings
+      .slice(0, 20)
+      .forEach((finding) =>
+        console.log(`- ${finding.route}: ${finding.issueType}`),
+      );
+  }
 
   if (strict && errorCount > 0) {
     process.exitCode = 1;

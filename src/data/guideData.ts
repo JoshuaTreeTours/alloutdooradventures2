@@ -6,6 +6,7 @@ import {
 } from "./cityGuideContent";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
+import { isTier1IntlCity } from "./cityTier1Intl";
 import { isTier1City } from "./cityTier1";
 import { buildTopThingsToDo } from "./cityTopThings";
 import type { CityFacts } from "../lib/cityGuideFacts";
@@ -1042,7 +1043,12 @@ export const buildCityGuide = ({
       citySlug,
       parentSlug,
       regionType,
-      tier: isTier1City(citySlug) ? 1 : 2,
+      tier:
+        regionType === "country" && isTier1IntlCity(parentSlug, citySlug)
+          ? 1
+          : isTier1City(citySlug)
+            ? 1
+            : 2,
       knownPois,
     },
   );
