@@ -14,6 +14,7 @@
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host",
+    "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "check": "tsc --noEmit",
     "format": "prettier --write ."
   },

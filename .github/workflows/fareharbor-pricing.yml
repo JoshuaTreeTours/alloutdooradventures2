@@ -29,6 +29,10 @@ jobs:
             npm install
           fi
 
+      - name: Audit city guide content (non-blocking)
+        run: npm run audit:city-guides
+        continue-on-error: true
+
       - name: Fetch FareHarbor pricing cache
         run: npm run fetch:fareharbor-prices
 
