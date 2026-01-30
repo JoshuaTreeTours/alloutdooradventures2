@@ -1,3 +1,4 @@
+import type { ChangeEvent } from "react";
 import { Link } from "wouter";
 
 import { getActivityLabelFromSlug } from "../data/activityLabels";
@@ -303,12 +304,42 @@ export default function GuideInternalLinks({
       return null;
     }
 
+    const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+      const href = event.target.value;
+      if (href) {
+        window.location.assign(href);
+      }
+    };
+
     return (
       <section className="rounded-3xl border border-black/10 bg-white/80 p-6 shadow-sm md:p-8">
         <h2 className="text-lg font-semibold text-[#1f2a1f] md:text-xl">
           Plan your adventure
         </h2>
-        <div className="mt-4 flex flex-wrap gap-3">
+        <div className="mt-4 md:hidden">
+          <label
+            htmlFor="plan-adventure-links"
+            className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
+          >
+            Choose a tour focus
+          </label>
+          <select
+            id="plan-adventure-links"
+            className="mt-3 w-full rounded-2xl border border-[#2f4a2f]/20 bg-white px-4 py-3 text-sm font-semibold text-[#2f4a2f]"
+            defaultValue=""
+            onChange={handleSelectChange}
+          >
+            <option value="" disabled>
+              Select an option
+            </option>
+            {primaryLinks.map((link) => (
+              <option key={link.href} value={link.href}>
+                {link.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="mt-4 hidden flex-wrap gap-3 md:flex">
           {primaryLinks.map((link) => (
             <Link key={link.href} href={link.href}>
               <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
