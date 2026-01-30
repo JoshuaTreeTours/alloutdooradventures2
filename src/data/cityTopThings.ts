@@ -5,7 +5,7 @@ import { haversineMiles, normalizePlaceName } from "../utils/geo";
 
 export const MAX_DRIVE_HOURS = 2;
 export const ASSUMED_AVG_MPH = 55;
-export const MAX_NEARBY_MILES = MAX_DRIVE_HOURS * ASSUMED_AVG_MPH;
+export const MAX_NEARBY_MILES = 60;
 
 export const TOP_THINGS_DENYLIST = [
   "riverfront",

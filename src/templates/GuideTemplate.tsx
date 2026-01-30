@@ -171,7 +171,9 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         <GuideInternalLinks guide={guide} variant="top-tours" />
 
         {guide.type === "city" && guide.topThingsToDo?.length ? (
-          <Section title={`Top 15 things to do in ${guide.name}`}>
+          <Section
+            title={`Top ${guide.topThingsToDo.length} things to do in ${guide.name}`}
+          >
             <ol className="list-decimal space-y-3 pl-5">
               {guide.topThingsToDo.map((item) => (
                 <li key={item.title}>

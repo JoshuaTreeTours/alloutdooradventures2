@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   applyTopThingsBackfill,
+  buildTopThingsToDo,
   filterTopThingsByRules,
   getNearbyDestinations,
 } from "./cityTopThings";
@@ -52,5 +53,13 @@ describe("city top things rules", () => {
       10,
     );
     expect(backfilled).toHaveLength(10);
+  });
+
+  it("returns 15 Palm Springs items without far metros", () => {
+    const items = buildTopThingsToDo("Palm Springs", "california", "palm-springs");
+    const titles = items.map((item) => item.title);
+    expect(items).toHaveLength(15);
+    expect(titles).not.toContain("San Diego");
+    expect(titles).not.toContain("Los Angeles");
   });
 });
