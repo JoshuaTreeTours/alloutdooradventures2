@@ -16,12 +16,12 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { buildTourMetaDescription, SITE_URL } from "../../utils/seo";
+import { buildTourMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
-  SITE_ORGANIZATION_ID,
+  buildWebPageStructuredData,
 } from "../../utils/structuredData";
 
 type TourDetailProps = {
@@ -39,20 +39,18 @@ export default function TourDetail({ params }: TourDetailProps) {
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const metaDescription = tour ? buildTourMetaDescription(tour) : undefined;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !bookingUrl || !detailUrl) {
       return null;
     }
     return [
-      {
-        "@type": "WebPage",
-        "@id": `${detailUrl}#webpage`,
+      buildWebPageStructuredData({
         url: detailUrl,
         name: tour.title,
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-        about: { "@id": `${detailUrl}#trip` },
-        publisher: { "@id": SITE_ORGANIZATION_ID },
-      },
+        description: metaDescription,
+        image: tour.heroImage,
+      }),
       buildTourProductStructuredData({
         tour,
         detailUrl,
@@ -70,7 +68,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         { name: tour.title, url: detailUrl },
       ]),
     ];
-  }, [bookingUrl, detailUrl, productDescription, tour]);
+  }, [bookingUrl, detailUrl, metaDescription, productDescription, tour]);
 
   useStructuredData(structuredDataNodes);
 
@@ -92,7 +90,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
   const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-  const description = buildTourMetaDescription(tour);
+  const description = metaDescription ?? buildTourMetaDescription(tour);
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
@@ -107,6 +105,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         title={title}
         description={description}
         url={detailUrl}
+        image={tour.heroImage}
       />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">

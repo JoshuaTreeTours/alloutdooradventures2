@@ -25,12 +25,12 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { buildMetaDescription, SITE_URL } from "../../../../utils/seo";
+import { buildMetaDescription } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
-  SITE_ORGANIZATION_ID,
+  buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
 
 type CityTourDetailRouteProps = {
@@ -75,6 +75,13 @@ export default function CityTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const metaDescription =
+    tour && state && city
+      ? buildMetaDescription(
+          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+        )
+      : undefined;
   const cityHref = state && city
     ? `/destinations/states/${state.slug}/cities/${city.slug}`
     : "";
@@ -90,15 +97,12 @@ export default function CityTourDetailRoute({
       return null;
     }
     return [
-      {
-        "@type": "WebPage",
-        "@id": `${canonicalUrl}#webpage`,
+      buildWebPageStructuredData({
         url: canonicalUrl,
         name: tour.title,
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-        about: { "@id": `${canonicalUrl}#trip` },
-        publisher: { "@id": SITE_ORGANIZATION_ID },
-      },
+        description: metaDescription,
+        image: tour.heroImage,
+      }),
       buildTourProductStructuredData({
         tour,
         detailUrl: canonicalUrl,
@@ -124,6 +128,7 @@ export default function CityTourDetailRoute({
     canonicalUrl,
     city?.name,
     cityHref,
+    metaDescription,
     productDescription,
     state?.name,
     stateHref,
@@ -168,10 +173,12 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description = buildMetaDescription(
-    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-    `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-  );
+  const description =
+    metaDescription ??
+    buildMetaDescription(
+      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+    );
   const relatedTours = (isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
@@ -184,7 +191,12 @@ export default function CityTourDetailRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo title={title} description={description} url={canonicalUrl} />
+      <Seo
+        title={title}
+        description={description}
+        url={canonicalUrl}
+        image={tour.heroImage}
+      />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

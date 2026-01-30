@@ -20,12 +20,12 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import { buildMetaDescription, SITE_URL } from "../../utils/seo";
+import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
-  SITE_ORGANIZATION_ID,
+  buildWebPageStructuredData,
 } from "../../utils/structuredData";
 
 type FlagstaffTourDetailRouteProps = {
@@ -61,6 +61,12 @@ export default function FlagstaffTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const metaDescription = tour
+    ? buildMetaDescription(
+        tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+        `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+      )
+    : undefined;
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
@@ -71,15 +77,12 @@ export default function FlagstaffTourDetailRoute({
       return null;
     }
     return [
-      {
-        "@type": "WebPage",
-        "@id": `${detailUrl}#webpage`,
+      buildWebPageStructuredData({
         url: detailUrl,
         name: tour.title,
-        isPartOf: { "@id": `${SITE_URL}/#website` },
-        about: { "@id": `${detailUrl}#trip` },
-        publisher: { "@id": SITE_ORGANIZATION_ID },
-      },
+        description: metaDescription,
+        image: tour.heroImage,
+      }),
       buildTourProductStructuredData({
         tour,
         detailUrl,
@@ -105,6 +108,7 @@ export default function FlagstaffTourDetailRoute({
     city.name,
     cityHref,
     detailUrl,
+    metaDescription,
     productDescription,
     state.name,
     stateHref,
@@ -135,10 +139,12 @@ export default function FlagstaffTourDetailRoute({
 
   const tourSlug = getFlagstaffTourSlug(tour);
   const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description = buildMetaDescription(
-    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-    `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-  );
+  const description =
+    metaDescription ??
+    buildMetaDescription(
+      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+    );
   const relatedTours = flagstaffTours.filter(
     (item) => getFlagstaffTourSlug(item) !== tourSlug,
   );
@@ -154,6 +160,7 @@ export default function FlagstaffTourDetailRoute({
         title={title}
         description={description}
         url={detailUrl}
+        image={tour.heroImage}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">

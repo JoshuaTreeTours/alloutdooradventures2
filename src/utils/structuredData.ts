@@ -10,7 +10,8 @@ type StructuredDataValue =
   | { [key: string]: StructuredDataValue };
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
-export const SITE_BUSINESS_ID = `${SITE_URL}/#business`;
+export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
+export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
 const ID_FIELDS = new Set(["@id"]);
@@ -140,14 +141,6 @@ export const getSiteStructuredDataNodes = () => {
     addressCountry: "US",
   };
 
-  const areaServed = [
-    "Worldwide",
-    {
-      "@type": "Country",
-      name: "United States",
-    },
-  ];
-
   const logoUrl = buildImageUrl("/images/Logo.png");
   const heroUrl = buildImageUrl("/hero.jpg");
 
@@ -155,48 +148,83 @@ export const getSiteStructuredDataNodes = () => {
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures",
+      name: "Outdoor Adventures, Inc.",
       url: SITE_URL,
       logo: logoUrl,
       image: heroUrl,
-      telephone: "+18553148687",
       address,
-      areaServed,
-      contactPoint: [
-        {
-          "@type": "ContactPoint",
-          contactType: "customer service",
-          telephone: "+18553148687",
-        },
-      ],
     },
     {
-      "@type": ["LocalBusiness", "TravelAgency"],
-      "@id": SITE_BUSINESS_ID,
+      "@type": ["Organization", "TravelAgency"],
+      "@id": SITE_BRAND_ID,
       name: "Outdoor Adventures",
       url: SITE_URL,
       logo: logoUrl,
-      image: [heroUrl],
-      telephone: "+18553148687",
-      address,
-      areaServed,
       parentOrganization: {
         "@id": SITE_ORGANIZATION_ID,
       },
+      areaServed: [
+        "Worldwide",
+        {
+          "@type": "Country",
+          name: "United States",
+        },
+      ],
+      sameAs: [
+        "https://www.facebook.com/alloutdooradventuresonline",
+        "https://www.linkedin.com/company/all-outdoor-adventures",
+      ],
     },
     {
       "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
+      "@id": SITE_WEBSITE_ID,
       url: SITE_URL,
       name: "Outdoor Adventures",
       publisher: {
         "@id": SITE_ORGANIZATION_ID,
       },
       about: {
-        "@id": SITE_BUSINESS_ID,
+        "@id": SITE_BRAND_ID,
       },
     },
   ];
+};
+
+export const sanitizeSchemaName = (value: string) =>
+  value.replace(/All Outdoor Adventures/gi, "Outdoor Adventures").trim();
+
+const buildImageObject = (url: string, id?: string) => ({
+  "@type": "ImageObject",
+  ...(id ? { "@id": id } : {}),
+  url,
+});
+
+export const buildWebPageStructuredData = ({
+  url,
+  name,
+  description,
+  image,
+}: {
+  url: string;
+  name: string;
+  description?: string;
+  image?: string;
+}) => {
+  const imageId = image ? `${url}#primaryimage` : undefined;
+  return {
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: sanitizeSchemaName(name),
+    description,
+    isPartOf: { "@id": SITE_WEBSITE_ID },
+    ...(image
+      ? {
+          primaryImageOfPage: buildImageObject(image, imageId),
+          image,
+        }
+      : {}),
+  };
 };
 
 export const buildBreadcrumbList = (
@@ -262,8 +290,8 @@ export const buildTourProductStructuredData = ({
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    brand: { "@id": SITE_ORGANIZATION_ID },
-    seller: { "@id": SITE_BUSINESS_ID },
+    brand: { "@id": SITE_BRAND_ID },
+    seller: { "@id": SITE_BRAND_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
@@ -303,7 +331,7 @@ export const buildTourTripStructuredData = ({
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    provider: { "@id": SITE_BUSINESS_ID },
+    provider: { "@id": SITE_BRAND_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
