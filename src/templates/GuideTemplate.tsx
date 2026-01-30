@@ -277,10 +277,10 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         {guide.type !== "city" ? (
           <GuideInternalLinks guide={guide} variant="nearby" />
         ) : null}
-        {guide.type === "city" ? (
-          <GuideInternalLinks guide={guide} variant="top-tours" />
-        ) : null}
       </section>
+      {guide.type === "city" ? (
+        <GuideInternalLinks guide={guide} variant="top-tours" />
+      ) : null}
     </main>
   );
 }
