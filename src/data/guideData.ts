@@ -1,4 +1,5 @@
 import { getActivityLabelFromSlug } from "./activityLabels";
+import { buildCityOverrideRoute, cityOverrides } from "./cityOverrides";
 import { cityLandmarks } from "./cityLandmarks";
 import type { CityLandmarkMetadata } from "./cityLandmarks";
 import type { CityFacts } from "../lib/cityGuideFacts";
@@ -64,6 +65,12 @@ export type GuideContent = {
   thingsToDoSections?: GuideEssaySection[];
   topThingsToDo?: GuideListItem[];
   guideImages?: GuideImage[];
+};
+
+export type CityGuideIssue = {
+  issueType: string;
+  matchedText: string;
+  contextSnippet: string;
 };
 
 const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
@@ -136,6 +143,329 @@ const uniqueValues = (items: string[]) => {
   });
 
   return results;
+};
+
+const RIVERWALK_ALLOWLIST = new Set(["san-antonio", "chicago", "tampa"]);
+
+const DAY_TRIP_DENYLIST: Array<{
+  destination: string;
+  allowCities: Set<string>;
+}> = [
+  {
+    destination: "napa",
+    allowCities: new Set([
+      "san-francisco",
+      "oakland",
+      "san-jose",
+      "sacramento",
+      "napa",
+    ]),
+  },
+  {
+    destination: "yosemite",
+    allowCities: new Set(["fresno", "mariposa", "oakhurst", "merced"]),
+  },
+  {
+    destination: "grand canyon",
+    allowCities: new Set(["flagstaff", "tusayan", "grand-canyon-village", "page"]),
+  },
+  {
+    destination: "yellowstone",
+    allowCities: new Set(["jackson", "west-yellowstone", "bozeman", "gardiner"]),
+  },
+  {
+    destination: "glacier national park",
+    allowCities: new Set(["whitefish", "kalispell"]),
+  },
+  {
+    destination: "moab",
+    allowCities: new Set(["moab"]),
+  },
+  {
+    destination: "zion",
+    allowCities: new Set(["springdale", "st-george"]),
+  },
+];
+
+const STATE_NAME_TO_SLUG = new Map(
+  US_STATES.map((state) => [state.toLowerCase(), slugify(state)]),
+);
+
+const DAY_TRIP_REGEX = /day[-\s]trip(?:s)? to\s+([^.,;:()]+)/gi;
+const RIVERWALK_REGEX = /\bRiver\s*walk\b|\bRiverwalk\b/gi;
+const RIVERWALK_TEST_REGEX = /\bRiver\s*walk\b|\bRiverwalk\b/i;
+const MUST_SEE_REGEX = /must-see/i;
+
+const buildKnownPoiSet = (cityName: string, cityFacts: CityFacts) => {
+  const basePois = [
+    ...cityFacts.anchors,
+    ...cityFacts.outdoors,
+    ...cityFacts.nearby,
+    `Historic Downtown ${cityName}`,
+    `Old Town ${cityName}`,
+    `${cityName} Riverfront`,
+    `${cityName} Waterfront`,
+    `${cityName} Greenway`,
+  ];
+
+  return new Set(basePois.map((item) => item.toLowerCase()));
+};
+
+const getContextSnippet = (text: string, index: number, length = 140) => {
+  const start = Math.max(0, index - Math.floor(length / 2));
+  const end = Math.min(text.length, start + length);
+  return text.slice(start, end).replace(/\s+/g, " ").trim();
+};
+
+const isRiverwalkAllowed = (citySlug: string) => RIVERWALK_ALLOWLIST.has(citySlug);
+
+const getDayTripMatches = (text: string) => {
+  const matches: Array<{ index: number; phrase: string; destination: string }> = [];
+  DAY_TRIP_REGEX.lastIndex = 0;
+  let match: RegExpExecArray | null = null;
+  while ((match = DAY_TRIP_REGEX.exec(text)) !== null) {
+    const phrase = match[0];
+    const destination = match[1]
+      .replace(/\bfor\b.*$/i, "")
+      .replace(/\bfrom\b.*$/i, "")
+      .replace(/\bin\b.*$/i, "")
+      .trim();
+    matches.push({ index: match.index, phrase, destination });
+  }
+
+  return matches;
+};
+
+const isDayTripDenied = (
+  destination: string,
+  citySlug: string,
+  parentSlug: string,
+  regionType: "state" | "country",
+  sentence: string,
+) => {
+  const destinationLower = destination.toLowerCase();
+  const denyMatch = DAY_TRIP_DENYLIST.find((entry) =>
+    destinationLower.includes(entry.destination),
+  );
+  if (denyMatch && !denyMatch.allowCities.has(citySlug)) {
+    return true;
+  }
+
+  if (regionType === "state") {
+    const sentenceLower = sentence.toLowerCase();
+    for (const [stateName, stateSlug] of STATE_NAME_TO_SLUG) {
+      if (stateSlug === parentSlug) {
+        continue;
+      }
+      if (sentenceLower.includes(stateName)) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+};
+
+const getMustSeeIssues = (
+  sentence: string,
+  knownPois: Set<string>,
+  issueType: string,
+) => {
+  if (!MUST_SEE_REGEX.test(sentence)) {
+    return [];
+  }
+
+  const sentenceLower = sentence.toLowerCase();
+  const hasKnownPoi = Array.from(knownPois).some((poi) => sentenceLower.includes(poi));
+
+  if (hasKnownPoi) {
+    return [];
+  }
+
+  return [
+    {
+      issueType,
+      matchedText: sentence.trim(),
+      contextSnippet: sentence.trim(),
+    },
+  ];
+};
+
+const sanitizeText = (
+  text: string,
+  context: {
+    citySlug: string;
+    parentSlug: string;
+    regionType: "state" | "country";
+    knownPois: Set<string>;
+  },
+) => {
+  let updated = text;
+  const changes: string[] = [];
+
+  if (!isRiverwalkAllowed(context.citySlug) && RIVERWALK_TEST_REGEX.test(updated)) {
+    updated = updated.replace(RIVERWALK_REGEX, "riverfront walk");
+    changes.push("riverwalk");
+  }
+
+  const sentences = updated.split(/(?<=[.!?])\s+/);
+  let sentenceChanged = false;
+  const sanitizedSentences = sentences.map((sentence) => {
+    const dayTripMatches = getDayTripMatches(sentence);
+    const hasDeniedDayTrip = dayTripMatches.some((match) =>
+      isDayTripDenied(
+        match.destination,
+        context.citySlug,
+        context.parentSlug,
+        context.regionType,
+        sentence,
+      ),
+    );
+
+    if (hasDeniedDayTrip) {
+      sentenceChanged = true;
+      changes.push("day-trip");
+      return "Plan a nearby scenic drive or short nature loop to keep travel time reasonable.";
+    }
+
+    const mustSeeIssues = getMustSeeIssues(
+      sentence,
+      context.knownPois,
+      "Unverified POI claim",
+    );
+    if (mustSeeIssues.length) {
+      sentenceChanged = true;
+      changes.push("must-see");
+      return "Look for standout neighborhoods, parks, and cultural hubs that showcase the city’s character.";
+    }
+
+    return sentence;
+  });
+
+  if (sentenceChanged) {
+    updated = sanitizedSentences.join(" ");
+  }
+
+  return { text: updated, changes };
+};
+
+export const sanitizeCityGuideContent = (
+  guide: GuideContent,
+  context: {
+    citySlug: string;
+    parentSlug: string;
+    regionType: "state" | "country";
+    knownPois: Set<string>;
+  },
+) => {
+  const changes: string[] = [];
+  const transform = (text?: string) => {
+    if (!text) {
+      return text;
+    }
+    const result = sanitizeText(text, context);
+    changes.push(...result.changes);
+    return result.text;
+  };
+
+  return {
+    guide: {
+      ...guide,
+      intro: transform(guide.intro),
+      bestTimeToVisit: transform(guide.bestTimeToVisit),
+      whatToPack: transform(guide.whatToPack),
+      itineraries: guide.itineraries.map((itinerary) => ({
+        ...itinerary,
+        title: transform(itinerary.title) ?? itinerary.title,
+        description: transform(itinerary.description) ?? itinerary.description,
+      })),
+      thingsToDoSections: guide.thingsToDoSections?.map((section) => ({
+        ...section,
+        title: transform(section.title) ?? section.title,
+        paragraphs: section.paragraphs.map((paragraph) => transform(paragraph) ?? paragraph),
+      })),
+      topThingsToDo: guide.topThingsToDo?.map((item) => ({
+        ...item,
+        title: transform(item.title) ?? item.title,
+        description: transform(item.description) ?? item.description,
+      })),
+    },
+    changes,
+  };
+};
+
+const sanitizationLogs = new Set<string>();
+
+export const auditCityGuideContent = (
+  guide: GuideContent,
+  context: {
+    cityName: string;
+    citySlug: string;
+    parentSlug: string;
+    regionType: "state" | "country";
+    knownPois?: Set<string>;
+  },
+) => {
+  const issues: CityGuideIssue[] = [];
+  const inferredPois = new Set(
+    [
+      ...(guide.topThingsToDo?.map((item) => item.title) ?? []),
+      ...(guide.thingsToDoSections?.map((section) => section.title) ?? []),
+    ]
+      .filter(Boolean)
+      .map((item) => item.toLowerCase()),
+  );
+  const knownPois = context.knownPois ?? inferredPois;
+  const textEntries: string[] = [
+    guide.intro,
+    guide.bestTimeToVisit,
+    guide.whatToPack,
+    ...(guide.itineraries?.map((itinerary) => itinerary.description) ?? []),
+    ...(guide.thingsToDoSections?.flatMap((section) => section.paragraphs) ?? []),
+    ...(guide.topThingsToDo?.map((item) => item.title) ?? []),
+    ...(guide.topThingsToDo?.map((item) => item.description) ?? []),
+  ].filter(Boolean);
+
+  textEntries.forEach((text) => {
+    if (!isRiverwalkAllowed(context.citySlug)) {
+      RIVERWALK_REGEX.lastIndex = 0;
+      let match: RegExpExecArray | null = null;
+      while ((match = RIVERWALK_REGEX.exec(text)) !== null) {
+        issues.push({
+          issueType: "Riverwalk",
+          matchedText: match[0],
+          contextSnippet: getContextSnippet(text, match.index),
+        });
+      }
+    }
+
+    const dayTripMatches = getDayTripMatches(text);
+    dayTripMatches.forEach((match) => {
+      if (
+        isDayTripDenied(
+          match.destination,
+          context.citySlug,
+          context.parentSlug,
+          context.regionType,
+          text,
+        )
+      ) {
+        issues.push({
+          issueType: "Unrealistic day trip",
+          matchedText: match.phrase.trim(),
+          contextSnippet: getContextSnippet(text, match.index),
+        });
+      }
+    });
+
+    const sentences = text.split(/(?<=[.!?])\s+/);
+    sentences.forEach((sentence) => {
+      const mustSeeIssues = getMustSeeIssues(sentence, knownPois, "Unverified POI claim");
+      mustSeeIssues.forEach((issue) => issues.push(issue));
+    });
+  });
+
+  return issues;
 };
 
 type CityLandmarks = {
@@ -847,11 +1177,13 @@ export const buildCityGuide = ({
   citySlug,
   regionType,
   activityFocus,
+  sanitize = true,
 }: {
   parentSlug: string;
   citySlug: string;
   regionType: "state" | "country";
   activityFocus?: string;
+  sanitize?: boolean;
 }): GuideContent | null => {
   const cityTours = tours.filter((tour) => {
     if (tour.destination.citySlug !== citySlug) {
@@ -968,7 +1300,7 @@ export const buildCityGuide = ({
     metadata,
   });
 
-  return {
+  const guide: GuideContent = {
     type: "city",
     name: cityName,
     slug: citySlug,
@@ -1023,4 +1355,39 @@ export const buildCityGuide = ({
       cityFacts,
     ),
   };
+
+  const overrideRoute = buildCityOverrideRoute({
+    regionType,
+    parentSlug,
+    citySlug,
+  });
+  const override = cityOverrides[overrideRoute];
+  if (override) {
+    return { ...guide, ...override };
+  }
+
+  if (!sanitize) {
+    return guide;
+  }
+
+  const knownPois = buildKnownPoiSet(cityName, cityFacts);
+  const { guide: sanitizedGuide, changes } = sanitizeCityGuideContent(guide, {
+    citySlug,
+    parentSlug,
+    regionType,
+    knownPois,
+  });
+
+  if (
+    changes.length &&
+    typeof window === "undefined" &&
+    !sanitizationLogs.has(overrideRoute)
+  ) {
+    sanitizationLogs.add(overrideRoute);
+    console.info(
+      `[city-guide-sanitize] ${overrideRoute}: ${Array.from(new Set(changes)).join(", ")}`,
+    );
+  }
+
+  return sanitizedGuide;
 };
