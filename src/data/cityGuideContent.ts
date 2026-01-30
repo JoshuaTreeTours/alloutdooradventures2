@@ -19,7 +19,11 @@ export type CityGuideTextContent = {
   whatToPack?: string;
   itineraries?: Array<{ title?: string; description?: string }>;
   thingsToDoSections?: Array<{ title?: string; paragraphs?: string[] }>;
-  topThingsToDo?: Array<{ title?: string; description?: string }>;
+  topThingsToDo?: Array<{
+    title?: string;
+    description?: string;
+    activityType?: string;
+  }>;
   extraText?: string[];
 };
 
@@ -319,6 +323,7 @@ export const sanitizeCityGuideContent = (
         ...item,
         title: sanitizeText(item.title),
         description: sanitizeText(item.description),
+        activityType: item.activityType,
       })),
       extraText: content.extraText?.map((text) => sanitizeText(text) ?? text),
     },
@@ -407,14 +412,17 @@ export const auditCityGuideContent = (
       const normalized = normalizePlaceName(item.title);
       const isLocalPoi = localPoiNames.has(normalized);
       const destinationDistance = destinationDistanceMap.get(normalized);
+      const isArchetype = item.activityType?.startsWith("archetype") ?? false;
 
       if (isDenylistedTopThing(item.title) && !isLocalPoi) {
         issues.push({
           issueType: "Denylisted top thing",
           matchedText: item.title,
           contextSnippet: item.title,
-          severity: "error",
-          suggestedFix: "Replace with a curated local POI or nearby destination.",
+          severity: isArchetype ? "warn" : "error",
+          suggestedFix: isArchetype
+            ? "Confirm the archetype matches the local landscape."
+            : "Replace with a curated local POI or nearby destination.",
         });
       }
 
@@ -423,11 +431,14 @@ export const auditCityGuideContent = (
           issueType: "Unverified top thing",
           matchedText: item.title,
           contextSnippet: item.title,
-          severity: "error",
-          suggestedFix:
-            "Replace with a curated local POI or a nearby destination within two hours.",
+          severity: isArchetype ? "warn" : "error",
+          suggestedFix: isArchetype
+            ? "Confirm the archetype stays general and city-appropriate."
+            : "Replace with a curated local POI or a nearby destination within two hours.",
         });
-        return;
+        if (!isArchetype) {
+          return;
+        }
       }
 
       if (

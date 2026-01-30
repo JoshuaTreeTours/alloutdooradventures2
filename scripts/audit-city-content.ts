@@ -31,6 +31,11 @@ const runAudit = () => {
         record.city,
         record.stateSlug,
         record.citySlug,
+        {
+          parentName: record.state,
+          regionType: record.regionType,
+          cityFacts,
+        },
       ),
       extraText: [
         record.cityData.shortDescription,
@@ -71,6 +76,7 @@ const runAudit = () => {
           topThingsToDo: override.topThingsToDo?.map((item) => ({
             title: item.title,
             description: item.description,
+            activityType: item.activityType,
           })),
         }
       : null;
