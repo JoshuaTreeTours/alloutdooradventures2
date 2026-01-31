@@ -1,10 +1,14 @@
 import { normalizePlaceName } from "../../../utils/geo";
 import type { Tier1UsCityPoi } from "./us/types";
 import { pois as boston } from "./us/massachusetts/boston";
+import { pois as portlandMaine } from "./us/maine/portland";
 import { pois as newYork } from "./us/new-york/new-york";
+import { pois as miami } from "./us/florida/miami";
+import { pois as orlando } from "./us/florida/orlando";
 import { pois as portland } from "./us/oregon/portland";
 import { pois as sanDiego } from "./us/california/san-diego";
 import { pois as sanFrancisco } from "./us/california/san-francisco";
+import { pois as nashville } from "./us/tennessee/nashville";
 import { pois as washingtonDc } from "./us/district-of-columbia/washington";
 import { pois as seattle } from "./us/washington/seattle";
 
@@ -98,6 +102,61 @@ export const tier1CityPois: CityPoi[] = [
     categories: ["visitor-center", "planning"],
     description:
       "Joshua Tree Visitor Center is the essential first stop for maps, ranger tips, and current trail conditions before you head into the park. The exhibits give quick context on desert ecosystems, while the nearby shops make it easy to stock up on last-minute supplies. It is a practical, time-saving stop that helps you plan a smart loop day.",
+  },
+  {
+    id: "noah-purifoy-desert-art-museum",
+    name: "Noah Purifoy Outdoor Desert Art Museum",
+    citySlug: "joshua-tree",
+    state: "california",
+    lat: 34.1303,
+    lng: -116.3499,
+    categories: ["art", "museum"],
+    description:
+      "Noah Purifoy Outdoor Desert Art Museum is an open-air sculpture field showcasing large-scale assemblage works spread across the high desert. The walk-through layout lets you take in the installations at your own pace, with mountain backdrops that make the art feel even more dramatic. Give yourself time to wander the paths and spot the surprising details tucked between the pieces.",
+  },
+  {
+    id: "world-famous-crochet-museum",
+    name: "World Famous Crochet Museum",
+    citySlug: "joshua-tree",
+    state: "california",
+    lat: 34.1348,
+    lng: -116.3133,
+    categories: ["museum", "culture"],
+    description:
+      "The World Famous Crochet Museum is a quirky roadside stop filled with hundreds of handmade crochet figures arranged in a small historic cabin. The collection is whimsical, colorful, and distinctly Joshua Tree, making it a quick visit with big photo appeal. Pair it with nearby cafés and shops for a low-key stroll along the main drag.",
+  },
+  {
+    id: "joshua-tree-coffee-company",
+    name: "Joshua Tree Coffee Company",
+    citySlug: "joshua-tree",
+    state: "california",
+    lat: 34.1342,
+    lng: -116.3136,
+    categories: ["cafe", "local-favorite"],
+    description:
+      "Joshua Tree Coffee Company is a beloved local café known for desert-roasted beans, relaxed patio seating, and a steady stream of creatives and hikers. The small shop makes an easy breakfast or afternoon recharge stop before heading into the park. Pick up a bag of beans or a pastry and linger for the laid-back desert atmosphere.",
+  },
+  {
+    id: "joshua-tree-saloon",
+    name: "Joshua Tree Saloon",
+    citySlug: "joshua-tree",
+    state: "california",
+    lat: 34.134,
+    lng: -116.313,
+    categories: ["historic", "nightlife"],
+    description:
+      "Joshua Tree Saloon is one of the town’s longest-running gathering spots, blending live music nights with a casual desert saloon vibe. The historic space keeps things informal, making it easy to drop in after a day in the park. It is a local staple for food, drinks, and a taste of Joshua Tree’s social scene.",
+  },
+  {
+    id: "joshua-tree-farmers-market",
+    name: "Joshua Tree Farmers Market",
+    citySlug: "joshua-tree",
+    state: "california",
+    lat: 34.1349,
+    lng: -116.3127,
+    categories: ["market", "local-favorite"],
+    description:
+      "Joshua Tree Farmers Market gathers local growers, bakers, and artisans with a friendly small-town feel and easy browsing. It is a convenient place to pick up picnic snacks, desert-made goods, and seasonal produce before a hike. Plan a short stop to soak in the community vibe and chat with local vendors.",
   },
   {
     id: "palm-springs-aerial-tramway",
@@ -1948,13 +2007,51 @@ export const tier1CityPois: CityPoi[] = [
       "Spruce Street Harbor Park is a seasonal waterfront hangout with hammocks, food vendors, and colorful lights along the Delaware River. The laid-back vibe makes it a fun evening stop in warmer months. It is a great place to relax by the water after a day of sightseeing.",
   },
   ...seattle,
+  ...portlandMaine,
   ...portland,
   ...boston,
   ...newYork,
   ...washingtonDc,
   ...sanDiego,
   ...sanFrancisco,
+  ...nashville,
+  ...orlando,
+  ...miami,
 ];
+
+const TIER1_US_COUNTRY_PARENT = "united-states";
+const TIER1_US_COUNTRY_CITY_STATE_MAP: Record<string, string> = {
+  "palm-springs": "california",
+  "joshua-tree": "california",
+  "santa-barbara": "california",
+  "los-angeles": "california",
+  "san-diego": "california",
+  "san-francisco": "california",
+  "newport-beach": "california",
+  "laguna-beach": "california",
+  anaheim: "california",
+  "long-beach": "california",
+  "san-jose": "california",
+  sacramento: "california",
+  seattle: "washington",
+  portland: "maine",
+  "las-vegas": "nevada",
+  phoenix: "arizona",
+  denver: "colorado",
+  chicago: "illinois",
+  "new-york": "new-york",
+  miami: "florida",
+  boston: "massachusetts",
+  washington: "district-of-columbia",
+  nashville: "tennessee",
+  orlando: "florida",
+  philadelphia: "pennsylvania",
+};
+
+export const resolveTier1ParentSlug = (parentSlug: string, citySlug: string) =>
+  parentSlug === TIER1_US_COUNTRY_PARENT
+    ? TIER1_US_COUNTRY_CITY_STATE_MAP[citySlug] ?? parentSlug
+    : parentSlug;
 
 const buildPoiIndex = () => {
   const index = new Map<string, CityPoi[]>();
@@ -1975,7 +2072,9 @@ export const getTier1PoisForCity = (parentSlug: string, citySlug: string) => {
     poiIndex = buildPoiIndex();
   }
 
-  return poiIndex.get(`${parentSlug}/${citySlug}`) ?? [];
+  const resolvedParentSlug = resolveTier1ParentSlug(parentSlug, citySlug);
+
+  return poiIndex.get(`${resolvedParentSlug}/${citySlug}`) ?? [];
 };
 
 export const getTier1PoiNameSet = (parentSlug: string, citySlug: string) =>

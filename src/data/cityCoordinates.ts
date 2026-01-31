@@ -16,8 +16,13 @@ const CITY_COORDINATE_OVERRIDES: Record<string, CityCoordinates> = {
   "california/sacramento": { lat: 38.5816, lng: -121.4944 },
   "illinois/chicago": { lat: 41.8781, lng: -87.6298 },
   "arizona/phoenix": { lat: 33.4484, lng: -112.074 },
+  "maine/portland": { lat: 43.6591, lng: -70.2568 },
   "massachusetts/boston": { lat: 42.3601, lng: -71.0589 },
   "new-york/new-york": { lat: 40.7128, lng: -74.006 },
+  "pennsylvania/philadelphia": { lat: 39.9526, lng: -75.1652 },
+  "tennessee/nashville": { lat: 36.1627, lng: -86.7816 },
+  "florida/orlando": { lat: 28.5383, lng: -81.3792 },
+  "florida/miami": { lat: 25.7617, lng: -80.1918 },
   "district-of-columbia/washington": { lat: 38.9072, lng: -77.0369 },
 };
 
