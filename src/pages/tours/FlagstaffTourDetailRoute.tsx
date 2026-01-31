@@ -23,7 +23,6 @@ import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
-  buildTourTripStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
 
@@ -83,12 +82,6 @@ export default function FlagstaffTourDetailRoute({
         image: tour.heroImage,
       }),
       buildTourProductStructuredData({
-        tour,
-        detailUrl,
-        bookingUrl,
-        description: productDescription,
-      }),
-      buildTourTripStructuredData({
         tour,
         detailUrl,
         bookingUrl,

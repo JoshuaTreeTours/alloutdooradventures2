@@ -28,7 +28,6 @@ import { buildMetaDescription } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
-  buildTourTripStructuredData,
   buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
 
@@ -98,12 +97,6 @@ export default function CityTourDetailRoute({
         image: tour.heroImage,
       }),
       buildTourProductStructuredData({
-        tour,
-        detailUrl: canonicalUrl,
-        bookingUrl,
-        description: productDescription,
-      }),
-      buildTourTripStructuredData({
         tour,
         detailUrl: canonicalUrl,
         bookingUrl,
