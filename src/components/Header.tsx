@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import { SITE_BRAND_NAME } from "../utils/site";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -14,11 +15,11 @@ export default function Header() {
             <a className="flex items-center gap-3 text-lg font-semibold text-[#1f2a1f]">
               <img
                 src="/logo.svg"
-                alt="Outdoor Adventures logo"
+                alt={`${SITE_BRAND_NAME} logo`}
                 className="h-10 w-10"
                 loading="lazy"
               />
-              Outdoor Adventures
+              {SITE_BRAND_NAME}
             </a>
           </Link>
 

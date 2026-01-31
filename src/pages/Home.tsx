@@ -16,6 +16,7 @@ import { featuredDestinations } from "../data/destinations";
 import { countriesWithTours } from "../data/europeIndex";
 import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { DEFAULT_SEO } from "../utils/seo";
 
 const HERO_IMAGE_URL = "/hero.jpg"; // Put your hero image in /public/hero.jpg
@@ -592,7 +593,7 @@ export default function Home() {
           aria-label="Why choose"
         >
           <h2 className="text-center text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-            Why Choose Outdoor Adventures?
+            Why Choose {SITE_BRAND_NAME}?
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-[#405040] md:text-base">
             We curate the best outdoor experiences, vetted by locals and seasoned

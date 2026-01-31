@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import { Link } from "wouter";
 
 import Seo from "../components/Seo";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { getStaticPageSeo } from "../utils/seo";
 
 type ContactField = "name" | "email" | "subject" | "message" | "website";
@@ -177,11 +178,11 @@ export default function Contact() {
           Contact
         </p>
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-          Contact Outdoor Adventures
+          Contact {SITE_BRAND_NAME}
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          All Outdoor Adventures is a Santa Barbara–based service business
-          offering curated tours and custom journeys worldwide.
+          {SITE_BRAND_NAME} is a service business offering curated tours and
+          custom journeys worldwide.
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
           We design custom journeys, private group experiences, and multi-day

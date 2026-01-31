@@ -21,27 +21,27 @@ const toTitleCase = (value) =>
     .map((segment) => segment[0]?.toUpperCase() + segment.slice(1))
     .join(" ");
 
-const buildFallbackTitle = (segments, defaultTitle) => {
+const buildFallbackTitle = (segments, defaultTitle, brandName) => {
   if (!segments.length) {
     return defaultTitle;
   }
 
   const label = segments.map(toTitleCase).join(" ");
 
-  return `${label} | All Outdoor Adventures`;
+  return `${label} | ${brandName}`;
 };
 
 const escapeRegExp = (value) =>
   value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-const buildFallbackDescription = (segments, defaultDescription) => {
+const buildFallbackDescription = (segments, defaultDescription, brandName) => {
   if (!segments.length) {
     return defaultDescription;
   }
 
   const label = segments.map(toTitleCase).join(" ");
 
-  return `Discover ${label} tours, guides, and outdoor experiences curated by All Outdoor Adventures.`;
+  return `Discover ${label} tours, guides, and outdoor experiences curated by ${brandName}.`;
 };
 
 const replaceTagAttribute = (tag, attrName, placeholder) => {
@@ -644,11 +644,12 @@ const main = async () => {
   const template = ensureTemplatePlaceholders(
     await readFile(templatePath, "utf8"),
   );
-  const [toursGeneratedModule, flagstaffModule, seoModule] =
+  const [toursGeneratedModule, flagstaffModule, seoModule, siteModule] =
     await Promise.all([
       tsImport("../src/data/tours.generated.ts", import.meta.url),
       tsImport("../src/data/flagstaffTours.ts", import.meta.url),
       tsImport("../src/utils/seo.ts", import.meta.url),
+      tsImport("../src/utils/site.ts", import.meta.url),
     ]);
   const [structuredDataModule, tourNarrativesModule, tourPathsModule] =
     await Promise.all([
@@ -683,6 +684,7 @@ const main = async () => {
     buildImageUrl,
     getStaticPageSeo,
   } = seoModule;
+  const siteBrandName = siteModule?.SITE_BRAND_NAME ?? "Outdoor Adventures";
   const buildBreadcrumbList =
     structuredDataModule?.buildBreadcrumbList ?? null;
   const buildTourProductStructuredData =
@@ -788,10 +790,11 @@ const main = async () => {
         seo.url = staticSeo.url;
         seo.image = staticSeo.image;
       } else {
-        seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title);
+        seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title, siteBrandName);
         seo.description = buildFallbackDescription(
           segments,
           DEFAULT_SEO.description,
+          siteBrandName,
         );
       }
     }

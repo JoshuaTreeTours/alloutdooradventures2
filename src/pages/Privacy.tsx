@@ -1,3 +1,5 @@
+import { SITE_BRAND_NAME } from "../utils/site";
+
 export default function Privacy() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
@@ -5,7 +7,7 @@ export default function Privacy() {
         Privacy Policy
       </p>
       <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-        Privacy at Outdoor Adventures
+        Privacy at {SITE_BRAND_NAME}
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
         We respect your privacy and handle your information with care. This

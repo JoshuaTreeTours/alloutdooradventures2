@@ -19,6 +19,7 @@ import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 import { filterHeroImages, resolveHeroImage } from "../utils/hero";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
 type CityTemplateProps = {
@@ -168,7 +169,7 @@ export default function CityTemplate({
     },
     { min: 3, max: 6 },
   );
-  const title = `${city.name}, ${state.name} Outdoor Adventures | Tours & City Guide`;
+  const title = `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
   const description = buildMetaDescription(
     city.shortDescription,
     `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,

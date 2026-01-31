@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { SITE_BRAND_NAME } from "../utils/site";
 
 export default function Footer() {
   return (
@@ -9,19 +10,19 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src="/logo.svg"
-                alt="Outdoor Adventures logo"
+                alt={`${SITE_BRAND_NAME} logo`}
                 className="h-11 w-11"
                 loading="lazy"
               />
               <div>
-                <p className="text-lg font-semibold">Outdoor Adventures</p>
+                <p className="text-lg font-semibold">{SITE_BRAND_NAME}</p>
                 <p className="text-sm text-white/85">
                   Curated outdoor experiences around the world.
                 </p>
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              Outdoor Adventures, Inc. — Founded in 1999
+              {SITE_BRAND_NAME}, Inc. — Founded in 1999
             </p>
           </div>
         </div>
@@ -189,7 +190,7 @@ export default function Footer() {
             </Link>
             <a
               href="tel:+18553148687"
-              aria-label="Call Outdoor Adventures at 855-314-TOUR"
+              aria-label={`Call ${SITE_BRAND_NAME} at 855-314-TOUR`}
               className="sr-only text-sm font-semibold text-white md:not-sr-only"
             >
               855-314-TOUR

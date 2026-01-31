@@ -1,3 +1,5 @@
+import { SITE_BRAND_NAME } from "../utils/site";
+
 export default function Disclosure() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
@@ -8,10 +10,9 @@ export default function Disclosure() {
         Affiliate &amp; Partner Disclosure
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
-        Outdoor Adventures curates tours and experiences from trusted partners.
-        When you book through links on our site, we may earn a commission at no
-        additional cost to you. This helps us keep our guides and planning
-        resources free.
+        {SITE_BRAND_NAME} curates tours and experiences from trusted partners. When
+        you book through links on our site, we may earn a commission at no additional
+        cost to you. This helps us keep our guides and planning resources free.
       </p>
 
       <section className="mt-10 space-y-6 text-sm text-[#405040] md:text-base">

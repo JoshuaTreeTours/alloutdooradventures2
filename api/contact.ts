@@ -200,7 +200,7 @@ export default async function handler(request: any, response: any) {
     await sendWithResend({
       apiKey: resendApiKey,
       to: contactToEmail,
-      from: "All Outdoor Adventures <onboarding@resend.dev>",
+      from: "Outdoor Adventures <onboarding@resend.dev>",
       subject: messageSubject,
       text: messageText,
       replyTo: email,

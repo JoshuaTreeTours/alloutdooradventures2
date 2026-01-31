@@ -1,10 +1,10 @@
-# All Outdoor Adventures V2
+# Outdoor Adventures V2
 
 A scalable, Vercel-first outdoor adventure website built with React, Tailwind CSS, and a template-driven architecture.
 
 ## 🚀 Project Overview
 
-Version 2 of AllOutdoorAdventures.com is designed for massive content expansion. It moves away from fragile dependencies and complex build steps in favor of a robust, static-first architecture that can easily scale to thousands of destination pages.
+Version 2 of Outdoor Adventures is designed for massive content expansion. It moves away from fragile dependencies and complex build steps in favor of a robust, static-first architecture that can easily scale to thousands of destination pages.
 
 ### Key Features
 
@@ -234,4 +234,4 @@ This project is ready for Vercel.
 
 ---
 
-Built by Manus AI for All Outdoor Adventures.
+Built by Manus AI for Outdoor Adventures.

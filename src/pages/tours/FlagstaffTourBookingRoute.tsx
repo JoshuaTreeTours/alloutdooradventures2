@@ -19,6 +19,7 @@ import {
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
 import { formatStartingPrice } from "../../lib/pricing";
+import { SITE_BRAND_NAME } from "../../utils/site";
 import { buildMetaDescription } from "../../utils/seo";
 import {
   buildReserveActionStructuredData,
@@ -102,7 +103,7 @@ export default function FlagstaffTourBookingRoute({
     `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
     tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
   );
-  const seoTitle = `${tour.title} Booking | Outdoor Adventures`;
+  const seoTitle = `${tour.title} Booking | ${SITE_BRAND_NAME}`;
   const structuredDataNodes = useMemo(() => {
     if (!detailUrl || !bookingUrl) {
       return null;
