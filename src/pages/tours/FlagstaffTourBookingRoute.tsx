@@ -2,12 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import FAQBlock from "../../components/FAQBlock";
+import Seo from "../../components/Seo";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
-import { getAffiliateDisclosure } from "../../data/tours";
+import { getAffiliateDisclosure, getTourBookingPath } from "../../data/tours";
 import {
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
@@ -17,6 +19,11 @@ import {
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
 import { formatStartingPrice } from "../../lib/pricing";
+import { buildMetaDescription } from "../../utils/seo";
+import {
+  buildReserveActionStructuredData,
+  buildWebPageStructuredData,
+} from "../../utils/structuredData";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -83,6 +90,33 @@ export default function FlagstaffTourBookingRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const tourDetailHref = getFlagstaffTourDetailPath(tour);
+  const detailUrl = getFlagstaffTourDetailPath(tour);
+  const bookingUrl = getTourBookingPath(tour);
+  const metaDescription = buildMetaDescription(
+    `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
+    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+  );
+  const seoTitle = `${tour.title} Booking | Outdoor Adventures`;
+  const structuredDataNodes = useMemo(() => {
+    if (!detailUrl || !bookingUrl) {
+      return null;
+    }
+    return [
+      buildWebPageStructuredData({
+        url: bookingUrl,
+        name: `${tour.title} booking`,
+        description: metaDescription,
+        image: tour.heroImage,
+      }),
+      buildReserveActionStructuredData({
+        bookingUrl,
+        tourDetailUrl: detailUrl,
+        tourName: tour.title,
+      }),
+    ];
+  }, [bookingUrl, detailUrl, metaDescription, tour.heroImage, tour.title]);
+
+  useStructuredData(structuredDataNodes);
 
   const disclosure = getAffiliateDisclosure(tour);
   const isFareharbor = tour.bookingProvider === "fareharbor";
@@ -203,7 +237,14 @@ export default function FlagstaffTourBookingRoute({
   }, [attributedWidgetUrl, embedStatus, isIOS]);
 
   return (
-    <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+    <>
+      <Seo
+        title={seoTitle}
+        description={metaDescription}
+        url={bookingUrl}
+        image={tour.heroImage}
+      />
+      <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
@@ -393,6 +434,7 @@ export default function FlagstaffTourBookingRoute({
       </section>
 
       <FAQBlock />
-    </main>
+      </main>
+    </>
   );
 }

@@ -10,8 +10,7 @@ type StructuredDataValue =
   | { [key: string]: StructuredDataValue };
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
-export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
-export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
+export const SITE_AGENCY_ID = `${SITE_URL}/#agency`;
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
 const ID_FIELDS = new Set(["@id"]);
@@ -134,57 +133,30 @@ export const normalizeStructuredData = (
 };
 
 export const getSiteStructuredDataNodes = () => {
-  const address = {
-    "@type": "PostalAddress",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    addressCountry: "US",
-  };
-
   const logoUrl = buildImageUrl("/images/Logo.png");
-  const heroUrl = buildImageUrl("/hero.jpg");
 
   return [
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures, Inc.",
-      url: SITE_URL,
-      logo: logoUrl,
-      image: heroUrl,
-      address,
-    },
-    {
-      "@type": ["Organization", "TravelAgency"],
-      "@id": SITE_BRAND_ID,
       name: "Outdoor Adventures",
       url: SITE_URL,
       logo: logoUrl,
-      parentOrganization: {
-        "@id": SITE_ORGANIZATION_ID,
-      },
-      areaServed: [
-        "Worldwide",
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
+      telephone: "+18553148687",
       sameAs: [
-        "https://www.facebook.com/alloutdooradventuresonline",
+        "https://www.facebook.com/alloutdooradventuresonline/",
         "https://www.linkedin.com/company/all-outdoor-adventures",
       ],
     },
     {
-      "@type": "WebSite",
-      "@id": SITE_WEBSITE_ID,
-      url: SITE_URL,
+      "@type": "TravelAgency",
+      "@id": SITE_AGENCY_ID,
       name: "Outdoor Adventures",
-      publisher: {
+      url: SITE_URL,
+      logo: logoUrl,
+      telephone: "+18553148687",
+      parentOrganization: {
         "@id": SITE_ORGANIZATION_ID,
-      },
-      about: {
-        "@id": SITE_BRAND_ID,
       },
     },
   ];
@@ -217,7 +189,8 @@ export const buildWebPageStructuredData = ({
     url,
     name: sanitizeSchemaName(name),
     description,
-    isPartOf: { "@id": SITE_WEBSITE_ID },
+    isPartOf: { "@id": SITE_AGENCY_ID },
+    publisher: { "@id": SITE_ORGANIZATION_ID },
     ...(image
       ? {
           primaryImageOfPage: buildImageObject(image, imageId),
@@ -270,6 +243,7 @@ export const buildTourProductStructuredData = ({
   const images = Array.from(
     new Set([tour.heroImage, ...(tour.galleryImages ?? [])].filter(Boolean)),
   );
+  const resolvedImages = images.length ? images : [buildImageUrl("/hero.jpg")];
   const offer: Record<string, StructuredDataValue> = {
     "@type": "Offer",
     url: bookingUrl,
@@ -289,9 +263,10 @@ export const buildTourProductStructuredData = ({
     "@id": `${detailUrl}#product`,
     name: tour.title,
     description,
-    image: images.length ? images : undefined,
-    brand: { "@id": SITE_BRAND_ID },
-    seller: { "@id": SITE_BRAND_ID },
+    image: resolvedImages,
+    sku: tour.id,
+    brand: { "@id": SITE_AGENCY_ID },
+    seller: { "@id": SITE_AGENCY_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
@@ -311,6 +286,7 @@ export const buildTourTripStructuredData = ({
   const images = Array.from(
     new Set([tour.heroImage, ...(tour.galleryImages ?? [])].filter(Boolean)),
   );
+  const resolvedImages = images.length ? images : [buildImageUrl("/hero.jpg")];
   const offer: Record<string, StructuredDataValue> = {
     "@type": "Offer",
     url: bookingUrl,
@@ -330,9 +306,30 @@ export const buildTourTripStructuredData = ({
     "@id": `${detailUrl}#trip`,
     name: tour.title,
     description,
-    image: images.length ? images : undefined,
-    provider: { "@id": SITE_BRAND_ID },
+    image: resolvedImages,
+    provider: { "@id": SITE_AGENCY_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };
+
+export const buildReserveActionStructuredData = ({
+  bookingUrl,
+  tourDetailUrl,
+  tourName,
+}: {
+  bookingUrl: string;
+  tourDetailUrl: string;
+  tourName: string;
+}) => ({
+  "@type": "ReserveAction",
+  "@id": `${bookingUrl}#reserve`,
+  name: `Reserve ${tourName}`,
+  target: {
+    "@type": "EntryPoint",
+    urlTemplate: bookingUrl,
+  },
+  object: {
+    "@id": `${tourDetailUrl}#product`,
+  },
+});
