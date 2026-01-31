@@ -114,11 +114,18 @@ const buildIntlCityGuideRecords = (): CityGuideRecord[] => {
         .split("/")
         .map((part) => part.trim())
         .filter(Boolean);
-      if (parts.length < 3) {
+      if (parts.length < 2) {
         return;
       }
-      const [country, , city] = parts;
+      const [country, maybeRegion, maybeCity] = parts;
+      const city = maybeCity ?? maybeRegion;
+      if (!city) {
+        return;
+      }
       const countrySlug = slugify(country);
+      if (countrySlug === "united-states") {
+        return;
+      }
       const citySlug = slugify(city);
       const key = `${countrySlug}/${citySlug}`;
       if (records.has(key)) {
