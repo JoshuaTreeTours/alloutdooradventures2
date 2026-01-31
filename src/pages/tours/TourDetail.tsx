@@ -17,7 +17,7 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { filterHeroImages, resolveHeroImage } from "../../utils/hero";
+import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
 import { buildTourMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -40,17 +40,16 @@ export default function TourDetail({ params }: TourDetailProps) {
     tour && tour.destination.stateSlug
       ? getCityBySlugs(tour.destination.stateSlug, tour.destination.citySlug)
       : null;
-  const heroImage = resolveHeroImage({
-    pageType: "product",
-    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-    fallbacks: [city?.heroImages[0], state?.heroImage],
-  });
+  const detailUrl = tour ? getTourDetailPath(tour) : "";
+  const heroImage = resolveHeroImageForRoute({
+    route: detailUrl,
+    tour,
+  }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product",
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
-  const detailUrl = tour ? getTourDetailPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;

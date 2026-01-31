@@ -8,7 +8,7 @@ import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
 import { getTourDetailPath } from "../data/tours";
-import { resolveHeroImage } from "../utils/hero";
+import { resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
@@ -28,10 +28,10 @@ export default function DestinationLandingTemplate({
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
   );
-  const heroImage = resolveHeroImage({
-    pageType: "destination",
-    primary: state.heroImage,
-  });
+  const heroImage = resolveHeroImageForRoute({
+    route: `/destinations/${state.slug}`,
+    state,
+  }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },

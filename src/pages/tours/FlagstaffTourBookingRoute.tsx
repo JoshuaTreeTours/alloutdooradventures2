@@ -25,7 +25,7 @@ import {
   buildReserveActionStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
-import { resolveHeroImage } from "../../utils/hero";
+import { resolveHeroImageForRoute } from "../../utils/hero";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -94,11 +94,10 @@ export default function FlagstaffTourBookingRoute({
   const tourDetailHref = getFlagstaffTourDetailPath(tour);
   const detailUrl = getFlagstaffTourDetailPath(tour);
   const bookingUrl = getTourBookingPath(tour);
-  const heroImage = resolveHeroImage({
-    pageType: "product",
-    primary: tour.heroImage ?? tour.galleryImages?.[0],
-    fallbacks: [city.heroImages[0], state.heroImage],
-  });
+  const heroImage = resolveHeroImageForRoute({
+    route: bookingUrl,
+    tour,
+  }) ?? undefined;
   const metaDescription = buildMetaDescription(
     `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
     tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,

@@ -6,7 +6,7 @@ import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import { getCityTourDetailPath, getToursByState } from "../data/tours";
-import { resolveHeroImage } from "../utils/hero";
+import { resolveHeroImageForRoute } from "../utils/hero";
 import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
 
 const FILTER_OPTIONS = [
@@ -21,10 +21,10 @@ export default function StateToursTemplate({
 }: {
   state: StateDestination;
 }) {
-  const heroImage = resolveHeroImage({
-    pageType: "state",
-    primary: state.heroImage,
-  });
+  const heroImage = resolveHeroImageForRoute({
+    route: `/destinations/states/${state.slug}/tours`,
+    state,
+  }) ?? undefined;
   const stateTours = getToursByState(state.slug);
   const [activeFilter, setActiveFilter] = useState("all");
   const filteredTours = useMemo(() => {

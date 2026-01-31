@@ -18,7 +18,7 @@ import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
-import { filterHeroImages, resolveHeroImage } from "../utils/hero";
+import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -202,11 +202,13 @@ export default function CityTemplate({
   ].filter((section) => section.tours.length > 0);
   const hasCoordinates =
     Number.isFinite(city.lat) && Number.isFinite(city.lng);
-  const heroImage = resolveHeroImage({
-    pageType: "city",
-    primary: city.heroImages[0],
-    fallbacks: [state.heroImage],
-  });
+  const heroImage = resolveHeroImageForRoute({
+    route:
+      seoUrlOverride ??
+      `/destinations/states/${state.slug}/cities/${city.slug}`,
+    state,
+    city,
+  }) ?? undefined;
   const cityHeroImages = filterHeroImages(city.heroImages, "city");
   const heroImages = cityHeroImages.length
     ? cityHeroImages
