@@ -4,6 +4,7 @@ import Image from "../../components/Image";
 import TourCard from "../../components/TourCard";
 import { tours } from "../../data/tours";
 import { ADVENTURE_ACTIVITY_PAGES, slugify } from "../../data/tourCatalog";
+import { resolveHeroImage } from "../../utils/hero";
 
 type ActivityStateToursProps = {
   params: {
@@ -36,16 +37,22 @@ export default function ActivityStateTours({
       slugify(tour.destination.state) === params.stateSlug,
   );
   const stateName = stateTours[0]?.destination.state ?? "this state";
+  const heroImage = resolveHeroImage({
+    pageType: "activity",
+    primary: activity.image,
+  });
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <Image
-          src={activity.image}
-          fallbackSrc="/hero.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            fallbackSrc={heroImage}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-16 text-white">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

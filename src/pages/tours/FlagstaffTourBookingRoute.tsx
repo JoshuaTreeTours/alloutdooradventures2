@@ -24,6 +24,7 @@ import {
   buildReserveActionStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
+import { resolveHeroImage } from "../../utils/hero";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -92,6 +93,11 @@ export default function FlagstaffTourBookingRoute({
   const tourDetailHref = getFlagstaffTourDetailPath(tour);
   const detailUrl = getFlagstaffTourDetailPath(tour);
   const bookingUrl = getTourBookingPath(tour);
+  const heroImage = resolveHeroImage({
+    pageType: "product",
+    primary: tour.heroImage ?? tour.galleryImages?.[0],
+    fallbacks: [city.heroImages[0], state.heroImage],
+  });
   const metaDescription = buildMetaDescription(
     `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
     tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
@@ -106,7 +112,7 @@ export default function FlagstaffTourBookingRoute({
         url: bookingUrl,
         name: `${tour.title} booking`,
         description: metaDescription,
-        image: tour.heroImage,
+        image: heroImage,
       }),
       buildReserveActionStructuredData({
         bookingUrl,
@@ -114,7 +120,7 @@ export default function FlagstaffTourBookingRoute({
         tourName: tour.title,
       }),
     ];
-  }, [bookingUrl, detailUrl, metaDescription, tour.heroImage, tour.title]);
+  }, [bookingUrl, detailUrl, heroImage, metaDescription, tour.title]);
 
   useStructuredData(structuredDataNodes);
 
@@ -242,7 +248,7 @@ export default function FlagstaffTourBookingRoute({
         title={seoTitle}
         description={metaDescription}
         url={bookingUrl}
-        image={tour.heroImage}
+        image={heroImage ?? null}
       />
       <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">

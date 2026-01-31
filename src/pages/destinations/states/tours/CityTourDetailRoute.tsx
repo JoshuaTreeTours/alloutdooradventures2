@@ -24,6 +24,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
+import { filterHeroImages, resolveHeroImage } from "../../../../utils/hero";
 import { buildMetaDescription } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -57,6 +58,15 @@ export default function CityTourDetailRoute({
       ? getFlagstaffTourBySlug(params.tourSlug)
       : getTourBySlugs(state.slug, city.slug, params.tourSlug)
     : null;
+  const heroImage = resolveHeroImage({
+    pageType: "product",
+    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
+    fallbacks: [city?.heroImages[0], state?.heroImage],
+  });
+  const structuredImages = filterHeroImages(
+    [heroImage, ...(tour?.galleryImages ?? [])],
+    "product",
+  );
 
   const canonicalUrl =
     tour && isFlagstaff
@@ -94,13 +104,14 @@ export default function CityTourDetailRoute({
         url: canonicalUrl,
         name: tour.title,
         description: metaDescription,
-        image: tour.heroImage,
+        image: heroImage,
       }),
       buildTourProductStructuredData({
         tour,
         detailUrl: canonicalUrl,
         bookingUrl,
         description: productDescription,
+        images: structuredImages.length ? structuredImages : undefined,
       }),
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
@@ -115,10 +126,12 @@ export default function CityTourDetailRoute({
     canonicalUrl,
     city?.name,
     cityHref,
+    heroImage,
     metaDescription,
     productDescription,
     state?.name,
     stateHref,
+    structuredImages,
     tour,
     toursHref,
   ]);
@@ -182,7 +195,7 @@ export default function CityTourDetailRoute({
         title={title}
         description={description}
         url={canonicalUrl}
-        image={tour.heroImage}
+        image={heroImage ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -255,12 +268,14 @@ export default function CityTourDetailRoute({
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-              <Image
-                src={tour.heroImage}
-                fallbackSrc="/hero.jpg"
-                alt={tour.title}
-                className="h-64 w-full object-cover md:h-80"
-              />
+              {heroImage ? (
+                <Image
+                  src={heroImage}
+                  fallbackSrc={heroImage}
+                  alt={tour.title}
+                  className="h-64 w-full object-cover md:h-80"
+                />
+              ) : null}
             </div>
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
@@ -309,7 +324,7 @@ export default function CityTourDetailRoute({
               >
                 <Image
                   src={image}
-                  fallbackSrc="/hero.jpg"
+                  fallbackSrc={image}
                   alt={`${tour.title} gallery`}
                   className="h-56 w-full object-cover md:h-64"
                 />

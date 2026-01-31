@@ -15,6 +15,7 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
+import { resolveHeroImage } from "../../../../utils/hero";
 import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
@@ -59,7 +60,11 @@ export default function CityToursIndexRoute({
     (state?.isFallback ? "/destinations" : `/destinations/states/${state?.slug ?? ""}`);
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
-  const heroImage = city?.heroImages[0] ?? "/hero.jpg";
+  const heroImage = resolveHeroImage({
+    pageType: "city",
+    primary: city?.heroImages[0],
+    fallbacks: [state?.heroImage],
+  });
 
   const toursHref = `${cityHref}/tours`;
   const structuredDataNodes = useMemo(() => {
@@ -142,12 +147,16 @@ export default function CityToursIndexRoute({
 
       <section className="mx-auto max-w-6xl px-6 py-14">
         <div className="overflow-hidden rounded-3xl border border-black/10 bg-white shadow-sm">
-          <Image
-            src={heroImage}
-            fallbackSrc="/hero.jpg"
-            alt={`${city.name} hero`}
-            className="h-64 w-full object-cover md:h-80"
-          />
+          {heroImage ? (
+            <Image
+              src={heroImage}
+              fallbackSrc={heroImage}
+              alt={`${city.name} hero`}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          ) : (
+            <div className="h-64 w-full bg-[#2f4a2f]/10 md:h-80" />
+          )}
         </div>
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">

@@ -4,9 +4,11 @@ import { Link } from "wouter";
 import GuideInternalLinks from "../components/GuideInternalLinks";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
+import { getCityBySlugs, getStateBySlug } from "../data/destinations";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
+import { resolveHeroImage } from "../utils/hero";
 import { buildMetaDescription } from "../utils/seo";
 
 type GuideTemplateProps = {
@@ -40,6 +42,7 @@ const GuideImageBlock = ({ image }: { image: GuideImage }) => (
   <div className="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
     <Image
       src={image.src}
+      fallbackSrc={image.src}
       alt={image.alt}
       className="h-64 w-full object-cover md:h-96"
     />
@@ -120,10 +123,35 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         : guide.regionType === "state"
           ? `/guides/us/${guide.parentSlug}/${guide.slug}`
           : `/guides/world/${guide.parentSlug}/${guide.slug}`;
+  const destinationState =
+    guide.type === "state"
+      ? getStateBySlug(guide.slug)
+      : guide.regionType === "state" && guide.parentSlug
+        ? getStateBySlug(guide.parentSlug)
+        : null;
+  const destinationCity =
+    guide.type === "city" && guide.regionType === "state" && guide.parentSlug
+      ? getCityBySlugs(guide.parentSlug, guide.slug)
+      : null;
+  const guideHeroImage = resolveHeroImage({
+    pageType:
+      guide.type === "state"
+        ? "state"
+        : guide.type === "city"
+          ? "city"
+          : "destination",
+    primary: destinationCity?.heroImages?.[0] ?? guide.guideImages?.[0]?.src,
+    fallbacks: [destinationState?.heroImage],
+  });
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo title={guideTitle} description={guideDescription} url={guideUrl} />
+      <Seo
+        title={guideTitle}
+        description={guideDescription}
+        url={guideUrl}
+        image={guideHeroImage ?? null}
+      />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

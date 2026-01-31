@@ -5,6 +5,7 @@ import RegionDropdownButton from "../components/RegionDropdownButton";
 import { countriesWithTours } from "../data/europeIndex";
 import { US_STATES, slugify } from "../data/tourCatalog";
 import { getToursByActivity } from "../data/tours";
+import { resolveHeroImage } from "../utils/hero";
 
 type ActivityExplorerTemplateProps = {
   title: string;
@@ -27,6 +28,10 @@ export default function ActivityExplorerTemplate({
   image,
   activitySlug,
 }: ActivityExplorerTemplateProps) {
+  const heroImage = resolveHeroImage({
+    pageType: "activity",
+    primary: image,
+  });
   const activityTours = getToursByActivity(activitySlug);
   const usStateMap = new Map(
     US_STATES.map((state) => [slugify(state), state]),
@@ -81,12 +86,14 @@ export default function ActivityExplorerTemplate({
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <Image
-          src={image}
-          fallbackSrc="/hero.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            fallbackSrc={heroImage}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 text-white">
           <span className="text-xs uppercase tracking-[0.3em] text-white/80">
