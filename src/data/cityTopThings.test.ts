@@ -377,18 +377,18 @@ describe("city top things rules", () => {
     ).toHaveLength(0);
   });
 
-  it("uses only Tier-1 POIs for Sydney with rich descriptions", () => {
-    const items = buildTopThingsToDo("Sydney", "australia", "sydney", {
+  it("uses only Tier-1 POIs for Madrid with rich descriptions", () => {
+    const items = buildTopThingsToDo("Madrid", "spain", "madrid", {
       regionType: "country",
     });
     const poiNames = new Set(
-      getTier1IntlPoisForCity("australia", "sydney").map(poi => poi.name)
+      getTier1IntlPoisForCity("spain", "madrid").map(poi => poi.name)
     );
 
     expect(items.length).toBeGreaterThanOrEqual(MIN_TIER1_ITEMS);
     items.forEach(item => {
       expect(poiNames.has(item.title)).toBe(true);
-      expect(isGenericPlaceholderName(item.title, "Sydney")).toBe(false);
+      expect(isGenericPlaceholderName(item.title, "Madrid")).toBe(false);
       expect(item.description.length).toBeGreaterThanOrEqual(
         MIN_TIER1_DESCRIPTION_LENGTH
       );
@@ -397,9 +397,9 @@ describe("city top things rules", () => {
     const issues = auditCityGuideContent(
       { topThingsToDo: items },
       {
-        cityName: "Sydney",
-        citySlug: "sydney",
-        parentSlug: "australia",
+        cityName: "Madrid",
+        citySlug: "madrid",
+        parentSlug: "spain",
         regionType: "country",
         tier: 1,
       }

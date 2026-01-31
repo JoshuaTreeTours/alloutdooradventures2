@@ -77,13 +77,6 @@ export const CITY_TIER1_INTL: Tier1IntlCity[] = [
     lat: 48.2082,
     lng: 16.3738,
   },
-  {
-    countrySlug: "australia",
-    citySlug: "sydney",
-    cityName: "Sydney",
-    lat: -33.8688,
-    lng: 151.2093,
-  },
 ];
 
 const tier1IntlSet = new Set(

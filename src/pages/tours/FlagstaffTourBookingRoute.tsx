@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import FAQBlock from "../../components/FAQBlock";
+import { useStructuredData } from "../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -10,6 +11,7 @@ import {
 import { getAffiliateDisclosure } from "../../data/tours";
 import {
   getFlagstaffTourBySlug,
+  getFlagstaffTourBookingPath,
   getFlagstaffTourDetailPath,
 } from "../../data/flagstaffTours";
 import {
@@ -17,6 +19,7 @@ import {
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
 import { formatStartingPrice } from "../../lib/pricing";
+import { buildBreadcrumbList, buildWebPageStructuredData } from "../../utils/structuredData";
 
 type FlagstaffTourBookingRouteProps = {
   params: {
@@ -83,6 +86,39 @@ export default function FlagstaffTourBookingRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const tourDetailHref = getFlagstaffTourDetailPath(tour);
+  const bookingHref = getFlagstaffTourBookingPath(tour);
+
+  const structuredDataNodes = useMemo(() => {
+    const webPageNode = {
+      ...buildWebPageStructuredData({
+        url: bookingHref,
+        name: `${tour.title} booking`,
+        description: `Book ${tour.title} in ${city.name}, ${state.name} with Outdoor Adventures.`,
+        image: tour.heroImage,
+      }),
+      mainEntity: { "@id": `${tourDetailHref}#product` },
+    };
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: state.name, url: stateHref },
+      { name: city.name, url: cityHref },
+      { name: "Tours", url: toursHref },
+      { name: tour.title, url: tourDetailHref },
+      { name: "Book", url: bookingHref },
+    ]);
+    return [webPageNode, breadcrumbs];
+  }, [
+    bookingHref,
+    city.name,
+    cityHref,
+    state.name,
+    stateHref,
+    tour,
+    tourDetailHref,
+    toursHref,
+  ]);
+
+  useStructuredData(structuredDataNodes);
 
   const disclosure = getAffiliateDisclosure(tour);
   const isFareharbor = tour.bookingProvider === "fareharbor";

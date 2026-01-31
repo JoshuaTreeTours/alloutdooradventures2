@@ -4,10 +4,7 @@ import { sedonaTours } from "./sedonaTours";
 import { manualTours } from "./tours.manual";
 import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
-import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
-
-export { australiaTours } from "./australiaTours";
 
 type ProviderConfig = {
   label: string;
@@ -127,7 +124,6 @@ export const tours: Tour[] = [
   ...flagstaffTours,
   ...sedonaTours,
   ...europeTours,
-  ...australiaTours,
 ].map(applyTourPricing);
 
 export const getToursByState = (stateSlug: string) =>

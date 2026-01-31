@@ -1,14 +1,21 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import { getAffiliateDisclosure, getTourBySlugs } from "../../../../data/tours";
+import {
+  getAffiliateDisclosure,
+  getCityTourBookingPath,
+  getCityTourDetailPath,
+  getTourBySlugs,
+} from "../../../../data/tours";
 import {
   getFlagstaffTourBySlug,
+  getFlagstaffTourBookingPath,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import {
@@ -16,6 +23,7 @@ import {
   normalizeFareharborUrl,
 } from "../../../../lib/fareharbor";
 import { formatStartingPrice } from "../../../../lib/pricing";
+import { buildBreadcrumbList, buildWebPageStructuredData } from "../../../../utils/structuredData";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -113,7 +121,45 @@ export default function CityTourBookingRoute({
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const tourDetailHref = isFlagstaff
     ? getFlagstaffTourDetailPath(tour)
-    : `${toursHref}/${tour.slug}`;
+    : getCityTourDetailPath(tour);
+  const bookingHref = isFlagstaff
+    ? getFlagstaffTourBookingPath(tour)
+    : getCityTourBookingPath(tour);
+
+  const structuredDataNodes = useMemo(() => {
+    if (!tour) {
+      return null;
+    }
+    const webPageNode = {
+      ...buildWebPageStructuredData({
+        url: bookingHref,
+        name: `${tour.title} booking`,
+        description: `Book ${tour.title} in ${city.name}, ${state.name} with Outdoor Adventures.`,
+        image: tour.heroImage,
+      }),
+      mainEntity: { "@id": `${tourDetailHref}#product` },
+    };
+    const breadcrumbs = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: state.name, url: stateHref },
+      { name: city.name, url: cityHref },
+      { name: "Tours", url: toursHref },
+      { name: tour.title, url: tourDetailHref },
+      { name: "Book", url: bookingHref },
+    ]);
+    return [webPageNode, breadcrumbs];
+  }, [
+    bookingHref,
+    city.name,
+    cityHref,
+    state.name,
+    stateHref,
+    tour,
+    tourDetailHref,
+    toursHref,
+  ]);
+
+  useStructuredData(structuredDataNodes);
 
   useEffect(() => {
     if (!attributedWidgetUrl) {

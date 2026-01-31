@@ -15,7 +15,13 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
-import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
+import { buildCanonicalUrl } from "../../../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildCollectionPageStructuredData,
+  buildItemList,
+  buildPlaceStructuredData,
+} from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -60,28 +66,55 @@ export default function CityToursIndexRoute({
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
   const heroImage = city?.heroImages[0] ?? "/hero.jpg";
+  const itemListLimit = 100;
 
   const toursHref = `${cityHref}/tours`;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
       return null;
     }
+    const canonicalCityUrl = buildCanonicalUrl(cityHref);
+    const canonicalToursUrl = buildCanonicalUrl(toursHref);
+    const statePlaceId =
+      state.isFallback || !stateHref
+        ? ""
+        : `${buildCanonicalUrl(stateHref)}#place`;
+    const countryPlace =
+      state.isFallback
+        ? { "@type": "Country", name: state.name }
+        : { "@type": "Country", name: "United States" };
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: stateHref },
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
     ]);
-    const itemListItems = filteredTours.map((tour) => ({
+    const itemListItems = filteredTours.slice(0, itemListLimit).map((tour) => ({
       name: tour.title,
       url: isFlagstaff
         ? getFlagstaffTourDetailPath(tour)
         : getCityTourDetailPath(tour),
       image: tour.heroImage ? [tour.heroImage] : undefined,
     }));
-    const nodes = [breadcrumbs];
+    const itemListId = `${canonicalToursUrl}#itemlist`;
+    const placeNode = buildPlaceStructuredData({
+      id: `${canonicalCityUrl}#place`,
+      name: city.name,
+      containedInPlace: [
+        ...(statePlaceId ? [{ "@id": statePlaceId }] : []),
+        countryPlace,
+      ],
+    });
+    const collectionPage = buildCollectionPageStructuredData({
+      url: canonicalToursUrl,
+      name: `Tours in ${city.name}`,
+      description: `Browse guided tours and outdoor experiences in ${city.name}.`,
+      image: heroImage,
+      mainEntity: itemListItems.length ? { "@id": itemListId } : undefined,
+    });
+    const nodes = [collectionPage, breadcrumbs, placeNode];
     if (itemListItems.length) {
-      nodes.push(buildItemList(itemListItems));
+      nodes.push(buildItemList(itemListItems, { id: itemListId }));
     }
     return nodes;
   }, [
@@ -89,9 +122,11 @@ export default function CityToursIndexRoute({
     cityHref,
     filteredTours,
     isFlagstaff,
+    itemListLimit,
     state,
     stateHref,
     toursHref,
+    heroImage,
   ]);
 
   useStructuredData(structuredDataNodes);

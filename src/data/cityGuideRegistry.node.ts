@@ -93,7 +93,6 @@ const getInternationalCsvFiles = () => {
     : [];
 
   return [
-    path.join(baseDir, "australia.csv"),
     path.join(baseDir, "canada.csv"),
     ...europeFiles,
   ].filter((file) => fs.existsSync(file));

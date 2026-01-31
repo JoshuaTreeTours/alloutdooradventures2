@@ -239,38 +239,6 @@ const buildTourSummaries = async (catalogModule) => {
       }),
   );
 
-  const australiaPath = path.resolve(__dirname, "../data/australia.csv");
-  const australiaContents = await readFile(australiaPath, "utf8");
-  const australiaRows = parseCsv(australiaContents);
-
-  australiaRows.forEach((row) => {
-    const location = row.location?.trim();
-    const itemName = row.item_name?.trim();
-    if (!location || !itemName) {
-      return;
-    }
-
-    const locationParts = location
-      .split("/")
-      .map((part) => part.trim())
-      .filter(Boolean);
-    const city = locationParts[locationParts.length - 1] ?? "Unknown";
-    const country = "Australia";
-    const itemId = row.item_id?.trim() || catalogModule.slugify(itemName);
-
-    tours.push({
-      slug: catalogModule.slugify(`${itemName}-${itemId}`),
-      destination: {
-        state: country,
-        stateSlug: catalogModule.slugify(country),
-        city,
-        citySlug: catalogModule.slugify(city),
-      },
-      activitySlugs: [],
-      primaryCategory: undefined,
-    });
-  });
-
   return tours;
 };
 

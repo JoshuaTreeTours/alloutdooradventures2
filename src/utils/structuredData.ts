@@ -10,7 +10,7 @@ type StructuredDataValue =
   | { [key: string]: StructuredDataValue };
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
-export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
+export const SITE_BUSINESS_ID = `${SITE_URL}/#business`;
 export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
@@ -134,45 +134,41 @@ export const normalizeStructuredData = (
 };
 
 export const getSiteStructuredDataNodes = () => {
-  const address = {
-    "@type": "PostalAddress",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    addressCountry: "US",
-  };
-
   const logoUrl = buildImageUrl("/images/Logo.png");
-  const heroUrl = buildImageUrl("/hero.jpg");
+  const sameAs = [
+    "https://www.facebook.com/alloutdooradventuresonline",
+    "https://www.linkedin.com/company/all-outdoor-adventures",
+  ];
 
   return [
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures, Inc.",
-      url: SITE_URL,
-      logo: logoUrl,
-      image: heroUrl,
-      address,
-    },
-    {
-      "@type": ["Organization", "TravelAgency"],
-      "@id": SITE_BRAND_ID,
       name: "Outdoor Adventures",
       url: SITE_URL,
       logo: logoUrl,
-      parentOrganization: {
-        "@id": SITE_ORGANIZATION_ID,
-      },
+      sameAs,
+    },
+    {
+      "@type": "TravelAgency",
+      "@id": SITE_BUSINESS_ID,
+      name: "Outdoor Adventures",
+      url: SITE_URL,
+      logo: logoUrl,
+      sameAs,
       areaServed: [
-        "Worldwide",
+        {
+          "@type": "City",
+          name: "Santa Barbara",
+        },
+        {
+          "@type": "State",
+          name: "California",
+        },
         {
           "@type": "Country",
           name: "United States",
         },
-      ],
-      sameAs: [
-        "https://www.facebook.com/alloutdooradventuresonline",
-        "https://www.linkedin.com/company/all-outdoor-adventures",
       ],
     },
     {
@@ -182,9 +178,6 @@ export const getSiteStructuredDataNodes = () => {
       name: "Outdoor Adventures",
       publisher: {
         "@id": SITE_ORGANIZATION_ID,
-      },
-      about: {
-        "@id": SITE_BRAND_ID,
       },
     },
   ];
@@ -241,8 +234,10 @@ export const buildBreadcrumbList = (
 
 export const buildItemList = (
   items: { name: string; url: string; image?: string | string[] }[],
+  options?: { id?: string },
 ) => ({
   "@type": "ItemList",
+  ...(options?.id ? { "@id": options.id } : {}),
   itemListElement: items.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -254,6 +249,49 @@ export const buildItemList = (
         }
       : {}),
   })),
+});
+
+export const buildCollectionPageStructuredData = ({
+  url,
+  name,
+  description,
+  image,
+  mainEntity,
+}: {
+  url: string;
+  name: string;
+  description?: string;
+  image?: string;
+  mainEntity?: { "@id": string };
+}) => ({
+  "@type": ["CollectionPage", "WebPage"],
+  "@id": `${url}#webpage`,
+  url,
+  name: sanitizeSchemaName(name),
+  description,
+  isPartOf: { "@id": SITE_WEBSITE_ID },
+  ...(image
+    ? {
+        primaryImageOfPage: buildImageObject(image, `${url}#primaryimage`),
+        image,
+      }
+    : {}),
+  ...(mainEntity ? { mainEntity } : {}),
+});
+
+export const buildPlaceStructuredData = ({
+  id,
+  name,
+  containedInPlace,
+}: {
+  id: string;
+  name: string;
+  containedInPlace?: StructuredDataValue;
+}) => ({
+  "@type": "Place",
+  "@id": id,
+  name,
+  ...(containedInPlace ? { containedInPlace } : {}),
 });
 
 export const buildTourProductStructuredData = ({
@@ -284,15 +322,20 @@ export const buildTourProductStructuredData = ({
     offer.priceCurrency = tour.currency;
   }
 
+  const offers =
+    offer.price && offer.priceCurrency ? offer : undefined;
+
   return {
     "@type": "Product",
     "@id": `${detailUrl}#product`,
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    brand: { "@id": SITE_BRAND_ID },
-    seller: { "@id": SITE_BRAND_ID },
-    offers: offer,
+    brand: { "@id": SITE_ORGANIZATION_ID },
+    seller: { "@id": SITE_BUSINESS_ID },
+    sku: tour.id,
+    url: detailUrl,
+    ...(offers ? { offers } : {}),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };
@@ -325,14 +368,17 @@ export const buildTourTripStructuredData = ({
     offer.priceCurrency = tour.currency;
   }
 
+  const offers =
+    offer.price && offer.priceCurrency ? offer : undefined;
+
   return {
     "@type": "TouristTrip",
     "@id": `${detailUrl}#trip`,
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    provider: { "@id": SITE_BRAND_ID },
-    offers: offer,
+    provider: { "@id": SITE_BUSINESS_ID },
+    ...(offers ? { offers } : {}),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };

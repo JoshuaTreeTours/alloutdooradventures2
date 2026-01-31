@@ -28,7 +28,7 @@ const buildFallbackTitle = (segments, defaultTitle) => {
 
   const label = segments.map(toTitleCase).join(" ");
 
-  return `${label} | All Outdoor Adventures`;
+  return `${label} | Outdoor Adventures`;
 };
 
 const escapeRegExp = (value) =>
@@ -41,7 +41,7 @@ const buildFallbackDescription = (segments, defaultDescription) => {
 
   const label = segments.map(toTitleCase).join(" ");
 
-  return `Discover ${label} tours, guides, and outdoor experiences curated by All Outdoor Adventures.`;
+  return `Discover ${label} tours, guides, and outdoor experiences curated by Outdoor Adventures.`;
 };
 
 const replaceTagAttribute = (tag, attrName, placeholder) => {
@@ -256,6 +256,20 @@ const isTour = (pathname) => {
   );
 };
 
+const isBooking = (pathname) =>
+  /\/book$/.test(normalizePathname(pathname)) &&
+  (isTour(pathname) || /^\/tours\/[^/]+\/book$/.test(normalizePathname(pathname)));
+
+const isCityToursIndex = (pathname) => {
+  const normalized = normalizePathname(pathname);
+  return (
+    /^\/destinations\/[^/]+\/[^/]+\/tours$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours$/.test(normalized) ||
+    /^\/destinations\/world\/[^/]+\/cities\/[^/]+\/tours$/.test(normalized) ||
+    /^\/destinations\/europe\/[^/]+\/cities\/[^/]+\/tours$/.test(normalized)
+  );
+};
+
 const isDestination = (pathname) => {
   const normalized = normalizePathname(pathname);
   return (
@@ -303,6 +317,28 @@ const extractAttribute = (tag, attrName) => {
   return match[1];
 };
 
+const findStructuredDataScripts = (html) => {
+  const pattern =
+    /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  const matches = [];
+  let match;
+  while ((match = pattern.exec(html)) !== null) {
+    matches.push(match[1]?.trim() ?? "");
+  }
+  return matches.filter(Boolean);
+};
+
+const nodeHasType = (node, type) => {
+  if (!node || typeof node !== "object") {
+    return false;
+  }
+  const nodeType = node["@type"];
+  if (Array.isArray(nodeType)) {
+    return nodeType.includes(type);
+  }
+  return nodeType === type;
+};
+
 const buildTourBreadcrumbs = ({
   tour,
   detailUrl,
@@ -343,6 +379,9 @@ const verifyPrerenderedPage = async ({
   defaultDescription,
   label,
   allowDefaultSeo = false,
+  structuredDataExpectation = {},
+  siteOrganizationId,
+  siteWebsiteId,
 }) => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
   if (!shouldWrite) {
@@ -625,6 +664,149 @@ const verifyPrerenderedPage = async ({
     });
     throw new Error("Prerender verification failed.");
   }
+
+  const structuredDataScripts = findStructuredDataScripts(html);
+  if (structuredDataScripts.length !== 1) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Expected exactly one JSON-LD script but found ${structuredDataScripts.length}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  let structuredData;
+  try {
+    structuredData = JSON.parse(structuredDataScripts[0]);
+  } catch (error) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Invalid JSON-LD payload: ${error?.message ?? "parse error"}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const graph = structuredData?.["@graph"];
+  if (!Array.isArray(graph)) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: "JSON-LD graph is missing or malformed.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const organizationNodes = graph.filter((node) => nodeHasType(node, "Organization"));
+  if (organizationNodes.length !== 1) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Expected exactly one Organization node but found ${organizationNodes.length}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const organizationNode = organizationNodes[0];
+  if (siteOrganizationId && organizationNode["@id"] !== siteOrganizationId) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Organization @id mismatch (${organizationNode["@id"]}).`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (organizationNode.name !== "Outdoor Adventures") {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Organization name mismatch (${organizationNode.name}).`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  const sameAs = Array.isArray(organizationNode.sameAs)
+    ? organizationNode.sameAs
+    : [];
+  const requiredSameAs = [
+    "https://www.facebook.com/alloutdooradventuresonline",
+    "https://www.linkedin.com/company/all-outdoor-adventures",
+  ];
+  const missingSameAs = requiredSameAs.filter(
+    (url) => !sameAs.includes(url),
+  );
+  if (missingSameAs.length || sameAs.length !== requiredSameAs.length) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Organization sameAs mismatch. Missing: ${missingSameAs.join(", ") || "none"}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const websiteNodes = graph.filter((node) => nodeHasType(node, "WebSite"));
+  if (websiteNodes.length !== 1) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `Expected exactly one WebSite node but found ${websiteNodes.length}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (siteWebsiteId && websiteNodes[0]["@id"] !== siteWebsiteId) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "structured-data",
+      details: `WebSite @id mismatch (${websiteNodes[0]["@id"]}).`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  if (structuredDataExpectation.requireProduct) {
+    const productNodes = graph.filter((node) => nodeHasType(node, "Product"));
+    if (!productNodes.length) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "structured-data",
+        details: "Expected Product node but none found.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+  }
+
+  if (structuredDataExpectation.requireItemList) {
+    const itemListNodes = graph.filter((node) => nodeHasType(node, "ItemList"));
+    if (!itemListNodes.length) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "structured-data",
+        details: "Expected ItemList node but none found.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+  }
+
+  if (structuredDataExpectation.forbidProduct) {
+    const productNodes = graph.filter((node) => nodeHasType(node, "Product"));
+    if (productNodes.length) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "structured-data",
+        details: "Product node found on a booking page.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+  }
 };
 
 
@@ -685,6 +867,11 @@ const main = async () => {
   } = seoModule;
   const buildBreadcrumbList =
     structuredDataModule?.buildBreadcrumbList ?? null;
+  const buildCollectionPageStructuredData =
+    structuredDataModule?.buildCollectionPageStructuredData ?? null;
+  const buildItemList = structuredDataModule?.buildItemList ?? null;
+  const buildPlaceStructuredData =
+    structuredDataModule?.buildPlaceStructuredData ?? null;
   const buildTourProductStructuredData =
     structuredDataModule?.buildTourProductStructuredData ?? null;
   const buildTourTripStructuredData =
@@ -695,9 +882,30 @@ const main = async () => {
     structuredDataModule?.getSiteStructuredDataNodes ?? null;
   const normalizeStructuredData =
     structuredDataModule?.normalizeStructuredData ?? null;
+  const SITE_ORGANIZATION_ID =
+    structuredDataModule?.SITE_ORGANIZATION_ID ?? null;
+  const SITE_WEBSITE_ID = structuredDataModule?.SITE_WEBSITE_ID ?? null;
   const getExpandedTourDescription =
     tourNarrativesModule?.getExpandedTourDescription ?? null;
   const getCityTourBookingPath = toursModule?.getCityTourBookingPath ?? null;
+
+  if (!getCityTourBookingPath) {
+    throw new Error(
+      "[prerender] Missing getCityTourBookingPath export from src/data/tours.ts. Booking structured data cannot be generated without it.",
+    );
+  }
+
+  if (!buildWebPageStructuredData || !normalizeStructuredData || !getSiteStructuredDataNodes) {
+    throw new Error(
+      "[prerender] Structured data helpers are missing. Ensure buildWebPageStructuredData, normalizeStructuredData, and getSiteStructuredDataNodes are exported.",
+    );
+  }
+
+  if (!SITE_ORGANIZATION_ID || !SITE_WEBSITE_ID) {
+    throw new Error(
+      "[prerender] Structured data identifiers are missing. Ensure SITE_ORGANIZATION_ID and SITE_WEBSITE_ID are exported.",
+    );
+  }
 
   const urls = await readSitemapUrls();
   if (!urls.length) {
@@ -808,7 +1016,9 @@ const main = async () => {
       const structuredDataNodes = [];
       let tourForStructuredData = null;
       let bookingUrl = null;
+      let tourDetailUrl = null;
       let breadcrumbItems = null;
+      let isBookingPage = segments[segments.length - 1] === "book";
       const canBuildTourNodes =
         Boolean(buildTourProductStructuredData) &&
         Boolean(buildTourTripStructuredData) &&
@@ -825,10 +1035,14 @@ const main = async () => {
           bookingUrl = buildCanonicalUrl(
             getCityTourBookingPath(tourForStructuredData),
           );
+          tourDetailUrl = canonicalUrl;
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
-            includeDestinations: false,
+            stateHref: `/destinations/states/${segments[1]}`,
+            cityHref: `/destinations/states/${segments[1]}/cities/${segments[2]}`,
+            toursHref: `/destinations/${segments[1]}/${segments[2]}/tours`,
+            includeDestinations: true,
           });
         }
       } else if (
@@ -841,6 +1055,7 @@ const main = async () => {
           bookingUrl = buildCanonicalUrl(
             getFlagstaffTourBookingPath(tourForStructuredData),
           );
+          tourDetailUrl = canonicalUrl;
           const stateSlug = tourForStructuredData.destination.stateSlug;
           const citySlug = tourForStructuredData.destination.citySlug;
           breadcrumbItems = buildTourBreadcrumbs({
@@ -853,30 +1068,70 @@ const main = async () => {
           });
         }
       } else if (
+        segments[0] === "tours" &&
+        segments.length === 3 &&
+        segments[2] === "book"
+      ) {
+        isBookingPage = true;
+        tourForStructuredData = getFlagstaffTourBySlug(segments[1]);
+        if (tourForStructuredData) {
+          bookingUrl = canonicalUrl;
+          tourDetailUrl = buildCanonicalUrl(
+            getFlagstaffTourDetailPath(tourForStructuredData),
+          );
+          const stateSlug = tourForStructuredData.destination.stateSlug;
+          const citySlug = tourForStructuredData.destination.citySlug;
+          breadcrumbItems = [
+            ...(buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: tourDetailUrl,
+              stateHref: `/destinations/states/${stateSlug}`,
+              cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
+              toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            }) ?? []),
+            { name: "Book", url: bookingUrl },
+          ];
+        }
+      } else if (
         canBuildTourNodes &&
         segments[0] === "destinations" &&
         segments[3] === "tours" &&
-        segments.length === 5
+        (segments.length === 5 || segments.length === 6)
       ) {
         const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
+        const isBooking = segments[5] === "book";
         const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
         tourForStructuredData = isFlagstaff
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            isFlagstaff
-              ? getFlagstaffTourBookingPath(tourForStructuredData)
-              : getCityTourBookingPath(tourForStructuredData),
-          );
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            stateHref: `/destinations/states/${stateSlug}`,
-            cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
-            includeDestinations: true,
-          });
+          isBookingPage = isBooking;
+          bookingUrl = isBooking
+            ? canonicalUrl
+            : buildCanonicalUrl(
+                isFlagstaff
+                  ? getFlagstaffTourBookingPath(tourForStructuredData)
+                  : getCityTourBookingPath(tourForStructuredData),
+              );
+          tourDetailUrl = isBooking
+            ? buildCanonicalUrl(
+                isFlagstaff
+                  ? getFlagstaffTourDetailPath(tourForStructuredData)
+                  : getCityTourDetailPath(tourForStructuredData),
+              )
+            : canonicalUrl;
+          breadcrumbItems = [
+            ...(buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: tourDetailUrl,
+              stateHref: `/destinations/states/${stateSlug}`,
+              cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
+              toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            }) ?? []),
+            ...(isBooking ? [{ name: "Book", url: bookingUrl }] : []),
+          ];
         }
       } else if (
         canBuildTourNodes &&
@@ -884,33 +1139,165 @@ const main = async () => {
         segments[1] === "states" &&
         segments[4] === "cities" &&
         segments[6] === "tours" &&
-        segments.length === 8
+        (segments.length === 8 || segments.length === 9)
       ) {
         const stateSlug = segments[2];
         const citySlug = segments[5];
         const tourSlug = segments[7];
+        const isBooking = segments[8] === "book";
         const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
         tourForStructuredData = isFlagstaff
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            isFlagstaff
-              ? getFlagstaffTourBookingPath(tourForStructuredData)
-              : getCityTourBookingPath(tourForStructuredData),
+          isBookingPage = isBooking;
+          bookingUrl = isBooking
+            ? canonicalUrl
+            : buildCanonicalUrl(
+                isFlagstaff
+                  ? getFlagstaffTourBookingPath(tourForStructuredData)
+                  : getCityTourBookingPath(tourForStructuredData),
+              );
+          tourDetailUrl = isBooking
+            ? buildCanonicalUrl(
+                isFlagstaff
+                  ? getFlagstaffTourDetailPath(tourForStructuredData)
+                  : getCityTourDetailPath(tourForStructuredData),
+              )
+            : canonicalUrl;
+          breadcrumbItems = [
+            ...(buildTourBreadcrumbs({
+              tour: tourForStructuredData,
+              detailUrl: tourDetailUrl,
+              stateHref: `/destinations/states/${stateSlug}`,
+              cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
+              toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+              includeDestinations: true,
+            }) ?? []),
+            ...(isBooking ? [{ name: "Book", url: bookingUrl }] : []),
+          ];
+        }
+      } else if (
+        buildCollectionPageStructuredData &&
+        buildItemList &&
+        buildPlaceStructuredData &&
+        isCityToursIndex(pathname)
+      ) {
+        let stateSlug = null;
+        let citySlug = null;
+        let toursHref = canonicalUrl;
+        let baseHref = "/destinations";
+
+        if (segments[1] === "states") {
+          stateSlug = segments[2];
+          citySlug = segments[5];
+          baseHref = `/destinations/states/${stateSlug}`;
+          toursHref = buildCanonicalUrl(
+            `/destinations/states/${stateSlug}/cities/${citySlug}/tours`,
           );
-          breadcrumbItems = buildTourBreadcrumbs({
-            tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
-            stateHref: `/destinations/states/${stateSlug}`,
-            cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
-            includeDestinations: true,
-          });
+        } else if (segments[1] === "world" || segments[1] === "europe") {
+          stateSlug = segments[2];
+          citySlug = segments[4];
+          baseHref = `/destinations/${segments[1]}/${stateSlug}`;
+          toursHref = buildCanonicalUrl(
+            `/destinations/${segments[1]}/${stateSlug}/cities/${citySlug}/tours`,
+          );
+        } else {
+          stateSlug = segments[1];
+          citySlug = segments[2];
+          baseHref = `/destinations/${stateSlug}`;
+          toursHref = buildCanonicalUrl(
+            `/destinations/${stateSlug}/${citySlug}/tours`,
+          );
+        }
+
+        if (stateSlug && citySlug) {
+          const isFlagstaff =
+            stateSlug === "arizona" && citySlug === "flagstaff";
+          const cityTours = isFlagstaff
+            ? flagstaffModule.flagstaffTours ?? []
+            : tours.filter(
+                (tour) =>
+                  tour.destination.stateSlug === stateSlug &&
+                  tour.destination.citySlug === citySlug,
+              );
+          const cityName =
+            cityTours[0]?.destination.city ?? toTitleCase(citySlug);
+          const stateName =
+            cityTours[0]?.destination.state ?? toTitleCase(stateSlug);
+          const heroImage = cityTours[0]?.heroImage
+            ? buildImageUrl(cityTours[0].heroImage)
+            : undefined;
+          const itemListLimit = 100;
+          const itemListId = `${toursHref}#itemlist`;
+
+          structuredDataNodes.push(
+            buildCollectionPageStructuredData({
+              url: toursHref,
+              name: `Tours in ${cityName}`,
+              description: `Browse guided tours and outdoor experiences in ${cityName}.`,
+              image: heroImage,
+              mainEntity: cityTours.length ? { "@id": itemListId } : undefined,
+            }),
+          );
+
+          structuredDataNodes.push(
+            buildPlaceStructuredData({
+              id: `${buildCanonicalUrl(
+                segments[1] === "world" || segments[1] === "europe"
+                  ? `${baseHref}/cities/${citySlug}`
+                  : `/destinations/states/${stateSlug}/cities/${citySlug}`,
+              )}#place`,
+              name: cityName,
+              containedInPlace: [
+                {
+                  "@type": "Place",
+                  name: stateName,
+                },
+                {
+                  "@type": "Country",
+                  name:
+                    segments[1] === "world" || segments[1] === "europe"
+                      ? stateName
+                      : "United States",
+                },
+              ],
+            }),
+          );
+
+          if (cityTours.length) {
+            structuredDataNodes.push(
+              buildItemList(
+                cityTours.slice(0, itemListLimit).map((tour) => ({
+                  name: tour.title,
+                  url: buildCanonicalUrl(
+                    isFlagstaff
+                      ? getFlagstaffTourDetailPath(tour)
+                      : getCityTourDetailPath(tour),
+                  ),
+                  image: tour.heroImage ? [tour.heroImage] : undefined,
+                })),
+                { id: itemListId },
+              ),
+            );
+          }
+
+          breadcrumbItems = [
+            { name: "Destinations", url: "/destinations" },
+            { name: stateName, url: baseHref },
+            {
+              name: cityName,
+              url:
+                segments[1] === "world" || segments[1] === "europe"
+                  ? `${baseHref}/cities/${citySlug}`
+                  : `/destinations/states/${stateSlug}/cities/${citySlug}`,
+            },
+            { name: "Tours", url: toursHref },
+          ];
         }
       }
 
-      if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
+      if (tourForStructuredData && bookingUrl && canBuildTourNodes && !isBookingPage) {
         const heroImage = buildImageUrl(tourForStructuredData.heroImage);
         const productDescription =
           getExpandedTourDescription(tourForStructuredData)[0];
@@ -923,21 +1310,29 @@ const main = async () => {
           }),
           buildTourProductStructuredData({
             tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
+            detailUrl: tourDetailUrl ?? canonicalUrl,
             bookingUrl,
             description: productDescription,
           }),
           buildTourTripStructuredData({
             tour: tourForStructuredData,
-            detailUrl: canonicalUrl,
+            detailUrl: tourDetailUrl ?? canonicalUrl,
             bookingUrl,
             description: productDescription,
           }),
         );
-        if (breadcrumbItems?.length && buildBreadcrumbList) {
-          structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
-        }
-      } else {
+      } else if (tourForStructuredData && isBookingPage && tourDetailUrl) {
+        const heroImage = buildImageUrl(tourForStructuredData.heroImage);
+        structuredDataNodes.push({
+          ...buildWebPageStructuredData({
+            url: canonicalUrl,
+            name: seo.title,
+            description: seo.description,
+            image: heroImage,
+          }),
+          mainEntity: { "@id": `${tourDetailUrl}#product` },
+        });
+      } else if (!structuredDataNodes.length) {
         structuredDataNodes.push(
           buildWebPageStructuredData({
             url: canonicalUrl,
@@ -945,6 +1340,10 @@ const main = async () => {
             description: seo.description,
           }),
         );
+      }
+
+      if (breadcrumbItems?.length && buildBreadcrumbList) {
+        structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
       }
 
       structuredData = normalizeStructuredData({
@@ -981,8 +1380,19 @@ const main = async () => {
       url: findUrl(isHome),
     },
     {
-      label: "Tour",
-      url: findUrl(isTour),
+      label: "Tour detail",
+      url: findUrl((pathname) => isTour(pathname) && !isBooking(pathname)),
+      structuredDataExpectation: { requireProduct: true },
+    },
+    {
+      label: "Tour booking",
+      url: findUrl(isBooking),
+      structuredDataExpectation: { forbidProduct: true },
+    },
+    {
+      label: "City tours index",
+      url: findUrl(isCityToursIndex),
+      structuredDataExpectation: { requireItemList: true },
     },
     {
       label: "Destination state",
@@ -994,17 +1404,6 @@ const main = async () => {
       label: "Destination city",
       url: findUrl((pathname) =>
         /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
-          normalizePathname(pathname),
-        ),
-      ),
-    },
-    {
-      label: "Destination tour",
-      url: findUrl((pathname) =>
-        /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-          normalizePathname(pathname),
-        ) ||
-        /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
           normalizePathname(pathname),
         ),
       ),
@@ -1054,6 +1453,9 @@ const main = async () => {
       defaultDescription: DEFAULT_SEO.description,
       label: target.label,
       allowDefaultSeo,
+      structuredDataExpectation: target.structuredDataExpectation,
+      siteOrganizationId: SITE_ORGANIZATION_ID,
+      siteWebsiteId: SITE_WEBSITE_ID,
     });
   }
 };

@@ -193,7 +193,6 @@ export const EUROPE_COUNTRIES = [
 ];
 
 export const WORLD_DESTINATIONS = [
-  "Australia",
   "Brazil",
   "Canada",
   "Chile",

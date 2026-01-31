@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
+import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
@@ -44,6 +45,16 @@ export default function TourDetail({ params }: TourDetailProps) {
     if (!tour || !bookingUrl || !detailUrl) {
       return null;
     }
+    const state = getStateBySlug(tour.destination.stateSlug);
+    const city = state
+      ? getCityBySlugs(state.slug, tour.destination.citySlug)
+      : null;
+    const stateHref = state ? `/destinations/states/${state.slug}` : "";
+    const cityHref =
+      state && city
+        ? `/destinations/states/${state.slug}/cities/${city.slug}`
+        : "";
+    const toursHref = `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours`;
     return [
       buildWebPageStructuredData({
         url: detailUrl,
@@ -64,7 +75,10 @@ export default function TourDetail({ params }: TourDetailProps) {
         description: productDescription,
       }),
       buildBreadcrumbList([
-        { name: "Tours", url: "/tours" },
+        { name: "Destinations", url: "/destinations" },
+        ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
+        ...(cityHref ? [{ name: city?.name ?? "", url: cityHref }] : []),
+        { name: "Tours", url: toursHref },
         { name: tour.title, url: detailUrl },
       ]),
     ];

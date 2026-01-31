@@ -180,7 +180,7 @@ export default function Contact() {
           Contact Outdoor Adventures
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          All Outdoor Adventures is a Santa Barbara–based service business
+          Outdoor Adventures is a Santa Barbara–based service business
           offering curated tours and custom journeys worldwide.
         </p>
         <p className="mt-4 text-sm text-[#405040] md:text-base">

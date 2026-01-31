@@ -10,7 +10,6 @@ import { pois as lisbon } from "./portugal/lisbon";
 import { pois as amsterdam } from "./netherlands/amsterdam";
 import { pois as berlin } from "./germany/berlin";
 import { pois as vienna } from "./austria/vienna";
-import { pois as sydney } from "./australia/sydney";
 import { pois as paris } from "./france/paris";
 
 export type { Tier1WorldCityPoi } from "./types";
@@ -26,7 +25,6 @@ const tier1IntlPoiMap: Record<string, Tier1WorldCityPoi[]> = {
   "netherlands/amsterdam": amsterdam,
   "germany/berlin": berlin,
   "austria/vienna": vienna,
-  "australia/sydney": sydney,
   "france/paris": paris,
 };
 

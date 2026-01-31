@@ -1,6 +1,5 @@
 import type { Tour } from "./tours.types";
 import { tours } from "./tours";
-import { australiaTours } from "./australiaTours";
 import { countriesWithTours } from "./europeIndex";
 import { US_STATES, slugify } from "./tourCatalog";
 
@@ -26,7 +25,7 @@ const getDestinationSlug = (tour: Tour) =>
     ? slugify(tour.destination.country)
     : tour.destination.stateSlug || slugify(tour.destination.state);
 
-export const worldTours = [...tours, ...australiaTours].filter(
+export const worldTours = [...tours].filter(
   (tour) => !excludedCountrySlugs.has(getDestinationSlug(tour)),
 );
 

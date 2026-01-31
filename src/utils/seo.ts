@@ -3,9 +3,9 @@ import { getActivityLabelFromSlug } from "../data/activityLabels";
 export const SITE_URL = "https://www.alloutdooradventures.com";
 
 export const DEFAULT_SEO = {
-  title: "All Outdoor Adventures | Curated Tours & Experiences Worldwide",
+  title: "Outdoor Adventures | Curated Tours & Experiences Worldwide",
   description:
-    "Discover unforgettable outdoor adventures across the United States and beyond. From national park tours and desert safaris to sailing, hiking, and wildlife experiences, All Outdoor Adventures curates the world’s best outdoor tours in one place.",
+    "Discover unforgettable outdoor adventures across the United States and beyond. From national park tours and desert safaris to sailing, hiking, and wildlife experiences, Outdoor Adventures curates the world’s best outdoor tours in one place.",
   url: `${SITE_URL}/`,
   type: "website",
   image: "/hero.jpg",
@@ -13,39 +13,39 @@ export const DEFAULT_SEO = {
 
 export const STATIC_PAGE_SEO = {
   "/faqs": {
-    title: "FAQs | All Outdoor Adventures",
+    title: "FAQs | Outdoor Adventures",
     description:
       "Get answers about booking, cancellations, and tour logistics so you can plan your outdoor adventure with confidence.",
   },
   "/contact": {
-    title: "Contact | All Outdoor Adventures",
+    title: "Contact | Outdoor Adventures",
     description:
       "Connect with our travel team to plan custom journeys, private group experiences, and curated outdoor tours.",
   },
   "/tours": {
-    title: "Tours | All Outdoor Adventures",
+    title: "Tours | Outdoor Adventures",
     description:
       "Navigate outdoor destinations by country or state and jump straight to local guides and tours.",
   },
   "/destinations": {
-    title: "Destinations | All Outdoor Adventures",
+    title: "Destinations | Outdoor Adventures",
     description:
       "Explore curated outdoor destinations across the U.S. and preview upcoming international tour hubs.",
   },
   "/guides": {
-    title: "Guides | All Outdoor Adventures",
+    title: "Guides | Outdoor Adventures",
     description:
       "Discover destination guides with expert insights to help you plan your next outdoor escape.",
   },
   "/journeys": {
-    title: "Journeys | All Outdoor Adventures",
+    title: "Journeys | Outdoor Adventures",
     description:
       "Plan multi-day journeys and custom itineraries built around iconic landscapes and local expertise.",
   },
   "/about": {
-    title: "About | All Outdoor Adventures",
+    title: "About | Outdoor Adventures",
     description:
-      "Learn about the team behind All Outdoor Adventures and our mission to curate unforgettable experiences.",
+      "Learn about the team behind Outdoor Adventures and our mission to curate unforgettable experiences.",
   },
 } as const;
 

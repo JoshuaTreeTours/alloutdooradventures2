@@ -89,7 +89,7 @@ export default function WorldCountryRoute({
   }
 
   const title = filterActivitySlug
-    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | All Outdoor Adventures`
+    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | Outdoor Adventures`
     : `${country.name} Outdoor Adventures | Curated Tours & Experiences`;
   const description = buildMetaDescription(
     filterActivitySlug
