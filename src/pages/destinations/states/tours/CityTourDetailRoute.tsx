@@ -13,13 +13,12 @@ import {
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
-  getCityTourBookingPath,
+  getTourBookingPath,
   getToursByCity,
   getTourBySlugs,
 } from "../../../../data/tours";
 import {
   flagstaffTours,
-  getFlagstaffTourBookingPath,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
@@ -66,12 +65,7 @@ export default function CityTourDetailRoute({
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const bookingUrl =
-    tour && isFlagstaff
-      ? getFlagstaffTourBookingPath(tour)
-      : tour
-        ? getCityTourBookingPath(tour)
-        : "";
+  const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;

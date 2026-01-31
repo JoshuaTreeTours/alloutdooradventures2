@@ -15,13 +15,6 @@ export const CITY_TIER1_INTL: Tier1IntlCity[] = [
     lng: -3.1883,
   },
   {
-    countrySlug: "united-kingdom",
-    citySlug: "london",
-    cityName: "London",
-    lat: 51.5074,
-    lng: -0.1278,
-  },
-  {
     countrySlug: "italy",
     citySlug: "rome",
     cityName: "Rome",

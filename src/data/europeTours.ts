@@ -2,9 +2,11 @@ import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 
-import europeCanoeingCsv from "../../data/europe/europe-canoeing.csv?raw";
-import europeCyclingCsv from "../../data/europe/europe-cycling.csv?raw";
-import europeHikingCsv from "../../data/europe/europe-hiking.csv?raw";
+import {
+  europeCanoeingCsv,
+  europeCyclingCsv,
+  europeHikingCsv,
+} from "./generated/europe.generated";
 
 type CsvRow = Record<string, string>;
 

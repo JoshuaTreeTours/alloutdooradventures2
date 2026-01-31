@@ -1132,6 +1132,3 @@ export const getFlagstaffTourBySlug = (slug: string) =>
 
 export const getFlagstaffTourDetailPath = (tour: Tour) =>
   `/tours/${getFlagstaffTourSlug(tour)}`;
-
-export const getFlagstaffTourBookingPath = (tour: Tour) =>
-  `/tours/${getFlagstaffTourSlug(tour)}/book`;
