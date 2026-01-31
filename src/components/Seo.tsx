@@ -8,7 +8,7 @@ type SeoProps = {
   description?: string;
   url?: string;
   type?: string;
-  image?: string;
+  image?: string | null;
   robots?: string;
   googlebot?: string;
 };
@@ -53,7 +53,7 @@ export default function Seo({
 }: SeoProps) {
   const [location] = useLocation();
   const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
-  const resolvedImage = buildImageUrl(image);
+  const resolvedImage = image ? buildImageUrl(image) : "";
 
   useLayoutEffect(() => {
     document.title = title;

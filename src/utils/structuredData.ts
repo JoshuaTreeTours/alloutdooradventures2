@@ -1,4 +1,5 @@
 import type { Tour } from "../data/tours.types";
+import { filterHeroImages } from "./hero";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 
 type StructuredDataValue =
@@ -238,16 +239,18 @@ export const buildTourProductStructuredData = ({
   detailUrl,
   bookingUrl,
   description,
+  images,
 }: {
   tour: Tour;
   detailUrl: string;
   bookingUrl: string;
   description?: string;
+  images?: string[];
 }) => {
-  const images = Array.from(
-    new Set([tour.heroImage, ...(tour.galleryImages ?? [])].filter(Boolean)),
+  const resolvedImages = filterHeroImages(
+    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    "product",
   );
-  const resolvedImages = images.length ? images : [buildImageUrl("/hero.jpg")];
   const offer: Record<string, StructuredDataValue> = {
     "@type": "Offer",
     url: bookingUrl,
@@ -267,7 +270,7 @@ export const buildTourProductStructuredData = ({
     "@id": `${detailUrl}#product`,
     name: tour.title,
     description,
-    image: resolvedImages,
+    ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
     brand: { "@id": SITE_ORGANIZATION_ID },
     provider: { "@id": SITE_AGENCY_ID },
@@ -281,16 +284,18 @@ export const buildTourTripStructuredData = ({
   detailUrl,
   bookingUrl,
   description,
+  images,
 }: {
   tour: Tour;
   detailUrl: string;
   bookingUrl: string;
   description?: string;
+  images?: string[];
 }) => {
-  const images = Array.from(
-    new Set([tour.heroImage, ...(tour.galleryImages ?? [])].filter(Boolean)),
+  const resolvedImages = filterHeroImages(
+    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    "product",
   );
-  const resolvedImages = images.length ? images : [buildImageUrl("/hero.jpg")];
   const offer: Record<string, StructuredDataValue> = {
     "@type": "Offer",
     url: bookingUrl,
@@ -310,7 +315,7 @@ export const buildTourTripStructuredData = ({
     "@id": `${detailUrl}#trip`,
     name: tour.title,
     description,
-    image: resolvedImages,
+    ...(resolvedImages.length ? { image: resolvedImages } : {}),
     provider: { "@id": SITE_AGENCY_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },

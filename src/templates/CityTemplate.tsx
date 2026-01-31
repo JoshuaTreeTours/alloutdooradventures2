@@ -18,6 +18,7 @@ import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
+import { filterHeroImages, resolveHeroImage } from "../utils/hero";
 import { buildMetaDescription } from "../utils/seo";
 
 type CityTemplateProps = {
@@ -83,7 +84,7 @@ function ImageSlider({ images, title }: { images: string[]; title: string }) {
             >
               <Image
                 src={image}
-                fallbackSrc="/hero.jpg"
+                fallbackSrc={image}
                 alt={`${title} slide ${index + 1}`}
                 className="h-72 w-full object-cover md:h-[420px]"
               />
@@ -200,6 +201,17 @@ export default function CityTemplate({
   ].filter((section) => section.tours.length > 0);
   const hasCoordinates =
     Number.isFinite(city.lat) && Number.isFinite(city.lng);
+  const heroImage = resolveHeroImage({
+    pageType: "city",
+    primary: city.heroImages[0],
+    fallbacks: [state.heroImage],
+  });
+  const cityHeroImages = filterHeroImages(city.heroImages, "city");
+  const heroImages = cityHeroImages.length
+    ? cityHeroImages
+    : heroImage
+      ? [heroImage]
+      : [];
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -210,6 +222,7 @@ export default function CityTemplate({
           seoUrlOverride ??
           `/destinations/states/${state.slug}/cities/${city.slug}`
         }
+        image={heroImage ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -248,7 +261,9 @@ export default function CityTemplate({
               </a>
             </Link>
           </div>
-          <ImageSlider images={city.heroImages} title={city.name} />
+          {heroImages.length ? (
+            <ImageSlider images={heroImages} title={city.name} />
+          ) : null}
         </div>
       </section>
 

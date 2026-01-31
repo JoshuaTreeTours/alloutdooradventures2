@@ -8,6 +8,7 @@ import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
 import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
+import { resolveHeroImage } from "../utils/hero";
 import { buildMetaDescription } from "../utils/seo";
 
 const buildCityDestination = (
@@ -47,6 +48,10 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
   );
+  const heroImage = resolveHeroImage({
+    pageType: "state",
+    primary: state.heroImage,
+  });
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -54,14 +59,17 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
         title={title}
         description={description}
         url={`/destinations/states/${state.slug}`}
+        image={heroImage ?? null}
       />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <Image
-          src={state.heroImage}
-          fallbackSrc="/hero.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            fallbackSrc={heroImage}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-20 text-white">
           <Link href="/destinations">

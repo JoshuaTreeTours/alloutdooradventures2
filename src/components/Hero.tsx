@@ -21,7 +21,7 @@ export default function Hero({
       <div className="relative overflow-hidden rounded-none md:rounded-md">
         <Image
           src={imageUrl}
-          fallbackSrc="/hero.jpg"
+          fallbackSrc={imageUrl}
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />

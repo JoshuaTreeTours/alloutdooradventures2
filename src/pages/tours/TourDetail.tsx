@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
+import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
@@ -16,6 +17,7 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
+import { filterHeroImages, resolveHeroImage } from "../../utils/hero";
 import { buildTourMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -33,6 +35,20 @@ type TourDetailProps = {
 
 export default function TourDetail({ params }: TourDetailProps) {
   const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
+  const state = tour ? getStateBySlug(tour.destination.stateSlug) : null;
+  const city =
+    tour && tour.destination.stateSlug
+      ? getCityBySlugs(tour.destination.stateSlug, tour.destination.citySlug)
+      : null;
+  const heroImage = resolveHeroImage({
+    pageType: "product",
+    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
+    fallbacks: [city?.heroImages[0], state?.heroImage],
+  });
+  const structuredImages = filterHeroImages(
+    [heroImage, ...(tour?.galleryImages ?? [])],
+    "product",
+  );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const detailUrl = tour ? getTourDetailPath(tour) : "";
   const productDescription = tour
@@ -48,20 +64,29 @@ export default function TourDetail({ params }: TourDetailProps) {
         url: detailUrl,
         name: tour.title,
         description: metaDescription,
-        image: tour.heroImage,
+        image: heroImage,
       }),
       buildTourProductStructuredData({
         tour,
         detailUrl,
         bookingUrl,
         description: productDescription,
+        images: structuredImages.length ? structuredImages : undefined,
       }),
       buildBreadcrumbList([
         { name: "Tours", url: "/tours" },
         { name: tour.title, url: detailUrl },
       ]),
     ];
-  }, [bookingUrl, detailUrl, metaDescription, productDescription, tour]);
+  }, [
+    bookingUrl,
+    detailUrl,
+    heroImage,
+    metaDescription,
+    productDescription,
+    structuredImages,
+    tour,
+  ]);
 
   useStructuredData(structuredDataNodes);
 
@@ -98,7 +123,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         title={title}
         description={description}
         url={detailUrl}
-        image={tour.heroImage}
+        image={heroImage ?? null}
       />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -115,12 +140,14 @@ export default function TourDetail({ params }: TourDetailProps) {
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
-              <Image
-                src={tour.heroImage}
-                fallbackSrc="/hero.jpg"
-                alt={tour.title}
-                className="h-72 w-full object-cover"
-              />
+              {heroImage ? (
+                <Image
+                  src={heroImage}
+                  fallbackSrc={heroImage}
+                  alt={tour.title}
+                  className="h-72 w-full object-cover"
+                />
+              ) : null}
             </div>
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
@@ -214,7 +241,7 @@ export default function TourDetail({ params }: TourDetailProps) {
               >
                 <Image
                   src={image}
-                  fallbackSrc="/hero.jpg"
+                  fallbackSrc={image}
                   alt={`${tour.title} gallery`}
                   className="h-56 w-full object-cover md:h-72"
                 />

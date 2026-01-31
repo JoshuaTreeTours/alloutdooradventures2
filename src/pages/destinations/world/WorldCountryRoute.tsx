@@ -12,6 +12,7 @@ import {
   worldToursByCountry,
 } from "../../../data/worldIndex";
 import { getTourDetailPath } from "../../../data/tours";
+import { resolveHeroImage } from "../../../utils/hero";
 import { buildMetaDescription } from "../../../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../../../utils/structuredData";
 
@@ -46,7 +47,10 @@ export default function WorldCountryRoute({
   const guideCountry = getGuideCountryBySlug(params.countrySlug);
   const guideCities = guideCountry?.cities.slice(0, 8) ?? [];
 
-  const heroImage = countryTours[0]?.heroImage ?? "/hero.jpg";
+  const heroImage = resolveHeroImage({
+    pageType: "destination",
+    primary: countryTours[0]?.heroImage,
+  });
   const filteredTours = filterActivitySlug
     ? countryTours.filter(
         (tour) =>
@@ -100,14 +104,16 @@ export default function WorldCountryRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo title={title} description={description} />
+      <Seo title={title} description={description} image={heroImage ?? null} />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
-        <Image
-          src={heroImage}
-          fallbackSrc="/hero.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {heroImage ? (
+          <Image
+            src={heroImage}
+            fallbackSrc={heroImage}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : null}
         <div className="absolute inset-0 bg-black/55" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-6 py-16 text-white">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

@@ -28,6 +28,7 @@ import {
   buildReserveActionStructuredData,
   buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
+import { resolveHeroImage } from "../../../../utils/hero";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -130,6 +131,11 @@ export default function CityTourBookingRoute({
     ? getFlagstaffTourDetailPath(tour)
     : getCityTourDetailPath(tour);
   const bookingUrl = getTourBookingPath(tour);
+  const heroImage = resolveHeroImage({
+    pageType: "product",
+    primary: tour.heroImage ?? tour.galleryImages?.[0],
+    fallbacks: [city.heroImages[0], state.heroImage],
+  });
 
   const metaDescription = buildMetaDescription(
     `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
@@ -145,7 +151,7 @@ export default function CityTourBookingRoute({
         url: bookingUrl,
         name: `${tour.title} booking`,
         description: metaDescription,
-        image: tour.heroImage,
+        image: heroImage,
       }),
       buildReserveActionStructuredData({
         bookingUrl,
@@ -153,7 +159,7 @@ export default function CityTourBookingRoute({
         tourName: tour.title,
       }),
     ];
-  }, [bookingUrl, detailUrl, metaDescription, tour.heroImage, tour.title]);
+  }, [bookingUrl, detailUrl, heroImage, metaDescription, tour.title]);
 
   useStructuredData(structuredDataNodes);
 
@@ -193,7 +199,7 @@ export default function CityTourBookingRoute({
         title={seoTitle}
         description={metaDescription}
         url={bookingUrl}
-        image={tour.heroImage}
+        image={heroImage ?? null}
       />
       <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">

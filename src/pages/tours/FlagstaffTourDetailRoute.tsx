@@ -19,6 +19,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
+import { filterHeroImages, resolveHeroImage } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -54,6 +55,15 @@ export default function FlagstaffTourDetailRoute({
   }
 
   const tour = getFlagstaffTourBySlug(params.tourSlug);
+  const heroImage = resolveHeroImage({
+    pageType: "product",
+    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
+    fallbacks: [city?.heroImages[0], state?.heroImage],
+  });
+  const structuredImages = filterHeroImages(
+    [heroImage, ...(tour?.galleryImages ?? [])],
+    "product",
+  );
   const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
@@ -79,13 +89,14 @@ export default function FlagstaffTourDetailRoute({
         url: detailUrl,
         name: tour.title,
         description: metaDescription,
-        image: tour.heroImage,
+        image: heroImage,
       }),
       buildTourProductStructuredData({
         tour,
         detailUrl,
         bookingUrl,
         description: productDescription,
+        images: structuredImages.length ? structuredImages : undefined,
       }),
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
@@ -100,10 +111,12 @@ export default function FlagstaffTourDetailRoute({
     city.name,
     cityHref,
     detailUrl,
+    heroImage,
     metaDescription,
     productDescription,
     state.name,
     stateHref,
+    structuredImages,
     tour,
     toursHref,
   ]);
@@ -152,7 +165,7 @@ export default function FlagstaffTourDetailRoute({
         title={title}
         description={description}
         url={detailUrl}
-        image={tour.heroImage}
+        image={heroImage ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -224,12 +237,14 @@ export default function FlagstaffTourDetailRoute({
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-              <Image
-                src={tour.heroImage}
-                fallbackSrc="/hero.jpg"
-                alt={tour.title}
-                className="h-64 w-full object-cover md:h-80"
-              />
+              {heroImage ? (
+                <Image
+                  src={heroImage}
+                  fallbackSrc={heroImage}
+                  alt={tour.title}
+                  className="h-64 w-full object-cover md:h-80"
+                />
+              ) : null}
             </div>
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
@@ -278,7 +293,7 @@ export default function FlagstaffTourDetailRoute({
               >
                 <Image
                   src={image}
-                  fallbackSrc="/hero.jpg"
+                  fallbackSrc={image}
                   alt={`${tour.title} gallery`}
                   className="h-56 w-full object-cover md:h-64"
                 />
