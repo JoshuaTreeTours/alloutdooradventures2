@@ -1,28 +1,133 @@
 import fs from "node:fs";
 import path from "node:path";
-import {
-  auditCityGuideContent,
-  buildTopThingsAuditMetrics,
-  type CityGuideIssue,
-  type CityGuideTextContent,
+import { fileURLToPath } from "node:url";
+import type {
+  CityGuideIssue,
+  CityGuideTextContent,
 } from "../src/data/cityGuideContent";
-import { isTier1IntlCity } from "../src/data/cityTier1Intl";
-import { isTier1City } from "../src/data/cityTier1";
-import {
-  buildCityOverrideRoute,
-  cityOverrides,
-} from "../src/data/cityOverrides";
-import { buildTopThingsToDo } from "../src/data/cityTopThings";
-import { allCityGuideRecords } from "../src/data/cityGuideRegistry.node";
-import { buildCityGuideFacts } from "../src/lib/cityGuideFacts";
-import { tours } from "../src/data/tours";
-import { US_STATES, slugify } from "../src/data/tourCatalog";
 
 const BOILERPLATE_SENTENCE_MIN_LENGTH = 80;
 const BOILERPLATE_REPEAT_THRESHOLD = 8;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const REPO_ROOT = path.resolve(__dirname, "..");
 
-const getTopUsCityRoutesByTourCount = (limit = 50) => {
-  const usStateSlugs = new Set(US_STATES.map(state => slugify(state)));
+const AUDIT_ENTRYPOINTS = [
+  __filename,
+  path.resolve(REPO_ROOT, "src/data/cityGuideContent.ts"),
+  path.resolve(REPO_ROOT, "src/data/cityGuideRegistry.node.ts"),
+  path.resolve(REPO_ROOT, "src/data/cityOverrides.ts"),
+  path.resolve(REPO_ROOT, "src/data/cityTier1.ts"),
+  path.resolve(REPO_ROOT, "src/data/cityTier1Intl.ts"),
+  path.resolve(REPO_ROOT, "src/data/cityTopThings.ts"),
+  path.resolve(REPO_ROOT, "src/data/tourCatalog.ts"),
+  path.resolve(REPO_ROOT, "src/data/tours.audit.ts"),
+  path.resolve(REPO_ROOT, "src/lib/cityGuideFacts.ts"),
+];
+
+const IMPORT_RE = /\b(?:import|export)\s+(?:[^'"]*?\s+from\s+)?["']([^"']+)["']/g;
+const IMPORT_CALL_RE = /\bimport\(\s*["']([^"']+)["']\s*\)/g;
+const RESOLVED_EXTENSIONS = [
+  ".ts",
+  ".tsx",
+  ".mts",
+  ".cts",
+  ".js",
+  ".jsx",
+  ".mjs",
+  ".cjs",
+  ".node.ts",
+  ".node.tsx",
+] as const;
+
+const resolveModulePath = (baseDir: string, specifier: string) => {
+  if (!specifier.startsWith(".")) {
+    return null;
+  }
+
+  const cleaned = specifier.split("?")[0] ?? specifier;
+  const hasExtension = path.extname(cleaned).length > 0;
+  const basePath = path.resolve(baseDir, cleaned);
+
+  if (hasExtension) {
+    return fs.existsSync(basePath) ? basePath : null;
+  }
+
+  for (const ext of RESOLVED_EXTENSIONS) {
+    const candidate = `${basePath}${ext}`;
+    if (fs.existsSync(candidate)) {
+      return candidate;
+    }
+  }
+
+  if (fs.existsSync(basePath) && fs.statSync(basePath).isDirectory()) {
+    for (const ext of RESOLVED_EXTENSIONS) {
+      const candidate = path.join(basePath, `index${ext}`);
+      if (fs.existsSync(candidate)) {
+        return candidate;
+      }
+    }
+  }
+
+  return null;
+};
+
+const extractSpecifiers = (source: string) => {
+  const specifiers = new Set<string>();
+  let match: RegExpExecArray | null = null;
+
+  while ((match = IMPORT_RE.exec(source))) {
+    specifiers.add(match[1]);
+  }
+
+  while ((match = IMPORT_CALL_RE.exec(source))) {
+    specifiers.add(match[1]);
+  }
+
+  return Array.from(specifiers);
+};
+
+const enforceNoCsvImports = () => {
+  const visited = new Set<string>();
+  const queue = [...AUDIT_ENTRYPOINTS];
+
+  while (queue.length) {
+    const current = queue.pop();
+    if (!current || visited.has(current) || !fs.existsSync(current)) {
+      continue;
+    }
+
+    visited.add(current);
+    const source = fs.readFileSync(current, "utf8");
+    const specifiers = extractSpecifiers(source);
+
+    for (const specifier of specifiers) {
+      const cleaned = specifier.split("?")[0] ?? specifier;
+      if (cleaned.endsWith(".csv")) {
+        const relativeFile = path.relative(REPO_ROOT, current);
+        throw new Error(
+          `Audit import guard: ${relativeFile} imports a CSV module (${specifier}). ` +
+            "Use generated TS data or runtime fs.readFile instead.",
+        );
+      }
+
+      const resolved = resolveModulePath(path.dirname(current), specifier);
+      if (resolved) {
+        queue.push(resolved);
+      }
+    }
+  }
+};
+
+const getTopUsCityRoutesByTourCount = (
+  tours: Array<{
+    destination: { stateSlug?: string; citySlug?: string; state?: string; city?: string };
+  }>,
+  usStates: string[],
+  slugifyValue: (value: string) => string,
+  limit = 50,
+) => {
+  const usStateSlugs = new Set(usStates.map(state => slugifyValue(state)));
   const cityCounts = new Map<
     string,
     { count: number; city: string; state: string }
@@ -65,8 +170,31 @@ const toCsvValue = (value: string) => {
   return `"${escaped}"`;
 };
 
-const runAudit = () => {
+const runAudit = async () => {
   const strict = process.argv.includes("--strict");
+  enforceNoCsvImports();
+
+  const [
+    { auditCityGuideContent, buildTopThingsAuditMetrics },
+    { isTier1IntlCity },
+    { isTier1City },
+    { buildCityOverrideRoute, cityOverrides },
+    { buildTopThingsToDo },
+    { allCityGuideRecords },
+    { buildCityGuideFacts },
+    { toursForAudit },
+    { US_STATES, slugify },
+  ] = await Promise.all([
+    import("../src/data/cityGuideContent"),
+    import("../src/data/cityTier1Intl"),
+    import("../src/data/cityTier1"),
+    import("../src/data/cityOverrides"),
+    import("../src/data/cityTopThings"),
+    import("../src/data/cityGuideRegistry.node"),
+    import("../src/lib/cityGuideFacts"),
+    import("../src/data/tours.audit"),
+    import("../src/data/tourCatalog"),
+  ]);
   const records = allCityGuideRecords.map(record => {
     const cityFacts = buildCityGuideFacts({
       cityName: record.city,
@@ -176,7 +304,11 @@ const runAudit = () => {
     };
   });
 
-  const topUsCityRoutes = getTopUsCityRoutesByTourCount();
+  const topUsCityRoutes = getTopUsCityRoutesByTourCount(
+    toursForAudit,
+    US_STATES,
+    slugify,
+  );
   const boilerplateIndex = new Map<string, { sentence: string; routes: Set<string> }>();
 
   records.forEach(entry => {
@@ -333,4 +465,4 @@ const runAudit = () => {
   }
 };
 
-runAudit();
+void runAudit();
