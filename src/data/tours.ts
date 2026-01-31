@@ -6,6 +6,7 @@ import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
+export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
 
@@ -167,8 +168,6 @@ export const getTourDetailPath = (tour: Tour) =>
 export const getCityTourDetailPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
 
-export const getCityTourBookingPath = (tour: Tour) =>
-  `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}/book`;
 
 export const getAffiliateDisclosure = (tour: Tour) =>
   PROVIDER_CONFIG[tour.bookingProvider].affiliateDisclosure;

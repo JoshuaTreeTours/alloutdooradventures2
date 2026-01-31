@@ -650,11 +650,11 @@ const main = async () => {
       tsImport("../src/data/flagstaffTours.ts", import.meta.url),
       tsImport("../src/utils/seo.ts", import.meta.url),
     ]);
-  const [structuredDataModule, tourNarrativesModule, toursModule] =
+  const [structuredDataModule, tourNarrativesModule, tourPathsModule] =
     await Promise.all([
       safeImport("../src/utils/structuredData.ts", "structuredData"),
       safeImport("../src/data/tourNarratives.ts", "tourNarratives"),
-      safeImport("../src/data/tours.ts", "tours"),
+      safeImport("../src/data/tourPaths.ts", "tourPaths"),
     ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -697,7 +697,7 @@ const main = async () => {
     structuredDataModule?.normalizeStructuredData ?? null;
   const getExpandedTourDescription =
     tourNarrativesModule?.getExpandedTourDescription ?? null;
-  const getCityTourBookingPath = toursModule?.getCityTourBookingPath ?? null;
+  const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
 
   const urls = await readSitemapUrls();
   if (!urls.length) {
@@ -813,7 +813,7 @@ const main = async () => {
         Boolean(buildTourProductStructuredData) &&
         Boolean(buildTourTripStructuredData) &&
         Boolean(getExpandedTourDescription) &&
-        Boolean(getCityTourBookingPath);
+        Boolean(getTourBookingPath);
 
       if (canBuildTourNodes && segments[0] === "tours" && segments.length === 4) {
         tourForStructuredData = getTourBySlugs(
@@ -822,9 +822,7 @@ const main = async () => {
           segments[3],
         );
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getCityTourBookingPath(tourForStructuredData),
-          );
+          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
@@ -838,9 +836,7 @@ const main = async () => {
       ) {
         tourForStructuredData = getFlagstaffTourBySlug(segments[1]);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            getFlagstaffTourBookingPath(tourForStructuredData),
-          );
+          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
           const stateSlug = tourForStructuredData.destination.stateSlug;
           const citySlug = tourForStructuredData.destination.citySlug;
           breadcrumbItems = buildTourBreadcrumbs({
@@ -864,11 +860,7 @@ const main = async () => {
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            isFlagstaff
-              ? getFlagstaffTourBookingPath(tourForStructuredData)
-              : getCityTourBookingPath(tourForStructuredData),
-          );
+          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
@@ -894,11 +886,7 @@ const main = async () => {
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(
-            isFlagstaff
-              ? getFlagstaffTourBookingPath(tourForStructuredData)
-              : getCityTourBookingPath(tourForStructuredData),
-          );
+          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,

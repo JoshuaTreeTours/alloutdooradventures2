@@ -7,7 +7,7 @@ import { useStructuredData } from "../../components/StructuredDataProvider";
 import {
   getAffiliateDisclosure,
   getProviderLabel,
-  getCityTourBookingPath,
+  getTourBookingPath,
   getTourBySlugs,
   getTourDetailPath,
 } from "../../data/tours";
@@ -34,7 +34,7 @@ type TourDetailProps = {
 
 export default function TourDetail({ params }: TourDetailProps) {
   const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
-  const bookingUrl = tour ? getCityTourBookingPath(tour) : "";
+  const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const detailUrl = tour ? getTourDetailPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]

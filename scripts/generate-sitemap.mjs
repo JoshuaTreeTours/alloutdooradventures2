@@ -283,11 +283,16 @@ const buildSitemap = async () => {
     "../src/data/tourCatalog.ts",
     import.meta.url,
   );
+  const tourPathsModule = await tsImport(
+    "../src/data/tourPaths.ts",
+    import.meta.url,
+  );
   const flagstaffModule = await tsImport(
     "../src/data/flagstaffTours.ts",
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
+  const getTourBookingPath = tourPathsModule.getTourBookingPath;
 
   const pages = new Set();
   const toursUrls = new Set();
@@ -371,16 +376,13 @@ const buildSitemap = async () => {
       toursUrls,
       `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
     );
-    addUrl(
-      bookingUrls,
-      `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}/book`,
-    );
+    addUrl(bookingUrls, getTourBookingPath(tour));
   });
 
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
       addUrl(toursUrls, flagstaffModule.getFlagstaffTourDetailPath(tour));
-      addUrl(bookingUrls, flagstaffModule.getFlagstaffTourBookingPath(tour));
+      addUrl(bookingUrls, getTourBookingPath(tour));
     });
   }
 

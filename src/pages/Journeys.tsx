@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 import Image from "../components/Image";
 import Seo from "../components/Seo";
-import { getCityTourBookingPath, getTourDetailPath, tours } from "../data/tours";
+import { getTourBookingPath, getTourDetailPath, tours } from "../data/tours";
 import type { Tour } from "../data/tours.types";
 import { getStaticPageSeo } from "../utils/seo";
 
@@ -107,7 +107,7 @@ const JourneyCard = ({ tour, durationDays }: JourneyCardProps) => {
       ? `${tour.destination.city}, ${tour.destination.country}`
       : tour.destination.city;
   const detailHref = getTourDetailPath(tour);
-  const bookingHref = getCityTourBookingPath(tour);
+  const bookingHref = getTourBookingPath(tour);
 
   const hasMultipleImages = images.length > 1;
   const displayedIndex = ((activeImage % images.length) + images.length) % images.length;

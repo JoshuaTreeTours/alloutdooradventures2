@@ -10,11 +10,10 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
-import { getAffiliateDisclosure } from "../../data/tours";
+import { getAffiliateDisclosure, getTourBookingPath } from "../../data/tours";
 import { getExpandedTourDescription } from "../../data/tourNarratives";
 import {
   flagstaffTours,
-  getFlagstaffTourBookingPath,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
@@ -57,7 +56,7 @@ export default function FlagstaffTourDetailRoute({
 
   const tour = getFlagstaffTourBySlug(params.tourSlug);
   const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
-  const bookingUrl = tour ? getFlagstaffTourBookingPath(tour) : "";
+  const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
