@@ -2,7 +2,7 @@ import { getCityCoordinates } from "./cityCoordinates";
 import { isTier1IntlCity } from "./cityTier1Intl";
 import { isTier1City } from "./cityTier1";
 import { cityLocalPois, type LocalPoi } from "./cityLocalPois";
-import { getTier1PoisForCity } from "./cityPois/tier1";
+import { getTier1PoisForCity, resolveTier1ParentSlug } from "./cityPois/tier1";
 import { getTier1IntlPoisForCity } from "./cityPois/tier1/world";
 import { getCityBySlugs, getStateBySlug, states } from "./destinations";
 import type { CityFacts } from "../lib/cityGuideFacts";
@@ -1218,19 +1218,27 @@ export const buildTopThingsToDo = (
   const minItems = options.minItems ?? 10;
   const regionType = options.regionType ?? "state";
   const parentName = options.parentName;
+  const isTier1UsCountry =
+    regionType === "country" &&
+    parentSlug === "united-states" &&
+    isTier1City(citySlug);
   const isTier1Us = regionType === "state" && isTier1City(citySlug);
   const isTier1Intl =
     regionType === "country" && isTier1IntlCity(parentSlug, citySlug);
-  const tier = isTier1Us || isTier1Intl ? 1 : 2;
+  const tier = isTier1Us || isTier1UsCountry || isTier1Intl ? 1 : 2;
+  const resolvedParentSlug =
+    isTier1Us || isTier1UsCountry
+      ? resolveTier1ParentSlug(parentSlug, citySlug)
+      : parentSlug;
 
   if (tier === 1) {
     const tier1Pois =
-      regionType === "country"
+      regionType === "country" && isTier1Intl
         ? getTier1IntlPoisForCity(parentSlug, citySlug)
-        : getTier1PoisForCity(parentSlug, citySlug);
+        : getTier1PoisForCity(resolvedParentSlug, citySlug);
     const filteredPois = tier1Pois.filter(
       poi =>
-        isPoiInCity(poi, { parentSlug, citySlug, tier }) &&
+        isPoiInCity(poi, { parentSlug: resolvedParentSlug, citySlug, tier }) &&
         poi.description.trim().length >= MIN_TIER1_DESCRIPTION_LENGTH
     );
 
@@ -1408,11 +1416,14 @@ export const buildTopThingsToDo = (
 export const getTopThingAuditContext = (
   parentSlug: string,
   citySlug: string,
-  options?: { allowedStates?: Set<string> | null }
+  options?: { allowedStates?: Set<string> | null; tier1PoiNames?: Set<string> }
 ) => {
   const origin = getCityCoordinates(parentSlug, citySlug);
   const localPois = getLocalPoisForCity(parentSlug, citySlug);
   const localPoiNames = buildLocalPoiNameSet(localPois);
+  if (options?.tier1PoiNames) {
+    options.tier1PoiNames.forEach(name => localPoiNames.add(name));
+  }
   const allDestinations = getDestinationList();
   const allowedStates = options?.allowedStates;
   const destinationNameMatches = (() => {

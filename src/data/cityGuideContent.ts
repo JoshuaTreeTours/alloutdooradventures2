@@ -13,7 +13,11 @@ import {
   MIN_TIER1_DESCRIPTION_LENGTH,
   MIN_TIER1_ITEMS,
 } from "./cityTopThings";
-import { getTier1PoiNameSet, getTier1PoisForCity } from "./cityPois/tier1";
+import {
+  getTier1PoiNameSet,
+  getTier1PoisForCity,
+  resolveTier1ParentSlug,
+} from "./cityPois/tier1";
 import {
   getTier1IntlPoiNameSet,
   getTier1IntlPoisForCity,
@@ -54,15 +58,33 @@ type CityGuideAuditContext = {
   cityFacts?: CityFacts;
 };
 
-const getTier1PoisForContext = (context: CityGuideAuditContext) =>
-  context.regionType === "country"
+const getTier1ParentSlugForContext = (context: CityGuideAuditContext) =>
+  context.regionType === "country" && context.parentSlug === "united-states"
+    ? resolveTier1ParentSlug(context.parentSlug, context.citySlug)
+    : context.parentSlug;
+
+const getTier1PoisForContext = (context: CityGuideAuditContext) => {
+  if (context.regionType === "country" && context.parentSlug === "united-states") {
+    return getTier1PoisForCity(
+      getTier1ParentSlugForContext(context),
+      context.citySlug
+    );
+  }
+
+  return context.regionType === "country"
     ? getTier1IntlPoisForCity(context.parentSlug, context.citySlug)
     : getTier1PoisForCity(context.parentSlug, context.citySlug);
+};
 
-const getTier1PoiNameSetForContext = (context: CityGuideAuditContext) =>
-  context.regionType === "country"
+const getTier1PoiNameSetForContext = (context: CityGuideAuditContext) => {
+  if (context.regionType === "country" && context.parentSlug === "united-states") {
+    return getTier1PoiNameSet(getTier1ParentSlugForContext(context), context.citySlug);
+  }
+
+  return context.regionType === "country"
     ? getTier1IntlPoiNameSet(context.parentSlug, context.citySlug)
     : getTier1PoiNameSet(context.parentSlug, context.citySlug);
+};
 
 type DestinationMatch = {
   name: string;
@@ -445,6 +467,10 @@ export const buildTopThingsAuditMetrics = (
 ): TopThingsAuditMetrics => {
   const topThings = content.topThingsToDo ?? [];
   const total = topThings.length;
+  const tier1PoiNames =
+    context.tier === 1
+      ? getTier1PoiNameSetForContext(context)
+      : new Set<string>();
   const allowedStates =
     context.regionType === "state"
       ? getAllowedNeighborStates(context.parentSlug)
@@ -452,12 +478,11 @@ export const buildTopThingsAuditMetrics = (
   const { localPoiNames, destinationDistanceMap } = getTopThingAuditContext(
     context.parentSlug,
     context.citySlug,
-    { allowedStates }
+    {
+      allowedStates,
+      tier1PoiNames: context.tier === 1 ? tier1PoiNames : undefined,
+    }
   );
-  const tier1PoiNames =
-    context.tier === 1
-      ? getTier1PoiNameSetForContext(context)
-      : new Set<string>();
 
   const poiBackedTitles: string[] = [];
   const nonPoiTitles: string[] = [];
@@ -603,6 +628,8 @@ export const auditCityGuideContent = (
       origin,
     } = getTopThingAuditContext(context.parentSlug, context.citySlug, {
       allowedStates: allowedNeighborStates,
+      tier1PoiNames:
+        context.tier === 1 ? getTier1PoiNameSetForContext(context) : undefined,
     });
     const isNonTierUs = context.regionType === "state" && context.tier === 2;
     const nearbyDestinationAllowlist = isNonTierUs
@@ -907,10 +934,14 @@ export const auditCityGuideContent = (
         }
         const normalized = normalizePlaceName(item.title);
         const poi = poiByName.get(normalized);
+        const tier1ParentSlug =
+          context.tier === 1
+            ? getTier1ParentSlugForContext(context)
+            : context.parentSlug;
         if (
           poi &&
           !isPoiInCity(poi, {
-            parentSlug: context.parentSlug,
+            parentSlug: tier1ParentSlug,
             citySlug: context.citySlug,
             tier: 1,
           })

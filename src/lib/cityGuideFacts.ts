@@ -1,5 +1,6 @@
 import type { CityLandmarkMetadata } from "../data/cityLandmarks";
 import { cityContext } from "../data/cityContext";
+import { isTier1City } from "../data/cityTier1";
 import type { Tour } from "../data/tours.types";
 
 export type SettlementType =
@@ -412,14 +413,20 @@ const buildNearbyFallback = (
 
 const buildOutdoorPlaceholders = (
   cityName: string,
+  citySlug: string,
   type: SettlementType,
   parentSlug: string,
 ) => {
   const stateHints = STATE_OUTDOOR_HINTS[parentSlug] ?? [];
   const isRiverState = RIVER_HINT_STATES.has(parentSlug);
+  const isTier1 = isTier1City(citySlug);
   const base = [
     `${cityName} Regional Park`,
-    isRiverState ? `${cityName} Riverwalk` : `${cityName} Greenway`,
+    isRiverState
+      ? isTier1
+        ? `${cityName} Riverfront Promenade`
+        : `${cityName} Riverwalk`
+      : `${cityName} Greenway`,
   ];
 
   const typeSpecific =
@@ -452,7 +459,12 @@ export const buildCityGuideFacts = (input: CityFactsInput): CityFacts => {
   const outdoors = uniqueValues([
     ...(input.landmarks?.outdoors ?? []),
     ...(input.metadata?.scenicAreas ?? []),
-    ...buildOutdoorPlaceholders(input.cityName, type, input.parentSlug),
+    ...buildOutdoorPlaceholders(
+      input.cityName,
+      input.citySlug,
+      type,
+      input.parentSlug,
+    ),
   ]);
 
   const nearby = uniqueValues([
