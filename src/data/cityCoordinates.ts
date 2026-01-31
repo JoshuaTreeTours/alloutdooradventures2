@@ -16,6 +16,9 @@ const CITY_COORDINATE_OVERRIDES: Record<string, CityCoordinates> = {
   "california/sacramento": { lat: 38.5816, lng: -121.4944 },
   "illinois/chicago": { lat: 41.8781, lng: -87.6298 },
   "arizona/phoenix": { lat: 33.4484, lng: -112.074 },
+  "massachusetts/boston": { lat: 42.3601, lng: -71.0589 },
+  "new-york/new-york": { lat: 40.7128, lng: -74.006 },
+  "district-of-columbia/washington": { lat: 38.9072, lng: -77.0369 },
 };
 
 const buildCityCoordinateIndex = () => {

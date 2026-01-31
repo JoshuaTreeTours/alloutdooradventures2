@@ -1,7 +1,11 @@
 import { normalizePlaceName } from "../../../utils/geo";
 import type { Tier1UsCityPoi } from "./us/types";
 import { pois as boston } from "./us/massachusetts/boston";
+import { pois as newYork } from "./us/new-york/new-york";
 import { pois as portland } from "./us/oregon/portland";
+import { pois as sanDiego } from "./us/california/san-diego";
+import { pois as sanFrancisco } from "./us/california/san-francisco";
+import { pois as washingtonDc } from "./us/district-of-columbia/washington";
 import { pois as seattle } from "./us/washington/seattle";
 
 export type CityPoi = Tier1UsCityPoi;
@@ -1946,6 +1950,10 @@ export const tier1CityPois: CityPoi[] = [
   ...seattle,
   ...portland,
   ...boston,
+  ...newYork,
+  ...washingtonDc,
+  ...sanDiego,
+  ...sanFrancisco,
 ];
 
 const buildPoiIndex = () => {
