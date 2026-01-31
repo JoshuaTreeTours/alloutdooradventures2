@@ -3,7 +3,7 @@ import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 
-import australiaCsv from "../../data/australia.csv?raw";
+import { australiaCsv } from "./generated/australia.generated";
 
 type CsvRow = Record<string, string>;
 
