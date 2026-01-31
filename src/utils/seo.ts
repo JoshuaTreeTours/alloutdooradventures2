@@ -182,6 +182,87 @@ export const buildTourMetaDescription = (tour: {
   return clampDescription(composed, maxLength);
 };
 
+export type SeoMetadata = {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  type: string;
+  image: string;
+};
+
+export const buildSeoMetadata = ({
+  title,
+  description,
+  pathname,
+  canonicalUrl,
+  type = DEFAULT_SEO.type,
+  image = DEFAULT_SEO.image,
+}: {
+  title: string;
+  description: string;
+  pathname: string;
+  canonicalUrl?: string;
+  type?: string;
+  image?: string;
+}): SeoMetadata => ({
+  title,
+  description,
+  canonicalUrl: canonicalUrl ?? buildCanonicalUrl(pathname),
+  type,
+  image: buildImageUrl(image),
+});
+
+export const buildStateHubMeta = ({
+  name,
+  intro,
+}: {
+  name: string;
+  intro: string;
+}) => ({
+  title: `${name} Outdoor Adventures | Tours & Destinations`,
+  description: buildMetaDescription(
+    intro,
+    `Explore ${name} tours, cities, and outdoor experiences curated by local experts.`,
+  ),
+});
+
+export const buildCityHubMeta = ({
+  cityName,
+  stateName,
+  shortDescription,
+}: {
+  cityName: string;
+  stateName: string;
+  shortDescription: string;
+}) => ({
+  title: `${cityName}, ${stateName} Outdoor Adventures | Tours & City Guide`,
+  description: buildMetaDescription(
+    shortDescription,
+    `Plan hikes, tours, and outdoor experiences around ${cityName}, ${stateName}.`,
+  ),
+});
+
+export const buildCityToursIndexMeta = ({
+  cityName,
+  stateName,
+  activityLabel,
+}: {
+  cityName: string;
+  stateName: string;
+  activityLabel?: string | null;
+}) => {
+  const activityPrefix = activityLabel ? `${activityLabel} tours` : "tours";
+  const titlePrefix = activityLabel ? `${activityLabel} Tours` : "Tours";
+
+  return {
+    title: `${titlePrefix} in ${cityName}, ${stateName} | Outdoor Adventures`,
+    description: buildMetaDescription(
+      `Browse ${activityPrefix} in ${cityName}, ${stateName}.`,
+      `Discover outdoor experiences, top-rated guides, and easy booking links for ${cityName}.`,
+    ),
+  };
+};
+
 export const buildCanonicalUrl = (path: string) => {
   if (!path) {
     return DEFAULT_SEO.url;

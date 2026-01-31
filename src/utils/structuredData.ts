@@ -10,7 +10,6 @@ type StructuredDataValue =
   | { [key: string]: StructuredDataValue };
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
-export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
 export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
@@ -134,42 +133,16 @@ export const normalizeStructuredData = (
 };
 
 export const getSiteStructuredDataNodes = () => {
-  const address = {
-    "@type": "PostalAddress",
-    addressLocality: "Las Vegas",
-    addressRegion: "NV",
-    addressCountry: "US",
-  };
-
-  const logoUrl = buildImageUrl("/images/Logo.png");
-  const heroUrl = buildImageUrl("/hero.jpg");
+  const logoUrl = buildImageUrl("/logo.svg");
 
   return [
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures, Inc.",
-      url: SITE_URL,
-      logo: logoUrl,
-      image: heroUrl,
-      address,
-    },
-    {
-      "@type": ["Organization", "TravelAgency"],
-      "@id": SITE_BRAND_ID,
       name: "Outdoor Adventures",
-      url: SITE_URL,
+      alternateName: "All Outdoor Adventures",
+      url: `${SITE_URL}/`,
       logo: logoUrl,
-      parentOrganization: {
-        "@id": SITE_ORGANIZATION_ID,
-      },
-      areaServed: [
-        "Worldwide",
-        {
-          "@type": "Country",
-          name: "United States",
-        },
-      ],
       sameAs: [
         "https://www.facebook.com/alloutdooradventuresonline",
         "https://www.linkedin.com/company/all-outdoor-adventures",
@@ -178,13 +151,10 @@ export const getSiteStructuredDataNodes = () => {
     {
       "@type": "WebSite",
       "@id": SITE_WEBSITE_ID,
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
       name: "Outdoor Adventures",
       publisher: {
         "@id": SITE_ORGANIZATION_ID,
-      },
-      about: {
-        "@id": SITE_BRAND_ID,
       },
     },
   ];
@@ -204,20 +174,29 @@ export const buildWebPageStructuredData = ({
   name,
   description,
   image,
+  type = "WebPage",
+  breadcrumbId,
+  mainEntityId,
 }: {
   url: string;
   name: string;
   description?: string;
   image?: string;
+  type?: "WebPage" | "CollectionPage";
+  breadcrumbId?: string;
+  mainEntityId?: string;
 }) => {
   const imageId = image ? `${url}#primaryimage` : undefined;
   return {
-    "@type": "WebPage",
+    "@type": type,
     "@id": `${url}#webpage`,
     url,
     name: sanitizeSchemaName(name),
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
+    publisher: { "@id": SITE_ORGANIZATION_ID },
+    ...(breadcrumbId ? { breadcrumb: { "@id": breadcrumbId } } : {}),
+    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
     ...(image
       ? {
           primaryImageOfPage: buildImageObject(image, imageId),
@@ -229,15 +208,88 @@ export const buildWebPageStructuredData = ({
 
 export const buildBreadcrumbList = (
   items: { name: string; url: string }[],
+  id?: string,
 ) => ({
   "@type": "BreadcrumbList",
+  ...(id ? { "@id": id } : {}),
   itemListElement: items.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
     name: item.name,
-    item: item.url,
+    item: { "@id": item.url },
   })),
 });
+
+export const buildPlaceStructuredData = ({
+  id,
+  type,
+  name,
+  url,
+  geo,
+}: {
+  id: string;
+  type: "AdministrativeArea" | "City" | "Place";
+  name: string;
+  url: string;
+  geo?: { lat: number; lng: number } | null;
+}) => ({
+  "@type": type,
+  "@id": id,
+  name,
+  url,
+  ...(geo
+    ? {
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: geo.lat,
+          longitude: geo.lng,
+        },
+      }
+    : {}),
+});
+
+export const dedupeStructuredDataNodes = (
+  nodes: StructuredDataValue[],
+): StructuredDataValue[] => {
+  const seen = new Set<string>();
+  const deduped: StructuredDataValue[] = [];
+
+  nodes.forEach((node) => {
+    if (
+      node &&
+      typeof node === "object" &&
+      !Array.isArray(node) &&
+      "@id" in node &&
+      typeof node["@id"] === "string"
+    ) {
+      const id = node["@id"] as string;
+      if (seen.has(id)) {
+        return;
+      }
+      seen.add(id);
+    }
+    deduped.push(node);
+  });
+
+  return deduped;
+};
+
+export const hasStructuredDataType = (
+  nodes: StructuredDataValue[] | null,
+  type: string,
+) =>
+  Boolean(
+    nodes?.some((node) => {
+      if (!node || typeof node !== "object") {
+        return false;
+      }
+      const nodeType = (node as { "@type"?: string | string[] })["@type"];
+      if (Array.isArray(nodeType)) {
+        return nodeType.includes(type);
+      }
+      return nodeType === type;
+    }),
+  );
 
 export const buildItemList = (
   items: { name: string; url: string; image?: string | string[] }[],
@@ -290,8 +342,8 @@ export const buildTourProductStructuredData = ({
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    brand: { "@id": SITE_BRAND_ID },
-    seller: { "@id": SITE_BRAND_ID },
+    brand: { "@id": SITE_ORGANIZATION_ID },
+    seller: { "@id": SITE_ORGANIZATION_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
@@ -331,7 +383,7 @@ export const buildTourTripStructuredData = ({
     name: tour.title,
     description,
     image: images.length ? images : undefined,
-    provider: { "@id": SITE_BRAND_ID },
+    provider: { "@id": SITE_ORGANIZATION_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };

@@ -358,6 +358,10 @@ const buildSitemap = async () => {
             cityUrls,
             `/destinations/states/${state.slug}/cities/${city.slug}/tours`,
           );
+          addUrl(
+            cityUrls,
+            `/destinations/${state.slug}/${city.slug}/tours`,
+          );
         });
       }
     });
@@ -370,6 +374,10 @@ const buildSitemap = async () => {
     addUrl(
       toursUrls,
       `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
+    );
+    addUrl(
+      toursUrls,
+      `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`,
     );
     addUrl(
       bookingUrls,

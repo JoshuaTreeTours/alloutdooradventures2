@@ -1,7 +1,8 @@
 import { useMemo } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 import Image from "../../../../components/Image";
+import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
@@ -15,7 +16,15 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
-import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
+import {
+  buildCityToursIndexMeta,
+  buildSeoMetadata,
+} from "../../../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildItemList,
+  buildWebPageStructuredData,
+} from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -29,6 +38,7 @@ export default function CityToursIndexRoute({
   params,
   basePathOverride,
 }: CityToursIndexRouteProps) {
+  const [location] = useLocation();
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -60,18 +70,37 @@ export default function CityToursIndexRoute({
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
   const heroImage = city?.heroImages[0] ?? "/hero.jpg";
+  const canonicalPath = (location ?? (state && city
+    ? `/destinations/${state.slug}/${city.slug}/tours`
+    : "/destinations")).split("?")[0];
+  const seoMeta = state && city
+    ? buildCityToursIndexMeta({
+        cityName: city.name,
+        stateName: state.name,
+        activityLabel,
+      })
+    : null;
+  const seo = seoMeta
+    ? buildSeoMetadata({
+        title: seoMeta.title,
+        description: seoMeta.description,
+        pathname: canonicalPath,
+        image: heroImage,
+      })
+    : null;
 
-  const toursHref = `${cityHref}/tours`;
+  const toursHref = canonicalPath;
   const structuredDataNodes = useMemo(() => {
-    if (!state || !city) {
+    if (!state || !city || !seo) {
       return null;
     }
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: stateHref },
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
-    ]);
+    ], breadcrumbId);
     const itemListItems = filteredTours.map((tour) => ({
       name: tour.title,
       url: isFlagstaff
@@ -79,7 +108,17 @@ export default function CityToursIndexRoute({
         : getCityTourDetailPath(tour),
       image: tour.heroImage ? [tour.heroImage] : undefined,
     }));
-    const nodes = [breadcrumbs];
+    const nodes = [
+      buildWebPageStructuredData({
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        type: "CollectionPage",
+        breadcrumbId,
+      }),
+      breadcrumbs,
+    ];
     if (itemListItems.length) {
       nodes.push(buildItemList(itemListItems));
     }
@@ -89,6 +128,7 @@ export default function CityToursIndexRoute({
     cityHref,
     filteredTours,
     isFlagstaff,
+    seo,
     state,
     stateHref,
     toursHref,
@@ -110,6 +150,14 @@ export default function CityToursIndexRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      {seo ? (
+        <Seo
+          title={seo.title}
+          description={seo.description}
+          canonicalUrl={seo.canonicalUrl}
+          image={seo.image}
+        />
+      ) : null}
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

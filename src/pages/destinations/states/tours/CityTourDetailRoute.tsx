@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 import Image from "../../../../components/Image";
 import Seo from "../../../../components/Seo";
@@ -13,19 +13,17 @@ import {
 import {
   getAffiliateDisclosure,
   getCityTourDetailPath,
-  getCityTourBookingPath,
   getToursByCity,
   getTourBySlugs,
 } from "../../../../data/tours";
 import {
   flagstaffTours,
-  getFlagstaffTourBookingPath,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { buildMetaDescription } from "../../../../utils/seo";
+import { buildMetaDescription, buildSeoMetadata } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -44,6 +42,7 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [location] = useLocation();
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -60,18 +59,15 @@ export default function CityTourDetailRoute({
       : getTourBySlugs(state.slug, city.slug, params.tourSlug)
     : null;
 
-  const canonicalUrl =
-    tour && isFlagstaff
-      ? getFlagstaffTourDetailPath(tour)
-      : tour
+  const canonicalPath = (
+    location ??
+    (tour
+      ? isFlagstaff
         ? getCityTourDetailPath(tour)
-        : "";
-  const bookingUrl =
-    tour && isFlagstaff
-      ? getFlagstaffTourBookingPath(tour)
-      : tour
-        ? getCityTourBookingPath(tour)
-        : "";
+        : getCityTourDetailPath(tour)
+      : "")
+  ).split("?")[0];
+  const bookingPath = tour ? `${canonicalPath}/book` : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
@@ -82,6 +78,14 @@ export default function CityTourDetailRoute({
           `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
         )
       : undefined;
+  const description =
+    metaDescription ??
+    (tour && state && city
+      ? buildMetaDescription(
+          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+        )
+      : "");
   const cityHref = state && city
     ? `/destinations/states/${state.slug}/cities/${city.slug}`
     : "";
@@ -91,28 +95,48 @@ export default function CityTourDetailRoute({
       : `/destinations/states/${state.slug}`
     : "";
   const toursHref =
-    state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+    canonicalPath && canonicalPath.includes("/tours/")
+      ? canonicalPath.replace(/\/tours\/[^/]+$/, "/tours")
+      : state && city
+        ? `/destinations/${state.slug}/${city.slug}/tours`
+        : "";
+  const title =
+    tour && state && city
+      ? `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`
+      : "";
+  const seoImage = tour?.heroImage ?? city?.heroImages[0] ?? "/hero.jpg";
+  const seo =
+    tour && canonicalPath
+      ? buildSeoMetadata({
+          title,
+          description,
+          pathname: canonicalPath,
+          image: seoImage,
+        })
+      : null;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !canonicalUrl || !bookingUrl) {
+    if (!tour || !seo || !bookingPath) {
       return null;
     }
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
     return [
       buildWebPageStructuredData({
-        url: canonicalUrl,
-        name: tour.title,
-        description: metaDescription,
-        image: tour.heroImage,
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        breadcrumbId,
       }),
       buildTourProductStructuredData({
         tour,
-        detailUrl: canonicalUrl,
-        bookingUrl,
+        detailUrl: seo.canonicalUrl,
+        bookingUrl: bookingPath,
         description: productDescription,
       }),
       buildTourTripStructuredData({
         tour,
-        detailUrl: canonicalUrl,
-        bookingUrl,
+        detailUrl: seo.canonicalUrl,
+        bookingUrl: bookingPath,
         description: productDescription,
       }),
       buildBreadcrumbList([
@@ -120,16 +144,16 @@ export default function CityTourDetailRoute({
         ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
         ...(cityHref ? [{ name: city?.name ?? "", url: cityHref }] : []),
         ...(toursHref ? [{ name: "Tours", url: toursHref }] : []),
-        { name: tour.title, url: canonicalUrl },
-      ]),
+        { name: tour.title, url: seo.canonicalUrl },
+      ], breadcrumbId),
     ];
   }, [
-    bookingUrl,
-    canonicalUrl,
+    bookingPath,
     city?.name,
     cityHref,
     metaDescription,
     productDescription,
+    seo,
     state?.name,
     stateHref,
     tour,
@@ -172,13 +196,6 @@ export default function CityTourDetailRoute({
   }
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
-  const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description =
-    metaDescription ??
-    buildMetaDescription(
-      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-    );
   const relatedTours = (isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
@@ -191,12 +208,14 @@ export default function CityTourDetailRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo
-        title={title}
-        description={description}
-        url={canonicalUrl}
-        image={tour.heroImage}
-      />
+      {seo ? (
+        <Seo
+          title={title}
+          description={description}
+          canonicalUrl={seo.canonicalUrl}
+          image={seoImage}
+        />
+      ) : null}
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

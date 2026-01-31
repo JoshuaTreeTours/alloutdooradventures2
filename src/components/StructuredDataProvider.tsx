@@ -2,12 +2,9 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useLocation } from "wouter";
 
 import {
-  buildWebPageStructuredData,
-  getSiteStructuredDataNodes,
-  normalizeStructuredData,
-  sanitizeSchemaName,
+  hasStructuredDataType,
 } from "../utils/structuredData";
-import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
+import { buildSchemaGraph, getDocumentSeoMetadata } from "../utils/schemaBuilders";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -19,20 +16,6 @@ const StructuredDataContext =
   createContext<StructuredDataContextValue | null>(null);
 
 const SCRIPT_ID = "structured-data";
-
-const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
-  Boolean(
-    nodes?.some((node) => {
-      if (!node || typeof node !== "object") {
-        return false;
-      }
-      const nodeType = (node as { "@type"?: string | string[] })["@type"];
-      if (Array.isArray(nodeType)) {
-        return nodeType.includes(type);
-      }
-      return nodeType === type;
-    }),
-  );
 
 const upsertStructuredDataScript = (json: StructuredDataNode | null) => {
   let script = document.head.querySelector<HTMLScriptElement>(
@@ -69,34 +52,15 @@ export const StructuredDataProvider = ({
   }, [location]);
 
   useEffect(() => {
-    const baseNodes = getSiteStructuredDataNodes();
-    const pageNodes = nodes?.length ? nodes : [];
-    const canonicalUrl =
-      document.head
-        .querySelector<HTMLLinkElement>("link[rel=\"canonical\"]")
-        ?.getAttribute("href") ?? buildCanonicalUrl(location ?? "/");
-    const description =
-      document.head
-        .querySelector<HTMLMetaElement>("meta[name=\"description\"]")
-        ?.getAttribute("content") ?? DEFAULT_SEO.description;
-    const title = sanitizeSchemaName(document.title || DEFAULT_SEO.title);
-
-    const defaultWebPageNode = hasNodeType(nodes, "WebPage")
-      ? []
-      : [
-          buildWebPageStructuredData({
-            url: canonicalUrl,
-            name: title,
-            description,
-          }),
-        ];
-
-    const graph = {
-      "@context": "https://schema.org",
-      "@graph": [...baseNodes, ...pageNodes, ...defaultWebPageNode],
-    };
-
-    const normalized = normalizeStructuredData(graph);
+    const seo = getDocumentSeoMetadata({
+      locationPathname: location ?? "/",
+    });
+    const includeWebPage = !hasStructuredDataType(nodes, "WebPage");
+    const normalized = buildSchemaGraph({
+      seo,
+      nodes,
+      includeWebPage,
+    });
     upsertStructuredDataScript(
       normalized ? (normalized as StructuredDataNode) : null,
     );

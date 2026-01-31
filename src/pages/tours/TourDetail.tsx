@@ -16,7 +16,7 @@ import {
   getExpandedTourDescription,
   getTourHighlights,
 } from "../../data/tourNarratives";
-import { buildTourMetaDescription } from "../../utils/seo";
+import { buildSeoMetadata, buildTourMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -40,35 +40,65 @@ export default function TourDetail({ params }: TourDetailProps) {
     ? getExpandedTourDescription(tour)[0]
     : undefined;
   const metaDescription = tour ? buildTourMetaDescription(tour) : undefined;
+  const regionLabel =
+    tour?.destination.state || tour?.destination.country || "";
+  const destinationLabel = tour
+    ? regionLabel
+      ? `${tour.destination.city}, ${regionLabel}`
+      : tour.destination.city
+    : "";
+  const title = tour
+    ? `${tour.title} | ${destinationLabel} Outdoor Tour`
+    : "";
+  const description = metaDescription ?? (tour ? buildTourMetaDescription(tour) : "");
+  const seoImage = tour?.heroImage ?? "/hero.jpg";
+  const seo =
+    tour && detailUrl
+      ? buildSeoMetadata({
+          title,
+          description,
+          pathname: detailUrl,
+          image: seoImage,
+        })
+      : null;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !bookingUrl || !detailUrl) {
+    if (!tour || !bookingUrl || !detailUrl || !seo) {
       return null;
     }
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
     return [
       buildWebPageStructuredData({
-        url: detailUrl,
-        name: tour.title,
-        description: metaDescription,
-        image: tour.heroImage,
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        breadcrumbId,
       }),
       buildTourProductStructuredData({
         tour,
-        detailUrl,
+        detailUrl: seo.canonicalUrl,
         bookingUrl,
         description: productDescription,
       }),
       buildTourTripStructuredData({
         tour,
-        detailUrl,
+        detailUrl: seo.canonicalUrl,
         bookingUrl,
         description: productDescription,
       }),
       buildBreadcrumbList([
         { name: "Tours", url: "/tours" },
-        { name: tour.title, url: detailUrl },
-      ]),
+        { name: tour.title, url: seo.canonicalUrl },
+      ], breadcrumbId),
     ];
-  }, [bookingUrl, detailUrl, metaDescription, productDescription, tour]);
+  }, [
+    bookingUrl,
+    detailUrl,
+    metaDescription,
+    productDescription,
+    seo,
+    tour,
+  ]);
 
   useStructuredData(structuredDataNodes);
 
@@ -84,13 +114,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     );
   }
 
-  const regionLabel =
-    tour.destination.state || tour.destination.country || "";
-  const destinationLabel = regionLabel
-    ? `${tour.destination.city}, ${regionLabel}`
-    : tour.destination.city;
-  const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-  const description = metaDescription ?? buildTourMetaDescription(tour);
+  const destinationLabelText = destinationLabel;
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
@@ -101,12 +125,14 @@ export default function TourDetail({ params }: TourDetailProps) {
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo
-        title={title}
-        description={description}
-        url={detailUrl}
-        image={tour.heroImage}
-      />
+      {seo ? (
+        <Seo
+          title={title}
+          description={description}
+          canonicalUrl={seo.canonicalUrl}
+          image={seoImage}
+        />
+      ) : null}
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           <Link href="/tours">
@@ -116,7 +142,7 @@ export default function TourDetail({ params }: TourDetailProps) {
           <Link
             href={`/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours`}
           >
-            <a>{destinationLabel}</a>
+            <a>{destinationLabelText}</a>
           </Link>
         </div>
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
@@ -131,7 +157,7 @@ export default function TourDetail({ params }: TourDetailProps) {
             </div>
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                {destinationLabel}
+                {destinationLabelText}
               </p>
               <h1 className="text-3xl font-semibold text-[#2f4a2f] md:text-4xl">
                 {tour.title}

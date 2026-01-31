@@ -20,7 +20,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import { buildMetaDescription } from "../../utils/seo";
+import { buildMetaDescription, buildSeoMetadata } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -67,31 +67,54 @@ export default function FlagstaffTourDetailRoute({
         `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
       )
     : undefined;
+  const title = tour
+    ? `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`
+    : "";
+  const description =
+    metaDescription ??
+    (tour
+      ? buildMetaDescription(
+          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
+        )
+      : "");
+  const seoImage = tour?.heroImage ?? city.heroImages[0] ?? "/hero.jpg";
+  const seo =
+    tour && detailUrl
+      ? buildSeoMetadata({
+          title,
+          description,
+          pathname: detailUrl,
+          image: seoImage,
+        })
+      : null;
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
     ? "/destinations"
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !detailUrl || !bookingUrl) {
+    if (!tour || !detailUrl || !bookingUrl || !seo) {
       return null;
     }
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
     return [
       buildWebPageStructuredData({
-        url: detailUrl,
-        name: tour.title,
-        description: metaDescription,
-        image: tour.heroImage,
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        breadcrumbId,
       }),
       buildTourProductStructuredData({
         tour,
-        detailUrl,
+        detailUrl: seo.canonicalUrl,
         bookingUrl,
         description: productDescription,
       }),
       buildTourTripStructuredData({
         tour,
-        detailUrl,
+        detailUrl: seo.canonicalUrl,
         bookingUrl,
         description: productDescription,
       }),
@@ -100,8 +123,8 @@ export default function FlagstaffTourDetailRoute({
         { name: state.name, url: stateHref },
         { name: city.name, url: cityHref },
         { name: "Tours", url: toursHref },
-        { name: tour.title, url: detailUrl },
-      ]),
+        { name: tour.title, url: seo.canonicalUrl },
+      ], breadcrumbId),
     ];
   }, [
     bookingUrl,
@@ -110,6 +133,7 @@ export default function FlagstaffTourDetailRoute({
     detailUrl,
     metaDescription,
     productDescription,
+    seo,
     state.name,
     stateHref,
     tour,
@@ -138,13 +162,6 @@ export default function FlagstaffTourDetailRoute({
   }
 
   const tourSlug = getFlagstaffTourSlug(tour);
-  const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description =
-    metaDescription ??
-    buildMetaDescription(
-      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-    );
   const relatedTours = flagstaffTours.filter(
     (item) => getFlagstaffTourSlug(item) !== tourSlug,
   );
@@ -156,12 +173,14 @@ export default function FlagstaffTourDetailRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
-      <Seo
-        title={title}
-        description={description}
-        url={detailUrl}
-        image={tour.heroImage}
-      />
+      {seo ? (
+        <Seo
+          title={title}
+          description={description}
+          canonicalUrl={seo.canonicalUrl}
+          image={seoImage}
+        />
+      ) : null}
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">

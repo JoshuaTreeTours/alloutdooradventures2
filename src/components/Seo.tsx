@@ -7,8 +7,10 @@ type SeoProps = {
   title?: string;
   description?: string;
   url?: string;
+  canonicalUrl?: string;
   type?: string;
   image?: string;
+  imageUrl?: string;
   robots?: string;
   googlebot?: string;
 };
@@ -48,12 +50,15 @@ export default function Seo({
   url,
   type = DEFAULT_SEO.type,
   image = DEFAULT_SEO.image,
+  imageUrl,
+  canonicalUrl,
   robots = "index,follow,max-image-preview:large",
   googlebot = "index,follow,max-image-preview:large",
 }: SeoProps) {
   const [location] = useLocation();
-  const canonicalUrl = buildCanonicalUrl(url ?? location ?? "/");
-  const resolvedImage = buildImageUrl(image);
+  const resolvedCanonicalUrl =
+    canonicalUrl ?? buildCanonicalUrl(url ?? location ?? "/");
+  const resolvedImage = imageUrl ?? buildImageUrl(image);
 
   useLayoutEffect(() => {
     document.title = title;
@@ -76,7 +81,7 @@ export default function Seo({
     });
     upsertMetaTag("meta[property=\"og:url\"]", {
       property: "og:url",
-      content: canonicalUrl,
+      content: resolvedCanonicalUrl,
     });
     upsertMetaTag("meta[property=\"og:image\"]", {
       property: "og:image",
@@ -108,9 +113,17 @@ export default function Seo({
     });
     upsertLinkTag("link[rel=\"canonical\"]", {
       rel: "canonical",
-      href: canonicalUrl,
+      href: resolvedCanonicalUrl,
     });
-  }, [canonicalUrl, description, googlebot, resolvedImage, robots, title, type]);
+  }, [
+    description,
+    googlebot,
+    resolvedCanonicalUrl,
+    resolvedImage,
+    robots,
+    title,
+    type,
+  ]);
 
   return null;
 }

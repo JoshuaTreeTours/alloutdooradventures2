@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import { useStructuredData } from "../components/StructuredDataProvider";
 import MapEmbed from "../components/maps/MapEmbed";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import type { City, StateDestination } from "../data/destinations";
@@ -18,7 +19,15 @@ import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
-import { buildMetaDescription } from "../utils/seo";
+import {
+  buildCityHubMeta,
+  buildSeoMetadata,
+} from "../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildPlaceStructuredData,
+  buildWebPageStructuredData,
+} from "../utils/structuredData";
 
 type CityTemplateProps = {
   state: StateDestination;
@@ -167,11 +176,18 @@ export default function CityTemplate({
     },
     { min: 3, max: 6 },
   );
-  const title = `${city.name}, ${state.name} Outdoor Adventures | Tours & City Guide`;
-  const description = buildMetaDescription(
-    city.shortDescription,
-    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,
-  );
+  const { title, description } = buildCityHubMeta({
+    cityName: city.name,
+    stateName: state.name,
+    shortDescription: city.shortDescription,
+  });
+  const seo = buildSeoMetadata({
+    title,
+    description,
+    pathname:
+      seoUrlOverride ?? `/destinations/states/${state.slug}/cities/${city.slug}`,
+    image: city.heroImages[0],
+  });
   const categorizedTours = [
     {
       title: "Day Tours & Highlights",
@@ -201,15 +217,66 @@ export default function CityTemplate({
   const hasCoordinates =
     Number.isFinite(city.lat) && Number.isFinite(city.lng);
 
+  const structuredDataNodes = useMemo(() => {
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
+    const placeId = `${seo.canonicalUrl}#place`;
+    const geo =
+      Number.isFinite(city.lat) && Number.isFinite(city.lng)
+        ? { lat: city.lat, lng: city.lng }
+        : null;
+
+    return [
+      buildWebPageStructuredData({
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        type: "CollectionPage",
+        breadcrumbId,
+        mainEntityId: placeId,
+      }),
+      buildPlaceStructuredData({
+        id: placeId,
+        type: "City",
+        name: city.name,
+        url: seo.canonicalUrl,
+        geo,
+      }),
+      buildBreadcrumbList(
+        [
+          { name: "Destinations", url: "/destinations" },
+          { name: state.name, url: stateHref },
+          {
+            name: city.name,
+            url:
+              seoUrlOverride ??
+              `/destinations/states/${state.slug}/cities/${city.slug}`,
+          },
+        ],
+        breadcrumbId,
+      ),
+    ];
+  }, [
+    city.lat,
+    city.lng,
+    city.name,
+    city.slug,
+    seo,
+    seoUrlOverride,
+    state.name,
+    state.slug,
+    stateHref,
+  ]);
+
+  useStructuredData(structuredDataNodes);
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={title}
-        description={description}
-        url={
-          seoUrlOverride ??
-          `/destinations/states/${state.slug}/cities/${city.slug}`
-        }
+        title={seo.title}
+        description={seo.description}
+        canonicalUrl={seo.canonicalUrl}
+        image={seo.image}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">

@@ -1,14 +1,24 @@
+import { useMemo } from "react";
 import { Link } from "wouter";
 
 import DestinationCard from "../components/DestinationCard";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import { useStructuredData } from "../components/StructuredDataProvider";
 import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
 import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
-import { buildMetaDescription } from "../utils/seo";
+import {
+  buildSeoMetadata,
+  buildStateHubMeta,
+} from "../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildPlaceStructuredData,
+  buildWebPageStructuredData,
+} from "../utils/structuredData";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -42,18 +52,55 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     { type: "state", slug: state.slug, name: state.name },
     { min: 3, max: 6 },
   );
-  const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
-  const description = buildMetaDescription(
-    state.intro,
-    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
-  );
+  const { title, description } = buildStateHubMeta({
+    name: state.name,
+    intro: state.intro,
+  });
+  const seo = buildSeoMetadata({
+    title,
+    description,
+    pathname: `/destinations/states/${state.slug}`,
+    image: state.heroImage,
+  });
+  const structuredDataNodes = useMemo(() => {
+    const breadcrumbId = `${seo.canonicalUrl}#breadcrumb`;
+    const placeId = `${seo.canonicalUrl}#place`;
+
+    return [
+      buildWebPageStructuredData({
+        url: seo.canonicalUrl,
+        name: seo.title,
+        description: seo.description,
+        image: seo.image,
+        type: "CollectionPage",
+        breadcrumbId,
+        mainEntityId: placeId,
+      }),
+      buildPlaceStructuredData({
+        id: placeId,
+        type: "AdministrativeArea",
+        name: state.name,
+        url: seo.canonicalUrl,
+      }),
+      buildBreadcrumbList(
+        [
+          { name: "Destinations", url: "/destinations" },
+          { name: state.name, url: `/destinations/states/${state.slug}` },
+        ],
+        breadcrumbId,
+      ),
+    ];
+  }, [seo, state.name, state.slug]);
+
+  useStructuredData(structuredDataNodes);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={title}
-        description={description}
-        url={`/destinations/states/${state.slug}`}
+        title={seo.title}
+        description={seo.description}
+        canonicalUrl={seo.canonicalUrl}
+        image={seo.image}
       />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         <Image

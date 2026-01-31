@@ -17,6 +17,7 @@
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
+    "verify:seo": "node scripts/verify-seo.mjs",
     "format": "prettier --write ."
   },
   "dependencies": {
