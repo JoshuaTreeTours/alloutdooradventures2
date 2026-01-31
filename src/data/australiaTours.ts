@@ -3,80 +3,14 @@ import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 
-import australiaCsv from "../../data/australia.csv?raw";
+import { australiaTourRows } from "./australiaTours.generated";
 
-type CsvRow = Record<string, string>;
+type CsvRow = (typeof australiaTourRows)[number];
 
 const CATEGORY_PRIORITY = ["cycling", "canoeing", "hiking", "day-adventures"] as const;
 
 const sanitizeText = (value?: string) =>
   value?.replace(/\r/g, " ").replace(/\n/g, " ").trim() ?? "";
-
-const parseCsvRows = (text: string) => {
-  const rows: string[][] = [];
-  let current = "";
-  let row: string[] = [];
-  let inQuotes = false;
-
-  for (let index = 0; index < text.length; index += 1) {
-    const char = text[index];
-    const next = text[index + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        current += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      row.push(current);
-      current = "";
-      continue;
-    }
-
-    if (char === "\n" && !inQuotes) {
-      row.push(current);
-      rows.push(row);
-      row = [];
-      current = "";
-      continue;
-    }
-
-    if (char !== "\r") {
-      current += char;
-    }
-  }
-
-  if (current.length || row.length) {
-    row.push(current);
-    rows.push(row);
-  }
-
-  return rows;
-};
-
-const parseCsv = (text: string): CsvRow[] => {
-  const rows = parseCsvRows(text).filter((row) =>
-    row.some((cell) => cell.trim().length > 0),
-  );
-  const [headers, ...dataRows] = rows;
-
-  if (!headers) {
-    return [];
-  }
-
-  return dataRows.map((row) => {
-    const record: CsvRow = {};
-    headers.forEach((header, index) => {
-      record[header] = sanitizeText(row[index]);
-    });
-    return record;
-  });
-};
 
 const splitTags = (value?: string) =>
   sanitizeText(value)
@@ -194,6 +128,6 @@ const buildTourFromRow = (row: CsvRow): Tour | null => {
   };
 };
 
-export const australiaTours: Tour[] = parseCsv(australiaCsv)
+export const australiaTours: Tour[] = australiaTourRows
   .map((row) => buildTourFromRow(row))
   .filter((tour): tour is Tour => Boolean(tour));
