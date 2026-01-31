@@ -142,10 +142,10 @@ export const getSiteStructuredDataNodes = () => {
       name: "Outdoor Adventures",
       url: SITE_URL,
       logo: logoUrl,
-      telephone: "+18553148687",
+      telephone: "+1-855-314-8687",
       sameAs: [
         "https://www.facebook.com/alloutdooradventuresonline/",
-        "https://www.linkedin.com/company/all-outdoor-adventures",
+        "https://www.linkedin.com/company/all-outdoor-adventures/",
       ],
     },
     {
@@ -154,7 +154,11 @@ export const getSiteStructuredDataNodes = () => {
       name: "Outdoor Adventures",
       url: SITE_URL,
       logo: logoUrl,
-      telephone: "+18553148687",
+      telephone: "+1-855-314-8687",
+      sameAs: [
+        "https://www.facebook.com/alloutdooradventuresonline/",
+        "https://www.linkedin.com/company/all-outdoor-adventures/",
+      ],
       parentOrganization: {
         "@id": SITE_ORGANIZATION_ID,
       },
@@ -265,8 +269,8 @@ export const buildTourProductStructuredData = ({
     description,
     image: resolvedImages,
     sku: tour.id,
-    brand: { "@id": SITE_AGENCY_ID },
-    seller: { "@id": SITE_AGENCY_ID },
+    brand: { "@id": SITE_ORGANIZATION_ID },
+    provider: { "@id": SITE_AGENCY_ID },
     offers: offer,
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
@@ -325,6 +329,7 @@ export const buildReserveActionStructuredData = ({
   "@type": "ReserveAction",
   "@id": `${bookingUrl}#reserve`,
   name: `Reserve ${tourName}`,
+  provider: { "@id": SITE_AGENCY_ID },
   target: {
     "@type": "EntryPoint",
     urlTemplate: bookingUrl,
