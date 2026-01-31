@@ -8,7 +8,7 @@ import MapEmbed from "../components/maps/MapEmbed";
 import type { Destination, StateDestination } from "../data/destinations";
 import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
-import { resolveHeroImage } from "../utils/hero";
+import { resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -49,10 +49,10 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
   );
-  const heroImage = resolveHeroImage({
-    pageType: "state",
-    primary: state.heroImage,
-  });
+  const heroImage = resolveHeroImageForRoute({
+    route: `/destinations/states/${state.slug}`,
+    state,
+  }) ?? undefined;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">

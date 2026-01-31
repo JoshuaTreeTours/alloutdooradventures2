@@ -24,7 +24,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { filterHeroImages, resolveHeroImage } from "../../../../utils/hero";
+import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildMetaDescription } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -58,22 +58,20 @@ export default function CityTourDetailRoute({
       ? getFlagstaffTourBySlug(params.tourSlug)
       : getTourBySlugs(state.slug, city.slug, params.tourSlug)
     : null;
-  const heroImage = resolveHeroImage({
-    pageType: "product",
-    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-    fallbacks: [city?.heroImages[0], state?.heroImage],
-  });
-  const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
-  );
-
   const canonicalUrl =
     tour && isFlagstaff
       ? getFlagstaffTourDetailPath(tour)
       : tour
         ? getCityTourDetailPath(tour)
         : "";
+  const heroImage = resolveHeroImageForRoute({
+    route: canonicalUrl,
+    tour,
+  }) ?? undefined;
+  const structuredImages = filterHeroImages(
+    [heroImage, ...(tour?.galleryImages ?? [])],
+    "product",
+  );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]

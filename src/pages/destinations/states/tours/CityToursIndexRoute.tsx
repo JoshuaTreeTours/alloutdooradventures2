@@ -15,7 +15,7 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
-import { resolveHeroImage } from "../../../../utils/hero";
+import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
@@ -60,13 +60,12 @@ export default function CityToursIndexRoute({
     (state?.isFallback ? "/destinations" : `/destinations/states/${state?.slug ?? ""}`);
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
-  const heroImage = resolveHeroImage({
-    pageType: "city",
-    primary: city?.heroImages[0],
-    fallbacks: [state?.heroImage],
-  });
-
   const toursHref = `${cityHref}/tours`;
+  const heroImage = resolveHeroImageForRoute({
+    route: toursHref,
+    state,
+    city,
+  }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
       return null;

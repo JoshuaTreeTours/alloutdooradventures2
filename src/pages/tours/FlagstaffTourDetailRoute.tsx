@@ -19,7 +19,7 @@ import {
   getFlagstaffTourSlug,
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
-import { filterHeroImages, resolveHeroImage } from "../../utils/hero";
+import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
@@ -55,16 +55,15 @@ export default function FlagstaffTourDetailRoute({
   }
 
   const tour = getFlagstaffTourBySlug(params.tourSlug);
-  const heroImage = resolveHeroImage({
-    pageType: "product",
-    primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-    fallbacks: [city?.heroImages[0], state?.heroImage],
-  });
+  const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
+  const heroImage = resolveHeroImageForRoute({
+    route: detailUrl,
+    tour,
+  }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product",
   );
-  const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
