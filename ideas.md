@@ -1,4 +1,4 @@
-# Design Brainstorming for All Outdoor Adventures V2
+# Design Brainstorming for Outdoor Adventures V2
 
 <response>
 <text>

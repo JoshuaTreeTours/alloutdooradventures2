@@ -1,4 +1,5 @@
 import Seo from "../components/Seo";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { getStaticPageSeo } from "../utils/seo";
 
 const FAQ_SECTIONS = [
@@ -53,7 +54,7 @@ const FAQ_SECTIONS = [
       {
         question: "Who runs the tours?",
         answer:
-          "Tours are operated by vetted local partners. Outdoor Adventures provides the planning hub and booking access.",
+          `Tours are operated by vetted local partners. ${SITE_BRAND_NAME} provides the planning hub and booking access.`,
       },
       {
         question: "Is equipment included?",

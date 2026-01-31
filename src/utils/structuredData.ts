@@ -1,6 +1,7 @@
 import type { Tour } from "../data/tours.types";
 import { filterHeroImages } from "./hero";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
+import { SITE_BRAND_NAME } from "./site";
 
 type StructuredDataValue =
   | string
@@ -15,6 +16,10 @@ export const SITE_AGENCY_ID = `${SITE_URL}/#agency`;
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
 const ID_FIELDS = new Set(["@id"]);
+const LEGACY_BRAND_PATTERN = new RegExp(
+  ["All", "Outdoor", "Adventures"].join("\\s+"),
+  "gi",
+);
 
 const toAbsoluteUrl = (value: string) => {
   if (!value) {
@@ -140,7 +145,7 @@ export const getSiteStructuredDataNodes = () => {
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: "Outdoor Adventures",
+      name: SITE_BRAND_NAME,
       url: SITE_URL,
       logo: logoUrl,
       telephone: "+1-855-314-8687",
@@ -152,7 +157,7 @@ export const getSiteStructuredDataNodes = () => {
     {
       "@type": "TravelAgency",
       "@id": SITE_AGENCY_ID,
-      name: "Outdoor Adventures",
+      name: SITE_BRAND_NAME,
       url: SITE_URL,
       logo: logoUrl,
       telephone: "+1-855-314-8687",
@@ -168,7 +173,7 @@ export const getSiteStructuredDataNodes = () => {
 };
 
 export const sanitizeSchemaName = (value: string) =>
-  value.replace(/All Outdoor Adventures/gi, "Outdoor Adventures").trim();
+  value.replace(LEGACY_BRAND_PATTERN, SITE_BRAND_NAME).trim();
 
 const buildImageObject = (url: string, id?: string) => ({
   "@type": "ImageObject",

@@ -9,6 +9,7 @@ import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
 import { getTourDetailPath } from "../data/tours";
 import { resolveHeroImage } from "../utils/hero";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../utils/structuredData";
 
@@ -22,7 +23,7 @@ export default function DestinationLandingTemplate({
   tours,
 }: DestinationLandingTemplateProps) {
   const paragraphs = state.longDescription.split("\n\n");
-  const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
+  const title = `${state.name} ${SITE_BRAND_NAME} | Tours & Destinations`;
   const description = buildMetaDescription(
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,

@@ -13,6 +13,7 @@ import {
 } from "../../../data/worldIndex";
 import { getTourDetailPath } from "../../../data/tours";
 import { resolveHeroImage } from "../../../utils/hero";
+import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../../../utils/structuredData";
 
@@ -93,8 +94,8 @@ export default function WorldCountryRoute({
   }
 
   const title = filterActivitySlug
-    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | All Outdoor Adventures`
-    : `${country.name} Outdoor Adventures | Curated Tours & Experiences`;
+    ? `${categoryLabel ?? "Outdoor"} Tours in ${country.name} | ${SITE_BRAND_NAME}`
+    : `${country.name} ${SITE_BRAND_NAME} | Curated Tours & Experiences`;
   const description = buildMetaDescription(
     filterActivitySlug
       ? `Discover ${categoryLabel ?? "outdoor"} tours in ${country.name}, with guided experiences that highlight local landscapes and culture.`

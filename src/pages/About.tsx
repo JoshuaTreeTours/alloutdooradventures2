@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 
 import Seo from "../components/Seo";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { getStaticPageSeo } from "../utils/seo";
 
 export default function About() {
@@ -21,10 +22,10 @@ export default function About() {
           About
         </p>
         <h1 className="mt-3 text-3xl font-semibold md:text-4xl">
-          About Outdoor Adventures
+          About {SITE_BRAND_NAME}
         </h1>
         <p className="mt-4 text-sm text-[#405040] md:text-base">
-          Outdoor Adventures connects travelers with curated tours, destination
+          {SITE_BRAND_NAME} connects travelers with curated tours, destination
           guides, and multi-day itineraries built for explorers.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -57,7 +58,7 @@ export default function About() {
                 Meet the Owner: Jerry Sybers
               </h2>
               <p className="mt-4 text-sm text-[#405040] md:text-base">
-                Outdoor Adventures was founded in 1999 as an expression of Jerry
+                {SITE_BRAND_NAME} was founded in 1999 as an expression of Jerry
                 Sybers&apos; life in the field—part geologist, part naturalist, part
                 wanderer. For Jerry, happiness is not a luxury product; it is a
                 discipline. Rooted in Epicurean philosophy, his work is built on a

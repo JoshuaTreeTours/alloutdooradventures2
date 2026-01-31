@@ -1,3 +1,5 @@
+import { SITE_BRAND_NAME } from "../utils/site";
+
 export default function Terms() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
@@ -8,7 +10,7 @@ export default function Terms() {
         Site Terms &amp; Conditions
       </h1>
       <p className="mt-4 text-sm text-[#405040] md:text-base">
-        By using Outdoor Adventures, you agree to the terms below. These terms
+        By using {SITE_BRAND_NAME}, you agree to the terms below. These terms
         help keep our site safe and clarify how bookings with partners work.
       </p>
 
@@ -37,10 +39,10 @@ export default function Terms() {
             Limitation of liability
           </h2>
           <p className="mt-2">
-            Outdoor Adventures is not liable for delays, cancellations, or
-            changes made by third-party operators. We are also not responsible
-            for personal injuries or losses arising from activities booked
-            through external providers.
+            {SITE_BRAND_NAME} is not liable for delays, cancellations, or changes
+            made by third-party operators. We are also not responsible for
+            personal injuries or losses arising from activities booked through
+            external providers.
           </p>
         </div>
         <div>

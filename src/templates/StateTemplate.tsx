@@ -9,6 +9,7 @@ import type { Destination, StateDestination } from "../data/destinations";
 import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
 import { resolveHeroImage } from "../utils/hero";
+import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
 const buildCityDestination = (
@@ -43,7 +44,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
     { type: "state", slug: state.slug, name: state.name },
     { min: 3, max: 6 },
   );
-  const title = `${state.name} Outdoor Adventures | Tours & Destinations`;
+  const title = `${state.name} ${SITE_BRAND_NAME} | Tours & Destinations`;
   const description = buildMetaDescription(
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
