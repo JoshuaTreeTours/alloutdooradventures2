@@ -3,7 +3,13 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import type { Tour } from "../src/data/tours.types";
+import { getCityBySlugs, getStateBySlug } from "../src/data/destinations";
 import { classifyActivity } from "../src/lib/activityClassifier";
+import { createIngestLogger } from "../src/lib/logging/ingestLogger";
+import {
+  type PlacementContext,
+  validateTourPlacement,
+} from "../src/lib/validation/validateTourPlacement";
 
 const DATA_DIR = path.resolve("data");
 const NORTHEAST_DIR = path.resolve("data/northeast");
@@ -68,6 +74,31 @@ const DEEP_SOUTH_STATE_SLUGS = new Set([
   "north-carolina",
   "south-carolina",
   "tennessee",
+]);
+const COASTAL_STATE_SLUGS = new Set([
+  "alabama",
+  "alaska",
+  "california",
+  "connecticut",
+  "delaware",
+  "florida",
+  "georgia",
+  "hawaii",
+  "louisiana",
+  "maine",
+  "maryland",
+  "massachusetts",
+  "mississippi",
+  "new-hampshire",
+  "new-jersey",
+  "new-york",
+  "north-carolina",
+  "oregon",
+  "rhode-island",
+  "south-carolina",
+  "texas",
+  "virginia",
+  "washington",
 ]);
 const CATEGORY_KEYWORDS: Record<string, string[]> = {
   hiking: [
@@ -360,7 +391,6 @@ const resolveActivitySlugs = ({
   title,
   shortDescription,
   tags,
-  logPrefix,
 }: {
   fallbackActivity?: string;
   explicitCategory?: string;
@@ -368,7 +398,6 @@ const resolveActivitySlugs = ({
   title: string;
   shortDescription?: string;
   tags: string[];
-  logPrefix: string;
 }) => {
   if (forceCategory) {
     return {
@@ -387,9 +416,6 @@ const resolveActivitySlugs = ({
   ]);
 
   if (categories.size === 0) {
-    console.warn(
-      `[import] ${logPrefix} missing category keywords; defaulting to hiking.`,
-    );
     categories.add("hiking");
   }
 
@@ -521,6 +547,43 @@ const buildAverageCoordinate = (values: number[]) => {
   }
   const sum = valid.reduce((total, value) => total + value, 0);
   return sum / valid.length;
+};
+
+const buildPlacementContext = (
+  source: string,
+  destination: ReturnType<typeof parseLocation>,
+): PlacementContext => {
+  const cityMeta = getCityBySlugs(destination.stateSlug, destination.citySlug);
+  const stateMeta = getStateBySlug(destination.stateSlug);
+  const stateLat = stateMeta
+    ? buildAverageCoordinate(
+        stateMeta.cities.map((city) => city.lat).filter(Number.isFinite),
+      )
+    : Number.NaN;
+  const stateLng = stateMeta
+    ? buildAverageCoordinate(
+        stateMeta.cities.map((city) => city.lng).filter(Number.isFinite),
+      )
+    : Number.NaN;
+  const center = cityMeta
+    ? { lat: cityMeta.lat, lng: cityMeta.lng }
+    : Number.isFinite(stateLat) && Number.isFinite(stateLng)
+      ? { lat: stateLat, lng: stateLng }
+      : undefined;
+  const kind = cityMeta ? "city" : "state";
+
+  return {
+    source,
+    region: {
+      kind,
+      slug: cityMeta ? destination.citySlug : destination.stateSlug,
+      stateCode: destination.stateSlug,
+      isLandlocked: destination.stateSlug
+        ? !COASTAL_STATE_SLUGS.has(destination.stateSlug)
+        : undefined,
+      center,
+    },
+  };
 };
 
 const buildActivityTags = (slugs: string[]) =>
@@ -711,7 +774,6 @@ const rowToTour = (
   parsedRow: ReturnType<typeof parseCsvRow>,
   activitySlug: string | undefined,
   forceCategory: string | undefined,
-  logPrefix: string,
 ): Tour => {
   const galleryImage = sanitizeCsvText(row.image_url);
   const destination = parseLocation(parsedRow.location);
@@ -726,7 +788,6 @@ const rowToTour = (
     title: parsedRow.title,
     shortDescription: parsedRow.shortDescription,
     tags: parsedRow.tags,
-    logPrefix,
   });
   const idFallback = slugify(
     [parsedRow.title, destination.city, parsedRow.operator].filter(Boolean).join(" "),
@@ -845,7 +906,6 @@ const run = async () => {
   }
 
   const tours: Tour[] = [];
-  const skippedRows: string[] = [];
   const reclassifiedTours: Array<
     ImportReportEntry & {
       fromCategory: string;
@@ -864,6 +924,7 @@ const run = async () => {
       walkingIntent: string[];
     }
   > = [];
+  const ingestLogger = createIngestLogger();
   const northeastSeeds = new Map<string, StateSeed>();
   const deepSouthSeeds = new Map<string, StateSeed>();
   const seenItems = new Map<
@@ -899,25 +960,31 @@ const run = async () => {
 
     if (missingOptionalColumns.length) {
       console.warn(
-        `[import] ${source} is missing optional columns: ${missingOptionalColumns.join(
-          ", ",
-        )}`,
+        JSON.stringify({
+          level: "warn",
+          event: "csv_missing_optional_columns",
+          source,
+          columns: missingOptionalColumns,
+        }),
       );
     }
 
     records.forEach((row, index) => {
+      ingestLogger.incrementProcessed();
       const rowIdentifier = row.item_id
         ? `${row.company_shortname}-${row.item_id}`
         : `row ${index + 2}`;
       const missingFields: string[] = [];
       const location = row.location?.trim() ?? "";
-      const { state, city } = parseLocation(location);
+      const destinationMeta = parseLocation(location);
+      const { state, city } = destinationMeta;
       const bookingUrl = (
         row.booking_url ||
         row.calendar_link ||
         row.regular_link ||
         ""
       ).trim();
+      const placementContext = buildPlacementContext(source, destinationMeta);
 
       if (!row.item_name?.trim()) {
         missingFields.push("title");
@@ -930,11 +997,15 @@ const run = async () => {
       }
 
       if (missingFields.length) {
-        const message = `${source}: ${rowIdentifier} missing ${missingFields.join(
-          ", ",
-        )}`;
-        console.warn(`[import] Skipping ${message}`);
-        skippedRows.push(message);
+        ingestLogger.warnRejected({
+          event: "ingest_row_rejected",
+          code: "MISSING_FIELDS",
+          reason: `Missing ${missingFields.join(", ")}`,
+          source,
+          regionKind: placementContext.region.kind,
+          regionSlug: placementContext.region.slug,
+          title: row.item_name,
+        });
         return;
       }
 
@@ -964,17 +1035,49 @@ const run = async () => {
           previousSnapshot.imageUrl !== nextSnapshot.imageUrl;
 
         if (hasConflict) {
-          const message = `${source}: ${itemKey} conflicts with ${previousSnapshot.source}`;
-          console.warn(`[import] Skipping ${message}`);
-          skippedRows.push(message);
+          ingestLogger.warnRejected({
+            event: "ingest_row_rejected",
+            code: "DUPLICATE_ITEM",
+            reason: `Conflicts with ${previousSnapshot.source}`,
+            source,
+            regionKind: placementContext.region.kind,
+            regionSlug: placementContext.region.slug,
+            title: row.item_name,
+          });
         }
         return;
       }
 
       seenItems.set(itemKey, nextSnapshot);
       try {
-        const logPrefix = `${source}: ${rowIdentifier}`;
         const parsedRow = parseCsvRow(row);
+        const placementResult = validateTourPlacement(
+          {
+            title: parsedRow.title,
+            categories: parsedRow.explicitCategory
+              ? [parsedRow.explicitCategory]
+              : undefined,
+            tags: parsedRow.tags,
+            lat: parsedRow.latitude,
+            lng: parsedRow.longitude,
+          },
+          placementContext,
+        );
+
+        if (!placementResult.ok) {
+          ingestLogger.warnRejected({
+            event: "tour_placement_rejected",
+            code: placementResult.code,
+            reason: placementResult.reason,
+            source,
+            regionKind: placementContext.region.kind,
+            regionSlug: placementContext.region.slug,
+            title: parsedRow.title,
+            lat: parsedRow.latitude,
+            lng: parsedRow.longitude,
+          });
+          return;
+        }
         const classification = classifyActivity({
           title: parsedRow.title,
           description: parsedRow.shortDescription,
@@ -988,10 +1091,21 @@ const run = async () => {
             title: parsedRow.title,
             reason: "food-only",
           });
+          ingestLogger.warnRejected({
+            event: "ingest_row_rejected",
+            code: "FOOD_ONLY",
+            reason: "Food-only tour",
+            source,
+            regionKind: placementContext.region.kind,
+            regionSlug: placementContext.region.slug,
+            title: parsedRow.title,
+            lat: parsedRow.latitude,
+            lng: parsedRow.longitude,
+          });
           return;
         }
 
-        let tour = rowToTour(row, parsedRow, activitySlug, forceCategory, logPrefix);
+        let tour = rowToTour(row, parsedRow, activitySlug, forceCategory);
 
         if (tour.primaryCategory === "hiking" && !classification.isHiking) {
           const reclassifiedCategory =
@@ -1018,6 +1132,7 @@ const run = async () => {
         }
 
         tours.push(tour);
+        ingestLogger.incrementAccepted();
 
         if (isNortheast && NORTHEAST_STATE_SLUGS.has(tour.destination.stateSlug)) {
           addRegionSeed(northeastSeeds, {
@@ -1047,17 +1162,17 @@ const run = async () => {
       } catch (error) {
         const message =
           error instanceof Error ? error.message : "Unknown error";
-        const warning = `${source}: ${message}`;
-        console.warn(`[import] Skipping ${warning}`);
-        skippedRows.push(warning);
+        ingestLogger.warnRejected({
+          event: "ingest_row_rejected",
+          code: "ROW_ERROR",
+          reason: message,
+          source,
+          regionKind: placementContext.region.kind,
+          regionSlug: placementContext.region.slug,
+          title: row.item_name,
+        });
       }
     });
-  }
-
-  if (skippedRows.length) {
-    console.warn(
-      `[import] Skipped ${skippedRows.length} rows due to missing or invalid data.`,
-    );
   }
 
   const northeastStates = Array.from(northeastSeeds.values()).map((state) =>
@@ -1132,10 +1247,7 @@ export const deepSouthStates: StateDestination[] = ${stringifyForTs(
 `,
     "utf8",
   );
-  console.log(JSON.stringify(importReport, null, 2));
-  console.log(
-    `Generated ${tours.length} tours, ${northeastStates.length} northeast states, and ${deepSouthStates.length} deep south states.`,
-  );
+  ingestLogger.printSummary();
 };
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

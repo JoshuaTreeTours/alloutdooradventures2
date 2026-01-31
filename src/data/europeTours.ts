@@ -2,11 +2,9 @@ import { normalizeFareharborUrl } from "../lib/fareharbor";
 import { slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 
-import europeCanoeingCsv from "../../data/europe/europe-canoeing.csv?raw";
-import europeCyclingCsv from "../../data/europe/europe-cycling.csv?raw";
-import europeHikingCsv from "../../data/europe/europe-hiking.csv?raw";
-
-type CsvRow = Record<string, string>;
+import { europeCanoeingRows, type CsvRow } from "./generated/europeCanoeingRows.generated";
+import { europeCyclingRows } from "./generated/europeCyclingRows.generated";
+import { europeHikingRows } from "./generated/europeHikingRows.generated";
 
 const ACTIVITY_BADGES: Record<string, string> = {
   cycling: "Bike Tour",
@@ -16,72 +14,6 @@ const ACTIVITY_BADGES: Record<string, string> = {
 
 const sanitizeText = (value?: string) =>
   value?.replace(/\r/g, " ").replace(/\n/g, " ").trim() ?? "";
-
-const parseCsvRows = (text: string) => {
-  const rows: string[][] = [];
-  let current = "";
-  let row: string[] = [];
-  let inQuotes = false;
-
-  for (let index = 0; index < text.length; index += 1) {
-    const char = text[index];
-    const next = text[index + 1];
-
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        current += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-
-    if (char === "," && !inQuotes) {
-      row.push(current);
-      current = "";
-      continue;
-    }
-
-    if (char === "\n" && !inQuotes) {
-      row.push(current);
-      rows.push(row);
-      row = [];
-      current = "";
-      continue;
-    }
-
-    if (char !== "\r") {
-      current += char;
-    }
-  }
-
-  if (current.length || row.length) {
-    row.push(current);
-    rows.push(row);
-  }
-
-  return rows;
-};
-
-const parseCsv = (text: string): CsvRow[] => {
-  const rows = parseCsvRows(text).filter((row) =>
-    row.some((cell) => cell.trim().length > 0),
-  );
-  const [headers, ...dataRows] = rows;
-
-  if (!headers) {
-    return [];
-  }
-
-  return dataRows.map((row) => {
-    const record: CsvRow = {};
-    headers.forEach((header, index) => {
-      record[header] = sanitizeText(row[index]);
-    });
-    return record;
-  });
-};
 
 const splitTags = (value?: string) =>
   sanitizeText(value)
@@ -149,13 +81,13 @@ const buildTourFromRow = (row: CsvRow, activitySlug: string): Tour | null => {
   };
 };
 
-const buildToursFromCsv = (text: string, activitySlug: string) =>
-  parseCsv(text)
+const buildToursFromRows = (rows: CsvRow[], activitySlug: string) =>
+  rows
     .map((row) => buildTourFromRow(row, activitySlug))
     .filter((tour): tour is Tour => Boolean(tour));
 
 export const europeTours: Tour[] = [
-  ...buildToursFromCsv(europeCyclingCsv, "cycling"),
-  ...buildToursFromCsv(europeHikingCsv, "hiking"),
-  ...buildToursFromCsv(europeCanoeingCsv, "canoeing"),
+  ...buildToursFromRows(europeCyclingRows, "cycling"),
+  ...buildToursFromRows(europeHikingRows, "hiking"),
+  ...buildToursFromRows(europeCanoeingRows, "canoeing"),
 ];
