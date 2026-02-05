@@ -267,6 +267,30 @@ const isDestination = (pathname) => {
   );
 };
 
+const isScopedRoute = (pathname) => {
+  const normalized = normalizePathname(pathname);
+  return (
+    normalized === "/" ||
+    /^\/guides\/.+/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours$/.test(normalized) ||
+    /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized)
+  );
+};
+
+const hasSlugTokens = (value) => /\b[a-z0-9]+(?:-[a-z0-9]+){2,}\b/.test(value);
+
+const EXCLUDED_GEO_SLUGS = new Set(["canada", "alberta"]);
+
+const isExcludedGeography = (pathname) => {
+  const normalized = normalizePathname(pathname);
+  return normalized
+    .split("/")
+    .filter(Boolean)
+    .some((segment) => EXCLUDED_GEO_SLUGS.has(segment));
+};
+
 const logVerificationFailure = ({ label, url, assertion, details }) => {
   console.error("[prerender-verify] Verification failed");
   console.error(`  label: ${label}`);
@@ -302,6 +326,14 @@ const extractAttribute = (tag, attrName) => {
   }
   return match[1];
 };
+
+const normalizeAttributeValue = (value) =>
+  (value ?? "")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&quot;", "\"")
+    .replaceAll("&#39;", "'")
+    .trim();
+
 
 const buildTourBreadcrumbs = ({
   tour,
@@ -343,6 +375,7 @@ const verifyPrerenderedPage = async ({
   defaultDescription,
   label,
   allowDefaultSeo = false,
+  defaultUrl,
 }) => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
   if (!shouldWrite) {
@@ -448,6 +481,15 @@ const verifyPrerenderedPage = async ({
     });
     throw new Error("Prerender verification failed.");
   }
+  if (!allowDefaultSeo && hasSlugTokens(titleValue)) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "title",
+      details: "Title contains tokenized slug fragments.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
 
   const descriptionTag = findTag(html, "meta", "name", "description");
   if (!descriptionTag) {
@@ -475,6 +517,25 @@ const verifyPrerenderedPage = async ({
       url: expectedUrl,
       assertion: "description",
       details: "Using the default description.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+  if (!allowDefaultSeo && hasSlugTokens(descriptionValue)) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "description",
+      details: "Description contains tokenized slug fragments.",
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  if (!allowDefaultSeo && defaultUrl && canonicalHref === defaultUrl) {
+    logVerificationFailure({
+      label,
+      url: expectedUrl,
+      assertion: "canonical",
+      details: "Non-home page canonicalized to homepage URL.",
     });
     throw new Error("Prerender verification failed.");
   }
@@ -700,6 +761,8 @@ const main = async () => {
   const siteBrandName = siteModule?.SITE_BRAND_NAME ?? "Outdoor Adventures";
   const resolveHeroImageForRoute =
     heroModule?.resolveHeroImageForRoute ?? null;
+  const resolveCityHeroImage =
+    heroModule?.resolveCityHeroImage ?? null;
   const getStateBySlug = destinationsModule?.getStateBySlug ?? null;
   const getCityBySlugs = destinationsModule?.getCityBySlugs ?? null;
   const buildBreadcrumbList =
@@ -721,9 +784,18 @@ const main = async () => {
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
 
-  const urls = await readSitemapUrls();
-  if (!urls.length) {
+  const discoveredUrls = await readSitemapUrls();
+  if (!discoveredUrls.length) {
     return;
+  }
+
+  const urls = discoveredUrls.filter(
+    (url) =>
+      isScopedRoute(new URL(url).pathname) &&
+      !isExcludedGeography(new URL(url).pathname),
+  );
+  if (!urls.length) {
+    throw new Error("Prerender verification failed: no scoped URLs found.");
   }
 
   for (const url of urls) {
@@ -870,7 +942,7 @@ const main = async () => {
       }
     }
 
-    const resolvedHeroImage =
+    let resolvedHeroImage =
       resolveHeroImageForRoute
         ? resolveHeroImageForRoute({
             route: normalizedPathname,
@@ -880,6 +952,33 @@ const main = async () => {
             city: cityForHero,
           })
         : null;
+
+    const isStateCityHubRoute =
+      /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(normalizedPathname) &&
+      segments[0] === "destinations" &&
+      segments[1] === "states";
+    const isUsCityGuideRoute =
+      /^\/guides\/us\/[^/]+\/[^/]+$/.test(normalizedPathname) &&
+      segments[0] === "guides" &&
+      segments[1] === "us";
+
+    if (resolveCityHeroImage && (isStateCityHubRoute || isUsCityGuideRoute)) {
+      const stateSlug = isStateCityHubRoute ? segments[2] : segments[2];
+      const citySlug = isStateCityHubRoute ? segments[4] : segments[3];
+      const cityContext = getCityBySlugs ? getCityBySlugs(stateSlug, citySlug) : null;
+      const cityTours = tours.filter(
+        (tour) =>
+          tour.destination?.stateSlug === stateSlug &&
+          tour.destination?.citySlug === citySlug,
+      );
+      const resolvedCityHero = resolveCityHeroImage({
+        city: cityContext,
+        stateSlug,
+        citySlug,
+        tours: cityTours,
+      });
+      resolvedHeroImage = resolvedCityHero?.url ?? resolvedHeroImage;
+    }
 
     if (resolvedHeroImage) {
       seo.image = resolvedHeroImage;
@@ -1085,43 +1184,32 @@ const main = async () => {
 
   const verificationTargets = [
     {
-      label: "Homepage",
-      url: findUrl(isHome),
-    },
-    {
-      label: "Tour",
-      url: findUrl(isTour),
-    },
-    {
-      label: "Destination state",
-      url: findUrl((pathname) =>
-        /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname)),
+      label: "California state hub",
+      url: findUrl(
+        (pathname) => normalizePathname(pathname) === "/destinations/states/california",
       ),
     },
     {
-      label: "Destination city",
-      url: findUrl((pathname) =>
-        /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
-          normalizePathname(pathname),
-        ),
-      ),
-    },
-    {
-      label: "Destination tour",
-      url: findUrl((pathname) =>
-        /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-          normalizePathname(pathname),
-        ) ||
-        /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-          normalizePathname(pathname),
-        ),
-      ),
-    },
-    {
-      label: "Static",
+      label: "California major city hub",
       url: findUrl(
         (pathname) =>
-          normalizePathname(pathname) === "/faqs" || isStatic(pathname),
+          normalizePathname(pathname) ===
+          "/destinations/states/california/cities/san-francisco",
+      ),
+    },
+    {
+      label: "California city tours index",
+      url: findUrl(
+        (pathname) =>
+          normalizePathname(pathname) ===
+          "/destinations/states/california/cities/san-francisco/tours",
+      ),
+    },
+    {
+      label: "Representative tour detail",
+      url: findUrl(
+        (pathname) =>
+          /^\/tours\/california\/[^/]+\/[^/]+$/.test(normalizePathname(pathname)),
       ),
     },
   ];
@@ -1138,14 +1226,143 @@ const main = async () => {
     }
   });
 
-  const faqPath = "/faqs";
-  const faqPrerendered = await ensurePrerenderedFile(faqPath);
-  if (!faqPrerendered) {
+  const cityHeroTargets = [
+    "/destinations/states/california/cities/joshua-tree",
+    "/destinations/states/california/cities/san-francisco",
+    "/destinations/states/california/cities/san-diego",
+  ];
+
+  for (const cityPath of cityHeroTargets) {
+    const foundUrl = findUrl((pathname) => normalizePathname(pathname) === cityPath);
+    if (!foundUrl) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: cityPath,
+        assertion: "city-hero-image-locality",
+        details: "City path was not found in scoped sitemap URLs.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    const segments = cityPath.split("/").filter(Boolean);
+    const stateSlug = segments[2];
+    const citySlug = segments[4];
+    const expectedUrl = buildCanonicalUrl(cityPath);
+    const cityContext = getCityBySlugs ? getCityBySlugs(stateSlug, citySlug) : null;
+    const cityTours = tours.filter(
+      (tour) =>
+        tour.destination?.stateSlug === stateSlug &&
+        tour.destination?.citySlug === citySlug,
+    );
+    const expectedCityHero = resolveCityHeroImage
+      ? resolveCityHeroImage({
+          city: cityContext,
+          stateSlug,
+          citySlug,
+          tours: cityTours,
+        })
+      : null;
+
+    if (!expectedCityHero) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: expectedUrl,
+        assertion: "city-hero-image-locality",
+        details: "City hero resolver is unavailable.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    const { outputPath, shouldWrite } = buildOutputPath(cityPath);
+    if (!shouldWrite) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: expectedUrl,
+        assertion: "city-hero-image-locality",
+        details: "No prerendered HTML output was generated.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    const html = await readFile(outputPath, "utf8");
+    const ogImageTag = findTag(html, "meta", "property", "og:image");
+    const ogImageValue = extractAttribute(ogImageTag, "content");
+    const twitterImageTag = findTag(html, "meta", "name", "twitter:image");
+    const twitterImageValue = extractAttribute(twitterImageTag, "content");
+
+    if (
+      !ogImageValue ||
+      normalizeAttributeValue(ogImageValue) !== normalizeAttributeValue(expectedCityHero.url)
+    ) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: expectedUrl,
+        assertion: "city-hero-image-locality",
+        details: `Expected og:image ${expectedCityHero.url} for city ${citySlug}, found ${ogImageValue ?? "missing"}.`,
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    if (
+      !twitterImageValue ||
+      normalizeAttributeValue(twitterImageValue) !== normalizeAttributeValue(expectedCityHero.url)
+    ) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: expectedUrl,
+        assertion: "city-hero-image-locality",
+        details: `Expected twitter:image ${expectedCityHero.url} for city ${citySlug}, found ${twitterImageValue ?? "missing"}.`,
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    if (expectedCityHero.citySlug !== citySlug) {
+      logVerificationFailure({
+        label: "City hero image locality",
+        url: expectedUrl,
+        assertion: "city-hero-image-locality",
+        details: `Hero resolver returned mismatched city slug ${expectedCityHero.citySlug} for ${citySlug}.`,
+      });
+      throw new Error("Prerender verification failed.");
+    }
+  }
+
+
+  const duplicateDescriptions = new Map();
+  const scopedTourUrls = urls.filter((url) =>
+    /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalizePathname(new URL(url).pathname)),
+  );
+
+  for (const url of scopedTourUrls) {
+    const pathname = normalizePathname(new URL(url).pathname);
+    const { outputPath, shouldWrite } = buildOutputPath(pathname);
+    if (!shouldWrite) {
+      continue;
+    }
+    const html = await readFile(outputPath, "utf8");
+    const descriptionTag = findTag(html, "meta", "name", "description");
+    const description = extractAttribute(descriptionTag, "content")?.trim();
+    if (!description) {
+      continue;
+    }
+    if (!duplicateDescriptions.has(description)) {
+      duplicateDescriptions.set(description, []);
+    }
+    duplicateDescriptions.get(description).push(pathname);
+  }
+
+  const repeatedDescriptions = Array.from(duplicateDescriptions.entries()).filter(
+    ([, paths]) => paths.length > 1,
+  );
+
+  if (repeatedDescriptions.length > 0) {
     logVerificationFailure({
-      label: "FAQ",
-      url: buildCanonicalUrl(faqPath),
-      assertion: "prerender",
-      details: "Missing prerendered FAQ HTML output.",
+      label: "Tour uniqueness",
+      url: "scoped /tours routes",
+      assertion: "description",
+      details: `Duplicate tour descriptions detected: ${repeatedDescriptions
+        .map(([, paths]) => paths.join(", "))
+        .join(" | ")}`,
     });
     throw new Error("Prerender verification failed.");
   }
@@ -1162,6 +1379,7 @@ const main = async () => {
       defaultDescription: DEFAULT_SEO.description,
       label: target.label,
       allowDefaultSeo,
+      defaultUrl: DEFAULT_SEO.url,
     });
   }
 };

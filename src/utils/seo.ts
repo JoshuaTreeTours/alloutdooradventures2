@@ -105,7 +105,11 @@ const trimHookToFit = (hook: string, maxLength: number) => {
 };
 
 export const buildTourMetaDescription = (tour: {
+  id?: string;
+  slug?: string;
   title?: string;
+  shortDescription?: string;
+  longDescription?: string;
   destination?: { city?: string; state?: string; country?: string };
   activitySlugs?: string[];
   primaryCategory?: string;
@@ -116,9 +120,11 @@ export const buildTourMetaDescription = (tour: {
     tour.destination?.state ?? tour.destination?.country ?? "",
   );
   const location = normalizeLocation(city || undefined, region || undefined);
+  const differentiator = normalizeText(tour.id ?? tour.slug ?? "");
+  const tourLabel = differentiator ? `${title} (ref ${differentiator})` : title;
   const prefix = location
-    ? `Discover ${title} in ${location}.`
-    : `Discover ${title}.`;
+    ? `Discover ${tourLabel} in ${location}.`
+    : `Discover ${tourLabel}.`;
   const suffix = "Book your outdoor adventure today.";
   const activitySlug = tour.activitySlugs?.[0] ?? tour.primaryCategory ?? "";
   const activityLabel = normalizeText(getActivityLabelFromSlug(activitySlug));
@@ -179,6 +185,7 @@ export const buildTourMetaDescription = (tour: {
   if (composed.length < minLength) {
     composed = buildMetaDescription(composed, undefined, minLength);
   }
+
 
   return clampDescription(composed, maxLength);
 };

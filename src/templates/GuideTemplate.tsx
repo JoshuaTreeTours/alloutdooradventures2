@@ -5,10 +5,11 @@ import GuideInternalLinks from "../components/GuideInternalLinks";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import { getCityBySlugs, getStateBySlug } from "../data/destinations";
+import { getToursByCity } from "../data/tours";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
-import { resolveHeroImageForRoute } from "../utils/hero";
+import { resolveCityHeroImage, resolveHeroImageForRoute } from "../utils/hero";
 import { buildMetaDescription } from "../utils/seo";
 
 type GuideTemplateProps = {
@@ -133,12 +134,23 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
     guide.type === "city" && guide.regionType === "state" && guide.parentSlug
       ? getCityBySlugs(guide.parentSlug, guide.slug)
       : null;
-  const guideHeroImage = resolveHeroImageForRoute({
-    route: guideUrl,
-    guide,
-    state: destinationState,
-    city: destinationCity,
-  }) ?? undefined;
+  const cityGuideHero =
+    guide.type === "city" && guide.regionType === "state" && guide.parentSlug
+      ? resolveCityHeroImage({
+          city: destinationCity,
+          citySlug: guide.slug,
+          stateSlug: guide.parentSlug,
+          tours: getToursByCity(guide.parentSlug, guide.slug),
+        })
+      : null;
+  const guideHeroImage =
+    cityGuideHero?.url ??
+    (resolveHeroImageForRoute({
+      route: guideUrl,
+      guide,
+      state: destinationState,
+      city: destinationCity,
+    }) ?? undefined);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">

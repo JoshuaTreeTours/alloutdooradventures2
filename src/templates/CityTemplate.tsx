@@ -18,7 +18,7 @@ import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
-import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
+import { resolveCityHeroImage } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -202,19 +202,14 @@ export default function CityTemplate({
   ].filter((section) => section.tours.length > 0);
   const hasCoordinates =
     Number.isFinite(city.lat) && Number.isFinite(city.lng);
-  const heroImage = resolveHeroImageForRoute({
-    route:
-      seoUrlOverride ??
-      `/destinations/states/${state.slug}/cities/${city.slug}`,
-    state,
+  const cityHero = resolveCityHeroImage({
     city,
-  }) ?? undefined;
-  const cityHeroImages = filterHeroImages(city.heroImages, "city");
-  const heroImages = cityHeroImages.length
-    ? cityHeroImages
-    : heroImage
-      ? [heroImage]
-      : [];
+    stateSlug: state.slug,
+    citySlug: city.slug,
+    tours: cityTours,
+  });
+  const heroImage = cityHero.url;
+  const heroImages = [cityHero.url];
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -265,7 +260,15 @@ export default function CityTemplate({
             </Link>
           </div>
           {heroImages.length ? (
-            <ImageSlider images={heroImages} title={city.name} />
+            <div
+              data-city-hero-image="true"
+              data-city-slug={city.slug}
+              data-image-city-slug={cityHero.citySlug}
+              data-hero-image-source={cityHero.source}
+              data-hero-image-url={cityHero.url}
+            >
+              <ImageSlider images={heroImages} title={city.name} />
+            </div>
           ) : null}
         </div>
       </section>

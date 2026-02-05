@@ -12,6 +12,14 @@ export const HOME_HERO_IMAGE = "/hero.jpg";
 export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
 export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
 export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
+export const CITY_NEUTRAL_FALLBACK_HERO_IMAGE =
+  "/images/hiking-hero.jpg";
+
+export type ResolvedCityHeroImage = {
+  url: string;
+  source: "city" | "tour" | "neutral";
+  citySlug: string;
+};
 
 export type HeroRouteContext = {
   route: string;
@@ -32,11 +40,27 @@ export type HeroRouteContext = {
     heroImage?: string;
   } | null;
   city?: {
+    heroImage?: string;
     heroImages?: string[];
   } | null;
 };
 
+type TourImageCandidate = {
+  id?: string;
+  slug?: string;
+  destination?: {
+    stateSlug?: string;
+    citySlug?: string;
+  };
+  heroImage?: string;
+  primaryImage?: string;
+  images?: string[];
+  galleryImages?: string[];
+};
+
 const normalizeHeroImage = (image?: string) => (image ?? "").trim();
+
+const isAbsoluteUrl = (image?: string) => /^https?:\/\//i.test(image ?? "");
 
 const isHomeHeroImage = (image?: string) => {
   const normalized = normalizeHeroImage(image);
@@ -74,6 +98,75 @@ export const resolveHeroImage = ({
 }) => {
   const candidates = filterHeroImages([primary, ...fallbacks], pageType);
   return candidates[0];
+};
+
+export const resolveCityHeroImage = ({
+  city,
+  citySlug,
+  stateSlug,
+  tours = [],
+}: {
+  city?: { heroImage?: string; heroImages?: string[] | null } | null;
+  citySlug: string;
+  stateSlug?: string;
+  tours?: TourImageCandidate[];
+}): ResolvedCityHeroImage => {
+  const cityDefinedImage = normalizeHeroImage(
+    city?.heroImage ?? city?.heroImages?.[0] ?? "",
+  );
+
+  if (cityDefinedImage) {
+    return {
+      url: isAbsoluteUrl(cityDefinedImage)
+        ? cityDefinedImage
+        : buildImageUrl(cityDefinedImage),
+      source: "city",
+      citySlug,
+    };
+  }
+
+  const cityTours = tours
+    .filter((tour) => {
+      const matchesCity = tour.destination?.citySlug === citySlug;
+      if (!matchesCity) {
+        return false;
+      }
+      if (!stateSlug) {
+        return true;
+      }
+      return tour.destination?.stateSlug === stateSlug;
+    })
+    .sort((a, b) =>
+      `${a.slug ?? ""}-${a.id ?? ""}`.localeCompare(
+        `${b.slug ?? ""}-${b.id ?? ""}`,
+      ),
+    );
+
+  const tourImage = cityTours
+    .map((tour) =>
+      normalizeHeroImage(
+        tour.heroImage ??
+          tour.primaryImage ??
+          tour.images?.[0] ??
+          tour.galleryImages?.[0] ??
+          "",
+      ),
+    )
+    .find(Boolean);
+
+  if (tourImage) {
+    return {
+      url: isAbsoluteUrl(tourImage) ? tourImage : buildImageUrl(tourImage),
+      source: "tour",
+      citySlug,
+    };
+  }
+
+  return {
+    url: buildImageUrl(CITY_NEUTRAL_FALLBACK_HERO_IMAGE),
+    source: "neutral",
+    citySlug,
+  };
 };
 
 const normalizePathname = (pathname: string) => {
@@ -172,11 +265,7 @@ export const resolveHeroImageForRoute = ({
     resolvedImage = resolveHeroImage({
       pageType: resolveGuidePageType(normalizedRoute, guide?.type),
       primary: guide?.guideImages?.[0]?.src ?? undefined,
-      fallbacks: [
-        city?.heroImages?.[0],
-        state?.heroImage,
-        GUIDE_FALLBACK_HERO_IMAGE,
-      ],
+      fallbacks: [GUIDE_FALLBACK_HERO_IMAGE],
     });
   } else if (isDestinationRoute(normalizedRoute) || state || city || destination) {
     const pageType: HeroPageType = city
@@ -186,16 +275,13 @@ export const resolveHeroImageForRoute = ({
         : "destination";
     resolvedImage = resolveHeroImage({
       pageType,
-      primary: city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
-      fallbacks: [
-        city ? state?.heroImage : undefined,
-        DESTINATION_FALLBACK_HERO_IMAGE,
-      ],
+      primary: city?.heroImage ?? city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
+      fallbacks: [DESTINATION_FALLBACK_HERO_IMAGE],
     });
   } else {
     resolvedImage = resolveHeroImage({
       pageType: "destination",
-      primary: destination?.heroImage ?? state?.heroImage ?? city?.heroImages?.[0],
+      primary: destination?.heroImage ?? state?.heroImage ?? city?.heroImage ?? city?.heroImages?.[0],
       fallbacks: [DESTINATION_FALLBACK_HERO_IMAGE],
     });
   }
