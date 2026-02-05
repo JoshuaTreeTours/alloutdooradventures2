@@ -65,6 +65,7 @@ export default function CityToursIndexRoute({
     route: toursHref,
     state,
     city,
+    cityTours: tours,
   }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {

@@ -4,14 +4,14 @@ import {
   CITY_NEUTRAL_BRAND_IMAGE,
   HOME_HERO_IMAGE,
   isImageInCityTour,
-  resolveCitySocialImageFromTours,
+  resolveCityHeroImage,
   resolveHeroImageForRoute,
 } from "./hero";
 import { buildImageUrl } from "./seo";
 
-describe("resolveCitySocialImageFromTours", () => {
+describe("resolveCityHeroImage", () => {
   it("prefers a city-bound tour hero image", () => {
-    const image = resolveCitySocialImageFromTours({
+    const image = resolveCityHeroImage({
       citySlug: "joshua-tree",
       stateSlug: "california",
       countryCode: "US",
@@ -34,7 +34,7 @@ describe("resolveCitySocialImageFromTours", () => {
   });
 
   it("joshua-tree: rejects other-city and other-country tour images", () => {
-    const image = resolveCitySocialImageFromTours({
+    const image = resolveCityHeroImage({
       citySlug: "joshua-tree",
       stateSlug: "california",
       countryCode: "US",
@@ -68,7 +68,7 @@ describe("resolveCitySocialImageFromTours", () => {
   });
 
   it("never falls back to activity default images like canoe-hero", () => {
-    const image = resolveCitySocialImageFromTours({
+    const image = resolveCityHeroImage({
       citySlug: "joshua-tree",
       stateSlug: "california",
       countryCode: "US",
@@ -128,6 +128,41 @@ describe("isImageInCityTour", () => {
 });
 
 describe("resolveHeroImageForRoute city hub", () => {
+
+
+  it("keeps city hub and city tours routes on the exact same hero URL", () => {
+    const cityTours = [
+      {
+        id: "jt-city-1",
+        title: "Joshua Tree Morning Hike",
+        heroImage: "https://cdn.example.com/joshua-tree-shared.jpg",
+        destination: {
+          citySlug: "joshua-tree",
+          stateSlug: "california",
+          countryCode: "US",
+        },
+        badges: { reviewCount: 350, rating: 4.9 },
+      },
+    ];
+
+    const cityHubHero = resolveHeroImageForRoute({
+      route: "/destinations/states/california/cities/joshua-tree",
+      city: { slug: "joshua-tree", stateSlug: "california" },
+      state: { slug: "california" },
+      cityTours,
+    });
+
+    const cityToursHero = resolveHeroImageForRoute({
+      route: "/destinations/states/california/cities/joshua-tree/tours",
+      city: { slug: "joshua-tree", stateSlug: "california" },
+      state: { slug: "california" },
+      cityTours,
+    });
+
+    expect(cityHubHero).toBe("https://cdn.example.com/joshua-tree-shared.jpg");
+    expect(cityToursHero).toBe(cityHubHero);
+    expect(cityToursHero).not.toContain("canoe-hero");
+  });
   it("uses same city-tour resolver for destination city routes", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/states/california/cities/joshua-tree",

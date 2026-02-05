@@ -195,7 +195,7 @@ const compareCityTours = (
   return (a.title ?? "").localeCompare(b.title ?? "");
 };
 
-export const resolveCitySocialImageFromTours = ({
+export const resolveCityHeroImage = ({
   citySlug,
   stateSlug,
   countryCode,
@@ -228,6 +228,8 @@ export const resolveCitySocialImageFromTours = ({
 
   return buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE);
 };
+
+export const resolveCitySocialImageFromTours = resolveCityHeroImage;
 
 const normalizePathname = (pathname: string) => {
   if (!pathname) {
@@ -366,7 +368,7 @@ export const resolveHeroImageForRoute = ({
       resolveGuidePageType(normalizedRoute, guide?.type) === "city";
     if (isCityGuidePage) {
       const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
-      return resolveCitySocialImageFromTours({
+      return resolveCityHeroImage({
         citySlug: cityCtx.citySlug,
         stateSlug: cityCtx.stateSlug,
         countryCode: cityCtx.countryCode,
@@ -386,7 +388,7 @@ export const resolveHeroImageForRoute = ({
         : "destination";
     if (pageType === "city") {
       const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
-      return resolveCitySocialImageFromTours({
+      return resolveCityHeroImage({
         citySlug: cityCtx.citySlug,
         stateSlug: cityCtx.stateSlug,
         countryCode: cityCtx.countryCode,
