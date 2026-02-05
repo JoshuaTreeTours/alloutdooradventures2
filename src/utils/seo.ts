@@ -104,6 +104,40 @@ const trimHookToFit = (hook: string, maxLength: number) => {
   return normalized ? `${normalized}.` : "";
 };
 
+const finalizeTourDescription = ({
+  description,
+  tour,
+  maxLength,
+  isFallbackTemplate,
+}: {
+  description: string;
+  tour: { id?: string; slug?: string };
+  maxLength: number;
+  isFallbackTemplate: boolean;
+}) => {
+  const normalizedDescription = normalizeText(description);
+  const stableId = normalizeText(tour.id ?? tour.slug ?? "");
+  const suffix = stableId ? `(Ref: ${stableId})` : "";
+
+  if (!suffix) {
+    return clampDescription(normalizedDescription, maxLength);
+  }
+
+  const shouldAppendSuffix = Boolean(stableId);
+
+  if (!shouldAppendSuffix) {
+    return clampDescription(normalizedDescription, maxLength);
+  }
+
+  const reserveLength = suffix.length + 1;
+  const maxBodyLength = Math.max(40, maxLength - reserveLength);
+  const trimmedBody = clampDescription(normalizedDescription, maxBodyLength)
+    .replace(/\s*[.,;:!?…]+$/g, "")
+    .trim();
+
+  return `${trimmedBody} ${suffix}`.trim();
+};
+
 export const buildTourMetaDescription = (tour: {
   id?: string;
   slug?: string;
@@ -147,15 +181,17 @@ export const buildTourMetaDescription = (tour: {
       ];
 
   const minLength = 120;
-  const maxLength = 155;
+  const maxLength = 165;
   let hook = hookOptions[0];
   let composed = `${prefix} ${hook} ${suffix}`.trim();
+  let usedTemplateFallback = true;
 
   for (const option of hookOptions) {
     const candidate = `${prefix} ${option} ${suffix}`.trim();
     if (candidate.length <= maxLength) {
       hook = option;
       composed = candidate;
+      usedTemplateFallback = false;
       break;
     }
   }
@@ -171,6 +207,7 @@ export const buildTourMetaDescription = (tour: {
       if (candidate.length >= minLength && candidate.length <= maxLength) {
         hook = expandedHook;
         composed = candidate;
+        usedTemplateFallback = false;
         break;
       }
     }
@@ -187,7 +224,12 @@ export const buildTourMetaDescription = (tour: {
   }
 
 
-  return clampDescription(composed, maxLength);
+  return finalizeTourDescription({
+    description: composed,
+    tour: { id: tour.id, slug: tour.slug },
+    maxLength,
+    isFallbackTemplate: usedTemplateFallback,
+  });
 };
 
 export const buildCanonicalUrl = (path: string) => {

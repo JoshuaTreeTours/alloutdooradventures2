@@ -319,12 +319,12 @@ const extractAttribute = (tag, attrName) => {
   if (!tag) {
     return null;
   }
-  const pattern = new RegExp(`${attrName}\\s*=\\s*["']([^"']+)["']`, "i");
+  const pattern = new RegExp(`${attrName}\\s*=\\s*(["\'])([\\s\\S]*?)\\1`, "i");
   const match = tag.match(pattern);
-  if (!match || !match[1]) {
+  if (!match || !match[2]) {
     return null;
   }
-  return match[1];
+  return match[2];
 };
 
 const normalizeAttributeValue = (value) =>
