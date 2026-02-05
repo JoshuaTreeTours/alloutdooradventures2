@@ -129,7 +129,7 @@ describe("tour offer + location safety", () => {
       bookingUrl: "https://example.com/book",
     });
 
-    expect(trip.location).toMatchObject({
+    expect(trip.tourLocation).toMatchObject({
       "@type": "Place",
       name: "San Diego, California",
       address: {
@@ -139,5 +139,27 @@ describe("tour offer + location safety", () => {
         addressCountry: "US",
       },
     });
+  });
+
+  it("links Product and TouristTrip with brand set to #brand", () => {
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl,
+      bookingUrl: "https://example.com/book",
+    });
+    const trip = buildTourTripStructuredData({
+      tour: baseTour,
+      detailUrl,
+      bookingUrl: "https://example.com/book",
+    });
+
+    expect(product.brand).toMatchObject({ "@id": SITE_BRAND_ID });
+    expect(product.isRelatedTo).toMatchObject({ "@id": `${detailUrl}#trip` });
+    expect(trip.mainEntityOfPage).toMatchObject({
+      "@id": `${detailUrl}#webpage`,
+    });
+    expect(trip.isRelatedTo).toMatchObject({ "@id": `${detailUrl}#product` });
   });
 });
