@@ -12,7 +12,7 @@ export const HOME_HERO_IMAGE = "/hero.jpg";
 export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
 export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
 export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
-export const CITY_PLACEHOLDER_HERO_IMAGE = "/images/canoe-hero.jpg";
+export const CITY_NEUTRAL_BRAND_IMAGE = "/logo.svg";
 
 export type HeroRouteContext = {
   route: string;
@@ -41,34 +41,41 @@ export type HeroRouteContext = {
     countryCode?: string;
     heroImage?: string;
     heroImages?: string[];
-    images?: HeroImageCandidate[];
-    poiImages?: HeroImageCandidate[];
   } | null;
+  cityTours?: Array<{
+    id?: string;
+    heroImage?: string;
+    primaryImage?: string;
+    destination?: {
+      citySlug?: string;
+      stateSlug?: string;
+      country?: string;
+      countryCode?: string;
+    };
+    badges?: {
+      reviewCount?: number;
+      rating?: number;
+    };
+    title?: string;
+  }>;
 };
 
-type CityHeroContext = {
+type CityRouteContext = {
   cityId?: string;
   citySlug?: string;
   stateSlug?: string;
   countryCode?: string;
 };
 
-export type HeroImageCandidate =
-  | string
-  | {
-      src?: string;
-      cityId?: string;
-      citySlug?: string;
-      stateSlug?: string;
-      countryCode?: string;
-      location?: {
-        citySlug?: string;
-      };
-      poi?: {
-        cityId?: string;
-        citySlug?: string;
-      };
-    };
+type CityTourImageCandidate = {
+  src?: string;
+  tourId?: string;
+  tourCitySlug?: string;
+  citySlug?: string;
+  stateSlug?: string;
+  countryCode?: string;
+  isActivityDefault?: boolean;
+};
 
 const normalizeHeroImage = (image?: string) => (image ?? "").trim();
 
@@ -82,6 +89,22 @@ const isHomeHeroImage = (image?: string) => {
   }
 
   return normalized === HOME_HERO_IMAGE || normalized.endsWith("/hero.jpg");
+};
+
+const isActivityDefaultImage = (image?: string) => {
+  const normalized = normalizeHeroImage(image);
+  if (!normalized) {
+    return false;
+  }
+
+  return [
+    HOME_HERO_IMAGE,
+    "/images/canoe-hero.jpg",
+    "/images/cycling-hero.jpg",
+    "/images/hiking-hero.jpg",
+    "/images/hiking-hero2.jpg",
+    "/images/hiking-hero3.jpg",
+  ].some((blocked) => normalized === blocked || normalized.endsWith(blocked));
 };
 
 export const filterHeroImages = (
@@ -113,119 +136,97 @@ export const resolveHeroImage = ({
   return candidates[0];
 };
 
-const getCandidateSrc = (image?: HeroImageCandidate) => {
-  if (!image) {
-    return undefined;
-  }
-
-  if (typeof image === "string") {
-    return image;
-  }
-
-  return image.src;
-};
-
-export const isImageInCity = (
-  image: HeroImageCandidate | undefined,
-  cityCtx: CityHeroContext,
+export const isImageInCityTour = (
+  image: CityTourImageCandidate | undefined,
+  cityCtx: CityRouteContext,
 ) => {
-  if (!image || typeof image === "string") {
+  if (!image?.src || image.isActivityDefault) {
     return false;
   }
 
-  const cityId = cityCtx.cityId?.trim();
+  if (isActivityDefaultImage(image.src)) {
+    return false;
+  }
+
   const citySlug = cityCtx.citySlug?.trim();
   const stateSlug = cityCtx.stateSlug?.trim();
   const countryCode = normalizeCountryCode(cityCtx.countryCode);
+
+  if (!citySlug) {
+    return false;
+  }
+
+  if (image.citySlug && image.citySlug !== citySlug) {
+    return false;
+  }
+
+  if (image.tourCitySlug && image.tourCitySlug !== citySlug) {
+    return false;
+  }
+
+  if (stateSlug && image.stateSlug && image.stateSlug !== stateSlug) {
+    return false;
+  }
 
   const imageCountryCode = normalizeCountryCode(image.countryCode);
   if (countryCode && imageCountryCode && imageCountryCode !== countryCode) {
     return false;
   }
 
-  const imageStateSlug = image.stateSlug?.trim();
-  if (stateSlug && imageStateSlug && imageStateSlug !== stateSlug) {
-    return false;
-  }
-
-  const hasStrongMatch = Boolean(
-    (cityId && image.cityId?.trim() === cityId) ||
-      (citySlug && image.citySlug?.trim() === citySlug) ||
-      (citySlug && image.location?.citySlug?.trim() === citySlug),
-  );
-
-  return hasStrongMatch;
+  return Boolean(image.tourCitySlug === citySlug || image.citySlug === citySlug);
 };
 
-export const resolveCityHeroImage = ({
-  city,
+const compareCityTours = (
+  a: NonNullable<HeroRouteContext["cityTours"]>[number],
+  b: NonNullable<HeroRouteContext["cityTours"]>[number],
+) => {
+  const reviewA = a.badges?.reviewCount ?? 0;
+  const reviewB = b.badges?.reviewCount ?? 0;
+  if (reviewA !== reviewB) {
+    return reviewB - reviewA;
+  }
+
+  const ratingA = a.badges?.rating ?? 0;
+  const ratingB = b.badges?.rating ?? 0;
+  if (ratingA !== ratingB) {
+    return ratingB - ratingA;
+  }
+
+  return (a.title ?? "").localeCompare(b.title ?? "");
+};
+
+export const resolveCitySocialImageFromTours = ({
   citySlug,
   stateSlug,
   countryCode,
-  cityId,
+  cityTours,
 }: {
-  city?: HeroRouteContext["city"];
   citySlug?: string;
   stateSlug?: string;
   countryCode?: string;
-  cityId?: string;
+  cityTours?: HeroRouteContext["cityTours"];
 }) => {
-  const cityCtx: CityHeroContext = {
-    cityId: cityId ?? city?.id,
-    citySlug: citySlug ?? city?.slug,
-    stateSlug: stateSlug ?? city?.stateSlug,
-    countryCode: countryCode ?? city?.countryCode,
-  };
+  const tourPool = [...(cityTours ?? [])].sort(compareCityTours);
+  const rankedTourPool = tourPool.slice(0, 12);
 
-  const cityHeroFromDedicatedFields = filterHeroImages(
-    [city?.heroImage, city?.heroImages?.[0]],
-    "city",
-  )[0];
-  if (cityHeroFromDedicatedFields) {
-    return buildImageUrl(cityHeroFromDedicatedFields);
+  for (const tour of rankedTourPool) {
+    const candidateImage = tour.heroImage ?? tour.primaryImage;
+    const candidate: CityTourImageCandidate = {
+      src: candidateImage,
+      tourId: tour.id,
+      tourCitySlug: tour.destination?.citySlug,
+      citySlug: tour.destination?.citySlug,
+      stateSlug: tour.destination?.stateSlug,
+      countryCode: tour.destination?.countryCode,
+      isActivityDefault: isActivityDefaultImage(candidateImage),
+    };
+
+    if (isImageInCityTour(candidate, { citySlug, stateSlug, countryCode })) {
+      return buildImageUrl(candidate.src);
+    }
   }
 
-  const sameCityImages = (city?.images ?? []).filter((image) =>
-    isImageInCity(image, cityCtx),
-  );
-  const cityImage = filterHeroImages(
-    sameCityImages.map((image) => getCandidateSrc(image)),
-    "city",
-  )[0];
-  if (cityImage) {
-    return buildImageUrl(cityImage);
-  }
-
-  const sameCityPoiImages = (city?.poiImages ?? []).filter((image) => {
-    if (!isImageInCity(image, cityCtx)) {
-      return false;
-    }
-
-    if (typeof image === "string") {
-      return false;
-    }
-
-    const poiCityId = image.poi?.cityId?.trim();
-    const poiCitySlug = image.poi?.citySlug?.trim();
-    if (cityCtx.cityId && poiCityId) {
-      return poiCityId === cityCtx.cityId;
-    }
-    if (cityCtx.citySlug && poiCitySlug) {
-      return poiCitySlug === cityCtx.citySlug;
-    }
-
-    return Boolean(poiCityId || poiCitySlug);
-  });
-
-  const poiImage = filterHeroImages(
-    sameCityPoiImages.map((image) => getCandidateSrc(image)),
-    "city",
-  )[0];
-  if (poiImage) {
-    return buildImageUrl(poiImage);
-  }
-
-  return buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE);
+  return buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE);
 };
 
 const normalizePathname = (pathname: string) => {
@@ -318,12 +319,19 @@ const resolveCityContextFromRoute = (
   } else if (segments[0] === "guides" && segments[1] === "us" && segments[3]) {
     routeStateSlug = segments[2];
     routeCitySlug = segments[3];
+  } else if (
+    segments[0] === "destinations" &&
+    (segments[1] === "world" || segments[1] === "europe") &&
+    segments[3] === "cities" &&
+    segments[4]
+  ) {
+    routeStateSlug = segments[2];
+    routeCitySlug = segments[4];
   }
 
   return {
     citySlug: city?.slug ?? routeCitySlug,
     stateSlug: city?.stateSlug ?? routeStateSlug ?? state?.slug,
-    cityId: city?.id,
     countryCode: city?.countryCode ?? state?.countryCode,
   };
 };
@@ -336,6 +344,7 @@ export const resolveHeroImageForRoute = ({
   destination,
   state,
   city,
+  cityTours,
 }: HeroRouteContext): string | null => {
   const normalizedRoute = normalizePathname(route);
   const isHome = isHomeRoute(normalizedRoute);
@@ -357,7 +366,12 @@ export const resolveHeroImageForRoute = ({
       resolveGuidePageType(normalizedRoute, guide?.type) === "city";
     if (isCityGuidePage) {
       const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
-      return resolveCityHeroImage({ city, ...cityCtx });
+      return resolveCitySocialImageFromTours({
+        citySlug: cityCtx.citySlug,
+        stateSlug: cityCtx.stateSlug,
+        countryCode: cityCtx.countryCode,
+        cityTours,
+      });
     }
     resolvedImage = resolveHeroImage({
       pageType: resolveGuidePageType(normalizedRoute, guide?.type),
@@ -372,7 +386,12 @@ export const resolveHeroImageForRoute = ({
         : "destination";
     if (pageType === "city") {
       const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
-      return resolveCityHeroImage({ city, ...cityCtx });
+      return resolveCitySocialImageFromTours({
+        citySlug: cityCtx.citySlug,
+        stateSlug: cityCtx.stateSlug,
+        countryCode: cityCtx.countryCode,
+        cityTours,
+      });
     }
     resolvedImage = resolveHeroImage({
       pageType,

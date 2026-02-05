@@ -1,149 +1,154 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  CITY_PLACEHOLDER_HERO_IMAGE,
+  CITY_NEUTRAL_BRAND_IMAGE,
   HOME_HERO_IMAGE,
-  isImageInCity,
-  resolveCityHeroImage,
+  isImageInCityTour,
+  resolveCitySocialImageFromTours,
   resolveHeroImageForRoute,
 } from "./hero";
 import { buildImageUrl } from "./seo";
 
-describe("resolveCityHeroImage", () => {
-  it("uses explicit city hero before other candidates", () => {
-    const image = resolveCityHeroImage({
-      city: {
-        slug: "joshua-tree",
-        stateSlug: "california",
-        countryCode: "US",
-        heroImage: "https://cdn.example.com/jt-explicit.jpg",
-        images: [
-          {
-            src: "https://cdn.example.com/jt-city-image.jpg",
+describe("resolveCitySocialImageFromTours", () => {
+  it("prefers a city-bound tour hero image", () => {
+    const image = resolveCitySocialImageFromTours({
+      citySlug: "joshua-tree",
+      stateSlug: "california",
+      countryCode: "US",
+      cityTours: [
+        {
+          id: "1",
+          title: "Joshua Tree Sunset Hike",
+          heroImage: "https://cdn.example.com/joshua-tree-tour.jpg",
+          destination: {
             citySlug: "joshua-tree",
             stateSlug: "california",
             countryCode: "US",
           },
-        ],
-      },
+          badges: { reviewCount: 120, rating: 4.9 },
+        },
+      ],
+    });
+
+    expect(image).toBe("https://cdn.example.com/joshua-tree-tour.jpg");
+  });
+
+  it("joshua-tree: rejects other-city and other-country tour images", () => {
+    const image = resolveCitySocialImageFromTours({
       citySlug: "joshua-tree",
       stateSlug: "california",
       countryCode: "US",
-    });
-
-    expect(image).toBe("https://cdn.example.com/jt-explicit.jpg");
-  });
-
-  it("returns neutral fallback when city bound metadata is missing", () => {
-    const image = resolveCityHeroImage({
-      city: {
-        slug: "joshua-tree",
-        stateSlug: "california",
-        countryCode: "US",
-        images: [{ src: "https://cdn.example.com/unbound.jpg" }],
-      },
-      citySlug: "joshua-tree",
-      stateSlug: "california",
-      countryCode: "US",
-    });
-
-    expect(image).toBe(buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE));
-  });
-
-  it("joshua-tree: never resolves image from another city/country", () => {
-    const image = resolveCityHeroImage({
-      city: {
-        slug: "joshua-tree",
-        stateSlug: "california",
-        countryCode: "US",
-        images: [
-          {
-            src: "https://cdn.example.com/paris.jpg",
+      cityTours: [
+        {
+          id: "2",
+          title: "Paris Day Tour",
+          heroImage: "https://cdn.example.com/paris-tour.jpg",
+          destination: {
             citySlug: "paris",
-            countryCode: "FR",
             stateSlug: "ile-de-france",
+            countryCode: "FR",
           },
-          {
-            src: "https://cdn.example.com/palm-springs.jpg",
+          badges: { reviewCount: 500, rating: 5 },
+        },
+        {
+          id: "3",
+          title: "Palm Springs Jeep",
+          heroImage: "https://cdn.example.com/palm-springs-tour.jpg",
+          destination: {
             citySlug: "palm-springs",
-            countryCode: "US",
             stateSlug: "california",
+            countryCode: "US",
           },
-        ],
-      },
+          badges: { reviewCount: 200, rating: 4.8 },
+        },
+      ],
+    });
+
+    expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
+  });
+
+  it("never falls back to activity default images like canoe-hero", () => {
+    const image = resolveCitySocialImageFromTours({
       citySlug: "joshua-tree",
       stateSlug: "california",
       countryCode: "US",
+      cityTours: [
+        {
+          id: "4",
+          title: "Default Image Tour",
+          heroImage: "/images/canoe-hero.jpg",
+          destination: {
+            citySlug: "joshua-tree",
+            stateSlug: "california",
+            countryCode: "US",
+          },
+          badges: { reviewCount: 1000, rating: 5 },
+        },
+      ],
     });
 
-    expect(image).toBe(buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE));
-    expect(image).not.toContain("paris");
-    expect(image).not.toContain("palm-springs");
+    expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
+    expect(image).not.toContain("/images/canoe-hero.jpg");
   });
 });
 
-describe("isImageInCity", () => {
-  it("requires a strong city match and rejects state/country mismatch", () => {
-    const cityCtx = {
-      cityId: "jt-1",
-      citySlug: "joshua-tree",
-      stateSlug: "california",
-      countryCode: "US",
-    };
-
+describe("isImageInCityTour", () => {
+  it("requires explicit tour/city binding and rejects defaults", () => {
     expect(
-      isImageInCity(
+      isImageInCityTour(
         {
           src: "https://cdn.example.com/jt.jpg",
-          cityId: "jt-1",
+          tourCitySlug: "joshua-tree",
           citySlug: "joshua-tree",
           stateSlug: "california",
           countryCode: "US",
         },
-        cityCtx,
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
       ),
     ).toBe(true);
 
     expect(
-      isImageInCity(
+      isImageInCityTour(
         {
-          src: "https://cdn.example.com/paris.jpg",
+          src: "/images/canoe-hero.jpg",
+          tourCitySlug: "joshua-tree",
           citySlug: "joshua-tree",
-          stateSlug: "california",
-          countryCode: "FR",
         },
-        cityCtx,
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
       ),
     ).toBe(false);
 
-    expect(isImageInCity({ src: "https://cdn.example.com/unbound.jpg" }, cityCtx)).toBe(
-      false,
-    );
+    expect(
+      isImageInCityTour(
+        { src: "https://cdn.example.com/unbound.jpg" },
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
+      ),
+    ).toBe(false);
   });
 });
 
-describe("resolveHeroImageForRoute city-page hard lock", () => {
-  it("never falls back to state or home hero on US city guides", () => {
-    const image = resolveHeroImageForRoute({
-      route: "/guides/us/california/joshua-tree",
-      guide: { type: "city", guideImages: [] },
-      state: { heroImage: "https://cdn.example.com/california-state.jpg" },
-      city: { slug: "joshua-tree", stateSlug: "california", heroImages: [HOME_HERO_IMAGE] },
-    });
-
-    expect(image).toBe(buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE));
-    expect(image).not.toBe("https://cdn.example.com/california-state.jpg");
-    expect(image).not.toContain(HOME_HERO_IMAGE);
-  });
-
-  it("never falls back to state hero on destination city routes", () => {
+describe("resolveHeroImageForRoute city hub", () => {
+  it("uses same city-tour resolver for destination city routes", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/states/california/cities/joshua-tree",
-      city: { slug: "joshua-tree", stateSlug: "california", heroImages: [] },
-      state: { heroImage: "https://cdn.example.com/california-state.jpg" },
+      city: { slug: "joshua-tree", stateSlug: "california", heroImages: [HOME_HERO_IMAGE] },
+      state: { heroImage: "https://cdn.example.com/california-state.jpg", slug: "california" },
+      cityTours: [
+        {
+          id: "jt-city",
+          title: "Joshua Tree Stargazing",
+          heroImage: "https://cdn.example.com/joshua-tree-city-tour.jpg",
+          destination: {
+            citySlug: "joshua-tree",
+            stateSlug: "california",
+            countryCode: "US",
+          },
+          badges: { reviewCount: 400, rating: 4.9 },
+        },
+      ],
     });
 
-    expect(image).toBe(buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE));
-    expect(image).not.toBe("https://cdn.example.com/california-state.jpg");
+    expect(image).toBe("https://cdn.example.com/joshua-tree-city-tour.jpg");
+    expect(image).not.toContain("canoe-hero");
   });
 });
