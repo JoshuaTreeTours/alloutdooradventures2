@@ -19,6 +19,10 @@ export type TourDestination = {
   lng?: number;
 };
 
+export type TourPricing = {
+  isReliable?: boolean;
+};
+
 export type Tour = {
   id: string;
   slug: string;
@@ -34,6 +38,7 @@ export type Tour = {
   badges: TourBadges;
   startingPrice?: number;
   currency?: string;
+  pricing?: TourPricing;
   tagPills?: string[];
   activitySlugs: string[];
   bookingProvider: BookingProvider;

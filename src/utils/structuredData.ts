@@ -12,13 +12,18 @@ type StructuredDataValue =
   | { [key: string]: StructuredDataValue };
 
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
-export const SITE_AGENCY_ID = `${SITE_URL}/#agency`;
+export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
+export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
+export const SITE_AGENCY_ID = SITE_BRAND_ID;
+export const PRICING_RELIABLE_DEFAULT = false;
+
+const ORGANIZATION_NAME = "Outdoor Adventures, Inc.";
 
 const URL_FIELDS = new Set(["url", "item", "logo", "image"]);
 const ID_FIELDS = new Set(["@id"]);
 const LEGACY_BRAND_PATTERN = new RegExp(
   ["All", "Outdoor", "Adventures"].join("\\s+"),
-  "gi",
+  "gi"
 );
 
 const toAbsoluteUrl = (value: string) => {
@@ -43,8 +48,8 @@ const stripEmptyValues = (value: StructuredDataValue): StructuredDataValue => {
 
   if (Array.isArray(value)) {
     const cleaned = value
-      .map((item) => stripEmptyValues(item))
-      .filter((item) => item !== null);
+      .map(item => stripEmptyValues(item))
+      .filter(item => item !== null);
     return cleaned.length ? cleaned : null;
   }
 
@@ -63,7 +68,7 @@ const stripEmptyValues = (value: StructuredDataValue): StructuredDataValue => {
 
 const ensureAbsoluteUrls = (
   value: StructuredDataValue,
-  key?: string,
+  key?: string
 ): StructuredDataValue => {
   if (value === null) {
     return null;
@@ -77,7 +82,7 @@ const ensureAbsoluteUrls = (
   }
 
   if (Array.isArray(value)) {
-    return value.map((item) => ensureAbsoluteUrls(item, key));
+    return value.map(item => ensureAbsoluteUrls(item, key));
   }
 
   if (typeof value === "object") {
@@ -85,7 +90,7 @@ const ensureAbsoluteUrls = (
       Object.entries(value).map(([entryKey, entryValue]) => [
         entryKey,
         ensureAbsoluteUrls(entryValue, entryKey),
-      ]),
+      ])
     ) as StructuredDataValue;
   }
 
@@ -110,7 +115,7 @@ const hasType = (value: StructuredDataValue): boolean => {
   }
 
   if ("@graph" in value && Array.isArray(value["@graph"])) {
-    return value["@graph"].some((node) => {
+    return value["@graph"].some(node => {
       if (!node || typeof node !== "object" || Array.isArray(node)) {
         return false;
       }
@@ -126,7 +131,7 @@ const hasType = (value: StructuredDataValue): boolean => {
 };
 
 export const normalizeStructuredData = (
-  value: StructuredDataValue,
+  value: StructuredDataValue
 ): StructuredDataValue | null => {
   const stripped = stripEmptyValues(value);
   if (!stripped) {
@@ -145,7 +150,7 @@ export const getSiteStructuredDataNodes = () => {
     {
       "@type": "Organization",
       "@id": SITE_ORGANIZATION_ID,
-      name: SITE_BRAND_NAME,
+      name: ORGANIZATION_NAME,
       url: SITE_URL,
       logo: logoUrl,
       telephone: "+1-855-314-8687",
@@ -155,8 +160,8 @@ export const getSiteStructuredDataNodes = () => {
       ],
     },
     {
-      "@type": "TravelAgency",
-      "@id": SITE_AGENCY_ID,
+      "@type": ["Organization", "TravelAgency"],
+      "@id": SITE_BRAND_ID,
       name: SITE_BRAND_NAME,
       url: SITE_URL,
       logo: logoUrl,
@@ -167,6 +172,24 @@ export const getSiteStructuredDataNodes = () => {
       ],
       parentOrganization: {
         "@id": SITE_ORGANIZATION_ID,
+      },
+      areaServed: [
+        {
+          "@type": "GeoShape",
+          name: "Worldwide",
+        },
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": SITE_WEBSITE_ID,
+      url: SITE_URL,
+      name: SITE_BRAND_NAME,
+      publisher: {
+        "@id": SITE_ORGANIZATION_ID,
+      },
+      about: {
+        "@id": SITE_BRAND_ID,
       },
     },
   ];
@@ -180,6 +203,74 @@ const buildImageObject = (url: string, id?: string) => ({
   ...(id ? { "@id": id } : {}),
   url,
 });
+
+const COUNTRY_NAME_TO_CODE: Record<string, string> = {
+  "united states": "US",
+  usa: "US",
+  us: "US",
+  australia: "AU",
+  canada: "CA",
+  france: "FR",
+  germany: "DE",
+  greece: "GR",
+  iceland: "IS",
+  ireland: "IE",
+  italy: "IT",
+  netherlands: "NL",
+  portugal: "PT",
+  spain: "ES",
+  "united kingdom": "GB",
+  uk: "GB",
+};
+
+const resolveCountryCode = (tour: Tour): string => {
+  const country = tour.destination.country?.trim().toLowerCase();
+  if (country && COUNTRY_NAME_TO_CODE[country]) {
+    return COUNTRY_NAME_TO_CODE[country];
+  }
+
+  return "US";
+};
+
+const buildTourLocationStructuredData = (tour: Tour) => {
+  const locality = tour.destination.city;
+  const region = tour.destination.state;
+  const countryCode = resolveCountryCode(tour);
+  const placeName = region ? `${locality}, ${region}` : locality;
+
+  return {
+    "@type": "Place",
+    name: placeName,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: locality,
+      ...(region ? { addressRegion: region } : {}),
+      addressCountry: countryCode,
+    },
+  };
+};
+
+const buildTourOfferStructuredData = (tour: Tour, bookingUrl: string) => {
+  const offer: Record<string, StructuredDataValue> = {
+    "@type": "Offer",
+    url: bookingUrl,
+    seller: {
+      "@id": SITE_BRAND_ID,
+    },
+  };
+
+  if (
+    tour.pricing?.isReliable === true &&
+    tour.startingPrice !== undefined &&
+    tour.startingPrice !== null &&
+    tour.currency
+  ) {
+    offer.price = String(tour.startingPrice);
+    offer.priceCurrency = tour.currency;
+  }
+
+  return offer;
+};
 
 export const buildWebPageStructuredData = ({
   url,
@@ -199,7 +290,7 @@ export const buildWebPageStructuredData = ({
     url,
     name: sanitizeSchemaName(name),
     description,
-    isPartOf: { "@id": SITE_AGENCY_ID },
+    isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
     ...(image
       ? {
@@ -211,7 +302,7 @@ export const buildWebPageStructuredData = ({
 };
 
 export const buildBreadcrumbList = (
-  items: { name: string; url: string }[],
+  items: { name: string; url: string }[]
 ) => ({
   "@type": "BreadcrumbList",
   itemListElement: items.map((item, index) => ({
@@ -223,7 +314,7 @@ export const buildBreadcrumbList = (
 });
 
 export const buildItemList = (
-  items: { name: string; url: string; image?: string | string[] }[],
+  items: { name: string; url: string; image?: string | string[] }[]
 ) => ({
   "@type": "ItemList",
   itemListElement: items.map((item, index) => ({
@@ -254,21 +345,9 @@ export const buildTourProductStructuredData = ({
 }) => {
   const resolvedImages = filterHeroImages(
     images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
-    "product",
+    "product"
   );
-  const offer: Record<string, StructuredDataValue> = {
-    "@type": "Offer",
-    url: bookingUrl,
-  };
-
-  if (
-    tour.startingPrice !== undefined &&
-    tour.startingPrice !== null &&
-    tour.currency
-  ) {
-    offer.price = String(tour.startingPrice);
-    offer.priceCurrency = tour.currency;
-  }
+  const offer = buildTourOfferStructuredData(tour, bookingUrl);
 
   return {
     "@type": "Product",
@@ -278,8 +357,9 @@ export const buildTourProductStructuredData = ({
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
     brand: { "@id": SITE_ORGANIZATION_ID },
-    provider: { "@id": SITE_AGENCY_ID },
+    provider: { "@id": SITE_BRAND_ID },
     offers: offer,
+    location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };
@@ -299,21 +379,9 @@ export const buildTourTripStructuredData = ({
 }) => {
   const resolvedImages = filterHeroImages(
     images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
-    "product",
+    "product"
   );
-  const offer: Record<string, StructuredDataValue> = {
-    "@type": "Offer",
-    url: bookingUrl,
-  };
-
-  if (
-    tour.startingPrice !== undefined &&
-    tour.startingPrice !== null &&
-    tour.currency
-  ) {
-    offer.price = String(tour.startingPrice);
-    offer.priceCurrency = tour.currency;
-  }
+  const offer = buildTourOfferStructuredData(tour, bookingUrl);
 
   return {
     "@type": "TouristTrip",
@@ -321,8 +389,9 @@ export const buildTourTripStructuredData = ({
     name: tour.title,
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
-    provider: { "@id": SITE_AGENCY_ID },
+    provider: { "@id": SITE_BRAND_ID },
     offers: offer,
+    location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };
@@ -339,7 +408,7 @@ export const buildReserveActionStructuredData = ({
   "@type": "ReserveAction",
   "@id": `${bookingUrl}#reserve`,
   name: `Reserve ${tourName}`,
-  provider: { "@id": SITE_AGENCY_ID },
+  provider: { "@id": SITE_BRAND_ID },
   target: {
     "@type": "EntryPoint",
     urlTemplate: bookingUrl,
