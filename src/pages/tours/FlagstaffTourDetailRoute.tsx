@@ -20,7 +20,7 @@ import {
 } from "../../data/flagstaffTours";
 import { formatStartingPrice } from "../../lib/pricing";
 import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
-import { buildMetaDescription } from "../../utils/seo";
+import { resolveTourMeta } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -36,8 +36,7 @@ type FlagstaffTourDetailRouteProps = {
 export default function FlagstaffTourDetailRoute({
   params,
 }: FlagstaffTourDetailRouteProps) {
-  const state =
-    getStateBySlug("arizona") ?? getFallbackStateBySlug("arizona");
+  const state = getStateBySlug("arizona") ?? getFallbackStateBySlug("arizona");
   const city =
     getCityBySlugs("arizona", "flagstaff") ??
     getFallbackCityBySlugs("arizona", "flagstaff");
@@ -56,23 +55,24 @@ export default function FlagstaffTourDetailRoute({
 
   const tour = getFlagstaffTourBySlug(params.tourSlug);
   const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : "";
-  const heroImage = resolveHeroImageForRoute({
-    route: detailUrl,
-    tour,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: detailUrl,
+      tour,
+    }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
+    "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const metaDescription = tour
-    ? buildMetaDescription(
-        tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-        `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-      )
+  const resolvedTourMeta = tour
+    ? resolveTourMeta({
+        tour,
+        productDescription,
+      })
     : undefined;
   const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
   const stateHref = state.isFallback
@@ -87,7 +87,7 @@ export default function FlagstaffTourDetailRoute({
       buildWebPageStructuredData({
         url: detailUrl,
         name: tour.title,
-        description: metaDescription,
+        description: resolvedTourMeta?.description,
         image: heroImage,
       }),
       buildTourProductStructuredData({
@@ -111,7 +111,7 @@ export default function FlagstaffTourDetailRoute({
     cityHref,
     detailUrl,
     heroImage,
-    metaDescription,
+    resolvedTourMeta?.description,
     productDescription,
     state.name,
     stateHref,
@@ -142,29 +142,26 @@ export default function FlagstaffTourDetailRoute({
   }
 
   const tourSlug = getFlagstaffTourSlug(tour);
-  const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description =
-    metaDescription ??
-    buildMetaDescription(
-      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-    );
+  const title =
+    resolvedTourMeta?.title ??
+    `${tour.title} in ${city.name}, ${state.name} | All Outdoor Adventures`;
+  const description = resolvedTourMeta?.description;
   const relatedTours = flagstaffTours.filter(
-    (item) => getFlagstaffTourSlug(item) !== tourSlug,
+    item => getFlagstaffTourSlug(item) !== tourSlug
   );
   const disclosure = getAffiliateDisclosure(tour);
   const startingPriceLabel = formatStartingPrice(
     tour.startingPrice,
-    tour.currency,
+    tour.currency
   );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={title}
-        description={description}
+        description={description ?? ""}
         url={detailUrl}
-        image={heroImage ?? null}
+        image={resolvedTourMeta?.image ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -248,7 +245,7 @@ export default function FlagstaffTourDetailRoute({
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            {getExpandedTourDescription(tour).map((paragraph) => (
+            {getExpandedTourDescription(tour).map(paragraph => (
               <p
                 key={paragraph}
                 className="mt-4 text-sm text-[#405040] leading-relaxed"
@@ -285,7 +282,7 @@ export default function FlagstaffTourDetailRoute({
         </div>
         {tour.galleryImages?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
+            {tour.galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
@@ -309,7 +306,7 @@ export default function FlagstaffTourDetailRoute({
               More tours in {city.name}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map((related) => (
+              {relatedTours.map(related => (
                 <TourCard
                   key={related.slug}
                   tour={related}

@@ -9,8 +9,7 @@ import type { Destination, StateDestination } from "../data/destinations";
 import { getGuideStateBySlug, getGuideTourDetailPath } from "../data/guideData";
 import { getTopToursForPlace } from "../data/tourIndex";
 import { resolveHeroImageForRoute } from "../utils/hero";
-import { SITE_BRAND_NAME } from "../utils/site";
-import { buildMetaDescription } from "../utils/seo";
+import { buildDestinationStateMeta } from "../utils/seo";
 
 const buildCityDestination = (
   stateSlug: string,
@@ -31,7 +30,7 @@ const buildStateHistory = (stateName: string) => [
 
 export default function StateTemplate({ state }: { state: StateDestination }) {
   const paragraphs = state.longDescription.split("\n\n");
-  const mapLocations = state.cities.map((city) => ({
+  const mapLocations = state.cities.map(city => ({
     label: city.name,
     lat: city.lat,
     lng: city.lng,
@@ -42,17 +41,16 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
   const hasGuideLinks = Boolean(guideState);
   const topTours = getTopToursForPlace(
     { type: "state", slug: state.slug, name: state.name },
-    { min: 3, max: 6 },
+    { min: 3, max: 6 }
   );
-  const title = `${state.name} ${SITE_BRAND_NAME} | Tours & Destinations`;
-  const description = buildMetaDescription(
-    state.intro,
-    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
-  );
-  const heroImage = resolveHeroImageForRoute({
-    route: `/destinations/states/${state.slug}`,
-    state,
-  }) ?? undefined;
+  const stateMeta = buildDestinationStateMeta({ state: state.name });
+  const title = stateMeta.title;
+  const description = stateMeta.description;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: `/destinations/states/${state.slug}`,
+      state,
+    }) ?? undefined;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -82,15 +80,13 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
             <p className="text-xs uppercase tracking-[0.3em] text-white/80">
               {state.description}
             </p>
-            <h1 className="text-3xl font-semibold md:text-5xl">
-              {state.name}
-            </h1>
+            <h1 className="text-3xl font-semibold md:text-5xl">{state.name}</h1>
             <p className="max-w-2xl text-sm text-white/90 md:text-base">
               {state.intro}
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
-            {state.topRegions.map((category) => (
+            {state.topRegions.map(category => (
               <span
                 key={category.title}
                 className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
@@ -146,7 +142,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           </p>
         </div>
         <div className="mt-8 space-y-5 text-sm leading-relaxed text-[#405040] md:text-base">
-          {paragraphs.map((paragraph) => (
+          {paragraphs.map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -172,7 +168,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                 </h2>
               </div>
               <div className="space-y-4 text-sm leading-relaxed text-[#405040] md:text-base">
-                {historyHighlights.map((paragraph) => (
+                {historyHighlights.map(paragraph => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
@@ -187,7 +183,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                     Signature regions
                   </span>
                   <p className="mt-1 font-semibold text-[#2f4a2f]">
-                    {state.topRegions.map((region) => region.title).join(", ")}
+                    {state.topRegions.map(region => region.title).join(", ")}
                   </p>
                 </li>
                 <li>
@@ -195,7 +191,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                     Featured cities
                   </span>
                   <p className="mt-1 font-semibold text-[#2f4a2f]">
-                    {state.cities.map((city) => city.name).join(", ")}
+                    {state.cities.map(city => city.name).join(", ")}
                   </p>
                 </li>
                 <li>
@@ -221,12 +217,12 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
             Explore {state.name} by region
           </h2>
           <p className="text-sm text-[#405040] md:text-base">
-            Each region offers a different flavor of adventure, from coastal loops
-            to alpine escapes.
+            Each region offers a different flavor of adventure, from coastal
+            loops to alpine escapes.
           </p>
         </div>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {state.topRegions.map((category) => (
+          {state.topRegions.map(category => (
             <div
               key={category.title}
               className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm"
@@ -259,7 +255,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           </p>
         </div>
         <div className="mt-10 flex flex-col gap-6">
-          {state.cities.map((city) => (
+          {state.cities.map(city => (
             <DestinationCard
               key={city.slug}
               destination={buildCityDestination(state.slug, city)}
@@ -273,7 +269,9 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
 
       <section className="bg-white/60">
         <div className="mx-auto max-w-6xl px-6 py-16">
-          <div className={`grid gap-10 ${hasGuideLinks ? "lg:grid-cols-2" : ""}`}>
+          <div
+            className={`grid gap-10 ${hasGuideLinks ? "lg:grid-cols-2" : ""}`}
+          >
             {hasGuideLinks ? (
               <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -283,7 +281,8 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                   Explore {state.name} guides
                 </h2>
                 <p className="mt-3 text-sm text-[#405040] md:text-base">
-                  Jump into the main guide or explore city-specific planning tips.
+                  Jump into the main guide or explore city-specific planning
+                  tips.
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
                   <Link href={`/guides/us/${state.slug}`}>
@@ -291,8 +290,11 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                       {state.name} guide
                     </a>
                   </Link>
-                  {guideCities.map((city) => (
-                    <Link key={city.slug} href={`/guides/us/${state.slug}/${city.slug}`}>
+                  {guideCities.map(city => (
+                    <Link
+                      key={city.slug}
+                      href={`/guides/us/${state.slug}/${city.slug}`}
+                    >
                       <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                         {city.name} guide
                       </a>
@@ -321,7 +323,7 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
                 Compare top-rated tours and browse live availability by city.
               </p>
               <div className="mt-6 grid gap-5 md:grid-cols-2">
-                {topTours.map((tour) => (
+                {topTours.map(tour => (
                   <TourCard
                     key={tour.id}
                     tour={tour}
@@ -340,7 +342,6 @@ export default function StateTemplate({ state }: { state: StateDestination }) {
           </div>
         </div>
       </section>
-
 
       <section className="bg-white/60">
         <div className="mx-auto max-w-6xl px-6 py-16">

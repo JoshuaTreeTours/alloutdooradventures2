@@ -18,7 +18,7 @@ import {
   getTourHighlights,
 } from "../../data/tourNarratives";
 import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
-import { buildTourMetaDescription } from "../../utils/seo";
+import { resolveTourMeta } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -41,19 +41,25 @@ export default function TourDetail({ params }: TourDetailProps) {
       ? getCityBySlugs(tour.destination.stateSlug, tour.destination.citySlug)
       : null;
   const detailUrl = tour ? getTourDetailPath(tour) : "";
-  const heroImage = resolveHeroImageForRoute({
-    route: detailUrl,
-    tour,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: detailUrl,
+      tour,
+    }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
+    "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const metaDescription = tour ? buildTourMetaDescription(tour) : undefined;
+  const resolvedTourMeta = tour
+    ? resolveTourMeta({
+        tour,
+        productDescription,
+      })
+    : undefined;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !bookingUrl || !detailUrl) {
       return null;
@@ -62,7 +68,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       buildWebPageStructuredData({
         url: detailUrl,
         name: tour.title,
-        description: metaDescription,
+        description: resolvedTourMeta?.description,
         image: heroImage,
       }),
       buildTourProductStructuredData({
@@ -81,7 +87,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     bookingUrl,
     detailUrl,
     heroImage,
-    metaDescription,
+    resolvedTourMeta?.description,
     productDescription,
     structuredImages,
     tour,
@@ -101,28 +107,29 @@ export default function TourDetail({ params }: TourDetailProps) {
     );
   }
 
-  const regionLabel =
-    tour.destination.state || tour.destination.country || "";
+  const regionLabel = tour.destination.state || tour.destination.country || "";
   const destinationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
-  const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-  const description = metaDescription ?? buildTourMetaDescription(tour);
+  const title =
+    resolvedTourMeta?.title ??
+    `${tour.title} in ${destinationLabel} | All Outdoor Adventures`;
+  const description = resolvedTourMeta?.description;
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
   const startingPriceLabel = formatStartingPrice(
     tour.startingPrice,
-    tour.currency,
+    tour.currency
   );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={title}
-        description={description}
+        description={description ?? ""}
         url={detailUrl}
-        image={heroImage ?? null}
+        image={resolvedTourMeta?.image ?? null}
       />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -174,7 +181,7 @@ export default function TourDetail({ params }: TourDetailProps) {
               ) : null}
               {tour.tagPills?.length ? (
                 <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]">
-                  {tour.tagPills.map((tag) => (
+                  {tour.tagPills.map(tag => (
                     <span
                       key={tag}
                       className="rounded-full border border-[#2f4a2f]/20 bg-white px-3 py-1"
@@ -222,18 +229,18 @@ export default function TourDetail({ params }: TourDetailProps) {
               Tour highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040] md:text-base">
-              {highlights.map((highlight) => (
+              {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           </div>
-          {getExpandedTourDescription(tour).map((paragraph) => (
+          {getExpandedTourDescription(tour).map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
         {tour.galleryImages?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
+            {tour.galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"

@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
 import TourCard from "../../../../components/TourCard";
+import Seo from "../../../../components/Seo";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
@@ -16,7 +17,11 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
-import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
+import { buildDestinationCityToursMeta } from "../../../../utils/seo";
+import {
+  buildBreadcrumbList,
+  buildItemList,
+} from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -38,34 +43,42 @@ export default function CityToursIndexRoute({
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   const isFlagstaff = Boolean(
-    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+    state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours = state && city
-    ? isFlagstaff
-      ? flagstaffTours
-      : getToursByCity(state.slug, city.slug)
-    : [];
+  const tours =
+    state && city
+      ? isFlagstaff
+        ? flagstaffTours
+        : getToursByCity(state.slug, city.slug)
+      : [];
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
   const filteredTours = activityFilter
-    ? tours.filter((tour) => tour.activitySlugs.includes(activityFilter))
+    ? tours.filter(tour => tour.activitySlugs.includes(activityFilter))
     : tours;
   const activityLabel = activityFilter
     ? getActivityLabelFromSlug(activityFilter)
     : null;
   const basePath =
     basePathOverride ??
-    (state?.isFallback ? "/destinations" : `/destinations/states/${state?.slug ?? ""}`);
+    (state?.isFallback
+      ? "/destinations"
+      : `/destinations/states/${state?.slug ?? ""}`);
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
   const toursHref = `${cityHref}/tours`;
-  const heroImage = resolveHeroImageForRoute({
-    route: toursHref,
-    state,
-    city,
-  }) ?? undefined;
+  const cityToursMeta =
+    state && city
+      ? buildDestinationCityToursMeta({ city: city.name, state: state.name })
+      : null;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: toursHref,
+      state,
+      city,
+    }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
       return null;
@@ -76,7 +89,7 @@ export default function CityToursIndexRoute({
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
     ]);
-    const itemListItems = filteredTours.map((tour) => ({
+    const itemListItems = filteredTours.map(tour => ({
       name: tour.title,
       url: isFlagstaff
         ? getFlagstaffTourDetailPath(tour)
@@ -88,15 +101,7 @@ export default function CityToursIndexRoute({
       nodes.push(buildItemList(itemListItems));
     }
     return nodes;
-  }, [
-    city,
-    cityHref,
-    filteredTours,
-    isFlagstaff,
-    state,
-    stateHref,
-    toursHref,
-  ]);
+  }, [city, cityHref, filteredTours, isFlagstaff, state, stateHref, toursHref]);
 
   useStructuredData(structuredDataNodes);
 
@@ -114,6 +119,14 @@ export default function CityToursIndexRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      {cityToursMeta ? (
+        <Seo
+          title={cityToursMeta.title}
+          description={cityToursMeta.description}
+          url={toursHref}
+          image={heroImage ?? null}
+        />
+      ) : null}
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
@@ -159,7 +172,7 @@ export default function CityToursIndexRoute({
         </div>
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredTours.map((tour) => (
+            {filteredTours.map(tour => (
               <TourCard
                 key={tour.id}
                 tour={tour}

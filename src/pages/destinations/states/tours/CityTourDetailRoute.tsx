@@ -24,8 +24,11 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/hero";
-import { buildMetaDescription } from "../../../../utils/seo";
+import {
+  filterHeroImages,
+  resolveHeroImageForRoute,
+} from "../../../../utils/hero";
+import { resolveTourMeta } from "../../../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -51,41 +54,43 @@ export default function CityTourDetailRoute({
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   const isFlagstaff = Boolean(
-    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+    state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tour = state && city
-    ? isFlagstaff
-      ? getFlagstaffTourBySlug(params.tourSlug)
-      : getTourBySlugs(state.slug, city.slug, params.tourSlug)
-    : null;
+  const tour =
+    state && city
+      ? isFlagstaff
+        ? getFlagstaffTourBySlug(params.tourSlug)
+        : getTourBySlugs(state.slug, city.slug, params.tourSlug)
+      : null;
   const canonicalUrl =
     tour && isFlagstaff
       ? getFlagstaffTourDetailPath(tour)
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const heroImage = resolveHeroImageForRoute({
-    route: canonicalUrl,
-    tour,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: canonicalUrl,
+      tour,
+    }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
+    "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const metaDescription =
-    tour && state && city
-      ? buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-        )
-      : undefined;
-  const cityHref = state && city
-    ? `/destinations/states/${state.slug}/cities/${city.slug}`
-    : "";
+  const resolvedTourMeta = tour
+    ? resolveTourMeta({
+        tour,
+        productDescription,
+      })
+    : undefined;
+  const cityHref =
+    state && city
+      ? `/destinations/states/${state.slug}/cities/${city.slug}`
+      : "";
   const stateHref = state
     ? state.isFallback
       ? "/destinations"
@@ -101,7 +106,7 @@ export default function CityTourDetailRoute({
       buildWebPageStructuredData({
         url: canonicalUrl,
         name: tour.title,
-        description: metaDescription,
+        description: resolvedTourMeta?.description,
         image: heroImage,
       }),
       buildTourProductStructuredData({
@@ -125,7 +130,7 @@ export default function CityTourDetailRoute({
     city?.name,
     cityHref,
     heroImage,
-    metaDescription,
+    resolvedTourMeta?.description,
     productDescription,
     state?.name,
     stateHref,
@@ -157,9 +162,7 @@ export default function CityTourDetailRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${state.slug}/${city.slug}/tours`}
-          >
+          <Link href={`/destinations/${state.slug}/${city.slug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -170,20 +173,16 @@ export default function CityTourDetailRoute({
   }
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
-  const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description =
-    metaDescription ??
-    buildMetaDescription(
-      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-    );
-  const relatedTours = (isFlagstaff
-    ? flagstaffTours
-    : getToursByCity(state.slug, city.slug)
-  ).filter((item) =>
+  const title =
+    resolvedTourMeta?.title ??
+    `${tour.title} in ${city.name}, ${state.name} | All Outdoor Adventures`;
+  const description = resolvedTourMeta?.description;
+  const relatedTours = (
+    isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
+  ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug,
+      : item.slug !== tour.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
 
@@ -191,9 +190,9 @@ export default function CityTourDetailRoute({
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={title}
-        description={description}
+        description={description ?? ""}
         url={canonicalUrl}
-        image={heroImage ?? null}
+        image={resolvedTourMeta?.image ?? null}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
@@ -210,9 +209,7 @@ export default function CityTourDetailRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -244,16 +241,12 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={bookingUrl}
-            >
+            <Link href={bookingUrl}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 BOOK
               </a>
             </Link>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>
@@ -278,7 +271,7 @@ export default function CityTourDetailRoute({
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            {getExpandedTourDescription(tour).map((paragraph) => (
+            {getExpandedTourDescription(tour).map(paragraph => (
               <p
                 key={paragraph}
                 className="mt-4 text-sm text-[#405040] leading-relaxed"
@@ -315,7 +308,7 @@ export default function CityTourDetailRoute({
         </div>
         {tour.galleryImages?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
+            {tour.galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
@@ -339,7 +332,7 @@ export default function CityTourDetailRoute({
               More tours in {city.name}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map((related) => (
+              {relatedTours.map(related => (
                 <TourCard
                   key={related.slug}
                   tour={related}

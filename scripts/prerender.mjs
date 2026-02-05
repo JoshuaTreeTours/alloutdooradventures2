@@ -9,16 +9,16 @@ const __dirname = path.dirname(__filename);
 const distDir = path.resolve(__dirname, "../dist");
 const templatePath = path.join(distDir, "index.html");
 
-const escapeAttribute = (value) =>
+const escapeAttribute = value =>
   value.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
 
-const escapeScriptJson = (value) => value.replace(/</g, "\\u003c");
+const escapeScriptJson = value => value.replace(/</g, "\\u003c");
 
-const toTitleCase = (value) =>
+const toTitleCase = value =>
   value
     .split("-")
     .filter(Boolean)
-    .map((segment) => segment[0]?.toUpperCase() + segment.slice(1))
+    .map(segment => segment[0]?.toUpperCase() + segment.slice(1))
     .join(" ");
 
 const buildFallbackTitle = (segments, defaultTitle, brandName) => {
@@ -31,8 +31,7 @@ const buildFallbackTitle = (segments, defaultTitle, brandName) => {
   return `${label} | ${brandName}`;
 };
 
-const escapeRegExp = (value) =>
-  value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const escapeRegExp = value => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const buildFallbackDescription = (segments, defaultDescription, brandName) => {
   if (!segments.length) {
@@ -47,19 +46,22 @@ const buildFallbackDescription = (segments, defaultDescription, brandName) => {
 const replaceTagAttribute = (tag, attrName, placeholder) => {
   const attributePattern = new RegExp(
     `${attrName}\\s*=\\s*["'][^"']*["']`,
-    "i",
+    "i"
   );
   return tag.replace(attributePattern, `${attrName}="${placeholder}"`);
 };
 
-const ensureTemplatePlaceholders = (template) => {
-  if (template.includes("__SEO_TITLE__") && template.includes("__SEO_CANONICAL__")) {
+const ensureTemplatePlaceholders = template => {
+  if (
+    template.includes("__SEO_TITLE__") &&
+    template.includes("__SEO_CANONICAL__")
+  ) {
     return template;
   }
 
   let normalized = template.replace(
     /<title[^>]*>[\s\S]*?<\/title>/i,
-    "<title>__SEO_TITLE__</title>",
+    "<title>__SEO_TITLE__</title>"
   );
 
   const metaPlaceholders = [
@@ -76,21 +78,21 @@ const ensureTemplatePlaceholders = (template) => {
   metaPlaceholders.forEach(([attrName, attrValue, placeholder]) => {
     const tagPattern = new RegExp(
       `<meta\\s+[^>]*${attrName}\\s*=\\s*["']${escapeRegExp(
-        attrValue,
+        attrValue
       )}["'][^>]*>`,
-      "i",
+      "i"
     );
-    normalized = normalized.replace(tagPattern, (tag) =>
-      replaceTagAttribute(tag, "content", placeholder),
+    normalized = normalized.replace(tagPattern, tag =>
+      replaceTagAttribute(tag, "content", placeholder)
     );
   });
 
   const canonicalPattern = new RegExp(
     `<link\\s+[^>]*rel\\s*=\\s*["']canonical["'][^>]*>`,
-    "i",
+    "i"
   );
-  normalized = normalized.replace(canonicalPattern, (tag) =>
-    replaceTagAttribute(tag, "href", "__SEO_CANONICAL__"),
+  normalized = normalized.replace(canonicalPattern, tag =>
+    replaceTagAttribute(tag, "href", "__SEO_CANONICAL__")
   );
 
   return normalized;
@@ -121,7 +123,7 @@ const STRUCTURED_DATA_SCRIPT_ID = "structured-data";
 const replaceStructuredData = (html, structuredData) => {
   const scriptTag = structuredData
     ? `<script id="${STRUCTURED_DATA_SCRIPT_ID}" type="application/ld+json">${escapeScriptJson(
-        JSON.stringify(structuredData),
+        JSON.stringify(structuredData)
       )}</script>`
     : "";
   const scriptPattern =
@@ -137,7 +139,7 @@ const replaceStructuredData = (html, structuredData) => {
   return html.replace("</head>", `${scriptTag}</head>`);
 };
 
-const buildOutputPath = (pathname) => {
+const buildOutputPath = pathname => {
   if (!pathname || pathname === "/") {
     return { outputPath: templatePath, shouldWrite: true };
   }
@@ -158,7 +160,7 @@ const buildOutputPath = (pathname) => {
   };
 };
 
-const ensureDirectory = async (dir) => {
+const ensureDirectory = async dir => {
   try {
     const stats = await stat(dir);
     if (!stats.isDirectory()) {
@@ -173,7 +175,7 @@ const ensureDirectory = async (dir) => {
   return true;
 };
 
-const ensurePrerenderedFile = async (pathname) => {
+const ensurePrerenderedFile = async pathname => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
   if (!shouldWrite) {
     return false;
@@ -192,7 +194,7 @@ const readSitemapUrls = async () => {
   try {
     const entries = await readdir(distDir);
     files = entries.filter(
-      (entry) => entry.startsWith("sitemap") && entry.endsWith(".xml"),
+      entry => entry.startsWith("sitemap") && entry.endsWith(".xml")
     );
   } catch {
     return [];
@@ -212,7 +214,7 @@ const readSitemapUrls = async () => {
   return Array.from(urls);
 };
 
-const normalizePathname = (pathname) => {
+const normalizePathname = pathname => {
   if (!pathname) {
     return "/";
   }
@@ -237,32 +239,29 @@ const STATIC_PATHS = new Set([
   "/disclosure",
 ]);
 
-const isHome = (pathname) => normalizePathname(pathname) === "/";
+const isHome = pathname => normalizePathname(pathname) === "/";
 
-const isStatic = (pathname) =>
-  STATIC_PATHS.has(normalizePathname(pathname));
+const isStatic = pathname => STATIC_PATHS.has(normalizePathname(pathname));
 
-const isTour = (pathname) => {
+const isTour = pathname => {
   const normalized = normalizePathname(pathname);
   return (
     /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized) ||
     /^\/tours\/[^/]+$/.test(normalized) ||
-    /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-      normalized,
-    ) ||
+    /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) ||
     /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-      normalized,
+      normalized
     )
   );
 };
 
-const isDestination = (pathname) => {
+const isDestination = pathname => {
   const normalized = normalizePathname(pathname);
   return (
     normalized.startsWith("/destinations") &&
     !/^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) &&
     !/^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-      normalized,
+      normalized
     )
   );
 };
@@ -280,9 +279,9 @@ const logVerificationFailure = ({ label, url, assertion, details }) => {
 const findTag = (html, tagName, attrName, attrValue) => {
   const pattern = new RegExp(
     `<${tagName}\\s+[^>]*${attrName}\\s*=\\s*["']${escapeRegExp(
-      attrValue,
+      attrValue
     )}["'][^>]*>`,
-    "i",
+    "i"
   );
   const match = html.match(pattern);
   if (!match) {
@@ -336,6 +335,40 @@ const buildTourBreadcrumbs = ({
   return crumbs;
 };
 
+const isGeoHumanizedPath = pathname => {
+  const normalized = normalizePathname(pathname);
+  return (
+    /^\/guides\/us\/[^/]+\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/[^/]+\/[^/]+\/tours$/.test(normalized)
+  );
+};
+
+const hasTokenizedGeoCopy = value => {
+  const normalized = (value ?? "").trim();
+  if (!normalized) {
+    return false;
+  }
+  return (
+    /Guides\s+Us/i.test(normalized) ||
+    /Destinations\s+States/i.test(normalized) ||
+    /States\s+[A-Za-z-]+\s+Cities/i.test(normalized)
+  );
+};
+
+const isTourDetailPath = pathname => {
+  const normalized = normalizePathname(pathname);
+  return (
+    /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized) ||
+    /^\/tours\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+$/.test(
+      normalized
+    )
+  );
+};
+
 const verifyPrerenderedPage = async ({
   pathname,
   expectedUrl,
@@ -343,6 +376,8 @@ const verifyPrerenderedPage = async ({
   defaultDescription,
   label,
   allowDefaultSeo = false,
+  enforceTourMeta = false,
+  expectedLocationTokens = [],
 }) => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
   if (!shouldWrite) {
@@ -362,7 +397,7 @@ const verifyPrerenderedPage = async ({
       label,
       url: expectedUrl,
       assertion: "robots",
-      details: "Missing <meta name=\"robots\">.",
+      details: 'Missing <meta name="robots">.',
     });
     throw new Error("Prerender verification failed.");
   }
@@ -383,7 +418,7 @@ const verifyPrerenderedPage = async ({
       label,
       url: expectedUrl,
       assertion: "googlebot",
-      details: "Missing <meta name=\"googlebot\">.",
+      details: 'Missing <meta name="googlebot">.',
     });
     throw new Error("Prerender verification failed.");
   }
@@ -404,7 +439,7 @@ const verifyPrerenderedPage = async ({
       label,
       url: expectedUrl,
       assertion: "canonical",
-      details: "Missing <link rel=\"canonical\">.",
+      details: 'Missing <link rel="canonical">.',
     });
     throw new Error("Prerender verification failed.");
   }
@@ -455,7 +490,7 @@ const verifyPrerenderedPage = async ({
       label,
       url: expectedUrl,
       assertion: "description",
-      details: "Missing <meta name=\"description\">.",
+      details: 'Missing <meta name="description">.',
     });
     throw new Error("Prerender verification failed.");
   }
@@ -567,11 +602,11 @@ const verifyPrerenderedPage = async ({
     html,
     "meta",
     "name",
-    "twitter:description",
+    "twitter:description"
   );
   const twitterDescriptionValue = extractAttribute(
     twitterDescriptionTag,
-    "content",
+    "content"
   );
   if (!twitterDescriptionValue) {
     logVerificationFailure({
@@ -625,8 +660,60 @@ const verifyPrerenderedPage = async ({
     });
     throw new Error("Prerender verification failed.");
   }
-};
 
+  if (enforceTourMeta) {
+    if (titleValue === defaultTitle) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "tour-title",
+        details: "Tour page title fell back to homepage default.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    if (descriptionValue.trim() === defaultDescription) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "tour-description",
+        details: "Tour page description fell back to homepage default.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    if (
+      ogImageValue.endsWith("/hero.jpg") ||
+      twitterImageValue.endsWith("/hero.jpg")
+    ) {
+      logVerificationFailure({
+        label,
+        url: expectedUrl,
+        assertion: "tour-image",
+        details: "Tour page social image is using /hero.jpg.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+
+    if (expectedLocationTokens.length) {
+      const metaText = `${titleValue} ${descriptionValue}`.toLowerCase();
+      const hasLocationToken = expectedLocationTokens.some(
+        token =>
+          token &&
+          metaText.includes(String(token).toLowerCase().replace(/-/g, " "))
+      );
+      if (!hasLocationToken) {
+        logVerificationFailure({
+          label,
+          url: expectedUrl,
+          assertion: "tour-location",
+          details: "Tour meta is missing city/region tokens from route.",
+        });
+        throw new Error("Prerender verification failed.");
+      }
+    }
+  }
+};
 
 const safeImport = async (importPath, label) => {
   try {
@@ -634,7 +721,7 @@ const safeImport = async (importPath, label) => {
   } catch (error) {
     console.warn(
       `[prerender] Optional import failed${label ? ` (${label})` : ""}:`,
-      error,
+      error
     );
     return null;
   }
@@ -642,7 +729,7 @@ const safeImport = async (importPath, label) => {
 
 const main = async () => {
   const template = ensureTemplatePlaceholders(
-    await readFile(templatePath, "utf8"),
+    await readFile(templatePath, "utf8")
   );
   const [
     toursGeneratedModule,
@@ -676,34 +763,34 @@ const main = async () => {
     : [];
   const getTourBySlugs = (stateSlug, citySlug, tourSlug) =>
     tours.find(
-      (tour) =>
+      tour =>
         tour.destination.stateSlug === stateSlug &&
         tour.destination.citySlug === citySlug &&
-        tour.slug === tourSlug,
+        tour.slug === tourSlug
     );
-  const getTourDetailPath = (tour) =>
+  const getTourDetailPath = tour =>
     `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
-  const getCityTourDetailPath = (tour) =>
+  const getCityTourDetailPath = tour =>
     `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
-  const {
-    getFlagstaffTourBySlug,
-    getFlagstaffTourDetailPath,
-  } = flagstaffModule;
+  const { getFlagstaffTourBySlug, getFlagstaffTourDetailPath } =
+    flagstaffModule;
   const {
     DEFAULT_SEO,
     buildMetaDescription,
-    buildTourMetaDescription,
+    resolveTourMeta,
+    buildGuideCityMeta,
+    buildDestinationStateMeta,
+    buildDestinationCityMeta,
+    buildDestinationCityToursMeta,
     buildCanonicalUrl,
     buildImageUrl,
     getStaticPageSeo,
   } = seoModule;
   const siteBrandName = siteModule?.SITE_BRAND_NAME ?? "Outdoor Adventures";
-  const resolveHeroImageForRoute =
-    heroModule?.resolveHeroImageForRoute ?? null;
+  const resolveHeroImageForRoute = heroModule?.resolveHeroImageForRoute ?? null;
   const getStateBySlug = destinationsModule?.getStateBySlug ?? null;
   const getCityBySlugs = destinationsModule?.getCityBySlugs ?? null;
-  const buildBreadcrumbList =
-    structuredDataModule?.buildBreadcrumbList ?? null;
+  const buildBreadcrumbList = structuredDataModule?.buildBreadcrumbList ?? null;
   const buildTourProductStructuredData =
     structuredDataModule?.buildTourProductStructuredData ?? null;
   const buildTourTripStructuredData =
@@ -747,7 +834,8 @@ const main = async () => {
     let guideForHero = null;
 
     if (segments[0] === "tours" && segments.length === 4) {
-      tourForSeo = getTourBySlugs(segments[1], segments[2], segments[3]) ?? null;
+      tourForSeo =
+        getTourBySlugs(segments[1], segments[2], segments[3]) ?? null;
     } else if (segments[0] === "tours" && segments.length === 2) {
       tourForSeo = getFlagstaffTourBySlug(segments[1]) ?? null;
     } else if (
@@ -757,9 +845,10 @@ const main = async () => {
     ) {
       const [stateSlug, citySlug, , tourSlug] = segments.slice(1);
       const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-      tourForSeo = (isFlagstaff
-        ? getFlagstaffTourBySlug(tourSlug)
-        : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
+      tourForSeo =
+        (isFlagstaff
+          ? getFlagstaffTourBySlug(tourSlug)
+          : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
     } else if (
       segments[0] === "destinations" &&
       segments[1] === "states" &&
@@ -771,9 +860,10 @@ const main = async () => {
       const citySlug = segments[5];
       const tourSlug = segments[7];
       const isFlagstaff = stateSlug === "arizona" && citySlug === "flagstaff";
-      tourForSeo = (isFlagstaff
-        ? getFlagstaffTourBySlug(tourSlug)
-        : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
+      tourForSeo =
+        (isFlagstaff
+          ? getFlagstaffTourBySlug(tourSlug)
+          : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
     }
 
     if (tourForSeo) {
@@ -788,13 +878,89 @@ const main = async () => {
           `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
           tourForSeo.shortDescription ??
             tourForSeo.badges?.tagline ??
-            tourForSeo.longDescription,
+            tourForSeo.longDescription
         );
         seo.url = buildCanonicalUrl(normalizedPathname);
       } else {
-        seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
-        seo.description = buildTourMetaDescription(tourForSeo);
+        const resolvedTourMeta = resolveTourMeta({
+          tour: tourForSeo,
+          productDescription: getExpandedTourDescription
+            ? getExpandedTourDescription(tourForSeo)?.[0]
+            : undefined,
+        });
+        if (resolvedTourMeta.title) {
+          seo.title = resolvedTourMeta.title;
+        }
+        if (resolvedTourMeta.description) {
+          seo.description = resolvedTourMeta.description;
+        }
+        if (resolvedTourMeta.image) {
+          seo.image = resolvedTourMeta.image;
+        }
         seo.url = buildCanonicalUrl(basePathname);
+      }
+    } else if (
+      segments[0] === "guides" &&
+      segments[1] === "us" &&
+      segments.length === 4
+    ) {
+      const state = getStateBySlug ? getStateBySlug(segments[2]) : null;
+      const city = getCityBySlugs
+        ? getCityBySlugs(segments[2], segments[3])
+        : null;
+      if (state && city) {
+        const guideCityMeta = buildGuideCityMeta({
+          city: city.name,
+          state: state.name,
+        });
+        seo.title = guideCityMeta.title;
+        seo.description = guideCityMeta.description;
+      }
+    } else if (
+      segments[0] === "destinations" &&
+      segments[1] === "states" &&
+      segments.length === 3
+    ) {
+      const state = getStateBySlug ? getStateBySlug(segments[2]) : null;
+      if (state) {
+        const stateMeta = buildDestinationStateMeta({ state: state.name });
+        seo.title = stateMeta.title;
+        seo.description = stateMeta.description;
+      }
+    } else if (
+      segments[0] === "destinations" &&
+      segments[1] === "states" &&
+      segments[3] === "cities" &&
+      segments.length === 5
+    ) {
+      const state = getStateBySlug ? getStateBySlug(segments[2]) : null;
+      const city = getCityBySlugs
+        ? getCityBySlugs(segments[2], segments[4])
+        : null;
+      if (state && city) {
+        const cityMeta = buildDestinationCityMeta({
+          city: city.name,
+          state: state.name,
+        });
+        seo.title = cityMeta.title;
+        seo.description = cityMeta.description;
+      }
+    } else if (
+      segments[0] === "destinations" &&
+      segments[3] === "tours" &&
+      segments.length === 4
+    ) {
+      const state = getStateBySlug ? getStateBySlug(segments[1]) : null;
+      const city = getCityBySlugs
+        ? getCityBySlugs(segments[1], segments[2])
+        : null;
+      if (state && city) {
+        const cityToursMeta = buildDestinationCityToursMeta({
+          city: city.name,
+          state: state.name,
+        });
+        seo.title = cityToursMeta.title;
+        seo.description = cityToursMeta.description;
       }
     } else {
       const staticSeo = getStaticPageSeo(pathname);
@@ -804,11 +970,15 @@ const main = async () => {
         seo.url = staticSeo.url;
         seo.image = staticSeo.image;
       } else {
-        seo.title = buildFallbackTitle(segments, DEFAULT_SEO.title, siteBrandName);
+        seo.title = buildFallbackTitle(
+          segments,
+          DEFAULT_SEO.title,
+          siteBrandName
+        );
         seo.description = buildFallbackDescription(
           segments,
           DEFAULT_SEO.description,
-          siteBrandName,
+          siteBrandName
         );
       }
     }
@@ -870,16 +1040,15 @@ const main = async () => {
       }
     }
 
-    const resolvedHeroImage =
-      resolveHeroImageForRoute
-        ? resolveHeroImageForRoute({
-            route: normalizedPathname,
-            tour: tourForSeo,
-            guide: guideForHero,
-            state: stateForHero,
-            city: cityForHero,
-          })
-        : null;
+    const resolvedHeroImage = resolveHeroImageForRoute
+      ? resolveHeroImageForRoute({
+          route: normalizedPathname,
+          tour: tourForSeo,
+          guide: guideForHero,
+          state: stateForHero,
+          city: cityForHero,
+        })
+      : null;
 
     if (resolvedHeroImage) {
       seo.image = resolvedHeroImage;
@@ -914,10 +1083,12 @@ const main = async () => {
         tourForStructuredData = getTourBySlugs(
           segments[1],
           segments[2],
-          segments[3],
+          segments[3]
         );
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
+          bookingUrl = buildCanonicalUrl(
+            getTourBookingPath(tourForStructuredData)
+          );
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
@@ -932,7 +1103,9 @@ const main = async () => {
       ) {
         tourForStructuredData = getFlagstaffTourBySlug(segments[1]);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
+          bookingUrl = buildCanonicalUrl(
+            getTourBookingPath(tourForStructuredData)
+          );
           const stateSlug = tourForStructuredData.destination.stateSlug;
           const citySlug = tourForStructuredData.destination.citySlug;
           breadcrumbItems = buildTourBreadcrumbs({
@@ -957,7 +1130,9 @@ const main = async () => {
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
+          bookingUrl = buildCanonicalUrl(
+            getTourBookingPath(tourForStructuredData)
+          );
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
@@ -984,7 +1159,9 @@ const main = async () => {
           ? getFlagstaffTourBySlug(tourSlug)
           : getTourBySlugs(stateSlug, citySlug, tourSlug);
         if (tourForStructuredData) {
-          bookingUrl = buildCanonicalUrl(getTourBookingPath(tourForStructuredData));
+          bookingUrl = buildCanonicalUrl(
+            getTourBookingPath(tourForStructuredData)
+          );
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
@@ -1010,12 +1187,14 @@ const main = async () => {
             bookingUrl: bookingCanonicalUrl,
             tourDetailUrl: detailCanonicalUrl,
             tourName: tourForSeo.title,
-          }),
+          })
         );
       } else if (tourForStructuredData && bookingUrl && canBuildTourNodes) {
-        const heroImage = resolvedHeroImage ?? buildImageUrl(tourForStructuredData.heroImage);
-        const productDescription =
-          getExpandedTourDescription(tourForStructuredData)[0];
+        const heroImage =
+          resolvedHeroImage ?? buildImageUrl(tourForStructuredData.heroImage);
+        const productDescription = getExpandedTourDescription(
+          tourForStructuredData
+        )[0];
         const structuredImages = [
           heroImage,
           ...(tourForStructuredData.galleryImages ?? []),
@@ -1040,7 +1219,7 @@ const main = async () => {
             bookingUrl,
             description: productDescription,
             images: structuredImages.length ? structuredImages : undefined,
-          }),
+          })
         );
         if (breadcrumbItems?.length && buildBreadcrumbList) {
           structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
@@ -1051,7 +1230,7 @@ const main = async () => {
             url: canonicalUrl,
             name: seo.title,
             description: seo.description,
-          }),
+          })
         );
       }
 
@@ -1075,13 +1254,13 @@ const main = async () => {
     const htmlWithMeta = replaceMeta(template, seo);
     const htmlWithStructuredData = replaceStructuredData(
       htmlWithMeta,
-      structuredData,
+      structuredData
     );
     await writeFile(outputPath, htmlWithStructuredData, "utf8");
   }
 
-  const findUrl = (predicate) =>
-    urls.find((url) => predicate(normalizePathname(new URL(url).pathname)));
+  const findUrl = predicate =>
+    urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
 
   const verificationTargets = [
     {
@@ -1094,39 +1273,40 @@ const main = async () => {
     },
     {
       label: "Destination state",
-      url: findUrl((pathname) =>
-        /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname)),
+      url: findUrl(pathname =>
+        /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname))
       ),
     },
     {
       label: "Destination city",
-      url: findUrl((pathname) =>
+      url: findUrl(pathname =>
         /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
-          normalizePathname(pathname),
-        ),
+          normalizePathname(pathname)
+        )
       ),
     },
     {
       label: "Destination tour",
-      url: findUrl((pathname) =>
-        /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-          normalizePathname(pathname),
-        ) ||
-        /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-          normalizePathname(pathname),
-        ),
+      url: findUrl(
+        pathname =>
+          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+            normalizePathname(pathname)
+          ) ||
+          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+            normalizePathname(pathname)
+          )
       ),
     },
     {
       label: "Static",
       url: findUrl(
-        (pathname) =>
-          normalizePathname(pathname) === "/faqs" || isStatic(pathname),
+        pathname =>
+          normalizePathname(pathname) === "/faqs" || isStatic(pathname)
       ),
     },
   ];
 
-  verificationTargets.forEach((target) => {
+  verificationTargets.forEach(target => {
     if (!target.url) {
       logVerificationFailure({
         label: target.label,
@@ -1137,6 +1317,68 @@ const main = async () => {
       throw new Error("Prerender verification failed.");
     }
   });
+
+  const tourDetailUrls = urls.filter(url =>
+    isTourDetailPath(new URL(url).pathname)
+  );
+  const seenTourDescriptions = new Map();
+  for (const tourUrl of tourDetailUrls) {
+    const tourPathname = normalizePathname(new URL(tourUrl).pathname);
+    const { outputPath, shouldWrite } = buildOutputPath(tourPathname);
+    if (!shouldWrite) {
+      continue;
+    }
+    const html = await readFile(outputPath, "utf8");
+    const descriptionTag = findTag(html, "meta", "name", "description");
+    const descriptionValue = extractAttribute(
+      descriptionTag,
+      "content"
+    )?.trim();
+    if (!descriptionValue) {
+      continue;
+    }
+    const duplicatePath = seenTourDescriptions.get(descriptionValue);
+    if (duplicatePath) {
+      logVerificationFailure({
+        label: "Tour meta uniqueness",
+        url: buildCanonicalUrl(tourPathname),
+        assertion: "description-unique",
+        details: `Duplicate description on ${tourPathname} and ${duplicatePath}.`,
+      });
+      throw new Error("Prerender verification failed.");
+    }
+    seenTourDescriptions.set(descriptionValue, tourPathname);
+  }
+
+  const geoScopedUrls = urls.filter(url =>
+    isGeoHumanizedPath(new URL(url).pathname)
+  );
+  for (const geoUrl of geoScopedUrls) {
+    const geoPathname = normalizePathname(new URL(geoUrl).pathname);
+    const { outputPath, shouldWrite } = buildOutputPath(geoPathname);
+    if (!shouldWrite) {
+      continue;
+    }
+    const html = await readFile(outputPath, "utf8");
+    const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+    const titleValue = titleMatch?.[1]?.trim() ?? "";
+    const descriptionTag = findTag(html, "meta", "name", "description");
+    const descriptionValue =
+      extractAttribute(descriptionTag, "content")?.trim() ?? "";
+
+    if (
+      hasTokenizedGeoCopy(titleValue) ||
+      hasTokenizedGeoCopy(descriptionValue)
+    ) {
+      logVerificationFailure({
+        label: "Geo meta humanization",
+        url: buildCanonicalUrl(geoPathname),
+        assertion: "tokenized-meta",
+        details: "Tokenized geo metadata detected in title or description.",
+      });
+      throw new Error("Prerender verification failed.");
+    }
+  }
 
   const faqPath = "/faqs";
   const faqPrerendered = await ensurePrerenderedFile(faqPath);
@@ -1154,6 +1396,16 @@ const main = async () => {
     const pathname = normalizePathname(new URL(target.url).pathname);
     const expectedUrl = buildCanonicalUrl(pathname);
     const allowDefaultSeo = isHome(pathname);
+    const enforceTourMeta = isTourDetailPath(pathname);
+    const pathSegments = pathname.split("/").filter(Boolean);
+    const expectedLocationTokens = enforceTourMeta
+      ? [
+          pathSegments[2],
+          pathSegments[1],
+          pathSegments[5],
+          pathSegments[2],
+        ].filter(Boolean)
+      : [];
 
     await verifyPrerenderedPage({
       pathname,
@@ -1162,11 +1414,13 @@ const main = async () => {
       defaultDescription: DEFAULT_SEO.description,
       label: target.label,
       allowDefaultSeo,
+      enforceTourMeta,
+      expectedLocationTokens,
     });
   }
 };
 
-main().catch((error) => {
+main().catch(error => {
   console.error(error);
   process.exitCode = 1;
 });
