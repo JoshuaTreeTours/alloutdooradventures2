@@ -19,6 +19,8 @@ export type HeroRouteContext = {
   params?: Record<string, string | undefined>;
   tour?: {
     heroImage?: string;
+    heroImageSource?: "fareharbor_media" | "csv" | "manual";
+    bookingProvider?: "fareharbor" | "viator";
     galleryImages?: string[];
   } | null;
   guide?: {
@@ -45,6 +47,8 @@ export type HeroRouteContext = {
   cityTours?: Array<{
     id?: string;
     heroImage?: string;
+    heroImageSource?: "fareharbor_media" | "csv" | "manual";
+    bookingProvider?: "fareharbor" | "viator";
     primaryImage?: string;
     destination?: {
       citySlug?: string;
@@ -176,10 +180,18 @@ export const isImageInCityTour = (
   return Boolean(image.tourCitySlug === citySlug || image.citySlug === citySlug);
 };
 
+const isFareharborTourWithLockedHero = (tour: NonNullable<HeroRouteContext["cityTours"]>[number]) =>
+  tour.bookingProvider === "fareharbor" && tour.heroImageSource === "fareharbor_media";
+
 const compareCityTours = (
   a: NonNullable<HeroRouteContext["cityTours"]>[number],
   b: NonNullable<HeroRouteContext["cityTours"]>[number],
 ) => {
+  const fareharborA = isFareharborTourWithLockedHero(a) ? 1 : 0;
+  const fareharborB = isFareharborTourWithLockedHero(b) ? 1 : 0;
+  if (fareharborA !== fareharborB) {
+    return fareharborB - fareharborA;
+  }
   const reviewA = a.badges?.reviewCount ?? 0;
   const reviewB = b.badges?.reviewCount ?? 0;
   if (reviewA !== reviewB) {
@@ -207,7 +219,8 @@ export const resolveCityHeroImage = ({
   cityTours?: HeroRouteContext["cityTours"];
 }) => {
   const tourPool = [...(cityTours ?? [])].sort(compareCityTours);
-  const rankedTourPool = tourPool.slice(0, 12);
+  const fareharborPool = tourPool.filter(isFareharborTourWithLockedHero);
+  const rankedTourPool = (fareharborPool.length > 0 ? fareharborPool : tourPool).slice(0, 12);
 
   for (const tour of rankedTourPool) {
     const candidateImage = tour.heroImage ?? tour.primaryImage;
@@ -358,10 +371,14 @@ export const resolveHeroImageForRoute = ({
   let resolvedImage: string | undefined;
 
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
+    const hasFareharborLockedHero =
+      tour?.bookingProvider === "fareharbor" &&
+      tour?.heroImageSource === "fareharbor_media" &&
+      Boolean(tour?.heroImage);
     resolvedImage = resolveHeroImage({
       pageType: "product",
       primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-      fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
+      fallbacks: hasFareharborLockedHero ? [] : [TOUR_FALLBACK_HERO_IMAGE],
     });
   } else if (isGuideRoute(normalizedRoute) || guide) {
     const isCityGuidePage =

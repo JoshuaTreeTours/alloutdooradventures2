@@ -295,6 +295,31 @@ const parseCsv = (contents: string) => {
   return { header, records };
 };
 
+
+const parseFareharborReferenceFromUrl = (bookingUrl?: string) => {
+  if (!bookingUrl) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(bookingUrl);
+    const match =
+      parsed.pathname.match(/\/embeds\/book\/([^/]+)\/items\/(\d+)/) ??
+      parsed.pathname.match(/\/embeds\/calendar\/([^/]+)\/items\/(\d+)/);
+
+    if (!match?.[1] || !match?.[2]) {
+      return null;
+    }
+
+    return {
+      sourceOperatorSlug: match[1],
+      sourceItemId: match[2],
+    };
+  } catch {
+    return null;
+  }
+};
+
 const parseCsvRow = (row: Record<string, string>) => {
   const location = sanitizeCsvText(row.location) ?? "";
   const itemId = sanitizeCsvText(row.item_id) ?? "";
@@ -312,6 +337,7 @@ const parseCsvRow = (row: Record<string, string>) => {
     sanitizeCsvText(row.regular_link) ||
     ""
   ).trim();
+  const fareharborReference = parseFareharborReferenceFromUrl(bookingUrl);
 
   return {
     location,
@@ -329,6 +355,9 @@ const parseCsvRow = (row: Record<string, string>) => {
     longitude: parseNumber(row.location_long),
     heroImage: sanitizeCsvText(row.image_url) || PLACEHOLDER_IMAGE,
     idSource: sanitizeCsvText(row.id) || itemId,
+    sourceOperatorSlug:
+      fareharborReference?.sourceOperatorSlug || sanitizeCsvText(row.company_shortname),
+    sourceItemId: fareharborReference?.sourceItemId || itemId,
   };
 };
 
@@ -814,6 +843,8 @@ const rowToTour = (
     slug,
     title: parsedRow.title,
     shortDescription: parsedRow.shortDescription,
+    sourceDescription: parsedRow.shortDescription,
+    sourceDescriptionSource: "fareharbor",
     operator: parsedRow.operator,
     categories: activitySlugs,
     primaryCategory,
@@ -824,6 +855,8 @@ const rowToTour = (
       lng: parsedRow.longitude,
     },
     heroImage: parsedRow.heroImage,
+    heroImageUrl: parsedRow.heroImage,
+    heroImageSource: "fareharbor_media",
     galleryImages: galleryImage ? [galleryImage] : [],
     badges: {
       rating: buildRating(parsedRow.qualityScore),
@@ -836,6 +869,8 @@ const rowToTour = (
     bookingProvider: "fareharbor",
     bookingUrl: normalizedBookingUrl,
     bookingWidgetUrl: normalizedCalendarLink,
+    sourceOperatorSlug: parsedRow.sourceOperatorSlug,
+    sourceItemId: parsedRow.sourceItemId,
     longDescription: buildLongDescription(
       parsedRow.title,
       destination.city,

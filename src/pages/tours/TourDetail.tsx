@@ -11,6 +11,8 @@ import {
   getTourBookingPath,
   getTourBySlugs,
   getTourDetailPath,
+  getTourHeroImage,
+  getTourMetaDescriptionSource,
   isTourDescriptionDuplicate,
 } from "../../data/tours";
 import { formatStartingPrice } from "../../lib/pricing";
@@ -43,18 +45,24 @@ export default function TourDetail({ params }: TourDetailProps) {
       ? getCityBySlugs(tour.destination.stateSlug, tour.destination.citySlug)
       : null;
   const detailUrl = tour ? getTourDetailPath(tour) : "";
+  const fareharborHeroImage = tour ? getTourHeroImage(tour) : undefined;
   const heroImage =
     resolveHeroImageForRoute({
       route: detailUrl,
-      tour,
+      tour:
+        tour && fareharborHeroImage
+          ? { ...tour, heroImage: fareharborHeroImage }
+          : tour,
     }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
+  const fareharborDescription = tour ? getTourMetaDescriptionSource(tour) : undefined;
   const metaDescription = tour
-    ? buildTourMetaDescription(tour, {
+    ? fareharborDescription ??
+      buildTourMetaDescription(tour, {
         isDuplicate: isTourDescriptionDuplicate(tour),
         diagnosticsLabel: `tour:${tour.id}`,
       })

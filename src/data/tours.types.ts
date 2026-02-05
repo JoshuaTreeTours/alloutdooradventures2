@@ -28,12 +28,16 @@ export type Tour = {
   slug: string;
   title: string;
   shortDescription?: string;
+  sourceDescription?: string;
+  sourceDescriptionSource?: "fareharbor" | "manual" | "generated";
   operator?: string;
   tags?: string[];
   categories?: string[];
   primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
+  heroImageUrl?: string;
+  heroImageSource?: "fareharbor_media" | "csv" | "manual";
   galleryImages?: string[];
   badges: TourBadges;
   startingPrice?: number;
@@ -44,6 +48,8 @@ export type Tour = {
   bookingProvider: BookingProvider;
   bookingUrl: string;
   bookingWidgetUrl?: string;
+  sourceOperatorSlug?: string;
+  sourceItemId?: string;
   longDescription: string;
   suppressReviews?: boolean;
 };
