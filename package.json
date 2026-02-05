@@ -17,7 +17,8 @@
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check:tour-route-seo": "node scripts/check-tour-route-seo.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

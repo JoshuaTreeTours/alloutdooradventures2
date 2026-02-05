@@ -69,6 +69,7 @@ const ensureTemplatePlaceholders = template => {
     ["property", "og:title", "__SEO_OG_TITLE__"],
     ["property", "og:description", "__SEO_OG_DESCRIPTION__"],
     ["property", "og:url", "__SEO_OG_URL__"],
+    ["property", "og:type", "__SEO_OG_TYPE__"],
     ["property", "og:image", "__SEO_OG_IMAGE__"],
     ["name", "twitter:title", "__SEO_TWITTER_TITLE__"],
     ["name", "twitter:description", "__SEO_TWITTER_DESCRIPTION__"],
@@ -111,6 +112,7 @@ const replaceMeta = (html, seo) => {
     .replaceAll("__SEO_CANONICAL__", url)
     .replaceAll("__SEO_OG_TITLE__", title)
     .replaceAll("__SEO_OG_DESCRIPTION__", description)
+    .replaceAll("__SEO_OG_TYPE__", type)
     .replaceAll("__SEO_OG_IMAGE__", image)
     .replaceAll("__SEO_OG_URL__", url)
     .replaceAll("__SEO_TWITTER_TITLE__", title)
@@ -307,28 +309,35 @@ const buildTourBreadcrumbs = ({
   detailUrl,
   stateHref,
   cityHref,
-  toursHref,
   includeDestinations,
 }) => {
   if (!tour) {
     return null;
   }
   if (!includeDestinations) {
-    return [
-      { name: "Tours", url: "/tours" },
-      { name: tour.title, url: detailUrl },
-    ];
+    const crumbs = [{ name: "Tours", url: "/tours" }];
+    if (tour.destination.stateSlug) {
+      crumbs.push({
+        name: tour.destination.state,
+        url: `/destinations/states/${tour.destination.stateSlug}`,
+      });
+    }
+    if (tour.destination.stateSlug && tour.destination.citySlug) {
+      crumbs.push({
+        name: tour.destination.city,
+        url: `/destinations/states/${tour.destination.stateSlug}/cities/${tour.destination.citySlug}`,
+      });
+    }
+    crumbs.push({ name: tour.title, url: detailUrl });
+    return crumbs;
   }
 
-  const crumbs = [{ name: "Destinations", url: "/destinations" }];
+  const crumbs = [{ name: "Tours", url: "/tours" }];
   if (stateHref) {
     crumbs.push({ name: tour.destination.state, url: stateHref });
   }
   if (cityHref) {
     crumbs.push({ name: tour.destination.city, url: cityHref });
-  }
-  if (toursHref) {
-    crumbs.push({ name: "Tours", url: toursHref });
   }
   crumbs.push({ name: tour.title, url: detailUrl });
 
@@ -815,6 +824,7 @@ const main = async () => {
         ? `${tourForSeo.destination.city}, ${regionLabel}`
         : tourForSeo.destination.city;
       if (isBookingRoute) {
+        seo.type = "website";
         seo.title = `${tourForSeo.title} Booking | ${siteBrandName}`;
         seo.description = buildMetaDescription(
           `Reserve ${tourForSeo.title} in ${destinationLabel}.`,
@@ -824,7 +834,8 @@ const main = async () => {
         );
         seo.url = buildCanonicalUrl(normalizedPathname);
       } else {
-        seo.title = `${tourForSeo.title} | ${destinationLabel} Outdoor Tour`;
+        seo.type = "article";
+        seo.title = `${tourForSeo.title} | ${siteBrandName}`;
         seo.description = buildTourMetaDescription(tourForSeo, {
           isDuplicate: isTourDescriptionDuplicate(tourForSeo),
           diagnosticsLabel: `prerender:${tourForSeo.id}`,
@@ -990,7 +1001,6 @@ const main = async () => {
             detailUrl: canonicalUrl,
             stateHref: `/destinations/states/${stateSlug}`,
             cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1015,7 +1025,6 @@ const main = async () => {
             detailUrl: canonicalUrl,
             stateHref: `/destinations/states/${stateSlug}`,
             cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1044,7 +1053,6 @@ const main = async () => {
             detailUrl: canonicalUrl,
             stateHref: `/destinations/states/${stateSlug}`,
             cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1076,9 +1084,10 @@ const main = async () => {
         structuredDataNodes.push(
           buildWebPageStructuredData({
             url: canonicalUrl,
-            name: seo.title,
+            name: tourForStructuredData.title,
             description: seo.description,
             image: heroImage,
+            mainEntityId: `${canonicalUrl}#trip`,
           }),
           buildTourProductStructuredData({
             tour: tourForStructuredData,
@@ -1096,7 +1105,9 @@ const main = async () => {
           })
         );
         if (breadcrumbItems?.length && buildBreadcrumbList) {
-          structuredDataNodes.push(buildBreadcrumbList(breadcrumbItems));
+          structuredDataNodes.push(
+            buildBreadcrumbList(breadcrumbItems, `${canonicalUrl}#breadcrumb`)
+          );
         }
       } else {
         structuredDataNodes.push(
