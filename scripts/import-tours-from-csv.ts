@@ -21,18 +21,18 @@ const DEEP_SOUTH_OUTPUT_PATH = path.resolve("src/data/deepSouth.generated.ts");
 const IMPORT_REPORT_PATH = path.resolve("data/import-audit.json");
 const PLACEHOLDER_IMAGE = "/hero.jpg";
 const CATEGORY_FILES = [
-  { filename: "cycling2.csv", activitySlug: "cycling" },
+  { sourceFile: "cycling2.csv", activitySlug: "cycling" },
   {
-    filename: "hiking2.csv",
+    sourceFile: "hiking2.csv",
     activitySlug: "hiking",
     forceCategory: "hiking",
   },
-  { filename: "canoeing.csv", activitySlug: "canoeing" },
-  { filename: "san-francisco.csv", activitySlug: "detours" },
-  { filename: "san-diego.csv", activitySlug: "detours" },
-  { filename: "santa-barbara.csv", activitySlug: "detours" },
-  { filename: "palm-springs.csv", activitySlug: "detours" },
-  { filename: "joshua-tree.csv", activitySlug: "detours" },
+  { sourceFile: "canoeing.csv", activitySlug: "canoeing" },
+  { sourceFile: "san-francisco.csv", activitySlug: "detours" },
+  { sourceFile: "san-diego.csv", activitySlug: "detours" },
+  { sourceFile: "santa-barbara.csv", activitySlug: "detours", limit: 10 },
+  { sourceFile: "palm-springs.csv", activitySlug: "detours" },
+  { sourceFile: "joshua-tree.csv", activitySlug: "detours" },
 ] as const;
 
 const REQUIRED_COLUMNS = ["location", "item_name"] as const;
@@ -413,10 +413,40 @@ const sortByPriority = (categories: string[]) =>
       CATEGORY_PRIORITY.indexOf(b as (typeof CATEGORY_PRIORITY)[number]),
   );
 
+
+
+const mapSiteBucketFromCategory = (categoryText: string) => {
+  const normalized = categoryText.toLowerCase();
+
+  if (normalized.includes("cycling")) {
+    return "cycling";
+  }
+  if (
+    normalized.includes("hike") ||
+    normalized.includes("hiking") ||
+    normalized.includes("walk") ||
+    normalized.includes("trail")
+  ) {
+    return "hiking";
+  }
+  if (
+    normalized.includes("kayak") ||
+    normalized.includes("paddle") ||
+    normalized.includes("canoe") ||
+    normalized.includes("sup") ||
+    normalized.includes("rafting")
+  ) {
+    return "canoeing";
+  }
+
+  return "detours";
+};
+
 const resolveActivitySlugs = ({
   fallbackActivity,
   explicitCategory,
   forceCategory,
+  categoryText,
   title,
   shortDescription,
   tags,
@@ -424,6 +454,7 @@ const resolveActivitySlugs = ({
   fallbackActivity?: string;
   explicitCategory?: string;
   forceCategory?: string;
+  categoryText?: string;
   title: string;
   shortDescription?: string;
   tags: string[];
@@ -439,7 +470,11 @@ const resolveActivitySlugs = ({
     [title, shortDescription, tags.join(" ")].filter(Boolean).join(" "),
   );
   const normalizedExplicit = normalizeCategory(explicitCategory) ?? fallbackActivity;
+  const siteBucketCategory = categoryText
+    ? mapSiteBucketFromCategory(categoryText)
+    : undefined;
   const categories = new Set<string>([
+    ...(siteBucketCategory ? [siteBucketCategory] : []),
     ...(normalizedExplicit ? [normalizedExplicit] : []),
     ...inferred,
   ]);
@@ -803,6 +838,7 @@ const rowToTour = (
   parsedRow: ReturnType<typeof parseCsvRow>,
   activitySlug: string | undefined,
   forceCategory: string | undefined,
+  sourceFile: string,
 ): Tour => {
   const galleryImage = sanitizeCsvText(row.image_url);
   const destination = parseLocation(parsedRow.location);
@@ -814,6 +850,12 @@ const rowToTour = (
     fallbackActivity: activitySlug,
     explicitCategory: parsedRow.explicitCategory,
     forceCategory,
+    categoryText:
+      sourceFile === "santa-barbara.csv"
+        ? [parsedRow.explicitCategory, parsedRow.tags.join(" ")]
+            .filter(Boolean)
+            .join(" ")
+        : undefined,
     title: parsedRow.title,
     shortDescription: parsedRow.shortDescription,
     tags: parsedRow.tags,
@@ -891,12 +933,13 @@ export const toursGenerated: Tour[] = ${stringifyForTs(tours)};
 const run = async () => {
   const files = new Set(await readdir(DATA_DIR));
   const categoryCsvFiles = CATEGORY_FILES.filter((entry) =>
-    files.has(entry.filename),
+    files.has(entry.sourceFile),
   ).map((entry) => ({
-    source: entry.filename,
+    source: entry.sourceFile,
     activitySlug: entry.activitySlug,
     forceCategory: "forceCategory" in entry ? entry.forceCategory : undefined,
-    csvPath: path.join(DATA_DIR, entry.filename),
+    limit: "limit" in entry ? entry.limit : undefined,
+    csvPath: path.join(DATA_DIR, entry.sourceFile),
     isNortheast: false,
     isDeepSouth: false,
   }));
@@ -935,7 +978,7 @@ const run = async () => {
   if (!csvFiles.length) {
     throw new Error(
       `No CSV files found in ${DATA_DIR}. Expected category files: ${CATEGORY_FILES.map(
-        (entry) => entry.filename,
+        (entry) => entry.sourceFile,
       ).join(", ")}.`,
     );
   }
@@ -978,6 +1021,7 @@ const run = async () => {
     source,
     activitySlug,
     forceCategory,
+    limit,
     csvPath,
     isNortheast,
     isDeepSouth,
@@ -1004,7 +1048,9 @@ const run = async () => {
       );
     }
 
-    records.forEach((row, index) => {
+    const boundedRecords = typeof limit === "number" ? records.slice(0, limit) : records;
+
+    boundedRecords.forEach((row, index) => {
       ingestLogger.incrementProcessed();
       const rowIdentifier = row.item_id
         ? `${row.company_shortname}-${row.item_id}`
@@ -1140,7 +1186,7 @@ const run = async () => {
           return;
         }
 
-        let tour = rowToTour(row, parsedRow, activitySlug, forceCategory);
+        let tour = rowToTour(row, parsedRow, activitySlug, forceCategory, source);
 
         if (tour.primaryCategory === "hiking" && !classification.isHiking) {
           const reclassifiedCategory =
