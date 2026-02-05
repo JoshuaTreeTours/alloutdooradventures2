@@ -773,6 +773,7 @@ const main = async () => {
     let stateForHero = null;
     let cityForHero = null;
     let guideForHero = null;
+    let cityToursForHero = null;
 
     if (segments[0] === "tours" && segments.length === 4) {
       tourForSeo =
@@ -908,6 +909,14 @@ const main = async () => {
       }
     }
 
+    if (cityForHero?.slug && stateForHero?.slug) {
+      cityToursForHero = tours.filter(
+        tour =>
+          tour.destination.stateSlug === stateForHero.slug &&
+          tour.destination.citySlug === cityForHero.slug
+      );
+    }
+
     const resolvedHeroImage = resolveHeroImageForRoute
       ? resolveHeroImageForRoute({
           route: normalizedPathname,
@@ -915,6 +924,7 @@ const main = async () => {
           guide: guideForHero,
           state: stateForHero,
           city: cityForHero,
+          cityTours: cityToursForHero ?? undefined,
         })
       : null;
 

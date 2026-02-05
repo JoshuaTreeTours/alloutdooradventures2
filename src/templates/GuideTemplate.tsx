@@ -8,6 +8,7 @@ import { getCityBySlugs, getStateBySlug } from "../data/destinations";
 import type { GuideContent, GuideLink } from "../data/guideData";
 import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
+import { getToursByCity } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { buildMetaDescription } from "../utils/seo";
 
@@ -133,11 +134,16 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
     guide.type === "city" && guide.regionType === "state" && guide.parentSlug
       ? getCityBySlugs(guide.parentSlug, guide.slug)
       : null;
+  const cityToursForSeo =
+    guide.type === "city" && guide.regionType === "state" && guide.parentSlug
+      ? getToursByCity(guide.parentSlug, guide.slug)
+      : [];
   const guideHeroImage = resolveHeroImageForRoute({
     route: guideUrl,
     guide,
     state: destinationState,
     city: destinationCity,
+    cityTours: cityToursForSeo,
   }) ?? undefined;
 
   return (

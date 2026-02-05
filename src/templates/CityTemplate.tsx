@@ -208,6 +208,7 @@ export default function CityTemplate({
       `/destinations/states/${state.slug}/cities/${city.slug}`,
     state,
     city,
+    cityTours,
   }) ?? undefined;
   const cityHeroImages = filterHeroImages(city.heroImages, "city");
   const heroImages = cityHeroImages.length
