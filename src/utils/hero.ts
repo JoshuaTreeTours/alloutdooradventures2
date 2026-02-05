@@ -31,13 +31,49 @@ export type HeroRouteContext = {
   } | null;
   state?: {
     heroImage?: string;
+    slug?: string;
+    countryCode?: string;
   } | null;
   city?: {
+    id?: string;
+    slug?: string;
+    stateSlug?: string;
+    countryCode?: string;
+    heroImage?: string;
     heroImages?: string[];
+    images?: HeroImageCandidate[];
+    poiImages?: HeroImageCandidate[];
   } | null;
 };
 
+type CityHeroContext = {
+  cityId?: string;
+  citySlug?: string;
+  stateSlug?: string;
+  countryCode?: string;
+};
+
+export type HeroImageCandidate =
+  | string
+  | {
+      src?: string;
+      cityId?: string;
+      citySlug?: string;
+      stateSlug?: string;
+      countryCode?: string;
+      location?: {
+        citySlug?: string;
+      };
+      poi?: {
+        cityId?: string;
+        citySlug?: string;
+      };
+    };
+
 const normalizeHeroImage = (image?: string) => (image ?? "").trim();
+
+const normalizeCountryCode = (value?: string) =>
+  value ? value.trim().toUpperCase() : undefined;
 
 const isHomeHeroImage = (image?: string) => {
   const normalized = normalizeHeroImage(image);
@@ -75,6 +111,121 @@ export const resolveHeroImage = ({
 }) => {
   const candidates = filterHeroImages([primary, ...fallbacks], pageType);
   return candidates[0];
+};
+
+const getCandidateSrc = (image?: HeroImageCandidate) => {
+  if (!image) {
+    return undefined;
+  }
+
+  if (typeof image === "string") {
+    return image;
+  }
+
+  return image.src;
+};
+
+export const isImageInCity = (
+  image: HeroImageCandidate | undefined,
+  cityCtx: CityHeroContext,
+) => {
+  if (!image || typeof image === "string") {
+    return false;
+  }
+
+  const cityId = cityCtx.cityId?.trim();
+  const citySlug = cityCtx.citySlug?.trim();
+  const stateSlug = cityCtx.stateSlug?.trim();
+  const countryCode = normalizeCountryCode(cityCtx.countryCode);
+
+  const imageCountryCode = normalizeCountryCode(image.countryCode);
+  if (countryCode && imageCountryCode && imageCountryCode !== countryCode) {
+    return false;
+  }
+
+  const imageStateSlug = image.stateSlug?.trim();
+  if (stateSlug && imageStateSlug && imageStateSlug !== stateSlug) {
+    return false;
+  }
+
+  const hasStrongMatch = Boolean(
+    (cityId && image.cityId?.trim() === cityId) ||
+      (citySlug && image.citySlug?.trim() === citySlug) ||
+      (citySlug && image.location?.citySlug?.trim() === citySlug),
+  );
+
+  return hasStrongMatch;
+};
+
+export const resolveCityHeroImage = ({
+  city,
+  citySlug,
+  stateSlug,
+  countryCode,
+  cityId,
+}: {
+  city?: HeroRouteContext["city"];
+  citySlug?: string;
+  stateSlug?: string;
+  countryCode?: string;
+  cityId?: string;
+}) => {
+  const cityCtx: CityHeroContext = {
+    cityId: cityId ?? city?.id,
+    citySlug: citySlug ?? city?.slug,
+    stateSlug: stateSlug ?? city?.stateSlug,
+    countryCode: countryCode ?? city?.countryCode,
+  };
+
+  const cityHeroFromDedicatedFields = filterHeroImages(
+    [city?.heroImage, city?.heroImages?.[0]],
+    "city",
+  )[0];
+  if (cityHeroFromDedicatedFields) {
+    return buildImageUrl(cityHeroFromDedicatedFields);
+  }
+
+  const sameCityImages = (city?.images ?? []).filter((image) =>
+    isImageInCity(image, cityCtx),
+  );
+  const cityImage = filterHeroImages(
+    sameCityImages.map((image) => getCandidateSrc(image)),
+    "city",
+  )[0];
+  if (cityImage) {
+    return buildImageUrl(cityImage);
+  }
+
+  const sameCityPoiImages = (city?.poiImages ?? []).filter((image) => {
+    if (!isImageInCity(image, cityCtx)) {
+      return false;
+    }
+
+    if (typeof image === "string") {
+      return false;
+    }
+
+    const poiCityId = image.poi?.cityId?.trim();
+    const poiCitySlug = image.poi?.citySlug?.trim();
+    if (cityCtx.cityId && poiCityId) {
+      return poiCityId === cityCtx.cityId;
+    }
+    if (cityCtx.citySlug && poiCitySlug) {
+      return poiCitySlug === cityCtx.citySlug;
+    }
+
+    return Boolean(poiCityId || poiCitySlug);
+  });
+
+  const poiImage = filterHeroImages(
+    sameCityPoiImages.map((image) => getCandidateSrc(image)),
+    "city",
+  )[0];
+  if (poiImage) {
+    return buildImageUrl(poiImage);
+  }
+
+  return buildImageUrl(CITY_PLACEHOLDER_HERO_IMAGE);
 };
 
 const normalizePathname = (pathname: string) => {
@@ -145,6 +296,38 @@ const resolveGuidePageType = (
   return "destination";
 };
 
+const resolveCityContextFromRoute = (
+  route: string,
+  city?: HeroRouteContext["city"],
+  state?: HeroRouteContext["state"],
+) => {
+  const normalizedRoute = normalizePathname(route);
+  const segments = normalizedRoute.replace(/^\//, "").split("/").filter(Boolean);
+
+  let routeCitySlug: string | undefined;
+  let routeStateSlug: string | undefined;
+
+  if (
+    segments[0] === "destinations" &&
+    segments[1] === "states" &&
+    segments[3] === "cities" &&
+    segments[4]
+  ) {
+    routeStateSlug = segments[2];
+    routeCitySlug = segments[4];
+  } else if (segments[0] === "guides" && segments[1] === "us" && segments[3]) {
+    routeStateSlug = segments[2];
+    routeCitySlug = segments[3];
+  }
+
+  return {
+    citySlug: city?.slug ?? routeCitySlug,
+    stateSlug: city?.stateSlug ?? routeStateSlug ?? state?.slug,
+    cityId: city?.id,
+    countryCode: city?.countryCode ?? state?.countryCode,
+  };
+};
+
 export const resolveHeroImageForRoute = ({
   route,
   params,
@@ -170,13 +353,16 @@ export const resolveHeroImageForRoute = ({
       fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
     });
   } else if (isGuideRoute(normalizedRoute) || guide) {
-    const isCityGuidePage = resolveGuidePageType(normalizedRoute, guide?.type) === "city";
+    const isCityGuidePage =
+      resolveGuidePageType(normalizedRoute, guide?.type) === "city";
+    if (isCityGuidePage) {
+      const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
+      return resolveCityHeroImage({ city, ...cityCtx });
+    }
     resolvedImage = resolveHeroImage({
-      pageType: isCityGuidePage ? "city" : resolveGuidePageType(normalizedRoute, guide?.type),
+      pageType: resolveGuidePageType(normalizedRoute, guide?.type),
       primary: guide?.guideImages?.[0]?.src ?? undefined,
-      fallbacks: isCityGuidePage
-        ? [city?.heroImages?.[0], CITY_PLACEHOLDER_HERO_IMAGE]
-        : [city?.heroImages?.[0], state?.heroImage, GUIDE_FALLBACK_HERO_IMAGE],
+      fallbacks: [city?.heroImages?.[0], state?.heroImage, GUIDE_FALLBACK_HERO_IMAGE],
     });
   } else if (isDestinationRoute(normalizedRoute) || state || city || destination) {
     const pageType: HeroPageType = city
@@ -184,15 +370,14 @@ export const resolveHeroImageForRoute = ({
       : state
         ? "state"
         : "destination";
-    const isCityDestinationPage = pageType === "city";
+    if (pageType === "city") {
+      const cityCtx = resolveCityContextFromRoute(normalizedRoute, city, state);
+      return resolveCityHeroImage({ city, ...cityCtx });
+    }
     resolvedImage = resolveHeroImage({
       pageType,
-      primary: isCityDestinationPage
-        ? city?.heroImages?.[0]
-        : city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
-      fallbacks: isCityDestinationPage
-        ? [CITY_PLACEHOLDER_HERO_IMAGE]
-        : [city ? state?.heroImage : undefined, DESTINATION_FALLBACK_HERO_IMAGE],
+      primary: city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
+      fallbacks: [city ? state?.heroImage : undefined, DESTINATION_FALLBACK_HERO_IMAGE],
     });
   } else {
     resolvedImage = resolveHeroImage({
