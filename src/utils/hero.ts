@@ -12,6 +12,7 @@ export const HOME_HERO_IMAGE = "/hero.jpg";
 export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
 export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
 export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
+export const CITY_PLACEHOLDER_HERO_IMAGE = "/images/canoe-hero.jpg";
 
 export type HeroRouteContext = {
   route: string;
@@ -169,14 +170,13 @@ export const resolveHeroImageForRoute = ({
       fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
     });
   } else if (isGuideRoute(normalizedRoute) || guide) {
+    const isCityGuidePage = resolveGuidePageType(normalizedRoute, guide?.type) === "city";
     resolvedImage = resolveHeroImage({
-      pageType: resolveGuidePageType(normalizedRoute, guide?.type),
+      pageType: isCityGuidePage ? "city" : resolveGuidePageType(normalizedRoute, guide?.type),
       primary: guide?.guideImages?.[0]?.src ?? undefined,
-      fallbacks: [
-        city?.heroImages?.[0],
-        state?.heroImage,
-        GUIDE_FALLBACK_HERO_IMAGE,
-      ],
+      fallbacks: isCityGuidePage
+        ? [city?.heroImages?.[0], CITY_PLACEHOLDER_HERO_IMAGE]
+        : [city?.heroImages?.[0], state?.heroImage, GUIDE_FALLBACK_HERO_IMAGE],
     });
   } else if (isDestinationRoute(normalizedRoute) || state || city || destination) {
     const pageType: HeroPageType = city
@@ -184,18 +184,20 @@ export const resolveHeroImageForRoute = ({
       : state
         ? "state"
         : "destination";
+    const isCityDestinationPage = pageType === "city";
     resolvedImage = resolveHeroImage({
       pageType,
-      primary: city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
-      fallbacks: [
-        city ? state?.heroImage : undefined,
-        DESTINATION_FALLBACK_HERO_IMAGE,
-      ],
+      primary: isCityDestinationPage
+        ? city?.heroImages?.[0]
+        : city?.heroImages?.[0] ?? state?.heroImage ?? destination?.heroImage,
+      fallbacks: isCityDestinationPage
+        ? [CITY_PLACEHOLDER_HERO_IMAGE]
+        : [city ? state?.heroImage : undefined, DESTINATION_FALLBACK_HERO_IMAGE],
     });
   } else {
     resolvedImage = resolveHeroImage({
       pageType: "destination",
-      primary: destination?.heroImage ?? state?.heroImage ?? city?.heroImages?.[0],
+      primary: undefined,
       fallbacks: [DESTINATION_FALLBACK_HERO_IMAGE],
     });
   }
