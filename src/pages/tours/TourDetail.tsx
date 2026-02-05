@@ -11,6 +11,7 @@ import {
   getTourBookingPath,
   getTourBySlugs,
   getTourDetailPath,
+  isTourDescriptionDuplicate,
 } from "../../data/tours";
 import { formatStartingPrice } from "../../lib/pricing";
 import {
@@ -41,19 +42,22 @@ export default function TourDetail({ params }: TourDetailProps) {
       ? getCityBySlugs(tour.destination.stateSlug, tour.destination.citySlug)
       : null;
   const detailUrl = tour ? getTourDetailPath(tour) : "";
-  const heroImage = resolveHeroImageForRoute({
-    route: detailUrl,
-    tour,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: detailUrl,
+      tour,
+    }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
+    "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
-  const productDescription = tour
-    ? getExpandedTourDescription(tour)[0]
+  const metaDescription = tour
+    ? buildTourMetaDescription(tour, {
+        isDuplicate: isTourDescriptionDuplicate(tour),
+        diagnosticsLabel: `tour:${tour.id}`,
+      })
     : undefined;
-  const metaDescription = tour ? buildTourMetaDescription(tour) : undefined;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !bookingUrl || !detailUrl) {
       return null;
@@ -69,7 +73,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         tour,
         detailUrl,
         bookingUrl,
-        description: productDescription,
+        description: metaDescription,
         images: structuredImages.length ? structuredImages : undefined,
       }),
       buildBreadcrumbList([
@@ -82,7 +86,6 @@ export default function TourDetail({ params }: TourDetailProps) {
     detailUrl,
     heroImage,
     metaDescription,
-    productDescription,
     structuredImages,
     tour,
   ]);
@@ -101,8 +104,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     );
   }
 
-  const regionLabel =
-    tour.destination.state || tour.destination.country || "";
+  const regionLabel = tour.destination.state || tour.destination.country || "";
   const destinationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
@@ -113,7 +115,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   const highlights = getTourHighlights(tour);
   const startingPriceLabel = formatStartingPrice(
     tour.startingPrice,
-    tour.currency,
+    tour.currency
   );
 
   return (
@@ -174,7 +176,7 @@ export default function TourDetail({ params }: TourDetailProps) {
               ) : null}
               {tour.tagPills?.length ? (
                 <div className="flex flex-wrap gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]">
-                  {tour.tagPills.map((tag) => (
+                  {tour.tagPills.map(tag => (
                     <span
                       key={tag}
                       className="rounded-full border border-[#2f4a2f]/20 bg-white px-3 py-1"
@@ -222,18 +224,18 @@ export default function TourDetail({ params }: TourDetailProps) {
               Tour highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040] md:text-base">
-              {highlights.map((highlight) => (
+              {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           </div>
-          {getExpandedTourDescription(tour).map((paragraph) => (
+          {getExpandedTourDescription(tour).map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
         {tour.galleryImages?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
+            {tour.galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
