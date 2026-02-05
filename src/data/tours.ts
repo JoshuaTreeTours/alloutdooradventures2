@@ -6,6 +6,10 @@ import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
+import {
+  extractTourBaseDescription,
+  normalizeDescriptionForDedupe,
+} from "../utils/tourDescription";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -131,30 +135,47 @@ export const tours: Tour[] = [
   ...australiaTours,
 ].map(applyTourPricing);
 
+const tourDescriptionCounts = tours.reduce<Map<string, number>>(
+  (counts, tour) => {
+    const key = normalizeDescriptionForDedupe(extractTourBaseDescription(tour));
+    if (!key) {
+      return counts;
+    }
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+    return counts;
+  },
+  new Map()
+);
+
+export const isTourDescriptionDuplicate = (tour: Tour) => {
+  const key = normalizeDescriptionForDedupe(extractTourBaseDescription(tour));
+  return key ? (tourDescriptionCounts.get(key) ?? 0) > 1 : false;
+};
+
 export const getToursByState = (stateSlug: string) =>
-  tours.filter((tour) => tour.destination.stateSlug === stateSlug);
+  tours.filter(tour => tour.destination.stateSlug === stateSlug);
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
   tours.filter(
-    (tour) =>
+    tour =>
       tour.destination.stateSlug === stateSlug &&
-      tour.destination.citySlug === citySlug,
+      tour.destination.citySlug === citySlug
   );
 
 export const getTourBySlugs = (
   stateSlug: string,
   citySlug: string,
-  tourSlug: string,
+  tourSlug: string
 ) =>
   tours.find(
-    (tour) =>
+    tour =>
       tour.destination.stateSlug === stateSlug &&
       tour.destination.citySlug === citySlug &&
-      tour.slug === tourSlug,
+      tour.slug === tourSlug
   );
 
 export const getToursByActivity = (activitySlug: string) =>
-  tours.filter((tour) => {
+  tours.filter(tour => {
     if (activitySlug === "hiking") {
       return tour.primaryCategory === "hiking";
     }
@@ -167,7 +188,6 @@ export const getTourDetailPath = (tour: Tour) =>
 
 export const getCityTourDetailPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
-
 
 export const getAffiliateDisclosure = (tour: Tour) =>
   PROVIDER_CONFIG[tour.bookingProvider].affiliateDisclosure;
