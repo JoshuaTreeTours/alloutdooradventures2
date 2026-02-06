@@ -13,6 +13,7 @@ import {
   getTourDetailPath,
   getTourHeroImage,
   getTourMetaDescriptionSource,
+  getTourSeoTitleSource,
   isTourDescriptionDuplicate,
 } from "../../data/tours";
 import { formatStartingPrice } from "../../lib/pricing";
@@ -59,13 +60,16 @@ export default function TourDetail({ params }: TourDetailProps) {
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
-  const fareharborDescription = tour ? getTourMetaDescriptionSource(tour) : undefined;
+  const seoTitle = tour ? getTourSeoTitleSource(tour) : undefined;
+  const fareharborDescription = tour
+    ? getTourMetaDescriptionSource(tour)
+    : undefined;
   const metaDescription = tour
-    ? fareharborDescription ??
+    ? (fareharborDescription ??
       buildTourMetaDescription(tour, {
         isDuplicate: isTourDescriptionDuplicate(tour),
         diagnosticsLabel: `tour:${tour.id}`,
-      })
+      }))
     : undefined;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !bookingUrl || !detailUrl) {
@@ -136,7 +140,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   const destinationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
-  const title = `${tour.title} | All Outdoor Adventures`;
+  const title = seoTitle ?? `${tour.title} | All Outdoor Adventures`;
   const description = metaDescription ?? buildTourMetaDescription(tour);
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);

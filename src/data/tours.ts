@@ -16,8 +16,8 @@ export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
 
-
-const cleanText = (value?: string) => value?.replace(/\s+/g, " ").trim() || undefined;
+const cleanText = (value?: string) =>
+  value?.replace(/\s+/g, " ").trim() || undefined;
 
 const extractFareharborReference = (bookingUrl?: string) => {
   if (!bookingUrl) return null;
@@ -48,12 +48,17 @@ const normalizeFareharborTourContent = (tour: Tour): Tour => {
   const cached = cacheKey ? fareharborTourContentByKey[cacheKey] : undefined;
 
   const heroImageUrl =
-    cleanText(cached?.heroImageUrl) ?? cleanText(tour.heroImageUrl) ?? cleanText(tour.heroImage);
+    cleanText(cached?.heroImageUrl) ??
+    cleanText(tour.heroImageUrl) ??
+    cleanText(tour.heroImage);
   const sourceDescription =
     cleanText(cached?.sourceDescription) ??
     cleanText(tour.sourceDescription) ??
     cleanText(tour.shortDescription) ??
     cleanText(tour.longDescription);
+  const seoTitle = cleanText(cached?.seoTitle) ?? cleanText(tour.seoTitle);
+  const seoDescription =
+    cleanText(cached?.seoDescription) ?? cleanText(tour.seoDescription);
 
   return {
     ...tour,
@@ -61,10 +66,17 @@ const normalizeFareharborTourContent = (tour: Tour): Tour => {
     heroImageUrl: heroImageUrl ?? tour.heroImageUrl,
     heroImageSource: heroImageUrl ? "fareharbor_media" : tour.heroImageSource,
     sourceDescription,
-    sourceDescriptionSource: sourceDescription ? "fareharbor" : tour.sourceDescriptionSource,
+    sourceDescriptionSource: sourceDescription
+      ? "fareharbor"
+      : tour.sourceDescriptionSource,
+    seoTitle,
+    seoDescription,
     sourceOperatorSlug:
-      cached?.sourceOperatorSlug ?? tour.sourceOperatorSlug ?? reference?.companyShortname,
-    sourceItemId: cached?.sourceItemId ?? tour.sourceItemId ?? reference?.itemId,
+      cached?.sourceOperatorSlug ??
+      tour.sourceOperatorSlug ??
+      reference?.companyShortname,
+    sourceItemId:
+      cached?.sourceItemId ?? tour.sourceItemId ?? reference?.itemId,
   };
 };
 
@@ -75,7 +87,12 @@ export const getTourHeroImage = (tour: Tour) => {
   return tour.heroImageUrl ?? tour.heroImage;
 };
 
+export const getTourSeoTitleSource = (tour: Tour) => cleanText(tour.seoTitle);
+
 export const getTourMetaDescriptionSource = (tour: Tour) => {
+  if (cleanText(tour.seoDescription)) {
+    return cleanText(tour.seoDescription);
+  }
   if (tour.sourceDescriptionSource === "fareharbor" && tour.sourceDescription) {
     return tour.sourceDescription;
   }
@@ -197,7 +214,7 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
 const dedupeToursByCanonicalKey = (tourList: Tour[]) => {
   const toursByKey = new Map<string, Tour>();
 
-  tourList.forEach((tour) => {
+  tourList.forEach(tour => {
     const canonicalKey = `${tour.bookingProvider}:${tour.sourceOperatorSlug ?? ""}:${tour.sourceItemId ?? tour.id}`;
     toursByKey.set(canonicalKey, tour);
   });
@@ -221,12 +238,12 @@ const ALL_TOURS = dedupeToursByCanonicalKey([
 
 if (ALL_TOURS.length < BASE_TOURS.length) {
   throw new Error(
-    `Per-location tour merge reduced tour count (${ALL_TOURS.length} < ${BASE_TOURS.length})`,
+    `Per-location tour merge reduced tour count (${ALL_TOURS.length} < ${BASE_TOURS.length})`
   );
 }
 
 export const tours: Tour[] = ALL_TOURS.map(normalizeFareharborTourContent).map(
-  applyTourPricing,
+  applyTourPricing
 );
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(

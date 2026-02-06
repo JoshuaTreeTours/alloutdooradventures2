@@ -9,27 +9,46 @@ type FareharborTourContent = {
   sourceItemId: string;
   heroImageUrl?: string;
   sourceDescription?: string;
+  seoTitle?: string;
+  seoDescription?: string;
 };
 
 const OUTPUT_PATH = path.resolve("src/data/fareharborContent.generated.ts");
 const API_BASE = "https://fareharbor.com/api/v1";
 const MAX_SNIPPET_LENGTH = 220;
 
-const toCacheKey = (operatorSlug: string, itemId: string) => `${operatorSlug}:${itemId}`;
+const toCacheKey = (operatorSlug: string, itemId: string) =>
+  `${operatorSlug}:${itemId}`;
 
-const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
+const normalizeWhitespace = (value: string) =>
+  value.replace(/\s+/g, " ").trim();
+
+const decodeHtmlEntities = (value?: string) => {
+  if (!value) return undefined;
+
+  return value
+    .replace(/&nbsp;/gi, " ")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex: string) =>
+      String.fromCodePoint(Number.parseInt(hex, 16))
+    )
+    .replace(/&#(\d+);/g, (_, decimal: string) =>
+      String.fromCodePoint(Number.parseInt(decimal, 10))
+    );
+};
 
 const stripHtml = (value?: string) => {
   if (!value) return undefined;
   const withoutTags = value
     .replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
-    .replace(/<[^>]+>/g, " ")
-    .replace(/&nbsp;/gi, " ")
-    .replace(/&amp;/gi, "&")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#39;/gi, "'");
-  const normalized = normalizeWhitespace(withoutTags);
+    .replace(/<[^>]+>/g, " ");
+  const decoded = decodeHtmlEntities(withoutTags);
+  const normalized = decoded ? normalizeWhitespace(decoded) : undefined;
   return normalized || undefined;
 };
 
@@ -54,7 +73,9 @@ const collectImageCandidates = (payload: unknown): string[] => {
       const trimmed = current.trim();
       if (
         /^https?:\/\//i.test(trimmed) &&
-        /(filestackcontent\.com|fareharbor\.com|images\.|cloudfront)/i.test(trimmed) &&
+        /(filestackcontent\.com|fareharbor\.com|images\.|cloudfront)/i.test(
+          trimmed
+        ) &&
         /\.(jpg|jpeg|png|webp)(\?|$)/i.test(trimmed)
       ) {
         results.add(trimmed);
@@ -84,7 +105,7 @@ const collectImageCandidates = (payload: unknown): string[] => {
     }
   }
 
-  return [...results];
+  return Array.from(results);
 };
 
 const pickDescription = (payload: Record<string, unknown>) => {
@@ -124,6 +145,64 @@ const fetchItemPayload = async (operatorSlug: string, itemId: string) => {
   }
 };
 
+const extractMetaContent = (
+  html: string,
+  attr: "property" | "name",
+  value: string
+) => {
+  const escaped = value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(
+    `<meta\\s+[^>]*${attr}\\s*=\\s*["']${escaped}["'][^>]*content\\s*=\\s*["']([^"']+)["'][^>]*>`,
+    "i"
+  );
+  const reversePattern = new RegExp(
+    `<meta\\s+[^>]*content\\s*=\\s*["']([^"']+)["'][^>]*${attr}\\s*=\\s*["']${escaped}["'][^>]*>`,
+    "i"
+  );
+  const match = html.match(pattern) ?? html.match(reversePattern);
+  const extracted = match?.[1]?.trim();
+  return normalizeWhitespace(decodeHtmlEntities(extracted) ?? "") || undefined;
+};
+
+const extractTitleTag = (html: string) => {
+  const titleMatch = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  const extracted = titleMatch?.[1]?.trim();
+  return normalizeWhitespace(decodeHtmlEntities(extracted) ?? "") || undefined;
+};
+
+const parseSeoFromHtml = (html: string) => {
+  const seoTitle =
+    extractMetaContent(html, "property", "og:title") ??
+    extractMetaContent(html, "name", "twitter:title") ??
+    extractTitleTag(html);
+
+  const seoDescription =
+    extractMetaContent(html, "property", "og:description") ??
+    extractMetaContent(html, "name", "twitter:description") ??
+    extractMetaContent(html, "name", "description");
+
+  return { seoTitle, seoDescription };
+};
+
+const fetchPageSeo = async (bookingUrl: string) => {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
+  try {
+    const response = await fetch(bookingUrl, {
+      signal: controller.signal,
+      headers: { Accept: "text/html" },
+      redirect: "follow",
+    });
+    if (!response.ok) {
+      throw new Error(`FareHarbor page request failed (${response.status})`);
+    }
+    const html = await response.text();
+    return parseSeoFromHtml(html);
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
 const loadExistingCache = async () => {
   try {
     const source = await readFile(OUTPUT_PATH, "utf8");
@@ -135,14 +214,21 @@ const loadExistingCache = async () => {
   }
 };
 
-const writeCache = async (contentByKey: Record<string, FareharborTourContent>) => {
-  const output = `export type FareharborTourContent = {\n  sourceOperatorSlug: string;\n  sourceItemId: string;\n  heroImageUrl?: string;\n  sourceDescription?: string;\n};\n\n// This file is auto-generated by scripts/enrich-fareharbor-tour-content.ts. Do not edit manually.\nexport const fareharborTourContentByKey: Record<string, FareharborTourContent> = ${JSON.stringify(contentByKey, null, 2)};\n`;
+const writeCache = async (
+  contentByKey: Record<string, FareharborTourContent>
+) => {
+  const output = `export type FareharborTourContent = {\n  sourceOperatorSlug: string;\n  sourceItemId: string;\n  heroImageUrl?: string;\n  sourceDescription?: string;\n  seoTitle?: string;\n  seoDescription?: string;\n};\n\n// This file is auto-generated by scripts/enrich-fareharbor-tour-content.ts. Do not edit manually.\nexport const fareharborTourContentByKey: Record<string, FareharborTourContent> = ${JSON.stringify(contentByKey, null, 2)};\n`;
   await writeFile(OUTPUT_PATH, output, "utf8");
 };
 
+const isNetworkError = (message: string) =>
+  /ENETUNREACH|EAI_AGAIN|fetch failed|aborted/i.test(message);
+
 const run = async () => {
   const existing = await loadExistingCache();
-  const fareharborTours = toursGenerated.filter(tour => tour.bookingProvider === "fareharbor");
+  const fareharborTours = toursGenerated.filter(
+    tour => tour.bookingProvider === "fareharbor"
+  );
   let remoteFetchDisabled = false;
 
   for (const tour of fareharborTours) {
@@ -154,7 +240,9 @@ const run = async () => {
       sourceOperatorSlug: reference.companyShortname,
       sourceItemId: reference.itemId,
       heroImageUrl: tour.heroImage,
-      sourceDescription: clampSnippet(stripHtml(tour.shortDescription ?? tour.longDescription)),
+      sourceDescription: clampSnippet(
+        stripHtml(tour.shortDescription ?? tour.longDescription)
+      ),
     };
 
     if (remoteFetchDisabled) {
@@ -163,18 +251,26 @@ const run = async () => {
     }
 
     try {
-      const payload = await fetchItemPayload(reference.companyShortname, reference.itemId);
+      const payload = await fetchItemPayload(
+        reference.companyShortname,
+        reference.itemId
+      );
       const imageCandidates = collectImageCandidates(payload);
       const preferredImage = imageCandidates[0] ?? fallback.heroImageUrl;
+      const pageSeo = await fetchPageSeo(tour.bookingUrl);
+
       existing[key] = {
         sourceOperatorSlug: reference.companyShortname,
         sourceItemId: reference.itemId,
         heroImageUrl: preferredImage,
-        sourceDescription: pickDescription(payload) ?? fallback.sourceDescription,
+        sourceDescription:
+          pickDescription(payload) ?? fallback.sourceDescription,
+        seoTitle: pageSeo.seoTitle,
+        seoDescription: pageSeo.seoDescription,
       };
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
-      if (/ENETUNREACH|EAI_AGAIN|fetch failed|aborted/i.test(message)) {
+      if (isNetworkError(message)) {
         remoteFetchDisabled = true;
       }
       existing[key] = existing[key] ?? fallback;
@@ -182,7 +278,9 @@ const run = async () => {
   }
 
   await writeCache(existing);
-  console.log(`FareHarbor content enrichment updated for ${Object.keys(existing).length} items.`);
+  console.log(
+    `FareHarbor content enrichment updated for ${Object.keys(existing).length} items.`
+  );
 };
 
 run().catch(error => {

@@ -27,6 +27,8 @@ export type Tour = {
   id: string;
   slug: string;
   title: string;
+  seoTitle?: string;
+  seoDescription?: string;
   shortDescription?: string;
   sourceDescription?: string;
   sourceDescriptionSource?: "fareharbor" | "manual" | "generated";
