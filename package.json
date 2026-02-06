@@ -19,7 +19,8 @@
     "check": "tsc --noEmit",
     "format": "prettier --write .",
     "check:tour-route-seo": "node scripts/check-tour-route-seo.mjs",
-    "enrich:fareharbor-content": "tsx scripts/enrich-fareharbor-tour-content.ts"
+    "enrich:fareharbor-content": "tsx scripts/enrich-fareharbor-tour-content.ts",
+    "smoke:booking": "tsx scripts/smoke-booking-urls.tsx"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -6,6 +6,7 @@ const REQUIRED_FAREHARBOR_PARAMS = {
 } as const;
 
 const AFFILIATE_PARAMS = {
+  asn: "fhdn",
   "asn-ref": "alloutdooradventures",
   ref: "alloutdooradventures",
 } as const;
@@ -67,6 +68,42 @@ export const normalizeFareharborUrl = (url?: string) => {
     return normalized.toString();
   } catch {
     return url;
+  }
+};
+
+export const buildFareharborEmbedUrl = ({
+  baseUrl,
+  companySlug,
+  itemId,
+  extraParams,
+}: {
+  baseUrl?: string;
+  companySlug?: string;
+  itemId?: string;
+  extraParams?: Record<string, string>;
+}) => {
+  if (baseUrl) {
+    return normalizeFareharborUrl(baseUrl);
+  }
+
+  if (!companySlug || !itemId) {
+    return undefined;
+  }
+
+  try {
+    const url = new URL(
+      `https://fareharbor.com/embeds/book/${companySlug}/items/${itemId}/`,
+    );
+    const params = {
+      ...getFareharborParams(),
+      ...extraParams,
+    };
+    Object.entries(params).forEach(([key, value]) => {
+      url.searchParams.append(key, value);
+    });
+    return normalizeFareharborUrl(url.toString()) ?? url.toString();
+  } catch {
+    return undefined;
   }
 };
 
