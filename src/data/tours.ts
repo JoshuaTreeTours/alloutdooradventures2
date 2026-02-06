@@ -285,6 +285,9 @@ export const getTourBySlugs = (
       tour.slug === tourSlug
   );
 
+export const getTourById = (id: string) =>
+  tours.find(tour => (tour.sourceItemId ?? "") === id || tour.id === id);
+
 export const getToursByActivity = (activitySlug: string) =>
   tours.filter(tour => {
     if (activitySlug === "hiking") {

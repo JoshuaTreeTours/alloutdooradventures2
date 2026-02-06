@@ -1,6 +1,33 @@
+import { useEffect } from "react";
 import { Link } from "wouter";
 
+import RemovedListing from "../../../components/RemovedListing";
+import { maybeResolveLegacyDayTourPath } from "./dayTourRouteGuard";
+
 export default function DayPaddleTours() {
+  const resolution =
+    typeof window === "undefined"
+      ? null
+      : maybeResolveLegacyDayTourPath(window.location.pathname);
+
+  useEffect(() => {
+    if (!resolution || resolution.removed) {
+      return;
+    }
+
+    if (resolution.canonicalPath !== window.location.pathname) {
+      window.location.replace(resolution.canonicalPath);
+    }
+  }, [resolution]);
+
+  if (resolution?.removed) {
+    console.warn("Tour not found", {
+      id: resolution.id,
+      url: typeof window !== "undefined" ? window.location.pathname : "ssr",
+    });
+    return <RemovedListing />;
+  }
+
   return (
     <main className="mx-auto max-w-5xl px-6 py-16 text-[#1f2a1f]">
       <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
