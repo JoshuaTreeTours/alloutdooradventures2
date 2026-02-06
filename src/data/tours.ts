@@ -256,6 +256,20 @@ export const getToursByCity = (stateSlug: string, citySlug: string) =>
       tour.destination.citySlug === citySlug
   );
 
+export const getTourById = (tourId?: string | null) => {
+  if (!tourId) {
+    return undefined;
+  }
+  return tours.find(tour => tour.id === tourId);
+};
+
+export const getTourBySlug = (tourSlug?: string | null) => {
+  if (!tourSlug) {
+    return undefined;
+  }
+  return tours.find(tour => tour.slug === tourSlug);
+};
+
 export const getTourBySlugs = (
   stateSlug: string,
   citySlug: string,
