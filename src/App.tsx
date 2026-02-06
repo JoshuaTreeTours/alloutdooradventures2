@@ -18,8 +18,6 @@ import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
 import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursIndexRoute";
-import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
-import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBookingRoute";
 import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursIndex from "./pages/ToursIndex";
 import ToursCatalog from "./pages/ToursCatalog";
@@ -48,7 +46,10 @@ import HikingTours from "./pages/tours/activities/HikingTours";
 import MultiDayTours from "./pages/tours/activities/MultiDayTours";
 import CanoeingTours from "./pages/tours/activities/CanoeingTours";
 import TourDetail from "./pages/tours/TourDetail";
+import TourBookingRoute from "./pages/tours/TourBookingRoute";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
+import DestinationTourAliasRoute from "./pages/tours/DestinationTourAliasRoute";
+import DestinationTourBookingAliasRoute from "./pages/tours/DestinationTourBookingAliasRoute";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 
@@ -107,11 +108,11 @@ export default function App() {
 
         <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours/:tourSlug/book"
-          component={CityTourBookingRoute}
+          component={DestinationTourBookingAliasRoute}
         />
         <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours/:tourSlug"
-          component={CityTourDetailRoute}
+          component={DestinationTourAliasRoute}
         />
         <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours"
@@ -123,11 +124,11 @@ export default function App() {
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
-          component={CityTourBookingRoute}
+          component={DestinationTourBookingAliasRoute}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"
-          component={CityTourDetailRoute}
+          component={DestinationTourAliasRoute}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours"
@@ -199,6 +200,10 @@ export default function App() {
         <Route
           path="/tours/:tourSlug"
           component={FlagstaffTourDetailRoute}
+        />
+        <Route
+          path="/tours/:stateSlug/:citySlug/:slug/book"
+          component={TourBookingRoute}
         />
         <Route
           path="/tours/:stateSlug/:citySlug/:slug"

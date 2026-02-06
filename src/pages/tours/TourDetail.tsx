@@ -9,12 +9,14 @@ import {
   getAffiliateDisclosure,
   getProviderLabel,
   getTourBookingPath,
-  getTourBySlugs,
   getTourDetailPath,
   getTourHeroImage,
   getTourMetaDescriptionSource,
   isTourDescriptionDuplicate,
 } from "../../data/tours";
+import ListingUnavailable from "../../components/ListingUnavailable";
+import { extractIdFromSlug } from "../../lib/routing/extractId";
+import { getTourById } from "../../lib/tours/getTourById";
 import { formatStartingPrice } from "../../lib/pricing";
 import {
   getExpandedTourDescription,
@@ -38,7 +40,8 @@ type TourDetailProps = {
 };
 
 export default function TourDetail({ params }: TourDetailProps) {
-  const tour = getTourBySlugs(params.stateSlug, params.citySlug, params.slug);
+  const tourId = extractIdFromSlug(params.slug);
+  const tour = tourId ? getTourById(tourId) : null;
   const state = tour ? getStateBySlug(tour.destination.stateSlug) : null;
   const city =
     tour && tour.destination.stateSlug
@@ -121,15 +124,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   useStructuredData(structuredDataNodes);
 
   if (!tour) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
-        <h1 className="text-2xl font-semibold">Tour not found</h1>
-        <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that tour. Browse the destination page to explore
-          other options.
-        </p>
-      </main>
-    );
+    return <ListingUnavailable statusCode={410} />;
   }
 
   const regionLabel = tour.destination.state || tour.destination.country || "";

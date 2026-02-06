@@ -248,8 +248,8 @@ const isStatic = pathname => STATIC_PATHS.has(normalizePathname(pathname));
 const isTour = pathname => {
   const normalized = normalizePathname(pathname);
   return (
-    /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized) ||
-    /^\/tours\/[^/]+$/.test(normalized) ||
+    /^\/tours\/[^/]+\/[^/]+\/[^/]+(\/book)?$/.test(normalized) ||
+    /^\/tours\/[^/]+(\/book)?$/.test(normalized) ||
     /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) ||
     /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
       normalized
@@ -849,6 +849,12 @@ const main = async () => {
         seo.description = staticSeo.description;
         seo.url = staticSeo.url;
         seo.image = staticSeo.image;
+      } else if (
+        (segments[0] === "tours" && (segments.length === 2 || segments.length === 4)) ||
+        (segments[0] === "destinations" && segments.includes("tours"))
+      ) {
+        seo.title = `Listing no longer available | ${siteBrandName}`;
+        seo.description = "This listing may have moved or is no longer offered.";
       } else {
         seo.title = buildFallbackTitle(
           segments,
