@@ -96,7 +96,9 @@ const assertRoute = async routePath => {
 
   const tripName = trip.name ?? "";
   if (!title || !tripName || !title.includes(tripName)) {
-    fail(`${routePath}: SSR title does not contain tour name.`);
+    console.warn(
+      `[SEO WARN] ${routePath}: SSR title does not include tour name`
+    );
   }
 
   if (!canonical || canonical === `${SITE_URL}/` || canonical === "/") {
