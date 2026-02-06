@@ -278,6 +278,97 @@ const logVerificationFailure = ({ label, url, assertion, details }) => {
   }
 };
 
+
+const buildRedirectMatcher = source => {
+  const normalized = normalizePathname(source);
+  const paramNames = [];
+  const pattern = normalized
+    .split("/")
+    .filter(Boolean)
+    .map(segment => {
+      if (segment.startsWith(":")) {
+        paramNames.push(segment.slice(1));
+        return "([^/]+)";
+      }
+      return escapeRegExp(segment);
+    })
+    .join("/");
+
+  return {
+    regex: new RegExp(`^/${pattern}$`),
+    paramNames,
+  };
+};
+
+const resolveRedirectDestination = (destination, params) =>
+  normalizePathname(
+    destination.replace(/:([A-Za-z0-9_]+)/g, (_, key) => params[key] ?? "")
+  );
+
+const verifyDestinationAliasRedirect = async ({
+  label,
+  aliasPathname,
+  siteUrl,
+  sitemapPathSet,
+}) => {
+  const vercelConfigPath = path.resolve(__dirname, "../vercel.json");
+  const vercelConfigRaw = await readFile(vercelConfigPath, "utf8");
+  const vercelConfig = JSON.parse(vercelConfigRaw);
+  const redirects = Array.isArray(vercelConfig.redirects)
+    ? vercelConfig.redirects
+    : [];
+
+  const matchingRedirect = redirects.find(redirect => {
+    if (!redirect?.source || !redirect?.destination) {
+      return false;
+    }
+    const matcher = buildRedirectMatcher(redirect.source);
+    return matcher.regex.test(aliasPathname);
+  });
+
+  if (!matchingRedirect) {
+    logVerificationFailure({
+      label,
+      url: `${siteUrl}${aliasPathname}`,
+      assertion: "redirect",
+      details: `No redirect rule matched alias route: ${aliasPathname}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  if (!matchingRedirect.permanent) {
+    logVerificationFailure({
+      label,
+      url: `${siteUrl}${aliasPathname}`,
+      assertion: "redirect",
+      details: `Expected a permanent redirect for alias route: ${aliasPathname}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+
+  const { regex, paramNames } = buildRedirectMatcher(matchingRedirect.source);
+  const match = aliasPathname.match(regex);
+  const params = {};
+  paramNames.forEach((name, index) => {
+    params[name] = match?.[index + 1] ?? "";
+  });
+
+  const redirectTargetPath = resolveRedirectDestination(
+    matchingRedirect.destination,
+    params
+  );
+
+  if (!sitemapPathSet.has(redirectTargetPath)) {
+    logVerificationFailure({
+      label,
+      url: `${siteUrl}${aliasPathname}`,
+      assertion: "redirect-target",
+      details: `Redirect target not in sitemap: ${redirectTargetPath}.`,
+    });
+    throw new Error("Prerender verification failed.");
+  }
+};
+
 const findTag = (html, tagName, attrName, attrValue) => {
   const pattern = new RegExp(
     `<${tagName}\\s+[^>]*${attrName}\\s*=\\s*["']${escapeRegExp(
@@ -1153,20 +1244,44 @@ const main = async () => {
   const findUrl = predicate =>
     urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
 
+  const sitemapPathSet = new Set(
+    urls.map(url => normalizePathname(new URL(url).pathname))
+  );
+
+  const sampleCanonicalTourUrl = findUrl(
+    pathname => /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalizePathname(pathname))
+  );
+  const sampleCanonicalTourPath = sampleCanonicalTourUrl
+    ? normalizePathname(new URL(sampleCanonicalTourUrl).pathname)
+    : null;
+  const sampleTourSegments = sampleCanonicalTourPath
+    ? sampleCanonicalTourPath.split("/").filter(Boolean)
+    : [];
+  const destinationAliasPath =
+    sampleTourSegments.length === 4
+      ? `/destinations/${sampleTourSegments[1]}/${sampleTourSegments[2]}/tours/${sampleTourSegments[3]}`
+      : null;
+  const destinationBookAliasPath = destinationAliasPath
+    ? `${destinationAliasPath}/book`
+    : null;
+
   const verificationTargets = [
     {
       label: "Homepage",
       url: findUrl(isHome),
+      requiresSitemapUrl: true,
     },
     {
       label: "Tour",
       url: findUrl(isTour),
+      requiresSitemapUrl: true,
     },
     {
       label: "Destination state",
       url: findUrl(pathname =>
         /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname))
       ),
+      requiresSitemapUrl: true,
     },
     {
       label: "Destination city",
@@ -1175,18 +1290,21 @@ const main = async () => {
           normalizePathname(pathname)
         )
       ),
+      requiresSitemapUrl: true,
     },
     {
       label: "Destination tour",
-      url: findUrl(
-        pathname =>
-          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          ) ||
-          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          )
-      ),
+      url: destinationAliasPath ? buildCanonicalUrl(destinationAliasPath) : null,
+      aliasPathname: destinationAliasPath,
+      requiresSitemapUrl: false,
+    },
+    {
+      label: "Destination book",
+      url: destinationBookAliasPath
+        ? buildCanonicalUrl(destinationBookAliasPath)
+        : null,
+      aliasPathname: destinationBookAliasPath,
+      requiresSitemapUrl: false,
     },
     {
       label: "Static",
@@ -1194,6 +1312,7 @@ const main = async () => {
         pathname =>
           normalizePathname(pathname) === "/faqs" || isStatic(pathname)
       ),
+      requiresSitemapUrl: true,
     },
   ];
 
@@ -1201,9 +1320,11 @@ const main = async () => {
     if (!target.url) {
       logVerificationFailure({
         label: target.label,
-        url: "unknown",
-        assertion: "route",
-        details: "No matching URL found in sitemap.",
+        url: target.url ?? target.aliasPathname ?? "missing-url",
+        assertion: target.requiresSitemapUrl ? "route" : "alias-route",
+        details: target.requiresSitemapUrl
+          ? "No matching URL found in sitemap."
+          : "Could not derive destination alias URL from canonical tour sample.",
       });
       throw new Error("Prerender verification failed.");
     }
@@ -1222,6 +1343,16 @@ const main = async () => {
   }
 
   for (const target of verificationTargets) {
+    if (target.aliasPathname) {
+      await verifyDestinationAliasRedirect({
+        label: target.label,
+        aliasPathname: normalizePathname(target.aliasPathname),
+        siteUrl: SITE_URL,
+        sitemapPathSet,
+      });
+      continue;
+    }
+
     const pathname = normalizePathname(new URL(target.url).pathname);
     const expectedUrl = buildCanonicalUrl(pathname);
     const allowDefaultSeo = isHome(pathname);
