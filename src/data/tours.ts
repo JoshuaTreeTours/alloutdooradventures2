@@ -5,7 +5,6 @@ import { manualTours } from "./tours.manual";
 import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
-import { SANTA_BARBARA_TOURS } from "./locations/us/california/santa-barbara.tours";
 import { applyTourPricing } from "./tourPricing";
 import { fareharborTourContentByKey } from "./fareharborContent.generated";
 import {
@@ -194,40 +193,14 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
-const dedupeToursByCanonicalKey = (tourList: Tour[]) => {
-  const toursByKey = new Map<string, Tour>();
-
-  tourList.forEach((tour) => {
-    const canonicalKey = `${tour.bookingProvider}:${tour.sourceOperatorSlug ?? ""}:${tour.sourceItemId ?? tour.id}`;
-    toursByKey.set(canonicalKey, tour);
-  });
-
-  return [...toursByKey.values()];
-};
-
-const BASE_TOURS: Tour[] = [
+export const tours: Tour[] = [
   ...toursGenerated,
   ...manualTours,
   ...flagstaffTours,
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-];
-
-const ALL_TOURS = dedupeToursByCanonicalKey([
-  ...BASE_TOURS,
-  ...SANTA_BARBARA_TOURS,
-]);
-
-if (ALL_TOURS.length < BASE_TOURS.length) {
-  throw new Error(
-    `Per-location tour merge reduced tour count (${ALL_TOURS.length} < ${BASE_TOURS.length})`,
-  );
-}
-
-export const tours: Tour[] = ALL_TOURS.map(normalizeFareharborTourContent).map(
-  applyTourPricing,
-);
+].map(normalizeFareharborTourContent).map(applyTourPricing);
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
