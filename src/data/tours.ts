@@ -15,8 +15,8 @@ export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
 
-
-const cleanText = (value?: string) => value?.replace(/\s+/g, " ").trim() || undefined;
+const cleanText = (value?: string) =>
+  value?.replace(/\s+/g, " ").trim() || undefined;
 
 const extractFareharborReference = (bookingUrl?: string) => {
   if (!bookingUrl) return null;
@@ -47,7 +47,9 @@ const normalizeFareharborTourContent = (tour: Tour): Tour => {
   const cached = cacheKey ? fareharborTourContentByKey[cacheKey] : undefined;
 
   const heroImageUrl =
-    cleanText(cached?.heroImageUrl) ?? cleanText(tour.heroImageUrl) ?? cleanText(tour.heroImage);
+    cleanText(cached?.heroImageUrl) ??
+    cleanText(tour.heroImageUrl) ??
+    cleanText(tour.heroImage);
   const sourceDescription =
     cleanText(cached?.sourceDescription) ??
     cleanText(tour.sourceDescription) ??
@@ -60,10 +62,15 @@ const normalizeFareharborTourContent = (tour: Tour): Tour => {
     heroImageUrl: heroImageUrl ?? tour.heroImageUrl,
     heroImageSource: heroImageUrl ? "fareharbor_media" : tour.heroImageSource,
     sourceDescription,
-    sourceDescriptionSource: sourceDescription ? "fareharbor" : tour.sourceDescriptionSource,
+    sourceDescriptionSource: sourceDescription
+      ? "fareharbor"
+      : tour.sourceDescriptionSource,
     sourceOperatorSlug:
-      cached?.sourceOperatorSlug ?? tour.sourceOperatorSlug ?? reference?.companyShortname,
-    sourceItemId: cached?.sourceItemId ?? tour.sourceItemId ?? reference?.itemId,
+      cached?.sourceOperatorSlug ??
+      tour.sourceOperatorSlug ??
+      reference?.companyShortname,
+    sourceItemId:
+      cached?.sourceItemId ?? tour.sourceItemId ?? reference?.itemId,
   };
 };
 
@@ -200,7 +207,9 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(normalizeFareharborTourContent).map(applyTourPricing);
+]
+  .map(normalizeFareharborTourContent)
+  .map(applyTourPricing);
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -240,6 +249,32 @@ export const getTourBySlugs = (
       tour.destination.citySlug === citySlug &&
       tour.slug === tourSlug
   );
+
+export const extractTourIdFromSlug = (tourSlug: string) => {
+  const normalized = tourSlug.trim();
+  if (!normalized) {
+    return null;
+  }
+  const match = normalized.match(/-([a-z0-9]+)$/i);
+  if (!match?.[1]) {
+    return null;
+  }
+  return match[1];
+};
+
+export const getTourById = (tourId: string) => {
+  const normalized = tourId.trim().toLowerCase();
+  if (!normalized) {
+    return null;
+  }
+
+  return (
+    tours.find(tour => {
+      const id = tour.id.toLowerCase();
+      return id === normalized || id.endsWith(`-${normalized}`);
+    }) ?? null
+  );
+};
 
 export const getToursByActivity = (activitySlug: string) =>
   tours.filter(tour => {
