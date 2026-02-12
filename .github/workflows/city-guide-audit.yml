@@ -22,5 +22,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build site
+        run: npm run build
+
+      - name: Guard tour SSR/schema output
+        run: npm run check:tour-route-seo
+
       - name: Run city guide audit (strict)
         run: npm run audit:city-guides:strict

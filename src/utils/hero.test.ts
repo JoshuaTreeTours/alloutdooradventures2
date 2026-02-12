@@ -67,6 +67,44 @@ describe("resolveCityHeroImage", () => {
     expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
   });
 
+
+  it("prefers FareHarbor-locked city hero when available", () => {
+    const image = resolveCityHeroImage({
+      citySlug: "sedona",
+      stateSlug: "arizona",
+      countryCode: "US",
+      cityTours: [
+        {
+          id: "non-fh",
+          title: "Non FH Top Rated",
+          heroImage: "https://cdn.example.com/non-fh.jpg",
+          bookingProvider: "viator",
+          destination: {
+            citySlug: "sedona",
+            stateSlug: "arizona",
+            countryCode: "US",
+          },
+          badges: { reviewCount: 500, rating: 5 },
+        },
+        {
+          id: "fh-lock",
+          title: "FH Hero Lock",
+          heroImage: "https://cdn.filestackcontent.com/fh-sedona-lock",
+          heroImageSource: "fareharbor_media",
+          bookingProvider: "fareharbor",
+          destination: {
+            citySlug: "sedona",
+            stateSlug: "arizona",
+            countryCode: "US",
+          },
+          badges: { reviewCount: 5, rating: 4.4 },
+        },
+      ],
+    });
+
+    expect(image).toBe("https://cdn.filestackcontent.com/fh-sedona-lock");
+  });
+
   it("never falls back to activity default images like canoe-hero", () => {
     const image = resolveCityHeroImage({
       citySlug: "joshua-tree",
