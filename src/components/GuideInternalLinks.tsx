@@ -316,21 +316,22 @@ export default function GuideInternalLinks({
         <h2 className="text-lg font-semibold text-[#1f2a1f] md:text-xl">
           Plan your adventure
         </h2>
-        <div className="mt-4 md:hidden">
+        <div className="mt-4 max-w-[420px] md:min-w-[320px]">
           <label
             htmlFor="plan-adventure-links"
             className="text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
           >
-            Choose a tour focus
+            Explore tours in {placeLabel}
           </label>
           <select
             id="plan-adventure-links"
-            className="mt-3 w-full rounded-2xl border border-[#2f4a2f]/20 bg-white px-4 py-3 text-sm font-semibold text-[#2f4a2f]"
+            aria-label={`Explore tours in ${placeLabel}`}
+            className="mt-3 w-full rounded-2xl border border-[#2f4a2f]/20 bg-white px-4 py-3 text-sm font-semibold text-[#2f4a2f] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f4a2f]/40"
             defaultValue=""
             onChange={handleSelectChange}
           >
             <option value="" disabled>
-              Select an option
+              Select a tour type…
             </option>
             {primaryLinks.map((link) => (
               <option key={link.href} value={link.href}>
@@ -339,14 +340,18 @@ export default function GuideInternalLinks({
             ))}
           </select>
         </div>
-        <div className="mt-4 hidden flex-wrap gap-3 md:flex">
-          {primaryLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-                {link.label}
-              </a>
-            </Link>
-          ))}
+        <div className="mt-4 text-xs text-[#4c5f4c]">
+          <p className="sr-only md:not-sr-only">
+            Quick links:{" "}
+            {primaryLinks.map((link, index) => (
+              <span key={link.href}>
+                <Link href={link.href}>
+                  <a className="underline underline-offset-2 hover:text-[#2f4a2f]">{link.label}</a>
+                </Link>
+                {index < primaryLinks.length - 1 ? " · " : null}
+              </span>
+            ))}
+          </p>
         </div>
       </section>
     );
