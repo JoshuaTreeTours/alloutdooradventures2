@@ -6,8 +6,6 @@ import {
   getCityBySlugs,
   getStateBySlug,
   states,
-  type City,
-  type StateDestination,
 } from "../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -15,8 +13,6 @@ import {
 } from "../../data/tourFallbacks";
 import { getCityTourDetailPath, getToursByCity } from "../../data/tours";
 import { getStaticPageSeo } from "../../utils/seo";
-
-const DEFAULT_STATE_SLUG = "california";
 
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
@@ -37,14 +33,6 @@ const resolveCity = (stateSlug: string, citySlug: string | null) => {
   );
 };
 
-const isCityInState = (state: StateDestination | null, city: City | null) => {
-  if (!state || !city) {
-    return false;
-  }
-
-  return state.cities.some(candidate => candidate.slug === city.slug);
-};
-
 export default function ToursLanding() {
   const seo = getStaticPageSeo("/tours");
   const didInitRef = useRef(false);
@@ -52,10 +40,6 @@ export default function ToursLanding() {
     () => [...states].sort((a, b) => a.name.localeCompare(b.name)),
     []
   );
-  const defaultStateSlug =
-    sortedStates.find(state => state.slug === DEFAULT_STATE_SLUG)?.slug ??
-    sortedStates[0]?.slug ??
-    "";
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
 
@@ -74,10 +58,18 @@ export default function ToursLanding() {
     );
   }, [selectedState]);
 
-  const selectedCity = useMemo(
-    () => resolveCity(selectedStateSlug, selectedCitySlug),
-    [selectedCitySlug, selectedStateSlug]
-  );
+  const selectedCity = useMemo(() => {
+    if (!selectedStateSlug) {
+      return null;
+    }
+
+    const city = resolveCity(selectedStateSlug, selectedCitySlug);
+    if (!city) {
+      return null;
+    }
+
+    return cityOptions.some(option => option.slug === city.slug) ? city : null;
+  }, [cityOptions, selectedCitySlug, selectedStateSlug]);
 
   const tours = useMemo(() => {
     if (!selectedStateSlug || !selectedCitySlug) {
@@ -87,7 +79,7 @@ export default function ToursLanding() {
     return getToursByCity(selectedStateSlug, selectedCitySlug);
   }, [selectedCitySlug, selectedStateSlug]);
 
-  const updateUrl = (stateSlug: string, citySlug: string, replace = false) => {
+  const updateUrl = (stateSlug: string, citySlug: string) => {
     const query = new URLSearchParams();
 
     if (stateSlug) {
@@ -100,46 +92,44 @@ export default function ToursLanding() {
 
     const queryString = query.toString();
     const nextUrl = `${window.location.pathname}${queryString ? `?${queryString}` : ""}`;
-
-    if (replace) {
-      window.history.replaceState({}, "", nextUrl);
-      return;
-    }
-
     window.history.pushState({}, "", nextUrl);
   };
 
   useEffect(() => {
-    if (didInitRef.current || !sortedStates.length) {
+    if (didInitRef.current) {
       return;
     }
 
     const params = new URLSearchParams(window.location.search);
     const urlStateSlug = params.get("state");
-    const resolvedUrlState = resolveState(urlStateSlug);
-    const nextStateSlug = resolvedUrlState?.slug ?? defaultStateSlug;
-
-    const resolvedState = resolveState(nextStateSlug);
     const urlCitySlug = params.get("city");
-    const resolvedUrlCity = resolveCity(nextStateSlug, urlCitySlug);
 
-    const nextCitySlug = isCityInState(resolvedState, resolvedUrlCity)
-      ? (resolvedUrlCity?.slug ?? "")
-      : (resolvedState?.cities[0]?.slug ?? "");
+    if (!urlStateSlug || !urlCitySlug) {
+      didInitRef.current = true;
+      return;
+    }
 
-    setSelectedStateSlug(nextStateSlug);
-    setSelectedCitySlug(nextCitySlug);
-    updateUrl(nextStateSlug, nextCitySlug, true);
+    const resolvedState = resolveState(urlStateSlug);
+    const resolvedCity = resolvedState
+      ? resolveCity(urlStateSlug, urlCitySlug)
+      : null;
+    const isValidCity = Boolean(
+      resolvedCity &&
+      resolvedState?.cities.some(city => city.slug === resolvedCity.slug)
+    );
+
+    if (resolvedState && resolvedCity && isValidCity) {
+      setSelectedStateSlug(resolvedState.slug);
+      setSelectedCitySlug(resolvedCity.slug);
+    }
+
     didInitRef.current = true;
-  }, [defaultStateSlug, sortedStates]);
+  }, []);
 
   const handleStateChange = (nextStateSlug: string) => {
-    const nextState = resolveState(nextStateSlug);
-    const nextCitySlug = nextState?.cities[0]?.slug ?? "";
-
     setSelectedStateSlug(nextStateSlug);
-    setSelectedCitySlug(nextCitySlug);
-    updateUrl(nextStateSlug, nextCitySlug);
+    setSelectedCitySlug("");
+    updateUrl(nextStateSlug, "");
   };
 
   const handleCityChange = (nextCitySlug: string) => {
@@ -174,6 +164,7 @@ export default function ToursLanding() {
                 value={selectedStateSlug}
                 onChange={event => handleStateChange(event.target.value)}
               >
+                <option value="">Select a state</option>
                 {sortedStates.map(state => (
                   <option key={state.slug} value={state.slug}>
                     {state.name}
@@ -188,11 +179,11 @@ export default function ToursLanding() {
                 className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
                 value={selectedCitySlug}
                 onChange={event => handleCityChange(event.target.value)}
-                disabled={!cityOptions.length}
+                disabled={!selectedStateSlug}
               >
-                {cityOptions.length ? null : (
-                  <option value="">Select a city</option>
-                )}
+                <option value="">
+                  {selectedStateSlug ? "Select a city" : "Select a state first"}
+                </option>
                 {cityOptions.map(city => (
                   <option key={city.slug} value={city.slug}>
                     {city.name}
@@ -203,9 +194,9 @@ export default function ToursLanding() {
           </div>
         </section>
 
-        {!selectedCity || !selectedState ? (
+        {!selectedState || !selectedCity ? (
           <p className="mt-8 text-sm text-[#405040]">
-            Select a city to view available tours.
+            Choose a state and city to see tours.
           </p>
         ) : (
           <section className="mt-10">
