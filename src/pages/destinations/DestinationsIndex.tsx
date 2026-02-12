@@ -46,11 +46,11 @@ export default function DestinationsIndex() {
     const hasMoreGuides = guideState.cities.length > guideCityLimit;
 
     return (
-      <div className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+      <div className="relative z-0 overflow-hidden rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           Available Guides in {stateName}
         </p>
-        <div className="mt-3 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
+        <div className="mt-3 flex flex-wrap content-start gap-2 text-sm text-[#2f4a2f]">
           {visibleCities.map((city) => (
             <Link key={`${stateSlug}-${city.slug}`} href={`/guides/us/${stateSlug}/${city.slug}`}>
               <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
@@ -159,7 +159,7 @@ export default function DestinationsIndex() {
 
         <section className="mt-10 space-y-12" aria-label="States">
           {rockyMountainStates.length > 0 ? (
-            <div className="space-y-6">
+            <section className="dest-section space-y-6">
               <div className="text-center">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                   Rocky Mountain
@@ -168,9 +168,12 @@ export default function DestinationsIndex() {
                   Featured Rocky Mountain States
                 </h2>
               </div>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="dest-grid grid gap-6 md:grid-cols-2">
                 {rockyMountainStates.map((state) => (
-                  <div key={`rocky-mountain-${state.name}`} className="space-y-4">
+                  <div
+                    key={`rocky-mountain-${state.name}`}
+                    className="dest-card-stack flex flex-col gap-4 overflow-hidden"
+                  >
                     <DestinationCard
                       destination={state}
                       ctaLabel="Discover"
@@ -181,12 +184,12 @@ export default function DestinationsIndex() {
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ) : null}
           {regionOrder
             .filter((region) => destinationsByRegion[region]?.length)
             .map((region) => (
-              <div key={region} className="space-y-6">
+              <section key={region} className="dest-section space-y-6">
                 <div className="text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
@@ -195,9 +198,12 @@ export default function DestinationsIndex() {
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
-                <div className="grid gap-6">
+                <div className="dest-grid grid gap-6">
                   {destinationsByRegion[region].map((state) => (
-                    <div key={`${region}-${state.name}`} className="space-y-4">
+                    <div
+                      key={`${region}-${state.name}`}
+                      className="dest-card-stack flex flex-col gap-4 overflow-hidden"
+                    >
                       <DestinationCard
                         destination={state}
                         ctaLabel="View adventures"
@@ -208,7 +214,7 @@ export default function DestinationsIndex() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </section>
             ))}
         </section>
 

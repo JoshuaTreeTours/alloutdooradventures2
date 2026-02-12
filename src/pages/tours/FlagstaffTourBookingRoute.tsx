@@ -1,6 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
+import BookingRenderErrorBoundary from "../../components/booking/BookingRenderErrorBoundary";
+import FareHarborEmbed from "../../components/booking/FareHarborEmbed";
 import FAQBlock from "../../components/FAQBlock";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
@@ -15,7 +17,9 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../data/flagstaffTours";
 import {
+  buildFareharborEmbedUrl,
   getFareharborParams,
+  getFareharborItemFromUrl,
   normalizeFareharborUrl,
 } from "../../lib/fareharbor";
 import { formatStartingPrice } from "../../lib/pricing";
@@ -41,44 +45,16 @@ export default function FlagstaffTourBookingRoute({
     getCityBySlugs("arizona", "flagstaff") ??
     getFallbackCityBySlugs("arizona", "flagstaff");
 
-  if (!state || !city) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
-        <h1 className="text-2xl font-semibold">Booking not found</h1>
-        <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that tour booking page. Head back to tours to keep
-          exploring.
-        </p>
-        <div className="mt-6">
-          <Link href="/destinations/arizona/flagstaff/tours">
-            <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
-              Back to tours
-            </a>
-          </Link>
-        </div>
-      </main>
-    );
-  }
-
   const tour = getFlagstaffTourBySlug(params.tourSlug);
+  const tourTitle = tour?.title ?? "Book this tour";
 
-  if (!tour) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
-        <h1 className="text-2xl font-semibold">Booking not found</h1>
-        <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that tour booking page. Head back to tours to keep
-          exploring.
-        </p>
-        <div className="mt-6">
-          <Link href="/destinations/arizona/flagstaff/tours">
-            <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
-              Back to tours
-            </a>
-          </Link>
-        </div>
-      </main>
-    );
+  if (!state || !city || !tour) {
+    console.warn("[booking] Missing Flagstaff booking metadata.", {
+      hasState: Boolean(state),
+      hasCity: Boolean(city),
+      hasTour: Boolean(tour),
+      params,
+    });
   }
 
   // Safe in SSR/build contexts.
@@ -86,25 +62,33 @@ export default function FlagstaffTourBookingRoute({
     typeof window !== "undefined" &&
     new URLSearchParams(window.location.search).get("debug") === "1";
 
-  const cityHref = `/destinations/states/${state.slug}/cities/${city.slug}`;
-  const stateHref = state.isFallback
+  const cityHref = `/destinations/states/${state?.slug ?? "arizona"}/cities/${city?.slug ?? "flagstaff"}`;
+  const stateHref = state?.isFallback
     ? "/destinations"
-    : `/destinations/states/${state.slug}`;
-  const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
-  const tourDetailHref = getFlagstaffTourDetailPath(tour);
-  const detailUrl = getFlagstaffTourDetailPath(tour);
-  const bookingUrl = getTourBookingPath(tour);
+    : `/destinations/states/${state?.slug ?? "arizona"}`;
+  const toursHref = `/destinations/${state?.slug ?? "arizona"}/${city?.slug ?? "flagstaff"}/tours`;
+  const tourDetailHref = tour
+    ? getFlagstaffTourDetailPath(tour)
+    : `/tours/${params.tourSlug}`;
+  const detailUrl = tour ? getFlagstaffTourDetailPath(tour) : tourDetailHref;
+  const bookingUrl = tour
+    ? getTourBookingPath(tour)
+    : `/tours/${params.tourSlug}/book`;
   const heroImage = resolveHeroImageForRoute({
     route: bookingUrl,
-    tour,
+    tour: tour ?? undefined,
   }) ?? undefined;
   const metaDescription = buildMetaDescription(
-    `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
-    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
+    tour
+      ? `Reserve ${tour.title} in ${city?.name ?? "Flagstaff"}, ${state?.name ?? "Arizona"}.`
+      : "Reserve this tour in Flagstaff, Arizona.",
+    tour?.shortDescription ?? tour?.badges.tagline ?? tour?.longDescription,
   );
-  const seoTitle = `${tour.title} Booking | ${SITE_BRAND_NAME}`;
+  const seoTitle = tour
+    ? `${tour.title} Booking | ${SITE_BRAND_NAME}`
+    : `Book this tour | ${SITE_BRAND_NAME}`;
   const structuredDataNodes = useMemo(() => {
-    if (!detailUrl || !bookingUrl) {
+    if (!detailUrl || !bookingUrl || !tour) {
       return null;
     }
     return [
@@ -120,12 +104,12 @@ export default function FlagstaffTourBookingRoute({
         tourName: tour.title,
       }),
     ];
-  }, [bookingUrl, detailUrl, heroImage, metaDescription, tour.title]);
+  }, [bookingUrl, detailUrl, heroImage, metaDescription, tour?.title]);
 
   useStructuredData(structuredDataNodes);
 
-  const disclosure = getAffiliateDisclosure(tour);
-  const isFareharbor = tour.bookingProvider === "fareharbor";
+  const disclosure = tour ? getAffiliateDisclosure(tour) : null;
+  const isFareharbor = tour?.bookingProvider === "fareharbor";
 
   const [embedStatus, setEmbedStatus] = useState<
     "idle" | "loading" | "loaded" | "failed"
@@ -182,10 +166,15 @@ export default function FlagstaffTourBookingRoute({
     }
   };
 
-  const embedSourceUrl = isFareharbor ? tour.bookingUrl : tour.bookingWidgetUrl;
-  const attributedBookingUrl = ensureFareharborParams(tour.bookingUrl);
+  const embedSourceUrl = tour
+    ? isFareharbor
+      ? tour.bookingUrl
+      : tour.bookingWidgetUrl
+    : undefined;
+  const attributedBookingUrl = ensureFareharborParams(tour?.bookingUrl);
   const attributedWidgetUrl = ensureFareharborParams(embedSourceUrl);
-  const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
+  const fallbackBookingUrl =
+    attributedBookingUrl ?? tour?.bookingUrl ?? tourDetailHref;
 
   const embedAudit = isDebugMode ? auditAttribution(attributedWidgetUrl) : null;
   const fallbackAudit = isDebugMode
@@ -206,9 +195,11 @@ export default function FlagstaffTourBookingRoute({
     typeof navigator !== "undefined" &&
     /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-  const startingAt = formatStartingPrice(tour.startingPrice, tour.currency);
+  const startingAt = tour
+    ? formatStartingPrice(tour.startingPrice, tour.currency)
+    : null;
   const departureLocation =
-    tour.destination.city !== "Unknown" && tour.destination.state !== "Unknown"
+    tour && tour.destination.city !== "Unknown" && tour.destination.state !== "Unknown"
       ? `${tour.destination.city}, ${tour.destination.state}`
       : undefined;
 
@@ -242,8 +233,31 @@ export default function FlagstaffTourBookingRoute({
     return () => window.clearTimeout(timeout);
   }, [attributedWidgetUrl, embedStatus, isIOS]);
 
+  const fareharborItem =
+    getFareharborItemFromUrl(embedSourceUrl) ??
+    getFareharborItemFromUrl(tour?.bookingUrl);
+
+  const resolvedFareharborEmbedUrl = buildFareharborEmbedUrl({
+    baseUrl: attributedWidgetUrl,
+    companySlug: fareharborItem?.companyShortname,
+    itemId: fareharborItem?.itemId,
+  });
+
+  if (isFareharbor && !resolvedFareharborEmbedUrl) {
+    console.warn("[booking] Missing FareHarbor embed URL.", {
+      tourSlug: params.tourSlug,
+      companySlug: fareharborItem?.companyShortname,
+      itemId: fareharborItem?.itemId,
+    });
+  }
+
   return (
-    <>
+    <BookingRenderErrorBoundary
+      fallbackTitle="Book this tour"
+      fallbackMessage="We hit a snag while loading this booking page. You can head back to the tour details and try again."
+      fallbackHref={tourDetailHref}
+      fallbackLinkLabel="Back to tour details"
+    >
       <Seo
         title={seoTitle}
         description={metaDescription}
@@ -259,11 +273,11 @@ export default function FlagstaffTourBookingRoute({
             </Link>
             <span>/</span>
             <Link href={stateHref}>
-              <a>{state.name}</a>
+              <a>{state?.name ?? "Arizona"}</a>
             </Link>
             <span>/</span>
             <Link href={cityHref}>
-              <a>{city.name}</a>
+              <a>{city?.name ?? "Flagstaff"}</a>
             </Link>
             <span>/</span>
             <Link href={toursHref}>
@@ -271,7 +285,7 @@ export default function FlagstaffTourBookingRoute({
             </Link>
             <span>/</span>
             <Link href={tourDetailHref}>
-              <a>{tour.title}</a>
+              <a>{tourTitle}</a>
             </Link>
             <span>/</span>
             <span className="text-white">Book</span>
@@ -282,7 +296,7 @@ export default function FlagstaffTourBookingRoute({
               Booking
             </p>
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
-              {tour.title}
+              {tourTitle}
             </h1>
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
               Reserve your spot on the official booking page. If the embedded
@@ -321,17 +335,30 @@ export default function FlagstaffTourBookingRoute({
       <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
         {attributedWidgetUrl && !redirectMode ? (
           <div className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6">
-            <iframe
-              title={`${tour.title} booking`}
-              src={attributedWidgetUrl}
-              className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
-              allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
-              sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
-              onLoad={() => {
-                setEmbedStatus("loaded");
-                setRedirectMode(false);
-              }}
-            />
+            {isFareharbor ? (
+              <FareHarborEmbed
+                title={`${tourTitle} booking`}
+                baseUrl={attributedWidgetUrl}
+                companySlug={fareharborItem?.companyShortname}
+                itemId={fareharborItem?.itemId}
+                onLoad={() => {
+                  setEmbedStatus("loaded");
+                  setRedirectMode(false);
+                }}
+              />
+            ) : (
+              <iframe
+                title={`${tourTitle} booking`}
+                src={attributedWidgetUrl}
+                className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
+                allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
+                sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+                onLoad={() => {
+                  setEmbedStatus("loaded");
+                  setRedirectMode(false);
+                }}
+              />
+            )}
           </div>
         ) : null}
 
@@ -347,6 +374,12 @@ export default function FlagstaffTourBookingRoute({
             Having trouble with the embed? Use the booking button to open the
             reservation page in a new tab.
           </p>
+          {!attributedWidgetUrl ? (
+            <p className="mt-3 text-sm text-[#405040]">
+              We couldn’t load the embedded calendar. Use the tour details page
+              if you need more info before booking.
+            </p>
+          ) : null}
 
           <a
             className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
@@ -441,6 +474,6 @@ export default function FlagstaffTourBookingRoute({
 
       <FAQBlock />
       </main>
-    </>
+    </BookingRenderErrorBoundary>
   );
 }

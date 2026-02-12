@@ -10,14 +10,17 @@
   "scripts": {
     "dev": "vite --host",
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
-    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/enrich-fareharbor-tour-content.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host",
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "check:tour-route-seo": "node scripts/check-tour-route-seo.mjs",
+    "enrich:fareharbor-content": "tsx scripts/enrich-fareharbor-tour-content.ts",
+    "smoke:booking": "tsx scripts/smoke-booking-urls.tsx"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

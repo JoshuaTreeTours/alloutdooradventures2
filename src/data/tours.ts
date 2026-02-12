@@ -5,7 +5,9 @@ import { manualTours } from "./tours.manual";
 import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
+import { SANTA_BARBARA_TOURS } from "./locations/us/california/santa-barbara.tours";
 import { applyTourPricing } from "./tourPricing";
+import { fareharborTourContentByKey } from "./fareharborContent.generated";
 import {
   extractTourBaseDescription,
   normalizeDescriptionForDedupe,
@@ -13,6 +15,72 @@ import {
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
+
+
+const cleanText = (value?: string) => value?.replace(/\s+/g, " ").trim() || undefined;
+
+const extractFareharborReference = (bookingUrl?: string) => {
+  if (!bookingUrl) return null;
+  try {
+    const parsed = new URL(bookingUrl);
+    const match =
+      parsed.pathname.match(/\/embeds\/book\/([^/]+)\/items\/(\d+)/) ??
+      parsed.pathname.match(/\/embeds\/calendar\/([^/]+)\/items\/(\d+)/);
+    if (!match?.[1] || !match?.[2]) return null;
+    return { companyShortname: match[1], itemId: match[2] };
+  } catch {
+    return null;
+  }
+};
+
+const getFareharborCacheKey = (companyShortname: string, itemId: string) =>
+  `${companyShortname}:${itemId}`;
+
+const normalizeFareharborTourContent = (tour: Tour): Tour => {
+  if (tour.bookingProvider !== "fareharbor") {
+    return tour;
+  }
+
+  const reference = extractFareharborReference(tour.bookingUrl);
+  const cacheKey = reference
+    ? getFareharborCacheKey(reference.companyShortname, reference.itemId)
+    : null;
+  const cached = cacheKey ? fareharborTourContentByKey[cacheKey] : undefined;
+
+  const heroImageUrl =
+    cleanText(cached?.heroImageUrl) ?? cleanText(tour.heroImageUrl) ?? cleanText(tour.heroImage);
+  const sourceDescription =
+    cleanText(cached?.sourceDescription) ??
+    cleanText(tour.sourceDescription) ??
+    cleanText(tour.shortDescription) ??
+    cleanText(tour.longDescription);
+
+  return {
+    ...tour,
+    heroImage: heroImageUrl ?? tour.heroImage,
+    heroImageUrl: heroImageUrl ?? tour.heroImageUrl,
+    heroImageSource: heroImageUrl ? "fareharbor_media" : tour.heroImageSource,
+    sourceDescription,
+    sourceDescriptionSource: sourceDescription ? "fareharbor" : tour.sourceDescriptionSource,
+    sourceOperatorSlug:
+      cached?.sourceOperatorSlug ?? tour.sourceOperatorSlug ?? reference?.companyShortname,
+    sourceItemId: cached?.sourceItemId ?? tour.sourceItemId ?? reference?.itemId,
+  };
+};
+
+export const getTourHeroImage = (tour: Tour) => {
+  if (tour.heroImageSource === "fareharbor_media" && tour.heroImageUrl) {
+    return tour.heroImageUrl;
+  }
+  return tour.heroImageUrl ?? tour.heroImage;
+};
+
+export const getTourMetaDescriptionSource = (tour: Tour) => {
+  if (tour.sourceDescriptionSource === "fareharbor" && tour.sourceDescription) {
+    return tour.sourceDescription;
+  }
+  return undefined;
+};
 
 type ProviderConfig = {
   label: string;
@@ -126,14 +194,40 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
 // Sunset Flight; Durango Half-Day Raft Trip; Jeep Wrangler Rental Seats 5 (4 Door);
 // Durango Snowdown Fight.
 
-export const tours: Tour[] = [
+const dedupeToursByCanonicalKey = (tourList: Tour[]) => {
+  const toursByKey = new Map<string, Tour>();
+
+  tourList.forEach((tour) => {
+    const canonicalKey = `${tour.bookingProvider}:${tour.sourceOperatorSlug ?? ""}:${tour.sourceItemId ?? tour.id}`;
+    toursByKey.set(canonicalKey, tour);
+  });
+
+  return [...toursByKey.values()];
+};
+
+const BASE_TOURS: Tour[] = [
   ...toursGenerated,
   ...manualTours,
   ...flagstaffTours,
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(applyTourPricing);
+];
+
+const ALL_TOURS = dedupeToursByCanonicalKey([
+  ...BASE_TOURS,
+  ...SANTA_BARBARA_TOURS,
+]);
+
+if (ALL_TOURS.length < BASE_TOURS.length) {
+  throw new Error(
+    `Per-location tour merge reduced tour count (${ALL_TOURS.length} < ${BASE_TOURS.length})`,
+  );
+}
+
+export const tours: Tour[] = ALL_TOURS.map(normalizeFareharborTourContent).map(
+  applyTourPricing,
+);
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
