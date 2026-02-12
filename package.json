@@ -96,5 +96,6 @@
     "overrides": {
       "tailwindcss>nanoid": "3.3.7"
     }
-  }
+  },
+  "packageManager": "pnpm@9.12.3"
 }
