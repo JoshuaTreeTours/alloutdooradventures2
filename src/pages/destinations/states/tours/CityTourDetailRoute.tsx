@@ -25,7 +25,7 @@ import {
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/hero";
-import { buildMetaDescription } from "../../../../utils/seo";
+import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -73,16 +73,10 @@ export default function CityTourDetailRoute({
     "product",
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
+  const seoDescription = tour ? buildTourMeta(tour, canonicalUrl).description : undefined;
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const metaDescription =
-    tour && state && city
-      ? buildMetaDescription(
-          tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-          `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-        )
-      : undefined;
   const cityHref = state && city
     ? `/destinations/states/${state.slug}/cities/${city.slug}`
     : "";
@@ -101,7 +95,7 @@ export default function CityTourDetailRoute({
       buildWebPageStructuredData({
         url: canonicalUrl,
         name: tour.title,
-        description: metaDescription,
+        description: seoDescription,
         image: heroImage,
       }),
       buildTourProductStructuredData({
@@ -125,7 +119,7 @@ export default function CityTourDetailRoute({
     city?.name,
     cityHref,
     heroImage,
-    metaDescription,
+    seoDescription,
     productDescription,
     state?.name,
     stateHref,
@@ -170,13 +164,7 @@ export default function CityTourDetailRoute({
   }
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
-  const title = `${tour.title} | ${city.name}, ${state.name} Outdoor Tour`;
-  const description =
-    metaDescription ??
-    buildMetaDescription(
-      tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-      `Book ${tour.title} in ${city.name}, ${state.name} with trusted guides and curated outdoor experiences.`,
-    );
+  const seoMeta = buildTourMeta(tour, canonicalUrl);
   const relatedTours = (isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
@@ -190,10 +178,12 @@ export default function CityTourDetailRoute({
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={title}
-        description={description}
-        url={canonicalUrl}
+        title={seoMeta.title}
+        description={seoMeta.description}
+        url={seoMeta.canonical}
         image={heroImage ?? null}
+        robots={seoMeta.robots}
+        googlebot={seoMeta.googlebot}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
