@@ -130,6 +130,7 @@ const buildTourFromRow = (row: CsvRow, activitySlug: string): Tour | null => {
     primaryCategory: activitySlug,
     tags: tags.length ? tags : undefined,
     destination: {
+      country,
       state: country,
       stateSlug: slugify(country),
       city,

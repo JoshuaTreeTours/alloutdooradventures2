@@ -11,7 +11,8 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
-import { getCityTourDetailPath, getToursByCity } from "../../data/tours";
+import { getCityTourDetailPath, tours } from "../../data/tours";
+import type { Tour } from "../../data/tours.types";
 import { getStaticPageSeo } from "../../utils/seo";
 
 const resolveState = (stateSlug: string | null) => {
@@ -42,6 +43,9 @@ export default function ToursLanding() {
   );
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [selectedInternationalCity, setSelectedInternationalCity] =
+    useState("");
 
   const selectedState = useMemo(
     () => resolveState(selectedStateSlug),
@@ -71,13 +75,64 @@ export default function ToursLanding() {
     return cityOptions.some(option => option.slug === city.slug) ? city : null;
   }, [cityOptions, selectedCitySlug, selectedStateSlug]);
 
-  const tours = useMemo(() => {
-    if (!selectedStateSlug || !selectedCitySlug) {
+  const internationalTours = useMemo(
+    () => tours.filter(tour => tour.destination.country !== "United States"),
+    []
+  );
+
+  const countries = useMemo(
+    () =>
+      Array.from(
+        new Set(
+          internationalTours
+            .map(tour => tour.destination.country)
+            .filter((country): country is string => Boolean(country))
+        )
+      ).sort((a, b) => a.localeCompare(b)),
+    [internationalTours]
+  );
+
+  const internationalCities = useMemo(() => {
+    if (!selectedCountry) {
       return [];
     }
 
-    return getToursByCity(selectedStateSlug, selectedCitySlug);
-  }, [selectedCitySlug, selectedStateSlug]);
+    return Array.from(
+      new Set(
+        internationalTours
+          .filter(tour => tour.destination.country === selectedCountry)
+          .map(tour => tour.destination.city)
+      )
+    ).sort((a, b) => a.localeCompare(b));
+  }, [internationalTours, selectedCountry]);
+
+  const filteredTours = useMemo(() => {
+    let nextTours: Tour[] = [];
+
+    if (selectedStateSlug && selectedCitySlug) {
+      nextTours = tours.filter(
+        tour =>
+          tour.destination.country === "United States" &&
+          tour.destination.stateSlug === selectedStateSlug &&
+          tour.destination.citySlug === selectedCitySlug
+      );
+    }
+
+    if (selectedCountry && selectedInternationalCity) {
+      nextTours = tours.filter(
+        tour =>
+          tour.destination.country === selectedCountry &&
+          tour.destination.city === selectedInternationalCity
+      );
+    }
+
+    return nextTours;
+  }, [
+    selectedCitySlug,
+    selectedCountry,
+    selectedInternationalCity,
+    selectedStateSlug,
+  ]);
 
   const updateUrl = (stateSlug: string, citySlug: string) => {
     const query = new URLSearchParams();
@@ -129,12 +184,31 @@ export default function ToursLanding() {
   const handleStateChange = (nextStateSlug: string) => {
     setSelectedStateSlug(nextStateSlug);
     setSelectedCitySlug("");
+    setSelectedCountry("");
+    setSelectedInternationalCity("");
     updateUrl(nextStateSlug, "");
   };
 
   const handleCityChange = (nextCitySlug: string) => {
     setSelectedCitySlug(nextCitySlug);
+    setSelectedCountry("");
+    setSelectedInternationalCity("");
     updateUrl(selectedStateSlug, nextCitySlug);
+  };
+
+  const handleCountryChange = (nextCountry: string) => {
+    setSelectedCountry(nextCountry);
+    setSelectedInternationalCity("");
+    setSelectedStateSlug("");
+    setSelectedCitySlug("");
+    updateUrl("", "");
+  };
+
+  const handleInternationalCityChange = (nextCity: string) => {
+    setSelectedInternationalCity(nextCity);
+    setSelectedStateSlug("");
+    setSelectedCitySlug("");
+    updateUrl("", "");
   };
 
   return (
@@ -194,30 +268,71 @@ export default function ToursLanding() {
           </div>
         </section>
 
-        {!selectedState || !selectedCity ? (
+        <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold text-[#1f2a1f]">
+            International Locations
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+              Country
+              <select
+                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                value={selectedCountry}
+                onChange={event => handleCountryChange(event.target.value)}
+              >
+                <option value="">Select a country</option>
+                {countries.map(country => (
+                  <option key={country} value={country}>
+                    {country}
+                  </option>
+                ))}
+              </select>
+            </label>
+
+            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+              City
+              <select
+                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                value={selectedInternationalCity}
+                onChange={event =>
+                  handleInternationalCityChange(event.target.value)
+                }
+                disabled={!selectedCountry}
+              >
+                <option value="">
+                  {selectedCountry ? "Select a city" : "Select a country first"}
+                </option>
+                {internationalCities.map(city => (
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+        </section>
+
+        {filteredTours.length === 0 ? (
           <p className="mt-8 text-sm text-[#405040]">
-            Choose a state and city to see tours.
+            Please select a location to view tours.
           </p>
         ) : (
           <section className="mt-10">
             <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
-              Tours in {selectedCity.name}, {selectedState.name}
+              Tours in{" "}
+              {selectedCountry && selectedInternationalCity
+                ? `${selectedInternationalCity}, ${selectedCountry}`
+                : `${selectedCity?.name ?? ""}, ${selectedState?.name ?? ""}`}
             </h2>
-            {tours.length ? (
-              <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                {tours.map(tour => (
-                  <TourCard
-                    key={tour.id}
-                    tour={tour}
-                    href={getCityTourDetailPath(tour)}
-                  />
-                ))}
-              </div>
-            ) : (
-              <p className="mt-6 text-sm text-[#405040]">
-                No tours found for this city yet.
-              </p>
-            )}
+            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {filteredTours.map(tour => (
+                <TourCard
+                  key={tour.id}
+                  tour={tour}
+                  href={getCityTourDetailPath(tour)}
+                />
+              ))}
+            </div>
           </section>
         )}
       </main>

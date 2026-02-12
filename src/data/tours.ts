@@ -133,7 +133,15 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(applyTourPricing);
+].map((tour) =>
+  applyTourPricing({
+    ...tour,
+    destination: {
+      ...tour.destination,
+      country: tour.destination.country || "United States",
+    },
+  })
+);
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
