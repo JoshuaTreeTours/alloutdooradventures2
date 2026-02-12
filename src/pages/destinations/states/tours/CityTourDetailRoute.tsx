@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
+import JsonLd from "../../../../components/JsonLd";
 import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
@@ -26,6 +27,7 @@ import {
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
 import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
+import { buildTourJsonLd } from "../../../../lib/buildTourJsonLd";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -165,6 +167,14 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
+  const tourJsonLd = buildTourJsonLd({
+    name: tour.title,
+    description: seoMeta.description,
+    url: seoMeta.canonical,
+    image: heroImage ?? undefined,
+    price: tour.startingPrice ?? undefined,
+    priceCurrency: tour.currency ?? undefined,
+  });
   const relatedTours = (isFlagstaff
     ? flagstaffTours
     : getToursByCity(state.slug, city.slug)
@@ -185,6 +195,7 @@ export default function CityTourDetailRoute({
         robots={seoMeta.robots}
         googlebot={seoMeta.googlebot}
       />
+      <JsonLd data={tourJsonLd} id="structured-data-tour" />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
