@@ -1,71 +1,53 @@
+import { buildTourMeta } from "../src/lib/tourMeta";
+import { getTourBySlug } from "../src/data/tourRegistry";
+import { SITE_URL } from "../src/utils/seo";
+
 export const config = { runtime: "edge" };
 
-function htmlEscape(str: string) {
-  return str
+const htmlEscape = (value: string) =>
+  value
     .replaceAll("&", "&amp;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
-}
 
-type OgMeta = {
-  title: string;
-  description: string;
-  canonical: string;
-  image: string;
+const parseDestinationTourPath = (path: string) => {
+  const normalizedPath = path.split("?")[0].split("#")[0];
+  const segments = normalizedPath.split("/");
+
+  const state = segments[2] ?? "";
+  const slug = segments[5] ?? "";
+
+  if (!state || !slug) {
+    return null;
+  }
+
+  return { state, slug };
 };
-
-function getStaticOgMeta(path: string, origin: string): OgMeta | null {
-  const map: Record<string, Omit<OgMeta, "canonical">> = {
-    "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223": {
-      title:
-        "Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland | Portland, Oregon Outdoor Tour",
-      description:
-        "Guided Tour – Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland (Portland, Oregon).",
-      image: "https://cdn.filestackcontent.com/Tr5TrDymQNOHOJPRAoGF",
-    },
-
-    "/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917": {
-      title: "Boulder E-Bike Art & Nature Tour | Flagstaff Outdoor Adventure",
-      description:
-        "Explore trails, art, and nature in Flagstaff on a guided e-bike experience with curated stops.",
-      image: `${origin}/hero.jpg`,
-    },
-
-    "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1": {
-      title: "San Andreas Fault Jeep Tour | Palm Springs Desert Adventure",
-      description:
-        "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
-      image: `${origin}/hero.jpg`,
-    },
-  };
-
-  const hit = map[path];
-  if (!hit) return null;
-
-  return {
-    title: hit.title,
-    description: hit.description,
-    canonical: `${origin}${path}`,
-    image: hit.image,
-  };
-}
 
 export default async function handler(req: Request) {
   const url = new URL(req.url);
-  const origin = url.origin;
+  const path = url.searchParams.get("path") ?? "/";
+  const parsed = parseDestinationTourPath(path);
 
-  const path = url.searchParams.get("path") || "/";
-  const meta = getStaticOgMeta(path, origin);
-
-  if (!meta) {
+  if (!parsed) {
     return new Response("Not Found", { status: 404 });
   }
+
+  const tour = getTourBySlug(parsed.state, parsed.slug);
+
+  if (!tour) {
+    return new Response("Not Found", { status: 404 });
+  }
+
+  const canonicalUrl = `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
+  const meta = buildTourMeta(tour, canonicalUrl);
+  const image = tour.image.startsWith("http") ? tour.image : `${SITE_URL}${tour.image}`;
 
   const title = htmlEscape(meta.title);
   const description = htmlEscape(meta.description);
   const canonical = htmlEscape(meta.canonical);
-  const image = htmlEscape(meta.image);
+  const ogImage = htmlEscape(image);
 
   const html = `<!doctype html>
 <html lang="en">
@@ -80,12 +62,12 @@ export default async function handler(req: Request) {
 <meta property="og:url" content="${canonical}" />
 <meta property="og:title" content="${title}" />
 <meta property="og:description" content="${description}" />
-<meta property="og:image" content="${image}" />
+<meta property="og:image" content="${ogImage}" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${title}" />
 <meta name="twitter:description" content="${description}" />
-<meta name="twitter:image" content="${image}" />
+<meta name="twitter:image" content="${ogImage}" />
 </head>
 <body></body>
 </html>`;
