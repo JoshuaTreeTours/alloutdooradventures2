@@ -18,7 +18,8 @@
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
     "format": "prettier --write .",
-    "build:ssg": "vite build && node scripts/prerender-pilot.mjs"
+    "build:ssg": "vite build && node scripts/prerender-pilot.mjs",
+    "build:vercel": "npm run build:ssg"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
