@@ -24,7 +24,10 @@ import {
 } from "../../../../lib/fareharbor";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import { SITE_URL } from "../../../../utils/seo";
-import { buildBookingMeta } from "../../../../lib/tourSeo";
+import {
+  buildBookingMeta,
+  getCanonicalFromBookingPath,
+} from "../../../../lib/tourMeta";
 import {
   buildReserveActionStructuredData,
   buildWebPageStructuredData,
@@ -137,7 +140,8 @@ export default function CityTourBookingRoute({
     tour,
   }) ?? undefined;
 
-  const canonicalTourUrl = `${SITE_URL}/tours/${tour.slug}`;
+  const canonicalTourUrl =
+    getCanonicalFromBookingPath(bookingUrl) || `${SITE_URL}/tours/${tour.slug}`;
   const bookingMeta = buildBookingMeta(tour, canonicalTourUrl);
   const structuredDataNodes = useMemo(() => {
     if (!detailUrl || !bookingUrl) {

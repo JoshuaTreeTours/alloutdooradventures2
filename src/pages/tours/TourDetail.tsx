@@ -26,7 +26,7 @@ import {
   buildTourProductStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
-import { buildTourMeta } from "../../lib/tourSeo";
+import { buildTourMeta } from "../../lib/tourMeta";
 
 type TourDetailProps = {
   params: {
