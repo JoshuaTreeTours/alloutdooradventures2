@@ -239,6 +239,12 @@ const STATIC_PATHS = new Set([
   "/disclosure",
 ]);
 
+const PILOT_TOUR_PRERENDER_PATHS = [
+  "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223",
+  "/destinations/georgia/savannah/tours/historical-bike-tour-keep-your-bike-after-362767",
+  "/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370",
+];
+
 const isHome = pathname => normalizePathname(pathname) === "/";
 
 const isStatic = pathname => STATIC_PATHS.has(normalizePathname(pathname));
@@ -300,6 +306,45 @@ const extractAttribute = (tag, attrName) => {
     return null;
   }
   return match[1];
+};
+
+const escapeHtml = value =>
+  String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/\"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+const replacePrerenderContent = ({ html, tour }) => {
+  if (!tour) {
+    return html;
+  }
+
+  const location = `${tour.destination.city}, ${tour.destination.state}`;
+  const summary = tour.shortDescription ?? tour.badges?.tagline ?? "";
+  const description = tour.longDescription ?? summary;
+  const price = Number.isFinite(tour.priceFrom) ? `$${Math.round(tour.priceFrom)}` : null;
+  const duration = Number.isFinite(tour.durationHours)
+    ? `${tour.durationHours} hour${tour.durationHours === 1 ? "" : "s"}`
+    : null;
+
+  const content = [
+    `<main data-prerendered-tour="${escapeHtml(tour.slug)}">`,
+    `<article>`,
+    `<h1>${escapeHtml(tour.title)}</h1>`,
+    `<p>${escapeHtml(location)}</p>`,
+    summary ? `<p>${escapeHtml(summary)}</p>` : "",
+    description ? `<p>${escapeHtml(description)}</p>` : "",
+    price ? `<p>From ${escapeHtml(price)}</p>` : "",
+    duration ? `<p>Duration: ${escapeHtml(duration)}</p>` : "",
+    `</article>`,
+    `</main>`,
+  ]
+    .filter(Boolean)
+    .join("");
+
+  return html.replace('<div id="root"></div>', `<div id="root">${content}</div>`);
 };
 
 const buildTourBreadcrumbs = ({
@@ -723,10 +768,9 @@ const main = async () => {
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
 
-  const urls = await readSitemapUrls();
-  if (!urls.length) {
-    return;
-  }
+  const urls = PILOT_TOUR_PRERENDER_PATHS.map(pathname =>
+    buildCanonicalUrl(pathname)
+  );
 
   const tourDescriptionCounts = new Map();
   for (const url of urls) {
@@ -1130,55 +1174,17 @@ const main = async () => {
       htmlWithMeta,
       structuredData
     );
-    await writeFile(outputPath, htmlWithStructuredData, "utf8");
+    const htmlWithContent = replacePrerenderContent({
+      html: htmlWithStructuredData,
+      tour: tourForSeo,
+    });
+    await writeFile(outputPath, htmlWithContent, "utf8");
   }
 
-  const findUrl = predicate =>
-    urls.find(url => predicate(normalizePathname(new URL(url).pathname)));
-
-  const verificationTargets = [
-    {
-      label: "Homepage",
-      url: findUrl(isHome),
-    },
-    {
-      label: "Tour",
-      url: findUrl(isTour),
-    },
-    {
-      label: "Destination state",
-      url: findUrl(pathname =>
-        /^\/destinations\/states\/[^/]+$/.test(normalizePathname(pathname))
-      ),
-    },
-    {
-      label: "Destination city",
-      url: findUrl(pathname =>
-        /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
-          normalizePathname(pathname)
-        )
-      ),
-    },
-    {
-      label: "Destination tour",
-      url: findUrl(
-        pathname =>
-          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          ) ||
-          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          )
-      ),
-    },
-    {
-      label: "Static",
-      url: findUrl(
-        pathname =>
-          normalizePathname(pathname) === "/faqs" || isStatic(pathname)
-      ),
-    },
-  ];
+  const verificationTargets = urls.map(url => ({
+    label: `Pilot route: ${new URL(url).pathname}`,
+    url,
+  }));
 
   verificationTargets.forEach(target => {
     if (!target.url) {
@@ -1191,18 +1197,6 @@ const main = async () => {
       throw new Error("Prerender verification failed.");
     }
   });
-
-  const faqPath = "/faqs";
-  const faqPrerendered = await ensurePrerenderedFile(faqPath);
-  if (!faqPrerendered) {
-    logVerificationFailure({
-      label: "FAQ",
-      url: buildCanonicalUrl(faqPath),
-      assertion: "prerender",
-      details: "Missing prerendered FAQ HTML output.",
-    });
-    throw new Error("Prerender verification failed.");
-  }
 
   for (const target of verificationTargets) {
     const pathname = normalizePathname(new URL(target.url).pathname);
