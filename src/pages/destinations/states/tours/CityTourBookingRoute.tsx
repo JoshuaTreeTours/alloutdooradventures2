@@ -23,8 +23,11 @@ import {
   normalizeFareharborUrl,
 } from "../../../../lib/fareharbor";
 import { formatStartingPrice } from "../../../../lib/pricing";
-import { SITE_BRAND_NAME } from "../../../../utils/site";
-import { buildMetaDescription } from "../../../../utils/seo";
+import { SITE_URL } from "../../../../utils/seo";
+import {
+  buildBookingMeta,
+  getCanonicalFromBookingPath,
+} from "../../../../lib/tourMeta";
 import {
   buildReserveActionStructuredData,
   buildWebPageStructuredData,
@@ -137,11 +140,9 @@ export default function CityTourBookingRoute({
     tour,
   }) ?? undefined;
 
-  const metaDescription = buildMetaDescription(
-    `Reserve ${tour.title} in ${city.name}, ${state.name}.`,
-    tour.shortDescription ?? tour.badges.tagline ?? tour.longDescription,
-  );
-  const seoTitle = `${tour.title} Booking | ${SITE_BRAND_NAME}`;
+  const canonicalTourUrl =
+    getCanonicalFromBookingPath(bookingUrl) || `${SITE_URL}/tours/${tour.slug}`;
+  const bookingMeta = buildBookingMeta(tour, canonicalTourUrl);
   const structuredDataNodes = useMemo(() => {
     if (!detailUrl || !bookingUrl) {
       return null;
@@ -150,7 +151,7 @@ export default function CityTourBookingRoute({
       buildWebPageStructuredData({
         url: bookingUrl,
         name: `${tour.title} booking`,
-        description: metaDescription,
+        description: bookingMeta.description,
         image: heroImage,
       }),
       buildReserveActionStructuredData({
@@ -159,7 +160,7 @@ export default function CityTourBookingRoute({
         tourName: tour.title,
       }),
     ];
-  }, [bookingUrl, detailUrl, heroImage, metaDescription, tour.title]);
+  }, [bookingMeta.description, bookingUrl, detailUrl, heroImage, tour.title]);
 
   useStructuredData(structuredDataNodes);
 
@@ -196,10 +197,12 @@ export default function CityTourBookingRoute({
   return (
     <>
       <Seo
-        title={seoTitle}
-        description={metaDescription}
-        url={bookingUrl}
+        title={bookingMeta.title}
+        description={bookingMeta.description}
+        url={bookingMeta.canonical}
         image={heroImage ?? null}
+        robots={bookingMeta.robots}
+        googlebot={bookingMeta.googlebot}
       />
       <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">
