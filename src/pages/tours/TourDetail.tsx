@@ -20,11 +20,13 @@ import {
 } from "../../data/tourNarratives";
 import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
 import { buildTourMetaDescription } from "../../utils/seo";
+import { SITE_URL } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
+import { buildTourMeta } from "../../lib/tourSeo";
 
 type TourDetailProps = {
   params: {
@@ -68,6 +70,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         name: tour.title,
         description: metaDescription,
         image: heroImage,
+        mainEntityId: `${detailUrl}#product`,
       }),
       buildTourProductStructuredData({
         tour,
@@ -108,8 +111,8 @@ export default function TourDetail({ params }: TourDetailProps) {
   const destinationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
-  const title = `${tour.title} | ${destinationLabel} Outdoor Tour`;
-  const description = metaDescription ?? buildTourMetaDescription(tour);
+  const canonicalUrl = `${SITE_URL}/tours/${tour.slug}`;
+  const tourMeta = buildTourMeta(tour, canonicalUrl);
   const disclosure = getAffiliateDisclosure(tour);
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
@@ -121,10 +124,12 @@ export default function TourDetail({ params }: TourDetailProps) {
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={title}
-        description={description}
-        url={detailUrl}
+        title={tourMeta.title}
+        description={tourMeta.description}
+        url={tourMeta.canonical}
         image={heroImage ?? null}
+        robots={tourMeta.robots}
+        googlebot={tourMeta.googlebot}
       />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">

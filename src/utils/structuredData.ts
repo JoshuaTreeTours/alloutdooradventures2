@@ -277,11 +277,13 @@ export const buildWebPageStructuredData = ({
   name,
   description,
   image,
+  mainEntityId,
 }: {
   url: string;
   name: string;
   description?: string;
   image?: string;
+  mainEntityId?: string;
 }) => {
   const imageId = image ? `${url}#primaryimage` : undefined;
   return {
@@ -292,6 +294,7 @@ export const buildWebPageStructuredData = ({
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
+    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
     ...(image
       ? {
           primaryImageOfPage: buildImageObject(image, imageId),
@@ -356,7 +359,7 @@ export const buildTourProductStructuredData = ({
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
-    brand: { "@id": SITE_ORGANIZATION_ID },
+    brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
     offers: offer,
     location: buildTourLocationStructuredData(tour),
