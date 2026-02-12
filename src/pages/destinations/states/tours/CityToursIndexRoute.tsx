@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
+import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
@@ -16,6 +17,7 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
+import { buildCanonicalUrl } from "../../../../utils/seo";
 import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
@@ -61,6 +63,11 @@ export default function CityToursIndexRoute({
   const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
   const stateHref = basePath;
   const toursHref = `${cityHref}/tours`;
+  const cityToursTitle = `${activityLabel ? `${activityLabel} tours in ` : "Tours in "}${city?.name ?? ""} | All Outdoor Adventures`;
+  const cityToursDescription = city
+    ? `Browse guided experiences in ${city.name} with live booking links and activity filters.`
+    : "Browse guided experiences with live booking links and activity filters.";
+  const cityToursCanonical = buildCanonicalUrl(toursHref || "/destinations");
   const heroImage = resolveHeroImageForRoute({
     route: toursHref,
     state,
@@ -115,6 +122,12 @@ export default function CityToursIndexRoute({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={cityToursTitle}
+        description={cityToursDescription}
+        url={cityToursCanonical}
+        image={heroImage ?? null}
+      />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
