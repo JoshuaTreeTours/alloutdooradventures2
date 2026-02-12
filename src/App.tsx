@@ -21,7 +21,7 @@ import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursInde
 import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
 import CityTourBookingRoute from "./pages/destinations/states/tours/CityTourBookingRoute";
 import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
-import ToursIndex from "./pages/ToursIndex";
+import ToursLanding from "./pages/tours/ToursLanding";
 import ToursCatalog from "./pages/ToursCatalog";
 import GuidesIndex from "./pages/guides/GuidesIndex";
 import StateGuideRoute from "./pages/guides/StateGuideRoute";
@@ -140,7 +140,7 @@ export default function App() {
         <Route path="/destinations/states/:stateSlug" component={StateRoute} />
         <Route path="/destinations/:stateSlug" component={StateLandingRoute} />
 
-        <Route path="/tours" component={ToursIndex} />
+        <Route path="/tours" component={ToursLanding} />
         <Route path="/tours/catalog" component={ToursCatalog} />
         <Route path="/tours/day" component={DayToursIndex} />
         <Route path="/tours/day/cycling" component={DayCyclingTours} />
@@ -188,18 +188,12 @@ export default function App() {
         <Route path="/tours/activities/detours" component={DetoursTours} />
         <Route path="/tours/activities/hiking" component={HikingTours} />
         <Route path="/tours/activities/multi-day" component={MultiDayTours} />
-        <Route
-          path="/tours/activities/canoeing"
-          component={CanoeingTours}
-        />
+        <Route path="/tours/activities/canoeing" component={CanoeingTours} />
         <Route
           path="/tours/:tourSlug/book"
           component={FlagstaffTourBookingRoute}
         />
-        <Route
-          path="/tours/:tourSlug"
-          component={FlagstaffTourDetailRoute}
-        />
+        <Route path="/tours/:tourSlug" component={FlagstaffTourDetailRoute} />
         <Route
           path="/tours/:stateSlug/:citySlug/:slug"
           component={TourDetail}
