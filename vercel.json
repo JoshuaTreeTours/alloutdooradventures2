@@ -39,6 +39,39 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(facebookexternalhit|Facebot|Twitterbot|Slackbot|LinkedInBot|Discordbot|WhatsApp|TelegramBot|Applebot|Googlebot|bingbot)"
+        }
+      ],
+      "destination": "/api/og?path=/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223"
+    },
+    {
+      "source": "/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(facebookexternalhit|Facebot|Twitterbot|Slackbot|LinkedInBot|Discordbot|WhatsApp|TelegramBot|Applebot|Googlebot|bingbot)"
+        }
+      ],
+      "destination": "/api/og?path=/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(facebookexternalhit|Facebot|Twitterbot|Slackbot|LinkedInBot|Discordbot|WhatsApp|TelegramBot|Applebot|Googlebot|bingbot)"
+        }
+      ],
+      "destination": "/api/og?path=/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1"
+    },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/(.*)", "destination": "/index.html" }
