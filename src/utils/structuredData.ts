@@ -277,11 +277,13 @@ export const buildWebPageStructuredData = ({
   name,
   description,
   image,
+  mainEntityId,
 }: {
   url: string;
   name: string;
   description?: string;
   image?: string;
+  mainEntityId?: string;
 }) => {
   const imageId = image ? `${url}#primaryimage` : undefined;
   return {
@@ -291,7 +293,8 @@ export const buildWebPageStructuredData = ({
     name: sanitizeSchemaName(name),
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
-    publisher: { "@id": SITE_ORGANIZATION_ID },
+    publisher: { "@id": SITE_BRAND_ID },
+    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
     ...(image
       ? {
           primaryImageOfPage: buildImageObject(image, imageId),
@@ -302,9 +305,11 @@ export const buildWebPageStructuredData = ({
 };
 
 export const buildBreadcrumbList = (
-  items: { name: string; url: string }[]
+  items: { name: string; url: string }[],
+  id?: string
 ) => ({
   "@type": "BreadcrumbList",
+  ...(id ? { "@id": id } : {}),
   itemListElement: items.map((item, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -356,11 +361,12 @@ export const buildTourProductStructuredData = ({
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
-    brand: { "@id": SITE_ORGANIZATION_ID },
+    brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
     offers: offer,
     location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
+    isRelatedTo: { "@id": `${detailUrl}#trip` },
   };
 };
 
@@ -391,8 +397,9 @@ export const buildTourTripStructuredData = ({
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     provider: { "@id": SITE_BRAND_ID },
     offers: offer,
-    location: buildTourLocationStructuredData(tour),
+    tourLocation: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
+    isRelatedTo: { "@id": `${detailUrl}#product` },
   };
 };
 
