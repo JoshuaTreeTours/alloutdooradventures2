@@ -1,3 +1,5 @@
+import ogManifest from "../src/data/ogManifest.json";
+
 export const config = { runtime: "edge" };
 
 function htmlEscape(str: string) {
@@ -17,7 +19,15 @@ type OgMeta = {
 
 type ParsedTourPath = {
   stateSlug: string;
+  citySlug: string;
+  tourSlug: string;
   canonicalPath: string;
+};
+
+type OgManifestEntry = {
+  title: string;
+  description: string;
+  image?: string;
 };
 
 function toTitleCaseSlug(slug: string) {
@@ -29,48 +39,33 @@ function toTitleCaseSlug(slug: string) {
 }
 
 function parseTourPath(path: string): ParsedTourPath | null {
-  const match = path.match(/^\/destinations\/([a-z0-9-]+)\/(.+)\/tours\/([^/?#]+)\/?$/i);
+  const match = path.match(
+    /^\/destinations\/([a-z0-9-]+)\/([a-z0-9-]+)\/tours\/([^/?#]+)\/?$/i,
+  );
   if (!match) return null;
 
   return {
     stateSlug: match[1].toLowerCase(),
+    citySlug: match[2].toLowerCase(),
+    tourSlug: match[3].toLowerCase(),
     canonicalPath: path,
   };
 }
 
 function getStaticOgMeta(path: string, origin: string): OgMeta | null {
-  const map: Record<string, Omit<OgMeta, "canonical">> = {
-    "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223": {
-      title:
-        "Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland | Portland, Oregon Outdoor Tour",
-      description:
-        "Guided Tour – Gorge-ous Sunset Multnomah Falls Waterfall Tour from Portland (Portland, Oregon).",
-      image: "https://cdn.filestackcontent.com/Tr5TrDymQNOHOJPRAoGF",
-    },
-
-    "/destinations/arizona/flagstaff/tours/boulder-e-bike-art-and-nature-tour-628917": {
-      title: "Boulder E-Bike Art & Nature Tour | Flagstaff Outdoor Adventure",
-      description:
-        "Explore trails, art, and nature in Flagstaff on a guided e-bike experience with curated stops.",
-      image: `${origin}/hero.jpg`,
-    },
-
-    "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-2335p1": {
-      title: "San Andreas Fault Jeep Tour | Palm Springs Desert Adventure",
-      description:
-        "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
-      image: `${origin}/hero.jpg`,
-    },
-
-  };
-
-  const hit = map[path];
+  const manifest = ogManifest as Record<string, OgManifestEntry>;
+  const hit = manifest[path];
   if (hit) {
+    const image =
+      hit.image && /^https?:\/\//i.test(hit.image)
+        ? hit.image
+        : `${origin}/hero.jpg`;
+
     return {
       title: hit.title,
       description: hit.description,
       canonical: `${origin}${path}`,
-      image: hit.image,
+      image,
     };
   }
 
@@ -78,10 +73,12 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
   if (!parsed) return null;
 
   const stateName = toTitleCaseSlug(parsed.stateSlug);
+  const cityName = toTitleCaseSlug(parsed.citySlug);
+  const tourName = toTitleCaseSlug(parsed.tourSlug);
 
   return {
-    title: `All Outdoor Adventures | ${stateName} Tour`,
-    description: `${stateName} tour on All Outdoor Adventures.`,
+    title: `${tourName} | ${cityName}, ${stateName} Tours`,
+    description: `Book ${tourName} in ${cityName}, ${stateName}. Curated tours & experiences on All Outdoor Adventures.`,
     canonical: `${origin}${parsed.canonicalPath}`,
     image: `${origin}/hero.jpg`,
   };
