@@ -38,6 +38,13 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
         "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
       image: `${origin}/hero.jpg`,
     },
+
+    "/destinations/arizona/sedona/tours/sedona-scenic-adventure-tour-214429": {
+      title: "Sedona Scenic Adventure Tour | Sedona Red Rock Experience",
+      description:
+        "Discover Sedona's iconic red rock landscapes on a scenic guided adventure tour.",
+      image: `${origin}/hero.jpg`,
+    },
   };
 
   const hit = map[path];
