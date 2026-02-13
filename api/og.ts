@@ -38,17 +38,32 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
         "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
       image: `${origin}/hero.jpg`,
     },
+
   };
 
   const hit = map[path];
-  if (!hit) return null;
+  if (hit) {
+    return {
+      title: hit.title,
+      description: hit.description,
+      canonical: `${origin}${path}`,
+      image: hit.image,
+    };
+  }
 
-  return {
-    title: hit.title,
-    description: hit.description,
-    canonical: `${origin}${path}`,
-    image: hit.image,
-  };
+  const isArizonaTourPath =
+    path.startsWith("/destinations/arizona/") && path.includes("/tours/");
+
+  if (isArizonaTourPath) {
+    return {
+      title: "All Outdoor Adventures | Arizona Tour",
+      description: "Arizona tour on All Outdoor Adventures.",
+      canonical: `${origin}${path}`,
+      image: `${origin}/hero.jpg`,
+    };
+  }
+
+  return null;
 }
 
 export default async function handler(req: Request) {
