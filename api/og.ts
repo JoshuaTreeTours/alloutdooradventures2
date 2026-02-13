@@ -15,6 +15,29 @@ type OgMeta = {
   image: string;
 };
 
+type ParsedTourPath = {
+  stateSlug: string;
+  canonicalPath: string;
+};
+
+function toTitleCaseSlug(slug: string) {
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+}
+
+function parseTourPath(path: string): ParsedTourPath | null {
+  const match = path.match(/^\/destinations\/([a-z0-9-]+)\/(.+)\/tours\/([^/?#]+)\/?$/i);
+  if (!match) return null;
+
+  return {
+    stateSlug: match[1].toLowerCase(),
+    canonicalPath: path,
+  };
+}
+
 function getStaticOgMeta(path: string, origin: string): OgMeta | null {
   const map: Record<string, Omit<OgMeta, "canonical">> = {
     "/destinations/oregon/portland/tours/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223": {
@@ -51,19 +74,17 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
     };
   }
 
-  const isArizonaTourPath =
-    path.startsWith("/destinations/arizona/") && path.includes("/tours/");
+  const parsed = parseTourPath(path);
+  if (!parsed) return null;
 
-  if (isArizonaTourPath) {
-    return {
-      title: "All Outdoor Adventures | Arizona Tour",
-      description: "Arizona tour on All Outdoor Adventures.",
-      canonical: `${origin}${path}`,
-      image: `${origin}/hero.jpg`,
-    };
-  }
+  const stateName = toTitleCaseSlug(parsed.stateSlug);
 
-  return null;
+  return {
+    title: `All Outdoor Adventures | ${stateName} Tour`,
+    description: `${stateName} tour on All Outdoor Adventures.`,
+    canonical: `${origin}${parsed.canonicalPath}`,
+    image: `${origin}/hero.jpg`,
+  };
 }
 
 export default async function handler(req: Request) {
