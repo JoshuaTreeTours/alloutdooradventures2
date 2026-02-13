@@ -61,6 +61,7 @@ function getStaticOgMeta(path: string, origin: string): OgMeta | null {
         "Off-road jeep tour through the legendary San Andreas Fault zone with professional desert guides.",
       image: `${origin}/hero.jpg`,
     },
+
   };
 
   const hit = map[path];
