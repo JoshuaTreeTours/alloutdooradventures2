@@ -17,9 +17,11 @@ export type Engine2Seo = {
 
 const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
 
+const sanitizeTourLabel = (value: string) =>
+  value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
+
 const stripForbiddenSeoTokens = (value: string) =>
-  normalizeWhitespace(value)
-    .replace(/\bFood\s+Tour\b/gi, "Guided Tour")
+  normalizeWhitespace(sanitizeTourLabel(value))
     .replace(/\s*[·|]\s*ID\s*\w+/gi, "")
     .replace(/\bID\s*\w+\b/gi, "")
     .replace(/\b[a-z0-9]+(?:-[a-z0-9]+){1,}-\d{3,}\b/gi, "")
@@ -53,7 +55,7 @@ const buildDescription = (tour: Engine2Tour) => {
 
 export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
   const location = [tour.geo.city, tour.geo.region].filter(Boolean).join(", ");
-  const title = `${tour.name} | ${location} Outdoor Tour`;
+  const title = `${sanitizeTourLabel(tour.name)} | ${location} Outdoor Tour`;
   const description = buildDescription(tour);
   const canonical = buildCanonicalUrl(tour.seo.canonicalPath);
   const image = buildImageUrl(tour.images.hero || tour.seo.ogImage);

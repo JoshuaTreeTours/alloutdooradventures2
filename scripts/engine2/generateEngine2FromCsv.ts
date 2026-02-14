@@ -17,7 +17,7 @@ const slugify = (value: string) =>
     .trim()
     .replace(/\s+/g, "-");
 
-const sanitizeFoodTourLabel = (value: string) =>
+const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
 
 const parseCsvRows = (text: string) => {
@@ -95,7 +95,7 @@ const normalizeStringArray = (value: unknown, fallback: string[] = []) => {
   const source = Array.isArray(value) ? value : fallback;
   return source
     .filter((item): item is string => typeof item === "string")
-    .map((item) => sanitizeFoodTourLabel(item.trim()))
+    .map((item) => sanitizeTourLabel(item.trim()))
     .filter(Boolean);
 };
 
@@ -124,7 +124,7 @@ const main = async () => {
       if (!id || !rawName) {
         return null;
       }
-      const name = sanitizeFoodTourLabel(rawName);
+      const name = sanitizeTourLabel(rawName);
       const slug = `${slugify(rawName)}-${id}`;
       const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
       const providerName = row.company_name || "Unknown provider";
@@ -163,14 +163,14 @@ const main = async () => {
         },
         seo: {
           title: "",
-          description: sanitizeFoodTourLabel(
+          description: sanitizeTourLabel(
             override.metaDescription ?? defaultCopy.metaDescription,
           ),
           canonicalPath,
           ogImage: primaryImage,
         },
         content: {
-          experienceText: sanitizeFoodTourLabel(
+          experienceText: sanitizeTourLabel(
             override.experienceText ?? defaultCopy.experienceText,
           ),
           highlights,
