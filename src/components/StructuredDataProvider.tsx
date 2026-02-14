@@ -12,7 +12,7 @@ import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
 type StructuredDataNode = Record<string, unknown>;
 
 type StructuredDataContextValue = {
-  setNodes: (nodes: StructuredDataNode[] | null) => void;
+  setNodes: React.Dispatch<React.SetStateAction<StructuredDataNode[] | null>>;
 };
 
 const StructuredDataContext =
@@ -65,10 +65,6 @@ export const StructuredDataProvider = ({
   const [location] = useLocation();
 
   useEffect(() => {
-    setNodes(null);
-  }, [location]);
-
-  useEffect(() => {
     const baseNodes = getSiteStructuredDataNodes();
     const pageNodes = nodes?.length ? nodes : [];
     const canonicalUrl =
@@ -119,7 +115,7 @@ export const useStructuredData = (nodes: StructuredDataNode[] | null) => {
     context.setNodes(nodes);
 
     return () => {
-      context.setNodes(null);
+      context.setNodes((current) => (current === nodes ? null : current));
     };
   }, [context, nodes]);
 };
