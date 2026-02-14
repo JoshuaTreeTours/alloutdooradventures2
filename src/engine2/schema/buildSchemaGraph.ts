@@ -15,13 +15,13 @@ const normalizeStringArray = (value: unknown) => {
 
   return value
     .filter((item): item is string => typeof item === "string")
-    .map((item) => item.trim())
+    .map(item => item.trim())
     .filter(Boolean);
 };
 
 export const buildSchemaGraph = (
   tour: Engine2Tour,
-  seo: Engine2Seo,
+  seo: Engine2Seo
 ): StructuredDataNode[] => {
   const providerId = `${seo.canonical}#provider`;
   const productId = `${seo.canonical}#product`;
@@ -70,7 +70,7 @@ export const buildSchemaGraph = (
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: {
         "@type": "Offer",
-        url: tour.booking.regularLink,
+        url: tour.booking.bookingUrl,
         availability: "https://schema.org/InStock",
       },
       provider: { "@id": providerId },

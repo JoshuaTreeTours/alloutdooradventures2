@@ -8,6 +8,7 @@ import {
 import { palmSpringsContentOverrides } from "../../src/engine2/content/overrides/palm-springs";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
 import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
+import { buildFareHarborCalendarUrl } from "../../src/lib/fareharbor/buildBookingUrl";
 
 const slugify = (value: string) =>
   value
@@ -63,8 +64,8 @@ const parseCsvRows = (text: string) => {
 const parseCsv = (contents: string): Record<string, string>[] => {
   const rows = parseCsvRows(contents);
   if (!rows.length) return [];
-  const headers = rows[0].map((header) => header.trim());
-  return rows.slice(1).map((row) => {
+  const headers = rows[0].map(header => header.trim());
+  return rows.slice(1).map(row => {
     const entry: Record<string, string> = {};
     headers.forEach((header, i) => {
       entry[header] = row[i]?.trim() ?? "";
@@ -95,14 +96,62 @@ const normalizeStringArray = (value: unknown, fallback: string[] = []) => {
   const source = Array.isArray(value) ? value : fallback;
   return source
     .filter((item): item is string => typeof item === "string")
-    .map((item) => sanitizeTourLabel(item.trim()))
+    .map(item => sanitizeTourLabel(item.trim()))
     .filter(Boolean);
+};
+
+type ParsedFareHarbor = {
+  shortname: string;
+  itemId: string;
+  refUrl: string;
+  backUrl: string;
+};
+
+const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
+  if (!url) {
+    return undefined;
+  }
+
+  try {
+    const parsed = new URL(url);
+    if (parsed.hostname !== "fareharbor.com") {
+      return undefined;
+    }
+
+    const match =
+      parsed.pathname.match(
+        /\/embeds\/(?:book|calendar)\/([^/]+)\/items\/(\d+)/
+      ) ??
+      parsed.pathname.match(/\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/);
+
+    if (!match?.[1] || !match?.[2]) {
+      return undefined;
+    }
+
+    const ref = parsed.searchParams.get("ref") ?? "";
+    const back = parsed.searchParams.get("back") ?? ref;
+
+    return {
+      shortname: match[1],
+      itemId: match[2],
+      refUrl: /^https?:\/\//.test(ref)
+        ? ref
+        : "https://www.alloutdooradventures.com",
+      backUrl: /^https?:\/\//.test(back)
+        ? back
+        : /^https?:\/\//.test(ref)
+          ? ref
+          : "https://www.alloutdooradventures.com/",
+    };
+  } catch {
+    return undefined;
+  }
 };
 
 const parseLocation = (value: string) => {
   const parts = value
     .split("/")
-    .map((part) => part.trim())
+    .map(part => part.trim())
     .filter(Boolean);
   return {
     country: parts[0] ?? ENGINE2_DESTINATIONS.palmSprings.country,
@@ -118,7 +167,7 @@ const main = async () => {
   const rows = parseCsv(csv);
 
   const generatedTours = rows
-    .map((row) => {
+    .map(row => {
       const id = row.item_id;
       const rawName = row.item_name;
       if (!id || !rawName) {
@@ -139,11 +188,26 @@ const main = async () => {
       const override = palmSpringsContentOverrides[id] ?? {};
 
       const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
-      const gallery = normalizeStringArray([primaryImage], [ENGINE2_DEFAULT_IMAGE]);
+      const gallery = normalizeStringArray(
+        [primaryImage],
+        [ENGINE2_DEFAULT_IMAGE]
+      );
       const highlights = normalizeStringArray(
         override.highlights,
-        normalizeStringArray(defaultCopy.highlights),
+        normalizeStringArray(defaultCopy.highlights)
       );
+
+      const fareharbor =
+        parseFareHarborDetails(row.regular_link) ??
+        parseFareHarborDetails(row.calendar_link) ??
+        (row.company_shortname && row.item_id
+          ? {
+              shortname: row.company_shortname,
+              itemId: row.item_id,
+              refUrl: "https://www.alloutdooradventures.com",
+              backUrl: "https://www.alloutdooradventures.com/",
+            }
+          : undefined);
 
       const draftTour = {
         id,
@@ -164,14 +228,14 @@ const main = async () => {
         seo: {
           title: "",
           description: sanitizeTourLabel(
-            override.metaDescription ?? defaultCopy.metaDescription,
+            override.metaDescription ?? defaultCopy.metaDescription
           ),
           canonicalPath,
           ogImage: primaryImage,
         },
         content: {
           experienceText: sanitizeTourLabel(
-            override.experienceText ?? defaultCopy.experienceText,
+            override.experienceText ?? defaultCopy.experienceText
           ),
           highlights,
         },
@@ -180,8 +244,10 @@ const main = async () => {
           gallery,
         },
         booking: {
-          calendarLink: row.calendar_link || undefined,
-          regularLink: row.regular_link,
+          bookingUrl: fareharbor
+            ? buildFareHarborCalendarUrl(fareharbor)
+            : row.regular_link,
+          fareharbor,
         },
       };
 
@@ -199,7 +265,7 @@ const main = async () => {
 
   const outPath = path.resolve(
     process.cwd(),
-    "src/engine2/data/palm-springs.generated.ts",
+    "src/engine2/data/palm-springs.generated.ts"
   );
   if (!generatedTours || generatedTours.length === 0) {
     throw new Error("Engine2 generation failed: no tours produced from CSV.");
@@ -211,7 +277,7 @@ const main = async () => {
   console.log(`Generated ${generatedTours.length} Engine2 tours -> ${outPath}`);
 };
 
-main().catch((error) => {
+main().catch(error => {
   console.error(error);
   process.exit(1);
 });
