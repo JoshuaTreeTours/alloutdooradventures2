@@ -117,7 +117,7 @@ const main = async () => {
   const csv = await readFile(csvPath, "utf8");
   const rows = parseCsv(csv);
 
-  const tours = rows
+  const generatedTours = rows
     .map((row) => {
       const id = row.item_id;
       const rawName = row.item_name;
@@ -201,10 +201,14 @@ const main = async () => {
     process.cwd(),
     "src/engine2/data/palm-springs.generated.ts",
   );
-  const fileContents = `const palmSpringsTours = ${JSON.stringify(tours, null, 2)} as const;\n\nexport default palmSpringsTours;\n`;
+  if (!generatedTours || generatedTours.length === 0) {
+    throw new Error("Engine2 generation failed: no tours produced from CSV.");
+  }
+
+  const fileContents = `const palmSpringsTours = ${JSON.stringify(generatedTours, null, 2)} as const;\n\nexport default palmSpringsTours;\n`;
   await writeFile(outPath, fileContents, "utf8");
 
-  console.log(`Generated ${tours.length} Engine2 tours -> ${outPath}`);
+  console.log(`Generated ${generatedTours.length} Engine2 tours -> ${outPath}`);
 };
 
 main().catch((error) => {
