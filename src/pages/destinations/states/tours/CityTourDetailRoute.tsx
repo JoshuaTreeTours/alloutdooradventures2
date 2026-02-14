@@ -32,6 +32,8 @@ import {
   buildTourTripStructuredData,
   buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
+import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
+import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -44,6 +46,16 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const engine2Tour = getEngine2TourBySlug(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug,
+  );
+
+  if (engine2Tour) {
+    return <Engine2TourPage tour={engine2Tour} />;
+  }
+
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
