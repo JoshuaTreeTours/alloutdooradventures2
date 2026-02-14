@@ -84,6 +84,15 @@ const parseLatLng = (latRaw: string, lngRaw: string) => {
   };
 };
 
+
+const normalizeStringArray = (value: unknown, fallback: string[] = []) => {
+  const source = Array.isArray(value) ? value : fallback;
+  return source
+    .filter((item): item is string => typeof item === "string")
+    .map((item) => item.trim())
+    .filter(Boolean);
+};
+
 const parseLocation = (value: string) => {
   const parts = value
     .split("/")
@@ -123,7 +132,11 @@ const main = async () => {
       const override = palmSpringsContentOverrides[id] ?? {};
 
       const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
-      const gallery = [primaryImage].filter(Boolean);
+      const gallery = normalizeStringArray([primaryImage], [ENGINE2_DEFAULT_IMAGE]);
+      const highlights = normalizeStringArray(
+        override.highlights,
+        normalizeStringArray(defaultCopy.highlights),
+      );
 
       return {
         id,
@@ -149,7 +162,7 @@ const main = async () => {
         },
         content: {
           experienceText: override.experienceText ?? defaultCopy.experienceText,
-          highlights: override.highlights ?? defaultCopy.highlights,
+          highlights,
         },
         images: {
           hero: primaryImage,

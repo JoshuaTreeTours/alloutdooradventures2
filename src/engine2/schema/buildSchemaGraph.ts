@@ -1,22 +1,34 @@
-import { buildCanonicalUrl } from "../../utils/seo";
 import {
   getSiteStructuredDataNodes,
-  normalizeStructuredData,
   buildBreadcrumbList,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 
+type StructuredDataNode = Record<string, unknown>;
+
 const excerpt = (value: string, max = 220) =>
   value.length <= max ? value : `${value.slice(0, max).trimEnd()}…`;
 
-export const buildSchemaGraph = (tour: Engine2Tour) => {
-  const canonicalUrl = buildCanonicalUrl(tour.seo.canonicalPath);
+const normalizeStringArray = (value: unknown) => {
+  if (!Array.isArray(value)) {
+    return [] as string[];
+  }
+
+  return value
+    .filter((item): item is string => typeof item === "string")
+    .map((item) => item.trim())
+    .filter(Boolean);
+};
+
+export const buildSchemaGraph = (tour: Engine2Tour): StructuredDataNode[] => {
+  const canonicalUrl = `https://www.alloutdooradventures.com${tour.seo.canonicalPath}`;
   const providerId = `${canonicalUrl}#provider`;
   const productId = `${canonicalUrl}#product`;
   const tripId = `${canonicalUrl}#trip`;
   const placeId = `${canonicalUrl}#place`;
+  const imageGallery = normalizeStringArray(tour.images.gallery);
 
-  const nodes = [
+  return [
     ...getSiteStructuredDataNodes(),
     {
       "@type": "Organization",
@@ -47,7 +59,7 @@ export const buildSchemaGraph = (tour: Engine2Tour) => {
       "@id": productId,
       name: tour.name,
       description: tour.seo.description,
-      image: [tour.images.hero, ...tour.images.gallery],
+      image: [tour.images.hero, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: {
         "@type": "Offer",
@@ -76,9 +88,4 @@ export const buildSchemaGraph = (tour: Engine2Tour) => {
       { name: tour.name, url: tour.seo.canonicalPath },
     ]),
   ];
-
-  return normalizeStructuredData({
-    "@context": "https://schema.org",
-    "@graph": nodes,
-  });
 };
