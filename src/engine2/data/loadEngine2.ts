@@ -1,8 +1,17 @@
-import palmSpringsTours from "./palm-springs.generated";
+import palmSpringsTours from "../../data/locations/us/california/palm-springs.tours";
 import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
 } from "../utils/buildFareHarborUrl";
+
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
 
 export type Engine2Tour = {
   id: string;
@@ -82,3 +91,13 @@ export const getAllEngine2Tours = () => engine2Tours;
 
 export const getEngine2ToursBySourceCity = (citySlug: string) =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);
+
+export const getTourById = (itemId: string | number) =>
+  engine2Tours.find(tour => tour.id === String(itemId)) ?? null;
+
+export const getToursByCity = (stateSlug: string, citySlug: string) =>
+  engine2Tours.filter(
+    tour =>
+      slugify(tour.geo.region) === stateSlug &&
+      slugify(tour.geo.city) === citySlug
+  );

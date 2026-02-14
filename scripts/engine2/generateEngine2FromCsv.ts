@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import {
@@ -13,6 +13,12 @@ import {
   normalizeFareHarborUrl,
 } from "../../src/engine2/utils/buildFareHarborUrl";
 import { parseCsv, toSourceCitySlug } from "./csvUtils";
+
+const PALM_SPRINGS_GEO = {
+  country: "United States",
+  region: "California",
+  city: "Palm Springs",
+} as const;
 
 const slugify = (value: string) =>
   value
@@ -119,14 +125,56 @@ const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
   }
 };
 
+const mergeByItemId = (
+  baseRows: Record<string, string>[],
+  jeepRows: Record<string, string>[]
+) => {
+  const mergedRows = new Map<string, Record<string, string>>();
+
+  for (const row of baseRows) {
+    const itemId = row.item_id?.trim();
+    if (itemId) {
+      mergedRows.set(itemId, row);
+      continue;
+    }
+    mergedRows.set(`base-missing-item-id-${mergedRows.size + 1}`, row);
+  }
+
+  for (const row of jeepRows) {
+    const itemId = row.item_id?.trim();
+    const normalizedJeepRow = {
+      ...row,
+      location: `${PALM_SPRINGS_GEO.country}/${PALM_SPRINGS_GEO.region}/${PALM_SPRINGS_GEO.city}`,
+    };
+    if (itemId) {
+      mergedRows.set(itemId, normalizedJeepRow);
+      continue;
+    }
+    mergedRows.set(`jeep-missing-item-id-${mergedRows.size + 1}`, normalizedJeepRow);
+  }
+
+  const merged = Array.from(mergedRows.values());
+  if (merged.length < baseRows.length) {
+    throw new Error(
+      `Engine2 generation failed: merged Palm Springs row count dropped from ${baseRows.length} to ${merged.length}.`
+    );
+  }
+
+  return merged;
+};
+
 
 const main = async () => {
   const destination = ENGINE2_DESTINATIONS.palmSprings;
   const csvPath = path.resolve(process.cwd(), destination.csvPath);
+  const jeepCsvPath = path.resolve(process.cwd(), "data/palm-springs-jeeps.csv");
   const sourceCitySlug = toSourceCitySlug(destination.csvPath);
   const csvFileName = path.basename(destination.csvPath);
   const csv = await readFile(csvPath, "utf8");
-  const rows = parseCsv(csv);
+  const jeepCsv = await readFile(jeepCsvPath, "utf8");
+  const baseRows = parseCsv(csv);
+  const jeepRows = parseCsv(jeepCsv);
+  const rows = mergeByItemId(baseRows, jeepRows);
 
   const generatedTours = rows.map((row, index) => {
     const fallbackId = `missing-item-id-row-${index + 2}`;
@@ -146,11 +194,7 @@ const main = async () => {
     const slug = `${slugify(rawName)}-${id}`;
     const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
     const providerName = row.company_name || "Unknown provider";
-    const csvSourceLocation = {
-      country: destination.country,
-      region: destination.region,
-      city: destination.city,
-    };
+    const csvSourceLocation = PALM_SPRINGS_GEO;
     const coords = parseLatLng(row.location_lat, row.location_long, {
       itemId: id,
       csvFile: csvFileName,
@@ -245,12 +289,13 @@ const main = async () => {
 
   const outPath = path.resolve(
     process.cwd(),
-    "src/engine2/data/palm-springs.generated.ts"
+    "src/data/locations/us/california/palm-springs.tours.ts"
   );
   if (!generatedTours || generatedTours.length === 0) {
     throw new Error("Engine2 generation failed: no tours produced from CSV.");
   }
 
+  await mkdir(path.dirname(outPath), { recursive: true });
   const fileContents = `const palmSpringsTours = ${JSON.stringify(generatedTours, null, 2)} as const;\n\nexport default palmSpringsTours;\n`;
   await writeFile(outPath, fileContents, "utf8");
 
