@@ -20,7 +20,8 @@
     "format": "prettier --write .",
     "engine2:gen": "tsx scripts/engine2/generateEngine2FromCsv.ts",
     "test:engine2": "pnpm engine2:gen && tsx scripts/engine2/testEngine2SeoQuality.ts",
-    "engine2:audit-city-csv-coverage": "tsx scripts/engine2/auditCityCsvCoverage.ts"
+    "engine2:audit-city-csv-coverage": "tsx scripts/engine2/auditCityCsvCoverage.ts",
+    "verify:tour-34849": "tsx scripts/engine2/verify-tour-34849.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
