@@ -27,11 +27,13 @@ const normalizeStringArray = (value: unknown) => {
 export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
-    const gallery = normalizeStringArray(tour.images.gallery);
     const heroImage =
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
         : ENGINE2_DEFAULT_IMAGE;
+    const gallery = normalizeStringArray(tour.images.gallery).filter(
+      image => image !== heroImage
+    );
     const experienceText =
       typeof tour.content.experienceText === "string" &&
       tour.content.experienceText.trim().length > 0
