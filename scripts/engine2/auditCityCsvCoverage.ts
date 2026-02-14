@@ -3,7 +3,7 @@ import path from "node:path";
 
 import { ENGINE2_DESTINATIONS } from "../../src/engine2/config/destinations";
 import { getAllEngine2Tours } from "../../src/engine2/data/loadEngine2";
-import { parseCsv, toSourceCitySlug } from "./csvUtils";
+import { parseCsv } from "./csvUtils";
 
 const REQUIRED_PALM_SPRINGS_ITEM_ID = "34849";
 
@@ -12,38 +12,47 @@ export const runCityCsvCoverageAudit = async () => {
   const failures: string[] = [];
 
   for (const destination of Object.values(ENGINE2_DESTINATIONS)) {
-    const csvPath = path.resolve(process.cwd(), destination.csvPath);
-    const csvContents = await readFile(csvPath, "utf8");
-    const rows = parseCsv(csvContents);
-    const sourceCitySlug = toSourceCitySlug(destination.csvPath);
-
+    const sourceCitySlug = destination.citySlug;
     const toursForCity = tours.filter(
       tour => tour.sourceCitySlug === sourceCitySlug
     );
     const producedIds = new Set(toursForCity.map(tour => tour.id));
 
-    const expectedItemIds = rows
-      .map(row => row.item_id?.trim())
-      .filter((itemId): itemId is string => Boolean(itemId));
+    const expectedItemIds = new Set<string>();
 
-    const missingItemIds = expectedItemIds.filter(
+    for (const csvPathInput of destination.csvPaths) {
+      const csvPath = path.resolve(process.cwd(), csvPathInput);
+      const csvContents = await readFile(csvPath, "utf8");
+      const rows = parseCsv(csvContents);
+
+      rows
+        .map(row => row.item_id?.trim())
+        .filter((itemId): itemId is string => Boolean(itemId))
+        .forEach(itemId => expectedItemIds.add(itemId));
+
+      console.log(
+        `[${path.basename(csvPathInput)}] rows=${rows.length} sourceCitySlug=${sourceCitySlug}`
+      );
+    }
+
+    const missingItemIds = Array.from(expectedItemIds).filter(
       itemId => !producedIds.has(itemId)
     );
 
     console.log(
-      `[${path.basename(destination.csvPath)}] rows=${rows.length} produced=${toursForCity.length} missing=${missingItemIds.length}`
+      `[${destination.key}] unique_expected=${expectedItemIds.size} produced=${toursForCity.length} missing=${missingItemIds.length}`
     );
 
-    if (rows.length !== toursForCity.length) {
+    if (toursForCity.length < expectedItemIds.size) {
       failures.push(
-        `${destination.csvPath}: row count ${rows.length} does not match produced tour count ${toursForCity.length}`
+        `${destination.key}: produced tour count ${toursForCity.length} is less than expected deduped item count ${expectedItemIds.size}`
       );
     }
 
     if (missingItemIds.length > 0) {
       console.log(`  Missing item_ids: ${missingItemIds.join(", ")}`);
       failures.push(
-        `${destination.csvPath}: missing item_ids -> ${missingItemIds.join(", ")}`
+        `${destination.key}: missing item_ids -> ${missingItemIds.join(", ")}`
       );
     }
   }
@@ -53,7 +62,7 @@ export const runCityCsvCoverageAudit = async () => {
 
   if (!palmSpringsIds.has(REQUIRED_PALM_SPRINGS_ITEM_ID)) {
     failures.push(
-      `Regression assertion failed: palm-springs.csv output must include item_id ${REQUIRED_PALM_SPRINGS_ITEM_ID}`
+      `Regression assertion failed: Palm Springs output must include item_id ${REQUIRED_PALM_SPRINGS_ITEM_ID}`
     );
   }
 

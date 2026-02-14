@@ -80,5 +80,10 @@ export const getEngine2TourBySlug = (
 
 export const getAllEngine2Tours = () => engine2Tours;
 
+const byId = new Map(engine2Tours.map(tour => [tour.id, tour]));
+
+export const getEngine2TourById = (tourId: string | number) =>
+  byId.get(String(tourId)) ?? null;
+
 export const getEngine2ToursBySourceCity = (citySlug: string) =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);
