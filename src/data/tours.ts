@@ -7,6 +7,11 @@ import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
 import {
+  REQUIRED_FH_URL_34849,
+  getEngine2ToursBySourceCity,
+  type Engine2Tour,
+} from "../engine2/data/loadEngine2";
+import {
   extractTourBaseDescription,
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
@@ -133,7 +138,7 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map((tour) =>
+].map(tour =>
   applyTourPricing({
     ...tour,
     destination: {
@@ -196,6 +201,127 @@ export const getTourDetailPath = (tour: Tour) =>
 
 export const getCityTourDetailPath = (tour: Tour) =>
   `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
+
+export type UnifiedCityTour = {
+  tour: Tour;
+  href: string;
+};
+
+const getEngine1FareHarborItemId = (tour: Tour) => {
+  if (tour.bookingProvider !== "fareharbor") {
+    return null;
+  }
+
+  const match = tour.bookingUrl.match(/\/items\/(\d+)/);
+  return match?.[1] ?? null;
+};
+
+const toUnifiedEngine1Tour = (tour: Tour): UnifiedCityTour => ({
+  tour,
+  href: getCityTourDetailPath(tour),
+});
+
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
+  id: `engine2-${tour.id}`,
+  slug: tour.slug,
+  title: tour.name,
+  shortDescription: tour.content.highlights[0],
+  operator: tour.provider.name,
+  categories: ["adventure"],
+  primaryCategory: "adventure",
+  destination: {
+    country: tour.geo.country || "United States",
+    state: tour.geo.region,
+    stateSlug: "california",
+    city: tour.geo.city,
+    citySlug: tour.sourceCitySlug,
+    lat: tour.geo.lat ?? undefined,
+    lng: tour.geo.lng ?? undefined,
+  },
+  heroImage: tour.images.hero,
+  galleryImages: tour.images.gallery,
+  badges: {},
+  activitySlugs: ["adventure"],
+  bookingProvider: "fareharbor",
+  bookingUrl: tour.booking.bookingUrl,
+  longDescription: tour.content.experienceText,
+});
+
+const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
+  tour: toEngine2ListingTour(tour),
+  href: tour.seo.canonicalPath,
+});
+
+const getDedupeKey = (entry: UnifiedCityTour) => {
+  const itemId = getEngine1FareHarborItemId(entry.tour);
+
+  if (!itemId) {
+    return null;
+  }
+
+  return `${entry.tour.bookingProvider}:${itemId}`;
+};
+
+const scoreDedupeCandidate = (entry: UnifiedCityTour) => {
+  if (entry.tour.bookingUrl === REQUIRED_FH_URL_34849) {
+    return 2;
+  }
+
+  return entry.tour.id.startsWith("engine2-") ? 1 : 0;
+};
+
+const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
+  const deduped = new Map<string, UnifiedCityTour>();
+
+  for (const entry of entries) {
+    const key = getDedupeKey(entry);
+
+    if (!key) {
+      deduped.set(`${entry.href}::${entry.tour.id}`, entry);
+      continue;
+    }
+
+    const existing = deduped.get(key);
+    if (!existing) {
+      deduped.set(key, entry);
+      continue;
+    }
+
+    const existingScore = scoreDedupeCandidate(existing);
+    const nextScore = scoreDedupeCandidate(entry);
+
+    if (nextScore > existingScore) {
+      deduped.set(key, entry);
+      continue;
+    }
+
+    if (
+      nextScore === existingScore &&
+      entry.href.localeCompare(existing.href) < 0
+    ) {
+      deduped.set(key, entry);
+    }
+  }
+
+  return [...deduped.values()].sort((a, b) => a.href.localeCompare(b.href));
+};
+
+export const getToursByCityUnified = (
+  stateSlug: string,
+  citySlug: string
+): UnifiedCityTour[] => {
+  const engine1Tours = getToursByCity(stateSlug, citySlug).map(
+    toUnifiedEngine1Tour
+  );
+
+  if (stateSlug !== "california") {
+    return engine1Tours;
+  }
+
+  const engine2Tours =
+    getEngine2ToursBySourceCity(citySlug).map(toUnifiedEngine2Tour);
+  return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
+};
 
 export const getAffiliateDisclosure = (tour: Tour) =>
   PROVIDER_CONFIG[tour.bookingProvider].affiliateDisclosure;

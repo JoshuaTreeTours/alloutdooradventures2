@@ -11,7 +11,7 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
-import { getCityTourDetailPath, tours } from "../../data/tours";
+import { getToursByCityUnified, tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import { getStaticPageSeo } from "../../utils/seo";
 
@@ -107,23 +107,23 @@ export default function ToursLanding() {
   }, [internationalTours, selectedCountry]);
 
   const filteredTours = useMemo(() => {
-    let nextTours: Tour[] = [];
+    let nextTours: Array<{ tour: Tour; href: string }> = [];
 
     if (selectedStateSlug && selectedCitySlug) {
-      nextTours = tours.filter(
-        tour =>
-          tour.destination.country === "United States" &&
-          tour.destination.stateSlug === selectedStateSlug &&
-          tour.destination.citySlug === selectedCitySlug
-      );
+      nextTours = getToursByCityUnified(selectedStateSlug, selectedCitySlug);
     }
 
     if (selectedCountry && selectedInternationalCity) {
-      nextTours = tours.filter(
-        tour =>
-          tour.destination.country === selectedCountry &&
-          tour.destination.city === selectedInternationalCity
-      );
+      nextTours = tours
+        .filter(
+          tour =>
+            tour.destination.country === selectedCountry &&
+            tour.destination.city === selectedInternationalCity
+        )
+        .map(tour => ({
+          tour,
+          href: `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
+        }));
     }
 
     return nextTours;
@@ -325,12 +325,8 @@ export default function ToursLanding() {
                 : `${selectedCity?.name ?? ""}, ${selectedState?.name ?? ""}`}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {filteredTours.map(tour => (
-                <TourCard
-                  key={tour.id}
-                  tour={tour}
-                  href={getCityTourDetailPath(tour)}
-                />
+              {filteredTours.map(({ tour, href }) => (
+                <TourCard key={tour.id} tour={tour} href={href} />
               ))}
             </div>
           </section>
