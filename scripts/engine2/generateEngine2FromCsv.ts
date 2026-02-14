@@ -12,7 +12,7 @@ import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
 } from "../../src/engine2/utils/buildFareHarborUrl";
-import { parseCsv, toSourceCitySlug } from "./csvUtils";
+import { parseCsv } from "./csvUtils";
 
 const slugify = (value: string) =>
   value
@@ -119,22 +119,57 @@ const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
   }
 };
 
+type MergedCsvRow = {
+  row: Record<string, string>;
+  csvFileName: string;
+  rowNumber: number;
+};
+
+const normalizeItemId = (itemId?: string) => String(itemId ?? "").trim();
 
 const main = async () => {
   const destination = ENGINE2_DESTINATIONS.palmSprings;
-  const csvPath = path.resolve(process.cwd(), destination.csvPath);
-  const sourceCitySlug = toSourceCitySlug(destination.csvPath);
-  const csvFileName = path.basename(destination.csvPath);
-  const csv = await readFile(csvPath, "utf8");
-  const rows = parseCsv(csv);
+  const mergedRows = new Map<string, MergedCsvRow>();
+  const fallbackRows: MergedCsvRow[] = [];
 
-  const generatedTours = rows.map((row, index) => {
-    const fallbackId = `missing-item-id-row-${index + 2}`;
-    const id = row.item_id?.trim() || fallbackId;
+  for (const csvPathInput of destination.csvPaths) {
+    const csvPath = path.resolve(process.cwd(), csvPathInput);
+    const csvFileName = path.basename(csvPathInput);
+    const csv = await readFile(csvPath, "utf8");
+    const rows = parseCsv(csv);
+
+    rows.forEach((row, index) => {
+      const rowNumber = index + 2;
+      const normalizedId = normalizeItemId(row.item_id);
+      if (!normalizedId) {
+        fallbackRows.push({ row, csvFileName, rowNumber });
+        return;
+      }
+
+      if (mergedRows.has(normalizedId)) {
+        console.warn(
+          `WARN: duplicate item_id ${normalizedId} found in ${csvFileName}; applying override from this file`
+        );
+      }
+
+      mergedRows.set(normalizedId, { row, csvFileName, rowNumber });
+    });
+  }
+
+  const allRows: MergedCsvRow[] = [
+    ...Array.from(mergedRows.values()),
+    ...fallbackRows,
+  ];
+
+  const generatedTours = allRows.map((entry, index) => {
+    const { row, csvFileName, rowNumber } = entry;
+    const fallbackId = `missing-item-id-row-${csvFileName}-${rowNumber}-${index + 1}`;
+    const id = normalizeItemId(row.item_id) || fallbackId;
     const rawName = row.item_name?.trim() || `Untitled Tour ${id}`;
-    if (!row.item_id?.trim()) {
+
+    if (!normalizeItemId(row.item_id)) {
       console.warn(
-        `WARN: missing item_id in ${csvFileName} at row ${index + 2}; using ${fallbackId}`
+        `WARN: missing item_id in ${csvFileName} at row ${rowNumber}; using ${fallbackId}`
       );
     }
     if (!row.item_name?.trim()) {
@@ -142,24 +177,27 @@ const main = async () => {
         `WARN: missing item_name for item_id ${id} in ${csvFileName}; using fallback title`
       );
     }
+
     const name = sanitizeTourLabel(rawName);
     const slug = `${slugify(rawName)}-${id}`;
     const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
     const providerName = row.company_name || "Unknown provider";
-    const csvSourceLocation = {
+    const forcedLocation = {
       country: destination.country,
       region: destination.region,
       city: destination.city,
     };
+
     const coords = parseLatLng(row.location_lat, row.location_long, {
       itemId: id,
       csvFile: csvFileName,
     });
+
     const defaultCopy = buildTourCopy({
       name,
       provider: providerName,
-      city: csvSourceLocation.city,
-      region: csvSourceLocation.region,
+      city: forcedLocation.city,
+      region: forcedLocation.region,
     });
     const override = palmSpringsContentOverrides[id] ?? {};
 
@@ -176,10 +214,10 @@ const main = async () => {
     const fareharbor =
       parseFareHarborDetails(row.regular_link) ??
       parseFareHarborDetails(row.calendar_link) ??
-      (row.company_shortname && row.item_id
+      (row.company_shortname && normalizeItemId(row.item_id)
         ? {
             shortname: row.company_shortname,
-            itemId: row.item_id,
+            itemId: normalizeItemId(row.item_id),
             refUrl: "https://www.alloutdooradventures.com",
             backUrl: "https://www.alloutdooradventures.com/",
           }
@@ -187,7 +225,7 @@ const main = async () => {
 
     const draftTour = {
       id,
-      sourceCitySlug,
+      sourceCitySlug: destination.citySlug,
       slug,
       name,
       provider: {
@@ -197,9 +235,9 @@ const main = async () => {
         phone: row.company_phone || undefined,
       },
       geo: {
-        country: csvSourceLocation.country,
-        region: csvSourceLocation.region,
-        city: csvSourceLocation.city,
+        country: forcedLocation.country,
+        region: forcedLocation.region,
+        city: forcedLocation.city,
         ...coords,
       },
       seo: {
@@ -247,7 +285,7 @@ const main = async () => {
     process.cwd(),
     "src/engine2/data/palm-springs.generated.ts"
   );
-  if (!generatedTours || generatedTours.length === 0) {
+  if (!generatedTours.length) {
     throw new Error("Engine2 generation failed: no tours produced from CSV.");
   }
 

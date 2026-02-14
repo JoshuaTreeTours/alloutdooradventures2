@@ -3,7 +3,7 @@ export const ENGINE2_DEFAULT_IMAGE = "/images/default-tour.jpg";
 export const ENGINE2_DESTINATIONS = {
   palmSprings: {
     key: "palm-springs",
-    csvPath: "data/palm-springs.csv",
+    csvPaths: ["data/palm-springs.csv", "data/palm-springs-jeeps.csv"],
     country: "United States",
     region: "California",
     city: "Palm Springs",

@@ -62,8 +62,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.8303,
-      "lng": -116.5453
+      "lat": null,
+      "lng": null
     },
     "seo": {
       "title": "Joshua Tree National Park Tour | Palm Springs, California Outdoor Tour",
@@ -110,8 +110,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.8303,
-      "lng": -116.5453
+      "lat": null,
+      "lng": null
     },
     "seo": {
       "title": "Private San Andreas Fault Jeep Tour | Palm Springs, California Outdoor Tour",
@@ -158,8 +158,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.8303,
-      "lng": -116.5453
+      "lat": null,
+      "lng": null
     },
     "seo": {
       "title": "Painted Canyon Jeep Tour | Palm Springs, California Outdoor Tour",
@@ -206,8 +206,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.8303,
-      "lng": -116.5453
+      "lat": null,
+      "lng": null
     },
     "seo": {
       "title": "Private Indian Canyons Hiking Tour by Jeep | Palm Springs, California Outdoor Tour",
@@ -254,8 +254,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.8303,
-      "lng": -116.5453
+      "lat": null,
+      "lng": null
     },
     "seo": {
       "title": "Shared Indian Canyons Hiking Tour by Jeep | Palm Springs, California Outdoor Tour",
