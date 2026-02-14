@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Seo from "../../../../components/Seo";
+import TourCard from "../../../../components/TourCard";
+import BookingCtaLink from "../../../../components/BookingCtaLink";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
@@ -13,8 +15,10 @@ import {
   getCityTourDetailPath,
   getTourBookingPath,
   getTourBySlugs,
+  getToursByCity,
 } from "../../../../data/tours";
 import {
+  flagstaffTours,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
@@ -106,6 +110,9 @@ export default function CityTourBookingRoute({
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
 
   const disclosure = getAffiliateDisclosure(tour);
+  const disclosureText =
+    disclosure ??
+    "Affiliate disclosure: This booking link may be monetized and can generate a commission at no extra cost to you.";
 
   const [embedStatus, setEmbedStatus] = useState<
     "idle" | "loading" | "loaded" | "failed"
@@ -189,6 +196,30 @@ export default function CityTourBookingRoute({
     return () => window.clearTimeout(timeout);
   }, [attributedWidgetUrl, embedStatus, isIOS]);
 
+
+  useEffect(() => {
+    if (!attributedWidgetUrl || embedStatus !== "loading") {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setEmbedStatus((current) => {
+        if (current === "loaded") {
+          return current;
+        }
+        return "failed";
+      });
+      setRedirectMode(true);
+    }, 10000);
+
+    return () => window.clearTimeout(timeout);
+  }, [attributedWidgetUrl, embedStatus]);
+
+
+  const relatedTours = (isFlagstaff
+    ? flagstaffTours
+    : getToursByCity(state.slug, city.slug)
+  ).filter((item) => item.slug !== tour.slug);
   return (
     <>
       <Seo
@@ -276,6 +307,11 @@ export default function CityTourBookingRoute({
               className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
               allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+              loading="lazy"
+              onError={() => {
+                setEmbedStatus("failed");
+                setRedirectMode(true);
+              }}
               onLoad={() => {
                 setEmbedStatus("loaded");
                 setRedirectMode(false);
@@ -287,8 +323,8 @@ export default function CityTourBookingRoute({
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
           {redirectMode ? (
             <p className="mb-3 rounded-xl border border-[#2f4a2f]/20 bg-[#f8f4ed] p-3 text-xs text-[#405040]">
-              iOS detected an embed issue, so we switched to redirect mode to
-              keep attribution intact.
+              The booking embed did not load, so we switched to redirect mode
+              to keep attribution intact.
             </p>
           ) : null}
 
@@ -297,22 +333,48 @@ export default function CityTourBookingRoute({
             reservation page in a new tab.
           </p>
 
-          <a
+          <BookingCtaLink
             className="mt-4 inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
             href={fallbackBookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             BOOK
-          </a>
+          </BookingCtaLink>
 
-          {disclosure ? (
-            <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
-          ) : null}
+          <p className="mt-4 text-xs text-[#405040]">{disclosureText}</p>
+
+          <Link href={toursHref}>
+            <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
+              Back to tours
+            </a>
+          </Link>
 
           {/* Booking flow audit UI removed */}
         </div>
       </section>
+
+      {relatedTours.length > 0 ? (
+        <section className="bg-white/60">
+          <div className="mx-auto max-w-6xl px-6 py-14">
+            <h2 className="text-2xl font-semibold text-[#2f4a2f]">
+              More tours in {city.name}
+            </h2>
+            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {relatedTours.slice(0, 6).map((related) => (
+                <TourCard
+                  key={related.slug}
+                  tour={related}
+                  href={
+                    isFlagstaff
+                      ? getFlagstaffTourDetailPath(related)
+                      : getCityTourDetailPath(related)
+                  }
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       </main>
     </>
   );

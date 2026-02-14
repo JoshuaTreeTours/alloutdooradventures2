@@ -292,7 +292,11 @@ const buildSitemap = async () => {
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
+  const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
   const getTourBookingPath = tourPathsModule.getTourBookingPath;
+  const engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
+    ? engine2Module.getAllEngine2Tours()
+    : [];
 
   const pages = new Set();
   const toursUrls = new Set();
@@ -379,6 +383,10 @@ const buildSitemap = async () => {
     addUrl(bookingUrls, getTourBookingPath(tour));
   });
 
+
+  engine2Tours.forEach((tour) => {
+    addUrl(toursUrls, tour.seo?.canonicalPath);
+  });
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
       addUrl(toursUrls, flagstaffModule.getFlagstaffTourDetailPath(tour));

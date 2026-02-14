@@ -10,14 +10,16 @@
   "scripts": {
     "dev": "vite --host",
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
-    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/prerender.mjs",
     "preview": "vite preview --host",
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
     "check": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "engine2:gen": "tsx scripts/engine2/generateEngine2FromCsv.ts",
+    "test:engine2": "pnpm engine2:gen && tsx scripts/engine2/testEngine2SeoQuality.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

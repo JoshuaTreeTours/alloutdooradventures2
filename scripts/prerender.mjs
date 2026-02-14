@@ -659,12 +659,21 @@ const main = async () => {
     tsImport("../src/data/destinations.ts", import.meta.url),
     tsImport("../src/utils/tourDescription.ts", import.meta.url),
   ]);
-  const [structuredDataModule, tourPathsModule, guideImagesModule] =
-    await Promise.all([
-      safeImport("../src/utils/structuredData.ts", "structuredData"),
-      safeImport("../src/data/tourPaths.ts", "tourPaths"),
-      safeImport("../src/data/guideImages.ts", "guideImages"),
-    ]);
+  const [
+    structuredDataModule,
+    tourPathsModule,
+    guideImagesModule,
+    engine2DataModule,
+    engine2SeoModule,
+    engine2SchemaModule,
+  ] = await Promise.all([
+    safeImport("../src/utils/structuredData.ts", "structuredData"),
+    safeImport("../src/data/tourPaths.ts", "tourPaths"),
+    safeImport("../src/data/guideImages.ts", "guideImages"),
+    safeImport("../src/engine2/data/loadEngine2.ts", "engine2Data"),
+    safeImport("../src/engine2/seo/buildEngine2Seo.ts", "engine2Seo"),
+    safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
+  ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
     ? toursGeneratedModule.toursGenerated
@@ -722,6 +731,9 @@ const main = async () => {
     structuredDataModule?.normalizeStructuredData ?? null;
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
+  const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
+  const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
+  const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
 
   const urls = await readSitemapUrls();
   if (!urls.length) {
@@ -769,6 +781,13 @@ const main = async () => {
       type: DEFAULT_SEO.type,
       image: buildImageUrl(DEFAULT_SEO.image),
     };
+    const engine2Tour =
+      !isBookingRoute && getEngine2TourByPath
+        ? getEngine2TourByPath(basePathname)
+        : null;
+    const engine2Seo =
+      engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
+
     let tourForSeo = null;
     let stateForHero = null;
     let cityForHero = null;
@@ -808,7 +827,12 @@ const main = async () => {
           : getTourBySlugs(stateSlug, citySlug, tourSlug)) ?? null;
     }
 
-    if (tourForSeo) {
+    if (engine2Seo) {
+      seo.title = engine2Seo.title;
+      seo.description = engine2Seo.description;
+      seo.url = engine2Seo.canonical;
+      seo.image = engine2Seo.og.image;
+    } else if (tourForSeo) {
       const regionLabel =
         tourForSeo.destination.state || tourForSeo.destination.country || "";
       const destinationLabel = regionLabel
@@ -928,7 +952,7 @@ const main = async () => {
         })
       : null;
 
-    if (resolvedHeroImage) {
+    if (resolvedHeroImage && !engine2Seo) {
       seo.image = resolvedHeroImage;
     }
 
@@ -936,6 +960,17 @@ const main = async () => {
     let structuredData = null;
 
     if (
+      engine2Tour &&
+      engine2Seo &&
+      buildEngine2SchemaGraph &&
+      normalizeStructuredData
+    ) {
+      const engine2Nodes = buildEngine2SchemaGraph(engine2Tour, engine2Seo);
+      structuredData = normalizeStructuredData({
+        "@context": "https://schema.org",
+        "@graph": Array.isArray(engine2Nodes) ? engine2Nodes : [],
+      });
+    } else if (
       buildWebPageStructuredData &&
       getSiteStructuredDataNodes &&
       normalizeStructuredData

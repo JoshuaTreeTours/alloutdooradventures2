@@ -22,7 +22,7 @@ const SCRIPT_ID = "structured-data";
 
 const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
   Boolean(
-    nodes?.some((node) => {
+    Array.isArray(nodes) && nodes.some((node) => {
       if (!node || typeof node !== "object") {
         return false;
       }
