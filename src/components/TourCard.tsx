@@ -27,13 +27,14 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency,
   );
+  const cardImage = tour.heroImage?.trim() || "/hero.jpg";
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
-          src={tour.heroImage}
-          fallbackSrc="/hero.jpg"
+          src={cardImage}
+          fallbackSrc={cardImage}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

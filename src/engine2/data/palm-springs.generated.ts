@@ -14,8 +14,8 @@ const palmSpringsTours = [
       "country": "United States",
       "region": "California",
       "city": "Palm Springs",
-      "lat": 33.765378,
-      "lng": -116.238253
+      "lat": 33.7653,
+      "lng": -116.2382
     },
     "seo": {
       "title": "Shared San Andreas Fault Jeep Tour | Palm Springs, California Outdoor Tour",
@@ -34,6 +34,7 @@ const palmSpringsTours = [
     "images": {
       "hero": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
       "gallery": [
+        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
         "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"
       ]
     },

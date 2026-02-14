@@ -163,11 +163,12 @@ const main = async () => {
     });
     const override = palmSpringsContentOverrides[id] ?? {};
 
-    const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
     const gallery = normalizeStringArray(
-      [primaryImage],
+      [row.image_url, row.hero_image_url],
       [ENGINE2_DEFAULT_IMAGE]
     );
+    const primaryImage =
+      row.hero_image_url?.trim() || gallery[0] || ENGINE2_DEFAULT_IMAGE;
     const highlights = normalizeStringArray(
       override.highlights,
       normalizeStringArray(defaultCopy.highlights)
@@ -208,7 +209,7 @@ const main = async () => {
           override.metaDescription ?? defaultCopy.metaDescription
         ),
         canonicalPath,
-        ogImage: primaryImage,
+        ogImage: primaryImage || gallery[0] || ENGINE2_DEFAULT_IMAGE,
       },
       content: {
         experienceText: sanitizeTourLabel(
