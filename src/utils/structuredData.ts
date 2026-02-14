@@ -206,10 +206,12 @@ const buildImageObject = (url: string, id?: string) => ({
 
 const COUNTRY_NAME_TO_CODE: Record<string, string> = {
   "united states": "US",
+  "united states of america": "US",
   usa: "US",
   us: "US",
   australia: "AU",
   canada: "CA",
+  denmark: "DK",
   france: "FR",
   germany: "DE",
   greece: "GR",
@@ -220,13 +222,32 @@ const COUNTRY_NAME_TO_CODE: Record<string, string> = {
   portugal: "PT",
   spain: "ES",
   "united kingdom": "GB",
+  "great britain": "GB",
   uk: "GB",
 };
 
+const ISO_COUNTRY_CODE_PATTERN = /^[A-Za-z]{2}$/;
+
+const normalizeCountryKey = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/[.,]/g, "")
+    .replace(/\s+/g, " ");
+
 const resolveCountryCode = (tour: Tour): string => {
-  const country = tour.destination.country?.trim().toLowerCase();
-  if (country && COUNTRY_NAME_TO_CODE[country]) {
-    return COUNTRY_NAME_TO_CODE[country];
+  const country = tour.destination.country?.trim();
+  if (!country) {
+    return "US";
+  }
+
+  if (ISO_COUNTRY_CODE_PATTERN.test(country)) {
+    return country.toUpperCase();
+  }
+
+  const normalizedCountry = normalizeCountryKey(country);
+  if (COUNTRY_NAME_TO_CODE[normalizedCountry]) {
+    return COUNTRY_NAME_TO_CODE[normalizedCountry];
   }
 
   return "US";

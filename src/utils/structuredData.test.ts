@@ -140,4 +140,26 @@ describe("tour product/trip schema safety", () => {
       },
     });
   });
+
+
+  it("maps destination country names to ISO 3166-1 alpha-2 codes", () => {
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          state: "Capital Region of Denmark",
+          country: "Denmark",
+        },
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/tours/denmark/copenhagen/tour-1",
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "DK",
+      },
+    });
+  });
 });
