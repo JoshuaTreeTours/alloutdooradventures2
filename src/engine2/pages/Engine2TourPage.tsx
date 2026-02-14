@@ -3,7 +3,6 @@ import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
-import BookingCtaLink from "../../components/BookingCtaLink";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
@@ -53,6 +52,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
   }, [tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const bookingPath = `${tour.seo.canonicalPath}/book`;
 
   const structuredDataNodes = useMemo(
     () => buildSchemaGraph(normalizedTour, seo),
@@ -91,12 +91,11 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
             Operated by {tour.provider.name}
           </p>
           <div className="mt-6 flex gap-3">
-            <BookingCtaLink
-              href={tour.booking.regularLink}
-              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            >
-              BOOK
-            </BookingCtaLink>
+            <Link href={bookingPath}>
+              <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                BOOK
+              </a>
+            </Link>
             <Link href="/destinations/california/palm-springs/tours">
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours

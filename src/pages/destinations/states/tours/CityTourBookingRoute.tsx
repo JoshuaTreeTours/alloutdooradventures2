@@ -342,6 +342,12 @@ export default function CityTourBookingRoute({
 
           <p className="mt-4 text-xs text-[#405040]">{disclosureText}</p>
 
+          <Link href={toursHref}>
+            <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
+              Back to tours
+            </a>
+          </Link>
+
           {/* Booking flow audit UI removed */}
         </div>
       </section>
