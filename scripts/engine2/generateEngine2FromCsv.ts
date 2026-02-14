@@ -35,8 +35,8 @@ const parseLatLng = (
   if (!Number.isFinite(lat)) lat = Number.NaN;
   if (!Number.isFinite(lng)) lng = Number.NaN;
 
-  const latLooksInvalid = lat < -90 || lat > 90;
-  const lngLooksLatitude = lng >= -90 && lng <= 90;
+  const latLooksInvalid = Math.abs(lat) > 90;
+  const lngLooksLatitude = Math.abs(lng) <= 90;
   if (latLooksInvalid && lngLooksLatitude) {
     console.warn(
       `WARN: swapped lat/long for item_id ${context.itemId} in ${context.csvFile}`
@@ -44,9 +44,22 @@ const parseLatLng = (
     [lat, lng] = [lng, lat];
   }
 
+  const latInRange = Number.isFinite(lat) && Math.abs(lat) <= 90;
+  const lngInRange = Number.isFinite(lng) && Math.abs(lng) <= 180;
+
+  if (!latInRange || !lngInRange) {
+    console.warn(
+      `WARN: invalid lat/long for item_id ${context.itemId} in ${context.csvFile}; setting coordinates to null`
+    );
+    return {
+      lat: null,
+      lng: null,
+    };
+  }
+
   return {
-    lat: Number.isFinite(lat) ? lat : undefined,
-    lng: Number.isFinite(lng) ? lng : undefined,
+    lat,
+    lng,
   };
 };
 
@@ -106,17 +119,6 @@ const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
   }
 };
 
-const parseLocation = (value: string) => {
-  const parts = value
-    .split("/")
-    .map(part => part.trim())
-    .filter(Boolean);
-  return {
-    country: parts[0] ?? ENGINE2_DESTINATIONS.palmSprings.country,
-    region: parts[1] ?? ENGINE2_DESTINATIONS.palmSprings.region,
-    city: parts[2] ?? ENGINE2_DESTINATIONS.palmSprings.city,
-  };
-};
 
 const main = async () => {
   const destination = ENGINE2_DESTINATIONS.palmSprings;
@@ -144,7 +146,11 @@ const main = async () => {
     const slug = `${slugify(rawName)}-${id}`;
     const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
     const providerName = row.company_name || "Unknown provider";
-    const location = parseLocation(row.location || "");
+    const csvSourceLocation = {
+      country: destination.country,
+      region: destination.region,
+      city: destination.city,
+    };
     const coords = parseLatLng(row.location_lat, row.location_long, {
       itemId: id,
       csvFile: csvFileName,
@@ -152,8 +158,8 @@ const main = async () => {
     const defaultCopy = buildTourCopy({
       name,
       provider: providerName,
-      city: location.city,
-      region: location.region,
+      city: csvSourceLocation.city,
+      region: csvSourceLocation.region,
     });
     const override = palmSpringsContentOverrides[id] ?? {};
 
@@ -191,9 +197,9 @@ const main = async () => {
         phone: row.company_phone || undefined,
       },
       geo: {
-        country: location.country,
-        region: location.region,
-        city: location.city,
+        country: csvSourceLocation.country,
+        region: csvSourceLocation.region,
+        city: csvSourceLocation.city,
         ...coords,
       },
       seo: {

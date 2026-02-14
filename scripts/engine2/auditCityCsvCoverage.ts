@@ -5,6 +5,8 @@ import { ENGINE2_DESTINATIONS } from "../../src/engine2/config/destinations";
 import { getAllEngine2Tours } from "../../src/engine2/data/loadEngine2";
 import { parseCsv, toSourceCitySlug } from "./csvUtils";
 
+const REQUIRED_PALM_SPRINGS_ITEM_ID = "34849";
+
 export const runCityCsvCoverageAudit = async () => {
   const tours = getAllEngine2Tours();
   const failures: string[] = [];
@@ -32,12 +34,27 @@ export const runCityCsvCoverageAudit = async () => {
       `[${path.basename(destination.csvPath)}] rows=${rows.length} produced=${toursForCity.length} missing=${missingItemIds.length}`
     );
 
+    if (rows.length !== toursForCity.length) {
+      failures.push(
+        `${destination.csvPath}: row count ${rows.length} does not match produced tour count ${toursForCity.length}`
+      );
+    }
+
     if (missingItemIds.length > 0) {
       console.log(`  Missing item_ids: ${missingItemIds.join(", ")}`);
       failures.push(
-        `${destination.csvPath}: ${missingItemIds.length} rows missing from Engine2 output`
+        `${destination.csvPath}: missing item_ids -> ${missingItemIds.join(", ")}`
       );
     }
+  }
+
+  const palmSpringsTours = tours.filter(tour => tour.sourceCitySlug === "palm-springs");
+  const palmSpringsIds = new Set(palmSpringsTours.map(tour => tour.id));
+
+  if (!palmSpringsIds.has(REQUIRED_PALM_SPRINGS_ITEM_ID)) {
+    failures.push(
+      `Regression assertion failed: palm-springs.csv output must include item_id ${REQUIRED_PALM_SPRINGS_ITEM_ID}`
+    );
   }
 
   if (failures.length > 0) {

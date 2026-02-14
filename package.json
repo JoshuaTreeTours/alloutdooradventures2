@@ -19,7 +19,8 @@
     "check": "tsc --noEmit && tsx scripts/engine2/test-fh-url-generator.ts",
     "format": "prettier --write .",
     "engine2:gen": "tsx scripts/engine2/generateEngine2FromCsv.ts",
-    "test:engine2": "pnpm engine2:gen && tsx scripts/engine2/testEngine2SeoQuality.ts"
+    "test:engine2": "pnpm engine2:gen && tsx scripts/engine2/testEngine2SeoQuality.ts",
+    "engine2:audit-city-csv-coverage": "tsx scripts/engine2/auditCityCsvCoverage.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
