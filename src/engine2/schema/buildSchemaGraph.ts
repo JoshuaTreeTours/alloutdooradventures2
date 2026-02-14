@@ -5,6 +5,7 @@ import {
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
+import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -70,7 +71,13 @@ export const buildSchemaGraph = (
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: {
         "@type": "Offer",
-        url: tour.booking.bookingUrl,
+        url: tour.booking.fareharbor
+          ? buildFareHarborUrl({
+              company: tour.booking.fareharbor.shortname,
+              itemId: tour.booking.fareharbor.itemId,
+              calendarPath: tour.booking.bookingUrl,
+            })
+          : normalizeFareHarborUrl(tour.booking.bookingUrl),
         availability: "https://schema.org/InStock",
       },
       provider: { "@id": providerId },

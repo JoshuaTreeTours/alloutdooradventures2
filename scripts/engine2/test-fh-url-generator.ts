@@ -1,28 +1,19 @@
 import assert from "node:assert/strict";
 
-import {
-  buildFareHarborCalendarUrl,
-  getCurrentYearMonth,
-} from "../../src/lib/fareharbor/buildBookingUrl";
+import { buildFareHarborUrl } from "../../src/engine2/utils/buildFareHarborUrl";
 
-const args = {
-  shortname: "red-jeep",
-  itemId: "43915",
-  refUrl: "https://www.red-jeep.com",
-  backUrl: "https://www.red-jeep.com/",
-};
-
-const { year, month } = getCurrentYearMonth();
-const output = buildFareHarborCalendarUrl(args);
-
-assert.match(month, /^\d{2}$/);
-assert.match(year, /^\d{4}$/);
+const output = buildFareHarborUrl({
+  company: "red-jeep",
+  itemId: "34891",
+  calendarPath: "/calendar/2026/02/",
+});
 
 const parsed = new URL(output);
+
 assert.equal(parsed.hostname, "fareharbor.com");
 assert.equal(
   parsed.pathname,
-  `/embeds/book/red-jeep/items/43915/calendar/${year}/${month}/`
+  "/embeds/book/red-jeep/items/34891/calendar/2026/02/"
 );
 
 const expectedParams = {
@@ -31,15 +22,23 @@ const expectedParams = {
   flow: "no",
   "full-items": "yes",
   g4: "yes",
-  ref: "https://www.red-jeep.com",
-  back: "https://www.red-jeep.com/",
+  ref: "https://www.alloutdooradventures.com",
+  back: "https://www.alloutdooradventures.com/",
 };
 
 for (const [key, value] of Object.entries(expectedParams)) {
   assert.equal(parsed.searchParams.get(key), value, `missing ${key}`);
 }
 
-const expectedBase = `https://fareharbor.com/embeds/book/red-jeep/items/43915/calendar/${year}/${month}/`;
-assert.equal(`${parsed.origin}${parsed.pathname}`, expectedBase);
+const disallowedPatterns = ["gclid", "branding", "bookable-only"];
+for (const pattern of disallowedPatterns) {
+  assert.equal(output.includes(pattern), false, `should not include ${pattern}`);
+}
+assert.equal(/flow=\d+/.test(output), false, "should not include numeric flow values");
 
-console.log("fareharbor url generator regression checks passed");
+assert.equal(
+  output,
+  "https://fareharbor.com/embeds/book/red-jeep/items/34891/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F"
+);
+
+console.log("engine2 fareharbor url normalization checks passed");

@@ -4,9 +4,9 @@ import { Link } from "wouter";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import BookingCtaLink from "../../components/BookingCtaLink";
-import { buildFareHarborCalendarUrl } from "../../lib/fareharbor/buildBookingUrl";
 import type { Engine2Tour } from "../data/loadEngine2";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
+import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -19,8 +19,12 @@ export default function Engine2TourBookingPage({
   const bookingArgs = tour.booking.fareharbor;
 
   const generatedCalendarUrl = bookingArgs
-    ? buildFareHarborCalendarUrl(bookingArgs)
-    : tour.booking.bookingUrl;
+    ? buildFareHarborUrl({
+        company: bookingArgs.shortname,
+        itemId: bookingArgs.itemId,
+        calendarPath: tour.booking.bookingUrl,
+      })
+    : normalizeFareHarborUrl(tour.booking.bookingUrl);
   const iframeUrl = generatedCalendarUrl;
   const fallbackUrl = generatedCalendarUrl;
 

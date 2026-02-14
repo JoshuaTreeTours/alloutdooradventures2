@@ -8,7 +8,7 @@ import {
 import { palmSpringsContentOverrides } from "../../src/engine2/content/overrides/palm-springs";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
 import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
-import { buildFareHarborCalendarUrl } from "../../src/lib/fareharbor/buildBookingUrl";
+import { buildFareHarborUrl, normalizeFareHarborUrl } from "../../src/engine2/utils/buildFareHarborUrl";
 
 const slugify = (value: string) =>
   value
@@ -245,8 +245,12 @@ const main = async () => {
         },
         booking: {
           bookingUrl: fareharbor
-            ? buildFareHarborCalendarUrl(fareharbor)
-            : row.regular_link,
+            ? buildFareHarborUrl({
+                company: fareharbor.shortname,
+                itemId: fareharbor.itemId,
+                calendarPath: row.calendar_link || row.regular_link,
+              })
+            : normalizeFareHarborUrl(row.regular_link),
           fareharbor,
         },
       };
