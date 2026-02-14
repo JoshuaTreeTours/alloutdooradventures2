@@ -4,9 +4,8 @@ import { Link } from "wouter";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import BookingCtaLink from "../../components/BookingCtaLink";
-import type { Engine2Tour } from "../data/loadEngine2";
+import { getEngine2ResolvedBookingUrl, type Engine2Tour } from "../data/loadEngine2";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
-import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -16,17 +15,9 @@ export default function Engine2TourBookingPage({
   tour,
 }: Engine2TourBookingPageProps) {
   const seo = useMemo(() => buildEngine2Seo(tour), [tour]);
-  const bookingArgs = tour.booking.fareharbor;
-
-  const generatedCalendarUrl = bookingArgs
-    ? buildFareHarborUrl({
-        company: bookingArgs.shortname,
-        itemId: bookingArgs.itemId,
-        calendarPath: tour.booking.bookingUrl,
-      })
-    : normalizeFareHarborUrl(tour.booking.bookingUrl);
-  const iframeUrl = generatedCalendarUrl;
-  const fallbackUrl = generatedCalendarUrl;
+  const bookingUrl = getEngine2ResolvedBookingUrl(tour);
+  const iframeUrl = bookingUrl;
+  const fallbackUrl = bookingUrl;
 
   const structuredDataNodes = useMemo(
     () => [

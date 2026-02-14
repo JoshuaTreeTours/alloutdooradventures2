@@ -3,6 +3,7 @@ import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
 } from "../utils/buildFareHarborUrl";
+import { palmSpringsTourOverrides } from "../content/overrides/palm-springs";
 
 export type Engine2Tour = {
   id: string;
@@ -47,21 +48,42 @@ export type Engine2Tour = {
   };
 };
 
-const engine2Tours = (
-  palmSpringsTours as unknown as readonly Engine2Tour[]
-).map(tour => ({
+const resolveBookingUrl = (tour: Engine2Tour) =>
+  tour.booking.fareharbor
+    ? buildFareHarborUrl({
+        company: tour.booking.fareharbor.shortname,
+        itemId: tour.booking.fareharbor.itemId,
+        calendarPath: tour.booking.bookingUrl,
+      })
+    : normalizeFareHarborUrl(tour.booking.bookingUrl);
+
+const generatedPalmSpringsTours = palmSpringsTours as unknown as readonly Engine2Tour[];
+
+const toursWithOverrides: Engine2Tour[] = generatedPalmSpringsTours.map(tour => ({
   ...tour,
-  booking: {
-    ...tour.booking,
-    bookingUrl: tour.booking.fareharbor
-      ? buildFareHarborUrl({
-          company: tour.booking.fareharbor.shortname,
-          itemId: tour.booking.fareharbor.itemId,
-          calendarPath: tour.booking.bookingUrl,
-        })
-      : normalizeFareHarborUrl(tour.booking.bookingUrl),
-  },
-}));
+  ...(palmSpringsTourOverrides[tour.id] ?? {}),
+})) as Engine2Tour[];
+
+for (const [id, override] of Object.entries(palmSpringsTourOverrides)) {
+  const alreadyPresent = toursWithOverrides.some(tour => tour.id === id);
+  if (!alreadyPresent) {
+    toursWithOverrides.push(override as Engine2Tour);
+  }
+}
+
+const engine2Tours = toursWithOverrides.map(tour => {
+  const shouldPreserveExactBookingUrl = !tour.booking.fareharbor;
+
+  return {
+    ...tour,
+    booking: {
+      ...tour.booking,
+      bookingUrl: shouldPreserveExactBookingUrl
+        ? tour.booking.bookingUrl
+        : resolveBookingUrl(tour),
+    },
+  };
+});
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
@@ -79,6 +101,9 @@ export const getEngine2TourBySlug = (
   );
 
 export const getAllEngine2Tours = () => engine2Tours;
+
+export const getEngine2ResolvedBookingUrl = (tour: Engine2Tour) =>
+  tour.booking.bookingUrl;
 
 export const getEngine2ToursBySourceCity = (citySlug: string) =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);
