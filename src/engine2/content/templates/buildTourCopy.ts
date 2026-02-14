@@ -4,14 +4,14 @@ export type BuiltTourCopy = {
   metaDescription: string;
 };
 
-const sanitizeFoodTourLabel = (value: string) =>
+const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
 
 const toSentenceCase = (value: string) =>
   value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
 
 const splitNameTokens = (name: string) =>
-  sanitizeFoodTourLabel(name)
+  sanitizeTourLabel(name)
     .split(/[-,:()]/g)
     .map((token) => token.trim())
     .filter(Boolean);
@@ -27,7 +27,7 @@ export const buildTourCopy = ({
   city: string;
   region: string;
 }): BuiltTourCopy => {
-  const sanitizedName = sanitizeFoodTourLabel(name);
+  const sanitizedName = sanitizeTourLabel(name);
   const tokens = splitNameTokens(sanitizedName);
   const moodWord = tokens[0] ?? "guided";
   const accentWord = tokens[tokens.length - 1] ?? "adventure";
@@ -43,14 +43,14 @@ export const buildTourCopy = ({
     `Guided ${toSentenceCase(moodWord)} experience in ${city}`,
     `Operated by ${provider} with straightforward booking`,
     `Great fit for first-time and repeat visitors to ${region}`,
-  ].map(sanitizeFoodTourLabel);
+  ].map(sanitizeTourLabel);
 
-  const metaDescription = sanitizeFoodTourLabel(
+  const metaDescription = sanitizeTourLabel(
     `${sanitizedName} in ${city}, ${region} with ${provider}. Guided experience, clear logistics, and memorable local stops.`,
   );
 
   return {
-    experienceText: sanitizeFoodTourLabel(experienceText),
+    experienceText: sanitizeTourLabel(experienceText),
     highlights,
     metaDescription,
   };
