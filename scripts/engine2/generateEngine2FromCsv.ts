@@ -63,6 +63,10 @@ const parseLatLng = (
   };
 };
 
+const uniq = (arr: string[]) => Array.from(new Set(arr));
+
+const cleanUrl = (value?: string) => (value ?? "").trim();
+
 const normalizeStringArray = (value: unknown, fallback: string[] = []) => {
   const source = Array.isArray(value) ? value : fallback;
   return source
@@ -163,12 +167,10 @@ const main = async () => {
     });
     const override = palmSpringsContentOverrides[id] ?? {};
 
-    const gallery = normalizeStringArray(
-      [row.image_url, row.hero_image_url],
-      [ENGINE2_DEFAULT_IMAGE]
-    );
     const primaryImage =
-      row.hero_image_url?.trim() || gallery[0] || ENGINE2_DEFAULT_IMAGE;
+      cleanUrl(row.hero_image_url) || cleanUrl(row.og_image_url) || cleanUrl(row.image_url);
+    const galleryRaw = [cleanUrl(row.image_url)].filter(Boolean);
+    const gallery = uniq(galleryRaw.filter(url => url !== primaryImage));
     const highlights = normalizeStringArray(
       override.highlights,
       normalizeStringArray(defaultCopy.highlights)

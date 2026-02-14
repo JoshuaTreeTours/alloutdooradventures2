@@ -33,10 +33,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-      "gallery": [
-        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
@@ -82,9 +79,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/Cf7UydWSTEOGI9qEvzND",
-      "gallery": [
-        "https://cdn.filestackcontent.com/Cf7UydWSTEOGI9qEvzND"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34897/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
@@ -130,9 +125,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5",
-      "gallery": [
-        "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/43915/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
@@ -178,9 +171,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/eNPt1NLTTNeoISBMNzpJ",
-      "gallery": [
-        "https://cdn.filestackcontent.com/eNPt1NLTTNeoISBMNzpJ"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34899/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
@@ -226,9 +217,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
-      "gallery": [
-        "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34891/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
@@ -274,9 +263,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
-      "gallery": [
-        "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"
-      ]
+      "gallery": []
     },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/574370/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
