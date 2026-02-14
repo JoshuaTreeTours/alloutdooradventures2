@@ -32,21 +32,31 @@ export type Engine2Tour = {
     gallery: string[];
   };
   booking: {
-    calendarLink?: string;
-    regularLink: string;
+    bookingUrl: string;
+    fareharbor?: {
+      shortname: string;
+      itemId: string;
+      refUrl: string;
+      backUrl: string;
+    };
   };
 };
 
 const engine2Tours = palmSpringsTours as unknown as readonly Engine2Tour[];
 
-const byPath = new Map(engine2Tours.map((tour) => [tour.seo.canonicalPath, tour]));
+const byPath = new Map(
+  engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
+);
 
 export const getEngine2TourByPath = (path: string) => byPath.get(path) ?? null;
 
 export const getEngine2TourBySlug = (
   stateSlug: string,
   citySlug: string,
-  tourSlug: string,
-) => getEngine2TourByPath(`/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`);
+  tourSlug: string
+) =>
+  getEngine2TourByPath(
+    `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
+  );
 
 export const getAllEngine2Tours = () => engine2Tours;
