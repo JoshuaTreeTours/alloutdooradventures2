@@ -19,8 +19,8 @@ export type Engine2Tour = {
     country: string;
     region: string;
     city: string;
-    lat?: number;
-    lng?: number;
+    lat: number | null;
+    lng: number | null;
   };
   seo: {
     title: string;
