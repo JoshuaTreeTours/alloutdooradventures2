@@ -31,7 +31,6 @@ import {
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
-  buildTourOfferStructuredData,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -98,7 +97,7 @@ export default function CityTourDetailRoute({
   const toursHref =
     state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !canonicalUrl || !bookingUrl) {
+    if (!tour || !canonicalUrl) {
       return null;
     }
     return [
@@ -107,11 +106,6 @@ export default function CityTourDetailRoute({
         name: tour.title,
         description: seoDescription,
         image: heroImage,
-      }),
-      buildTourOfferStructuredData({
-        tour,
-        detailUrl: canonicalUrl,
-        bookingUrl,
       }),
       buildTourProductStructuredData({
         tour,
@@ -134,7 +128,6 @@ export default function CityTourDetailRoute({
       ]),
     ];
   }, [
-    bookingUrl,
     canonicalUrl,
     city?.name,
     cityHref,

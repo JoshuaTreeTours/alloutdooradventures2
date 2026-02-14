@@ -23,7 +23,6 @@ import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
 import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
-  buildTourOfferStructuredData,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -82,7 +81,7 @@ export default function FlagstaffTourDetailRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !detailUrl || !bookingUrl) {
+    if (!tour || !detailUrl) {
       return null;
     }
     return [
@@ -91,11 +90,6 @@ export default function FlagstaffTourDetailRoute({
         name: tour.title,
         description: metaDescription,
         image: heroImage,
-      }),
-      buildTourOfferStructuredData({
-        tour,
-        detailUrl,
-        bookingUrl,
       }),
       buildTourProductStructuredData({
         tour,
@@ -118,7 +112,6 @@ export default function FlagstaffTourDetailRoute({
       ]),
     ];
   }, [
-    bookingUrl,
     city.name,
     cityHref,
     detailUrl,

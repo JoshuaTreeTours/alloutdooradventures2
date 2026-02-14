@@ -4,7 +4,6 @@ import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
-  buildTourOfferStructuredData,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   getSiteStructuredDataNodes,
@@ -78,30 +77,11 @@ describe("global structured data graph", () => {
   });
 });
 
-describe("tour product/trip/offer schema", () => {
+describe("tour product/trip schema", () => {
   const detailUrl =
     "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
 
-  it("emits offer pointer with textual price range and no numeric price", () => {
-    const offer = buildTourOfferStructuredData({
-      tour: baseTour,
-      detailUrl,
-      bookingUrl: "https://example.com/book",
-    });
-
-    expect(offer).toMatchObject({
-      "@type": "Offer",
-      "@id": `${detailUrl}#offer`,
-      url: "https://example.com/book",
-      description: "Price range: $$–$$$",
-      availability: "https://schema.org/InStock",
-      seller: { "@id": SITE_ORGANIZATION_ID },
-    });
-    expect(offer).not.toHaveProperty("price");
-    expect(offer).not.toHaveProperty("priceCurrency");
-  });
-
-  it("links product and tourist trip to the shared offer node", () => {
+  it("emits textual price range via PriceSpecification and no Offer linkage", () => {
     const product = buildTourProductStructuredData({
       tour: baseTour,
       detailUrl,
@@ -111,22 +91,32 @@ describe("tour product/trip/offer schema", () => {
       detailUrl,
     });
 
-    expect(product.offers).toEqual({ "@id": `${detailUrl}#offer` });
     expect(product).toMatchObject({
       "@type": "Product",
       "@id": `${detailUrl}#product`,
-      brand: { "@id": SITE_ORGANIZATION_ID },
+      brand: { "@id": SITE_BRAND_ID },
+      manufacturer: { "@id": SITE_ORGANIZATION_ID },
+      provider: { "@id": SITE_BRAND_ID },
       category: "Tour",
       url: detailUrl,
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        description: "Price range: $$–$$$",
+      },
     });
+    expect(product).not.toHaveProperty("offers");
 
-    expect(trip.offers).toEqual({ "@id": `${detailUrl}#offer` });
     expect(trip).toMatchObject({
       "@type": "TouristTrip",
       "@id": `${detailUrl}#touristtrip`,
       touristType: ["Adventure", "Sightseeing"],
-      provider: { "@id": SITE_ORGANIZATION_ID },
+      provider: { "@id": SITE_BRAND_ID },
+      priceSpecification: {
+        "@type": "PriceSpecification",
+        description: "Price range: $$–$$$",
+      },
     });
+    expect(trip).not.toHaveProperty("offers");
   });
 
   it("emits Place/PostalAddress location with locality and country on tours", () => {

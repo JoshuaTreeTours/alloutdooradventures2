@@ -21,6 +21,7 @@ const buildTourPricingText = (tour: Tour) =>
     .toLowerCase();
 
 export const getTourPriceRange = (tour: Tour): string => {
+  // TODO: When CSV pricing is available, emit Offer.price (numeric) + priceCurrency and optionally AggregateOffer.
   const pricingText = buildTourPricingText(tour);
 
   if (includesKeyword(pricingText, PREMIUM_KEYWORDS)) {

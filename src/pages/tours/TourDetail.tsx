@@ -23,7 +23,6 @@ import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
 import {
   buildBreadcrumbList,
-  buildTourOfferStructuredData,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -63,7 +62,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       })
     : undefined;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !bookingUrl || !detailUrl) {
+    if (!tour || !detailUrl) {
       return null;
     }
     return [
@@ -73,11 +72,6 @@ export default function TourDetail({ params }: TourDetailProps) {
         description: metaDescription,
         image: heroImage,
         mainEntityId: `${detailUrl}#product`,
-      }),
-      buildTourOfferStructuredData({
-        tour,
-        detailUrl,
-        bookingUrl,
       }),
       buildTourProductStructuredData({
         tour,
@@ -97,7 +91,6 @@ export default function TourDetail({ params }: TourDetailProps) {
       ]),
     ];
   }, [
-    bookingUrl,
     detailUrl,
     heroImage,
     metaDescription,

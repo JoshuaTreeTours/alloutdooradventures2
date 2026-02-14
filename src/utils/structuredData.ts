@@ -251,29 +251,6 @@ const buildTourLocationStructuredData = (tour: Tour) => {
   };
 };
 
-export const buildTourOfferStructuredData = ({
-  tour,
-  detailUrl,
-  bookingUrl,
-}: {
-  tour: Tour;
-  detailUrl: string;
-  bookingUrl: string;
-}) => {
-  const offer: Record<string, StructuredDataValue> = {
-    "@type": "Offer",
-    "@id": `${detailUrl}#offer`,
-    url: bookingUrl,
-    description: `Price range: ${getTourPriceRange(tour)}`,
-    availability: "https://schema.org/InStock",
-    seller: {
-      "@id": SITE_ORGANIZATION_ID,
-    },
-  };
-
-  return offer;
-};
-
 export const buildWebPageStructuredData = ({
   url,
   name,
@@ -357,11 +334,15 @@ export const buildTourProductStructuredData = ({
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
-    brand: { "@id": SITE_ORGANIZATION_ID },
-    provider: { "@id": SITE_ORGANIZATION_ID },
+    brand: { "@id": SITE_BRAND_ID },
+    manufacturer: { "@id": SITE_ORGANIZATION_ID },
+    provider: { "@id": SITE_BRAND_ID },
     url: detailUrl,
     category: "Tour",
-    offers: { "@id": `${detailUrl}#offer` },
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      description: `Price range: ${getTourPriceRange(tour)}`,
+    },
     location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
@@ -388,9 +369,12 @@ export const buildTourTripStructuredData = ({
     name: tour.title,
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
-    provider: { "@id": SITE_ORGANIZATION_ID },
+    provider: { "@id": SITE_BRAND_ID },
     touristType: ["Adventure", "Sightseeing"],
-    offers: { "@id": `${detailUrl}#offer` },
+    priceSpecification: {
+      "@type": "PriceSpecification",
+      description: `Price range: ${getTourPriceRange(tour)}`,
+    },
     location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
