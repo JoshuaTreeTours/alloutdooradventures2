@@ -9,8 +9,18 @@ type OgEntry = {
   image?: string;
 };
 
+type MissingItemIdRecord = {
+  source: string;
+  title: string;
+  location: string;
+  path: string;
+};
+
 const DATA_DIR = path.resolve("data");
 const OUTPUT_PATH = path.resolve("src/data/ogManifest.json");
+const MISSING_ITEM_ID_REPORT_PATH = process.env.OG_MISSING_ITEM_ID_REPORT_PATH
+  ? path.resolve(process.env.OG_MISSING_ITEM_ID_REPORT_PATH)
+  : null;
 
 const slugify = (value: string) =>
   value
@@ -19,7 +29,6 @@ const slugify = (value: string) =>
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
-
 
 const parseCsvRows = (text: string) => {
   const rows: string[][] = [];
@@ -136,6 +145,7 @@ const buildDescription = (record: CsvRecord, city: string, state: string) => {
 
 const buildManifest = async () => {
   const manifest: Record<string, OgEntry> = {};
+  const missingItemIds: MissingItemIdRecord[] = [];
   const csvFiles = await getCsvFiles(DATA_DIR);
 
   for (const filePath of csvFiles) {
@@ -150,10 +160,20 @@ const buildManifest = async () => {
       }
 
       const { state, city, stateSlug, citySlug } = parseLocation(location);
-      const rawItemId = record.item_id?.trim();
-      const itemId = rawItemId || slugify(itemName);
-      const tourSlug = slugify(`${itemName}-${itemId}`);
+      const itemId = record.item_id?.trim();
+      const tourSlug = itemId
+        ? slugify(`${itemName}-${itemId}`)
+        : slugify(itemName);
       const tourPath = `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`;
+
+      if (!itemId) {
+        missingItemIds.push({
+          source: path.relative(process.cwd(), filePath),
+          title: itemName,
+          location,
+          path: tourPath,
+        });
+      }
 
       const nextEntry: OgEntry = {
         title: itemName,
@@ -178,7 +198,10 @@ const buildManifest = async () => {
         return;
       }
 
-      if (existing.description.startsWith("Guided tour in") && !nextEntry.description.startsWith("Guided tour in")) {
+      if (
+        existing.description.startsWith("Guided tour in") &&
+        !nextEntry.description.startsWith("Guided tour in")
+      ) {
         manifest[tourPath] = nextEntry;
       }
     });
@@ -188,7 +211,32 @@ const buildManifest = async () => {
     a.localeCompare(b),
   );
 
-  await writeFile(OUTPUT_PATH, `${JSON.stringify(Object.fromEntries(sortedEntries), null, 2)}\n`);
+  await writeFile(
+    OUTPUT_PATH,
+    `${JSON.stringify(Object.fromEntries(sortedEntries), null, 2)}\n`,
+  );
+
+  if (missingItemIds.length > 0) {
+    const sampleCount = Math.min(missingItemIds.length, 10);
+    console.warn(
+      `[og-manifest] Missing item_id in ${missingItemIds.length} rows. Using name-only slug fallback.`,
+    );
+    missingItemIds.slice(0, sampleCount).forEach((row) => {
+      console.warn(
+        `[og-manifest] missing item_id: ${row.source} :: ${row.path} :: ${row.title}`,
+      );
+    });
+
+    if (MISSING_ITEM_ID_REPORT_PATH) {
+      await writeFile(
+        MISSING_ITEM_ID_REPORT_PATH,
+        `${JSON.stringify(missingItemIds, null, 2)}\n`,
+      );
+      console.warn(
+        `[og-manifest] Wrote missing item_id report to ${path.relative(process.cwd(), MISSING_ITEM_ID_REPORT_PATH)}`,
+      );
+    }
+  }
 
   console.log(
     `Generated OG manifest with ${sortedEntries.length} entries at ${path.relative(process.cwd(), OUTPUT_PATH)}`,
