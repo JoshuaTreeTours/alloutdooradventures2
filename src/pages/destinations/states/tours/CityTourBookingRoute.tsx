@@ -107,6 +107,9 @@ export default function CityTourBookingRoute({
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
 
   const disclosure = getAffiliateDisclosure(tour);
+  const disclosureText =
+    disclosure ??
+    "Affiliate disclosure: This booking link may be monetized and can generate a commission at no extra cost to you.";
 
   const [embedStatus, setEmbedStatus] = useState<
     "idle" | "loading" | "loaded" | "failed"
@@ -190,6 +193,24 @@ export default function CityTourBookingRoute({
     return () => window.clearTimeout(timeout);
   }, [attributedWidgetUrl, embedStatus, isIOS]);
 
+
+  useEffect(() => {
+    if (!attributedWidgetUrl || embedStatus !== "loading") {
+      return;
+    }
+
+    const timeout = window.setTimeout(() => {
+      setEmbedStatus((current) => {
+        if (current === "loaded") {
+          return current;
+        }
+        return "failed";
+      });
+      setRedirectMode(true);
+    }, 10000);
+
+    return () => window.clearTimeout(timeout);
+  }, [attributedWidgetUrl, embedStatus]);
   return (
     <>
       <Seo
@@ -277,6 +298,11 @@ export default function CityTourBookingRoute({
               className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
               allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
               sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+              loading="lazy"
+              onError={() => {
+                setEmbedStatus("failed");
+                setRedirectMode(true);
+              }}
               onLoad={() => {
                 setEmbedStatus("loaded");
                 setRedirectMode(false);
@@ -288,8 +314,8 @@ export default function CityTourBookingRoute({
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
           {redirectMode ? (
             <p className="mb-3 rounded-xl border border-[#2f4a2f]/20 bg-[#f8f4ed] p-3 text-xs text-[#405040]">
-              iOS detected an embed issue, so we switched to redirect mode to
-              keep attribution intact.
+              The booking embed did not load, so we switched to redirect mode
+              to keep attribution intact.
             </p>
           ) : null}
 
@@ -305,9 +331,7 @@ export default function CityTourBookingRoute({
             BOOK
           </BookingCtaLink>
 
-          {disclosure ? (
-            <p className="mt-4 text-xs text-[#405040]">{disclosure}</p>
-          ) : null}
+          <p className="mt-4 text-xs text-[#405040]">{disclosureText}</p>
 
           {/* Booking flow audit UI removed */}
         </div>
