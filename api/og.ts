@@ -52,6 +52,21 @@ function parseTourPath(path: string): ParsedTourPath | null {
   };
 }
 
+
+function getTourPathFromRequest(url: URL) {
+  const pathParam = url.searchParams.get("path")?.trim();
+  if (pathParam) {
+    return pathParam.startsWith("/") ? pathParam : `/${pathParam}`;
+  }
+
+  const pathFromRewrite = url.pathname.replace(/^\/api\/og/, "").trim();
+  if (!pathFromRewrite) {
+    return "/";
+  }
+
+  return pathFromRewrite.startsWith("/") ? pathFromRewrite : `/${pathFromRewrite}`;
+}
+
 function getStaticOgMeta(path: string, origin: string): OgMeta | null {
   const manifest = ogManifest as Record<string, OgManifestEntry>;
   const hit = manifest[path];
@@ -88,7 +103,7 @@ export default async function handler(req: Request) {
   const url = new URL(req.url);
   const origin = url.origin;
 
-  const path = url.searchParams.get("path") || "/";
+  const path = getTourPathFromRequest(url);
   const meta = getStaticOgMeta(path, origin);
 
   if (!meta) {

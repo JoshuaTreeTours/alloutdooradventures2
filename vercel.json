@@ -82,7 +82,7 @@
           "value": "(?i)googlebot|googleother|adsbot-google|bingbot|slurp|duckduckbot|baiduspider|yandexbot|applebot|facebookexternalhit|twitterbot|linkedinbot|slackbot|discordbot|whatsapp|telegrambot|pinterestbot|skypeuripreview"
         }
       ],
-      "destination": "/api/og?path=/destinations/:state/:rest*/tours/:slug*"
+      "destination": "/api/og/destinations/:state/:rest*/tours/:slug*"
     },
     {
       "source": "/(.*)",
