@@ -36,7 +36,7 @@ export type Engine2Tour = {
     highlights: string[];
   };
   images: {
-    hero: string;
+    hero: string | null;
     gallery: string[];
   };
   booking: {
@@ -50,10 +50,30 @@ export type Engine2Tour = {
   };
 };
 
+const getBestFareHarborImage = (tour: Engine2Tour) => {
+  if (tour.images?.gallery?.length) {
+    return tour.images.gallery[0];
+  }
+
+  if (tour.seo?.ogImage) {
+    return tour.seo.ogImage;
+  }
+
+  if (tour.images?.hero) {
+    return tour.images.hero;
+  }
+
+  return null;
+};
+
 const engine2Tours: Engine2Tour[] = (
   palmSpringsTours as unknown as readonly Engine2Tour[]
 ).map(tour => ({
   ...tour,
+  images: {
+    ...tour.images,
+    hero: getBestFareHarborImage(tour),
+  },
   booking: {
     ...tour.booking,
     bookingUrl:
