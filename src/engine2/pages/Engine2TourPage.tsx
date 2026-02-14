@@ -20,7 +20,7 @@ const normalizeStringArray = (value: unknown) => {
 
   return value
     .filter((item): item is string => typeof item === "string")
-    .map((item) => item.trim())
+    .map(item => item.trim())
     .filter(Boolean);
 };
 
@@ -56,19 +56,16 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
 
   const structuredDataNodes = useMemo(
     () => buildSchemaGraph(normalizedTour, seo),
-    [normalizedTour, seo],
+    [normalizedTour, seo]
   );
-
 
   const relatedTours = useMemo(
     () =>
       getAllEngine2Tours().filter(
-        (item) =>
-          item.slug !== tour.slug &&
-          item.geo.city === tour.geo.city &&
-          item.geo.region === tour.geo.region,
+        item =>
+          item.slug !== tour.slug && item.sourceCitySlug === tour.sourceCitySlug
       ),
-    [tour.geo.city, tour.geo.region, tour.slug],
+    [tour.slug, tour.sourceCitySlug]
   );
 
   useStructuredData(structuredDataNodes);
@@ -86,7 +83,9 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
             {tour.geo.city}, {tour.geo.region}
           </p>
-          <h1 className="mt-3 text-3xl font-semibold md:text-5xl">{tour.name}</h1>
+          <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
+            {tour.name}
+          </h1>
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
@@ -114,11 +113,15 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
-        <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">What you'll experience</h2>
-        <p className="mt-4 text-sm leading-relaxed text-[#405040]">{normalizedTour.content.experienceText}</p>
+        <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
+          What you'll experience
+        </h2>
+        <p className="mt-4 text-sm leading-relaxed text-[#405040]">
+          {normalizedTour.content.experienceText}
+        </p>
         {normalizedTour.content.highlights.length ? (
           <ul className="mt-6 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-            {normalizedTour.content.highlights.map((highlight) => (
+            {normalizedTour.content.highlights.map(highlight => (
               <li key={highlight}>{highlight}</li>
             ))}
           </ul>
@@ -126,7 +129,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
 
         {normalizedTour.images.gallery.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {normalizedTour.images.gallery.map((image) => (
+            {normalizedTour.images.gallery.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
@@ -150,11 +153,8 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
               More tours in {tour.geo.city}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map((related) => (
-                <Link
-                  key={related.slug}
-                  href={related.seo.canonicalPath}
-                >
+              {relatedTours.map(related => (
+                <Link key={related.slug} href={related.seo.canonicalPath}>
                   <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                     <Image
                       src={related.images.hero}
@@ -177,7 +177,6 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
           </div>
         </section>
       ) : null}
-
     </main>
   );
 }

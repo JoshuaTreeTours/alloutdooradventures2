@@ -5,7 +5,10 @@ import {
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
-import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
+import {
+  buildFareHarborUrl,
+  normalizeFareHarborUrl,
+} from "../utils/buildFareHarborUrl";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -19,6 +22,12 @@ const normalizeStringArray = (value: unknown) => {
     .map(item => item.trim())
     .filter(Boolean);
 };
+
+const formatCityFromSlug = (slug: string) =>
+  slug
+    .split("-")
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
 export const buildSchemaGraph = (
   tour: Engine2Tour,
@@ -95,10 +104,13 @@ export const buildSchemaGraph = (
       { name: "Destinations", url: "/destinations" },
       { name: tour.geo.region, url: "/destinations/states/california" },
       {
-        name: tour.geo.city,
-        url: "/destinations/states/california/cities/palm-springs",
+        name: formatCityFromSlug(tour.sourceCitySlug),
+        url: `/destinations/states/california/cities/${tour.sourceCitySlug}`,
       },
-      { name: "Tours", url: "/destinations/california/palm-springs/tours" },
+      {
+        name: "Tours",
+        url: `/destinations/california/${tour.sourceCitySlug}/tours`,
+      },
       { name: tour.name, url: tour.seo.canonicalPath },
     ]),
   ];

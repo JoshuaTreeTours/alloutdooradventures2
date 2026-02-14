@@ -1,8 +1,12 @@
 import palmSpringsTours from "./palm-springs.generated";
-import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
+import {
+  buildFareHarborUrl,
+  normalizeFareHarborUrl,
+} from "../utils/buildFareHarborUrl";
 
 export type Engine2Tour = {
   id: string;
+  sourceCitySlug: string;
   slug: string;
   name: string;
   provider: {
@@ -43,21 +47,21 @@ export type Engine2Tour = {
   };
 };
 
-const engine2Tours = (palmSpringsTours as unknown as readonly Engine2Tour[]).map(
-  tour => ({
-    ...tour,
-    booking: {
-      ...tour.booking,
-      bookingUrl: tour.booking.fareharbor
-        ? buildFareHarborUrl({
-            company: tour.booking.fareharbor.shortname,
-            itemId: tour.booking.fareharbor.itemId,
-            calendarPath: tour.booking.bookingUrl,
-          })
-        : normalizeFareHarborUrl(tour.booking.bookingUrl),
-    },
-  })
-);
+const engine2Tours = (
+  palmSpringsTours as unknown as readonly Engine2Tour[]
+).map(tour => ({
+  ...tour,
+  booking: {
+    ...tour.booking,
+    bookingUrl: tour.booking.fareharbor
+      ? buildFareHarborUrl({
+          company: tour.booking.fareharbor.shortname,
+          itemId: tour.booking.fareharbor.itemId,
+          calendarPath: tour.booking.bookingUrl,
+        })
+      : normalizeFareHarborUrl(tour.booking.bookingUrl),
+  },
+}));
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
@@ -75,3 +79,6 @@ export const getEngine2TourBySlug = (
   );
 
 export const getAllEngine2Tours = () => engine2Tours;
+
+export const getEngine2ToursBySourceCity = (citySlug: string) =>
+  engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);

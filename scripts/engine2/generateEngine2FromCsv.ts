@@ -8,7 +8,11 @@ import {
 import { palmSpringsContentOverrides } from "../../src/engine2/content/overrides/palm-springs";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
 import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
-import { buildFareHarborUrl, normalizeFareHarborUrl } from "../../src/engine2/utils/buildFareHarborUrl";
+import {
+  buildFareHarborUrl,
+  normalizeFareHarborUrl,
+} from "../../src/engine2/utils/buildFareHarborUrl";
+import { parseCsv, toSourceCitySlug } from "./csvUtils";
 
 const slugify = (value: string) =>
   value
@@ -21,60 +25,11 @@ const slugify = (value: string) =>
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
 
-const parseCsvRows = (text: string) => {
-  const rows: string[][] = [];
-  let current = "";
-  let row: string[] = [];
-  let inQuotes = false;
-  for (let index = 0; index < text.length; index += 1) {
-    const char = text[index];
-    const next = text[index + 1];
-    if (char === '"') {
-      if (inQuotes && next === '"') {
-        current += '"';
-        index += 1;
-      } else {
-        inQuotes = !inQuotes;
-      }
-      continue;
-    }
-    if (char === "," && !inQuotes) {
-      row.push(current);
-      current = "";
-      continue;
-    }
-    if (char === "\n" && !inQuotes) {
-      row.push(current);
-      rows.push(row);
-      row = [];
-      current = "";
-      continue;
-    }
-    if (char !== "\r") {
-      current += char;
-    }
-  }
-  if (current.length || row.length) {
-    row.push(current);
-    rows.push(row);
-  }
-  return rows;
-};
-
-const parseCsv = (contents: string): Record<string, string>[] => {
-  const rows = parseCsvRows(contents);
-  if (!rows.length) return [];
-  const headers = rows[0].map(header => header.trim());
-  return rows.slice(1).map(row => {
-    const entry: Record<string, string> = {};
-    headers.forEach((header, i) => {
-      entry[header] = row[i]?.trim() ?? "";
-    });
-    return entry;
-  });
-};
-
-const parseLatLng = (latRaw: string, lngRaw: string) => {
+const parseLatLng = (
+  latRaw: string,
+  lngRaw: string,
+  context: { itemId: string; csvFile: string }
+) => {
   let lat = Number.parseFloat(latRaw);
   let lng = Number.parseFloat(lngRaw);
   if (!Number.isFinite(lat)) lat = Number.NaN;
@@ -83,6 +38,9 @@ const parseLatLng = (latRaw: string, lngRaw: string) => {
   const latLooksInvalid = lat < -90 || lat > 90;
   const lngLooksLatitude = lng >= -90 && lng <= 90;
   if (latLooksInvalid && lngLooksLatitude) {
+    console.warn(
+      `WARN: swapped lat/long for item_id ${context.itemId} in ${context.csvFile}`
+    );
     [lat, lng] = [lng, lat];
   }
 
@@ -163,109 +121,121 @@ const parseLocation = (value: string) => {
 const main = async () => {
   const destination = ENGINE2_DESTINATIONS.palmSprings;
   const csvPath = path.resolve(process.cwd(), destination.csvPath);
+  const sourceCitySlug = toSourceCitySlug(destination.csvPath);
+  const csvFileName = path.basename(destination.csvPath);
   const csv = await readFile(csvPath, "utf8");
   const rows = parseCsv(csv);
 
-  const generatedTours = rows
-    .map(row => {
-      const id = row.item_id;
-      const rawName = row.item_name;
-      if (!id || !rawName) {
-        return null;
-      }
-      const name = sanitizeTourLabel(rawName);
-      const slug = `${slugify(rawName)}-${id}`;
-      const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
-      const providerName = row.company_name || "Unknown provider";
-      const location = parseLocation(row.location || "");
-      const coords = parseLatLng(row.location_lat, row.location_long);
-      const defaultCopy = buildTourCopy({
-        name,
-        provider: providerName,
-        city: location.city,
+  const generatedTours = rows.map((row, index) => {
+    const fallbackId = `missing-item-id-row-${index + 2}`;
+    const id = row.item_id?.trim() || fallbackId;
+    const rawName = row.item_name?.trim() || `Untitled Tour ${id}`;
+    if (!row.item_id?.trim()) {
+      console.warn(
+        `WARN: missing item_id in ${csvFileName} at row ${index + 2}; using ${fallbackId}`
+      );
+    }
+    if (!row.item_name?.trim()) {
+      console.warn(
+        `WARN: missing item_name for item_id ${id} in ${csvFileName}; using fallback title`
+      );
+    }
+    const name = sanitizeTourLabel(rawName);
+    const slug = `${slugify(rawName)}-${id}`;
+    const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
+    const providerName = row.company_name || "Unknown provider";
+    const location = parseLocation(row.location || "");
+    const coords = parseLatLng(row.location_lat, row.location_long, {
+      itemId: id,
+      csvFile: csvFileName,
+    });
+    const defaultCopy = buildTourCopy({
+      name,
+      provider: providerName,
+      city: location.city,
+      region: location.region,
+    });
+    const override = palmSpringsContentOverrides[id] ?? {};
+
+    const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
+    const gallery = normalizeStringArray(
+      [primaryImage],
+      [ENGINE2_DEFAULT_IMAGE]
+    );
+    const highlights = normalizeStringArray(
+      override.highlights,
+      normalizeStringArray(defaultCopy.highlights)
+    );
+
+    const fareharbor =
+      parseFareHarborDetails(row.regular_link) ??
+      parseFareHarborDetails(row.calendar_link) ??
+      (row.company_shortname && row.item_id
+        ? {
+            shortname: row.company_shortname,
+            itemId: row.item_id,
+            refUrl: "https://www.alloutdooradventures.com",
+            backUrl: "https://www.alloutdooradventures.com/",
+          }
+        : undefined);
+
+    const draftTour = {
+      id,
+      sourceCitySlug,
+      slug,
+      name,
+      provider: {
+        name: providerName,
+        shortName: row.company_shortname || "",
+        email: row.company_email || undefined,
+        phone: row.company_phone || undefined,
+      },
+      geo: {
+        country: location.country,
         region: location.region,
-      });
-      const override = palmSpringsContentOverrides[id] ?? {};
+        city: location.city,
+        ...coords,
+      },
+      seo: {
+        title: "",
+        description: sanitizeTourLabel(
+          override.metaDescription ?? defaultCopy.metaDescription
+        ),
+        canonicalPath,
+        ogImage: primaryImage,
+      },
+      content: {
+        experienceText: sanitizeTourLabel(
+          override.experienceText ?? defaultCopy.experienceText
+        ),
+        highlights,
+      },
+      images: {
+        hero: primaryImage,
+        gallery,
+      },
+      booking: {
+        bookingUrl: fareharbor
+          ? buildFareHarborUrl({
+              company: fareharbor.shortname,
+              itemId: fareharbor.itemId,
+              calendarPath: row.calendar_link || row.regular_link,
+            })
+          : normalizeFareHarborUrl(row.regular_link),
+        fareharbor,
+      },
+    };
 
-      const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
-      const gallery = normalizeStringArray(
-        [primaryImage],
-        [ENGINE2_DEFAULT_IMAGE]
-      );
-      const highlights = normalizeStringArray(
-        override.highlights,
-        normalizeStringArray(defaultCopy.highlights)
-      );
-
-      const fareharbor =
-        parseFareHarborDetails(row.regular_link) ??
-        parseFareHarborDetails(row.calendar_link) ??
-        (row.company_shortname && row.item_id
-          ? {
-              shortname: row.company_shortname,
-              itemId: row.item_id,
-              refUrl: "https://www.alloutdooradventures.com",
-              backUrl: "https://www.alloutdooradventures.com/",
-            }
-          : undefined);
-
-      const draftTour = {
-        id,
-        slug,
-        name,
-        provider: {
-          name: providerName,
-          shortName: row.company_shortname || "",
-          email: row.company_email || undefined,
-          phone: row.company_phone || undefined,
-        },
-        geo: {
-          country: location.country,
-          region: location.region,
-          city: location.city,
-          ...coords,
-        },
-        seo: {
-          title: "",
-          description: sanitizeTourLabel(
-            override.metaDescription ?? defaultCopy.metaDescription
-          ),
-          canonicalPath,
-          ogImage: primaryImage,
-        },
-        content: {
-          experienceText: sanitizeTourLabel(
-            override.experienceText ?? defaultCopy.experienceText
-          ),
-          highlights,
-        },
-        images: {
-          hero: primaryImage,
-          gallery,
-        },
-        booking: {
-          bookingUrl: fareharbor
-            ? buildFareHarborUrl({
-                company: fareharbor.shortname,
-                itemId: fareharbor.itemId,
-                calendarPath: row.calendar_link || row.regular_link,
-              })
-            : normalizeFareHarborUrl(row.regular_link),
-          fareharbor,
-        },
-      };
-
-      const builtSeo = buildEngine2Seo(draftTour);
-      return {
-        ...draftTour,
-        seo: {
-          ...draftTour.seo,
-          title: builtSeo.title,
-          description: builtSeo.description,
-        },
-      };
-    })
-    .filter((tour): tour is NonNullable<typeof tour> => Boolean(tour));
+    const builtSeo = buildEngine2Seo(draftTour);
+    return {
+      ...draftTour,
+      seo: {
+        ...draftTour.seo,
+        title: builtSeo.title,
+        description: builtSeo.description,
+      },
+    };
+  });
 
   const outPath = path.resolve(
     process.cwd(),
