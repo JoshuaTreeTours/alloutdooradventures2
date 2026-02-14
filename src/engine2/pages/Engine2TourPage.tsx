@@ -8,6 +8,7 @@ import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import type { Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
+import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -51,9 +52,11 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
     };
   }, [tour]);
 
+  const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour),
-    [normalizedTour],
+    () => buildSchemaGraph(normalizedTour, seo),
+    [normalizedTour, seo],
   );
 
   useStructuredData(structuredDataNodes);
@@ -61,10 +64,10 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={tour.seo.title}
-        description={tour.seo.description}
-        url={tour.seo.canonicalPath}
-        image={normalizedTour.images.hero}
+        title={seo.title}
+        description={seo.description}
+        url={seo.canonical}
+        image={seo.og.image}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">

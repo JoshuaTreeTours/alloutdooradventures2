@@ -1,9 +1,13 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { ENGINE2_DESTINATIONS, ENGINE2_DEFAULT_IMAGE } from "../../src/engine2/config/destinations";
+import {
+  ENGINE2_DESTINATIONS,
+  ENGINE2_DEFAULT_IMAGE,
+} from "../../src/engine2/config/destinations";
 import { palmSpringsContentOverrides } from "../../src/engine2/content/overrides/palm-springs";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
+import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
 
 const slugify = (value: string) =>
   value
@@ -12,6 +16,9 @@ const slugify = (value: string) =>
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
+
+const sanitizeFoodTourLabel = (value: string) =>
+  value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
 
 const parseCsvRows = (text: string) => {
   const rows: string[][] = [];
@@ -84,12 +91,11 @@ const parseLatLng = (latRaw: string, lngRaw: string) => {
   };
 };
 
-
 const normalizeStringArray = (value: unknown, fallback: string[] = []) => {
   const source = Array.isArray(value) ? value : fallback;
   return source
     .filter((item): item is string => typeof item === "string")
-    .map((item) => item.trim())
+    .map((item) => sanitizeFoodTourLabel(item.trim()))
     .filter(Boolean);
 };
 
@@ -114,11 +120,12 @@ const main = async () => {
   const tours = rows
     .map((row) => {
       const id = row.item_id;
-      const name = row.item_name;
-      if (!id || !name) {
+      const rawName = row.item_name;
+      if (!id || !rawName) {
         return null;
       }
-      const slug = `${slugify(name)}-${id}`;
+      const name = sanitizeFoodTourLabel(rawName);
+      const slug = `${slugify(rawName)}-${id}`;
       const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
       const providerName = row.company_name || "Unknown provider";
       const location = parseLocation(row.location || "");
@@ -138,7 +145,7 @@ const main = async () => {
         normalizeStringArray(defaultCopy.highlights),
       );
 
-      return {
+      const draftTour = {
         id,
         slug,
         name,
@@ -155,13 +162,17 @@ const main = async () => {
           ...coords,
         },
         seo: {
-          title: `${name} | ${location.city}, ${location.region} Tour`,
-          description: override.metaDescription ?? defaultCopy.metaDescription,
+          title: "",
+          description: sanitizeFoodTourLabel(
+            override.metaDescription ?? defaultCopy.metaDescription,
+          ),
           canonicalPath,
           ogImage: primaryImage,
         },
         content: {
-          experienceText: override.experienceText ?? defaultCopy.experienceText,
+          experienceText: sanitizeFoodTourLabel(
+            override.experienceText ?? defaultCopy.experienceText,
+          ),
           highlights,
         },
         images: {
@@ -173,10 +184,23 @@ const main = async () => {
           regularLink: row.regular_link,
         },
       };
+
+      const builtSeo = buildEngine2Seo(draftTour);
+      return {
+        ...draftTour,
+        seo: {
+          ...draftTour.seo,
+          title: builtSeo.title,
+          description: builtSeo.description,
+        },
+      };
     })
     .filter((tour): tour is NonNullable<typeof tour> => Boolean(tour));
 
-  const outPath = path.resolve(process.cwd(), "src/engine2/data/palm-springs.generated.ts");
+  const outPath = path.resolve(
+    process.cwd(),
+    "src/engine2/data/palm-springs.generated.ts",
+  );
   const fileContents = `const palmSpringsTours = ${JSON.stringify(tours, null, 2)} as const;\n\nexport default palmSpringsTours;\n`;
   await writeFile(outPath, fileContents, "utf8");
 

@@ -17,7 +17,7 @@ const palmSpringsTours = [
       "lng": -116.238253
     },
     "seo": {
-      "title": "Shared San Andreas Fault Jeep Tour | Indio, California Tour",
+      "title": "Shared San Andreas Fault Jeep Tour | Indio, California Outdoor Tour",
       "description": "Shared San Andreas Fault Jeep Tour in Indio, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local stops.",
       "canonicalPath": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
       "ogImage": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"
@@ -59,7 +59,7 @@ const palmSpringsTours = [
       "lng": -116.5453
     },
     "seo": {
-      "title": "Joshua Tree National Park Tour | Palm Springs, California Tour",
+      "title": "Joshua Tree National Park Tour | Palm Springs, California Outdoor Tour",
       "description": "Joshua Tree National Park Tour in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local stops.",
       "canonicalPath": "/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897",
       "ogImage": "https://cdn.filestackcontent.com/Cf7UydWSTEOGI9qEvzND"
@@ -101,7 +101,7 @@ const palmSpringsTours = [
       "lng": -116.5453
     },
     "seo": {
-      "title": "Private San Andreas Fault Jeep Tour | Palm Springs, California Tour",
+      "title": "Private San Andreas Fault Jeep Tour | Palm Springs, California Outdoor Tour",
       "description": "Private San Andreas Fault Jeep Tour in Palm Springs with Desert Adventures Red Jeep Tours. Personalized geology experience with scenic desert stops.",
       "canonicalPath": "/destinations/california/palm-springs/tours/private-san-andreas-fault-jeep-tour-43915",
       "ogImage": "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5"
@@ -143,7 +143,7 @@ const palmSpringsTours = [
       "lng": -116.5453
     },
     "seo": {
-      "title": "Painted Canyon Jeep Tour | Palm Springs, California Tour",
+      "title": "Painted Canyon Jeep Tour | Palm Springs, California Outdoor Tour",
       "description": "Painted Canyon Jeep Tour in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local stops.",
       "canonicalPath": "/destinations/california/palm-springs/tours/painted-canyon-jeep-tour-34899",
       "ogImage": "https://cdn.filestackcontent.com/eNPt1NLTTNeoISBMNzpJ"
@@ -185,8 +185,8 @@ const palmSpringsTours = [
       "lng": -116.5453
     },
     "seo": {
-      "title": "Private Indian Canyons Hiking Tour by Jeep | Palm Springs, California Tour",
-      "description": "Private Indian Canyons Hiking Tour by Jeep in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local stops.",
+      "title": "Private Indian Canyons Hiking Tour by Jeep | Palm Springs, California Outdoor Tour",
+      "description": "Private Indian Canyons Hiking Tour by Jeep in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local…",
       "canonicalPath": "/destinations/california/palm-springs/tours/private-indian-canyons-hiking-tour-by-jeep-34891",
       "ogImage": "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"
     },
@@ -227,8 +227,8 @@ const palmSpringsTours = [
       "lng": -116.5453
     },
     "seo": {
-      "title": "Shared Indian Canyons Hiking Tour by Jeep | Palm Springs, California Tour",
-      "description": "Shared Indian Canyons Hiking Tour by Jeep in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local stops.",
+      "title": "Shared Indian Canyons Hiking Tour by Jeep | Palm Springs, California Outdoor Tour",
+      "description": "Shared Indian Canyons Hiking Tour by Jeep in Palm Springs, California with Desert Adventures Red Jeep Tours. Guided experience, clear logistics, and memorable local…",
       "canonicalPath": "/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370",
       "ogImage": "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"
     },

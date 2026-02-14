@@ -1,13 +1,12 @@
 import {
   getSiteStructuredDataNodes,
   buildBreadcrumbList,
+  buildWebPageStructuredData,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
+import type { Engine2Seo } from "../seo/buildEngine2Seo";
 
 type StructuredDataNode = Record<string, unknown>;
-
-const excerpt = (value: string, max = 220) =>
-  value.length <= max ? value : `${value.slice(0, max).trimEnd()}…`;
 
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
@@ -20,16 +19,24 @@ const normalizeStringArray = (value: unknown) => {
     .filter(Boolean);
 };
 
-export const buildSchemaGraph = (tour: Engine2Tour): StructuredDataNode[] => {
-  const canonicalUrl = `https://www.alloutdooradventures.com${tour.seo.canonicalPath}`;
-  const providerId = `${canonicalUrl}#provider`;
-  const productId = `${canonicalUrl}#product`;
-  const tripId = `${canonicalUrl}#trip`;
-  const placeId = `${canonicalUrl}#place`;
+export const buildSchemaGraph = (
+  tour: Engine2Tour,
+  seo: Engine2Seo,
+): StructuredDataNode[] => {
+  const providerId = `${seo.canonical}#provider`;
+  const productId = `${seo.canonical}#product`;
+  const tripId = `${seo.canonical}#trip`;
+  const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
 
   return [
     ...getSiteStructuredDataNodes(),
+    buildWebPageStructuredData({
+      url: seo.canonical,
+      name: seo.title,
+      description: seo.description,
+      image: seo.og.image,
+    }),
     {
       "@type": "Organization",
       "@id": providerId,
@@ -58,7 +65,7 @@ export const buildSchemaGraph = (tour: Engine2Tour): StructuredDataNode[] => {
       "@type": "Product",
       "@id": productId,
       name: tour.name,
-      description: tour.seo.description,
+      description: seo.description,
       image: [tour.images.hero, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: {
@@ -72,7 +79,7 @@ export const buildSchemaGraph = (tour: Engine2Tour): StructuredDataNode[] => {
       "@type": "TouristTrip",
       "@id": tripId,
       name: tour.name,
-      description: excerpt(tour.content.experienceText),
+      description: seo.description,
       itinerary: { "@id": placeId },
       provider: { "@id": providerId },
       touristType: "Adventure travelers",
