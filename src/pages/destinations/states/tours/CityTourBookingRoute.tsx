@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Seo from "../../../../components/Seo";
+import TourCard from "../../../../components/TourCard";
 import BookingCtaLink from "../../../../components/BookingCtaLink";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
@@ -14,8 +15,10 @@ import {
   getCityTourDetailPath,
   getTourBookingPath,
   getTourBySlugs,
+  getToursByCity,
 } from "../../../../data/tours";
 import {
+  flagstaffTours,
   getFlagstaffTourBySlug,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
@@ -211,6 +214,12 @@ export default function CityTourBookingRoute({
 
     return () => window.clearTimeout(timeout);
   }, [attributedWidgetUrl, embedStatus]);
+
+
+  const relatedTours = (isFlagstaff
+    ? flagstaffTours
+    : getToursByCity(state.slug, city.slug)
+  ).filter((item) => item.slug !== tour.slug);
   return (
     <>
       <Seo
@@ -336,6 +345,30 @@ export default function CityTourBookingRoute({
           {/* Booking flow audit UI removed */}
         </div>
       </section>
+
+      {relatedTours.length > 0 ? (
+        <section className="bg-white/60">
+          <div className="mx-auto max-w-6xl px-6 py-14">
+            <h2 className="text-2xl font-semibold text-[#2f4a2f]">
+              More tours in {city.name}
+            </h2>
+            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {relatedTours.slice(0, 6).map((related) => (
+                <TourCard
+                  key={related.slug}
+                  tour={related}
+                  href={
+                    isFlagstaff
+                      ? getFlagstaffTourDetailPath(related)
+                      : getCityTourDetailPath(related)
+                  }
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       </main>
     </>
   );

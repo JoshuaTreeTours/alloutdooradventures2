@@ -6,7 +6,7 @@ import Seo from "../../components/Seo";
 import BookingCtaLink from "../../components/BookingCtaLink";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
-import type { Engine2Tour } from "../data/loadEngine2";
+import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 
@@ -57,6 +57,18 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
   const structuredDataNodes = useMemo(
     () => buildSchemaGraph(normalizedTour, seo),
     [normalizedTour, seo],
+  );
+
+
+  const relatedTours = useMemo(
+    () =>
+      getAllEngine2Tours().filter(
+        (item) =>
+          item.slug !== tour.slug &&
+          item.geo.city === tour.geo.city &&
+          item.geo.region === tour.geo.region,
+      ),
+    [tour.geo.city, tour.geo.region, tour.slug],
   );
 
   useStructuredData(structuredDataNodes);
@@ -131,6 +143,42 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
           </div>
         ) : null}
       </section>
+
+      {relatedTours.length ? (
+        <section className="bg-white/60">
+          <div className="mx-auto max-w-6xl px-6 py-14">
+            <h2 className="text-2xl font-semibold text-[#2f4a2f]">
+              More tours in {tour.geo.city}
+            </h2>
+            <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {relatedTours.map((related) => (
+                <Link
+                  key={related.slug}
+                  href={related.seo.canonicalPath}
+                >
+                  <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                    <Image
+                      src={related.images.hero}
+                      fallbackSrc={related.images.hero}
+                      alt={related.name}
+                      className="h-44 w-full object-cover"
+                    />
+                    <div className="p-4">
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                        {related.geo.city}, {related.geo.region}
+                      </p>
+                      <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
+                        {related.name}
+                      </h3>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      ) : null}
+
     </main>
   );
 }
