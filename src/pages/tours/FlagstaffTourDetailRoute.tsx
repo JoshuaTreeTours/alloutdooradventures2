@@ -24,6 +24,7 @@ import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
+  buildTourTripStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
 
@@ -80,7 +81,7 @@ export default function FlagstaffTourDetailRoute({
     : `/destinations/states/${state.slug}`;
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const structuredDataNodes = useMemo(() => {
-    if (!tour || !detailUrl || !bookingUrl) {
+    if (!tour || !detailUrl) {
       return null;
     }
     return [
@@ -93,7 +94,12 @@ export default function FlagstaffTourDetailRoute({
       buildTourProductStructuredData({
         tour,
         detailUrl,
-        bookingUrl,
+        description: productDescription,
+        images: structuredImages.length ? structuredImages : undefined,
+      }),
+      buildTourTripStructuredData({
+        tour,
+        detailUrl,
         description: productDescription,
         images: structuredImages.length ? structuredImages : undefined,
       }),

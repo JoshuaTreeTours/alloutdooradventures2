@@ -65,10 +65,6 @@ export const StructuredDataProvider = ({
   const [location] = useLocation();
 
   useEffect(() => {
-    setNodes(null);
-  }, [location]);
-
-  useEffect(() => {
     const baseNodes = getSiteStructuredDataNodes();
     const pageNodes = nodes?.length ? nodes : [];
     const canonicalUrl =
