@@ -23,7 +23,9 @@ import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
 import {
   buildBreadcrumbList,
+  buildTourOfferStructuredData,
   buildTourProductStructuredData,
+  buildTourTripStructuredData,
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
 import { buildTourMeta } from "../../lib/tourMeta";
@@ -72,10 +74,20 @@ export default function TourDetail({ params }: TourDetailProps) {
         image: heroImage,
         mainEntityId: `${detailUrl}#product`,
       }),
-      buildTourProductStructuredData({
+      buildTourOfferStructuredData({
         tour,
         detailUrl,
         bookingUrl,
+      }),
+      buildTourProductStructuredData({
+        tour,
+        detailUrl,
+        description: metaDescription,
+        images: structuredImages.length ? structuredImages : undefined,
+      }),
+      buildTourTripStructuredData({
+        tour,
+        detailUrl,
         description: metaDescription,
         images: structuredImages.length ? structuredImages : undefined,
       }),

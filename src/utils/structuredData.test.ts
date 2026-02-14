@@ -4,6 +4,7 @@ import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
+  buildTourOfferStructuredData,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   getSiteStructuredDataNodes,
@@ -77,56 +78,61 @@ describe("global structured data graph", () => {
   });
 });
 
-describe("tour offer + location safety", () => {
-  it("emits offer as booking pointer with seller by default", () => {
-    const product = buildTourProductStructuredData({
+describe("tour product/trip/offer schema", () => {
+  const detailUrl =
+    "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+
+  it("emits offer pointer with textual price range and no numeric price", () => {
+    const offer = buildTourOfferStructuredData({
       tour: baseTour,
-      detailUrl:
-        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      detailUrl,
       bookingUrl: "https://example.com/book",
     });
 
-    expect(product.offers).toMatchObject({
+    expect(offer).toMatchObject({
       "@type": "Offer",
+      "@id": `${detailUrl}#offer`,
       url: "https://example.com/book",
-      seller: { "@id": SITE_BRAND_ID },
+      description: "Price range: $$–$$$",
+      availability: "https://schema.org/InStock",
+      seller: { "@id": SITE_ORGANIZATION_ID },
     });
-    expect(product.offers).not.toHaveProperty("price");
-    expect(product.offers).not.toHaveProperty("availability");
-    expect(product.offers).not.toHaveProperty("priceValidUntil");
-
-    const validIds = new Set(
-      getSiteStructuredDataNodes().map(node => node["@id"])
-    );
-    expect(
-      validIds.has((product.offers.seller as { "@id": string })["@id"])
-    ).toBe(true);
+    expect(offer).not.toHaveProperty("price");
+    expect(offer).not.toHaveProperty("priceCurrency");
   });
 
-  it("includes price only when pricing.isReliable is true", () => {
+  it("links product and tourist trip to the shared offer node", () => {
     const product = buildTourProductStructuredData({
-      tour: {
-        ...baseTour,
-        pricing: { isReliable: true },
-      },
-      detailUrl:
-        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
-      bookingUrl: "https://example.com/book",
+      tour: baseTour,
+      detailUrl,
+    });
+    const trip = buildTourTripStructuredData({
+      tour: baseTour,
+      detailUrl,
     });
 
-    expect(product.offers).toMatchObject({
-      price: "99",
-      priceCurrency: "USD",
-      seller: { "@id": SITE_BRAND_ID },
+    expect(product.offers).toEqual({ "@id": `${detailUrl}#offer` });
+    expect(product).toMatchObject({
+      "@type": "Product",
+      "@id": `${detailUrl}#product`,
+      brand: { "@id": SITE_ORGANIZATION_ID },
+      category: "Tour",
+      url: detailUrl,
+    });
+
+    expect(trip.offers).toEqual({ "@id": `${detailUrl}#offer` });
+    expect(trip).toMatchObject({
+      "@type": "TouristTrip",
+      "@id": `${detailUrl}#touristtrip`,
+      touristType: ["Adventure", "Sightseeing"],
+      provider: { "@id": SITE_ORGANIZATION_ID },
     });
   });
 
   it("emits Place/PostalAddress location with locality and country on tours", () => {
     const trip = buildTourTripStructuredData({
       tour: baseTour,
-      detailUrl:
-        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
-      bookingUrl: "https://example.com/book",
+      detailUrl,
     });
 
     expect(trip.location).toMatchObject({
