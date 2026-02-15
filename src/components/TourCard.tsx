@@ -33,7 +33,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={tour.heroImage}
-          fallbackSrc="/hero.jpg"
+          fallbackSrc={tour.heroImage}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Seo from "../../components/Seo";
+import Image from "../../components/Image";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import BookingCtaLink from "../../components/BookingCtaLink";
 import type { Engine2Tour } from "../data/loadEngine2";
@@ -63,6 +64,22 @@ export default function Engine2TourBookingPage({
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.name}
           </h1>
+        </div>
+      </section>
+
+
+      <section className="mx-auto max-w-6xl px-6 pt-10">
+        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          {tour.images.hero ? (
+            <Image
+              src={tour.images.hero}
+              fallbackSrc={tour.images.hero}
+              alt={tour.name}
+              className="h-56 w-full object-cover md:h-72"
+            />
+          ) : (
+            <div className="h-56 w-full bg-[#2f4a2f]/10 md:h-72" />
+          )}
         </div>
       </section>
 

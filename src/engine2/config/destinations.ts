@@ -1,14 +1,17 @@
-export const ENGINE2_DEFAULT_IMAGE = "/images/default-tour.jpg";
+export type Engine2Destination = {
+  country: string;
+  region: string;
+  city: string;
+  csvPath: string;
+  canonicalBasePath: string;
+};
 
-export const ENGINE2_DESTINATIONS = {
+export const ENGINE2_DESTINATIONS: Record<string, Engine2Destination> = {
   palmSprings: {
-    key: "palm-springs",
-    csvPath: "data/palm-springs.csv",
     country: "United States",
     region: "California",
     city: "Palm Springs",
-    stateSlug: "california",
-    citySlug: "palm-springs",
+    csvPath: "data/palm-springs.csv",
     canonicalBasePath: "/destinations/california/palm-springs/tours",
   },
-} as const;
+};

@@ -4,7 +4,6 @@ import { Link } from "wouter";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
-import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
@@ -28,10 +27,6 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const gallery = normalizeStringArray(tour.images.gallery);
-    const heroImage =
-      typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
-        ? tour.images.hero
-        : ENGINE2_DEFAULT_IMAGE;
     const experienceText =
       typeof tour.content.experienceText === "string" &&
       tour.content.experienceText.trim().length > 0
@@ -41,7 +36,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
     return {
       ...tour,
       images: {
-        hero: heroImage,
+        hero: tour.images.hero,
         gallery,
       },
       content: {
@@ -106,12 +101,16 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
 
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-          <Image
-            src={normalizedTour.images.hero}
-            fallbackSrc={normalizedTour.images.hero}
-            alt={tour.name}
-            className="h-64 w-full object-cover md:h-80"
-          />
+          {normalizedTour.images.hero ? (
+            <Image
+              src={normalizedTour.images.hero}
+              fallbackSrc={normalizedTour.images.hero}
+              alt={tour.name}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          ) : (
+            <div className="h-64 w-full bg-[#2f4a2f]/10 md:h-80" />
+          )}
         </div>
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
@@ -156,12 +155,16 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
               {relatedTours.map(related => (
                 <Link key={related.slug} href={related.seo.canonicalPath}>
                   <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                    <Image
-                      src={related.images.hero}
-                      fallbackSrc={related.images.hero}
-                      alt={related.name}
-                      className="h-44 w-full object-cover"
-                    />
+                    {related.images.hero ? (
+                      <Image
+                        src={related.images.hero}
+                        fallbackSrc={related.images.hero}
+                        alt={related.name}
+                        className="h-44 w-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-44 w-full bg-[#2f4a2f]/10" />
+                    )}
                     <div className="p-4">
                       <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
                         {related.geo.city}, {related.geo.region}

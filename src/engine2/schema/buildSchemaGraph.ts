@@ -8,17 +8,6 @@ import type { Engine2Seo } from "../seo/buildEngine2Seo";
 
 type StructuredDataNode = Record<string, unknown>;
 
-const normalizeStringArray = (value: unknown) => {
-  if (!Array.isArray(value)) {
-    return [] as string[];
-  }
-
-  return value
-    .filter((item): item is string => typeof item === "string")
-    .map(item => item.trim())
-    .filter(Boolean);
-};
-
 const formatCityFromSlug = (slug: string) =>
   slug
     .split("-")
@@ -33,7 +22,6 @@ export const buildSchemaGraph = (
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
-  const imageGallery = normalizeStringArray(tour.images.gallery);
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -41,7 +29,7 @@ export const buildSchemaGraph = (
       url: seo.canonical,
       name: seo.title,
       description: seo.description,
-      image: seo.og.image,
+      image: seo.og.image ?? undefined,
     }),
     {
       "@type": "Organization",
@@ -72,7 +60,7 @@ export const buildSchemaGraph = (
       "@id": productId,
       name: tour.name,
       description: seo.description,
-      image: [tour.images.hero, ...imageGallery],
+      image: tour.images.hero ?? undefined,
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: {
         "@type": "Offer",
@@ -86,6 +74,7 @@ export const buildSchemaGraph = (
       "@id": tripId,
       name: tour.name,
       description: seo.description,
+      image: tour.images.hero ?? undefined,
       itinerary: { "@id": placeId },
       provider: { "@id": providerId },
       touristType: "Adventure travelers",

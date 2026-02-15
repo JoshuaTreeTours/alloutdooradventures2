@@ -1,10 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import {
-  ENGINE2_DESTINATIONS,
-  ENGINE2_DEFAULT_IMAGE,
-} from "../../src/engine2/config/destinations";
+import { ENGINE2_DESTINATIONS } from "../../src/engine2/config/destinations";
 import { palmSpringsContentOverrides } from "../../src/engine2/content/overrides/palm-springs";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
 import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
@@ -163,11 +160,8 @@ const main = async () => {
     });
     const override = palmSpringsContentOverrides[id] ?? {};
 
-    const primaryImage = row.image_url || ENGINE2_DEFAULT_IMAGE;
-    const gallery = normalizeStringArray(
-      [primaryImage],
-      [ENGINE2_DEFAULT_IMAGE]
-    );
+    const primaryImage = row.image_url || null;
+    const gallery = normalizeStringArray(primaryImage ? [primaryImage] : []);
     const highlights = normalizeStringArray(
       override.highlights,
       normalizeStringArray(defaultCopy.highlights)

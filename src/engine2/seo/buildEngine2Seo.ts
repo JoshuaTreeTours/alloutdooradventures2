@@ -1,4 +1,4 @@
-import { buildCanonicalUrl, buildImageUrl } from "../../utils/seo";
+import { buildCanonicalUrl } from "../../utils/seo";
 
 import type { Engine2Tour } from "../data/loadEngine2";
 
@@ -6,11 +6,11 @@ export type Engine2Seo = {
   title: string;
   description: string;
   canonical: string;
-  og: { title: string; description: string; image: string; url: string };
+  og: { title: string; description: string; image: string | null; url: string };
   twitter: {
     title: string;
     description: string;
-    image: string;
+    image: string | null;
     card: "summary_large_image";
   };
 };
@@ -58,7 +58,7 @@ export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
   const title = `${sanitizeTourLabel(tour.name)} | ${location} Outdoor Tour`;
   const description = buildDescription(tour);
   const canonical = buildCanonicalUrl(tour.seo.canonicalPath);
-  const image = buildImageUrl(tour.images.hero || tour.seo.ogImage);
+  const image = tour.images.hero;
 
   return {
     title,

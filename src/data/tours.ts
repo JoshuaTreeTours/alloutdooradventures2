@@ -238,7 +238,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
     lat: tour.geo.lat ?? undefined,
     lng: tour.geo.lng ?? undefined,
   },
-  heroImage: tour.images.hero,
+  heroImage: tour.images.hero ?? "",
   galleryImages: tour.images.gallery,
   badges: {},
   activitySlugs: ["adventure"],

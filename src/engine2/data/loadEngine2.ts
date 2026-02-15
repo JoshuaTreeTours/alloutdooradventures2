@@ -29,14 +29,14 @@ export type Engine2Tour = {
     title: string;
     description: string;
     canonicalPath: string;
-    ogImage: string;
+    ogImage: string | null;
   };
   content: {
     experienceText: string;
     highlights: string[];
   };
   images: {
-    hero: string;
+    hero: string | null;
     gallery: string[];
   };
   booking: {
@@ -50,24 +50,43 @@ export type Engine2Tour = {
   };
 };
 
+const isAbsoluteUrl = (value: unknown): value is string =>
+  typeof value === "string" && /^https?:\/\//.test(value);
+
 const engine2Tours: Engine2Tour[] = (
   palmSpringsTours as unknown as readonly Engine2Tour[]
-).map(tour => ({
-  ...tour,
-  booking: {
-    ...tour.booking,
-    bookingUrl:
-      tour.booking.fareharbor?.itemId === "34849"
-        ? REQUIRED_FH_URL_34849
-        : tour.booking.fareharbor
-          ? buildFareHarborUrl({
-              company: tour.booking.fareharbor.shortname,
-              itemId: tour.booking.fareharbor.itemId,
-              calendarPath: tour.booking.bookingUrl,
-            })
-          : normalizeFareHarborUrl(tour.booking.bookingUrl),
-  },
-}));
+).map(tour => {
+  const canonicalProviderImage = isAbsoluteUrl(tour.seo.ogImage)
+    ? tour.seo.ogImage
+    : isAbsoluteUrl(tour.images.hero)
+      ? tour.images.hero
+      : null;
+
+  return {
+    ...tour,
+    seo: {
+      ...tour.seo,
+      ogImage: canonicalProviderImage,
+    },
+    images: {
+      ...tour.images,
+      hero: canonicalProviderImage,
+    },
+    booking: {
+      ...tour.booking,
+      bookingUrl:
+        tour.booking.fareharbor?.itemId === "34849"
+          ? REQUIRED_FH_URL_34849
+          : tour.booking.fareharbor
+            ? buildFareHarborUrl({
+                company: tour.booking.fareharbor.shortname,
+                itemId: tour.booking.fareharbor.itemId,
+                calendarPath: tour.booking.bookingUrl,
+              })
+            : normalizeFareHarborUrl(tour.booking.bookingUrl),
+    },
+  };
+});
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
