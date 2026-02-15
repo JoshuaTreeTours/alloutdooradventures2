@@ -12,7 +12,7 @@
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
     "prebuild": "tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
-    "build": "node scripts/generate-sitemap.mjs && vite build && node scripts/run-prerender.mjs",
+    "build": "npm run generate:tour-enrichment && node scripts/generate-sitemap.mjs && vite build && node scripts/run-prerender.mjs",
     "preview": "vite preview --host",
     "audit:city-guides": "tsx scripts/audit-city-content.ts",
     "audit:city-guides:strict": "tsx scripts/audit-city-content.ts --strict",
