@@ -6,6 +6,7 @@ import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
+import { getTourEnrichment } from "@/data/tourEnrichment";
 import {
   REQUIRED_FH_URL_34849,
   getEngine2ToursBySourceCity,
@@ -18,6 +19,20 @@ import {
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
+
+const resolveTourEnrichment = (tour: Pick<Tour, "id" | "bookingUrl">) => {
+  const directMatch = getTourEnrichment(tour.id);
+  if (directMatch) {
+    return directMatch;
+  }
+
+  const fareHarborItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
+  if (fareHarborItemId) {
+    return getTourEnrichment(fareHarborItemId) || {};
+  }
+
+  return {};
+};
 
 type ProviderConfig = {
   label: string;
@@ -138,15 +153,22 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(tour =>
-  applyTourPricing({
+].map(tour => {
+  const enrichment = resolveTourEnrichment(tour);
+
+  return applyTourPricing({
     ...tour,
+    ratingValue: enrichment.ratingValue,
+    ratingCount: enrichment.ratingCount,
+    price: enrichment.price,
+    startingPrice: enrichment.price ?? tour.startingPrice,
+    currency: enrichment.currency ?? tour.currency,
     destination: {
       ...tour.destination,
       country: tour.destination.country || "United States",
     },
-  })
-);
+  });
+});
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -221,31 +243,43 @@ const toUnifiedEngine1Tour = (tour: Tour): UnifiedCityTour => ({
   href: getCityTourDetailPath(tour),
 });
 
-const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-${tour.id}`,
-  slug: tour.slug,
-  title: tour.name,
-  shortDescription: tour.content.highlights[0],
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country || "United States",
-    state: tour.geo.region,
-    stateSlug: "california",
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug,
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero ?? "/hero.jpg",
-  galleryImages: tour.images.gallery,
-  badges: {},
-  activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText,
-});
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
+  const enrichment = resolveTourEnrichment({
+    id: String(tour.id),
+    bookingUrl: tour.booking.bookingUrl,
+  });
+
+  return {
+    id: `engine2-${tour.id}`,
+    slug: tour.slug,
+    title: tour.name,
+    ratingValue: enrichment.ratingValue,
+    ratingCount: enrichment.ratingCount,
+    price: enrichment.price,
+    shortDescription: tour.content.highlights[0],
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country || "United States",
+      state: tour.geo.region,
+      stateSlug: "california",
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug,
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: tour.images.hero ?? "/hero.jpg",
+    galleryImages: tour.images.gallery,
+    badges: {},
+    startingPrice: enrichment.price,
+    currency: enrichment.currency ?? tour.currency ?? undefined,
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText,
+  };
+};
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),

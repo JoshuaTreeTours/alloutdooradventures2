@@ -126,6 +126,8 @@ export default function TourDetail({ params }: TourDetailProps) {
     tour.startingPrice,
     tour.currency
   );
+  const ratingValue = tour.ratingValue ?? tour.badges.rating;
+  const ratingCount = tour.ratingCount ?? tour.badges.reviewCount;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -209,8 +211,13 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
+              {ratingValue ? (
+                <p className="mt-4 text-sm text-[#1f2a1f]">
+                  ⭐ {ratingValue} ({ratingCount ?? 0} reviews)
+                </p>
+              ) : null}
               {startingPriceLabel ? (
-                <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
+                <p className="mt-2 text-sm font-semibold text-[#1f2a1f]">
                   From {startingPriceLabel}
                 </p>
               ) : null}

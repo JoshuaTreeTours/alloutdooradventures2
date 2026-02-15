@@ -229,11 +229,7 @@ const COUNTRY_NAME_TO_CODE: Record<string, string> = {
 const ISO_COUNTRY_CODE_PATTERN = /^[A-Za-z]{2}$/;
 
 const normalizeCountryKey = (value: string) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/[.,]/g, "")
-    .replace(/\s+/g, " ");
+  value.trim().toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, " ");
 
 const resolveCountryCode = (tour: Tour): string => {
   const country = tour.destination.country?.trim();
@@ -350,6 +346,10 @@ export const buildTourProductStructuredData = ({
     images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
     "product"
   );
+  const ratingValue = tour.ratingValue ?? tour.badges.rating;
+  const ratingCount = tour.ratingCount ?? tour.badges.reviewCount;
+  const offerPrice = tour.price ?? tour.startingPrice;
+
   return {
     "@type": "Product",
     "@id": `${detailUrl}#product`,
@@ -359,10 +359,30 @@ export const buildTourProductStructuredData = ({
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
-    priceSpecification: {
-      "@type": "PriceSpecification",
-      description: TOUR_PRICE_DESCRIPTION,
-    },
+    ...(ratingValue && ratingCount
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue,
+            reviewCount: ratingCount,
+          },
+        }
+      : {}),
+    ...(offerPrice && tour.currency
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: offerPrice,
+            priceCurrency: tour.currency,
+            availability: "https://schema.org/InStock",
+          },
+        }
+      : {
+          priceSpecification: {
+            "@type": "PriceSpecification",
+            description: TOUR_PRICE_DESCRIPTION,
+          },
+        }),
     location: buildTourLocationStructuredData(tour),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };

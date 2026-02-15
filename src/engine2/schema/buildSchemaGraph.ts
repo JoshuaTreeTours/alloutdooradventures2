@@ -5,6 +5,7 @@ import {
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
+import { getTourEnrichment } from "@/data/tourEnrichment";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -34,6 +35,7 @@ export const buildSchemaGraph = (
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
+  const enrichment = getTourEnrichment(String(tour.id)) || {};
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -74,9 +76,20 @@ export const buildSchemaGraph = (
       description: seo.description,
       image: [tour.images.hero, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
+      ...(enrichment.ratingValue && enrichment.ratingCount
+        ? {
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: enrichment.ratingValue,
+              reviewCount: enrichment.ratingCount,
+            },
+          }
+        : {}),
       offers: {
         "@type": "Offer",
         url: tour.booking.bookingUrl,
+        ...(enrichment.price ? { price: enrichment.price } : {}),
+        ...(enrichment.currency ? { priceCurrency: enrichment.currency } : {}),
         availability: "https://schema.org/InStock",
       },
       provider: { "@id": providerId },
