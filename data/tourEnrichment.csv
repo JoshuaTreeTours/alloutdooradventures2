@@ -1,7 +1,9 @@
-﻿tourId,ratingValue,ratingCount,price,currency
-402194,5.0,351,160,USD
-553857,4.8,149,795,DKK
-430167,4.8,25,45,USD
-34849,4.8,117,150,USD
+tourId,slug,title,price,currency,ratingValue,ratingCount,availability,image,merchant_enabled,merchant_title,merchant_description,source_url,last_updated
+
+402194,, ,160,USD,5.0,351,,,,,,,
+553857,, ,795,DKK,4.8,149,,,,,,,
+430167,, ,45,USD,4.8,25,,,,,,,
+34849,, ,150,USD,4.8,117,,,,,,,
+
 
 
