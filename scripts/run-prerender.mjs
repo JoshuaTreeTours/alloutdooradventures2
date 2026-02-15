@@ -1,8 +1,17 @@
-const isPreviewBuild = process.env.VERCEL_ENV === "preview";
+const env = process.env.VERCEL_ENV;
 
-if (isPreviewBuild) {
-  console.log("Skipping prerender for Vercel preview build.");
+if (env === "preview") {
+  console.log("⏭ Skipping prerender in preview environment.");
   process.exit(0);
 }
 
-await import("./prerender.mjs");
+console.log("🚀 Running prerender (production build).");
+
+import("./prerender.mjs")
+  .then(() => {
+    console.log("✅ Prerender complete.");
+  })
+  .catch((err) => {
+    console.error("❌ Prerender failed:", err);
+    process.exit(1);
+  });
