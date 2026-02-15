@@ -5,11 +5,9 @@ import {
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
-import { loadTourEnrichment } from "../../data/tourEnrichment";
+import { getTourEnrichment } from "@/data/tourEnrichment";
 
 type StructuredDataNode = Record<string, unknown>;
-
-const tourEnrichment = loadTourEnrichment();
 
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
@@ -37,7 +35,7 @@ export const buildSchemaGraph = (
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
-  const enrichment = tourEnrichment[String(tour.id)] || {};
+  const enrichment = getTourEnrichment(String(tour.id)) || {};
 
   return [
     ...getSiteStructuredDataNodes(),

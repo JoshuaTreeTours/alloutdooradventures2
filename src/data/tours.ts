@@ -6,7 +6,7 @@ import { toursGenerated } from "./tours.generated";
 import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
-import { loadTourEnrichment } from "./tourEnrichment";
+import { getTourEnrichment } from "@/data/tourEnrichment";
 import {
   REQUIRED_FH_URL_34849,
   getEngine2ToursBySourceCity,
@@ -20,16 +20,15 @@ export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
 
-const tourEnrichment = loadTourEnrichment();
-
 const resolveTourEnrichment = (tour: Pick<Tour, "id" | "bookingUrl">) => {
-  if (tourEnrichment[tour.id]) {
-    return tourEnrichment[tour.id];
+  const directMatch = getTourEnrichment(tour.id);
+  if (directMatch) {
+    return directMatch;
   }
 
   const fareHarborItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
-  if (fareHarborItemId && tourEnrichment[fareHarborItemId]) {
-    return tourEnrichment[fareHarborItemId];
+  if (fareHarborItemId) {
+    return getTourEnrichment(fareHarborItemId) || {};
   }
 
   return {};
