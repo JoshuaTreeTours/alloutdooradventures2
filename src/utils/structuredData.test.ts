@@ -78,7 +78,7 @@ describe("global structured data graph", () => {
 });
 
 describe("tour product/trip schema safety", () => {
-  it("emits Product without Offer and with textual price specification", () => {
+  it("emits Product with Offer when price and currency are present", () => {
     const product = buildTourProductStructuredData({
       tour: baseTour,
       detailUrl:
@@ -91,12 +91,12 @@ describe("tour product/trip schema safety", () => {
         "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1#product",
       brand: { "@id": SITE_BRAND_ID },
       provider: { "@id": SITE_BRAND_ID },
-      priceSpecification: {
-        "@type": "PriceSpecification",
+      offers: {
+        "@type": "Offer",
+        price: 99,
+        priceCurrency: "USD",
       },
     });
-    expect(product).not.toHaveProperty("offers");
-    expect(JSON.stringify(product)).not.toContain('"@type":"Offer"');
 
     const validIds = new Set(getSiteStructuredDataNodes().map(node => node["@id"]));
     expect(validIds.has((product.brand as { "@id": string })["@id"])).toBe(true);
