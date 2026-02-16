@@ -1,9 +1,5 @@
-tourId,slug,title,price,currency,ratingValue,ratingCount,availability,image,merchant_enabled,merchant_title,merchant_description,source_url,last_updated
-
-402194,, ,160,USD,5.0,351,,,,,,,
-553857,, ,795,DKK,4.8,149,,,,,,,
-430167,, ,45,USD,4.8,25,,,,,,,
-34849,, ,150,USD,4.8,117,,,,,,,
-
-
-
+tourId , slug , title , description , price , currency , ratingValue , ratingCount , availability , image , merchant_enabled , merchant_title , merchant_description , source_url , last_updated
+,,,,,,,,,,,,,,
+402194,,,,160,USD,5,351,,,,,,,
+430167, san-andreas-fault-shared-tour , San Andreas Fault Shared Tour , Guided San Andreas Fault Jeep tour exploring the geological forces shaping California. ,  , USD ,  ,  , in_stock ,  , true , San Andreas Fault Shared Tour , Guided San Andreas Fault Jeep tour exploring the geological forces shaping California. , https://adventurehummer.com/san-andreas-fault-tour/ ,
+402194, scenic-joshua-tree-tour , Joshua Tree National Park Scenic Tour ," Climate-controlled Joshua Tree National Park tour with expert guides, scenic viewpoints, and desert geology insights. ",  , USD ,  ,  , in_stock ,  , true , Joshua Tree National Park Scenic Tour ," Climate-controlled Joshua Tree National Park tour with expert guides, scenic viewpoints, and desert geology insights. ", https://adventurehummer.com/scenic-joshua-tree-tour/ ,
