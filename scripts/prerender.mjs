@@ -781,10 +781,9 @@ const main = async () => {
       type: DEFAULT_SEO.type,
       image: buildImageUrl(DEFAULT_SEO.image),
     };
-    const engine2Tour =
-      !isBookingRoute && getEngine2TourByPath
-        ? getEngine2TourByPath(basePathname)
-        : null;
+    const engine2Tour = getEngine2TourByPath
+      ? getEngine2TourByPath(basePathname)
+      : null;
     const engine2Seo =
       engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
 
@@ -828,9 +827,15 @@ const main = async () => {
     }
 
     if (engine2Seo) {
-      seo.title = engine2Seo.title;
-      seo.description = engine2Seo.description;
-      seo.url = engine2Seo.canonical;
+      seo.title = isBookingRoute
+        ? `${engine2Seo.title} | Book`
+        : engine2Seo.title;
+      seo.description = isBookingRoute
+        ? `Book ${engine2Tour.name} in ${engine2Tour.geo.city}, ${engine2Tour.geo.region}.`
+        : engine2Seo.description;
+      seo.url = isBookingRoute
+        ? buildCanonicalUrl(normalizedPathname)
+        : engine2Seo.canonical;
       seo.image = engine2Seo.og.image;
     } else if (tourForSeo) {
       const regionLabel =

@@ -1,4 +1,7 @@
 import palmSpringsTours from "./palm-springs.generated";
+import californiaEngine2Tours, {
+  californiaEngine2CitiesIndex,
+} from "./california.generated";
 import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
@@ -71,9 +74,12 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
   return null;
 };
 
-const engine2Tours: Engine2Tour[] = (
-  palmSpringsTours as unknown as readonly Engine2Tour[]
-).map(tour => ({
+const allGeneratedTours = [
+  ...(palmSpringsTours as unknown as readonly Engine2Tour[]),
+  ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
+];
+
+const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
   ...tour,
   images: {
     ...tour.images,
@@ -97,6 +103,25 @@ const engine2Tours: Engine2Tour[] = (
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
 );
+
+export type Engine2CityIndexEntry = {
+  cityName: string;
+  citySlug: string;
+  tourCount: number;
+  sampleImages: string[];
+};
+
+export const getEngine2CityIndex = (): Engine2CityIndexEntry[] =>
+  (californiaEngine2CitiesIndex as unknown as Engine2CityIndexEntry[]).map(
+    entry => ({
+      cityName: entry.cityName,
+      citySlug: entry.citySlug,
+      tourCount: Number(entry.tourCount) || 0,
+      sampleImages: Array.isArray(entry.sampleImages)
+        ? [...entry.sampleImages]
+        : [],
+    })
+  );
 
 export const getEngine2TourByPath = (path: string): Engine2Tour | null =>
   byPath.get(path) ?? null;

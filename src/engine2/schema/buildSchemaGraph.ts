@@ -100,13 +100,14 @@ export const buildSchemaGraph = (
       itinerary: { "@id": placeId },
       provider: { "@id": providerId },
       touristType: "Adventure travelers",
+      offers: offer,
     },
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
-      { name: tour.geo.region, url: "/destinations/states/california" },
+      { name: tour.geo.region, url: "/destinations/california" },
       {
         name: formatCityFromSlug(tour.sourceCitySlug),
-        url: `/destinations/states/california/cities/${tour.sourceCitySlug}`,
+        url: `/destinations/california/${tour.sourceCitySlug}`,
       },
       {
         name: "Tours",
