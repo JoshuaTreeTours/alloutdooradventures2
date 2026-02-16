@@ -1,13 +1,10 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
 import {
-  DEFAULT_CURRENCY,
-  DEFAULT_IMAGE_URL,
-} from "../src/constants/merchantDefaults";
-import {
-  ALLOWED_ACTIVITY_KEYWORDS,
-  EXCLUDED_TITLE_PATTERNS,
+  EXCLUDED_FEED_KEYWORDS,
+  HIGH_ENERGY_ALLOWED_KEYWORDS,
 } from "../src/config/merchantFilters";
 import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
@@ -36,7 +33,14 @@ const OUTPUT_HEADERS = [
   "condition",
 ] as const;
 
-const DEBUG_HEADERS = ["tourId", "title", "reason", "link", "image", "price"] as const;
+const DEBUG_HEADERS = [
+  "id",
+  "title",
+  "reason",
+  "link",
+  "imageCandidate",
+  "priceCandidate",
+] as const;
 
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
 type DebugHeader = (typeof DEBUG_HEADERS)[number];
@@ -44,27 +48,22 @@ type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
 type DebugRow = Record<DebugHeader, string>;
 
-type ProductImageRecord = {
-  image_url?: string;
-};
-
 type DropReason =
   | "notAllowedActivity"
+  | "excludedKeyword"
   | "invalidLink"
   | "pageNotFound"
-  | "missingTitle"
-  | "missingDescription"
-  | "missingImage_afterAllFallbacks";
+  | "missingImage";
 
 type FilterStats = {
   totalInput: number;
   kept: number;
   dropped_notAllowedActivity: number;
+  dropped_excludedKeyword: number;
   dropped_invalidLink: number;
   dropped_pageNotFound: number;
-  dropped_missingTitle: number;
-  dropped_missingDescription: number;
-  dropped_missingImage_afterAllFallbacks: number;
+  dropped_missingImage: number;
+  dropped_missingPrice: number;
 };
 
 const DOMAIN = "https://www.alloutdooradventures.com";
@@ -144,6 +143,63 @@ const rowsToCsv = <THeader extends string>(
   return `${headerLine}\n${body}\n`;
 };
 
+const tokenizeText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+
+const includesKeyword = (text: string, keyword: string) => {
+  const normalizedText = ` ${text.toLowerCase()} `;
+  const normalizedKeyword = keyword.toLowerCase().trim();
+
+  if (normalizedKeyword.includes(" ") || normalizedKeyword.includes("-")) {
+    return normalizedText.includes(` ${normalizedKeyword} `);
+  }
+
+  return tokenizeText(text).includes(normalizedKeyword);
+};
+
+const buildSourceText = (title: string, tags?: string, description?: string) =>
+  `${title || ""} ${tags || ""} ${description || ""}`.toLowerCase();
+
+const matchesExcluded = (title: string, tags?: string, description?: string) => {
+  const text = buildSourceText(title, tags, description);
+  return EXCLUDED_FEED_KEYWORDS.some(keyword => includesKeyword(text, keyword));
+};
+
+const isHorseContext = (text: string) =>
+  ["horse", "horseback", "trail ride", "ranch", "equestrian"].some(term =>
+    text.includes(term)
+  );
+
+const isHighEnergyAllowed = (title: string, tags?: string, description?: string) => {
+  const text = buildSourceText(title, tags, description);
+  const hasAllowedKeyword = HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+    includesKeyword(text, keyword)
+  );
+
+  if (!hasAllowedKeyword) {
+    return false;
+  }
+
+  const hasRideWord = includesKeyword(text, "ride") || includesKeyword(text, "riding");
+  const hasHorseWord = includesKeyword(text, "horseback") || includesKeyword(text, "horse");
+  if (hasRideWord && !hasHorseWord && !isHorseContext(text)) {
+    return HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+      keyword !== "ride" && keyword !== "riding" && includesKeyword(text, keyword)
+    );
+  }
+
+  const onlySunset = includesKeyword(text, "sunset") &&
+    !HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+      keyword !== "ride" && keyword !== "riding" && includesKeyword(text, keyword)
+    );
+
+  return !onlySunset;
+};
+
 const buildFallbackLink = (row: CsvRecord, tourId: string) => {
   const rawSlug = row.slug?.trim();
   const generatedSlug =
@@ -172,60 +228,31 @@ const toAoaLink = (rawSourceUrl: string, row: CsvRecord, tourId: string) => {
   return buildFallbackLink(row, tourId);
 };
 
-const isValidHttpUrl = (value: unknown): value is string => {
+const isValidImageUrl = (value: unknown): value is string => {
   if (typeof value !== "string") {
     return false;
   }
 
   const trimmed = value.trim();
-  if (!trimmed) {
+  if (!trimmed || trimmed.startsWith("data:")) {
     return false;
   }
 
   try {
     const parsed = new URL(trimmed);
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
+    return parsed.protocol === "https:";
   } catch {
     return false;
   }
 };
 
-const getProductMap = () => {
-  const products = new Map<string, ProductImageRecord>();
-
-  tours.forEach(tour => {
-    const bookingItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
-    const fallbackImage =
-      tour.heroImage ??
-      tour.galleryImages?.find(image => isValidHttpUrl(image));
-
-    if (!fallbackImage) {
-      return;
-    }
-
-    if (bookingItemId) {
-      products.set(bookingItemId, { image_url: fallbackImage });
-    }
-
-    if (tour.id) {
-      products.set(tour.id, { image_url: fallbackImage });
-    }
-  });
-
-  return products;
-};
-
-const getValidTourPaths = () =>
-  new Set(tours.map(tour => `/tours/${tour.slug}`));
-
-const isAllowedTour = (title: string, tags?: string) => {
-  const text = `${title} ${tags || ""}`.toLowerCase();
-
-  if (EXCLUDED_TITLE_PATTERNS.some(pattern => text.includes(pattern))) {
-    return false;
-  }
-
-  return ALLOWED_ACTIVITY_KEYWORDS.some(keyword => text.includes(keyword));
+const isPlaceholderImage = (value: string) => {
+  const lower = value.toLowerCase();
+  return (
+    lower.includes("default-tour") ||
+    lower.includes("placeholder") ||
+    lower.includes("default-image")
+  );
 };
 
 const parseAoaTourPath = (url: string) => {
@@ -235,7 +262,7 @@ const parseAoaTourPath = (url: string) => {
     const pathname = parsed.pathname.replace(/\/+$/, "");
 
     if (
-      (parsed.protocol !== "https:" && parsed.protocol !== "http:") ||
+      parsed.protocol !== "https:" ||
       hostname !== DOMAIN_HOSTNAME ||
       !pathname.startsWith("/tours/") ||
       pathname.split("/").filter(Boolean).length !== 2
@@ -249,11 +276,13 @@ const parseAoaTourPath = (url: string) => {
   }
 };
 
+const getValidTourPaths = () => new Set(tours.map(tour => `/tours/${tour.slug}`));
+
 const pageExists = async (url: string, validTourPaths: Set<string>) => {
   const pathname = parseAoaTourPath(url);
-  if (pathname && validTourPaths.has(pathname)) {
-    return true;
-  }
+  const isKnownPath = Boolean(pathname && validTourPaths.has(pathname));
+  const slug = pathname?.split("/").pop() ?? "";
+  const isGeneratedSlug = slug.startsWith("generated-");
 
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), PAGE_EXISTS_TIMEOUT_MS);
@@ -264,22 +293,27 @@ const pageExists = async (url: string, validTourPaths: Set<string>) => {
       signal: controller.signal,
     });
 
-    if (headResponse.ok) {
-      return true;
+    if (!headResponse.ok && headResponse.status !== 405) {
+      return isKnownPath || !isGeneratedSlug;
     }
 
     const getResponse = await fetch(url, {
       method: "GET",
       signal: controller.signal,
     });
-    return getResponse.ok;
-  } catch {
-    if (pathname) {
-      const slug = pathname.split("/").pop() ?? "";
-      return !slug.startsWith("generated-");
+
+    if (!getResponse.ok) {
+      return isKnownPath || !isGeneratedSlug;
     }
 
-    return false;
+    const html = (await getResponse.text()).toLowerCase();
+    if (html.includes("tour not found")) {
+      return false;
+    }
+
+    return true;
+  } catch {
+    return isKnownPath || !isGeneratedSlug;
   } finally {
     clearTimeout(timeout);
   }
@@ -289,18 +323,17 @@ const emptyStats = (): FilterStats => ({
   totalInput: 0,
   kept: 0,
   dropped_notAllowedActivity: 0,
+  dropped_excludedKeyword: 0,
   dropped_invalidLink: 0,
   dropped_pageNotFound: 0,
-  dropped_missingTitle: 0,
-  dropped_missingDescription: 0,
-  dropped_missingImage_afterAllFallbacks: 0,
+  dropped_missingImage: 0,
+  dropped_missingPrice: 0,
 });
 
 const main = async () => {
   const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
-  const productsByTourId = getProductMap();
-  const validTourPaths = getValidTourPaths();
   const skipPageCheck = process.env.MERCHANT_SKIP_PAGE_CHECK === "1";
+  const validTourPaths = getValidTourPaths();
 
   const stats = emptyStats();
   const outputRows: MerchantRow[] = [];
@@ -308,18 +341,24 @@ const main = async () => {
 
   const dropRow = (
     reason: DropReason,
-    row: { tourId: string; title: string; link: string; image: string; price: string }
+    row: {
+      id: string;
+      title: string;
+      link: string;
+      imageCandidate: string;
+      priceCandidate: string;
+    }
   ) => {
     stats[`dropped_${reason}`] += 1;
 
     if (droppedRows.length < MAX_DEBUG_ROWS) {
       droppedRows.push({
-        tourId: row.tourId,
+        id: row.id,
         title: row.title,
         reason,
         link: row.link,
-        image: row.image,
-        price: row.price,
+        imageCandidate: row.imageCandidate,
+        priceCandidate: row.priceCandidate,
       });
     }
   };
@@ -330,9 +369,10 @@ const main = async () => {
     const row = sourceRows[index];
     const tourId = row.tourId?.trim() || `generated-${index + 1}`;
 
-    const title = row.merchant_title?.trim() || row.title?.trim() || "";
+    const title = row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
     const description =
       row.merchant_description?.trim() || row.description?.trim() || "";
+    const tags = row.tags?.trim() || "";
     const link = toAoaLink(row.source_url ?? "", row, tourId);
 
     const rawPrice = parsePrice(row.price);
@@ -343,29 +383,24 @@ const main = async () => {
       : row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
     const price = formatMerchantPrice(finalPrice, currency);
 
-    if (!title) {
-      dropRow("missingTitle", { tourId, title, link, image: row.image ?? "", price });
-      continue;
-    }
-
-    if (!description) {
-      dropRow("missingDescription", {
-        tourId,
+    if (!isHighEnergyAllowed(title, tags, description)) {
+      dropRow("notAllowedActivity", {
+        id: tourId,
         title,
         link,
-        image: row.image ?? "",
-        price,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
       });
       continue;
     }
 
-    if (!isAllowedTour(title, row.tags?.trim())) {
-      dropRow("notAllowedActivity", {
-        tourId,
+    if (matchesExcluded(title, tags, description)) {
+      dropRow("excludedKeyword", {
+        id: tourId,
         title,
         link,
-        image: row.image ?? "",
-        price,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
       });
       continue;
     }
@@ -373,52 +408,48 @@ const main = async () => {
     const parsedPath = parseAoaTourPath(link);
     if (!parsedPath) {
       dropRow("invalidLink", {
-        tourId,
+        id: tourId,
         title,
         link,
-        image: row.image ?? "",
-        price,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
       });
       continue;
     }
 
-    const isGeneratedSlug = parsedPath.split("/").pop()?.startsWith("generated-") ?? false;
-    const generatedSlugIsKnown = validTourPaths.has(parsedPath);
-
-    const exists =
-      skipPageCheck && !isGeneratedSlug
-        ? true
-        : skipPageCheck && isGeneratedSlug
-          ? generatedSlugIsKnown
-          : await pageExists(link, validTourPaths);
-
-    if (!exists) {
-      dropRow("pageNotFound", {
-        tourId,
-        title,
-        link,
-        image: row.image ?? "",
-        price,
-      });
-      continue;
+    if (!skipPageCheck) {
+      const exists = await pageExists(link, validTourPaths);
+      if (!exists) {
+        dropRow("pageNotFound", {
+          id: tourId,
+          title,
+          link,
+          imageCandidate: row.image ?? "",
+          priceCandidate: price,
+        });
+        continue;
+      }
     }
 
-    const product = productsByTourId.get(tourId);
-    const extractedPageImage = await extractPageImage(link);
-    const imageLink = [
-      product?.image_url,
+    const imageCandidate = [
+      row.image_url,
       row.image,
-      extractedPageImage,
-      DEFAULT_IMAGE_URL,
-    ].find(candidate => isValidHttpUrl(candidate)) as string | undefined;
+      await extractPageImage(link),
+    ].find(candidate => {
+      if (!isValidImageUrl(candidate)) {
+        return false;
+      }
 
-    if (!imageLink?.trim()) {
-      dropRow("missingImage_afterAllFallbacks", {
-        tourId,
+      return !isPlaceholderImage(candidate);
+    });
+
+    if (!imageCandidate) {
+      dropRow("missingImage", {
+        id: tourId,
         title,
         link,
-        image: "",
-        price,
+        imageCandidate: row.image ?? row.image_url ?? "",
+        priceCandidate: price,
       });
       continue;
     }
@@ -431,11 +462,12 @@ const main = async () => {
       title,
       description,
       link,
-      image_link: imageLink,
+      image_link: imageCandidate,
       availability,
       price,
       condition: "new",
     });
+
     stats.kept += 1;
   }
 
@@ -446,7 +478,6 @@ const main = async () => {
     "utf8"
   );
 
-  console.log("Merchant feed generation summary");
   console.table(stats);
   console.log(`Wrote ${outputRows.length} merchant rows to ${OUTPUT_PATH}.`);
   console.log(`Wrote ${droppedRows.length} dropped debug rows to ${DEBUG_OUTPUT_PATH}.`);
