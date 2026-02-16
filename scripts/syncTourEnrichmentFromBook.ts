@@ -1,6 +1,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { buildTourUrlSafe } from "../src/utils/buildTourUrl";
+
 type CsvData = {
   headers: string[];
   rows: Record<string, string>[];
@@ -188,17 +190,18 @@ const appendBookPath = (rawUrl: string): string => {
 };
 
 const deriveBookUrl = (row: Record<string, string>) => {
-  const fromSource = appendBookPath(row.source_url ?? "");
-  if (fromSource) {
-    return fromSource;
-  }
+  const fallbackTourUrl = buildTourUrlSafe({
+    source_url: row.source_url,
+    slug: row.slug,
+    title: row.title,
+    tourId: row.tourId,
+    state: row.state,
+    city: row.city,
+    state_slug: row.state_slug,
+    city_slug: row.city_slug,
+  });
 
-  const slug = (row.slug ?? "").trim();
-  if (!slug) {
-    return "";
-  }
-
-  return `https://www.alloutdooradventures.com/tours/${encodeURIComponent(slug)}/book`;
+  return appendBookPath(fallbackTourUrl);
 };
 
 const parseJsonSafely = (value: string): unknown | undefined => {
@@ -505,10 +508,11 @@ const main = async () => {
     const tourId = (row.tourId ?? "").trim();
     const url = deriveBookUrl(row);
 
-    if (!url) {
-      failures.push({ tourId: tourId || "unknown", url: "", reason: "Missing source_url and slug" });
-      rowsSkipped += 1;
-      return;
+    if (!(row.source_url ?? "").trim()) {
+      console.warn(`Fallback used: missing source_url for tourId ${tourId || "unknown"}`);
+    }
+    if (!(row.slug ?? "").trim()) {
+      console.warn(`Fallback used: missing slug for tourId ${tourId || "unknown"}`);
     }
 
     try {
