@@ -43,6 +43,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   },
   {
@@ -89,6 +92,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   },
   {
@@ -135,6 +141,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   },
   {
@@ -181,6 +190,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   },
   {
@@ -227,6 +239,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   },
   {
@@ -273,6 +288,9 @@ const palmSpringsTours = [
         "refUrl": "https://www.alloutdooradventures.com",
         "backUrl": "https://www.alloutdooradventures.com/"
       }
+    },
+    "pricing": {
+      "currency": "USD"
     }
   }
 ] as const;

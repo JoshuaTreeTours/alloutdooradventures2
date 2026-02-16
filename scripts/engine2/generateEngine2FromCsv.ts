@@ -197,6 +197,12 @@ const main = async () => {
           }
         : undefined);
 
+    const parsedPrice = Number.parseFloat(enrichment?.price ?? "");
+    const hasNumericPrice = Number.isFinite(parsedPrice);
+    const normalizedPrice = hasNumericPrice ? parsedPrice.toString() : undefined;
+    const normalizedCurrency = cleanUrl(enrichment?.currency) || "USD";
+    const normalizedPriceRange = cleanUrl(enrichment?.priceRange) || undefined;
+
     const draftTour = {
       id,
       sourceCitySlug,
@@ -243,6 +249,11 @@ const main = async () => {
             })
           : normalizeFareHarborUrl(row.regular_link),
         fareharbor,
+      },
+      pricing: {
+        price: normalizedPrice,
+        currency: normalizedCurrency,
+        priceRange: hasNumericPrice ? undefined : normalizedPriceRange,
       },
     };
 

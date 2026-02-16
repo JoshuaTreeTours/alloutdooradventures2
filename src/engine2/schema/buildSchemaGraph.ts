@@ -34,6 +34,24 @@ export const buildSchemaGraph = (
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
+  const parsedPrice = Number.parseFloat(tour.pricing?.price ?? "");
+  const hasNumericPrice = Number.isFinite(parsedPrice);
+  const offer: Record<string, unknown> = {
+    "@type": "Offer",
+    url: tour.booking.bookingUrl,
+    availability: "https://schema.org/InStock",
+  };
+
+  if (hasNumericPrice) {
+    offer.price = parsedPrice.toString();
+    offer.priceCurrency = tour.pricing?.currency || "USD";
+  } else if (tour.pricing?.priceRange) {
+    offer.priceSpecification = {
+      "@type": "PriceSpecification",
+      description: `Typical price range ${tour.pricing.priceRange}`,
+      priceCurrency: tour.pricing?.currency || "USD",
+    };
+  }
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -74,11 +92,7 @@ export const buildSchemaGraph = (
       description: seo.description,
       image: [tour.images.hero, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
-      offers: {
-        "@type": "Offer",
-        url: tour.booking.bookingUrl,
-        availability: "https://schema.org/InStock",
-      },
+      offers: offer,
       provider: { "@id": providerId },
     },
     {

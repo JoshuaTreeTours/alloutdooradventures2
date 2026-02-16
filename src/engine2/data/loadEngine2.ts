@@ -48,6 +48,11 @@ export type Engine2Tour = {
       backUrl: string;
     };
   };
+  pricing?: {
+    price?: string;
+    currency?: string;
+    priceRange?: string;
+  };
 };
 
 const getBestFareHarborImage = (tour: Engine2Tour) => {
