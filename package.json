@@ -23,7 +23,9 @@
     "engine2:audit-city-csv-coverage": "tsx scripts/engine2/auditCityCsvCoverage.ts",
     "verify:palm-springs-34849": "tsx scripts/verify-palm-springs-34849.ts",
     "sync:tour-enrichment": "tsx scripts/syncTourEnrichmentFromBook.ts",
-    "sync:tour-enrichment:force": "tsx scripts/syncTourEnrichmentFromBook.ts --force"
+    "sync:tour-enrichment:force": "tsx scripts/syncTourEnrichmentFromBook.ts --force",
+    "sync:fareharbor": "tsx scripts/syncTourEnrichmentFromFareHarbor.ts",
+    "sync:fareharbor:force": "tsx scripts/syncTourEnrichmentFromFareHarbor.ts --force"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
