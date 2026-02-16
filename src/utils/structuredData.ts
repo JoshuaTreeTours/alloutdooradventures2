@@ -1,4 +1,9 @@
 import type { Tour } from "../data/tours.types";
+import {
+  DEFAULT_CURRENCY,
+  DEFAULT_IMAGE_URL,
+} from "../constants/merchantDefaults";
+import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages } from "./hero";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 import { SITE_BRAND_NAME } from "./site";
@@ -229,11 +234,7 @@ const COUNTRY_NAME_TO_CODE: Record<string, string> = {
 const ISO_COUNTRY_CODE_PATTERN = /^[A-Za-z]{2}$/;
 
 const normalizeCountryKey = (value: string) =>
-  value
-    .trim()
-    .toLowerCase()
-    .replace(/[.,]/g, "")
-    .replace(/\s+/g, " ");
+  value.trim().toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, " ");
 
 const resolveCountryCode = (tour: Tour): string => {
   const country = tour.destination.country?.trim();
@@ -273,6 +274,12 @@ const buildTourLocationStructuredData = (tour: Tour) => {
 
 const TOUR_PRICE_DESCRIPTION =
   "Pricing varies by date and group size; see booking partner for current rates.";
+
+const toOfferPrice = (tour: Tour) =>
+  applyPriceFloor(tour.startingPrice ?? null);
+
+const toOfferCurrency = (tour: Tour) =>
+  tour.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
 
 export const buildWebPageStructuredData = ({
   url,
@@ -347,7 +354,11 @@ export const buildTourProductStructuredData = ({
   images?: string[];
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    images ?? [
+      tour.heroImage,
+      ...(tour.galleryImages ?? []),
+      DEFAULT_IMAGE_URL,
+    ],
     "product"
   );
   return {
@@ -359,6 +370,13 @@ export const buildTourProductStructuredData = ({
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
+    offers: {
+      "@type": "Offer",
+      url: detailUrl,
+      availability: "https://schema.org/InStock",
+      price: toOfferPrice(tour).toFixed(2),
+      priceCurrency: toOfferCurrency(tour),
+    },
     priceSpecification: {
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,
@@ -380,7 +398,11 @@ export const buildTourTripStructuredData = ({
   images?: string[];
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
+    images ?? [
+      tour.heroImage,
+      ...(tour.galleryImages ?? []),
+      DEFAULT_IMAGE_URL,
+    ],
     "product"
   );
   return {
@@ -390,6 +412,13 @@ export const buildTourTripStructuredData = ({
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     provider: { "@id": SITE_BRAND_ID },
+    offers: {
+      "@type": "Offer",
+      url: detailUrl,
+      availability: "https://schema.org/InStock",
+      price: toOfferPrice(tour).toFixed(2),
+      priceCurrency: toOfferCurrency(tour),
+    },
     priceSpecification: {
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,

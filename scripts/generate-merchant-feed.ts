@@ -1,7 +1,18 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  DEFAULT_CURRENCY,
+  DEFAULT_IMAGE_URL,
+} from "../src/constants/merchantDefaults";
+import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
+import {
+  applyPriceFloor,
+  formatMerchantPrice,
+  parsePrice,
+} from "../src/utils/merchantPricing";
+import { extractPageImage } from "./utils/extractPageImage";
 
 const INPUT_PATH = path.resolve(process.cwd(), "data/tourEnrichment.csv");
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
@@ -21,9 +32,11 @@ type OutputHeader = (typeof OUTPUT_HEADERS)[number];
 type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
 
+type ProductImageRecord = {
+  image_url?: string;
+};
+
 const DOMAIN = "https://www.alloutdooradventures.com";
-const DEFAULT_IMAGE = `${DOMAIN}/default-tour.jpg`;
-const DEFAULT_PRICE = "1.00 USD";
 const DEFAULT_AVAILABILITY = "in_stock";
 
 const parseCsv = (content: string): CsvRecord[] => {
@@ -96,7 +109,8 @@ const toCsv = (rows: MerchantRow[]) => {
 
 const buildFallbackLink = (row: CsvRecord, tourId: string) => {
   const rawSlug = row.slug?.trim();
-  const generatedSlug = rawSlug || slugify(row.title?.trim() || tourId || "tour");
+  const generatedSlug =
+    rawSlug || slugify(row.title?.trim() || tourId || "tour");
   return `${DOMAIN}/tours/${generatedSlug}`;
 };
 
@@ -121,61 +135,115 @@ const toAoaLink = (rawSourceUrl: string, row: CsvRecord, tourId: string) => {
   return buildFallbackLink(row, tourId);
 };
 
-const normalizePrice = (rawPrice: string, rawCurrency: string) => {
-  const currency = (rawCurrency ?? "").trim().toUpperCase() || "USD";
-  const cleaned = (rawPrice ?? "").trim().replace(/,/g, "").replace(/[^\d.-]/g, "");
-
-  if (!cleaned) {
-    return { value: DEFAULT_PRICE, usedFallback: true };
+const isValidHttpUrl = (value: unknown): value is string => {
+  if (typeof value !== "string") {
+    return false;
   }
 
-  const numeric = Number.parseFloat(cleaned);
-  if (!Number.isFinite(numeric)) {
-    return { value: DEFAULT_PRICE, usedFallback: true };
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return false;
   }
 
-  return { value: `${numeric.toFixed(2)} ${currency}`, usedFallback: false };
+  try {
+    const parsed = new URL(trimmed);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false;
+  }
+};
+
+const getProductMap = () => {
+  const products = new Map<string, ProductImageRecord>();
+
+  tours.forEach(tour => {
+    const bookingItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
+    const fallbackImage =
+      tour.heroImage ??
+      tour.galleryImages?.find(image => isValidHttpUrl(image));
+
+    if (!fallbackImage) {
+      return;
+    }
+
+    if (bookingItemId) {
+      products.set(bookingItemId, { image_url: fallbackImage });
+    }
+
+    if (tour.id) {
+      products.set(tour.id, { image_url: fallbackImage });
+    }
+  });
+
+  return products;
 };
 
 const main = async () => {
   const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
+  const productsByTourId = getProductMap();
 
   const outputRows: MerchantRow[] = [];
   let warningCount = 0;
 
-  sourceRows.forEach((row, index) => {
+  for (let index = 0; index < sourceRows.length; index += 1) {
+    const row = sourceRows[index];
     const tourId = row.tourId?.trim() || `generated-${index + 1}`;
 
-    const price = normalizePrice(row.price, row.currency);
-    if (price.usedFallback) {
+    const rawPrice = parsePrice(row.price);
+    const finalPrice = applyPriceFloor(rawPrice);
+    const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
+    const price = formatMerchantPrice(finalPrice, currency);
+
+    if (rawPrice === null || finalPrice !== rawPrice) {
       warningCount += 1;
-      console.warn(`Fallback used for price on tourId ${tourId}: defaulted to ${price.value}.`);
+      console.warn(
+        `Fallback used for price on tourId ${tourId}: defaulted to ${price}.`
+      );
     }
 
-    const title = row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
+    const title =
+      row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
     const description =
-      row.merchant_description?.trim() || row.description?.trim() || `Tour ${tourId}`;
+      row.merchant_description?.trim() ||
+      row.description?.trim() ||
+      `Tour ${tourId}`;
     const link = toAoaLink(row.source_url ?? "", row, tourId);
-    const imageLink = (row.image ?? "").trim() || DEFAULT_IMAGE;
-    const availability = (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
+
+    const product = productsByTourId.get(tourId);
+    const extractedPageImage = await extractPageImage(link);
+    const imageLink = [
+      row.image,
+      product?.image_url,
+      extractedPageImage,
+      DEFAULT_IMAGE_URL,
+    ].find(candidate => isValidHttpUrl(candidate)) as string;
+
+    const availability =
+      (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
 
     if (!row.source_url?.trim()) {
       warningCount += 1;
-      console.warn(`Fallback used for link on tourId ${tourId}: used AOA URL ${link}`);
+      console.warn(
+        `Fallback used for link on tourId ${tourId}: used AOA URL ${link}`
+      );
     } else if (!row.source_url.includes("alloutdooradventures.com")) {
       warningCount += 1;
-      console.warn(`Fallback used for link on tourId ${tourId}: replaced with ${link}`);
+      console.warn(
+        `Fallback used for link on tourId ${tourId}: replaced with ${link}`
+      );
     }
 
-    if (!(row.image ?? "").trim()) {
+    if (!row.image?.trim() && imageLink !== row.image?.trim()) {
       warningCount += 1;
-      console.warn(`Fallback used for image on tourId ${tourId}: defaulted to ${DEFAULT_IMAGE}.`);
+      console.warn(
+        `Fallback used for image on tourId ${tourId}: resolved to ${imageLink}.`
+      );
     }
 
     if (!(row.availability ?? "").trim()) {
       warningCount += 1;
       console.warn(
-        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`,
+        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`
       );
     }
 
@@ -186,15 +254,17 @@ const main = async () => {
       link,
       image_link: imageLink,
       availability,
-      price: price.value,
+      price,
       condition: "new",
     });
-  });
+  }
 
   await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
 
   console.log(`Processed ${sourceRows.length} rows.`);
-  console.log(`Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`);
+  console.log(
+    `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+  );
   console.log(`Logged ${warningCount} warnings.`);
 };
 

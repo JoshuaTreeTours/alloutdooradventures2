@@ -28,6 +28,11 @@ import {
   buildWebPageStructuredData,
 } from "../../utils/structuredData";
 import { buildTourMeta } from "../../lib/tourMeta";
+import {
+  DEFAULT_IMAGE_URL,
+  PRICE_MIN_THRESHOLD_USD,
+} from "../../constants/merchantDefaults";
+import { applyPriceFloor } from "../../utils/merchantPricing";
 
 type TourDetailProps = {
   params: {
@@ -50,6 +55,7 @@ export default function TourDetail({ params }: TourDetailProps) {
       route: detailUrl,
       tour,
     }) ?? undefined;
+  const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product"
@@ -70,7 +76,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         url: detailUrl,
         name: tour.title,
         description: metaDescription,
-        image: heroImage,
+        image: finalHeroImage,
         mainEntityId: `${detailUrl}#product`,
       }),
       buildTourProductStructuredData({
@@ -93,7 +99,7 @@ export default function TourDetail({ params }: TourDetailProps) {
   }, [
     bookingUrl,
     detailUrl,
-    heroImage,
+    finalHeroImage,
     metaDescription,
     structuredImages,
     tour,
@@ -123,9 +129,14 @@ export default function TourDetail({ params }: TourDetailProps) {
   const providerLabel = getProviderLabel(tour.bookingProvider);
   const highlights = getTourHighlights(tour);
   const startingPriceLabel = formatStartingPrice(
-    tour.startingPrice,
+    applyPriceFloor(tour.startingPrice ?? null),
     tour.currency
   );
+  const isPriceFallbackApplied =
+    tour.startingPrice === undefined ||
+    tour.startingPrice === null ||
+    !Number.isFinite(tour.startingPrice) ||
+    tour.startingPrice < PRICE_MIN_THRESHOLD_USD;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -133,7 +144,7 @@ export default function TourDetail({ params }: TourDetailProps) {
         title={tourMeta.title}
         description={tourMeta.description}
         url={tourMeta.canonical}
-        image={heroImage ?? null}
+        image={finalHeroImage}
         robots={tourMeta.robots}
         googlebot={tourMeta.googlebot}
       />
@@ -152,10 +163,10 @@ export default function TourDetail({ params }: TourDetailProps) {
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
             <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
-              {heroImage ? (
+              {finalHeroImage ? (
                 <Image
-                  src={heroImage}
-                  fallbackSrc={heroImage}
+                  src={finalHeroImage}
+                  fallbackSrc={finalHeroImage}
                   alt={tour.title}
                   className="h-72 w-full object-cover"
                 />
@@ -209,11 +220,11 @@ export default function TourDetail({ params }: TourDetailProps) {
                 be taken to the official booking page for availability and
                 pricing.
               </p>
-              {startingPriceLabel ? (
-                <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
-                  From {startingPriceLabel}
-                </p>
-              ) : null}
+              <p className="mt-4 text-sm font-semibold text-[#1f2a1f]">
+                {isPriceFallbackApplied
+                  ? "From $129 per person"
+                  : `From ${startingPriceLabel} per person`}
+              </p>
               <Link href={bookingUrl}>
                 <a className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                   BOOK

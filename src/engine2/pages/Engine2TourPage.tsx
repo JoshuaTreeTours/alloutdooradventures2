@@ -8,6 +8,8 @@ import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
+import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -55,6 +57,10 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const bookingPath = `${tour.seo.canonicalPath}/book`;
+  const basePrice = parsePrice(tour.pricing?.price ?? null);
+  const displayPrice = applyPriceFloor(basePrice);
+  const isPriceFallbackApplied =
+    basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
   const structuredDataNodes = useMemo(
     () => buildSchemaGraph(normalizedTour, seo),
@@ -90,6 +96,11 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
           </h1>
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
+          </p>
+          <p className="mt-4 text-sm font-semibold text-white/90">
+            {isPriceFallbackApplied
+              ? "From $129 per person"
+              : `From $${displayPrice.toFixed(2)} per person`}
           </p>
           <div className="mt-6 flex gap-3">
             <Link href={bookingPath}>
@@ -155,26 +166,31 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
               More tours in {tour.geo.city}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map(related => (
-                <Link key={related.slug} href={related.seo.canonicalPath}>
-                  <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                    <Image
-                      src={related.images.hero}
-                      fallbackSrc={related.images.hero}
-                      alt={related.name}
-                      className="h-44 w-full object-cover"
-                    />
-                    <div className="p-4">
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                        {related.geo.city}, {related.geo.region}
-                      </p>
-                      <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
-                        {related.name}
-                      </h3>
-                    </div>
-                  </a>
-                </Link>
-              ))}
+              {relatedTours.map(related => {
+                const relatedHeroImage =
+                  related.images.hero || ENGINE2_DEFAULT_IMAGE;
+
+                return (
+                  <Link key={related.slug} href={related.seo.canonicalPath}>
+                    <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                      <Image
+                        src={relatedHeroImage}
+                        fallbackSrc={relatedHeroImage}
+                        alt={related.name}
+                        className="h-44 w-full object-cover"
+                      />
+                      <div className="p-4">
+                        <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                          {related.geo.city}, {related.geo.region}
+                        </p>
+                        <h3 className="mt-2 text-base font-semibold text-[#1f2a1f]">
+                          {related.name}
+                        </h3>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>

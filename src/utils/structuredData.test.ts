@@ -78,7 +78,7 @@ describe("global structured data graph", () => {
 });
 
 describe("tour product/trip schema safety", () => {
-  it("emits Product without Offer and with textual price specification", () => {
+  it("emits Product with Offer and textual price specification", () => {
     const product = buildTourProductStructuredData({
       tour: baseTour,
       detailUrl:
@@ -94,15 +94,22 @@ describe("tour product/trip schema safety", () => {
       priceSpecification: {
         "@type": "PriceSpecification",
       },
+      offers: {
+        "@type": "Offer",
+        price: "99.00",
+        priceCurrency: "USD",
+      },
     });
-    expect(product).not.toHaveProperty("offers");
-    expect(JSON.stringify(product)).not.toContain('"@type":"Offer"');
 
-    const validIds = new Set(getSiteStructuredDataNodes().map(node => node["@id"]));
-    expect(validIds.has((product.brand as { "@id": string })["@id"])).toBe(true);
+    const validIds = new Set(
+      getSiteStructuredDataNodes().map(node => node["@id"])
+    );
+    expect(validIds.has((product.brand as { "@id": string })["@id"])).toBe(
+      true
+    );
   });
 
-  it("emits TouristTrip with stable ID and no Offer", () => {
+  it("emits TouristTrip with stable ID and Offer", () => {
     const trip = buildTourTripStructuredData({
       tour: baseTour,
       detailUrl:
@@ -117,9 +124,30 @@ describe("tour product/trip schema safety", () => {
       priceSpecification: {
         "@type": "PriceSpecification",
       },
+      offers: {
+        "@type": "Offer",
+        price: "99.00",
+        priceCurrency: "USD",
+      },
     });
-    expect(trip).not.toHaveProperty("offers");
-    expect(JSON.stringify(trip)).not.toContain('"@type":"Offer"');
+  });
+
+  it("applies a USD 129.00 offer floor when price is missing or below threshold", () => {
+    const product = buildTourProductStructuredData({
+      tour: {
+        ...baseTour,
+        startingPrice: 0,
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+    });
+
+    expect(product).toMatchObject({
+      offers: {
+        price: "129.00",
+        priceCurrency: "USD",
+      },
+    });
   });
 
   it("emits Place/PostalAddress location with locality and country on tours", () => {
@@ -140,7 +168,6 @@ describe("tour product/trip schema safety", () => {
       },
     });
   });
-
 
   it("maps destination country names to ISO 3166-1 alpha-2 codes", () => {
     const trip = buildTourTripStructuredData({
