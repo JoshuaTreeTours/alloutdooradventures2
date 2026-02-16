@@ -22,6 +22,9 @@ type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
 
 const DOMAIN = "https://www.alloutdooradventures.com";
+const DEFAULT_IMAGE = `${DOMAIN}/default-tour.jpg`;
+const DEFAULT_PRICE = "1.00 USD";
+const DEFAULT_AVAILABILITY = "in_stock";
 
 const parseCsv = (content: string): CsvRecord[] => {
   const normalized = content.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
@@ -123,12 +126,12 @@ const normalizePrice = (rawPrice: string, rawCurrency: string) => {
   const cleaned = (rawPrice ?? "").trim().replace(/,/g, "").replace(/[^\d.-]/g, "");
 
   if (!cleaned) {
-    return { value: `0.00 ${currency}`, usedFallback: true };
+    return { value: DEFAULT_PRICE, usedFallback: true };
   }
 
   const numeric = Number.parseFloat(cleaned);
   if (!Number.isFinite(numeric)) {
-    return { value: `0.00 ${currency}`, usedFallback: true };
+    return { value: DEFAULT_PRICE, usedFallback: true };
   }
 
   return { value: `${numeric.toFixed(2)} ${currency}`, usedFallback: false };
@@ -138,7 +141,6 @@ const main = async () => {
   const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
 
   const outputRows: MerchantRow[] = [];
-  let skippedForMissingPrice = 0;
   let warningCount = 0;
 
   sourceRows.forEach((row, index) => {
@@ -147,27 +149,34 @@ const main = async () => {
     const price = normalizePrice(row.price, row.currency);
     if (price.usedFallback) {
       warningCount += 1;
-      console.warn(`Missing or invalid price for tourId ${tourId}: defaulted to ${price.value}.`);
+      console.warn(`Fallback used for price on tourId ${tourId}: defaulted to ${price.value}.`);
     }
 
     const title = row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
     const description =
       row.merchant_description?.trim() || row.description?.trim() || `Tour ${tourId}`;
     const link = toAoaLink(row.source_url ?? "", row, tourId);
-    const imageLink = (row.image ?? "").trim();
-    const availability = (row.availability ?? "").trim() || "in_stock";
+    const imageLink = (row.image ?? "").trim() || DEFAULT_IMAGE;
+    const availability = (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
 
     if (!row.source_url?.trim()) {
       warningCount += 1;
-      console.warn(`Missing source_url for tourId ${tourId}: used fallback AOA URL ${link}`);
+      console.warn(`Fallback used for link on tourId ${tourId}: used AOA URL ${link}`);
     } else if (!row.source_url.includes("alloutdooradventures.com")) {
       warningCount += 1;
-      console.warn(`Non-AOA source_url for tourId ${tourId}: replaced with ${link}`);
+      console.warn(`Fallback used for link on tourId ${tourId}: replaced with ${link}`);
     }
 
-    if (!imageLink) {
+    if (!(row.image ?? "").trim()) {
       warningCount += 1;
-      console.warn(`Missing image for tourId ${tourId}.`);
+      console.warn(`Fallback used for image on tourId ${tourId}: defaulted to ${DEFAULT_IMAGE}.`);
+    }
+
+    if (!(row.availability ?? "").trim()) {
+      warningCount += 1;
+      console.warn(
+        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`,
+      );
     }
 
     outputRows.push({
@@ -186,7 +195,6 @@ const main = async () => {
 
   console.log(`Processed ${sourceRows.length} rows.`);
   console.log(`Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`);
-  console.log(`Skipped ${skippedForMissingPrice} rows due to missing/invalid price.`);
   console.log(`Logged ${warningCount} warnings.`);
 };
 
