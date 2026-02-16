@@ -13,6 +13,7 @@ import {
   normalizeFareHarborUrl,
 } from "../../src/engine2/utils/buildFareHarborUrl";
 import { parseCsv, toSourceCitySlug } from "./csvUtils";
+import { readTourEnrichment } from "./readTourEnrichment";
 
 const slugify = (value: string) =>
   value
@@ -131,11 +132,15 @@ const main = async () => {
   const csvFileName = path.basename(destination.csvPath);
   const csv = await readFile(csvPath, "utf8");
   const rows = parseCsv(csv);
+  const enrichmentByTourId = await readTourEnrichment(
+    path.resolve(process.cwd(), "data/tourEnrichment.csv")
+  );
 
   const generatedTours = rows.map((row, index) => {
     const fallbackId = `missing-item-id-row-${index + 2}`;
     const id = row.item_id?.trim() || fallbackId;
     const rawName = row.item_name?.trim() || `Untitled Tour ${id}`;
+    const enrichment = enrichmentByTourId.get(id);
     if (!row.item_id?.trim()) {
       console.warn(
         `WARN: missing item_id in ${csvFileName} at row ${index + 2}; using ${fallbackId}`
@@ -146,8 +151,9 @@ const main = async () => {
         `WARN: missing item_name for item_id ${id} in ${csvFileName}; using fallback title`
       );
     }
-    const name = sanitizeTourLabel(rawName);
-    const slug = `${slugify(rawName)}-${id}`;
+    const name = sanitizeTourLabel(enrichment?.title || rawName);
+    const enrichmentSlug = enrichment?.slug?.trim();
+    const slug = enrichmentSlug || `${slugify(rawName)}-${id}`;
     const canonicalPath = `${destination.canonicalBasePath}/${slug}`;
     const providerName = row.company_name || "Unknown provider";
     const csvSourceLocation = {
@@ -168,7 +174,10 @@ const main = async () => {
     const override = palmSpringsContentOverrides[id] ?? {};
 
     const primaryImage =
-      cleanUrl(row.hero_image_url) || cleanUrl(row.og_image_url) || cleanUrl(row.image_url);
+      cleanUrl(enrichment?.image) ||
+      cleanUrl(row.hero_image_url) ||
+      cleanUrl(row.og_image_url) ||
+      cleanUrl(row.image_url);
     const galleryRaw = [cleanUrl(row.image_url)].filter(Boolean);
     const gallery = uniq(galleryRaw.filter(url => url !== primaryImage));
     const highlights = normalizeStringArray(
@@ -208,7 +217,9 @@ const main = async () => {
       seo: {
         title: "",
         description: sanitizeTourLabel(
-          override.metaDescription ?? defaultCopy.metaDescription
+          enrichment?.description ||
+            override.metaDescription ||
+            defaultCopy.metaDescription
         ),
         canonicalPath,
         ogImage: primaryImage || gallery[0] || ENGINE2_DEFAULT_IMAGE,
