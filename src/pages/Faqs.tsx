@@ -1,6 +1,23 @@
+import { useLayoutEffect } from "react";
+
 import Seo from "../components/Seo";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { getStaticPageSeo } from "../utils/seo";
+
+const RETURN_POLICY_SCHEMA_ID = "merchant-return-policy-schema";
+
+const RETURN_POLICY_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "MerchantReturnPolicy",
+  name: "All Outdoor Adventures Return Policy",
+  url: "https://www.alloutdooradventures.com/faqs",
+  returnPolicyCategory:
+    "https://schema.org/MerchantReturnFiniteReturnWindow",
+  merchantReturnDays: 1,
+  returnFees: "https://schema.org/FreeReturn",
+  refundType: "https://schema.org/FullRefund",
+  returnMethod: "https://schema.org/ReturnByMail",
+};
 
 const FAQ_SECTIONS = [
   {
@@ -88,6 +105,21 @@ const FAQ_SECTIONS = [
 export default function Faqs() {
   const seo = getStaticPageSeo("/faqs");
 
+  useLayoutEffect(() => {
+    let script = document.head.querySelector<HTMLScriptElement>(
+      `script#${RETURN_POLICY_SCHEMA_ID}`,
+    );
+
+    if (!script) {
+      script = document.createElement("script");
+      script.id = RETURN_POLICY_SCHEMA_ID;
+      script.type = "application/ld+json";
+      document.head.appendChild(script);
+    }
+
+    script.text = JSON.stringify(RETURN_POLICY_SCHEMA);
+  }, []);
+
   return (
     <>
       {seo ? (
@@ -141,6 +173,39 @@ export default function Faqs() {
                 </div>
               </div>
             ))}
+
+            <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
+              <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
+                Returns &amp; Refund Policy
+              </h2>
+              <div className="mt-6 rounded-2xl border border-black/5 bg-white p-5">
+                <p className="text-sm text-[#405040]">
+                  All Outdoor Adventures sells tour experiences and activity
+                  bookings.
+                </p>
+                <p className="mt-3 text-sm text-[#405040]">
+                  Because tours are scheduled services rather than physical
+                  goods, we do not accept product returns or exchanges.
+                </p>
+                <p className="mt-3 text-sm text-[#405040]">
+                  Refunds may be issued only in the following situations:
+                </p>
+                <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[#405040]">
+                  <li>If a tour is cancelled by the operator</li>
+                  <li>If a booking cannot be fulfilled</li>
+                  <li>If a service is defective or unavailable</li>
+                </ul>
+                <p className="mt-3 text-sm text-[#405040]">
+                  Customers should contact support within 24 hours of booking
+                  for assistance. Refunds are processed within 5 business days
+                  when approved.
+                </p>
+                <p className="mt-3 text-sm text-[#405040]">
+                  For booking changes or cancellations, please refer to the
+                  cancellation terms shown at checkout for each tour.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
