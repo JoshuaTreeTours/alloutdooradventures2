@@ -21,7 +21,8 @@
     "engine2:gen": "tsx scripts/engine2/generateEngine2FromCsv.ts",
     "test:engine2": "pnpm engine2:gen && tsx scripts/engine2/testEngine2SeoQuality.ts",
     "engine2:audit-city-csv-coverage": "tsx scripts/engine2/auditCityCsvCoverage.ts",
-    "verify:palm-springs-34849": "tsx scripts/verify-palm-springs-34849.ts"
+    "verify:palm-springs-34849": "tsx scripts/verify-palm-springs-34849.ts",
+    "migrate:tour-enrichment": "node scripts/expand-tour-enrichment-csv.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
