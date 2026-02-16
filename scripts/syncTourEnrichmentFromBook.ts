@@ -189,16 +189,11 @@ const appendBookPath = (rawUrl: string): string => {
 
 const deriveBookUrl = (row: Record<string, string>) => {
   const fromSource = appendBookPath(row.source_url ?? "");
-  if (fromSource) {
-    return fromSource;
-  }
-
-  const slug = (row.slug ?? "").trim();
-  if (!slug) {
+  if (!fromSource) {
     return "";
   }
 
-  return `https://www.alloutdooradventures.com/tours/${encodeURIComponent(slug)}/book`;
+  return fromSource;
 };
 
 const parseJsonSafely = (value: string): unknown | undefined => {
@@ -506,7 +501,7 @@ const main = async () => {
     const url = deriveBookUrl(row);
 
     if (!url) {
-      failures.push({ tourId: tourId || "unknown", url: "", reason: "Missing source_url and slug" });
+      failures.push({ tourId: tourId || "unknown", url: "", reason: "Missing source_url" });
       rowsSkipped += 1;
       return;
     }
