@@ -108,7 +108,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
                 BOOK
               </a>
             </Link>
-            <Link href="/destinations/california/palm-springs/tours">
+            <Link href={`/destinations/california/${tour.sourceCitySlug}/tours`}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>

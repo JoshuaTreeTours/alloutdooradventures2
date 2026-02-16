@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
+import { buildBreadcrumbList, getSiteStructuredDataNodes } from "../../utils/structuredData";
 import BookingCtaLink from "../../components/BookingCtaLink";
 import type { Engine2Tour } from "../data/loadEngine2";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
@@ -30,18 +31,31 @@ export default function Engine2TourBookingPage({
 
   const structuredDataNodes = useMemo(
     () => [
+      ...getSiteStructuredDataNodes(),
+      buildBreadcrumbList([
+        { name: "Destinations", url: "/destinations" },
+        { name: "California", url: "/destinations/california" },
+        { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
+        { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+        { name: tour.name, url: tour.seo.canonicalPath },
+        { name: "Book", url: `${tour.seo.canonicalPath}/book` },
+      ]),
       {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
+        "@type": "Product",
+        "@id": `${seo.canonical}/book#product`,
         name: `${tour.name} booking`,
-        url: `${seo.canonical}/book`,
-        mainEntity: {
-          "@type": "TouristTrip",
-          name: tour.name,
+        description: `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
+        image: [seo.og.image],
+        offers: {
+          "@type": "Offer",
+          url: `${seo.canonical}/book`,
+          availability: "https://schema.org/InStock",
+          price: tour.pricing?.price ?? "129.00",
+          priceCurrency: tour.pricing?.currency ?? "USD",
         },
       },
     ],
-    [seo.canonical, tour.name]
+    [seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);
@@ -53,6 +67,8 @@ export default function Engine2TourBookingPage({
         description={`Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`}
         url={`${seo.canonical}/book`}
         image={seo.og.image}
+        robots="noindex,follow,max-image-preview:large"
+        googlebot="noindex,follow,max-image-preview:large"
       />
 
       <section className="bg-[#2f4a2f] text-white">

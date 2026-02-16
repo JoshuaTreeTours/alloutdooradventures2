@@ -8,6 +8,7 @@ import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
 import {
   REQUIRED_FH_URL_34849,
+  getAllEngine2Tours,
   getEngine2ToursBySourceCity,
   type Engine2Tour,
 } from "../engine2/data/loadEngine2";
@@ -165,22 +166,48 @@ export const isTourDescriptionDuplicate = (tour: Tour) => {
   return key ? (tourDescriptionCounts.get(key) ?? 0) > 1 : false;
 };
 
+const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
+  if (stateSlug !== "california") {
+    return [] as Tour[];
+  }
+
+  const engine2Tours = citySlug
+    ? getEngine2ToursBySourceCity(citySlug)
+    : getAllEngine2Tours();
+
+  return engine2Tours.map(toEngine2ListingTour);
+};
+
+const dedupeToursById = (entries: Tour[]) => {
+  const byId = new Map<string, Tour>();
+  for (const entry of entries) {
+    byId.set(entry.id, entry);
+  }
+  return [...byId.values()];
+};
+
 export const getToursByState = (stateSlug: string) =>
-  tours.filter(tour => tour.destination.stateSlug === stateSlug);
+  dedupeToursById([
+    ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
+    ...getEngine2ToursForLocation(stateSlug),
+  ]);
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
-  tours.filter(
-    tour =>
-      tour.destination.stateSlug === stateSlug &&
-      tour.destination.citySlug === citySlug
-  );
+  dedupeToursById([
+    ...tours.filter(
+      tour =>
+        tour.destination.stateSlug === stateSlug &&
+        tour.destination.citySlug === citySlug
+    ),
+    ...getEngine2ToursForLocation(stateSlug, citySlug),
+  ]);
 
 export const getTourBySlugs = (
   stateSlug: string,
   citySlug: string,
   tourSlug: string
 ) =>
-  tours.find(
+  getToursByCity(stateSlug, citySlug).find(
     tour =>
       tour.destination.stateSlug === stateSlug &&
       tour.destination.citySlug === citySlug &&

@@ -10,7 +10,7 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import { getCityTourDetailPath, getToursByCity } from "../../../../data/tours";
+import { getToursByCityUnified } from "../../../../data/tours";
 import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
@@ -42,15 +42,15 @@ export default function CityToursIndexRoute({
   );
   const tours = state && city
     ? isFlagstaff
-      ? flagstaffTours
-      : getToursByCity(state.slug, city.slug)
+      ? flagstaffTours.map(tour => ({ tour, href: getFlagstaffTourDetailPath(tour) }))
+      : getToursByCityUnified(state.slug, city.slug)
     : [];
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
   const filteredTours = activityFilter
-    ? tours.filter((tour) => tour.activitySlugs.includes(activityFilter))
+    ? tours.filter((entry) => entry.tour.activitySlugs.includes(activityFilter))
     : tours;
   const activityLabel = activityFilter
     ? getActivityLabelFromSlug(activityFilter)
@@ -65,7 +65,7 @@ export default function CityToursIndexRoute({
     route: toursHref,
     state,
     city,
-    cityTours: tours,
+    cityTours: tours.map(entry => entry.tour),
   }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
@@ -77,12 +77,10 @@ export default function CityToursIndexRoute({
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
     ]);
-    const itemListItems = filteredTours.map((tour) => ({
-      name: tour.title,
-      url: isFlagstaff
-        ? getFlagstaffTourDetailPath(tour)
-        : getCityTourDetailPath(tour),
-      image: tour.heroImage ? [tour.heroImage] : undefined,
+    const itemListItems = filteredTours.map((entry) => ({
+      name: entry.tour.title,
+      url: entry.href,
+      image: entry.tour.heroImage ? [entry.tour.heroImage] : undefined,
     }));
     const nodes = [breadcrumbs];
     if (itemListItems.length) {
@@ -160,15 +158,11 @@ export default function CityToursIndexRoute({
         </div>
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredTours.map((tour) => (
+            {filteredTours.map(({ tour, href }) => (
               <TourCard
                 key={tour.id}
                 tour={tour}
-                href={
-                  isFlagstaff
-                    ? getFlagstaffTourDetailPath(tour)
-                    : getCityTourDetailPath(tour)
-                }
+                href={href}
               />
             ))}
           </div>

@@ -29,7 +29,8 @@
     "generate:tour-descriptions": "tsx scripts/generateTourDescriptions.ts",
     "gen:merchant": "tsx scripts/generate-merchant-feed.ts",
     "gen:feeds": "tsx scripts/generate-tour-enrichment.ts && tsx scripts/generate-merchant-feed.ts",
-    "publish:merchant": "bash scripts/publish-merchant-feed.sh"
+    "publish:merchant": "bash scripts/publish-merchant-feed.sh",
+    "test:engine2:smoke": "tsx scripts/engine2/smokeTestCaliforniaRoutes.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
