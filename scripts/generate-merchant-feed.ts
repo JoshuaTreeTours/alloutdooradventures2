@@ -23,7 +23,7 @@ type MerchantRow = Record<OutputHeader, string>;
 
 const DOMAIN = "https://www.alloutdooradventures.com";
 const DEFAULT_IMAGE = `${DOMAIN}/default-tour.jpg`;
-const DEFAULT_PRICE = "1.00 USD";
+const DEFAULT_PRICE = "149.00 USD";
 const DEFAULT_AVAILABILITY = "in_stock";
 
 const parseCsv = (content: string): CsvRecord[] => {
