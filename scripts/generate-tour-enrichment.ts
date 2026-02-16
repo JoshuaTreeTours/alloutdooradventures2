@@ -1,6 +1,9 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { buildTourUrlSafe } from "../src/utils/buildTourUrl";
+import { slugify } from "../src/utils/slugify";
+
 const OUTPUT_HEADERS = [
   "tourId",
   "slug",
@@ -99,15 +102,6 @@ const buildCsv = (rows: OutputRow[]) => {
   return `${headerLine}\n${body}\n`;
 };
 
-const slugify = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/&/g, " and ")
-    .replace(/[^a-z0-9\s-]/g, " ")
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
-
 const pickFirst = (row: CsvRecord, keys: string[]) => {
   for (const key of keys) {
     const value = row[key]?.trim();
@@ -139,6 +133,19 @@ const getSlug = (row: CsvRecord, title: string, tourId: string) => {
   }
 
   return `tour-${tourId}`;
+};
+
+const getSourceUrl = (row: CsvRecord, tourId: string, title: string, slug: string) => {
+  return buildTourUrlSafe({
+    source_url: row.source_url,
+    slug,
+    title,
+    tourId,
+    state: pickFirst(row, ["state", "state_name", "region"]),
+    state_slug: pickFirst(row, ["state_slug", "stateSlug"]),
+    city: pickFirst(row, ["city", "city_name", "destination_city"]),
+    city_slug: pickFirst(row, ["city_slug", "citySlug"]),
+  });
 };
 
 const toBlankOutputRow = (): OutputRow => ({
@@ -200,12 +207,12 @@ const main = async () => {
 
   const byTourId = new Map<string, OutputRow>();
 
-  for (const existing of existingRows) {
-    const tourId = getTourId(existing);
-    if (!tourId) {
-      continue;
+  for (let index = 0; index < existingRows.length; index += 1) {
+    const existing = existingRows[index];
+    const tourId = getTourId(existing) || `generated-existing-${index + 1}`;
+    if (!getTourId(existing)) {
+      console.warn(`Fallback used: missing tourId in existing enrichment row ${index + 2}`);
     }
-
     const row = byTourId.get(tourId) ?? toBlankOutputRow();
     row.tourId = tourId;
     mergeOnlyBlanks(row, existing as Partial<OutputRow>);
@@ -213,20 +220,31 @@ const main = async () => {
     byTourId.set(tourId, row);
   }
 
-  for (const source of californiaRows) {
-    const tourId = getTourId(source);
-    if (!tourId) {
-      continue;
+  for (let index = 0; index < californiaRows.length; index += 1) {
+    const source = californiaRows[index];
+    const tourId = getTourId(source) || `generated-source-${index + 1}`;
+    if (!getTourId(source)) {
+      console.warn(`Fallback used: missing tourId in source row ${index + 2}`);
     }
 
     const title = getTitle(source);
     const description = getDescription(source);
+    const slug = getSlug(source, title, tourId);
     const candidate: Partial<OutputRow> = {
       tourId,
-      slug: getSlug(source, title, tourId),
+      slug,
       title,
       description,
+      source_url: getSourceUrl(source, tourId, title, slug),
     };
+
+    if (!(source.source_url ?? "").trim()) {
+      console.warn(`Fallback used: missing source_url for tourId ${tourId}`);
+    }
+
+    if (!(source.slug ?? "").trim()) {
+      console.warn(`Fallback used: missing slug for tourId ${tourId}`);
+    }
 
     const row = byTourId.get(tourId) ?? toBlankOutputRow();
     row.tourId = tourId;

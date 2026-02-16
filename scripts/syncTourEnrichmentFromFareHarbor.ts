@@ -1,6 +1,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { buildTourUrlSafe } from "../src/utils/buildTourUrl";
+
 type CsvData = {
   headers: string[];
   rows: Record<string, string>[];
@@ -541,17 +543,19 @@ const main = async () => {
     async index => {
       const row = rowsToProcess[index];
       const tourId = (row.tourId ?? "").trim() || "unknown";
-      const sourceUrl = (row.source_url ?? "").trim();
+      const sourceUrl = buildTourUrlSafe({
+        source_url: row.source_url,
+        slug: row.slug,
+        title: row.title,
+        tourId,
+        state: row.state,
+        city: row.city,
+        state_slug: row.state_slug,
+        city_slug: row.city_slug,
+      });
 
-      if (!sourceUrl) {
-        rowsSkipped += 1;
-        failures.push({
-          tourId,
-          url: "",
-          reason: "Missing source_url",
-        });
-        rowsProcessed += 1;
-        return;
+      if (!(row.source_url ?? "").trim()) {
+        console.warn(`Fallback used: missing source_url for tourId ${tourId}`);
       }
 
       try {
