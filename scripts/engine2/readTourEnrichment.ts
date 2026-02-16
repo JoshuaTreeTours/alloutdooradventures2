@@ -2,11 +2,13 @@ import { readFile } from "node:fs/promises";
 
 export type TourEnrichment = {
   tourId: string;
+  state: string;
   slug: string;
   title: string;
   description: string;
   price: string;
   currency: string;
+  priceRange: string;
   ratingValue: string;
   ratingCount: string;
   availability: string;
@@ -20,11 +22,13 @@ export type TourEnrichment = {
 
 const KNOWN_COLUMNS: (keyof TourEnrichment)[] = [
   "tourId",
+  "state",
   "slug",
   "title",
   "description",
   "price",
   "currency",
+  "priceRange",
   "ratingValue",
   "ratingCount",
   "availability",
@@ -69,11 +73,13 @@ const parseCsvLine = (line: string) => {
 
 const blankEnrichment = (): TourEnrichment => ({
   tourId: "",
+  state: "",
   slug: "",
   title: "",
   description: "",
   price: "",
   currency: "",
+  priceRange: "",
   ratingValue: "",
   ratingCount: "",
   availability: "",
