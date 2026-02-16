@@ -5,6 +5,10 @@ import {
   DEFAULT_CURRENCY,
   DEFAULT_IMAGE_URL,
 } from "../src/constants/merchantDefaults";
+import {
+  ALLOWED_ACTIVITY_KEYWORDS,
+  EXCLUDED_TITLE_PATTERNS,
+} from "../src/config/merchantFilters";
 import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
 import {
@@ -16,6 +20,10 @@ import { extractPageImage } from "./utils/extractPageImage";
 
 const INPUT_PATH = path.resolve(process.cwd(), "data/tourEnrichment.csv");
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const DEBUG_OUTPUT_PATH = path.resolve(
+  process.cwd(),
+  "data/merchantFeed.debug.csv"
+);
 
 const OUTPUT_HEADERS = [
   "id",
@@ -28,16 +36,42 @@ const OUTPUT_HEADERS = [
   "condition",
 ] as const;
 
+const DEBUG_HEADERS = ["tourId", "title", "reason", "link", "image", "price"] as const;
+
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
+type DebugHeader = (typeof DEBUG_HEADERS)[number];
 type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
+type DebugRow = Record<DebugHeader, string>;
 
 type ProductImageRecord = {
   image_url?: string;
 };
 
+type DropReason =
+  | "notAllowedActivity"
+  | "invalidLink"
+  | "pageNotFound"
+  | "missingTitle"
+  | "missingDescription"
+  | "missingImage_afterAllFallbacks";
+
+type FilterStats = {
+  totalInput: number;
+  kept: number;
+  dropped_notAllowedActivity: number;
+  dropped_invalidLink: number;
+  dropped_pageNotFound: number;
+  dropped_missingTitle: number;
+  dropped_missingDescription: number;
+  dropped_missingImage_afterAllFallbacks: number;
+};
+
 const DOMAIN = "https://www.alloutdooradventures.com";
+const DOMAIN_HOSTNAME = "www.alloutdooradventures.com";
 const DEFAULT_AVAILABILITY = "in_stock";
+const PAGE_EXISTS_TIMEOUT_MS = 3000;
+const MAX_DEBUG_ROWS = 200;
 
 const parseCsv = (content: string): CsvRecord[] => {
   const normalized = content.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
@@ -99,10 +133,13 @@ const escapeCsv = (value: string) => {
   return /[",\n]/.test(escaped) ? `"${escaped}"` : escaped;
 };
 
-const toCsv = (rows: MerchantRow[]) => {
-  const headerLine = OUTPUT_HEADERS.join(",");
+const rowsToCsv = <THeader extends string>(
+  headers: readonly THeader[],
+  rows: Record<THeader, string>[]
+) => {
+  const headerLine = headers.join(",");
   const body = rows
-    .map(row => OUTPUT_HEADERS.map(header => escapeCsv(row[header])).join(","))
+    .map(row => headers.map(header => escapeCsv(row[header])).join(","))
     .join("\n");
   return `${headerLine}\n${body}\n`;
 };
@@ -178,74 +215,216 @@ const getProductMap = () => {
   return products;
 };
 
+const getValidTourPaths = () =>
+  new Set(tours.map(tour => `/tours/${tour.slug}`));
+
+const isAllowedTour = (title: string, tags?: string) => {
+  const text = `${title} ${tags || ""}`.toLowerCase();
+
+  if (EXCLUDED_TITLE_PATTERNS.some(pattern => text.includes(pattern))) {
+    return false;
+  }
+
+  return ALLOWED_ACTIVITY_KEYWORDS.some(keyword => text.includes(keyword));
+};
+
+const parseAoaTourPath = (url: string) => {
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+    const pathname = parsed.pathname.replace(/\/+$/, "");
+
+    if (
+      (parsed.protocol !== "https:" && parsed.protocol !== "http:") ||
+      hostname !== DOMAIN_HOSTNAME ||
+      !pathname.startsWith("/tours/") ||
+      pathname.split("/").filter(Boolean).length !== 2
+    ) {
+      return null;
+    }
+
+    return pathname;
+  } catch {
+    return null;
+  }
+};
+
+const pageExists = async (url: string, validTourPaths: Set<string>) => {
+  const pathname = parseAoaTourPath(url);
+  if (pathname && validTourPaths.has(pathname)) {
+    return true;
+  }
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), PAGE_EXISTS_TIMEOUT_MS);
+
+  try {
+    const headResponse = await fetch(url, {
+      method: "HEAD",
+      signal: controller.signal,
+    });
+
+    if (headResponse.ok) {
+      return true;
+    }
+
+    const getResponse = await fetch(url, {
+      method: "GET",
+      signal: controller.signal,
+    });
+    return getResponse.ok;
+  } catch {
+    if (pathname) {
+      const slug = pathname.split("/").pop() ?? "";
+      return !slug.startsWith("generated-");
+    }
+
+    return false;
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
+const emptyStats = (): FilterStats => ({
+  totalInput: 0,
+  kept: 0,
+  dropped_notAllowedActivity: 0,
+  dropped_invalidLink: 0,
+  dropped_pageNotFound: 0,
+  dropped_missingTitle: 0,
+  dropped_missingDescription: 0,
+  dropped_missingImage_afterAllFallbacks: 0,
+});
+
 const main = async () => {
   const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
   const productsByTourId = getProductMap();
+  const validTourPaths = getValidTourPaths();
+  const skipPageCheck = process.env.MERCHANT_SKIP_PAGE_CHECK === "1";
 
+  const stats = emptyStats();
   const outputRows: MerchantRow[] = [];
-  let warningCount = 0;
+  const droppedRows: DebugRow[] = [];
+
+  const dropRow = (
+    reason: DropReason,
+    row: { tourId: string; title: string; link: string; image: string; price: string }
+  ) => {
+    stats[`dropped_${reason}`] += 1;
+
+    if (droppedRows.length < MAX_DEBUG_ROWS) {
+      droppedRows.push({
+        tourId: row.tourId,
+        title: row.title,
+        reason,
+        link: row.link,
+        image: row.image,
+        price: row.price,
+      });
+    }
+  };
 
   for (let index = 0; index < sourceRows.length; index += 1) {
+    stats.totalInput += 1;
+
     const row = sourceRows[index];
     const tourId = row.tourId?.trim() || `generated-${index + 1}`;
 
+    const title = row.merchant_title?.trim() || row.title?.trim() || "";
+    const description =
+      row.merchant_description?.trim() || row.description?.trim() || "";
+    const link = toAoaLink(row.source_url ?? "", row, tourId);
+
     const rawPrice = parsePrice(row.price);
     const finalPrice = applyPriceFloor(rawPrice);
-    const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
+    const useFloorPrice = rawPrice === null || rawPrice < 20;
+    const currency = useFloorPrice
+      ? DEFAULT_CURRENCY
+      : row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
     const price = formatMerchantPrice(finalPrice, currency);
 
-    if (rawPrice === null || finalPrice !== rawPrice) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for price on tourId ${tourId}: defaulted to ${price}.`
-      );
+    if (!title) {
+      dropRow("missingTitle", { tourId, title, link, image: row.image ?? "", price });
+      continue;
     }
 
-    const title =
-      row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
-    const description =
-      row.merchant_description?.trim() ||
-      row.description?.trim() ||
-      `Tour ${tourId}`;
-    const link = toAoaLink(row.source_url ?? "", row, tourId);
+    if (!description) {
+      dropRow("missingDescription", {
+        tourId,
+        title,
+        link,
+        image: row.image ?? "",
+        price,
+      });
+      continue;
+    }
+
+    if (!isAllowedTour(title, row.tags?.trim())) {
+      dropRow("notAllowedActivity", {
+        tourId,
+        title,
+        link,
+        image: row.image ?? "",
+        price,
+      });
+      continue;
+    }
+
+    const parsedPath = parseAoaTourPath(link);
+    if (!parsedPath) {
+      dropRow("invalidLink", {
+        tourId,
+        title,
+        link,
+        image: row.image ?? "",
+        price,
+      });
+      continue;
+    }
+
+    const isGeneratedSlug = parsedPath.split("/").pop()?.startsWith("generated-") ?? false;
+    const generatedSlugIsKnown = validTourPaths.has(parsedPath);
+
+    const exists =
+      skipPageCheck && !isGeneratedSlug
+        ? true
+        : skipPageCheck && isGeneratedSlug
+          ? generatedSlugIsKnown
+          : await pageExists(link, validTourPaths);
+
+    if (!exists) {
+      dropRow("pageNotFound", {
+        tourId,
+        title,
+        link,
+        image: row.image ?? "",
+        price,
+      });
+      continue;
+    }
 
     const product = productsByTourId.get(tourId);
     const extractedPageImage = await extractPageImage(link);
     const imageLink = [
-      row.image,
       product?.image_url,
+      row.image,
       extractedPageImage,
       DEFAULT_IMAGE_URL,
-    ].find(candidate => isValidHttpUrl(candidate)) as string;
+    ].find(candidate => isValidHttpUrl(candidate)) as string | undefined;
+
+    if (!imageLink?.trim()) {
+      dropRow("missingImage_afterAllFallbacks", {
+        tourId,
+        title,
+        link,
+        image: "",
+        price,
+      });
+      continue;
+    }
 
     const availability =
       (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
-
-    if (!row.source_url?.trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for link on tourId ${tourId}: used AOA URL ${link}`
-      );
-    } else if (!row.source_url.includes("alloutdooradventures.com")) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for link on tourId ${tourId}: replaced with ${link}`
-      );
-    }
-
-    if (!row.image?.trim() && imageLink !== row.image?.trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for image on tourId ${tourId}: resolved to ${imageLink}.`
-      );
-    }
-
-    if (!(row.availability ?? "").trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`
-      );
-    }
 
     outputRows.push({
       id: tourId,
@@ -257,15 +436,23 @@ const main = async () => {
       price,
       condition: "new",
     });
+    stats.kept += 1;
   }
 
-  await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
-
-  console.log(`Processed ${sourceRows.length} rows.`);
-  console.log(
-    `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+  await writeFile(OUTPUT_PATH, rowsToCsv(OUTPUT_HEADERS, outputRows), "utf8");
+  await writeFile(
+    DEBUG_OUTPUT_PATH,
+    rowsToCsv(DEBUG_HEADERS, droppedRows),
+    "utf8"
   );
-  console.log(`Logged ${warningCount} warnings.`);
+
+  console.log("Merchant feed generation summary");
+  console.table(stats);
+  console.log(`Wrote ${outputRows.length} merchant rows to ${OUTPUT_PATH}.`);
+  console.log(`Wrote ${droppedRows.length} dropped debug rows to ${DEBUG_OUTPUT_PATH}.`);
+  if (skipPageCheck) {
+    console.log("MERCHANT_SKIP_PAGE_CHECK=1 active: page existence checks bypassed.");
+  }
 };
 
 main().catch(error => {
