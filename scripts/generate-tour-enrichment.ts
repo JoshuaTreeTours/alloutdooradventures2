@@ -1,5 +1,7 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { buildTourUrl } from "../src/utils/buildTourUrl";
+import palmSpringsTours from "../src/engine2/data/palm-springs.generated";
 
 const OUTPUT_HEADERS = [
   "tourId",
@@ -25,8 +27,7 @@ type OutputRow = Record<OutputHeader, string>;
 type CsvRecord = Record<string, string>;
 
 const csvPaths = {
-  california: path.resolve(process.cwd(), "data/california.csv"),
-  californiaAlt: path.resolve(process.cwd(), "data/California.csv"),
+  dataRoot: path.resolve(process.cwd(), "data"),
   enrichment: path.resolve(process.cwd(), "data/tourEnrichment.csv"),
 };
 
@@ -127,7 +128,16 @@ const getTitle = (row: CsvRecord) =>
 const getDescription = (row: CsvRecord) =>
   pickFirst(row, ["description", "summary", "blurb", "tour_description"]);
 
-const getSlug = (row: CsvRecord, title: string, tourId: string) => {
+const getSlug = (
+  row: CsvRecord,
+  title: string,
+  tourId: string,
+  canonicalSlug?: string
+) => {
+  if (canonicalSlug?.trim()) {
+    return canonicalSlug.trim();
+  }
+
   const sourceSlug = row.slug?.trim();
   if (sourceSlug) {
     return sourceSlug;
@@ -135,10 +145,49 @@ const getSlug = (row: CsvRecord, title: string, tourId: string) => {
 
   const generated = slugify(title);
   if (generated) {
-    return generated;
+    return `${generated}-${tourId}`;
   }
 
-  return `tour-${tourId}`;
+  console.warn(`WARN: missing slug and title for tourId=${tourId}; skipping record`);
+  return "";
+};
+
+const parseLocation = (value: string) => {
+  const segments = value
+    .split("/")
+    .map(segment => segment.trim())
+    .filter(Boolean);
+
+  const city = segments.at(-1) ?? "";
+  const state = segments.length >= 2 ? segments.at(-2) ?? "" : "";
+  return { state, city };
+};
+
+const listCsvFiles = async (directory: string): Promise<string[]> => {
+  const all = await readdir(directory, {
+    withFileTypes: true,
+  });
+
+  const files: string[] = [];
+  for (const entry of all) {
+    const fullPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await listCsvFiles(fullPath)));
+      continue;
+    }
+    if (!entry.isFile()) {
+      continue;
+    }
+    if (!entry.name.toLowerCase().endsWith(".csv")) {
+      continue;
+    }
+    if (entry.name.toLowerCase() === "tourenrichment.csv") {
+      continue;
+    }
+    files.push(fullPath);
+  }
+
+  return files;
 };
 
 const toBlankOutputRow = (): OutputRow => ({
@@ -181,15 +230,25 @@ const mergeOnlyBlanks = (target: OutputRow, patch: Partial<OutputRow>) => {
   }
 };
 
-const main = async () => {
-  let californiaPath = csvPaths.california;
-  try {
-    await readFile(californiaPath, "utf8");
-  } catch {
-    californiaPath = csvPaths.californiaAlt;
-  }
+const canonicalByTourId = new Map<string, { slug: string; state: string; city: string }>(
+  palmSpringsTours.map(tour => [
+    tour.id,
+    {
+      slug: tour.slug,
+      state: tour.geo.region,
+      city: tour.geo.city,
+    },
+  ])
+);
 
-  const californiaRows = parseCsv(await readFile(californiaPath, "utf8"));
+const main = async () => {
+  const sourceFiles = await listCsvFiles(csvPaths.dataRoot);
+  const sourceRows: CsvRecord[] = [];
+
+  for (const sourceFile of sourceFiles) {
+    const parsedRows = parseCsv(await readFile(sourceFile, "utf8"));
+    sourceRows.push(...parsedRows);
+  }
 
   let existingRows: CsvRecord[] = [];
   try {
@@ -213,7 +272,7 @@ const main = async () => {
     byTourId.set(tourId, row);
   }
 
-  for (const source of californiaRows) {
+  for (const source of sourceRows) {
     const tourId = getTourId(source);
     if (!tourId) {
       continue;
@@ -221,16 +280,31 @@ const main = async () => {
 
     const title = getTitle(source);
     const description = getDescription(source);
-    const candidate: Partial<OutputRow> = {
-      tourId,
-      slug: getSlug(source, title, tourId),
-      title,
-      description,
-    };
+    const canonical = canonicalByTourId.get(tourId);
+    const slug = getSlug(source, title, tourId, canonical?.slug);
+    if (!slug) {
+      continue;
+    }
+
+    const parsedLocation = parseLocation(source.location ?? "");
+    const state = canonical?.state?.trim() || parsedLocation.state;
+    const city = canonical?.city?.trim() || parsedLocation.city;
+
+    if (!state || !city) {
+      console.warn(`WARN: missing location state/city for tourId=${tourId}; skipping record`);
+      continue;
+    }
 
     const row = byTourId.get(tourId) ?? toBlankOutputRow();
     row.tourId = tourId;
-    mergeOnlyBlanks(row, candidate);
+    if (!row.title.trim() && title.trim()) {
+      row.title = title;
+    }
+    if (!row.description.trim() && description.trim()) {
+      row.description = description;
+    }
+    row.slug = slug;
+    row.source_url = buildTourUrl(state, city, slug);
     applyDefaults(row);
     byTourId.set(tourId, row);
   }
@@ -243,7 +317,7 @@ const main = async () => {
   await writeFile(csvPaths.enrichment, output, "utf8");
 
   console.log(
-    `Wrote ${mergedRows.length} tour enrichment rows from ${californiaRows.length} California source rows.`
+    `Wrote ${mergedRows.length} tour enrichment rows from ${sourceRows.length} source rows across ${sourceFiles.length} CSV files.`
   );
 };
 
