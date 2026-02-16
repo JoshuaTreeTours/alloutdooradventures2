@@ -5,6 +5,11 @@ import {
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
+import {
+  DEFAULT_CURRENCY,
+  DEFAULT_IMAGE_URL,
+} from "../../constants/merchantDefaults";
+import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -34,24 +39,16 @@ export const buildSchemaGraph = (
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
-  const parsedPrice = Number.parseFloat(tour.pricing?.price ?? "");
-  const hasNumericPrice = Number.isFinite(parsedPrice);
+  const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
+  const flooredPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
+  const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const offer: Record<string, unknown> = {
     "@type": "Offer",
     url: tour.booking.bookingUrl,
     availability: "https://schema.org/InStock",
+    price: flooredPrice.toFixed(2),
+    priceCurrency: offerCurrency,
   };
-
-  if (hasNumericPrice) {
-    offer.price = parsedPrice.toString();
-    offer.priceCurrency = tour.pricing?.currency || "USD";
-  } else if (tour.pricing?.priceRange) {
-    offer.priceSpecification = {
-      "@type": "PriceSpecification",
-      description: `Typical price range ${tour.pricing.priceRange}`,
-      priceCurrency: tour.pricing?.currency || "USD",
-    };
-  }
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -59,7 +56,7 @@ export const buildSchemaGraph = (
       url: seo.canonical,
       name: seo.title,
       description: seo.description,
-      image: seo.og.image,
+      image: effectiveHeroImage,
     }),
     {
       "@type": "Organization",
@@ -90,7 +87,7 @@ export const buildSchemaGraph = (
       "@id": productId,
       name: tour.name,
       description: seo.description,
-      image: [tour.images.hero, ...imageGallery],
+      image: [effectiveHeroImage, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: offer,
       provider: { "@id": providerId },
