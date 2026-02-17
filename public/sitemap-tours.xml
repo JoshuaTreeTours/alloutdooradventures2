@@ -1001,16 +1001,9 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/world/canada/quebec/quebec/tours/quebec-city-electric-bike-tour-524620</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/canada/quebec/quebec/tours/south-shore-cove-scenic-route-630637</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/canada/quebec/stoneham-et-tewkesbury/tours/tour-helicoptere-702105</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/3-hour-daytime-session-592933</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/4-hour-night-session-592935</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/8-hour-full-day-session-592928</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alabama/gulf-shores/full-day-supkayak-rentals-452964</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alabama/gulf-shores/guided-kayaksup-tour-553749</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alabama/gulf-shores/half-day-supkayak-rentals-452942</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/alaska-denali-expedition-418261</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/alaska-highlights-tour-489017</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/alaska-kenai-adventure-418263</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/alaska-salmon-run-adventure-418228</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alaska/anchorage/anchorage-greenbelt-bike-tour-391155</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alaska/anchorage/anchorages-winter-city-tour-491013</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/alaska/anchorage/beginning-singletrack-mountain-biking-clinic-298930</loc><priority>0.8</priority></url>
@@ -1079,6 +1072,36 @@
   <url><loc>https://www.alloutdooradventures.com/tours/aores/vila-franca-do-campo/kayaking-vila-franca-do-campo-282450</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/arizona/cottonwood/pedal-paddle-to-wine-experience-388607</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/arizona/cottonwood/pedal-to-wine-e-bikes-378097</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/3-hour-daytime-session-592933</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/4-hour-night-session-592935</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/8-hour-full-day-session-592928</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/alaska-denali-expedition-418261</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/alaska-highlights-tour-489017</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/alaska-kenai-adventure-418263</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/alaska-salmon-run-adventure-418228</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/canada-gold-rush-trail-adventure-418264</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/cooler-runnings-2026-592939</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/crime-lab-662097</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/field-study-meteorite-hunters-664066</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/field-study-space-engineers-664069</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/grand-canyon-aerial-tour-f-air-164137</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/grand-canyon-skywalk-adventure-tour-west-rim-f-adv-164139</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/haunted-downtown-tour-29163</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/historic-downtown-tour-29167</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/kinetic-art-662088</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/launch-lab-chemistry-in-motion-662102</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/mission-planetfall-662232</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/monument-valley-air-ground-tour-f-mvj-164143</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/ready-set-launch-662098</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/rockstars-of-the-solar-system-662103</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/slimy-chemistry-662228</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/starry-stories-planetarium-show-662234</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/strange-matter-662231</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/the-grand-day-tour-flagstaff-694028</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/the-grand-day-tour-tusayan-and-grand-canyon-village-inside-gcnp-694063</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/the-grand-day-tour-williams-694061</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/arizona/flagstaff/ultimate-tour-of-northern-arizona-from-flagstaff-f-ult-561718</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/arizona/oljato-monument-valley/all-day-tour-108971</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/arizona/oljato-monument-valley/extended-sunrise-tour-108950</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/arizona/oljato-monument-valley/extended-sunset-tour-108962</loc><priority>0.8</priority></url>
@@ -1659,7 +1682,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/california/tuolumne-meadows/summit-half-dome-in-a-day-619664</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/tuolumne-meadows/tenaya-lake-family-swimming-and-beach-day-619647</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/tuolumne-meadows/yosemite-valley-walking-tour-619653</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/canada-gold-rush-trail-adventure-418264</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/ciudad-de-mxico/ciudad-de-mxico/bike-tour-bosque-de-chapultepec-642068</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/ciudad-de-mxico/ciudad-de-mxico/chapultepec-park-and-ferris-wheel-bike-tour-642079</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/ciudad-de-mxico/ciudad-de-mxico/city-bike-tour-downtown-642086</loc><priority>0.8</priority></url>
@@ -2005,12 +2027,10 @@
   <url><loc>https://www.alloutdooradventures.com/tours/connecticut/seymour/super-chocoholic-chocolate-tour-in-support-of-the-greater-boston-food-bank-677335</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/connecticut/thomaston/the-connecticut-ice-cream-train-634418</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/connecticut/wolcott/holiday-pub-crawl---bristol-ct-348288</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/cooler-runnings-2026-592939</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/county-cork/cork/cork-historic-doughnut-tour-479129</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/county-cork/cork/cork-historic-holiday-doughnut-tour-502960</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/county-dublin/dublin-2/dublin-city-centre-and-temple-bar-doughnut-tour-393410</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/county-dublin/dublin-2/dublin-city-centre-and-temple-bar-holiday-doughnut-tour-503578</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/crime-lab-662097</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/croatia/trogir/from-split-or-trogir-np-krka-bike-tour-and-primoten-669271</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/czechia/vy-brod/kanutour-auf-der-moldau-family-and-friends-kanu-moldau-567765</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/delaware/dewey-beach/4-hour-pontoon-boat-and-1-hour-jet-ski-combo-package-531037</loc><priority>0.8</priority></url>
@@ -2146,8 +2166,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/england/torquay/canoe-hire-561828</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/england/whitney-on-wye/full-day-canoe-hire-12-miles-543748</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/estonia/tallinn/welcome-to-tallinn-bike-tour-218862</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/field-study-meteorite-hunters-664066</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/field-study-space-engineers-664069</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/finland/espoo/patikointia-nuuksion-jrviylngll-englanniksi-290957</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/finland/ruokolahti/dark-and-dim-forest-moonlit-night-starry-sky-644485</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/finland/ruokolahti/in-the-shade-of-the-forest-644472</loc><priority>0.8</priority></url>
@@ -3113,9 +3131,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/germany/warnow/kanu-kurztour-im-durchbruchstal-625825</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/germany/warnow/kanutour-im-durchbruchstal---wilde-warnow-625829</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/germany/warnow/kloster-kanutour-nach-rhn-oder-btzow-625827</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/grand-canyon-aerial-tour-f-air-164137</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/grand-canyon-signature-tour-south-rim-with-hummer-ground-tour-f-pjx-164131</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/grand-canyon-skywalk-adventure-tour-west-rim-f-adv-164139</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/greece/athina/athens-from-hill-to-hill-small-group-or-private-tours-291299</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/greece/chania/private-cretan-south-coast-adventure-291969</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/greece/chania/private-explore-the-far-west-of-crete-tour-291929</loc><priority>0.8</priority></url>
@@ -3146,7 +3161,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/greece/tourlos/south-beaches-540808</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/greece/xeropotamos/eco-bike-tour---full-day-knossos-and-villages-489515</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/greece/xeropotamos/eco-bike-tour-in-historic-heraklion-300378</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/haunted-downtown-tour-29163</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/eleele/leila-napali-sunset-sail-24206</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/eleele/morning-napali-coast-snorkel-tour--super-raft-adventure-316332</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/haiku-pauwela/northshore-zipline-tour-131135</loc><priority>0.8</priority></url>
@@ -3290,7 +3304,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/waimea/na-pali-coast-tour-on-the-makana-up-to-12-passengers-40381</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/waimea/na-pali-coast-tour-on-the-new-seiko-i-and-seiko-ii-catamaran-299115</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hawaii/waimea/whale-watch-and-sunset-cruise-780</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/historic-downtown-tour-29167</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hungary/budapest/budapest-bike-tour-414786</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/hungary/budapest/off-road-e-bike-tour-in-the-buda-hills-546524</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/idaho/cascade/cowboy-camping-616803</loc><priority>0.8</priority></url>
@@ -3632,7 +3645,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/kentucky/louisville/whispers-on-whiskey-row-murder-crime-and-ghosts-of-derby-city-526996</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/kentucky/new-haven/summer-weekday-train-rides-to-boston-129292</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/kentucky/new-haven/weekend-train-ride-to-boston-518032</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/kinetic-art-662088</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lajas/la-parguera/bioluminescent-bay-glassbottom-boat-tours-290229</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lajas/la-parguera/bioluminescent-bay-kayak-swim-and-boat-tour-390143</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lajas/la-parguera/bioluminescent-bay-swimming-tour-303072</loc><priority>0.8</priority></url>
@@ -3654,7 +3666,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/lappi/enonteki/ounasjki-river-323256</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lappi/enonteki/palojoki-wilderness-snowmobile-tour-40km-117378</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/latvia/rga/riga-highlights-bike-tour---german-628057</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/launch-lab-chemistry-in-motion-662102</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lithuania/kaunas/pavilnys-hidden-district-of-vilnius-294004</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lithuania/vilnius/bike-tour-to-pavilniai-regional-park-with-mountain-bikes-255364</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/lithuania/vilnius/electric-bicycle-rental-255386</loc><priority>0.8</priority></url>
@@ -4685,7 +4696,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/minnesota/waconia/prince-the-tour-sightseeing-minneapolis-66387</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/minnesota/webster/fresh-pressed-cider-tasting-kit-581603</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/minnesota/willow-river/106-stand-up-paddle-board-rental-577574</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/mission-planetfall-662232</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/mississippi/natchez/cherry-blossoms-washington-dc-566775</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/mississippi/natchez/early-camellias-in-louisiana-455480</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/missouri/branson/new-jersey-nights-298922</loc><priority>0.8</priority></url>
@@ -4979,7 +4989,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/montana/whitefish/ice-climb-at-serenity-falls---full-day-117858</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/montana/whitefish/private-rock-climbing-trip-615146</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/montana/whitefish/rock-rescue-101-612955</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/monument-valley-air-ground-tour-f-mvj-164143</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/morocco/taouz/merzouga-experience-677776</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/nebraska/sparks/3-hour-canoe-or-kayak-trip-604519</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/nebraska/sparks/4-hour-canoe-or-kayak-trip-604535</loc><priority>0.8</priority></url>
@@ -5540,14 +5549,12 @@
   <url><loc>https://www.alloutdooradventures.com/tours/queensland/westcourt/behana-adventure-tour-199482</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/quintana-roo/cozumel/4-day---bicycle-rental-573344</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/quintana-roo/cozumel/one-week---bicycle-rental-573350</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/ready-set-launch-662098</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/little-compton/2-hour-group-e-bike-tour-biking-should-not-be-this-much-fun-pedal-assist-bikes-make-the-hills-go-away-294251</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/little-compton/customprivate-bicycle-or-e-bike-tour-294252</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/little-compton/little-compton-sunset-bike-tour-291415</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/little-compton/morning-coffee-ride-a-2-hour-bike-pedal-or-e-bike-tour-to-groundswell-cafe-in-tiverton-ri-291406</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/warwick/boston-art-and-architecture-635111</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/rhode-island/warwick/valentines-in-boston-690450</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/rockstars-of-the-solar-system-662103</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sachsen-anhalt/balgstdt/kirchscheidungen---balgstdt-626581</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sachsen-anhalt/freyburg-unstrut/3-tage-artern---freyburg-626677</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sachsen-anhalt/freyburg-unstrut/4-tage-heldrungen--freyburg-626680</loc><priority>0.8</priority></url>
@@ -5585,7 +5592,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/scotland/riverside/the-river-tay-expedition-614015</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/scotland/selkirk/canoe-st-marys-loch-30-min-from-peebles-384409</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/setbal/so-simo/rotas-a-sul---cais-da-moita---reserva-exclusiva-363097</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/slimy-chemistry-662228</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/slovenia/bled/e-bike-self-guided-trip---bled-highlights-including-vintgar-gorge-full-day-211294</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/slovenia/bled/e-bike-self-guided-trip---bled-highlights-including-vintgar-gorge-half-day-211290</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/slovenia/bled/h20-adventure-day-211272</loc><priority>0.8</priority></url>
@@ -6042,14 +6048,12 @@
   <url><loc>https://www.alloutdooradventures.com/tours/spain/xbia/electric-bike-tour-385085</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/spain/xbia/mountain-bike-tour-385091</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/st-ann-parish/ocho-rios/blue-hole-secret-falls-and-dunns-river-falls-352498</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/starry-stories-planetarium-show-662234</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/solna/paddling-2-timmar-vlj-kajak-eller-sup-pampas-693951</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/solna/paddling-4-timmar-vlj-kajak-eller-sup-pampas-693970</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/solna/paddling-8-timmar-vlj-kajak-eller-sup-pampas-693976</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/stockholm/paddling-2-timmar-vlj-kajak-eller-sup-eden-693903</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/stockholm/paddling-4-timmar-vlj-kajak-eller-sup-eden-693941</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/stockholms-ln/stockholm/stockholm-by-night---guidad-kajaktur-670857</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/strange-matter-662231</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sweden/flaten/halvdag-flaten-583801</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sweden/flaten/heldag-flaten-583803</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/sweden/hultsfred/halvdag-hultsfred-583782</loc><priority>0.8</priority></url>
@@ -6186,12 +6190,8 @@
   <url><loc>https://www.alloutdooradventures.com/tours/texas/the-colony/three-days-e-bike-rental-523820</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/texas/the-colony/weekly-e-bike-rental-523818</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/texas/waco/season-end-party-666585</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/the-grand-day-tour-flagstaff-694028</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/the-grand-day-tour-tusayan-and-grand-canyon-village-inside-gcnp-694063</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/the-grand-day-tour-williams-694061</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/thringen/dornburg-camburg/kanutour-wasserwerk-naturcamp---bad-ksen-596602</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/trelawny-parish/falmouth/blue-hole-secret-falls-adventure-352497</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/ultimate-tour-of-northern-arizona-from-flagstaff-f-ult-561718</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/united-kingdom/ambergate/adventure-tour-597629</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/united-kingdom/ambergate/canoe-safari-full-day-535865</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/united-kingdom/aviemore/the-spey-descent-expedition-614010</loc><priority>0.8</priority></url>
