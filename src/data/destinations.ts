@@ -3083,6 +3083,131 @@ export const tours: Tour[] = [
   },
 ];
 
+
+const minnesotaState: StateDestination = {
+  slug: "minnesota",
+  name: "Minnesota",
+  description: "North woods trails, lake-country paddling, and Twin Cities basecamps.",
+  featuredDescription:
+    "City-to-lakes itineraries with guided outings across Minnesota’s four-season landscapes.",
+  heroImage:
+    "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80",
+  region: "Heartland",
+  intro:
+    "Minnesota blends urban access with lake-country adventure, making it easy to pair city stays with guided outdoor days.",
+  longDescription:
+    "Minnesota is built for travelers who want flexible, water-forward itineraries. From the Twin Cities to North Shore gateways, guided experiences range from easy city excursions to wilderness-focused outings around lakes, forests, and river corridors.",
+  topRegions: [
+    {
+      title: "Twin Cities",
+      description:
+        "Minneapolis and Saint Paul provide easy access to river parks, bike paths, and day tours.",
+    },
+    {
+      title: "North Shore & Lake Country",
+      description:
+        "Duluth and northern hubs open up shoreline drives, paddling routes, and scenic forest adventures.",
+    },
+  ],
+  cities: [
+    {
+      name: "Minneapolis",
+      slug: "minneapolis",
+      stateSlug: "minnesota",
+      region: "Twin Cities",
+      lat: 44.9778,
+      lng: -93.265,
+      shortDescription: "Urban basecamp with river trails, lakes, and year-round day tours.",
+      intro:
+        "Minneapolis pairs city convenience with easy access to waterfront parks, bike networks, and guided outings.",
+      heroImages: [
+        "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
+      ],
+      activityTags: ["hiking", "cycling", "paddling"],
+      whereItIs: [
+        "Minneapolis sits along the Mississippi River in eastern Minnesota, linked to Saint Paul and a broad metro trail network.",
+      ],
+      experiences: {
+        mountains: "Regional bluffs and river overlooks deliver easy half-day hikes.",
+        lakesWater: "City lakes and nearby waterways support paddling and sightseeing tours.",
+        desertForest: "Forest parks and river greenways shape most outdoor routes here.",
+        cycling: "Miles of connected bike trails make guided rides beginner-friendly.",
+        scenicDrives: "Short drives reach lake towns, bluff roads, and state-park day trips.",
+        seasonalNotes:
+          "Summer and early fall are peak for biking and paddling, while winter adds snow-focused tours.",
+      },
+      thingsToDo: [
+        "Ride the city lakes bike loop.",
+        "Explore riverfront parks and stone-arch viewpoints.",
+        "Take a guided city-and-waterways tour.",
+      ],
+      toursCopy: [
+        "Minneapolis tours work well as half-day add-ons between museum, food, and neighborhood stops.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: riverfront walk and local coffee.",
+          "Afternoon: guided city highlight tour.",
+          "Evening: dinner in the North Loop.",
+        ],
+        dayTwo: [
+          "Morning: bike trail loop around city lakes.",
+          "Afternoon: paddle or park outing.",
+          "Evening: sunset along the Mississippi.",
+        ],
+      },
+      gettingThere: [
+        "MSP Airport provides national connections and quick access to downtown.",
+      ],
+      faq: [
+        {
+          question: "Is Minneapolis good for outdoor trips without long drives?",
+          answer:
+            "Yes. Trails, waterfront routes, and guided experiences are accessible from central neighborhoods.",
+        },
+      ],
+    },
+    {
+      name: "Duluth",
+      slug: "duluth",
+      stateSlug: "minnesota",
+      region: "North Shore",
+      lat: 46.7867,
+      lng: -92.1005,
+      shortDescription: "Lake Superior gateway for shoreline hikes and scenic tours.",
+      intro:
+        "Duluth anchors North Shore adventures with quick access to lake views, forest trails, and day-trip routes.",
+      heroImages: ["/hero.jpg"],
+      activityTags: ["hiking", "scenic-drives", "waterfront"],
+      whereItIs: [
+        "Duluth sits at the western tip of Lake Superior, serving as a launch point for North Shore itineraries.",
+      ],
+      experiences: {
+        mountains: "Ridge trails above the lake deliver broad Superior views.",
+        lakesWater: "Harbor cruises and shoreline walks define many first-time visits.",
+        desertForest: "Pine forests and rocky shoreline parks dominate local terrain.",
+        cycling: "Lakefront paths offer easy, scenic riding options.",
+        scenicDrives: "Highway 61 day trips are a Minnesota classic.",
+        seasonalNotes: "Late spring through fall is ideal for mixed hiking and shoreline touring.",
+      },
+      thingsToDo: ["Walk Canal Park.", "Plan a North Shore scenic drive.", "Visit lake overlooks and local trailheads."],
+      toursCopy: ["Duluth-based tours are great for combining city comforts with North Shore scenery."],
+      weekendItinerary: {
+        dayOne: ["Morning: Canal Park stroll.", "Afternoon: guided shoreline outing.", "Evening: harbor sunset."],
+        dayTwo: ["Morning: North Shore drive.", "Afternoon: waterfall or ridge hike.", "Evening: return to Duluth."],
+      },
+      gettingThere: ["Drive from the Twin Cities in about 2.5 hours or fly into Duluth International Airport."],
+      faq: [
+        {
+          question: "Can I do North Shore highlights in a weekend?",
+          answer: "Yes. Base in Duluth and prioritize one scenic drive plus one guided outdoor tour.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 const wyomingState: StateDestination = {
   slug: "wyoming",
   name: "Wyoming",
@@ -3174,6 +3299,7 @@ export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates,
   ...deepSouthStates,
+  minnesotaState,
   wyomingState,
 ];
 
