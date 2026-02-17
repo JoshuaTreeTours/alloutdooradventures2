@@ -11,6 +11,7 @@ import {
   normalizeFareHarborUrl,
 } from "../utils/buildFareHarborUrl";
 import { loadCanoeingEngine2Tours } from "./canoeingTours";
+import { loadHeartlandEngine2Tours } from "./heartlandTours";
 import { loadOregonEngine2Tours } from "./oregonTours";
 
 export const REQUIRED_FH_URL_34849 =
@@ -88,6 +89,7 @@ const allGeneratedTours = [
   ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...loadCanoeingEngine2Tours(),
+  ...loadHeartlandEngine2Tours(),
   ...loadOregonEngine2Tours(),
 ];
 
