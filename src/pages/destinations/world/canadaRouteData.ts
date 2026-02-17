@@ -29,6 +29,14 @@ export const getTourActivitySlugs = (tour: Engine2Tour): string[] => {
   return ["outdoor-adventures"];
 };
 
+export const getTourActivityLabels = (tour: Engine2Tour): string[] =>
+  getTourActivitySlugs(tour)
+    .map(slug => getActivityLabelFromSlug(slug) ?? slug.replace(/-/g, " "))
+    .slice(0, 3);
+
+export const getTourCardImage = (tour: Engine2Tour): string | null =>
+  tour.images.hero || tour.seo.ogImage || tour.images.gallery[0] || null;
+
 export const buildCanadaActivityGroups = (
   tours: Engine2Tour[]
 ): CanadaActivityGroup[] => {

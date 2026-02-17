@@ -13,7 +13,13 @@ import {
 } from "../../data/tourFallbacks";
 import { getToursByCityUnified, tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
+import { getEngine2CanadaProvinceIndex } from "../../engine2/data/loadEngine2";
 import { getStaticPageSeo } from "../../utils/seo";
+import {
+  buildInternationalCityOptions,
+  buildInternationalCountryOptions,
+  CANADA_COUNTRY_NAME,
+} from "./internationalSelectorData";
 
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
@@ -44,8 +50,20 @@ export default function ToursLanding() {
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
+  const [
+    selectedInternationalProvinceSlug,
+    setSelectedInternationalProvinceSlug,
+  ] = useState("");
   const [selectedInternationalCity, setSelectedInternationalCity] =
     useState("");
+
+  const canadaProvinces = useMemo(
+    () =>
+      getEngine2CanadaProvinceIndex().sort((a, b) =>
+        a.provinceName.localeCompare(b.provinceName)
+      ),
+    []
+  );
 
   const selectedState = useMemo(
     () => resolveState(selectedStateSlug),
@@ -81,30 +99,25 @@ export default function ToursLanding() {
   );
 
   const countries = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          internationalTours
-            .map(tour => tour.destination.country)
-            .filter((country): country is string => Boolean(country))
-        )
-      ).sort((a, b) => a.localeCompare(b)),
+    () => buildInternationalCountryOptions(internationalTours),
     [internationalTours]
   );
 
-  const internationalCities = useMemo(() => {
-    if (!selectedCountry) {
-      return [];
-    }
-
-    return Array.from(
-      new Set(
-        internationalTours
-          .filter(tour => tour.destination.country === selectedCountry)
-          .map(tour => tour.destination.city)
-      )
-    ).sort((a, b) => a.localeCompare(b));
-  }, [internationalTours, selectedCountry]);
+  const internationalCities = useMemo(
+    () =>
+      buildInternationalCityOptions({
+        selectedCountry,
+        selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
+        internationalTours,
+        canadaProvinces,
+      }),
+    [
+      canadaProvinces,
+      internationalTours,
+      selectedCountry,
+      selectedInternationalProvinceSlug,
+    ]
+  );
 
   const filteredTours = useMemo(() => {
     let nextTours: Array<{ tour: Tour; href: string }> = [];
@@ -185,6 +198,7 @@ export default function ToursLanding() {
     setSelectedStateSlug(nextStateSlug);
     setSelectedCitySlug("");
     setSelectedCountry("");
+    setSelectedInternationalProvinceSlug("");
     setSelectedInternationalCity("");
     updateUrl(nextStateSlug, "");
   };
@@ -192,16 +206,34 @@ export default function ToursLanding() {
   const handleCityChange = (nextCitySlug: string) => {
     setSelectedCitySlug(nextCitySlug);
     setSelectedCountry("");
+    setSelectedInternationalProvinceSlug("");
     setSelectedInternationalCity("");
     updateUrl(selectedStateSlug, nextCitySlug);
   };
 
   const handleCountryChange = (nextCountry: string) => {
     setSelectedCountry(nextCountry);
+    setSelectedInternationalProvinceSlug("");
     setSelectedInternationalCity("");
     setSelectedStateSlug("");
     setSelectedCitySlug("");
     updateUrl("", "");
+
+    if (nextCountry === CANADA_COUNTRY_NAME) {
+      window.location.assign("/destinations/world/canada");
+    }
+  };
+
+  const handleProvinceChange = (nextProvinceSlug: string) => {
+    setSelectedInternationalProvinceSlug(nextProvinceSlug);
+    setSelectedInternationalCity("");
+    setSelectedStateSlug("");
+    setSelectedCitySlug("");
+    updateUrl("", "");
+
+    if (nextProvinceSlug) {
+      window.location.assign(`/destinations/world/canada/${nextProvinceSlug}`);
+    }
   };
 
   const handleInternationalCityChange = (nextCity: string) => {
@@ -209,6 +241,16 @@ export default function ToursLanding() {
     setSelectedStateSlug("");
     setSelectedCitySlug("");
     updateUrl("", "");
+
+    if (
+      selectedCountry === CANADA_COUNTRY_NAME &&
+      selectedInternationalProvinceSlug &&
+      nextCity
+    ) {
+      window.location.assign(
+        `/destinations/world/canada/${selectedInternationalProvinceSlug}/${nextCity}`
+      );
+    }
   };
 
   return (
@@ -272,7 +314,13 @@ export default function ToursLanding() {
           <h2 className="mb-4 text-xl font-semibold text-[#1f2a1f]">
             International Locations
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
+          <div
+            className={`grid gap-4 ${
+              selectedCountry === CANADA_COUNTRY_NAME
+                ? "md:grid-cols-3"
+                : "md:grid-cols-2"
+            }`}
+          >
             <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
               Country
               <select
@@ -289,6 +337,32 @@ export default function ToursLanding() {
               </select>
             </label>
 
+            {selectedCountry === CANADA_COUNTRY_NAME ? (
+              <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+                Province
+                <select
+                  className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                  value={selectedInternationalProvinceSlug}
+                  onChange={event => handleProvinceChange(event.target.value)}
+                  disabled={!selectedCountry}
+                >
+                  <option value="">
+                    {selectedCountry
+                      ? "Select a province"
+                      : "Select a country first"}
+                  </option>
+                  {canadaProvinces.map(province => (
+                    <option
+                      key={province.provinceSlug}
+                      value={province.provinceSlug}
+                    >
+                      {province.provinceName}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ) : null}
+
             <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
               City
               <select
@@ -297,14 +371,23 @@ export default function ToursLanding() {
                 onChange={event =>
                   handleInternationalCityChange(event.target.value)
                 }
-                disabled={!selectedCountry}
+                disabled={
+                  !selectedCountry ||
+                  (selectedCountry === CANADA_COUNTRY_NAME &&
+                    !selectedInternationalProvinceSlug)
+                }
               >
                 <option value="">
-                  {selectedCountry ? "Select a city" : "Select a country first"}
+                  {!selectedCountry
+                    ? "Select a country first"
+                    : selectedCountry === CANADA_COUNTRY_NAME &&
+                        !selectedInternationalProvinceSlug
+                      ? "Select a province first"
+                      : "Select a city"}
                 </option>
                 {internationalCities.map(city => (
-                  <option key={city} value={city}>
-                    {city}
+                  <option key={city.slug} value={city.slug}>
+                    {city.name}
                   </option>
                 ))}
               </select>

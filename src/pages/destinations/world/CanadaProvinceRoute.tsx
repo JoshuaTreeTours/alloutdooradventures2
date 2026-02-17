@@ -10,7 +10,11 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../utils/structuredData";
-import { buildCanadaActivityGroups } from "./canadaRouteData";
+import {
+  buildCanadaActivityGroups,
+  getTourActivityLabels,
+  getTourCardImage,
+} from "./canadaRouteData";
 
 type Props = { params: { province: string } };
 
@@ -28,6 +32,7 @@ export default function CanadaProvinceRoute({ params }: Props) {
     tour => tour.sourceProvinceSlug === province.provinceSlug
   );
   const activityGroups = buildCanadaActivityGroups(provinceTours).slice(0, 12);
+
   useStructuredData([
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
@@ -65,6 +70,51 @@ export default function CanadaProvinceRoute({ params }: Props) {
               </a>
             </Link>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <h2 className="text-lg font-semibold text-[#2f4a2f]">
+          Available tours in {province.provinceName}
+        </h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {provinceTours.map(tour => {
+            const image = getTourCardImage(tour);
+            const activityLabels = getTourActivityLabels(tour);
+            return (
+              <Link key={tour.id} href={tour.seo.canonicalPath}>
+                <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow">
+                  <div className="relative h-40 bg-[#dfe9d8]">
+                    {image ? (
+                      <Image
+                        src={image}
+                        fallbackSrc={image}
+                        alt={tour.name}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="space-y-3 p-4">
+                    <h3 className="text-sm font-semibold text-[#1f2a1f]">
+                      {tour.name}
+                    </h3>
+                    {activityLabels.length ? (
+                      <div className="flex flex-wrap gap-2">
+                        {activityLabels.map(label => (
+                          <span
+                            key={`${tour.id}-${label}`}
+                            className="rounded-full border border-[#2f4a2f]/15 bg-[#f0f4ee] px-2 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[#2f4a2f]"
+                          >
+                            {label}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
