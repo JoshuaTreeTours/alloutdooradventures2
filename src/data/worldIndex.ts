@@ -10,8 +10,10 @@ export type WorldCountrySummary = {
   tourCount: number;
 };
 
-const europeCountrySlugs = new Set(countriesWithTours.map((country) => country.slug));
-const usStateSlugs = new Set(US_STATES.map((state) => slugify(state)));
+const europeCountrySlugs = new Set(
+  countriesWithTours.map(country => country.slug)
+);
+const usStateSlugs = new Set(US_STATES.map(state => slugify(state)));
 const excludedCountrySlugs = new Set([
   ...europeCountrySlugs,
   ...usStateSlugs,
@@ -27,7 +29,7 @@ const getDestinationSlug = (tour: Tour) =>
     : tour.destination.stateSlug || slugify(tour.destination.state);
 
 export const worldTours = [...tours, ...australiaTours].filter(
-  (tour) => !excludedCountrySlugs.has(getDestinationSlug(tour)),
+  tour => !excludedCountrySlugs.has(getDestinationSlug(tour))
 );
 
 export const worldToursByCountry = worldTours.reduce<Record<string, Tour[]>>(
@@ -39,14 +41,19 @@ export const worldToursByCountry = worldTours.reduce<Record<string, Tour[]>>(
     accumulator[key].push(tour);
     return accumulator;
   },
-  {},
+  {}
 );
 
-export const worldCountriesWithTours: WorldCountrySummary[] = Object.entries(
-  worldToursByCountry,
-).map(([slug, toursForCountry]) => ({
-  name: toursForCountry[0] ? getDestinationName(toursForCountry[0]) : slug,
-  slug,
-  tourCount: toursForCountry.length,
-}))
+export const worldCountriesWithTours: WorldCountrySummary[] = [
+  ...Object.entries(worldToursByCountry).map(([slug, toursForCountry]) => ({
+    name: toursForCountry[0] ? getDestinationName(toursForCountry[0]) : slug,
+    slug,
+    tourCount: toursForCountry.length,
+  })),
+  { name: "Canada", slug: "canada", tourCount: 0 },
+]
+  .filter(
+    (country, index, countries) =>
+      countries.findIndex(entry => entry.slug === country.slug) === index
+  )
   .sort((a, b) => a.name.localeCompare(b.name));
