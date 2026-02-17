@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { slugify } from "../../utils/slugify";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
 import { buildTourCopy } from "../content/templates/buildTourCopy";
@@ -9,6 +11,11 @@ type HeartlandDataset = {
   key: string;
   label: string;
   rows: HeartlandCsvRow[];
+};
+
+type HeartlandCsvSource = {
+  fileName: string;
+  csvContents: string;
 };
 
 const clean = (value?: string) => (value ?? "").trim();
@@ -87,16 +94,51 @@ const parseCsv = (contents: string): HeartlandCsvRow[] => {
   });
 };
 
-const HEARTLAND_CSVS = import.meta.glob("../../../data/heartland/*.csv", {
-  eager: true,
-  query: "?raw",
-  import: "default",
-}) as Record<string, string>;
+const readHeartlandCsvSourcesFromVite = (): HeartlandCsvSource[] => {
+  const viteGlob = (import.meta as ImportMeta & { glob?: Function }).glob;
+  if (typeof viteGlob !== "function") {
+    return [];
+  }
 
-const loadHeartlandDatasets = (): HeartlandDataset[] =>
-  Object.entries(HEARTLAND_CSVS)
-    .map(([filePath, csvContents]) => {
-      const fileName = filePath.split("/").pop() ?? "";
+  const csvs = viteGlob("../../../data/heartland/*.[cC][sS][vV]", {
+    eager: true,
+    query: "?raw",
+    import: "default",
+  }) as Record<string, string>;
+
+  return Object.entries(csvs).map(([filePath, csvContents]) => ({
+    fileName: filePath.split("/").pop() ?? "",
+    csvContents,
+  }));
+};
+
+const readHeartlandCsvSourcesFromNode = (): HeartlandCsvSource[] => {
+  const heartlandDir = path.resolve(process.cwd(), "data/heartland");
+
+  return fs
+    .readdirSync(heartlandDir, { withFileTypes: true })
+    .filter(entry => entry.isFile() && entry.name.toLowerCase().endsWith(".csv"))
+    .map(entry => ({
+      fileName: entry.name,
+      csvContents: fs.readFileSync(path.join(heartlandDir, entry.name), "utf8"),
+    }));
+};
+
+export const getHeartlandCsvFilenames = (): string[] => {
+  const sources = readHeartlandCsvSourcesFromVite();
+  const fileNames = sources.length
+    ? sources.map(source => source.fileName)
+    : readHeartlandCsvSourcesFromNode().map(source => source.fileName);
+
+  return fileNames.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }));
+};
+
+const loadHeartlandDatasets = (): HeartlandDataset[] => {
+  const sources = readHeartlandCsvSourcesFromVite();
+  const csvSources = sources.length ? sources : readHeartlandCsvSourcesFromNode();
+
+  return csvSources
+    .map(({ fileName, csvContents }) => {
       const key = fileName.replace(/\.csv$/i, "").toLowerCase();
 
       return {
@@ -106,6 +148,7 @@ const loadHeartlandDatasets = (): HeartlandDataset[] =>
       };
     })
     .sort((a, b) => a.key.localeCompare(b.key));
+};
 
 const parseLatLng = (latRaw: string, lngRaw: string) => {
   let lat = Number.parseFloat(latRaw);
