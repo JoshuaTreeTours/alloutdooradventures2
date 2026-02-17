@@ -7,7 +7,11 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../utils/structuredData";
-import { buildCanadaActivityGroups } from "./canadaRouteData";
+import {
+  buildCanadaActivityGroups,
+  getTourActivityLabels,
+  getTourCardImage,
+} from "./canadaRouteData";
 
 type Props = { params: { province: string; city: string } };
 
@@ -59,12 +63,44 @@ export default function CanadaCityRoute({ params }: Props) {
         <h2 className="text-lg font-semibold text-[#2f4a2f]">
           Available tours
         </h2>
-        <div className="mt-4 grid gap-3">
-          {tours.map(t => (
-            <Link key={t.id} href={t.seo.canonicalPath}>
-              <a className="rounded border p-4">{t.name}</a>
-            </Link>
-          ))}
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {tours.map(tour => {
+            const image = getTourCardImage(tour);
+            const activityLabels = getTourActivityLabels(tour);
+            return (
+              <Link key={tour.id} href={tour.seo.canonicalPath}>
+                <a className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow">
+                  <div className="relative h-40 bg-[#dfe9d8]">
+                    {image ? (
+                      <Image
+                        src={image}
+                        fallbackSrc={image}
+                        alt={tour.name}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : null}
+                  </div>
+                  <div className="space-y-3 p-4">
+                    <h3 className="text-sm font-semibold text-[#1f2a1f]">
+                      {tour.name}
+                    </h3>
+                    {activityLabels.length ? (
+                      <div className="flex flex-wrap gap-2">
+                        {activityLabels.map(label => (
+                          <span
+                            key={`${tour.id}-${label}`}
+                            className="rounded-full border border-[#2f4a2f]/15 bg-[#f0f4ee] px-2 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-[#2f4a2f]"
+                          >
+                            {label}
+                          </span>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                </a>
+              </Link>
+            );
+          })}
         </div>
       </section>
 
