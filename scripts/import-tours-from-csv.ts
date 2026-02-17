@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import type { Tour } from "../src/data/tours.types";
 import { getCityBySlugs, getStateBySlug } from "../src/data/destinations";
 import { classifyActivity } from "../src/lib/activityClassifier";
+import { loadWyomingTours } from "../src/data/us/wyoming";
 import { createIngestLogger } from "../src/lib/logging/ingestLogger";
 import {
   type PlacementContext,
@@ -844,6 +845,52 @@ const rowToTour = (
   };
 };
 
+const buildToursFromWyomingLoader = (): Tour[] =>
+  loadWyomingTours().flatMap((tour) => {
+    if (!tour.bookingUrl) {
+      return [];
+    }
+
+    const citySlug = slugify(tour.city);
+    const slug = `${slugify(tour.title)}-${tour.id}`;
+    const normalizedBookingUrl = normalizeBookingUrl(tour.bookingUrl);
+
+    return [
+      {
+        id: `wyoming-${tour.id}`,
+        slug,
+        title: tour.title,
+        shortDescription:
+          tour.description || `${tour.title} guided tour in ${tour.city}, Wyoming.`,
+        operator: tour.operator || "Local guide",
+        categories: ["day-adventures"],
+        primaryCategory: "day-adventures",
+        tags: [],
+        destination: {
+          country: "United States",
+          state: "Wyoming",
+          stateSlug: "wyoming",
+          city: tour.city,
+          citySlug,
+        },
+        heroImage: tour.image || PLACEHOLDER_IMAGE,
+        galleryImages: tour.image ? [tour.image] : [],
+        badges: {
+          priceFrom: tour.price,
+          tagline: "Wyoming tour",
+        },
+        tagPills: [],
+        activitySlugs: ["day-adventures"],
+        bookingProvider: "fareharbor",
+        bookingUrl: normalizedBookingUrl,
+        bookingWidgetUrl: normalizedBookingUrl,
+        longDescription:
+          tour.description ||
+          buildLongDescription(tour.title, tour.city, "Wyoming"),
+      },
+    ];
+  });
+
 const writeGeneratedFile = async (tours: Tour[]) => {
   const fileContents = `import type { Tour } from "./tours.types";
 
@@ -905,7 +952,7 @@ const run = async () => {
     );
   }
 
-  const tours: Tour[] = [];
+  const tours: Tour[] = [...buildToursFromWyomingLoader()];
   const reclassifiedTours: Array<
     ImportReportEntry & {
       fromCategory: string;

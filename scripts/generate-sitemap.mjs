@@ -197,6 +197,23 @@ const buildTourSummaries = async (catalogModule) => {
     toursGeneratedModule.toursGenerated.forEach((tour) => tours.push(tour));
   }
 
+  const wyomingModule = await tsImport("../src/data/us/wyoming.ts", import.meta.url);
+  if (typeof wyomingModule.loadWyomingTours === "function") {
+    wyomingModule.loadWyomingTours().forEach((tour) => {
+      tours.push({
+        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
+        destination: {
+          state: "Wyoming",
+          stateSlug: "wyoming",
+          city: tour.city,
+          citySlug: catalogModule.slugify(tour.city),
+        },
+        activitySlugs: ["day-adventures"],
+        primaryCategory: "day-adventures",
+      });
+    });
+  }
+
   const europeDir = path.resolve(__dirname, "../data/europe");
   const europeFiles = await readdir(europeDir);
   await Promise.all(
