@@ -75,8 +75,10 @@ export const loadMinnesotaEngine2Tours = (): Engine2Tour[] => {
 
     byId.set(id, {
       id: `minnesota-${id}`,
+      sourceItemId: id,
       sourceDatasetKey: "minnesota",
       sourceCountrySlug: "united-states",
+      sourceStateSlug: "minnesota",
       sourceCitySlug: citySlug,
       slug,
       name,

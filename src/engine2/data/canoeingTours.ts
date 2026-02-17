@@ -82,8 +82,10 @@ export const loadCanoeingEngine2Tours = (): Engine2Tour[] => {
 
     byId.set(id, {
       id: `canoeing-${id}`,
+      sourceItemId: id,
       sourceDatasetKey: "canoeing",
-      sourceCountrySlug: countrySlug === "canada" ? "canada" : undefined,
+      sourceCountrySlug: countrySlug === "canada" ? "canada" : "united-states",
+      sourceStateSlug: countrySlug === "canada" ? undefined : regionSlug,
       sourceProvinceSlug: countrySlug === "canada" ? regionSlug : undefined,
       sourceCitySlug: citySlug,
       slug,

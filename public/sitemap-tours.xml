@@ -770,12 +770,10 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/minnesota/webster/tours/fresh-pressed-cider-tasting-kit-581603</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/minnesota/willow-river/tours/10-6-stand-up-paddle-board-rental-577574</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/astoria/tours/bird-lover-s-morning-544406</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/bend/tours/canoes-631415</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/cascade-locks/tours/multnomah-falls-e-bike-tour-to-three-gorge-waterfalls-2-hours-341903</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/chiloquin/tours/eight-hour-gear-rental-301662</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/chiloquin/tours/four-hour-gear-rental-301654</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/chiloquin/tours/full-day-gear-rental-301666</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/chiloquin/tours/shuttle-service-301670</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/grants-pass/tours/2-hour-quick-scenic-449931</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/grants-pass/tours/4-hour-dinner-excursion-449941</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/grants-pass/tours/4-hour-weekend-brunch-excursion-449937</loc><priority>0.8</priority></url>
@@ -790,7 +788,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/joseph/tours/non-camp-based-day-guide-664473</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/joseph/tours/wing-ridge-camp-exclusive-rental-661375</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/joseph/tours/wing-ridge-camp-small-group-661115</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/klamath-falls/tours/malone-springs-kayaking-tour-301585</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/parma/tours/guided-coyote-hunting-trip-southwest-idaho-659958</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/parma/tours/snow-goose-experience-659961</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/port-orford/tours/pedal-paddle-combo-tour-394336</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/portland/tours/chengdu-full-day-giant-panda-teahouse-evening-food-tour-677978</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/portland/tours/explore-columbia-river-gorge-half-day-small-group-hiking-tour-476396</loc><priority>0.8</priority></url>
@@ -809,9 +808,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/seaside/tours/junior-course-ages-4-8-699234</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/silverton/tours/silver-falls-hike-210214</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/sisters/tours/aluminum-fishing-boats-317116</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/sisters/tours/canoes-317154</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/sisters/tours/pedal-boats-317103</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/sisters/tours/stand-up-paddleboards-317160</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/united-states/oregon/washington/tours/the-mt-st-helens-adventure-tour-149165</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/utah/hurricane/tours/poker-paddle-358050</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/vermont/jamaica/tours/west-river-upper-river-run-1-day-clinic-350473</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/virginia/buchanan/tours/10-5-mile-james-river-kayak-or-canoe-trip-buchanan-to-alpine-42252</loc><priority>0.8</priority></url>
@@ -5153,19 +5151,15 @@
   <url><loc>https://www.alloutdooradventures.com/tours/new-south-wales/kangaroo-valley/the-morton-national-park-2-day-paddle-343450</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-south-wales/narooma/canoe-hire-274033</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/blue-mountain-lake/canoe-rentals-548222</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/a-day-in-brooklyn---half-day-in-brooklyn-88160</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/a-day-in-manhattan-tour-74423</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/brooklyn-navy-yard-bicycle-tour-19349</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/brooklyn-navy-yard-bicycle-tour-333546</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/brooklyn-navy-yard-urban-ecology-bicycle-tour-19351</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/coney-island-138473</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/cycle-nycs-top-sites-in-one-day-273867</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/lower-manhattan-108837</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/north-brooklyn---willamsburg-and-greenpoint-207475</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/private-tour-108835</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/ride-the-bridges-64184</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/sup-american-canoe-association-classes-53335</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/the-brooklyn-tour-our-must-do-64182</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/brooklyn/washington-dc-group-tour-with-workshop-617347</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/catskill/sunday-salon-lecture-thomas-cole-and-connecticut-a-closer-look-with-erin-monroe-curator-687287</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/new-york/clayton/1000-islands-canada---no-passports-required-36589</loc><priority>0.8</priority></url>
@@ -5397,12 +5391,54 @@
   <url><loc>https://www.alloutdooradventures.com/tours/ontario/windsor/self-guided-bikes-and-beer-cycling-tour-70224</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/ontario/windsor/the-dirty-poutine-tour-83704</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/ontario/windsor/windsor-graffiti-scooter-tour-252489</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/astoria/bird-lovers-morning-544406</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/bend/canoes-631415</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/cascade-locks/multnomah-falls-e-bike-tour-to-three-gorge-waterfalls-2-hours-341903</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/chiloquin/eight-hour-gear-rental-301662</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/chiloquin/four-hour-gear-rental-301654</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/chiloquin/full-day-gear-rental-301666</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/chiloquin/shuttle-service-301670</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/grants-pass/2-hour-quick-and-scenic-449931</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/grants-pass/4-hour-dinner-excursion-449941</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/grants-pass/4-hour-weekend-brunch-excursion-449937</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/halfway/cornucopia-camp-661055</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/halfway/norway-camp-661110</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/halfway/schneider-camp-661014</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/hood-river/pedals-and-pines---the-banks-vernonia-trail-adventure-587116</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/big-sheep-camp-exclusive-rental-661049</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/big-sheep-camp-small-group-661045</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/mccully-camp-exclusive-rental-661107</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/mccully-camp-small-groups-661058</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/non-camp-based-day-guide-664473</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/wing-ridge-camp-exclusive-rental-661375</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/joseph/wing-ridge-camp-small-group-661115</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/klamath-falls/malone-springs-kayaking-tour-301585</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/parma/guided-coyote-hunting-trip-southwest-idaho-659958</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/parma/snow-goose-experience-659961</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/port-orford/pedal-paddle-combo-tour-394336</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/chengdu-full-day-giant-panda-teahouse-and-evening-food-tour-677978</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/explore-columbia-river-gorge-half-day-small-group-hiking-tour-476396</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/explore-columbia-river-gorge-half-day-small-group-tour-158133</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/full-day-columbia-gorge-hiking-tour-149182</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/full-day-gorge-waterfalls-and-mt-hood-tour-5236</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/full-day-oregon-coast-tour-5234</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/full-day-willamette-valley-wine-tasting-tour-5238</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/gorge-ous-sunset-multnomah-falls-waterfall-tour-from-portland-462223</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/half-day-gorge-waterfalls-tour-5235</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/half-day-multnomah-falls-waterfall-shuttle-tour-from-portland-527345</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/half-day-portland-city-tour-5237</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/mt-hood-winter-wonderland-snowshoe-adventure-685976</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/northern-oregon-coast-day-trip-cannon-beach-area-154680</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/portland-to-columbia-gorge-waterfalls-and-botanical-discovery-hike-498723</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/portland/private-banks-vernonia-pedal-and-pour-excursion-623134</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/seaside/general-admission-ages-7-699222</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/seaside/junior-course-ages-4-8-699234</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/silverton/silver-falls-hike-210214</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/sisters/aluminum-fishing-boats-317116</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/sisters/canoes-317154</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/sisters/pedal-boats-317103</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/oregon/sisters/stand-up-paddleboards-317160</loc><priority>0.8</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/tours/oregon/washington/the-mt-st-helens-adventure-tour-149165</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/otago/dunedin/iconic-karitane-maori-tour-and-moeraki-boulders-680320</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/pennsylvania/airville/christmas-city-express-670044</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/pennsylvania/airville/pumpkin-patch-excursion-670039</loc><priority>0.8</priority></url>
