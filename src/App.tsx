@@ -19,6 +19,7 @@ import CanadaProvinceRoute from "./pages/destinations/world/CanadaProvinceRoute"
 import CanadaCityRoute from "./pages/destinations/world/CanadaCityRoute";
 import CanadaTourRoute from "./pages/destinations/world/CanadaTourRoute";
 import CanadaTourBookingRoute from "./pages/destinations/world/CanadaTourBookingRoute";
+import CanadaActivityRoute from "./pages/destinations/world/CanadaActivityRoute";
 import StateLandingRoute from "./pages/destinations/StateLandingRoute";
 import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
@@ -93,10 +94,7 @@ export default function App() {
           path="/destinations/europe/:countrySlug"
           component={EuropeCountryRoute}
         />
-        <Route
-          path="/book/:tourSlug"
-          component={CanadaTourBookingRoute}
-        />
+        <Route path="/book/:tourSlug" component={CanadaTourBookingRoute} />
         <Route
           path="/destinations/world/canada/:province/:city/tours/:tourSlug/book"
           component={CanadaTourBookingRoute}
@@ -104,6 +102,18 @@ export default function App() {
         <Route
           path="/destinations/world/canada/:province/:city/tours/:tourSlug"
           component={CanadaTourRoute}
+        />
+        <Route
+          path="/destinations/world/canada/:province/:city/activities/:activitySlug"
+          component={CanadaActivityRoute}
+        />
+        <Route
+          path="/destinations/world/canada/:province/activities/:activitySlug"
+          component={CanadaActivityRoute}
+        />
+        <Route
+          path="/destinations/world/canada/activities/:activitySlug"
+          component={CanadaActivityRoute}
         />
         <Route
           path="/destinations/world/canada/:province/:city"
