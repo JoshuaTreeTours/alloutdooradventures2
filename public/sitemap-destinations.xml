@@ -74,6 +74,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/maryland/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/massachusetts</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/massachusetts/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/minnesota/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/montana</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/montana/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/nevada</loc><priority>0.6</priority></url>
@@ -102,23 +104,61 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/vermont/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/washington</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/washington/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/wyoming</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/wyoming/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baja-california-sur</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro-district</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/bavaria</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ciudad-de-mxico</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/comunidad-valenciana</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-cork</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-dublin</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/czechia</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/district-of-columbia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/emilia-romagna</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/england</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/jalisco</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/lajas</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/lisboa</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/lappi</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/lower-saxony</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/manitoba</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/mecklenburg-vorpommern</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/morocco</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-brunswick</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/norrbottens-ln</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/northern-ireland</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/otago</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/pohjois-savo</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/quintana-roo</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/saint-martin</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/saxony-anhalt</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/schleswig-holstein</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/setbal</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/south-bohemian-region</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/st-ann-parish</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/st-thomas</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/stockholms-ln</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/thringen</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/trelawny-parish</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/us-virgin-islands</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/vestland</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/vlaams-gewest</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/western-australia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/zeeland</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/zuid-holland</loc><priority>0.6</priority></url>
 </urlset>

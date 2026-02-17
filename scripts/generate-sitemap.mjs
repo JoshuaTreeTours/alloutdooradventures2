@@ -10,6 +10,7 @@ const BASE_URL = (
   process.env.SITE_URL || "https://www.alloutdooradventures.com"
 ).replace(/\/+$/, "");
 const MAX_URLS_PER_SITEMAP = 50000;
+const MIN_TOUR_URL_COUNT = 50;
 
 const ensurePath = (value) => {
   if (!value) {
@@ -40,6 +41,67 @@ const addUrl = (set, value) => {
   }
 
   set.add(normalized);
+};
+
+const safeSlugify = (catalogModule, value) => {
+  if (typeof value !== "string") {
+    return null;
+  }
+
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
+  }
+
+  const slug = catalogModule.slugify(trimmed);
+  return slug || null;
+};
+
+const getTourIdentifier = (tour, fallback = "unknown") =>
+  tour?.sourceItemId ||
+  tour?.tour_id ||
+  tour?.item_id ||
+  tour?.id ||
+  tour?.slug ||
+  fallback;
+
+const buildCanonicalTourPath = (tour, catalogModule) => {
+  const canonicalPath = ensurePath(
+    tour?.seo?.canonicalPath ||
+      tour?.canonicalPath ||
+      tour?.path ||
+      tour?.href ||
+      tour?.url,
+  );
+  if (canonicalPath && canonicalPath !== "/") {
+    return canonicalPath;
+  }
+
+  const slug =
+    safeSlugify(catalogModule, tour?.slug) ||
+    safeSlugify(catalogModule, tour?.title);
+  if (!slug) {
+    return null;
+  }
+
+  const destination = tour?.destination ?? {};
+  const city =
+    destination.citySlug || destination.city || tour?.city || tour?.location;
+  const citySlug = safeSlugify(catalogModule, city);
+
+  const state =
+    destination.stateSlug ||
+    destination.state ||
+    tour?.stateSlug ||
+    tour?.state ||
+    tour?.country;
+  const stateSlug = safeSlugify(catalogModule, state);
+
+  if (!stateSlug || !citySlug) {
+    return null;
+  }
+
+  return `/tours/${stateSlug}/${citySlug}/${slug}`;
 };
 
 const escapeXml = (value) =>
@@ -317,24 +379,18 @@ const buildSitemap = async () => {
     "../src/data/tourCatalog.ts",
     import.meta.url,
   );
-  const tourPathsModule = await tsImport(
-    "../src/data/tourPaths.ts",
-    import.meta.url,
-  );
   const flagstaffModule = await tsImport(
     "../src/data/flagstaffTours.ts",
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
   const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
-  const getTourBookingPath = tourPathsModule.getTourBookingPath;
   const engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
     ? engine2Module.getAllEngine2Tours()
     : [];
 
   const pages = new Set();
   const toursUrls = new Set();
-  const bookingUrls = new Set();
   const cityUrls = new Set();
   const guideUrls = new Set();
   const destinationUrls = new Set();
@@ -407,24 +463,41 @@ const buildSitemap = async () => {
   }
 
   tours.forEach((tour) => {
-    if (!tour?.destination?.stateSlug || !tour?.destination?.citySlug) {
+    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    if (!tourPath) {
+      console.warn(
+        `Skipping tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+      );
       return;
     }
-    addUrl(
-      toursUrls,
-      `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
-    );
-    addUrl(bookingUrls, getTourBookingPath(tour));
+    addUrl(toursUrls, tourPath);
   });
 
-
   engine2Tours.forEach((tour) => {
-    addUrl(toursUrls, tour.seo?.canonicalPath);
+    const tourPath = buildCanonicalTourPath(tour, catalogModule);
+    if (!tourPath) {
+      console.warn(
+        `Skipping Engine2 tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+      );
+      return;
+    }
+    addUrl(toursUrls, tourPath);
   });
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
-      addUrl(toursUrls, flagstaffModule.getFlagstaffTourDetailPath(tour));
-      addUrl(bookingUrls, getTourBookingPath(tour));
+      const legacyPath = ensurePath(flagstaffModule.getFlagstaffTourDetailPath(tour));
+      const canonicalPath = buildCanonicalTourPath(tour, catalogModule);
+      if (canonicalPath) {
+        addUrl(toursUrls, canonicalPath);
+        return;
+      }
+      if (legacyPath) {
+        addUrl(toursUrls, legacyPath);
+        return;
+      }
+      console.warn(
+        `Skipping Flagstaff tour sitemap URL (missing route fields): ${getTourIdentifier(tour)}`,
+      );
     });
   }
 
@@ -566,7 +639,6 @@ const buildSitemap = async () => {
   return {
     pages,
     toursUrls,
-    bookingUrls,
     cityUrls,
     guideUrls,
     destinationUrls,
@@ -575,15 +647,8 @@ const buildSitemap = async () => {
 };
 
 const run = async () => {
-  const {
-    pages,
-    toursUrls,
-    bookingUrls,
-    cityUrls,
-    guideUrls,
-    destinationUrls,
-    categoryUrls,
-  } = await buildSitemap();
+  const { pages, toursUrls, cityUrls, guideUrls, destinationUrls, categoryUrls } =
+    await buildSitemap();
   const outputDir = path.resolve(__dirname, "../public");
   const sitemapIndexPath = path.join(outputDir, "sitemap.xml");
 
@@ -628,35 +693,45 @@ const run = async () => {
     );
   };
 
-  const pagesEntries = toEntries(pages, { priority: 0.4 });
-  const tourEntries = toEntries(toursUrls, { priority: 0.8 });
-  const bookingEntries = toEntries(bookingUrls, { priority: 0.6 });
-  const cityEntries = toEntries(cityUrls, { priority: 0.6 });
-  const guideEntries = toEntries(guideUrls, { priority: 0.5 });
-  const destinationEntries = toEntries(destinationUrls, { priority: 0.6 });
-  const categoryEntries = toEntries(categoryUrls, { priority: 0.5 });
+  const sections = [
+    { slug: "pages", entries: toEntries(pages, { priority: 0.4 }) },
+    { slug: "tours", entries: toEntries(toursUrls, { priority: 0.8 }) },
+    { slug: "cities", entries: toEntries(cityUrls, { priority: 0.6 }) },
+    { slug: "guides", entries: toEntries(guideUrls, { priority: 0.5 }) },
+    {
+      slug: "destinations",
+      entries: toEntries(destinationUrls, { priority: 0.6 }),
+    },
+    { slug: "categories", entries: toEntries(categoryUrls, { priority: 0.5 }) },
+  ];
 
-  const sitemapFiles = (
-    await Promise.all([
-      writeUrlsetFiles("pages", pagesEntries),
-      writeUrlsetFiles("tours", tourEntries),
-      writeUrlsetFiles("booking", bookingEntries),
-      writeUrlsetFiles("cities", cityEntries),
-      writeUrlsetFiles("guides", guideEntries),
-      writeUrlsetFiles("destinations", destinationEntries),
-      writeUrlsetFiles("categories", categoryEntries),
-    ])
-  ).flat();
+  const sitemapFiles = [];
+  for (const section of sections) {
+    try {
+      const files = await writeUrlsetFiles(section.slug, section.entries);
+      sitemapFiles.push(...files);
+      console.log(`Sitemap ${section.slug}: ${section.entries.length}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(`Skipping sitemap section \"${section.slug}\": ${message}`);
+    }
+  }
 
   await writeFile(sitemapIndexPath, buildSitemapIndexXml(sitemapFiles), "utf8");
 
-  console.log(`Sitemap pages: ${pagesEntries.length}`);
-  console.log(`Sitemap tours: ${tourEntries.length}`);
-  console.log(`Sitemap booking: ${bookingEntries.length}`);
-  console.log(`Sitemap cities: ${cityEntries.length}`);
-  console.log(`Sitemap guides: ${guideEntries.length}`);
-  console.log(`Sitemap destinations: ${destinationEntries.length}`);
-  console.log(`Sitemap categories: ${categoryEntries.length}`);
+  const sitemapIndexContents = await readFile(sitemapIndexPath, "utf8");
+  if (sitemapIndexContents.includes("sitemap-booking.xml")) {
+    throw new Error("sitemap.xml must not include sitemap-booking.xml");
+  }
+
+  const toursSitemapPath = path.join(outputDir, "sitemap-tours.xml");
+  const toursSitemapContents = await readFile(toursSitemapPath, "utf8");
+  const tourUrlCount = (toursSitemapContents.match(/<url>/g) || []).length;
+  if (tourUrlCount < MIN_TOUR_URL_COUNT) {
+    throw new Error(
+      `sitemap-tours.xml must contain at least ${MIN_TOUR_URL_COUNT} tour URLs (found ${tourUrlCount})`,
+    );
+  }
 };
 
 try {
