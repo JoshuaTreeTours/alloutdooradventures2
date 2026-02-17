@@ -134,16 +134,18 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
   const stateTours = tours.filter(
     (tour) => tour.destination.stateSlug === stateSlug,
   );
-  const engine2StateTours =
-    stateSlug === "california"
-      ? getAllEngine2Tours().filter(tour => tour.geo.region.toLowerCase() === "california")
-      : [];
+
+  const engine2StateTours = getAllEngine2Tours().filter(
+    tour =>
+      tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/`) ||
+      tour.seo.canonicalPath.startsWith(`/destinations/united-states/${stateSlug}/`)
+  );
 
   if (!stateTours.length && !engine2StateTours.length) {
     return null;
   }
 
-  const stateName = stateTours[0]?.destination.state ?? "California";
+  const stateName = stateTours[0]?.destination.state ?? engine2StateTours[0]?.geo.region ?? stateSlug;
   const citySlugs = Array.from(
     new Set([
       ...stateTours.map((tour) => tour.destination.citySlug),
@@ -168,16 +170,22 @@ export const getFallbackCityBySlugs = (
       tour.destination.stateSlug === stateSlug &&
       tour.destination.citySlug === citySlug,
   );
-  const engine2CityTours =
-    stateSlug === "california"
-      ? getAllEngine2Tours().filter(tour => tour.sourceCitySlug === citySlug)
-      : [];
+  const engine2CityTours = getAllEngine2Tours().filter(
+    tour =>
+      (tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/${citySlug}/tours/`) ||
+        tour.seo.canonicalPath.startsWith(
+          `/destinations/united-states/${stateSlug}/${citySlug}/tours/`
+        )) ||
+      tour.seo.canonicalPath === `/destinations/${stateSlug}/tours/${tour.slug}` ||
+      tour.seo.canonicalPath ===
+        `/destinations/united-states/${stateSlug}/tours/${tour.slug}`
+  );
 
   if (!cityTours.length && !engine2CityTours.length) {
     return null;
   }
 
-  const stateName = cityTours[0]?.destination.state ?? "California";
+  const stateName = cityTours[0]?.destination.state ?? engine2CityTours[0]?.geo.region ?? stateSlug;
   const cityName = cityTours[0]?.destination.city ?? engine2CityTours[0]?.geo.city ?? citySlug;
   const activityTags = buildActivityTags(
     [

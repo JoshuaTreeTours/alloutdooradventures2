@@ -293,6 +293,23 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
+  const alaskaModule = await tsImport("../src/data/us/alaska.ts", import.meta.url);
+  if (typeof alaskaModule.loadAlaskaTours === "function") {
+    alaskaModule.loadAlaskaTours().forEach((tour) => {
+      tours.push({
+        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
+        destination: {
+          state: "Alaska",
+          stateSlug: "alaska",
+          city: tour.city,
+          citySlug: catalogModule.slugify(tour.city),
+        },
+        activitySlugs: ["day-adventures"],
+        primaryCategory: "day-adventures",
+      });
+    });
+  }
+
   const europeDir = path.resolve(__dirname, "../data/europe");
   const europeFiles = await readdir(europeDir);
   await Promise.all(
@@ -647,19 +664,22 @@ const buildSitemap = async () => {
 };
 
 const run = async () => {
+  const shouldWrite = process.env.SITEMAP_WRITE === "1";
   const { pages, toursUrls, cityUrls, guideUrls, destinationUrls, categoryUrls } =
     await buildSitemap();
   const outputDir = path.resolve(__dirname, "../public");
   const sitemapIndexPath = path.join(outputDir, "sitemap.xml");
 
-  await mkdir(outputDir, { recursive: true });
+  if (shouldWrite) {
+    await mkdir(outputDir, { recursive: true });
 
-  const existingFiles = await readdir(outputDir);
-  await Promise.all(
-    existingFiles
-      .filter((file) => file.startsWith("sitemap-") && file.endsWith(".xml"))
-      .map((file) => unlink(path.join(outputDir, file))),
-  );
+    const existingFiles = await readdir(outputDir);
+    await Promise.all(
+      existingFiles
+        .filter((file) => file.startsWith("sitemap-") && file.endsWith(".xml"))
+        .map((file) => unlink(path.join(outputDir, file))),
+    );
+  }
 
   const toEntries = (values, options = {}) =>
     Array.from(values)
@@ -687,7 +707,9 @@ const run = async () => {
             ? `sitemap-${slug}.xml`
             : `sitemap-${slug}-${index + 1}.xml`;
         const filepath = path.join(outputDir, filename);
-        await writeFile(filepath, buildUrlsetXml(chunk), "utf8");
+        if (shouldWrite) {
+          await writeFile(filepath, buildUrlsetXml(chunk), "utf8");
+        }
         return `${BASE_URL}/${filename}`;
       }),
     );
@@ -717,20 +739,25 @@ const run = async () => {
     }
   }
 
-  await writeFile(sitemapIndexPath, buildSitemapIndexXml(sitemapFiles), "utf8");
+  const sitemapIndexXml = buildSitemapIndexXml(sitemapFiles);
+  if (shouldWrite) {
+    await writeFile(sitemapIndexPath, sitemapIndexXml, "utf8");
+  }
 
-  const sitemapIndexContents = await readFile(sitemapIndexPath, "utf8");
-  if (sitemapIndexContents.includes("sitemap-booking.xml")) {
+  if (sitemapIndexXml.includes("sitemap-booking.xml")) {
     throw new Error("sitemap.xml must not include sitemap-booking.xml");
   }
 
-  const toursSitemapPath = path.join(outputDir, "sitemap-tours.xml");
-  const toursSitemapContents = await readFile(toursSitemapPath, "utf8");
-  const tourUrlCount = (toursSitemapContents.match(/<url>/g) || []).length;
+  const toursSection = sections.find(section => section.slug === "tours");
+  const tourUrlCount = toursSection?.entries.length ?? 0;
   if (tourUrlCount < MIN_TOUR_URL_COUNT) {
     throw new Error(
       `sitemap-tours.xml must contain at least ${MIN_TOUR_URL_COUNT} tour URLs (found ${tourUrlCount})`,
     );
+  }
+
+  if (!shouldWrite) {
+    console.log("SITEMAP_WRITE is not set to 1; skipping XML file writes.");
   }
 };
 
