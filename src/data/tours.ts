@@ -9,6 +9,7 @@ import { applyTourPricing } from "./tourPricing";
 import {
   REQUIRED_FH_URL_34849,
   getAllEngine2Tours,
+  getEngine2ToursByStateSlug,
   getEngine2ToursBySourceCity,
   type Engine2Tour,
 } from "../engine2/data/loadEngine2";
@@ -16,6 +17,7 @@ import {
   extractTourBaseDescription,
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
+import { slugify } from "../utils/slugify";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -167,13 +169,9 @@ export const isTourDescriptionDuplicate = (tour: Tour) => {
 };
 
 const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
-  if (stateSlug !== "california") {
-    return [] as Tour[];
-  }
-
   const engine2Tours = citySlug
-    ? getEngine2ToursBySourceCity(citySlug)
-    : getAllEngine2Tours();
+    ? getEngine2ToursByStateSlug(stateSlug, citySlug)
+    : getEngine2ToursByStateSlug(stateSlug);
 
   return engine2Tours.map(toEngine2ListingTour);
 };
@@ -248,6 +246,19 @@ const toUnifiedEngine1Tour = (tour: Tour): UnifiedCityTour => ({
   href: getCityTourDetailPath(tour),
 });
 
+const getEngine2StateSlug = (tour: Engine2Tour) => {
+  const parts = tour.seo.canonicalPath.split("/").filter(Boolean);
+  if (parts[0] !== "destinations") {
+    return "california";
+  }
+
+  if (parts[1] === "world") {
+    return slugify(tour.geo.region || "california");
+  }
+
+  return parts[1] || slugify(tour.geo.region || "california");
+};
+
 const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
   id: `engine2-${tour.id}`,
   slug: tour.slug,
@@ -259,7 +270,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
   destination: {
     country: tour.geo.country || "United States",
     state: tour.geo.region,
-    stateSlug: "california",
+    stateSlug: getEngine2StateSlug(tour),
     city: tour.geo.city,
     citySlug: tour.sourceCitySlug,
     lat: tour.geo.lat ?? undefined,
@@ -342,7 +353,10 @@ export const getToursByCityUnified = (
   );
 
   if (stateSlug !== "california") {
-    return engine1Tours;
+    const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
+      toUnifiedEngine2Tour
+    );
+    return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
   }
 
   const engine2Tours =
