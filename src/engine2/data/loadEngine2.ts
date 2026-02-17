@@ -19,8 +19,10 @@ export const REQUIRED_FH_URL_34849 =
 
 export type Engine2Tour = {
   id: string;
+  sourceItemId?: string;
   sourceDatasetKey?: string;
   sourceCountrySlug?: string;
+  sourceStateSlug?: string;
   sourceProvinceSlug?: string;
   sourceCitySlug: string;
   slug: string;
@@ -68,6 +70,13 @@ export type Engine2Tour = {
   };
 };
 
+type Engine2StateSource = {
+  key: string;
+  name: string;
+  country: "united-states";
+  loader: () => Engine2Tour[];
+};
+
 const getBestFareHarborImage = (tour: Engine2Tour) => {
   if (tour.images?.gallery?.length) {
     return tour.images.gallery[0];
@@ -84,14 +93,84 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
   return null;
 };
 
-const allGeneratedTours = [
+const getTourStateSlug = (tour: Engine2Tour): string | undefined => {
+  if (tour.sourceStateSlug) {
+    return tour.sourceStateSlug;
+  }
+
+  const match = tour.seo?.canonicalPath?.match(
+    /^\/destinations\/(?:united-states\/)?([^/]+)\//,
+  );
+  return match?.[1];
+};
+
+const getFallbackDedupKey = (tour: Engine2Tour) => {
+  const stateSlug = getTourStateSlug(tour);
+  if (!stateSlug || !tour.sourceCitySlug || !tour.slug) {
+    return null;
+  }
+
+  return `${tour.slug}::${tour.sourceCitySlug}::${stateSlug}`;
+};
+
+const ENGINE2_STATE_SOURCES: Engine2StateSource[] = [
+  {
+    key: "oregon",
+    name: "Oregon",
+    country: "united-states",
+    loader: loadOregonEngine2Tours,
+  },
+  {
+    key: "minnesota",
+    name: "Minnesota",
+    country: "united-states",
+    loader: loadMinnesotaEngine2Tours,
+  },
+];
+
+const baseTours = [
   ...(palmSpringsTours as unknown as readonly Engine2Tour[]),
   ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...loadCanoeingEngine2Tours(),
-  ...loadOregonEngine2Tours(),
-  ...loadMinnesotaEngine2Tours(),
 ];
+
+const allGeneratedTours = (() => {
+  const tours: Engine2Tour[] = [...baseTours];
+  const seenIds = new Set(
+    baseTours.map(tour => tour.sourceItemId || tour.booking?.fareharbor?.itemId || "").filter(Boolean),
+  );
+  const seenFallbackKeys = new Set(
+    baseTours.map(tour => getFallbackDedupKey(tour) || "").filter(Boolean),
+  );
+
+  ENGINE2_STATE_SOURCES.forEach(source => {
+    source.loader().forEach(tour => {
+      const dedupeId = tour.sourceItemId || tour.id;
+      if (dedupeId && seenIds.has(dedupeId)) {
+        if (source.key === "oregon") {
+          console.warn(`⚠️ Skipping duplicate Oregon tour id=${dedupeId}`);
+        }
+        return;
+      }
+
+      const fallbackKey = getFallbackDedupKey(tour);
+      if (fallbackKey && seenFallbackKeys.has(fallbackKey)) {
+        return;
+      }
+
+      if (dedupeId) {
+        seenIds.add(dedupeId);
+      }
+      if (fallbackKey) {
+        seenFallbackKeys.add(fallbackKey);
+      }
+      tours.push(tour);
+    });
+  });
+
+  return tours;
+})();
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
   ...tour,

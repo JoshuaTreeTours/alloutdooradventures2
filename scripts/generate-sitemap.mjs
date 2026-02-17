@@ -214,6 +214,23 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
+  const oregonModule = await tsImport("../src/data/us/oregon.ts", import.meta.url);
+  if (typeof oregonModule.loadOregonTours === "function") {
+    oregonModule.loadOregonTours().forEach((tour) => {
+      tours.push({
+        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
+        destination: {
+          state: "Oregon",
+          stateSlug: "oregon",
+          city: tour.city,
+          citySlug: catalogModule.slugify(tour.city),
+        },
+        activitySlugs: ["day-adventures"],
+        primaryCategory: "day-adventures",
+      });
+    });
+  }
+
   const minnesotaModule = await tsImport("../src/data/us/minnesota.ts", import.meta.url);
   if (typeof minnesotaModule.loadMinnesotaTours === "function") {
     minnesotaModule.loadMinnesotaTours().forEach((tour) => {
@@ -317,24 +334,18 @@ const buildSitemap = async () => {
     "../src/data/tourCatalog.ts",
     import.meta.url,
   );
-  const tourPathsModule = await tsImport(
-    "../src/data/tourPaths.ts",
-    import.meta.url,
-  );
   const flagstaffModule = await tsImport(
     "../src/data/flagstaffTours.ts",
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
   const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
-  const getTourBookingPath = tourPathsModule.getTourBookingPath;
   const engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
     ? engine2Module.getAllEngine2Tours()
     : [];
 
   const pages = new Set();
   const toursUrls = new Set();
-  const bookingUrls = new Set();
   const cityUrls = new Set();
   const guideUrls = new Set();
   const destinationUrls = new Set();
@@ -414,17 +425,15 @@ const buildSitemap = async () => {
       toursUrls,
       `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
     );
-    addUrl(bookingUrls, getTourBookingPath(tour));
   });
 
-
+  // Intentionally tours-only: booking URLs and sitemap-booking.xml are excluded.
   engine2Tours.forEach((tour) => {
     addUrl(toursUrls, tour.seo?.canonicalPath);
   });
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
       addUrl(toursUrls, flagstaffModule.getFlagstaffTourDetailPath(tour));
-      addUrl(bookingUrls, getTourBookingPath(tour));
     });
   }
 
@@ -566,7 +575,6 @@ const buildSitemap = async () => {
   return {
     pages,
     toursUrls,
-    bookingUrls,
     cityUrls,
     guideUrls,
     destinationUrls,
@@ -578,7 +586,6 @@ const run = async () => {
   const {
     pages,
     toursUrls,
-    bookingUrls,
     cityUrls,
     guideUrls,
     destinationUrls,
@@ -630,7 +637,6 @@ const run = async () => {
 
   const pagesEntries = toEntries(pages, { priority: 0.4 });
   const tourEntries = toEntries(toursUrls, { priority: 0.8 });
-  const bookingEntries = toEntries(bookingUrls, { priority: 0.6 });
   const cityEntries = toEntries(cityUrls, { priority: 0.6 });
   const guideEntries = toEntries(guideUrls, { priority: 0.5 });
   const destinationEntries = toEntries(destinationUrls, { priority: 0.6 });
@@ -640,7 +646,6 @@ const run = async () => {
     await Promise.all([
       writeUrlsetFiles("pages", pagesEntries),
       writeUrlsetFiles("tours", tourEntries),
-      writeUrlsetFiles("booking", bookingEntries),
       writeUrlsetFiles("cities", cityEntries),
       writeUrlsetFiles("guides", guideEntries),
       writeUrlsetFiles("destinations", destinationEntries),
@@ -652,7 +657,6 @@ const run = async () => {
 
   console.log(`Sitemap pages: ${pagesEntries.length}`);
   console.log(`Sitemap tours: ${tourEntries.length}`);
-  console.log(`Sitemap booking: ${bookingEntries.length}`);
   console.log(`Sitemap cities: ${cityEntries.length}`);
   console.log(`Sitemap guides: ${guideEntries.length}`);
   console.log(`Sitemap destinations: ${destinationEntries.length}`);
