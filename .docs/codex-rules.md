@@ -1,0 +1,7 @@
+- Never commit generated build output
+- Never commit dist or build folders
+- Never commit large datasets in one commit
+- If dataset > 5MB split into multiple commits
+- CSV datasets must be committed separately from code changes
+- Prefer regional dataset splitting for large files
+- Engine2 ingestion changes must not include generated page output
