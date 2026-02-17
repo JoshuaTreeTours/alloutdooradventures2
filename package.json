@@ -34,7 +34,8 @@
     "engine2:gen:canada": "tsx scripts/engine2/generateCanadaEngine2FromCsv.ts",
     "test:engine2:canada": "tsx scripts/engine2/smokeTestCanadaRoutes.ts",
     "check:large-files": "node scripts/check-large-files.js",
-    "check:canoeing": "vite-node --script scripts/check-canoeing-tours.ts"
+    "check:canoeing": "vite-node --script scripts/check-canoeing-tours.ts",
+    "check:oregon": "tsx scripts/check-oregon-tours.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

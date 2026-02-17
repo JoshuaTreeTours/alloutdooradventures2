@@ -57,6 +57,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const bookingPath = `${tour.seo.canonicalPath}/book`;
+  const backToToursPath = tour.seo.canonicalPath.replace(/\/tours\/[^/]+$/, "/tours");
   const basePrice = parsePrice(tour.pricing?.price ?? null);
   const displayPrice = applyPriceFloor(basePrice);
   const isPriceFallbackApplied =
@@ -108,7 +109,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
                 BOOK
               </a>
             </Link>
-            <Link href={tour.sourceCountrySlug === "canada" ? `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}` : `/destinations/california/${tour.sourceCitySlug}/tours`}>
+            <Link href={backToToursPath}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>
