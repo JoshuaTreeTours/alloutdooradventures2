@@ -3083,10 +3083,98 @@ export const tours: Tour[] = [
   },
 ];
 
+const wyomingState: StateDestination = {
+  slug: "wyoming",
+  name: "Wyoming",
+  description: "Wide-open basins, alpine peaks, and iconic national park gateways.",
+  featuredDescription:
+    "Wild landscapes and mountain towns that make Wyoming a year-round adventure basecamp.",
+  heroImage:
+    "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=80",
+  region: "West",
+  intro:
+    "Wyoming combines Yellowstone and Grand Teton access with wide-open spaces and classic mountain-town adventures.",
+  longDescription:
+    "Wyoming is built for travelers who want big-sky drives, wildlife-rich valleys, and trail networks that start minutes from town.",
+  topRegions: [
+    {
+      title: "Jackson Hole & Teton Valley",
+      description:
+        "Alpine hikes, wildlife drives, and river adventures anchored by Jackson.",
+    },
+    {
+      title: "Yellowstone Gateways",
+      description:
+        "Geothermal basins, canyon overlooks, and guided park touring from Cody and nearby hubs.",
+    },
+  ],
+  cities: [
+    {
+      name: "Jackson",
+      slug: "jackson",
+      stateSlug: "wyoming",
+      region: "Jackson Hole",
+      lat: 43.4799,
+      lng: -110.7624,
+      shortDescription: "Mountain-town basecamp for Tetons and Yellowstone day tours.",
+      intro:
+        "Jackson is a high-energy mountain town with quick access to iconic Wyoming landscapes.",
+      heroImages: [
+        "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1600&q=80",
+      ],
+      activityTags: ["hiking", "wildlife", "scenic-drives"],
+      whereItIs: [
+        "Jackson sits in northwestern Wyoming, framed by the Teton Range and wildlife-rich valleys.",
+      ],
+      experiences: {
+        mountains: "Ride or hike ridge lines with expansive Teton views.",
+        lakesWater: "Plan float trips and lakeside stops during summer itineraries.",
+        desertForest: "High-elevation forests and sage valleys create varied terrain.",
+        cycling: "Ride scenic roads and paved paths around the valley floor.",
+        scenicDrives: "Use Jackson as a launch point for Grand Teton and Yellowstone loops.",
+        seasonalNotes:
+          "Summer and early fall are prime for trails; winter adds snow-focused adventures.",
+      },
+      thingsToDo: [
+        "Visit Grand Teton viewpoints and lakes.",
+        "Plan a Yellowstone day trip.",
+        "Take a guided wildlife-spotting drive.",
+      ],
+      toursCopy: [
+        "Jackson tours work well as full-day experiences paired with flexible evenings in town.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: Teton scenic drive.",
+          "Afternoon: guided trail or wildlife tour.",
+          "Evening: downtown Jackson dinner.",
+        ],
+        dayTwo: [
+          "Morning: Yellowstone gateway route.",
+          "Afternoon: canyon viewpoints and geyser basins.",
+          "Evening: return via scenic valley overlooks.",
+        ],
+      },
+      gettingThere: [
+        "Jackson Hole Airport provides direct regional and seasonal national flights.",
+      ],
+      faq: [
+        {
+          question: "Can I visit Grand Teton and Yellowstone in one trip?",
+          answer:
+            "Yes. Many visitors use Jackson as a base and split park days for a more relaxed pace.",
+        },
+      ],
+    },
+  ],
+  isFallback: true,
+};
+
 export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates,
   ...deepSouthStates,
+  wyomingState,
 ];
 
 export const destinations: Destination[] = states.map((state) => ({
