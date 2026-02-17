@@ -214,6 +214,55 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
+  const heartlandDatasets = [
+    {
+      importPath: "../src/data/us/utah.ts",
+      loaderName: "loadUtahTours",
+      stateName: "Utah",
+      stateSlug: "utah",
+    },
+    {
+      importPath: "../src/data/us/colorado.ts",
+      loaderName: "loadColoradoTours",
+      stateName: "Colorado",
+      stateSlug: "colorado",
+    },
+    {
+      importPath: "../src/data/us/montana.ts",
+      loaderName: "loadMontanaTours",
+      stateName: "Montana",
+      stateSlug: "montana",
+    },
+  ];
+
+  for (const dataset of heartlandDatasets) {
+    const datasetModule = await tsImport(dataset.importPath, import.meta.url);
+    const loader = datasetModule[dataset.loaderName];
+
+    if (typeof loader !== "function") {
+      continue;
+    }
+
+    loader().forEach((tour) => {
+      const tourStateSlug = catalogModule.slugify(tour.state || dataset.stateName);
+      if (tourStateSlug !== dataset.stateSlug) {
+        return;
+      }
+
+      tours.push({
+        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
+        destination: {
+          state: dataset.stateName,
+          stateSlug: dataset.stateSlug,
+          city: tour.city,
+          citySlug: catalogModule.slugify(tour.city),
+        },
+        activitySlugs: ["day-adventures"],
+        primaryCategory: "day-adventures",
+      });
+    });
+  }
+
   const europeDir = path.resolve(__dirname, "../data/europe");
   const europeFiles = await readdir(europeDir);
   await Promise.all(

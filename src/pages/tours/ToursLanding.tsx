@@ -44,7 +44,10 @@ export default function ToursLanding() {
   const seo = getStaticPageSeo("/tours");
   const didInitRef = useRef(false);
   const sortedStates = useMemo(
-    () => [...states].sort((a, b) => a.name.localeCompare(b.name)),
+    () => {
+      const bySlug = new Map(states.map(state => [state.slug, state]));
+      return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
+    },
     []
   );
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
