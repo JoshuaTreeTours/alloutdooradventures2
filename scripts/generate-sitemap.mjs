@@ -214,7 +214,6 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
-
   const oregonModule = await tsImport("../src/data/us/oregon.ts", import.meta.url);
   if (typeof oregonModule.loadOregonTours === "function") {
     oregonModule.loadOregonTours().forEach((tour) => {
@@ -428,6 +427,7 @@ const buildSitemap = async () => {
     );
   });
 
+  // Intentionally tours-only: booking URLs and sitemap-booking.xml are excluded.
   engine2Tours.forEach((tour) => {
     addUrl(toursUrls, tour.seo?.canonicalPath);
   });
