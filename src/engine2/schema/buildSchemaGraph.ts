@@ -2,6 +2,7 @@ import {
   getSiteStructuredDataNodes,
   buildBreadcrumbList,
   buildWebPageStructuredData,
+  SITE_ORGANIZATION_ID,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
@@ -34,7 +35,6 @@ export const buildSchemaGraph = (
   tour: Engine2Tour,
   seo: Engine2Seo
 ): StructuredDataNode[] => {
-  const providerId = `${seo.canonical}#provider`;
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
@@ -59,11 +59,6 @@ export const buildSchemaGraph = (
       image: effectiveHeroImage,
     }),
     {
-      "@type": "Organization",
-      "@id": providerId,
-      name: tour.provider.name,
-    },
-    {
       "@type": "Place",
       "@id": placeId,
       name: `${tour.geo.city}, ${tour.geo.region}`,
@@ -79,7 +74,7 @@ export const buildSchemaGraph = (
         "@type": "PostalAddress",
         addressLocality: tour.geo.city,
         addressRegion: tour.geo.region,
-        addressCountry: "US",
+        addressCountry: tour.geo.country.toLowerCase() === "canada" ? "CA" : "US",
       },
     },
     {
@@ -90,7 +85,7 @@ export const buildSchemaGraph = (
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@type": "Brand", name: "All Outdoor Adventures" },
       offers: offer,
-      provider: { "@id": providerId },
+      provider: { "@id": SITE_ORGANIZATION_ID },
     },
     {
       "@type": "TouristTrip",
@@ -98,20 +93,32 @@ export const buildSchemaGraph = (
       name: tour.name,
       description: seo.description,
       itinerary: { "@id": placeId },
-      provider: { "@id": providerId },
+      provider: { "@id": SITE_ORGANIZATION_ID },
       touristType: "Adventure travelers",
       offers: offer,
     },
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
-      { name: tour.geo.region, url: "/destinations/california" },
+      {
+        name: tour.sourceCountrySlug === "canada" ? "Canada" : tour.geo.region,
+        url:
+          tour.sourceCountrySlug === "canada"
+            ? "/destinations/world/canada"
+            : "/destinations/california",
+      },
       {
         name: formatCityFromSlug(tour.sourceCitySlug),
-        url: `/destinations/california/${tour.sourceCitySlug}`,
+        url:
+          tour.sourceCountrySlug === "canada"
+            ? `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`
+            : `/destinations/california/${tour.sourceCitySlug}`,
       },
       {
         name: "Tours",
-        url: `/destinations/california/${tour.sourceCitySlug}/tours`,
+        url:
+          tour.sourceCountrySlug === "canada"
+            ? `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`
+            : `/destinations/california/${tour.sourceCitySlug}/tours`,
       },
       { name: tour.name, url: tour.seo.canonicalPath },
     ]),

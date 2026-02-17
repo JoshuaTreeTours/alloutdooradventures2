@@ -34,9 +34,28 @@ export default function Engine2TourBookingPage({
       ...getSiteStructuredDataNodes(),
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
-        { name: "California", url: "/destinations/california" },
-        { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
-        { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+        {
+          name: tour.sourceCountrySlug === "canada" ? "Canada" : "California",
+          url:
+            tour.sourceCountrySlug === "canada"
+              ? "/destinations/world/canada"
+              : "/destinations/california",
+        },
+        ...(tour.sourceCountrySlug === "canada"
+          ? [
+              {
+                name: tour.geo.region,
+                url: `/destinations/world/canada/${tour.sourceProvinceSlug}`,
+              },
+              {
+                name: tour.geo.city,
+                url: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
+              },
+            ]
+          : [
+              { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
+              { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+            ]),
         { name: tour.name, url: tour.seo.canonicalPath },
         { name: "Book", url: `${tour.seo.canonicalPath}/book` },
       ]),
