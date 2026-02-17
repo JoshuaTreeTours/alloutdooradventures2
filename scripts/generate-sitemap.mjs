@@ -214,6 +214,23 @@ const buildTourSummaries = async (catalogModule) => {
     });
   }
 
+  const minnesotaModule = await tsImport("../src/data/us/minnesota.ts", import.meta.url);
+  if (typeof minnesotaModule.loadMinnesotaTours === "function") {
+    minnesotaModule.loadMinnesotaTours().forEach((tour) => {
+      tours.push({
+        slug: catalogModule.slugify(`${tour.title}-${tour.id}`),
+        destination: {
+          state: "Minnesota",
+          stateSlug: "minnesota",
+          city: tour.city,
+          citySlug: catalogModule.slugify(tour.city),
+        },
+        activitySlugs: ["day-adventures"],
+        primaryCategory: "day-adventures",
+      });
+    });
+  }
+
   const europeDir = path.resolve(__dirname, "../data/europe");
   const europeFiles = await readdir(europeDir);
   await Promise.all(

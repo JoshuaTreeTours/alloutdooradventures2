@@ -12,6 +12,7 @@ import {
 } from "../utils/buildFareHarborUrl";
 import { loadCanoeingEngine2Tours } from "./canoeingTours";
 import { loadOregonEngine2Tours } from "./oregonTours";
+import { loadMinnesotaEngine2Tours } from "./minnesotaTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -89,6 +90,7 @@ const allGeneratedTours = [
   ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...loadCanoeingEngine2Tours(),
   ...loadOregonEngine2Tours(),
+  ...loadMinnesotaEngine2Tours(),
 ];
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
