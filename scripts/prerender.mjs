@@ -248,6 +248,9 @@ const isTour = pathname => {
   return (
     /^\/tours\/[^/]+\/[^/]+\/[^/]+$/.test(normalized) ||
     /^\/tours\/[^/]+$/.test(normalized) ||
+    /^\/destinations\/canada\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+      normalized
+    ) ||
     /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) ||
     /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
       normalized
@@ -259,6 +262,9 @@ const isDestination = pathname => {
   const normalized = normalizePathname(pathname);
   return (
     normalized.startsWith("/destinations") &&
+    !/^\/destinations\/canada\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+      normalized
+    ) &&
     !/^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(normalized) &&
     !/^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
       normalized
@@ -666,6 +672,7 @@ const main = async () => {
     engine2DataModule,
     engine2SeoModule,
     engine2SchemaModule,
+    canadaGeneratedModule,
   ] = await Promise.all([
     safeImport("../src/utils/structuredData.ts", "structuredData"),
     safeImport("../src/data/tourPaths.ts", "tourPaths"),
@@ -673,6 +680,10 @@ const main = async () => {
     safeImport("../src/engine2/data/loadEngine2.ts", "engine2Data"),
     safeImport("../src/engine2/seo/buildEngine2Seo.ts", "engine2Seo"),
     safeImport("../src/engine2/schema/buildSchemaGraph.ts", "engine2Schema"),
+    safeImport(
+      "../src/engine2/data/_generated/canada.generated.ts",
+      "engine2CanadaGenerated"
+    ),
   ]);
 
   const tours = Array.isArray(toursGeneratedModule.toursGenerated)
@@ -732,6 +743,12 @@ const main = async () => {
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
   const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
+  const canadaGeneratedTours = Array.isArray(canadaGeneratedModule?.default)
+    ? canadaGeneratedModule.default
+    : [];
+  const canadaByPath = new Map(
+    canadaGeneratedTours.map(tour => [tour.seo?.canonicalPath, tour])
+  );
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
 
@@ -784,8 +801,11 @@ const main = async () => {
     const engine2Tour = getEngine2TourByPath
       ? getEngine2TourByPath(basePathname)
       : null;
+    const resolvedEngine2Tour = engine2Tour ?? canadaByPath.get(basePathname) ?? null;
     const engine2Seo =
-      engine2Tour && buildEngine2Seo ? buildEngine2Seo(engine2Tour) : null;
+      resolvedEngine2Tour && buildEngine2Seo
+        ? buildEngine2Seo(resolvedEngine2Tour)
+        : null;
 
     let tourForSeo = null;
     let stateForHero = null;
@@ -831,7 +851,7 @@ const main = async () => {
         ? `${engine2Seo.title} | Book`
         : engine2Seo.title;
       seo.description = isBookingRoute
-        ? `Book ${engine2Tour.name} in ${engine2Tour.geo.city}, ${engine2Tour.geo.region}.`
+        ? `Book ${resolvedEngine2Tour.name} in ${resolvedEngine2Tour.geo.city}, ${resolvedEngine2Tour.geo.region}.`
         : engine2Seo.description;
       seo.url = isBookingRoute
         ? buildCanonicalUrl(normalizedPathname)
@@ -965,12 +985,12 @@ const main = async () => {
     let structuredData = null;
 
     if (
-      engine2Tour &&
+      resolvedEngine2Tour &&
       engine2Seo &&
       buildEngine2SchemaGraph &&
       normalizeStructuredData
     ) {
-      const engine2Nodes = buildEngine2SchemaGraph(engine2Tour, engine2Seo);
+      const engine2Nodes = buildEngine2SchemaGraph(resolvedEngine2Tour, engine2Seo);
       structuredData = normalizeStructuredData({
         "@context": "https://schema.org",
         "@graph": Array.isArray(engine2Nodes) ? engine2Nodes : [],
@@ -1196,19 +1216,31 @@ const main = async () => {
       url: findUrl(pathname =>
         /^\/destinations\/states\/[^/]+\/cities\/[^/]+$/.test(
           normalizePathname(pathname)
-        )
+        ) || /^\/destinations\/canada\/[^/]+\/[^/]+$/.test(normalizePathname(pathname))
       ),
+    },
+    {
+      label: "Destination province",
+      url: findUrl(pathname => /^\/destinations\/canada\/[^/]+$/.test(normalizePathname(pathname))),
     },
     {
       label: "Destination tour",
       url: findUrl(
-        pathname =>
-          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          ) ||
-          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
-            normalizePathname(pathname)
-          )
+        pathname => {
+          const normalized = normalizePathname(pathname);
+          return (
+            !normalized.endsWith("/book") &&
+            (/^\/destinations\/canada\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+              normalized
+            ) ||
+              /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+                normalized
+              ) ||
+              /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+                normalized
+              ))
+          );
+        }
       ),
     },
     {
@@ -1260,7 +1292,7 @@ const main = async () => {
   }
 };
 
-main().catch(error => {
+await main().catch(error => {
   console.error(error);
   process.exitCode = 1;
 });

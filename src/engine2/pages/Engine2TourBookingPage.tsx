@@ -16,6 +16,9 @@ type Engine2TourBookingPageProps = {
 export default function Engine2TourBookingPage({
   tour,
 }: Engine2TourBookingPageProps) {
+  const cityHubPath = tour.seo.canonicalPath.replace(/\/tours\/[^/]+$/, "");
+  const provinceHubPath = cityHubPath.split("/").slice(0, -1).join("/");
+  const countryHubPath = provinceHubPath.split("/").slice(0, -1).join("/");
   const seo = useMemo(() => buildEngine2Seo(tour), [tour]);
   const bookingArgs = tour.booking.fareharbor;
 
@@ -32,11 +35,17 @@ export default function Engine2TourBookingPage({
   const structuredDataNodes = useMemo(
     () => [
       ...getSiteStructuredDataNodes(),
+      {
+        "@type": "Organization",
+        "@id": `${seo.canonical}/book#provider`,
+        name: tour.provider.name,
+      },
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
-        { name: "California", url: "/destinations/california" },
-        { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
-        { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+        { name: tour.geo.country === "canada" ? "Canada" : tour.geo.region, url: countryHubPath },
+        { name: tour.geo.region, url: provinceHubPath },
+        { name: tour.geo.city, url: cityHubPath },
+        { name: "Tours", url: `${cityHubPath}/tours` },
         { name: tour.name, url: tour.seo.canonicalPath },
         { name: "Book", url: `${tour.seo.canonicalPath}/book` },
       ]),
@@ -55,7 +64,7 @@ export default function Engine2TourBookingPage({
         },
       },
     ],
-    [seo.canonical, seo.og.image, tour]
+    [cityHubPath, countryHubPath, provinceHubPath, seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);

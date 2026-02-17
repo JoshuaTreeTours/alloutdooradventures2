@@ -293,9 +293,21 @@ const buildSitemap = async () => {
   );
   const tours = await buildTourSummaries(catalogModule);
   const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
+  let canadaGeneratedModule = null;
+  try {
+    canadaGeneratedModule = await tsImport(
+      "../src/engine2/data/_generated/canada.generated.ts",
+      import.meta.url,
+    );
+  } catch {
+    console.warn("[sitemap] Canada generated dataset missing. Run `npm run engine2:gen`.");
+  }
   const getTourBookingPath = tourPathsModule.getTourBookingPath;
   const engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
     ? engine2Module.getAllEngine2Tours()
+    : [];
+  const canadaEngine2Tours = Array.isArray(canadaGeneratedModule?.default)
+    ? canadaGeneratedModule.default
     : [];
 
   const pages = new Set();
@@ -384,8 +396,21 @@ const buildSitemap = async () => {
   });
 
 
-  engine2Tours.forEach((tour) => {
+  [...engine2Tours, ...canadaEngine2Tours].forEach((tour) => {
     addUrl(toursUrls, tour.seo?.canonicalPath);
+    addUrl(bookingUrls, `${tour.seo?.canonicalPath}/book`);
+
+    const canonicalPath = tour.seo?.canonicalPath || "";
+    if (!canonicalPath.startsWith("/destinations/canada/")) {
+      return;
+    }
+    const parts = canonicalPath.split("/").filter(Boolean);
+    if (parts.length >= 5) {
+      const provinceSlug = parts[2];
+      const citySlug = parts[3];
+      addUrl(destinationUrls, `/destinations/canada/${provinceSlug}`);
+      addUrl(cityUrls, `/destinations/canada/${provinceSlug}/${citySlug}`);
+    }
   });
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
