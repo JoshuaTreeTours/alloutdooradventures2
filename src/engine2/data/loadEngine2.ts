@@ -2,6 +2,10 @@ import palmSpringsTours from "./palm-springs.generated";
 import californiaEngine2Tours, {
   californiaEngine2CitiesIndex,
 } from "./california.generated";
+import canadaEngine2Tours, {
+  canadaEngine2CitiesIndex,
+  canadaEngine2ProvincesIndex,
+} from "./canada.generated";
 import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
@@ -12,6 +16,8 @@ export const REQUIRED_FH_URL_34849 =
 
 export type Engine2Tour = {
   id: string;
+  sourceCountrySlug?: string;
+  sourceProvinceSlug?: string;
   sourceCitySlug: string;
   slug: string;
   name: string;
@@ -77,6 +83,7 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
 const allGeneratedTours = [
   ...(palmSpringsTours as unknown as readonly Engine2Tour[]),
   ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
+  ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
 ];
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
@@ -112,7 +119,12 @@ export type Engine2CityIndexEntry = {
 };
 
 export const getEngine2CityIndex = (): Engine2CityIndexEntry[] =>
-  (californiaEngine2CitiesIndex as unknown as Engine2CityIndexEntry[]).map(
+  (
+    [
+      ...(californiaEngine2CitiesIndex as unknown as Engine2CityIndexEntry[]),
+      ...(canadaEngine2CitiesIndex as unknown as Engine2CityIndexEntry[]),
+    ] as Engine2CityIndexEntry[]
+  ).map(
     entry => ({
       cityName: entry.cityName,
       citySlug: entry.citySlug,
@@ -136,6 +148,44 @@ export const getEngine2TourBySlug = (
   );
 
 export const getAllEngine2Tours = (): Engine2Tour[] => engine2Tours;
+
+export const getEngine2CanadaTours = (): Engine2Tour[] =>
+  engine2Tours.filter(tour => tour.sourceCountrySlug === "canada");
+
+export const getEngine2CanadaTourBySlug = (
+  provinceSlug: string,
+  citySlug: string,
+  tourSlug: string
+): Engine2Tour | null =>
+  engine2Tours.find(
+    tour =>
+      tour.sourceCountrySlug === "canada" &&
+      tour.sourceProvinceSlug === provinceSlug &&
+      tour.sourceCitySlug === citySlug &&
+      tour.slug === tourSlug
+  ) ?? null;
+
+export const getEngine2CanadaTourByTourSlug = (
+  tourSlug: string
+): Engine2Tour | null =>
+  engine2Tours.find(
+    tour => tour.sourceCountrySlug === "canada" && tour.slug === tourSlug
+  ) ?? null;
+
+export type Engine2CanadaProvinceIndexEntry = {
+  provinceName: string;
+  provinceSlug: string;
+  tourCount: number;
+  cities: Array<{ cityName: string; citySlug: string; tourIds: string[] }>;
+};
+
+export const getEngine2CanadaProvinceIndex = (): Engine2CanadaProvinceIndexEntry[] =>
+  (canadaEngine2ProvincesIndex as unknown as Engine2CanadaProvinceIndexEntry[]).map(
+    province => ({
+      ...province,
+      cities: province.cities.map(city => ({ ...city, tourIds: [...city.tourIds] })),
+    })
+  );
 
 export const getEngine2ToursBySourceCity = (citySlug: string): Engine2Tour[] =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);

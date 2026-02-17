@@ -30,7 +30,9 @@
     "gen:merchant": "tsx scripts/generate-merchant-feed.ts",
     "gen:feeds": "tsx scripts/generate-tour-enrichment.ts && tsx scripts/generate-merchant-feed.ts",
     "publish:merchant": "bash scripts/publish-merchant-feed.sh",
-    "test:engine2:smoke": "tsx scripts/engine2/smokeTestCaliforniaRoutes.ts"
+    "test:engine2:smoke": "tsx scripts/engine2/smokeTestCaliforniaRoutes.ts",
+    "engine2:gen:canada": "tsx scripts/engine2/generateCanadaEngine2FromCsv.ts",
+    "test:engine2:canada": "pnpm engine2:gen:canada && tsx scripts/engine2/smokeTestCanadaRoutes.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
