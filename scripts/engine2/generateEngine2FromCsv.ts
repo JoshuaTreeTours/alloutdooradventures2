@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 import { ENGINE2_DEFAULT_IMAGE } from "../../src/engine2/config/destinations";
@@ -13,6 +13,7 @@ import { parseCsv } from "./csvUtils";
 import { readTourEnrichment } from "./readTourEnrichment";
 
 type CsvRow = Record<string, string>;
+type SourceKey = "santa-barbara" | "california" | "canada";
 
 type GeneratedTour = {
   id: string;
@@ -27,7 +28,9 @@ type GeneratedTour = {
   };
   geo: {
     country: string;
+    countryCode: string;
     region: string;
+    regionSlug: string;
     city: string;
     lat: number | null;
     lng: number | null;
@@ -65,6 +68,8 @@ type GeneratedTour = {
 type CityIndexEntry = {
   cityName: string;
   citySlug: string;
+  regionSlug: string;
+  regionName: string;
   tourCount: number;
   sampleImages: string[];
 };
@@ -86,24 +91,28 @@ const LOCATION_ALIAS: Record<string, string> = {
   "santa barbara, ca": "santa barbara",
   "santa barbara ca": "santa barbara",
   "los angeles county": "los angeles",
-  "la": "los angeles",
+  la: "los angeles",
   "los angeles, ca": "los angeles",
   "los angeles ca": "los angeles",
+  "british columbia": "british columbia",
+  "bc": "british columbia",
+  "québec": "quebec",
 };
 
 const slugify = (value: string) =>
   value
     .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/&/g, "and")
-    .replace(/,\s*ca\b/g, "")
+    .replace(/[’']/g, "")
+    .replace(/[.,]/g, " ")
     .replace(/[^\w\s-]/g, "")
     .trim()
     .replace(/\s+/g, "-");
 
 const uniq = (arr: string[]) => Array.from(new Set(arr));
-
 const clean = (value?: string) => (value ?? "").trim();
-
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
 
@@ -114,9 +123,7 @@ const getStatusValue = (row: CsvRow) =>
 
 const isRowActive = (row: CsvRow) => {
   const status = getStatusValue(row);
-  if (!status) {
-    return true;
-  }
+  if (!status) return true;
   return ACTIVE_PATTERNS.has(status);
 };
 
@@ -126,16 +133,11 @@ const parseLatLng = (latRaw: string, lngRaw: string) => {
   if (!Number.isFinite(lat)) lat = Number.NaN;
   if (!Number.isFinite(lng)) lng = Number.NaN;
 
-  const latLooksInvalid = Math.abs(lat) > 90;
-  const lngLooksLatitude = Math.abs(lng) <= 90;
-  if (latLooksInvalid && lngLooksLatitude) {
+  if (Math.abs(lat) > 90 && Math.abs(lng) <= 90) {
     [lat, lng] = [lng, lat];
   }
 
-  const latInRange = Number.isFinite(lat) && Math.abs(lat) <= 90;
-  const lngInRange = Number.isFinite(lng) && Math.abs(lng) <= 180;
-
-  if (!latInRange || !lngInRange) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) {
     return { lat: null, lng: null };
   }
 
@@ -168,9 +170,7 @@ const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
     return {
       shortname: match[1],
       itemId: match[2],
-      refUrl: /^https?:\/\//.test(ref)
-        ? ref
-        : "https://www.alloutdooradventures.com",
+      refUrl: /^https?:\/\//.test(ref) ? ref : "https://www.alloutdooradventures.com",
       backUrl: /^https?:\/\//.test(back)
         ? back
         : /^https?:\/\//.test(ref)
@@ -182,33 +182,63 @@ const parseFareHarborDetails = (url?: string): ParsedFareHarbor | undefined => {
   }
 };
 
-const normalizeLocation = (row: CsvRow, sourceKey: "santa-barbara" | "california") => {
+const normalizeLabel = (value: string) =>
+  value
+    .split(" ")
+    .filter(Boolean)
+    .map(part => part[0].toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ");
+
+const normalizeLocation = (row: CsvRow, sourceKey: SourceKey) => {
   if (sourceKey === "santa-barbara") {
     return {
       country: "usa",
-      state: "california",
+      countryCode: "US",
+      region: "California",
+      regionSlug: "california",
       city: "Santa Barbara",
       citySlug: "santa-barbara",
+      rootPath: "/destinations/california",
+      shouldSkip: false,
     };
   }
 
-  const rawLocation = clean(row.location);
-  const parts = rawLocation
+  const parts = clean(row.location)
     .split("/")
     .map(part => part.trim())
     .filter(Boolean);
-  const rawCity = parts[2] || row.city || "Unknown";
-  const normalizedCity = LOCATION_ALIAS[rawCity.toLowerCase().trim()] || rawCity;
+
+  const rawCountry = (parts[0] || row.country || "United States").toLowerCase();
+  const rawRegion = parts[1] || row.state || row.province || row.region || "";
+  const rawCity = parts[2] || row.city || "";
+
+  if (sourceKey === "canada" && rawCountry !== "canada") {
+    return {
+      country: "canada",
+      countryCode: "CA",
+      region: "",
+      regionSlug: "",
+      city: "",
+      citySlug: "",
+      rootPath: "/destinations/canada",
+      shouldSkip: true,
+    };
+  }
+
+  const fallbackRegion = sourceKey === "canada" ? "Ontario" : "California";
+  const normalizedRegion = LOCATION_ALIAS[rawRegion.toLowerCase()] || rawRegion || fallbackRegion;
+  const normalizedCity = LOCATION_ALIAS[rawCity.toLowerCase()] || rawCity;
+  const country = sourceKey === "canada" ? "canada" : "usa";
 
   return {
-    country: "usa",
-    state: "california",
-    city: normalizedCity
-      .split(" ")
-      .filter(Boolean)
-      .map(part => part[0].toUpperCase() + part.slice(1).toLowerCase())
-      .join(" "),
-    citySlug: slugify(normalizedCity),
+    country,
+    countryCode: sourceKey === "canada" ? "CA" : "US",
+    region: normalizeLabel(normalizedRegion || fallbackRegion),
+    regionSlug: slugify(normalizedRegion || fallbackRegion),
+    city: normalizeLabel(normalizedCity || "Unknown"),
+    citySlug: slugify(normalizedCity || "unknown"),
+    rootPath: sourceKey === "canada" ? "/destinations/canada" : "/destinations/california",
+    shouldSkip: false,
   };
 };
 
@@ -235,7 +265,7 @@ const validateGeneratedTours = (tours: GeneratedTour[]) => {
     }
   }
 
-  if (failures.length > 0) {
+  if (failures.length) {
     throw new Error(`Engine2 validation failed:\n${failures.slice(0, 20).join("\n")}`);
   }
 };
@@ -243,7 +273,7 @@ const validateGeneratedTours = (tours: GeneratedTour[]) => {
 const buildTour = (
   row: CsvRow,
   enrichmentByTourId: Map<string, Record<string, string>>,
-  sourceKey: "santa-barbara" | "california"
+  sourceKey: SourceKey,
 ): GeneratedTour | { skipped: string } => {
   const id = clean(row.item_id);
   if (!id) return { skipped: "missing id" };
@@ -252,7 +282,8 @@ const buildTour = (
   if (!rawTitle) return { skipped: "missing title" };
 
   const location = normalizeLocation(row, sourceKey);
-  if (!location.citySlug) return { skipped: "missing city" };
+  if (location.shouldSkip) return { skipped: "outside canada" };
+  if (!location.regionSlug || !location.citySlug) return { skipped: "missing geo" };
 
   const enrichment = enrichmentByTourId.get(id);
   const name = sanitizeTourLabel(clean(enrichment?.title) || rawTitle);
@@ -281,13 +312,17 @@ const buildTour = (
 
   const providerName = clean(row.company_name) || "Unknown provider";
   const slug = `${slugify(clean(enrichment?.slug) || rawTitle)}-${id}`;
-  const canonicalPath = `/destinations/california/${location.citySlug}/tours/${slug}`;
+  const canonicalBase =
+    sourceKey === "canada"
+      ? `${location.rootPath}/${location.regionSlug}/${location.citySlug}/tours`
+      : `${location.rootPath}/${location.citySlug}/tours`;
+  const canonicalPath = `${canonicalBase}/${slug}`;
 
   const defaultCopy = buildTourCopy({
     name,
     provider: providerName,
     city: location.city,
-    region: "California",
+    region: location.region,
   });
 
   const primaryImage =
@@ -298,7 +333,7 @@ const buildTour = (
     ENGINE2_DEFAULT_IMAGE;
 
   const gallery = uniq([clean(row.image_url), clean(row.alt_image_url)]).filter(
-    url => Boolean(url) && url !== primaryImage
+    url => Boolean(url) && url !== primaryImage,
   );
 
   const coords = parseLatLng(row.location_lat, row.location_long);
@@ -318,16 +353,16 @@ const buildTour = (
     },
     geo: {
       country: location.country,
-      region: "California",
+      countryCode: location.countryCode,
+      region: location.region,
+      regionSlug: location.regionSlug,
       city: location.city,
       lat: coords.lat,
       lng: coords.lng,
     },
     seo: {
       title: "",
-      description: sanitizeTourLabel(
-        clean(enrichment?.description) || defaultCopy.metaDescription
-      ),
+      description: sanitizeTourLabel(clean(enrichment?.description) || defaultCopy.metaDescription),
       canonicalPath,
       ogImage: primaryImage,
     },
@@ -366,11 +401,14 @@ const buildCityIndex = (tours: GeneratedTour[]): CityIndexEntry[] => {
   const cityMap = new Map<string, CityIndexEntry>();
 
   for (const tour of tours) {
-    const existing = cityMap.get(tour.sourceCitySlug);
+    const key = `${tour.geo.regionSlug}:${tour.sourceCitySlug}`;
+    const existing = cityMap.get(key);
     if (!existing) {
-      cityMap.set(tour.sourceCitySlug, {
+      cityMap.set(key, {
         cityName: tour.geo.city,
         citySlug: tour.sourceCitySlug,
+        regionSlug: tour.geo.regionSlug,
+        regionName: tour.geo.region,
         tourCount: 1,
         sampleImages: [tour.images.hero || ENGINE2_DEFAULT_IMAGE],
       });
@@ -391,29 +429,27 @@ const main = async () => {
   const csvSources = [
     { path: "data/santa-barbara.csv", key: "santa-barbara" as const },
     { path: "data/California.csv", key: "california" as const },
+    { path: "data/canada.csv", key: "canada" as const },
   ];
 
-  const enrichmentByTourId = await readTourEnrichment(
-    path.resolve(process.cwd(), "data/tourEnrichment.csv")
-  );
+  const enrichmentByTourId = await readTourEnrichment(path.resolve(process.cwd(), "data/tourEnrichment.csv"));
 
-  const diagnostics: Diagnostics = {
-    totalRows: 0,
-    activeRows: 0,
-    inactiveRows: 0,
-    generatedTours: 0,
-    generatedBookings: 0,
-    skippedRows: 0,
-    skippedReasons: new Map(),
-  };
-
+  const diagnosticsBySource = new Map<SourceKey, Diagnostics>();
   const tourById = new Map<string, GeneratedTour>();
 
   for (const source of csvSources) {
-    const csvPath = path.resolve(process.cwd(), source.path);
-    const csv = await readFile(csvPath, "utf8");
-    const rows = parseCsv(csv);
+    const diagnostics: Diagnostics = {
+      totalRows: 0,
+      activeRows: 0,
+      inactiveRows: 0,
+      generatedTours: 0,
+      generatedBookings: 0,
+      skippedRows: 0,
+      skippedReasons: new Map(),
+    };
+    diagnosticsBySource.set(source.key, diagnostics);
 
+    const rows = parseCsv(await readFile(path.resolve(process.cwd(), source.path), "utf8"));
     diagnostics.totalRows += rows.length;
 
     for (const row of rows) {
@@ -429,48 +465,61 @@ const main = async () => {
         incrementReason(diagnostics.skippedReasons, built.skipped);
         continue;
       }
-
-      tourById.set(built.id, built);
+      tourById.set(`${source.key}:${built.id}`, built);
     }
   }
 
-  const tours = Array.from(tourById.values()).sort((a, b) => a.seo.canonicalPath.localeCompare(b.seo.canonicalPath));
-  const citiesIndex = buildCityIndex(tours);
+  const allTours = Array.from(tourById.values());
+  const californiaTours = allTours.filter(tour => tour.geo.country === "usa");
+  const canadaTours = allTours.filter(tour => tour.geo.country === "canada");
+  const californiaCityIndex = buildCityIndex(californiaTours);
+  const canadaCityIndex = buildCityIndex(canadaTours);
 
-  diagnostics.generatedTours = tours.length;
-  diagnostics.generatedBookings = tours.length;
+  const canadaDiagnostics = diagnosticsBySource.get("canada")!;
+  canadaDiagnostics.generatedTours = canadaTours.length;
+  canadaDiagnostics.generatedBookings = canadaTours.length;
 
-  if (diagnostics.activeRows > 0 && diagnostics.generatedTours === 0) {
-    throw new Error("Active rows found, but no tour pages were generated.");
+  if (canadaDiagnostics.activeRows > 0 && canadaTours.length === 0) {
+    throw new Error("Active Canada rows found, but no Canada routes were generated.");
   }
 
-  validateGeneratedTours(tours);
+  validateGeneratedTours(allTours);
 
-  const outPath = path.resolve(process.cwd(), "src/engine2/data/california.generated.ts");
-  const fileContents = `const californiaEngine2Tours = ${JSON.stringify(tours, null, 2)} as const;\n\nexport const californiaEngine2CitiesIndex = ${JSON.stringify(citiesIndex, null, 2)} as const;\n\nexport default californiaEngine2Tours;\n`;
-  await writeFile(outPath, fileContents, "utf8");
+  const sourceRoot = path.resolve(process.cwd(), "src/engine2/data");
+  const generatedDir = path.join(sourceRoot, "_generated");
+  await mkdir(generatedDir, { recursive: true });
 
-  console.log("[engine2] CSV rows:", diagnostics.totalRows);
-  console.log("[engine2] Active rows:", diagnostics.activeRows);
-  console.log("[engine2] Inactive rows:", diagnostics.inactiveRows);
-  console.log("[engine2] Distinct city slugs:", citiesIndex.length);
-  console.log("[engine2] Top 20 city counts:");
-  for (const city of citiesIndex.slice(0, 20)) {
-    console.log(`  - ${city.citySlug}: ${city.tourCount}`);
+  await writeFile(
+    path.join(generatedDir, "canada.generated.ts"),
+    `const canadaEngine2Tours = ${JSON.stringify(canadaTours, null, 2)} as const;\n\nexport const canadaEngine2CitiesIndex = ${JSON.stringify(canadaCityIndex, null, 2)} as const;\n\nexport default canadaEngine2Tours;\n`,
+    "utf8",
+  );
+
+  await writeFile(
+    path.join(sourceRoot, "canada.summary.json"),
+    `${JSON.stringify({
+      rows: canadaDiagnostics.totalRows,
+      active: canadaDiagnostics.activeRows,
+      provinces: new Set(canadaTours.map(t => t.geo.regionSlug)).size,
+      cities: new Set(canadaTours.map(t => `${t.geo.regionSlug}:${t.sourceCitySlug}`)).size,
+      tours: canadaTours.length,
+      bookings: canadaTours.length,
+      generatedAt: new Date().toISOString(),
+    }, null, 2)}\n`,
+    "utf8",
+  );
+
+  const skippedReasons = Array.from(canadaDiagnostics.skippedReasons.entries()).sort((a, b) => b[1] - a[1]);
+  console.log("[engine2:canada] total rows:", canadaDiagnostics.totalRows);
+  console.log("[engine2:canada] active rows:", canadaDiagnostics.activeRows);
+  console.log("[engine2:canada] provinces:", new Set(canadaTours.map(t => t.geo.regionSlug)).size);
+  console.log("[engine2:canada] cities:", new Set(canadaTours.map(t => `${t.geo.regionSlug}:${t.sourceCitySlug}`)).size);
+  console.log("[engine2:canada] generated tour routes:", canadaDiagnostics.generatedTours);
+  console.log("[engine2:canada] generated booking routes:", canadaDiagnostics.generatedBookings);
+  console.log("[engine2:canada] skipped rows:", canadaDiagnostics.skippedRows);
+  for (const [reason, count] of skippedReasons.slice(0, 10)) {
+    console.log(`  - ${reason}: ${count}`);
   }
-  console.log("[engine2] Generated tour pages:", diagnostics.generatedTours);
-  console.log("[engine2] Generated booking pages:", diagnostics.generatedBookings);
-  console.log("[engine2] Skipped rows:", diagnostics.skippedRows);
-
-  const skippedReasons = Array.from(diagnostics.skippedReasons.entries()).sort((a, b) => b[1] - a[1]);
-  if (skippedReasons.length) {
-    console.log("[engine2] Top skipped reasons:");
-    for (const [reason, count] of skippedReasons.slice(0, 10)) {
-      console.log(`  - ${reason}: ${count}`);
-    }
-  }
-
-  console.log(`Generated ${tours.length} Engine2 tours -> ${outPath}`);
 };
 
 main().catch(error => {

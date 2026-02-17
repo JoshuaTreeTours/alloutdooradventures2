@@ -23,7 +23,9 @@ export type Engine2Tour = {
   };
   geo: {
     country: string;
+    countryCode?: string;
     region: string;
+    regionSlug?: string;
     city: string;
     lat: number | null;
     lng: number | null;
@@ -77,6 +79,28 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
 const allGeneratedTours = [
   ...(palmSpringsTours as unknown as readonly Engine2Tour[]),
   ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
+  ...(() => {
+    const globFn = (import.meta as { glob?: unknown }).glob;
+    if (typeof globFn !== "function") {
+      console.info(
+        "[engine2] Canada generated dataset not loaded in this runtime. Run `npm run engine2:gen` to generate it."
+      );
+      return [] as readonly Engine2Tour[];
+    }
+    const modules = (
+      globFn as (pattern: string, options: { eager: boolean }) => Record<string, unknown>
+    )("./_generated/canada.generated.ts", { eager: true });
+    const loaded = Object.values(modules)[0] as
+      | { default?: readonly Engine2Tour[] }
+      | undefined;
+    if (!loaded?.default?.length) {
+      console.info(
+        "[engine2] Canada generated dataset is missing. Run `npm run engine2:gen`."
+      );
+      return [] as readonly Engine2Tour[];
+    }
+    return loaded.default;
+  })(),
 ];
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
@@ -107,6 +131,8 @@ const byPath = new Map(
 export type Engine2CityIndexEntry = {
   cityName: string;
   citySlug: string;
+  regionSlug?: string;
+  regionName?: string;
   tourCount: number;
   sampleImages: string[];
 };
@@ -139,3 +165,52 @@ export const getAllEngine2Tours = (): Engine2Tour[] => engine2Tours;
 
 export const getEngine2ToursBySourceCity = (citySlug: string): Engine2Tour[] =>
   engine2Tours.filter(tour => tour.sourceCitySlug === citySlug);
+
+export const getEngine2CanadaProvinceIndex = () => {
+  const map = new Map<string, { provinceSlug: string; provinceName: string; tourCount: number }>();
+  for (const tour of engine2Tours) {
+    if (tour.geo.country !== "canada") continue;
+    const provinceSlug = tour.geo.regionSlug || tour.geo.region.toLowerCase().replace(/\s+/g, "-");
+    const existing = map.get(provinceSlug);
+    if (existing) {
+      existing.tourCount += 1;
+      continue;
+    }
+    map.set(provinceSlug, {
+      provinceSlug,
+      provinceName: tour.geo.region,
+      tourCount: 1,
+    });
+  }
+  return Array.from(map.values()).sort((a, b) => b.tourCount - a.tourCount);
+};
+
+export const getEngine2CanadaCityIndexByProvince = (provinceSlug: string) => {
+  const map = new Map<string, { citySlug: string; cityName: string; tourCount: number }>();
+  for (const tour of engine2Tours) {
+    if (tour.geo.country !== "canada") continue;
+    const regionSlug = tour.geo.regionSlug || tour.geo.region.toLowerCase().replace(/\s+/g, "-");
+    if (regionSlug !== provinceSlug) continue;
+    const existing = map.get(tour.sourceCitySlug);
+    if (existing) {
+      existing.tourCount += 1;
+    } else {
+      map.set(tour.sourceCitySlug, {
+        citySlug: tour.sourceCitySlug,
+        cityName: tour.geo.city,
+        tourCount: 1,
+      });
+    }
+  }
+  return Array.from(map.values()).sort((a, b) => b.tourCount - a.tourCount);
+};
+
+export const getEngine2CanadaToursByProvinceCity = (
+  provinceSlug: string,
+  citySlug: string
+) =>
+  engine2Tours.filter(tour => {
+    if (tour.geo.country !== "canada") return false;
+    const regionSlug = tour.geo.regionSlug || tour.geo.region.toLowerCase().replace(/\s+/g, "-");
+    return regionSlug === provinceSlug && tour.sourceCitySlug === citySlug;
+  });

@@ -27,6 +27,7 @@ const normalizeStringArray = (value: unknown) => {
 };
 
 export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
+  const toursHubPath = tour.seo.canonicalPath.replace(/\/tours\/[^/]+$/, "");
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const heroImage =
@@ -71,9 +72,12 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
     () =>
       getAllEngine2Tours().filter(
         item =>
-          item.slug !== tour.slug && item.sourceCitySlug === tour.sourceCitySlug
+          item.slug !== tour.slug &&
+          item.sourceCitySlug === tour.sourceCitySlug &&
+          item.geo.country === tour.geo.country &&
+          item.geo.regionSlug === tour.geo.regionSlug
       ),
-    [tour.slug, tour.sourceCitySlug]
+    [tour.geo.country, tour.geo.regionSlug, tour.slug, tour.sourceCitySlug]
   );
 
   useStructuredData(structuredDataNodes);
@@ -108,7 +112,7 @@ export default function Engine2TourPage({ tour }: Engine2TourPageProps) {
                 BOOK
               </a>
             </Link>
-            <Link href={`/destinations/california/${tour.sourceCitySlug}/tours`}>
+            <Link href={toursHubPath}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>

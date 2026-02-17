@@ -50,6 +50,16 @@ export const buildSchemaGraph = (
     priceCurrency: offerCurrency,
   };
 
+  const isCanada = tour.geo.country === "canada";
+  const countryPath = isCanada ? "/destinations/canada" : "/destinations/california";
+  const regionPath = isCanada
+    ? `/destinations/canada/${tour.geo.regionSlug}`
+    : "/destinations/california";
+  const cityPath = isCanada
+    ? `/destinations/canada/${tour.geo.regionSlug}/${tour.sourceCitySlug}`
+    : `/destinations/california/${tour.sourceCitySlug}`;
+  const toursPath = `${cityPath}/tours`;
+
   return [
     ...getSiteStructuredDataNodes(),
     buildWebPageStructuredData({
@@ -79,7 +89,7 @@ export const buildSchemaGraph = (
         "@type": "PostalAddress",
         addressLocality: tour.geo.city,
         addressRegion: tour.geo.region,
-        addressCountry: "US",
+        addressCountry: tour.geo.countryCode || (tour.geo.country === "canada" ? "CA" : "US"),
       },
     },
     {
@@ -104,15 +114,10 @@ export const buildSchemaGraph = (
     },
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
-      { name: tour.geo.region, url: "/destinations/california" },
-      {
-        name: formatCityFromSlug(tour.sourceCitySlug),
-        url: `/destinations/california/${tour.sourceCitySlug}`,
-      },
-      {
-        name: "Tours",
-        url: `/destinations/california/${tour.sourceCitySlug}/tours`,
-      },
+      { name: isCanada ? "Canada" : tour.geo.region, url: countryPath },
+      ...(isCanada ? [{ name: tour.geo.region, url: regionPath }] : []),
+      { name: formatCityFromSlug(tour.sourceCitySlug), url: cityPath },
+      { name: "Tours", url: toursPath },
       { name: tour.name, url: tour.seo.canonicalPath },
     ]),
   ];

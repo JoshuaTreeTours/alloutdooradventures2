@@ -51,6 +51,12 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
+import {
+  CanadaCityHubRoute,
+  CanadaProvinceHubRoute,
+  CanadaTourBookingRoute,
+  CanadaTourDetailRoute,
+} from "./pages/destinations/canada/CanadaEngine2Routes";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
@@ -105,6 +111,22 @@ export default function App() {
           component={WorldCountryRoute}
         />
 
+        <Route
+          path="/destinations/canada/:provinceSlug/:citySlug/tours/:tourSlug/book"
+          component={CanadaTourBookingRoute}
+        />
+        <Route
+          path="/destinations/canada/:provinceSlug/:citySlug/tours/:tourSlug"
+          component={CanadaTourDetailRoute}
+        />
+        <Route
+          path="/destinations/canada/:provinceSlug/:citySlug"
+          component={CanadaCityHubRoute}
+        />
+        <Route
+          path="/destinations/canada/:provinceSlug"
+          component={CanadaProvinceHubRoute}
+        />
         <Route
           path="/destinations/states/:stateSlug/cities/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
