@@ -11,16 +11,37 @@ export interface AlaskaTour {
   bookingUrl?: string;
   operator?: string;
   slug?: string;
+  sourceItemId?: string;
+  location?: string;
+  location_lat?: string;
+  location_long?: string;
+  company_shortname?: string;
+  company_email?: string;
+  company_phone?: string;
 }
 
 const clean = (value?: string) => (value ?? "").trim();
+
+const toHumanCity = (value?: string) => {
+  const raw = clean(value)
+    .replace(/[_-]+/g, " ")
+    .replace(/\s+/g, " ");
+  if (!raw) {
+    return "";
+  }
+
+  return raw
+    .split(" ")
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+    .join(" ");
+};
 
 const getCityFromLocation = (location?: string) => {
   const parts = clean(location)
     .split("/")
     .map(segment => segment.trim())
     .filter(Boolean);
-  return parts[parts.length - 1] ?? "";
+  return toHumanCity(parts[parts.length - 1] ?? "");
 };
 
 const parseCsvRows = (text: string) => {
@@ -94,7 +115,7 @@ export function loadAlaskaTours(): AlaskaTour[] {
   const filePath = path.join(process.cwd(), "data/alaska.csv");
 
   if (!fs.existsSync(filePath)) {
-    console.warn("⚠️ alaska.csv not found");
+    console.warn("⚠️ data/alaska.csv not found; skipping Alaska ingestion.");
     return [];
   }
 
@@ -103,34 +124,40 @@ export function loadAlaskaTours(): AlaskaTour[] {
 
   return records
     .map((record, index): AlaskaTour | null => {
-      const id = clean(record.id || record.tour_id || record.item_id);
-      const title = clean(record.title || record.item_name);
-      const city = clean(record.city) || getCityFromLocation(record.location);
+      const id = clean(
+        record.id || record.tour_id || record.sourceItemId || record.item_id
+      );
+      const title = clean(record.title || record.name || record.item_name);
+      const sourceItemId = id;
+      const location = clean(record.location);
 
-      if (!id || !title) {
-        console.warn(`Skipping invalid Alaska row ${index + 2}: missing id/title`);
-        return null;
-      }
+      const city =
+        toHumanCity(record.city || record.citySlug) ||
+        getCityFromLocation(location) ||
+        "Alaska";
 
-      if (!city) {
-        console.warn(`Skipping invalid Alaska row ${index + 2}: missing city/location`);
+      if (!id && !title) {
+        console.warn(`Skipping invalid Alaska row ${index + 2}: missing id and title`);
         return null;
       }
 
       return {
         id,
-        title,
+        sourceItemId,
+        title: title || `Alaska Tour ${sourceItemId || index + 1}`,
         city,
-        description: clean(record.description || record.short_description) || undefined,
-        price: clean(record.price) || undefined,
-        image: clean(record.image || record.image_url) || undefined,
-        bookingUrl:
-          clean(record.booking_url || record.regular_link || record.calendar_link) ||
-          undefined,
-        operator:
-          clean(record.operator || record.company_name || record.company_shortname) ||
-          undefined,
+        location,
+        description: clean(record.description) || undefined,
+        price: clean(record.price || record.from_price) || undefined,
+        image: clean(record.image || record.image_url || record.photo) || undefined,
+        bookingUrl: clean(record.booking_url || record.url || record.regular_link) || undefined,
+        operator: clean(record.operator || record.provider || record.company_name) || undefined,
         slug: clean(record.slug) || undefined,
+        location_lat: clean(record.location_lat) || undefined,
+        location_long: clean(record.location_long) || undefined,
+        company_shortname: clean(record.company_shortname) || undefined,
+        company_email: clean(record.company_email) || undefined,
+        company_phone: clean(record.company_phone) || undefined,
       };
     })
     .filter((tour): tour is AlaskaTour => Boolean(tour));
