@@ -13,7 +13,10 @@ import {
 } from "../../data/tourFallbacks";
 import { getToursByCityUnified, tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
-import { getEngine2CanadaProvinceIndex } from "../../engine2/data/loadEngine2";
+import {
+  getAllEngine2Tours,
+  getEngine2CanadaProvinceIndex,
+} from "../../engine2/data/loadEngine2";
 import { getStaticPageSeo } from "../../utils/seo";
 import {
   buildInternationalCityOptions,
@@ -43,10 +46,38 @@ const resolveCity = (stateSlug: string, citySlug: string | null) => {
 export default function ToursLanding() {
   const seo = getStaticPageSeo("/tours");
   const didInitRef = useRef(false);
-  const sortedStates = useMemo(
-    () => [...states].sort((a, b) => a.name.localeCompare(b.name)),
-    []
-  );
+  const sortedStates = useMemo(() => {
+    const bySlug = new Map(states.map(state => [state.slug, state]));
+
+    getAllEngine2Tours().forEach(tour => {
+      const parts = tour.seo.canonicalPath.split("/").filter(Boolean);
+      const stateSlug =
+        parts[0] === "destinations" && parts[1] === "united-states"
+          ? parts[2]
+          : parts[0] === "destinations"
+            ? parts[1]
+            : "";
+
+      if (!stateSlug || bySlug.has(stateSlug) || parts[1] === "world") {
+        return;
+      }
+
+      bySlug.set(stateSlug, {
+        slug: stateSlug,
+        name: tour.geo.region || stateSlug,
+        description: `Outdoor experiences across ${tour.geo.region || stateSlug}.`,
+        heroImage: "/hero.jpg",
+        region: "Featured destination",
+        intro: `${tour.geo.region || stateSlug} is a strong basecamp for guided adventures.`,
+        longDescription: `${tour.geo.region || stateSlug} features growing Engine2 inventory.`,
+        topRegions: [],
+        cities: [],
+        isFallback: true,
+      });
+    });
+
+    return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
+  }, []);
   const [selectedStateSlug, setSelectedStateSlug] = useState("");
   const [selectedCitySlug, setSelectedCitySlug] = useState("");
   const [selectedCountry, setSelectedCountry] = useState("");
