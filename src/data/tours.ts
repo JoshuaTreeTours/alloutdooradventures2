@@ -256,6 +256,10 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
     return slugify(tour.geo.region || "california");
   }
 
+  if (parts[1] === "united-states") {
+    return parts[2] || slugify(tour.geo.region || "california");
+  }
+
   return parts[1] || slugify(tour.geo.region || "california");
 };
 

@@ -11,6 +11,7 @@ import {
   normalizeFareHarborUrl,
 } from "../utils/buildFareHarborUrl";
 import { loadCanoeingEngine2Tours } from "./canoeingTours";
+import { loadOregonEngine2Tours } from "./oregonTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -87,6 +88,7 @@ const allGeneratedTours = [
   ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
   ...loadCanoeingEngine2Tours(),
+  ...loadOregonEngine2Tours(),
 ];
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
@@ -197,20 +199,20 @@ export const getEngine2ToursByStateSlug = (
   stateSlug: string,
   citySlug?: string
 ): Engine2Tour[] => {
-  const base = citySlug
+  const directBase = citySlug
     ? `/destinations/${stateSlug}/${citySlug}/tours/`
     : `/destinations/${stateSlug}/`;
+  const usBase = citySlug
+    ? `/destinations/united-states/${stateSlug}/${citySlug}/tours/`
+    : `/destinations/united-states/${stateSlug}/`;
 
   return engine2Tours.filter(tour => {
     const path = tour.seo.canonicalPath;
     if (citySlug) {
-      return path.startsWith(base);
+      return path.startsWith(directBase) || path.startsWith(usBase);
     }
 
-    return (
-      path.startsWith(base) &&
-      path.includes("/tours/") &&
-      !path.startsWith("/destinations/world/")
-    );
+    const isStatePath = path.startsWith(directBase) || path.startsWith(usBase);
+    return isStatePath && path.includes("/tours/") && !path.startsWith("/destinations/world/");
   });
 };

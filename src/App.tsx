@@ -161,6 +161,27 @@ export default function App() {
           component={StateToursRoute}
         />
         <Route
+          path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug/book"
+          component={CityTourBookingRoute}
+        />
+        <Route
+          path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug"
+          component={CityTourDetailRoute}
+        />
+        <Route
+          path="/destinations/united-states/:stateSlug/:citySlug/tours"
+          component={CityToursIndexRoute}
+        />
+        <Route
+          path="/destinations/united-states/:stateSlug/tours"
+          component={StateToursRoute}
+        />
+        <Route
+          path="/destinations/united-states/:stateSlug"
+          component={StateLandingRoute}
+        />
+
+        <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
         />
