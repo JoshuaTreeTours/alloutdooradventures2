@@ -1,10 +1,11 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
+import { DEFAULT_CURRENCY } from "../src/constants/merchantDefaults";
 import {
-  DEFAULT_CURRENCY,
-  DEFAULT_IMAGE_URL,
-} from "../src/constants/merchantDefaults";
+  EXCLUDED_FEED_KEYWORDS,
+  HIGH_ENERGY_ALLOWED_KEYWORDS,
+} from "../src/config/merchantFilters";
 import { tours } from "../src/data/tours";
 import { slugify } from "../src/utils/slugify";
 import {
@@ -16,6 +17,10 @@ import { extractPageImage } from "./utils/extractPageImage";
 
 const INPUT_PATH = path.resolve(process.cwd(), "data/tourEnrichment.csv");
 const OUTPUT_PATH = path.resolve(process.cwd(), "data/merchantFeed.csv");
+const DEBUG_OUTPUT_PATH = path.resolve(
+  process.cwd(),
+  "data/merchantFeed.debug.csv"
+);
 
 const OUTPUT_HEADERS = [
   "id",
@@ -28,16 +33,44 @@ const OUTPUT_HEADERS = [
   "condition",
 ] as const;
 
+const DEBUG_HEADERS = [
+  "id",
+  "title",
+  "reason",
+  "link",
+  "imageCandidate",
+  "priceCandidate",
+] as const;
+
 type OutputHeader = (typeof OUTPUT_HEADERS)[number];
+type DebugHeader = (typeof DEBUG_HEADERS)[number];
 type CsvRecord = Record<string, string>;
 type MerchantRow = Record<OutputHeader, string>;
+type DebugRow = Record<DebugHeader, string>;
 
-type ProductImageRecord = {
-  image_url?: string;
+type DropReason =
+  | "notAllowedActivity"
+  | "excludedKeyword"
+  | "invalidLink"
+  | "pageNotFound"
+  | "missingImage";
+
+type FilterStats = {
+  totalInput: number;
+  kept: number;
+  dropped_notAllowedActivity: number;
+  dropped_excludedKeyword: number;
+  dropped_invalidLink: number;
+  dropped_pageNotFound: number;
+  dropped_missingImage: number;
+  dropped_missingPrice: number;
 };
 
 const DOMAIN = "https://www.alloutdooradventures.com";
+const DOMAIN_HOSTNAME = "www.alloutdooradventures.com";
 const DEFAULT_AVAILABILITY = "in_stock";
+const PAGE_EXISTS_TIMEOUT_MS = 3000;
+const MAX_DEBUG_ROWS = 200;
 
 const parseCsv = (content: string): CsvRecord[] => {
   const normalized = content.replace(/^\uFEFF/, "").replace(/\r\n/g, "\n");
@@ -99,12 +132,72 @@ const escapeCsv = (value: string) => {
   return /[",\n]/.test(escaped) ? `"${escaped}"` : escaped;
 };
 
-const toCsv = (rows: MerchantRow[]) => {
-  const headerLine = OUTPUT_HEADERS.join(",");
+const rowsToCsv = <THeader extends string>(
+  headers: readonly THeader[],
+  rows: Record<THeader, string>[]
+) => {
+  const headerLine = headers.join(",");
   const body = rows
-    .map(row => OUTPUT_HEADERS.map(header => escapeCsv(row[header])).join(","))
+    .map(row => headers.map(header => escapeCsv(row[header])).join(","))
     .join("\n");
   return `${headerLine}\n${body}\n`;
+};
+
+const tokenizeText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, " ")
+    .split(/\s+/)
+    .filter(Boolean);
+
+const includesKeyword = (text: string, keyword: string) => {
+  const normalizedText = ` ${text.toLowerCase()} `;
+  const normalizedKeyword = keyword.toLowerCase().trim();
+
+  if (normalizedKeyword.includes(" ") || normalizedKeyword.includes("-")) {
+    return normalizedText.includes(` ${normalizedKeyword} `);
+  }
+
+  return tokenizeText(text).includes(normalizedKeyword);
+};
+
+const buildSourceText = (title: string, tags?: string, description?: string) =>
+  `${title || ""} ${tags || ""} ${description || ""}`.toLowerCase();
+
+const matchesExcluded = (title: string, tags?: string, description?: string) => {
+  const text = buildSourceText(title, tags, description);
+  return EXCLUDED_FEED_KEYWORDS.some(keyword => includesKeyword(text, keyword));
+};
+
+const isHorseContext = (text: string) =>
+  ["horse", "horseback", "trail ride", "ranch", "equestrian"].some(term =>
+    text.includes(term)
+  );
+
+const isHighEnergyAllowed = (title: string, tags?: string, description?: string) => {
+  const text = buildSourceText(title, tags, description);
+  const hasAllowedKeyword = HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+    includesKeyword(text, keyword)
+  );
+
+  if (!hasAllowedKeyword) {
+    return false;
+  }
+
+  const hasRideWord = includesKeyword(text, "ride") || includesKeyword(text, "riding");
+  const hasHorseWord = includesKeyword(text, "horseback") || includesKeyword(text, "horse");
+  if (hasRideWord && !hasHorseWord && !isHorseContext(text)) {
+    return HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+      keyword !== "ride" && keyword !== "riding" && includesKeyword(text, keyword)
+    );
+  }
+
+  const onlySunset = includesKeyword(text, "sunset") &&
+    !HIGH_ENERGY_ALLOWED_KEYWORDS.some(keyword =>
+      keyword !== "ride" && keyword !== "riding" && includesKeyword(text, keyword)
+    );
+
+  return !onlySunset;
 };
 
 const buildFallbackLink = (row: CsvRecord, tourId: string) => {
@@ -135,137 +228,262 @@ const toAoaLink = (rawSourceUrl: string, row: CsvRecord, tourId: string) => {
   return buildFallbackLink(row, tourId);
 };
 
-const isValidHttpUrl = (value: unknown): value is string => {
+const isValidImageUrl = (value: unknown): value is string => {
   if (typeof value !== "string") {
     return false;
   }
 
   const trimmed = value.trim();
-  if (!trimmed) {
+  if (!trimmed || trimmed.startsWith("data:")) {
     return false;
   }
 
   try {
     const parsed = new URL(trimmed);
-    return parsed.protocol === "http:" || parsed.protocol === "https:";
+    return parsed.protocol === "https:";
   } catch {
     return false;
   }
 };
 
-const getProductMap = () => {
-  const products = new Map<string, ProductImageRecord>();
-
-  tours.forEach(tour => {
-    const bookingItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
-    const fallbackImage =
-      tour.heroImage ??
-      tour.galleryImages?.find(image => isValidHttpUrl(image));
-
-    if (!fallbackImage) {
-      return;
-    }
-
-    if (bookingItemId) {
-      products.set(bookingItemId, { image_url: fallbackImage });
-    }
-
-    if (tour.id) {
-      products.set(tour.id, { image_url: fallbackImage });
-    }
-  });
-
-  return products;
+const isPlaceholderImage = (value: string) => {
+  const lower = value.toLowerCase();
+  return (
+    lower.includes("default-tour") ||
+    lower.includes("placeholder") ||
+    lower.includes("default-image")
+  );
 };
+
+const parseAoaTourPath = (url: string) => {
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+    const pathname = parsed.pathname.replace(/\/+$/, "");
+
+    if (
+      parsed.protocol !== "https:" ||
+      hostname !== DOMAIN_HOSTNAME ||
+      !pathname.startsWith("/tours/") ||
+      pathname.split("/").filter(Boolean).length !== 2
+    ) {
+      return null;
+    }
+
+    return pathname;
+  } catch {
+    return null;
+  }
+};
+
+const getValidTourPaths = () => new Set(tours.map(tour => `/tours/${tour.slug}`));
+
+const pageExists = async (url: string, validTourPaths: Set<string>) => {
+  const pathname = parseAoaTourPath(url);
+  const isKnownPath = Boolean(pathname && validTourPaths.has(pathname));
+  const slug = pathname?.split("/").pop() ?? "";
+  const isGeneratedSlug = slug.startsWith("generated-");
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), PAGE_EXISTS_TIMEOUT_MS);
+
+  try {
+    const headResponse = await fetch(url, {
+      method: "HEAD",
+      signal: controller.signal,
+    });
+
+    if (!headResponse.ok && headResponse.status !== 405) {
+      return isKnownPath || !isGeneratedSlug;
+    }
+
+    const getResponse = await fetch(url, {
+      method: "GET",
+      signal: controller.signal,
+    });
+
+    if (!getResponse.ok) {
+      return isKnownPath || !isGeneratedSlug;
+    }
+
+    const html = (await getResponse.text()).toLowerCase();
+    if (html.includes("tour not found")) {
+      return false;
+    }
+
+    return true;
+  } catch {
+    return isKnownPath || !isGeneratedSlug;
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
+const emptyStats = (): FilterStats => ({
+  totalInput: 0,
+  kept: 0,
+  dropped_notAllowedActivity: 0,
+  dropped_excludedKeyword: 0,
+  dropped_invalidLink: 0,
+  dropped_pageNotFound: 0,
+  dropped_missingImage: 0,
+  dropped_missingPrice: 0,
+});
 
 const main = async () => {
   const sourceRows = parseCsv(await readFile(INPUT_PATH, "utf8"));
-  const productsByTourId = getProductMap();
+  const skipPageCheck = process.env.MERCHANT_SKIP_PAGE_CHECK === "1";
+  const validTourPaths = getValidTourPaths();
 
+  const stats = emptyStats();
   const outputRows: MerchantRow[] = [];
-  let warningCount = 0;
+  const droppedRows: DebugRow[] = [];
+
+  const dropRow = (
+    reason: DropReason,
+    row: {
+      id: string;
+      title: string;
+      link: string;
+      imageCandidate: string;
+      priceCandidate: string;
+    }
+  ) => {
+    stats[`dropped_${reason}`] += 1;
+
+    if (droppedRows.length < MAX_DEBUG_ROWS) {
+      droppedRows.push({
+        id: row.id,
+        title: row.title,
+        reason,
+        link: row.link,
+        imageCandidate: row.imageCandidate,
+        priceCandidate: row.priceCandidate,
+      });
+    }
+  };
 
   for (let index = 0; index < sourceRows.length; index += 1) {
+    stats.totalInput += 1;
+
     const row = sourceRows[index];
     const tourId = row.tourId?.trim() || `generated-${index + 1}`;
 
-    const rawPrice = parsePrice(row.price);
-    const finalPrice = applyPriceFloor(rawPrice);
-    const currency = row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
-    const price = formatMerchantPrice(finalPrice, currency);
-
-    if (rawPrice === null || finalPrice !== rawPrice) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for price on tourId ${tourId}: defaulted to ${price}.`
-      );
-    }
-
-    const title =
-      row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
+    const title = row.merchant_title?.trim() || row.title?.trim() || `Tour ${tourId}`;
     const description =
-      row.merchant_description?.trim() ||
-      row.description?.trim() ||
-      `Tour ${tourId}`;
+      row.merchant_description?.trim() || row.description?.trim() || "";
+    const tags = row.tags?.trim() || "";
     const link = toAoaLink(row.source_url ?? "", row, tourId);
 
-    const product = productsByTourId.get(tourId);
-    const extractedPageImage = await extractPageImage(link);
-    const imageLink = [
+    const rawPrice = parsePrice(row.price);
+    const finalPrice = applyPriceFloor(rawPrice);
+    const useFloorPrice = rawPrice === null || rawPrice < 20;
+    const currency = useFloorPrice
+      ? DEFAULT_CURRENCY
+      : row.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
+    const price = formatMerchantPrice(finalPrice, currency);
+
+    if (!isHighEnergyAllowed(title, tags, description)) {
+      dropRow("notAllowedActivity", {
+        id: tourId,
+        title,
+        link,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
+      });
+      continue;
+    }
+
+    if (matchesExcluded(title, tags, description)) {
+      dropRow("excludedKeyword", {
+        id: tourId,
+        title,
+        link,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
+      });
+      continue;
+    }
+
+    const parsedPath = parseAoaTourPath(link);
+    if (!parsedPath) {
+      dropRow("invalidLink", {
+        id: tourId,
+        title,
+        link,
+        imageCandidate: row.image ?? "",
+        priceCandidate: price,
+      });
+      continue;
+    }
+
+    if (!skipPageCheck) {
+      const exists = await pageExists(link, validTourPaths);
+      if (!exists) {
+        dropRow("pageNotFound", {
+          id: tourId,
+          title,
+          link,
+          imageCandidate: row.image ?? "",
+          priceCandidate: price,
+        });
+        continue;
+      }
+    }
+
+    const imageCandidate = [
+      row.image_url,
       row.image,
-      product?.image_url,
-      extractedPageImage,
-      DEFAULT_IMAGE_URL,
-    ].find(candidate => isValidHttpUrl(candidate)) as string;
+      await extractPageImage(link),
+    ].find(candidate => {
+      if (!isValidImageUrl(candidate)) {
+        return false;
+      }
+
+      return !isPlaceholderImage(candidate);
+    });
+
+    if (!imageCandidate) {
+      dropRow("missingImage", {
+        id: tourId,
+        title,
+        link,
+        imageCandidate: row.image ?? row.image_url ?? "",
+        priceCandidate: price,
+      });
+      continue;
+    }
 
     const availability =
       (row.availability ?? "").trim() || DEFAULT_AVAILABILITY;
-
-    if (!row.source_url?.trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for link on tourId ${tourId}: used AOA URL ${link}`
-      );
-    } else if (!row.source_url.includes("alloutdooradventures.com")) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for link on tourId ${tourId}: replaced with ${link}`
-      );
-    }
-
-    if (!row.image?.trim() && imageLink !== row.image?.trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for image on tourId ${tourId}: resolved to ${imageLink}.`
-      );
-    }
-
-    if (!(row.availability ?? "").trim()) {
-      warningCount += 1;
-      console.warn(
-        `Fallback used for availability on tourId ${tourId}: defaulted to ${DEFAULT_AVAILABILITY}.`
-      );
-    }
 
     outputRows.push({
       id: tourId,
       title,
       description,
       link,
-      image_link: imageLink,
+      image_link: imageCandidate,
       availability,
       price,
       condition: "new",
     });
+
+    stats.kept += 1;
   }
 
-  await writeFile(OUTPUT_PATH, toCsv(outputRows), "utf8");
-
-  console.log(`Processed ${sourceRows.length} rows.`);
-  console.log(
-    `Wrote ${outputRows.length} merchant feed rows to ${OUTPUT_PATH}.`
+  await writeFile(OUTPUT_PATH, rowsToCsv(OUTPUT_HEADERS, outputRows), "utf8");
+  await writeFile(
+    DEBUG_OUTPUT_PATH,
+    rowsToCsv(DEBUG_HEADERS, droppedRows),
+    "utf8"
   );
-  console.log(`Logged ${warningCount} warnings.`);
+
+  console.table(stats);
+  console.log(`Wrote ${outputRows.length} merchant rows to ${OUTPUT_PATH}.`);
+  console.log(`Wrote ${droppedRows.length} dropped debug rows to ${DEBUG_OUTPUT_PATH}.`);
+  if (skipPageCheck) {
+    console.log("MERCHANT_SKIP_PAGE_CHECK=1 active: page existence checks bypassed.");
+  }
 };
 
 main().catch(error => {
