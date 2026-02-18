@@ -46,7 +46,7 @@ export default function DestinationsIndex() {
     const hasMoreGuides = guideState.cities.length > guideCityLimit;
 
     return (
-      <div className="relative z-0 rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+      <div className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           Available Guides in {stateName}
         </p>
@@ -59,7 +59,7 @@ export default function DestinationsIndex() {
             </Link>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-3">
           <Link href={`/guides/us/${stateSlug}`}>
             <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
               {hasMoreGuides ? `View all ${stateName} guides` : `${stateName} travel guide`}
@@ -159,12 +159,12 @@ export default function DestinationsIndex() {
 
         <section className="space-y-14" aria-label="States">
           {rockyMountainStates.length > 0 ? (
-            <div className="space-y-6">
-              <div className="text-center">
+            <div className="relative mt-12 space-y-6">
+              <div className="relative z-10 text-center">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                   Rocky Mountain
                 </span>
-                <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                <h2 className="mb-4 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                   Featured Rocky Mountain States
                 </h2>
               </div>
@@ -186,12 +186,12 @@ export default function DestinationsIndex() {
           {regionOrder
             .filter((region) => destinationsByRegion[region]?.length)
             .map((region) => (
-              <div key={region} className="space-y-6">
-                <div className="text-center">
+              <div key={region} className="relative mt-12 space-y-6">
+                <div className="relative z-10 text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
                   </span>
-                  <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                  <h2 className="mb-4 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
