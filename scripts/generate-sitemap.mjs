@@ -423,14 +423,17 @@ const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
 const buildMexicoSitemapFallbackTours = async (catalogModule) => {
   const mexicoPath = path.resolve(__dirname, "../data/mexico.csv");
   const cancunPath = path.resolve(__dirname, "../data/cancun.csv");
+  const puertoVallartaPath = path.resolve(__dirname, "../data/Puerto Vallarta.csv");
 
-  const [mexicoContents, cancunContents] = await Promise.all([
+  const [mexicoContents, cancunContents, puertoVallartaContents] = await Promise.all([
     readFile(mexicoPath, "utf8"),
     readFile(cancunPath, "utf8"),
+    readFile(puertoVallartaPath, "utf8"),
   ]);
 
   const mexicoRows = parseCsv(mexicoContents);
   const cancunRows = parseCsv(cancunContents);
+  const puertoVallartaRows = parseCsv(puertoVallartaContents);
 
   return [
     ...parseMexicoFallbackRows(mexicoRows, catalogModule),
@@ -438,6 +441,11 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
       country: "Mexico",
       city: "Cancun",
       citySlug: "cancun",
+    }),
+    ...parseMexicoFallbackRows(puertoVallartaRows, catalogModule, {
+      country: "Mexico",
+      city: "Puerto Vallarta",
+      citySlug: "puerto-vallarta",
     }),
   ];
 };
