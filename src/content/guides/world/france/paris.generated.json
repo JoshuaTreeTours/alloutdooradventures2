@@ -1,0 +1,81 @@
+{
+  "city": "Paris",
+  "country": "France",
+  "wikidataId": "Q90",
+  "wikipediaTitle": "Paris",
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Paris",
+  "leadImageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg",
+  "seoTitle": "Paris Travel Guide: Top Things to Do, Neighborhoods, and Day Trips",
+  "seoDescription": "Plan your Paris trip with practical tips on what to do, where to wander, when to visit, and easy day trips from the French capital.",
+  "intro": "Paris pairs iconic landmarks with compact neighborhoods that are easy to explore on foot and by metro. With world-class museums, riverfront walks, and caf\u00e9 culture, the city rewards both first-time visitors and repeat travelers. Use this guide to map out your highlights while leaving space for slower local moments.",
+  "topThings": [
+    {
+      "title": "Eiffel Tower and Champ de Mars",
+      "description": "Visit early or near sunset for broad city views, then stroll the lawns and riverbanks around the tower."
+    },
+    {
+      "title": "Louvre Museum",
+      "description": "Focus on one wing or theme to avoid museum fatigue and enjoy a more relaxed visit."
+    },
+    {
+      "title": "Mus\u00e9e d\u2019Orsay",
+      "description": "Explore major Impressionist works in a converted station with excellent Seine views from the upper floor."
+    },
+    {
+      "title": "Seine River Cruise",
+      "description": "A boat ride gives a quick orientation to central Paris landmarks, especially beautiful in evening light."
+    },
+    {
+      "title": "\u00cele de la Cit\u00e9 and Notre-Dame area",
+      "description": "Walk the historic core to see medieval street patterns, river bridges, and nearby Sainte-Chapelle."
+    },
+    {
+      "title": "Montmartre",
+      "description": "Climb to Sacr\u00e9-C\u0153ur for city panoramas and then wander side streets known for studios and caf\u00e9s."
+    }
+  ],
+  "neighborhoods": [
+    "Le Marais for galleries, independent shops, and lively evening streets.",
+    "Saint-Germain-des-Pr\u00e9s for classic caf\u00e9s, bookstores, and easy river access.",
+    "Latin Quarter for student energy, historic lanes, and budget-friendly eats.",
+    "Canal Saint-Martin for local bars, waterside walks, and weekend picnics.",
+    "Montmartre for hilltop views, village-like corners, and artist history."
+  ],
+  "whenToGo": [
+    "Late spring and early fall usually offer mild temperatures and long days for walking-heavy itineraries.",
+    "Summer has the fullest event calendar but also larger crowds around major attractions.",
+    "Winter is cooler and darker, yet museum-focused trips can be easier to pace with shorter lines."
+  ],
+  "gettingAround": [
+    "The Paris Metro is the fastest way across neighborhoods; load a transit pass for frequent rides.",
+    "Central districts are very walkable, so group sights by arrondissement to reduce backtracking.",
+    "Use regional RER trains for airports and farther destinations such as Versailles."
+  ],
+  "dayTrips": [
+    "Versailles for palace interiors, formal gardens, and a straightforward train connection.",
+    "Giverny for Monet\u2019s home and gardens during the main bloom season.",
+    "Reims in Champagne for cathedral history and cellar tours.",
+    "Fontainebleau for ch\u00e2teau visits and nearby forest trails.",
+    "Provins for a medieval walled town atmosphere and historic ramparts."
+  ],
+  "facts": {
+    "population": 2102650,
+    "coordinates": {
+      "lat": 48.8567,
+      "lon": 2.3508
+    },
+    "country": "France",
+    "officialWebsite": "https://www.paris.fr/",
+    "sectionHeadings": [
+      "Etymology",
+      "History",
+      "Geography",
+      "Climate",
+      "Demographics",
+      "Culture",
+      "Tourism",
+      "Transport"
+    ]
+  },
+  "generatedAt": "2026-02-18T00:00:00.000Z"
+}

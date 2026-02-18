@@ -1,0 +1,23 @@
+[
+  { "name": "Paris", "country": "France", "countrySlug": "france", "citySlug": "paris" },
+  { "name": "Las Vegas", "country": "United States", "countrySlug": "united-states", "citySlug": "las-vegas" },
+  { "name": "New York City", "country": "United States", "countrySlug": "united-states", "citySlug": "new-york-city" },
+  { "name": "Orlando", "country": "United States", "countrySlug": "united-states", "citySlug": "orlando" },
+  { "name": "London", "country": "United Kingdom", "countrySlug": "united-kingdom", "citySlug": "london" },
+  { "name": "Rome", "country": "Italy", "countrySlug": "italy", "citySlug": "rome" },
+  { "name": "Tokyo", "country": "Japan", "countrySlug": "japan", "citySlug": "tokyo" },
+  { "name": "Cancun", "country": "Mexico", "countrySlug": "mexico", "citySlug": "cancun" },
+  { "name": "Barcelona", "country": "Spain", "countrySlug": "spain", "citySlug": "barcelona" },
+  { "name": "Bangkok", "country": "Thailand", "countrySlug": "thailand", "citySlug": "bangkok" },
+  { "name": "Amsterdam", "country": "Netherlands", "countrySlug": "netherlands", "citySlug": "amsterdam" },
+  { "name": "Miami", "country": "United States", "countrySlug": "united-states", "citySlug": "miami" },
+  { "name": "Los Angeles", "country": "United States", "countrySlug": "united-states", "citySlug": "los-angeles" },
+  { "name": "San Francisco", "country": "United States", "countrySlug": "united-states", "citySlug": "san-francisco" },
+  { "name": "Honolulu", "country": "United States", "countrySlug": "united-states", "citySlug": "honolulu" },
+  { "name": "Singapore", "country": "Singapore", "countrySlug": "singapore", "citySlug": "singapore" },
+  { "name": "Sydney", "country": "Australia", "countrySlug": "australia", "citySlug": "sydney" },
+  { "name": "Florence", "country": "Italy", "countrySlug": "italy", "citySlug": "florence" },
+  { "name": "Venice", "country": "Italy", "countrySlug": "italy", "citySlug": "venice" },
+  { "name": "Mexico City", "country": "Mexico", "countrySlug": "mexico", "citySlug": "ciudad-de-mexico" },
+  { "name": "Cabo San Lucas", "country": "Mexico", "countrySlug": "mexico", "citySlug": "cabo-san-lucas" }
+]

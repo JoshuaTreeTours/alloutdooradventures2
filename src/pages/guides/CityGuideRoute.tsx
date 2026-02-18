@@ -1,4 +1,5 @@
 import GuideTemplate from "../../templates/GuideTemplate";
+import GeneratedWorldGuideRoute, { shouldUseGeneratedGuide } from "./GeneratedWorldGuideRoute";
 import { buildCityGuide } from "../../data/guideData";
 
 type CityGuideRouteProps = {
@@ -23,6 +24,19 @@ export default function CityGuideRoute({
   regionType,
 }: CityGuideRouteProps) {
   const activity = getActivityFilter() ?? undefined;
+
+  if (
+    regionType === "country" &&
+    shouldUseGeneratedGuide(params.parentSlug, params.citySlug)
+  ) {
+    return (
+      <GeneratedWorldGuideRoute
+        countrySlug={params.parentSlug}
+        citySlug={params.citySlug}
+      />
+    );
+  }
+
   const guide = buildCityGuide({
     parentSlug: params.parentSlug,
     citySlug: params.citySlug,
