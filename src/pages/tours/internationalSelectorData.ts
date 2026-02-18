@@ -37,8 +37,7 @@ export const getMexicoCityKey = (name: string, fallbackSlug?: string): string =>
 
   if (
     isMexicoCityAlias(name) ||
-    normalizedFallbackSlug === "ciudad-de-mexico" ||
-    normalizedFallbackSlug === "ciudad-de-m-xico"
+    normalizedFallbackSlug === "ciudad-de-mexico"
   ) {
     return slugify("Ciudad De México");
   }
