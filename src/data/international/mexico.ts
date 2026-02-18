@@ -51,6 +51,35 @@ const getLocationParts = (location: string) =>
     .map(segment => clean(segment))
     .filter(Boolean);
 
+const getLocationSegment = (value: string, index: number) => {
+  const parts = getLocationParts(value);
+  return parts[index] ?? "";
+};
+
+const resolveCity = (record: Record<string, string>) => {
+  const raw = clean(record.city || record.location || record.destination_city);
+  if (raw.includes("/")) {
+    return getLocationSegment(raw, 2) || getLocationSegment(raw, 1) || raw;
+  }
+  return raw;
+};
+
+const resolveRegion = (record: Record<string, string>) => {
+  const raw = clean(record.state || record.region || record.province);
+  if (raw) {
+    return raw.includes("/") ? getLocationSegment(raw, 1) || raw : raw;
+  }
+  return getLocationSegment(clean(record.location), 1);
+};
+
+const resolveCountry = (record: Record<string, string>) => {
+  const raw = clean(record.country || record.country_name);
+  if (raw) {
+    return raw.includes("/") ? getLocationSegment(raw, 0) || raw : raw;
+  }
+  return getLocationSegment(clean(record.location), 0);
+};
+
 const isUsRow = (row: Record<string, string>, resolved: MexicoTourRow) => {
   const locationParts = getLocationParts(resolved.location);
   const locationCountry = locationParts[0] ?? "";
@@ -95,9 +124,9 @@ export function loadMexicoTours(): MexicoTourRow[] {
             record.id || record.tour_id || record.item_id || record.sourceItemId
           ),
           title: clean(record.title || record.name || record.item_name),
-          city: clean(record.city || record.location || record.destination_city) || locationCity,
-          region: clean(record.state || record.region || record.province) || locationRegion,
-          country: clean(record.country || record.country_name) || locationCountry,
+          city: resolveCity(record) || locationCity,
+          region: resolveRegion(record) || locationRegion,
+          country: resolveCountry(record) || locationCountry,
           description: clean(record.description || record.summary),
           image: clean(record.image || record.image_url || record.photo),
           price: clean(record.price || record.starting_price),

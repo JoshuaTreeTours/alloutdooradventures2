@@ -7,7 +7,7 @@ import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
-import { getTourDetailPath } from "../data/tours";
+import { getTourDetailPath, getToursByCityUnified } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
@@ -32,6 +32,17 @@ export default function DestinationLandingTemplate({
     route: `/destinations/${state.slug}`,
     state,
   }) ?? undefined;
+
+  const cityCards = useMemo(
+    () =>
+      state.cities
+        .map(city => ({
+          city,
+          tourCount: getToursByCityUnified(state.slug, city.slug).length,
+        }))
+        .sort((a, b) => b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)),
+    [state.cities, state.slug]
+  );
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
@@ -114,6 +125,40 @@ export default function DestinationLandingTemplate({
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-8">
+        <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <div className="flex flex-col gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Cities
+            </span>
+            <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              Explore {state.name} cities
+            </h2>
+          </div>
+          {cityCards.length ? (
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {cityCards.map(({ city, tourCount }) => (
+                <Link
+                  key={city.slug}
+                  href={`/destinations/${state.slug}/${city.slug}/tours`}
+                >
+                  <a className="rounded-xl border border-[#2f4a2f]/15 bg-[#f6f1e8] px-4 py-3 text-sm transition hover:border-[#2f4a2f]/35 hover:bg-white">
+                    <p className="font-semibold text-[#1f2a1f]">{city.name}</p>
+                    <p className="mt-1 text-xs text-[#405040]">
+                      {tourCount} {tourCount === 1 ? "tour" : "tours"}
+                    </p>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-6 text-sm text-[#405040]">
+              City inventory is being updated. Check back soon.
+            </p>
+          )}
         </div>
       </section>
 

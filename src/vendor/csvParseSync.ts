@@ -4,19 +4,20 @@ export type CsvParseOptions = {
   relax_column_count?: boolean;
 };
 
-const parseLine = (line: string): string[] => {
-  const values: string[] = [];
+const parseCsvRows = (text: string): string[][] => {
+  const rows: string[][] = [];
   let current = "";
+  let row: string[] = [];
   let inQuotes = false;
 
-  for (let i = 0; i < line.length; i += 1) {
-    const char = line[i];
-    const next = line[i + 1];
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    const next = text[index + 1];
 
     if (char === '"') {
       if (inQuotes && next === '"') {
         current += '"';
-        i += 1;
+        index += 1;
       } else {
         inQuotes = !inQuotes;
       }
@@ -24,54 +25,73 @@ const parseLine = (line: string): string[] => {
     }
 
     if (char === "," && !inQuotes) {
-      values.push(current.trim());
+      row.push(current.trim());
       current = "";
       continue;
     }
 
-    current += char;
+    if (char === "\n" && !inQuotes) {
+      row.push(current.trim());
+      rows.push(row);
+      row = [];
+      current = "";
+      continue;
+    }
+
+    if (char !== "\r") {
+      current += char;
+    }
   }
 
-  values.push(current.trim());
-  return values;
+  if (current.length || row.length) {
+    row.push(current.trim());
+    rows.push(row);
+  }
+
+  return rows;
 };
 
 export const parse = (
   input: string,
   options: CsvParseOptions = {}
 ): Array<Record<string, string>> => {
-  const lines = input
-    .split(/\r?\n/)
-    .map(line => line.trimEnd())
-    .filter(line => (options.skip_empty_lines ? Boolean(line.trim()) : true));
-
-  if (!lines.length) {
+  const rows = parseCsvRows(input);
+  if (!rows.length) {
     return [];
   }
 
-  const headers = parseLine(lines[0]);
-  if (!options.columns) {
-    return lines.slice(1).map(line => {
-      const row = parseLine(line);
-      return Object.fromEntries(row.map((value, index) => [String(index), value]));
-    });
+  const normalizedRows = options.skip_empty_lines
+    ? rows.filter(row => row.some(cell => cell.trim().length > 0))
+    : rows;
+
+  if (!normalizedRows.length) {
+    return [];
   }
 
-  return lines.slice(1).reduce<Array<Record<string, string>>>((records, line) => {
-    const row = parseLine(line);
-    if (!options.relax_column_count && row.length !== headers.length) {
-      return records;
-    }
+  if (!options.columns) {
+    return normalizedRows.map(row =>
+      Object.fromEntries(row.map((value, index) => [String(index), value]))
+    );
+  }
 
-    const record = headers.reduce<Record<string, string>>((acc, header, index) => {
-      if (!header) {
-        return acc;
+  const headers = normalizedRows[0].map(header => header.trim());
+  return normalizedRows.slice(1).reduce<Array<Record<string, string>>>(
+    (records, row) => {
+      if (!options.relax_column_count && row.length !== headers.length) {
+        return records;
       }
-      acc[header] = (row[index] ?? "").trim();
-      return acc;
-    }, {});
 
-    records.push(record);
-    return records;
-  }, []);
+      const record = headers.reduce<Record<string, string>>((acc, header, index) => {
+        if (!header) {
+          return acc;
+        }
+        acc[header] = (row[index] ?? "").trim();
+        return acc;
+      }, {});
+
+      records.push(record);
+      return records;
+    },
+    []
+  );
 };

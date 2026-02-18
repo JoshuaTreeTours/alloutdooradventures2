@@ -55,11 +55,17 @@ export default function CityToursIndexRoute({
   const activityLabel = activityFilter
     ? getActivityLabelFromSlug(activityFilter)
     : null;
-  const basePath =
+  const stateHref =
     basePathOverride ??
-    (state?.isFallback ? "/destinations" : `/destinations/states/${state?.slug ?? ""}`);
-  const cityHref = state && city ? `${basePath}/cities/${city.slug}` : "";
-  const stateHref = basePath;
+    (state?.isFallback
+      ? `/destinations/${state?.slug ?? ""}`
+      : `/destinations/states/${state?.slug ?? ""}`);
+  const cityHref =
+    state && city
+      ? state?.isFallback && !basePathOverride
+        ? `/destinations/${state.slug}/${city.slug}`
+        : `${stateHref}/cities/${city.slug}`
+      : "";
   const toursHref = `${cityHref}/tours`;
   const heroImage = resolveHeroImageForRoute({
     route: toursHref,
@@ -91,7 +97,6 @@ export default function CityToursIndexRoute({
     city,
     cityHref,
     filteredTours,
-    isFlagstaff,
     state,
     stateHref,
     toursHref,
