@@ -1,7 +1,11 @@
 import type { Tour } from "../../data/tours.types";
-import type { Engine2CanadaProvinceIndexEntry } from "../../engine2/data/loadEngine2";
+import type {
+  Engine2CanadaProvinceIndexEntry,
+  Engine2Tour,
+} from "../../engine2/data/loadEngine2";
 
 export const CANADA_COUNTRY_NAME = "Canada";
+export const MEXICO_COUNTRY_NAME = "Mexico";
 
 export type SelectorOption = {
   name: string;
@@ -9,13 +13,19 @@ export type SelectorOption = {
 };
 
 export const buildInternationalCountryOptions = (
-  internationalTours: Tour[]
+  internationalTours: Tour[],
+  mexicoTours: Engine2Tour[]
 ): string[] => {
   const countrySet = new Set(
     internationalTours
       .map(tour => tour.destination.country)
       .filter((country): country is string => Boolean(country))
   );
+
+  if (mexicoTours.length) {
+    countrySet.add(MEXICO_COUNTRY_NAME);
+  }
+
   countrySet.add(CANADA_COUNTRY_NAME);
   return Array.from(countrySet).sort((a, b) => a.localeCompare(b));
 };
@@ -25,11 +35,13 @@ export const buildInternationalCityOptions = ({
   selectedCanadaProvinceSlug,
   internationalTours,
   canadaProvinces,
+  mexicoTours,
 }: {
   selectedCountry: string;
   selectedCanadaProvinceSlug: string;
   internationalTours: Tour[];
   canadaProvinces: Engine2CanadaProvinceIndexEntry[];
+  mexicoTours: Engine2Tour[];
 }): SelectorOption[] => {
   if (!selectedCountry) {
     return [];
@@ -46,6 +58,14 @@ export const buildInternationalCityOptions = ({
     return selectedProvince.cities
       .map(city => ({ name: city.cityName, slug: city.citySlug }))
       .sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  if (selectedCountry === MEXICO_COUNTRY_NAME) {
+    return Array.from(
+      new Map(
+        mexicoTours.map(tour => [tour.sourceCitySlug, { name: tour.geo.city, slug: tour.sourceCitySlug }])
+      ).values()
+    ).sort((a, b) => a.name.localeCompare(b.name));
   }
 
   return Array.from(

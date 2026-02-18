@@ -31,6 +31,36 @@ const formatCityFromSlug = (slug: string) =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
+const getDestinationMeta = (tour: Engine2Tour) => {
+  if (tour.sourceCountrySlug === "canada") {
+    return {
+      countryCode: "CA",
+      countryName: "Canada",
+      countryUrl: "/destinations/world/canada",
+      cityUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
+    };
+  }
+
+  if (tour.sourceCountrySlug === "mexico") {
+    return {
+      countryCode: "MX",
+      countryName: "Mexico",
+      countryUrl: "/destinations/mexico",
+      cityUrl: `/destinations/mexico/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/mexico/${tour.sourceCitySlug}/tours`,
+    };
+  }
+
+  return {
+    countryCode: "US",
+    countryName: tour.geo.region,
+    countryUrl: "/destinations/california",
+    cityUrl: `/destinations/california/${tour.sourceCitySlug}`,
+    toursUrl: `/destinations/california/${tour.sourceCitySlug}/tours`,
+  };
+};
+
 export const buildSchemaGraph = (
   tour: Engine2Tour,
   seo: Engine2Seo
@@ -42,6 +72,7 @@ export const buildSchemaGraph = (
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
   const flooredPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
+  const destinationMeta = getDestinationMeta(tour);
   const offer: Record<string, unknown> = {
     "@type": "Offer",
     url: tour.booking.bookingUrl,
@@ -74,7 +105,7 @@ export const buildSchemaGraph = (
         "@type": "PostalAddress",
         addressLocality: tour.geo.city,
         addressRegion: tour.geo.region,
-        addressCountry: tour.geo.country.toLowerCase() === "canada" ? "CA" : "US",
+        addressCountry: destinationMeta.countryCode,
       },
     },
     {
@@ -100,25 +131,16 @@ export const buildSchemaGraph = (
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       {
-        name: tour.sourceCountrySlug === "canada" ? "Canada" : tour.geo.region,
-        url:
-          tour.sourceCountrySlug === "canada"
-            ? "/destinations/world/canada"
-            : "/destinations/california",
+        name: destinationMeta.countryName,
+        url: destinationMeta.countryUrl,
       },
       {
         name: formatCityFromSlug(tour.sourceCitySlug),
-        url:
-          tour.sourceCountrySlug === "canada"
-            ? `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`
-            : `/destinations/california/${tour.sourceCitySlug}`,
+        url: destinationMeta.cityUrl,
       },
       {
         name: "Tours",
-        url:
-          tour.sourceCountrySlug === "canada"
-            ? `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`
-            : `/destinations/california/${tour.sourceCitySlug}/tours`,
+        url: destinationMeta.toursUrl,
       },
       { name: tour.name, url: tour.seo.canonicalPath },
     ]),

@@ -387,6 +387,43 @@ const buildTourSummaries = async (catalogModule) => {
   return tours;
 };
 
+
+const buildMexicoSitemapFallbackTours = async (catalogModule) => {
+  const filePath = path.resolve(__dirname, "../data/mexico.csv");
+  const contents = await readFile(filePath, "utf8");
+  const rows = parseCsv(contents);
+
+  return rows
+    .map((row) => {
+      const location = row.location?.trim() || "";
+      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
+      const country = (row.country || row.country_name || parts[0] || "").trim();
+      const city = (row.city || parts[2] || "").trim();
+      const title = (row.title || row.name || row.item_name || "").trim();
+      const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
+
+      if (!country || !city || !title || !id) {
+        return null;
+      }
+
+      const normalizedCountry = country.toLowerCase();
+      if (
+        normalizedCountry.includes("united states") ||
+        normalizedCountry === "us" ||
+        normalizedCountry === "usa"
+      ) {
+        return null;
+      }
+
+      return {
+        seo: {
+          canonicalPath: `/destinations/mexico/${catalogModule.slugify(city)}/tours/${catalogModule.slugify(title)}-${id}`,
+        },
+      };
+    })
+    .filter(Boolean);
+};
+
 const buildSitemap = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
@@ -401,10 +438,15 @@ const buildSitemap = async () => {
     import.meta.url,
   );
   const tours = await buildTourSummaries(catalogModule);
-  const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
-  const engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
-    ? engine2Module.getAllEngine2Tours()
-    : [];
+  let engine2Tours = [];
+  try {
+    const engine2Module = await tsImport("../src/engine2/data/loadEngine2.ts", import.meta.url);
+    engine2Tours = Array.isArray(engine2Module.getAllEngine2Tours?.())
+      ? engine2Module.getAllEngine2Tours()
+      : [];
+  } catch (error) {
+    console.warn("Unable to import Engine2 tours for sitemap; continuing with fallback parsing.", error?.message || error);
+  }
 
   const pages = new Set();
   const toursUrls = new Set();
@@ -500,6 +542,13 @@ const buildSitemap = async () => {
     }
     addUrl(toursUrls, tourPath);
   });
+
+  if (!engine2Tours.length) {
+    const mexicoFallbackTours = await buildMexicoSitemapFallbackTours(catalogModule);
+    mexicoFallbackTours.forEach((tour) => {
+      addUrl(toursUrls, tour.seo.canonicalPath);
+    });
+  }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {
       const legacyPath = ensurePath(flagstaffModule.getFlagstaffTourDetailPath(tour));

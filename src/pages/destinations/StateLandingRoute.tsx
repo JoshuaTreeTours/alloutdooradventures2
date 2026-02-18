@@ -1,5 +1,6 @@
 import DestinationLandingTemplate from "../../templates/DestinationLandingTemplate";
 import { getStateBySlug } from "../../data/destinations";
+import { getFallbackStateBySlug } from "../../data/tourFallbacks";
 import { getToursByState } from "../../data/tours";
 
 type StateLandingRouteProps = {
@@ -9,7 +10,7 @@ type StateLandingRouteProps = {
 };
 
 export default function StateLandingRoute({ params }: StateLandingRouteProps) {
-  const state = getStateBySlug(params.stateSlug);
+  const state = getStateBySlug(params.stateSlug) ?? getFallbackStateBySlug(params.stateSlug);
 
   if (!state) {
     return (

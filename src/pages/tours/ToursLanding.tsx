@@ -16,12 +16,14 @@ import type { Tour } from "../../data/tours.types";
 import {
   getAllEngine2Tours,
   getEngine2CanadaProvinceIndex,
+  getEngine2MexicoTours,
 } from "../../engine2/data/loadEngine2";
 import { getStaticPageSeo } from "../../utils/seo";
 import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
   CANADA_COUNTRY_NAME,
+  MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
 const resolveState = (stateSlug: string | null) => {
@@ -129,9 +131,11 @@ export default function ToursLanding() {
     []
   );
 
+  const mexicoTours = useMemo(() => getEngine2MexicoTours(), []);
+
   const countries = useMemo(
-    () => buildInternationalCountryOptions(internationalTours),
-    [internationalTours]
+    () => buildInternationalCountryOptions(internationalTours, mexicoTours),
+    [internationalTours, mexicoTours]
   );
 
   const internationalCities = useMemo(
@@ -141,12 +145,14 @@ export default function ToursLanding() {
         selectedCanadaProvinceSlug: selectedInternationalProvinceSlug,
         internationalTours,
         canadaProvinces,
+        mexicoTours,
       }),
     [
       canadaProvinces,
       internationalTours,
       selectedCountry,
       selectedInternationalProvinceSlug,
+      mexicoTours,
     ]
   );
 
@@ -158,16 +164,48 @@ export default function ToursLanding() {
     }
 
     if (selectedCountry && selectedInternationalCity) {
-      nextTours = tours
-        .filter(
-          tour =>
-            tour.destination.country === selectedCountry &&
-            tour.destination.city === selectedInternationalCity
-        )
-        .map(tour => ({
-          tour,
-          href: `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
-        }));
+      if (selectedCountry === MEXICO_COUNTRY_NAME) {
+        nextTours = mexicoTours
+          .filter(tour => tour.sourceCitySlug === selectedInternationalCity)
+          .map(tour => ({
+            tour: {
+              id: tour.id,
+              slug: tour.slug,
+              title: tour.name,
+              description: tour.seo.description,
+              image: tour.images.hero ?? "",
+              price: tour.pricing?.price ? `$${tour.pricing.price}` : undefined,
+              duration: "",
+              difficulty: "",
+              activityType: "Adventure",
+              activitySlugs: ["adventure"],
+              destination: {
+                state: "Mexico",
+                stateSlug: "mexico",
+                city: tour.geo.city,
+                citySlug: tour.sourceCitySlug,
+                country: "Mexico",
+                lat: tour.geo.lat ?? undefined,
+                lng: tour.geo.lng ?? undefined,
+              },
+              bookingUrl: tour.booking.bookingUrl,
+              operator: tour.provider.name,
+              source: "manual",
+            },
+            href: tour.seo.canonicalPath,
+          }));
+      } else {
+        nextTours = tours
+          .filter(
+            tour =>
+              tour.destination.country === selectedCountry &&
+              tour.destination.city === selectedInternationalCity
+          )
+          .map(tour => ({
+            tour,
+            href: `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
+          }));
+      }
     }
 
     return nextTours;
@@ -176,6 +214,7 @@ export default function ToursLanding() {
     selectedCountry,
     selectedInternationalCity,
     selectedStateSlug,
+    mexicoTours,
   ]);
 
   const updateUrl = (stateSlug: string, citySlug: string) => {
@@ -252,6 +291,11 @@ export default function ToursLanding() {
 
     if (nextCountry === CANADA_COUNTRY_NAME) {
       window.location.assign("/destinations/world/canada");
+      return;
+    }
+
+    if (nextCountry === MEXICO_COUNTRY_NAME) {
+      window.location.assign("/destinations/mexico");
     }
   };
 
@@ -281,6 +325,11 @@ export default function ToursLanding() {
       window.location.assign(
         `/destinations/world/canada/${selectedInternationalProvinceSlug}/${nextCity}`
       );
+      return;
+    }
+
+    if (selectedCountry === MEXICO_COUNTRY_NAME && nextCity) {
+      window.location.assign(`/destinations/mexico/${nextCity}/tours`);
     }
   };
 
