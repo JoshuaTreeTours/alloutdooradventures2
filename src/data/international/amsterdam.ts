@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import amsterdamCsvRaw from "../../../data/amsterdam.csv?raw";
+import { amsterdamCsvRaw } from "./generatedCsvRaw";
 import { slugify } from "../../utils/slugify";
 
 export interface AmsterdamTourRow {

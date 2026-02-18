@@ -157,18 +157,18 @@ export default function DestinationsIndex() {
           </div>
         </section>
 
-        <section className="space-y-14" aria-label="States">
+        <section className="mt-16 space-y-16" aria-label="States">
           {rockyMountainStates.length > 0 ? (
-            <div className="relative mt-12 space-y-6">
-              <div className="relative z-10 text-center">
+            <div className="mt-16 space-y-6">
+              <div className="relative mb-6 text-center">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                   Rocky Mountain
                 </span>
-                <h2 className="mb-4 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                   Featured Rocky Mountain States
                 </h2>
               </div>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="mt-6 grid gap-6 md:grid-cols-2">
                 {rockyMountainStates.map((state) => (
                   <div key={`rocky-mountain-${state.name}`} className="space-y-4">
                     <DestinationCard
@@ -186,16 +186,16 @@ export default function DestinationsIndex() {
           {regionOrder
             .filter((region) => destinationsByRegion[region]?.length)
             .map((region) => (
-              <div key={region} className="relative mt-12 space-y-6">
-                <div className="relative z-10 text-center">
+              <div key={region} className="mt-16 space-y-6">
+                <div className="relative mb-6 text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
                   </span>
-                  <h2 className="mb-4 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                  <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
-                <div className="grid gap-6">
+                <div className="mt-6 grid gap-6">
                   {destinationsByRegion[region].map((state) => (
                     <div key={`${region}-${state.name}`} className="space-y-4">
                       <DestinationCard
@@ -212,8 +212,8 @@ export default function DestinationsIndex() {
             ))}
         </section>
 
-        <section className="space-y-8" aria-label="International destinations">
-          <div className="text-center">
+        <section className="mt-16 space-y-8" aria-label="International destinations">
+          <div className="relative mb-6 text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
               International
             </span>
