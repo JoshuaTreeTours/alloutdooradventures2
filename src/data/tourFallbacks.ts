@@ -143,6 +143,10 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
   );
 
   if (!stateTours.length && !engine2StateTours.length) {
+    if (stateSlug === "mexico") {
+      return buildFallbackState("Mexico", "mexico", []);
+    }
+
     return null;
   }
 
