@@ -15,8 +15,12 @@ import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
+import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
-import { buildBreadcrumbList, buildItemList } from "../../../../utils/structuredData";
+import {
+  buildBreadcrumbList,
+  buildItemList,
+} from "../../../../utils/structuredData";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -38,20 +42,27 @@ export default function CityToursIndexRoute({
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   const isFlagstaff = Boolean(
-    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+    state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours = state && city
-    ? isFlagstaff
-      ? flagstaffTours.map(tour => ({ tour, href: getFlagstaffTourDetailPath(tour) }))
-      : getToursByCityUnified(state.slug, city.slug)
-    : [];
+  const tours =
+    state && city
+      ? isFlagstaff
+        ? flagstaffTours.map(tour => ({
+            tour,
+            href: getFlagstaffTourDetailPath(tour),
+          }))
+        : getToursByCityUnified(state.slug, city.slug)
+      : [];
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
+  const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
   const filteredTours = activityFilter
-    ? tours.filter((entry) => entry.tour.activitySlugs.includes(activityFilter))
-    : tours;
+    ? toursWithImages.filter(entry =>
+        entry.tour.activitySlugs.includes(activityFilter)
+      )
+    : toursWithImages;
   const activityLabel = activityFilter
     ? getActivityLabelFromSlug(activityFilter)
     : null;
@@ -67,12 +78,13 @@ export default function CityToursIndexRoute({
         : `${stateHref}/cities/${city.slug}`
       : "";
   const toursHref = `${cityHref}/tours`;
-  const heroImage = resolveHeroImageForRoute({
-    route: toursHref,
-    state,
-    city,
-    cityTours: tours.map(entry => entry.tour),
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: toursHref,
+      state,
+      city,
+      cityTours: tours.map(entry => entry.tour),
+    }) ?? undefined;
   const structuredDataNodes = useMemo(() => {
     if (!state || !city) {
       return null;
@@ -83,7 +95,7 @@ export default function CityToursIndexRoute({
       { name: city.name, url: cityHref },
       { name: "Tours", url: toursHref },
     ]);
-    const itemListItems = filteredTours.map((entry) => ({
+    const itemListItems = filteredTours.map(entry => ({
       name: entry.tour.title,
       url: entry.href,
       image: entry.tour.heroImage ? [entry.tour.heroImage] : undefined,
@@ -93,14 +105,7 @@ export default function CityToursIndexRoute({
       nodes.push(buildItemList(itemListItems));
     }
     return nodes;
-  }, [
-    city,
-    cityHref,
-    filteredTours,
-    state,
-    stateHref,
-    toursHref,
-  ]);
+  }, [city, cityHref, filteredTours, state, stateHref, toursHref]);
 
   useStructuredData(structuredDataNodes);
 
@@ -164,11 +169,7 @@ export default function CityToursIndexRoute({
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {filteredTours.map(({ tour, href }) => (
-              <TourCard
-                key={tour.id}
-                tour={tour}
-                href={href}
-              />
+              <TourCard key={tour.id} tour={tour} href={href} />
             ))}
           </div>
         ) : (
