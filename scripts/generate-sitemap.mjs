@@ -388,21 +388,18 @@ const buildTourSummaries = async (catalogModule) => {
 };
 
 
-const buildMexicoSitemapFallbackTours = async (catalogModule) => {
-  const filePath = path.resolve(__dirname, "../data/mexico.csv");
-  const contents = await readFile(filePath, "utf8");
-  const rows = parseCsv(contents);
-
-  return rows
+const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
+  rows
     .map((row) => {
       const location = row.location?.trim() || "";
       const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
-      const country = (row.country || row.country_name || parts[0] || "").trim();
-      const city = (row.city || parts[2] || "").trim();
+      const country = (defaults.country || row.country || row.country_name || parts[0] || "").trim();
+      const city = (defaults.city || row.city || parts[2] || "").trim();
+      const citySlug = defaults.citySlug || catalogModule.slugify(city);
       const title = (row.title || row.name || row.item_name || "").trim();
       const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
 
-      if (!country || !city || !title || !id) {
+      if (!country || !citySlug || !title || !id) {
         return null;
       }
 
@@ -417,11 +414,32 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
 
       return {
         seo: {
-          canonicalPath: `/destinations/mexico/${catalogModule.slugify(city)}/tours/${catalogModule.slugify(title)}-${id}`,
+          canonicalPath: `/destinations/mexico/${citySlug}/tours/${catalogModule.slugify(title)}-${id}`,
         },
       };
     })
     .filter(Boolean);
+
+const buildMexicoSitemapFallbackTours = async (catalogModule) => {
+  const mexicoPath = path.resolve(__dirname, "../data/mexico.csv");
+  const cancunPath = path.resolve(__dirname, "../data/cancun.csv");
+
+  const [mexicoContents, cancunContents] = await Promise.all([
+    readFile(mexicoPath, "utf8"),
+    readFile(cancunPath, "utf8"),
+  ]);
+
+  const mexicoRows = parseCsv(mexicoContents);
+  const cancunRows = parseCsv(cancunContents);
+
+  return [
+    ...parseMexicoFallbackRows(mexicoRows, catalogModule),
+    ...parseMexicoFallbackRows(cancunRows, catalogModule, {
+      country: "Mexico",
+      city: "Cancun",
+      citySlug: "cancun",
+    }),
+  ];
 };
 
 const buildSitemap = async () => {
