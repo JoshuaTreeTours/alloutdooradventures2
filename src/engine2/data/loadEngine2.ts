@@ -15,6 +15,7 @@ import { loadOregonEngine2Tours } from "./oregonTours";
 import { loadMinnesotaEngine2Tours } from "./minnesotaTours";
 import { loadAlaskaEngine2Tours } from "./alaskaTours";
 import getMexicoTours from "./mexicoTours";
+import { getEngine2PuertoVallartaTours as loadEngine2PuertoVallartaTours } from "./puertoVallartaTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -95,9 +96,48 @@ const allGeneratedTours = [
   ...loadMinnesotaEngine2Tours(),
   ...loadAlaskaEngine2Tours(),
   ...getMexicoTours(),
+  ...loadEngine2PuertoVallartaTours(),
 ];
 
-const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
+const getPrimaryDedupeKey = (tour: Engine2Tour) => {
+  const itemId =
+    tour.booking?.fareharbor?.itemId ||
+    tour.id.match(/(\d+)$/)?.[1] ||
+    "";
+
+  return itemId || null;
+};
+
+const getFallbackDedupeKey = (tour: Engine2Tour) =>
+  `${tour.slug}|${tour.sourceCitySlug}|${tour.sourceCountrySlug || ""}`;
+
+const dedupeEngine2Tours = (tours: Engine2Tour[]) => {
+  const byPrimary = new Map<string, Engine2Tour>();
+  const byFallback = new Map<string, Engine2Tour>();
+
+  for (const tour of tours) {
+    const primaryKey = getPrimaryDedupeKey(tour);
+    const fallbackKey = getFallbackDedupeKey(tour);
+
+    if (primaryKey && byPrimary.has(primaryKey)) {
+      continue;
+    }
+
+    if (!primaryKey && byFallback.has(fallbackKey)) {
+      continue;
+    }
+
+    if (primaryKey) {
+      byPrimary.set(primaryKey, tour);
+    }
+
+    byFallback.set(fallbackKey, tour);
+  }
+
+  return Array.from(byFallback.values());
+};
+
+const engine2Tours: Engine2Tour[] = dedupeEngine2Tours(allGeneratedTours).map(tour => ({
   ...tour,
   images: {
     ...tour.images,
@@ -179,6 +219,13 @@ export const getEngine2CanadaTourBySlug = (
 
 export const getEngine2MexicoTours = (): Engine2Tour[] =>
   engine2Tours.filter(tour => tour.sourceCountrySlug === "mexico");
+
+export const getEngine2PuertoVallartaTours = (): Engine2Tour[] =>
+  engine2Tours.filter(
+    tour =>
+      tour.sourceCountrySlug === "mexico" &&
+      tour.sourceCitySlug === "puerto-vallarta"
+  );
 
 export const getEngine2CanadaTourByTourSlug = (
   tourSlug: string

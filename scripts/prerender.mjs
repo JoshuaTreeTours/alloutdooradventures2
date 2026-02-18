@@ -189,25 +189,32 @@ const ensurePrerenderedFile = async pathname => {
 };
 
 const readSitemapUrls = async () => {
-  let files = [];
-
-  try {
-    const entries = await readdir(distDir);
-    files = entries.filter(
-      entry => entry.startsWith("sitemap") && entry.endsWith(".xml")
-    );
-  } catch {
-    return [];
-  }
-
+  const sitemapDirs = [distDir, path.resolve(__dirname, "../public")];
   const urls = new Set();
-  for (const file of files) {
-    const contents = await readFile(path.join(distDir, file), "utf8");
-    const locPattern = /<loc>(.*?)<\/loc>/g;
-    let match = locPattern.exec(contents);
-    while (match) {
-      urls.add(match[1]);
-      match = locPattern.exec(contents);
+
+  for (const directory of sitemapDirs) {
+    let files = [];
+    try {
+      const entries = await readdir(directory);
+      files = entries.filter(
+        entry => entry.startsWith("sitemap") && entry.endsWith(".xml")
+      );
+    } catch {
+      continue;
+    }
+
+    for (const file of files) {
+      const contents = await readFile(path.join(directory, file), "utf8");
+      const locPattern = /<loc>(.*?)<\/loc>/g;
+      let match = locPattern.exec(contents);
+      while (match) {
+        urls.add(match[1]);
+        match = locPattern.exec(contents);
+      }
+    }
+
+    if (urls.size) {
+      break;
     }
   }
 
