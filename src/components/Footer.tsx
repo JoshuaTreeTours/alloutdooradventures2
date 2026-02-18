@@ -56,12 +56,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://www.alloutdooradventures.com/destinations/mexico"
-                  className="transition hover:text-white"
-                >
-                  Mexico Tours
-                </a>
+                <Link href="/destinations/world/mexico">
+                  <a className="transition hover:text-white">Mexico Tours</a>
+                </Link>
               </li>
             </ul>
           </div>
