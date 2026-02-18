@@ -1,3 +1,8 @@
+import { Link } from "wouter";
+
+import { getEngine2ParisTours } from "../../engine2/data/parisTours";
+import Image from "../../components/Image";
+
 type ParisGeneratedGuide = {
   city: string;
   country: string;
@@ -57,6 +62,8 @@ const rawParisGuide =
 
 const parisGuide = isGuideLike(rawParisGuide) ? rawParisGuide : null;
 
+const topParisTours = getEngine2ParisTours().slice(0, 10);
+
 export default function ParisGuideRoute() {
   if (!parisGuide) {
     return (
@@ -70,7 +77,7 @@ export default function ParisGuideRoute() {
   }
 
   return (
-    <main className="mx-auto max-w-4xl px-6 py-12 text-[#1f2a1f]">
+    <main className="mx-auto max-w-6xl px-6 py-12 text-[#1f2a1f]">
       <header>
         <p className="text-xs uppercase tracking-wide text-[#5f7a5f]">Guide</p>
         <h1 className="mt-2 text-4xl font-bold">{parisGuide.seoTitle}</h1>
@@ -134,6 +141,50 @@ export default function ParisGuideRoute() {
           </ul>
         </div>
       </section>
+
+      {topParisTours.length ? (
+        <section className="mt-14">
+          <div className="flex items-end justify-between gap-4">
+            <h2 className="text-2xl font-semibold">Top tours in Paris</h2>
+            <p className="text-sm text-[#405040]">Swipe to browse 10 picks</p>
+          </div>
+          <div className="mt-4 flex gap-4 overflow-x-auto pb-3">
+            {topParisTours.map((tour) => {
+              const image = tour.images.hero || tour.seo.ogImage || "/hero.jpg";
+
+              return (
+                <article
+                  key={tour.id}
+                  className="min-w-[260px] max-w-[260px] overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
+                >
+                  <div className="relative h-40 w-full overflow-hidden bg-black/5">
+                    <Image
+                      src={image}
+                      fallbackSrc="/hero.jpg"
+                      alt={tour.name}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <p className="text-xs uppercase tracking-[0.16em] text-[#7a8a6b]">
+                      {tour.provider.name}
+                    </p>
+                    <h3 className="mt-2 line-clamp-2 min-h-[3rem] text-base font-semibold text-[#1f2a1f]">
+                      {tour.name}
+                    </h3>
+                    <Link href={tour.seo.canonicalPath}>
+                      <a className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white hover:bg-[#287a35]">
+                        View tour
+                      </a>
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ) : null}
 
       <section className="mt-12 border-t border-[#dde7dd] pt-6">
         <h2 className="text-xl font-semibold">Sources</h2>
