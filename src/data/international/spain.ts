@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import spainCsvRaw from "../../../data/spain.csv?raw";
+import { spainCsvRaw } from "./generatedCsvRaw";
 import { slugify } from "../../utils/slugify";
 
 export interface SpainTourRow {

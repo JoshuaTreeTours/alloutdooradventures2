@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite --host",
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
-    "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "prebuild": "npm run generate:international && npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/vercel-build.mjs",
     "preview": "vite preview --host",
@@ -35,7 +35,9 @@
     "test:engine2:canada": "tsx scripts/engine2/smokeTestCanadaRoutes.ts",
     "check:large-files": "node scripts/check-large-files.js",
     "check:canoeing": "vite-node --script scripts/check-canoeing-tours.ts",
-    "check:oregon": "tsx scripts/check-oregon-tours.ts"
+    "check:oregon": "tsx scripts/check-oregon-tours.ts",
+    "generate:international": "tsx scripts/generate-international-csv-raw.ts",
+    "predev": "npm run generate:international"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -240,6 +240,10 @@ export default function App() {
         />
 
         <Route
+          path="/destinations/states/:stateSlug"
+          component={DestinationStateGuideRedirect}
+        />
+        <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
         />
@@ -250,10 +254,6 @@ export default function App() {
         <Route
           path="/destinations/:stateSlug/:citySlug/tours"
           component={CityToursIndexRoute}
-        />
-        <Route
-          path="/destinations/states/:stateSlug"
-          component={DestinationStateGuideRedirect}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug"
