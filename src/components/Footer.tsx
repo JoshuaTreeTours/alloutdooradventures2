@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { SITE_BRAND_NAME } from "../utils/site";
+import { buildDestinationUrl } from "../utils/buildDestinationUrl";
 
 export default function Footer() {
   return (
@@ -56,7 +57,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/destinations/world/mexico">
+                <Link href={buildDestinationUrl("mexico")}>
                   <a className="transition hover:text-white">Mexico Tours</a>
                 </Link>
               </li>
