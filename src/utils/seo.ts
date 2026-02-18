@@ -4,6 +4,7 @@ import {
   extractVariantLabel,
 } from "./tourDescription";
 import { SITE_BRAND_NAME } from "./site";
+import { mexicoCityMetaBySlug } from "../data/international/mexicoCityMeta";
 
 export const SITE_URL = "https://www.alloutdooradventures.com";
 
@@ -160,8 +161,35 @@ const normalizePathname = (pathname: string) => {
   return `/${trimmed.replace(/^\/+|\/+$/g, "")}`;
 };
 
+
+const getMexicoCityStaticSeo = (pathname: string) => {
+  const match = normalizePathname(pathname).match(/^\/destinations\/mexico\/([^/]+)$/);
+  if (!match) {
+    return null;
+  }
+
+  const citySlug = match[1];
+  const cityMeta = mexicoCityMetaBySlug[citySlug];
+  if (!cityMeta) {
+    return null;
+  }
+
+  return {
+    title: cityMeta.title,
+    description: cityMeta.description,
+    url: buildCanonicalUrl(`/destinations/mexico/${citySlug}`),
+    type: DEFAULT_SEO.type,
+    image: buildImageUrl(DEFAULT_SEO.image),
+  };
+};
+
 export const getStaticPageSeo = (pathname: string) => {
   const normalized = normalizePathname(pathname);
+  const mexicoCitySeo = getMexicoCityStaticSeo(normalized);
+  if (mexicoCitySeo) {
+    return mexicoCitySeo;
+  }
+
   const entry = STATIC_PAGE_SEO[normalized as keyof typeof STATIC_PAGE_SEO];
   if (!entry) {
     return null;

@@ -389,16 +389,34 @@ const buildTourSummaries = async (catalogModule) => {
 
 
 const buildMexicoSitemapFallbackTours = async (catalogModule) => {
-  const filePath = path.resolve(__dirname, "../data/mexico.csv");
-  const contents = await readFile(filePath, "utf8");
-  const rows = parseCsv(contents);
+  const mexicoFiles = [
+    {
+      filePath: path.resolve(__dirname, "../data/mexico.csv"),
+      forcedCountry: null,
+      forcedCity: null,
+    },
+    {
+      filePath: path.resolve(__dirname, "../data/Puerto Vallarta.csv"),
+      forcedCountry: "Mexico",
+      forcedCity: "Puerto Vallarta",
+    },
+  ];
 
-  return rows
-    .map((row) => {
+  const entries = await Promise.all(
+    mexicoFiles.map(async ({ filePath, forcedCountry, forcedCity }) => {
+      const contents = await readFile(filePath, "utf8");
+      const rows = parseCsv(contents);
+      return rows.map((row) => ({ row, forcedCountry, forcedCity }));
+    }),
+  );
+
+  return entries
+    .flat()
+    .map(({ row, forcedCountry, forcedCity }) => {
       const location = row.location?.trim() || "";
       const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
-      const country = (row.country || row.country_name || parts[0] || "").trim();
-      const city = (row.city || parts[2] || "").trim();
+      const country = (forcedCountry || row.country || row.country_name || parts[0] || "").trim();
+      const city = (forcedCity || row.city || parts[2] || "").trim();
       const title = (row.title || row.name || row.item_name || "").trim();
       const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
 
@@ -543,11 +561,41 @@ const buildSitemap = async () => {
     addUrl(toursUrls, tourPath);
   });
 
+
+  const mexicoCitySlugs = new Set();
+  engine2Tours.forEach((tour) => {
+    if (tour?.sourceCountrySlug === "mexico" && tour?.sourceCitySlug) {
+      mexicoCitySlugs.add(tour.sourceCitySlug);
+    }
+  });
+
+  if (mexicoCitySlugs.size) {
+    addUrl(destinationUrls, "/destinations/mexico");
+    mexicoCitySlugs.forEach((citySlug) => {
+      addUrl(cityUrls, `/destinations/mexico/${citySlug}`);
+      addUrl(cityUrls, `/destinations/mexico/${citySlug}/tours`);
+    });
+  }
+
   if (!engine2Tours.length) {
     const mexicoFallbackTours = await buildMexicoSitemapFallbackTours(catalogModule);
+    const fallbackCitySlugs = new Set();
+
     mexicoFallbackTours.forEach((tour) => {
       addUrl(toursUrls, tour.seo.canonicalPath);
+      const parts = String(tour.seo.canonicalPath).split("/").filter(Boolean);
+      if (parts[0] === "destinations" && parts[1] === "mexico" && parts[2]) {
+        fallbackCitySlugs.add(parts[2]);
+      }
     });
+
+    if (fallbackCitySlugs.size) {
+      addUrl(destinationUrls, "/destinations/mexico");
+      fallbackCitySlugs.forEach((citySlug) => {
+        addUrl(cityUrls, `/destinations/mexico/${citySlug}`);
+        addUrl(cityUrls, `/destinations/mexico/${citySlug}/tours`);
+      });
+    }
   }
   if (Array.isArray(flagstaffModule.flagstaffTours)) {
     flagstaffModule.flagstaffTours.forEach((tour) => {

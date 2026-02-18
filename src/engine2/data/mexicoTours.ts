@@ -43,6 +43,7 @@ export default function getMexicoTours(): Engine2Tour[] {
         }
 
         const slug = `${tourSlug}-${row.id}`;
+        const primaryKey = `${row.sourceKey}:${row.id}`;
         const canonicalPath = `/destinations/mexico/${citySlug}/tours/${slug}`;
         const providerName = clean(row.providerName) || "Unknown provider";
         const cityName = toTitle(row.city);
@@ -56,7 +57,7 @@ export default function getMexicoTours(): Engine2Tour[] {
 
         const tour: Engine2Tour = {
           id: `mexico-${row.id}`,
-          sourceDatasetKey: "mexico",
+          sourceDatasetKey: row.sourceKey,
           sourceCountrySlug: "mexico",
           sourceProvinceSlug: regionSlug,
           sourceCitySlug: citySlug,
@@ -99,11 +100,11 @@ export default function getMexicoTours(): Engine2Tour[] {
         };
 
         const fallbackKey = buildFallbackKey(tour);
-        if (byPrimary.has(row.id) || byFallback.has(fallbackKey)) {
+        if (byPrimary.has(primaryKey) || byFallback.has(fallbackKey)) {
           continue;
         }
 
-        byPrimary.set(row.id, tour);
+        byPrimary.set(primaryKey, tour);
         byFallback.set(fallbackKey, tour);
       } catch {
         continue;
