@@ -424,6 +424,30 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
     .filter(Boolean);
 };
 
+
+const buildPuertoVallartaSitemapFallbackTours = async (catalogModule) => {
+  const filePath = path.resolve(__dirname, "../data/Puerto Vallarta.csv");
+  const contents = await readFile(filePath, "utf8");
+  const rows = parseCsv(contents);
+
+  return rows
+    .map((row) => {
+      const title = (row.title || row.name || row.item_name || "").trim();
+      const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
+
+      if (!title || !id) {
+        return null;
+      }
+
+      return {
+        seo: {
+          canonicalPath: `/destinations/mexico/puerto-vallarta/tours/${catalogModule.slugify(title)}-${id}`,
+        },
+      };
+    })
+    .filter(Boolean);
+};
+
 const buildSitemap = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
@@ -546,6 +570,12 @@ const buildSitemap = async () => {
   if (!engine2Tours.length) {
     const mexicoFallbackTours = await buildMexicoSitemapFallbackTours(catalogModule);
     mexicoFallbackTours.forEach((tour) => {
+      addUrl(toursUrls, tour.seo.canonicalPath);
+    });
+
+    const puertoVallartaFallbackTours =
+      await buildPuertoVallartaSitemapFallbackTours(catalogModule);
+    puertoVallartaFallbackTours.forEach((tour) => {
       addUrl(toursUrls, tour.seo.canonicalPath);
     });
   }
