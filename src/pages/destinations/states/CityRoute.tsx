@@ -37,7 +37,7 @@ export default function CityRoute({ params }: CityRouteProps) {
   const toursOverride =
     state.slug === "arizona" && city.slug === "flagstaff"
       ? flagstaffTours
-      : state.slug === "california"
+      : state.slug === "california" || state.isFallback
         ? getToursByCityUnified(state.slug, city.slug).map(entry => entry.tour)
         : undefined;
 

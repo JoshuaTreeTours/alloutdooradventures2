@@ -143,7 +143,7 @@ export default function CityTemplate({
   const toursHref = `/destinations/${state.slug}/${city.slug}/tours`;
   const stateHref =
     stateHrefOverride ??
-    (state.isFallback ? "/destinations" : `/destinations/states/${state.slug}`);
+    (state.isFallback ? `/destinations/${state.slug}` : `/destinations/states/${state.slug}`);
   const guideParentSlug = guideParentSlugOverride ?? state.slug;
   const guideRegionType =
     guideRegionTypeOverride ?? (state.isFallback ? "country" : "state");

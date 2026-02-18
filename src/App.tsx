@@ -194,6 +194,10 @@ export default function App() {
           component={CityToursIndexRoute}
         />
         <Route
+          path="/destinations/:stateSlug/:citySlug"
+          component={CityRoute}
+        />
+        <Route
           path="/destinations/states/:stateSlug/cities/:citySlug"
           component={CityRoute}
         />

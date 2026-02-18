@@ -4,10 +4,12 @@ import { Link } from "wouter";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import BubbleChips from "../components/BubbleChips";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
 import type { Tour } from "../data/tours.types";
-import { getTourDetailPath } from "../data/tours";
+import { getTourDetailPath, getToursByCityUnified } from "../data/tours";
+import { pickBestHeroImageFromTours } from "../utils/heroImage";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { buildMetaDescription } from "../utils/seo";
@@ -28,10 +30,31 @@ export default function DestinationLandingTemplate({
     state.intro,
     `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
   );
-  const heroImage = resolveHeroImageForRoute({
-    route: `/destinations/${state.slug}`,
-    state,
-  }) ?? undefined;
+  const fallbackHeroImage =
+    resolveHeroImageForRoute({
+      route: `/destinations/${state.slug}`,
+      state,
+    }) ?? undefined;
+  const mexicoHeroImage =
+    state.slug === "mexico" ? pickBestHeroImageFromTours(tours as unknown[]) : null;
+  const heroImage = mexicoHeroImage ?? fallbackHeroImage;
+
+  const cityCards = useMemo(
+    () =>
+      state.cities
+        .map(city => {
+          const cityTours = getToursByCityUnified(state.slug, city.slug);
+          return {
+            city,
+            tourCount: cityTours.length,
+            heroImage: pickBestHeroImageFromTours(
+              cityTours.map(entry => entry.tour) as unknown[]
+            ),
+          };
+        })
+        .sort((a, b) => b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)),
+    [state.cities, state.slug]
+  );
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
@@ -84,16 +107,25 @@ export default function DestinationLandingTemplate({
               {state.intro}
             </p>
           </div>
-          <div className="flex flex-wrap gap-3">
-            {state.topRegions.map((region) => (
-              <span
-                key={region.title}
-                className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
-              >
-                {region.title}
-              </span>
-            ))}
-          </div>
+          {state.slug === "mexico" ? (
+            <BubbleChips
+              items={state.topRegions.map(region => ({
+                key: region.title,
+                label: region.title,
+              }))}
+            />
+          ) : (
+            <div className="flex flex-wrap gap-3">
+              {state.topRegions.map((region) => (
+                <span
+                  key={region.title}
+                  className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
+                >
+                  {region.title}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -114,6 +146,50 @@ export default function DestinationLandingTemplate({
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-8">
+        <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+          <div className="flex flex-col gap-2">
+            <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
+              Cities
+            </span>
+            <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+              Explore {state.name} cities
+            </h2>
+          </div>
+          {cityCards.length ? (
+            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {cityCards.map(({ city, tourCount, heroImage: cityHeroImage }) => (
+                <Link
+                  key={city.slug}
+                  href={`/destinations/${state.slug}/${city.slug}/tours`}
+                >
+                  <a className="overflow-hidden rounded-xl border border-[#2f4a2f]/15 bg-[#f6f1e8] text-sm transition hover:border-[#2f4a2f]/35 hover:bg-white">
+                    {state.slug === "mexico" && cityHeroImage ? (
+                      <Image
+                        src={cityHeroImage}
+                        fallbackSrc={cityHeroImage}
+                        alt={`${city.name} tours`}
+                        className="h-24 w-full object-cover"
+                      />
+                    ) : null}
+                    <div className="px-4 py-3">
+                      <p className="font-semibold text-[#1f2a1f]">{city.name}</p>
+                      <p className="mt-1 text-xs text-[#405040]">
+                        {tourCount} {tourCount === 1 ? "tour" : "tours"}
+                      </p>
+                    </div>
+                  </a>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-6 text-sm text-[#405040]">
+              City inventory is being updated. Check back soon.
+            </p>
+          )}
         </div>
       </section>
 

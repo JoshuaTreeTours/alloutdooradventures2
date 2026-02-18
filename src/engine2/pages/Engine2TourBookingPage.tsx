@@ -13,6 +13,36 @@ type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
 };
 
+const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
+  if (tour.sourceCountrySlug === "canada") {
+    return [
+      { name: "Canada", url: "/destinations/world/canada" },
+      {
+        name: tour.geo.region,
+        url: `/destinations/world/canada/${tour.sourceProvinceSlug}`,
+      },
+      {
+        name: tour.geo.city,
+        url: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
+      },
+    ];
+  }
+
+  if (tour.sourceCountrySlug === "mexico") {
+    return [
+      { name: "Mexico", url: "/destinations/mexico" },
+      { name: tour.geo.city, url: `/destinations/mexico/${tour.sourceCitySlug}` },
+      { name: "Tours", url: `/destinations/mexico/${tour.sourceCitySlug}/tours` },
+    ];
+  }
+
+  return [
+    { name: "California", url: "/destinations/california" },
+    { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
+    { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+  ];
+};
+
 export default function Engine2TourBookingPage({
   tour,
 }: Engine2TourBookingPageProps) {
@@ -34,28 +64,7 @@ export default function Engine2TourBookingPage({
       ...getSiteStructuredDataNodes(),
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
-        {
-          name: tour.sourceCountrySlug === "canada" ? "Canada" : "California",
-          url:
-            tour.sourceCountrySlug === "canada"
-              ? "/destinations/world/canada"
-              : "/destinations/california",
-        },
-        ...(tour.sourceCountrySlug === "canada"
-          ? [
-              {
-                name: tour.geo.region,
-                url: `/destinations/world/canada/${tour.sourceProvinceSlug}`,
-              },
-              {
-                name: tour.geo.city,
-                url: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
-              },
-            ]
-          : [
-              { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
-              { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
-            ]),
+        ...getDestinationBreadcrumbs(tour),
         { name: tour.name, url: tour.seo.canonicalPath },
         { name: "Book", url: `${tour.seo.canonicalPath}/book` },
       ]),

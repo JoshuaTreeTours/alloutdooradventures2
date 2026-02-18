@@ -14,6 +14,7 @@ import { loadCanoeingEngine2Tours } from "./canoeingTours";
 import { loadOregonEngine2Tours } from "./oregonTours";
 import { loadMinnesotaEngine2Tours } from "./minnesotaTours";
 import { loadAlaskaEngine2Tours } from "./alaskaTours";
+import getMexicoTours from "./mexicoTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -93,6 +94,7 @@ const allGeneratedTours = [
   ...loadOregonEngine2Tours(),
   ...loadMinnesotaEngine2Tours(),
   ...loadAlaskaEngine2Tours(),
+  ...getMexicoTours(),
 ];
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
@@ -173,6 +175,10 @@ export const getEngine2CanadaTourBySlug = (
       tour.sourceCitySlug === citySlug &&
       tour.slug === tourSlug
   ) ?? null;
+
+
+export const getEngine2MexicoTours = (): Engine2Tour[] =>
+  engine2Tours.filter(tour => tour.sourceCountrySlug === "mexico");
 
 export const getEngine2CanadaTourByTourSlug = (
   tourSlug: string

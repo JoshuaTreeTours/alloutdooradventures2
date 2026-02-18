@@ -1,6 +1,7 @@
 import type { City, StateDestination } from "./destinations";
 import { tours } from "./tours";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { slugify } from "../utils/slugify";
 
 const buildActivityTags = (slugs: string[]) =>
   Array.from(new Set(slugs)).map((slug) => slug.replace(/-/g, " "));
@@ -145,7 +146,14 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
     return null;
   }
 
-  const stateName = stateTours[0]?.destination.state ?? engine2StateTours[0]?.geo.region ?? stateSlug;
+  const engine2CountryMatch = engine2StateTours.find(
+    tour => tour.sourceCountrySlug === stateSlug || slugify(tour.geo.country) === stateSlug
+  );
+  const stateName =
+    stateTours[0]?.destination.state ??
+    engine2CountryMatch?.geo.country ??
+    engine2StateTours[0]?.geo.region ??
+    stateSlug;
   const citySlugs = Array.from(
     new Set([
       ...stateTours.map((tour) => tour.destination.citySlug),
