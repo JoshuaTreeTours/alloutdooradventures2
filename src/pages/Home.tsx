@@ -16,6 +16,7 @@ import { featuredDestinations } from "../data/destinations";
 import { countriesWithTours } from "../data/europeIndex";
 import type { Tour } from "../data/tours.types";
 import { worldCountriesWithTours } from "../data/worldIndex";
+import { canonicalHref, getStateGuidePath } from "../utils/guidePaths";
 import { SITE_BRAND_NAME } from "../utils/site";
 import { DEFAULT_SEO } from "../utils/seo";
 
@@ -771,7 +772,10 @@ export default function Home() {
                   {group.destinations.map((destination) => (
                     <DestinationCard
                       key={`${group.region}-${destination.name}`}
-                      destination={destination}
+                      destination={{
+                        ...destination,
+                        href: canonicalHref(getStateGuidePath(destination.stateSlug)),
+                      }}
                       ctaLabel="Discover"
                       headingLevel="h4"
                       descriptionVariant="featured"
@@ -794,7 +798,10 @@ export default function Home() {
                   {rockyMountainDestinations.map((destination) => (
                     <DestinationCard
                       key={`rocky-mountain-${destination.name}`}
-                      destination={destination}
+                      destination={{
+                        ...destination,
+                        href: canonicalHref(getStateGuidePath(destination.stateSlug)),
+                      }}
                       ctaLabel="Discover"
                       headingLevel="h4"
                       descriptionVariant="featured"
