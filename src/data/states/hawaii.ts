@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import hawaiiCsvRaw from "../../../data/hawaii.csv?raw";
+import { hawaiiCsvRaw } from "../international/rawCsvData";
 import { slugify } from "../../utils/slugify";
 
 export type HawaiiSourceRow = {

@@ -1,3 +1,4 @@
+import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
 import { EUROPE_COUNTRIES, slugify } from "./tourCatalog";
 import type { Tour } from "./tours.types";
 import { europeTours } from "./europeTours";
@@ -26,15 +27,58 @@ export const toursByCountry = europeTours.reduce<Record<string, Tour[]>>(
 );
 
 const europeCountrySlugs = new Set(EUROPE_COUNTRIES.map((country) => slugify(country)));
+const europeCountryNamesBySlug = new Map(
+  EUROPE_COUNTRIES.map((country) => [slugify(country), country]),
+);
 
-export const countriesWithTours: EuropeCountrySummary[] = Object.entries(
-  toursByCountry,
+const engine2EuropeCountsByCountry = getAllEngine2Tours().reduce<Map<string, number>>(
+  (counts, tour) => {
+    const countrySlug = slugify(tour.geo.country || tour.sourceCountrySlug || "");
+    if (!europeCountrySlugs.has(countrySlug)) {
+      return counts;
+    }
+
+    counts.set(countrySlug, (counts.get(countrySlug) ?? 0) + 1);
+    return counts;
+  },
+  new Map(),
+);
+
+const engine2EuropeImageByCountry = getAllEngine2Tours().reduce<Map<string, string>>(
+  (images, tour) => {
+    const countrySlug = slugify(tour.geo.country || tour.sourceCountrySlug || "");
+    if (!europeCountrySlugs.has(countrySlug) || images.has(countrySlug)) {
+      return images;
+    }
+
+    const image = tour.images.hero?.trim() || tour.seo.ogImage?.trim();
+    if (image) {
+      images.set(countrySlug, image);
+    }
+
+    return images;
+  },
+  new Map(),
+);
+
+export const countriesWithTours: EuropeCountrySummary[] = Array.from(
+  new Set([...Object.keys(toursByCountry), ...engine2EuropeCountsByCountry.keys()]),
 )
-  .filter(([slug]) => europeCountrySlugs.has(slug))
-  .map(([slug, tours]) => ({
-    name: tours[0]?.destination.state ?? slug,
-    slug,
-    tourCount: tours.length,
-    image: tours[0]?.heroImage || getEuropeFallbackImage(),
-  }))
+  .filter((slug) => europeCountrySlugs.has(slug))
+  .map((slug) => {
+    const fallbackTours = toursByCountry[slug] ?? [];
+    const fallbackCount = fallbackTours.length;
+    const engine2Count = engine2EuropeCountsByCountry.get(slug) ?? 0;
+
+    return {
+      name: fallbackTours[0]?.destination.state ?? europeCountryNamesBySlug.get(slug) ?? slug,
+      slug,
+      tourCount: fallbackCount + engine2Count,
+      image:
+        fallbackTours[0]?.heroImage ||
+        engine2EuropeImageByCountry.get(slug) ||
+        getEuropeFallbackImage(),
+    };
+  })
+  .filter((country) => country.tourCount > 0)
   .sort((a, b) => a.name.localeCompare(b.name));

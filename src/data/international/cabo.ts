@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import caboCsvRaw from "../../../data/cabo.csv?raw";
+import { caboCsvRaw } from "./rawCsvData";
 import { slugify } from "../../utils/slugify";
 
 export type CaboCitySlug = "cabo-san-lucas" | "san-jose-del-cabo";
