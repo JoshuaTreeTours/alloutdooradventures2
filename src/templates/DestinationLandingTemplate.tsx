@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import GuideLinkPill from "../components/GuideLinkPill";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
@@ -28,7 +29,7 @@ export default function DestinationLandingTemplate({
   const title = `${state.name} ${SITE_BRAND_NAME} | Tours & Destinations`;
   const description = buildMetaDescription(
     state.intro,
-    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`,
+    `Explore ${state.name} tours, cities, and outdoor experiences curated by local experts.`
   );
   const fallbackHeroImage =
     resolveHeroImageForRoute({
@@ -36,7 +37,9 @@ export default function DestinationLandingTemplate({
       state,
     }) ?? undefined;
   const mexicoHeroImage =
-    state.slug === "mexico" ? pickBestHeroImageFromTours(tours as unknown[]) : null;
+    state.slug === "mexico"
+      ? pickBestHeroImageFromTours(tours as unknown[])
+      : null;
   const heroImage = mexicoHeroImage ?? fallbackHeroImage;
 
   const cityCards = useMemo(
@@ -52,15 +55,29 @@ export default function DestinationLandingTemplate({
             ),
           };
         })
-        .sort((a, b) => b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)),
+        .sort(
+          (a, b) =>
+            b.tourCount - a.tourCount || a.city.name.localeCompare(b.city.name)
+        ),
     [state.cities, state.slug]
   );
+  const cityPills = useMemo(
+    () =>
+      [...cityCards]
+        .sort((a, b) => a.city.name.localeCompare(b.city.name))
+        .map(({ city }) => ({
+          href: `/destinations/${state.slug}/${city.slug}/tours`,
+          label: city.name,
+        })),
+    [cityCards, state.slug]
+  );
+  const isCountryDestination = Boolean(state.isFallback);
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: `/destinations/${state.slug}` },
     ]);
-    const itemListItems = tours.map((tour) => ({
+    const itemListItems = tours.map(tour => ({
       name: tour.title,
       url: getTourDetailPath(tour),
       image: tour.heroImage ? [tour.heroImage] : undefined,
@@ -116,7 +133,7 @@ export default function DestinationLandingTemplate({
             />
           ) : (
             <div className="flex flex-wrap gap-3">
-              {state.topRegions.map((region) => (
+              {state.topRegions.map(region => (
                 <span
                   key={region.title}
                   className="rounded-full bg-white/15 px-4 py-2 text-xs uppercase tracking-[0.2em]"
@@ -143,7 +160,7 @@ export default function DestinationLandingTemplate({
           </p>
         </div>
         <div className="mt-8 space-y-5 text-sm leading-relaxed text-[#405040] md:text-base">
-          {paragraphs.map((paragraph) => (
+          {paragraphs.map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -156,35 +173,49 @@ export default function DestinationLandingTemplate({
               Cities
             </span>
             <h2 className="text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
-              Explore {state.name} cities
+              {isCountryDestination
+                ? "Top regions / cities"
+                : `Explore ${state.name} cities`}
             </h2>
           </div>
           {cityCards.length ? (
-            <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {cityCards.map(({ city, tourCount, heroImage: cityHeroImage }) => (
-                <Link
-                  key={city.slug}
-                  href={`/destinations/${state.slug}/${city.slug}/tours`}
-                >
-                  <a className="overflow-hidden rounded-xl border border-[#2f4a2f]/15 bg-[#f6f1e8] text-sm transition hover:border-[#2f4a2f]/35 hover:bg-white">
-                    {state.slug === "mexico" && cityHeroImage ? (
-                      <Image
-                        src={cityHeroImage}
-                        fallbackSrc={cityHeroImage}
-                        alt={`${city.name} tours`}
-                        className="h-24 w-full object-cover"
-                      />
-                    ) : null}
-                    <div className="px-4 py-3">
-                      <p className="font-semibold text-[#1f2a1f]">{city.name}</p>
-                      <p className="mt-1 text-xs text-[#405040]">
-                        {tourCount} {tourCount === 1 ? "tour" : "tours"}
-                      </p>
-                    </div>
-                  </a>
-                </Link>
-              ))}
-            </div>
+            isCountryDestination ? (
+              <div className="mt-6 flex flex-wrap gap-3">
+                {cityPills.map(city => (
+                  <GuideLinkPill key={city.href} link={city} />
+                ))}
+              </div>
+            ) : (
+              <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                {cityCards.map(
+                  ({ city, tourCount, heroImage: cityHeroImage }) => (
+                    <Link
+                      key={city.slug}
+                      href={`/destinations/${state.slug}/${city.slug}/tours`}
+                    >
+                      <a className="overflow-hidden rounded-xl border border-[#2f4a2f]/15 bg-[#f6f1e8] text-sm transition hover:border-[#2f4a2f]/35 hover:bg-white">
+                        {state.slug === "mexico" && cityHeroImage ? (
+                          <Image
+                            src={cityHeroImage}
+                            fallbackSrc={cityHeroImage}
+                            alt={`${city.name} tours`}
+                            className="h-24 w-full object-cover"
+                          />
+                        ) : null}
+                        <div className="px-4 py-3">
+                          <p className="font-semibold text-[#1f2a1f]">
+                            {city.name}
+                          </p>
+                          <p className="mt-1 text-xs text-[#405040]">
+                            {tourCount} {tourCount === 1 ? "tour" : "tours"}
+                          </p>
+                        </div>
+                      </a>
+                    </Link>
+                  )
+                )}
+              </div>
+            )
           ) : (
             <p className="mt-6 text-sm text-[#405040]">
               City inventory is being updated. Check back soon.
@@ -209,7 +240,7 @@ export default function DestinationLandingTemplate({
           </div>
           {tours.length ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {tours.map((tour) => (
+              {tours.map(tour => (
                 <TourCard key={tour.slug} tour={tour} />
               ))}
             </div>
