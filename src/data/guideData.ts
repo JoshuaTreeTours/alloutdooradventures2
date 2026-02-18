@@ -171,6 +171,45 @@ const engine2CountryCityIndex = engine2Tours.reduce<
   return index;
 }, new Map());
 
+const toEngine2GuideTour = (tour: Engine2Tour): Tour => ({
+  id: `engine2-guide-${tour.id}`,
+  slug: tour.slug,
+  title: tour.name,
+  operator: tour.provider.name,
+  categories: ["adventure"],
+  primaryCategory: "adventure",
+  destination: {
+    country: tour.geo.country,
+    state: tour.geo.country,
+    stateSlug: slugify(tour.geo.country),
+    city: tour.geo.city,
+    citySlug: tour.sourceCitySlug || slugify(tour.geo.city),
+    lat: tour.geo.lat ?? undefined,
+    lng: tour.geo.lng ?? undefined,
+  },
+  heroImage: tour.images.hero || tour.seo.ogImage || "/hero.jpg",
+  galleryImages: [tour.images.hero || tour.seo.ogImage || "/hero.jpg"],
+  badges: {
+    tagline: "Tour",
+  },
+  activitySlugs: ["adventure"],
+  bookingProvider: "fareharbor",
+  bookingUrl: tour.booking.bookingUrl,
+  bookingWidgetUrl: tour.booking.bookingUrl,
+  longDescription: tour.content.experienceText || tour.seo.description,
+});
+
+const engine2InternationalGuideTours = engine2Tours
+  .filter((tour) => {
+    const country = getCountryFromEngine2Tour(tour);
+    return country?.slug === "france";
+  })
+  .map(toEngine2GuideTour);
+
+const engine2GuideCanonicalById = new Map<string, string>(
+  engine2Tours.map((tour) => [`engine2-guide-${tour.id}`, tour.seo.canonicalPath]),
+);
+
 const mergeCitySummaries = (
   primary: GuideCitySummary[],
   secondary: GuideCitySummary[],
@@ -617,6 +656,11 @@ const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
 };
 
 export const getGuideTourDetailPath = (tour: Tour) => {
+  const engine2Path = engine2GuideCanonicalById.get(tour.id);
+  if (engine2Path) {
+    return engine2Path;
+  }
+
   if (tour.destination.stateSlug === "arizona" && tour.destination.citySlug === "flagstaff") {
     return getFlagstaffTourDetailPath(tour);
   }
@@ -951,7 +995,12 @@ export const buildCityGuide = ({
   activityFocus?: string;
   sanitize?: boolean;
 }): GuideContent | null => {
-  const cityTours = tours.filter((tour) => {
+  const sourceTours =
+    regionType === "state"
+      ? tours
+      : [...tours, ...engine2InternationalGuideTours];
+
+  const cityTours = sourceTours.filter((tour) => {
     if (tour.destination.citySlug !== citySlug) {
       return false;
     }
