@@ -61,6 +61,9 @@ import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
 const ContactRedirect = () => <RouteRedirect to="/contact" />;
+const MexicoDestinationRoute = () => (
+  <WorldCountryRoute params={{ countrySlug: "mexico" }} />
+);
 
 export default function App() {
   return (
@@ -73,6 +76,10 @@ export default function App() {
         <Route path="/united-kingdom" component={UnitedKingdomRoute} />
 
         <Route path="/destinations" component={DestinationsIndex} />
+        <Route
+          path="/destinations/mexico"
+          component={MexicoDestinationRoute}
+        />
         <Route path="/destinations/europe" component={EuropeIndex} />
         <Route
           path="/destinations/europe/:countrySlug/cities/:citySlug/tours"
