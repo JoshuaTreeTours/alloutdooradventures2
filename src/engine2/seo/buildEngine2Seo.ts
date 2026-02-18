@@ -55,7 +55,10 @@ const buildDescription = (tour: Engine2Tour) => {
 
 export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
   const location = [tour.geo.city, tour.geo.region].filter(Boolean).join(", ");
-  const title = `${sanitizeTourLabel(tour.name)} | ${location} Outdoor Tour`;
+  const title =
+    typeof tour.seo.title === "string" && tour.seo.title.trim().length > 0
+      ? normalizeWhitespace(tour.seo.title)
+      : `${sanitizeTourLabel(tour.name)} | ${location} Outdoor Tour`;
   const description = buildDescription(tour);
   const canonical = buildCanonicalUrl(tour.seo.canonicalPath);
   const image = buildImageUrl(tour.images.hero || tour.seo.ogImage);
