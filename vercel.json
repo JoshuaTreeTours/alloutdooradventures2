@@ -64,6 +64,13 @@
       ]
     }
   ],
+  "redirects": [
+    {
+      "source": "/destinations/states/:stateSlug",
+      "destination": "/guides/us/:stateSlug",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/sitemap.xml",

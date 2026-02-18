@@ -21,7 +21,6 @@ import CanadaTourRoute from "./pages/destinations/world/CanadaTourRoute";
 import CanadaTourBookingRoute from "./pages/destinations/world/CanadaTourBookingRoute";
 import CanadaActivityRoute from "./pages/destinations/world/CanadaActivityRoute";
 import StateLandingRoute from "./pages/destinations/StateLandingRoute";
-import StateRoute from "./pages/destinations/states/StateRoute";
 import CityRoute from "./pages/destinations/states/CityRoute";
 import CityToursIndexRoute from "./pages/destinations/states/tours/CityToursIndexRoute";
 import CityTourDetailRoute from "./pages/destinations/states/tours/CityTourDetailRoute";
@@ -57,10 +56,24 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
+import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
 const ContactRedirect = () => <RouteRedirect to="/contact" />;
+
+type StateSlugParams = {
+  params: {
+    stateSlug: string;
+  };
+};
+
+const DestinationStateGuideRedirect = ({ params }: StateSlugParams) => {
+  const stateGuidePath = canonicalHref(getStateGuidePath(params.stateSlug));
+  const queryString = window.location.search || "";
+
+  return <RouteRedirect to={`${stateGuidePath}${queryString}`} />;
+};
 
 const MexicoCitySlugRedirect = () =>
   <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />;
@@ -239,6 +252,10 @@ export default function App() {
           component={CityToursIndexRoute}
         />
         <Route
+          path="/destinations/states/:stateSlug"
+          component={DestinationStateGuideRedirect}
+        />
+        <Route
           path="/destinations/:stateSlug/:citySlug"
           component={CityRoute}
         />
@@ -246,7 +263,6 @@ export default function App() {
           path="/destinations/states/:stateSlug/cities/:citySlug"
           component={CityRoute}
         />
-        <Route path="/destinations/states/:stateSlug" component={StateRoute} />
         <Route path="/destinations/:stateSlug" component={StateLandingRoute} />
 
         <Route path="/tours" component={ToursLanding} />
