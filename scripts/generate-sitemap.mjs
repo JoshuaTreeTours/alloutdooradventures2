@@ -390,16 +390,22 @@ const buildTourSummaries = async (catalogModule) => {
 
 const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
   rows
-    .map((row) => {
+    .map((row, index) => {
       const location = row.location?.trim() || "";
       const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
       const country = (defaults.country || row.country || row.country_name || parts[0] || "").trim();
       const city = (defaults.city || row.city || parts[2] || "").trim();
-      const citySlug = defaults.citySlug || catalogModule.slugify(city);
+      const citySlug =
+        typeof defaults.citySlug === "function"
+          ? defaults.citySlug(row, catalogModule)
+          : defaults.citySlug || catalogModule.slugify(city);
       const title = (row.title || row.name || row.item_name || "").trim();
       const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
 
       if (!country || !citySlug || !title || !id) {
+        console.warn(
+          `[sitemap] skipped Mexico fallback row ${index + 2}: missing country/citySlug/title/id`
+        );
         return null;
       }
 
@@ -424,16 +430,32 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
   const mexicoPath = path.resolve(__dirname, "../data/mexico.csv");
   const cancunPath = path.resolve(__dirname, "../data/cancun.csv");
   const puertoVallartaPath = path.resolve(__dirname, "../data/Puerto Vallarta.csv");
+  const caboPath = path.resolve(__dirname, "../data/cabo.csv");
 
-  const [mexicoContents, cancunContents, puertoVallartaContents] = await Promise.all([
+  const [mexicoContents, cancunContents, puertoVallartaContents, caboContents] = await Promise.all([
     readFile(mexicoPath, "utf8"),
     readFile(cancunPath, "utf8"),
     readFile(puertoVallartaPath, "utf8"),
+    readFile(caboPath, "utf8"),
   ]);
 
   const mexicoRows = parseCsv(mexicoContents);
   const cancunRows = parseCsv(cancunContents);
   const puertoVallartaRows = parseCsv(puertoVallartaContents);
+  const caboRows = parseCsv(caboContents);
+
+  const resolveCaboCitySlug = (row) => {
+    const source = `${row.city || ""} ${row.destination_city || ""} ${row.location || ""}`
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+    if (source.includes("san jose del cabo") || source.includes("san jose cabo")) {
+      return "san-jose-del-cabo";
+    }
+
+    return "cabo-san-lucas";
+  };
 
   return [
     ...parseMexicoFallbackRows(mexicoRows, catalogModule),
@@ -446,6 +468,11 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
       country: "Mexico",
       city: "Puerto Vallarta",
       citySlug: "puerto-vallarta",
+    }),
+    ...parseMexicoFallbackRows(caboRows, catalogModule, {
+      country: "Mexico",
+      city: "Cabo San Lucas",
+      citySlug: resolveCaboCitySlug,
     }),
   ];
 };
