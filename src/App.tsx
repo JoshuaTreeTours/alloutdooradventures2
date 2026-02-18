@@ -33,6 +33,7 @@ import StateGuideRoute from "./pages/guides/StateGuideRoute";
 import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
 import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
+import ParisGuideRoute from "./pages/guides/ParisGuideRoute";
 import Faqs from "./pages/Faqs";
 import Journeys from "./pages/Journeys";
 import About from "./pages/About";
@@ -278,6 +279,7 @@ export default function App() {
           component={CityGuideUsRoute}
         />
         <Route path="/guides/us/:stateSlug" component={StateGuideRoute} />
+        <Route path="/guides/world/france/paris" component={ParisGuideRoute} />
         <Route
           path="/guides/world/:countrySlug/:citySlug"
           component={CityGuideWorldRoute}
