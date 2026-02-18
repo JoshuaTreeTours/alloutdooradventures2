@@ -157,10 +157,10 @@ export default function DestinationsIndex() {
           </div>
         </section>
 
-        <section className="mt-16 space-y-16" aria-label="States">
+        <section className="mt-16" aria-label="States">
           {rockyMountainStates.length > 0 ? (
-            <div className="mt-16 space-y-6">
-              <div className="relative mb-6 text-center">
+            <div className="mt-12 space-y-6">
+              <div className="mb-6 text-center">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                   Rocky Mountain
                 </span>
@@ -168,7 +168,7 @@ export default function DestinationsIndex() {
                   Featured Rocky Mountain States
                 </h2>
               </div>
-              <div className="mt-6 grid gap-6 md:grid-cols-2">
+              <div className="grid gap-6 md:grid-cols-2">
                 {rockyMountainStates.map((state) => (
                   <div key={`rocky-mountain-${state.name}`} className="space-y-4">
                     <DestinationCard
@@ -186,8 +186,8 @@ export default function DestinationsIndex() {
           {regionOrder
             .filter((region) => destinationsByRegion[region]?.length)
             .map((region) => (
-              <div key={region} className="mt-16 space-y-6">
-                <div className="relative mb-6 text-center">
+              <div key={region} className="mt-12 space-y-6">
+                <div className="mb-6 text-center">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
                   </span>
@@ -195,7 +195,7 @@ export default function DestinationsIndex() {
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
-                <div className="mt-6 grid gap-6">
+                <div className="grid gap-6">
                   {destinationsByRegion[region].map((state) => (
                     <div key={`${region}-${state.name}`} className="space-y-4">
                       <DestinationCard
@@ -213,7 +213,7 @@ export default function DestinationsIndex() {
         </section>
 
         <section className="mt-16 space-y-8" aria-label="International destinations">
-          <div className="relative mb-6 text-center">
+          <div className="mb-6 text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
               International
             </span>
