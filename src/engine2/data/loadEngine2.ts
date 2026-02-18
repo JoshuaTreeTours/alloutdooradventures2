@@ -19,6 +19,7 @@ import getMexicoTours from "./mexicoTours";
 import { getEngine2CancunTours } from "./cancunTours";
 import { getEngine2PuertoVallartaTours } from "./puertoVallartaTours";
 import { getEngine2CaboTours } from "./caboTours";
+import { getEngine2AmsterdamTours } from "./amsterdamTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -121,6 +122,7 @@ const allGeneratedTours = mergeEngine2Tours([
   getEngine2CancunTours(),
   getEngine2PuertoVallartaTours(),
   getEngine2CaboTours(),
+  getEngine2AmsterdamTours(),
 ]);
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({

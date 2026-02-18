@@ -54,6 +54,33 @@ const buildDescription = (tour: Engine2Tour) => {
 };
 
 export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
+  const isAmsterdamTour =
+    tour.sourceCountrySlug === "netherlands" && tour.sourceCitySlug === "amsterdam";
+  if (isAmsterdamTour) {
+    const amsterdamTitle = `${sanitizeTourLabel(tour.name)} | Amsterdam Tour`;
+    const amsterdamDescription = `Book ${tour.name} in Amsterdam, Netherlands. Guided tours and curated experiences with local operators.`;
+    const amsterdamCanonical = buildCanonicalUrl(tour.seo.canonicalPath);
+    const amsterdamImage = buildImageUrl(tour.images.hero || tour.seo.ogImage);
+
+    return {
+      title: amsterdamTitle,
+      description: amsterdamDescription,
+      canonical: amsterdamCanonical,
+      og: {
+        title: amsterdamTitle,
+        description: amsterdamDescription,
+        image: amsterdamImage,
+        url: amsterdamCanonical,
+      },
+      twitter: {
+        title: amsterdamTitle,
+        description: amsterdamDescription,
+        image: amsterdamImage,
+        card: "summary_large_image",
+      },
+    };
+  }
+
   const location = [tour.geo.city, tour.geo.region].filter(Boolean).join(", ");
   const title =
     typeof tour.seo.title === "string" && tour.seo.title.trim().length > 0

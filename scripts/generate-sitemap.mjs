@@ -537,6 +537,32 @@ const buildMexicoSitemapFallbackTours = async (catalogModule) => {
   ];
 };
 
+const buildAmsterdamSitemapFallbackTours = async (catalogModule) => {
+  const amsterdamPath = path.resolve(__dirname, "../data/amsterdam.csv");
+  const amsterdamContents = await readFile(amsterdamPath, "utf8");
+  const amsterdamRows = parseCsv(amsterdamContents);
+
+  return amsterdamRows
+    .map((row, index) => {
+      const title = (row.item_name || row.title || row.name || "").trim();
+      const id = (row.item_id || row.sourceItemId || row.id || "").trim();
+
+      if (!title || !id) {
+        console.warn(
+          `[sitemap] skipped Amsterdam fallback row ${index + 2}: missing title/id`
+        );
+        return null;
+      }
+
+      return {
+        seo: {
+          canonicalPath: `/destinations/netherlands/amsterdam/tours/${catalogModule.slugify(title)}-${id}`,
+        },
+      };
+    })
+    .filter(Boolean);
+};
+
 const buildSitemap = async () => {
   const destinationsModule = await tsImport(
     "../src/data/destinations.ts",
@@ -657,11 +683,12 @@ const buildSitemap = async () => {
   });
 
   if (!engine2Tours.length) {
-    const [mexicoFallbackTours, hawaiiFallbackTours] = await Promise.all([
+    const [mexicoFallbackTours, hawaiiFallbackTours, amsterdamFallbackTours] = await Promise.all([
       buildMexicoSitemapFallbackTours(catalogModule),
       buildHawaiiSitemapFallbackTours(catalogModule),
+      buildAmsterdamSitemapFallbackTours(catalogModule),
     ]);
-    [...mexicoFallbackTours, ...hawaiiFallbackTours].forEach((tour) => {
+    [...mexicoFallbackTours, ...hawaiiFallbackTours, ...amsterdamFallbackTours].forEach((tour) => {
       addUrl(toursUrls, tour.seo.canonicalPath);
     });
   }
