@@ -46,7 +46,7 @@ export default function DestinationsIndex() {
     const hasMoreGuides = guideState.cities.length > guideCityLimit;
 
     return (
-      <div className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+      <div className="mb-10 rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           Available Guides in {stateName}
         </p>
@@ -59,7 +59,7 @@ export default function DestinationsIndex() {
             </Link>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-5">
           <Link href={`/guides/us/${stateSlug}`}>
             <a className="text-sm font-semibold text-[#2f4a2f] underline underline-offset-4">
               {hasMoreGuides ? `View all ${stateName} guides` : `${stateName} travel guide`}
@@ -157,20 +157,20 @@ export default function DestinationsIndex() {
           </div>
         </section>
 
-        <section className="mt-10 space-y-12" aria-label="States">
+        <section className="mt-12" aria-label="States">
           {rockyMountainStates.length > 0 ? (
-            <div className="space-y-6">
-              <div className="text-center">
+            <div className="clear-both relative z-0 mt-16 block w-full border-t border-[#d6decf] pt-8 first:mt-0 first:border-t-0 first:pt-0">
+              <div className="w-full text-center mb-8">
                 <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                   Rocky Mountain
                 </span>
-                <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                <h2 className="relative z-10 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                   Featured Rocky Mountain States
                 </h2>
               </div>
               <div className="grid gap-6 md:grid-cols-2">
                 {rockyMountainStates.map((state) => (
-                  <div key={`rocky-mountain-${state.name}`} className="space-y-4">
+                  <div key={`rocky-mountain-${state.name}`} className="relative flex flex-col gap-4">
                     <DestinationCard
                       destination={state}
                       ctaLabel="Discover"
@@ -186,18 +186,21 @@ export default function DestinationsIndex() {
           {regionOrder
             .filter((region) => destinationsByRegion[region]?.length)
             .map((region) => (
-              <div key={region} className="space-y-6">
-                <div className="text-center">
+              <div
+                key={region}
+                className="clear-both relative z-0 mt-16 block w-full border-t border-[#d6decf] pt-8"
+              >
+                <div className="w-full text-center mb-8">
                   <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
                     {getRegionLabel(region)}
                   </span>
-                  <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+                  <h2 className="relative z-10 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
                     {getRegionLabel(region)} destinations
                   </h2>
                 </div>
-                <div className="grid gap-6">
+                <div className="grid gap-8">
                   {destinationsByRegion[region].map((state) => (
-                    <div key={`${region}-${state.name}`} className="space-y-4">
+                    <div key={`${region}-${state.name}`} className="relative flex flex-col gap-4">
                       <DestinationCard
                         destination={state}
                         ctaLabel="View adventures"
@@ -212,12 +215,15 @@ export default function DestinationsIndex() {
             ))}
         </section>
 
-        <section className="mt-16 space-y-8" aria-label="International destinations">
-          <div className="text-center">
+        <section
+          className="clear-both relative z-0 mt-16 block w-full space-y-8 border-t border-[#d6decf] pt-8"
+          aria-label="International destinations"
+        >
+          <div className="w-full text-center mb-8">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
               International
             </span>
-            <h2 className="mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
+            <h2 className="relative z-10 mt-2 text-2xl font-semibold text-[#2f4a2f] md:text-3xl">
               Explore global destinations
             </h2>
             <p className="mt-3 text-sm text-[#405040] md:text-base">
