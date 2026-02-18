@@ -15,6 +15,7 @@ import { loadOregonEngine2Tours } from "./oregonTours";
 import { loadMinnesotaEngine2Tours } from "./minnesotaTours";
 import { loadAlaskaEngine2Tours } from "./alaskaTours";
 import getMexicoTours from "./mexicoTours";
+import { getEngine2CancunTours } from "./cancunTours";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -86,16 +87,35 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
   return null;
 };
 
-const allGeneratedTours = [
-  ...(palmSpringsTours as unknown as readonly Engine2Tour[]),
-  ...(californiaEngine2Tours as unknown as readonly Engine2Tour[]),
-  ...(canadaEngine2Tours as unknown as readonly Engine2Tour[]),
-  ...loadCanoeingEngine2Tours(),
-  ...loadOregonEngine2Tours(),
-  ...loadMinnesotaEngine2Tours(),
-  ...loadAlaskaEngine2Tours(),
-  ...getMexicoTours(),
-];
+const mergeEngine2Tours = (datasets: Engine2Tour[][]) => {
+  const byTourId = new Map<string, Engine2Tour>();
+  const byCanonicalPath = new Map<string, Engine2Tour>();
+
+  for (const tours of datasets) {
+    for (const tour of tours) {
+      if (byTourId.has(tour.id) || byCanonicalPath.has(tour.seo.canonicalPath)) {
+        continue;
+      }
+
+      byTourId.set(tour.id, tour);
+      byCanonicalPath.set(tour.seo.canonicalPath, tour);
+    }
+  }
+
+  return Array.from(byTourId.values());
+};
+
+const allGeneratedTours = mergeEngine2Tours([
+  [...(palmSpringsTours as unknown as readonly Engine2Tour[])],
+  [...(californiaEngine2Tours as unknown as readonly Engine2Tour[])],
+  [...(canadaEngine2Tours as unknown as readonly Engine2Tour[])],
+  loadCanoeingEngine2Tours(),
+  loadOregonEngine2Tours(),
+  loadMinnesotaEngine2Tours(),
+  loadAlaskaEngine2Tours(),
+  getMexicoTours(),
+  getEngine2CancunTours(),
+]);
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
   ...tour,
