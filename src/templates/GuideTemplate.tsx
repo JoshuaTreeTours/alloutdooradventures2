@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { Link } from "wouter";
 
 import GuideInternalLinks from "../components/GuideInternalLinks";
+import GuideLinkPill from "../components/GuideLinkPill";
 import Image from "../components/Image";
 import Seo from "../components/Seo";
 import { getCityBySlugs, getStateBySlug } from "../data/destinations";
@@ -31,14 +32,6 @@ const Section = ({
   </section>
 );
 
-const LinkPill = ({ link }: { link: GuideLink }) => (
-  <Link href={link.href}>
-    <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-      {link.label}
-    </a>
-  </Link>
-);
-
 const GuideImageBlock = ({ image }: { image: GuideImage }) => (
   <div className="mt-10 overflow-hidden rounded-3xl border border-black/10 bg-white/70 shadow-sm">
     <Image
@@ -62,11 +55,12 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
       : getGuideStateBySlug(guide.parentSlug);
   const siblingCities =
     parentGuide?.cities
-      .filter((city) => city.slug !== guide.slug)
+      .filter(city => city.slug !== guide.slug)
       .sort((a, b) => a.name.localeCompare(b.name)) ?? [];
   const showSiblingGuides =
     siblingCities.length > 0 && siblingCities.length <= maxSiblingGuides;
-  const guideBasePath = guide.regionType === "country" ? "/guides/world" : "/guides/us";
+  const guideBasePath =
+    guide.regionType === "country" ? "/guides/world" : "/guides/us";
 
   return (
     <section className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
@@ -80,7 +74,7 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
           </a>
         </Link>
         {showSiblingGuides
-          ? siblingCities.map((city) => (
+          ? siblingCities.map(city => (
               <Link
                 key={`${guide.parentSlug}-${city.slug}`}
                 href={`${guideBasePath}/${guide.parentSlug}/${city.slug}`}
@@ -98,7 +92,7 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
 
 export default function GuideTemplate({ guide }: GuideTemplateProps) {
   const cityPills =
-    guide.topCities?.map((city) => ({
+    guide.topCities?.map(city => ({
       label: city.name,
       href:
         guide.type === "state"
@@ -106,15 +100,14 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           : `/guides/world/${guide.slug}/${city.slug}`,
     })) ?? [];
 
-  const guideImages =
-    guide.type === "city" ? guide.guideImages ?? [] : [];
+  const guideImages = guide.type === "city" ? (guide.guideImages ?? []) : [];
   const guideTitle =
     guide.type === "city" && guide.parentName
       ? `${guide.name}, ${guide.parentName} Outdoor Adventure Guide | Tours & Tips`
       : `${guide.name} Outdoor Adventure Guide | Tours & Tips`;
   const guideDescription = buildMetaDescription(
     guide.intro,
-    `Plan your ${guide.name} adventure with curated tours, itineraries, and local guide highlights.`,
+    `Plan your ${guide.name} adventure with curated tours, itineraries, and local guide highlights.`
   );
   const guideUrl =
     guide.type === "state"
@@ -138,13 +131,14 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
     guide.type === "city" && guide.regionType === "state" && guide.parentSlug
       ? getToursByCity(guide.parentSlug, guide.slug)
       : [];
-  const guideHeroImage = resolveHeroImageForRoute({
-    route: guideUrl,
-    guide,
-    state: destinationState,
-    city: destinationCity,
-    cityTours: cityToursForSeo,
-  }) ?? undefined;
+  const guideHeroImage =
+    resolveHeroImageForRoute({
+      route: guideUrl,
+      guide,
+      state: destinationState,
+      city: destinationCity,
+      cityTours: cityToursForSeo,
+    }) ?? undefined;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -158,7 +152,10 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
             {guide.breadcrumbs.map((crumb, index) => (
-              <span key={`${crumb.href}-${index}`} className="flex items-center gap-3">
+              <span
+                key={`${crumb.href}-${index}`}
+                className="flex items-center gap-3"
+              >
                 <Link href={crumb.href}>
                   <a>{crumb.label}</a>
                 </Link>
@@ -188,8 +185,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           </div>
           {guide.type !== "city" && guide.activities?.length ? (
             <div className="flex flex-wrap gap-3">
-              {guide.activities.map((activity) => (
-                <LinkPill key={activity.href} link={activity} />
+              {guide.activities.map(activity => (
+                <GuideLinkPill key={activity.href} link={activity} />
               ))}
             </div>
           ) : null}
@@ -203,8 +200,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         {guide.type === "city" && guide.activities?.length ? (
           <Section title={`Best ways to explore ${guide.name}`}>
             <div className="flex flex-wrap gap-3">
-              {guide.activities.map((activity) => (
-                <LinkPill key={activity.href} link={activity} />
+              {guide.activities.map(activity => (
+                <GuideLinkPill key={activity.href} link={activity} />
               ))}
             </div>
           </Section>
@@ -212,8 +209,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         {cityPills.length ? (
           <Section title="Top regions / cities">
             <div className="flex flex-wrap gap-3">
-              {cityPills.map((city) => (
-                <LinkPill key={city.href} link={city} />
+              {cityPills.map(city => (
+                <GuideLinkPill key={city.href} link={city} />
               ))}
             </div>
           </Section>
@@ -221,7 +218,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
 
         <Section title="Recommended itineraries">
           <div className="grid gap-6 md:grid-cols-3">
-            {guide.itineraries.map((itinerary) => (
+            {guide.itineraries.map(itinerary => (
               <div
                 key={itinerary.title}
                 className="rounded-2xl border border-black/10 bg-white p-5"
@@ -237,8 +234,8 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
                 </p>
                 {itinerary.links.length ? (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {itinerary.links.map((link) => (
-                      <LinkPill key={link.href} link={link} />
+                    {itinerary.links.map(link => (
+                      <GuideLinkPill key={link.href} link={link} />
                     ))}
                   </div>
                 ) : null}
@@ -256,7 +253,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
             title={`Top ${guide.topThingsToDo.length} things to do in ${guide.name}`}
           >
             <ol className="list-decimal space-y-3 pl-5">
-              {guide.topThingsToDo.map((item) => (
+              {guide.topThingsToDo.map(item => (
                 <li key={item.title}>
                   <p className="font-semibold text-[#1f2a1f]">{item.title}</p>
                   <p className="text-sm text-[#405040]">{item.description}</p>
@@ -272,7 +269,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
               Things to do in {guide.name}
             </h2>
             <div className="mt-6 space-y-8">
-              {guide.thingsToDoSections.map((section) => (
+              {guide.thingsToDoSections.map(section => (
                 <article
                   key={section.title}
                   className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10"
@@ -281,7 +278,7 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
                     {section.title}
                   </h3>
                   <div className="mt-4 space-y-4 text-sm text-[#405040] leading-relaxed md:text-base">
-                    {section.paragraphs.map((paragraph) => (
+                    {section.paragraphs.map(paragraph => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                   </div>
@@ -294,10 +291,14 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         {guideImages[1] ? <GuideImageBlock image={guideImages[1]} /> : null}
 
         <div className="grid gap-6 md:grid-cols-2">
-          <Section title={guide.type === "city" ? "When to go" : "Best time to visit"}>
+          <Section
+            title={guide.type === "city" ? "When to go" : "Best time to visit"}
+          >
             <p>{guide.bestTimeToVisit}</p>
           </Section>
-          <Section title={guide.type === "city" ? "What to bring" : "What to pack"}>
+          <Section
+            title={guide.type === "city" ? "What to bring" : "What to pack"}
+          >
             <p>{guide.whatToPack}</p>
           </Section>
         </div>
