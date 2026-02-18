@@ -1,6 +1,5 @@
-import { Link } from "wouter";
-
 import { countriesWithTours } from "../../../data/europeIndex";
+import DestinationCard from "../../../components/DestinationCard";
 
 export default function EuropeIndex() {
   return (
@@ -16,16 +15,19 @@ export default function EuropeIndex() {
         new experiences added each season.
       </p>
 
-      <section className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {countriesWithTours.map((country) => (
-          <Link key={country.slug} href={`/destinations/europe/${country.slug}`}>
-            <a className="rounded-2xl border border-[#d6decf] bg-white/80 p-5 text-sm text-[#2f4a2f] shadow-sm transition hover:border-[#2f4a2f] hover:text-[#1f2a1f]">
-              <div className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
-                {country.tourCount} tours
-              </div>
-              <div className="mt-2 text-lg font-semibold">{country.name}</div>
-            </a>
-          </Link>
+          <DestinationCard
+            key={country.slug}
+            ctaLabel="Discover"
+            destination={{
+              name: country.name,
+              stateSlug: country.slug,
+              description: `${country.tourCount} tours`,
+              image: country.image,
+              href: `/destinations/europe/${country.slug}`,
+            }}
+          />
         ))}
       </section>
     </main>
