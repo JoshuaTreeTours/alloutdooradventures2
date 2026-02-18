@@ -12,6 +12,15 @@ export type SelectorOption = {
   slug: string;
 };
 
+const normalizeMexicoCityName = (name: string): string => {
+  const normalized = name.trim().toLowerCase().replace(/\s+/g, " ");
+  if (normalized === "ciudad de méxico" || normalized === "ciudad de mexico") {
+    return "Ciudad de México";
+  }
+
+  return name;
+};
+
 export const buildInternationalCountryOptions = (
   internationalTours: Tour[],
   mexicoTours: Engine2Tour[]
@@ -63,7 +72,13 @@ export const buildInternationalCityOptions = ({
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
     return Array.from(
       new Map(
-        mexicoTours.map(tour => [tour.sourceCitySlug, { name: tour.geo.city, slug: tour.sourceCitySlug }])
+        mexicoTours.map(tour => [
+          tour.sourceCitySlug,
+          {
+            name: normalizeMexicoCityName(tour.geo.city),
+            slug: tour.sourceCitySlug,
+          },
+        ])
       ).values()
     ).sort((a, b) => a.name.localeCompare(b.name));
   }

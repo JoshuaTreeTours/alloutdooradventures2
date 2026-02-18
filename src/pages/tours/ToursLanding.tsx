@@ -18,6 +18,7 @@ import {
   getEngine2CanadaProvinceIndex,
   getEngine2MexicoTours,
 } from "../../engine2/data/loadEngine2";
+import { isUSStateName } from "../../constants/usStates";
 import { getStaticPageSeo } from "../../utils/seo";
 import {
   buildInternationalCityOptions,
@@ -60,18 +61,25 @@ export default function ToursLanding() {
             ? parts[1]
             : "";
 
-      if (!stateSlug || bySlug.has(stateSlug) || parts[1] === "world") {
+      const stateName = tour.geo.region || stateSlug;
+
+      if (
+        !stateSlug ||
+        bySlug.has(stateSlug) ||
+        parts[1] === "world" ||
+        !isUSStateName(stateName)
+      ) {
         return;
       }
 
       bySlug.set(stateSlug, {
         slug: stateSlug,
-        name: tour.geo.region || stateSlug,
-        description: `Outdoor experiences across ${tour.geo.region || stateSlug}.`,
+        name: stateName,
+        description: `Outdoor experiences across ${stateName}.`,
         heroImage: "/hero.jpg",
         region: "Featured destination",
-        intro: `${tour.geo.region || stateSlug} is a strong basecamp for guided adventures.`,
-        longDescription: `${tour.geo.region || stateSlug} features growing Engine2 inventory.`,
+        intro: `${stateName} is a strong basecamp for guided adventures.`,
+        longDescription: `${stateName} features growing Engine2 inventory.`,
         topRegions: [],
         cities: [],
         isFallback: true,
@@ -133,7 +141,12 @@ export default function ToursLanding() {
 
   const mexicoTours = useMemo(() => getEngine2MexicoTours(), []);
 
-  const countries = useMemo(
+  const usStateOptions = useMemo(
+    () => sortedStates.filter(state => isUSStateName(state.name)),
+    [sortedStates]
+  );
+
+  const countryOptions = useMemo(
     () => buildInternationalCountryOptions(internationalTours, mexicoTours),
     [internationalTours, mexicoTours]
   );
@@ -293,10 +306,6 @@ export default function ToursLanding() {
       window.location.assign("/destinations/world/canada");
       return;
     }
-
-    if (nextCountry === MEXICO_COUNTRY_NAME) {
-      window.location.assign("/destinations/mexico");
-    }
   };
 
   const handleProvinceChange = (nextProvinceSlug: string) => {
@@ -361,7 +370,7 @@ export default function ToursLanding() {
                 onChange={event => handleStateChange(event.target.value)}
               >
                 <option value="">Select a state</option>
-                {sortedStates.map(state => (
+                {usStateOptions.map(state => (
                   <option key={state.slug} value={state.slug}>
                     {state.name}
                   </option>
@@ -409,7 +418,7 @@ export default function ToursLanding() {
                 onChange={event => handleCountryChange(event.target.value)}
               >
                 <option value="">Select a country</option>
-                {countries.map(country => (
+                {countryOptions.map(country => (
                   <option key={country} value={country}>
                     {country}
                   </option>
