@@ -17,6 +17,7 @@ import { getTopToursForPlace } from "../data/tourIndex";
 import type { Tour } from "../data/tours.types";
 import { cityLongDescriptions } from "../data/cityLongDescriptions";
 import { getCityTourDetailPath, getToursByCity } from "../data/tours";
+import { getMexicoCityMeta } from "../data/international/mexicoCityMeta";
 import { getFlagstaffTourDetailPath } from "../data/flagstaffTours";
 import { filterHeroImages, resolveHeroImageForRoute } from "../utils/hero";
 import { SITE_BRAND_NAME } from "../utils/site";
@@ -169,11 +170,17 @@ export default function CityTemplate({
     },
     { min: 3, max: 6 },
   );
-  const title = `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
-  const description = buildMetaDescription(
-    city.shortDescription,
-    `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,
-  );
+  const mexicoCityMeta =
+    state.slug === "mexico" ? getMexicoCityMeta(city.slug) : null;
+  const title =
+    mexicoCityMeta?.title ??
+    `${city.name}, ${state.name} ${SITE_BRAND_NAME} | Tours & City Guide`;
+  const description =
+    mexicoCityMeta?.description ??
+    buildMetaDescription(
+      city.shortDescription,
+      `Plan hikes, tours, and outdoor experiences around ${city.name}, ${state.name}.`,
+    );
   const categorizedTours = [
     {
       title: "Day Tours & Highlights",

@@ -1,9 +1,11 @@
 import { parse } from "csv-parse/sync";
 
 import mexicoCsvRaw from "../../../data/mexico.csv?raw";
+import puertoVallartaCsvRaw from "../../../data/Puerto Vallarta.csv?raw";
 import { slugify } from "../../utils/slugify";
 
 export interface MexicoTourRow {
+  sourceKey: string;
   id: string;
   title: string;
   city: string;
@@ -22,6 +24,33 @@ export interface MexicoTourRow {
   locationLong: string;
   addressCountry: string;
 }
+
+type MexicoCsvSource = {
+  key: string;
+  label: string;
+  raw: string;
+  forceCountry?: string;
+  forceCountrySlug?: string;
+  forceCity?: string;
+  forceCitySlug?: string;
+};
+
+const MEXICO_SOURCES: MexicoCsvSource[] = [
+  {
+    key: "mexico-core",
+    label: "mexico.csv",
+    raw: mexicoCsvRaw,
+  },
+  {
+    key: "mexico-puerto-vallarta",
+    label: "Puerto Vallarta.csv",
+    raw: puertoVallartaCsvRaw,
+    forceCountry: "Mexico",
+    forceCountrySlug: "mexico",
+    forceCity: "Puerto Vallarta",
+    forceCitySlug: "puerto-vallarta",
+  },
+];
 
 const clean = (value?: string) => (value ?? "").trim();
 
@@ -99,65 +128,84 @@ const isUsRow = (row: Record<string, string>, resolved: MexicoTourRow) => {
 
 export function loadMexicoTours(): MexicoTourRow[] {
   try {
-    if (!clean(mexicoCsvRaw)) {
-      console.warn("[mexico] mexico.csv not found or empty");
-      return [];
-    }
-
-    const parsed = parse(mexicoCsvRaw, {
-      columns: true,
-      skip_empty_lines: true,
-      relax_column_count: true,
-    }) as Array<Record<string, string>>;
-
     let filteredUsRows = 0;
 
-    const rows = parsed.reduce<MexicoTourRow[]>((acc, record, index) => {
-      try {
-        const locationParts = getLocationParts(clean(record.location));
-        const locationCountry = locationParts[0] ?? "";
-        const locationRegion = locationParts[1] ?? "";
-        const locationCity = locationParts[2] ?? "";
-
-        const row: MexicoTourRow = {
-          id: clean(
-            record.id || record.tour_id || record.item_id || record.sourceItemId
-          ),
-          title: clean(record.title || record.name || record.item_name),
-          city: resolveCity(record) || locationCity,
-          region: resolveRegion(record) || locationRegion,
-          country: resolveCountry(record) || locationCountry,
-          description: clean(record.description || record.summary),
-          image: clean(record.image || record.image_url || record.photo),
-          price: clean(record.price || record.starting_price),
-          bookingUrl: clean(
-            record.booking_url || record.regular_link || record.calendar_link
-          ),
-          providerName: clean(record.company_name || record.operator),
-          providerShortName: clean(record.company_shortname),
-          providerEmail: clean(record.company_email),
-          providerPhone: clean(record.company_phone),
-          location: clean(record.location),
-          locationLat: clean(record.location_lat || record.lat),
-          locationLong: clean(record.location_long || record.lng || record.long),
-          addressCountry: clean(record.addressCountry || record.address_country),
-        };
-
-        if (!row.id || !row.title || !row.city) {
-          return acc;
-        }
-
-        if (isUsRow(record, row)) {
-          filteredUsRows += 1;
-          return acc;
-        }
-
-        acc.push(row);
-        return acc;
-      } catch {
-        console.warn(`[mexico] skipped malformed row at index ${index + 2}`);
-        return acc;
+    const rows = MEXICO_SOURCES.reduce<MexicoTourRow[]>((allRows, source) => {
+      if (!clean(source.raw)) {
+        console.warn(`[mexico] ${source.label} not found or empty`);
+        return allRows;
       }
+
+      const parsed = parse(source.raw, {
+        columns: true,
+        skip_empty_lines: true,
+        relax_column_count: true,
+      }) as Array<Record<string, string>>;
+
+      const sourceRows = parsed.reduce<MexicoTourRow[]>((acc, record, index) => {
+        try {
+          const locationParts = getLocationParts(clean(record.location));
+          const locationCountry = locationParts[0] ?? "";
+          const locationRegion = locationParts[1] ?? "";
+          const locationCity = locationParts[2] ?? "";
+
+          const forcedCountry = clean(source.forceCountry);
+          const forcedCountrySlug = clean(source.forceCountrySlug);
+          const forcedCity = clean(source.forceCity);
+          const resolvedRegion = resolveRegion(record) || locationRegion;
+          const resolvedCountry = forcedCountry || resolveCountry(record) || locationCountry;
+          const resolvedCity = forcedCity || resolveCity(record) || locationCity;
+
+          const row: MexicoTourRow = {
+            sourceKey: source.key,
+            id: clean(
+              record.id || record.tour_id || record.item_id || record.sourceItemId
+            ),
+            title: clean(record.title || record.name || record.item_name),
+            city: resolvedCity,
+            region: resolvedRegion,
+            country: resolvedCountry,
+            description: clean(record.description || record.summary),
+            image: clean(record.image || record.image_url || record.photo),
+            price: clean(record.price || record.starting_price),
+            bookingUrl: clean(
+              record.booking_url || record.regular_link || record.calendar_link
+            ),
+            providerName: clean(record.company_name || record.operator),
+            providerShortName: clean(record.company_shortname),
+            providerEmail: clean(record.company_email),
+            providerPhone: clean(record.company_phone),
+            location: forcedCountry && forcedCity
+              ? `${resolvedCountry}/${resolvedRegion}/${resolvedCity}`
+              : clean(record.location),
+            locationLat: clean(record.location_lat || record.lat),
+            locationLong: clean(record.location_long || record.lng || record.long),
+            addressCountry: forcedCountrySlug || clean(record.addressCountry || record.address_country),
+          };
+
+          if (!row.id || !row.title || !row.city) {
+            console.warn(
+              `[mexico] skipped incomplete row in ${source.label} at index ${index + 2}`,
+            );
+            return acc;
+          }
+
+          if (isUsRow(record, row)) {
+            filteredUsRows += 1;
+            return acc;
+          }
+
+          acc.push(row);
+          return acc;
+        } catch {
+          console.warn(
+            `[mexico] skipped malformed row in ${source.label} at index ${index + 2}`,
+          );
+          return acc;
+        }
+      }, []);
+
+      return [...allRows, ...sourceRows];
     }, []);
 
     console.warn("[mexico] filtered US rows:", filteredUsRows);
