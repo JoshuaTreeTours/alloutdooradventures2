@@ -11,6 +11,7 @@ import EuropeCityRoute from "./pages/destinations/europe/EuropeCityRoute";
 import EuropeCityToursRoute from "./pages/destinations/europe/EuropeCityToursRoute";
 import UnitedKingdomRoute from "./pages/destinations/europe/UnitedKingdomRoute";
 import EuropeIndex from "./pages/destinations/europe/EuropeIndex";
+import MexicoDestinationRoute from "./pages/destinations/MexicoDestinationRoute";
 import WorldCountryRoute from "./pages/destinations/world/WorldCountryRoute";
 import WorldCityRoute from "./pages/destinations/world/WorldCityRoute";
 import WorldCityToursRoute from "./pages/destinations/world/WorldCityToursRoute";
@@ -73,6 +74,10 @@ export default function App() {
         <Route path="/united-kingdom" component={UnitedKingdomRoute} />
 
         <Route path="/destinations" component={DestinationsIndex} />
+        <Route
+          path="/destinations/mexico"
+          component={MexicoDestinationRoute}
+        />
         <Route path="/destinations/europe" component={EuropeIndex} />
         <Route
           path="/destinations/europe/:countrySlug/cities/:citySlug/tours"
