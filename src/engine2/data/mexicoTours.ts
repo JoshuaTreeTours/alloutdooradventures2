@@ -24,6 +24,33 @@ const toTitle = (value: string) =>
 const buildFallbackKey = (tour: Engine2Tour) =>
   `${tour.slug}|${tour.sourceCitySlug}|${tour.sourceCountrySlug}`;
 
+
+const normalizeSearch = (value: string) =>
+  clean(value)
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "");
+
+const resolveMexicoCityIdentity = (city: string) => {
+  const normalized = normalizeSearch(city);
+  const isMexicoCity =
+    normalized === "ciudad de mexico" ||
+    normalized === "mexico city" ||
+    normalized === "cdmx";
+
+  if (isMexicoCity) {
+    return {
+      cityName: "Ciudad De México",
+      citySlug: "ciudad-de-mexico",
+    };
+  }
+
+  return {
+    cityName: toTitle(city),
+    citySlug: slugify(city),
+  };
+};
+
 export default function getMexicoTours(): Engine2Tour[] {
   try {
     const byPrimary = new Map<string, Engine2Tour>();
@@ -31,7 +58,8 @@ export default function getMexicoTours(): Engine2Tour[] {
 
     for (const row of loadMexicoTours()) {
       try {
-        const citySlug = slugify(row.city);
+        const cityIdentity = resolveMexicoCityIdentity(row.city);
+        const citySlug = cityIdentity.citySlug;
         if (!citySlug) {
           continue;
         }
@@ -45,7 +73,7 @@ export default function getMexicoTours(): Engine2Tour[] {
         const slug = `${tourSlug}-${row.id}`;
         const canonicalPath = `/destinations/mexico/${citySlug}/tours/${slug}`;
         const providerName = clean(row.providerName) || "Unknown provider";
-        const cityName = toTitle(row.city);
+        const cityName = cityIdentity.cityName;
         const regionName = clean(row.region) ? toTitle(row.region) : "Mexico";
         const copy = buildTourCopy({
           name: row.title,

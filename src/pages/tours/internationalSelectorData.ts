@@ -3,6 +3,7 @@ import type {
   Engine2CanadaProvinceIndexEntry,
   Engine2Tour,
 } from "../../engine2/data/loadEngine2";
+import { slugify } from "../../utils/slugify";
 
 export const CANADA_COUNTRY_NAME = "Canada";
 export const MEXICO_COUNTRY_NAME = "Mexico";
@@ -12,13 +13,36 @@ export type SelectorOption = {
   slug: string;
 };
 
-const normalizeMexicoCityName = (name: string): string => {
-  const normalized = name.trim().toLowerCase().replace(/\s+/g, " ");
-  if (normalized === "ciudad de méxico" || normalized === "ciudad de mexico") {
-    return "Ciudad de México";
+const normalizeSpacing = (value: string) => value.trim().toLowerCase().replace(/\s+/g, " ");
+
+const normalizeAscii = (value: string) =>
+  normalizeSpacing(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+const isMexicoCityAlias = (name: string) => {
+  const normalized = normalizeAscii(name);
+  return (
+    normalized === "ciudad de mexico" ||
+    normalized === "cdmx" ||
+    normalized === "mexico city"
+  );
+};
+
+export const normalizeMexicoCityName = (name: string): string =>
+  isMexicoCityAlias(name) ? "Ciudad De México" : name;
+
+export const getMexicoCityKey = (name: string, fallbackSlug?: string): string => {
+  const normalizedFallbackSlug = normalizeAscii(fallbackSlug ?? "");
+
+  if (
+    isMexicoCityAlias(name) ||
+    normalizedFallbackSlug === "ciudad-de-mexico"
+  ) {
+    return slugify("Ciudad De México");
   }
 
-  return name;
+  return slugify(name) || fallbackSlug || "";
 };
 
 export const buildInternationalCountryOptions = (
@@ -70,17 +94,25 @@ export const buildInternationalCityOptions = ({
   }
 
   if (selectedCountry === MEXICO_COUNTRY_NAME) {
-    return Array.from(
-      new Map(
-        mexicoTours.map(tour => [
-          tour.sourceCitySlug,
-          {
-            name: normalizeMexicoCityName(tour.geo.city),
-            slug: tour.sourceCitySlug,
-          },
-        ])
-      ).values()
-    ).sort((a, b) => a.name.localeCompare(b.name));
+    const byCityKey = new Map<string, SelectorOption>();
+
+    mexicoTours.forEach(tour => {
+      const cityName = normalizeMexicoCityName(tour.geo.city);
+      const cityKey = getMexicoCityKey(tour.geo.city, tour.sourceCitySlug);
+
+      if (!cityKey || byCityKey.has(cityKey)) {
+        return;
+      }
+
+      byCityKey.set(cityKey, {
+        name: cityName,
+        slug: cityKey,
+      });
+    });
+
+    return Array.from(byCityKey.values()).sort((a, b) =>
+      a.name.localeCompare(b.name)
+    );
   }
 
   return Array.from(

@@ -24,6 +24,7 @@ import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
   CANADA_COUNTRY_NAME,
+  getMexicoCityKey,
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
 
@@ -179,7 +180,11 @@ export default function ToursLanding() {
     if (selectedCountry && selectedInternationalCity) {
       if (selectedCountry === MEXICO_COUNTRY_NAME) {
         nextTours = mexicoTours
-          .filter(tour => tour.sourceCitySlug === selectedInternationalCity)
+          .filter(
+            tour =>
+              getMexicoCityKey(tour.geo.city, tour.sourceCitySlug) ===
+              selectedInternationalCity
+          )
           .map(tour => ({
             tour: {
               id: tour.id,
@@ -229,6 +234,13 @@ export default function ToursLanding() {
     selectedStateSlug,
     mexicoTours,
   ]);
+
+  const selectedInternationalCityLabel = useMemo(() => {
+    const match = internationalCities.find(
+      city => city.slug === selectedInternationalCity
+    );
+    return match?.name ?? selectedInternationalCity;
+  }, [internationalCities, selectedInternationalCity]);
 
   const updateUrl = (stateSlug: string, citySlug: string) => {
     const query = new URLSearchParams();
@@ -493,7 +505,7 @@ export default function ToursLanding() {
             <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
               Tours in{" "}
               {selectedCountry && selectedInternationalCity
-                ? `${selectedInternationalCity}, ${selectedCountry}`
+                ? `${selectedInternationalCityLabel}, ${selectedCountry}`
                 : `${selectedCity?.name ?? ""}, ${selectedState?.name ?? ""}`}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">

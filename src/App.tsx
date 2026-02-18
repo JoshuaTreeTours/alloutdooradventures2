@@ -62,6 +62,31 @@ const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
 const FaqRedirect = () => <RouteRedirect to="/faqs" />;
 const ContactRedirect = () => <RouteRedirect to="/contact" />;
 
+const MexicoCitySlugRedirect = () =>
+  <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />;
+
+type MexicoCityToursSlugRedirectProps = {
+  params: {
+    tourSlug: string;
+  };
+};
+
+const MexicoCityToursSlugRedirect = ({
+  params,
+}: MexicoCityToursSlugRedirectProps) => (
+  <RouteRedirect
+    to={`/destinations/mexico/ciudad-de-mexico/tours/${params.tourSlug}`}
+  />
+);
+
+const MexicoCityBookSlugRedirect = ({
+  params,
+}: MexicoCityToursSlugRedirectProps) => (
+  <RouteRedirect
+    to={`/destinations/mexico/ciudad-de-mexico/tours/${params.tourSlug}/book`}
+  />
+);
+
 export default function App() {
   return (
     <>
@@ -179,6 +204,26 @@ export default function App() {
         <Route
           path="/destinations/united-states/:stateSlug"
           component={StateLandingRoute}
+        />
+
+
+        <Route
+          path="/destinations/mexico/ciudad-de-m-xico"
+          component={MexicoCitySlugRedirect}
+        />
+        <Route
+          path="/destinations/mexico/ciudad-de-m-xico/tours"
+          component={() =>
+            <RouteRedirect to="/destinations/mexico/ciudad-de-mexico/tours" />
+          }
+        />
+        <Route
+          path="/destinations/mexico/ciudad-de-m-xico/tours/:tourSlug"
+          component={MexicoCityToursSlugRedirect}
+        />
+        <Route
+          path="/destinations/mexico/ciudad-de-m-xico/tours/:tourSlug/book"
+          component={MexicoCityBookSlugRedirect}
         />
 
         <Route
