@@ -36,6 +36,23 @@ const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
     ];
   }
 
+  if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
+    return [
+      {
+        name: tour.geo.country,
+        url: `/destinations/${tour.sourceCountrySlug}`,
+      },
+      {
+        name: tour.geo.city,
+        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
+      },
+      {
+        name: "Tours",
+        url: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
+      },
+    ];
+  }
+
   return [
     { name: "California", url: "/destinations/california" },
     { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },

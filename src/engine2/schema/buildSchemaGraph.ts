@@ -52,6 +52,16 @@ const getDestinationMeta = (tour: Engine2Tour) => {
     };
   }
 
+  if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
+    return {
+      countryCode: (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
+      countryName: tour.geo.country,
+      countryUrl: `/destinations/${tour.sourceCountrySlug}`,
+      cityUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
+    };
+  }
+
   return {
     countryCode: "US",
     countryName: tour.geo.region,
