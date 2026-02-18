@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import puertoVallartaCsvRaw from "../../../data/Puerto Vallarta.csv?raw";
+import { puertoVallartaCsvRaw } from "./rawCsvData";
 import { slugify } from "../../utils/slugify";
 
 export interface PuertoVallartaTourRow {

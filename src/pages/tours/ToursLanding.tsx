@@ -20,6 +20,8 @@ import {
 } from "../../engine2/data/loadEngine2";
 import { isUSStateName } from "../../constants/usStates";
 import { getStaticPageSeo } from "../../utils/seo";
+import { slugify } from "../../utils/slugify";
+import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
@@ -142,6 +144,22 @@ export default function ToursLanding() {
 
   const mexicoTours = useMemo(() => getEngine2MexicoTours(), []);
 
+  const internationalEngine2Tours = useMemo(
+    () =>
+      getAllEngine2Tours().filter(
+        tour =>
+          tour.geo.country !== "United States" &&
+          tour.sourceCountrySlug !== "canada" &&
+          tour.sourceCountrySlug !== "mexico"
+      ),
+    []
+  );
+
+  const europeCountrySlugSet = useMemo(
+    () => new Set(EUROPE_COUNTRIES.map((country) => slugify(country))),
+    []
+  );
+
   const usStateOptions = useMemo(
     () => sortedStates.filter(state => isUSStateName(state.name)),
     [sortedStates]
@@ -213,16 +231,55 @@ export default function ToursLanding() {
             href: tour.seo.canonicalPath,
           }));
       } else {
-        nextTours = tours
+        const selectedCitySlug = selectedInternationalCity;
+
+        const standardTours = tours
           .filter(
             tour =>
               tour.destination.country === selectedCountry &&
-              tour.destination.city === selectedInternationalCity
+              tour.destination.citySlug === selectedCitySlug
           )
           .map(tour => ({
             tour,
             href: `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`,
           }));
+
+        const engine2Tours = internationalEngine2Tours
+          .filter(
+            tour =>
+              tour.geo.country === selectedCountry &&
+              (tour.sourceCitySlug === selectedCitySlug ||
+                slugify(tour.geo.city) === selectedCitySlug)
+          )
+          .map(tour => ({
+            tour: {
+              id: tour.id,
+              slug: tour.slug,
+              title: tour.name,
+              description: tour.seo.description,
+              image: tour.images.hero ?? "",
+              price: tour.pricing?.price ? `$${tour.pricing.price}` : undefined,
+              duration: "",
+              difficulty: "",
+              activityType: "Adventure",
+              activitySlugs: ["adventure"],
+              destination: {
+                state: tour.geo.country,
+                stateSlug: slugify(tour.geo.country),
+                city: tour.geo.city,
+                citySlug: tour.sourceCitySlug,
+                country: tour.geo.country,
+                lat: tour.geo.lat ?? undefined,
+                lng: tour.geo.lng ?? undefined,
+              },
+              bookingUrl: tour.booking.bookingUrl,
+              operator: tour.provider.name,
+              source: "manual",
+            },
+            href: tour.seo.canonicalPath,
+          }));
+
+        nextTours = [...standardTours, ...engine2Tours];
       }
     }
 
@@ -233,6 +290,7 @@ export default function ToursLanding() {
     selectedInternationalCity,
     selectedStateSlug,
     mexicoTours,
+    internationalEngine2Tours,
   ]);
 
   const selectedInternationalCityLabel = useMemo(() => {
@@ -351,6 +409,16 @@ export default function ToursLanding() {
 
     if (selectedCountry === MEXICO_COUNTRY_NAME && nextCity) {
       window.location.assign(`/destinations/mexico/${nextCity}/tours`);
+      return;
+    }
+
+    if (selectedCountry && nextCity) {
+      const countrySlug = slugify(selectedCountry);
+      const basePath = europeCountrySlugSet.has(countrySlug)
+        ? `/destinations/europe/${countrySlug}`
+        : `/destinations/world/${countrySlug}`;
+
+      window.location.assign(`${basePath}/cities/${nextCity}`);
     }
   };
 

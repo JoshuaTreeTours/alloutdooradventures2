@@ -1,6 +1,6 @@
 import { parse } from "csv-parse/sync";
 
-import cancunCsvRaw from "../../../data/cancun.csv?raw";
+import { cancunCsvRaw } from "./rawCsvData";
 import { slugify } from "../../utils/slugify";
 
 export interface CancunTourRow {
