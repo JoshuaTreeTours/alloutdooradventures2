@@ -19,6 +19,7 @@ import getMexicoTours from "./mexicoTours";
 import { getEngine2CancunTours } from "./cancunTours";
 import { getEngine2PuertoVallartaTours } from "./puertoVallartaTours";
 import { getEngine2CaboTours } from "./caboTours";
+import { getEngine2MexicoCityTours } from "./mexicoCityTours";
 import { getEngine2AmsterdamTours } from "./amsterdamTours";
 
 export const REQUIRED_FH_URL_34849 =
@@ -122,6 +123,7 @@ const allGeneratedTours = mergeEngine2Tours([
   getEngine2CancunTours(),
   getEngine2PuertoVallartaTours(),
   getEngine2CaboTours(),
+  getEngine2MexicoCityTours(),
   getEngine2AmsterdamTours(),
 ]);
 
