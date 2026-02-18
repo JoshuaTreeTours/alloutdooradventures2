@@ -14,6 +14,7 @@ import { loadCanoeingEngine2Tours } from "./canoeingTours";
 import { loadOregonEngine2Tours } from "./oregonTours";
 import { loadMinnesotaEngine2Tours } from "./minnesotaTours";
 import { loadAlaskaEngine2Tours } from "./alaskaTours";
+import { getEngine2HawaiiTours } from "./hawaiiTours";
 import getMexicoTours from "./mexicoTours";
 import { getEngine2CancunTours } from "./cancunTours";
 import { getEngine2PuertoVallartaTours } from "./puertoVallartaTours";
@@ -115,6 +116,7 @@ const allGeneratedTours = mergeEngine2Tours([
   loadOregonEngine2Tours(),
   loadMinnesotaEngine2Tours(),
   loadAlaskaEngine2Tours(),
+  getEngine2HawaiiTours(),
   getMexicoTours(),
   getEngine2CancunTours(),
   getEngine2PuertoVallartaTours(),
@@ -180,6 +182,9 @@ export const getEngine2TourBySlug = (
 ) =>
   getEngine2TourByPath(
     `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
+  ) ??
+  getEngine2TourByPath(
+    `/destinations/united-states/${stateSlug}/${citySlug}/tours/${tourSlug}`
   );
 
 export const getAllEngine2Tours = (): Engine2Tour[] => engine2Tours;

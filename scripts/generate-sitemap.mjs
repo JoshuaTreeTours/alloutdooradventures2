@@ -388,6 +388,66 @@ const buildTourSummaries = async (catalogModule) => {
 };
 
 
+const parseUsStateFallbackRows = (rows, catalogModule, defaults = {}) =>
+  rows
+    .map((row, index) => {
+      const location = row.location?.trim() || "";
+      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
+      const country = (defaults.country || row.country || row.country_name || parts[0] || "").trim();
+      const stateSlug = (defaults.stateSlug || row.stateSlug || row.state || parts[1] || "").trim();
+      const city = (defaults.city || row.city || parts[2] || "").trim();
+      const citySlug =
+        typeof defaults.citySlug === "function"
+          ? defaults.citySlug(row, catalogModule)
+          : defaults.citySlug || catalogModule.slugify(city);
+      const title = (row.title || row.name || row.item_name || "").trim();
+      const id = (row.id || row.tour_id || row.item_id || row.sourceItemId || "").trim();
+
+      if (!country || !stateSlug || !citySlug || !title || !id) {
+        console.warn(
+          `[sitemap] skipped US fallback row ${index + 2}: missing country/state/city/title/id`
+        );
+        return null;
+      }
+
+      const normalizedCountry = country.toLowerCase();
+      if (!normalizedCountry.includes("united states") && normalizedCountry !== "us" && normalizedCountry !== "usa") {
+        return null;
+      }
+
+      const normalizedStateSlug = catalogModule.slugify(stateSlug);
+
+      return {
+        seo: {
+          canonicalPath: `/destinations/united-states/${normalizedStateSlug}/${citySlug}/tours/${catalogModule.slugify(title)}-${id}`,
+        },
+      };
+    })
+    .filter(Boolean);
+
+const buildHawaiiSitemapFallbackTours = async (catalogModule) => {
+  const hawaiiPath = path.resolve(__dirname, "../data/hawaii.csv");
+  const hawaiiContents = await readFile(hawaiiPath, "utf8");
+  const hawaiiRows = parseCsv(hawaiiContents);
+
+  return parseUsStateFallbackRows(hawaiiRows, catalogModule, {
+    country: "United States",
+    stateSlug: "hawaii",
+    citySlug: (row, module) => {
+      const rawCity = (row.city || row.location_city || "").trim();
+      if (rawCity) {
+        return module.slugify(rawCity);
+      }
+
+      const location = (row.location || "").trim();
+      const parts = location.split("/").map((part) => part.trim()).filter(Boolean);
+      const cityFromLocation = parts[2] || parts[parts.length - 1] || "Hawaii";
+      const normalized = module.slugify(cityFromLocation);
+      return normalized || "hawaii";
+    },
+  });
+};
+
 const parseMexicoFallbackRows = (rows, catalogModule, defaults = {}) =>
   rows
     .map((row, index) => {
@@ -597,8 +657,11 @@ const buildSitemap = async () => {
   });
 
   if (!engine2Tours.length) {
-    const mexicoFallbackTours = await buildMexicoSitemapFallbackTours(catalogModule);
-    mexicoFallbackTours.forEach((tour) => {
+    const [mexicoFallbackTours, hawaiiFallbackTours] = await Promise.all([
+      buildMexicoSitemapFallbackTours(catalogModule),
+      buildHawaiiSitemapFallbackTours(catalogModule),
+    ]);
+    [...mexicoFallbackTours, ...hawaiiFallbackTours].forEach((tour) => {
       addUrl(toursUrls, tour.seo.canonicalPath);
     });
   }
