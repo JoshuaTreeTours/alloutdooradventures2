@@ -1,3 +1,4 @@
+import { getGuideCountryBySlug } from "../../data/guideData";
 import type { Tour } from "../../data/tours.types";
 import type {
   Engine2CanadaProvinceIndexEntry,
@@ -115,6 +116,13 @@ export const buildInternationalCityOptions = ({
     );
   }
 
+  const guideCountry = getGuideCountryBySlug(slugify(selectedCountry));
+  if (guideCountry?.cities.length) {
+    return guideCountry.cities
+      .map((city) => ({ name: city.name, slug: city.slug || slugify(city.name) }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }
+
   return Array.from(
     new Set(
       internationalTours
@@ -123,5 +131,5 @@ export const buildInternationalCityOptions = ({
     )
   )
     .sort((a, b) => a.localeCompare(b))
-    .map(city => ({ name: city, slug: city }));
+    .map(city => ({ name: city, slug: slugify(city) }));
 };

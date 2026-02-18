@@ -15,6 +15,7 @@ import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import type { GuideImage } from "./guideImages";
 import { getGuideImages } from "./guideImages";
 import { getTourDetailPath, tours } from "./tours";
+import { getAllEngine2Tours, type Engine2Tour } from "../engine2/data/loadEngine2";
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 
@@ -115,6 +116,78 @@ const getCountryFromTour = (tour: Tour) => {
   }
 
   return null;
+};
+
+const getCountryFromEngine2Tour = (tour: Engine2Tour) => {
+  const countryName = (tour.geo.country || "").trim();
+  const slug = slugify(countryName || tour.sourceCountrySlug || "");
+
+  if (!countryName || !slug || slug === "united-states") {
+    return null;
+  }
+
+  return {
+    name: countryName,
+    slug,
+  };
+};
+
+const engine2Tours = getAllEngine2Tours();
+
+const engine2CountryCityIndex = engine2Tours.reduce<
+  Map<string, { name: string; tourCount: number; cities: Map<string, GuideCitySummary> }>
+>((index, tour) => {
+  const country = getCountryFromEngine2Tour(tour);
+  if (!country) {
+    return index;
+  }
+
+  const existingCountry =
+    index.get(country.slug) ??
+    {
+      name: country.name,
+      tourCount: 0,
+      cities: new Map<string, GuideCitySummary>(),
+    };
+
+  existingCountry.tourCount += 1;
+
+  const citySlug = tour.sourceCitySlug || slugify(tour.geo.city);
+  if (citySlug) {
+    const cityName = tour.geo.city || citySlug;
+    const city = existingCountry.cities.get(citySlug);
+    if (city) {
+      city.tourCount += 1;
+    } else {
+      existingCountry.cities.set(citySlug, {
+        name: cityName,
+        slug: citySlug,
+        tourCount: 1,
+      });
+    }
+  }
+
+  index.set(country.slug, existingCountry);
+  return index;
+}, new Map());
+
+const mergeCitySummaries = (
+  primary: GuideCitySummary[],
+  secondary: GuideCitySummary[],
+): GuideCitySummary[] => {
+  const bySlug = new Map<string, GuideCitySummary>();
+
+  [...primary, ...secondary].forEach((city) => {
+    const existing = bySlug.get(city.slug);
+    if (existing) {
+      existing.tourCount += city.tourCount;
+      return;
+    }
+
+    bySlug.set(city.slug, { ...city });
+  });
+
+  return Array.from(bySlug.values()).sort((a, b) => a.name.localeCompare(b.name));
 };
 
 const formatList = (items: string[]) => {
@@ -607,16 +680,38 @@ export const getGuideCountries = (): GuidePlaceSummary[] => {
     });
   });
 
+  engine2CountryCityIndex.forEach((countryData, countrySlug) => {
+    const existing = countries.get(countrySlug);
+    if (existing) {
+      existing.tourCount += countryData.tourCount;
+      return;
+    }
+
+    countries.set(countrySlug, {
+      name: countryData.name,
+      slug: countrySlug,
+      tourCount: countryData.tourCount,
+      cities: [],
+    });
+  });
+
   return Array.from(countries.values())
-    .map((country) => ({
-      ...country,
-      cities: buildCitySummaries(
+    .map((country) => {
+      const tourCities = buildCitySummaries(
         tours.filter((tour) => {
           const tourCountry = getCountryFromTour(tour);
           return tourCountry?.slug === country.slug;
         }),
-      ),
-    }))
+      );
+      const engine2Cities = Array.from(
+        engine2CountryCityIndex.get(country.slug)?.cities.values() ?? [],
+      );
+
+      return {
+        ...country,
+        cities: mergeCitySummaries(tourCities, engine2Cities),
+      };
+    })
     .sort((a, b) => a.name.localeCompare(b.name));
 };
 
@@ -764,12 +859,21 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     return country?.slug === countrySlug;
   });
 
-  if (!countryTours.length) {
+  const engine2Country = engine2CountryCityIndex.get(countrySlug);
+
+  if (!countryTours.length && !engine2Country) {
     return null;
   }
 
-  const countryName = getCountryFromTour(countryTours[0])?.name ?? countrySlug;
-  const cities = buildCitySummaries(countryTours);
+  const countryName =
+    getCountryFromTour(countryTours[0])?.name ??
+    engine2CountryCityIndex.get(countrySlug)?.name ??
+    countrySlug;
+  const tourCities = buildCitySummaries(countryTours);
+  const engine2Cities = Array.from(
+    engine2CountryCityIndex.get(countrySlug)?.cities.values() ?? [],
+  );
+  const cities = mergeCitySummaries(tourCities, engine2Cities);
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
@@ -820,7 +924,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     type: "country",
     name: countryName,
     slug: countrySlug,
-    intro: `${countryName} offers ${countryTours.length} tours across ${cities.length} cities, spanning ${formatList(activityLabels)}.`,
+    intro: `${countryName} offers ${countryTours.length + (engine2CountryCityIndex.get(countrySlug)?.tourCount ?? 0)} tours across ${cities.length} cities, spanning ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
       { label: "International", href: "/guides" },
