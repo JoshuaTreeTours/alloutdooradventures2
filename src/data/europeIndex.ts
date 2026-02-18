@@ -6,7 +6,12 @@ export type EuropeCountrySummary = {
   name: string;
   slug: string;
   tourCount: number;
+  image: string;
 };
+
+const EUROPE_FALLBACK_IMAGE = "/hero.jpg";
+
+export const getEuropeFallbackImage = () => EUROPE_FALLBACK_IMAGE;
 
 export const toursByCountry = europeTours.reduce<Record<string, Tour[]>>(
   (accumulator, tour) => {
@@ -30,5 +35,6 @@ export const countriesWithTours: EuropeCountrySummary[] = Object.entries(
     name: tours[0]?.destination.state ?? slug,
     slug,
     tourCount: tours.length,
+    image: tours[0]?.heroImage || getEuropeFallbackImage(),
   }))
   .sort((a, b) => a.name.localeCompare(b.name));
