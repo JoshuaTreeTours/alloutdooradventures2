@@ -1,5 +1,6 @@
 import { deepSouthStates } from "./deepSouth.generated";
 import { northeastStates } from "./northeast.generated";
+import { canonicalHref, getStateGuidePath } from "../utils/guidePaths";
 
 export type Destination = {
   name: string;
@@ -3309,7 +3310,7 @@ export const destinations: Destination[] = states.map((state) => ({
   description: state.description,
   featuredDescription: state.featuredDescription,
   image: state.heroImage,
-  href: `/destinations/states/${state.slug}`,
+  href: canonicalHref(getStateGuidePath(state.slug)),
   region: state.region,
 }));
 

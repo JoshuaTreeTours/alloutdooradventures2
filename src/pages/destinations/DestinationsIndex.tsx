@@ -46,7 +46,7 @@ export default function DestinationsIndex() {
     const hasMoreGuides = guideState.cities.length > guideCityLimit;
 
     return (
-      <div className="rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
+      <div className="relative z-0 rounded-2xl border border-black/10 bg-white/80 p-5 shadow-sm">
         <p className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
           Available Guides in {stateName}
         </p>
@@ -80,7 +80,7 @@ export default function DestinationsIndex() {
           image={seo.image}
         />
       ) : null}
-      <main className="mx-auto max-w-6xl px-6 pb-20 pt-16">
+      <main className="mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-20 pt-16 md:gap-14">
         <section className="flex flex-col items-center text-center">
           <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
             Destinations
@@ -95,7 +95,7 @@ export default function DestinationsIndex() {
           </p>
         </section>
 
-        <section className="mt-10">
+        <section>
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="rounded-2xl border border-black/10 bg-white/80 p-6 shadow-sm">
               <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
@@ -157,7 +157,7 @@ export default function DestinationsIndex() {
           </div>
         </section>
 
-        <section className="mt-10 space-y-12" aria-label="States">
+        <section className="space-y-14" aria-label="States">
           {rockyMountainStates.length > 0 ? (
             <div className="space-y-6">
               <div className="text-center">
@@ -212,7 +212,7 @@ export default function DestinationsIndex() {
             ))}
         </section>
 
-        <section className="mt-16 space-y-8" aria-label="International destinations">
+        <section className="space-y-8" aria-label="International destinations">
           <div className="text-center">
             <span className="text-xs uppercase tracking-[0.3em] text-[#7a8a6b]">
               International
