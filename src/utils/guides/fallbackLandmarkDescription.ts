@@ -9,6 +9,15 @@ const inferType = (landmarkName: string) => {
   return "landmark";
 };
 
+const limitWords = (text: string, maxWords: number): string => {
+  const words = text.trim().split(/\s+/).filter(Boolean);
+  if (words.length <= maxWords) {
+    return text;
+  }
+
+  return `${words.slice(0, maxWords).join(" ").replace(/[,:;\-]+$/g, "")}.`;
+};
+
 export const fallbackLandmarkDescription = (args: {
   landmarkName: string;
   cityName: string;
@@ -18,13 +27,13 @@ export const fallbackLandmarkDescription = (args: {
   const type = inferType(landmarkName);
 
   const templates: Record<string, string> = {
-    park: `${landmarkName} is a major park in ${cityName}, ${stateName}, with public trails and managed green space. It is a practical stop for walking, viewpoints, and orientation before exploring nearby neighborhoods.`,
-    museum: `${landmarkName} is a museum in ${cityName}, ${stateName}, focused on curated collections and rotating exhibits. It gives visitors a direct introduction to local art, science, or history without requiring a full-day visit.`,
-    bridge: `${landmarkName} is a bridge landmark in ${cityName}, ${stateName}, known as a visible transportation crossing and viewpoint. It is often paired with waterfront walks and nearby districts in city itineraries.`,
-    district: `${landmarkName} is a district in ${cityName}, ${stateName}, recognized for concentrated historic blocks, businesses, and public streets. It works well for walking routes that combine architecture, dining, and local street life.`,
-    waterfront: `${landmarkName} is a waterfront landmark in ${cityName}, ${stateName}, associated with shoreline access and public promenades. Visitors typically come for open views, walking paths, and nearby harbor or river activity.`,
-    landmark: `${landmarkName} is a notable landmark in ${cityName}, ${stateName}. It provides a clear orientation point and is commonly included in city plans for its location, recognizability, and local significance.`,
+    park: `${landmarkName} is a major public park in ${cityName}, ${stateName}, known for open lawns, trails, and recreation areas that anchor outdoor activity in the city.`,
+    museum: `${landmarkName} is a museum in ${cityName}, ${stateName}, featuring curated exhibitions that highlight art, science, or regional history in a single, focused visit.`,
+    bridge: `${landmarkName} is a prominent bridge in ${cityName}, ${stateName}, notable for its engineering profile and elevated views over surrounding waterways and neighborhoods.`,
+    district: `${landmarkName} is a district in ${cityName}, ${stateName}, recognized for concentrated historic streets, local businesses, and architecture that reflects the city's development.`,
+    waterfront: `${landmarkName} is a waterfront area in ${cityName}, ${stateName}, known for shoreline access, scenic promenades, and active public space near the water.`,
+    landmark: `${landmarkName} is a notable landmark in ${cityName}, ${stateName}, known for its local significance and role as a recognizable stop on city visits.`,
   };
 
-  return templates[type];
+  return limitWords(templates[type], 45);
 };
