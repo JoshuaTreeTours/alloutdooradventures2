@@ -34,6 +34,9 @@ import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
 import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import ParisGuideRoute from "./pages/guides/ParisGuideRoute";
+import NewYorkGuidePage from "./pages/guides/custom/NewYorkGuidePage";
+import LasVegasGuidePage from "./pages/guides/custom/LasVegasGuidePage";
+import NevadaGuidePage from "./pages/guides/custom/NevadaGuidePage";
 import Faqs from "./pages/Faqs";
 import Journeys from "./pages/Journeys";
 import About from "./pages/About";
@@ -76,8 +79,9 @@ const DestinationStateGuideRedirect = ({ params }: StateSlugParams) => {
   return <RouteRedirect to={`${stateGuidePath}${queryString}`} />;
 };
 
-const MexicoCitySlugRedirect = () =>
-  <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />;
+const MexicoCitySlugRedirect = () => (
+  <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />
+);
 
 type MexicoCityToursSlugRedirectProps = {
   params: {
@@ -220,16 +224,15 @@ export default function App() {
           component={StateLandingRoute}
         />
 
-
         <Route
           path="/destinations/mexico/ciudad-de-m-xico"
           component={MexicoCitySlugRedirect}
         />
         <Route
           path="/destinations/mexico/ciudad-de-m-xico/tours"
-          component={() =>
+          component={() => (
             <RouteRedirect to="/destinations/mexico/ciudad-de-mexico/tours" />
-          }
+          )}
         />
         <Route
           path="/destinations/mexico/ciudad-de-m-xico/tours/:tourSlug"
@@ -274,6 +277,15 @@ export default function App() {
         <Route path="/tours/day/paddle" component={DayPaddleTours} />
         <Route path="/tours/multi-day" component={MultiDayLanding} />
         <Route path="/guides" component={GuidesIndex} />
+        <Route
+          path="/guides/us/new-york/new-york"
+          component={NewYorkGuidePage}
+        />
+        <Route
+          path="/guides/us/nevada/las-vegas"
+          component={LasVegasGuidePage}
+        />
+        <Route path="/guides/us/nevada" component={NevadaGuidePage} />
         <Route
           path="/guides/us/:stateSlug/:citySlug"
           component={CityGuideUsRoute}
