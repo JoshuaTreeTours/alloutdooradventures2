@@ -29,12 +29,20 @@ const hasTwoCapitalizedWords = (
   return usable.length >= 2;
 };
 
+const firstSixWords = (text: string) =>
+  normalize(text)
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 6)
+    .join(" ");
+
 export const validateThingsToDo = (
   items: Tier2ThingToDo[],
   cityName: string,
   stateName: string
 ): string[] => {
   const failures: string[] = [];
+  const openingTracker = new Map<string, string>();
 
   items.forEach(item => {
     if (FORBIDDEN_TITLE_PATTERNS.some(pattern => pattern.test(item.title))) {
@@ -50,10 +58,20 @@ export const validateThingsToDo = (
     }
 
     const words = item.description.trim().split(/\s+/).filter(Boolean).length;
-    if (words < 45 || words > 75) {
-      failures.push(
-        `Description length out of range (${words}) for: ${item.title}`
-      );
+    if (words > 120) {
+      failures.push(`Description too long (${words}) for: ${item.title}`);
+    }
+
+    const opening = firstSixWords(item.description);
+    if (opening) {
+      const previous = openingTracker.get(opening);
+      if (previous) {
+        failures.push(
+          `Duplicate six-word opening between "${previous}" and "${item.title}"`
+        );
+      } else {
+        openingTracker.set(opening, item.title);
+      }
     }
   });
 

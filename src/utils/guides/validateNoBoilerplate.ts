@@ -6,6 +6,11 @@ const BLACKLIST = [
   /plan for 60 to 150 minutes/i,
   /you should/i,
   /pair this with nearby dining/i,
+  /established network of cultural and public places/i,
+  /identifiable physical features/i,
+  /city-level events across the year/i,
+  /civic references/i,
+  /clear sense of place/i,
 ];
 
 export const validateNoBoilerplate = (description: string): boolean =>
