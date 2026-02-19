@@ -144,11 +144,18 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         </Section>
 
         <Section title={`Things to Do in ${place}`}>
-          <ol className="list-decimal space-y-3 pl-5">
-            {guide.thingsToDo.map(item => (
-              <li key={item.title}>
-                <p className="font-semibold text-[#1f2a1f]">{item.title}</p>
-                <p className="text-sm text-[#405040]">{item.description}</p>
+          <ol className="space-y-5">
+            {guide.thingsToDo.map((item, index) => (
+              <li
+                key={item.title}
+                className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
+              >
+                <p className="font-semibold text-[#1f2a1f]">
+                  {index + 1}. {item.title}
+                </p>
+                <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
+                  {item.description}
+                </p>
               </li>
             ))}
           </ol>
