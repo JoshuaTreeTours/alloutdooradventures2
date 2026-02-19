@@ -8,6 +8,7 @@ import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
+import { getRenderedThing } from "../utils/guides/thingCardContent";
 import { buildBreadcrumbList } from "../utils/structuredData";
 
 type GuidePageTemplateProps = {
@@ -31,17 +32,6 @@ const Section = ({
 
 
 
-const slugify = (value: string) =>
-  value
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-");
-
-const getLearnMoreUrl = (guide: GuidePageData, item: GuidePageData["thingsToDo"][number]) =>
-  item.learnMoreUrl ||
-  item.wikiUrl ||
-  `/${guide.slug.replace(/^\/+/, "")}${guide.city ? `#${slugify(item.title)}` : ""}`;
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
@@ -51,6 +41,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const renderedThings = guide.thingsToDo.map((item, index) =>
+    getRenderedThing(guide, item, index)
+  );
 
   const breadcrumbs = [
     { name: "Guides", url: "/guides" },
@@ -82,11 +75,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
       {
         "@type": "ItemList",
         name: `Things to do in ${place}`,
-        itemListElement: guide.thingsToDo.map((item, index) => ({
+        itemListElement: renderedThings.map((item, index) => ({
           "@type": "ListItem",
           position: index + 1,
           name: item.title,
-          item: getLearnMoreUrl(guide, item),
+          item: item.learnMoreUrl,
         })),
       },
     ];
@@ -98,6 +91,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     sameAs,
     urlPath,
     guide.city,
+    renderedThings,
   ]);
 
   useStructuredData(structuredDataNodes);
@@ -172,12 +166,13 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
-            {guide.thingsToDo.map((item, index) => (
+            {renderedThings.map((item, index) => (
               <GuideCard
                 key={item.title}
                 item={item}
                 index={index}
-                learnMoreUrl={getLearnMoreUrl(guide, item)}
+                learnMoreUrl={item.learnMoreUrl}
+                anchorId={item.anchorId}
               />
             ))}
           </ol>

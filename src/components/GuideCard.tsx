@@ -1,16 +1,16 @@
-import type { GuidePageData } from "../utils/loadGuide";
-
-type GuideThing = GuidePageData["thingsToDo"][number];
-
 type GuideCardProps = {
-  item: GuideThing;
+  item: {
+    title: string;
+    description: string;
+  };
   index: number;
   learnMoreUrl: string;
+  anchorId?: string;
 };
 
-export default function GuideCard({ item, index, learnMoreUrl }: GuideCardProps) {
+export default function GuideCard({ item, index, learnMoreUrl, anchorId }: GuideCardProps) {
   return (
-    <li className="rounded-2xl border border-black/10 bg-white p-4 md:p-5">
+    <li id={anchorId} className="rounded-2xl border border-black/10 bg-white p-4 md:p-5">
       <p className="font-semibold text-[#1f2a1f]">
         {index + 1}. {item.title}
       </p>
