@@ -1,0 +1,2585 @@
+{
+  "totalGuides": 429,
+  "updatedGuides": 120,
+  "totalItems": 2478,
+  "wikiItems": 8,
+  "fallbackItems": 2470,
+  "wikiHitRate": 0.003228410008071025,
+  "failures": [],
+  "byGuide": [
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/anchorage.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/denali-national-park-and-preserve.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/fairbanks.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/homer.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/ketchikan.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/palmer.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/alaska/seward.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/cottonwood.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/flagstaff.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/morristown.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/page.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/phoenix.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/prescott.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/scottsdale.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/arizona/sedona.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/avalon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/bonita.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/burlingame.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/calistoga.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/carpinteria.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/coronado.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/del-mar.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/healdsburg.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/indio.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/joshua-tree.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/laguna-beach.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/lake-elsinore.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/los-angeles.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/marina-del-rey.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/napa.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/newport-beach.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/oakhurst.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/oceanside.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/palm-springs.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/pismo-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/poway.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/redondo-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/rio-linda.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/sacramento.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/san-diego.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/san-francisco.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/santa-barbara.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/santa-monica.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/santee.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/solvang.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/sonoma.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/temecula.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/california/ventura.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/colorado/boulder.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/colorado/colorado-springs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/colorado/denver.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/colorado/durango.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/colchester.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/east-lyme.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/essex.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/haddam.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/hartford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/montville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/new-london.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/new-milford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/plainville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/salisbury.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/seymour.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/thomaston.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/connecticut/wolcott.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/delaware/dewey-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/district-of-columbia/washington.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/apopka.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/bonita-springs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/bradenton-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/bradenton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/canal-point.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/cape-canaveral.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/cape-coral.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/clearwater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/clermont.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/cocoa-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/crystal-river.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/cudjoe-key.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/daytona-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/deland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/delray-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/destin.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/dunnellon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/edgewater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/estero.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/eustis.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/everglades-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fellsmere.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fort-lauderdale.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fort-myers-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fort-myers.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fort-walton-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/fort-white.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/gainesville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/goodland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/greenacres.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/gulfport.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/hallandale-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/hastings.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/hobe-sound.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/hollywood.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/homestead.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/homosassa.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/islamorada.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/jacksonville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/jupiter.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/key-biscayne.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/key-largo.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/key-west.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/kissimmee.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/lake-wales.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/lakeland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/lamont.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/lecanto.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/lighthouse-point.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/marathon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/marco-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/matlacha.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/merritt-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/miami-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/miami.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/naples.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/new-smyrna-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/nokomis.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/north-fort-myers.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/north-miami.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/orange-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/orlando.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/osprey.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/oviedo.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/palm-coast.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/palm-harbor.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/palmetto.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/panama-city-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/parrish.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/pembroke-pines.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/pensacola-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/pompano-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/riviera-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/sanford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/santa-rosa-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/sarasota.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/silver-springs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/st-augustine.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/st-cloud.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/st-petersburg.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/stock-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/summerland-key.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/tampa.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/tarpon-springs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/tavernier.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/titusville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/town-n-country.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/venice.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/vero-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/warrington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/west-palm-beach.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/weston.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/winter-haven.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/florida/winter-park.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/albany.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/atlanta.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/augusta.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/blairsville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/braselton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/buford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/cleveland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/covington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/fortson.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/helen.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/hogansville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/juliette.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/leesburg.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/lizella.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/macon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/peachtree-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/roswell.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/savannah.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/senoia.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/summerville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/georgia/tybee-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/eleele.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/haiku-pauwela.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/hakalau.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/haleiwa.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/hanalei.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/hilo.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/honolulu.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/honomu.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kaaawa.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kahului.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kailua-kona.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kailua.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kaneohe.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/keaau.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kekaha.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/kihei.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/lahaina.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/makawao.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/paia.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/waianae.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/waikoloa-village.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/wailea-makena.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/wailuku.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/hawaii/waimea.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/idaho/coeur-dalene.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/illinois/chicago.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/indiana/indianapolis.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/kentucky/louisville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/kentucky/new-haven.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/kentucky/park-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/abita-springs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/baton-rouge.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/lafayette.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/laplace.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/madisonville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/marrero.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/new-orleans.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/ponchatoula.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/vacherie.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/louisiana/venice.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/bar-harbor.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/bethel.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/harpswell.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/kennebunk.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/ogunquit.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maine/portland.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/baltimore.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/cambridge.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/cumberland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/denton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/edgewater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/fort-washington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/glen-burnie.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/lusby.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/monkton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/ocean-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/maryland/vienna.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/barnstable.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/beverly.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/boston.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/brookline.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/cambridge.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/chelsea.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/falmouth.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/holbrook.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/lexington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/marblehead.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/mashpee.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/nantucket.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/natick.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/needham.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/newton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/north-andover.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/oak-bluffs.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/quincy.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/randolph.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/revere.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/salem.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/sandwich.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/sharon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/somerville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/sudbury.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/winthrop.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/massachusetts/wrentham.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/michigan/detroit.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/michigan/grosse-ile-township.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/michigan/lake-leelanau.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/michigan/mount-pleasant.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/michigan/traverse-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/minnesota/minneapolis.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/minnesota/stillwater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/mississippi/natchez.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/missouri/branson.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/missouri/kansas-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/missouri/st-louis.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/montana/bozeman.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/montana/missoula.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/montana/whitefish.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/nevada/las-vegas.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/freedom.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/laconia.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/new-castle.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/portsmouth.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/weare.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-hampshire/wolfeboro.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/atlantic-highlands.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/brick-township.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/edgewater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/fieldsboro.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/hillsdale.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/keyport.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/lavallette.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/middletown-township.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/millville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/ocean-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/shamong.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/wallington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-jersey/wildwood-crest.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/abiquiu.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/albuquerque.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/las-cruces.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/los-ranchos-de-albuquerque.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/santa-fe-foothills.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-mexico/santa-fe.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/brooklyn.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/catskill.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/freeport.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/hammondsport.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/hancock.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/ithaca.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/lansing.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/montauk.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/napanoch.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/new-york.json",
+      "tier": "tier1",
+      "wikiUsed": 8,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/queens.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/rushville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/staten-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/warwick.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/asheville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/black-mountain.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/charlotte.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/elkin.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/highlands.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/kill-devil-hills.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/nags-head.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/raleigh.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/north-carolina/ronda.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/cincinnati.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/cleveland.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/columbus.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/grove-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/lancaster.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/logan.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/ohio/rockbridge.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/oklahoma/oklahoma-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/oregon/cascade-locks.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/oregon/portland.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/airville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/bethlehem.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/gettysburg.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/hawley.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/levittown.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/new-stanton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/newville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/ohiopyle.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/philadelphia.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/pittsburgh.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/pennsylvania/wrightsville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/rhode-island/little-compton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/rhode-island/warwick.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/aiken.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/bluffton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/charleston.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/columbia.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/hilton-head-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/johns-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/mount-pleasant.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/saint-helena-island.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-carolina/winnsboro.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/south-dakota/rapid-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/chattanooga.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/christiana.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/delano.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/franklin.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/granville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/greenbrier.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/johnson-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/nashville.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/pigeon-forge.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/sevierville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/tennessee/williamsport.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/aransas-pass.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/austin.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/dallas.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/fort-worth.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/houston.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/port-aransas.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/san-antonio.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/spring.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/texas/the-colony.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/bryce-canyon-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/hurricane.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/moab.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/salt-lake-city.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/springdale.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/utah/st-george.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/braintree.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/bridgewater.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/charleston.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/essex-junction.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/fairlee.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/hartford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/manchester.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/norwich.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/plymouth.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/royalton.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/springfield.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/stowe.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/thetford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/waterbury.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/windsor.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/vermont/woodford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/alexandria.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/arlington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/cape-charles.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/charlottesville.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/chincoteague.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/covington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/eagle-rock.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/great-falls.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/herndon.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/leesburg.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/richmond.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/virginia/stafford.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/washington/chelan.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/washington/seattle.json",
+      "tier": "tier1",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/west-virginia/harpers-ferry.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/darlington.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/fish-creek.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/milwaukee.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/sister-bay.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/sturgeon-bay.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wisconsin/washburn.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wyoming/cody.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 6
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wyoming/jackson-hole.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 8
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wyoming/jackson.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 4
+    },
+    {
+      "file": "/workspace/alloutdooradventures2/src/data/guides/us/wyoming/yellowstone-national-park.json",
+      "tier": "tier2",
+      "wikiUsed": 0,
+      "total": 5
+    }
+  ]
+}

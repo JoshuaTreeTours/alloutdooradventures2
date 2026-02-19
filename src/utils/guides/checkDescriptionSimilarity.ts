@@ -1,30 +1,21 @@
 const STOP_WORDS = new Set([
-  "a",
-  "an",
+  "the",
   "and",
-  "are",
-  "as",
-  "at",
-  "be",
-  "for",
-  "from",
   "in",
+  "of",
+  "to",
+  "a",
   "is",
+  "for",
+  "with",
+  "on",
   "it",
   "its",
-  "of",
-  "on",
-  "or",
-  "that",
-  "the",
+  "as",
+  "at",
+  "from",
   "this",
-  "to",
-  "with",
-  "within",
-  "into",
-  "by",
-  "their",
-  "about",
+  "that",
 ]);
 
 const tokenize = (input: string) =>
@@ -38,19 +29,21 @@ const tokenize = (input: string) =>
 export const jaccardSimilarity = (a: string, b: string): number => {
   const setA = new Set(tokenize(a));
   const setB = new Set(tokenize(b));
-
-  if (!setA.size && !setB.size) {
-    return 1;
-  }
+  if (!setA.size && !setB.size) return 1;
 
   const intersection = Array.from(setA).filter(token => setB.has(token)).length;
   const union = new Set([...Array.from(setA), ...Array.from(setB)]).size;
-  return union === 0 ? 0 : intersection / union;
+  return union ? intersection / union : 0;
 };
+
+export const maxSimilarityAgainst = (candidate: string, existing: string[]): number =>
+  existing.reduce(
+    (max, current) => Math.max(max, jaccardSimilarity(candidate, current)),
+    0
+  );
 
 export const hasHighSimilarity = (
   candidate: string,
   existing: string[],
   threshold = 0.7
-): boolean =>
-  existing.some(description => jaccardSimilarity(candidate, description) > threshold);
+): boolean => maxSimilarityAgainst(candidate, existing) > threshold;
