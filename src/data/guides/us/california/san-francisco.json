@@ -1,22 +1,22 @@
 {
-  "title": "New York Travel Guide",
+  "title": "San Francisco Travel Guide",
   "country": "United States",
-  "state": "New York",
-  "city": "New York",
-  "slug": "guides/us/new-york/new-york",
+  "state": "California",
+  "city": "San Francisco",
+  "slug": "guides/us/california/san-francisco",
   "hero": {
     "image": "",
-    "alt": "New York skyline and landmarks",
-    "headline": "New York Travel Guide",
-    "subheadline": "Plan a high-value New York itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+    "alt": "San Francisco skyline and landmarks",
+    "headline": "San Francisco Travel Guide",
+    "subheadline": "Plan a high-value San Francisco itinerary with top neighborhoods, outdoor access, and proven tour ideas."
   },
   "overview": [
-    "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling."
+    "San Francisco is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for San Francisco without over-scheduling."
   ],
   "highlights": [
     {
-      "title": "Signature sights in New York",
+      "title": "Signature sights in San Francisco",
       "description": "Start with landmark districts and viewpoints during early hours."
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "title": "Plan a nature or water half-day",
-      "description": "New York works best when city highlights are paired with an outdoor window."
+      "description": "San Francisco works best when city highlights are paired with an outdoor window."
     }
   ],
   "bestTimeToVisit": {
@@ -62,11 +62,11 @@
   ],
   "faq": [
     {
-      "q": "How many days are ideal for New York?",
+      "q": "How many days are ideal for San Francisco?",
       "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
     },
     {
-      "q": "Is New York good for outdoor travelers?",
+      "q": "Is San Francisco good for outdoor travelers?",
       "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
     },
     {
@@ -75,12 +75,12 @@
     }
   ],
   "tours": {
-    "stateSlug": "new-york",
-    "citySlug": "new-york",
+    "stateSlug": "california",
+    "citySlug": "san-francisco",
     "limit": 6,
-    "title": "Top New York tours"
+    "title": "Top San Francisco tours"
   },
   "seoLinks": {
-    "officialTourism": "https://www.nyctourism.com/"
+    "officialTourism": "https://www.sftravel.com/"
   }
 }

@@ -1,22 +1,22 @@
 {
-  "title": "New York Travel Guide",
+  "title": "Anchorage Travel Guide",
   "country": "United States",
-  "state": "New York",
-  "city": "New York",
-  "slug": "guides/us/new-york/new-york",
+  "state": "Alaska",
+  "city": "Anchorage",
+  "slug": "guides/us/alaska/anchorage",
   "hero": {
     "image": "",
-    "alt": "New York skyline and landmarks",
-    "headline": "New York Travel Guide",
-    "subheadline": "Plan a high-value New York itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+    "alt": "Anchorage skyline and landmarks",
+    "headline": "Anchorage Travel Guide",
+    "subheadline": "Plan a high-value Anchorage itinerary with top neighborhoods, outdoor access, and proven tour ideas."
   },
   "overview": [
-    "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling."
+    "Anchorage is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Anchorage without over-scheduling."
   ],
   "highlights": [
     {
-      "title": "Signature sights in New York",
+      "title": "Signature sights in Anchorage",
       "description": "Start with landmark districts and viewpoints during early hours."
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "title": "Plan a nature or water half-day",
-      "description": "New York works best when city highlights are paired with an outdoor window."
+      "description": "Anchorage works best when city highlights are paired with an outdoor window."
     }
   ],
   "bestTimeToVisit": {
@@ -62,11 +62,11 @@
   ],
   "faq": [
     {
-      "q": "How many days are ideal for New York?",
+      "q": "How many days are ideal for Anchorage?",
       "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
     },
     {
-      "q": "Is New York good for outdoor travelers?",
+      "q": "Is Anchorage good for outdoor travelers?",
       "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
     },
     {
@@ -75,12 +75,12 @@
     }
   ],
   "tours": {
-    "stateSlug": "new-york",
-    "citySlug": "new-york",
+    "stateSlug": "alaska",
+    "citySlug": "anchorage",
     "limit": 6,
-    "title": "Top New York tours"
+    "title": "Top Anchorage tours"
   },
   "seoLinks": {
-    "officialTourism": "https://www.nyctourism.com/"
+    "officialTourism": "https://www.anchorage.net/"
   }
 }

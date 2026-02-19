@@ -1,22 +1,22 @@
 {
-  "title": "New York Travel Guide",
+  "title": "St Louis Travel Guide",
   "country": "United States",
-  "state": "New York",
-  "city": "New York",
-  "slug": "guides/us/new-york/new-york",
+  "state": "Missouri",
+  "city": "St Louis",
+  "slug": "guides/us/missouri/st-louis",
   "hero": {
     "image": "",
-    "alt": "New York skyline and landmarks",
-    "headline": "New York Travel Guide",
-    "subheadline": "Plan a high-value New York itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+    "alt": "St Louis skyline and landmarks",
+    "headline": "St Louis Travel Guide",
+    "subheadline": "Plan a high-value St Louis itinerary with top neighborhoods, outdoor access, and proven tour ideas."
   },
   "overview": [
-    "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
-    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling."
+    "St Louis is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for St Louis without over-scheduling."
   ],
   "highlights": [
     {
-      "title": "Signature sights in New York",
+      "title": "Signature sights in St Louis",
       "description": "Start with landmark districts and viewpoints during early hours."
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "title": "Plan a nature or water half-day",
-      "description": "New York works best when city highlights are paired with an outdoor window."
+      "description": "St Louis works best when city highlights are paired with an outdoor window."
     }
   ],
   "bestTimeToVisit": {
@@ -62,11 +62,11 @@
   ],
   "faq": [
     {
-      "q": "How many days are ideal for New York?",
+      "q": "How many days are ideal for St Louis?",
       "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
     },
     {
-      "q": "Is New York good for outdoor travelers?",
+      "q": "Is St Louis good for outdoor travelers?",
       "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
     },
     {
@@ -75,12 +75,12 @@
     }
   ],
   "tours": {
-    "stateSlug": "new-york",
-    "citySlug": "new-york",
+    "stateSlug": "missouri",
+    "citySlug": "st-louis",
     "limit": 6,
-    "title": "Top New York tours"
+    "title": "Top St Louis tours"
   },
   "seoLinks": {
-    "officialTourism": "https://www.nyctourism.com/"
+    "officialTourism": "https://explorestlouis.com/"
   }
 }

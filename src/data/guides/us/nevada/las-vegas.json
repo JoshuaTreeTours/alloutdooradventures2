@@ -5,69 +5,82 @@
   "city": "Las Vegas",
   "slug": "guides/us/nevada/las-vegas",
   "hero": {
-    "image": "/images/colorado-hero.jpg",
-    "alt": "Las Vegas Strip skyline at night",
+    "image": "",
+    "alt": "Las Vegas skyline and landmarks",
     "headline": "Las Vegas Travel Guide",
-    "subheadline": "Beyond the Strip: outdoor escapes, iconic neighborhoods, and high-value day plans."
+    "subheadline": "Plan a high-value Las Vegas itinerary with top neighborhoods, outdoor access, and proven tour ideas."
   },
   "overview": [
-    "Las Vegas is known for resort nightlife, but the city is also a strong base for desert landscapes and Southwest road trips. You can split your itinerary between major Strip attractions and nearby outdoor parks.",
-    "For first-time travelers, plan one anchor activity each morning and leave afternoons flexible. Distances can be larger than expected, so cluster your days by area: Strip, Downtown, and day-trip zones.",
-    "If you want a balanced trip, combine one entertainment-heavy night with one early outdoor day. This keeps energy high while avoiding heat and traffic at peak times."
+    "Las Vegas is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Las Vegas without over-scheduling."
   ],
   "highlights": [
-    { "title": "Las Vegas Strip", "description": "Walk major resorts, observation decks, and evening fountain shows." },
-    { "title": "Fremont Street Experience", "description": "Visit Downtown for live music, classic casinos, and street performances." },
-    { "title": "Red Rock Canyon", "description": "Scenic drive, short hikes, and climbing areas 30 minutes from central Las Vegas." },
-    { "title": "Hoover Dam", "description": "Half-day engineering landmark visit with Lake Mead viewpoints." },
-    { "title": "Valley of Fire State Park", "description": "Nevada's standout red sandstone park for sunrise photography." },
-    { "title": "Arts District", "description": "Independent galleries, coffee shops, and local dining off the Strip." },
-    { "title": "Neon Museum", "description": "Historic Las Vegas sign collection with guided storytelling tours." },
-    { "title": "Lake Mead National Recreation Area", "description": "Kayaking, boating, and shoreline viewpoints within day-trip range." }
+    {
+      "title": "Signature sights in Las Vegas",
+      "description": "Start with landmark districts and viewpoints during early hours."
+    },
+    {
+      "title": "Local neighborhoods",
+      "description": "Balance top attractions with one neighborhood known for food and culture."
+    },
+    {
+      "title": "Outdoor access",
+      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
+    },
+    {
+      "title": "Evening experiences",
+      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
+    }
   ],
   "thingsToDo": [
-    { "title": "Book one signature show", "description": "Secure headline entertainment tickets before arrival for best seats." },
-    { "title": "Try a food-focused evening", "description": "Combine one fine-dining reservation with neighborhood casual spots." },
-    { "title": "Take a guided desert hike", "description": "Early-morning tours are ideal for summer conditions." },
-    { "title": "Plan a Hoover Dam + Boulder City stop", "description": "Pairs well with half-day scenic driving routes." },
-    { "title": "Visit Valley of Fire at sunrise", "description": "Cooler temperatures and better light for photos and short trails." },
-    { "title": "Explore Downtown at night", "description": "Fremont area offers a different vibe from mega-resorts." },
-    { "title": "Add a Grand Canyon day option", "description": "West Rim and helicopter options are popular from Las Vegas." }
+    {
+      "title": "Book one top-rated guided tour",
+      "description": "Morning departures usually offer better pace and lower crowd pressure."
+    },
+    {
+      "title": "Cluster stops by area",
+      "description": "Reducing cross-city travel helps you fit more quality stops in one day."
+    },
+    {
+      "title": "Plan a nature or water half-day",
+      "description": "Las Vegas works best when city highlights are paired with an outdoor window."
+    }
   ],
   "bestTimeToVisit": {
-    "title": "Best seasons: March to May and October to November",
+    "title": "Shoulder seasons are best for comfort and flexibility",
     "bullets": [
-      "Spring offers comfortable daytime temperatures for Strip walks and park visits.",
-      "Fall brings mild weather and strong conditions for day trips.",
-      "Summer is very hot; prioritize early starts and indoor midday plans.",
-      "Winter is cooler and often better value for hotels and shows."
+      "Spring and fall typically offer the easiest weather for walking and tours.",
+      "Summer can be busy; reserve major attractions and timed entries early.",
+      "Winter trips can provide better rates and lighter midday crowds in many districts."
     ]
   },
   "travelTips": [
-    "Hydrate constantly—desert air dries you out quickly, even indoors.",
-    "Use rideshare or monorail strategically; walking between resorts can take longer than expected.",
-    "Start outdoor activities early to avoid heat and crowds.",
-    "If planning multiple day trips, consider a rental car for flexibility.",
-    "Check resort fees and parking policies before booking accommodations.",
-    "Pack sun protection year-round: hat, sunscreen, and sunglasses."
+    "Use early starts for major sights and popular viewpoints.",
+    "Pre-book top attractions and guided activities during peak months.",
+    "Keep one flexible block each day for weather or traffic changes.",
+    "Stay close to transit hubs if you want to minimize transfer time."
+  ],
+  "faq": [
+    {
+      "q": "How many days are ideal for Las Vegas?",
+      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
+    },
+    {
+      "q": "Is Las Vegas good for outdoor travelers?",
+      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
+    },
+    {
+      "q": "Should I book tours in advance?",
+      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    }
   ],
   "tours": {
     "stateSlug": "nevada",
     "citySlug": "las-vegas",
     "limit": 6,
-    "title": "Top Las Vegas tours and day trips"
+    "title": "Top Las Vegas tours"
   },
-  "faq": [
-    { "q": "How many days do you need in Las Vegas?", "a": "Three to four days works well for first-time visitors balancing resorts, Downtown, and one outdoor day trip." },
-    { "q": "What is the best month to visit Las Vegas?", "a": "April and October are top choices for moderate weather and outdoor flexibility." },
-    { "q": "Is Las Vegas family-friendly?", "a": "Yes, especially with day trips like Red Rock, Hoover Dam, and family-oriented shows or attractions." },
-    { "q": "Do I need a car in Las Vegas?", "a": "Not for Strip-focused trips, but a car helps if you plan Red Rock, Valley of Fire, or Hoover Dam independently." },
-    { "q": "Can I do Grand Canyon from Las Vegas in one day?", "a": "Yes. West Rim and some South Rim options run as full-day tours from Las Vegas." },
-    { "q": "Is summer travel to Las Vegas a bad idea?", "a": "Summer is workable with early starts, indoor midday plans, and strong hydration habits." }
-  ],
   "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Las_Vegas",
-    "officialTourism": "https://www.visitlasvegas.com/",
-    "reference": "https://www.britannica.com/place/Las-Vegas"
+    "officialTourism": "https://www.visitlasvegas.com/"
   }
 }
