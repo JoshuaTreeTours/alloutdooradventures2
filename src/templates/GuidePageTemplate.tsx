@@ -163,7 +163,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   <a
                     href={item.wikiUrl}
                     target="_blank"
-                    rel="nofollow noopener"
+                    rel="nofollow noopener noreferrer"
                     className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
                   >
                     Learn more
