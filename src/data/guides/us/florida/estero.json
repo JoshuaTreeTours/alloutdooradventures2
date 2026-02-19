@@ -26,10 +26,6 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Bonita Springs",
-      "description": "Bonita Springs is a waterfront in Estero, Florida. Nearby day trip: Bonita Springs is a coastal town in Florida, about 3 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
-    },
-    {
       "title": "Visit Fort Myers",
       "description": "Fort Myers is a waterfront in Estero, Florida. Nearby day trip: Fort Myers is a coastal town in Florida, about 3 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
     },
@@ -38,16 +34,16 @@
       "description": "North Fort Myers is a waterfront in Estero, Florida. Nearby day trip: North Fort Myers is a coastal town in Florida, about 4 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
     },
     {
-      "title": "Visit Cape Coral",
-      "description": "Cape Coral is a waterfront in Estero, Florida. Nearby day trip: Cape Coral is a coastal town in Florida, about 9 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
-    },
-    {
       "title": "Visit Marco Island",
       "description": "Marco Island is a waterfront in Estero, Florida. Nearby day trip: Marco Island is a coastal town in Florida, about 10 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
     },
     {
-      "title": "Visit Goodland",
-      "description": "Goodland is a waterfront in Estero, Florida. Nearby day trip: Goodland is a coastal town in Florida, about 14 miles from Estero. It is a quick hop from Estero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Estero by evening."
+      "title": "Pelican Sound",
+      "description": "Pelican Sound is a practical stop for understanding Estero's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Estero, Florida."
+    },
+    {
+      "title": "Pelican Sound.  Pelican Sound",
+      "description": "Pelican Sound.  Pelican Sound is a practical stop for understanding Estero's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Estero, Florida."
     }
   ],
   "bestTimeToVisit": {

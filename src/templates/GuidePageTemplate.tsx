@@ -159,6 +159,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
                   {item.description}
                 </p>
+                {item.wikiUrl ? (
+                  <a
+                    href={item.wikiUrl}
+                    target="_blank"
+                    rel="nofollow noopener"
+                    className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
+                  >
+                    Learn more
+                  </a>
+                ) : null}
               </li>
             ))}
           </ol>
