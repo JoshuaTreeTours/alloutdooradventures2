@@ -5,20 +5,26 @@ type WikipediaSummary = {
   title?: string;
   extract?: string;
   type?: string;
+  wikibase_item?: string;
+  thumbnail?: {
+    source?: string;
+  };
   content_urls?: {
     desktop?: { page?: string };
   };
 };
 
-type CacheEntry = {
+export type WikipediaSummaryCacheEntry = {
   title: string;
   extract: string;
   pageUrl?: string;
   type?: string;
+  wikidataId?: string;
+  thumbnailUrl?: string;
 };
 
 type CacheState = {
-  summaries: Record<string, CacheEntry | null>;
+  summaries: Record<string, WikipediaSummaryCacheEntry | null>;
 };
 
 const CACHE_PATH = path.resolve(".cache/wiki-summaries.json");
@@ -72,7 +78,9 @@ const waitForSlot = async (requestsPerSecond = 8) => {
 const toCacheKey = (title: string) =>
   title.trim().toLowerCase().replace(/\s+/g, " ");
 
-const normalizeSummary = (data: WikipediaSummary): CacheEntry | null => {
+const normalizeSummary = (
+  data: WikipediaSummary
+): WikipediaSummaryCacheEntry | null => {
   const extract = data.extract?.trim();
   if (!extract) return null;
 
@@ -81,13 +89,15 @@ const normalizeSummary = (data: WikipediaSummary): CacheEntry | null => {
     extract,
     pageUrl: data.content_urls?.desktop?.page,
     type: data.type,
+    wikidataId: data.wikibase_item,
+    thumbnailUrl: data.thumbnail?.source,
   };
 };
 
 export const getWikipediaSummary = async (
   title: string,
   options?: { requestsPerSecond?: number }
-): Promise<CacheEntry | null> => {
+): Promise<WikipediaSummaryCacheEntry | null> => {
   ensureCacheLoaded();
   const trimmed = title.trim();
   if (!trimmed) return null;

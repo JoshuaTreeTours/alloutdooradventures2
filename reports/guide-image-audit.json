@@ -1,0 +1,472 @@
+{
+  "sampled_guides": 18,
+  "total_attractions": 115,
+  "attractions_with_images": 25,
+  "guides_without_any_images": [
+    "Phoenix, Arizona",
+    "Laguna Beach, California",
+    "Los Angeles, California",
+    "Newport Beach, California",
+    "Sacramento, California",
+    "San Diego, California",
+    "San Francisco, California",
+    "Denver, Colorado",
+    "Chicago, Illinois",
+    "Portland, Maine",
+    "Las Vegas, Nevada",
+    "New York, New York",
+    "Seattle, Washington"
+  ],
+  "missing_images": [
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Desert Botanical Garden"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Camelback Mountain"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Heard Museum"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Roosevelt Row"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Papago Park"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore South Mountain Park"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Musical Instrument Museum"
+    },
+    {
+      "city": "Phoenix",
+      "state": "Arizona",
+      "attraction": "Explore Old Town Scottsdale"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "Laguna Beach"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "Online Coaching"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "Overnight Surf Camp"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "Laguna Wilderness Hiking"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "Advanced Surf Coaching Group Lesson"
+    },
+    {
+      "city": "Laguna Beach",
+      "state": "California",
+      "attraction": "After School Surf Program"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Griffith Observatory"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Hollywood Boulevard"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Santa Monica Pier"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Venice Beach"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Getty Center"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Runyon Canyon"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore The Broad"
+    },
+    {
+      "city": "Los Angeles",
+      "state": "California",
+      "attraction": "Explore Malibu"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Visit Newport Beach Pier"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Visit Balboa Pier"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Visit Balboa Island Ferry"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Visit Crystal Cove State Park"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Boston Whaler"
+    },
+    {
+      "city": "Newport Beach",
+      "state": "California",
+      "attraction": "Newport Beach"
+    },
+    {
+      "city": "Sacramento",
+      "state": "California",
+      "attraction": "Old Town Sacramento"
+    },
+    {
+      "city": "Sacramento",
+      "state": "California",
+      "attraction": "River Fox Train"
+    },
+    {
+      "city": "Sacramento",
+      "state": "California",
+      "attraction": "Sacramento Old Town Sacramento"
+    },
+    {
+      "city": "Sacramento",
+      "state": "California",
+      "attraction": "Authentic Adventures Central California"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Balboa Park"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore La Jolla Cove"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore USS Midway Museum"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Gaslamp Quarter"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Old Town San Diego"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Torrey Pines State Reserve"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Mission Beach"
+    },
+    {
+      "city": "San Diego",
+      "state": "California",
+      "attraction": "Explore Sunset Cliffs"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Golden Gate Bridge"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Alcatraz Island"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Fisherman’s Wharf"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Golden Gate Park"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Lombard Street"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Chinatown"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Mission District"
+    },
+    {
+      "city": "San Francisco",
+      "state": "California",
+      "attraction": "Explore Twin Peaks"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Union Station"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore RiNo Art District"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Denver Botanic Gardens"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Red Rocks Park"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Denver Art Museum"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore City Park"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Larimer Square"
+    },
+    {
+      "city": "Denver",
+      "state": "Colorado",
+      "attraction": "Explore Rocky Mountain Arsenal"
+    },
+    {
+      "city": "Miami",
+      "state": "Florida",
+      "attraction": "Explore Brickell"
+    },
+    {
+      "city": "Miami",
+      "state": "Florida",
+      "attraction": "Explore Key Biscayne"
+    },
+    {
+      "city": "Miami",
+      "state": "Florida",
+      "attraction": "Explore Everglades National Park"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Millennium Park"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Navy Pier"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Art Institute of Chicago"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Riverwalk"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Wicker Park"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Lincoln Park"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Willis Tower Skydeck"
+    },
+    {
+      "city": "Chicago",
+      "state": "Illinois",
+      "attraction": "Explore Architecture River Cruise"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Visit Portland Museum of Art"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Visit Casco Bay Lines Ferry Terminal"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Visit Portland Observatory"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Portland Fire Engine Co. Tours"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Fire Engine Co. Tours"
+    },
+    {
+      "city": "Portland",
+      "state": "Maine",
+      "attraction": "Portland Fire Engine Co. Tours.  Portland"
+    },
+    {
+      "city": "Las Vegas",
+      "state": "Nevada",
+      "attraction": "Explore Las Vegas Strip"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Central Park"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Brooklyn Bridge"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Statue of Liberty"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Ellis Island"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore High Line"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Times Square"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore Metropolitan Museum of Art"
+    },
+    {
+      "city": "New York",
+      "state": "New York",
+      "attraction": "Explore DUMBO"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Pike Place Market"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Space Needle"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Chihuly Garden and Glass"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Discovery Park"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Kerry Park"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Fremont"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Seattle Waterfront"
+    },
+    {
+      "city": "Seattle",
+      "state": "Washington",
+      "attraction": "Explore Mount Rainier"
+    }
+  ]
+}

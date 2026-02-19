@@ -11,6 +11,7 @@ import {
   type LandmarkType,
 } from "../src/utils/guides/extractCityLandmarksFromTours";
 import { validateThingsToDo } from "../src/utils/guides/validateThingsToDo";
+import { flushWikiImageCache, getWikiImageUrls } from "../src/utils/wiki/getWikiImage";
 import {
   getLocalPoisForCity,
   getNearbyPoisForCity,
@@ -96,7 +97,7 @@ const fallbackLandmarksFromPois = (
   return [...local, ...nearby];
 };
 
-const run = () => {
+const run = async () => {
   const files = walkGuideFiles(ROOT);
   let updated = 0;
   let usedOverrides = 0;
@@ -139,6 +140,13 @@ const run = () => {
       6
     );
 
+    for (const thing of things) {
+      const photoUrls = await getWikiImageUrls({ title: thing.title });
+      if (photoUrls.length) {
+        thing.photoUrls = photoUrls;
+      }
+    }
+
     if (things.length < 4) {
       failingCities.push(routeKey);
       continue;
@@ -161,6 +169,8 @@ const run = () => {
   if (failingCities.length) {
     console.log(failingCities.join("\n"));
   }
+
+  flushWikiImageCache();
 
   console.log(`Validation failures: ${validationFailures.length}`);
   if (validationFailures.length) {

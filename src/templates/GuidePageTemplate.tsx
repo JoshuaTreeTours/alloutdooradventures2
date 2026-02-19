@@ -150,9 +150,22 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
               const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
-              const photoUrls = Array.isArray(item.photoUrls)
-                ? item.photoUrls.filter(Boolean).slice(0, 3)
-                : [];
+              const candidatePhotoUrls = [
+                ...(Array.isArray(item.photoUrls) ? item.photoUrls : []),
+                ...(typeof item.photoUrl === "string" ? [item.photoUrl] : []),
+                ...(typeof item.image === "string" ? [item.image] : []),
+                ...(typeof item.imageUrl === "string" ? [item.imageUrl] : []),
+              ];
+              const photoUrls = Array.from(new Set(candidatePhotoUrls.filter(Boolean))).slice(0, 3);
+
+              if (
+                (((typeof process !== "undefined" && process.env.NODE_ENV !== "production") || import.meta.env.DEV)) &&
+                !photoUrls.length
+              ) {
+                console.warn(
+                  `[guide-images] Missing attraction images for ${guide.city ?? guide.state}: ${item.title}`
+                );
+              }
 
               return (
                 <li
@@ -163,14 +176,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                     {index + 1}. {item.title}
                   </p>
                   {photoUrls.length ? (
-                    <div className="mt-3 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+                    <div className="mt-3 grid gap-2 grid-cols-1 md:grid-cols-3">
                       {photoUrls.map((photoUrl, photoIndex) => (
                         <img
                           key={`${item.title}-${photoUrl}`}
                           src={photoUrl}
                           alt={`${item.title} photo ${photoIndex + 1}`}
                           loading="lazy"
-                          className="h-32 w-full rounded-lg object-cover"
+                          decoding="async"
+                          referrerPolicy="no-referrer"
+                          className="h-40 w-full rounded-lg object-cover"
                         />
                       ))}
                     </div>

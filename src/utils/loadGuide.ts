@@ -29,6 +29,9 @@ export type GuidePageData = {
     sourceUrl?: string;
     source_url?: string;
     photoUrls?: string[];
+    photoUrl?: string;
+    image?: string;
+    imageUrl?: string;
   }>;
   bestTimeToVisit: {
     title: string;
