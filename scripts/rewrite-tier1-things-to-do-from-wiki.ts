@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { buildWikiLandmarkDescription } from "../src/utils/guides/buildWikiLandmarkDescription";
 import { jaccardSimilarity } from "../src/utils/guides/checkDescriptionSimilarity";
+import { isGenericTravelAdvice } from "../src/utils/guides/isGenericTravelAdvice";
 import { isTier1Guide } from "../src/utils/guides/isTier1Guide";
 import { validateNoBoilerplate } from "../src/utils/guides/validateNoBoilerplate";
 import { flushWikiSummaryCache } from "../src/utils/wiki/wikiSummary";
@@ -33,9 +34,6 @@ const SIMILARITY_THRESHOLD = 0.7;
 
 const FACT_SIGNAL_PATTERN =
   /(\b\d{2,}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%)\b|\b(?:opened|built|founded|established|completed|designated)\s+in\s+\d{4}\b|\bNational\s(?:Park|Scenic Area|Historic Landmark)\b|\b(?:River|Bridge|Museum|Garden|District|Park)\b)/i;
-
-const GENERIC_ADVICE_PATTERN =
-  /(balanced itinerary|easy recommendation|pair this experience|avoid unnecessary transit|target morning or golden hour|high-impact stop|travelers comparing attractions)/i;
 
 const walkGuideFiles = (dir: string): string[] => {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -71,7 +69,7 @@ const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).len
 const isHighQuality = (text: string) => {
   const words = wordCount(text);
   const hasFactSignal = FACT_SIGNAL_PATTERN.test(text);
-  const hasGenericAdvice = GENERIC_ADVICE_PATTERN.test(text);
+  const hasGenericAdvice = isGenericTravelAdvice(text);
   const isBoilerplate = !validateNoBoilerplate(text);
 
   return words > 70 && hasFactSignal && !hasGenericAdvice && !isBoilerplate;
@@ -91,14 +89,21 @@ const shouldRewriteDescription = (args: {
   );
   const maxSimilarity = similarityScores.length ? Math.max(...similarityScores) : 0;
   const hasBoilerplate = !validateNoBoilerplate(description);
+  const hasGenericAdvice = isGenericTravelAdvice(description);
   const tooShort = wordCount(description) < 50;
-  const missingSource = !hasSourceUrl(item);
+  const missingDescription = !description.trim();
 
   if (hasSourceUrl(item) && isHighQuality(description) && !hasBoilerplate) {
     return false;
   }
 
-  return hasBoilerplate || maxSimilarity > SIMILARITY_THRESHOLD || tooShort || missingSource;
+  return (
+    hasBoilerplate ||
+    hasGenericAdvice ||
+    maxSimilarity > SIMILARITY_THRESHOLD ||
+    tooShort ||
+    missingDescription
+  );
 };
 
 const run = async () => {
@@ -147,9 +152,9 @@ const run = async () => {
 
       if (
         !validateNoBoilerplate(description) ||
-        countSentences(description) !== 3 ||
-        wordCount(description) < 60 ||
-        wordCount(description) > 100
+        (hasSourceUrl(item) && (wordCount(description) < 80 || wordCount(description) > 120)) ||
+        (!hasSourceUrl(item) && wordCount(description) > 45) ||
+        countSentences(description) > 3
       ) {
         const retry = await buildWikiLandmarkDescription({
           landmarkName: item.title,
