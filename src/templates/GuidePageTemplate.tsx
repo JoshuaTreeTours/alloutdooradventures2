@@ -1,12 +1,14 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import GuideCard from "../components/GuideCard";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
+import { getRenderedThing } from "../utils/guides/thingCardContent";
 import { buildBreadcrumbList } from "../utils/structuredData";
 
 type GuidePageTemplateProps = {
@@ -28,6 +30,8 @@ const Section = ({
   </section>
 );
 
+
+
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
@@ -37,6 +41,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const renderedThings = guide.thingsToDo.map((item, index) =>
+    getRenderedThing(guide, item, index)
+  );
 
   const breadcrumbs = [
     { name: "Guides", url: "/guides" },
@@ -65,6 +72,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           name: guide.country,
         },
       },
+      {
+        "@type": "ItemList",
+        name: `Things to do in ${place}`,
+        itemListElement: renderedThings.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item.title,
+          item: item.learnMoreUrl,
+        })),
+      },
     ];
   }, [
     breadcrumbs,
@@ -74,6 +91,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     sameAs,
     urlPath,
     guide.city,
+    renderedThings,
   ]);
 
   useStructuredData(structuredDataNodes);
@@ -148,28 +166,14 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
-            {guide.thingsToDo.map((item, index) => (
-              <li
+            {renderedThings.map((item, index) => (
+              <GuideCard
                 key={item.title}
-                className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
-              >
-                <p className="font-semibold text-[#1f2a1f]">
-                  {index + 1}. {item.title}
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-                  {item.description}
-                </p>
-                {item.wikiUrl ? (
-                  <a
-                    href={item.wikiUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-                  >
-                    Learn more
-                  </a>
-                ) : null}
-              </li>
+                item={item}
+                index={index}
+                learnMoreUrl={item.learnMoreUrl}
+                anchorId={item.anchorId}
+              />
             ))}
           </ol>
         </Section>

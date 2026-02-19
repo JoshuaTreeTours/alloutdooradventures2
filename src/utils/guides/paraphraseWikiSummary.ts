@@ -1,89 +1,74 @@
-const IMPORTANT_DATE_HINT = /\b(century|war|UNESCO|Olympics|founded|established|built in|opened in)\b/i;
-
-const cleanText = (text: string) =>
-  text
-    .replace(/\[[^\]]*\]/g, "")
-    .replace(/\([^)]*\bcitation needed\b[^)]*\)/gi, "")
-    .replace(/\s+/g, " ")
-    .trim();
+import { extractFactSignals } from "./validateWikiSpecificity";
 
 const splitSentences = (text: string) =>
-  cleanText(text)
+  text
+    .replace(/\[[^\]]*\]/g, "")
+    .replace(/\s+/g, " ")
+    .trim()
     .split(/(?<=[.!?])\s+/)
     .map(sentence => sentence.trim())
     .filter(Boolean);
 
-const removeNonEssentialDates = (sentence: string) => {
-  if (IMPORTANT_DATE_HINT.test(sentence)) {
-    return sentence;
-  }
+const toSentence = (text: string) => `${text.replace(/[.!?]+$/g, "").trim()}.`;
 
-  return sentence
-    .replace(/\b(1[6-9]\d{2}|20\d{2})\b/g, "")
-    .replace(/\s+,/g, ",")
-    .replace(/\s{2,}/g, " ")
-    .trim();
-};
+const wordCount = (text: string) => text.split(/\s+/).filter(Boolean).length;
 
-const clampWordCount = (text: string, minWords: number, maxWords: number) => {
+const clampWords = (text: string, maxWords: number) => {
   const words = text.split(/\s+/).filter(Boolean);
-  if (words.length <= maxWords) {
-    return words.length >= minWords ? text : null;
-  }
-
-  const trimmed = words.slice(0, maxWords).join(" ").replace(/[,:;\-]+$/g, "");
-  return `${trimmed}.`;
+  if (words.length <= maxWords) return text;
+  return `${words.slice(0, maxWords).join(" ").replace(/[,:;\-]+$/g, "")}.`;
 };
 
-export const paraphraseWikiSummary = (args: {
+export function paraphraseWikiSummary(args: {
+  extract: string;
   landmarkName: string;
   cityName: string;
-  stateName: string;
-  extract: string;
-  variant?: number;
-}): string => {
-  const { landmarkName, cityName, stateName, extract, variant = 0 } = args;
-  const source = splitSentences(extract).map(removeNonEssentialDates);
+  stateName?: string;
+  tier: "tier1" | "tier2";
+}): { text: string; sentenceCount: number; wordCount: number; factSignals: string[] } {
+  const { extract, landmarkName, cityName, stateName, tier } = args;
+  const source = splitSentences(extract);
+  const location = stateName ? `${cityName}, ${stateName}` : cityName;
 
-  const sentence1 =
-    source[0] ||
-    `${landmarkName} is a notable landmark in ${cityName}, ${stateName}, recognized as part of the city's built and cultural environment.`;
+  const definition = source[0] ?? `${landmarkName} is a landmark in ${location}`;
+  const locationSentence = source[1]
+    ? `It is located in ${location}, and ${source[1].replace(/^It\s+(is|was)\s+/i, "").replace(/^it\s+/i, "")}`
+    : `It is located in ${location}`;
 
-  const sentence2Base = source[1]
-    ? `It is known for ${source[1].replace(/^[A-Z][^a-z]*/, "").replace(/^it\s+/i, "").replace(/\.$/, "")}.`
-    : `It is known for its role in ${cityName}'s local identity, with strong associations to the area's history, architecture, or public life.`;
+  if (tier === "tier2") {
+    const details = source.slice(2, 4).map(sentence => sentence.replace(/^It\s+/i, "")).join(" ");
+    const output = clampWords(
+      [
+        toSentence(definition.replace(new RegExp(`^${landmarkName}\\s+`, "i"), `${landmarkName} `)),
+        toSentence(locationSentence),
+        details ? toSentence(details) : "",
+      ]
+        .filter(Boolean)
+        .join(" "),
+      110
+    );
 
-  const sentence3Base = source[2]
-    ? `Visitors experience ${source[2].replace(/^it\s+/i, "").replace(/\.$/, "").toLowerCase()} while exploring the site and surrounding district.`
-    : `Visitors experience distinct views, design details, and neighborhood context that make the site a clear reference point within ${cityName}.`;
-
-  const sentence2Alt = sentence2Base.replace("It is known for", "The landmark is noted for");
-
-  const extras = source.slice(3).join(" ");
-  const sentence3Alt = extras
-    ? `Visitors experience ${extras.replace(/\.$/, "").toLowerCase()} alongside the landmark's main features.`
-    : sentence3Base;
-
-  const ordered =
-    variant % 2 === 1
-      ? [sentence1, sentence3Base, sentence2Alt]
-      : [sentence1, variant > 1 ? sentence2Alt : sentence2Base, variant > 1 ? sentence3Alt : sentence3Base];
-
-  const candidate = ordered
-    .map(s => s.replace(/\s+/g, " ").trim().replace(/\.*$/, "."))
-    .slice(0, 3)
-    .join(" ");
-
-  const clamped = clampWordCount(candidate, 60, 100);
-  if (clamped) {
-    return clamped;
+    return {
+      text: output,
+      sentenceCount: splitSentences(output).length,
+      wordCount: wordCount(output),
+      factSignals: extractFactSignals(extract),
+    };
   }
 
-  return `${sentence1} ${sentence2Base} ${sentence3Base}`
-    .replace(/\s+/g, " ")
-    .split(/\s+/)
-    .slice(0, 100)
-    .join(" ")
-    .replace(/[,:;\-]+$/g, "")
-    .concat(".");
-};
+  const details = source.slice(2, 6).map(sentence => toSentence(sentence.replace(/^It\s+/i, "")));
+  const assembled = [
+    toSentence(definition.replace(new RegExp(`^${landmarkName}\\s+`, "i"), `${landmarkName} `)),
+    toSentence(locationSentence),
+    ...details,
+  ];
+
+  const output = clampWords(assembled.join(" "), 150);
+
+  return {
+    text: output,
+    sentenceCount: splitSentences(output).length,
+    wordCount: wordCount(output),
+    factSignals: extractFactSignals(extract),
+  };
+}

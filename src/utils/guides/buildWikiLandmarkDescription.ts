@@ -1,74 +1,76 @@
-import { hasHighSimilarity } from "./checkDescriptionSimilarity";
-import { fallbackLandmarkDescription } from "./fallbackLandmarkDescription";
+import { maxSimilarityAgainst } from "./checkDescriptionSimilarity";
 import { paraphraseWikiSummary } from "./paraphraseWikiSummary";
-import { validateNoBoilerplate } from "./validateNoBoilerplate";
-import { fetchWikiSummary } from "../wiki/wikiSummary";
+import { findBannedPhrase } from "./validateNoBoilerplate";
+import { validateTier1Specificity } from "./validateWikiSpecificity";
+import { fetchWikiSummaryWithVariants } from "../wiki/wikiSummary";
 
-export type WikiDescResult = {
-  description: string;
-  wikiUrl?: string | null;
-  usedWiki: boolean;
+const splitSentences = (text: string) =>
+  text
+    .replace(/(\d)\.(\d)/g, "$1_$2")
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+
+const enforceTierBounds = (text: string, tier: "tier1" | "tier2") => {
+  const sentences = splitSentences(text);
+  if (tier === "tier1") {
+    return sentences.slice(0, 6).join(" ");
+  }
+
+  const sliced = sentences.slice(0, 3);
+  const joined = sliced.join(" ");
+  const words = joined.split(/\s+/).filter(Boolean);
+  if (words.length <= 120) return joined;
+  return `${words.slice(0, 120).join(" ").replace(/[,:;\-]+$/g, "")}.`;
 };
 
 export async function buildWikiLandmarkDescription(args: {
   landmarkName: string;
   cityName: string;
-  stateName: string;
+  stateName?: string;
+  tier: "tier1" | "tier2";
   existingDescriptions?: string[];
-}): Promise<WikiDescResult> {
-  const { landmarkName, cityName, stateName, existingDescriptions = [] } = args;
-  const candidateTitles = [
-    `${landmarkName}`,
-    `${landmarkName} (${cityName})`,
-    `${landmarkName}, ${cityName}`,
-    `${landmarkName}, ${stateName}`,
-  ];
+}): Promise<{ description: string; wikiUrl: string | null; usedWiki: boolean; tried: string[] }> {
+  const { landmarkName, cityName, stateName, tier, existingDescriptions = [] } = args;
 
-  for (const candidateTitle of candidateTitles) {
-    const summary = await fetchWikiSummary(candidateTitle);
-    if (!summary.extract) {
-      continue;
-    }
+  const wiki = await fetchWikiSummaryWithVariants({
+    landmarkName,
+    cityName,
+    stateName,
+  });
 
-    let best = "";
-    for (let attempt = 0; attempt < 3; attempt += 1) {
-      const candidate = paraphraseWikiSummary({
-        landmarkName,
-        cityName,
-        stateName,
-        extract: summary.extract,
-        variant: attempt,
-      });
-
-      if (!validateNoBoilerplate(candidate)) {
-        continue;
-      }
-
-      if (!hasHighSimilarity(candidate, existingDescriptions)) {
-        return {
-          description: candidate,
-          wikiUrl: summary.url,
-          usedWiki: true,
-        };
-      }
-
-      if (!best || candidate.length > best.length) {
-        best = candidate;
-      }
-    }
-
-    if (best) {
-      return {
-        description: best,
-        wikiUrl: summary.url,
-        usedWiki: true,
-      };
-    }
+  if (!wiki.extract) {
+    return { description: "", wikiUrl: null, usedWiki: false, tried: wiki.tried };
   }
 
-  return {
-    description: fallbackLandmarkDescription({ landmarkName, cityName, stateName }),
-    wikiUrl: null,
-    usedWiki: false,
-  };
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    const parsed = paraphraseWikiSummary({
+      extract: wiki.extract,
+      landmarkName,
+      cityName,
+      stateName,
+      tier,
+    });
+
+    const candidate = enforceTierBounds(parsed.text, tier);
+    if (!candidate || findBannedPhrase(candidate)) continue;
+    if (maxSimilarityAgainst(candidate, existingDescriptions) > 0.7) continue;
+
+    if (tier === "tier1") {
+      const specificity = validateTier1Specificity({
+        text: candidate,
+        factSignalsFromExtract: parsed.factSignals,
+      });
+      if (!specificity.ok) continue;
+    }
+
+    return {
+      description: candidate,
+      wikiUrl: wiki.wikiUrl,
+      usedWiki: true,
+      tried: wiki.tried,
+    };
+  }
+
+  return { description: "", wikiUrl: null, usedWiki: false, tried: wiki.tried };
 }
