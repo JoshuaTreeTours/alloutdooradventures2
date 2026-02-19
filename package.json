@@ -38,7 +38,8 @@
     "check:oregon": "tsx scripts/check-oregon-tours.ts",
     "gen:paris": "pnpm gen:guide --only paris",
     "gen:guide": "tsx --tsconfig tsconfig.node.json scripts/generate-guide-from-wiki.ts",
-    "gen:guides:top": "pnpm gen:guide"
+    "gen:guides:top": "pnpm gen:guide",
+    "gen:guides": "pnpm gen:guides:top"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
