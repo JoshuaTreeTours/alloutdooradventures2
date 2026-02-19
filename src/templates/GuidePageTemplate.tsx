@@ -6,7 +6,6 @@ import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
-import { buildThingToDoPath } from "../utils/guides/thingPages";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 
@@ -150,12 +149,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
-              const internalThingPath = buildThingToDoPath({
-                countrySlug: "us",
-                regionSlug: guide.tours.stateSlug,
-                citySlug: guide.tours.citySlug ?? "",
-                thingTitle: item.title,
-              });
+              const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
 
               return (
                 <li
@@ -168,11 +162,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
                     {item.description}
                   </p>
-                  <Link href={internalThingPath}>
-                    <a className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline">
-                      Learn more
+                  {sourceUrl ? (
+                    <a
+                      href={sourceUrl}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
+                    >
+                      Source
                     </a>
-                  </Link>
+                  ) : null}
                 </li>
               );
             })}

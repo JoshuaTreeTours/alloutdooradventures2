@@ -1,0 +1,300 @@
+{
+  "city": "miami",
+  "generatedAt": "2026-02-19T22:36:37.417Z",
+  "thresholds": {
+    "minWords": 100,
+    "minFactSignals": 2,
+    "maxSimilarity": 0.85,
+    "bannedPhrases": [
+      "One of the most valuable things to do",
+      "Travelers comparing attractions",
+      "balanced itinerary",
+      "high-impact stop",
+      "easy recommendation"
+    ]
+  },
+  "items": [
+    {
+      "title": "Explore South Beach",
+      "wordCount": 112,
+      "factSignalCount": 7,
+      "factSignals": [
+        "Biscayne Bay",
+        "Ocean Drive",
+        "Collins Avenue",
+        "Washington Avenue",
+        "Lummus Park",
+        "Art Deco",
+        "built"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/South_Beach",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Wynwood Walls",
+      "wordCount": 113,
+      "factSignalCount": 3,
+      "factSignals": [
+        "2009",
+        "Wynwood neighborhood",
+        "opened"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wynwood_Walls",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Little Havana",
+      "wordCount": 117,
+      "factSignalCount": 3,
+      "factSignals": [
+        "1959",
+        "SW 8th Street",
+        "Calle Ocho"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Little_Havana",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Vizcaya Museum and Gardens",
+      "wordCount": 112,
+      "factSignalCount": 9,
+      "factSignals": [
+        "1914",
+        "1922",
+        "1994",
+        "Coconut Grove",
+        "Biscayne Bay",
+        "Italian Renaissance Revival",
+        "National Historic Landmark",
+        "built",
+        "designated"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Bayside Marketplace",
+      "wordCount": 113,
+      "factSignalCount": 4,
+      "factSignals": [
+        "1987",
+        "Downtown Miami",
+        "Biscayne Bay",
+        "opened"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Bayside_Marketplace",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Brickell",
+      "wordCount": 119,
+      "factSignalCount": 4,
+      "factSignals": [
+        "2016",
+        "Miami River",
+        "financial district",
+        "opened"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Brickell",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Key Biscayne",
+      "wordCount": 120,
+      "factSignalCount": 8,
+      "factSignals": [
+        "1947",
+        "1825",
+        "1991",
+        "Rickenbacker Causeway",
+        "Cape Florida Lighthouse",
+        "Biscayne Bay",
+        "completed",
+        "incorporated"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Key_Biscayne",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    },
+    {
+      "title": "Explore Everglades National Park",
+      "wordCount": 116,
+      "factSignalCount": 10,
+      "factSignals": [
+        "1947",
+        "1976",
+        "1979",
+        "1987",
+        "Shark Valley",
+        "Ernest F. Coe Visitor Center",
+        "UNESCO Biosphere Reserve",
+        "World Heritage",
+        "Ramsar Wetland",
+        "established"
+      ],
+      "sourceUrl": "https://en.wikipedia.org/wiki/Everglades_National_Park",
+      "sourcePresent": true,
+      "bannedPhraseHits": []
+    }
+  ],
+  "similarity": {
+    "maxScore": 0.31,
+    "pairsOverThreshold": [],
+    "allPairs": [
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Wynwood Walls",
+        "score": 0.226
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Little Havana",
+        "score": 0.226
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Vizcaya Museum and Gardens",
+        "score": 0.238
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Bayside Marketplace",
+        "score": 0.202
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Brickell",
+        "score": 0.238
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Key Biscayne",
+        "score": 0.31
+      },
+      {
+        "a": "Explore South Beach",
+        "b": "Explore Everglades National Park",
+        "score": 0.167
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Little Havana",
+        "score": 0.181
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Vizcaya Museum and Gardens",
+        "score": 0.161
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Bayside Marketplace",
+        "score": 0.213
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Brickell",
+        "score": 0.225
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Key Biscayne",
+        "score": 0.167
+      },
+      {
+        "a": "Explore Wynwood Walls",
+        "b": "Explore Everglades National Park",
+        "score": 0.117
+      },
+      {
+        "a": "Explore Little Havana",
+        "b": "Explore Vizcaya Museum and Gardens",
+        "score": 0.149
+      },
+      {
+        "a": "Explore Little Havana",
+        "b": "Explore Bayside Marketplace",
+        "score": 0.236
+      },
+      {
+        "a": "Explore Little Havana",
+        "b": "Explore Brickell",
+        "score": 0.191
+      },
+      {
+        "a": "Explore Little Havana",
+        "b": "Explore Key Biscayne",
+        "score": 0.226
+      },
+      {
+        "a": "Explore Little Havana",
+        "b": "Explore Everglades National Park",
+        "score": 0.223
+      },
+      {
+        "a": "Explore Vizcaya Museum and Gardens",
+        "b": "Explore Bayside Marketplace",
+        "score": 0.184
+      },
+      {
+        "a": "Explore Vizcaya Museum and Gardens",
+        "b": "Explore Brickell",
+        "score": 0.172
+      },
+      {
+        "a": "Explore Vizcaya Museum and Gardens",
+        "b": "Explore Key Biscayne",
+        "score": 0.19
+      },
+      {
+        "a": "Explore Vizcaya Museum and Gardens",
+        "b": "Explore Everglades National Park",
+        "score": 0.195
+      },
+      {
+        "a": "Explore Bayside Marketplace",
+        "b": "Explore Brickell",
+        "score": 0.236
+      },
+      {
+        "a": "Explore Bayside Marketplace",
+        "b": "Explore Key Biscayne",
+        "score": 0.202
+      },
+      {
+        "a": "Explore Bayside Marketplace",
+        "b": "Explore Everglades National Park",
+        "score": 0.18
+      },
+      {
+        "a": "Explore Brickell",
+        "b": "Explore Key Biscayne",
+        "score": 0.226
+      },
+      {
+        "a": "Explore Brickell",
+        "b": "Explore Everglades National Park",
+        "score": 0.146
+      },
+      {
+        "a": "Explore Key Biscayne",
+        "b": "Explore Everglades National Park",
+        "score": 0.202
+      }
+    ]
+  },
+  "gates": {
+    "minWordsPass": true,
+    "factSignalsPass": true,
+    "sourceUrlsPresent": true,
+    "bannedPhrasesPass": true,
+    "similarityPass": true,
+    "overallPass": true
+  }
+}
