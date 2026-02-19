@@ -26,20 +26,28 @@
   ],
   "thingsToDo": [
     {
-      "title": "A scenic trail with views around Portland",
-      "description": "a scenic trail with views around Portland is one of the easiest ways to understand Portland. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Portland itinerary without forcing extra travel time."
+      "title": "Visit Old Port",
+      "description": "Old Port is a district in Portland, Maine. Old Port is Portland’s historic waterfront district, known for cobblestone streets, brick warehouses, and an easy-to-wander mix of shops and restaurants. The neighborhood is compact and walkable, making it ideal for a self-guided stroll along the harbor. Come in the late afternoon to catch golden light on the waterfront and stay for dinner."
     },
     {
-      "title": "A local park or nature preserve near Portland",
-      "description": "If you are building a shorter trip, include a local park or nature preserve near Portland in your Portland plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+      "title": "Visit Portland Museum of Art",
+      "description": "Portland Museum of Art is a district in Portland, Maine. Portland Museum of Art anchors the city’s Arts District with collections that range from American classics to contemporary exhibits. The galleries are approachable for a short visit, and the location is close to cafés and bookshops for easy pairing. Plan an hour or two to see the highlights and rotating shows."
     },
     {
-      "title": "Catch golden hour at a nearby viewpoint",
-      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Portland because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Portland route stays efficient and balanced."
+      "title": "Visit Eastern Promenade",
+      "description": "Eastern Promenade is a park in Portland, Maine. Eastern Promenade is a scenic park and trail system with sweeping views of Casco Bay and the working harbor. The open lawns and coastal paths make it a relaxing place for a walk or picnic, especially on clear days. It is one of the best spots in Portland for fresh air and water views without leaving the city."
     },
     {
-      "title": "Stroll a waterfront trail or greenway in Portland",
-      "description": "For a reliable local experience in Portland, add Stroll a waterfront trail or greenway in Portland to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Portland day strong variety without overplanning."
+      "title": "Visit Commercial Street",
+      "description": "Commercial Street is a waterfront in Portland, Maine. Commercial Street runs along Portland’s harbor with seafood shacks, boutiques, and dockside activity. The street is lively but compact, so it works well for a short walk between ferry terminals and the Old Port. It is a classic city waterfront stop that captures Portland’s maritime character."
+    },
+    {
+      "title": "Visit Casco Bay Lines Ferry Terminal",
+      "description": "Casco Bay Lines Ferry Terminal is a waterfront in Portland, Maine. Casco Bay Lines Ferry Terminal is the jumping-off point for island ferries, offering a front-row view of Portland’s working harbor. Even if you are not boarding a ferry, the terminal area is a pleasant waterfront stop with benches and photo angles. It is a simple way to soak in the bay atmosphere before heading deeper into town."
+    },
+    {
+      "title": "Visit Portland Observatory",
+      "description": "Portland Observatory is a waterfront in Portland, Maine. Portland Observatory is a historic maritime signal tower perched above the Eastern Promenade. Climbing to the top rewards you with panoramic views over Casco Bay, the harbor, and the city rooftops. It is a compact historic stop that offers one of the best urban viewpoints in Portland."
     }
   ],
   "bestTimeToVisit": {
