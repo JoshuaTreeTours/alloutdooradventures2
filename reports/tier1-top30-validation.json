@@ -1,0 +1,2012 @@
+{
+  "cities": [
+    {
+      "city": "Portland, OR",
+      "file": "src/data/guides/us/oregon/portland.json",
+      "attractions": [
+        {
+          "title": "Explore Washington Park",
+          "word_count": 163,
+          "fact_signal_count": 10,
+          "similarity_max": 0.34,
+          "source_url": "https://en.wikipedia.org/wiki/Washington_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Washington_Park"
+        },
+        {
+          "title": "Explore Powell\u2019s City of Books",
+          "word_count": 164,
+          "fact_signal_count": 9,
+          "similarity_max": 0.329,
+          "source_url": "https://en.wikipedia.org/wiki/Powells_City_of_Books",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Powells_City_of_Books"
+        },
+        {
+          "title": "Explore Pearl District",
+          "word_count": 157,
+          "fact_signal_count": 8,
+          "similarity_max": 0.281,
+          "source_url": "https://en.wikipedia.org/wiki/Pearl_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_District"
+        },
+        {
+          "title": "Explore Lan Su Chinese Garden",
+          "word_count": 164,
+          "fact_signal_count": 11,
+          "similarity_max": 0.24,
+          "source_url": "https://en.wikipedia.org/wiki/Lan_Su_Chinese_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lan_Su_Chinese_Garden"
+        },
+        {
+          "title": "Explore Forest Park",
+          "word_count": 155,
+          "fact_signal_count": 12,
+          "similarity_max": 0.328,
+          "source_url": "https://en.wikipedia.org/wiki/Forest_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Forest_Park"
+        },
+        {
+          "title": "Explore Tom McCall Waterfront Park",
+          "word_count": 165,
+          "fact_signal_count": 10,
+          "similarity_max": 0.331,
+          "source_url": "https://en.wikipedia.org/wiki/Tom_McCall_Waterfront_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Tom_McCall_Waterfront_Park"
+        },
+        {
+          "title": "Explore Alberta Arts District",
+          "word_count": 159,
+          "fact_signal_count": 8,
+          "similarity_max": 0.137,
+          "source_url": "https://en.wikipedia.org/wiki/Alberta_Arts_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Alberta_Arts_District"
+        },
+        {
+          "title": "Explore Columbia River Gorge",
+          "word_count": 162,
+          "fact_signal_count": 13,
+          "similarity_max": 0.26,
+          "source_url": "https://en.wikipedia.org/wiki/Columbia_River_Gorge",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Columbia_River_Gorge"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Santa Barbara, CA",
+      "file": "src/data/guides/us/california/santa-barbara.json",
+      "attractions": [
+        {
+          "title": "Explore Stearns Wharf",
+          "word_count": 156,
+          "fact_signal_count": 9,
+          "similarity_max": 0.747,
+          "source_url": "https://en.wikipedia.org/wiki/Stearns_Wharf",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf"
+        },
+        {
+          "title": "Explore State Street",
+          "word_count": 156,
+          "fact_signal_count": 9,
+          "similarity_max": 0.821,
+          "source_url": "https://en.wikipedia.org/wiki/State_Street",
+          "wikiUrl": "https://en.wikipedia.org/wiki/State_Street"
+        },
+        {
+          "title": "Explore Santa Barbara Mission",
+          "word_count": 121,
+          "fact_signal_count": 8,
+          "similarity_max": 0.594,
+          "source_url": "https://en.wikipedia.org/wiki/Santa_Barbara_Mission",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Mission"
+        },
+        {
+          "title": "Explore Funk Zone",
+          "word_count": 156,
+          "fact_signal_count": 9,
+          "similarity_max": 0.705,
+          "source_url": "https://en.wikipedia.org/wiki/Funk_Zone",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Funk_Zone"
+        },
+        {
+          "title": "Explore Butterfly Beach",
+          "word_count": 125,
+          "fact_signal_count": 9,
+          "similarity_max": 0.413,
+          "source_url": "https://en.wikipedia.org/wiki/Butterfly_Beach",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Butterfly_Beach"
+        },
+        {
+          "title": "Explore Santa Barbara County Courthouse",
+          "word_count": 123,
+          "fact_signal_count": 8,
+          "similarity_max": 0.735,
+          "source_url": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse"
+        },
+        {
+          "title": "Explore Douglas Family Preserve",
+          "word_count": 159,
+          "fact_signal_count": 10,
+          "similarity_max": 0.753,
+          "source_url": "https://en.wikipedia.org/wiki/Douglas_Family_Preserve",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Family_Preserve"
+        },
+        {
+          "title": "Explore Los Padres National Forest",
+          "word_count": 123,
+          "fact_signal_count": 8,
+          "similarity_max": 0.74,
+          "source_url": "https://en.wikipedia.org/wiki/Los_Padres_National_Forest",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Los_Padres_National_Forest"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Joshua Tree, CA",
+      "file": "src/data/guides/us/california/joshua-tree.json",
+      "attractions": [
+        {
+          "title": "Joshua Tree National Park (West Entrance)",
+          "word_count": 132,
+          "fact_signal_count": 8,
+          "similarity_max": 0.397,
+          "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance"
+        },
+        {
+          "title": "Hidden Valley",
+          "word_count": 154,
+          "fact_signal_count": 10,
+          "similarity_max": 0.728,
+          "source_url": "https://en.wikipedia.org/wiki/Hidden_Valley",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Hidden_Valley"
+        },
+        {
+          "title": "Keys View",
+          "word_count": 154,
+          "fact_signal_count": 10,
+          "similarity_max": 0.77,
+          "source_url": "https://en.wikipedia.org/wiki/Keys_View",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Keys_View"
+        },
+        {
+          "title": "Barker Dam",
+          "word_count": 154,
+          "fact_signal_count": 9,
+          "similarity_max": 0.798,
+          "source_url": "https://en.wikipedia.org/wiki/Barker_Dam",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Barker_Dam"
+        },
+        {
+          "title": "Joshua Tree",
+          "word_count": 118,
+          "fact_signal_count": 8,
+          "similarity_max": 0.492,
+          "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree"
+        },
+        {
+          "title": "Hour Visitor Pass",
+          "word_count": 157,
+          "fact_signal_count": 9,
+          "similarity_max": 0.824,
+          "source_url": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Philadelphia, PA",
+      "file": "src/data/guides/us/pennsylvania/philadelphia.json",
+      "attractions": [
+        {
+          "title": "Explore Independence Hall",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.723,
+          "source_url": "https://en.wikipedia.org/wiki/Independence_Hall",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Independence_Hall"
+        },
+        {
+          "title": "Explore Liberty Bell",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.711,
+          "source_url": "https://en.wikipedia.org/wiki/Liberty_Bell",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Liberty_Bell"
+        },
+        {
+          "title": "Explore Reading Terminal Market",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.738,
+          "source_url": "https://en.wikipedia.org/wiki/Reading_Terminal_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Reading_Terminal_Market"
+        },
+        {
+          "title": "Explore Philadelphia Museum of Art",
+          "word_count": 228,
+          "fact_signal_count": 11,
+          "similarity_max": 0.632,
+          "source_url": "https://en.wikipedia.org/wiki/Philadelphia_Museum_of_Art",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Philadelphia_Museum_of_Art"
+        },
+        {
+          "title": "Explore Rittenhouse Square",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.806,
+          "source_url": "https://en.wikipedia.org/wiki/Rittenhouse_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Rittenhouse_Square"
+        },
+        {
+          "title": "Explore Fishtown",
+          "word_count": 186,
+          "fact_signal_count": 10,
+          "similarity_max": 0.666,
+          "source_url": "https://en.wikipedia.org/wiki/Fishtown",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Fishtown"
+        },
+        {
+          "title": "Explore Schuylkill River Trail",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.772,
+          "source_url": "https://en.wikipedia.org/wiki/Schuylkill_River_Trail",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Schuylkill_River_Trail"
+        },
+        {
+          "title": "Explore Elfreth\u2019s Alley",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.797,
+          "source_url": "https://en.wikipedia.org/wiki/Elfreths_Alley",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Elfreths_Alley"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Atlanta, GA",
+      "file": "src/data/guides/us/georgia/atlanta.json",
+      "attractions": [
+        {
+          "title": "Explore Georgia Aquarium",
+          "word_count": 260,
+          "fact_signal_count": 16,
+          "similarity_max": 0.742,
+          "source_url": "https://en.wikipedia.org/wiki/Georgia_Aquarium",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Georgia_Aquarium"
+        },
+        {
+          "title": "Explore BeltLine Eastside Trail",
+          "word_count": 263,
+          "fact_signal_count": 15,
+          "similarity_max": 0.728,
+          "source_url": "https://en.wikipedia.org/wiki/BeltLine_Eastside_Trail",
+          "wikiUrl": "https://en.wikipedia.org/wiki/BeltLine_Eastside_Trail"
+        },
+        {
+          "title": "Explore Ponce City Market",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.764,
+          "source_url": "https://en.wikipedia.org/wiki/Ponce_City_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Ponce_City_Market"
+        },
+        {
+          "title": "Explore Martin Luther King Jr. National Historical Park",
+          "word_count": 192,
+          "fact_signal_count": 11,
+          "similarity_max": 0.624,
+          "source_url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr_National_Historical_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr_National_Historical_Park"
+        },
+        {
+          "title": "Explore Piedmont Park",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.812,
+          "source_url": "https://en.wikipedia.org/wiki/Piedmont_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Piedmont_Park"
+        },
+        {
+          "title": "Explore Midtown",
+          "word_count": 222,
+          "fact_signal_count": 11,
+          "similarity_max": 0.633,
+          "source_url": "https://en.wikipedia.org/wiki/Midtown",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Midtown"
+        },
+        {
+          "title": "Explore High Museum of Art",
+          "word_count": 266,
+          "fact_signal_count": 16,
+          "similarity_max": 0.761,
+          "source_url": "https://en.wikipedia.org/wiki/High_Museum_of_Art",
+          "wikiUrl": "https://en.wikipedia.org/wiki/High_Museum_of_Art"
+        },
+        {
+          "title": "Explore Stone Mountain Park",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.7,
+          "source_url": "https://en.wikipedia.org/wiki/Stone_Mountain_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Stone_Mountain_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Dallas, TX",
+      "file": "src/data/guides/us/texas/dallas.json",
+      "attractions": [
+        {
+          "title": "Explore Dealey Plaza",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.681,
+          "source_url": "https://en.wikipedia.org/wiki/Dealey_Plaza",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Dealey_Plaza"
+        },
+        {
+          "title": "Explore Dallas Arts District",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.839,
+          "source_url": "https://en.wikipedia.org/wiki/Dallas_Arts_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Dallas_Arts_District"
+        },
+        {
+          "title": "Explore Klyde Warren Park",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.686,
+          "source_url": "https://en.wikipedia.org/wiki/Klyde_Warren_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Klyde_Warren_Park"
+        },
+        {
+          "title": "Explore Deep Ellum",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.804,
+          "source_url": "https://en.wikipedia.org/wiki/Deep_Ellum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Deep_Ellum"
+        },
+        {
+          "title": "Explore Bishop Arts District",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.631,
+          "source_url": "https://en.wikipedia.org/wiki/Bishop_Arts_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Bishop_Arts_District"
+        },
+        {
+          "title": "Explore Perot Museum",
+          "word_count": 260,
+          "fact_signal_count": 15,
+          "similarity_max": 0.774,
+          "source_url": "https://en.wikipedia.org/wiki/Perot_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Perot_Museum"
+        },
+        {
+          "title": "Explore White Rock Lake",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.776,
+          "source_url": "https://en.wikipedia.org/wiki/White_Rock_Lake",
+          "wikiUrl": "https://en.wikipedia.org/wiki/White_Rock_Lake"
+        },
+        {
+          "title": "Explore AT&T Discovery District",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.805,
+          "source_url": "https://en.wikipedia.org/wiki/ATandT_Discovery_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/ATandT_Discovery_District"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Houston, TX",
+      "file": "src/data/guides/us/texas/houston.json",
+      "attractions": [
+        {
+          "title": "Explore Space Center Houston",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.81,
+          "source_url": "https://en.wikipedia.org/wiki/Space_Center_Houston",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Space_Center_Houston"
+        },
+        {
+          "title": "Explore Museum District",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.839,
+          "source_url": "https://en.wikipedia.org/wiki/Museum_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Museum_District"
+        },
+        {
+          "title": "Explore Buffalo Bayou Park",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.671,
+          "source_url": "https://en.wikipedia.org/wiki/Buffalo_Bayou_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Buffalo_Bayou_Park"
+        },
+        {
+          "title": "Explore The Galleria",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.666,
+          "source_url": "https://en.wikipedia.org/wiki/The_Galleria",
+          "wikiUrl": "https://en.wikipedia.org/wiki/The_Galleria"
+        },
+        {
+          "title": "Explore Discovery Green",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.598,
+          "source_url": "https://en.wikipedia.org/wiki/Discovery_Green",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Discovery_Green"
+        },
+        {
+          "title": "Explore Montrose",
+          "word_count": 257,
+          "fact_signal_count": 15,
+          "similarity_max": 0.8,
+          "source_url": "https://en.wikipedia.org/wiki/Montrose",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Montrose"
+        },
+        {
+          "title": "Explore Hermann Park",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.667,
+          "source_url": "https://en.wikipedia.org/wiki/Hermann_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Hermann_Park"
+        },
+        {
+          "title": "Explore Kemah Boardwalk",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.667,
+          "source_url": "https://en.wikipedia.org/wiki/Kemah_Boardwalk",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Kemah_Boardwalk"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "San Antonio, TX",
+      "file": "src/data/guides/us/texas/san-antonio.json",
+      "attractions": [
+        {
+          "title": "Explore San Antonio River Walk",
+          "word_count": 229,
+          "fact_signal_count": 11,
+          "similarity_max": 0.697,
+          "source_url": "https://en.wikipedia.org/wiki/San_Antonio_River_Walk",
+          "wikiUrl": "https://en.wikipedia.org/wiki/San_Antonio_River_Walk"
+        },
+        {
+          "title": "Explore The Alamo",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.662,
+          "source_url": "https://en.wikipedia.org/wiki/The_Alamo",
+          "wikiUrl": "https://en.wikipedia.org/wiki/The_Alamo"
+        },
+        {
+          "title": "Explore Pearl District",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.807,
+          "source_url": "https://en.wikipedia.org/wiki/Pearl_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_District"
+        },
+        {
+          "title": "Explore Mission San Jos\u00e9",
+          "word_count": 189,
+          "fact_signal_count": 11,
+          "similarity_max": 0.755,
+          "source_url": "https://en.wikipedia.org/wiki/Mission_San_Jos",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mission_San_Jos"
+        },
+        {
+          "title": "Explore Market Square",
+          "word_count": 225,
+          "fact_signal_count": 12,
+          "similarity_max": 0.777,
+          "source_url": "https://en.wikipedia.org/wiki/Market_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Market_Square"
+        },
+        {
+          "title": "Explore San Fernando Cathedral",
+          "word_count": 189,
+          "fact_signal_count": 11,
+          "similarity_max": 0.758,
+          "source_url": "https://en.wikipedia.org/wiki/San_Fernando_Cathedral",
+          "wikiUrl": "https://en.wikipedia.org/wiki/San_Fernando_Cathedral"
+        },
+        {
+          "title": "Explore Brackenridge Park",
+          "word_count": 225,
+          "fact_signal_count": 12,
+          "similarity_max": 0.842,
+          "source_url": "https://en.wikipedia.org/wiki/Brackenridge_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Brackenridge_Park"
+        },
+        {
+          "title": "Explore Natural Bridge Caverns",
+          "word_count": 264,
+          "fact_signal_count": 16,
+          "similarity_max": 0.678,
+          "source_url": "https://en.wikipedia.org/wiki/Natural_Bridge_Caverns",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Natural_Bridge_Caverns"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "San Jose, CA",
+      "file": null,
+      "attractions": [],
+      "skipped": [
+        {
+          "title": null,
+          "reason": "city_file_missing"
+        }
+      ]
+    },
+    {
+      "city": "San Diego, CA",
+      "file": "src/data/guides/us/california/san-diego.json",
+      "attractions": [
+        {
+          "title": "Explore Balboa Park",
+          "word_count": 215,
+          "fact_signal_count": 8,
+          "similarity_max": 0.256,
+          "source_url": "https://en.wikipedia.org/wiki/Balboa_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Balboa_Park"
+        },
+        {
+          "title": "Explore La Jolla Cove",
+          "word_count": 213,
+          "fact_signal_count": 8,
+          "similarity_max": 0.257,
+          "source_url": "https://en.wikipedia.org/wiki/La_Jolla_Cove",
+          "wikiUrl": "https://en.wikipedia.org/wiki/La_Jolla_Cove"
+        },
+        {
+          "title": "Explore USS Midway Museum",
+          "word_count": 217,
+          "fact_signal_count": 8,
+          "similarity_max": 0.261,
+          "source_url": "https://en.wikipedia.org/wiki/USS_Midway_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/USS_Midway_Museum"
+        },
+        {
+          "title": "Explore Gaslamp Quarter",
+          "word_count": 211,
+          "fact_signal_count": 8,
+          "similarity_max": 0.812,
+          "source_url": "https://en.wikipedia.org/wiki/Gaslamp_Quarter",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Gaslamp_Quarter"
+        },
+        {
+          "title": "Explore Old Town San Diego",
+          "word_count": 219,
+          "fact_signal_count": 8,
+          "similarity_max": 0.258,
+          "source_url": "https://en.wikipedia.org/wiki/Old_Town_San_Diego",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Old_Town_San_Diego"
+        },
+        {
+          "title": "Explore Torrey Pines State Reserve",
+          "word_count": 217,
+          "fact_signal_count": 8,
+          "similarity_max": 0.453,
+          "source_url": "https://en.wikipedia.org/wiki/Torrey_Pines_State_Reserve",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Torrey_Pines_State_Reserve"
+        },
+        {
+          "title": "Explore Mission Beach",
+          "word_count": 215,
+          "fact_signal_count": 8,
+          "similarity_max": 0.27,
+          "source_url": "https://en.wikipedia.org/wiki/Mission_Beach",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mission_Beach"
+        },
+        {
+          "title": "Explore Sunset Cliffs",
+          "word_count": 246,
+          "fact_signal_count": 10,
+          "similarity_max": 0.843,
+          "source_url": "https://en.wikipedia.org/wiki/Sunset_Cliffs",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Sunset_Cliffs"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Phoenix, AZ",
+      "file": "src/data/guides/us/arizona/phoenix.json",
+      "attractions": [
+        {
+          "title": "Explore Desert Botanical Garden",
+          "word_count": 210,
+          "fact_signal_count": 8,
+          "similarity_max": 0.682,
+          "source_url": "https://en.wikipedia.org/wiki/Desert_Botanical_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Desert_Botanical_Garden"
+        },
+        {
+          "title": "Explore Camelback Mountain",
+          "word_count": 206,
+          "fact_signal_count": 8,
+          "similarity_max": 0.522,
+          "source_url": "https://en.wikipedia.org/wiki/Camelback_Mountain",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Camelback_Mountain"
+        },
+        {
+          "title": "Explore Heard Museum",
+          "word_count": 210,
+          "fact_signal_count": 9,
+          "similarity_max": 0.709,
+          "source_url": "https://en.wikipedia.org/wiki/Heard_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Heard_Museum"
+        },
+        {
+          "title": "Explore Roosevelt Row",
+          "word_count": 206,
+          "fact_signal_count": 8,
+          "similarity_max": 0.515,
+          "source_url": "https://en.wikipedia.org/wiki/Roosevelt_Row",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Roosevelt_Row"
+        },
+        {
+          "title": "Explore Papago Park",
+          "word_count": 212,
+          "fact_signal_count": 8,
+          "similarity_max": 0.766,
+          "source_url": "https://en.wikipedia.org/wiki/Papago_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Papago_Park"
+        },
+        {
+          "title": "Explore South Mountain Park",
+          "word_count": 216,
+          "fact_signal_count": 8,
+          "similarity_max": 0.481,
+          "source_url": "https://en.wikipedia.org/wiki/South_Mountain_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/South_Mountain_Park"
+        },
+        {
+          "title": "Explore Musical Instrument Museum",
+          "word_count": 214,
+          "fact_signal_count": 9,
+          "similarity_max": 0.735,
+          "source_url": "https://en.wikipedia.org/wiki/Musical_Instrument_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Musical_Instrument_Museum"
+        },
+        {
+          "title": "Explore Old Town Scottsdale",
+          "word_count": 212,
+          "fact_signal_count": 8,
+          "similarity_max": 0.326,
+          "source_url": "https://en.wikipedia.org/wiki/Old_Town_Scottsdale",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Old_Town_Scottsdale"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Denver, CO",
+      "file": "src/data/guides/us/colorado/denver.json",
+      "attractions": [
+        {
+          "title": "Explore Union Station",
+          "word_count": 243,
+          "fact_signal_count": 9,
+          "similarity_max": 0.657,
+          "source_url": "https://en.wikipedia.org/wiki/Union_Station",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Union_Station"
+        },
+        {
+          "title": "Explore RiNo Art District",
+          "word_count": 212,
+          "fact_signal_count": 9,
+          "similarity_max": 0.504,
+          "source_url": "https://en.wikipedia.org/wiki/RiNo_Art_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/RiNo_Art_District"
+        },
+        {
+          "title": "Explore Denver Botanic Gardens",
+          "word_count": 210,
+          "fact_signal_count": 8,
+          "similarity_max": 0.492,
+          "source_url": "https://en.wikipedia.org/wiki/Denver_Botanic_Gardens",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Denver_Botanic_Gardens"
+        },
+        {
+          "title": "Explore Red Rocks Park",
+          "word_count": 216,
+          "fact_signal_count": 9,
+          "similarity_max": 0.479,
+          "source_url": "https://en.wikipedia.org/wiki/Red_Rocks_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Red_Rocks_Park"
+        },
+        {
+          "title": "Explore Denver Art Museum",
+          "word_count": 214,
+          "fact_signal_count": 8,
+          "similarity_max": 0.276,
+          "source_url": "https://en.wikipedia.org/wiki/Denver_Art_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Denver_Art_Museum"
+        },
+        {
+          "title": "Explore City Park",
+          "word_count": 212,
+          "fact_signal_count": 9,
+          "similarity_max": 0.745,
+          "source_url": "https://en.wikipedia.org/wiki/City_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/City_Park"
+        },
+        {
+          "title": "Explore Larimer Square",
+          "word_count": 206,
+          "fact_signal_count": 9,
+          "similarity_max": 0.762,
+          "source_url": "https://en.wikipedia.org/wiki/Larimer_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Larimer_Square"
+        },
+        {
+          "title": "Explore Rocky Mountain Arsenal",
+          "word_count": 210,
+          "fact_signal_count": 8,
+          "similarity_max": 0.631,
+          "source_url": "https://en.wikipedia.org/wiki/Rocky_Mountain_Arsenal",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Rocky_Mountain_Arsenal"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Austin, TX",
+      "file": "src/data/guides/us/texas/austin.json",
+      "attractions": [
+        {
+          "title": "Explore South Congress Avenue",
+          "word_count": 194,
+          "fact_signal_count": 8,
+          "similarity_max": 0.515,
+          "source_url": "https://en.wikipedia.org/wiki/South_Congress_Avenue",
+          "wikiUrl": "https://en.wikipedia.org/wiki/South_Congress_Avenue"
+        },
+        {
+          "title": "Explore Zilker Park",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.536,
+          "source_url": "https://en.wikipedia.org/wiki/Zilker_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Zilker_Park"
+        },
+        {
+          "title": "Explore Lady Bird Lake",
+          "word_count": 192,
+          "fact_signal_count": 8,
+          "similarity_max": 0.455,
+          "source_url": "https://en.wikipedia.org/wiki/Lady_Bird_Lake",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lady_Bird_Lake"
+        },
+        {
+          "title": "Explore Texas State Capitol",
+          "word_count": 192,
+          "fact_signal_count": 9,
+          "similarity_max": 0.73,
+          "source_url": "https://en.wikipedia.org/wiki/Texas_State_Capitol",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Texas_State_Capitol"
+        },
+        {
+          "title": "Explore Barton Springs Pool",
+          "word_count": 189,
+          "fact_signal_count": 12,
+          "similarity_max": 0.532,
+          "source_url": "https://en.wikipedia.org/wiki/Barton_Springs_Pool",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Barton_Springs_Pool"
+        },
+        {
+          "title": "Explore East Austin",
+          "word_count": 187,
+          "fact_signal_count": 8,
+          "similarity_max": 0.549,
+          "source_url": "https://en.wikipedia.org/wiki/East_Austin",
+          "wikiUrl": "https://en.wikipedia.org/wiki/East_Austin"
+        },
+        {
+          "title": "Explore Mount Bonnell",
+          "word_count": 188,
+          "fact_signal_count": 8,
+          "similarity_max": 0.568,
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Bonnell",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mount_Bonnell"
+        },
+        {
+          "title": "Explore Hamilton Pool Preserve",
+          "word_count": 195,
+          "fact_signal_count": 10,
+          "similarity_max": 0.528,
+          "source_url": "https://en.wikipedia.org/wiki/Hamilton_Pool_Preserve",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Hamilton_Pool_Preserve"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Nashville, TN",
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "attractions": [
+        {
+          "title": "Explore Broadway",
+          "word_count": 186,
+          "fact_signal_count": 11,
+          "similarity_max": 0.633,
+          "source_url": "https://en.wikipedia.org/wiki/Broadway",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Broadway"
+        },
+        {
+          "title": "Explore Ryman Auditorium",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.73,
+          "source_url": "https://en.wikipedia.org/wiki/Ryman_Auditorium",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Ryman_Auditorium"
+        },
+        {
+          "title": "Explore Country Music Hall of Fame",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.674,
+          "source_url": "https://en.wikipedia.org/wiki/Country_Music_Hall_of_Fame",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Country_Music_Hall_of_Fame"
+        },
+        {
+          "title": "Explore The Gulch",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.817,
+          "source_url": "https://en.wikipedia.org/wiki/The_Gulch",
+          "wikiUrl": "https://en.wikipedia.org/wiki/The_Gulch"
+        },
+        {
+          "title": "Explore Centennial Park",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.812,
+          "source_url": "https://en.wikipedia.org/wiki/Centennial_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Centennial_Park"
+        },
+        {
+          "title": "Explore East Nashville",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.799,
+          "source_url": "https://en.wikipedia.org/wiki/East_Nashville",
+          "wikiUrl": "https://en.wikipedia.org/wiki/East_Nashville"
+        },
+        {
+          "title": "Explore Johnny Cash Museum",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.831,
+          "source_url": "https://en.wikipedia.org/wiki/Johnny_Cash_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Johnny_Cash_Museum"
+        },
+        {
+          "title": "Explore Natchez Trace Parkway",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.752,
+          "source_url": "https://en.wikipedia.org/wiki/Natchez_Trace_Parkway",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Natchez_Trace_Parkway"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Charleston, SC",
+      "file": "src/data/guides/us/south-carolina/charleston.json",
+      "attractions": [
+        {
+          "title": "Explore Rainbow Row",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.825,
+          "source_url": "https://en.wikipedia.org/wiki/Rainbow_Row",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Rainbow_Row"
+        },
+        {
+          "title": "Explore Waterfront Park",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.721,
+          "source_url": "https://en.wikipedia.org/wiki/Waterfront_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Waterfront_Park"
+        },
+        {
+          "title": "Explore King Street",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.794,
+          "source_url": "https://en.wikipedia.org/wiki/King_Street",
+          "wikiUrl": "https://en.wikipedia.org/wiki/King_Street"
+        },
+        {
+          "title": "Explore Charleston City Market",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.808,
+          "source_url": "https://en.wikipedia.org/wiki/Charleston_City_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Charleston_City_Market"
+        },
+        {
+          "title": "Explore Battery and White Point Garden",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.796,
+          "source_url": "https://en.wikipedia.org/wiki/Battery_and_White_Point_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Battery_and_White_Point_Garden"
+        },
+        {
+          "title": "Explore Boone Hall Plantation",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.638,
+          "source_url": "https://en.wikipedia.org/wiki/Boone_Hall_Plantation",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Boone_Hall_Plantation"
+        },
+        {
+          "title": "Explore Shem Creek",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.723,
+          "source_url": "https://en.wikipedia.org/wiki/Shem_Creek",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Shem_Creek"
+        },
+        {
+          "title": "Explore Folly Beach",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.673,
+          "source_url": "https://en.wikipedia.org/wiki/Folly_Beach",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Folly_Beach"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Savannah, GA",
+      "file": "src/data/guides/us/georgia/savannah.json",
+      "attractions": [
+        {
+          "title": "Explore Forsyth Park",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.774,
+          "source_url": "https://en.wikipedia.org/wiki/Forsyth_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Forsyth_Park"
+        },
+        {
+          "title": "Explore Historic District",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.659,
+          "source_url": "https://en.wikipedia.org/wiki/Historic_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Historic_District"
+        },
+        {
+          "title": "Explore River Street",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.72,
+          "source_url": "https://en.wikipedia.org/wiki/River_Street",
+          "wikiUrl": "https://en.wikipedia.org/wiki/River_Street"
+        },
+        {
+          "title": "Explore Bonaventure Cemetery",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.785,
+          "source_url": "https://en.wikipedia.org/wiki/Bonaventure_Cemetery",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Bonaventure_Cemetery"
+        },
+        {
+          "title": "Explore City Market",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.821,
+          "source_url": "https://en.wikipedia.org/wiki/City_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/City_Market"
+        },
+        {
+          "title": "Explore Wormsloe Historic Site",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.695,
+          "source_url": "https://en.wikipedia.org/wiki/Wormsloe_Historic_Site",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Wormsloe_Historic_Site"
+        },
+        {
+          "title": "Explore Tybee Island",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.714,
+          "source_url": "https://en.wikipedia.org/wiki/Tybee_Island",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Tybee_Island"
+        },
+        {
+          "title": "Explore Jones Street",
+          "word_count": 260,
+          "fact_signal_count": 15,
+          "similarity_max": 0.808,
+          "source_url": "https://en.wikipedia.org/wiki/Jones_Street",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Jones_Street"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Sedona, AZ",
+      "file": "src/data/guides/us/arizona/sedona.json",
+      "attractions": [
+        {
+          "title": "Explore Cathedral Rock",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.775,
+          "source_url": "https://en.wikipedia.org/wiki/Cathedral_Rock",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cathedral_Rock"
+        },
+        {
+          "title": "Explore Bell Rock",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.792,
+          "source_url": "https://en.wikipedia.org/wiki/Bell_Rock",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Bell_Rock"
+        },
+        {
+          "title": "Explore Chapel of the Holy Cross",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.814,
+          "source_url": "https://en.wikipedia.org/wiki/Chapel_of_the_Holy_Cross",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Chapel_of_the_Holy_Cross"
+        },
+        {
+          "title": "Explore Tlaquepaque Arts and Shopping Village",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.766,
+          "source_url": "https://en.wikipedia.org/wiki/Tlaquepaque_Arts_and_Shopping_Village",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Tlaquepaque_Arts_and_Shopping_Village"
+        },
+        {
+          "title": "Explore Airport Mesa",
+          "word_count": 260,
+          "fact_signal_count": 16,
+          "similarity_max": 0.78,
+          "source_url": "https://en.wikipedia.org/wiki/Airport_Mesa",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Airport_Mesa"
+        },
+        {
+          "title": "Explore Red Rock State Park",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.644,
+          "source_url": "https://en.wikipedia.org/wiki/Red_Rock_State_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Red_Rock_State_Park"
+        },
+        {
+          "title": "Explore Oak Creek",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.832,
+          "source_url": "https://en.wikipedia.org/wiki/Oak_Creek",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Oak_Creek"
+        },
+        {
+          "title": "Explore Boynton Canyon",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.743,
+          "source_url": "https://en.wikipedia.org/wiki/Boynton_Canyon",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Boynton_Canyon"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Scottsdale, AZ",
+      "file": "src/data/guides/us/arizona/scottsdale.json",
+      "attractions": [
+        {
+          "title": "Explore Old Town Scottsdale",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.777,
+          "source_url": "https://en.wikipedia.org/wiki/Old_Town_Scottsdale",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Old_Town_Scottsdale"
+        },
+        {
+          "title": "Explore Scottsdale Waterfront",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.837,
+          "source_url": "https://en.wikipedia.org/wiki/Scottsdale_Waterfront",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Scottsdale_Waterfront"
+        },
+        {
+          "title": "Explore McDowell Sonoran Preserve",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.849,
+          "source_url": "https://en.wikipedia.org/wiki/McDowell_Sonoran_Preserve",
+          "wikiUrl": "https://en.wikipedia.org/wiki/McDowell_Sonoran_Preserve"
+        },
+        {
+          "title": "Explore Taliesin West",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.768,
+          "source_url": "https://en.wikipedia.org/wiki/Taliesin_West",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Taliesin_West"
+        },
+        {
+          "title": "Explore Kierland Commons",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.669,
+          "source_url": "https://en.wikipedia.org/wiki/Kierland_Commons",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Kierland_Commons"
+        },
+        {
+          "title": "Explore Scottsdale Museum of Contemporary Art",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.732,
+          "source_url": "https://en.wikipedia.org/wiki/Scottsdale_Museum_of_Contemporary_Art",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Scottsdale_Museum_of_Contemporary_Art"
+        },
+        {
+          "title": "Explore Pinnacle Peak",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.736,
+          "source_url": "https://en.wikipedia.org/wiki/Pinnacle_Peak",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Pinnacle_Peak"
+        },
+        {
+          "title": "Explore Salt River",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.847,
+          "source_url": "https://en.wikipedia.org/wiki/Salt_River",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Salt_River"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Tucson, AZ",
+      "file": null,
+      "attractions": [],
+      "skipped": [
+        {
+          "title": null,
+          "reason": "city_file_missing"
+        }
+      ]
+    },
+    {
+      "city": "Salt Lake City, UT",
+      "file": "src/data/guides/us/utah/salt-lake-city.json",
+      "attractions": [
+        {
+          "title": "Explore Temple Square",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.827,
+          "source_url": "https://en.wikipedia.org/wiki/Temple_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Temple_Square"
+        },
+        {
+          "title": "Explore Utah State Capitol",
+          "word_count": 228,
+          "fact_signal_count": 11,
+          "similarity_max": 0.79,
+          "source_url": "https://en.wikipedia.org/wiki/Utah_State_Capitol",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Utah_State_Capitol"
+        },
+        {
+          "title": "Explore Red Butte Garden",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.738,
+          "source_url": "https://en.wikipedia.org/wiki/Red_Butte_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Red_Butte_Garden"
+        },
+        {
+          "title": "Explore Liberty Park",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.639,
+          "source_url": "https://en.wikipedia.org/wiki/Liberty_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Liberty_Park"
+        },
+        {
+          "title": "Explore 9th and 9th",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.833,
+          "source_url": "https://en.wikipedia.org/wiki/9th_and_9th",
+          "wikiUrl": "https://en.wikipedia.org/wiki/9th_and_9th"
+        },
+        {
+          "title": "Explore Natural History Museum of Utah",
+          "word_count": 192,
+          "fact_signal_count": 10,
+          "similarity_max": 0.72,
+          "source_url": "https://en.wikipedia.org/wiki/Natural_History_Museum_of_Utah",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Natural_History_Museum_of_Utah"
+        },
+        {
+          "title": "Explore Big Cottonwood Canyon",
+          "word_count": 190,
+          "fact_signal_count": 11,
+          "similarity_max": 0.744,
+          "source_url": "https://en.wikipedia.org/wiki/Big_Cottonwood_Canyon",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Big_Cottonwood_Canyon"
+        },
+        {
+          "title": "Explore Antelope Island",
+          "word_count": 189,
+          "fact_signal_count": 11,
+          "similarity_max": 0.8,
+          "source_url": "https://en.wikipedia.org/wiki/Antelope_Island",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Antelope_Island"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Minneapolis, MN",
+      "file": "src/data/guides/us/minnesota/minneapolis.json",
+      "attractions": [
+        {
+          "title": "Explore Chain of Lakes",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.57,
+          "source_url": "https://en.wikipedia.org/wiki/Chain_of_Lakes",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Chain_of_Lakes"
+        },
+        {
+          "title": "Explore Minneapolis Sculpture Garden",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.84,
+          "source_url": "https://en.wikipedia.org/wiki/Minneapolis_Sculpture_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Minneapolis_Sculpture_Garden"
+        },
+        {
+          "title": "Explore North Loop",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.802,
+          "source_url": "https://en.wikipedia.org/wiki/North_Loop",
+          "wikiUrl": "https://en.wikipedia.org/wiki/North_Loop"
+        },
+        {
+          "title": "Explore Stone Arch Bridge",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.704,
+          "source_url": "https://en.wikipedia.org/wiki/Stone_Arch_Bridge",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Stone_Arch_Bridge"
+        },
+        {
+          "title": "Explore Mill City Museum",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.803,
+          "source_url": "https://en.wikipedia.org/wiki/Mill_City_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mill_City_Museum"
+        },
+        {
+          "title": "Explore Minnehaha Falls",
+          "word_count": 260,
+          "fact_signal_count": 16,
+          "similarity_max": 0.796,
+          "source_url": "https://en.wikipedia.org/wiki/Minnehaha_Falls",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Minnehaha_Falls"
+        },
+        {
+          "title": "Explore Nicollet Mall",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.746,
+          "source_url": "https://en.wikipedia.org/wiki/Nicollet_Mall",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Nicollet_Mall"
+        },
+        {
+          "title": "Explore St. Anthony Main",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.811,
+          "source_url": "https://en.wikipedia.org/wiki/St_Anthony_Main",
+          "wikiUrl": "https://en.wikipedia.org/wiki/St_Anthony_Main"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Detroit, MI",
+      "file": "src/data/guides/us/michigan/detroit.json",
+      "attractions": [
+        {
+          "title": "Explore Detroit Institute of Arts",
+          "word_count": 228,
+          "fact_signal_count": 12,
+          "similarity_max": 0.782,
+          "source_url": "https://en.wikipedia.org/wiki/Detroit_Institute_of_Arts",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Detroit_Institute_of_Arts"
+        },
+        {
+          "title": "Explore Eastern Market",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.832,
+          "source_url": "https://en.wikipedia.org/wiki/Eastern_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Eastern_Market"
+        },
+        {
+          "title": "Explore RiverWalk",
+          "word_count": 186,
+          "fact_signal_count": 11,
+          "similarity_max": 0.818,
+          "source_url": "https://en.wikipedia.org/wiki/RiverWalk",
+          "wikiUrl": "https://en.wikipedia.org/wiki/RiverWalk"
+        },
+        {
+          "title": "Explore Motown Museum",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.767,
+          "source_url": "https://en.wikipedia.org/wiki/Motown_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Motown_Museum"
+        },
+        {
+          "title": "Explore Corktown",
+          "word_count": 222,
+          "fact_signal_count": 12,
+          "similarity_max": 0.825,
+          "source_url": "https://en.wikipedia.org/wiki/Corktown",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Corktown"
+        },
+        {
+          "title": "Explore Belle Isle Park",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.707,
+          "source_url": "https://en.wikipedia.org/wiki/Belle_Isle_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Belle_Isle_Park"
+        },
+        {
+          "title": "Explore The Henry Ford",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.821,
+          "source_url": "https://en.wikipedia.org/wiki/The_Henry_Ford",
+          "wikiUrl": "https://en.wikipedia.org/wiki/The_Henry_Ford"
+        },
+        {
+          "title": "Explore Campus Martius Park",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.816,
+          "source_url": "https://en.wikipedia.org/wiki/Campus_Martius_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Campus_Martius_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Cleveland, OH",
+      "file": "src/data/guides/us/ohio/cleveland.json",
+      "attractions": [
+        {
+          "title": "Explore Rock and Roll Hall of Fame",
+          "word_count": 191,
+          "fact_signal_count": 10,
+          "similarity_max": 0.701,
+          "source_url": "https://en.wikipedia.org/wiki/Rock_and_Roll_Hall_of_Fame",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Rock_and_Roll_Hall_of_Fame"
+        },
+        {
+          "title": "Explore West Side Market",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.814,
+          "source_url": "https://en.wikipedia.org/wiki/West_Side_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/West_Side_Market"
+        },
+        {
+          "title": "Explore Cleveland Museum of Art",
+          "word_count": 189,
+          "fact_signal_count": 11,
+          "similarity_max": 0.798,
+          "source_url": "https://en.wikipedia.org/wiki/Cleveland_Museum_of_Art",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cleveland_Museum_of_Art"
+        },
+        {
+          "title": "Explore Edgewater Park",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.814,
+          "source_url": "https://en.wikipedia.org/wiki/Edgewater_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Edgewater_Park"
+        },
+        {
+          "title": "Explore Ohio City",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.644,
+          "source_url": "https://en.wikipedia.org/wiki/Ohio_City",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Ohio_City"
+        },
+        {
+          "title": "Explore Playhouse Square",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.814,
+          "source_url": "https://en.wikipedia.org/wiki/Playhouse_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Playhouse_Square"
+        },
+        {
+          "title": "Explore University Circle",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.702,
+          "source_url": "https://en.wikipedia.org/wiki/University_Circle",
+          "wikiUrl": "https://en.wikipedia.org/wiki/University_Circle"
+        },
+        {
+          "title": "Explore Cuyahoga Valley National Park",
+          "word_count": 228,
+          "fact_signal_count": 11,
+          "similarity_max": 0.752,
+          "source_url": "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cuyahoga_Valley_National_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Pittsburgh, PA",
+      "file": "src/data/guides/us/pennsylvania/pittsburgh.json",
+      "attractions": [
+        {
+          "title": "Explore Point State Park",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.595,
+          "source_url": "https://en.wikipedia.org/wiki/Point_State_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Point_State_Park"
+        },
+        {
+          "title": "Explore Duquesne Incline",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.813,
+          "source_url": "https://en.wikipedia.org/wiki/Duquesne_Incline",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Duquesne_Incline"
+        },
+        {
+          "title": "Explore Strip District",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.722,
+          "source_url": "https://en.wikipedia.org/wiki/Strip_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Strip_District"
+        },
+        {
+          "title": "Explore Phipps Conservatory",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.823,
+          "source_url": "https://en.wikipedia.org/wiki/Phipps_Conservatory",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Phipps_Conservatory"
+        },
+        {
+          "title": "Explore North Shore",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.826,
+          "source_url": "https://en.wikipedia.org/wiki/North_Shore",
+          "wikiUrl": "https://en.wikipedia.org/wiki/North_Shore"
+        },
+        {
+          "title": "Explore Andy Warhol Museum",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.829,
+          "source_url": "https://en.wikipedia.org/wiki/Andy_Warhol_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Andy_Warhol_Museum"
+        },
+        {
+          "title": "Explore Lawrenceville",
+          "word_count": 186,
+          "fact_signal_count": 10,
+          "similarity_max": 0.65,
+          "source_url": "https://en.wikipedia.org/wiki/Lawrenceville",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lawrenceville"
+        },
+        {
+          "title": "Explore Mount Washington",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.796,
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Washington",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mount_Washington"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Baltimore, MD",
+      "file": "src/data/guides/us/maryland/baltimore.json",
+      "attractions": [
+        {
+          "title": "Explore Inner Harbor",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.8,
+          "source_url": "https://en.wikipedia.org/wiki/Inner_Harbor",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Inner_Harbor"
+        },
+        {
+          "title": "Explore Fells Point",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.629,
+          "source_url": "https://en.wikipedia.org/wiki/Fells_Point",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Fells_Point"
+        },
+        {
+          "title": "Explore Fort McHenry",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.765,
+          "source_url": "https://en.wikipedia.org/wiki/Fort_McHenry",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Fort_McHenry"
+        },
+        {
+          "title": "Explore National Aquarium",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.81,
+          "source_url": "https://en.wikipedia.org/wiki/National_Aquarium",
+          "wikiUrl": "https://en.wikipedia.org/wiki/National_Aquarium"
+        },
+        {
+          "title": "Explore Mount Vernon",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.739,
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Vernon",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mount_Vernon"
+        },
+        {
+          "title": "Explore Hampden",
+          "word_count": 222,
+          "fact_signal_count": 11,
+          "similarity_max": 0.767,
+          "source_url": "https://en.wikipedia.org/wiki/Hampden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Hampden"
+        },
+        {
+          "title": "Explore American Visionary Art Museum",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.67,
+          "source_url": "https://en.wikipedia.org/wiki/American_Visionary_Art_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/American_Visionary_Art_Museum"
+        },
+        {
+          "title": "Explore Patterson Park",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.694,
+          "source_url": "https://en.wikipedia.org/wiki/Patterson_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Patterson_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Kansas City, MO",
+      "file": "src/data/guides/us/missouri/kansas-city.json",
+      "attractions": [
+        {
+          "title": "Explore National WWI Museum and Memorial",
+          "word_count": 191,
+          "fact_signal_count": 11,
+          "similarity_max": 0.612,
+          "source_url": "https://en.wikipedia.org/wiki/National_WWI_Museum_and_Memorial",
+          "wikiUrl": "https://en.wikipedia.org/wiki/National_WWI_Museum_and_Memorial"
+        },
+        {
+          "title": "Explore Country Club Plaza",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.745,
+          "source_url": "https://en.wikipedia.org/wiki/Country_Club_Plaza",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Country_Club_Plaza"
+        },
+        {
+          "title": "Explore Union Station",
+          "word_count": 225,
+          "fact_signal_count": 12,
+          "similarity_max": 0.832,
+          "source_url": "https://en.wikipedia.org/wiki/Union_Station",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Union_Station"
+        },
+        {
+          "title": "Explore Crossroads Arts District",
+          "word_count": 189,
+          "fact_signal_count": 11,
+          "similarity_max": 0.825,
+          "source_url": "https://en.wikipedia.org/wiki/Crossroads_Arts_District",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Crossroads_Arts_District"
+        },
+        {
+          "title": "Explore 18th and Vine",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.849,
+          "source_url": "https://en.wikipedia.org/wiki/18th_and_Vine",
+          "wikiUrl": "https://en.wikipedia.org/wiki/18th_and_Vine"
+        },
+        {
+          "title": "Explore Nelson-Atkins Museum of Art",
+          "word_count": 190,
+          "fact_signal_count": 10,
+          "similarity_max": 0.786,
+          "source_url": "https://en.wikipedia.org/wiki/Nelson_Atkins_Museum_of_Art",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Nelson_Atkins_Museum_of_Art"
+        },
+        {
+          "title": "Explore River Market",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.756,
+          "source_url": "https://en.wikipedia.org/wiki/River_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/River_Market"
+        },
+        {
+          "title": "Explore Loose Park",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.742,
+          "source_url": "https://en.wikipedia.org/wiki/Loose_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Loose_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "St. Louis, MO",
+      "file": "src/data/guides/us/missouri/st-louis.json",
+      "attractions": [
+        {
+          "title": "Explore Gateway Arch",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.809,
+          "source_url": "https://en.wikipedia.org/wiki/Gateway_Arch",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Gateway_Arch"
+        },
+        {
+          "title": "Explore Forest Park",
+          "word_count": 188,
+          "fact_signal_count": 10,
+          "similarity_max": 0.732,
+          "source_url": "https://en.wikipedia.org/wiki/Forest_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Forest_Park"
+        },
+        {
+          "title": "Explore City Museum",
+          "word_count": 225,
+          "fact_signal_count": 11,
+          "similarity_max": 0.768,
+          "source_url": "https://en.wikipedia.org/wiki/City_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/City_Museum"
+        },
+        {
+          "title": "Explore Soulard",
+          "word_count": 258,
+          "fact_signal_count": 15,
+          "similarity_max": 0.805,
+          "source_url": "https://en.wikipedia.org/wiki/Soulard",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Soulard"
+        },
+        {
+          "title": "Explore Missouri Botanical Garden",
+          "word_count": 227,
+          "fact_signal_count": 11,
+          "similarity_max": 0.803,
+          "source_url": "https://en.wikipedia.org/wiki/Missouri_Botanical_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Missouri_Botanical_Garden"
+        },
+        {
+          "title": "Explore The Hill",
+          "word_count": 225,
+          "fact_signal_count": 11,
+          "similarity_max": 0.815,
+          "source_url": "https://en.wikipedia.org/wiki/The_Hill",
+          "wikiUrl": "https://en.wikipedia.org/wiki/The_Hill"
+        },
+        {
+          "title": "Explore Delmar Loop",
+          "word_count": 261,
+          "fact_signal_count": 15,
+          "similarity_max": 0.782,
+          "source_url": "https://en.wikipedia.org/wiki/Delmar_Loop",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Delmar_Loop"
+        },
+        {
+          "title": "Explore Cahokia Mounds",
+          "word_count": 225,
+          "fact_signal_count": 11,
+          "similarity_max": 0.751,
+          "source_url": "https://en.wikipedia.org/wiki/Cahokia_Mounds",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cahokia_Mounds"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Milwaukee, WI",
+      "file": "src/data/guides/us/wisconsin/milwaukee.json",
+      "attractions": [
+        {
+          "title": "Explore Milwaukee RiverWalk",
+          "word_count": 224,
+          "fact_signal_count": 12,
+          "similarity_max": 0.738,
+          "source_url": "https://en.wikipedia.org/wiki/Milwaukee_RiverWalk",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Milwaukee_RiverWalk"
+        },
+        {
+          "title": "Explore Historic Third Ward",
+          "word_count": 188,
+          "fact_signal_count": 11,
+          "similarity_max": 0.69,
+          "source_url": "https://en.wikipedia.org/wiki/Historic_Third_Ward",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Historic_Third_Ward"
+        },
+        {
+          "title": "Explore Milwaukee Art Museum",
+          "word_count": 263,
+          "fact_signal_count": 15,
+          "similarity_max": 0.789,
+          "source_url": "https://en.wikipedia.org/wiki/Milwaukee_Art_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Milwaukee_Art_Museum"
+        },
+        {
+          "title": "Explore Lakefront Brewery",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.704,
+          "source_url": "https://en.wikipedia.org/wiki/Lakefront_Brewery",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lakefront_Brewery"
+        },
+        {
+          "title": "Explore Brady Street",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.798,
+          "source_url": "https://en.wikipedia.org/wiki/Brady_Street",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Brady_Street"
+        },
+        {
+          "title": "Explore Harley-Davidson Museum",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.829,
+          "source_url": "https://en.wikipedia.org/wiki/Harley_Davidson_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Harley_Davidson_Museum"
+        },
+        {
+          "title": "Explore Bradford Beach",
+          "word_count": 187,
+          "fact_signal_count": 11,
+          "similarity_max": 0.718,
+          "source_url": "https://en.wikipedia.org/wiki/Bradford_Beach",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Bradford_Beach"
+        },
+        {
+          "title": "Explore Kettle Moraine",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.791,
+          "source_url": "https://en.wikipedia.org/wiki/Kettle_Moraine",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Kettle_Moraine"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Cincinnati, OH",
+      "file": "src/data/guides/us/ohio/cincinnati.json",
+      "attractions": [
+        {
+          "title": "Explore Over-the-Rhine",
+          "word_count": 186,
+          "fact_signal_count": 10,
+          "similarity_max": 0.585,
+          "source_url": "https://en.wikipedia.org/wiki/Over_the_Rhine",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Over_the_Rhine"
+        },
+        {
+          "title": "Explore Findlay Market",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.752,
+          "source_url": "https://en.wikipedia.org/wiki/Findlay_Market",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Findlay_Market"
+        },
+        {
+          "title": "Explore Smale Riverfront Park",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.776,
+          "source_url": "https://en.wikipedia.org/wiki/Smale_Riverfront_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Smale_Riverfront_Park"
+        },
+        {
+          "title": "Explore Cincinnati Art Museum",
+          "word_count": 226,
+          "fact_signal_count": 12,
+          "similarity_max": 0.63,
+          "source_url": "https://en.wikipedia.org/wiki/Cincinnati_Art_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cincinnati_Art_Museum"
+        },
+        {
+          "title": "Explore Mount Adams",
+          "word_count": 260,
+          "fact_signal_count": 15,
+          "similarity_max": 0.609,
+          "source_url": "https://en.wikipedia.org/wiki/Mount_Adams",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mount_Adams"
+        },
+        {
+          "title": "Explore Fountain Square",
+          "word_count": 260,
+          "fact_signal_count": 15,
+          "similarity_max": 0.748,
+          "source_url": "https://en.wikipedia.org/wiki/Fountain_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Fountain_Square"
+        },
+        {
+          "title": "Explore Cincinnati Zoo",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.592,
+          "source_url": "https://en.wikipedia.org/wiki/Cincinnati_Zoo",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cincinnati_Zoo"
+        },
+        {
+          "title": "Explore Ault Park",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.734,
+          "source_url": "https://en.wikipedia.org/wiki/Ault_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Ault_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Indianapolis, IN",
+      "file": "src/data/guides/us/indiana/indianapolis.json",
+      "attractions": [
+        {
+          "title": "Explore Monument Circle",
+          "word_count": 187,
+          "fact_signal_count": 10,
+          "similarity_max": 0.665,
+          "source_url": "https://en.wikipedia.org/wiki/Monument_Circle",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Monument_Circle"
+        },
+        {
+          "title": "Explore Mass Ave",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.788,
+          "source_url": "https://en.wikipedia.org/wiki/Mass_Ave",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mass_Ave"
+        },
+        {
+          "title": "Explore White River State Park",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.647,
+          "source_url": "https://en.wikipedia.org/wiki/White_River_State_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/White_River_State_Park"
+        },
+        {
+          "title": "Explore Indianapolis Motor Speedway Museum",
+          "word_count": 189,
+          "fact_signal_count": 10,
+          "similarity_max": 0.645,
+          "source_url": "https://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Indianapolis_Motor_Speedway_Museum"
+        },
+        {
+          "title": "Explore Canal Walk",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.829,
+          "source_url": "https://en.wikipedia.org/wiki/Canal_Walk",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Canal_Walk"
+        },
+        {
+          "title": "Explore Fountain Square",
+          "word_count": 224,
+          "fact_signal_count": 11,
+          "similarity_max": 0.837,
+          "source_url": "https://en.wikipedia.org/wiki/Fountain_Square",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Fountain_Square"
+        },
+        {
+          "title": "Explore Newfields",
+          "word_count": 222,
+          "fact_signal_count": 11,
+          "similarity_max": 0.776,
+          "source_url": "https://en.wikipedia.org/wiki/Newfields",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Newfields"
+        },
+        {
+          "title": "Explore Eagle Creek Park",
+          "word_count": 226,
+          "fact_signal_count": 11,
+          "similarity_max": 0.822,
+          "source_url": "https://en.wikipedia.org/wiki/Eagle_Creek_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Eagle_Creek_Park"
+        }
+      ],
+      "skipped": []
+    }
+  ],
+  "failures_by_city": {
+    "San Jose, CA": [
+      {
+        "title": null,
+        "reason": "city_file_missing"
+      }
+    ],
+    "Tucson, AZ": [
+      {
+        "title": null,
+        "reason": "city_file_missing"
+      }
+    ]
+  }
+}
