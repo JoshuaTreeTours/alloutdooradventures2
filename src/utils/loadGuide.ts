@@ -22,7 +22,13 @@ export type GuidePageData = {
   };
   overview: string[];
   highlights: Array<{ title: string; description: string }>;
-  thingsToDo: Array<{ title: string; description: string; wikiUrl?: string }>;
+  thingsToDo: Array<{
+    title: string;
+    description: string;
+    wikiUrl?: string;
+    sourceUrl?: string;
+    source_url?: string;
+  }>;
   bestTimeToVisit: {
     title: string;
     bullets: string[];
