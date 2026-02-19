@@ -1,8 +1,14 @@
 import { hasHighSimilarity } from "./checkDescriptionSimilarity";
-import { fallbackLandmarkDescription } from "./fallbackLandmarkDescription";
-import { paraphraseWikiSummary } from "./paraphraseWikiSummary";
+import {
+  cleanWikipediaExtract,
+  paraphraseWikiSummary,
+  wikiWordCount,
+} from "./paraphraseWikiSummary";
 import { validateNoBoilerplate } from "./validateNoBoilerplate";
-import { fetchWikiSummary } from "../wiki/wikiSummary";
+import {
+  fetchWikiIntroExtract,
+  fetchWikiSummary,
+} from "../wiki/wikiSummary";
 import { getWikidataEntity, searchWikidataEntity } from "../wiki/wikidata";
 
 export type WikiDescResult = {
@@ -11,12 +17,14 @@ export type WikiDescResult = {
   usedWiki: boolean;
 };
 
+const MIN_WORDS = 100;
+
 const FACT_PATTERNS = [
   /\b\d{4}\b/g,
   /\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|meter|meters|foot|feet|ft|square|sq|hectare|hectares|%)\b/gi,
-  /\b(?:opened|built|founded|established|completed|designated|renovated|expanded|constructed)\b/gi,
-  /\b(?:architect|architects|neighborhood|neighbourhood|district|boulevard|avenue|style|campus|collection|tower|pier|beach|museum|gallery|observatory)\b/gi,
-  /\b(?:National Historic Landmark|World Heritage Site|state park|national park)\b/gi,
+  /\b(?:opened|built|founded|established|completed|designated|renovated|expanded|constructed|incorporated)\b/gi,
+  /\b(?:architect|architects|neighborhood|neighbourhood|district|boulevard|avenue|style|campus|collection|tower|pier|beach|museum|gallery|observatory|bridge|landmark|park)\b/gi,
+  /\b(?:National Historic Landmark|World Heritage Site|state park|national park|UNESCO)\b/gi,
 ];
 
 const countFactSignals = (text: string) => {
@@ -29,11 +37,6 @@ const countFactSignals = (text: string) => {
 
   return matches.size;
 };
-
-const isValidCandidate = (description: string, existingDescriptions: string[]) =>
-  validateNoBoilerplate(description) &&
-  countFactSignals(description) >= 2 &&
-  !hasHighSimilarity(description, existingDescriptions, 0.85);
 
 const dedupeTitles = (titles: string[]) => {
   const seen = new Set<string>();
@@ -51,7 +54,11 @@ const dedupeTitles = (titles: string[]) => {
   return deduped;
 };
 
-const wikipediaCandidates = (landmarkName: string, cityName: string, stateName: string) =>
+const wikipediaCandidates = (
+  landmarkName: string,
+  cityName: string,
+  stateName: string
+) =>
   dedupeTitles([
     `${landmarkName}`,
     `${landmarkName} (${cityName})`,
@@ -88,12 +95,35 @@ const wikidataCandidates = async (
   return [];
 };
 
-
 const normalizeLandmarkName = (name: string) =>
   name
     .replace(/^(?:explore|visit|see|discover|experience)\s+/i, "")
     .replace(/\s+in\s+.+$/i, "")
     .trim();
+
+const passesRules = (description: string) =>
+  validateNoBoilerplate(description) &&
+  wikiWordCount(description) >= MIN_WORDS &&
+  countFactSignals(description) >= 2;
+
+const scoreCandidate = (description: string, existingDescriptions: string[]) => {
+  const factSignals = countFactSignals(description);
+  const words = wikiWordCount(description);
+  const similarityPenalty = hasHighSimilarity(description, existingDescriptions, 0.85)
+    ? 100
+    : 0;
+
+  return factSignals * 10 + Math.min(words, 160) - similarityPenalty;
+};
+
+const buildCandidatesFromExtract = (extract: string): string[] => {
+  const fromParaphrase = Array.from({ length: 4 }, (_, variant) =>
+    paraphraseWikiSummary({ extract, variant })
+  );
+  const cleaned = cleanWikipediaExtract(extract, 170);
+
+  return dedupeTitles([...fromParaphrase, cleaned]);
+};
 
 export async function buildWikiLandmarkDescription(args: {
   landmarkName: string;
@@ -108,35 +138,26 @@ export async function buildWikiLandmarkDescription(args: {
     ...(await wikidataCandidates(normalizedLandmark, cityName, stateName)),
   ]);
 
-  let bestFromWiki: { description: string; wikiUrl: string | null } | null = null;
+  let best: { description: string; wikiUrl: string | null; score: number } | null =
+    null;
 
-  for (const candidateTitle of candidateTitles) {
-    const summary = await fetchWikiSummary(candidateTitle);
+  for (const title of candidateTitles) {
+    const summary = await fetchWikiSummary(title);
     if (!summary.extract) {
       continue;
     }
 
-    for (let attempt = 0; attempt < 4; attempt += 1) {
-      const candidate = paraphraseWikiSummary({
-        landmarkName: normalizedLandmark,
-        cityName,
-        stateName,
-        extract: summary.extract,
-        variant: attempt,
-      });
-
-      if (!validateNoBoilerplate(candidate)) {
-        continue;
+    const candidates = buildCandidatesFromExtract(summary.extract);
+    for (const candidate of candidates) {
+      const score = scoreCandidate(candidate, existingDescriptions);
+      if (!best || score > best.score) {
+        best = { description: candidate, wikiUrl: summary.url, score };
       }
 
-      if (!bestFromWiki || countFactSignals(candidate) > countFactSignals(bestFromWiki.description)) {
-        bestFromWiki = {
-          description: candidate,
-          wikiUrl: summary.url,
-        };
-      }
-
-      if (isValidCandidate(candidate, existingDescriptions)) {
+      if (
+        passesRules(candidate) &&
+        !hasHighSimilarity(candidate, existingDescriptions, 0.85)
+      ) {
         return {
           description: candidate,
           wikiUrl: summary.url,
@@ -146,17 +167,30 @@ export async function buildWikiLandmarkDescription(args: {
     }
   }
 
-  if (bestFromWiki && !hasHighSimilarity(bestFromWiki.description, existingDescriptions, 0.9)) {
-    return {
-      description: bestFromWiki.description,
-      wikiUrl: bestFromWiki.wikiUrl,
-      usedWiki: true,
-    };
+  for (const title of candidateTitles) {
+    const intro = await fetchWikiIntroExtract(title);
+    if (!intro.extract) {
+      continue;
+    }
+
+    const cleaned = cleanWikipediaExtract(intro.extract, 170);
+    const score = scoreCandidate(cleaned, existingDescriptions);
+    if (!best || score > best.score) {
+      best = { description: cleaned, wikiUrl: intro.url, score };
+    }
+
+    if (passesRules(cleaned) && !hasHighSimilarity(cleaned, existingDescriptions, 0.85)) {
+      return {
+        description: cleaned,
+        wikiUrl: intro.url,
+        usedWiki: true,
+      };
+    }
   }
 
   return {
-    description: fallbackLandmarkDescription({ landmarkName: normalizedLandmark, cityName, stateName }),
-    wikiUrl: null,
-    usedWiki: false,
+    description: best?.description ?? "",
+    wikiUrl: best?.wikiUrl ?? null,
+    usedWiki: Boolean(best),
   };
 }

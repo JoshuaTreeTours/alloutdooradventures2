@@ -12,13 +12,26 @@ type SummaryResponse = {
   };
 };
 
+type QueryExtractResponse = {
+  query?: {
+    pages?: Record<
+      string,
+      {
+        extract?: string;
+        title?: string;
+      }
+    >;
+  };
+};
+
 type CacheState = {
   summaries: Record<string, { extract: string | null; url: string | null }>;
 };
 
 const CACHE_PATH = path.resolve(".cache/wiki-summaries.json");
 const REQUESTS_PER_SECOND = 4;
-const USER_AGENT = "alloutdooradventures/1.0 (contact: guides@alloutdooradventures.com)";
+const USER_AGENT =
+  "alloutdooradventures/1.0 (contact: guides@alloutdooradventures.com)";
 
 let cacheLoaded = false;
 let cacheDirty = false;
@@ -77,6 +90,25 @@ const waitForRequestSlot = async () => {
   nextRequestAt = Math.max(now, nextRequestAt) + minDelayMs;
 };
 
+const fetchWithTimeout = async (url: string) => {
+  await waitForRequestSlot();
+
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 9000);
+
+  try {
+    return await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": USER_AGENT,
+      },
+      signal: controller.signal,
+    });
+  } finally {
+    clearTimeout(timeout);
+  }
+};
+
 export const fetchWikiSummary = async (
   title: string
 ): Promise<{ extract: string | null; url: string | null }> => {
@@ -93,24 +125,10 @@ export const fetchWikiSummary = async (
     return cached;
   }
 
-  await waitForRequestSlot();
-
   try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 8000);
-
-    const response = await fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(trimmed)}`,
-      {
-        headers: {
-          Accept: "application/json",
-          "User-Agent": USER_AGENT,
-        },
-        signal: controller.signal,
-      }
+    const response = await fetchWithTimeout(
+      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(trimmed)}`
     );
-
-    clearTimeout(timeout);
 
     if (!response.ok) {
       const empty = { extract: null, url: null };
@@ -140,6 +158,50 @@ export const fetchWikiSummary = async (
     cacheDirty = true;
 
     return result;
+  } catch {
+    return { extract: null, url: null };
+  }
+};
+
+export const fetchWikiIntroExtract = async (
+  title: string
+): Promise<{ extract: string | null; url: string | null }> => {
+  const trimmed = title.trim();
+  if (!trimmed) {
+    return { extract: null, url: null };
+  }
+
+  const apiUrl = new URL("https://en.wikipedia.org/w/api.php");
+  apiUrl.searchParams.set("action", "query");
+  apiUrl.searchParams.set("format", "json");
+  apiUrl.searchParams.set("prop", "extracts");
+  apiUrl.searchParams.set("explaintext", "1");
+  apiUrl.searchParams.set("exintro", "1");
+  apiUrl.searchParams.set("redirects", "1");
+  apiUrl.searchParams.set("titles", trimmed);
+  apiUrl.searchParams.set("origin", "*");
+
+  try {
+    const response = await fetchWithTimeout(apiUrl.toString());
+    if (!response.ok) {
+      return { extract: null, url: null };
+    }
+
+    const payload = (await response.json()) as QueryExtractResponse;
+    const pages = payload.query?.pages ?? {};
+    const page = Object.values(pages)[0];
+    const extract = page?.extract?.trim() || null;
+
+    if (!extract) {
+      return { extract: null, url: null };
+    }
+
+    return {
+      extract,
+      url: `https://en.wikipedia.org/wiki/${encodeURIComponent(
+        (page.title || trimmed).replace(/\s+/g, "_")
+      )}`,
+    };
   } catch {
     return { extract: null, url: null };
   }
