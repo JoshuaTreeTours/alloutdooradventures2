@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Fortson, Georgia Travel Guide",
+  "country": "United States",
+  "state": "Georgia",
+  "city": "Fortson",
+  "slug": "guides/us/georgia/fortson",
+  "hero": {
+    "image": "",
+    "alt": "Fortson, Georgia skyline and attractions",
+    "headline": "Fortson, Georgia Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused Fortson itinerary."
+  },
+  "overview": [
+    "Fortson, Georgia is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your Fortson trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core Fortson landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "Fortson local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Fortson",
+      "description": "Start with A scenic trail with views around Fortson to experience a signature side of Fortson. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your Fortson plan efficient and varied."
+    },
+    {
+      "title": "A local park or nature preserve near Fortson",
+      "description": "A local park or nature preserve near Fortson is a reliable addition to any Fortson itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in Fortson feels balanced without extra transit time."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "If you are choosing only a few highlights in Fortson, include Catch golden hour at a nearby viewpoint. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your Fortson trip."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Fortson",
+      "description": "Plan time at Stroll a waterfront trail or greenway in Fortson for one of the most approachable experiences in Fortson. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore Fortson."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in Fortson",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your Fortson itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in Fortson?",
+      "a": "A focused two- to three-day trip covers major Fortson highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in Fortson?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "georgia",
+    "citySlug": "fortson",
+    "limit": 6,
+    "title": "Top Fortson tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fortson",
+    "officialTourism": "https://www.exploregeorgia.org/",
+    "reference": "https://www.britannica.com/place/Fortson"
+  }
+}

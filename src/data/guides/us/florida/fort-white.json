@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Fort White, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Fort White",
+  "slug": "guides/us/florida/fort-white",
+  "hero": {
+    "image": "",
+    "alt": "Fort White, Florida skyline and attractions",
+    "headline": "Fort White, Florida Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused Fort White itinerary."
+  },
+  "overview": [
+    "Fort White, Florida is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your Fort White trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core Fort White landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "Fort White local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A paddle or canoe outing near Fort White",
+      "description": "Start with A paddle or canoe outing near Fort White to experience a signature side of Fort White. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your Fort White plan efficient and varied."
+    },
+    {
+      "title": "A local park or nature preserve near Fort White",
+      "description": "A local park or nature preserve near Fort White is a reliable addition to any Fort White itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in Fort White feels balanced without extra transit time."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "If you are choosing only a few highlights in Fort White, include Catch golden hour at a nearby viewpoint. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your Fort White trip."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Fort White",
+      "description": "Plan time at Stroll a waterfront trail or greenway in Fort White for one of the most approachable experiences in Fort White. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore Fort White."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in Fort White",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your Fort White itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in Fort White?",
+      "a": "A focused two- to three-day trip covers major Fort White highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in Fort White?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "fort-white",
+    "limit": 6,
+    "title": "Top Fort White tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fort_White",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Fort-White"
+  }
+}

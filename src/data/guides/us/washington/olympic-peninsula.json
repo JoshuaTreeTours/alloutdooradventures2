@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Olympic Peninsula, Washington Travel Guide",
+  "country": "United States",
+  "state": "Washington",
+  "city": "Olympic Peninsula",
+  "slug": "guides/us/washington/olympic-peninsula",
+  "hero": {
+    "image": "",
+    "alt": "Olympic Peninsula, Washington skyline and attractions",
+    "headline": "Olympic Peninsula, Washington Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused Olympic Peninsula itinerary."
+  },
+  "overview": [
+    "Olympic Peninsula, Washington is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your Olympic Peninsula trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core Olympic Peninsula landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "Olympic Peninsula local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "The Hoh Rainforest trails",
+      "description": "Start with The Hoh Rainforest trails to experience a signature side of Olympic Peninsula. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your Olympic Peninsula plan efficient and varied."
+    },
+    {
+      "title": "Rialto Beach and its sea stacks",
+      "description": "Rialto Beach and its sea stacks is a reliable addition to any Olympic Peninsula itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in Olympic Peninsula feels balanced without extra transit time."
+    },
+    {
+      "title": "Hurricane Ridge viewpoints",
+      "description": "If you are choosing only a few highlights in Olympic Peninsula, include Hurricane Ridge viewpoints. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your Olympic Peninsula trip."
+    },
+    {
+      "title": "Lake Crescent’s shoreline trails",
+      "description": "Plan time at Lake Crescent’s shoreline trails for one of the most approachable experiences in Olympic Peninsula. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore Olympic Peninsula."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in Olympic Peninsula",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your Olympic Peninsula itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in Olympic Peninsula?",
+      "a": "A focused two- to three-day trip covers major Olympic Peninsula highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in Olympic Peninsula?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "washington",
+    "citySlug": "olympic-peninsula",
+    "limit": 6,
+    "title": "Top Olympic Peninsula tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Olympic_Peninsula",
+    "officialTourism": "https://stateofwatourism.com/",
+    "reference": "https://www.britannica.com/place/Olympic-Peninsula"
+  }
+}

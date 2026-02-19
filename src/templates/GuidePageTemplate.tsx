@@ -29,6 +29,7 @@ const Section = ({
 );
 
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
+  const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
@@ -127,21 +128,23 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </div>
         </Section>
 
-        <Section title={`Top Highlights in ${place}`}>
-          <div className="grid gap-4 md:grid-cols-2">
-            {guide.highlights.map(item => (
-              <article
-                key={item.title}
-                className="rounded-2xl border border-black/10 bg-white p-4"
-              >
-                <h3 className="font-semibold text-[#1f2a1f]">{item.title}</h3>
-                <p className="mt-2 text-sm text-[#405040]">
-                  {item.description}
-                </p>
-              </article>
-            ))}
-          </div>
-        </Section>
+        {!isTier2 ? (
+          <Section title={`Top Highlights in ${place}`}>
+            <div className="grid gap-4 md:grid-cols-2">
+              {guide.highlights.map(item => (
+                <article
+                  key={item.title}
+                  className="rounded-2xl border border-black/10 bg-white p-4"
+                >
+                  <h3 className="font-semibold text-[#1f2a1f]">{item.title}</h3>
+                  <p className="mt-2 text-sm text-[#405040]">
+                    {item.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </Section>
+        ) : null}
 
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
@@ -162,14 +165,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         </Section>
 
         <div className="grid gap-6 md:grid-cols-2">
-          <Section title="Best time to visit">
-            <p className="font-semibold">{guide.bestTimeToVisit.title}</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5">
-              {guide.bestTimeToVisit.bullets.map(bullet => (
-                <li key={bullet}>{bullet}</li>
-              ))}
-            </ul>
-          </Section>
+          {!isTier2 ? (
+            <Section title="Best time to visit">
+              <p className="font-semibold">{guide.bestTimeToVisit.title}</p>
+              <ul className="mt-3 list-disc space-y-2 pl-5">
+                {guide.bestTimeToVisit.bullets.map(bullet => (
+                  <li key={bullet}>{bullet}</li>
+                ))}
+              </ul>
+            </Section>
+          ) : null}
           <Section title="Travel tips">
             <ul className="list-disc space-y-2 pl-5">
               {guide.travelTips.map(tip => (

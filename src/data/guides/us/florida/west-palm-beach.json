@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "West Palm Beach, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "West Palm Beach",
+  "slug": "guides/us/florida/west-palm-beach",
+  "hero": {
+    "image": "",
+    "alt": "West Palm Beach, Florida skyline and attractions",
+    "headline": "West Palm Beach, Florida Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused West Palm Beach itinerary."
+  },
+  "overview": [
+    "West Palm Beach, Florida is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your West Palm Beach trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core West Palm Beach landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "West Palm Beach local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around West Palm Beach",
+      "description": "Start with A scenic trail with views around West Palm Beach to experience a signature side of West Palm Beach. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your West Palm Beach plan efficient and varied."
+    },
+    {
+      "title": "A local park or nature preserve near West Palm Beach",
+      "description": "A local park or nature preserve near West Palm Beach is a reliable addition to any West Palm Beach itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in West Palm Beach feels balanced without extra transit time."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "If you are choosing only a few highlights in West Palm Beach, include Catch golden hour at a nearby viewpoint. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your West Palm Beach trip."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in West Palm Beach",
+      "description": "Plan time at Stroll a waterfront trail or greenway in West Palm Beach for one of the most approachable experiences in West Palm Beach. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore West Palm Beach."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in West Palm Beach",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your West Palm Beach itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in West Palm Beach?",
+      "a": "A focused two- to three-day trip covers major West Palm Beach highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in West Palm Beach?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "west-palm-beach",
+    "limit": 6,
+    "title": "Top West Palm Beach tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/West_Palm_Beach",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/West-Palm-Beach"
+  }
+}

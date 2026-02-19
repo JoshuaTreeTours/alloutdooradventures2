@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Salem, Massachusetts Travel Guide",
+  "country": "United States",
+  "state": "Massachusetts",
+  "city": "Salem",
+  "slug": "guides/us/massachusetts/salem",
+  "hero": {
+    "image": "",
+    "alt": "Salem, Massachusetts skyline and attractions",
+    "headline": "Salem, Massachusetts Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused Salem itinerary."
+  },
+  "overview": [
+    "Salem, Massachusetts is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your Salem trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core Salem landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "Salem local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Salem",
+      "description": "Start with A scenic trail with views around Salem to experience a signature side of Salem. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your Salem plan efficient and varied."
+    },
+    {
+      "title": "A local park or nature preserve near Salem",
+      "description": "A local park or nature preserve near Salem is a reliable addition to any Salem itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in Salem feels balanced without extra transit time."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "If you are choosing only a few highlights in Salem, include Catch golden hour at a nearby viewpoint. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your Salem trip."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Salem",
+      "description": "Plan time at Stroll a waterfront trail or greenway in Salem for one of the most approachable experiences in Salem. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore Salem."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in Salem",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your Salem itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in Salem?",
+      "a": "A focused two- to three-day trip covers major Salem highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in Salem?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "massachusetts",
+    "citySlug": "salem",
+    "limit": 6,
+    "title": "Top Salem tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Salem",
+    "officialTourism": "https://www.massvacation.com/",
+    "reference": "https://www.britannica.com/place/Salem"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Freedom, New Hampshire Travel Guide",
+  "country": "United States",
+  "state": "New Hampshire",
+  "city": "Freedom",
+  "slug": "guides/us/new-hampshire/freedom",
+  "hero": {
+    "image": "",
+    "alt": "Freedom, New Hampshire skyline and attractions",
+    "headline": "Freedom, New Hampshire Travel Guide",
+    "subheadline": "Quick planning notes, practical activities, and local context to help you build a focused Freedom itinerary."
+  },
+  "overview": [
+    "Freedom, New Hampshire is a practical base for travelers who want a mix of recognizable landmarks, local neighborhoods, and easy outdoor access. This Tier-2 guide highlights a concise set of high-value stops so you can plan faster without missing the essentials. Use one anchor area each day, then add a nearby experience to keep logistics simple and give your Freedom trip a balanced rhythm."
+  ],
+  "highlights": [
+    {
+      "title": "Core Freedom landmarks",
+      "description": "Start with a signature location to orient your trip."
+    },
+    {
+      "title": "Freedom local character",
+      "description": "Add one neighborhood or culture-focused stop each day."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Freedom",
+      "description": "Start with A scenic trail with views around Freedom to experience a signature side of Freedom. This stop works well as a morning anchor, then pair it with nearby cafes, neighborhood walks, or a short guided outing to keep your Freedom plan efficient and varied."
+    },
+    {
+      "title": "A local park or nature preserve near Freedom",
+      "description": "A local park or nature preserve near Freedom is a reliable addition to any Freedom itinerary. You can spend an hour or two here, then connect to local dining, waterfront paths, or cultural stops nearby so your day in Freedom feels balanced without extra transit time."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "If you are choosing only a few highlights in Freedom, include Catch golden hour at a nearby viewpoint. It delivers a memorable sense of place and combines easily with nearby districts, outdoor viewpoints, and local experiences, making it a practical and rewarding part of your Freedom trip."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Freedom",
+      "description": "Plan time at Stroll a waterfront trail or greenway in Freedom for one of the most approachable experiences in Freedom. It is easy to pair with local neighborhoods, seasonal events, and short outdoor breaks, giving first-time visitors a strong, low-stress way to explore Freedom."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are typically the easiest seasons in Freedom",
+    "bullets": [
+      "Shoulder seasons usually offer more comfortable walking conditions.",
+      "Book popular activities early during peak travel windows.",
+      "Use early starts for major landmarks and scenic areas."
+    ]
+  },
+  "travelTips": [
+    "Cluster activities by area so your Freedom itinerary stays efficient.",
+    "Reserve top tours and timed attractions before arrival when possible.",
+    "Leave one flexible block each day for weather or local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days do I need in Freedom?",
+      "a": "A focused two- to three-day trip covers major Freedom highlights and one local experience."
+    },
+    {
+      "q": "Should I pre-book activities in Freedom?",
+      "a": "Yes for top-rated tours, weekends, and seasonal peak dates."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-hampshire",
+    "citySlug": "freedom",
+    "limit": 6,
+    "title": "Top Freedom tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Freedom",
+    "officialTourism": "https://www.usa.gov/visit-state-tourism-offices",
+    "reference": "https://www.britannica.com/place/Freedom"
+  }
+}
