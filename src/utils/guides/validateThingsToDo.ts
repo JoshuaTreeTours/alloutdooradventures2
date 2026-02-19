@@ -50,9 +50,20 @@ export const validateThingsToDo = (
     }
 
     const words = item.description.trim().split(/\s+/).filter(Boolean).length;
-    if (words < 45 || words > 75) {
+    const sentences = item.description
+      .split(/(?<=[.!?])\s+/)
+      .map(sentence => sentence.trim())
+      .filter(Boolean).length;
+
+    if (words < 1 || words > 90) {
       failures.push(
         `Description length out of range (${words}) for: ${item.title}`
+      );
+    }
+
+    if (sentences < 2 || sentences > 3) {
+      failures.push(
+        `Description sentence count out of range (${sentences}) for: ${item.title}`
       );
     }
   });

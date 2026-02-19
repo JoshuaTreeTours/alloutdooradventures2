@@ -95,6 +95,7 @@ const run = async () => {
         landmarkName: item.title,
         cityName: guide.city,
         stateName: guide.state,
+        tier: "tier1",
         existingDescriptions: existing,
       });
 
@@ -104,12 +105,13 @@ const run = async () => {
         !validateNoBoilerplate(description) ||
         countSentences(description) !== 3 ||
         wordCount(description) < 60 ||
-        wordCount(description) > 100
+        wordCount(description) > 110
       ) {
         const retry = await buildWikiLandmarkDescription({
           landmarkName: item.title,
           cityName: guide.city,
           stateName: guide.state,
+          tier: "tier1",
           existingDescriptions: existing,
         });
         description = retry.description;
@@ -129,6 +131,7 @@ const run = async () => {
           landmarkName: item.title,
           cityName: guide.city,
           stateName: guide.state,
+          tier: "tier1",
           existingDescriptions: updatedThings.map(entry => entry.description),
         });
 

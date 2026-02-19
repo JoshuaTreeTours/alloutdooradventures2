@@ -96,7 +96,7 @@ const fallbackLandmarksFromPois = (
   return [...local, ...nearby];
 };
 
-const run = () => {
+const run = async () => {
   const files = walkGuideFiles(ROOT);
   let updated = 0;
   let usedOverrides = 0;
@@ -134,10 +134,11 @@ const run = () => {
       }
     }
 
-    const things = buildTier2ThingsToDo(json.city, json.state, landmarks).slice(
-      0,
-      6
-    );
+    const things = (await buildTier2ThingsToDo(
+      json.city,
+      json.state,
+      landmarks
+    )).slice(0, 6);
 
     if (things.length < 4) {
       failingCities.push(routeKey);
