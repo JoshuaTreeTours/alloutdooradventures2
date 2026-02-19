@@ -26,28 +26,20 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit New Orleans",
-      "description": "New Orleans is a waterfront in Marrero, Louisiana. Nearby day trip: New Orleans is a coastal town in Louisiana, about 5 miles from Marrero. It is a quick hop from Marrero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Marrero by evening."
-    },
-    {
-      "title": "Visit Ponchatoula",
-      "description": "Ponchatoula is a waterfront in Marrero, Louisiana. Nearby day trip: Ponchatoula is a coastal town in Louisiana, about 20 miles from Marrero. It is a quick hop from Marrero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Marrero by evening."
-    },
-    {
-      "title": "Visit Venice",
-      "description": "Venice is a waterfront in Marrero, Louisiana. Nearby day trip: Venice is a coastal town in Louisiana, about 54 miles from Marrero. It is a longer day trip from Marrero with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a day trip and return to Marrero by evening."
-    },
-    {
-      "title": "Visit Historic Downtown Walking Routes",
-      "description": "Historic Downtown Walking Routes is a historic site in Marrero, Louisiana. Historic downtown walking routes in Marrero deliver architecture, storefronts, and easy sightseeing in a compact area. These short loops are perfect for a relaxed stroll with coffee stops and people-watching."
-    },
-    {
       "title": "Visit Regional Park and Preserve Trails",
       "description": "Regional Park and Preserve Trails is a park in Marrero, Louisiana. Regional parks and preserves near Marrero are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace."
     },
     {
-      "title": "Visit Scenic Drive Loops",
-      "description": "Scenic Drive Loops is a park in Marrero, Louisiana. Plan a scenic drive loop around Marrero to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of the surrounding region without committing to a long hike."
+      "title": "Drive Out",
+      "description": "Drive Out is a practical stop for understanding Marrero's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Marrero, Louisiana."
+    },
+    {
+      "title": "Large Boat",
+      "description": "Large Boat is a practical stop for understanding Marrero's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Marrero, Louisiana."
+    },
+    {
+      "title": "Small Boat",
+      "description": "Small Boat is a practical stop for understanding Marrero's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Marrero, Louisiana."
     }
   ],
   "bestTimeToVisit": {

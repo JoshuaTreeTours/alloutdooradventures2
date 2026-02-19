@@ -26,28 +26,20 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Hastings",
-      "description": "Hastings is a waterfront in Jacksonville, Florida. Nearby day trip: Hastings is a coastal town in Florida, about 14 miles from Jacksonville. It is a quick hop from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
-    },
-    {
-      "title": "Visit Eustis",
-      "description": "Eustis is a waterfront in Jacksonville, Florida. Nearby day trip: Eustis is a coastal town in Florida, about 16 miles from Jacksonville. It is a quick hop from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
-    },
-    {
-      "title": "Visit Winter Haven",
-      "description": "Winter Haven is a waterfront in Jacksonville, Florida. Nearby day trip: Winter Haven is a coastal town in Florida, about 24 miles from Jacksonville. It is a quick hop from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
-    },
-    {
-      "title": "Visit Orlando",
-      "description": "Orlando is a waterfront in Jacksonville, Florida. Nearby day trip: Orlando is a coastal town in Florida, about 24 miles from Jacksonville. It is a quick hop from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
-    },
-    {
-      "title": "Visit St. Augustine",
-      "description": "St. Augustine is a waterfront in Jacksonville, Florida. Nearby day trip: St. Augustine is a coastal town in Florida, about 25 miles from Jacksonville. It is a quick hop from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
-    },
-    {
       "title": "Visit Lakeland",
       "description": "Lakeland is a waterfront in Jacksonville, Florida. Nearby day trip: Lakeland is a coastal town in Florida, about 27 miles from Jacksonville. It is a short drive from Jacksonville with time for beach walks, salty-air viewpoints, and breezy shoreline paths. Plan it as a half-day escape and return to Jacksonville by evening."
+    },
+    {
+      "title": "Spirits Ghost Hunt",
+      "description": "Spirits Ghost Hunt is a practical stop for understanding Jacksonville's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jacksonville, Florida."
+    },
+    {
+      "title": "Spirits Ghost Hunt.  Jacksonville",
+      "description": "Spirits Ghost Hunt.  Jacksonville is a practical stop for understanding Jacksonville's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jacksonville, Florida."
+    },
+    {
+      "title": "TAXI WRISTBAND",
+      "description": "TAXI WRISTBAND is a practical stop for understanding Jacksonville's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jacksonville, Florida."
     }
   ],
   "bestTimeToVisit": {
