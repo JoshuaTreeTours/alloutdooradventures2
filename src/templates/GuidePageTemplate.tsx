@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 
+import GuideCard from "../components/GuideCard";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
@@ -28,6 +29,19 @@ const Section = ({
   </section>
 );
 
+
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+
+const getLearnMoreUrl = (guide: GuidePageData, item: GuidePageData["thingsToDo"][number]) =>
+  item.learnMoreUrl ||
+  item.wikiUrl ||
+  `/${guide.slug.replace(/^\/+/, "")}${guide.city ? `#${slugify(item.title)}` : ""}`;
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
@@ -64,6 +78,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           "@type": "Country",
           name: guide.country,
         },
+      },
+      {
+        "@type": "ItemList",
+        name: `Things to do in ${place}`,
+        itemListElement: guide.thingsToDo.map((item, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: item.title,
+          item: getLearnMoreUrl(guide, item),
+        })),
       },
     ];
   }, [
@@ -149,27 +173,12 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => (
-              <li
+              <GuideCard
                 key={item.title}
-                className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
-              >
-                <p className="font-semibold text-[#1f2a1f]">
-                  {index + 1}. {item.title}
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-                  {item.description}
-                </p>
-                {item.wikiUrl ? (
-                  <a
-                    href={item.wikiUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-                  >
-                    Learn more
-                  </a>
-                ) : null}
-              </li>
+                item={item}
+                index={index}
+                learnMoreUrl={getLearnMoreUrl(guide, item)}
+              />
             ))}
           </ol>
         </Section>

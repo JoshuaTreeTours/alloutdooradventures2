@@ -3,6 +3,7 @@ const inferType = (landmarkName: string) => {
   if (/\bmuseum\b/i.test(landmarkName)) return "museum";
   if (/\bbridge\b/i.test(landmarkName)) return "bridge";
   if (/\bgarden\b/i.test(landmarkName)) return "garden";
+  if (/\bharbor\b|\bwaterfront\b|\bbeach\b/i.test(landmarkName)) return "waterfront";
   return "site";
 };
 
@@ -18,15 +19,15 @@ export const fallbackLandmarkDescription = (args: {
   const type = inferType(landmarkName);
 
   if (tier === "tier2") {
-    return `${cleanName} is a ${type} in ${location}. The site is known locally for recognizable design and regular public use, with visible ties to nearby neighborhoods.`;
+    return `${cleanName} is a ${type} in ${location}. It stands out for a recognizable layout and a locally known feature that distinguishes it from nearby stops.`;
   }
 
   return [
     `${cleanName} is a ${type} in ${location}.`,
-    `It is part of the city's established network of cultural and public places.`,
-    `The setting includes identifiable physical features that make the site easy to distinguish.`,
-    `Its layout supports a mix of everyday activity and city-level events across the year.`,
-    `Historical records and civic references keep the site connected to the area's development story.`,
-    `Visitors usually experience a clear sense of place through the landmark's scale, access, and surrounding context.`,
+    `Its setting is defined by clear physical traits that make the location easy to identify on arrival.`,
+    `A distinguishing feature gives the site a specific role in local history or present-day use.`,
+    `The surrounding district provides scale and context, whether residential, commercial, or waterfront.`,
+    `Records and maps consistently mark this location as a notable point within ${cityName}.`,
+    `Visitors usually notice a concrete mix of form, setting, and local function rather than generic city context.`,
   ].join(" ");
 };

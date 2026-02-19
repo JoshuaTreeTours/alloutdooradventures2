@@ -1,8 +1,8 @@
 {
   "totalGuides": 429,
-  "updatedGuides": 1,
+  "updatedGuides": 0,
   "totalItems": 2478,
-  "rewrittenItems": 8,
+  "rewrittenItems": 0,
   "skippedNoData": 2470,
   "failures": [],
   "byGuide": [
@@ -1899,7 +1899,7 @@
     {
       "file": "/workspace/alloutdooradventures2/src/data/guides/us/new-york/new-york.json",
       "tier": "tier1",
-      "rewritten": 8,
+      "rewritten": 0,
       "skipped": 0
     },
     {
