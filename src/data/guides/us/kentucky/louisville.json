@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Louisville, Kentucky Travel Guide",
+  "country": "United States",
+  "state": "Kentucky",
+  "city": "Louisville",
+  "slug": "guides/us/kentucky/louisville",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/1sW7z5rPQ5mHtdX9jL51",
+    "alt": "Louisville, Kentucky — Secrets of Louisville Food & History Tour in NuLu",
+    "headline": "Louisville, Kentucky Travel Guide",
+    "subheadline": "Plan a focused Louisville trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Louisville, Kentucky is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Louisville itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Louisville essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Louisville local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Louisville",
+      "description": "downtown Louisville is one of the easiest ways to understand Louisville. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Louisville itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Louisville",
+      "description": "If you are building a shorter trip, include a local neighborhood in Louisville in your Louisville plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Louisville",
+      "description": "Many travelers rank time in an outdoor area near Louisville as a high-value stop in Louisville because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Louisville route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Louisville",
+      "description": "For a reliable local experience in Louisville, add Book a local guided experience in Louisville to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Louisville day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Louisville",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Louisville.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Louisville?",
+      "a": "Two to three days is enough for core Louisville highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Louisville?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "kentucky",
+    "citySlug": "louisville",
+    "limit": 6,
+    "title": "Top Louisville tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Louisville",
+    "reference": "https://www.britannica.com/place/Louisville"
+  }
+}

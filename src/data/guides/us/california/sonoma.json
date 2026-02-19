@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Sonoma, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Sonoma",
+  "slug": "guides/us/california/sonoma",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/dtx6TYxnQb2GtjvJVgoQ",
+    "alt": "Sonoma, California — The Tastes of Sonoma Bike Tour",
+    "headline": "Sonoma, California Travel Guide",
+    "subheadline": "Plan a focused Sonoma trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Sonoma, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Sonoma itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Sonoma essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Sonoma local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Sonoma",
+      "description": "downtown Sonoma is one of the easiest ways to understand Sonoma. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Sonoma itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Sonoma",
+      "description": "If you are building a shorter trip, include a local neighborhood in Sonoma in your Sonoma plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Sonoma",
+      "description": "Many travelers rank time in an outdoor area near Sonoma as a high-value stop in Sonoma because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Sonoma route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Sonoma",
+      "description": "For a reliable local experience in Sonoma, add Book a local guided experience in Sonoma to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Sonoma day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Sonoma",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Sonoma.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Sonoma?",
+      "a": "Two to three days is enough for core Sonoma highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Sonoma?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "sonoma",
+    "limit": 6,
+    "title": "Top Sonoma tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sonoma",
+    "officialTourism": "https://www.visitcalifornia.com/",
+    "reference": "https://www.britannica.com/place/Sonoma"
+  }
+}

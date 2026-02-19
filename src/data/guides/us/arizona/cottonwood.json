@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Cottonwood, Arizona Travel Guide",
+  "country": "United States",
+  "state": "Arizona",
+  "city": "Cottonwood",
+  "slug": "guides/us/arizona/cottonwood",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/x49l4AT9TtmEoxAghnxm",
+    "alt": "Cottonwood, Arizona — Pedal to Wine (E-Bikes)",
+    "headline": "Cottonwood, Arizona Travel Guide",
+    "subheadline": "Plan a focused Cottonwood trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Cottonwood, Arizona is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cottonwood itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Cottonwood essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Cottonwood local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Cottonwood",
+      "description": "downtown Cottonwood is one of the easiest ways to understand Cottonwood. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Cottonwood itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Cottonwood",
+      "description": "If you are building a shorter trip, include a local neighborhood in Cottonwood in your Cottonwood plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Cottonwood",
+      "description": "Many travelers rank time in an outdoor area near Cottonwood as a high-value stop in Cottonwood because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Cottonwood route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Cottonwood",
+      "description": "For a reliable local experience in Cottonwood, add Book a local guided experience in Cottonwood to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Cottonwood day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Cottonwood",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Cottonwood.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Cottonwood?",
+      "a": "Two to three days is enough for core Cottonwood highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Cottonwood?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "arizona",
+    "citySlug": "cottonwood",
+    "limit": 6,
+    "title": "Top Cottonwood tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cottonwood",
+    "officialTourism": "https://www.visitarizona.com/",
+    "reference": "https://www.britannica.com/place/Cottonwood"
+  }
+}

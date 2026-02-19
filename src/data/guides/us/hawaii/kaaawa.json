@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Kaaawa, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Kaaawa",
+  "slug": "guides/us/hawaii/kaaawa",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/bnjSIyETneylLSRI6SZi",
+    "alt": "Kaaawa, Hawaii — Rainforest Self-Guided Kayak Tour",
+    "headline": "Kaaawa, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Kaaawa trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Kaaawa, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Kaaawa itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Kaaawa essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Kaaawa local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Kaaawa",
+      "description": "downtown Kaaawa is one of the easiest ways to understand Kaaawa. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Kaaawa itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Kaaawa",
+      "description": "If you are building a shorter trip, include a local neighborhood in Kaaawa in your Kaaawa plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Kaaawa",
+      "description": "Many travelers rank time in an outdoor area near Kaaawa as a high-value stop in Kaaawa because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Kaaawa route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Kaaawa",
+      "description": "For a reliable local experience in Kaaawa, add Book a local guided experience in Kaaawa to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Kaaawa day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Kaaawa",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Kaaawa.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Kaaawa?",
+      "a": "Two to three days is enough for core Kaaawa highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Kaaawa?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "kaaawa",
+    "limit": 6,
+    "title": "Top Kaaawa tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kaaawa",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Kaaawa"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Stock Island, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Stock Island",
+  "slug": "guides/us/florida/stock-island",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/trC4enRduUsMUKHLjJrA",
+    "alt": "Stock Island, Florida — Private Patch Reef Fishing",
+    "headline": "Stock Island, Florida Travel Guide",
+    "subheadline": "Plan a focused Stock Island trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Stock Island, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Stock Island itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Stock Island essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Stock Island local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Stock Island",
+      "description": "downtown Stock Island is one of the easiest ways to understand Stock Island. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Stock Island itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Stock Island",
+      "description": "If you are building a shorter trip, include a local neighborhood in Stock Island in your Stock Island plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Stock Island",
+      "description": "Many travelers rank time in an outdoor area near Stock Island as a high-value stop in Stock Island because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Stock Island route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Stock Island",
+      "description": "For a reliable local experience in Stock Island, add Book a local guided experience in Stock Island to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Stock Island day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Stock Island",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Stock Island.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Stock Island?",
+      "a": "Two to three days is enough for core Stock Island highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Stock Island?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "stock-island",
+    "limit": 6,
+    "title": "Top Stock Island tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Stock_Island",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Stock-Island"
+  }
+}

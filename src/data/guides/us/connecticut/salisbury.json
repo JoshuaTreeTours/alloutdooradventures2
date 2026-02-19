@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Salisbury, Connecticut Travel Guide",
+  "country": "United States",
+  "state": "Connecticut",
+  "city": "Salisbury",
+  "slug": "guides/us/connecticut/salisbury",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/txzULwEgSEiv3HO9WeJ4",
+    "alt": "Salisbury, Connecticut — Early Bird Group Rate - 9 AM Quietwater Canoeing",
+    "headline": "Salisbury, Connecticut Travel Guide",
+    "subheadline": "Plan a focused Salisbury trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Salisbury, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Salisbury itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Salisbury essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Salisbury local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Salisbury",
+      "description": "downtown Salisbury is one of the easiest ways to understand Salisbury. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Salisbury itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Salisbury",
+      "description": "If you are building a shorter trip, include a local neighborhood in Salisbury in your Salisbury plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Salisbury",
+      "description": "Many travelers rank time in an outdoor area near Salisbury as a high-value stop in Salisbury because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Salisbury route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Salisbury",
+      "description": "For a reliable local experience in Salisbury, add Book a local guided experience in Salisbury to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Salisbury day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Salisbury",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Salisbury.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Salisbury?",
+      "a": "Two to three days is enough for core Salisbury highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Salisbury?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "connecticut",
+    "citySlug": "salisbury",
+    "limit": 6,
+    "title": "Top Salisbury tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Salisbury",
+    "reference": "https://www.britannica.com/place/Salisbury"
+  }
+}

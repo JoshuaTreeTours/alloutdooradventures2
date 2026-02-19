@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Mount Pleasant, Michigan Travel Guide",
+  "country": "United States",
+  "state": "Michigan",
+  "city": "Mount Pleasant",
+  "slug": "guides/us/michigan/mount-pleasant",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/fX8bUS8zS8imVxiXyXy4",
+    "alt": "Mount Pleasant, Michigan — Tigers on the Road in Boston! (6D/5N/7M)",
+    "headline": "Mount Pleasant, Michigan Travel Guide",
+    "subheadline": "Plan a focused Mount Pleasant trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Mount Pleasant, Michigan is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Mount Pleasant itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Mount Pleasant essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Mount Pleasant local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Mount Pleasant",
+      "description": "downtown Mount Pleasant is one of the easiest ways to understand Mount Pleasant. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Mount Pleasant itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Mount Pleasant",
+      "description": "If you are building a shorter trip, include a local neighborhood in Mount Pleasant in your Mount Pleasant plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Mount Pleasant",
+      "description": "Many travelers rank time in an outdoor area near Mount Pleasant as a high-value stop in Mount Pleasant because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Mount Pleasant route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Mount Pleasant",
+      "description": "For a reliable local experience in Mount Pleasant, add Book a local guided experience in Mount Pleasant to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Mount Pleasant day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Mount Pleasant",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Mount Pleasant.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Mount Pleasant?",
+      "a": "Two to three days is enough for core Mount Pleasant highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Mount Pleasant?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "michigan",
+    "citySlug": "mount-pleasant",
+    "limit": 6,
+    "title": "Top Mount Pleasant tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Mount_Pleasant",
+    "officialTourism": "https://www.michigan.org/",
+    "reference": "https://www.britannica.com/place/Mount-Pleasant"
+  }
+}

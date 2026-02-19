@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "The Colony, Texas Travel Guide",
+  "country": "United States",
+  "state": "Texas",
+  "city": "The Colony",
+  "slug": "guides/us/texas/the-colony",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/lYFOHSs3RbSHBNgnFckf",
+    "alt": "The Colony, Texas — Four-Days Cruiser Rental",
+    "headline": "The Colony, Texas Travel Guide",
+    "subheadline": "Plan a focused The Colony trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "The Colony, Texas is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your The Colony itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "The Colony essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "The Colony local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown The Colony",
+      "description": "downtown The Colony is one of the easiest ways to understand The Colony. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your The Colony itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in The Colony",
+      "description": "If you are building a shorter trip, include a local neighborhood in The Colony in your The Colony plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near The Colony",
+      "description": "Many travelers rank time in an outdoor area near The Colony as a high-value stop in The Colony because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your The Colony route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in The Colony",
+      "description": "For a reliable local experience in The Colony, add Book a local guided experience in The Colony to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your The Colony day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in The Colony",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across The Colony.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for The Colony?",
+      "a": "Two to three days is enough for core The Colony highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in The Colony?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "texas",
+    "citySlug": "the-colony",
+    "limit": 6,
+    "title": "Top The Colony tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/The_Colony",
+    "officialTourism": "https://www.traveltexas.com/",
+    "reference": "https://www.britannica.com/place/The-Colony"
+  }
+}

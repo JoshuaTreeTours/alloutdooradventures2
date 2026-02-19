@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Lahaina, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Lahaina",
+  "slug": "guides/us/hawaii/lahaina",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/8pWz6BBrT2kV1O6sIipQ",
+    "alt": "Lahaina, Hawaii — Intro Scuba Class & Reef Dive",
+    "headline": "Lahaina, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Lahaina trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Lahaina essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Lahaina local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Lahaina",
+      "description": "downtown Lahaina is one of the easiest ways to understand Lahaina. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Lahaina itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Lahaina",
+      "description": "If you are building a shorter trip, include a local neighborhood in Lahaina in your Lahaina plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Lahaina",
+      "description": "Many travelers rank time in an outdoor area near Lahaina as a high-value stop in Lahaina because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Lahaina route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Lahaina",
+      "description": "For a reliable local experience in Lahaina, add Book a local guided experience in Lahaina to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Lahaina day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Lahaina",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Lahaina.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Lahaina?",
+      "a": "Two to three days is enough for core Lahaina highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Lahaina?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "lahaina",
+    "limit": 6,
+    "title": "Top Lahaina tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lahaina",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Lahaina"
+  }
+}

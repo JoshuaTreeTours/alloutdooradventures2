@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Waikoloa Village, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Waikoloa Village",
+  "slug": "guides/us/hawaii/waikoloa-village",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/m0FU8UawTiy7fsBUmZN9",
+    "alt": "Waikoloa Village, Hawaii — EBC E-Bikes",
+    "headline": "Waikoloa Village, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Waikoloa Village trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Waikoloa Village, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Waikoloa Village itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Waikoloa Village essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Waikoloa Village local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Waikoloa Village",
+      "description": "downtown Waikoloa Village is one of the easiest ways to understand Waikoloa Village. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Waikoloa Village itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Waikoloa Village",
+      "description": "If you are building a shorter trip, include a local neighborhood in Waikoloa Village in your Waikoloa Village plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Waikoloa Village",
+      "description": "Many travelers rank time in an outdoor area near Waikoloa Village as a high-value stop in Waikoloa Village because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Waikoloa Village route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Waikoloa Village",
+      "description": "For a reliable local experience in Waikoloa Village, add Book a local guided experience in Waikoloa Village to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Waikoloa Village day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Waikoloa Village",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Waikoloa Village.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Waikoloa Village?",
+      "a": "Two to three days is enough for core Waikoloa Village highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Waikoloa Village?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "waikoloa-village",
+    "limit": 6,
+    "title": "Top Waikoloa Village tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Waikoloa_Village",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Waikoloa-Village"
+  }
+}

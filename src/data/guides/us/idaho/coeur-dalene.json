@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Coeur d'Alene, Idaho Travel Guide",
+  "country": "United States",
+  "state": "Idaho",
+  "city": "Coeur d'Alene",
+  "slug": "guides/us/idaho/coeur-dalene",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/MQsWCDeRXG8jcmsQFg99",
+    "alt": "Coeur d'Alene, Idaho — E-Bike Rentals",
+    "headline": "Coeur d'Alene, Idaho Travel Guide",
+    "subheadline": "Plan a focused Coeur d'Alene trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Coeur d'Alene, Idaho is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Coeur d'Alene itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Coeur d'Alene essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Coeur d'Alene local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Coeur d'Alene",
+      "description": "downtown Coeur d'Alene is one of the easiest ways to understand Coeur d'Alene. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Coeur d'Alene itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Coeur d'Alene",
+      "description": "If you are building a shorter trip, include a local neighborhood in Coeur d'Alene in your Coeur d'Alene plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Coeur d'Alene",
+      "description": "Many travelers rank time in an outdoor area near Coeur d'Alene as a high-value stop in Coeur d'Alene because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Coeur d'Alene route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Coeur d'Alene",
+      "description": "For a reliable local experience in Coeur d'Alene, add Book a local guided experience in Coeur d'Alene to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Coeur d'Alene day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Coeur d'Alene",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Coeur d'Alene.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Coeur d'Alene?",
+      "a": "Two to three days is enough for core Coeur d'Alene highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Coeur d'Alene?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "idaho",
+    "citySlug": "coeur-dalene",
+    "limit": 6,
+    "title": "Top Coeur d'Alene tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Coeur_d'Alene",
+    "reference": "https://www.britannica.com/place/Coeur-d'Alene"
+  }
+}
