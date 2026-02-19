@@ -37,6 +37,13 @@ export default function CityGuideRoute({
     );
   }
 
+
+  if (regionType === "country") {
+    console.info(
+      `[guide:fallback] ${params.parentSlug}/${params.citySlug} -> Engine1 guide source (no Wikidata match or generated guide)`,
+    );
+  }
+
   const guide = buildCityGuide({
     parentSlug: params.parentSlug,
     citySlug: params.citySlug,

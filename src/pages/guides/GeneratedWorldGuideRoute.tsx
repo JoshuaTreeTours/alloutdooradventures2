@@ -11,6 +11,7 @@ type RegistryEntry = {
   country: string;
   countrySlug: string;
   citySlug: string;
+  wikidataId?: string | null;
 };
 
 type GeneratedGuide = {
@@ -74,13 +75,18 @@ const getGuide = (countrySlug: string, citySlug: string): GeneratedGuide | null 
   return isGuideLike(candidate) ? candidate : null;
 };
 
-const isTopCity = (countrySlug: string, citySlug: string) =>
-  registry.some(
+const getRegistryEntry = (countrySlug: string, citySlug: string) =>
+  registry.find(
     (entry) => entry.countrySlug === countrySlug && entry.citySlug === citySlug,
   );
 
-export const shouldUseGeneratedGuide = (countrySlug: string, citySlug: string) =>
-  Boolean(getGuide(countrySlug, citySlug)) || isTopCity(countrySlug, citySlug);
+export const shouldUseGeneratedGuide = (countrySlug: string, citySlug: string) => {
+  const guide = getGuide(countrySlug, citySlug);
+  if (guide) return true;
+
+  const entry = getRegistryEntry(countrySlug, citySlug);
+  return Boolean(entry?.wikidataId);
+};
 
 const toTourCardModel = (tour: Engine2Tour): Tour => ({
   id: tour.id,
@@ -171,7 +177,8 @@ export default function GeneratedWorldGuideRoute({
   const [activity, setActivity] = useState<ActivityFilter>("all");
 
   if (!guide) {
-    if (!isTopCity(countrySlug, citySlug)) return null;
+    const entry = getRegistryEntry(countrySlug, citySlug);
+    if (!entry || !entry.wikidataId) return null;
 
     return (
       <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">

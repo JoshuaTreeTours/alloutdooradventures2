@@ -1,23 +1,184 @@
 [
-  { "name": "Paris", "country": "France", "countrySlug": "france", "citySlug": "paris" },
-  { "name": "Las Vegas", "country": "United States", "countrySlug": "united-states", "citySlug": "las-vegas" },
-  { "name": "New York City", "country": "United States", "countrySlug": "united-states", "citySlug": "new-york-city" },
-  { "name": "Orlando", "country": "United States", "countrySlug": "united-states", "citySlug": "orlando" },
-  { "name": "London", "country": "United Kingdom", "countrySlug": "united-kingdom", "citySlug": "london" },
-  { "name": "Rome", "country": "Italy", "countrySlug": "italy", "citySlug": "rome" },
-  { "name": "Tokyo", "country": "Japan", "countrySlug": "japan", "citySlug": "tokyo" },
-  { "name": "Cancun", "country": "Mexico", "countrySlug": "mexico", "citySlug": "cancun" },
-  { "name": "Barcelona", "country": "Spain", "countrySlug": "spain", "citySlug": "barcelona" },
-  { "name": "Bangkok", "country": "Thailand", "countrySlug": "thailand", "citySlug": "bangkok" },
-  { "name": "Amsterdam", "country": "Netherlands", "countrySlug": "netherlands", "citySlug": "amsterdam" },
-  { "name": "Miami", "country": "United States", "countrySlug": "united-states", "citySlug": "miami" },
-  { "name": "Los Angeles", "country": "United States", "countrySlug": "united-states", "citySlug": "los-angeles" },
-  { "name": "San Francisco", "country": "United States", "countrySlug": "united-states", "citySlug": "san-francisco" },
-  { "name": "Honolulu", "country": "United States", "countrySlug": "united-states", "citySlug": "honolulu" },
-  { "name": "Singapore", "country": "Singapore", "countrySlug": "singapore", "citySlug": "singapore" },
-  { "name": "Sydney", "country": "Australia", "countrySlug": "australia", "citySlug": "sydney" },
-  { "name": "Florence", "country": "Italy", "countrySlug": "italy", "citySlug": "florence" },
-  { "name": "Venice", "country": "Italy", "countrySlug": "italy", "citySlug": "venice" },
-  { "name": "Mexico City", "country": "Mexico", "countrySlug": "mexico", "citySlug": "ciudad-de-mexico" },
-  { "name": "Cabo San Lucas", "country": "Mexico", "countrySlug": "mexico", "citySlug": "cabo-san-lucas" }
+  {
+    "name": "Paris",
+    "country": "France",
+    "countrySlug": "france",
+    "citySlug": "paris",
+    "wikidataId": "Q90"
+  },
+  {
+    "name": "Las Vegas",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "las-vegas",
+    "wikidataId": "Q23768"
+  },
+  {
+    "name": "New York",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "new-york",
+    "wikidataId": "Q60"
+  },
+  {
+    "name": "Orlando",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "orlando",
+    "wikidataId": "Q49247"
+  },
+  {
+    "name": "London",
+    "country": "United Kingdom",
+    "countrySlug": "united-kingdom",
+    "citySlug": "london",
+    "wikidataId": "Q84"
+  },
+  {
+    "name": "Rome",
+    "country": "Italy",
+    "countrySlug": "italy",
+    "citySlug": "rome",
+    "wikidataId": "Q220"
+  },
+  {
+    "name": "Tokyo",
+    "country": "Japan",
+    "countrySlug": "japan",
+    "citySlug": "tokyo",
+    "wikidataId": "Q1490"
+  },
+  {
+    "name": "Cancun",
+    "country": "Mexico",
+    "countrySlug": "mexico",
+    "citySlug": "cancun",
+    "wikidataId": "Q83958"
+  },
+  {
+    "name": "Barcelona",
+    "country": "Spain",
+    "countrySlug": "spain",
+    "citySlug": "barcelona",
+    "wikidataId": "Q1492"
+  },
+  {
+    "name": "Bangkok",
+    "country": "Thailand",
+    "countrySlug": "thailand",
+    "citySlug": "bangkok",
+    "wikidataId": "Q1861"
+  },
+  {
+    "name": "Amsterdam",
+    "country": "Netherlands",
+    "countrySlug": "netherlands",
+    "citySlug": "amsterdam",
+    "wikidataId": "Q727"
+  },
+  {
+    "name": "Miami",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "miami",
+    "wikidataId": "Q8652"
+  },
+  {
+    "name": "Los Angeles",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "los-angeles",
+    "wikidataId": "Q65"
+  },
+  {
+    "name": "San Francisco",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "san-francisco",
+    "wikidataId": "Q62"
+  },
+  {
+    "name": "Honolulu",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "honolulu",
+    "wikidataId": "Q18094"
+  },
+  {
+    "name": "Singapore",
+    "country": "Singapore",
+    "countrySlug": "singapore",
+    "citySlug": "singapore",
+    "wikidataId": "Q334"
+  },
+  {
+    "name": "Sydney",
+    "country": "Australia",
+    "countrySlug": "australia",
+    "citySlug": "sydney",
+    "wikidataId": "Q3130"
+  },
+  {
+    "name": "Florence",
+    "country": "Italy",
+    "countrySlug": "italy",
+    "citySlug": "florence",
+    "wikidataId": "Q2044"
+  },
+  {
+    "name": "Venice",
+    "country": "Italy",
+    "countrySlug": "italy",
+    "citySlug": "venice",
+    "wikidataId": "Q641"
+  },
+  {
+    "name": "Mexico City",
+    "country": "Mexico",
+    "countrySlug": "mexico",
+    "citySlug": "ciudad-de-mexico",
+    "wikidataId": "Q1489"
+  },
+  {
+    "name": "Cabo San Lucas",
+    "country": "Mexico",
+    "countrySlug": "mexico",
+    "citySlug": "cabo-san-lucas",
+    "wikidataId": "Q741640"
+  },
+  {
+    "name": "Vancouver",
+    "country": "Canada",
+    "countrySlug": "canada",
+    "citySlug": "vancouver",
+    "wikidataId": "Q24639"
+  },
+  {
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "countrySlug": "denmark",
+    "citySlug": "copenhagen",
+    "wikidataId": "Q1748"
+  },
+  {
+    "name": "Toronto",
+    "country": "Canada",
+    "countrySlug": "canada",
+    "citySlug": "toronto",
+    "wikidataId": "Q172"
+  },
+  {
+    "name": "Banff",
+    "country": "Canada",
+    "countrySlug": "canada",
+    "citySlug": "banff",
+    "wikidataId": "Q80700"
+  },
+  {
+    "name": "New York City",
+    "country": "United States",
+    "countrySlug": "united-states",
+    "citySlug": "new-york-city",
+    "wikidataId": null
+  }
 ]

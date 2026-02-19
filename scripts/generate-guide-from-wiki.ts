@@ -6,6 +6,7 @@ type RegistryEntry = {
   country: string;
   countrySlug: string;
   citySlug: string;
+  wikidataId?: string | null;
 };
 
 type WikidataValue = {
@@ -53,6 +54,28 @@ type GeneratedGuide = {
 
 const REGISTRY_PATH = path.resolve("src/content/guides/guideRegistry.top-cities.json");
 const OUTPUT_BASE = path.resolve("src/content/guides/world");
+
+
+const CITY_QID_OVERRIDES: Record<string, string> = {
+  "united-kingdom/london": "Q84",
+};
+
+const normalize = (value: string) =>
+  value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+
+const countryMatches = (description: string, country: string) => {
+  const d = normalize(description);
+  const c = normalize(country);
+  if (!d || !c) return false;
+  if (d.includes(c)) return true;
+  if (c === "united states" && (d.includes("usa") || d.includes("u s"))) return true;
+  if (c === "united kingdom" && (d.includes("uk") || d.includes("england"))) return true;
+  return false;
+};
 
 const cli = {
   dryRun: process.argv.includes("--dry-run"),
@@ -172,12 +195,22 @@ const extractString = (claim?: WikidataValue[]) => {
 };
 
 async function resolveWikidataId(entry: RegistryEntry) {
+  const overrideKey = `${entry.countrySlug}/${entry.citySlug}`;
+  const overrideId = CITY_QID_OVERRIDES[overrideKey];
+  if (overrideId) {
+    return overrideId;
+  }
+
+  if (entry.wikidataId) {
+    return entry.wikidataId;
+  }
+
   const url = new URL("https://www.wikidata.org/w/api.php");
   url.searchParams.set("action", "wbsearchentities");
   url.searchParams.set("search", `${entry.name} ${entry.country}`);
   url.searchParams.set("language", "en");
   url.searchParams.set("type", "item");
-  url.searchParams.set("limit", "8");
+  url.searchParams.set("limit", "10");
   url.searchParams.set("format", "json");
   url.searchParams.set("origin", "*");
 
@@ -188,15 +221,18 @@ async function resolveWikidataId(entry: RegistryEntry) {
     search?: Array<{ id: string; label?: string; description?: string }>;
   };
 
-  const best = (payload.search ?? []).find((item) => {
-    const haystack = `${item.label ?? ""} ${item.description ?? ""}`.toLowerCase();
-    return haystack.includes(entry.name.toLowerCase()) && haystack.includes(entry.country.toLowerCase());
+  const byContext = (payload.search ?? []).find((item) => {
+    const label = normalize(item.label ?? "");
+    const city = normalize(entry.name);
+    const description = item.description ?? "";
+    return (label === city || label.includes(city)) && countryMatches(description, entry.country);
   });
 
-  if (best) return best.id;
+  if (byContext) return byContext.id;
   if (payload.search?.length) return payload.search[0].id;
   throw new Error(`Could not resolve Wikidata ID for ${entry.name}`);
 }
+
 
 async function fetchWikidataFacts(wikidataId: string) {
   const url = new URL("https://www.wikidata.org/w/api.php");
@@ -369,7 +405,12 @@ async function main() {
   if (!selected.length) throw new Error("No matching city found for --only.");
 
   for (const entry of selected) {
-    await generateCity(entry);
+    try {
+      await generateCity(entry);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(`[guide:fallback] ${entry.name}, ${entry.country} -> Engine1 fallback (${message})`);
+    }
   }
 }
 
