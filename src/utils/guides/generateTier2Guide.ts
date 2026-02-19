@@ -1,6 +1,7 @@
 import { getCityBySlugs } from "../../data/destinations";
 import { getGuideStateBySlug } from "../../data/guideData";
 import { buildSeoLinks } from "./buildSeoLinks";
+import { generateCityEntities } from "./generateCityEntities";
 import { selectCityHeroFromTours } from "./selectCityHeroFromTours";
 import type { GuidePageData } from "../loadGuide";
 
@@ -9,38 +10,53 @@ type Tier2GenerationResult = {
   usedHeroFallback: boolean;
 };
 
-const toThingTitle = (value: string, cityName: string) =>
-  value
-    .replace(/\.$/, "")
-    .replace(
-      /^(Walk|Hike|Bike|Paddle|Explore|Visit|Take|Spend|Plan|Ride|Tour)\s+/i,
-      ""
-    )
-    .replace(new RegExp(`^${cityName}\\s+`, "i"), "")
-    .trim();
+const countWords = (text: string) => text.trim().split(/\s+/).length;
 
-const toThingDescription = (cityName: string, title: string, index: number) => {
-  const options = [
-    `${title} is one of the easiest ways to understand ${cityName}. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your ${cityName} itinerary without forcing extra travel time.`,
-    `If you are building a shorter trip, include ${title} in your ${cityName} plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible.`,
-    `Many travelers rank ${title} as a high-value stop in ${cityName} because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your ${cityName} route stays efficient and balanced.`,
-    `For a reliable local experience in ${cityName}, add ${title} to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your ${cityName} day strong variety without overplanning.`,
-  ];
+const toThingDescription = (
+  cityName: string,
+  stateName: string,
+  entityName: string,
+  entityType: string,
+  summary: string
+) => {
+  const cleanedSummary = summary.replace(/\s+/g, " ").trim();
+  const base = `${entityName} is a ${entityType} in ${cityName}, ${stateName}. ${cleanedSummary}`;
+  const words = countWords(base);
 
-  return options[index % options.length];
+  if (words > 70) {
+    return base
+      .split(/\s+/)
+      .slice(0, 70)
+      .join(" ")
+      .replace(/[;,]$/, "")
+      .concat(".");
+  }
+
+  if (words >= 40) {
+    return base;
+  }
+
+  return `${base} Visitors come for the landmark's role in local history, architecture, or outdoor access, making it a concise and factual stop that explains how ${cityName} developed within ${stateName}.`;
 };
 
 export const generateTier2Guide = (
   stateSlug: string,
   citySlug: string,
   cityName: string
-): Tier2GenerationResult => {
+): Promise<Tier2GenerationResult> =>
+  generateTier2GuideInternal(stateSlug, citySlug, cityName);
+
+const generateTier2GuideInternal = async (
+  stateSlug: string,
+  citySlug: string,
+  cityName: string
+): Promise<Tier2GenerationResult> => {
   const state = getGuideStateBySlug(stateSlug);
   if (!state) {
     throw new Error(`Unknown state slug: ${stateSlug}`);
   }
 
-  const city = getCityBySlugs(stateSlug, citySlug);
+  getCityBySlugs(stateSlug, citySlug);
   const hero = selectCityHeroFromTours(
     stateSlug,
     citySlug,
@@ -48,31 +64,31 @@ export const generateTier2Guide = (
     state.name
   );
 
-  const baseThings = city?.thingsToDo?.length
-    ? city.thingsToDo.slice(0, 4)
-    : [
-        `Visit downtown ${cityName}.`,
-        `Explore a local neighborhood in ${cityName}.`,
-        `Spend time in an outdoor area near ${cityName}.`,
-        `Book a local guided experience in ${cityName}.`,
-      ];
+  const entities = await generateCityEntities(cityName, state.name);
 
-  const thingsToDo = baseThings.map((item, index) => {
-    const cleaned =
-      toThingTitle(item, cityName) || `${cityName} highlight ${index + 1}`;
-
-    return {
-      title: cleaned.charAt(0).toUpperCase() + cleaned.slice(1),
-      description: toThingDescription(cityName, cleaned, index),
-    };
-  });
+  const thingsToDo = entities.slice(0, 6).map(entity => ({
+    title: `Visit ${entity.name}`,
+    description: toThingDescription(
+      cityName,
+      state.name,
+      entity.name,
+      entity.type,
+      entity.summary
+    ),
+  }));
 
   while (thingsToDo.length < 4) {
     const index = thingsToDo.length;
-    const title = `${cityName} local experience ${index + 1}`;
+    const title = `Visit ${cityName} landmark ${index + 1}`;
     thingsToDo.push({
       title,
-      description: toThingDescription(cityName, title, index),
+      description: toThingDescription(
+        cityName,
+        state.name,
+        `${cityName} landmark ${index + 1}`,
+        "landmark",
+        `${cityName} in ${state.name} includes historic blocks, civic spaces, and public attractions that orient visitors to the city's built environment and local identity.`
+      ),
     });
   }
 

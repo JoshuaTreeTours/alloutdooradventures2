@@ -26,20 +26,28 @@
   ],
   "thingsToDo": [
     {
-      "title": "A paddle or canoe outing near Homestead",
-      "description": "a paddle or canoe outing near Homestead is one of the easiest ways to understand Homestead. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Homestead itinerary without forcing extra travel time."
+      "title": "Visit Florida Bay",
+      "description": "Florida Bay is a historic site in Homestead, Florida. Florida Bay is a recognized destination connected to tours operating in Homestead, Florida, and appears frequently in local itineraries for its sightseeing value and geographic setting. The site helps explain how Homestead developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
     },
     {
-      "title": "A local park or nature preserve near Homestead",
-      "description": "If you are building a shorter trip, include a local park or nature preserve near Homestead in your Homestead plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+      "title": "Visit Everglades National Park",
+      "description": "Everglades National Park is a district in Homestead, Florida. Everglades National Park is a recognized destination connected to tours operating in Homestead, Florida, and appears frequently in local itineraries for its sightseeing value and geographic setting. The site helps explain how Homestead developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
     },
     {
-      "title": "Catch golden hour at a nearby viewpoint",
-      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Homestead because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Homestead route stays efficient and balanced."
+      "title": "Visit South Florida National Park Service",
+      "description": "South Florida National Park Service is a district in Homestead, Florida. South Florida National Park Service is a recognized destination connected to tours operating in Homestead, Florida, and appears frequently in local itineraries for its sightseeing value and geographic setting."
     },
     {
-      "title": "Stroll a waterfront trail or greenway in Homestead",
-      "description": "For a reliable local experience in Homestead, add Stroll a waterfront trail or greenway in Homestead to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Homestead day strong variety without overplanning."
+      "title": "Visit Historic Downtown Walking Routes",
+      "description": "Historic Downtown Walking Routes is a historic site in Homestead, Florida. Historic downtown walking routes in Homestead deliver architecture, storefronts, and easy sightseeing in a compact area. These short loops are perfect for a relaxed stroll with coffee stops and people-watching."
+    },
+    {
+      "title": "Visit Regional Park and Preserve Trails",
+      "description": "Regional Park and Preserve Trails is a park in Homestead, Florida. Regional parks and preserves near Homestead are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace."
+    },
+    {
+      "title": "Visit Scenic Drive Loops",
+      "description": "Scenic Drive Loops is a park in Homestead, Florida. Plan a scenic drive loop around Homestead to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of the surrounding region without committing to a long hike."
     }
   ],
   "bestTimeToVisit": {
