@@ -6,6 +6,7 @@ import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
+import { buildThingToDoPath } from "../utils/guides/thingPages";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 
@@ -148,29 +149,33 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
-            {guide.thingsToDo.map((item, index) => (
-              <li
-                key={item.title}
-                className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
-              >
-                <p className="font-semibold text-[#1f2a1f]">
-                  {index + 1}. {item.title}
-                </p>
-                <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-                  {item.description}
-                </p>
-                {item.wikiUrl ? (
-                  <a
-                    href={item.wikiUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-                  >
-                    Learn more
-                  </a>
-                ) : null}
-              </li>
-            ))}
+            {guide.thingsToDo.map((item, index) => {
+              const internalThingPath = buildThingToDoPath({
+                countrySlug: "us",
+                regionSlug: guide.tours.stateSlug,
+                citySlug: guide.tours.citySlug ?? "",
+                thingTitle: item.title,
+              });
+
+              return (
+                <li
+                  key={item.title}
+                  className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
+                >
+                  <p className="font-semibold text-[#1f2a1f]">
+                    {index + 1}. {item.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
+                    {item.description}
+                  </p>
+                  <Link href={internalThingPath}>
+                    <a className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline">
+                      Learn more
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
           </ol>
         </Section>
 

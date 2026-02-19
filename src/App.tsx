@@ -31,6 +31,7 @@ import ToursCatalog from "./pages/ToursCatalog";
 import GuidesIndex from "./pages/guides/GuidesIndex";
 import StateGuideRoute from "./pages/guides/StateGuideRoute";
 import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
+import ThingToDoGuideRoute from "./pages/guides/ThingToDoGuideRoute";
 import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
 import CityGuideWorldRoute from "./pages/guides/CityGuideWorldRoute";
 import ParisGuideRoute from "./pages/guides/ParisGuideRoute";
@@ -274,6 +275,10 @@ export default function App() {
         <Route path="/tours/day/paddle" component={DayPaddleTours} />
         <Route path="/tours/multi-day" component={MultiDayLanding} />
         <Route path="/guides" component={GuidesIndex} />
+        <Route
+          path="/guides/:countrySlug/:regionSlug/:citySlug/:thingSlug"
+          component={ThingToDoGuideRoute}
+        />
         <Route
           path="/guides/us/:stateSlug/:citySlug"
           component={CityGuideUsRoute}
