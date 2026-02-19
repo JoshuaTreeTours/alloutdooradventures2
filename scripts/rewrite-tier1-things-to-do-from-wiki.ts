@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import { CITY_TIER1_SLUGS } from "../src/data/cityTier1";
 import { buildWikiLandmarkDescription } from "../src/utils/guides/buildWikiLandmarkDescription";
 import { jaccardSimilarity } from "../src/utils/guides/checkDescriptionSimilarity";
-import { isGenericTravelAdvice } from "../src/utils/guides/isGenericTravelAdvice";
 import { isTier1Guide } from "../src/utils/guides/isTier1Guide";
 import { validateNoBoilerplate } from "../src/utils/guides/validateNoBoilerplate";
 import { flushWikiSummaryCache } from "../src/utils/wiki/wikiSummary";
@@ -24,16 +24,40 @@ type Guide = {
 type Report = {
   updatedGuides: string[];
   wikiItems: number;
-  fallbackItems: number;
   failures: Array<{ file: string; reason: string }>;
+  warnings: Array<{ file: string; reason: string }>;
 };
 
 const ROOT = path.resolve("src/data/guides/us");
 const REPORT_PATH = path.resolve("reports/tier1-wiki-things-to-do.json");
-const SIMILARITY_THRESHOLD = 0.7;
+const MIN_WORDS = 100;
+const MIN_FACT_SIGNALS = 2;
+const SIMILARITY_THRESHOLD = 0.85;
+const TOP20_CITY_SLUGS = new Set([
+  "los-angeles",
+  "san-diego",
+  "san-francisco",
+  "sacramento",
+  "phoenix",
+  "denver",
+  "chicago",
+  "new-york",
+  "miami",
+  "boston",
+  "washington",
+  "orlando",
+  "philadelphia",
+  "las-vegas",
+  "portland",
+  "seattle",
+  "anaheim",
+  "long-beach",
+  "san-jose",
+  "nashville",
+]);
 
 const FACT_SIGNAL_PATTERN =
-  /(\b\d{2,}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%)\b|\b(?:opened|built|founded|established|completed|designated)\s+in\s+\d{4}\b|\bNational\s(?:Park|Scenic Area|Historic Landmark)\b|\b(?:River|Bridge|Museum|Garden|District|Park)\b)/i;
+  /(\b\d{4}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%|meter|meters)\b|\b(?:opened|built|founded|established|completed|designated|renovated|expanded|constructed|incorporated)\b|\b(?:architect|neighborhood|district|style|collection|campus|tower|pier|beach|museum|gallery|observatory|bridge|park|landmark)\b)/gi;
 
 const walkGuideFiles = (dir: string): string[] => {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -46,11 +70,7 @@ const walkGuideFiles = (dir: string): string[] => {
       continue;
     }
 
-    if (
-      entry.isFile() &&
-      entry.name.endsWith(".json") &&
-      entry.name !== "index.json"
-    ) {
+    if (entry.isFile() && entry.name.endsWith(".json") && entry.name !== "index.json") {
       files.push(full);
     }
   }
@@ -58,60 +78,24 @@ const walkGuideFiles = (dir: string): string[] => {
   return files.sort();
 };
 
-const countSentences = (text: string) =>
-  text
-    .split(/(?<=[.!?])\s+/)
-    .map(sentence => sentence.trim())
-    .filter(Boolean).length;
-
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
-const isHighQuality = (text: string) => {
-  const words = wordCount(text);
-  const hasFactSignal = FACT_SIGNAL_PATTERN.test(text);
-  const hasGenericAdvice = isGenericTravelAdvice(text);
-  const isBoilerplate = !validateNoBoilerplate(text);
-
-  return words > 70 && hasFactSignal && !hasGenericAdvice && !isBoilerplate;
+const countFactSignals = (text: string) => {
+  const matches = text.match(FACT_SIGNAL_PATTERN) ?? [];
+  return new Set(matches.map(value => value.toLowerCase())).size;
 };
 
-const hasSourceUrl = (item: ThingToDo) =>
-  Boolean(item.source_url?.trim() || item.wikiUrl?.trim());
-
-const shouldRewriteDescription = (args: {
-  item: ThingToDo;
-  existingDescriptions: string[];
-}) => {
-  const { item, existingDescriptions } = args;
-  const description = item.description ?? "";
-  const similarityScores = existingDescriptions.map(existing =>
-    jaccardSimilarity(description, existing)
-  );
-  const maxSimilarity = similarityScores.length ? Math.max(...similarityScores) : 0;
-  const hasBoilerplate = !validateNoBoilerplate(description);
-  const hasGenericAdvice = isGenericTravelAdvice(description);
-  const tooShort = wordCount(description) < 50;
-  const missingDescription = !description.trim();
-
-  if (hasSourceUrl(item) && isHighQuality(description) && !hasBoilerplate) {
-    return false;
-  }
-
-  return (
-    hasBoilerplate ||
-    hasGenericAdvice ||
-    maxSimilarity > SIMILARITY_THRESHOLD ||
-    tooShort ||
-    missingDescription
-  );
-};
+const isValidDescription = (text: string) =>
+  validateNoBoilerplate(text) &&
+  wordCount(text) >= MIN_WORDS &&
+  countFactSignals(text) >= MIN_FACT_SIGNALS;
 
 const run = async () => {
   const report: Report = {
     updatedGuides: [],
     wikiItems: 0,
-    fallbackItems: 0,
     failures: [],
+    warnings: [],
   };
 
   const files = walkGuideFiles(ROOT);
@@ -119,8 +103,13 @@ const run = async () => {
   for (const file of files) {
     const raw = fs.readFileSync(file, "utf8");
     const guide = JSON.parse(raw) as Guide;
+    const citySlug = path.basename(file, ".json");
 
-    if (!isTier1Guide(guide, file)) {
+    if (!isTier1Guide(guide, file) || !TOP20_CITY_SLUGS.has(citySlug)) {
+      continue;
+    }
+
+    if (!CITY_TIER1_SLUGS.includes(citySlug)) {
       continue;
     }
 
@@ -130,93 +119,74 @@ const run = async () => {
     }
 
     const updatedThings: ThingToDo[] = [];
-    let hadChange = false;
 
-    for (let index = 0; index < guide.thingsToDo.length; index += 1) {
-      const item = guide.thingsToDo[index];
-      const existing = updatedThings.map(entry => entry.description);
-
-      if (!shouldRewriteDescription({ item, existingDescriptions: existing })) {
-        updatedThings.push(item);
-        continue;
-      }
-
-      const result = await buildWikiLandmarkDescription({
+    for (const item of guide.thingsToDo) {
+      let chosen = await buildWikiLandmarkDescription({
         landmarkName: item.title,
         cityName: guide.city,
         stateName: guide.state,
-        existingDescriptions: existing,
+        existingDescriptions: updatedThings.map(entry => entry.description),
       });
 
-      let description = result.description;
-
-      if (
-        !validateNoBoilerplate(description) ||
-        (hasSourceUrl(item) && (wordCount(description) < 80 || wordCount(description) > 120)) ||
-        (!hasSourceUrl(item) && wordCount(description) > 45) ||
-        countSentences(description) > 3
-      ) {
-        const retry = await buildWikiLandmarkDescription({
-          landmarkName: item.title,
-          cityName: guide.city,
-          stateName: guide.state,
-          existingDescriptions: existing,
-        });
-        description = retry.description;
-      }
-
-      for (let retryCount = 0; retryCount < 3; retryCount += 1) {
-        const similarities = updatedThings.map(existingThing =>
-          jaccardSimilarity(description, existingThing.description)
-        );
-        const max = similarities.length ? Math.max(...similarities) : 0;
-
-        if (max <= SIMILARITY_THRESHOLD) {
+      for (let attempt = 0; attempt < 3; attempt += 1) {
+        if (
+          isValidDescription(chosen.description) &&
+          !updatedThings.some(existing => jaccardSimilarity(chosen.description, existing.description) > SIMILARITY_THRESHOLD)
+        ) {
           break;
         }
 
-        const regenerated = await buildWikiLandmarkDescription({
+        chosen = await buildWikiLandmarkDescription({
           landmarkName: item.title,
           cityName: guide.city,
           stateName: guide.state,
           existingDescriptions: updatedThings.map(entry => entry.description),
         });
-
-        description = regenerated.description;
       }
 
       const next: ThingToDo = {
         title: item.title,
-        description,
+        description: chosen.description,
+        source_url: chosen.wikiUrl ?? item.source_url,
+        wikiUrl: chosen.wikiUrl ?? item.wikiUrl,
       };
 
-      if (item.source_url) {
-        next.source_url = item.source_url;
-      }
-
-      if (result.wikiUrl) {
-        next.source_url = result.wikiUrl;
-        next.wikiUrl = result.wikiUrl;
-      }
-
-      if (item.description !== description || item.wikiUrl !== next.wikiUrl) {
-        hadChange = true;
-      }
-
-      if (result.usedWiki) {
-        report.wikiItems += 1;
-      } else {
-        report.fallbackItems += 1;
-      }
-
       updatedThings.push(next);
-    }
-
-    if (!hadChange) {
-      continue;
+      if (chosen.usedWiki) {
+        report.wikiItems += 1;
+      }
     }
 
     guide.thingsToDo = updatedThings;
+
+    for (const item of updatedThings) {
+      if (!validateNoBoilerplate(item.description)) {
+        report.failures.push({
+          file,
+          reason: `Banned boilerplate phrase in ${item.title}`,
+        });
+      }
+
+      if (wordCount(item.description) < MIN_WORDS || countFactSignals(item.description) < MIN_FACT_SIGNALS) {
+        report.failures.push({
+          file,
+          reason: `Description rule failure in ${item.title}`,
+        });
+      }
+    }
+
+    for (let i = 0; i < updatedThings.length; i += 1) {
+      for (let j = i + 1; j < updatedThings.length; j += 1) {
+        const similarity = jaccardSimilarity(updatedThings[i].description, updatedThings[j].description);
+        if (similarity > SIMILARITY_THRESHOLD) {
+          report.warnings.push({
+            file,
+            reason: `High similarity (${similarity.toFixed(2)}) between ${updatedThings[i].title} and ${updatedThings[j].title}`,
+          });
+        }
+      }
+    }
+
     fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
     report.updatedGuides.push(file);
   }
@@ -228,8 +198,12 @@ const run = async () => {
 
   console.log(`Updated tier1 guides: ${report.updatedGuides.length}`);
   console.log(`Items from wiki: ${report.wikiItems}`);
-  console.log(`Items from fallback: ${report.fallbackItems}`);
+  console.log(`Warnings: ${report.warnings.length}`);
   console.log(`Failures: ${report.failures.length}`);
+
+  if (report.failures.length > 0) {
+    process.exitCode = 1;
+  }
 };
 
 run();

@@ -35,35 +35,51 @@
   "thingsToDo": [
     {
       "title": "Explore Griffith Observatory",
-      "description": "Explore Griffith Observatory is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Griffith Observatory is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Griffith_Observatory"
     },
     {
       "title": "Explore Hollywood Boulevard",
-      "description": "Explore Hollywood Boulevard is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Hollywood Boulevard is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/Hollywood_Boulevard",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hollywood_Boulevard"
     },
     {
       "title": "Explore Santa Monica Pier",
-      "description": "Explore Santa Monica Pier is a waterfront landmark in Los Angeles, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography."
+      "description": "Santa Monica Pier is a waterfront area in Los Angeles, California, known for shoreline access, scenic promenades, and active public space near the water.",
+      "source_url": "https://en.wikipedia.org/wiki/Santa_Monica_Pier",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Monica_Pier"
     },
     {
       "title": "Explore Venice Beach",
-      "description": "Explore Venice Beach is a waterfront landmark in Los Angeles, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography."
+      "description": "Venice Beach is a waterfront area in Los Angeles, California, known for shoreline access, scenic promenades, and active public space near the water.",
+      "source_url": "https://en.wikipedia.org/wiki/Venice,_Los_Angeles",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Venice,_Los_Angeles"
     },
     {
       "title": "Explore Getty Center",
-      "description": "Explore Getty Center is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Getty Center is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/Getty_Center",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Getty_Center"
     },
     {
       "title": "Explore Runyon Canyon",
-      "description": "Explore Runyon Canyon is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Runyon Canyon is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/Runyon_Canyon_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Runyon_Canyon_Park"
     },
     {
       "title": "Explore The Broad",
-      "description": "Explore The Broad is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "The Broad is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/The_Broad",
+      "wikiUrl": "https://en.wikipedia.org/wiki/The_Broad"
     },
     {
       "title": "Explore Malibu",
-      "description": "Explore Malibu is a prominent landmark in Los Angeles, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Malibu is a notable landmark in Los Angeles, California, known for its local significance and role as a recognizable stop on city visits.",
+      "source_url": "https://en.wikipedia.org/wiki/Malibu,_California",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Malibu,_California"
     }
   ],
   "bestTimeToVisit": {

@@ -11,6 +11,14 @@ const BLACKLIST = [
   /city-level events across the year/i,
   /civic references/i,
   /clear sense of place/i,
+  /prominent landmark/i,
+  /recognized as part of the city'?s physical and cultural landscape/i,
+  /identifiable design features/i,
+  /long-standing local relevance/i,
+  /site-specific details/i,
+  /practical orientation point/i,
+  /connected to shoreline infrastructure/i,
+  /\bit is known for\b/i,
 ];
 
 export const validateNoBoilerplate = (description: string): boolean =>
