@@ -1,0 +1,662 @@
+{
+  "Los Angeles": [
+    {
+      "title": "Explore Griffith Observatory",
+      "word_count": 120,
+      "fact_signal_count": 3,
+      "similarity_max": 0.626,
+      "source_url": "https://en.wikipedia.org/wiki/Griffith_Observatory",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Griffith_Observatory"
+    },
+    {
+      "title": "Explore Hollywood Boulevard",
+      "word_count": 106,
+      "fact_signal_count": 3,
+      "similarity_max": 0.652,
+      "source_url": "https://en.wikipedia.org/wiki/Hollywood_Boulevard",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hollywood_Boulevard"
+    },
+    {
+      "title": "Explore Santa Monica Pier",
+      "word_count": 106,
+      "fact_signal_count": 2,
+      "similarity_max": 0.636,
+      "source_url": "https://en.wikipedia.org/wiki/Santa_Monica_Pier",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Monica_Pier"
+    },
+    {
+      "title": "Explore Venice Beach",
+      "word_count": 127,
+      "fact_signal_count": 3,
+      "similarity_max": 0.575,
+      "source_url": "https://en.wikipedia.org/wiki/Venice_Beach",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Venice_Beach"
+    },
+    {
+      "title": "Explore Getty Center",
+      "word_count": 128,
+      "fact_signal_count": 3,
+      "similarity_max": 0.652,
+      "source_url": "https://en.wikipedia.org/wiki/Getty_Center",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Getty_Center"
+    },
+    {
+      "title": "Explore Runyon Canyon",
+      "word_count": 130,
+      "fact_signal_count": 3,
+      "similarity_max": 0.469,
+      "source_url": "https://en.wikipedia.org/wiki/Runyon_Canyon",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Runyon_Canyon"
+    },
+    {
+      "title": "Explore The Broad",
+      "word_count": 134,
+      "fact_signal_count": 2,
+      "similarity_max": 0.584,
+      "source_url": "https://en.wikipedia.org/wiki/The_Broad",
+      "wikiUrl": "https://en.wikipedia.org/wiki/The_Broad"
+    },
+    {
+      "title": "Explore Malibu",
+      "word_count": 131,
+      "fact_signal_count": 3,
+      "similarity_max": 0.549,
+      "source_url": "https://en.wikipedia.org/wiki/Malibu",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Malibu"
+    }
+  ],
+  "Las Vegas": [
+    {
+      "title": "Explore Las Vegas Strip",
+      "word_count": 105,
+      "fact_signal_count": 2,
+      "similarity_max": 0.69,
+      "source_url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip"
+    },
+    {
+      "title": "Explore Fremont Street Experience",
+      "word_count": 121,
+      "fact_signal_count": 2,
+      "similarity_max": 0.629,
+      "source_url": "https://en.wikipedia.org/wiki/Fremont_Street_Experience",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fremont_Street_Experience"
+    },
+    {
+      "title": "Explore Red Rock Canyon",
+      "word_count": 108,
+      "fact_signal_count": 3,
+      "similarity_max": 0.526,
+      "source_url": "https://en.wikipedia.org/wiki/Red_Rock_Canyon",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Red_Rock_Canyon"
+    },
+    {
+      "title": "Explore Neon Museum",
+      "word_count": 130,
+      "fact_signal_count": 2,
+      "similarity_max": 0.623,
+      "source_url": "https://en.wikipedia.org/wiki/Neon_Museum",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Neon_Museum"
+    },
+    {
+      "title": "Explore Bellagio Fountains",
+      "word_count": 107,
+      "fact_signal_count": 4,
+      "similarity_max": 0.69,
+      "source_url": "https://en.wikipedia.org/wiki/Bellagio_Fountains",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bellagio_Fountains"
+    },
+    {
+      "title": "Explore Arts District",
+      "word_count": 101,
+      "fact_signal_count": 2,
+      "similarity_max": 0.543,
+      "source_url": "https://en.wikipedia.org/wiki/Arts_District",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Arts_District"
+    },
+    {
+      "title": "Explore Hoover Dam",
+      "word_count": 104,
+      "fact_signal_count": 4,
+      "similarity_max": 0.591,
+      "source_url": "https://en.wikipedia.org/wiki/Hoover_Dam",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hoover_Dam"
+    },
+    {
+      "title": "Explore Valley of Fire State Park",
+      "word_count": 128,
+      "fact_signal_count": 4,
+      "similarity_max": 0.534,
+      "source_url": "https://en.wikipedia.org/wiki/Valley_of_Fire_State_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Valley_of_Fire_State_Park"
+    }
+  ],
+  "San Francisco": [
+    {
+      "title": "Explore Golden Gate Bridge",
+      "word_count": 106,
+      "fact_signal_count": 3,
+      "similarity_max": 0.623,
+      "source_url": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Golden_Gate_Bridge"
+    },
+    {
+      "title": "Explore Alcatraz Island",
+      "word_count": 102,
+      "fact_signal_count": 3,
+      "similarity_max": 0.515,
+      "source_url": "https://en.wikipedia.org/wiki/Alcatraz_Island",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Alcatraz_Island"
+    },
+    {
+      "title": "Explore Fisherman’s Wharf",
+      "word_count": 121,
+      "fact_signal_count": 3,
+      "similarity_max": 0.589,
+      "source_url": "https://en.wikipedia.org/wiki/Fishermans_Wharf",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fishermans_Wharf"
+    },
+    {
+      "title": "Explore Golden Gate Park",
+      "word_count": 109,
+      "fact_signal_count": 3,
+      "similarity_max": 0.57,
+      "source_url": "https://en.wikipedia.org/wiki/Golden_Gate_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Golden_Gate_Park"
+    },
+    {
+      "title": "Explore Lombard Street",
+      "word_count": 122,
+      "fact_signal_count": 2,
+      "similarity_max": 0.554,
+      "source_url": "https://en.wikipedia.org/wiki/Lombard_Street",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lombard_Street"
+    },
+    {
+      "title": "Explore Chinatown",
+      "word_count": 129,
+      "fact_signal_count": 2,
+      "similarity_max": 0.599,
+      "source_url": "https://en.wikipedia.org/wiki/Chinatown",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Chinatown"
+    },
+    {
+      "title": "Explore Mission District",
+      "word_count": 125,
+      "fact_signal_count": 3,
+      "similarity_max": 0.586,
+      "source_url": "https://en.wikipedia.org/wiki/Mission_District",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mission_District"
+    },
+    {
+      "title": "Explore Twin Peaks",
+      "word_count": 104,
+      "fact_signal_count": 2,
+      "similarity_max": 0.623,
+      "source_url": "https://en.wikipedia.org/wiki/Twin_Peaks",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Twin_Peaks"
+    }
+  ],
+  "Chicago": [
+    {
+      "title": "Explore Millennium Park",
+      "word_count": 102,
+      "fact_signal_count": 2,
+      "similarity_max": 0.654,
+      "source_url": "https://en.wikipedia.org/wiki/Millennium_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Millennium_Park"
+    },
+    {
+      "title": "Explore Navy Pier",
+      "word_count": 101,
+      "fact_signal_count": 6,
+      "similarity_max": 0.563,
+      "source_url": "https://en.wikipedia.org/wiki/Navy_Pier",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Navy_Pier"
+    },
+    {
+      "title": "Explore Art Institute of Chicago",
+      "word_count": 110,
+      "fact_signal_count": 2,
+      "similarity_max": 0.644,
+      "source_url": "https://en.wikipedia.org/wiki/Art_Institute_of_Chicago",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Art_Institute_of_Chicago"
+    },
+    {
+      "title": "Explore Riverwalk",
+      "word_count": 103,
+      "fact_signal_count": 2,
+      "similarity_max": 0.667,
+      "source_url": "https://en.wikipedia.org/wiki/Riverwalk",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Riverwalk"
+    },
+    {
+      "title": "Explore Wicker Park",
+      "word_count": 105,
+      "fact_signal_count": 4,
+      "similarity_max": 0.667,
+      "source_url": "https://en.wikipedia.org/wiki/Wicker_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wicker_Park"
+    },
+    {
+      "title": "Explore Lincoln Park",
+      "word_count": 108,
+      "fact_signal_count": 4,
+      "similarity_max": 0.667,
+      "source_url": "https://en.wikipedia.org/wiki/Lincoln_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lincoln_Park"
+    },
+    {
+      "title": "Explore Willis Tower Skydeck",
+      "word_count": 105,
+      "fact_signal_count": 9,
+      "similarity_max": 0.625,
+      "source_url": "https://en.wikipedia.org/wiki/Willis_Tower_Skydeck",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Willis_Tower_Skydeck"
+    },
+    {
+      "title": "Explore Architecture River Cruise",
+      "word_count": 108,
+      "fact_signal_count": 2,
+      "similarity_max": 0.667,
+      "source_url": "https://en.wikipedia.org/wiki/Architecture_River_Cruise",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Architecture_River_Cruise"
+    }
+  ],
+  "Orlando": [
+    {
+      "title": "Explore Walt Disney World",
+      "word_count": 106,
+      "fact_signal_count": 7,
+      "similarity_max": 0.613,
+      "source_url": "https://en.wikipedia.org/wiki/Walt_Disney_World",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Walt_Disney_World"
+    },
+    {
+      "title": "Explore Universal Orlando Resort",
+      "word_count": 109,
+      "fact_signal_count": 3,
+      "similarity_max": 0.633,
+      "source_url": "https://en.wikipedia.org/wiki/Universal_Orlando_Resort",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Universal_Orlando_Resort"
+    },
+    {
+      "title": "Explore Lake Eola Park",
+      "word_count": 109,
+      "fact_signal_count": 4,
+      "similarity_max": 0.633,
+      "source_url": "https://en.wikipedia.org/wiki/Lake_Eola_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lake_Eola_Park"
+    },
+    {
+      "title": "Explore ICON Park",
+      "word_count": 111,
+      "fact_signal_count": 6,
+      "similarity_max": 0.608,
+      "source_url": "https://en.wikipedia.org/wiki/ICON_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/ICON_Park"
+    },
+    {
+      "title": "Explore Winter Park",
+      "word_count": 113,
+      "fact_signal_count": 4,
+      "similarity_max": 0.607,
+      "source_url": "https://en.wikipedia.org/wiki/Winter_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Winter_Park"
+    },
+    {
+      "title": "Explore Disney Springs",
+      "word_count": 109,
+      "fact_signal_count": 2,
+      "similarity_max": 0.613,
+      "source_url": "https://en.wikipedia.org/wiki/Disney_Springs",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Disney_Springs"
+    },
+    {
+      "title": "Explore Kissimmee",
+      "word_count": 128,
+      "fact_signal_count": 3,
+      "similarity_max": 0.595,
+      "source_url": "https://en.wikipedia.org/wiki/Kissimmee",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Kissimmee"
+    },
+    {
+      "title": "Explore Wekiwa Springs",
+      "word_count": 107,
+      "fact_signal_count": 3,
+      "similarity_max": 0.595,
+      "source_url": "https://en.wikipedia.org/wiki/Wekiwa_Springs",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wekiwa_Springs"
+    }
+  ],
+  "Washington": [
+    {
+      "title": "Explore National Mall",
+      "word_count": 112,
+      "fact_signal_count": 3,
+      "similarity_max": 0.713,
+      "source_url": "https://en.wikipedia.org/wiki/National_Mall",
+      "wikiUrl": "https://en.wikipedia.org/wiki/National_Mall"
+    },
+    {
+      "title": "Explore Smithsonian Museums",
+      "word_count": 115,
+      "fact_signal_count": 2,
+      "similarity_max": 0.676,
+      "source_url": "https://en.wikipedia.org/wiki/Smithsonian_Museums",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Smithsonian_Museums"
+    },
+    {
+      "title": "Explore U.S. Capitol",
+      "word_count": 112,
+      "fact_signal_count": 5,
+      "similarity_max": 0.724,
+      "source_url": "https://en.wikipedia.org/wiki/US_Capitol",
+      "wikiUrl": "https://en.wikipedia.org/wiki/US_Capitol"
+    },
+    {
+      "title": "Explore Georgetown",
+      "word_count": 115,
+      "fact_signal_count": 4,
+      "similarity_max": 0.695,
+      "source_url": "https://en.wikipedia.org/wiki/Georgetown",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Georgetown"
+    },
+    {
+      "title": "Explore Tidal Basin",
+      "word_count": 112,
+      "fact_signal_count": 3,
+      "similarity_max": 0.649,
+      "source_url": "https://en.wikipedia.org/wiki/Tidal_Basin",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Tidal_Basin"
+    },
+    {
+      "title": "Explore Lincoln Memorial",
+      "word_count": 115,
+      "fact_signal_count": 5,
+      "similarity_max": 0.724,
+      "source_url": "https://en.wikipedia.org/wiki/Lincoln_Memorial",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lincoln_Memorial"
+    },
+    {
+      "title": "Explore The Wharf",
+      "word_count": 108,
+      "fact_signal_count": 3,
+      "similarity_max": 0.679,
+      "source_url": "https://en.wikipedia.org/wiki/The_Wharf",
+      "wikiUrl": "https://en.wikipedia.org/wiki/The_Wharf"
+    },
+    {
+      "title": "Explore Rock Creek Park",
+      "word_count": 112,
+      "fact_signal_count": 3,
+      "similarity_max": 0.677,
+      "source_url": "https://en.wikipedia.org/wiki/Rock_Creek_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Rock_Creek_Park"
+    }
+  ],
+  "Boston": [
+    {
+      "title": "Explore Freedom Trail",
+      "word_count": 109,
+      "fact_signal_count": 7,
+      "similarity_max": 0.635,
+      "source_url": "https://en.wikipedia.org/wiki/Freedom_Trail",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Freedom_Trail"
+    },
+    {
+      "title": "Explore Boston Common",
+      "word_count": 110,
+      "fact_signal_count": 4,
+      "similarity_max": 0.666,
+      "source_url": "https://en.wikipedia.org/wiki/Boston_Common",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Boston_Common"
+    },
+    {
+      "title": "Explore Fenway Park",
+      "word_count": 105,
+      "fact_signal_count": 5,
+      "similarity_max": 0.666,
+      "source_url": "https://en.wikipedia.org/wiki/Fenway_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fenway_Park"
+    },
+    {
+      "title": "Explore North End",
+      "word_count": 110,
+      "fact_signal_count": 6,
+      "similarity_max": 0.647,
+      "source_url": "https://en.wikipedia.org/wiki/North_End",
+      "wikiUrl": "https://en.wikipedia.org/wiki/North_End"
+    },
+    {
+      "title": "Explore Museum of Fine Arts",
+      "word_count": 108,
+      "fact_signal_count": 5,
+      "similarity_max": 0.628,
+      "source_url": "https://en.wikipedia.org/wiki/Museum_of_Fine_Arts",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Museum_of_Fine_Arts"
+    },
+    {
+      "title": "Explore Seaport District",
+      "word_count": 113,
+      "fact_signal_count": 3,
+      "similarity_max": 0.659,
+      "source_url": "https://en.wikipedia.org/wiki/Seaport_District",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Seaport_District"
+    },
+    {
+      "title": "Explore Newbury Street",
+      "word_count": 111,
+      "fact_signal_count": 2,
+      "similarity_max": 0.617,
+      "source_url": "https://en.wikipedia.org/wiki/Newbury_Street",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Newbury_Street"
+    },
+    {
+      "title": "Explore Harbor Islands",
+      "word_count": 107,
+      "fact_signal_count": 2,
+      "similarity_max": 0.63,
+      "source_url": "https://en.wikipedia.org/wiki/Harbor_Islands",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Harbor_Islands"
+    }
+  ],
+  "New Orleans": [
+    {
+      "title": "Explore French Quarter",
+      "word_count": 108,
+      "fact_signal_count": 6,
+      "similarity_max": 0.669,
+      "source_url": "https://en.wikipedia.org/wiki/French_Quarter",
+      "wikiUrl": "https://en.wikipedia.org/wiki/French_Quarter"
+    },
+    {
+      "title": "Explore Jackson Square",
+      "word_count": 111,
+      "fact_signal_count": 2,
+      "similarity_max": 0.709,
+      "source_url": "https://en.wikipedia.org/wiki/Jackson_Square",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Jackson_Square"
+    },
+    {
+      "title": "Explore Garden District",
+      "word_count": 114,
+      "fact_signal_count": 5,
+      "similarity_max": 0.709,
+      "source_url": "https://en.wikipedia.org/wiki/Garden_District",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Garden_District"
+    },
+    {
+      "title": "Explore Frenchmen Street",
+      "word_count": 114,
+      "fact_signal_count": 2,
+      "similarity_max": 0.622,
+      "source_url": "https://en.wikipedia.org/wiki/Frenchmen_Street",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Frenchmen_Street"
+    },
+    {
+      "title": "Explore City Park",
+      "word_count": 114,
+      "fact_signal_count": 4,
+      "similarity_max": 0.663,
+      "source_url": "https://en.wikipedia.org/wiki/City_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/City_Park"
+    },
+    {
+      "title": "Explore National WWII Museum",
+      "word_count": 133,
+      "fact_signal_count": 3,
+      "similarity_max": 0.648,
+      "source_url": "https://en.wikipedia.org/wiki/National_WWII_Museum",
+      "wikiUrl": "https://en.wikipedia.org/wiki/National_WWII_Museum"
+    },
+    {
+      "title": "Explore St. Charles Avenue",
+      "word_count": 111,
+      "fact_signal_count": 3,
+      "similarity_max": 0.68,
+      "source_url": "https://en.wikipedia.org/wiki/St_Charles_Avenue",
+      "wikiUrl": "https://en.wikipedia.org/wiki/St_Charles_Avenue"
+    },
+    {
+      "title": "Explore Bayou St. John",
+      "word_count": 110,
+      "fact_signal_count": 2,
+      "similarity_max": 0.663,
+      "source_url": "https://en.wikipedia.org/wiki/Bayou_St_John",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bayou_St_John"
+    }
+  ],
+  "Seattle": [
+    {
+      "title": "Explore Pike Place Market",
+      "word_count": 111,
+      "fact_signal_count": 3,
+      "similarity_max": 0.581,
+      "source_url": "https://en.wikipedia.org/wiki/Pike_Place_Market",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Pike_Place_Market"
+    },
+    {
+      "title": "Explore Space Needle",
+      "word_count": 113,
+      "fact_signal_count": 5,
+      "similarity_max": 0.638,
+      "source_url": "https://en.wikipedia.org/wiki/Space_Needle",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Space_Needle"
+    },
+    {
+      "title": "Explore Chihuly Garden and Glass",
+      "word_count": 110,
+      "fact_signal_count": 4,
+      "similarity_max": 0.638,
+      "source_url": "https://en.wikipedia.org/wiki/Chihuly_Garden_and_Glass",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Chihuly_Garden_and_Glass"
+    },
+    {
+      "title": "Explore Discovery Park",
+      "word_count": 107,
+      "fact_signal_count": 3,
+      "similarity_max": 0.618,
+      "source_url": "https://en.wikipedia.org/wiki/Discovery_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Discovery_Park"
+    },
+    {
+      "title": "Explore Kerry Park",
+      "word_count": 113,
+      "fact_signal_count": 2,
+      "similarity_max": 0.618,
+      "source_url": "https://en.wikipedia.org/wiki/Kerry_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Kerry_Park"
+    },
+    {
+      "title": "Explore Fremont",
+      "word_count": 107,
+      "fact_signal_count": 4,
+      "similarity_max": 0.551,
+      "source_url": "https://en.wikipedia.org/wiki/Fremont",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Fremont"
+    },
+    {
+      "title": "Explore Seattle Waterfront",
+      "word_count": 105,
+      "fact_signal_count": 3,
+      "similarity_max": 0.579,
+      "source_url": "https://en.wikipedia.org/wiki/Seattle_Waterfront",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Seattle_Waterfront"
+    },
+    {
+      "title": "Explore Mount Rainier",
+      "word_count": 107,
+      "fact_signal_count": 6,
+      "similarity_max": 0.604,
+      "source_url": "https://en.wikipedia.org/wiki/Mount_Rainier",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mount_Rainier"
+    }
+  ],
+  "Honolulu": [
+    {
+      "title": "Explore Waikiki Beach",
+      "word_count": 108,
+      "fact_signal_count": 2,
+      "similarity_max": 0.635,
+      "source_url": "https://en.wikipedia.org/wiki/Waikiki_Beach",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Waikiki_Beach"
+    },
+    {
+      "title": "Explore Diamond Head",
+      "word_count": 109,
+      "fact_signal_count": 5,
+      "similarity_max": 0.571,
+      "source_url": "https://en.wikipedia.org/wiki/Diamond_Head",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diamond_Head"
+    },
+    {
+      "title": "Explore Iolani Palace",
+      "word_count": 112,
+      "fact_signal_count": 5,
+      "similarity_max": 0.631,
+      "source_url": "https://en.wikipedia.org/wiki/Iolani_Palace",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Iolani_Palace"
+    },
+    {
+      "title": "Explore Ala Moana Beach Park",
+      "word_count": 142,
+      "fact_signal_count": 2,
+      "similarity_max": 0.635,
+      "source_url": "https://en.wikipedia.org/wiki/Ala_Moana_Beach_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ala_Moana_Beach_Park"
+    },
+    {
+      "title": "Explore Kaka‘ako",
+      "word_count": 123,
+      "fact_signal_count": 3,
+      "similarity_max": 0.59,
+      "source_url": "https://en.wikipedia.org/wiki/Kakaako",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Kakaako"
+    },
+    {
+      "title": "Explore Pearl Harbor",
+      "word_count": 114,
+      "fact_signal_count": 3,
+      "similarity_max": 0.545,
+      "source_url": "https://en.wikipedia.org/wiki/Pearl_Harbor",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_Harbor"
+    },
+    {
+      "title": "Explore Manoa Falls",
+      "word_count": 132,
+      "fact_signal_count": 3,
+      "similarity_max": 0.581,
+      "source_url": "https://en.wikipedia.org/wiki/Manoa_Falls",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Manoa_Falls"
+    },
+    {
+      "title": "Explore North Shore",
+      "word_count": 149,
+      "fact_signal_count": 2,
+      "similarity_max": 0.532,
+      "source_url": "https://en.wikipedia.org/wiki/North_Shore",
+      "wikiUrl": "https://en.wikipedia.org/wiki/North_Shore"
+    }
+  ]
+}
