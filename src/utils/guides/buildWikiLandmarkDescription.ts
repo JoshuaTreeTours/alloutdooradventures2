@@ -14,9 +14,15 @@ export async function buildWikiLandmarkDescription(args: {
   landmarkName: string;
   cityName: string;
   stateName: string;
+  tier: "tier1" | "tier2";
   existingDescriptions?: string[];
 }): Promise<WikiDescResult> {
-  const { landmarkName, cityName, stateName, existingDescriptions = [] } = args;
+  const { landmarkName, cityName, stateName, tier, existingDescriptions = [] } =
+    args;
+  const maxWords = tier === "tier1" ? 120 : 90;
+  const minWords = tier === "tier1" ? 60 : 1;
+  const sentenceRange: [number, number] = tier === "tier1" ? [3, 3] : [2, 3];
+
   const candidateTitles = [
     `${landmarkName}`,
     `${landmarkName} (${cityName})`,
@@ -37,10 +43,27 @@ export async function buildWikiLandmarkDescription(args: {
         cityName,
         stateName,
         extract: summary.extract,
+        maxWords,
+        maxSentences: 3,
         variant: attempt,
       });
 
       if (!validateNoBoilerplate(candidate)) {
+        continue;
+      }
+
+      const words = candidate.trim().split(/\s+/).filter(Boolean).length;
+      const sentences = candidate
+        .split(/(?<=[.!?])\s+/)
+        .map(sentence => sentence.trim())
+        .filter(Boolean).length;
+
+      if (
+        words < minWords ||
+        words > maxWords ||
+        sentences < sentenceRange[0] ||
+        sentences > sentenceRange[1]
+      ) {
         continue;
       }
 

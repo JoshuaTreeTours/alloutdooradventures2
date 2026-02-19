@@ -40,9 +40,19 @@ export const paraphraseWikiSummary = (args: {
   cityName: string;
   stateName: string;
   extract: string;
+  maxWords: number;
+  maxSentences: number;
   variant?: number;
 }): string => {
-  const { landmarkName, cityName, stateName, extract, variant = 0 } = args;
+  const {
+    landmarkName,
+    cityName,
+    stateName,
+    extract,
+    maxWords,
+    maxSentences,
+    variant = 0,
+  } = args;
   const source = splitSentences(extract).map(removeNonEssentialDates);
 
   const sentence1 =
@@ -71,10 +81,11 @@ export const paraphraseWikiSummary = (args: {
 
   const candidate = ordered
     .map(s => s.replace(/\s+/g, " ").trim().replace(/\.*$/, "."))
-    .slice(0, 3)
+    .slice(0, Math.max(1, maxSentences))
     .join(" ");
 
-  const clamped = clampWordCount(candidate, 60, 100);
+  const minWords = Math.min(60, maxWords);
+  const clamped = clampWordCount(candidate, minWords, maxWords);
   if (clamped) {
     return clamped;
   }
@@ -82,7 +93,7 @@ export const paraphraseWikiSummary = (args: {
   return `${sentence1} ${sentence2Base} ${sentence3Base}`
     .replace(/\s+/g, " ")
     .split(/\s+/)
-    .slice(0, 100)
+    .slice(0, maxWords)
     .join(" ")
     .replace(/[,:;\-]+$/g, "")
     .concat(".");

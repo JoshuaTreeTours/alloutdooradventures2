@@ -28,11 +28,11 @@ export const generateTier2Guide = async (
   );
 
   const landmarks = extractCityLandmarksFromTours(stateSlug, citySlug);
-  const thingsToDo = buildTier2ThingsToDo(
+  const thingsToDo = (await buildTier2ThingsToDo(
     cityName,
     state.name,
     landmarks
-  ).slice(0, 6);
+  )).slice(0, 6);
 
   const seoLinks = buildSeoLinks({
     city: cityName,
