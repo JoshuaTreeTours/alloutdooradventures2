@@ -1,0 +1,60 @@
+{
+  "tier": "tier1",
+  "title": "Park City, Utah Travel Guide",
+  "country": "United States",
+  "state": "Utah",
+  "city": "Park City",
+  "slug": "guides/us/utah/park-city",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Park City, Utah",
+    "headline": "Park City, Utah Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Park City."
+  },
+  "overview": [
+    "Park City combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Park City essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Utah Olympic Park",
+      "description": "Utah Olympic Park was built for the 2002 Winter Olympics in the Wasatch Range near Park City and later converted into a year-round training and visitor venue. The complex includes ski jumps, bobsled and luge facilities, and museum exhibits documenting Olympic and Paralympic history in Utah. Its competition infrastructure was designed to international standards under the Salt Lake Organizing Committee and is now operated by the Utah Olympic Legacy Foundation. Elevation, venue engineering, and continued athlete use distinguish it from typical resort attractions. Because the site remains active decades after the Games, it demonstrates how Park City integrated mega-event investment into long-term sports development, tourism programming, and regional identity.",
+      "source_url": "https://en.wikipedia.org/wiki/Utah_Olympic_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Utah_Olympic_Park"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Park City",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Park City?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "utah",
+    "citySlug": "park-city",
+    "limit": 6,
+    "title": "Top Park City tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Park_City",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}

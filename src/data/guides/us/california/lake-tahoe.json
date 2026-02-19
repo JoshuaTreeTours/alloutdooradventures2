@@ -1,0 +1,60 @@
+{
+  "tier": "tier1",
+  "title": "Lake Tahoe, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Lake Tahoe",
+  "slug": "guides/us/california/lake-tahoe",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Lake Tahoe, California",
+    "headline": "Lake Tahoe, California Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Lake Tahoe."
+  },
+  "overview": [
+    "Lake Tahoe combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Lake Tahoe essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Lake Tahoe",
+      "description": "Lake Tahoe is a large freshwater lake in the Sierra Nevada on the California\u2013Nevada border, with a surface elevation of about 6,225 feet and a maximum depth of roughly 1,645 feet. Those measurements make it the largest alpine lake in North America and the second-deepest lake in the United States. The basin was formed through geologic faulting and glaciation, and modern shoreline development spans multiple counties in two states. Because water clarity and watershed management have been monitored for decades by regional agencies, the lake is also a prominent environmental policy case in western public land planning. Its bi-state jurisdiction and physical scale define the destination more than any single resort or town center.",
+      "source_url": "https://en.wikipedia.org/wiki/Lake_Tahoe",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Lake Tahoe",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Lake Tahoe?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "lake-tahoe",
+    "limit": 6,
+    "title": "Top Lake Tahoe tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Lake_Tahoe",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}

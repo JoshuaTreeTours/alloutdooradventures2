@@ -1,0 +1,60 @@
+{
+  "tier": "tier1",
+  "title": "Carmel-by-the-Sea, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Carmel-by-the-Sea",
+  "slug": "guides/us/california/carmel-by-the-sea",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Carmel-by-the-Sea, California",
+    "headline": "Carmel-by-the-Sea, California Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Carmel-by-the-Sea."
+  },
+  "overview": [
+    "Carmel-by-the-Sea combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Carmel-by-the-Sea essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Mission San Carlos Borromeo de Carmelo",
+      "description": "Mission San Carlos Borromeo de Carmelo, commonly called Carmel Mission, was founded in 1771 and relocated to its current Carmel Valley site in 1771\u20131772 under Jun\u00edpero Serra during Spanish Alta California mission expansion. The complex became headquarters for the California mission system and preserves a historic basilica, courtyards, and cemetery associated with the colonial period. It was designated a National Historic Landmark in 1960 and remains an active parish as well as a museum property. Its founding date, religious administrative role, and landmark status provide documented evidence of how settlement patterns and mission-era architecture shaped the Monterey Peninsula long before Carmel-by-the-Sea developed as a twentieth-century arts and tourism town.",
+      "source_url": "https://en.wikipedia.org/wiki/Mission_San_Carlos_Borromeo_de_Carmelo",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mission_San_Carlos_Borromeo_de_Carmelo"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Carmel-by-the-Sea",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Carmel-by-the-Sea?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "carmel-by-the-sea",
+    "limit": 6,
+    "title": "Top Carmel-by-the-Sea tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Carmel-by-the-Sea",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}

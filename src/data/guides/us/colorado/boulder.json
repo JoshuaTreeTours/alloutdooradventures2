@@ -7,7 +7,7 @@
   "slug": "guides/us/colorado/boulder",
   "hero": {
     "image": "https://cdn.filestackcontent.com/jhsenHDSQAOwzDqrprwI",
-    "alt": "Boulder, Colorado — 2 Hour E-Bike Rental",
+    "alt": "Boulder, Colorado \u2014 2 Hour E-Bike Rental",
     "headline": "Boulder, Colorado Travel Guide",
     "subheadline": "Plan a focused Boulder trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Denver",
-      "description": "Denver is a park in Boulder, Colorado. Nearby day trip: Denver is a mountain gateway in Colorado, about 24 miles from Boulder. It is a quick hop from Boulder with time for trailheads, scenic overlooks, and cooler highland air. Plan it as a half-day escape and return to Boulder by evening."
-    },
-    {
-      "title": "Visit Historic Downtown Walking Routes",
-      "description": "Historic Downtown Walking Routes is a historic site in Boulder, Colorado. Historic downtown walking routes in Boulder deliver architecture, storefronts, and easy sightseeing in a compact area. These short loops are perfect for a relaxed stroll with coffee stops and people-watching."
-    },
-    {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Boulder, Colorado. Regional parks and preserves near Boulder are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace."
-    },
-    {
-      "title": "Visit Scenic Drive Loops",
-      "description": "Scenic Drive Loops is a park in Boulder, Colorado. Plan a scenic drive loop around Boulder to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of the surrounding region without committing to a long hike."
-    },
-    {
-      "title": "Visit Local Greenways and Easy Nature Walks",
-      "description": "Local Greenways and Easy Nature Walks is a landmark in Boulder, Colorado. Local greenways in Boulder are perfect for easy walks, casual bike rides, and family-friendly nature strolls. These routes keep you close to town while still feeling outdoorsy. The site helps explain how Boulder developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
-    },
-    {
-      "title": "Visit Viewpoint Overlooks and Photo Stops",
-      "description": "Viewpoint Overlooks and Photo Stops is a park in Boulder, Colorado. Short viewpoint walks around Boulder create quick wins for panoramic photos and big-sky scenery. They are great add-ons between meals or before a longer trail. The site helps explain how Boulder developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
+      "title": "Explore Flatirons",
+      "description": "The Flatirons are a series of steeply tilted sandstone formations on the eastern flank of Green Mountain above Boulder, visible from much of the city and the University of Colorado campus. The slabs were formed through uplift and erosion processes associated with the Laramide Orogeny, then exposed as dramatic west-dipping outcrops. Much of the surrounding foothill landscape is protected within Boulder\u2019s open space and Chautauqua area, where trail systems provide access to multiple viewpoints. Their geologic age, orientation, and proximity to the urban grid make the Flatirons both a scientific landmark and a civic symbol. They are central to Boulder\u2019s identity as a Front Range city where mountain terrain begins immediately at the city edge.",
+      "source_url": "https://en.wikipedia.org/wiki/Flatirons",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Flatirons"
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Boulder?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

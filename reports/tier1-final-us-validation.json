@@ -1,0 +1,290 @@
+{
+  "cities": [
+    {
+      "city": "Las Vegas, Nevada",
+      "file": "src/data/guides/us/nevada/las-vegas.json",
+      "attractions": [
+        {
+          "title": "Explore Las Vegas Strip",
+          "word_count": 108,
+          "fact_signal_count": 3,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Orlando, Florida",
+      "file": "src/data/guides/us/florida/orlando.json",
+      "attractions": [
+        {
+          "title": "Explore Walt Disney World",
+          "word_count": 110,
+          "fact_signal_count": 8,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Walt_Disney_World",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Walt_Disney_World"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Tampa, Florida",
+      "file": "src/data/guides/us/florida/tampa.json",
+      "attractions": [
+        {
+          "title": "Explore Ybor City",
+          "word_count": 108,
+          "fact_signal_count": 5,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Ybor_City",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Ybor_City"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Fort Lauderdale, Florida",
+      "file": "src/data/guides/us/florida/fort-lauderdale.json",
+      "attractions": [
+        {
+          "title": "Explore Port Everglades",
+          "word_count": 110,
+          "fact_signal_count": 3,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Port_Everglades",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Port_Everglades"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Key West, Florida",
+      "file": "src/data/guides/us/florida/key-west.json",
+      "attractions": [
+        {
+          "title": "Explore Dry Tortugas National Park",
+          "word_count": 113,
+          "fact_signal_count": 7,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Palm Springs, California",
+      "file": "src/data/guides/us/california/palm-springs.json",
+      "attractions": [
+        {
+          "title": "Explore Palm Springs Aerial Tramway",
+          "word_count": 112,
+          "fact_signal_count": 12,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Monterey, California",
+      "file": "src/data/guides/us/california/monterey.json",
+      "attractions": [
+        {
+          "title": "Explore Monterey Bay Aquarium",
+          "word_count": 107,
+          "fact_signal_count": 5,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Carmel-by-the-Sea, California",
+      "file": "src/data/guides/us/california/carmel-by-the-sea.json",
+      "attractions": [
+        {
+          "title": "Explore Mission San Carlos Borromeo de Carmelo",
+          "word_count": 109,
+          "fact_signal_count": 8,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Mission_San_Carlos_Borromeo_de_Carmelo",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mission_San_Carlos_Borromeo_de_Carmelo"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Lake Tahoe, California",
+      "file": "src/data/guides/us/california/lake-tahoe.json",
+      "attractions": [
+        {
+          "title": "Explore Lake Tahoe",
+          "word_count": 114,
+          "fact_signal_count": 3,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Lake_Tahoe",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lake_Tahoe"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Anchorage, Alaska",
+      "file": "src/data/guides/us/alaska/anchorage.json",
+      "attractions": [
+        {
+          "title": "Explore Chugach State Park",
+          "word_count": 113,
+          "fact_signal_count": 5,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Chugach_State_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Chugach_State_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Fairbanks, Alaska",
+      "file": "src/data/guides/us/alaska/fairbanks.json",
+      "attractions": [
+        {
+          "title": "Explore University of Alaska Fairbanks",
+          "word_count": 114,
+          "fact_signal_count": 3,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks",
+          "wikiUrl": "https://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Jackson, Wyoming",
+      "file": "src/data/guides/us/wyoming/jackson.json",
+      "attractions": [
+        {
+          "title": "Explore National Elk Refuge",
+          "word_count": 114,
+          "fact_signal_count": 4,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/National_Elk_Refuge",
+          "wikiUrl": "https://en.wikipedia.org/wiki/National_Elk_Refuge"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Moab, Utah",
+      "file": "src/data/guides/us/utah/moab.json",
+      "attractions": [
+        {
+          "title": "Explore Arches National Park",
+          "word_count": 109,
+          "fact_signal_count": 6,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Arches_National_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Arches_National_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Park City, Utah",
+      "file": "src/data/guides/us/utah/park-city.json",
+      "attractions": [
+        {
+          "title": "Explore Utah Olympic Park",
+          "word_count": 109,
+          "fact_signal_count": 4,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Utah_Olympic_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Utah_Olympic_Park"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Boulder, Colorado",
+      "file": "src/data/guides/us/colorado/boulder.json",
+      "attractions": [
+        {
+          "title": "Explore Flatirons",
+          "word_count": 115,
+          "fact_signal_count": 2,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Flatirons",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Flatirons"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Aspen, Colorado",
+      "file": "src/data/guides/us/colorado/aspen.json",
+      "attractions": [
+        {
+          "title": "Explore Maroon Bells",
+          "word_count": 113,
+          "fact_signal_count": 5,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Maroon_Bells",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Maroon_Bells"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Flagstaff, Arizona",
+      "file": "src/data/guides/us/arizona/flagstaff.json",
+      "attractions": [
+        {
+          "title": "Explore Lowell Observatory",
+          "word_count": 110,
+          "fact_signal_count": 4,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Lowell_Observatory",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Lowell_Observatory"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Bozeman, Montana",
+      "file": "src/data/guides/us/montana/bozeman.json",
+      "attractions": [
+        {
+          "title": "Explore Museum of the Rockies",
+          "word_count": 112,
+          "fact_signal_count": 4,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Museum_of_the_Rockies",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Museum_of_the_Rockies"
+        }
+      ],
+      "skipped": []
+    },
+    {
+      "city": "Whitefish, Montana",
+      "file": "src/data/guides/us/montana/whitefish.json",
+      "attractions": [
+        {
+          "title": "Explore Whitefish Mountain Resort",
+          "word_count": 108,
+          "fact_signal_count": 13,
+          "similarity_max": 0,
+          "source_url": "https://en.wikipedia.org/wiki/Whitefish_Mountain_Resort",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Whitefish_Mountain_Resort"
+        }
+      ],
+      "skipped": []
+    }
+  ],
+  "unresolved_by_city": {}
+}

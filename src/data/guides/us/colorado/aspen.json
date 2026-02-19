@@ -1,0 +1,60 @@
+{
+  "tier": "tier1",
+  "title": "Aspen, Colorado Travel Guide",
+  "country": "United States",
+  "state": "Colorado",
+  "city": "Aspen",
+  "slug": "guides/us/colorado/aspen",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Aspen, Colorado",
+    "headline": "Aspen, Colorado Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Aspen."
+  },
+  "overview": [
+    "Aspen combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Aspen essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Maroon Bells",
+      "description": "Maroon Bells refers to two peaks in the Elk Mountains near Aspen\u2014Maroon Peak at 14,163 feet and North Maroon Peak at 14,019 feet\u2014forming one of Colorado\u2019s most recognizable alpine skylines. The mountains are composed largely of sedimentary mudstone that weathers easily, giving the range its distinctive coloration and unstable climbing reputation. The area lies within the White River National Forest and is accessed seasonally through transportation controls designed to reduce road congestion in the Maroon Creek valley. Because the peaks combine measurable elevation, geologic distinctiveness, and strict management policies, they represent more than a scenic backdrop. Maroon Bells illustrates how Aspen\u2019s tourism economy is tied directly to high-elevation public lands and preservation rules.",
+      "source_url": "https://en.wikipedia.org/wiki/Maroon_Bells",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Maroon_Bells"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Aspen",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Aspen?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "colorado",
+    "citySlug": "aspen",
+    "limit": 6,
+    "title": "Top Aspen tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Aspen",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}

@@ -7,7 +7,7 @@
   "slug": "guides/us/montana/whitefish",
   "hero": {
     "image": "https://cdn.filestackcontent.com/MQZSZGlQPWZg8cEF3c7s",
-    "alt": "Whitefish, Montana — Tour: Whitefish Lake Evening Tour",
+    "alt": "Whitefish, Montana \u2014 Tour: Whitefish Lake Evening Tour",
     "headline": "Whitefish, Montana Travel Guide",
     "subheadline": "Plan a focused Whitefish trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,24 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Serenity Falls",
-      "description": "Serenity Falls is a practical stop for understanding Whitefish's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Whitefish, Montana."
-    },
-    {
-      "title": "Rock Rescue",
-      "description": "Rock Rescue is a practical stop for understanding Whitefish's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Whitefish, Montana."
-    },
-    {
-      "title": "Ice Climb",
-      "description": "Ice Climb is a practical stop for understanding Whitefish's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Whitefish, Montana."
-    },
-    {
-      "title": "Full Day",
-      "description": "Full Day is a practical stop for understanding Whitefish's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Whitefish, Montana."
-    },
-    {
-      "title": "Full Day.  Ice Climb",
-      "description": "Full Day.  Ice Climb is a practical stop for understanding Whitefish's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Whitefish, Montana."
+      "title": "Explore Whitefish Mountain Resort",
+      "description": "Whitefish Mountain Resort, formerly Big Mountain, opened for skiing in 1947 on Big Mountain north of downtown Whitefish. The resort base is around 4,464 feet, and summit terrain reaches over 6,800 feet, creating substantial vertical relief for winter operations. Lift infrastructure and trail development expanded over decades as the region grew into a year-round gateway for Glacier National Park and Flathead County recreation. The mountain is known for frequent snowfall and cloud conditions associated with the northern Rocky Mountain climate. Its opening date, elevation profile, and transportation links to nearby Whitefish define it as a long-running component of the local economy, rather than a recently built destination project.",
+      "source_url": "https://en.wikipedia.org/wiki/Whitefish_Mountain_Resort",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Whitefish_Mountain_Resort"
     }
   ],
   "bestTimeToVisit": {
@@ -66,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Whitefish?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

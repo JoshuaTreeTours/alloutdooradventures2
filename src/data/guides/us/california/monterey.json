@@ -1,0 +1,60 @@
+{
+  "tier": "tier1",
+  "title": "Monterey, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Monterey",
+  "slug": "guides/us/california/monterey",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Monterey, California",
+    "headline": "Monterey, California Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Monterey."
+  },
+  "overview": [
+    "Monterey combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Monterey essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Monterey Bay Aquarium",
+      "description": "Monterey Bay Aquarium opened in 1984 on Cannery Row in a former sardine cannery, directly linking the institution to Monterey\u2019s industrial waterfront history. It was founded by the David and Lucile Packard Foundation and became internationally recognized for large-scale living exhibits, including a multi-story kelp forest and major open-ocean tanks. The aquarium\u2019s location on Monterey Bay places it within a biologically rich upwelling zone that supports research and public interpretation of Pacific marine ecosystems. Its opening year, adaptive reuse of a historic cannery structure, and role in sea otter and tuna husbandry programs made it a model for modern coastal aquariums and science-based visitor education in California.",
+      "source_url": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Monterey",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Monterey?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "monterey",
+    "limit": 6,
+    "title": "Top Monterey tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Monterey",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}

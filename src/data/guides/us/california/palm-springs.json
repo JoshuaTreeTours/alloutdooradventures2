@@ -7,7 +7,7 @@
   "slug": "guides/us/california/palm-springs",
   "hero": {
     "image": "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5",
-    "alt": "Palm Springs, California — Private San Andreas Fault Jeep Tour",
+    "alt": "Palm Springs, California \u2014 Private San Andreas Fault Jeep Tour",
     "headline": "Palm Springs, California Travel Guide",
     "subheadline": "Plan a focused Palm Springs trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Palm Springs Aerial Tramway",
-      "description": "Palm Springs Aerial Tramway is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Indian Canyons",
-      "description": "Indian Canyons is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Tahquitz Canyon",
-      "description": "Tahquitz Canyon is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Moorten Botanical Garden",
-      "description": "Moorten Botanical Garden is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Palm Springs",
-      "description": "Palm Springs is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Palm Springs Joshua Tree National Park",
-      "description": "Palm Springs Joshua Tree National Park is a major urban park in Palm Springs, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city."
+      "title": "Explore Palm Springs Aerial Tramway",
+      "description": "The Palm Springs Aerial Tramway opened in 1963 and climbs from the Coachella Valley floor to the San Jacinto Mountains, gaining roughly 6,000 feet in elevation over a route of about 2.5 miles. It is known for large rotating tramcars that were introduced in 2000 to replace earlier cabins while retaining the same mountain corridor. The Valley Station sits near 2,600 feet, while Mountain Station is near 8,500 feet, producing a substantial temperature and ecosystem shift within a single ride. Built through complex engineering on steep terrain, the tramway became one of Palm Springs\u2019 defining infrastructure landmarks by connecting an urban desert resort to alpine trails in Mount San Jacinto State Park.",
+      "source_url": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway"
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Palm Springs?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {
