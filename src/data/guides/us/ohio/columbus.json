@@ -1,0 +1,106 @@
+{
+  "title": "Columbus Travel Guide",
+  "country": "United States",
+  "state": "Ohio",
+  "city": "Columbus",
+  "slug": "guides/us/ohio/columbus",
+  "hero": {
+    "image": "",
+    "alt": "Columbus skyline and landmarks",
+    "headline": "Columbus Travel Guide",
+    "subheadline": "Plan a high-value Columbus itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+  },
+  "overview": [
+    "Columbus is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Columbus without over-scheduling."
+  ],
+  "highlights": [
+    {
+      "title": "Signature sights in Columbus",
+      "description": "Start with landmark districts and viewpoints during early hours."
+    },
+    {
+      "title": "Local neighborhoods",
+      "description": "Balance top attractions with one neighborhood known for food and culture."
+    },
+    {
+      "title": "Outdoor access",
+      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
+    },
+    {
+      "title": "Evening experiences",
+      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Short North Arts District",
+      "description": "One of the most valuable things to do in Columbus is spend time around Short North Arts District. Travelers comparing attractions in Columbus consistently rank Short North Arts District as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Short North Arts District early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
+    },
+    {
+      "title": "Explore Scioto Mile",
+      "description": "One of the most valuable things to do in Columbus is spend time around Scioto Mile. Travelers comparing attractions in Columbus consistently rank Scioto Mile as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Scioto Mile early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore German Village",
+      "description": "One of the most valuable things to do in Columbus is spend time around German Village. Travelers comparing attractions in Columbus consistently rank German Village as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize German Village early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Franklin Park Conservatory",
+      "description": "One of the most valuable things to do in Columbus is spend time around Franklin Park Conservatory. Travelers comparing attractions in Columbus consistently rank Franklin Park Conservatory as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Franklin Park Conservatory early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore North Market",
+      "description": "One of the most valuable things to do in Columbus is spend time around North Market. Travelers comparing attractions in Columbus consistently rank North Market as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize North Market early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Columbus Museum of Art",
+      "description": "One of the most valuable things to do in Columbus is spend time around Columbus Museum of Art. Travelers comparing attractions in Columbus consistently rank Columbus Museum of Art as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Columbus Museum of Art early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
+    },
+    {
+      "title": "Explore Ohio State University",
+      "description": "One of the most valuable things to do in Columbus is spend time around Ohio State University. Travelers comparing attractions in Columbus consistently rank Ohio State University as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Ohio State University early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore Hocking Hills",
+      "description": "One of the most valuable things to do in Columbus is spend time around Hocking Hills. Travelers comparing attractions in Columbus consistently rank Hocking Hills as a high-impact stop. If you want to visit Columbus with a balanced itinerary, prioritize Hocking Hills early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Columbus, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are best for comfort and flexibility",
+    "bullets": [
+      "Spring and fall typically offer the easiest weather for walking and tours.",
+      "Summer can be busy; reserve major attractions and timed entries early.",
+      "Winter trips can provide better rates and lighter midday crowds in many districts."
+    ]
+  },
+  "travelTips": [
+    "Use early starts for major sights and popular viewpoints.",
+    "Pre-book top attractions and guided activities during peak months.",
+    "Keep one flexible block each day for weather or traffic changes.",
+    "Stay close to transit hubs if you want to minimize transfer time."
+  ],
+  "faq": [
+    {
+      "q": "How many days are ideal for Columbus?",
+      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
+    },
+    {
+      "q": "Is Columbus good for outdoor travelers?",
+      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
+    },
+    {
+      "q": "Should I book tours in advance?",
+      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    }
+  ],
+  "tours": {
+    "stateSlug": "ohio",
+    "citySlug": "columbus",
+    "limit": 6,
+    "title": "Top Columbus tours"
+  },
+  "seoLinks": {
+    "officialTourism": "https://www.experiencecolumbus.com/"
+  }
+}

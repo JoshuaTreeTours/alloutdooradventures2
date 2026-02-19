@@ -1,12 +1,24 @@
 import RegionDropdownButton from "../../components/RegionDropdownButton";
 import Seo from "../../components/Seo";
-import { getGuideCountries, getGuideStates } from "../../data/guideData";
+import { getGuideCountries } from "../../data/guideData";
 import { getStaticPageSeo } from "../../utils/seo";
+import { getGuideStates, usGuideRegistry } from "../../utils/guides/guideRegistry";
+
+const titleCase = (value: string) =>
+  value
+    .split("-")
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 
 export default function GuidesIndex() {
   const seo = getStaticPageSeo("/guides");
-  const states = getGuideStates();
+  const stateSlugs = getGuideStates();
   const countries = getGuideCountries();
+  const allGuideCities = [...usGuideRegistry].sort((a, b) =>
+    `${a.dataImport.city}, ${a.dataImport.state}`.localeCompare(
+      `${b.dataImport.city}, ${b.dataImport.state}`
+    )
+  );
 
   return (
     <>
@@ -36,17 +48,17 @@ export default function GuidesIndex() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-8">
               <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-                US States
+                Find an Adventure (US Guides)
               </h2>
               <p className="mt-2 text-sm text-[#405040]">
-                Choose a state to review local guides, cities, and tour ideas.
+                Choose a state to browse city destination guides.
               </p>
               <div className="mt-4">
                 <RegionDropdownButton
                   label="Choose a state"
-                  options={states.map((state) => ({
-                    name: state.name,
-                    slug: state.slug,
+                  options={stateSlugs.map((slug) => ({
+                    name: titleCase(slug),
+                    slug,
                   }))}
                   onSelect={(slug) => {
                     window.location.assign(`/guides/us/${slug}`);
@@ -76,6 +88,29 @@ export default function GuidesIndex() {
               </div>
             </div>
           </div>
+
+          {allGuideCities.length ? (
+            <div className="mt-8 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-8">
+              <h2 className="text-xl font-semibold md:text-2xl">
+                Guide index listings
+              </h2>
+              <p className="mt-2 text-sm text-[#405040]">
+                Browse all US city guides alphabetically.
+              </p>
+              <div className="mt-4 max-w-xl">
+                <RegionDropdownButton
+                  label="Choose a city guide"
+                  options={allGuideCities.map((entry) => ({
+                    name: `${entry.dataImport.city}, ${entry.dataImport.state}`,
+                    slug: `${entry.stateSlug}/${entry.citySlug}`,
+                  }))}
+                  onSelect={(slug) => {
+                    window.location.assign(`/guides/us/${slug}`);
+                  }}
+                />
+              </div>
+            </div>
+          ) : null}
         </section>
       </main>
     </>

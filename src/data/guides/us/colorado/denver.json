@@ -1,0 +1,106 @@
+{
+  "title": "Denver Travel Guide",
+  "country": "United States",
+  "state": "Colorado",
+  "city": "Denver",
+  "slug": "guides/us/colorado/denver",
+  "hero": {
+    "image": "",
+    "alt": "Denver skyline and landmarks",
+    "headline": "Denver Travel Guide",
+    "subheadline": "Plan a high-value Denver itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+  },
+  "overview": [
+    "Denver is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Denver without over-scheduling."
+  ],
+  "highlights": [
+    {
+      "title": "Signature sights in Denver",
+      "description": "Start with landmark districts and viewpoints during early hours."
+    },
+    {
+      "title": "Local neighborhoods",
+      "description": "Balance top attractions with one neighborhood known for food and culture."
+    },
+    {
+      "title": "Outdoor access",
+      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
+    },
+    {
+      "title": "Evening experiences",
+      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Union Station",
+      "description": "One of the most valuable things to do in Denver is spend time around Union Station. Travelers comparing attractions in Denver consistently rank Union Station as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Union Station early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore RiNo Art District",
+      "description": "One of the most valuable things to do in Denver is spend time around RiNo Art District. Travelers comparing attractions in Denver consistently rank RiNo Art District as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize RiNo Art District early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore Denver Botanic Gardens",
+      "description": "One of the most valuable things to do in Denver is spend time around Denver Botanic Gardens. Travelers comparing attractions in Denver consistently rank Denver Botanic Gardens as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Denver Botanic Gardens early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore Red Rocks Park",
+      "description": "One of the most valuable things to do in Denver is spend time around Red Rocks Park. Travelers comparing attractions in Denver consistently rank Red Rocks Park as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Red Rocks Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore Denver Art Museum",
+      "description": "One of the most valuable things to do in Denver is spend time around Denver Art Museum. Travelers comparing attractions in Denver consistently rank Denver Art Museum as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Denver Art Museum early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    },
+    {
+      "title": "Explore City Park",
+      "description": "One of the most valuable things to do in Denver is spend time around City Park. Travelers comparing attractions in Denver consistently rank City Park as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize City Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Larimer Square",
+      "description": "One of the most valuable things to do in Denver is spend time around Larimer Square. Travelers comparing attractions in Denver consistently rank Larimer Square as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Larimer Square early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Rocky Mountain Arsenal",
+      "description": "One of the most valuable things to do in Denver is spend time around Rocky Mountain Arsenal. Travelers comparing attractions in Denver consistently rank Rocky Mountain Arsenal as a high-impact stop. If you want to visit Denver with a balanced itinerary, prioritize Rocky Mountain Arsenal early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Denver, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are best for comfort and flexibility",
+    "bullets": [
+      "Spring and fall typically offer the easiest weather for walking and tours.",
+      "Summer can be busy; reserve major attractions and timed entries early.",
+      "Winter trips can provide better rates and lighter midday crowds in many districts."
+    ]
+  },
+  "travelTips": [
+    "Use early starts for major sights and popular viewpoints.",
+    "Pre-book top attractions and guided activities during peak months.",
+    "Keep one flexible block each day for weather or traffic changes.",
+    "Stay close to transit hubs if you want to minimize transfer time."
+  ],
+  "faq": [
+    {
+      "q": "How many days are ideal for Denver?",
+      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
+    },
+    {
+      "q": "Is Denver good for outdoor travelers?",
+      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
+    },
+    {
+      "q": "Should I book tours in advance?",
+      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    }
+  ],
+  "tours": {
+    "stateSlug": "colorado",
+    "citySlug": "denver",
+    "limit": 6,
+    "title": "Top Denver tours"
+  },
+  "seoLinks": {
+    "officialTourism": "https://www.denver.org/"
+  }
+}

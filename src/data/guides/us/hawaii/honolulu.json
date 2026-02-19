@@ -1,0 +1,106 @@
+{
+  "title": "Honolulu Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Honolulu",
+  "slug": "guides/us/hawaii/honolulu",
+  "hero": {
+    "image": "",
+    "alt": "Honolulu skyline and landmarks",
+    "headline": "Honolulu Travel Guide",
+    "subheadline": "Plan a high-value Honolulu itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+  },
+  "overview": [
+    "Honolulu is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Honolulu without over-scheduling."
+  ],
+  "highlights": [
+    {
+      "title": "Signature sights in Honolulu",
+      "description": "Start with landmark districts and viewpoints during early hours."
+    },
+    {
+      "title": "Local neighborhoods",
+      "description": "Balance top attractions with one neighborhood known for food and culture."
+    },
+    {
+      "title": "Outdoor access",
+      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
+    },
+    {
+      "title": "Evening experiences",
+      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Waikiki Beach",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Waikiki Beach. Travelers comparing attractions in Honolulu consistently rank Waikiki Beach as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Waikiki Beach early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Diamond Head",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Diamond Head. Travelers comparing attractions in Honolulu consistently rank Diamond Head as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Diamond Head early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Iolani Palace",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Iolani Palace. Travelers comparing attractions in Honolulu consistently rank Iolani Palace as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Iolani Palace early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Ala Moana Beach Park",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Ala Moana Beach Park. Travelers comparing attractions in Honolulu consistently rank Ala Moana Beach Park as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Ala Moana Beach Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation."
+    },
+    {
+      "title": "Explore Kaka\u2018ako",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Kaka\u2018ako. Travelers comparing attractions in Honolulu consistently rank Kaka\u2018ako as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Kaka\u2018ako early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do in Honolulu before."
+    },
+    {
+      "title": "Explore Pearl Harbor",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Pearl Harbor. Travelers comparing attractions in Honolulu consistently rank Pearl Harbor as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Pearl Harbor early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore Manoa Falls",
+      "description": "One of the most valuable things to do in Honolulu is spend time around Manoa Falls. Travelers comparing attractions in Honolulu consistently rank Manoa Falls as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize Manoa Falls early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    },
+    {
+      "title": "Explore North Shore",
+      "description": "One of the most valuable things to do in Honolulu is spend time around North Shore. Travelers comparing attractions in Honolulu consistently rank North Shore as a high-impact stop. If you want to visit Honolulu with a balanced itinerary, prioritize North Shore early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Honolulu, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers researching things to do."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are best for comfort and flexibility",
+    "bullets": [
+      "Spring and fall typically offer the easiest weather for walking and tours.",
+      "Summer can be busy; reserve major attractions and timed entries early.",
+      "Winter trips can provide better rates and lighter midday crowds in many districts."
+    ]
+  },
+  "travelTips": [
+    "Use early starts for major sights and popular viewpoints.",
+    "Pre-book top attractions and guided activities during peak months.",
+    "Keep one flexible block each day for weather or traffic changes.",
+    "Stay close to transit hubs if you want to minimize transfer time."
+  ],
+  "faq": [
+    {
+      "q": "How many days are ideal for Honolulu?",
+      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
+    },
+    {
+      "q": "Is Honolulu good for outdoor travelers?",
+      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
+    },
+    {
+      "q": "Should I book tours in advance?",
+      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "honolulu",
+    "limit": 6,
+    "title": "Top Honolulu tours"
+  },
+  "seoLinks": {
+    "officialTourism": "https://www.gohawaii.com/islands/oahu"
+  }
+}

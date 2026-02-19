@@ -1,0 +1,106 @@
+{
+  "title": "San Diego Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "San Diego",
+  "slug": "guides/us/california/san-diego",
+  "hero": {
+    "image": "",
+    "alt": "San Diego skyline and landmarks",
+    "headline": "San Diego Travel Guide",
+    "subheadline": "Plan a high-value San Diego itinerary with top neighborhoods, outdoor access, and proven tour ideas."
+  },
+  "overview": [
+    "San Diego is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time.",
+    "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for San Diego without over-scheduling."
+  ],
+  "highlights": [
+    {
+      "title": "Signature sights in San Diego",
+      "description": "Start with landmark districts and viewpoints during early hours."
+    },
+    {
+      "title": "Local neighborhoods",
+      "description": "Balance top attractions with one neighborhood known for food and culture."
+    },
+    {
+      "title": "Outdoor access",
+      "description": "Use guided trips for nearby parks, water routes, or scenic drives."
+    },
+    {
+      "title": "Evening experiences",
+      "description": "Reserve one night for live entertainment, dining, or waterfront walks."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Balboa Park",
+      "description": "One of the most valuable things to do in San Diego is spend time around Balboa Park. Travelers comparing attractions in San Diego consistently rank Balboa Park as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Balboa Park early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers."
+    },
+    {
+      "title": "Explore La Jolla Cove",
+      "description": "One of the most valuable things to do in San Diego is spend time around La Jolla Cove. Travelers comparing attractions in San Diego consistently rank La Jolla Cove as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize La Jolla Cove early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy."
+    },
+    {
+      "title": "Explore USS Midway Museum",
+      "description": "One of the most valuable things to do in San Diego is spend time around USS Midway Museum. Travelers comparing attractions in San Diego consistently rank USS Midway Museum as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize USS Midway Museum early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy."
+    },
+    {
+      "title": "Explore Gaslamp Quarter",
+      "description": "One of the most valuable things to do in San Diego is spend time around Gaslamp Quarter. Travelers comparing attractions in San Diego consistently rank Gaslamp Quarter as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Gaslamp Quarter early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers."
+    },
+    {
+      "title": "Explore Old Town San Diego",
+      "description": "One of the most valuable things to do in San Diego is spend time around Old Town San Diego. Travelers comparing attractions in San Diego consistently rank Old Town San Diego as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Old Town San Diego early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It."
+    },
+    {
+      "title": "Explore Torrey Pines State Reserve",
+      "description": "One of the most valuable things to do in San Diego is spend time around Torrey Pines State Reserve. Travelers comparing attractions in San Diego consistently rank Torrey Pines State Reserve as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Torrey Pines State Reserve early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It."
+    },
+    {
+      "title": "Explore Mission Beach",
+      "description": "One of the most valuable things to do in San Diego is spend time around Mission Beach. Travelers comparing attractions in San Diego consistently rank Mission Beach as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Mission Beach early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers."
+    },
+    {
+      "title": "Explore Sunset Cliffs",
+      "description": "One of the most valuable things to do in San Diego is spend time around Sunset Cliffs. Travelers comparing attractions in San Diego consistently rank Sunset Cliffs as a high-impact stop. If you want to visit San Diego with a balanced itinerary, prioritize Sunset Cliffs early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in San Diego, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are best for comfort and flexibility",
+    "bullets": [
+      "Spring and fall typically offer the easiest weather for walking and tours.",
+      "Summer can be busy; reserve major attractions and timed entries early.",
+      "Winter trips can provide better rates and lighter midday crowds in many districts."
+    ]
+  },
+  "travelTips": [
+    "Use early starts for major sights and popular viewpoints.",
+    "Pre-book top attractions and guided activities during peak months.",
+    "Keep one flexible block each day for weather or traffic changes.",
+    "Stay close to transit hubs if you want to minimize transfer time."
+  ],
+  "faq": [
+    {
+      "q": "How many days are ideal for San Diego?",
+      "a": "Three to four days gives enough time for major attractions and one outdoor-focused day."
+    },
+    {
+      "q": "Is San Diego good for outdoor travelers?",
+      "a": "Yes. Most itineraries can combine city highlights with nearby hiking, water, or scenic touring options."
+    },
+    {
+      "q": "Should I book tours in advance?",
+      "a": "For top-rated tours and peak travel weeks, advance booking is strongly recommended."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "san-diego",
+    "limit": 6,
+    "title": "Top San Diego tours"
+  },
+  "seoLinks": {
+    "officialTourism": "https://www.sandiego.org/"
+  }
+}
