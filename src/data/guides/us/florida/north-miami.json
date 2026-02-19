@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "North Miami, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "North Miami",
+  "slug": "guides/us/florida/north-miami",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/34HpYS9RdiOewY1hF2lG",
+    "alt": "North Miami, Florida — Raccoon Island Jet Ski’s Experience | Sunny Isles, Fl",
+    "headline": "North Miami, Florida Travel Guide",
+    "subheadline": "Plan a focused North Miami trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "North Miami, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your North Miami itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "North Miami essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "North Miami local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around North Miami",
+      "description": "a scenic trail with views around North Miami is one of the easiest ways to understand North Miami. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your North Miami itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near North Miami",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near North Miami in your North Miami plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in North Miami because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your North Miami route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in North Miami",
+      "description": "For a reliable local experience in North Miami, add Stroll a waterfront trail or greenway in North Miami to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your North Miami day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in North Miami",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across North Miami.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for North Miami?",
+      "a": "Two to three days is enough for core North Miami highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in North Miami?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "north-miami",
+    "limit": 6,
+    "title": "Top North Miami tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/North_Miami",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/North-Miami"
+  }
+}

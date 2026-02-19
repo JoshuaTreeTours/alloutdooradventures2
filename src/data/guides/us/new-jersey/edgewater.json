@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Edgewater, New Jersey Travel Guide",
+  "country": "United States",
+  "state": "New Jersey",
+  "city": "Edgewater",
+  "slug": "guides/us/new-jersey/edgewater",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/TfyUDoIAQe2b1wza7OxT",
+    "alt": "Edgewater, New Jersey — New Jersey Zone",
+    "headline": "Edgewater, New Jersey Travel Guide",
+    "subheadline": "Plan a focused Edgewater trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Edgewater, New Jersey is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Edgewater itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Edgewater essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Edgewater local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Edgewater",
+      "description": "a scenic trail with views around Edgewater is one of the easiest ways to understand Edgewater. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Edgewater itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Edgewater",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Edgewater in your Edgewater plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Edgewater because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Edgewater route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Edgewater",
+      "description": "For a reliable local experience in Edgewater, add Stroll a waterfront trail or greenway in Edgewater to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Edgewater day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Edgewater",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Edgewater.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Edgewater?",
+      "a": "Two to three days is enough for core Edgewater highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Edgewater?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-jersey",
+    "citySlug": "edgewater",
+    "limit": 6,
+    "title": "Top Edgewater tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Edgewater",
+    "reference": "https://www.britannica.com/place/Edgewater"
+  }
+}

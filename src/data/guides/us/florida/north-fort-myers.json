@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "North Fort Myers, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "North Fort Myers",
+  "slug": "guides/us/florida/north-fort-myers",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/5ox0uebpSKuVsqs802wH",
+    "alt": "North Fort Myers, Florida — Jetski Rentals",
+    "headline": "North Fort Myers, Florida Travel Guide",
+    "subheadline": "Plan a focused North Fort Myers trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "North Fort Myers, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your North Fort Myers itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "North Fort Myers essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "North Fort Myers local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around North Fort Myers",
+      "description": "a scenic trail with views around North Fort Myers is one of the easiest ways to understand North Fort Myers. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your North Fort Myers itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near North Fort Myers",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near North Fort Myers in your North Fort Myers plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in North Fort Myers because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your North Fort Myers route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in North Fort Myers",
+      "description": "For a reliable local experience in North Fort Myers, add Stroll a waterfront trail or greenway in North Fort Myers to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your North Fort Myers day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in North Fort Myers",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across North Fort Myers.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for North Fort Myers?",
+      "a": "Two to three days is enough for core North Fort Myers highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in North Fort Myers?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "north-fort-myers",
+    "limit": 6,
+    "title": "Top North Fort Myers tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/North_Fort_Myers",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/North-Fort-Myers"
+  }
+}

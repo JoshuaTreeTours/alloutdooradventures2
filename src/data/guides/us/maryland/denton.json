@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Denton, Maryland Travel Guide",
+  "country": "United States",
+  "state": "Maryland",
+  "city": "Denton",
+  "slug": "guides/us/maryland/denton",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/wdoQecrITB6pJpxUaLXo",
+    "alt": "Denton, Maryland — Public Maryland Style Father's Day June 15th",
+    "headline": "Denton, Maryland Travel Guide",
+    "subheadline": "Plan a focused Denton trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Denton, Maryland is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Denton itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Denton essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Denton local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Denton",
+      "description": "a scenic trail with views around Denton is one of the easiest ways to understand Denton. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Denton itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Denton",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Denton in your Denton plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Denton because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Denton route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Denton",
+      "description": "For a reliable local experience in Denton, add Stroll a waterfront trail or greenway in Denton to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Denton day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Denton",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Denton.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Denton?",
+      "a": "Two to three days is enough for core Denton highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Denton?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "maryland",
+    "citySlug": "denton",
+    "limit": 6,
+    "title": "Top Denton tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Denton",
+    "officialTourism": "https://www.visitmaryland.org/",
+    "reference": "https://www.britannica.com/place/Denton"
+  }
+}

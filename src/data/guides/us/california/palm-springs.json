@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Palm Springs, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Palm Springs",
+  "slug": "guides/us/california/palm-springs",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5",
+    "alt": "Palm Springs, California — Private San Andreas Fault Jeep Tour",
+    "headline": "Palm Springs, California Travel Guide",
+    "subheadline": "Plan a focused Palm Springs trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Palm Springs, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Palm Springs itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Palm Springs essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Palm Springs local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "The Indian Canyons palm oases",
+      "description": "the Indian Canyons palm oases is one of the easiest ways to understand Palm Springs. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Palm Springs itinerary without forcing extra travel time."
+    },
+    {
+      "title": "The aerial tramway to alpine trails",
+      "description": "If you are building a shorter trip, include the aerial tramway to alpine trails in your Palm Springs plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Cycle the valley bike paths at sunrise",
+      "description": "Many travelers rank Cycle the valley bike paths at sunrise as a high-value stop in Palm Springs because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Palm Springs route stays efficient and balanced."
+    },
+    {
+      "title": "Nearby hot springs for recovery",
+      "description": "For a reliable local experience in Palm Springs, add nearby hot springs for recovery to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Palm Springs day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Palm Springs",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Palm Springs.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Palm Springs?",
+      "a": "Two to three days is enough for core Palm Springs highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Palm Springs?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "palm-springs",
+    "limit": 6,
+    "title": "Top Palm Springs tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Palm_Springs",
+    "officialTourism": "https://www.visitcalifornia.com/",
+    "reference": "https://www.britannica.com/place/Palm-Springs"
+  }
+}

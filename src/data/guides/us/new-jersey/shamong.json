@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Shamong, New Jersey Travel Guide",
+  "country": "United States",
+  "state": "New Jersey",
+  "city": "Shamong",
+  "slug": "guides/us/new-jersey/shamong",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/FocSmyFaTJuUnvjD4Hht",
+    "alt": "Shamong, New Jersey — Adventures without Barriers: New Jersey Folklore",
+    "headline": "Shamong, New Jersey Travel Guide",
+    "subheadline": "Plan a focused Shamong trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Shamong, New Jersey is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Shamong itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Shamong essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Shamong local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Shamong",
+      "description": "a scenic trail with views around Shamong is one of the easiest ways to understand Shamong. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Shamong itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Shamong",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Shamong in your Shamong plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Shamong because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Shamong route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Shamong",
+      "description": "For a reliable local experience in Shamong, add Stroll a waterfront trail or greenway in Shamong to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Shamong day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Shamong",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Shamong.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Shamong?",
+      "a": "Two to three days is enough for core Shamong highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Shamong?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-jersey",
+    "citySlug": "shamong",
+    "limit": 6,
+    "title": "Top Shamong tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Shamong",
+    "reference": "https://www.britannica.com/place/Shamong"
+  }
+}

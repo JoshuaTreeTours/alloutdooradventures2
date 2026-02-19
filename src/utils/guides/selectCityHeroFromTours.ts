@@ -6,11 +6,26 @@ export type SelectedCityHero = {
   alt: string;
 };
 
+const isPlaceholderImage = (value: string) => {
+  const normalized = value.toLowerCase();
+  return (
+    normalized.includes("default-tour.jpg") ||
+    normalized.endsWith("/hero.jpg") ||
+    normalized === "/hero.jpg" ||
+    normalized.endsWith("hero.jpg")
+  );
+};
+
 const hasValidImage = (tour: Tour) =>
-  Boolean(tour.heroImage && !tour.heroImage.includes("default-tour.jpg"));
+  Boolean(tour.heroImage && !isPlaceholderImage(tour.heroImage));
 
 const isFeaturedTour = (tour: Tour) => {
-  const values = [tour.slug, tour.title, ...(tour.tags ?? []), ...(tour.categories ?? [])]
+  const values = [
+    tour.slug,
+    tour.title,
+    ...(tour.tags ?? []),
+    ...(tour.categories ?? []),
+  ]
     .join(" ")
     .toLowerCase();
   return values.includes("featured");
@@ -26,7 +41,7 @@ export const selectCityHeroFromTours = (
   stateSlug: string,
   citySlug: string,
   city: string,
-  state: string,
+  state: string
 ): SelectedCityHero | null => {
   const tours = getToursByCity(stateSlug, citySlug).filter(hasValidImage);
   if (!tours.length) {

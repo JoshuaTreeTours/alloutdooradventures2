@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Daytona Beach, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Daytona Beach",
+  "slug": "guides/us/florida/daytona-beach",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/cYwpCVL9T6qU4M8rFqjt",
+    "alt": "Daytona Beach, Florida — Manatees, Monkeys and Florida Natural Spring Tour at Silver Springs",
+    "headline": "Daytona Beach, Florida Travel Guide",
+    "subheadline": "Plan a focused Daytona Beach trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Daytona Beach, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Daytona Beach itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Daytona Beach essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Daytona Beach local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Daytona Beach",
+      "description": "a scenic trail with views around Daytona Beach is one of the easiest ways to understand Daytona Beach. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Daytona Beach itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Daytona Beach",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Daytona Beach in your Daytona Beach plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Daytona Beach because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Daytona Beach route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Daytona Beach",
+      "description": "For a reliable local experience in Daytona Beach, add Stroll a waterfront trail or greenway in Daytona Beach to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Daytona Beach day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Daytona Beach",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Daytona Beach.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Daytona Beach?",
+      "a": "Two to three days is enough for core Daytona Beach highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Daytona Beach?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "daytona-beach",
+    "limit": 6,
+    "title": "Top Daytona Beach tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Daytona_Beach",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Daytona-Beach"
+  }
+}

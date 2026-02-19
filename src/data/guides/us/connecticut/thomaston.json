@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Thomaston, Connecticut Travel Guide",
+  "country": "United States",
+  "state": "Connecticut",
+  "city": "Thomaston",
+  "slug": "guides/us/connecticut/thomaston",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/WC18wFnjQ2SIJc4rIgvI",
+    "alt": "Thomaston, Connecticut — The Connecticut Ice Cream Train",
+    "headline": "Thomaston, Connecticut Travel Guide",
+    "subheadline": "Plan a focused Thomaston trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Thomaston, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Thomaston itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Thomaston essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Thomaston local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Thomaston",
+      "description": "a scenic trail with views around Thomaston is one of the easiest ways to understand Thomaston. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Thomaston itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Thomaston",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Thomaston in your Thomaston plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Thomaston because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Thomaston route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Thomaston",
+      "description": "For a reliable local experience in Thomaston, add Stroll a waterfront trail or greenway in Thomaston to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Thomaston day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Thomaston",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Thomaston.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Thomaston?",
+      "a": "Two to three days is enough for core Thomaston highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Thomaston?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "connecticut",
+    "citySlug": "thomaston",
+    "limit": 6,
+    "title": "Top Thomaston tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Thomaston",
+    "reference": "https://www.britannica.com/place/Thomaston"
+  }
+}

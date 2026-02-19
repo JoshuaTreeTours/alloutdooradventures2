@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Hobe Sound, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Hobe Sound",
+  "slug": "guides/us/florida/hobe-sound",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/HIr4nVkRDazPg5TM65pg",
+    "alt": "Hobe Sound, Florida — Private Surf Lesson",
+    "headline": "Hobe Sound, Florida Travel Guide",
+    "subheadline": "Plan a focused Hobe Sound trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Hobe Sound, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hobe Sound itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Hobe Sound essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Hobe Sound local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Hobe Sound",
+      "description": "a scenic trail with views around Hobe Sound is one of the easiest ways to understand Hobe Sound. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Hobe Sound itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Hobe Sound",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Hobe Sound in your Hobe Sound plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Hobe Sound because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Hobe Sound route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Hobe Sound",
+      "description": "For a reliable local experience in Hobe Sound, add Stroll a waterfront trail or greenway in Hobe Sound to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Hobe Sound day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Hobe Sound",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Hobe Sound.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Hobe Sound?",
+      "a": "Two to three days is enough for core Hobe Sound highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Hobe Sound?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "hobe-sound",
+    "limit": 6,
+    "title": "Top Hobe Sound tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Hobe_Sound",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Hobe-Sound"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Ogunquit, Maine Travel Guide",
+  "country": "United States",
+  "state": "Maine",
+  "city": "Ogunquit",
+  "slug": "guides/us/maine/ogunquit",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/R5BerKQASjCijJdxZCt7",
+    "alt": "Ogunquit, Maine — 29th ANNUAL CHAMBER MUSIC FESTIVAL: BOSTON CHAMBER MUSIC STRING QUARTET",
+    "headline": "Ogunquit, Maine Travel Guide",
+    "subheadline": "Plan a focused Ogunquit trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Ogunquit, Maine is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Ogunquit itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Ogunquit essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Ogunquit local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Ogunquit",
+      "description": "a scenic trail with views around Ogunquit is one of the easiest ways to understand Ogunquit. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Ogunquit itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Ogunquit",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Ogunquit in your Ogunquit plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Ogunquit because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Ogunquit route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Ogunquit",
+      "description": "For a reliable local experience in Ogunquit, add Stroll a waterfront trail or greenway in Ogunquit to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Ogunquit day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Ogunquit",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Ogunquit.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Ogunquit?",
+      "a": "Two to three days is enough for core Ogunquit highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Ogunquit?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "maine",
+    "citySlug": "ogunquit",
+    "limit": 6,
+    "title": "Top Ogunquit tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ogunquit",
+    "reference": "https://www.britannica.com/place/Ogunquit"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Pismo Beach, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Pismo Beach",
+  "slug": "guides/us/california/pismo-beach",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/Q8Y26cA9SeGBFzNVtVpS",
+    "alt": "Pismo Beach, California — Guided E-Bike Tour of Pismo Beach, Shell Beach and Avila Beach",
+    "headline": "Pismo Beach, California Travel Guide",
+    "subheadline": "Plan a focused Pismo Beach trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Pismo Beach, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Pismo Beach itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Pismo Beach essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Pismo Beach local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Pismo Beach",
+      "description": "downtown Pismo Beach is one of the easiest ways to understand Pismo Beach. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Pismo Beach itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Pismo Beach",
+      "description": "If you are building a shorter trip, include a local neighborhood in Pismo Beach in your Pismo Beach plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Pismo Beach",
+      "description": "Many travelers rank time in an outdoor area near Pismo Beach as a high-value stop in Pismo Beach because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Pismo Beach route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Pismo Beach",
+      "description": "For a reliable local experience in Pismo Beach, add Book a local guided experience in Pismo Beach to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Pismo Beach day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Pismo Beach",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Pismo Beach.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Pismo Beach?",
+      "a": "Two to three days is enough for core Pismo Beach highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Pismo Beach?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "pismo-beach",
+    "limit": 6,
+    "title": "Top Pismo Beach tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Pismo_Beach",
+    "officialTourism": "https://www.visitcalifornia.com/",
+    "reference": "https://www.britannica.com/place/Pismo-Beach"
+  }
+}

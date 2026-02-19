@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Traverse City, Michigan Travel Guide",
+  "country": "United States",
+  "state": "Michigan",
+  "city": "Traverse City",
+  "slug": "guides/us/michigan/traverse-city",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/GKaWQTEGRdqMxieIaokh",
+    "alt": "Traverse City, Michigan — Traverse City E-Bike Tours",
+    "headline": "Traverse City, Michigan Travel Guide",
+    "subheadline": "Plan a focused Traverse City trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Traverse City, Michigan is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Traverse City itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Traverse City essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Traverse City local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Traverse City",
+      "description": "downtown Traverse City is one of the easiest ways to understand Traverse City. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Traverse City itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Traverse City",
+      "description": "If you are building a shorter trip, include a local neighborhood in Traverse City in your Traverse City plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Traverse City",
+      "description": "Many travelers rank time in an outdoor area near Traverse City as a high-value stop in Traverse City because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Traverse City route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Traverse City",
+      "description": "For a reliable local experience in Traverse City, add Book a local guided experience in Traverse City to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Traverse City day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Traverse City",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Traverse City.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Traverse City?",
+      "a": "Two to three days is enough for core Traverse City highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Traverse City?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "michigan",
+    "citySlug": "traverse-city",
+    "limit": 6,
+    "title": "Top Traverse City tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Traverse_City",
+    "officialTourism": "https://www.michigan.org/",
+    "reference": "https://www.britannica.com/place/Traverse-City"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Harpers Ferry, West Virginia Travel Guide",
+  "country": "United States",
+  "state": "West Virginia",
+  "city": "Harpers Ferry",
+  "slug": "guides/us/west-virginia/harpers-ferry",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/IUGfWkpKRa2cNDv6bxGf",
+    "alt": "Harpers Ferry, West Virginia — Harpers Ferry Zipline Canopy Tour",
+    "headline": "Harpers Ferry, West Virginia Travel Guide",
+    "subheadline": "Plan a focused Harpers Ferry trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Harpers Ferry, West Virginia is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Harpers Ferry itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Harpers Ferry essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Harpers Ferry local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Harpers Ferry",
+      "description": "downtown Harpers Ferry is one of the easiest ways to understand Harpers Ferry. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Harpers Ferry itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Harpers Ferry",
+      "description": "If you are building a shorter trip, include a local neighborhood in Harpers Ferry in your Harpers Ferry plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Harpers Ferry",
+      "description": "Many travelers rank time in an outdoor area near Harpers Ferry as a high-value stop in Harpers Ferry because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Harpers Ferry route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Harpers Ferry",
+      "description": "For a reliable local experience in Harpers Ferry, add Book a local guided experience in Harpers Ferry to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Harpers Ferry day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Harpers Ferry",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Harpers Ferry.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Harpers Ferry?",
+      "a": "Two to three days is enough for core Harpers Ferry highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Harpers Ferry?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "west-virginia",
+    "citySlug": "harpers-ferry",
+    "limit": 6,
+    "title": "Top Harpers Ferry tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Harpers_Ferry",
+    "reference": "https://www.britannica.com/place/Harpers-Ferry"
+  }
+}

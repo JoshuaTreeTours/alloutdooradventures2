@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Wailuku, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Wailuku",
+  "slug": "guides/us/hawaii/wailuku",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/BcDDD1kwRTiTSAIbTLIu",
+    "alt": "Wailuku, Hawaii — Molokini Crater",
+    "headline": "Wailuku, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Wailuku trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Wailuku, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Wailuku itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Wailuku essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Wailuku local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Wailuku",
+      "description": "downtown Wailuku is one of the easiest ways to understand Wailuku. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Wailuku itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Wailuku",
+      "description": "If you are building a shorter trip, include a local neighborhood in Wailuku in your Wailuku plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Wailuku",
+      "description": "Many travelers rank time in an outdoor area near Wailuku as a high-value stop in Wailuku because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Wailuku route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Wailuku",
+      "description": "For a reliable local experience in Wailuku, add Book a local guided experience in Wailuku to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Wailuku day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Wailuku",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Wailuku.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Wailuku?",
+      "a": "Two to three days is enough for core Wailuku highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Wailuku?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "wailuku",
+    "limit": 6,
+    "title": "Top Wailuku tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Wailuku",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Wailuku"
+  }
+}

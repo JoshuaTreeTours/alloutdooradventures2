@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Waianae, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Waianae",
+  "slug": "guides/us/hawaii/waianae",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/yqoRguPSr6q1U515rQxV",
+    "alt": "Waianae, Hawaii — Dolphins and You",
+    "headline": "Waianae, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Waianae trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Waianae, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Waianae itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Waianae essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Waianae local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Waianae",
+      "description": "downtown Waianae is one of the easiest ways to understand Waianae. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Waianae itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Waianae",
+      "description": "If you are building a shorter trip, include a local neighborhood in Waianae in your Waianae plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Waianae",
+      "description": "Many travelers rank time in an outdoor area near Waianae as a high-value stop in Waianae because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Waianae route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Waianae",
+      "description": "For a reliable local experience in Waianae, add Book a local guided experience in Waianae to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Waianae day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Waianae",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Waianae.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Waianae?",
+      "a": "Two to three days is enough for core Waianae highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Waianae?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "waianae",
+    "limit": 6,
+    "title": "Top Waianae tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Waianae",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Waianae"
+  }
+}

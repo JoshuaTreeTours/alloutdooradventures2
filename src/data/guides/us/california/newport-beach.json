@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Newport Beach, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Newport Beach",
+  "slug": "guides/us/california/newport-beach",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+    "alt": "Newport Beach, California — Boston Whaler",
+    "headline": "Newport Beach, California Travel Guide",
+    "subheadline": "Plan a focused Newport Beach trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Newport Beach, California is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Newport Beach itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Newport Beach essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Newport Beach local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Newport Beach",
+      "description": "downtown Newport Beach is one of the easiest ways to understand Newport Beach. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Newport Beach itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Newport Beach",
+      "description": "If you are building a shorter trip, include a local neighborhood in Newport Beach in your Newport Beach plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Newport Beach",
+      "description": "Many travelers rank time in an outdoor area near Newport Beach as a high-value stop in Newport Beach because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Newport Beach route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Newport Beach",
+      "description": "For a reliable local experience in Newport Beach, add Book a local guided experience in Newport Beach to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Newport Beach day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Newport Beach",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Newport Beach.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Newport Beach?",
+      "a": "Two to three days is enough for core Newport Beach highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Newport Beach?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "newport-beach",
+    "limit": 6,
+    "title": "Top Newport Beach tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Newport_Beach",
+    "officialTourism": "https://www.visitcalifornia.com/",
+    "reference": "https://www.britannica.com/place/Newport-Beach"
+  }
+}

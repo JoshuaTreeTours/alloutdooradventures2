@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Sharon, Massachusetts Travel Guide",
+  "country": "United States",
+  "state": "Massachusetts",
+  "city": "Sharon",
+  "slug": "guides/us/massachusetts/sharon",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/v4SL69VGTmecvruy4PeJ",
+    "alt": "Sharon, Massachusetts — Single Kayak Rentals",
+    "headline": "Sharon, Massachusetts Travel Guide",
+    "subheadline": "Plan a focused Sharon trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Sharon, Massachusetts is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Sharon itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Sharon essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Sharon local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A paddle or canoe outing near Sharon",
+      "description": "a paddle or canoe outing near Sharon is one of the easiest ways to understand Sharon. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Sharon itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Sharon",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Sharon in your Sharon plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Sharon because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Sharon route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Sharon",
+      "description": "For a reliable local experience in Sharon, add Stroll a waterfront trail or greenway in Sharon to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Sharon day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Sharon",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Sharon.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Sharon?",
+      "a": "Two to three days is enough for core Sharon highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Sharon?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "massachusetts",
+    "citySlug": "sharon",
+    "limit": 6,
+    "title": "Top Sharon tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Sharon",
+    "officialTourism": "https://www.massvacation.com/",
+    "reference": "https://www.britannica.com/place/Sharon"
+  }
+}

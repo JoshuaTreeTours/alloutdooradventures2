@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Everglades City, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Everglades City",
+  "slug": "guides/us/florida/everglades-city",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/Dl4KcrCUQGcvTyMSIJjA",
+    "alt": "Everglades City, Florida — Multi Day Kayak Rentals",
+    "headline": "Everglades City, Florida Travel Guide",
+    "subheadline": "Plan a focused Everglades City trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Everglades City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Everglades City itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Everglades City essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Everglades City local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Everglades City",
+      "description": "a scenic trail with views around Everglades City is one of the easiest ways to understand Everglades City. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Everglades City itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A paddle or canoe outing near Everglades City",
+      "description": "If you are building a shorter trip, include a paddle or canoe outing near Everglades City in your Everglades City plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "A local park or nature preserve near Everglades City",
+      "description": "Many travelers rank a local park or nature preserve near Everglades City as a high-value stop in Everglades City because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Everglades City route stays efficient and balanced."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "For a reliable local experience in Everglades City, add Catch golden hour at a nearby viewpoint to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Everglades City day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Everglades City",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Everglades City.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Everglades City?",
+      "a": "Two to three days is enough for core Everglades City highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Everglades City?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "everglades-city",
+    "limit": 6,
+    "title": "Top Everglades City tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Everglades_City",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Everglades-City"
+  }
+}

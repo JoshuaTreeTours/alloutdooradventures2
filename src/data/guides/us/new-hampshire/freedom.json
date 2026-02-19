@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Freedom, New Hampshire Travel Guide",
+  "country": "United States",
+  "state": "New Hampshire",
+  "city": "Freedom",
+  "slug": "guides/us/new-hampshire/freedom",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/4Q0lkJRDQ6ycKIgjKTWN",
+    "alt": "Freedom, New Hampshire — Half Day Canoeing and Kayaking Tour/Lesson",
+    "headline": "Freedom, New Hampshire Travel Guide",
+    "subheadline": "Plan a focused Freedom trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Freedom, New Hampshire is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Freedom itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Freedom essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Freedom local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Freedom",
+      "description": "a scenic trail with views around Freedom is one of the easiest ways to understand Freedom. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Freedom itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Freedom",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Freedom in your Freedom plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Freedom because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Freedom route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Freedom",
+      "description": "For a reliable local experience in Freedom, add Stroll a waterfront trail or greenway in Freedom to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Freedom day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Freedom",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Freedom.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Freedom?",
+      "a": "Two to three days is enough for core Freedom highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Freedom?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-hampshire",
+    "citySlug": "freedom",
+    "limit": 6,
+    "title": "Top Freedom tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Freedom",
+    "reference": "https://www.britannica.com/place/Freedom"
+  }
+}

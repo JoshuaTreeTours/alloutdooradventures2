@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Christiana, Tennessee Travel Guide",
+  "country": "United States",
+  "state": "Tennessee",
+  "city": "Christiana",
+  "slug": "guides/us/tennessee/christiana",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/eobhfnd9SRe2UE0cJVVf",
+    "alt": "Christiana, Tennessee — Public Sunday",
+    "headline": "Christiana, Tennessee Travel Guide",
+    "subheadline": "Plan a focused Christiana trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Christiana, Tennessee is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Christiana itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Christiana essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Christiana local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Christiana",
+      "description": "a scenic trail with views around Christiana is one of the easiest ways to understand Christiana. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Christiana itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Christiana",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Christiana in your Christiana plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Christiana because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Christiana route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Christiana",
+      "description": "For a reliable local experience in Christiana, add Stroll a waterfront trail or greenway in Christiana to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Christiana day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Christiana",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Christiana.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Christiana?",
+      "a": "Two to three days is enough for core Christiana highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Christiana?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "tennessee",
+    "citySlug": "christiana",
+    "limit": 6,
+    "title": "Top Christiana tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Christiana",
+    "officialTourism": "https://www.tnvacation.com/",
+    "reference": "https://www.britannica.com/place/Christiana"
+  }
+}

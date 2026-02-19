@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Jackson, Wyoming Travel Guide",
+  "country": "United States",
+  "state": "Wyoming",
+  "city": "Jackson",
+  "slug": "guides/us/wyoming/jackson",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/U24Rjc69QJOocG31BuhM",
+    "alt": "Jackson, Wyoming — Honda Talon 1000 Two Seater",
+    "headline": "Jackson, Wyoming Travel Guide",
+    "subheadline": "Plan a focused Jackson trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Jackson essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Jackson local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Grand Teton viewpoints and lakes",
+      "description": "Grand Teton viewpoints and lakes is one of the easiest ways to understand Jackson. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Jackson itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A Yellowstone day trip",
+      "description": "If you are building a shorter trip, include a Yellowstone day trip in your Jackson plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "A guided wildlife-spotting drive",
+      "description": "Many travelers rank a guided wildlife-spotting drive as a high-value stop in Jackson because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Jackson route stays efficient and balanced."
+    },
+    {
+      "title": "Jackson local experience 4",
+      "description": "For a reliable local experience in Jackson, add Jackson local experience 4 to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Jackson day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Jackson",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Jackson.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Jackson?",
+      "a": "Two to three days is enough for core Jackson highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Jackson?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "wyoming",
+    "citySlug": "jackson",
+    "limit": 6,
+    "title": "Top Jackson tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Jackson",
+    "officialTourism": "https://travelwyoming.com/",
+    "reference": "https://www.britannica.com/place/Jackson"
+  }
+}

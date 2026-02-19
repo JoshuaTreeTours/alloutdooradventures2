@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Ohiopyle, Pennsylvania Travel Guide",
+  "country": "United States",
+  "state": "Pennsylvania",
+  "city": "Ohiopyle",
+  "slug": "guides/us/pennsylvania/ohiopyle",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/TAKGasQURMCRRmZt48wb",
+    "alt": "Ohiopyle, Pennsylvania — Lower Yough Classic Whitewater Tour",
+    "headline": "Ohiopyle, Pennsylvania Travel Guide",
+    "subheadline": "Plan a focused Ohiopyle trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Ohiopyle, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Ohiopyle itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Ohiopyle essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Ohiopyle local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Ohiopyle",
+      "description": "a scenic trail with views around Ohiopyle is one of the easiest ways to understand Ohiopyle. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Ohiopyle itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Ohiopyle",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Ohiopyle in your Ohiopyle plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Ohiopyle because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Ohiopyle route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Ohiopyle",
+      "description": "For a reliable local experience in Ohiopyle, add Stroll a waterfront trail or greenway in Ohiopyle to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Ohiopyle day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Ohiopyle",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Ohiopyle.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Ohiopyle?",
+      "a": "Two to three days is enough for core Ohiopyle highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Ohiopyle?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "pennsylvania",
+    "citySlug": "ohiopyle",
+    "limit": 6,
+    "title": "Top Ohiopyle tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Ohiopyle",
+    "officialTourism": "https://www.visitpa.com/",
+    "reference": "https://www.britannica.com/place/Ohiopyle"
+  }
+}

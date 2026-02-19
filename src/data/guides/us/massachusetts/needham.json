@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Needham, Massachusetts Travel Guide",
+  "country": "United States",
+  "state": "Massachusetts",
+  "city": "Needham",
+  "slug": "guides/us/massachusetts/needham",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/e7hWUZGZQsygR5IN5hyb",
+    "alt": "Needham, Massachusetts — Studio Time",
+    "headline": "Needham, Massachusetts Travel Guide",
+    "subheadline": "Plan a focused Needham trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Needham, Massachusetts is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Needham itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Needham essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Needham local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Needham",
+      "description": "a scenic trail with views around Needham is one of the easiest ways to understand Needham. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Needham itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Needham",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Needham in your Needham plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Needham because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Needham route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Needham",
+      "description": "For a reliable local experience in Needham, add Stroll a waterfront trail or greenway in Needham to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Needham day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Needham",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Needham.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Needham?",
+      "a": "Two to three days is enough for core Needham highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Needham?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "massachusetts",
+    "citySlug": "needham",
+    "limit": 6,
+    "title": "Top Needham tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Needham",
+    "officialTourism": "https://www.massvacation.com/",
+    "reference": "https://www.britannica.com/place/Needham"
+  }
+}

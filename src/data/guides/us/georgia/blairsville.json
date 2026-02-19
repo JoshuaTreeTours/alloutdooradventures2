@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Blairsville, Georgia Travel Guide",
+  "country": "United States",
+  "state": "Georgia",
+  "city": "Blairsville",
+  "slug": "guides/us/georgia/blairsville",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/zqyeBVdXQUOFgqSsSkpj",
+    "alt": "Blairsville, Georgia — Tube Rental Add-On",
+    "headline": "Blairsville, Georgia Travel Guide",
+    "subheadline": "Plan a focused Blairsville trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Blairsville, Georgia is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Blairsville itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Blairsville essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Blairsville local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Blairsville",
+      "description": "a scenic trail with views around Blairsville is one of the easiest ways to understand Blairsville. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Blairsville itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Blairsville",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Blairsville in your Blairsville plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Blairsville because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Blairsville route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Blairsville",
+      "description": "For a reliable local experience in Blairsville, add Stroll a waterfront trail or greenway in Blairsville to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Blairsville day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Blairsville",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Blairsville.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Blairsville?",
+      "a": "Two to three days is enough for core Blairsville highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Blairsville?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "georgia",
+    "citySlug": "blairsville",
+    "limit": 6,
+    "title": "Top Blairsville tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Blairsville",
+    "officialTourism": "https://www.exploregeorgia.org/",
+    "reference": "https://www.britannica.com/place/Blairsville"
+  }
+}

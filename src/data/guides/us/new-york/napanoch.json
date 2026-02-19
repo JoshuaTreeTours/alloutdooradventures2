@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Napanoch, New York Travel Guide",
+  "country": "United States",
+  "state": "New York",
+  "city": "Napanoch",
+  "slug": "guides/us/new-york/napanoch",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/9LaqXk59RtyOXrniQtnf",
+    "alt": "Napanoch, New York — Overnight investigation of the Shanley hotel",
+    "headline": "Napanoch, New York Travel Guide",
+    "subheadline": "Plan a focused Napanoch trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Napanoch, New York is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Napanoch itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Napanoch essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Napanoch local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Napanoch",
+      "description": "a scenic trail with views around Napanoch is one of the easiest ways to understand Napanoch. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Napanoch itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Napanoch",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Napanoch in your Napanoch plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Napanoch because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Napanoch route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Napanoch",
+      "description": "For a reliable local experience in Napanoch, add Stroll a waterfront trail or greenway in Napanoch to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Napanoch day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Napanoch",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Napanoch.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Napanoch?",
+      "a": "Two to three days is enough for core Napanoch highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Napanoch?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-york",
+    "citySlug": "napanoch",
+    "limit": 6,
+    "title": "Top Napanoch tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Napanoch",
+    "officialTourism": "https://www.iloveny.com/",
+    "reference": "https://www.britannica.com/place/Napanoch"
+  }
+}

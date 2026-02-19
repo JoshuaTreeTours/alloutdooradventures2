@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "North Andover, Massachusetts Travel Guide",
+  "country": "United States",
+  "state": "Massachusetts",
+  "city": "North Andover",
+  "slug": "guides/us/massachusetts/north-andover",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/mFa3erd9RSlaogcm92yi",
+    "alt": "North Andover, Massachusetts — Boston Harbor Halloween Paddle",
+    "headline": "North Andover, Massachusetts Travel Guide",
+    "subheadline": "Plan a focused North Andover trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "North Andover, Massachusetts is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your North Andover itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "North Andover essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "North Andover local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A paddle or canoe outing near North Andover",
+      "description": "a paddle or canoe outing near North Andover is one of the easiest ways to understand North Andover. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your North Andover itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A scenic trail with views around North Andover",
+      "description": "If you are building a shorter trip, include a scenic trail with views around North Andover in your North Andover plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "A local park or nature preserve near North Andover",
+      "description": "Many travelers rank a local park or nature preserve near North Andover as a high-value stop in North Andover because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your North Andover route stays efficient and balanced."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "For a reliable local experience in North Andover, add Catch golden hour at a nearby viewpoint to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your North Andover day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in North Andover",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across North Andover.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for North Andover?",
+      "a": "Two to three days is enough for core North Andover highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in North Andover?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "massachusetts",
+    "citySlug": "north-andover",
+    "limit": 6,
+    "title": "Top North Andover tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/North_Andover",
+    "officialTourism": "https://www.massvacation.com/",
+    "reference": "https://www.britannica.com/place/North-Andover"
+  }
+}

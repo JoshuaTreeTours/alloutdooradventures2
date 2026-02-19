@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Fort Myers, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Fort Myers",
+  "slug": "guides/us/florida/fort-myers",
+  "hero": {
+    "image": "https://www.filepicker.io/api/file/4mrKLX5WTaiPiwOLdQ5u",
+    "alt": "Fort Myers, Florida — Tandem Flights",
+    "headline": "Fort Myers, Florida Travel Guide",
+    "subheadline": "Plan a focused Fort Myers trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Fort Myers, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Fort Myers itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Fort Myers essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Fort Myers local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Fort Myers",
+      "description": "a scenic trail with views around Fort Myers is one of the easiest ways to understand Fort Myers. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Fort Myers itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Fort Myers",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Fort Myers in your Fort Myers plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Fort Myers because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Fort Myers route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Fort Myers",
+      "description": "For a reliable local experience in Fort Myers, add Stroll a waterfront trail or greenway in Fort Myers to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Fort Myers day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Fort Myers",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Fort Myers.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Fort Myers?",
+      "a": "Two to three days is enough for core Fort Myers highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Fort Myers?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "fort-myers",
+    "limit": 6,
+    "title": "Top Fort Myers tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Fort_Myers",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Fort-Myers"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Kaneohe, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Kaneohe",
+  "slug": "guides/us/hawaii/kaneohe",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/p6ScOjEXQFW4cktGZnb2",
+    "alt": "Kaneohe, Hawaii — Chinaman's Hat Kayak Rental",
+    "headline": "Kaneohe, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Kaneohe trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Kaneohe, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Kaneohe itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Kaneohe essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Kaneohe local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Kaneohe",
+      "description": "downtown Kaneohe is one of the easiest ways to understand Kaneohe. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Kaneohe itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Kaneohe",
+      "description": "If you are building a shorter trip, include a local neighborhood in Kaneohe in your Kaneohe plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Kaneohe",
+      "description": "Many travelers rank time in an outdoor area near Kaneohe as a high-value stop in Kaneohe because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Kaneohe route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Kaneohe",
+      "description": "For a reliable local experience in Kaneohe, add Book a local guided experience in Kaneohe to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Kaneohe day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Kaneohe",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Kaneohe.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Kaneohe?",
+      "a": "Two to three days is enough for core Kaneohe highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Kaneohe?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "kaneohe",
+    "limit": 6,
+    "title": "Top Kaneohe tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kaneohe",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Kaneohe"
+  }
+}

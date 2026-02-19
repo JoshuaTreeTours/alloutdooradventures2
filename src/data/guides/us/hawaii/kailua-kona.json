@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Kailua-Kona, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Kailua-Kona",
+  "slug": "guides/us/hawaii/kailua-kona",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/pdAJGMMSy3Q8ZCTjtj9Q",
+    "alt": "Kailua-Kona, Hawaii — Manta Ray Moonlight Night Snorkel in Keauhou - Kona",
+    "headline": "Kailua-Kona, Hawaii Travel Guide",
+    "subheadline": "Plan a focused Kailua-Kona trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Kailua-Kona, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Kailua-Kona itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Kailua-Kona essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Kailua-Kona local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Kailua-Kona",
+      "description": "downtown Kailua-Kona is one of the easiest ways to understand Kailua-Kona. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Kailua-Kona itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Kailua-Kona",
+      "description": "If you are building a shorter trip, include a local neighborhood in Kailua-Kona in your Kailua-Kona plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Kailua-Kona",
+      "description": "Many travelers rank time in an outdoor area near Kailua-Kona as a high-value stop in Kailua-Kona because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Kailua-Kona route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Kailua-Kona",
+      "description": "For a reliable local experience in Kailua-Kona, add Book a local guided experience in Kailua-Kona to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Kailua-Kona day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Kailua-Kona",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Kailua-Kona.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Kailua-Kona?",
+      "a": "Two to three days is enough for core Kailua-Kona highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Kailua-Kona?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "kailua-kona",
+    "limit": 6,
+    "title": "Top Kailua-Kona tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kailua-Kona",
+    "officialTourism": "https://www.gohawaii.com/",
+    "reference": "https://www.britannica.com/place/Kailua-Kona"
+  }
+}

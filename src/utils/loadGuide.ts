@@ -8,6 +8,7 @@ export type GuideSeoLinks = {
 };
 
 export type GuidePageData = {
+  tier?: "tier1" | "tier2";
   title: string;
   country: string;
   state: string;

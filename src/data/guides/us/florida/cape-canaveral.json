@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Cape Canaveral, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Cape Canaveral",
+  "slug": "guides/us/florida/cape-canaveral",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/bpnXPPWTQSrsRU7a8n8Q",
+    "alt": "Cape Canaveral, Florida — Florida Man’s Wild Adventure – Hold Onto Your Flip-Flops!",
+    "headline": "Cape Canaveral, Florida Travel Guide",
+    "subheadline": "Plan a focused Cape Canaveral trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Cape Canaveral, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Cape Canaveral itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Cape Canaveral essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Cape Canaveral local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Cape Canaveral",
+      "description": "a scenic trail with views around Cape Canaveral is one of the easiest ways to understand Cape Canaveral. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Cape Canaveral itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Cape Canaveral",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Cape Canaveral in your Cape Canaveral plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Cape Canaveral because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Cape Canaveral route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Cape Canaveral",
+      "description": "For a reliable local experience in Cape Canaveral, add Stroll a waterfront trail or greenway in Cape Canaveral to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Cape Canaveral day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Cape Canaveral",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Cape Canaveral.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Cape Canaveral?",
+      "a": "Two to three days is enough for core Cape Canaveral highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Cape Canaveral?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "cape-canaveral",
+    "limit": 6,
+    "title": "Top Cape Canaveral tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Cape_Canaveral",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Cape-Canaveral"
+  }
+}

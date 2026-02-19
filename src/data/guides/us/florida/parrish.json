@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Parrish, Florida Travel Guide",
+  "country": "United States",
+  "state": "Florida",
+  "city": "Parrish",
+  "slug": "guides/us/florida/parrish",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/UjsIxGQj6H5pzm6kTRKQ",
+    "alt": "Parrish, Florida — Willow Express",
+    "headline": "Parrish, Florida Travel Guide",
+    "subheadline": "Plan a focused Parrish trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Parrish, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Parrish itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Parrish essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Parrish local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Parrish",
+      "description": "a scenic trail with views around Parrish is one of the easiest ways to understand Parrish. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Parrish itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Parrish",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Parrish in your Parrish plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Parrish because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Parrish route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Parrish",
+      "description": "For a reliable local experience in Parrish, add Stroll a waterfront trail or greenway in Parrish to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Parrish day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Parrish",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Parrish.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Parrish?",
+      "a": "Two to three days is enough for core Parrish highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Parrish?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "florida",
+    "citySlug": "parrish",
+    "limit": 6,
+    "title": "Top Parrish tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Parrish",
+    "officialTourism": "https://www.visitflorida.com/",
+    "reference": "https://www.britannica.com/place/Parrish"
+  }
+}

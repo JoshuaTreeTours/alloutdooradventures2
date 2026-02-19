@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Freeport, New York Travel Guide",
+  "country": "United States",
+  "state": "New York",
+  "city": "Freeport",
+  "slug": "guides/us/new-york/freeport",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/cbCh6lDxRVGGYKPS967D",
+    "alt": "Freeport, New York — Sunset Cruise",
+    "headline": "Freeport, New York Travel Guide",
+    "subheadline": "Plan a focused Freeport trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Freeport, New York is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Freeport itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Freeport essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Freeport local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Freeport",
+      "description": "downtown Freeport is one of the easiest ways to understand Freeport. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Freeport itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Freeport",
+      "description": "If you are building a shorter trip, include a local neighborhood in Freeport in your Freeport plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Freeport",
+      "description": "Many travelers rank time in an outdoor area near Freeport as a high-value stop in Freeport because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Freeport route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Freeport",
+      "description": "For a reliable local experience in Freeport, add Book a local guided experience in Freeport to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Freeport day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Freeport",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Freeport.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Freeport?",
+      "a": "Two to three days is enough for core Freeport highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Freeport?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "new-york",
+    "citySlug": "freeport",
+    "limit": 6,
+    "title": "Top Freeport tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Freeport",
+    "officialTourism": "https://www.iloveny.com/",
+    "reference": "https://www.britannica.com/place/Freeport"
+  }
+}

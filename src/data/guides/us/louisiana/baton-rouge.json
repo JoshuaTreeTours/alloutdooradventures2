@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Baton Rouge, Louisiana Travel Guide",
+  "country": "United States",
+  "state": "Louisiana",
+  "city": "Baton Rouge",
+  "slug": "guides/us/louisiana/baton-rouge",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/F3TlNnMRTW2OLUDfZGCQ",
+    "alt": "Baton Rouge, Louisiana — This Will Be War: Louisiana Secession",
+    "headline": "Baton Rouge, Louisiana Travel Guide",
+    "subheadline": "Plan a focused Baton Rouge trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Baton Rouge, Louisiana is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Baton Rouge itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Baton Rouge essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Baton Rouge local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Baton Rouge",
+      "description": "a scenic trail with views around Baton Rouge is one of the easiest ways to understand Baton Rouge. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Baton Rouge itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Baton Rouge",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Baton Rouge in your Baton Rouge plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Baton Rouge because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Baton Rouge route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Baton Rouge",
+      "description": "For a reliable local experience in Baton Rouge, add Stroll a waterfront trail or greenway in Baton Rouge to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Baton Rouge day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Baton Rouge",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Baton Rouge.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Baton Rouge?",
+      "a": "Two to three days is enough for core Baton Rouge highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Baton Rouge?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "louisiana",
+    "citySlug": "baton-rouge",
+    "limit": 6,
+    "title": "Top Baton Rouge tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Baton_Rouge",
+    "officialTourism": "https://www.explorelouisiana.com/",
+    "reference": "https://www.britannica.com/place/Baton-Rouge"
+  }
+}

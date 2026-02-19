@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Stafford, Virginia Travel Guide",
+  "country": "United States",
+  "state": "Virginia",
+  "city": "Stafford",
+  "slug": "guides/us/virginia/stafford",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/JmqWEYJoTnKNsdEB5YeQ",
+    "alt": "Stafford, Virginia — Charleston South Carolina",
+    "headline": "Stafford, Virginia Travel Guide",
+    "subheadline": "Plan a focused Stafford trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Stafford, Virginia is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Stafford itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Stafford essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Stafford local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Downtown Stafford",
+      "description": "downtown Stafford is one of the easiest ways to understand Stafford. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Stafford itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local neighborhood in Stafford",
+      "description": "If you are building a shorter trip, include a local neighborhood in Stafford in your Stafford plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Time in an outdoor area near Stafford",
+      "description": "Many travelers rank time in an outdoor area near Stafford as a high-value stop in Stafford because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Stafford route stays efficient and balanced."
+    },
+    {
+      "title": "Book a local guided experience in Stafford",
+      "description": "For a reliable local experience in Stafford, add Book a local guided experience in Stafford to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Stafford day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Stafford",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Stafford.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Stafford?",
+      "a": "Two to three days is enough for core Stafford highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Stafford?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "virginia",
+    "citySlug": "stafford",
+    "limit": 6,
+    "title": "Top Stafford tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Stafford",
+    "reference": "https://www.britannica.com/place/Stafford"
+  }
+}

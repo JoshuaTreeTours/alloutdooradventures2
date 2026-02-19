@@ -1,0 +1,78 @@
+{
+  "tier": "tier2",
+  "title": "Hartford, Connecticut Travel Guide",
+  "country": "United States",
+  "state": "Connecticut",
+  "city": "Hartford",
+  "slug": "guides/us/connecticut/hartford",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/5aDMWPjvT7XWN5CXKdPw",
+    "alt": "Hartford, Connecticut — Southern Middlesex County CT Ale Trail Private Brewery Trip",
+    "headline": "Hartford, Connecticut Travel Guide",
+    "subheadline": "Plan a focused Hartford trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Hartford, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hartford itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Hartford essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Hartford local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Hartford",
+      "description": "a scenic trail with views around Hartford is one of the easiest ways to understand Hartford. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Hartford itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Hartford",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Hartford in your Hartford plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Hartford because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Hartford route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Hartford",
+      "description": "For a reliable local experience in Hartford, add Stroll a waterfront trail or greenway in Hartford to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Hartford day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Hartford",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Hartford.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Hartford?",
+      "a": "Two to three days is enough for core Hartford highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Hartford?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "connecticut",
+    "citySlug": "hartford",
+    "limit": 6,
+    "title": "Top Hartford tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Hartford",
+    "reference": "https://www.britannica.com/place/Hartford"
+  }
+}

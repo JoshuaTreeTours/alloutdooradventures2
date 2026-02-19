@@ -1,0 +1,79 @@
+{
+  "tier": "tier2",
+  "title": "Glen Burnie, Maryland Travel Guide",
+  "country": "United States",
+  "state": "Maryland",
+  "city": "Glen Burnie",
+  "slug": "guides/us/maryland/glen-burnie",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/XsX6mNTHRR3oHco9vTCw",
+    "alt": "Glen Burnie, Maryland — Super Rage Room with Color Lighting",
+    "headline": "Glen Burnie, Maryland Travel Guide",
+    "subheadline": "Plan a focused Glen Burnie trip with practical highlights, local context, and easy tour connections."
+  },
+  "overview": [
+    "Glen Burnie, Maryland is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Glen Burnie itinerary efficient while still feeling varied and local."
+  ],
+  "highlights": [
+    {
+      "title": "Glen Burnie essentials",
+      "description": "Prioritize one signature attraction each day for better pacing."
+    },
+    {
+      "title": "Glen Burnie local character",
+      "description": "Add nearby neighborhoods and outdoor stops for variety."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "A scenic trail with views around Glen Burnie",
+      "description": "a scenic trail with views around Glen Burnie is one of the easiest ways to understand Glen Burnie. Plan about one to two hours, then pair it with a nearby cafe, neighborhood walk, or guided outing. This stop adds a recognizable anchor to your Glen Burnie itinerary without forcing extra travel time."
+    },
+    {
+      "title": "A local park or nature preserve near Glen Burnie",
+      "description": "If you are building a shorter trip, include a local park or nature preserve near Glen Burnie in your Glen Burnie plan. It offers a practical mix of local character and scenery, and it connects well with nearby districts. Most visitors can fit it into a half-day block and still keep the day flexible."
+    },
+    {
+      "title": "Catch golden hour at a nearby viewpoint",
+      "description": "Many travelers rank Catch golden hour at a nearby viewpoint as a high-value stop in Glen Burnie because it combines atmosphere, easy access, and good pacing for first-time visitors. Schedule it early, then continue with another nearby attraction so your Glen Burnie route stays efficient and balanced."
+    },
+    {
+      "title": "Stroll a waterfront trail or greenway in Glen Burnie",
+      "description": "For a reliable local experience in Glen Burnie, add Stroll a waterfront trail or greenway in Glen Burnie to your route. It works well as a morning or sunset stop and pairs naturally with nearby food spots, outdoor walks, or culture-focused neighborhoods, giving your Glen Burnie day strong variety without overplanning."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Shoulder seasons are typically easiest in Glen Burnie",
+    "bullets": [
+      "Spring and fall usually offer comfortable weather and smoother logistics.",
+      "Reserve popular tours and timed attractions early in busy periods.",
+      "Use morning starts for major sights and photo-heavy locations."
+    ]
+  },
+  "travelTips": [
+    "Group activities by area to reduce transfers across Glen Burnie.",
+    "Pre-book top tours and high-demand attractions when your dates are set.",
+    "Leave one flexible time block each day for weather and local recommendations."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Glen Burnie?",
+      "a": "Two to three days is enough for core Glen Burnie highlights plus one or two local experiences."
+    },
+    {
+      "q": "Should I book tours ahead in Glen Burnie?",
+      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+    }
+  ],
+  "tours": {
+    "stateSlug": "maryland",
+    "citySlug": "glen-burnie",
+    "limit": 6,
+    "title": "Top Glen Burnie tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Glen_Burnie",
+    "officialTourism": "https://www.visitmaryland.org/",
+    "reference": "https://www.britannica.com/place/Glen-Burnie"
+  }
+}
