@@ -163,6 +163,12 @@ export async function fetchWikiSummary(title: string): Promise<WikiSummary> {
   const cached = cacheState.summaries[key];
   if (cached) return cached;
 
+  if (process.env.WIKI_ENABLE_NETWORK !== "1") {
+    const miss = toMiss(cleanTitle, "offline");
+    saveCache(key, miss);
+    return miss;
+  }
+
   const result = await queueRequest(async () => {
     try {
       const response = await fetch(
