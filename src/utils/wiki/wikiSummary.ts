@@ -17,8 +17,8 @@ type CacheState = {
 };
 
 const CACHE_PATH = path.resolve(".cache/wiki-summaries.json");
-const REQUESTS_PER_SECOND = 8;
-const USER_AGENT = "alloutdooradventures/1.0 (tier1-wiki-things-to-do)";
+const REQUESTS_PER_SECOND = 4;
+const USER_AGENT = "alloutdooradventures/1.0 (contact: guides@alloutdooradventures.com)";
 
 let cacheLoaded = false;
 let cacheDirty = false;
@@ -96,27 +96,21 @@ export const fetchWikiSummary = async (
   await waitForRequestSlot();
 
   try {
-    const request = fetch(
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 8000);
+
+    const response = await fetch(
       `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(trimmed)}`,
       {
         headers: {
           Accept: "application/json",
           "User-Agent": USER_AGENT,
         },
+        signal: controller.signal,
       }
     );
 
-    const response = (await Promise.race([
-      request,
-      new Promise<null>(resolve => setTimeout(() => resolve(null), 500)),
-    ])) as Response | null;
-
-    if (!response) {
-      const empty = { extract: null, url: null };
-      cacheState.summaries[lookupKey] = empty;
-      cacheDirty = true;
-      return empty;
-    }
+    clearTimeout(timeout);
 
     if (!response.ok) {
       const empty = { extract: null, url: null };

@@ -1,0 +1,231 @@
+{
+  "scope": "top20-tier1",
+  "checkedCities": 20,
+  "failures": [],
+  "warnings": [
+    {
+      "file": "src/data/guides/us/arizona/phoenix.json",
+      "reason": "Explore Heard Museum vs Explore Musical Instrument Museum 0.86"
+    },
+    {
+      "file": "src/data/guides/us/arizona/phoenix.json",
+      "reason": "Explore Papago Park vs Explore South Mountain Park 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/los-angeles.json",
+      "reason": "Explore Griffith Observatory vs Explore Malibu 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/los-angeles.json",
+      "reason": "Explore Hollywood Boulevard vs Explore Malibu 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/los-angeles.json",
+      "reason": "Explore Getty Center vs Explore Malibu 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/los-angeles.json",
+      "reason": "Explore Runyon Canyon vs Explore Malibu 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/los-angeles.json",
+      "reason": "Explore The Broad vs Explore Malibu 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/sacramento.json",
+      "reason": "Old Town Sacramento vs Sacramento Old Town Sacramento 1.00"
+    },
+    {
+      "file": "src/data/guides/us/california/san-francisco.json",
+      "reason": "Explore Alcatraz Island vs Explore Chinatown 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/san-francisco.json",
+      "reason": "Explore Lombard Street vs Explore Chinatown 0.88"
+    },
+    {
+      "file": "src/data/guides/us/california/san-francisco.json",
+      "reason": "Explore Chinatown vs Explore Twin Peaks 0.88"
+    },
+    {
+      "file": "src/data/guides/us/colorado/denver.json",
+      "reason": "Explore Red Rocks Park vs Explore City Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/district-of-columbia/washington.json",
+      "reason": "Explore National Mall vs Explore Georgetown 0.88"
+    },
+    {
+      "file": "src/data/guides/us/district-of-columbia/washington.json",
+      "reason": "Explore Smithsonian Museums vs Explore Georgetown 0.88"
+    },
+    {
+      "file": "src/data/guides/us/district-of-columbia/washington.json",
+      "reason": "Explore Georgetown vs Explore Tidal Basin 0.88"
+    },
+    {
+      "file": "src/data/guides/us/district-of-columbia/washington.json",
+      "reason": "Explore Georgetown vs Explore Lincoln Memorial 0.88"
+    },
+    {
+      "file": "src/data/guides/us/district-of-columbia/washington.json",
+      "reason": "Explore Georgetown vs Explore The Wharf 0.88"
+    },
+    {
+      "file": "src/data/guides/us/florida/miami.json",
+      "reason": "Explore Wynwood Walls vs Explore Brickell 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/miami.json",
+      "reason": "Explore Little Havana vs Explore Brickell 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/miami.json",
+      "reason": "Explore Bayside Marketplace vs Explore Brickell 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/miami.json",
+      "reason": "Explore Brickell vs Explore Key Biscayne 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Walt Disney World vs Explore Disney Springs 0.88"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Universal Orlando Resort vs Explore Kissimmee 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Lake Eola Park vs Explore ICON Park 0.88"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Lake Eola Park vs Explore Winter Park 0.88"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore ICON Park vs Explore Winter Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Disney Springs vs Explore Kissimmee 0.87"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Disney Springs vs Explore Wekiwa Springs 0.91"
+    },
+    {
+      "file": "src/data/guides/us/florida/orlando.json",
+      "reason": "Explore Kissimmee vs Explore Wekiwa Springs 0.87"
+    },
+    {
+      "file": "src/data/guides/us/illinois/chicago.json",
+      "reason": "Explore Millennium Park vs Explore Wicker Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/illinois/chicago.json",
+      "reason": "Explore Millennium Park vs Explore Lincoln Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/illinois/chicago.json",
+      "reason": "Explore Wicker Park vs Explore Lincoln Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/maine/portland.json",
+      "reason": "Portland Fire Engine Co. Tours vs Fire Engine Co. Tours 1.00"
+    },
+    {
+      "file": "src/data/guides/us/maine/portland.json",
+      "reason": "Portland Fire Engine Co. Tours vs Portland Fire Engine Co. Tours.  Portland 1.00"
+    },
+    {
+      "file": "src/data/guides/us/maine/portland.json",
+      "reason": "Fire Engine Co. Tours vs Portland Fire Engine Co. Tours.  Portland 1.00"
+    },
+    {
+      "file": "src/data/guides/us/massachusetts/boston.json",
+      "reason": "Explore Freedom Trail vs Explore Boston Common 0.87"
+    },
+    {
+      "file": "src/data/guides/us/massachusetts/boston.json",
+      "reason": "Explore Boston Common vs Explore North End 0.87"
+    },
+    {
+      "file": "src/data/guides/us/massachusetts/boston.json",
+      "reason": "Explore Boston Common vs Explore Newbury Street 0.87"
+    },
+    {
+      "file": "src/data/guides/us/nevada/las-vegas.json",
+      "reason": "Explore Las Vegas Strip vs Explore Bellagio Fountains 0.88"
+    },
+    {
+      "file": "src/data/guides/us/nevada/las-vegas.json",
+      "reason": "Explore Las Vegas Strip vs Explore Hoover Dam 0.88"
+    },
+    {
+      "file": "src/data/guides/us/new-york/new-york.json",
+      "reason": "Explore Ellis Island vs Explore DUMBO 0.87"
+    },
+    {
+      "file": "src/data/guides/us/new-york/new-york.json",
+      "reason": "Explore High Line vs Explore DUMBO 0.87"
+    },
+    {
+      "file": "src/data/guides/us/new-york/new-york.json",
+      "reason": "Explore Times Square vs Explore DUMBO 0.87"
+    },
+    {
+      "file": "src/data/guides/us/oregon/portland.json",
+      "reason": "Explore Washington Park vs Explore Forest Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/oregon/portland.json",
+      "reason": "Explore Pearl District vs Explore Alberta Arts District 0.88"
+    },
+    {
+      "file": "src/data/guides/us/pennsylvania/philadelphia.json",
+      "reason": "Explore Independence Hall vs Explore Fishtown 0.87"
+    },
+    {
+      "file": "src/data/guides/us/pennsylvania/philadelphia.json",
+      "reason": "Explore Liberty Bell vs Explore Fishtown 0.87"
+    },
+    {
+      "file": "src/data/guides/us/pennsylvania/philadelphia.json",
+      "reason": "Explore Rittenhouse Square vs Explore Fishtown 0.87"
+    },
+    {
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "reason": "Explore Broadway vs Explore Ryman Auditorium 0.87"
+    },
+    {
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "reason": "Explore Broadway vs Explore The Gulch 0.87"
+    },
+    {
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "reason": "Explore Broadway vs Explore East Nashville 0.91"
+    },
+    {
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "reason": "Explore Ryman Auditorium vs Explore East Nashville 0.87"
+    },
+    {
+      "file": "src/data/guides/us/tennessee/nashville.json",
+      "reason": "Explore The Gulch vs Explore East Nashville 0.87"
+    },
+    {
+      "file": "src/data/guides/us/washington/seattle.json",
+      "reason": "Explore Space Needle vs Explore Fremont 0.87"
+    },
+    {
+      "file": "src/data/guides/us/washington/seattle.json",
+      "reason": "Explore Discovery Park vs Explore Kerry Park 0.92"
+    },
+    {
+      "file": "src/data/guides/us/washington/seattle.json",
+      "reason": "Explore Fremont vs Explore Mount Rainier 0.87"
+    }
+  ]
+}

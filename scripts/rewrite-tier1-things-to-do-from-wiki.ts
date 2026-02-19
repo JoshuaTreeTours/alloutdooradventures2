@@ -26,14 +26,17 @@ type Report = {
   wikiItems: number;
   fallbackItems: number;
   failures: Array<{ file: string; reason: string }>;
+  warnings: Array<{ file: string; reason: string }>;
 };
 
 const ROOT = path.resolve("src/data/guides/us");
 const REPORT_PATH = path.resolve("reports/tier1-wiki-things-to-do.json");
-const SIMILARITY_THRESHOLD = 0.7;
+const REWRITE_SIMILARITY_THRESHOLD = 0.7;
+const VALIDATION_SIMILARITY_THRESHOLD = 0.85;
+const MIN_DESCRIPTION_CHARS = 160;
 
 const FACT_SIGNAL_PATTERN =
-  /(\b\d{2,}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%)\b|\b(?:opened|built|founded|established|completed|designated)\s+in\s+\d{4}\b|\bNational\s(?:Park|Scenic Area|Historic Landmark)\b|\b(?:River|Bridge|Museum|Garden|District|Park)\b)/i;
+  /(\b\d{4}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%|meter|meters)\b|\b(?:opened|built|founded|established|completed|designated|renovated|expanded|constructed)\b|\b(?:architect|neighborhood|district|style|collection|campus|tower|pier|beach|museum|gallery|observatory|landmark|park|lake)\b)/i;
 
 const walkGuideFiles = (dir: string): string[] => {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -58,12 +61,6 @@ const walkGuideFiles = (dir: string): string[] => {
   return files.sort();
 };
 
-const countSentences = (text: string) =>
-  text
-    .split(/(?<=[.!?])\s+/)
-    .map(sentence => sentence.trim())
-    .filter(Boolean).length;
-
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
 
 const isHighQuality = (text: string) => {
@@ -72,7 +69,7 @@ const isHighQuality = (text: string) => {
   const hasGenericAdvice = isGenericTravelAdvice(text);
   const isBoilerplate = !validateNoBoilerplate(text);
 
-  return words > 70 && hasFactSignal && !hasGenericAdvice && !isBoilerplate;
+  return words > 45 && hasFactSignal && !hasGenericAdvice && !isBoilerplate;
 };
 
 const hasSourceUrl = (item: ThingToDo) =>
@@ -90,7 +87,7 @@ const shouldRewriteDescription = (args: {
   const maxSimilarity = similarityScores.length ? Math.max(...similarityScores) : 0;
   const hasBoilerplate = !validateNoBoilerplate(description);
   const hasGenericAdvice = isGenericTravelAdvice(description);
-  const tooShort = wordCount(description) < 50;
+  const tooShort = description.length < MIN_DESCRIPTION_CHARS;
   const missingDescription = !description.trim();
 
   if (hasSourceUrl(item) && isHighQuality(description) && !hasBoilerplate) {
@@ -100,10 +97,45 @@ const shouldRewriteDescription = (args: {
   return (
     hasBoilerplate ||
     hasGenericAdvice ||
-    maxSimilarity > SIMILARITY_THRESHOLD ||
+    maxSimilarity > REWRITE_SIMILARITY_THRESHOLD ||
     tooShort ||
     missingDescription
   );
+};
+
+const validateGuide = (file: string, guide: Guide, report: Report) => {
+  const thingsToDo = guide.thingsToDo ?? [];
+
+  for (const item of thingsToDo) {
+    if (!validateNoBoilerplate(item.description)) {
+      report.failures.push({
+        file,
+        reason: `Banned boilerplate phrase in ${item.title}`,
+      });
+    }
+
+    if (item.description.length < MIN_DESCRIPTION_CHARS && !FACT_SIGNAL_PATTERN.test(item.description)) {
+      report.failures.push({
+        file,
+        reason: `Thin description with no concrete facts for ${item.title}`,
+      });
+    }
+  }
+
+  for (let i = 0; i < thingsToDo.length; i += 1) {
+    for (let j = i + 1; j < thingsToDo.length; j += 1) {
+      const similarity = jaccardSimilarity(
+        thingsToDo[i].description,
+        thingsToDo[j].description
+      );
+      if (similarity > VALIDATION_SIMILARITY_THRESHOLD) {
+        report.warnings.push({
+          file,
+          reason: `High similarity (${similarity.toFixed(2)}) between ${thingsToDo[i].title} and ${thingsToDo[j].title}`,
+        });
+      }
+    }
+  }
 };
 
 const run = async () => {
@@ -112,6 +144,7 @@ const run = async () => {
     wikiItems: 0,
     fallbackItems: 0,
     failures: [],
+    warnings: [],
   };
 
   const files = walkGuideFiles(ROOT);
@@ -132,8 +165,7 @@ const run = async () => {
     const updatedThings: ThingToDo[] = [];
     let hadChange = false;
 
-    for (let index = 0; index < guide.thingsToDo.length; index += 1) {
-      const item = guide.thingsToDo[index];
+    for (const item of guide.thingsToDo) {
       const existing = updatedThings.map(entry => entry.description);
 
       if (!shouldRewriteDescription({ item, existingDescriptions: existing })) {
@@ -141,65 +173,49 @@ const run = async () => {
         continue;
       }
 
-      const result = await buildWikiLandmarkDescription({
+      let result = await buildWikiLandmarkDescription({
         landmarkName: item.title,
         cityName: guide.city,
         stateName: guide.state,
         existingDescriptions: existing,
       });
 
-      let description = result.description;
-
-      if (
-        !validateNoBoilerplate(description) ||
-        (hasSourceUrl(item) && (wordCount(description) < 80 || wordCount(description) > 120)) ||
-        (!hasSourceUrl(item) && wordCount(description) > 45) ||
-        countSentences(description) > 3
-      ) {
-        const retry = await buildWikiLandmarkDescription({
-          landmarkName: item.title,
-          cityName: guide.city,
-          stateName: guide.state,
-          existingDescriptions: existing,
-        });
-        description = retry.description;
-      }
-
       for (let retryCount = 0; retryCount < 3; retryCount += 1) {
-        const similarities = updatedThings.map(existingThing =>
-          jaccardSimilarity(description, existingThing.description)
+        const maxSimilarity = Math.max(
+          0,
+          ...updatedThings.map(existingThing =>
+            jaccardSimilarity(result.description, existingThing.description)
+          )
         );
-        const max = similarities.length ? Math.max(...similarities) : 0;
 
-        if (max <= SIMILARITY_THRESHOLD) {
+        if (
+          validateNoBoilerplate(result.description) &&
+          maxSimilarity <= VALIDATION_SIMILARITY_THRESHOLD
+        ) {
           break;
         }
 
-        const regenerated = await buildWikiLandmarkDescription({
+        result = await buildWikiLandmarkDescription({
           landmarkName: item.title,
           cityName: guide.city,
           stateName: guide.state,
           existingDescriptions: updatedThings.map(entry => entry.description),
         });
-
-        description = regenerated.description;
       }
 
       const next: ThingToDo = {
         title: item.title,
-        description,
+        description: result.description,
       };
-
-      if (item.source_url) {
-        next.source_url = item.source_url;
-      }
 
       if (result.wikiUrl) {
         next.source_url = result.wikiUrl;
         next.wikiUrl = result.wikiUrl;
+      } else if (item.source_url) {
+        next.source_url = item.source_url;
       }
 
-      if (item.description !== description || item.wikiUrl !== next.wikiUrl) {
+      if (item.description !== next.description || item.wikiUrl !== next.wikiUrl) {
         hadChange = true;
       }
 
@@ -212,13 +228,13 @@ const run = async () => {
       updatedThings.push(next);
     }
 
-    if (!hadChange) {
-      continue;
-    }
-
     guide.thingsToDo = updatedThings;
-    fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
-    report.updatedGuides.push(file);
+    validateGuide(file, guide, report);
+
+    if (hadChange) {
+      fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
+      report.updatedGuides.push(file);
+    }
   }
 
   flushWikiSummaryCache();
@@ -229,7 +245,12 @@ const run = async () => {
   console.log(`Updated tier1 guides: ${report.updatedGuides.length}`);
   console.log(`Items from wiki: ${report.wikiItems}`);
   console.log(`Items from fallback: ${report.fallbackItems}`);
+  console.log(`Warnings: ${report.warnings.length}`);
   console.log(`Failures: ${report.failures.length}`);
+
+  if (report.failures.length > 0) {
+    process.exitCode = 1;
+  }
 };
 
 run();
