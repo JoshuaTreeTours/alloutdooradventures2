@@ -1,0 +1,68 @@
+{
+  "title": "New York City Travel Guide",
+  "country": "United States",
+  "state": "New York",
+  "city": "New York City",
+  "slug": "guides/us/new-york/new-york",
+  "hero": {
+    "image": "/images/hiking-hero3.jpg",
+    "alt": "Skyline view of Manhattan at sunset",
+    "headline": "New York City Travel Guide",
+    "subheadline": "Neighborhood culture, iconic landmarks, and outdoor escapes in one packed itinerary."
+  },
+  "overview": [
+    "New York City combines world-famous landmarks with neighborhood-level character. You can spend one morning on the Brooklyn Bridge, an afternoon in Central Park, and a night in a jazz club downtown.",
+    "The city is easy to navigate by subway, but each borough rewards slow exploration. Plan your days around one or two neighborhoods at a time so you can enjoy food, parks, and local museums without rushing.",
+    "If this is your first visit, pair major highlights with one less-crowded stop daily. That balance helps you see classic New York while still discovering places that feel personal."
+  ],
+  "highlights": [
+    { "title": "Central Park", "description": "Walk, bike, or picnic across 843 acres of trails, lakes, and city views." },
+    { "title": "Brooklyn Bridge", "description": "Cross at sunrise for skyline photos and lower crowds." },
+    { "title": "Statue of Liberty & Ellis Island", "description": "Book ferry tickets early and include museum time." },
+    { "title": "Museum Mile", "description": "Choose one major museum plus one smaller collection each day." },
+    { "title": "High Line & Hudson Yards", "description": "Pair this elevated park walk with Chelsea food stops." },
+    { "title": "Broadway & Theater District", "description": "Use lottery and rush options for better ticket value." }
+  ],
+  "thingsToDo": [
+    { "title": "Explore Lower Manhattan", "description": "Combine Wall Street, Battery Park, and the Seaport in one day." },
+    { "title": "Discover Brooklyn neighborhoods", "description": "Try DUMBO, Williamsburg, and Prospect Park for a varied day." },
+    { "title": "Ride the Staten Island Ferry", "description": "A free harbor ride with strong Statue of Liberty views." },
+    { "title": "Sample global food", "description": "Use Queens and Lower East Side stops for diverse cuisine." },
+    { "title": "Take a bike tour", "description": "Guided rides are efficient for first-time visitors covering multiple districts." },
+    { "title": "Catch a skyline sunset", "description": "Top spots include Brooklyn Bridge Park and waterfront piers." }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are easiest for weather and walking",
+    "bullets": [
+      "April to June brings parks in bloom and mild temperatures.",
+      "September to early November offers comfortable weather and clear city views.",
+      "Summer is energetic but humid; reserve attractions and dining in advance.",
+      "Winter has fewer crowds and seasonal events, but shorter daylight hours."
+    ]
+  },
+  "travelTips": [
+    "Use OMNY tap-to-pay for subway and bus convenience.",
+    "Book timed-entry attractions 1–2 weeks ahead during peak months.",
+    "Walk with comfortable shoes; daily distances add up quickly.",
+    "Stay near a major subway hub to reduce transit time.",
+    "Keep flexible indoor backup plans for rain or heat days."
+  ],
+  "tours": {
+    "stateSlug": "new-york",
+    "citySlug": "new-york",
+    "limit": 6,
+    "title": "Top-rated New York City tours"
+  },
+  "faq": [
+    { "q": "How many days should I spend in New York City?", "a": "Three to five days gives enough time for major landmarks plus at least two neighborhood-focused days." },
+    { "q": "Is New York City walkable for first-time visitors?", "a": "Yes. Most areas are very walkable, and the subway connects major districts efficiently." },
+    { "q": "Do I need to book attractions in advance?", "a": "For major observatories, museums, and Broadway shows, advance booking is strongly recommended." },
+    { "q": "What is the best area to stay in?", "a": "Midtown and Lower Manhattan are practical for first trips, while Brooklyn offers strong food and culture access." },
+    { "q": "Can I visit NYC without a car?", "a": "Absolutely. Most visitors rely entirely on transit, walking, and occasional rideshare." }
+  ],
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/New_York_City",
+    "officialTourism": "https://www.nyctourism.com/",
+    "reference": "https://www.britannica.com/place/New-York-City"
+  }
+}

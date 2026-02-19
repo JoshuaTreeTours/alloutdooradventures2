@@ -1,0 +1,66 @@
+{
+  "title": "Nevada Travel Guide",
+  "country": "United States",
+  "state": "Nevada",
+  "slug": "guides/us/nevada",
+  "hero": {
+    "image": "/images/montana-hero.jpg",
+    "alt": "Desert landscape in Nevada at sunset",
+    "headline": "Nevada Travel Guide",
+    "subheadline": "Plan city stays and desert adventures across Las Vegas, Reno-Tahoe, and the Great Basin."
+  },
+  "overview": [
+    "Nevada offers more than casinos: the state combines entertainment hubs, alpine lake access, and expansive desert parks. You can pair urban experiences with scenic drives and low-crowd outdoor routes.",
+    "Most travelers focus on Las Vegas or Reno-Tahoe, but central and eastern Nevada reward slower itineraries. Use multi-night bases so you can enjoy parks, trails, and small towns without long backtracking days."
+  ],
+  "highlights": [
+    { "title": "Las Vegas Region", "description": "Iconic resort corridor with quick access to Red Rock and Hoover Dam." },
+    { "title": "Reno and Lake Tahoe", "description": "Mountain recreation, lake views, and four-season outdoor activities." },
+    { "title": "Great Basin National Park", "description": "High-elevation trails, cave tours, and dark-sky stargazing." },
+    { "title": "Valley of Fire State Park", "description": "Red sandstone landscapes and short interpretive hikes." },
+    { "title": "Red Rock Canyon", "description": "Popular climbing and scenic loop just west of Las Vegas." },
+    { "title": "Lake Mead NRA", "description": "Boating, paddling, and desert shoreline viewpoints." }
+  ],
+  "thingsToDo": [
+    { "title": "Build a regional itinerary", "description": "Split your trip between Southern Nevada and Reno-Tahoe for contrast." },
+    { "title": "Plan one dark-sky night", "description": "Great Basin and rural Nevada are ideal for astronomy viewing." },
+    { "title": "Link city stays with state parks", "description": "Use Las Vegas or Reno as a base, then add 1–2 park day trips." },
+    { "title": "Travel scenic highways", "description": "Nevada's long open routes are part of the experience—allow extra drive time." },
+    { "title": "Start outdoor days early", "description": "Morning starts improve comfort in warmer months."
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Spring and fall are most versatile statewide",
+    "bullets": [
+      "March to May is strong for Southern Nevada parks and city touring.",
+      "September to November balances weather across desert and mountain regions.",
+      "Summer is hottest in southern areas but good for Tahoe alpine escapes.",
+      "Winter supports skiing near Tahoe and quieter travel in desert corridors."
+    ]
+  },
+  "travelTips": [
+    "Carry extra water and check fuel range before remote drives.",
+    "Expect significant distances between major destinations.",
+    "Use sun and wind protection in all seasons.",
+    "Reserve park lodging and key tours early during peak spring/fall windows.",
+    "Start with Las Vegas if this is your first Nevada trip.",
+    "See also: /guides/us/nevada/las-vegas for city-level planning."
+  ],
+  "tours": {
+    "stateSlug": "nevada",
+    "limit": 6,
+    "title": "Popular Nevada tours"
+  },
+  "faq": [
+    { "q": "What are the best regions to visit in Nevada?", "a": "Most travelers combine Las Vegas and Southern Nevada with either Reno-Tahoe or Great Basin for a broader trip." },
+    { "q": "Is Nevada good for outdoor travel?", "a": "Yes. State parks, national recreation areas, and alpine zones make Nevada strong for hiking, paddling, and scenic drives." },
+    { "q": "How long should a Nevada trip be?", "a": "Five to eight days allows one city base plus multiple outdoor day trips." },
+    { "q": "Can I visit Nevada without focusing on casinos?", "a": "Absolutely. Many itineraries prioritize parks, road trips, and adventure activities." },
+    { "q": "Which Nevada guide should I read first?", "a": "Start with the Nevada state guide, then use the Las Vegas city guide for detailed planning." }
+  ],
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Nevada",
+    "officialTourism": "https://travelnevada.com/",
+    "reference": "https://www.britannica.com/place/Nevada-state"
+  }
+}
