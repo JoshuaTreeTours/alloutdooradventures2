@@ -34,52 +34,59 @@
   ],
   "thingsToDo": [
     {
-      "title": "Explore Washington Park",
-      "description": "Set on Portland’s West Hills, Washington Park spans more than 400 acres and links several of the city’s best-known institutions in one connected landscape. The park contains the International Rose Test Garden, the Portland Japanese Garden, Hoyt Arboretum, and the Oregon Zoo, so visitors can combine formal gardens, forest trails, and family attractions in a single outing. MAX light and bus service make access straightforward from downtown, and many paths connect directly to higher viewpoints over the city. In spring and summer, rose displays and clear-weather vistas make this one of Portland’s most photographed public spaces. Wikipedia coverage for Washington Park in Portland, OR cites dated milestones in 1939, 1990, and 2012, including phases when the site was built or later renovated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 75 acres, corridors around 3 miles, or comparable capacity figures, and cross-links them with architectural registers and geologic notes to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Washington_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Washington_Park"
+      "title": "Explore Washington Park (Portland)",
+      "description": "Washington Park in Portland is a large urban park complex on the west side hills, with roughly 410 acres of developed and natural landscape. The area evolved from late nineteenth-century city park planning and now includes major institutions such as the Oregon Zoo, Hoyt Arboretum, and Portland Japanese Garden. Elevation changes and forested slopes create a cooler microclimate than downtown blocks below, while roads and trails connect multiple cultural facilities in a single public district. The park is managed through city and partner institutions with year-round programming. Its acreage, institutional concentration, and long planning history make it one of Portland\u2019s core civic landscapes.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Washington_Park_(Portland,_Oregon)",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Washington_Park_(Portland,_Oregon)",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Washington_Park_Portland.jpg/640px-Washington_Park_Portland.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Washington_Park_trail.jpg/640px-Washington_Park_trail.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Washington_Park_entrance.jpg/640px-Washington_Park_entrance.jpg"
+      ]
     },
     {
-      "title": "Explore Powell’s City of Books",
-      "description": "Occupying an entire city block in the Pearl District, Powell’s City of Books is one of the world’s largest independent bookstores and a defining Portland landmark. The multilevel store organizes new and used titles by color-coded rooms, and its inventory regularly tops one million volumes across subjects, languages, and rare editions. Author talks and readings are scheduled throughout the year, making it more than a retail stop. Because it sits within walking distance of cafés, galleries, and streetcar lines, many travelers use Powell’s as a practical anchor when exploring downtown and the surrounding Northwest neighborhoods. Wikipedia coverage for Powell’s City of Books in Portland, OR cites dated milestones in 1902, 1956, and 1964, including phases when the site was founded or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 79 acres, corridors around 7 miles, or comparable capacity figures, and cross-links them with transit datasets and zoning maps to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Powells_City_of_Books",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Powells_City_of_Books"
+      "title": "Explore International Rose Test Garden",
+      "description": "International Rose Test Garden opened in 1917 in Portland\u2019s Washington Park and is considered the oldest continuously operated public rose test garden in the United States. It was created to preserve European rose varieties during World War I shipping disruptions and expanded into a major trial site for new cultivars. The garden now contains thousands of rose bushes representing many classes and breeding programs from around the world. Terraced beds provide views over downtown Portland and Mount Hood on clear days, integrating horticulture with topographic design. Its founding date, wartime origin, and long-running cultivar evaluation function distinguish it from ornamental display-only gardens.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/International_Rose_Test_Garden",
+      "wikiUrl": "https://en.wikipedia.org/wiki/International_Rose_Test_Garden",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/International_Rose_Test_Garden.jpg/640px-International_Rose_Test_Garden.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Rose_Garden_Portland.jpg/640px-Rose_Garden_Portland.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Portland_Rose_Garden_view.jpg/640px-Portland_Rose_Garden_view.jpg"
+      ]
     },
     {
-      "title": "Explore Pearl District",
-      "description": "Once a warehouse and rail corridor, the Pearl District was redeveloped into one of Portland’s densest walkable neighborhoods, with converted brick buildings, galleries, parks, and modern housing. NW 10th and 11th avenues carry the Portland Streetcar, giving easy connections to downtown, the riverfront, and Northwest Portland without a car. The district also borders Powell’s City of Books and Jamison Square, so short routes combine shopping, architecture, and public spaces in a compact area. For visitors, Pearl works best as a half-day neighborhood circuit focused on design, food, and city-scale walking. Wikipedia coverage for Pearl District in Portland, OR cites dated milestones in 1939, 1967, and 1997, including phases when the site was opened or later restored under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 260 acres, corridors around 1 miles, or comparable capacity figures, and cross-links them with architectural registers and geologic notes to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Pearl_District",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_District"
+      "title": "Explore Portland Japanese Garden",
+      "description": "Portland Japanese Garden opened in 1967 within Washington Park and was designed as a five-style garden complex informed by Japanese landscape traditions. The site covers about 12 acres and includes strolling ponds, sand-and-stone compositions, tea garden elements, and cultural buildings used for exhibitions and education. Architect Takuma Tono led the original design work, and major expansion in 2017 added the Cultural Village designed by Kengo Kuma. The garden\u2019s plant palette and grading respond to Portland\u2019s climate while retaining formal spatial sequencing derived from Japanese precedents. Its opening year, acreage, and phased architectural development make it a significant cultural landscape institution in Oregon.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Portland_Japanese_Garden",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Portland_Japanese_Garden",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Portland_Japanese_Garden.jpg/640px-Portland_Japanese_Garden.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Portland_Japanese_Garden_pond.jpg/640px-Portland_Japanese_Garden_pond.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Portland_Japanese_Garden_bridge.jpg/640px-Portland_Japanese_Garden_bridge.jpg"
+      ]
     },
     {
-      "title": "Explore Lan Su Chinese Garden",
-      "description": "Built in 2000 through a collaboration between Portland and Suzhou, Lan Su Chinese Garden is an authentic Ming-style scholar’s garden in the Old Town Chinatown district. The site was constructed with imported materials and artisans from China, then arranged around a central lake, covered walkways, and pavilions designed for changing seasonal views. Tea service, cultural programs, and rotating exhibitions add context beyond the architecture itself. Because the garden is enclosed and intentionally quiet, it offers a strong contrast to surrounding downtown streets while still sitting within easy walking distance of transit and other central attractions. Wikipedia coverage for Lan Su Chinese Garden in Portland, OR cites dated milestones in 1862, 1924, and 2005, including phases when the site was opened or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 89 acres, corridors around 12 miles, or comparable capacity figures, and cross-links them with construction logs and riverfront plans to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Lan_Su_Chinese_Garden",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Lan_Su_Chinese_Garden"
+      "title": "Explore Powell\u2019s City of Books",
+      "description": "Powell\u2019s City of Books in Portland opened in 1971 and grew into one of the largest independent new-and-used bookstores in the world. The flagship occupies a full city block in the Pearl District, with multiple color-coded rooms and extensive inventory across literature, academic titles, and specialty subjects. Expansion during the late twentieth century paralleled downtown warehouse district redevelopment, linking the store to broader changes in urban land use and retail patterns. The business remains family-owned and became a recognizable institution in Portland publishing culture. Its opening year, block-scale footprint, and hybrid inventory model define it as a major commercial and cultural landmark.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Powell%27s_Books",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Powell%27s_Books",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Powells_City_of_Books.jpg/640px-Powells_City_of_Books.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Powells_Books_Portland.jpg/640px-Powells_Books_Portland.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Powells_Books_sign.jpg/640px-Powells_Books_sign.jpg"
+      ]
     },
     {
-      "title": "Explore Forest Park",
-      "description": "Stretching along Portland’s west side, Forest Park covers roughly 5,200 acres and is among the largest urban forests within U.S. city limits. More than 80 miles of trails run through Douglas-fir and bigleaf maple habitat, including the Wildwood Trail, a long north-south route used by hikers and trail runners. Multiple trailheads—such as Lower Macleay Park and Leif Erikson access points—allow short loops or longer ridge walks without leaving the city. Wildlife sightings are common, and elevation changes create a backcountry feel despite the park’s proximity to downtown neighborhoods. Wikipedia coverage for Forest Park in Portland, OR cites dated milestones in 1930, 1928, and 1979, including phases when the site was opened or later renovated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 378 acres, corridors around 4 miles, or comparable capacity figures, and cross-links them with design briefs and design briefs to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Forest_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Forest_Park"
-    },
-    {
-      "title": "Explore Tom McCall Waterfront Park",
-      "description": "Running for about 1.5 miles along the west bank of the Willamette River, Tom McCall Waterfront Park transformed a former freeway corridor into one of Portland’s central public spaces. The park hosts major annual events including the Portland Rose Festival CityFair and the Oregon Brewers Festival, and its continuous path links bridges, downtown blocks, and river viewpoints. Open lawns, cherry trees, and broad sidewalks make it a year-round walking and cycling route. For many visitors, this is the easiest way to understand Portland’s river geography while moving between Old Town, downtown, and the South Waterfront direction. Wikipedia coverage for Tom McCall Waterfront Park in Portland, OR cites dated milestones in 1960, 1919, and 1956, including phases when the site was founded or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 338 acres, corridors around 5 miles, or comparable capacity figures, and cross-links them with design briefs and architectural registers to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Tom_McCall_Waterfront_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Tom_McCall_Waterfront_Park"
-    },
-    {
-      "title": "Explore Alberta Arts District",
-      "description": "Centered on NE Alberta Street in Northeast Portland, the Alberta Arts District is known for murals, independent galleries, and small venues that reflect the area’s long-running creative scene. The monthly Last Thursday event turns the main corridor into a community street festival with open studios, pop-up vendors, and live performances. Restaurants, coffee shops, and boutiques line a compact stretch that is easy to explore on foot. Alberta’s visual identity changes block by block, so it works well for travelers who want neighborhood-scale culture rather than major downtown landmarks or museum-heavy itineraries. Wikipedia coverage for Alberta Arts District in Portland, OR cites dated milestones in 1967, 1983, and 1968, including phases when the site was restored or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 45 acres, corridors around 3 miles, or comparable capacity figures, and cross-links them with construction logs and transit datasets to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Alberta_Arts_District",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Alberta_Arts_District"
-    },
-    {
-      "title": "Explore Columbia River Gorge",
-      "description": "East of Portland, the Columbia River Gorge is a 80-mile canyon and a federally designated National Scenic Area where sheer basalt cliffs rise above the Columbia River. Historic Columbia River Highway viewpoints and trailheads lead to well-known waterfall routes, including Multnomah Falls, Latourell Falls, and Wahkeena Falls. The gorge also supports wind sports near Hood River, with strong corridor winds drawing kiteboarders and sailboarders through much of the year. Because access begins less than an hour from central Portland, the area is a practical day trip that delivers mountain-scale scenery without an overnight transfer. Wikipedia coverage for Columbia River Gorge in Portland, OR cites dated milestones in 1875, 1972, and 2014, including phases when the site was reclassified or later renovated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 226 acres, corridors around 10 miles, or comparable capacity figures, and cross-links them with land-use files and park ledgers to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Columbia_River_Gorge",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Columbia_River_Gorge"
+      "title": "Explore Oregon Museum of Science and Industry (OMSI)",
+      "description": "Oregon Museum of Science and Industry was founded in 1944 and moved to its current east-bank Willamette River campus in 1992. The museum includes large exhibit halls, laboratories, and a former naval submarine, USS Blueback, permanently moored as a tour component. Its location in the Central Eastside places it near major bridge crossings and transit corridors, supporting school programs and regional visitation. OMSI\u2019s programming combines physical science exhibits, planetarium shows, and engineering-focused education tied to Oregon industry and universities. The institution\u2019s founding year, relocation date, and riverfront campus scale make it a core science-education anchor in Portland.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Oregon_Museum_of_Science_and_Industry",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Oregon_Museum_of_Science_and_Industry",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Oregon_Museum_of_Science_and_Industry.jpg/640px-Oregon_Museum_of_Science_and_Industry.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/OMSI_Portland.jpg/640px-OMSI_Portland.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/USS_Blueback_OMSI.jpg/640px-USS_Blueback_OMSI.jpg"
+      ]
     }
   ],
   "bestTimeToVisit": {
@@ -118,5 +125,6 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.travelportland.com/"
-  }
+  },
+  "tier": "tier1"
 }

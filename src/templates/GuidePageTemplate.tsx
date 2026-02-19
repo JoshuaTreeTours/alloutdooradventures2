@@ -150,6 +150,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
               const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
+              const photoUrls = Array.isArray(item.photoUrls)
+                ? item.photoUrls.filter(Boolean).slice(0, 3)
+                : [];
 
               return (
                 <li
@@ -159,6 +162,19 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   <p className="font-semibold text-[#1f2a1f]">
                     {index + 1}. {item.title}
                   </p>
+                  {photoUrls.length ? (
+                    <div className="mt-3 grid gap-2 sm:grid-cols-2 md:grid-cols-3">
+                      {photoUrls.map((photoUrl, photoIndex) => (
+                        <img
+                          key={`${item.title}-${photoUrl}`}
+                          src={photoUrl}
+                          alt={`${item.title} photo ${photoIndex + 1}`}
+                          loading="lazy"
+                          className="h-32 w-full rounded-lg object-cover"
+                        />
+                      ))}
+                    </div>
+                  ) : null}
                   <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
                     {item.description}
                   </p>

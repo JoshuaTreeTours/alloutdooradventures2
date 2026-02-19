@@ -28,6 +28,7 @@ export type GuidePageData = {
     wikiUrl?: string;
     sourceUrl?: string;
     source_url?: string;
+    photoUrls?: string[];
   }>;
   bestTimeToVisit: {
     title: string;
