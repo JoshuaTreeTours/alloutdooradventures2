@@ -1,70 +1,70 @@
 import { useEffect, useMemo, useState } from "react";
-import {
-  extractLandmarkNameFromTitle,
-  getLandmarkImage,
-} from "../../utils/guides/getLandmarkImage";
+
+type GuideThingsToDoItem = {
+  title: string;
+  name?: string;
+  description: string;
+  sourceUrl?: string;
+  source_url?: string;
+  wikiUrl?: string;
+  imageUrl?: string | null;
+  imageURL?: string | null;
+  image?: string | null;
+  image_link?: string | null;
+  imageSrc?: string | null;
+  heroImageUrl?: string | null;
+};
 
 type GuideThingsToDoCardProps = {
   index: number;
-  city: string;
-  title: string;
-  description: string;
-  sourceUrl?: string;
-  imageUrl?: string | null;
+  item: GuideThingsToDoItem;
 };
+
+export function getImageUrl(item: GuideThingsToDoItem): string | undefined {
+  const candidate =
+    item.imageUrl ??
+    item.imageURL ??
+    item.image ??
+    item.image_link ??
+    item.imageSrc ??
+    item.heroImageUrl;
+
+  const url = typeof candidate === "string" ? candidate.trim() : "";
+  return url.length ? url : undefined;
+}
 
 export default function GuideThingsToDoCard({
   index,
-  city,
-  title,
-  description,
-  sourceUrl,
-  imageUrl,
+  item,
 }: GuideThingsToDoCardProps) {
-  const [resolvedImageUrl, setResolvedImageUrl] = useState<string | null>(
-    imageUrl ?? null
-  );
+  const imageUrl = useMemo(() => getImageUrl(item), [item]);
+  const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
 
-  const landmarkName = useMemo(
-    () => extractLandmarkNameFromTitle(title),
-    [title]
-  );
+  const [imgOk, setImgOk] = useState(true);
 
   useEffect(() => {
-    let cancelled = false;
-
-    if (resolvedImageUrl) {
-      return;
-    }
-
-    getLandmarkImage(landmarkName, city).then(result => {
-      if (!cancelled) {
-        setResolvedImageUrl(result);
-      }
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [city, landmarkName, resolvedImageUrl]);
+    setImgOk(true);
+  }, [imageUrl]);
 
   return (
     <li className="overflow-hidden rounded-2xl border border-black/10 bg-white p-4 md:p-5">
-      {resolvedImageUrl ? (
+      {imageUrl && imgOk ? (
         <div className="-m-4 mb-4 overflow-hidden md:-m-5 md:mb-5">
           <img
-            src={resolvedImageUrl}
-            alt={title}
+            src={imageUrl}
+            alt={item.title || item.name || "Landmark"}
             loading="lazy"
+            decoding="async"
+            onError={() => setImgOk(false)}
             className="h-48 w-full object-cover md:h-56"
           />
         </div>
       ) : null}
       <p className="font-semibold text-[#1f2a1f]">
-        {index}. {title}
+        {index}. {item.title}
       </p>
       <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-        {description}
+        {item.description}
       </p>
       {sourceUrl ? (
         <a

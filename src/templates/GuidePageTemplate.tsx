@@ -182,18 +182,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
-              const sourceUrl =
-                item.sourceUrl ?? item.source_url ?? item.wikiUrl;
-
               return (
                 <GuideThingsToDoCard
                   key={item.title}
                   index={index + 1}
-                  city={guide.city ?? place}
-                  title={item.title}
-                  description={item.description}
-                  sourceUrl={sourceUrl}
-                  imageUrl={item.imageUrl}
+                  item={item}
                 />
               );
             })}
