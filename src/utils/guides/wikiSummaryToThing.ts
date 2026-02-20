@@ -5,6 +5,7 @@ export type WikiThingToDo = {
   title: string;
   description: string;
   wikiUrl?: string;
+  imageUrl?: string | null;
 };
 
 const trimToWordRange = (text: string, min = 45, max = 75) => {
@@ -39,5 +40,6 @@ export const wikiSummaryToThing = async (
       paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
     ),
     wikiUrl: summary.pageUrl,
+    imageUrl: summary.imageUrl,
   };
 };

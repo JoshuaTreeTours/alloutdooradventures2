@@ -5,6 +5,12 @@ type SummaryResponse = {
   title?: string;
   extract?: string;
   type?: string;
+  thumbnail?: {
+    source?: string;
+  };
+  originalimage?: {
+    source?: string;
+  };
   content_urls?: {
     desktop?: {
       page?: string;
@@ -13,7 +19,10 @@ type SummaryResponse = {
 };
 
 type CacheState = {
-  summaries: Record<string, { extract: string | null; url: string | null }>;
+  summaries: Record<
+    string,
+    { extract: string | null; url: string | null; imageUrl: string | null }
+  >;
 };
 
 const CACHE_PATH = path.resolve(".cache/wiki-summaries.json");
@@ -26,11 +35,7 @@ let cacheState: CacheState = { summaries: {} };
 let nextRequestAt = 0;
 
 const normalizeTitle = (title: string) =>
-  title
-    .trim()
-    .toLowerCase()
-    .replace(/_/g, " ")
-    .replace(/\s+/g, " ");
+  title.trim().toLowerCase().replace(/_/g, " ").replace(/\s+/g, " ");
 
 const ensureCacheLoaded = () => {
   if (cacheLoaded) {
@@ -79,12 +84,16 @@ const waitForRequestSlot = async () => {
 
 export const fetchWikiSummary = async (
   title: string
-): Promise<{ extract: string | null; url: string | null }> => {
+): Promise<{
+  extract: string | null;
+  url: string | null;
+  imageUrl: string | null;
+}> => {
   ensureCacheLoaded();
 
   const trimmed = title.trim();
   if (!trimmed) {
-    return { extract: null, url: null };
+    return { extract: null, url: null, imageUrl: null };
   }
 
   const lookupKey = normalizeTitle(trimmed);
@@ -112,14 +121,14 @@ export const fetchWikiSummary = async (
     ])) as Response | null;
 
     if (!response) {
-      const empty = { extract: null, url: null };
+      const empty = { extract: null, url: null, imageUrl: null };
       cacheState.summaries[lookupKey] = empty;
       cacheDirty = true;
       return empty;
     }
 
     if (!response.ok) {
-      const empty = { extract: null, url: null };
+      const empty = { extract: null, url: null, imageUrl: null };
       cacheState.summaries[lookupKey] = empty;
       cacheDirty = true;
       return empty;
@@ -133,12 +142,18 @@ export const fetchWikiSummary = async (
     const result = {
       extract: payload.extract?.trim() || null,
       url: payload.content_urls?.desktop?.page || null,
+      imageUrl:
+        payload.thumbnail?.source ?? payload.originalimage?.source ?? null,
     };
 
     if (payload.type === "missing" || !result.extract) {
-      cacheState.summaries[lookupKey] = { extract: null, url: null };
+      cacheState.summaries[lookupKey] = {
+        extract: null,
+        url: null,
+        imageUrl: null,
+      };
       cacheDirty = true;
-      return { extract: null, url: null };
+      return { extract: null, url: null, imageUrl: null };
     }
 
     cacheState.summaries[normalizedTitle] = result;
@@ -147,6 +162,6 @@ export const fetchWikiSummary = async (
 
     return result;
   } catch {
-    return { extract: null, url: null };
+    return { extract: null, url: null, imageUrl: null };
   }
 };

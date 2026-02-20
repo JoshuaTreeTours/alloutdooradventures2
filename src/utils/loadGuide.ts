@@ -43,6 +43,7 @@ export type GuidePageData = {
     wikiUrl?: string;
     sourceUrl?: string;
     source_url?: string;
+    imageUrl?: string | null;
   }>;
   bestTimeToVisit: {
     title: string;
