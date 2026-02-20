@@ -290,7 +290,13 @@ const run = async () => {
       wikiSummaryText: wikiContext?.summaryText,
       wikiExtractText:
         `${wikiContext?.extractText ?? ""} ${localEvidence}`.trim(),
-      facts,
+      facts: {
+        ...facts,
+        landmarks: (guide.thingsToDo ?? [])
+          .map(item => item.title)
+          .filter((value): value is string => Boolean(value))
+          .slice(0, 4),
+      },
     });
 
     const sections = [
