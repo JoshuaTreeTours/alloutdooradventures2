@@ -230,7 +230,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 rel="noopener noreferrer"
                 className="text-[#1f2a1f] underline"
               >
-                {`${place} travel guide — Wikipedia`}
+                {"Source"}
               </a>
             </li>
             <li>
