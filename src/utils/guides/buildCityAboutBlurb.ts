@@ -23,7 +23,6 @@ type BuildCityAboutFactsInput = {
   thingsToDo?: GuideThing[];
 };
 
-const MIN_WORDS = 60;
 const MAX_WORDS = 120;
 
 const sentenceSplit = (text: string) =>
@@ -69,19 +68,25 @@ const normalizeIdentityText = (text: string, cityName?: string) => {
     .trim();
 
   if (!normalized) {
-    normalized = `${place} is a major economic and cultural center with globally known institutions and landmark districts.`;
+    normalized = `${place} has global significance through major economic activity and cultural institutions.`;
   }
 
-  const words = normalized.split(/\s+/).filter(Boolean);
+  let words = normalized.split(/\s+/).filter(Boolean);
+  if (!/\b(economic|cultural|global)\b/i.test(normalized)) {
+    normalized = `${normalized.replace(/\.$/, "")}; economic and cultural influence is substantial.`;
+    words = normalized.split(/\s+/).filter(Boolean);
+  }
+
   if (words.length > 20) {
     normalized = `${words
       .slice(0, 20)
       .join(" ")
       .replace(/[,:;]?$/, "")}.`;
+    words = normalized.split(/\s+/).filter(Boolean);
   }
 
   if (words.length < 10) {
-    normalized = `${normalized.replace(/\.$/, "")}, with major economic activity and a strong cultural reputation.`;
+    normalized = `${normalized.replace(/\.$/, "")}, with major economic and cultural significance.`;
   }
 
   return normalized.replace(/\s+/g, " ").trim();
@@ -103,22 +108,19 @@ const buildFallbackCharacter = ({
   );
 
   if (hasArt && hasEconomic) {
-    return `${place} combines a major economic role with an established cultural reputation shaped by prominent institutions.`;
+    return `${place} combines major economic activity with a strong cultural reputation anchored by prominent institutions.`;
   }
 
   if (hasArt) {
-    return `${place} has a strong cultural reputation with globally recognized institutions, landmark districts, and public venues.`;
+    return `${place} has a strong cultural reputation with globally recognized institutions and landmark districts.`;
   }
 
   if (hasEconomic) {
-    return `${place} holds a significant economic role, with major commercial activity and globally visible infrastructure.`;
+    return `${place} holds a significant economic role with globally visible commercial infrastructure.`;
   }
 
-  return `${place} has global significance for its economic activity and cultural reputation across key landmark districts.`;
+  return `${place} has global significance for economic activity and cultural reputation across landmark districts.`;
 };
-
-const withinWordBudget = (groups: AboutFactGroup[]) =>
-  countWords(groups.map(group => group.text).join(" "));
 
 const buildFallbackLocation = ({
   cityName,
@@ -139,10 +141,28 @@ const buildFallbackKnownFor = ({
   const place = cityName ?? "This city";
   const anchors = uniqTitles(thingsToDo).slice(0, 3);
   if (!anchors.length) {
-    return `${place} is known for its documented landmarks and public institutions.`;
+    return `${place} is known for major landmarks and established public institutions.`;
   }
 
   return `${place} is known for landmarks such as ${anchors.join(", ")}.`;
+};
+
+const buildPopulationFromText = (sentences: string[]) => {
+  const sentence = pickFirst(
+    sentences,
+    /\b(population|inhabitants|residents|census|metro area|metropolitan)\b/i
+  );
+  if (!sentence) return undefined;
+
+  const millionMatch = sentence.match(/(\d+(?:\.\d+)?)\s*(million|billion)/i);
+  if (millionMatch) {
+    return `~${millionMatch[1]} ${millionMatch[2].toLowerCase()}`;
+  }
+
+  const numeric = sentence.match(/\b\d{1,3}(?:,\d{3})+\b|\b\d{5,}\b/);
+  if (!numeric) return undefined;
+
+  return `~${numeric[0]}`;
 };
 
 const buildClimateFromSummary = (wikiSummaryText?: string) => {
@@ -165,49 +185,32 @@ const buildClimateFromSummary = (wikiSummaryText?: string) => {
   const seasonalMatch = climateSentence.match(
     /(warm,? dry summers? and mild,? wet winters?|hot summers? and mild winters?|four distinct seasons?|mild winters? and warm summers?|wet and dry seasons?|seasonal rainfall|seasonal temperature variation)/i
   );
-  const featureMatch = climateSentence.match(
-    /(marine influence|coastal fog|snowfall|heat waves|rainfall concentration|low precipitation|high humidity|ocean moderation|temperature range)/i
-  );
 
-  const climateType = typeMatch?.[1] ?? "a documented local climate";
-  const seasonalPattern =
-    seasonalMatch?.[1] ??
-    "with seasonal temperature and precipitation variation";
-  const notableFeature =
-    featureMatch?.[1] ?? "including notable local weather variation";
+  const climateType = typeMatch?.[1]
+    ? `${typeMatch[1].charAt(0).toUpperCase()}${typeMatch[1].slice(1)}`
+    : "Seasonal";
+  const seasonal = seasonalMatch?.[1]
+    ?.replace(/and/gi, ",")
+    .replace(/\s+/g, " ")
+    .trim();
 
-  let text = `${climateType.charAt(0).toUpperCase()}${climateType.slice(1)} climate with ${seasonalPattern}; notable feature: ${notableFeature}.`;
+  let phrase = seasonal
+    ? `${climateType}; ${seasonal}`
+    : `${climateType} climate`;
 
-  while (countWords(text) > 25) {
-    text = text
-      .replace(
-        "seasonal temperature and precipitation variation",
-        "seasonal variation"
-      )
-      .replace(
-        "including notable local weather variation",
-        "local weather variation"
-      )
-      .replace("; notable feature:", ",")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (countWords(text) <= 25) break;
-    text = sentenceSplit(text)[0] ?? text;
-    if (countWords(text) <= 25) break;
-    const words = text.split(/\s+/);
-    text = `${words
-      .slice(0, 25)
+  const words = phrase.split(/\s+/).filter(Boolean);
+  if (words.length > 12) {
+    phrase = words
+      .slice(0, 12)
       .join(" ")
-      .replace(/[,:;]?$/, "")}.`;
-    break;
+      .replace(/[,:;]?$/, "");
   }
 
-  if (countWords(text) < 15) {
-    text = `${text.replace(/\.$/, "")}, with seasonal variation and a notable local weather feature.`;
-  }
-
-  return text;
+  return phrase;
 };
+
+const withinWordBudget = (groups: AboutFactGroup[]) =>
+  countWords(groups.map(group => group.text).join(" "));
 
 export const buildCityAboutFactGroups = (
   input: BuildCityAboutFactsInput
@@ -226,11 +229,7 @@ export const buildCityAboutFactGroups = (
       /\b(located|lies|sits|in|along|on the|at the|region|coast|river|valley|basin|bay|mountain|island)\b/i
     ) ?? buildFallbackLocation(input);
 
-  const population = pickFirst(
-    sentences,
-    /\b(population|inhabitants|residents|census|metro area|metropolitan)\b/i
-  );
-
+  const population = buildPopulationFromText(sentences);
   const climate = buildClimateFromSummary(input.wikiSummaryText);
 
   const knownFor =
@@ -252,51 +251,26 @@ export const buildCityAboutFactGroups = (
 
   const groups: AboutFactGroup[] = [
     { label: "Location", text: trimToTwoSentences(location) },
-    ...(population
-      ? [{ label: "Population" as const, text: trimToTwoSentences(population) }]
-      : []),
+    ...(population ? [{ label: "Population" as const, text: population }] : []),
     ...(climate ? [{ label: "Climate" as const, text: climate }] : []),
     { label: "Known For", text: trimToTwoSentences(knownFor) },
     { label: "Character / Identity", text: trimToTwoSentences(character) },
   ];
-
-  while (groups.length < 4) {
-    groups.splice(1, 0, {
-      label: "Population",
-      text: `${input.cityName ?? "This city"} has population figures reported in published reference records.`,
-    });
-  }
 
   const deduped = groups.filter(
     (group, index, all) =>
       all.findIndex(other => other.label === group.label) === index
   );
 
-  while (withinWordBudget(deduped) > MAX_WORDS && deduped.length > 4) {
+  while (withinWordBudget(deduped) > MAX_WORDS && deduped.length > 3) {
     const removableIndex = deduped.findIndex(
-      group => group.label === "Population"
+      group => group.label === "Population" || group.label === "Climate"
     );
     if (removableIndex >= 0) {
       deduped.splice(removableIndex, 1);
       continue;
     }
     break;
-  }
-
-  if (withinWordBudget(deduped) < MIN_WORDS) {
-    const knownForGroup = deduped.find(group => group.label === "Known For");
-    if (knownForGroup) {
-      knownForGroup.text +=
-        " This summary reflects published city references and documented landmarks.";
-    }
-  }
-
-  if (withinWordBudget(deduped) < MIN_WORDS) {
-    const knownForGroup = deduped.find(group => group.label === "Known For");
-    if (knownForGroup) {
-      knownForGroup.text +=
-        " The city has established global visibility through documented landmark assets.";
-    }
   }
 
   return deduped.slice(0, 5);
