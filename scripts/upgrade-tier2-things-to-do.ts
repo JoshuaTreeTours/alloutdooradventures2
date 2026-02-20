@@ -5,6 +5,9 @@ import { generateCityEntities } from "../src/utils/guides/generateCityEntities";
 type ThingToDo = {
   title: string;
   description: string;
+  wikiUrl?: string;
+  imageUrl?: string;
+  imageSource?: string;
 };
 
 type GuideFile = {
@@ -96,10 +99,28 @@ const run = async () => {
       }
     }
 
-    const thingsToDo: ThingToDo[] = Array.from(unique.values()).map(entity => ({
-      title: `Visit ${entity.name}`,
-      description: buildDescription(entity, guide.city!, guide.state!),
-    }));
+    const existingByEntityName = new Map(
+      (guide.thingsToDo ?? []).map(it => {
+        const name = it.title
+          .replace(/^Visit\s+/i, "")
+          .trim()
+          .toLowerCase();
+        return [name, it];
+      })
+    );
+
+    const thingsToDo: ThingToDo[] = Array.from(unique.values()).map(entity => {
+      const key = entity.name.trim().toLowerCase();
+      const prev = existingByEntityName.get(key);
+
+      return {
+        title: `Visit ${entity.name}`,
+        description: buildDescription(entity, guide.city!, guide.state!),
+        wikiUrl: prev?.wikiUrl,
+        imageUrl: prev?.imageUrl,
+        imageSource: prev?.imageSource,
+      };
+    });
 
     if (thingsToDo.length < 4) {
       qaFailures.push(`${file}: generated only ${thingsToDo.length} items`);
