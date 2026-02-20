@@ -14,19 +14,51 @@
     "Most travelers focus on Las Vegas or Reno-Tahoe, but central and eastern Nevada reward slower itineraries. Use multi-night bases so you can enjoy parks, trails, and small towns without long backtracking days."
   ],
   "highlights": [
-    { "title": "Las Vegas Region", "description": "Iconic resort corridor with quick access to Red Rock and Hoover Dam." },
-    { "title": "Reno and Lake Tahoe", "description": "Mountain recreation, lake views, and four-season outdoor activities." },
-    { "title": "Great Basin National Park", "description": "High-elevation trails, cave tours, and dark-sky stargazing." },
-    { "title": "Valley of Fire State Park", "description": "Red sandstone landscapes and short interpretive hikes." },
-    { "title": "Red Rock Canyon", "description": "Popular climbing and scenic loop just west of Las Vegas." },
-    { "title": "Lake Mead NRA", "description": "Boating, paddling, and desert shoreline viewpoints." }
+    {
+      "title": "Las Vegas Region",
+      "description": "Iconic resort corridor with quick access to Red Rock and Hoover Dam."
+    },
+    {
+      "title": "Reno and Lake Tahoe",
+      "description": "Mountain recreation, lake views, and four-season outdoor activities."
+    },
+    {
+      "title": "Great Basin National Park",
+      "description": "High-elevation trails, cave tours, and dark-sky stargazing."
+    },
+    {
+      "title": "Valley of Fire State Park",
+      "description": "Red sandstone landscapes and short interpretive hikes."
+    },
+    {
+      "title": "Red Rock Canyon",
+      "description": "Popular climbing and scenic loop just west of Las Vegas."
+    },
+    {
+      "title": "Lake Mead NRA",
+      "description": "Boating, paddling, and desert shoreline viewpoints."
+    }
   ],
   "thingsToDo": [
-    { "title": "Build a regional itinerary", "description": "Split your trip between Southern Nevada and Reno-Tahoe for contrast." },
-    { "title": "Plan one dark-sky night", "description": "Great Basin and rural Nevada are ideal for astronomy viewing." },
-    { "title": "Link city stays with state parks", "description": "Use Las Vegas or Reno as a base, then add 1–2 park day trips." },
-    { "title": "Travel scenic highways", "description": "Nevada's long open routes are part of the experience—allow extra drive time." },
-    { "title": "Start outdoor days early", "description": "Morning starts improve comfort in warmer months."
+    {
+      "title": "Build a regional itinerary",
+      "description": "Split your trip between Southern Nevada and Reno-Tahoe for contrast."
+    },
+    {
+      "title": "Plan one dark-sky night",
+      "description": "Great Basin and rural Nevada are ideal for astronomy viewing."
+    },
+    {
+      "title": "Link city stays with state parks",
+      "description": "Use Las Vegas or Reno as a base, then add 1–2 park day trips."
+    },
+    {
+      "title": "Travel scenic highways",
+      "description": "Nevada's long open routes are part of the experience—allow extra drive time."
+    },
+    {
+      "title": "Start outdoor days early",
+      "description": "Morning starts improve comfort in warmer months."
     }
   ],
   "bestTimeToVisit": {
@@ -52,11 +84,26 @@
     "title": "Popular Nevada tours"
   },
   "faq": [
-    { "q": "What are the best regions to visit in Nevada?", "a": "Most travelers combine Las Vegas and Southern Nevada with either Reno-Tahoe or Great Basin for a broader trip." },
-    { "q": "Is Nevada good for outdoor travel?", "a": "Yes. State parks, national recreation areas, and alpine zones make Nevada strong for hiking, paddling, and scenic drives." },
-    { "q": "How long should a Nevada trip be?", "a": "Five to eight days allows one city base plus multiple outdoor day trips." },
-    { "q": "Can I visit Nevada without focusing on casinos?", "a": "Absolutely. Many itineraries prioritize parks, road trips, and adventure activities." },
-    { "q": "Which Nevada guide should I read first?", "a": "Start with the Nevada state guide, then use the Las Vegas city guide for detailed planning." }
+    {
+      "q": "What are the best regions to visit in Nevada?",
+      "a": "Most travelers combine Las Vegas and Southern Nevada with either Reno-Tahoe or Great Basin for a broader trip."
+    },
+    {
+      "q": "Is Nevada good for outdoor travel?",
+      "a": "Yes. State parks, national recreation areas, and alpine zones make Nevada strong for hiking, paddling, and scenic drives."
+    },
+    {
+      "q": "How long should a Nevada trip be?",
+      "a": "Five to eight days allows one city base plus multiple outdoor day trips."
+    },
+    {
+      "q": "Can I visit Nevada without focusing on casinos?",
+      "a": "Absolutely. Many itineraries prioritize parks, road trips, and adventure activities."
+    },
+    {
+      "q": "Which Nevada guide should I read first?",
+      "a": "Start with the Nevada state guide, then use the Las Vegas city guide for detailed planning."
+    }
   ],
   "seoLinks": {
     "wikipedia": "https://en.wikipedia.org/wiki/Nevada",

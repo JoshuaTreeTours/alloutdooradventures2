@@ -1,3 +1,5 @@
+import { cleanWikiLanguage } from "../cleanWikiLanguage";
+
 const cleanText = (text: string) =>
   text
     .replace(/\[[^\]]*\]/g, "")
@@ -42,7 +44,7 @@ export const paraphraseWikiSummary = (args: {
   const source = splitSentences(extract);
 
   if (!source.length) {
-    return withFallback({ landmarkName, cityName, stateName });
+    return cleanWikiLanguage(withFallback({ landmarkName, cityName, stateName }));
   }
 
   const rotations = [
@@ -83,12 +85,12 @@ export const paraphraseWikiSummary = (args: {
   }
 
   if (!candidate) {
-    return withFallback({ landmarkName, cityName, stateName });
+    return cleanWikiLanguage(withFallback({ landmarkName, cityName, stateName }));
   }
 
   if (wordCount(candidate) > 120) {
-    return trimToWordLimit(candidate, 120);
+    return cleanWikiLanguage(trimToWordLimit(candidate, 120));
   }
 
-  return candidate;
+  return cleanWikiLanguage(candidate);
 };

@@ -1,5 +1,7 @@
 import type { Tier2ThingToDo } from "./buildTier2ThingsToDo";
 
+const FORBIDDEN_TEXT_PATTERN = /\b(wikipedia|wiki)\b/i;
+
 const FORBIDDEN_TITLE_PATTERNS = [
   /^Downtown\b/i,
   /\blocal neighborhood\b/i,
@@ -55,6 +57,10 @@ export const validateThingsToDo = (
 
     if (!passesStructure) {
       failures.push(`Title is not landmark-like: ${item.title}`);
+    }
+
+    if (FORBIDDEN_TEXT_PATTERN.test(item.description)) {
+      failures.push(`Forbidden wiki wording in description for: ${item.title}`);
     }
 
     const words = item.description.trim().split(/\s+/).filter(Boolean).length;

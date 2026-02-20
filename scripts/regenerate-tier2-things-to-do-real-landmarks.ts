@@ -15,6 +15,8 @@ import {
   getLocalPoisForCity,
   getNearbyPoisForCity,
 } from "../src/data/cityTopThings";
+import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
+import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
@@ -134,10 +136,12 @@ const run = () => {
       }
     }
 
-    const things = buildTier2ThingsToDo(json.city, json.state, landmarks).slice(
-      0,
-      6
-    );
+    const things = buildTier2ThingsToDo(json.city, json.state, landmarks)
+      .slice(0, 6)
+      .map(item => ({
+        ...item,
+        description: cleanWikiLanguage(item.description),
+      }));
 
     if (things.length < 4) {
       failingCities.push(routeKey);
@@ -151,6 +155,7 @@ const run = () => {
     }
 
     json.thingsToDo = things;
+    assertGuideHasNoWikiLanguage(json, file);
     fs.writeFileSync(file, `${JSON.stringify(json, null, 2)}\n`, "utf8");
     updated += 1;
   }

@@ -1,5 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import {
+  assertGuideHasNoWikiLanguage,
+  cleanGuideTextContent,
+} from "../src/utils/guides/wikiLanguageGuard";
 
 type GuideThing = {
   title: string;
@@ -505,6 +509,8 @@ const run = async () => {
       await sleep(25);
     }
 
+    cleanGuideTextContent(guide);
+    assertGuideHasNoWikiLanguage(guide, file);
     fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`);
   }
 

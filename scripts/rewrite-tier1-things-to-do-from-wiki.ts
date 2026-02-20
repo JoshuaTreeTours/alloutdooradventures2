@@ -6,6 +6,8 @@ import { isGenericTravelAdvice } from "../src/utils/guides/isGenericTravelAdvice
 import { isTier1Guide } from "../src/utils/guides/isTier1Guide";
 import { validateNoBoilerplate } from "../src/utils/guides/validateNoBoilerplate";
 import { flushWikiSummaryCache } from "../src/utils/wiki/wikiSummary";
+import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
+import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
 
 type ThingToDo = {
   title: string;
@@ -148,7 +150,7 @@ const run = async () => {
         existingDescriptions: existing,
       });
 
-      let description = result.description;
+      let description = cleanWikiLanguage(result.description);
 
       if (
         !validateNoBoilerplate(description) ||
@@ -162,7 +164,7 @@ const run = async () => {
           stateName: guide.state,
           existingDescriptions: existing,
         });
-        description = retry.description;
+        description = cleanWikiLanguage(retry.description);
       }
 
       for (let retryCount = 0; retryCount < 3; retryCount += 1) {
@@ -182,7 +184,7 @@ const run = async () => {
           existingDescriptions: updatedThings.map(entry => entry.description),
         });
 
-        description = regenerated.description;
+        description = cleanWikiLanguage(regenerated.description);
       }
 
       const next: ThingToDo = {
@@ -216,7 +218,11 @@ const run = async () => {
       continue;
     }
 
-    guide.thingsToDo = updatedThings;
+    guide.thingsToDo = updatedThings.map(item => ({
+      ...item,
+      description: cleanWikiLanguage(item.description),
+    }));
+    assertGuideHasNoWikiLanguage(guide, file);
     fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
     report.updatedGuides.push(file);
   }
