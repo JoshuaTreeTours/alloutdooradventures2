@@ -7,7 +7,7 @@
   "slug": "guides/us/florida/fort-lauderdale",
   "hero": {
     "image": "https://cdn.filestackcontent.com/WU8727NlSWicjU9Nxfes",
-    "alt": "Fort Lauderdale, Florida — Thirty Minutes Demo",
+    "alt": "Fort Lauderdale, Florida \u2014 Thirty Minutes Demo",
     "headline": "Fort Lauderdale, Florida Travel Guide",
     "subheadline": "Plan a focused Fort Lauderdale trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Fort Lauderdale",
-      "description": "Fort Lauderdale is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
-    },
-    {
-      "title": "Las Olas Coffee",
-      "description": "Las Olas Coffee is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
-    },
-    {
-      "title": "Sea Rocket Speed Boat",
-      "description": "Sea Rocket Speed Boat is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
-    },
-    {
-      "title": "Sea Rocket Sunset",
-      "description": "Sea Rocket Sunset is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
-    },
-    {
-      "title": "Thirty Minutes Demo",
-      "description": "Thirty Minutes Demo is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
-    },
-    {
-      "title": "Thirty Minutes Demo.  Thirty Minutes Demo",
-      "description": "Thirty Minutes Demo.  Thirty Minutes Demo is a practical stop for understanding Fort Lauderdale's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fort Lauderdale, Florida."
+      "title": "Explore Port Everglades",
+      "description": "Port Everglades is a deepwater seaport in Broward County that opened in 1928 and became one of Florida\u2019s primary cargo, petroleum, and cruise terminals. The harbor was created through major dredging and channel engineering projects that connected inland waterways to Atlantic shipping lanes. Today it ranks among the busiest cruise ports in the world by passenger traffic and also handles significant containerized freight and fuel imports for South Florida. Its location between Fort Lauderdale and Hollywood, plus direct highway and rail links, gives it an outsized role in regional logistics. The port\u2019s opening date, throughput scale, and infrastructure footprint make it a core historical and economic landmark for the city.",
+      "source_url": "https://en.wikipedia.org/wiki/Port_Everglades",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Port_Everglades"
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Fort Lauderdale?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

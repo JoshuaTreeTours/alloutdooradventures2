@@ -27,19 +27,39 @@
   "thingsToDo": [
     {
       "title": "Old Town Sacramento",
-      "description": "Old Town Sacramento is a recognized district in Sacramento, California, with concentrated historic fabric, commercial streets, or civic landmarks. It is known for layered architecture and place identity shaped by long-term development patterns. Visitors experience walkable blocks, distinct building character, and an immediate sense of the neighborhood's role in the wider city."
+      "description": "Old Town Sacramento is a recognized district in Sacramento, California, with concentrated historic fabric, commercial streets, or civic landmarks. It is known for layered architecture and place identity shaped by long-term development patterns. Visitors experience walkable blocks, distinct building character, and an immediate sense of the neighborhood's role in the wider city.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/goG73RRkmN4NCMNvTrWg",
+        "https://source.unsplash.com/1600x900/?Old%20Town%20Sacramento%20Sacramento%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Old%20Town%20Sacramento%20Sacramento%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "River Fox Train",
-      "description": "River Fox Train is a prominent landmark in Sacramento, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "River Fox Train is a prominent landmark in Sacramento, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/goG73RRkmN4NCMNvTrWg",
+        "https://source.unsplash.com/1600x900/?River%20Fox%20Train%20Sacramento%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?River%20Fox%20Train%20Sacramento%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Sacramento Old Town Sacramento",
-      "description": "Sacramento Old Town Sacramento is a recognized district in Sacramento, California, with concentrated historic fabric, commercial streets, or civic landmarks. It is known for layered architecture and place identity shaped by long-term development patterns. Visitors experience walkable blocks, distinct building character, and an immediate sense of the neighborhood's role in the wider city."
+      "description": "Sacramento Old Town Sacramento is a recognized district in Sacramento, California, with concentrated historic fabric, commercial streets, or civic landmarks. It is known for layered architecture and place identity shaped by long-term development patterns. Visitors experience walkable blocks, distinct building character, and an immediate sense of the neighborhood's role in the wider city.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/goG73RRkmN4NCMNvTrWg",
+        "https://source.unsplash.com/1600x900/?Sacramento%20Old%20Town%20Sacramento%20Sacramento%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Sacramento%20Old%20Town%20Sacramento%20Sacramento%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Authentic Adventures Central California",
-      "description": "Authentic Adventures Central California is a prominent landmark in Sacramento, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Authentic Adventures Central California is a prominent landmark in Sacramento, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/goG73RRkmN4NCMNvTrWg",
+        "https://source.unsplash.com/1600x900/?Authentic%20Adventures%20Central%20California%20Sacramento%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Authentic%20Adventures%20Central%20California%20Sacramento%20California%20travel&sig=2"
+      ]
     }
   ],
   "bestTimeToVisit": {

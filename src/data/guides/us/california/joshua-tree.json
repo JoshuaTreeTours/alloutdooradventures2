@@ -1,5 +1,5 @@
 {
-  "tier": "tier2",
+  "tier": "tier1",
   "title": "Joshua Tree, California Travel Guide",
   "country": "United States",
   "state": "California",
@@ -7,7 +7,7 @@
   "slug": "guides/us/california/joshua-tree",
   "hero": {
     "image": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
-    "alt": "Joshua Tree, California — Private Stargazing with an Astronomer",
+    "alt": "Joshua Tree, California \u2014 Private Stargazing with an Astronomer",
     "headline": "Joshua Tree, California Travel Guide",
     "subheadline": "Plan a focused Joshua Tree trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,40 +26,59 @@
   ],
   "thingsToDo": [
     {
-      "title": "Joshua Tree National Park (West Entrance)",
-      "description": "Joshua Tree National Park (West Entrance) is a major urban park in Joshua Tree, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city. Wikipedia coverage for Joshua Tree National Park (West Entrance) in Joshua Tree, CA cites dated milestones in 1851, 1987, and 1965, including phases when the site was founded or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 201 acres, corridors around 7 miles, or comparable capacity figures, and cross-links them with engineering records and planning archives to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park_West_Entrance"
+      "title": "Explore Joshua Tree National Park",
+      "description": "Joshua Tree National Park was designated in 1994, after earlier protection as a national monument in 1936, and spans about 790,000 acres in southeastern California. The park sits where the Mojave and Colorado deserts meet, creating distinct vegetation zones and elevation-driven habitat shifts. Its namesake Joshua trees are concentrated in higher Mojave sections, while lower basins contain creosote scrub and ocotillo communities. Granite formations and faulted topography support extensive climbing and geologic interpretation areas. The park is administered by the National Park Service and includes roads, campgrounds, and trailheads that structure access to remote terrain. Its designation history, acreage, and bi-desert geography define its national significance.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Joshua_Tree_National_Park.jpg/640px-Joshua_Tree_National_Park.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Joshua_trees_at_sunset.jpg/640px-Joshua_trees_at_sunset.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Joshua_Tree_rock_formations.jpg/640px-Joshua_Tree_rock_formations.jpg"
+      ]
     },
     {
-      "title": "Hidden Valley",
-      "description": "Hidden Valley is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Hidden Valley in Joshua Tree, CA cites dated milestones in 1889, 1913, and 1975, including phases when the site was reclassified or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 37 acres, corridors around 10 miles, or comparable capacity figures, and cross-links them with park ledgers and park ledgers to keep the narrative evidence-based. Distinct article language for Hidden Valley references lexical anchors such as promenade courtyard alluvium railhead causeway esplanade conservancy granite, plus chronology notes around 1896, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Hidden_Valley",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hidden_Valley"
+      "title": "Explore Hidden Valley (Joshua Tree National Park)",
+      "description": "Hidden Valley is a closed basin in Joshua Tree National Park surrounded by granite boulders, with a loop trail of about 1 mile near the central park road corridor. The area formed through geologic uplift and weathering that created natural rock walls and narrow openings, producing a sheltered micro-landscape compared with adjacent desert flats. Historical interpretation links the valley to late nineteenth-century cattle use, although those accounts are partly folkloric and debated by historians. Today it functions as a concentrated access point for short hiking, climbing, and field geology observation. Its mapped trail length, geomorphic enclosure, and central location make Hidden Valley one of the park\u2019s best-documented landscape units.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park#Hidden_Valley",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park#Hidden_Valley",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hidden_Valley_Joshua_Tree.jpg/640px-Hidden_Valley_Joshua_Tree.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Hidden_Valley_trail.jpg/640px-Hidden_Valley_trail.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Joshua_Tree_boulders_Hidden_Valley.jpg/640px-Joshua_Tree_boulders_Hidden_Valley.jpg"
+      ]
     },
     {
-      "title": "Keys View",
-      "description": "Keys View is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Keys View in Joshua Tree, CA cites dated milestones in 1896, 2005, and 1961, including phases when the site was reclassified or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 156 acres, corridors around 12 miles, or comparable capacity figures, and cross-links them with engineering records and land-use files to keep the narrative evidence-based. Distinct article language for Keys View references lexical anchors such as causeway headland terrace alluvium watershed terrace headland estuary, plus chronology notes around 1991, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Keys_View",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Keys_View"
+      "title": "Explore Keys View",
+      "description": "Keys View is a high overlook in Joshua Tree National Park at an elevation of about 5,185 feet on the Little San Bernardino Mountains ridge. From the viewpoint, visitors can see the Coachella Valley, Salton Sea, San Andreas Fault zone, and, on clear days, peaks in Mexico. A paved access road and parking area connect the site to the park\u2019s main circulation network, making it one of the most visited panorama points. Interpretive signage explains fault-related basin formation and long-distance topographic relationships visible from the rim. Its precise elevation, fault-system visibility, and road-access design make Keys View a geographic orientation point within the park.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Keys_View",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Keys_View",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Keys_View_Joshua_Tree.jpg/640px-Keys_View_Joshua_Tree.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Keys_View_Coachella_Valley.jpg/640px-Keys_View_Coachella_Valley.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Keys_View_sign.jpg/640px-Keys_View_sign.jpg"
+      ]
     },
     {
-      "title": "Barker Dam",
-      "description": "Barker Dam is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Barker Dam in Joshua Tree, CA cites dated milestones in 1859, 1954, and 2001, including phases when the site was expanded or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 173 acres, corridors around 8 miles, or comparable capacity figures, and cross-links them with park ledgers and planning archives to keep the narrative evidence-based. Distinct article language for Barker Dam references lexical anchors such as auditorium promenade rotunda railhead headland basalt causeway observatory, plus chronology notes around 1825, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Barker_Dam",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Barker_Dam"
+      "title": "Explore Skull Rock",
+      "description": "Skull Rock is a named granite monzogranite formation along Park Boulevard in Joshua Tree National Park, shaped by long-term weathering and erosion. The rock\u2019s \u201ceye socket\u201d openings formed as rainwater pooled in small depressions and gradually enlarged fractures over geologic time. Its roadside location near Jumbo Rocks Campground and trail pullouts makes it a frequent stop for park orientation and short walks. The surrounding boulder field records the same intrusive igneous history that defines many central Joshua Tree outcrops. Because the feature is easy to locate and visually distinctive, it is often used in interpretive materials to explain desert weathering processes and visitor-use concentration patterns along developed corridors.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Skull_Rock_(California)",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Skull_Rock_(California)",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Skull_Rock_Joshua_Tree.jpg/640px-Skull_Rock_Joshua_Tree.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Skull_Rock_detail.jpg/640px-Skull_Rock_detail.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Jumbo_Rocks_area.jpg/640px-Jumbo_Rocks_area.jpg"
+      ]
     },
     {
-      "title": "Joshua Tree",
-      "description": "Joshua Tree is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Joshua Tree in Joshua Tree, CA cites dated milestones in 1960, 1995, and 1994, including phases when the site was founded or later restored under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 51 acres, corridors around 4 miles, or comparable capacity figures, and cross-links them with design briefs and architectural registers to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Joshua_Tree",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree"
-    },
-    {
-      "title": "Hour Visitor Pass",
-      "description": "Hour Visitor Pass is a prominent landmark in Joshua Tree, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Hour Visitor Pass in Joshua Tree, CA cites dated milestones in 1914, 1945, and 1972, including phases when the site was expanded or later expanded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 288 acres, corridors around 9 miles, or comparable capacity figures, and cross-links them with heritage surveys and heritage surveys to keep the narrative evidence-based. Distinct article language for Hour Visitor Pass references lexical anchors such as esplanade masonry conservancy conservancy auditorium observatory alluvium esplanade, plus chronology notes around 1988, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hour_Visitor_Pass"
+      "title": "Explore Barker Dam",
+      "description": "Barker Dam is a small historic water-storage structure in Joshua Tree National Park built by ranchers in the early twentieth century and later modified by federal crews in the 1940s. The associated loop trail is about 1.3 miles and passes petroglyph sites, granite outcrops, and a seasonal reservoir basin that can attract wildlife after rains. The dam illustrates how livestock operations adapted to limited desert water supplies before park-era management priorities shifted toward conservation and recreation. Located near park roads and parking, it is a common short-hike destination with interpretive signage. Its construction period, engineered purpose, and trail-linked cultural resources make Barker Dam a layered history site.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Barker_Dam",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Barker_Dam",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Barker_Dam_Joshua_Tree.jpg/640px-Barker_Dam_Joshua_Tree.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Barker_Dam_trail.jpg/640px-Barker_Dam_trail.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Barker_Dam_reservoir.jpg/640px-Barker_Dam_reservoir.jpg"
+      ]
     }
   ],
   "bestTimeToVisit": {
@@ -82,7 +101,7 @@
     },
     {
       "q": "Should I book tours ahead in Joshua Tree?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

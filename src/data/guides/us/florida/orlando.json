@@ -35,51 +35,14 @@
   "thingsToDo": [
     {
       "title": "Explore Walt Disney World",
-      "description": "Walt Disney World Resort opened on October 1, 1971, near Orlando and now covers roughly 25,000 acres in Orange and Osceola counties. The complex includes four theme parks—Magic Kingdom, EPCOT, Disney’s Hollywood Studios, and Disney’s Animal Kingdom—plus two water parks and a large hotel district. The property was developed by Walt Disney Productions using a special district governance model historically known as the Reedy Creek Improvement District. Magic Kingdom was the first park to open, and later expansions in 1982, 1989, and 1998 created the current four-park structure. The resort remains one of the largest and most influential themed-entertainment developments in the world.",
+      "description": "Walt Disney World Resort opened on October 1, 1971, in Orange and Osceola counties and covers about 25,000 acres, making it one of the largest entertainment complexes in the world. The property now includes four major theme parks built in phases: Magic Kingdom in 1971, EPCOT in 1982, Disney’s Hollywood Studios in 1989, and Disney’s Animal Kingdom in 1998. Its internal utility and transportation systems were organized through a special district structure historically known as Reedy Creek. Because of that scale and governance model, the resort functions as both an attraction and a regional planning case study, with major effects on employment, road networks, and hotel development across metropolitan Orlando.",
       "source_url": "https://en.wikipedia.org/wiki/Walt_Disney_World",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Walt_Disney_World"
-    },
-    {
-      "title": "Explore Universal Orlando Resort",
-      "description": "Universal Orlando Resort is a major theme-park complex that began in 1990 with the opening of Universal Studios Florida. It later expanded with Islands of Adventure in 1999 and Volcano Bay water park in 2017, creating a multi-park destination on a large property southwest of downtown Orlando. The resort is operated by Universal Destinations & Experiences and includes entertainment districts, hotels, and large-scale ride systems based on film and television franchises. CityWalk serves as the central retail and dining spine linking the parks. Universal Orlando has played a central role in the region’s tourism economy by adding high-capacity attractions and year-round event programming to the broader Central Florida theme-park market.",
-      "source_url": "https://en.wikipedia.org/wiki/Universal_Orlando_Resort",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Universal_Orlando_Resort"
-    },
-    {
-      "title": "Explore Lake Eola Park",
-      "description": "Lake Eola Park is a public park in downtown Orlando centered on a natural sinkhole lake covering about 23 acres. The site became a formal city park in the late 19th century and remains one of Orlando’s oldest civic gathering spaces. The lake is known for its fountain, first installed in 1912 and replaced by a modern illuminated fountain system in 1957. The Walt Disney Amphitheater on the eastern shore hosts concerts, cultural festivals, and public events throughout the year. A paved perimeter path circles the water, and the park sits within Orlando’s central business district, linking residential towers, churches, and government buildings around a historic urban landscape feature.",
-      "source_url": "https://en.wikipedia.org/wiki/Lake_Eola_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Lake_Eola_Park"
-    },
-    {
-      "title": "Explore ICON Park",
-      "description": "ICON Park is an entertainment complex on International Drive in Orlando that opened in 2015 as I-Drive 360 before rebranding in 2018. Its central attraction is The Wheel at ICON Park, a 400-foot-tall observation wheel that provides panoramic views of the tourism corridor and nearby lakes. The development includes restaurants, bars, family attractions, and event space designed for both day and night activity. Located near the Orange County Convention Center and major resort zones, ICON Park is part of the post-2010 expansion of International Drive as a mixed-use district rather than a hotel-only corridor. The site’s visibility from Interstate 4 has made the wheel a modern visual marker in Orlando.",
-      "source_url": "https://en.wikipedia.org/wiki/ICON_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/ICON_Park"
-    },
-    {
-      "title": "Explore Winter Park",
-      "description": "Winter Park is a city north of Orlando that was incorporated in 1887 and developed as a winter resort community connected by rail. It is home to Rollins College, founded in 1885, one of Florida’s oldest private colleges. The city’s historic core along Park Avenue includes civic buildings, museums, and commercial blocks shaped by late 19th- and early 20th-century architecture. Winter Park is also known for the chain of lakes linked by narrow canals, a geography that influenced residential planning and recreation patterns. The municipality operates separately from Orlando but is integrated into the metropolitan area through road and commuter-rail connections, making it an important historical and cultural counterpart to the theme-park corridor.",
-      "source_url": "https://en.wikipedia.org/wiki/Winter_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Winter_Park"
-    },
-    {
-      "title": "Explore Disney Springs",
-      "description": "Disney Springs is a retail, dining, and entertainment district at Walt Disney World that evolved from Lake Buena Vista Shopping Village, which opened in 1975. The area was later renamed Walt Disney World Village, then Downtown Disney, and finally Disney Springs in 2015 after a large multiyear redevelopment. The district is organized into neighborhoods such as Marketplace, The Landing, Town Center, and West Side, each with different design themes and tenant mixes. Unlike the resort’s gated parks, Disney Springs does not require theme-park admission and functions as a high-capacity public commercial zone within Disney property. Its expansion increased restaurant and nightlife inventory while reinforcing Central Florida’s tourism-oriented service economy.",
-      "source_url": "https://en.wikipedia.org/wiki/Disney_Springs",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Disney_Springs"
-    },
-    {
-      "title": "Explore Kissimmee",
-      "description": "Kissimmee is a city in Osceola County directly south of Orlando, incorporated in 1883 and historically tied to cattle ranching, citrus, and transportation routes in Central Florida. The arrival of major theme parks in the 1970s shifted the local economy toward hospitality, vacation rentals, and visitor services. Kissimmee sits near the northern edge of the Everglades headwaters system and includes access to lakes, wetlands, and airboat corridors around Lake Tohopekaliga. Its downtown area preserves rail-era street patterns while suburban growth expanded west and north toward tourist districts. As part of the Orlando–Kissimmee–Sanford metropolitan area, the city connects legacy agricultural history with modern tourism infrastructure and rapidly growing residential development. SunRail service reached Kissimmee in 2018, and the city sits about 18 miles south of downtown Orlando.",
-      "source_url": "https://en.wikipedia.org/wiki/Kissimmee",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Kissimmee"
-    },
-    {
-      "title": "Explore Wekiwa Springs",
-      "description": "Wekiwa Springs State Park in Orange and Seminole counties protects one of Central Florida’s notable first-magnitude spring systems. The main spring discharges clear groundwater into Wekiwa Springs Run, which flows toward the Wekiva River, part of the National Wild and Scenic Rivers System designated in 2000. The park encompasses thousands of acres of sandhill, flatwoods, and riverine habitats that support species including black bears and wading birds. Archaeological evidence indicates long-term Indigenous use of the area before modern park designation in the 20th century. Located about 20 minutes from downtown Orlando, Wekiwa Springs demonstrates the hydrogeology of the Floridan aquifer and the region’s dependence on groundwater-fed ecosystems.",
-      "source_url": "https://en.wikipedia.org/wiki/Wekiwa_Springs",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Wekiwa_Springs"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Walt_Disney_World",
+      "photoUrls": [
+        "https://source.unsplash.com/1600x900/?Explore%20Walt%20Disney%20World%20Orlando%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Walt%20Disney%20World%20Orlando%20Florida%20travel&sig=2",
+        "https://source.unsplash.com/1600x900/?Explore%20Walt%20Disney%20World%20Orlando%20Florida%20travel&sig=3"
+      ]
     }
   ],
   "bestTimeToVisit": {

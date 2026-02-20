@@ -6,6 +6,7 @@ import type {
 export type Tier2ThingToDo = {
   title: string;
   description: string;
+  photoUrls?: string[];
 };
 
 const wordCount = (text: string) =>

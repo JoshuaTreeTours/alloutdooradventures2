@@ -7,7 +7,7 @@
   "slug": "guides/us/wyoming/jackson",
   "hero": {
     "image": "https://cdn.filestackcontent.com/U24Rjc69QJOocG31BuhM",
-    "alt": "Jackson, Wyoming — Honda Talon 1000 Two Seater",
+    "alt": "Jackson, Wyoming \u2014 Honda Talon 1000 Two Seater",
     "headline": "Jackson, Wyoming Travel Guide",
     "subheadline": "Plan a focused Jackson trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,20 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Jackson, Wyoming. Regional parks and preserves near Jackson are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace."
-    },
-    {
-      "title": "Honda Talon",
-      "description": "Honda Talon is a practical stop for understanding Jackson's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jackson, Wyoming."
-    },
-    {
-      "title": "Two Seater",
-      "description": "Two Seater is a practical stop for understanding Jackson's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jackson, Wyoming."
-    },
-    {
-      "title": "Two Seater.  Honda Talon",
-      "description": "Two Seater.  Honda Talon is a practical stop for understanding Jackson's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Jackson, Wyoming."
+      "title": "Explore National Elk Refuge",
+      "description": "The National Elk Refuge was established in 1912 just northeast of Jackson to protect winter habitat for the Jackson elk herd in the southern Greater Yellowstone ecosystem. The refuge encompasses about 24,700 acres of valley floor and foothill terrain and is managed by the U.S. Fish and Wildlife Service. Seasonal migration patterns bring thousands of elk into the area each winter, and long-term management includes habitat restoration, conflict mitigation, and coordination with nearby Grand Teton National Park. Because the refuge directly borders the town, it provides a clear example of wildlife conservation operating next to a major tourism gateway. Its acreage, founding year, and federal designation make it one of Jackson\u2019s defining public lands.",
+      "source_url": "https://en.wikipedia.org/wiki/National_Elk_Refuge",
+      "wikiUrl": "https://en.wikipedia.org/wiki/National_Elk_Refuge"
     }
   ],
   "bestTimeToVisit": {
@@ -62,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Jackson?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

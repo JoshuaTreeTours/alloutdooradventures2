@@ -1,9 +1,11 @@
+import { getWikiImageUrls } from "../wiki/getWikiImage";
 import { getWikipediaSummary } from "../wiki/wikiRest";
 
 export type WikiThingToDo = {
   title: string;
   description: string;
   wikiUrl?: string;
+  photoUrls?: string[];
 };
 
 const trimToWordRange = (text: string, min = 45, max = 75) => {
@@ -32,13 +34,16 @@ export const wikiSummaryToThing = async (
   const summary = await getWikipediaSummary(title);
   if (!summary?.extract) return null;
 
+  const resolvedTitle = summary.title?.trim() || title;
+  const photoUrls = await getWikiImageUrls({
+    title: resolvedTitle,
+    wikidataId: summary.wikidataId,
+  });
+
   return {
-    title: summary.title?.trim() || title,
-    description: paraphraseSummary(
-      summary.title?.trim() || title,
-      summary.extract,
-      city
-    ),
+    title: resolvedTitle,
+    description: paraphraseSummary(resolvedTitle, summary.extract, city),
     wikiUrl: summary.pageUrl,
+    photoUrls,
   };
 };

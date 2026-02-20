@@ -1,0 +1,259 @@
+{
+  "cities": [
+    {
+      "city": "Palm Springs",
+      "file": "src/data/guides/us/california/palm-springs.json",
+      "attractions": [
+        {
+          "title": "Explore Palm Springs Aerial Tramway",
+          "word_count": 104,
+          "fact_signal_count": 8,
+          "similarity_max": 0.12,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Indian Canyons (Palm Canyon / Andreas / Murray)",
+          "word_count": 107,
+          "fact_signal_count": 0,
+          "similarity_max": 0.201,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Indian_Canyons",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Indian_Canyons",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Tahquitz Canyon",
+          "word_count": 109,
+          "fact_signal_count": 2,
+          "similarity_max": 0.201,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Tahquitz_Canyon",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Tahquitz_Canyon",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Palm Springs Art Museum",
+          "word_count": 108,
+          "fact_signal_count": 6,
+          "similarity_max": 0.166,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Art_Museum",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Art_Museum",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Palm Springs Walk of Stars",
+          "word_count": 108,
+          "fact_signal_count": 2,
+          "similarity_max": 0.166,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Walk_of_Stars",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Walk_of_Stars",
+          "photo_count": 3
+        }
+      ]
+    },
+    {
+      "city": "Santa Barbara",
+      "file": "src/data/guides/us/california/santa-barbara.json",
+      "attractions": [
+        {
+          "title": "Explore Mission Santa Barbara",
+          "word_count": 103,
+          "fact_signal_count": 9,
+          "similarity_max": 0.18,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Mission_Santa_Barbara",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Mission_Santa_Barbara",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Stearns Wharf",
+          "word_count": 104,
+          "fact_signal_count": 4,
+          "similarity_max": 0.196,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Santa Barbara County Courthouse",
+          "word_count": 102,
+          "fact_signal_count": 4,
+          "similarity_max": 0.18,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Santa Barbara Botanic Garden",
+          "word_count": 102,
+          "fact_signal_count": 6,
+          "similarity_max": 0.149,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Botanic_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Botanic_Garden",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Santa Barbara Harbor",
+          "word_count": 104,
+          "fact_signal_count": 5,
+          "similarity_max": 0.196,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Harbor",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Harbor",
+          "photo_count": 3
+        }
+      ]
+    },
+    {
+      "city": "Joshua Tree",
+      "file": "src/data/guides/us/california/joshua-tree.json",
+      "attractions": [
+        {
+          "title": "Explore Joshua Tree National Park",
+          "word_count": 106,
+          "fact_signal_count": 7,
+          "similarity_max": 0.149,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Hidden Valley (Joshua Tree National Park)",
+          "word_count": 109,
+          "fact_signal_count": 2,
+          "similarity_max": 0.207,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park#Hidden_Valley",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park#Hidden_Valley",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Keys View",
+          "word_count": 104,
+          "fact_signal_count": 4,
+          "similarity_max": 0.15,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Keys_View",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Keys_View",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Skull Rock",
+          "word_count": 108,
+          "fact_signal_count": 1,
+          "similarity_max": 0.207,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Skull_Rock_(California)",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Skull_Rock_(California)",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Barker Dam",
+          "word_count": 107,
+          "fact_signal_count": 3,
+          "similarity_max": 0.168,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Barker_Dam",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Barker_Dam",
+          "photo_count": 3
+        }
+      ]
+    },
+    {
+      "city": "Portland",
+      "file": "src/data/guides/us/oregon/portland.json",
+      "attractions": [
+        {
+          "title": "Explore Washington Park (Portland)",
+          "word_count": 103,
+          "fact_signal_count": 2,
+          "similarity_max": 0.179,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Washington_Park_(Portland,_Oregon)",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Washington_Park_(Portland,_Oregon)",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore International Rose Test Garden",
+          "word_count": 102,
+          "fact_signal_count": 2,
+          "similarity_max": 0.142,
+          "sourceUrl": "https://en.wikipedia.org/wiki/International_Rose_Test_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/International_Rose_Test_Garden",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Portland Japanese Garden",
+          "word_count": 102,
+          "fact_signal_count": 4,
+          "similarity_max": 0.179,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Portland_Japanese_Garden",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Portland_Japanese_Garden",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Powell\u2019s City of Books",
+          "word_count": 102,
+          "fact_signal_count": 2,
+          "similarity_max": 0.162,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Powell%27s_Books",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Powell%27s_Books",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Oregon Museum of Science and Industry (OMSI)",
+          "word_count": 97,
+          "fact_signal_count": 7,
+          "similarity_max": 0.128,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Oregon_Museum_of_Science_and_Industry",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Oregon_Museum_of_Science_and_Industry",
+          "photo_count": 3
+        }
+      ]
+    },
+    {
+      "city": "Monterey",
+      "file": "src/data/guides/us/california/monterey.json",
+      "attractions": [
+        {
+          "title": "Explore Monterey Bay Aquarium",
+          "word_count": 101,
+          "fact_signal_count": 3,
+          "similarity_max": 0.147,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Cannery Row",
+          "word_count": 101,
+          "fact_signal_count": 1,
+          "similarity_max": 0.147,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Cannery_Row",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Cannery_Row",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore 17-Mile Drive",
+          "word_count": 103,
+          "fact_signal_count": 0,
+          "similarity_max": 0.115,
+          "sourceUrl": "https://en.wikipedia.org/wiki/17-Mile_Drive",
+          "wikiUrl": "https://en.wikipedia.org/wiki/17-Mile_Drive",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Point Lobos State Natural Reserve",
+          "word_count": 102,
+          "fact_signal_count": 4,
+          "similarity_max": 0.122,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Point_Lobos",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Point_Lobos",
+          "photo_count": 3
+        },
+        {
+          "title": "Explore Carmel-by-the-Sea",
+          "word_count": 107,
+          "fact_signal_count": 3,
+          "similarity_max": 0.123,
+          "sourceUrl": "https://en.wikipedia.org/wiki/Carmel-by-the-Sea,_California",
+          "wikiUrl": "https://en.wikipedia.org/wiki/Carmel-by-the-Sea,_California",
+          "photo_count": 3
+        }
+      ]
+    }
+  ]
+}

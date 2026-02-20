@@ -7,7 +7,7 @@
   "slug": "guides/us/alaska/fairbanks",
   "hero": {
     "image": "https://cdn.filestackcontent.com/jjEvl7jVS0Wgihs51lQW",
-    "alt": "Fairbanks, Alaska — 1-Hour Private Day Mush",
+    "alt": "Fairbanks, Alaska \u2014 1-Hour Private Day Mush",
     "headline": "Fairbanks, Alaska Travel Guide",
     "subheadline": "Plan a focused Fairbanks trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Tundra Trekkers",
-      "description": "Tundra Trekkers is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
-    },
-    {
-      "title": "Maia Hartwigsen",
-      "description": "Maia Hartwigsen is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
-    },
-    {
-      "title": "Chena River Nature Trail Walk",
-      "description": "Chena River Nature Trail Walk is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
-    },
-    {
-      "title": "Husky Hike",
-      "description": "Husky Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
-    },
-    {
-      "title": "Mastodon Trail Hike",
-      "description": "Mastodon Trail Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
-    },
-    {
-      "title": "Table Top Mountain Hike",
-      "description": "Table Top Mountain Hike is a practical stop for understanding Fairbanks's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Fairbanks, Alaska."
+      "title": "Explore University of Alaska Fairbanks",
+      "description": "The University of Alaska Fairbanks was founded in 1917 as the Alaska Agricultural College and School of Mines, years before Alaska became a state in 1959. Its main campus sits on a hill west of downtown Fairbanks and serves as the flagship research institution in the University of Alaska system. The university hosts major Arctic and geophysical research programs, including facilities linked to climate, aurora, and permafrost science in high-latitude environments. Enrollment, federal research partnerships, and specialized institutes have made the campus one of interior Alaska\u2019s most important economic and educational anchors. Its founding date, institutional mission, and scientific output place it at the center of Fairbanks\u2019 modern identity beyond military and pipeline-era development.",
+      "source_url": "https://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks",
+      "wikiUrl": "https://en.wikipedia.org/wiki/University_of_Alaska_Fairbanks"
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Fairbanks?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

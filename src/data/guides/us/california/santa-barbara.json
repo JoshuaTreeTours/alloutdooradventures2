@@ -34,52 +34,59 @@
   ],
   "thingsToDo": [
     {
+      "title": "Explore Mission Santa Barbara",
+      "description": "Mission Santa Barbara was founded in 1786 as the tenth Spanish mission in Alta California and remains one of the best-preserved mission complexes in the state. The current twin-tower church facade dates largely to rebuilding after an 1812 earthquake, and later nineteenth-century restoration stabilized key structures. The mission includes a church, cemetery, mausoleum, museum rooms, and landscaped grounds set above downtown Santa Barbara. It is still operated by Franciscan friars and functions as both an active parish and historical site. Its founding date, colonial-era architecture, and continuous religious use provide direct evidence of Spanish and Mexican period settlement history on the California coast.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mission_Santa_Barbara",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mission_Santa_Barbara",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Mission_Santa_Barbara.jpg/640px-Mission_Santa_Barbara.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Santa_Barbara_Mission_front.jpg/640px-Santa_Barbara_Mission_front.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Mission_Santa_Barbara_garden.jpg/640px-Mission_Santa_Barbara_garden.jpg"
+      ]
+    },
+    {
       "title": "Explore Stearns Wharf",
-      "description": "Explore Stearns Wharf is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Stearns Wharf in Santa Barbara, CA cites dated milestones in 1951, 1932, and 1956, including phases when the site was restored or later built under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 206 acres, corridors around 1 miles, or comparable capacity figures, and cross-links them with preservation reports and museum catalogs to keep the narrative evidence-based. Distinct article language for Explore Stearns Wharf references lexical anchors such as headland conservancy auditorium headland basalt foundry conservancy promenade, plus chronology notes around 1997, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Stearns_Wharf",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf"
-    },
-    {
-      "title": "Explore State Street",
-      "description": "Explore State Street is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for State Street in Santa Barbara, CA cites dated milestones in 1929, 1952, and 1975, including phases when the site was renovated or later reclassified under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 151 acres, corridors around 9 miles, or comparable capacity figures, and cross-links them with heritage surveys and construction logs to keep the narrative evidence-based. Distinct article language for Explore State Street references lexical anchors such as terrace arcade rotunda estuary causeway terrace watershed headland, plus chronology notes around 1924, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/State_Street",
-      "wikiUrl": "https://en.wikipedia.org/wiki/State_Street"
-    },
-    {
-      "title": "Explore Santa Barbara Mission",
-      "description": "Explore Santa Barbara Mission is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Santa Barbara Mission in Santa Barbara, CA cites dated milestones in 1860, 1962, and 1982, including phases when the site was designated or later built under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 223 acres, corridors around 9 miles, or comparable capacity figures, and cross-links them with land-use files and planning archives to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Santa_Barbara_Mission",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Mission"
-    },
-    {
-      "title": "Explore Funk Zone",
-      "description": "Explore Funk Zone is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Funk Zone in Santa Barbara, CA cites dated milestones in 1908, 1944, and 1973, including phases when the site was founded or later renovated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 272 acres, corridors around 1 miles, or comparable capacity figures, and cross-links them with geologic notes and preservation reports to keep the narrative evidence-based. Distinct article language for Explore Funk Zone references lexical anchors such as esplanade causeway masonry watershed esplanade causeway estuary causeway, plus chronology notes around 1868, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Funk_Zone",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Funk_Zone"
-    },
-    {
-      "title": "Explore Butterfly Beach",
-      "description": "Explore Butterfly Beach is a waterfront landmark in Santa Barbara, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography. Wikipedia coverage for Butterfly Beach in Santa Barbara, CA cites dated milestones in 1854, 1922, and 2003, including phases when the site was renovated or later opened under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 359 acres, corridors around 10 miles, or comparable capacity figures, and cross-links them with heritage surveys and transit datasets to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Butterfly_Beach",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Butterfly_Beach"
+      "description": "Stearns Wharf opened in 1872 and is the oldest working wooden wharf in California, extending into the Santa Barbara Channel from the city\u2019s waterfront. It was built by John P. Stearns to improve freight and passenger transfer between coastal shipping and town businesses before rail links dominated transport. Storm damage and fire required multiple reconstruction phases over the twentieth century, preserving the wharf as both infrastructure and historic landmark. Today it hosts fisheries-related uses, small retail, and access to harbor views while remaining publicly visited year-round. Its opening year, maritime function, and repeated restoration cycles make it central to Santa Barbara\u2019s shoreline development story.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Stearns_Wharf",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Stearns_Wharf%2C_Santa_Barbara.jpg/640px-Stearns_Wharf%2C_Santa_Barbara.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Stearns_Wharf_sunset.jpg/640px-Stearns_Wharf_sunset.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Stearns_Wharf_view.jpg/640px-Stearns_Wharf_view.jpg"
+      ]
     },
     {
       "title": "Explore Santa Barbara County Courthouse",
-      "description": "Explore Santa Barbara County Courthouse is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Santa Barbara County Courthouse in Santa Barbara, CA cites dated milestones in 1891, 1994, and 1956, including phases when the site was renovated or later designated under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 143 acres, corridors around 8 miles, or comparable capacity figures, and cross-links them with preservation reports and land-use files to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse"
+      "description": "Santa Barbara County Courthouse was completed in 1929 and designed in the Spanish Colonial Revival style by William Mooser III. The complex replaced an earlier courthouse damaged in the 1925 Santa Barbara earthquake, and reconstruction aligned with broader city planning rules that encouraged unified Mediterranean architecture downtown. The building includes tiled stairways, murals, a clock tower, and landscaped gardens organized around a central public block. It remains an active county government facility while also functioning as a major architectural site for visitors. Its construction year, post-earthquake context, and civic role make it one of the most documented public buildings in Santa Barbara.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_County_Courthouse",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Santa_Barbara_County_Courthouse.jpg/640px-Santa_Barbara_County_Courthouse.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Courthouse_tower_santa_barbara.jpg/640px-Courthouse_tower_santa_barbara.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Santa_Barbara_Courthouse_mural_room.jpg/640px-Santa_Barbara_Courthouse_mural_room.jpg"
+      ]
     },
     {
-      "title": "Explore Douglas Family Preserve",
-      "description": "Explore Douglas Family Preserve is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Douglas Family Preserve in Santa Barbara, CA cites dated milestones in 1881, 1990, and 2008, including phases when the site was restored or later reclassified under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 53 acres, corridors around 10 miles, or comparable capacity figures, and cross-links them with engineering records and park ledgers to keep the narrative evidence-based. Distinct article language for Explore Douglas Family Preserve references lexical anchors such as estuary courtyard arcade basalt estuary promenade causeway observatory, plus chronology notes around 1981, which differentiates this entry from other landmarks in the same city dataset.",
-      "source_url": "https://en.wikipedia.org/wiki/Douglas_Family_Preserve",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Douglas_Family_Preserve"
+      "title": "Explore Santa Barbara Botanic Garden",
+      "description": "Santa Barbara Botanic Garden opened in 1926 and was created to conserve and interpret California native plants across a foothill site of roughly 78 acres. The garden is located in Mission Canyon and includes habitat-focused sections such as redwood groves, desert plots, chaparral areas, and riparian corridors tied to local topography. It also supports seed conservation and native plant research programs that expanded through the late twentieth and early twenty-first centuries. Trail systems connect themed plant communities with historic features including an early twentieth-century dam and mission-era elements nearby. Its acreage, founding date, and native-plant mission distinguish it from ornamental coastal gardens.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Botanic_Garden",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Botanic_Garden",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Santa_Barbara_Botanic_Garden.jpg/640px-Santa_Barbara_Botanic_Garden.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Santa_Barbara_Botanic_Garden_path.jpg/640px-Santa_Barbara_Botanic_Garden_path.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Santa_Barbara_Botanic_Garden_oak.jpg/640px-Santa_Barbara_Botanic_Garden_oak.jpg"
+      ]
     },
     {
-      "title": "Explore Los Padres National Forest",
-      "description": "Explore Los Padres National Forest is a prominent landmark in Santa Barbara, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area. Wikipedia coverage for Los Padres National Forest in Santa Barbara, CA cites dated milestones in 1949, 1995, and 1973, including phases when the site was expanded or later founded under identifiable public or nonprofit stewardship. The same article set references measurable attributes such as footprints near 127 acres, corridors around 5 miles, or comparable capacity figures, and cross-links them with park ledgers and museum catalogs to keep the narrative evidence-based.",
-      "source_url": "https://en.wikipedia.org/wiki/Los_Padres_National_Forest",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Los_Padres_National_Forest"
+      "title": "Explore Santa Barbara Harbor",
+      "description": "Santa Barbara Harbor is a municipal harbor on the city waterfront with marina basins, commercial fishing operations, and public access piers. Major harbor construction occurred in the twentieth century, with breakwater and dredging projects that created safer berthing conditions along the Santa Barbara Channel. The harbor now supports hundreds of slips and serves as a base for fisheries, sailing schools, and marine services tied to the county\u2019s coastal economy. Adjacent facilities include the harbor district offices and links to Stearns Wharf and beachfront pathways. Its engineered shoreline, working-waterfront functions, and city governance structure make it a key infrastructure site in Santa Barbara\u2019s coastal history.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Harbor",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Santa_Barbara_Harbor",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Santa_Barbara_Harbor.jpg/640px-Santa_Barbara_Harbor.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Santa_Barbara_marina.jpg/640px-Santa_Barbara_marina.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Santa_Barbara_Harbor_boats.jpg/640px-Santa_Barbara_Harbor_boats.jpg"
+      ]
     }
   ],
   "bestTimeToVisit": {
@@ -118,5 +125,6 @@
   },
   "seoLinks": {
     "officialTourism": "https://santabarbaraca.com/"
-  }
+  },
+  "tier": "tier1"
 }

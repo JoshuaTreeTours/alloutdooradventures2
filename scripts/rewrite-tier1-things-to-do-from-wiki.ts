@@ -6,12 +6,14 @@ import { isGenericTravelAdvice } from "../src/utils/guides/isGenericTravelAdvice
 import { isTier1Guide } from "../src/utils/guides/isTier1Guide";
 import { validateNoBoilerplate } from "../src/utils/guides/validateNoBoilerplate";
 import { flushWikiSummaryCache } from "../src/utils/wiki/wikiSummary";
+import { flushWikiImageCache, getWikiImageUrls } from "../src/utils/wiki/getWikiImage";
 
 type ThingToDo = {
   title: string;
   description: string;
   wikiUrl?: string;
   source_url?: string;
+  photoUrls?: string[];
 };
 
 type Guide = {
@@ -190,6 +192,14 @@ const run = async () => {
         description,
       };
 
+      const photoUrls = await getWikiImageUrls({
+        title: result.wikiUrl ? undefined : item.title,
+      });
+
+      if (photoUrls.length) {
+        next.photoUrls = photoUrls;
+      }
+
       if (item.source_url) {
         next.source_url = item.source_url;
       }
@@ -197,6 +207,12 @@ const run = async () => {
       if (result.wikiUrl) {
         next.source_url = result.wikiUrl;
         next.wikiUrl = result.wikiUrl;
+
+        const wikiTitle = result.wikiUrl.split("/wiki/")[1]?.replace(/_/g, " ");
+        const wikiPhotoUrls = await getWikiImageUrls({ title: wikiTitle });
+        if (wikiPhotoUrls.length) {
+          next.photoUrls = wikiPhotoUrls;
+        }
       }
 
       if (item.description !== description || item.wikiUrl !== next.wikiUrl) {
@@ -222,6 +238,7 @@ const run = async () => {
   }
 
   flushWikiSummaryCache();
+  flushWikiImageCache();
 
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
   fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, "utf8");

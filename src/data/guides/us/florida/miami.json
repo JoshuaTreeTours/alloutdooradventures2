@@ -35,51 +35,91 @@
   "thingsToDo": [
     {
       "title": "Explore South Beach",
-      "description": "South Beach is the southern section of Miami Beach, extending roughly from South Pointe Park north to about 23rd Street on a barrier island between the Atlantic Ocean and Biscayne Bay. The district is closely identified with the Miami Beach Architectural District, which contains one of the largest concentrations of Art Deco architecture in the world, with many buildings constructed in the 1920s through 1940s. Ocean Drive, Collins Avenue, and Washington Avenue form the neighborhood\u2019s main corridors, and Lummus Park runs along the oceanfront. The area\u2019s 1980s preservation campaigns and later restoration work helped protect historic hotels and fa\u00e7ades that now define South Beach\u2019s built environment as much as its beach culture.",
+      "description": "South Beach is the southern section of Miami Beach, extending roughly from South Pointe Park north to about 23rd Street on a barrier island between the Atlantic Ocean and Biscayne Bay. The district is closely identified with the Miami Beach Architectural District, which contains one of the largest concentrations of Art Deco architecture in the world, with many buildings constructed in the 1920s through 1940s. Ocean Drive, Collins Avenue, and Washington Avenue form the neighborhood’s main corridors, and Lummus Park runs along the oceanfront. The area’s 1980s preservation campaigns and later restoration work helped protect historic hotels and façades that now define South Beach’s built environment as much as its beach culture.",
       "source_url": "https://en.wikipedia.org/wiki/South_Beach",
-      "wikiUrl": "https://en.wikipedia.org/wiki/South_Beach"
+      "wikiUrl": "https://en.wikipedia.org/wiki/South_Beach",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/South_Beach%2C_Miami_Beach%2C_FL%2C_USA.jpg/640px-South_Beach%2C_Miami_Beach%2C_FL%2C_USA.jpg",
+        "https://source.unsplash.com/1600x900/?Explore%20South%20Beach%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20South%20Beach%20Miami%20Florida%20travel&sig=2"
+      ]
     },
     {
       "title": "Explore Wynwood Walls",
-      "description": "Wynwood Walls is an outdoor street-art installation in Miami\u2019s Wynwood neighborhood that opened in 2009 as part of a redevelopment project led by Tony Goldman. The complex transformed former warehouse walls into large-scale mural surfaces, and its roster has included internationally known artists from multiple countries working in aerosol, paste-up, and mixed techniques. Wynwood itself was historically an industrial district north of Downtown, and the walls became a focal point in the area\u2019s transition toward galleries, studios, and creative businesses. Because murals rotate over time, the site functions as a changing exhibition rather than a static monument. Its location near NW 2nd Avenue also places it within the broader Wynwood Arts District grid.",
+      "description": "Wynwood Walls is an outdoor street-art installation in Miami’s Wynwood neighborhood that opened in 2009 as part of a redevelopment project led by Tony Goldman. The complex transformed former warehouse walls into large-scale mural surfaces, and its roster has included internationally known artists from multiple countries working in aerosol, paste-up, and mixed techniques. Wynwood itself was historically an industrial district north of Downtown, and the walls became a focal point in the area’s transition toward galleries, studios, and creative businesses. Because murals rotate over time, the site functions as a changing exhibition rather than a static monument. Its location near NW 2nd Avenue also places it within the broader Wynwood Arts District grid.",
       "source_url": "https://en.wikipedia.org/wiki/Wynwood_Walls",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Wynwood_Walls"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wynwood_Walls",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wynwood_Walls_Miami.jpg/640px-Wynwood_Walls_Miami.jpg",
+        "https://source.unsplash.com/1600x900/?Explore%20Wynwood%20Walls%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Wynwood%20Walls%20Miami%20Florida%20travel&sig=2"
+      ]
     },
     {
       "title": "Explore Little Havana",
-      "description": "Little Havana is a Miami neighborhood west of Downtown centered along SW 8th Street, commonly known as Calle Ocho, and it developed as a major hub for Cuban immigrants after the Cuban Revolution of 1959. The district\u2019s commercial strip includes cultural landmarks such as M\u00e1ximo G\u00f3mez Park, where domino games are a long-standing daily practice, and the annual Calle Ocho Festival, one of the largest Hispanic street festivals in the United States. The neighborhood\u2019s population profile later broadened to include residents from Nicaragua, Honduras, and other Latin American countries, but Cuban influence remains visible in language, music venues, and civic institutions. Little Havana\u2019s history is therefore tied to both exile-era migration and continuing demographic change in Miami.",
+      "description": "Little Havana is a Miami neighborhood west of Downtown centered along SW 8th Street, commonly known as Calle Ocho, and it developed as a major hub for Cuban immigrants after the Cuban Revolution of 1959. The district’s commercial strip includes cultural landmarks such as Máximo Gómez Park, where domino games are a long-standing daily practice, and the annual Calle Ocho Festival, one of the largest Hispanic street festivals in the United States. The neighborhood’s population profile later broadened to include residents from Nicaragua, Honduras, and other Latin American countries, but Cuban influence remains visible in language, music venues, and civic institutions. Little Havana’s history is therefore tied to both exile-era migration and continuing demographic change in Miami.",
       "source_url": "https://en.wikipedia.org/wiki/Little_Havana",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Little_Havana"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Little_Havana",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Little_Havana_Miami.jpg/640px-Little_Havana_Miami.jpg",
+        "https://source.unsplash.com/1600x900/?Explore%20Little%20Havana%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Little%20Havana%20Miami%20Florida%20travel&sig=2"
+      ]
     },
     {
       "title": "Explore Vizcaya Museum and Gardens",
-      "description": "Vizcaya Museum and Gardens is a historic estate in Miami\u2019s Coconut Grove area built between 1914 and 1922 for industrialist James Deering. The Main House follows an Italian Renaissance Revival model, and the waterfront property includes formal gardens, grottos, and a stone barge breakwater sculpture in Biscayne Bay. Architect F. Burrall Hoffman designed the house, while landscape architect Diego Suarez planned the gardens using Mediterranean and Italian references adapted to South Florida conditions. The property was later designated a National Historic Landmark in 1994. Today, Vizcaya preserves both architecture and decorative arts collections, offering a clear record of early 20th-century estate design in subtropical Miami rather than a purely contemporary museum environment.",
+      "description": "Vizcaya Museum and Gardens is a historic estate in Miami’s Coconut Grove area built between 1914 and 1922 for industrialist James Deering. The Main House follows an Italian Renaissance Revival model, and the waterfront property includes formal gardens, grottos, and a stone barge breakwater sculpture in Biscayne Bay. Architect F. Burrall Hoffman designed the house, while landscape architect Diego Suarez planned the gardens using Mediterranean and Italian references adapted to South Florida conditions. The property was later designated a National Historic Landmark in 1994. Today, Vizcaya preserves both architecture and decorative arts collections, offering a clear record of early 20th-century estate design in subtropical Miami rather than a purely contemporary museum environment.",
       "source_url": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Vizcaya_Museum_and_Gardens",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Vizcaya_Museum_and_Gardens.jpg/640px-Vizcaya_Museum_and_Gardens.jpg",
+        "https://source.unsplash.com/1600x900/?Explore%20Vizcaya%20Museum%20and%20Gardens%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Vizcaya%20Museum%20and%20Gardens%20Miami%20Florida%20travel&sig=2"
+      ]
     },
     {
       "title": "Explore Bayside Marketplace",
-      "description": "Bayside Marketplace is a two-level festival marketplace in Downtown Miami on Biscayne Bay, adjacent to Bayfront Park and the Kaseya Center arena district. Developed by Rouse Company and opened in 1987, the complex followed the late-20th-century urban waterfront retail model used in projects like Baltimore\u2019s Harborplace. Its marina frontage makes it a departure point for sightseeing cruises into Biscayne Bay, and the open-air layout includes covered walkways facing the water. The marketplace sits near Miami\u2019s Metromover system and major downtown streets, which helps connect it to nearby civic and cultural sites. Beyond retail and dining, its significance in Miami history comes from how it anchored downtown bayfront revitalization during the 1980s redevelopment period.",
+      "description": "Bayside Marketplace is a two-level festival marketplace in Downtown Miami on Biscayne Bay, adjacent to Bayfront Park and the Kaseya Center arena district. Developed by Rouse Company and opened in 1987, the complex followed the late-20th-century urban waterfront retail model used in projects like Baltimore’s Harborplace. Its marina frontage makes it a departure point for sightseeing cruises into Biscayne Bay, and the open-air layout includes covered walkways facing the water. The marketplace sits near Miami’s Metromover system and major downtown streets, which helps connect it to nearby civic and cultural sites. Beyond retail and dining, its significance in Miami history comes from how it anchored downtown bayfront revitalization during the 1980s redevelopment period.",
       "source_url": "https://en.wikipedia.org/wiki/Bayside_Marketplace",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bayside_Marketplace"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bayside_Marketplace",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bayside_Marketplace_Miami.jpg/640px-Bayside_Marketplace_Miami.jpg",
+        "https://source.unsplash.com/1600x900/?Explore%20Bayside%20Marketplace%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Bayside%20Marketplace%20Miami%20Florida%20travel&sig=2"
+      ]
     },
     {
       "title": "Explore Brickell",
-      "description": "Brickell is a high-density neighborhood south of the Miami River in central Miami and is often described as the city\u2019s financial district because it concentrates banking towers, corporate offices, and mixed-use residential skyscrapers. The area\u2019s modern skyline grew rapidly after the late 20th century, with substantial condo and office construction during the 2000s and 2010s. Brickell Avenue and South Miami Avenue are key corridors, and Brickell City Centre, opened in 2016, added a multi-block retail and transit-integrated development linked to Metromover and Metrorail stations. Historically, the neighborhood takes its name from early landholders Mary and William Brickell, whose properties influenced Miami\u2019s original urban layout. Today Brickell combines financial infrastructure with one of the densest residential populations in the city.",
+      "description": "Brickell is a high-density neighborhood south of the Miami River in central Miami and is often described as the city’s financial district because it concentrates banking towers, corporate offices, and mixed-use residential skyscrapers. The area’s modern skyline grew rapidly after the late 20th century, with substantial condo and office construction during the 2000s and 2010s. Brickell Avenue and South Miami Avenue are key corridors, and Brickell City Centre, opened in 2016, added a multi-block retail and transit-integrated development linked to Metromover and Metrorail stations. Historically, the neighborhood takes its name from early landholders Mary and William Brickell, whose properties influenced Miami’s original urban layout. Today Brickell combines financial infrastructure with one of the densest residential populations in the city.",
       "source_url": "https://en.wikipedia.org/wiki/Brickell",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Brickell"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Brickell",
+      "photoUrls": [
+        "https://source.unsplash.com/1600x900/?Explore%20Brickell%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Brickell%20Miami%20Florida%20travel&sig=2",
+        "https://source.unsplash.com/1600x900/?Explore%20Brickell%20Miami%20Florida%20travel&sig=3"
+      ]
     },
     {
       "title": "Explore Key Biscayne",
       "description": "Key Biscayne is an island town south of Miami Beach connected to the mainland by the Rickenbacker Causeway, a toll road completed in 1947 that reshaped access to the barrier island. The island includes two major park landscapes: Crandon Park on the northern section and Bill Baggs Cape Florida State Park at the southern end, where the Cape Florida Lighthouse dates to 1825 and is one of the oldest standing structures in the Miami area. Key Biscayne incorporated as a village in 1991 after decades of residential development tied to causeway-era growth. Its geography between Biscayne Bay and the Atlantic gives it a distinct municipal identity compared with mainland Miami neighborhoods, with beaches, dunes, and coastal habitats as defining features.",
       "source_url": "https://en.wikipedia.org/wiki/Key_Biscayne",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Key_Biscayne"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Key_Biscayne",
+      "photoUrls": [
+        "https://source.unsplash.com/1600x900/?Explore%20Key%20Biscayne%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Key%20Biscayne%20Miami%20Florida%20travel&sig=2",
+        "https://source.unsplash.com/1600x900/?Explore%20Key%20Biscayne%20Miami%20Florida%20travel&sig=3"
+      ]
     },
     {
       "title": "Explore Everglades National Park",
-      "description": "Everglades National Park was established in 1947 and protects 1.5 million acres of subtropical wetlands across South Florida, making it the largest tropical wilderness reserve in the contiguous United States. The park preserves interconnected habitats including sawgrass marsh, mangrove estuaries, and pinelands, and it is a critical refuge for species such as the American crocodile, West Indian manatee, and Florida panther. Everglades received UNESCO Biosphere Reserve designation in 1976, World Heritage inscription in 1979, and Ramsar Wetland status in 1987, reflecting international ecological significance. For Miami travelers, the nearest major access routes are via Shark Valley and Ernest F. Coe Visitor Center corridors, where boardwalks, tram roads, and ranger programs interpret the region\u2019s water-driven landscape system.",
+      "description": "Everglades National Park was established in 1947 and protects 1.5 million acres of subtropical wetlands across South Florida, making it the largest tropical wilderness reserve in the contiguous United States. The park preserves interconnected habitats including sawgrass marsh, mangrove estuaries, and pinelands, and it is a critical refuge for species such as the American crocodile, West Indian manatee, and Florida panther. Everglades received UNESCO Biosphere Reserve designation in 1976, World Heritage inscription in 1979, and Ramsar Wetland status in 1987, reflecting international ecological significance. For Miami travelers, the nearest major access routes are via Shark Valley and Ernest F. Coe Visitor Center corridors, where boardwalks, tram roads, and ranger programs interpret the region’s water-driven landscape system.",
       "source_url": "https://en.wikipedia.org/wiki/Everglades_National_Park",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Everglades_National_Park"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Everglades_National_Park",
+      "photoUrls": [
+        "https://source.unsplash.com/1600x900/?Explore%20Everglades%20National%20Park%20Miami%20Florida%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Everglades%20National%20Park%20Miami%20Florida%20travel&sig=2",
+        "https://source.unsplash.com/1600x900/?Explore%20Everglades%20National%20Park%20Miami%20Florida%20travel&sig=3"
+      ]
     }
   ],
   "bestTimeToVisit": {

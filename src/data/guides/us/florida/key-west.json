@@ -7,7 +7,7 @@
   "slug": "guides/us/florida/key-west",
   "hero": {
     "image": "https://cdn.filestackcontent.com/YEuiJ9MCSLOuMzZtp2y3",
-    "alt": "Key West, Florida — 3/4 Day 6hrs Boston Whaler",
+    "alt": "Key West, Florida \u2014 3/4 Day 6hrs Boston Whaler",
     "headline": "Key West, Florida Travel Guide",
     "subheadline": "Plan a focused Key West trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,10 @@
   ],
   "thingsToDo": [
     {
-      "title": "Key West",
-      "description": "Key West is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
-    },
-    {
-      "title": "Boston Whaler",
-      "description": "Boston Whaler is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
-    },
-    {
-      "title": "Kokomo Cabs",
-      "description": "Kokomo Cabs is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
-    },
-    {
-      "title": "Old Town Key West",
-      "description": "Old Town Key West is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
-    },
-    {
-      "title": "Sandbar Express",
-      "description": "Sandbar Express is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
-    },
-    {
-      "title": "Multiple  Sandbar Hangout Boston Whaler",
-      "description": "Multiple  Sandbar Hangout Boston Whaler is a practical stop for understanding Key West's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Key West, Florida."
+      "title": "Explore Dry Tortugas National Park",
+      "description": "Dry Tortugas National Park is located about 70 miles west of Key West and was established as a national park in 1992, succeeding earlier monument status. The park covers roughly 100 square miles, most of it open water in the Gulf of Mexico, and includes seven small islands in the lower Florida Keys chain. Fort Jefferson, a massive 19th-century coastal fort begun in 1846, is the best-known historic structure within the park and is listed on the National Register of Historic Places. Because access is primarily by boat or seaplane, the site preserves a remote maritime setting where military history, coral reef ecosystems, and seabird habitat are documented in the same protected unit.",
+      "source_url": "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Dry_Tortugas_National_Park"
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +52,7 @@
     },
     {
       "q": "Should I book tours ahead in Key West?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

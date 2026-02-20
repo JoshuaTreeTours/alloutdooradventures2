@@ -1,5 +1,5 @@
 {
-  "tier": "tier2",
+  "tier": "tier1",
   "title": "Palm Springs, California Travel Guide",
   "country": "United States",
   "state": "California",
@@ -7,7 +7,7 @@
   "slug": "guides/us/california/palm-springs",
   "hero": {
     "image": "https://cdn.filestackcontent.com/uUfpgBIGTLe6aVruGHp5",
-    "alt": "Palm Springs, California — Private San Andreas Fault Jeep Tour",
+    "alt": "Palm Springs, California \u2014 Private San Andreas Fault Jeep Tour",
     "headline": "Palm Springs, California Travel Guide",
     "subheadline": "Plan a focused Palm Springs trip with practical highlights, local context, and easy tour connections."
   },
@@ -26,28 +26,59 @@
   ],
   "thingsToDo": [
     {
-      "title": "Palm Springs Aerial Tramway",
-      "description": "Palm Springs Aerial Tramway is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "title": "Explore Palm Springs Aerial Tramway",
+      "description": "Palm Springs Aerial Tramway opened in 1963 and carries riders from the Coachella Valley floor to Mountain Station in the San Jacinto Mountains. The route climbs roughly 2.5 miles while gaining nearly 6,000 feet in elevation, creating a sharp shift from desert climate to alpine forest. Rotating tramcars were introduced in 2000, replacing earlier cabins and giving a full 360-degree view during the ascent. Valley Station sits near 2,600 feet and the upper terminal is around 8,500 feet. The line connects directly to Mount San Jacinto State Park trail access, making it both an engineering landmark and a geographic transition point for Palm Springs.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Palm_Springs_Aerial_Tramway.jpg/640px-Palm_Springs_Aerial_Tramway.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Palm_Springs_Tramway_station.jpg/640px-Palm_Springs_Tramway_station.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Palm_Springs_Aerial_Tramway_car.jpg/640px-Palm_Springs_Aerial_Tramway_car.jpg"
+      ]
     },
     {
-      "title": "Indian Canyons",
-      "description": "Indian Canyons is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "title": "Explore Indian Canyons (Palm Canyon / Andreas / Murray)",
+      "description": "Indian Canyons is a protected cultural and natural area on Agua Caliente Band of Cahuilla Indians land south of downtown Palm Springs. The system includes Palm Canyon, Andreas Canyon, and Murray Canyon, each with distinct trail distances, riparian habitat, and historical use by Cahuilla communities. Palm Canyon is known for one of the largest California fan palm oases in the region, while Andreas Canyon concentrates streamside vegetation in steep rock walls. Managed visitor access expanded after 1970 through formal trailheads and reservation-operated facilities. The canyons document long-term desert settlement patterns and show how water availability shaped routes and habitation across the Coachella Valley.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Indian_Canyons",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Indian_Canyons",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Indian_Canyons_Palm_Springs.jpg/640px-Indian_Canyons_Palm_Springs.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Palm_Canyon_Indian_Canyons.jpg/640px-Palm_Canyon_Indian_Canyons.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Andreas_Canyon.jpg/640px-Andreas_Canyon.jpg"
+      ]
     },
     {
-      "title": "Tahquitz Canyon",
-      "description": "Tahquitz Canyon is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "title": "Explore Tahquitz Canyon",
+      "description": "Tahquitz Canyon is a reservation-managed canyon at the base of the San Jacinto Mountains in Palm Springs, with a trail route of about 2 miles round trip. The site is associated with Cahuilla oral history, including the figure Tahquitz, and includes a seasonal waterfall that can reach roughly 60 feet after winter and spring runoff. Visitor access is organized through a trailhead and interpretation center operated by the Agua Caliente Band of Cahuilla Indians. Archaeological evidence in the broader area documents long Indigenous use of canyon resources. Its measured trail length, managed entry system, and cultural interpretation framework make it one of the city\u2019s most clearly defined heritage landscapes.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Tahquitz_Canyon",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Tahquitz_Canyon",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Tahquitz_Canyon_Palm_Springs.jpg/640px-Tahquitz_Canyon_Palm_Springs.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Tahquitz_Creek.jpg/640px-Tahquitz_Creek.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tahquitz_Canyon_waterfall.jpg/640px-Tahquitz_Canyon_waterfall.jpg"
+      ]
     },
     {
-      "title": "Moorten Botanical Garden",
-      "description": "Moorten Botanical Garden is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "title": "Explore Palm Springs Art Museum",
+      "description": "Palm Springs Art Museum was founded in 1938, making it one of the oldest cultural institutions in the Coachella Valley. Its downtown Palm Springs campus developed into a regional museum focused on modern and contemporary art, architecture, and design, with additional holdings in Native American art and western subjects. The institution expanded physically over time through multiple building phases and satellite venues, including architecture and design spaces in the city center. Collection growth and exhibition programming increased significantly after the late twentieth century as desert modernism gained wider academic and public attention. The museum\u2019s founding date, curatorial scope, and downtown location anchor it within Palm Springs civic history.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Art_Museum",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Art_Museum",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Palm_Springs_Art_Museum.jpg/640px-Palm_Springs_Art_Museum.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Palm_Springs_Art_Museum_entry.jpg/640px-Palm_Springs_Art_Museum_entry.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Palm_Springs_Art_Museum_architecture.jpg/640px-Palm_Springs_Art_Museum_architecture.jpg"
+      ]
     },
     {
-      "title": "Palm Springs",
-      "description": "Palm Springs is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
-    },
-    {
-      "title": "Palm Springs Joshua Tree National Park",
-      "description": "Palm Springs Joshua Tree National Park is a major urban park in Palm Springs, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city."
+      "title": "Explore Palm Springs Walk of Stars",
+      "description": "Palm Springs Walk of Stars was established in 1992 and places commemorative stars along downtown sidewalks, primarily on Palm Canyon Drive and adjacent streets. Honorees include entertainers, civic leaders, architects, athletes, and other figures associated with Palm Springs history and the Coachella Valley. The program expanded year by year through a formal nomination and sponsorship process, producing hundreds of installed markers across the core commercial district. Its distribution pattern is tied to the city\u2019s historic shopping and entertainment corridor, where mid-century development and tourism growth were concentrated. The founding year, geographic layout, and civic selection framework make the walk a structured public-history feature rather than a single monument.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Walk_of_Stars",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Walk_of_Stars",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Palm_Springs_Walk_of_Stars.jpg/640px-Palm_Springs_Walk_of_Stars.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Palm_Canyon_Drive_Palm_Springs.jpg/640px-Palm_Canyon_Drive_Palm_Springs.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Downtown_Palm_Springs.jpg/640px-Downtown_Palm_Springs.jpg"
+      ]
     }
   ],
   "bestTimeToVisit": {
@@ -70,7 +101,7 @@
     },
     {
       "q": "Should I book tours ahead in Palm Springs?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+      "a": "Yes\u2014advance booking is recommended for weekends, holidays, and top-rated operators."
     }
   ],
   "tours": {

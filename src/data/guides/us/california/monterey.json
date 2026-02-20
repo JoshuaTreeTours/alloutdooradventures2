@@ -1,0 +1,109 @@
+{
+  "tier": "tier1",
+  "title": "Monterey, California Travel Guide",
+  "country": "United States",
+  "state": "California",
+  "city": "Monterey",
+  "slug": "guides/us/california/monterey",
+  "hero": {
+    "image": "https://cdn.filestackcontent.com/A9fNDt6wRmuZKbSkx0fM",
+    "alt": "Monterey, California",
+    "headline": "Monterey, California Travel Guide",
+    "subheadline": "Wikipedia-grounded highlights for Monterey."
+  },
+  "overview": [
+    "Monterey combines major attractions with regional outdoor access and historical sites."
+  ],
+  "highlights": [
+    {
+      "title": "Monterey essentials",
+      "description": "Wikipedia-grounded landmarks and districts."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Explore Monterey Bay Aquarium",
+      "description": "Monterey Bay Aquarium opened in 1984 on Cannery Row in a former sardine cannery, directly linking the institution to Monterey\u2019s fishing and canning history. Founded by the David and Lucile Packard Foundation, it became known for large living exhibits such as the multi-story kelp forest and open-sea tanks. The aquarium\u2019s site on Monterey Bay places marine research and interpretation in a biologically productive upwelling region used by sea otters, seabirds, and migratory species. Conservation science and husbandry programs expanded significantly after the 1990s. Its opening date, adaptive reuse setting, and research-driven exhibits make it one of California\u2019s most influential coastal museums.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Monterey_Bay_Aquarium",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Monterey_Bay_Aquarium.jpg/640px-Monterey_Bay_Aquarium.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Monterey_Bay_Aquarium_exterior.jpg/640px-Monterey_Bay_Aquarium_exterior.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Monterey_Bay_Aquarium_kelp_forest.jpg/640px-Monterey_Bay_Aquarium_kelp_forest.jpg"
+      ]
+    },
+    {
+      "title": "Explore Cannery Row",
+      "description": "Cannery Row is the historic waterfront street in Monterey made famous by sardine canning operations that peaked in the 1930s and 1940s. The district\u2019s industrial plants declined after fishery collapse in the mid-twentieth century, and many buildings were later adapted for hotels, restaurants, and cultural institutions. Author John Steinbeck\u2019s 1945 novel \u201cCannery Row\u201d helped document the social world of the area and fixed its name in American literature. Today the corridor sits along Monterey Bay\u2019s recreation coastline with preserved industrial architecture and mixed-use tourism functions. Its fishery timeline, 1945 literary association, and adaptive reuse pattern make it central to Monterey urban history.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Cannery_Row",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Cannery_Row",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Cannery_Row_Monterey.jpg/640px-Cannery_Row_Monterey.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Cannery_Row_sign.jpg/640px-Cannery_Row_sign.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cannery_Row_waterfront.jpg/640px-Cannery_Row_waterfront.jpg"
+      ]
+    },
+    {
+      "title": "Explore 17-Mile Drive",
+      "description": "17-Mile Drive is a scenic road through the Monterey Peninsula that runs between Pacific Grove and Pebble Beach, passing coastal viewpoints, cypress groves, and golf links. The route was first developed in the late nineteenth century by the Pacific Improvement Company and later managed by Pebble Beach Company as a controlled-access roadway. Landmarks along the corridor include the Lone Cypress, Spanish Bay shoreline, and Del Monte Forest segments. The drive\u2019s measured length, gate system, and private-management model distinguish it from standard public highways. It remains a structured landscape route where road engineering, coastal ecology, and resort-era planning are visible in one continuous circuit.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/17-Mile_Drive",
+      "wikiUrl": "https://en.wikipedia.org/wiki/17-Mile_Drive",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/17-Mile_Drive.jpg/640px-17-Mile_Drive.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Lone_Cypress.jpg/640px-Lone_Cypress.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/17_Mile_Drive_coast.jpg/640px-17_Mile_Drive_coast.jpg"
+      ]
+    },
+    {
+      "title": "Explore Point Lobos State Natural Reserve",
+      "description": "Point Lobos State Natural Reserve was established in 1933 and protects a rugged stretch of Monterey County coastline south of Carmel. The reserve includes underwater and terrestrial habitats, with coves, cypress stands, and kelp-rich nearshore waters that support sea lions, harbor seals, and seabirds. Trails and viewpoints are organized within a relatively compact land area, while adjacent marine conservation zones extend ecological protection offshore. The site also contains traces of earlier whaling and abalone industries documented in park interpretation. Its state reserve designation, coastal habitat diversity, and managed access system make Point Lobos a key reference landscape for central California shoreline conservation.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Point_Lobos",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Point_Lobos",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Point_Lobos.jpg/640px-Point_Lobos.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Point_Lobos_cypress.jpg/640px-Point_Lobos_cypress.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Point_Lobos_coastline.jpg/640px-Point_Lobos_coastline.jpg"
+      ]
+    },
+    {
+      "title": "Explore Carmel-by-the-Sea",
+      "description": "Carmel-by-the-Sea incorporated in 1916 and developed as a small coastal city on the Monterey Peninsula with a strong arts and architecture identity. Early twentieth-century residents included writers, photographers, and painters who helped establish galleries and performance institutions that still shape the local economy. The city is known for low-rise commercial streets, beach access at Carmel Bay, and planning rules that historically limited chain signage and dense urban form. Nearby Mission San Carlos Borromeo de Carmelo and shoreline reserves connect the town to deeper colonial and environmental histories. Its incorporation date, civic design controls, and cultural-institution footprint define Carmel beyond its role as a neighboring stop to Monterey.",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Carmel-by-the-Sea,_California",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Carmel-by-the-Sea,_California",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Carmel-by-the-Sea.jpg/640px-Carmel-by-the-Sea.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Carmel_Beach.jpg/640px-Carmel_Beach.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Carmel_downtown.jpg/640px-Carmel_downtown.jpg"
+      ]
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Best times to visit Monterey",
+    "bullets": [
+      "Spring and fall usually have mild weather.",
+      "Peak travel dates can require reservations.",
+      "Check seasonal operations before arrival."
+    ]
+  },
+  "travelTips": [
+    "Group nearby stops on the same day.",
+    "Prebook ticketed attractions in peak season.",
+    "Verify operating hours for parks and museums."
+  ],
+  "faq": [
+    {
+      "q": "How many days should I plan for Monterey?",
+      "a": "Two to four days covers core highlights and nearby nature areas."
+    }
+  ],
+  "tours": {
+    "stateSlug": "california",
+    "citySlug": "monterey",
+    "limit": 6,
+    "title": "Top Monterey tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Monterey",
+    "officialTourism": "https://www.visittheusa.com/"
+  }
+}
