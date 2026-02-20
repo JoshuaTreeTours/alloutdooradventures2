@@ -44,20 +44,22 @@ export default function UsGuidesIndex() {
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-12">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {stateSlugs.map(stateSlug => {
               const stateGuides = getGuidesByState(stateSlug);
 
               return (
                 <Link key={stateSlug} href={`/guides/us/${stateSlug}`}>
-                  <a className="rounded-3xl border border-black/10 bg-white/70 p-5 shadow-sm transition hover:bg-white">
-                    <p className="text-lg font-semibold text-[#1f2a1f]">
-                      {toLabel(stateSlug)}
-                    </p>
-                    <p className="mt-2 text-sm text-[#405040]">
-                      {stateGuides.length} city guide
-                      {stateGuides.length === 1 ? "" : "s"}
-                    </p>
+                  <a className="group block">
+                    <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm transition group-hover:shadow-md">
+                      <p className="text-xl font-semibold text-[#2f4a2f]">
+                        {toLabel(stateSlug)}
+                      </p>
+                      <p className="mt-2 text-sm text-black/60">
+                        {stateGuides.length} city guide
+                        {stateGuides.length === 1 ? "" : "s"}
+                      </p>
+                    </div>
                   </a>
                 </Link>
               );
