@@ -52,6 +52,16 @@ export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
     description:
       "Browse United States outdoor guides by state and jump into city-level planning pages.",
   },
+  "/guides/world": {
+    title: `International Guides | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse international country guides and continue into destination-level planning pages.",
+  },
+  "/guides/international": {
+    title: `International Guides | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse international country guides and continue into destination-level planning pages.",
+  },
   "/journeys": {
     title: `Journeys | ${SITE_BRAND_NAME}`,
     description:

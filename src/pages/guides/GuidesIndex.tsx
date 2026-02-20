@@ -1,10 +1,13 @@
 import { Link } from "wouter";
 
+import RegionDropdownButton from "../../components/RegionDropdownButton";
 import Seo from "../../components/Seo";
+import { getInternationalCountries } from "../../utils/guides/getInternationalCountries";
 import { getStaticPageSeo } from "../../utils/seo";
 
 export default function GuidesIndex() {
   const seo = getStaticPageSeo("/guides");
+  const countries = getInternationalCountries();
 
   return (
     <>
@@ -57,11 +60,23 @@ export default function GuidesIndex() {
                 Explore country and city guides outside the United States.
               </p>
               <div className="mt-5">
-                <Link href="/guides/world/france">
+                <Link href="/guides/world">
                   <a className="inline-flex rounded-full border border-[#2f4a2f]/20 bg-white px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
-                    Open world guides (France)
+                    Open world guides
                   </a>
                 </Link>
+              </div>
+              <div className="mt-4">
+                <RegionDropdownButton
+                  label="Choose a country guide"
+                  options={countries.map(country => ({
+                    name: country.name,
+                    slug: country.slug,
+                  }))}
+                  onSelect={slug => {
+                    window.location.assign(`/guides/world/${slug}`);
+                  }}
+                />
               </div>
             </div>
           </div>

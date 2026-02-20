@@ -982,7 +982,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     intro: `${countryName} offers ${countryTours.length + (engine2CountryCityIndex.get(countrySlug)?.tourCount ?? 0)} tours across ${cities.length} cities, spanning ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
-      { label: "International", href: "/guides" },
+      { label: "International", href: "/guides/world" },
       { label: countryName, href: `/guides/world/${countrySlug}` },
     ],
     topCities: cities,
