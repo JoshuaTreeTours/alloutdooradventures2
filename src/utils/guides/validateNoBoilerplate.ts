@@ -1,4 +1,13 @@
 const BLACKLIST = [
+  /perfect for/i,
+  /strong base for/i,
+  /over-scheduling/i,
+  /nearby experiences/i,
+  /build each day/i,
+  /first-time visitors/i,
+  /anchor area/i,
+  /pair landmarks/i,
+  /reduce transit time/i,
   /one of the most valuable things to do/i,
   /balanced itinerary/i,
   /travelers comparing attractions/i,

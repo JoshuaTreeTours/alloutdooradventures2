@@ -4,6 +4,7 @@ import {
   assertGuideHasNoWikiLanguage,
   cleanGuideTextContent,
 } from "../src/utils/guides/wikiLanguageGuard";
+import { buildCityAboutSection } from "../src/utils/guides/buildCityAboutSection";
 
 type GuideThing = {
   title: string;
@@ -32,15 +33,6 @@ type GuideJson = {
 const GUIDE_GLOB_ROOT = path.resolve("src/data/guides/us");
 const REPORTS_DIR = path.resolve("reports");
 const USER_AGENT = "alloutdooradventures/1.0 (guide-city-about-map-enrichment)";
-
-const ABOUT_HEADINGS = [
-  "Overview",
-  "Geography & setting",
-  "History (brief)",
-  "Culture & neighborhoods",
-  "Outdoor & seasonal highlights",
-  "Getting around",
-] as const;
 
 const toWords = (text: string) =>
   text.trim().split(/\s+/).filter(Boolean).length;
@@ -212,156 +204,19 @@ const fetchWikidataCoordinate = async (wikidataId: string) => {
   return coord;
 };
 
-const pickSentences = (
-  sentences: string[],
-  used: Set<string>,
-  min = 2,
-  max = 4
-) => {
-  const selected: string[] = [];
-  for (const sentence of sentences) {
-    if (used.has(sentence)) continue;
-    selected.push(sentence);
-    used.add(sentence);
-    if (selected.length >= max) break;
-  }
-  if (selected.length >= min) return selected;
-  return selected;
-};
-
 const composeAboutSections = (
   summary: string,
   extract: string,
-  isTier2: boolean
-) => {
-  const summarySentences = sentenceSplit(summary);
-  const allSentences = sentenceSplit(extract);
-  const byKeyword = {
-    geography: allSentences.filter(s =>
-      /river|lake|mountain|climate|elevation|region|located|coast|valley|desert|plain/i.test(
-        s
-      )
-    ),
-    history: allSentences.filter(s =>
-      /founded|incorporated|historic|history|settled|century|war|developed|established/i.test(
-        s
-      )
-    ),
-    culture: allSentences.filter(s =>
-      /culture|arts|museum|district|neighborhood|festival|music|community|downtown/i.test(
-        s
-      )
-    ),
-    outdoor: allSentences.filter(s =>
-      /park|trail|outdoor|hiking|ski|winter|summer|spring|fall|recreation|waterfront/i.test(
-        s
-      )
-    ),
-    transit: allSentences.filter(s =>
-      /transport|bus|rail|airport|highway|transit|walk|bike|road|commute/i.test(
-        s
-      )
-    ),
-  };
-
-  const used = new Set<string>();
-  const sections = [
-    {
-      heading: ABOUT_HEADINGS[0],
-      paragraphs: [
-        pickSentences([...summarySentences, ...allSentences], used, 2, 4).join(
-          " "
-        ),
-      ],
-    },
-    {
-      heading: ABOUT_HEADINGS[1],
-      paragraphs: [
-        pickSentences(
-          [...byKeyword.geography, ...allSentences],
-          used,
-          2,
-          4
-        ).join(" "),
-      ],
-    },
-    {
-      heading: ABOUT_HEADINGS[2],
-      paragraphs: [
-        pickSentences([...byKeyword.history, ...allSentences], used, 2, 4).join(
-          " "
-        ),
-      ],
-    },
-    {
-      heading: ABOUT_HEADINGS[3],
-      paragraphs: [
-        pickSentences([...byKeyword.culture, ...allSentences], used, 2, 4).join(
-          " "
-        ),
-      ],
-    },
-    {
-      heading: ABOUT_HEADINGS[4],
-      paragraphs: [
-        pickSentences([...byKeyword.outdoor, ...allSentences], used, 2, 4).join(
-          " "
-        ),
-      ],
-    },
-    {
-      heading: ABOUT_HEADINGS[5],
-      paragraphs: [
-        pickSentences([...byKeyword.transit, ...allSentences], used, 2, 4).join(
-          " "
-        ),
-      ],
-    },
-  ];
-
-  for (const section of sections) {
-    if (!section.paragraphs[0]) {
-      section.paragraphs = [pickSentences(allSentences, used, 2, 3).join(" ")];
-    }
-  }
-
-  const minWords = isTier2 ? 220 : 400;
-  const maxWords = isTier2 ? 400 : 700;
-  let words = toWords(sections.map(s => s.paragraphs.join(" ")).join(" "));
-
-  if (words < minWords) {
-    const filler = [
-      ...allSentences.filter(s => !used.has(s)),
-      ...summarySentences,
-      ...allSentences,
-    ];
-    for (const sentence of filler) {
-      sections[0].paragraphs[0] += ` ${sentence}`;
-      words = toWords(sections.map(s => s.paragraphs.join(" ")).join(" "));
-      if (words >= minWords) break;
-    }
-  }
-
-  if (words > maxWords) {
-    for (const section of sections) {
-      const trimmed = sentenceSplit(section.paragraphs[0])
-        .slice(0, 3)
-        .join(" ");
-      if (trimmed) section.paragraphs[0] = trimmed;
-    }
-  }
-
-  while (
-    toWords(sections.map(s => s.paragraphs.join(" ")).join(" ")) > maxWords
-  ) {
-    sections[0].paragraphs[0] = sentenceSplit(sections[0].paragraphs[0])
-      .slice(0, -1)
-      .join(" ");
-    if (!sections[0].paragraphs[0]) break;
-  }
-
-  return sections;
-};
+  cityName: string,
+  stateName: string
+) =>
+  buildCityAboutSection({
+    wikiSummaryText: summary,
+    wikiExtractText: extract,
+    cityName,
+    stateName,
+    countryName: "United States",
+  });
 
 const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -392,87 +247,41 @@ const run = async () => {
 
     const cityContext = await resolveCityWikiContext(cityCandidates);
 
-    if (cityContext) {
-      const sections = composeAboutSections(
-        cityContext.summary.extract,
-        cityContext.extract,
-        tier === "tier2"
+    if (!cityContext) {
+      console.log(
+        `INSUFFICIENT AUTHORITY CONTENT: ${guide.city}, ${guide.state}`
       );
-      guide.aboutCity = {
-        sourceUrl: cityContext.summary.url ?? guide.seoLinks?.wikipedia,
-        sections,
-      };
-
-      const count = toWords(
-        sections.map(section => section.paragraphs.join(" ")).join(" ")
-      );
-      lengthReport.push({
-        city: guide.city,
-        state: guide.state,
-        tier,
-        wordCount: count,
-      });
-    } else if (guide.overview?.length) {
-      const minWords = tier === "tier2" ? 220 : 400;
-      const maxWords = tier === "tier2" ? 400 : 700;
-      const repeatedOverview = guide.overview.join(" ");
-      const sectionText = [
-        repeatedOverview,
-        repeatedOverview,
-        repeatedOverview,
-      ].join(" ");
-      guide.aboutCity = {
-        sourceUrl: guide.seoLinks?.wikipedia,
-        sections: ABOUT_HEADINGS.map((heading, index) => ({
-          heading,
-          paragraphs: [
-            sentenceSplit(sectionText)
-              .slice(index * 3, index * 3 + 3)
-              .join(" ") ||
-              guide.overview?.[0] ||
-              "",
-          ],
-        })),
-      };
-
-      let fallbackWords = toWords(
-        guide.aboutCity.sections
-          .map(section => section.paragraphs.join(" "))
-          .join(" ")
-      );
-      while (fallbackWords < minWords) {
-        guide.aboutCity.sections[0].paragraphs[0] += ` ${repeatedOverview}`;
-        fallbackWords = toWords(
-          guide.aboutCity.sections
-            .map(section => section.paragraphs.join(" "))
-            .join(" ")
-        );
-      }
-      while (fallbackWords > maxWords) {
-        guide.aboutCity.sections[0].paragraphs[0] = sentenceSplit(
-          guide.aboutCity.sections[0].paragraphs[0]
-        )
-          .slice(0, -1)
-          .join(" ");
-        fallbackWords = toWords(
-          guide.aboutCity.sections
-            .map(section => section.paragraphs.join(" "))
-            .join(" ")
-        );
-      }
-
-      const count = toWords(
-        guide.aboutCity.sections
-          .map(section => section.paragraphs.join(" "))
-          .join(" ")
-      );
-      lengthReport.push({
-        city: guide.city,
-        state: guide.state,
-        tier,
-        wordCount: count,
-      });
+      continue;
     }
+
+    const sections = composeAboutSections(
+      cityContext.summary.extract,
+      cityContext.extract,
+      guide.city,
+      guide.state
+    );
+
+    if (!sections) {
+      console.log(
+        `INSUFFICIENT AUTHORITY CONTENT: ${guide.city}, ${guide.state}`
+      );
+      continue;
+    }
+
+    guide.aboutCity = {
+      sourceUrl: cityContext.summary.url ?? guide.seoLinks?.wikipedia,
+      sections,
+    };
+
+    const count = toWords(
+      sections.map(section => section.paragraphs.join(" ")).join(" ")
+    );
+    lengthReport.push({
+      city: guide.city,
+      state: guide.state,
+      tier,
+      wordCount: count,
+    });
 
     const cityMetaTitle = cityContext?.title ?? cityCandidates[0];
     const cityMeta = cityMetaTitle ? await fetchPageMeta(cityMetaTitle) : null;

@@ -45,7 +45,7 @@ const buildDescription = (
   cityName: string,
   stateName: string
 ) => {
-  const sentence = `${title} ${typeLead[type]} in ${cityName}, ${stateName}, known for ${typeExperience[type]}. It helps anchor a practical visit because the area combines orientation, context, and a clear sense of place without requiring a long transfer. The site is useful for first-time visitors who want a factual, city-grounded stop.`;
+  const sentence = `${title} ${typeLead[type]} in ${cityName}, ${stateName}, known for ${typeExperience[type]}. It provides historical and civic context by connecting the site to the city's broader institutions, built environment, and public memory.`;
 
   const words = sentence.split(/\s+/);
   if (words.length > 75) {
