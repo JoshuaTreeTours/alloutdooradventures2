@@ -96,27 +96,19 @@ export const fetchWikiSummary = async (
   await waitForRequestSlot();
 
   try {
-    const request = fetch(
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 1500);
+    const response = await fetch(
       `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(trimmed)}`,
       {
+        signal: controller.signal,
         headers: {
           Accept: "application/json",
           "User-Agent": USER_AGENT,
         },
       }
     );
-
-    const response = (await Promise.race([
-      request,
-      new Promise<null>(resolve => setTimeout(() => resolve(null), 500)),
-    ])) as Response | null;
-
-    if (!response) {
-      const empty = { extract: null, url: null };
-      cacheState.summaries[lookupKey] = empty;
-      cacheDirty = true;
-      return empty;
-    }
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       const empty = { extract: null, url: null };

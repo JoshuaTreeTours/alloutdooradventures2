@@ -5,10 +5,14 @@ import { validateNoBoilerplate } from "./validateNoBoilerplate";
 import { fetchWikiSummary } from "../wiki/wikiSummary";
 
 export type WikiDescResult = {
+  name: string;
   description: string;
   wikiUrl?: string | null;
   usedWiki: boolean;
 };
+
+export const TIER1_ATTRACTION_COUNT = 8;
+export const ENABLE_IMAGES = false;
 
 export async function buildWikiLandmarkDescription(args: {
   landmarkName: string;
@@ -46,6 +50,7 @@ export async function buildWikiLandmarkDescription(args: {
 
       if (!hasHighSimilarity(candidate, existingDescriptions)) {
         return {
+          name: landmarkName,
           description: candidate,
           wikiUrl: summary.url,
           usedWiki: true,
@@ -59,6 +64,7 @@ export async function buildWikiLandmarkDescription(args: {
 
     if (best) {
       return {
+        name: landmarkName,
         description: best,
         wikiUrl: summary.url,
         usedWiki: true,
@@ -67,6 +73,7 @@ export async function buildWikiLandmarkDescription(args: {
   }
 
   return {
+    name: landmarkName,
     description: fallbackLandmarkDescription({ landmarkName, cityName, stateName }),
     wikiUrl: null,
     usedWiki: false,

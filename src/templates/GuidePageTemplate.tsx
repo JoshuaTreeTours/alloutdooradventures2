@@ -149,7 +149,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
-              const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
+              const sourceUrl = item.wikiUrl ?? item.source_url ?? item.sourceUrl;
 
               return (
                 <li
@@ -189,13 +189,15 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
               </ul>
             </Section>
           ) : null}
-          <Section title="Travel tips">
-            <ul className="list-disc space-y-2 pl-5">
-              {guide.travelTips.map(tip => (
-                <li key={tip}>{tip}</li>
-              ))}
-            </ul>
-          </Section>
+          {guide.travelTips.length ? (
+            <Section title="Travel tips">
+              <ul className="list-disc space-y-2 pl-5">
+                {guide.travelTips.map(tip => (
+                  <li key={tip}>{tip}</li>
+                ))}
+              </ul>
+            </Section>
+          ) : null}
         </div>
 
         {featuredTours.length ? (
