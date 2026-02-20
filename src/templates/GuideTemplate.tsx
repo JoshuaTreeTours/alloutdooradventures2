@@ -11,6 +11,7 @@ import { getGuideCountryBySlug, getGuideStateBySlug } from "../data/guideData";
 import type { GuideImage } from "../data/guideImages";
 import { getToursByCity } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
+import { hasUsGuide } from "../utils/guides/guideIndex";
 import { buildMetaDescription } from "../utils/seo";
 
 type GuideTemplateProps = {
@@ -49,12 +50,17 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
   }
 
   const maxSiblingGuides = 4;
+  const parentSlug = guide.parentSlug;
   const parentGuide =
     guide.regionType === "country"
-      ? getGuideCountryBySlug(guide.parentSlug)
-      : getGuideStateBySlug(guide.parentSlug);
+      ? getGuideCountryBySlug(parentSlug)
+      : getGuideStateBySlug(parentSlug);
   const siblingCities =
     parentGuide?.cities
+      .filter(
+        city =>
+          guide.regionType !== "state" || hasUsGuide(parentSlug, city.slug)
+      )
       .filter(city => city.slug !== guide.slug)
       .sort((a, b) => a.name.localeCompare(b.name)) ?? [];
   const showSiblingGuides =
@@ -68,7 +74,7 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
         Explore More Guides Nearby
       </p>
       <div className="mt-3 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
-        <Link href={`${guideBasePath}/${guide.parentSlug}`}>
+        <Link href={`${guideBasePath}/${parentSlug}`}>
           <a className="rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
             {guide.parentName} travel guide
           </a>
@@ -76,8 +82,8 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
         {showSiblingGuides
           ? siblingCities.map(city => (
               <Link
-                key={`${guide.parentSlug}-${city.slug}`}
-                href={`${guideBasePath}/${guide.parentSlug}/${city.slug}`}
+                key={`${parentSlug}-${city.slug}`}
+                href={`${guideBasePath}/${parentSlug}/${city.slug}`}
               >
                 <a className="rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
                   {city.name} guide
@@ -92,13 +98,17 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
 
 export default function GuideTemplate({ guide }: GuideTemplateProps) {
   const cityPills =
-    guide.topCities?.map(city => ({
-      label: city.name,
-      href:
-        guide.type === "state"
-          ? `/guides/us/${guide.slug}/${city.slug}`
-          : `/guides/world/${guide.slug}/${city.slug}`,
-    })) ?? [];
+    guide.topCities
+      ?.filter(
+        city => guide.type !== "state" || hasUsGuide(guide.slug, city.slug)
+      )
+      .map(city => ({
+        label: city.name,
+        href:
+          guide.type === "state"
+            ? `/guides/us/${guide.slug}/${city.slug}`
+            : `/guides/world/${guide.slug}/${city.slug}`,
+      })) ?? [];
 
   const guideImages = guide.type === "city" ? (guide.guideImages ?? []) : [];
   const guideTitle =
