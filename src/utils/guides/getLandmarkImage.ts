@@ -1,5 +1,9 @@
 const CACHE_PATH = "data/landmarkImages.json";
 const CONFIDENCE_THRESHOLD = 0.8;
+const COMMONS_ENDPOINT = "https://commons.wikimedia.org/w/api.php";
+const WIKIPEDIA_SEARCH_ENDPOINT = "https://en.wikipedia.org/w/api.php";
+const WIKIPEDIA_SUMMARY_ENDPOINT =
+  "https://en.wikipedia.org/api/rest_v1/page/summary";
 
 type CacheEntry = {
   imageUrl: string | null;
@@ -21,9 +25,13 @@ let cacheState: CacheMap | null = null;
 let saveInFlight: Promise<void> = Promise.resolve();
 
 const isNode = typeof window === "undefined";
+const shouldPersistCache = isNode && !process.env.VITEST;
 
 const toKey = (name: string, city: string) =>
   `${city.trim().toLowerCase()}::${name.trim().toLowerCase()}`;
+
+const normalize = (value: string) =>
+  value.toLowerCase().replace(/\s+/g, " ").trim();
 
 export const extractLandmarkNameFromTitle = (title: string) =>
   title
@@ -35,7 +43,8 @@ const ensureCacheLoaded = async () => {
   if (cacheState) return;
   cacheState = {};
 
-  if (!isNode) return;
+  if (!shouldPersistCache) return;
+
   try {
     const fs = await import("node:fs/promises");
     const raw = await fs.readFile(CACHE_PATH, "utf8");
@@ -46,7 +55,7 @@ const ensureCacheLoaded = async () => {
 };
 
 const queueCacheWrite = async () => {
-  if (!isNode || !cacheState) return;
+  if (!shouldPersistCache || !cacheState) return;
 
   saveInFlight = saveInFlight.then(async () => {
     const fs = await import("node:fs/promises");
@@ -60,6 +69,14 @@ const queueCacheWrite = async () => {
 
 const clamp = (value: number) => Math.max(0, Math.min(1, value));
 
+const isGenericImage = (text: string) =>
+  /(landscape|sunset|sunrise|wallpaper|panorama|nature scenery|skyline view|aerial|drone)/i.test(
+    text
+  );
+
+const isNonPhotographicAsset = (text: string) =>
+  /(map|locator|logo|icon|coat of arms|diagram|flag|seal)/i.test(text);
+
 const scoreCommonsCandidate = ({
   page,
   name,
@@ -69,12 +86,12 @@ const scoreCommonsCandidate = ({
   name: string;
   city: string;
 }) => {
-  const lowerName = name.toLowerCase();
-  const lowerCity = city.toLowerCase();
-  const title = (page.title ?? "").toLowerCase();
-  const categories = (page.categories ?? [])
-    .map(category => category.title?.toLowerCase() ?? "")
-    .join(" ");
+  const lowerName = normalize(name);
+  const lowerCity = normalize(city);
+  const title = normalize(page.title ?? "");
+  const categories = normalize(
+    (page.categories ?? []).map(category => category.title ?? "").join(" ")
+  );
 
   let score = 0.2;
 
@@ -89,42 +106,30 @@ const scoreCommonsCandidate = ({
     score += 0.1;
   }
 
-  if (
-    /(landscape|sunset|sunrise|wallpaper|panorama|nature scenery)/.test(
-      categories
-    )
-  ) {
-    score -= 0.45;
-  }
-
-  if (/(^|:)file:(img_|dsc_|p\d{4}|photo\d+)/.test(title)) {
-    score -= 0.25;
-  }
-
-  if (/(map|locator|logo|icon|coat of arms)/.test(title + " " + categories)) {
-    score -= 0.4;
-  }
+  if (isGenericImage(categories)) score -= 0.45;
+  if (isNonPhotographicAsset(`${title} ${categories}`)) score -= 0.5;
+  if (/(^|:)file:(img_|dsc_|p\d{4}|photo\d+)/.test(title)) score -= 0.25;
 
   return clamp(score);
 };
 
 const searchCommons = async (name: string, city: string) => {
-  const query = `${name} ${city} landmark`;
-  const url = new URL("https://commons.wikimedia.org/w/api.php");
+  const url = new URL(COMMONS_ENDPOINT);
   url.searchParams.set("action", "query");
   url.searchParams.set("format", "json");
   url.searchParams.set("origin", "*");
   url.searchParams.set("generator", "search");
   url.searchParams.set("gsrnamespace", "6");
-  url.searchParams.set("gsrsearch", query);
-  url.searchParams.set("gsrlimit", "8");
+  url.searchParams.set("gsrsearch", `intitle:${name} ${city}`);
+  url.searchParams.set("gsrlimit", "10");
   url.searchParams.set("prop", "imageinfo|coordinates|categories");
   url.searchParams.set("iiprop", "url");
-  url.searchParams.set("cllimit", "20");
+  url.searchParams.set("cllimit", "30");
 
   const response = await fetch(url, {
     headers: { Accept: "application/json" },
   });
+
   if (!response.ok) return null;
 
   const payload = (await response.json()) as {
@@ -132,36 +137,54 @@ const searchCommons = async (name: string, city: string) => {
   };
 
   const pages = Object.values(payload.query?.pages ?? {});
+
   const candidates = pages
     .map(page => {
       const imageUrl = page.imageinfo?.[0]?.url ?? null;
       if (!imageUrl) return null;
 
       const confidence = scoreCommonsCandidate({ page, name, city });
-      return {
-        imageUrl,
-        confidence,
-      };
+      return { imageUrl, confidence };
     })
-    .filter((item): item is { imageUrl: string; confidence: number } =>
-      Boolean(item)
+    .filter((entry): entry is { imageUrl: string; confidence: number } =>
+      Boolean(entry)
     )
     .sort((a, b) => b.confidence - a.confidence);
 
   return candidates[0] ?? null;
 };
 
-const fallbackWikipediaImage = async (name: string, city: string) => {
-  const title = `${name}, ${city}`;
-  const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`;
+const searchWikipediaTitle = async (name: string, city: string) => {
+  const url = new URL(WIKIPEDIA_SEARCH_ENDPOINT);
+  url.searchParams.set("action", "query");
+  url.searchParams.set("format", "json");
+  url.searchParams.set("origin", "*");
+  url.searchParams.set("list", "search");
+  url.searchParams.set("srlimit", "1");
+  url.searchParams.set("srsearch", `${name} ${city}`);
 
   const response = await fetch(url, {
     headers: { Accept: "application/json" },
   });
 
-  if (!response.ok) {
-    return null;
-  }
+  if (!response.ok) return null;
+
+  const payload = (await response.json()) as {
+    query?: {
+      search?: Array<{ title?: string }>;
+    };
+  };
+
+  return payload.query?.search?.[0]?.title?.trim() || null;
+};
+
+const fetchWikipediaSummary = async (title: string) => {
+  const response = await fetch(
+    `${WIKIPEDIA_SUMMARY_ENDPOINT}/${encodeURIComponent(title)}`,
+    { headers: { Accept: "application/json" } }
+  );
+
+  if (!response.ok) return null;
 
   const payload = (await response.json()) as {
     title?: string;
@@ -174,20 +197,39 @@ const fallbackWikipediaImage = async (name: string, city: string) => {
     payload.thumbnail?.source ?? payload.originalimage?.source ?? null;
   if (!imageUrl) return null;
 
-  const pageTitle = payload.title?.toLowerCase() ?? "";
-  const pageDescription = payload.description?.toLowerCase() ?? "";
-  const lowerName = name.toLowerCase();
-  const lowerCity = city.toLowerCase();
+  return {
+    title: payload.title ?? title,
+    description: payload.description ?? "",
+    imageUrl,
+  };
+};
 
-  const confidence = clamp(
-    0.65 +
-      (pageTitle.includes(lowerName) ? 0.2 : 0) +
-      (pageTitle.includes(lowerCity) || pageDescription.includes(lowerCity)
-        ? 0.05
-        : 0)
-  );
+const fallbackWikipediaImage = async (name: string, city: string) => {
+  const titleCandidates = [`${name}, ${city}`, name];
+  const searchedTitle = await searchWikipediaTitle(name, city);
+  if (searchedTitle) {
+    titleCandidates.unshift(searchedTitle);
+  }
 
-  return { imageUrl, confidence };
+  for (const title of titleCandidates) {
+    const summary = await fetchWikipediaSummary(title);
+    if (!summary) continue;
+
+    const pageTitle = normalize(summary.title);
+    const pageDescription = normalize(summary.description);
+    const lowerName = normalize(name);
+    const lowerCity = normalize(city);
+
+    let confidence = 0.6;
+    if (pageTitle.includes(lowerName)) confidence += 0.25;
+    if (pageTitle.includes(lowerCity) || pageDescription.includes(lowerCity))
+      confidence += 0.1;
+    if (isGenericImage(`${pageTitle} ${pageDescription}`)) confidence -= 0.2;
+
+    return { imageUrl: summary.imageUrl, confidence: clamp(confidence) };
+  }
+
+  return null;
 };
 
 export const getLandmarkImage = async (
@@ -239,6 +281,7 @@ export const getLandmarkImage = async (
       updatedAt: new Date().toISOString(),
     };
     await queueCacheWrite();
+
     return null;
   } catch {
     return null;
