@@ -1,4 +1,5 @@
 import type { GuidePageData } from "../loadGuide";
+import { isGuideCityAllowedUS } from "./guideCityAllowlistUS";
 
 type GuideRegistryRecord = {
   country: "us";
@@ -38,7 +39,8 @@ export const usGuideRegistry: GuideRegistryRecord[] = Object.entries(usGuideModu
       dataImport,
     };
   })
-  .filter((record): record is GuideRegistryRecord => Boolean(record));
+  .filter((record): record is GuideRegistryRecord => Boolean(record))
+  .filter(record => isGuideCityAllowedUS(record.stateSlug, record.citySlug));
 
 const guideRegistryByKey = new Map(
   usGuideRegistry.map(record => [
