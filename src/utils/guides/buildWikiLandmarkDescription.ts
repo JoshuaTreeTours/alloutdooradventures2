@@ -1,4 +1,5 @@
 import { hasHighSimilarity } from "./checkDescriptionSimilarity";
+import { cleanLandmarkText } from "./cleanLandmarkText";
 import { fallbackLandmarkDescription } from "./fallbackLandmarkDescription";
 import { paraphraseWikiSummary } from "./paraphraseWikiSummary";
 import { validateNoBoilerplate } from "./validateNoBoilerplate";
@@ -15,9 +16,50 @@ export async function buildWikiLandmarkDescription(args: {
   landmarkName: string;
   cityName: string;
   stateName: string;
+  tier?: "tier1" | "tier2";
   existingDescriptions?: string[];
 }): Promise<WikiDescResult> {
-  const { landmarkName, cityName, stateName, existingDescriptions = [] } = args;
+  const {
+    landmarkName,
+    cityName,
+    stateName,
+    tier,
+    existingDescriptions = [],
+  } = args;
+
+  const toAuthoritativeDescription = (
+    description: string,
+    wikiSummaryText?: string
+  ) => {
+    if (tier !== "tier1") return description;
+
+    let rewritten = cleanLandmarkText(description)
+      .replace(/visitors experience/gi, "The area offers")
+      .replace(/is recognized as/gi, "is")
+      .replace(/is known for/gi, "features")
+      .replace(
+        /provides a practical orientation point/gi,
+        "serves as a major landmark"
+      );
+
+    if (rewritten.split(/\s+/).filter(Boolean).length < 60 && wikiSummaryText) {
+      const firstSentence = wikiSummaryText
+        .split(".")
+        .slice(0, 1)
+        .join(".")
+        .trim();
+      if (firstSentence) {
+        rewritten = `${rewritten} ${firstSentence}`.trim();
+      }
+    }
+
+    if (/article|coverage|dataset/i.test(rewritten)) {
+      console.warn("Non-authoritative text detected", landmarkName);
+    }
+
+    return rewritten;
+  };
+
   const candidateTitles = [
     `${landmarkName}`,
     `${landmarkName} (${cityName})`,
@@ -45,17 +87,22 @@ export async function buildWikiLandmarkDescription(args: {
         continue;
       }
 
-      if (!hasHighSimilarity(candidate, existingDescriptions)) {
+      const cleanedCandidate = toAuthoritativeDescription(
+        candidate,
+        summary.extract
+      );
+
+      if (!hasHighSimilarity(cleanedCandidate, existingDescriptions)) {
         return {
-          description: candidate,
+          description: cleanedCandidate,
           wikiUrl: summary.url,
           imageUrl: summary.imageUrl,
           usedWiki: true,
         };
       }
 
-      if (!best || candidate.length > best.length) {
-        best = candidate;
+      if (!best || cleanedCandidate.length > best.length) {
+        best = cleanedCandidate;
       }
     }
 
