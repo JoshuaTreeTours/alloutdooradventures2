@@ -29,6 +29,8 @@ import StateToursRoute from "./pages/destinations/states/tours/StateToursRoute";
 import ToursLanding from "./pages/tours/ToursLanding";
 import ToursCatalog from "./pages/ToursCatalog";
 import GuidesIndex from "./pages/guides/GuidesIndex";
+import UsGuidesIndex from "./pages/guides/UsGuidesIndex";
+import InternationalGuidesIndex from "./pages/guides/InternationalGuidesIndex";
 import StateGuideRoute from "./pages/guides/StateGuideRoute";
 import CityGuideUsRoute from "./pages/guides/CityGuideUsRoute";
 import CountryGuideRoute from "./pages/guides/CountryGuideRoute";
@@ -274,6 +276,26 @@ export default function App() {
         <Route path="/tours/day/paddle" component={DayPaddleTours} />
         <Route path="/tours/multi-day" component={MultiDayLanding} />
         <Route path="/guides" component={GuidesIndex} />
+        <Route path="/guides/us" component={UsGuidesIndex} />
+        <Route
+          path="/guides/international/:countrySlug/:citySlug"
+          component={({ params }) => (
+            <RouteRedirect
+              to={`/guides/world/${params.countrySlug}/${params.citySlug}`}
+            />
+          )}
+        />
+        <Route
+          path="/guides/international/:countrySlug"
+          component={({ params }) => (
+            <RouteRedirect to={`/guides/world/${params.countrySlug}`} />
+          )}
+        />
+        <Route
+          path="/guides/international"
+          component={() => <RouteRedirect to="/guides/world" />}
+        />
+        <Route path="/guides/world" component={InternationalGuidesIndex} />
         <Route
           path="/guides/us/:stateSlug/:citySlug"
           component={CityGuideUsRoute}

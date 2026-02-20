@@ -18,6 +18,9 @@ type GuideTemplateProps = {
   guide: GuideContent;
 };
 
+const topCityChipClass =
+  "inline-flex items-center rounded-full border border-[#2f4a2f]/20 bg-white px-4 py-2 text-sm font-medium tracking-wide text-[#2f4a2f] shadow-sm transition hover:border-[#2f4a2f]/30 hover:bg-[#f0f4ee] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2f4a2f]/30";
+
 const Section = ({
   title,
   children,
@@ -218,9 +221,13 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
         ) : null}
         {cityPills.length ? (
           <Section title="Top regions / cities">
-            <div className="flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               {cityPills.map(city => (
-                <GuideLinkPill key={city.href} link={city} />
+                <GuideLinkPill
+                  key={city.href}
+                  link={city}
+                  className={topCityChipClass}
+                />
               ))}
             </div>
           </Section>

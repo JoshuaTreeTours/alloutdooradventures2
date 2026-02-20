@@ -15,7 +15,13 @@ export const DEFAULT_SEO = {
   image: "/hero.jpg",
 } as const;
 
-export const STATIC_PAGE_SEO = {
+type StaticSeoEntry = {
+  title: string;
+  description: string;
+  image?: string;
+};
+
+export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
   "/faqs": {
     title: `FAQs | ${SITE_BRAND_NAME}`,
     description:
@@ -41,6 +47,21 @@ export const STATIC_PAGE_SEO = {
     description:
       "Discover destination guides with expert insights to help you plan your next outdoor escape.",
   },
+  "/guides/us": {
+    title: `US Guides | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse United States outdoor guides by state and jump into city-level planning pages.",
+  },
+  "/guides/world": {
+    title: `International Guides | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse international country guides and continue into destination-level planning pages.",
+  },
+  "/guides/international": {
+    title: `International Guides | ${SITE_BRAND_NAME}`,
+    description:
+      "Browse international country guides and continue into destination-level planning pages.",
+  },
   "/journeys": {
     title: `Journeys | ${SITE_BRAND_NAME}`,
     description:
@@ -50,7 +71,7 @@ export const STATIC_PAGE_SEO = {
     title: `About | ${SITE_BRAND_NAME}`,
     description: `Learn about the team behind ${SITE_BRAND_NAME} and our mission to curate unforgettable experiences.`,
   },
-} as const;
+};
 
 const normalizeText = (text: string) => text.replace(/\s+/g, " ").trim();
 

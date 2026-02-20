@@ -15,7 +15,10 @@ import { getFlagstaffTourDetailPath } from "./flagstaffTours";
 import type { GuideImage } from "./guideImages";
 import { getGuideImages } from "./guideImages";
 import { getTourDetailPath, tours } from "./tours";
-import { getAllEngine2Tours, type Engine2Tour } from "../engine2/data/loadEngine2";
+import {
+  getAllEngine2Tours,
+  type Engine2Tour,
+} from "../engine2/data/loadEngine2";
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 
@@ -79,9 +82,9 @@ export type GuideContent = {
 export type { CityGuideIssue } from "./cityGuideContent";
 export { auditCityGuideContent } from "./cityGuideContent";
 
-const US_STATE_SLUGS = new Set(US_STATES.map((state) => slugify(state)));
+const US_STATE_SLUGS = new Set(US_STATES.map(state => slugify(state)));
 const EUROPE_COUNTRY_SLUGS = new Set(
-  EUROPE_COUNTRIES.map((country) => slugify(country)),
+  EUROPE_COUNTRIES.map(country => slugify(country))
 );
 const CATEGORY_ACTIVITY_SLUGS = new Set([
   "cycling",
@@ -135,20 +138,21 @@ const getCountryFromEngine2Tour = (tour: Engine2Tour) => {
 const engine2Tours = getAllEngine2Tours();
 
 const engine2CountryCityIndex = engine2Tours.reduce<
-  Map<string, { name: string; tourCount: number; cities: Map<string, GuideCitySummary> }>
+  Map<
+    string,
+    { name: string; tourCount: number; cities: Map<string, GuideCitySummary> }
+  >
 >((index, tour) => {
   const country = getCountryFromEngine2Tour(tour);
   if (!country) {
     return index;
   }
 
-  const existingCountry =
-    index.get(country.slug) ??
-    {
-      name: country.name,
-      tourCount: 0,
-      cities: new Map<string, GuideCitySummary>(),
-    };
+  const existingCountry = index.get(country.slug) ?? {
+    name: country.name,
+    tourCount: 0,
+    cities: new Map<string, GuideCitySummary>(),
+  };
 
   existingCountry.tourCount += 1;
 
@@ -200,23 +204,23 @@ const toEngine2GuideTour = (tour: Engine2Tour): Tour => ({
 });
 
 const engine2InternationalGuideTours = engine2Tours
-  .filter((tour) => {
+  .filter(tour => {
     const country = getCountryFromEngine2Tour(tour);
     return country?.slug === "france";
   })
   .map(toEngine2GuideTour);
 
 const engine2GuideCanonicalById = new Map<string, string>(
-  engine2Tours.map((tour) => [`engine2-guide-${tour.id}`, tour.seo.canonicalPath]),
+  engine2Tours.map(tour => [`engine2-guide-${tour.id}`, tour.seo.canonicalPath])
 );
 
 const mergeCitySummaries = (
   primary: GuideCitySummary[],
-  secondary: GuideCitySummary[],
+  secondary: GuideCitySummary[]
 ): GuideCitySummary[] => {
   const bySlug = new Map<string, GuideCitySummary>();
 
-  [...primary, ...secondary].forEach((city) => {
+  [...primary, ...secondary].forEach(city => {
     const existing = bySlug.get(city.slug);
     if (existing) {
       existing.tourCount += city.tourCount;
@@ -226,7 +230,9 @@ const mergeCitySummaries = (
     bySlug.set(city.slug, { ...city });
   });
 
-  return Array.from(bySlug.values()).sort((a, b) => a.name.localeCompare(b.name));
+  return Array.from(bySlug.values()).sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
 };
 
 const formatList = (items: string[]) => {
@@ -257,22 +263,22 @@ const buildKnownPoiSet = (cityName: string, cityFacts: CityFacts) => {
     `${cityName} Greenway`,
   ];
 
-  return new Set(basePois.map((item) => item.toLowerCase()));
+  return new Set(basePois.map(item => item.toLowerCase()));
 };
 
 const toCityGuideTextContent = (guide: GuideContent): CityGuideTextContent => ({
   intro: guide.intro,
   bestTimeToVisit: guide.bestTimeToVisit,
   whatToPack: guide.whatToPack,
-  itineraries: guide.itineraries.map((itinerary) => ({
+  itineraries: guide.itineraries.map(itinerary => ({
     title: itinerary.title,
     description: itinerary.description,
   })),
-  thingsToDoSections: guide.thingsToDoSections?.map((section) => ({
+  thingsToDoSections: guide.thingsToDoSections?.map(section => ({
     title: section.title,
     paragraphs: section.paragraphs,
   })),
-  topThingsToDo: guide.topThingsToDo?.map((item) => ({
+  topThingsToDo: guide.topThingsToDo?.map(item => ({
     title: item.title,
     description: item.description,
     activityType: item.activityType,
@@ -281,7 +287,7 @@ const toCityGuideTextContent = (guide: GuideContent): CityGuideTextContent => ({
 
 const applyCityGuideTextContent = (
   guide: GuideContent,
-  content: CityGuideTextContent,
+  content: CityGuideTextContent
 ): GuideContent => ({
   ...guide,
   intro: content.intro ?? guide.intro,
@@ -290,18 +296,22 @@ const applyCityGuideTextContent = (
   itineraries: guide.itineraries.map((itinerary, index) => ({
     ...itinerary,
     title: content.itineraries?.[index]?.title ?? itinerary.title,
-    description: content.itineraries?.[index]?.description ?? itinerary.description,
+    description:
+      content.itineraries?.[index]?.description ?? itinerary.description,
   })),
   thingsToDoSections: guide.thingsToDoSections?.map((section, index) => ({
     ...section,
     title: content.thingsToDoSections?.[index]?.title ?? section.title,
-    paragraphs: content.thingsToDoSections?.[index]?.paragraphs ?? section.paragraphs,
+    paragraphs:
+      content.thingsToDoSections?.[index]?.paragraphs ?? section.paragraphs,
   })),
   topThingsToDo: guide.topThingsToDo?.map((item, index) => ({
     ...item,
     title: content.topThingsToDo?.[index]?.title ?? item.title,
-    description: content.topThingsToDo?.[index]?.description ?? item.description,
-    activityType: content.topThingsToDo?.[index]?.activityType ?? item.activityType,
+    description:
+      content.topThingsToDo?.[index]?.description ?? item.description,
+    activityType:
+      content.topThingsToDo?.[index]?.activityType ?? item.activityType,
   })),
 });
 const sanitizationLogs = new Set<string>();
@@ -402,12 +412,12 @@ const STATE_ABBREVIATIONS: Record<string, string> = {
 
 const getCityLandmarks = (
   parentSlug: string,
-  citySlug: string,
+  citySlug: string
 ): CityLandmarks | null => CITY_LANDMARKS[`${parentSlug}/${citySlug}`] ?? null;
 
 const getCityMetadata = (
   stateSlug: string,
-  citySlug: string,
+  citySlug: string
 ): CityLandmarkMetadata | null => {
   const stateAbbreviation = STATE_ABBREVIATIONS[stateSlug] ?? stateSlug;
   return cityLandmarks[`${citySlug}-${stateAbbreviation}`] ?? null;
@@ -420,7 +430,7 @@ const buildMuseumsEssay = (
   cityName: string,
   parentName: string,
   landmarks: CityLandmarks | null,
-  metadata: CityLandmarkMetadata | null,
+  metadata: CityLandmarkMetadata | null
 ): GuideEssaySection => {
   const museums = landmarks?.museums ?? [];
   const culturalSites = landmarks?.culturalSites ?? [];
@@ -428,11 +438,11 @@ const buildMuseumsEssay = (
 
   const museumsLine = formatLandmarkList(
     museums,
-    `flagship art collections, regional history museums, and design-focused galleries`,
+    `flagship art collections, regional history museums, and design-focused galleries`
   );
   const culturalLine = formatLandmarkList(
     culturalSites,
-    `heritage sites that frame the city’s founding stories and modern identity`,
+    `heritage sites that frame the city’s founding stories and modern identity`
   );
   const culturalAreasLine =
     culturalAreas.length > 0
@@ -455,7 +465,7 @@ const buildNeighborhoodsEssay = (
   parentName: string,
   landmarks: CityLandmarks | null,
   metadata: CityLandmarkMetadata | null,
-  cityFacts: CityFacts,
+  cityFacts: CityFacts
 ): GuideEssaySection => {
   const neighborhoods = landmarks?.neighborhoods ?? [];
   const districts = landmarks?.districts ?? [];
@@ -470,19 +480,19 @@ const buildNeighborhoodsEssay = (
         ? `a coastal town vibe`
         : cityFacts.type === "desert-town"
           ? `a desert-town energy`
-        : cityFacts.type === "historic-district"
-          ? `a historic district feel`
-        : cityFacts.type === "urban"
-          ? `an urban energy`
-          : `a small-town rhythm`;
+          : cityFacts.type === "historic-district"
+            ? `a historic district feel`
+            : cityFacts.type === "urban"
+              ? `an urban energy`
+              : `a small-town rhythm`;
 
   const neighborhoodsLine = formatLandmarkList(
     neighborhoods,
-    `historic neighborhoods with tree-lined streets, creative districts, and café-filled corners`,
+    `historic neighborhoods with tree-lined streets, creative districts, and café-filled corners`
   );
   const districtsLine = formatLandmarkList(
     districts,
-    `market halls, converted warehouses, and downtown corridors that anchor the local scene`,
+    `market halls, converted warehouses, and downtown corridors that anchor the local scene`
   );
 
   if (
@@ -575,13 +585,13 @@ const buildOutdoorsEssay = (
   parentName: string,
   landmarks: CityLandmarks | null,
   metadata: CityLandmarkMetadata | null,
-  cityFacts: CityFacts,
+  cityFacts: CityFacts
 ): GuideEssaySection => {
   const outdoors = cityFacts.outdoors;
   const scenicAreas = metadata?.scenicAreas ?? [];
   const outdoorsLine = formatLandmarkList(
     outdoors,
-    `a mix of greenways, riverfront paths, and hillside viewpoints that frame the skyline`,
+    `a mix of greenways, riverfront paths, and hillside viewpoints that frame the skyline`
   );
   const scenicLine = scenicAreas.length
     ? `Local favorites like ${formatList(scenicAreas)} keep the scenery close at hand.`
@@ -597,20 +607,25 @@ const buildOutdoorsEssay = (
   };
 };
 
-
 const buildCityThingsToDoSections = (
   cityName: string,
   parentName: string,
   parentSlug: string,
   citySlug: string,
-  cityFacts: CityFacts,
+  cityFacts: CityFacts
 ): GuideEssaySection[] => {
   const landmarks = getCityLandmarks(parentSlug, citySlug);
   const metadata = getCityMetadata(parentSlug, citySlug);
 
   return [
     buildMuseumsEssay(cityName, parentName, landmarks, metadata),
-    buildNeighborhoodsEssay(cityName, parentName, landmarks, metadata, cityFacts),
+    buildNeighborhoodsEssay(
+      cityName,
+      parentName,
+      landmarks,
+      metadata,
+      cityFacts
+    ),
     buildOutdoorsEssay(cityName, parentName, landmarks, metadata, cityFacts),
   ];
 };
@@ -618,20 +633,20 @@ const buildCityThingsToDoSections = (
 const getActivitySlugs = (tourList: Tour[]) =>
   Array.from(
     new Set(
-      tourList.flatMap((tour) =>
+      tourList.flatMap(tour =>
         tour.activitySlugs.length
           ? tour.activitySlugs
           : tour.primaryCategory
             ? [tour.primaryCategory]
-            : [],
-      ),
-    ),
+            : []
+      )
+    )
   );
 
 const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
   const cities = new Map<string, GuideCitySummary>();
 
-  tourList.forEach((tour) => {
+  tourList.forEach(tour => {
     const key = tour.destination.citySlug;
     if (!key) {
       return;
@@ -651,7 +666,7 @@ const buildCitySummaries = (tourList: Tour[]): GuideCitySummary[] => {
   });
 
   return Array.from(cities.values()).sort((a, b) =>
-    a.name.localeCompare(b.name),
+    a.name.localeCompare(b.name)
   );
 };
 
@@ -661,7 +676,10 @@ export const getGuideTourDetailPath = (tour: Tour) => {
     return engine2Path;
   }
 
-  if (tour.destination.stateSlug === "arizona" && tour.destination.citySlug === "flagstaff") {
+  if (
+    tour.destination.stateSlug === "arizona" &&
+    tour.destination.citySlug === "flagstaff"
+  ) {
     return getFlagstaffTourDetailPath(tour);
   }
 
@@ -671,7 +689,7 @@ export const getGuideTourDetailPath = (tour: Tour) => {
 export const getGuideStates = (): GuidePlaceSummary[] => {
   const states = new Map<string, GuidePlaceSummary>();
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     if (!isUsStateTour(tour)) {
       return;
     }
@@ -692,10 +710,10 @@ export const getGuideStates = (): GuidePlaceSummary[] => {
   });
 
   return Array.from(states.values())
-    .map((state) => ({
+    .map(state => ({
       ...state,
       cities: buildCitySummaries(
-        tours.filter((tour) => tour.destination.stateSlug === state.slug),
+        tours.filter(tour => tour.destination.stateSlug === state.slug)
       ),
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -704,7 +722,7 @@ export const getGuideStates = (): GuidePlaceSummary[] => {
 export const getGuideCountries = (): GuidePlaceSummary[] => {
   const countries = new Map<string, GuidePlaceSummary>();
 
-  tours.forEach((tour) => {
+  tours.forEach(tour => {
     const country = getCountryFromTour(tour);
     if (!country) {
       return;
@@ -740,15 +758,15 @@ export const getGuideCountries = (): GuidePlaceSummary[] => {
   });
 
   return Array.from(countries.values())
-    .map((country) => {
+    .map(country => {
       const tourCities = buildCitySummaries(
-        tours.filter((tour) => {
+        tours.filter(tour => {
           const tourCountry = getCountryFromTour(tour);
           return tourCountry?.slug === country.slug;
-        }),
+        })
       );
       const engine2Cities = Array.from(
-        engine2CountryCityIndex.get(country.slug)?.cities.values() ?? [],
+        engine2CountryCityIndex.get(country.slug)?.cities.values() ?? []
       );
 
       return {
@@ -760,28 +778,23 @@ export const getGuideCountries = (): GuidePlaceSummary[] => {
 };
 
 export const getGuideStateBySlug = (stateSlug: string) =>
-  getGuideStates().find((state) => state.slug === stateSlug);
+  getGuideStates().find(state => state.slug === stateSlug);
 
 export const getGuideCountryBySlug = (countrySlug: string) =>
-  getGuideCountries().find((country) => country.slug === countrySlug);
+  getGuideCountries().find(country => country.slug === countrySlug);
 
 export const getCountryDestinationHref = (countrySlug: string) =>
   EUROPE_COUNTRY_SLUGS.has(countrySlug)
     ? `/destinations/europe/${countrySlug}`
     : `/destinations/world/${countrySlug}`;
 
-const getInternationalCityBasePath = (
-  countrySlug: string,
-  citySlug: string,
-) =>
+const getInternationalCityBasePath = (countrySlug: string, citySlug: string) =>
   EUROPE_COUNTRY_SLUGS.has(countrySlug)
     ? `/destinations/europe/${countrySlug}/cities/${citySlug}`
     : `/destinations/world/${countrySlug}/cities/${citySlug}`;
 
-const getInternationalCityToursPath = (
-  countrySlug: string,
-  citySlug: string,
-) => `${getInternationalCityBasePath(countrySlug, citySlug)}/tours`;
+const getInternationalCityToursPath = (countrySlug: string, citySlug: string) =>
+  `${getInternationalCityBasePath(countrySlug, citySlug)}/tours`;
 
 const buildBestTimeToVisit = (placeName: string) =>
   `Tour availability in ${placeName} varies by operator and activity, so check live calendars and choose dates that match your preferred pace.`;
@@ -791,11 +804,11 @@ const buildWhatToPack = () =>
 
 const buildActivityLinks = (
   tourList: Tour[],
-  buildHref: (slug: string) => string,
+  buildHref: (slug: string) => string
 ): GuideLink[] => {
   const activitySlugs = getActivitySlugs(tourList);
 
-  return activitySlugs.map((slug) => ({
+  return activitySlugs.map(slug => ({
     label: getActivityLabelFromSlug(slug),
     href: buildHref(slug),
   }));
@@ -803,9 +816,9 @@ const buildActivityLinks = (
 
 const buildCategoryLinks = (tourList: Tour[], max = 3) =>
   getActivitySlugs(tourList)
-    .filter((slug) => CATEGORY_ACTIVITY_SLUGS.has(slug))
+    .filter(slug => CATEGORY_ACTIVITY_SLUGS.has(slug))
     .slice(0, max)
-    .map((slug) => ({
+    .map(slug => ({
       slug,
       label: getActivityLabelFromSlug(slug),
       href: `/tours/activities/${slug}`,
@@ -813,7 +826,7 @@ const buildCategoryLinks = (tourList: Tour[], max = 3) =>
 
 export const buildStateGuide = (stateSlug: string): GuideContent | null => {
   const stateTours = tours.filter(
-    (tour) => tour.destination.stateSlug === stateSlug && isUsStateTour(tour),
+    tour => tour.destination.stateSlug === stateSlug && isUsStateTour(tour)
   );
 
   if (!stateTours.length) {
@@ -827,10 +840,10 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
     .slice(0, 3);
   const activityLabels = getActivitySlugs(stateTours)
     .slice(0, 4)
-    .map((slug) => getActivityLabelFromSlug(slug));
+    .map(slug => getActivityLabelFromSlug(slug));
   const categoryLinks = buildCategoryLinks(stateTours, 3);
 
-  const destinationCityLinks = highlightCities.map((city) => ({
+  const destinationCityLinks = highlightCities.map(city => ({
     label: `${city.name} city page`,
     href: `/destinations/states/${stateSlug}/cities/${city.slug}`,
   }));
@@ -849,9 +862,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
         destinationLink,
         destinationCityLinks[0],
         categoryLinks[0],
-      ].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
     {
       title: "Classic (4–5 days)",
@@ -861,9 +872,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
         destinationLink,
         destinationCityLinks[1] ?? destinationCityLinks[0],
         categoryLinks[1] ?? categoryLinks[0],
-      ].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
     {
       title: "Deep dive (7 days)",
@@ -873,9 +882,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
         destinationLink,
         destinationCityLinks[2] ?? destinationCityLinks[0],
         categoryLinks[2] ?? categoryLinks[0],
-      ].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
   ];
 
@@ -886,7 +893,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
     intro: `${stateName} has ${stateTours.length} tours across ${cities.length} cities, covering ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
-      { label: "United States", href: "/guides" },
+      { label: "United States", href: "/guides/us" },
       { label: stateName, href: `/guides/us/${stateSlug}` },
     ],
     topCities: cities,
@@ -898,7 +905,7 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
 };
 
 export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
-  const countryTours = tours.filter((tour) => {
+  const countryTours = tours.filter(tour => {
     const country = getCountryFromTour(tour);
     return country?.slug === countrySlug;
   });
@@ -915,7 +922,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     countrySlug;
   const tourCities = buildCitySummaries(countryTours);
   const engine2Cities = Array.from(
-    engine2CountryCityIndex.get(countrySlug)?.cities.values() ?? [],
+    engine2CountryCityIndex.get(countrySlug)?.cities.values() ?? []
   );
   const cities = mergeCitySummaries(tourCities, engine2Cities);
   const highlightCities = [...cities]
@@ -923,11 +930,11 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     .slice(0, 3);
   const activityLabels = getActivitySlugs(countryTours)
     .slice(0, 4)
-    .map((slug) => getActivityLabelFromSlug(slug));
+    .map(slug => getActivityLabelFromSlug(slug));
   const categoryLinks = buildCategoryLinks(countryTours, 3);
   const destinationHref = getCountryDestinationHref(countrySlug);
 
-  const cityLinks = highlightCities.map((city) => ({
+  const cityLinks = highlightCities.map(city => ({
     label: `${city.name} city page`,
     href: getInternationalCityBasePath(countrySlug, city.slug),
   }));
@@ -943,24 +950,28 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
       duration: "2–3 days",
       description: `Start in ${highlightCities[0]?.name ?? countryName} and combine a headline tour with a focused activity.`,
       links: [destinationLink, cityLinks[0], categoryLinks[0]].filter(
-        (link): link is GuideLink => Boolean(link),
+        (link): link is GuideLink => Boolean(link)
       ),
     },
     {
       title: "Classic (4–5 days)",
       duration: "4–5 days",
       description: `Add ${highlightCities[1]?.name ?? "another city"} to diversify activities and tour styles.`,
-      links: [destinationLink, cityLinks[1] ?? cityLinks[0], categoryLinks[1] ?? categoryLinks[0]].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      links: [
+        destinationLink,
+        cityLinks[1] ?? cityLinks[0],
+        categoryLinks[1] ?? categoryLinks[0],
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
     {
       title: "Deep dive (7 days)",
       duration: "7 days",
       description: `Connect multiple regions to build a well-rounded itinerary across the country.`,
-      links: [destinationLink, cityLinks[2] ?? cityLinks[0], categoryLinks[2] ?? categoryLinks[0]].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      links: [
+        destinationLink,
+        cityLinks[2] ?? cityLinks[0],
+        categoryLinks[2] ?? categoryLinks[0],
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
   ];
 
@@ -971,7 +982,7 @@ export const buildCountryGuide = (countrySlug: string): GuideContent | null => {
     intro: `${countryName} offers ${countryTours.length + (engine2CountryCityIndex.get(countrySlug)?.tourCount ?? 0)} tours across ${cities.length} cities, spanning ${formatList(activityLabels)}.`,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
-      { label: "International", href: "/guides" },
+      { label: "International", href: "/guides/world" },
       { label: countryName, href: `/guides/world/${countrySlug}` },
     ],
     topCities: cities,
@@ -1000,7 +1011,7 @@ export const buildCityGuide = ({
       ? tours
       : [...tours, ...engine2InternationalGuideTours];
 
-  const cityTours = sourceTours.filter((tour) => {
+  const cityTours = sourceTours.filter(tour => {
     if (tour.destination.citySlug !== citySlug) {
       return false;
     }
@@ -1021,21 +1032,21 @@ export const buildCityGuide = ({
   const parentName =
     regionType === "state"
       ? cityTours[0].destination.state
-      : getCountryFromTour(cityTours[0])?.name ?? parentSlug;
+      : (getCountryFromTour(cityTours[0])?.name ?? parentSlug);
   const filteredTours = activityFocus
-    ? cityTours.filter((tour) =>
-        tour.activitySlugs.includes(activityFocus),
-      )
+    ? cityTours.filter(tour => tour.activitySlugs.includes(activityFocus))
     : cityTours;
   const toursToShow = filteredTours.length ? filteredTours : cityTours;
-  const activityLinks = buildActivityLinks(cityTours, (slug) =>
+  const activityLinks = buildActivityLinks(cityTours, slug =>
     regionType === "state"
       ? `/destinations/states/${parentSlug}/cities/${citySlug}/tours?activity=${slug}`
-      : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${slug}`,
+      : `${getInternationalCityToursPath(parentSlug, citySlug)}?activity=${slug}`
   );
-  const activityLabels = activityLinks.map((activity) => activity.label).slice(0, 4);
+  const activityLabels = activityLinks
+    .map(activity => activity.label)
+    .slice(0, 4);
 
-  const tourLinks = toursToShow.slice(0, 6).map((tour) => ({
+  const tourLinks = toursToShow.slice(0, 6).map(tour => ({
     label: tour.title,
     href: getGuideTourDetailPath(tour),
   }));
@@ -1067,9 +1078,12 @@ export const buildCityGuide = ({
       title: "1-Day sampler",
       duration: "1 day",
       description: `Pick one signature tour and add a short activity window to get oriented.`,
-      links: [tourLinks[0], tourLinks[1], cityToursLink, ...categoryLinks].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      links: [
+        tourLinks[0],
+        tourLinks[1],
+        cityToursLink,
+        ...categoryLinks,
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
     {
       title: "3-Day explorer",
@@ -1080,9 +1094,7 @@ export const buildCityGuide = ({
         tourLinks[3] ?? tourLinks[1],
         cityToursLink,
         ...categoryLinks,
-      ].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
     {
       title: "5-Day deep dive",
@@ -1093,9 +1105,7 @@ export const buildCityGuide = ({
         tourLinks[5] ?? tourLinks[1],
         cityToursLink,
         ...categoryLinks,
-      ].filter(
-        (link): link is GuideLink => Boolean(link),
-      ),
+      ].filter((link): link is GuideLink => Boolean(link)),
     },
   ];
 
@@ -1153,25 +1163,20 @@ export const buildCityGuide = ({
     guideImages: getGuideImages(
       citySlug,
       regionType === "state" ? parentSlug : undefined,
-      regionType === "country" ? parentSlug : undefined,
+      regionType === "country" ? parentSlug : undefined
     ),
     thingsToDoSections: buildCityThingsToDoSections(
       cityName,
       parentName,
       parentSlug,
       citySlug,
+      cityFacts
+    ),
+    topThingsToDo: buildTopThingsToDo(cityName, parentSlug, citySlug, {
+      parentName,
+      regionType,
       cityFacts,
-    ),
-    topThingsToDo: buildTopThingsToDo(
-      cityName,
-      parentSlug,
-      citySlug,
-      {
-        parentName,
-        regionType,
-        cityFacts,
-      },
-    ),
+    }),
   };
 
   const overrideRoute = buildCityOverrideRoute({
@@ -1203,7 +1208,7 @@ export const buildCityGuide = ({
             ? 1
             : 2,
       knownPois,
-    },
+    }
   );
 
   if (
@@ -1213,7 +1218,7 @@ export const buildCityGuide = ({
   ) {
     sanitizationLogs.add(overrideRoute);
     console.info(
-      `[city-guide-sanitize] ${overrideRoute}: ${Array.from(new Set(changes)).join(", ")}`,
+      `[city-guide-sanitize] ${overrideRoute}: ${Array.from(new Set(changes)).join(", ")}`
     );
   }
 
