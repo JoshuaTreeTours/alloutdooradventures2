@@ -152,6 +152,7 @@ const run = async () => {
         cityName: guide.city,
         stateName: guide.state,
         existingDescriptions: existing,
+        tier: "tier1",
       });
 
       let description = cleanWikiLanguage(result.description);
@@ -168,6 +169,7 @@ const run = async () => {
           cityName: guide.city,
           stateName: guide.state,
           existingDescriptions: existing,
+          tier: "tier1",
         });
         description = cleanWikiLanguage(retry.description);
       }
@@ -187,6 +189,7 @@ const run = async () => {
           cityName: guide.city,
           stateName: guide.state,
           existingDescriptions: updatedThings.map(entry => entry.description),
+          tier: "tier1",
         });
 
         description = cleanWikiLanguage(regenerated.description);
