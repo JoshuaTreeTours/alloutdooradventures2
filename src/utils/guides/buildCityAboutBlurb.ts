@@ -58,6 +58,65 @@ const uniqTitles = (thingsToDo?: GuideThing[]) =>
 const trimToTwoSentences = (text: string) =>
   sentenceSplit(text).slice(0, 2).join(" ");
 
+const normalizeIdentityText = (text: string, cityName?: string) => {
+  const place = cityName ?? "This city";
+  let normalized = text
+    .replace(
+      /\b(urban municipality|regional system|administrative structure|recognized city|administrative)\b/gi,
+      ""
+    )
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (!normalized) {
+    normalized = `${place} is a major economic and cultural center with globally known institutions and landmark districts.`;
+  }
+
+  const words = normalized.split(/\s+/).filter(Boolean);
+  if (words.length > 20) {
+    normalized = `${words
+      .slice(0, 20)
+      .join(" ")
+      .replace(/[,:;]?$/, "")}.`;
+  }
+
+  if (words.length < 10) {
+    normalized = `${normalized.replace(/\.$/, "")}, with major economic activity and a strong cultural reputation.`;
+  }
+
+  return normalized.replace(/\s+/g, " ").trim();
+};
+
+const buildFallbackCharacter = ({
+  cityName,
+  thingsToDo,
+}: BuildCityAboutFactsInput) => {
+  const place = cityName ?? "This city";
+  const anchors = uniqTitles(thingsToDo);
+  const hasArt = anchors.some(title =>
+    /museum|art|gallery|theater|opera|music|cultural/i.test(title)
+  );
+  const hasEconomic = anchors.some(title =>
+    /port|market|center|district|financial|industry|harbor|terminal/i.test(
+      title
+    )
+  );
+
+  if (hasArt && hasEconomic) {
+    return `${place} combines a major economic role with an established cultural reputation shaped by prominent institutions.`;
+  }
+
+  if (hasArt) {
+    return `${place} has a strong cultural reputation with globally recognized institutions, landmark districts, and public venues.`;
+  }
+
+  if (hasEconomic) {
+    return `${place} holds a significant economic role, with major commercial activity and globally visible infrastructure.`;
+  }
+
+  return `${place} has global significance for its economic activity and cultural reputation across key landmark districts.`;
+};
+
 const withinWordBudget = (groups: AboutFactGroup[]) =>
   countWords(groups.map(group => group.text).join(" "));
 
@@ -180,12 +239,16 @@ export const buildCityAboutFactGroups = (
       /\b(known for|famous for|noted for|landmarks|museum|architecture|industry|arts|culture|port|university|districts?)\b/i
     ) ?? buildFallbackKnownFor(input);
 
-  const character =
+  const characterSource =
     pickFirst(
       sentences,
-      /\b(major city|largest|capital|economic|cultural|administrative|regional center|global city|municipality|commune)\b/i
-    ) ??
-    `${input.cityName ?? "This city"} is a recognized urban municipality in ${input.stateName ?? input.countryName ?? "its region"}.`;
+      /\b(economic|cultural|global|financial|commercial|creative|arts|media|technology|industrial|port city|capital)\b/i
+    ) ?? buildFallbackCharacter(input);
+
+  const character = normalizeIdentityText(
+    trimToTwoSentences(characterSource),
+    input.cityName
+  );
 
   const groups: AboutFactGroup[] = [
     { label: "Location", text: trimToTwoSentences(location) },
@@ -229,12 +292,10 @@ export const buildCityAboutFactGroups = (
   }
 
   if (withinWordBudget(deduped) < MIN_WORDS) {
-    const identityGroup = deduped.find(
-      group => group.label === "Character / Identity"
-    );
-    if (identityGroup) {
-      identityGroup.text +=
-        " It is identified as part of a broader regional urban system.";
+    const knownForGroup = deduped.find(group => group.label === "Known For");
+    if (knownForGroup) {
+      knownForGroup.text +=
+        " The city has established global visibility through documented landmark assets.";
     }
   }
 
