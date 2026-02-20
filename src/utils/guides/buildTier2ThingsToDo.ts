@@ -2,14 +2,12 @@ import type {
   CityLandmarkCandidate,
   LandmarkType,
 } from "./extractCityLandmarksFromTours";
+import { cleanLandmarkText, ensureLength } from "./cleanLandmarkText";
 
 export type Tier2ThingToDo = {
   title: string;
   description: string;
 };
-
-const wordCount = (text: string) =>
-  text.trim().split(/\s+/).filter(Boolean).length;
 
 const typeLead: Record<LandmarkType, string> = {
   park: "is a major outdoor area",
@@ -47,16 +45,7 @@ const buildDescription = (
 ) => {
   const sentence = `${title} ${typeLead[type]} in ${cityName}, ${stateName}, known for ${typeExperience[type]}. It helps anchor a practical visit because the area combines orientation, context, and a clear sense of place without requiring a long transfer. The site is useful for first-time visitors who want a factual, city-grounded stop.`;
 
-  const words = sentence.split(/\s+/);
-  if (words.length > 75) {
-    return `${words.slice(0, 75).join(" ").replace(/[;,]$/, "")}.`;
-  }
-
-  if (wordCount(sentence) >= 45) {
-    return sentence;
-  }
-
-  return `${sentence} It also serves as a straightforward reference point when connecting nearby neighborhoods, attractions, and waterfront or park routes.`;
+  return ensureLength(cleanLandmarkText(sentence), cityName, stateName, type);
 };
 
 export const buildTier2ThingsToDo = (
