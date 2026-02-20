@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite --host",
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
-    "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts && tsx scripts/audit-guide-images.ts",
+    "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts && tsx scripts/audit-guide-images.ts && tsx scripts/populate-guide-attraction-images.ts",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/vercel-build.mjs",
     "preview": "vite preview --host",

@@ -27,27 +27,57 @@
   "thingsToDo": [
     {
       "title": "Visit Newport Beach Pier",
-      "description": "Visit Newport Beach Pier is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography."
+      "description": "Visit Newport Beach Pier is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Visit%20Newport%20Beach%20Pier%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Visit%20Newport%20Beach%20Pier%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Visit Balboa Pier",
-      "description": "Visit Balboa Pier is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography."
+      "description": "Visit Balboa Pier is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Visit%20Balboa%20Pier%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Visit%20Balboa%20Pier%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Visit Balboa Island Ferry",
-      "description": "Visit Balboa Island Ferry is a prominent landmark in Newport Beach, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Visit Balboa Island Ferry is a prominent landmark in Newport Beach, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Visit%20Balboa%20Island%20Ferry%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Visit%20Balboa%20Island%20Ferry%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Visit Crystal Cove State Park",
-      "description": "Visit Crystal Cove State Park is a major urban park in Newport Beach, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city."
+      "description": "Visit Crystal Cove State Park is a major urban park in Newport Beach, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Visit%20Crystal%20Cove%20State%20Park%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Visit%20Crystal%20Cove%20State%20Park%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Boston Whaler",
-      "description": "Boston Whaler is a prominent landmark in Newport Beach, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Boston Whaler is a prominent landmark in Newport Beach, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Boston%20Whaler%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Boston%20Whaler%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     },
     {
       "title": "Newport Beach",
-      "description": "Newport Beach is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography."
+      "description": "Newport Beach is a waterfront landmark in Newport Beach, California, connected to shoreline infrastructure and public access zones. It is known for views over the water, maritime activity, and its relationship to nearby civic or commercial districts. Visitors experience promenades, changing light conditions, and a clear reference point for understanding the city's coastal or riverfront geography.",
+      "photoUrls": [
+        "https://cdn.filestackcontent.com/My8GARm5SHqPWQL6vnJC",
+        "https://source.unsplash.com/1600x900/?Newport%20Beach%20Newport%20Beach%20California%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Newport%20Beach%20Newport%20Beach%20California%20travel&sig=2"
+      ]
     }
   ],
   "bestTimeToVisit": {

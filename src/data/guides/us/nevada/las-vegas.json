@@ -35,9 +35,14 @@
   "thingsToDo": [
     {
       "title": "Explore Las Vegas Strip",
-      "description": "The Las Vegas Strip is a 4.2-mile segment of Las Vegas Boulevard South, and most of it lies in Paradise and Winchester rather than inside the City of Las Vegas boundary. Resort development accelerated after the 1946 opening of the Flamingo and intensified again during the megaresort cycle of the 1990s, including Bellagio in 1998. The corridor was listed on the National Register of Historic Places in 2021 as part of the Las Vegas Boulevard Scenic Byway district. Its concentration of hotel towers, arena venues, and convention capacity makes it a measurable tourism infrastructure zone, not just a single attraction, and it anchors southern Nevada\u2019s visitor economy year-round.",
+      "description": "The Las Vegas Strip is a 4.2-mile segment of Las Vegas Boulevard South, and most of it lies in Paradise and Winchester rather than inside the City of Las Vegas boundary. Resort development accelerated after the 1946 opening of the Flamingo and intensified again during the megaresort cycle of the 1990s, including Bellagio in 1998. The corridor was listed on the National Register of Historic Places in 2021 as part of the Las Vegas Boulevard Scenic Byway district. Its concentration of hotel towers, arena venues, and convention capacity makes it a measurable tourism infrastructure zone, not just a single attraction, and it anchors southern Nevada’s visitor economy year-round.",
       "source_url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip"
+      "wikiUrl": "https://en.wikipedia.org/wiki/Las_Vegas_Strip",
+      "photoUrls": [
+        "https://source.unsplash.com/1600x900/?Explore%20Las%20Vegas%20Strip%20Las%20Vegas%20Nevada%20travel&sig=1",
+        "https://source.unsplash.com/1600x900/?Explore%20Las%20Vegas%20Strip%20Las%20Vegas%20Nevada%20travel&sig=2",
+        "https://source.unsplash.com/1600x900/?Explore%20Las%20Vegas%20Strip%20Las%20Vegas%20Nevada%20travel&sig=3"
+      ]
     }
   ],
   "bestTimeToVisit": {

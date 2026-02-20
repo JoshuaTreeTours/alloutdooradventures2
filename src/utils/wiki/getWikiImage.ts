@@ -32,7 +32,6 @@ type CacheState = {
 const CACHE_PATH = path.resolve(".cache/wiki-images.json");
 const USER_AGENT = "alloutdooradventures/1.0 (wiki-images)";
 const MAX_IMAGES = 3;
-const FALLBACK_IMAGE_URL = "/images/default-attraction.svg";
 
 let cacheLoaded = false;
 let cacheDirty = false;
@@ -201,7 +200,7 @@ export const getWikiImageUrls = async (
     }
   }
 
-  const urls = validated.length ? validated : [FALLBACK_IMAGE_URL];
+  const urls = validated;
   cacheState.images[key] = urls;
   cacheDirty = true;
 

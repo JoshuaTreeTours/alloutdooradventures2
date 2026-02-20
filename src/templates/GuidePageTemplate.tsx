@@ -157,10 +157,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 ...(typeof item.imageUrl === "string" ? [item.imageUrl] : []),
               ];
               const photoUrls = Array.from(new Set(candidatePhotoUrls.filter(Boolean))).slice(0, 3);
-              const safePhotoUrls = photoUrls.length
-                ? photoUrls
-                : ["/images/default-attraction.svg"];
-
               if (
                 (((typeof process !== "undefined" && process.env.NODE_ENV !== "production") || import.meta.env.DEV)) &&
                 !photoUrls.length
@@ -178,9 +174,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   <p className="font-semibold text-[#1f2a1f]">
                     {index + 1}. {item.title}
                   </p>
-                  {safePhotoUrls.length ? (
+                  {photoUrls.length ? (
                     <div className="mt-3 grid gap-2 grid-cols-1 md:grid-cols-3">
-                      {safePhotoUrls.map((photoUrl, photoIndex) => (
+                      {photoUrls.map((photoUrl, photoIndex) => (
                         <img
                           key={`${item.title}-${photoUrl}`}
                           src={photoUrl}
@@ -190,13 +186,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                           referrerPolicy="no-referrer"
                           className="h-40 w-full rounded-lg object-cover"
                           onError={event => {
-                            const img = event.currentTarget;
-                            if (img.src.endsWith("/images/default-attraction.svg")) {
-                              img.style.display = "none";
-                              return;
-                            }
-
-                            img.src = "/images/default-attraction.svg";
+                            event.currentTarget.style.display = "none";
                           }}
                         />
                       ))}
