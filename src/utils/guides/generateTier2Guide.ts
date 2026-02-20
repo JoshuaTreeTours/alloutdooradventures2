@@ -43,75 +43,79 @@ export const generateTier2Guide = async (
   });
 
   const guide: GuidePageData = {
-      tier: "tier2",
-      title: `${cityName}, ${state.name} Travel Guide`,
-      country: "United States",
-      state: state.name,
-      city: cityName,
-      slug: `guides/us/${stateSlug}/${citySlug}`,
-      hero: {
-        image: hero?.imageUrl ?? "/hero.jpg",
-        alt: hero?.alt ?? `${cityName}, ${state.name} travel skyline`,
-        headline: `${cityName}, ${state.name} Travel Guide`,
-        subheadline: `Plan a focused ${cityName} trip with practical highlights, local context, and easy tour connections.`,
-      },
-      overview: [
-        cleanWikiLanguage(`${cityName}, ${state.name} is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your ${cityName} itinerary efficient while still feeling varied and local.`),
-      ],
-      highlights: [
-        {
-          title: `${cityName} essentials`,
-          description: cleanWikiLanguage(
-            "Prioritize one signature attraction each day for better pacing."
-          ),
-        },
-        {
-          title: `${cityName} local character`,
-          description: cleanWikiLanguage(
-            "Add nearby neighborhoods and outdoor stops for variety."
-          ),
-        },
-      ],
-      thingsToDo,
-      bestTimeToVisit: {
-        title: `Shoulder seasons are typically easiest in ${cityName}`,
-        bullets: [
-          "Spring and fall usually offer comfortable weather and smoother logistics.",
-          "Reserve popular tours and timed attractions early in busy periods.",
-          "Use morning starts for major sights and photo-heavy locations.",
-        ],
-      },
-      travelTips: [
-        cleanWikiLanguage(`Group activities by area to reduce transfers across ${cityName}.`),
-        cleanWikiLanguage(
-          "Pre-book top tours and high-demand attractions when your dates are set."
+    tier: "tier2",
+    title: `${cityName}, ${state.name} Travel Guide`,
+    country: "United States",
+    state: state.name,
+    city: cityName,
+    slug: `guides/us/${stateSlug}/${citySlug}`,
+    hero: {
+      image: hero?.imageUrl ?? "/hero.jpg",
+      alt: hero?.alt ?? `${cityName}, ${state.name} travel skyline`,
+      headline: `${cityName}, ${state.name} Travel Guide`,
+      subheadline: `Plan a focused ${cityName} trip with practical highlights, local context, and easy tour connections.`,
+    },
+    overview: [
+      cleanWikiLanguage(
+        `${cityName}, ${state.name} is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. The guide frames core institutions, notable districts, and natural context in a single narrative so each section reflects the city's historical and cultural depth.`
+      ),
+    ],
+    highlights: [
+      {
+        title: `${cityName} essentials`,
+        description: cleanWikiLanguage(
+          "Prioritize one signature attraction each day for better pacing."
         ),
-        cleanWikiLanguage(
-          "Leave one flexible time block each day for weather and local recommendations."
-        ),
-      ],
-      faq: [
-        {
-          q: `How many days should I plan for ${cityName}?`,
-          a: cleanWikiLanguage(
-            `Two to three days is enough for core ${cityName} highlights plus one or two local experiences.`
-          ),
-        },
-        {
-          q: `Should I book tours ahead in ${cityName}?`,
-          a: cleanWikiLanguage(
-            "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-          ),
-        },
-      ],
-      tours: {
-        stateSlug,
-        citySlug,
-        limit: 6,
-        title: `Top ${cityName} tours`,
       },
-      seoLinks,
-    };
+      {
+        title: `${cityName} local character`,
+        description: cleanWikiLanguage(
+          "Add nearby neighborhoods and outdoor stops for variety."
+        ),
+      },
+    ],
+    thingsToDo,
+    bestTimeToVisit: {
+      title: `Shoulder seasons are typically easiest in ${cityName}`,
+      bullets: [
+        "Spring and fall usually offer comfortable weather and smoother logistics.",
+        "Reserve popular tours and timed attractions early in busy periods.",
+        "Use morning starts for major sights and photo-heavy locations.",
+      ],
+    },
+    travelTips: [
+      cleanWikiLanguage(
+        `Group activities by area to reduce transfers across ${cityName}.`
+      ),
+      cleanWikiLanguage(
+        "Pre-book top tours and high-demand attractions when your dates are set."
+      ),
+      cleanWikiLanguage(
+        "Leave one flexible time block each day for weather and local recommendations."
+      ),
+    ],
+    faq: [
+      {
+        q: `How many days should I plan for ${cityName}?`,
+        a: cleanWikiLanguage(
+          `Two to three days is enough for core ${cityName} highlights plus one or two local experiences.`
+        ),
+      },
+      {
+        q: `Should I book tours ahead in ${cityName}?`,
+        a: cleanWikiLanguage(
+          "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+        ),
+      },
+    ],
+    tours: {
+      stateSlug,
+      citySlug,
+      limit: 6,
+      title: `Top ${cityName} tours`,
+    },
+    seoLinks,
+  };
 
   assertGuideHasNoWikiLanguage(guide, `us/${stateSlug}/${citySlug}`);
 

@@ -30,7 +30,11 @@ export type GuidePageData = {
         | "History (brief)"
         | "Culture & neighborhoods"
         | "Outdoor & seasonal highlights"
-        | "Getting around";
+        | "Getting around"
+        | "Geography & Setting"
+        | "History"
+        | "Culture & Identity"
+        | "Outdoor / Natural Context";
       paragraphs: string[];
     }>;
   };
