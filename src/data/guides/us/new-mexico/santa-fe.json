@@ -42,8 +42,8 @@
       "description": "One of the most valuable things to do in Santa Fe is spend time around Canyon Road. Travelers comparing attractions in Santa Fe consistently rank Canyon Road as a high-impact stop. If you want to visit Santa Fe with a balanced itinerary, prioritize Canyon Road early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Santa Fe, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy recommendation for travelers."
     },
     {
-      "title": "Explore Georgia O\u2019Keeffe Museum",
-      "description": "One of the most valuable things to do in Santa Fe is spend time around Georgia O\u2019Keeffe Museum. Travelers comparing attractions in Santa Fe consistently rank Georgia O\u2019Keeffe Museum as a high-impact stop. If you want to visit Santa Fe with a balanced itinerary, prioritize Georgia O\u2019Keeffe Museum early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Santa Fe, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy."
+      "title": "Explore Georgia O’Keeffe Museum",
+      "description": "One of the most valuable things to do in Santa Fe is spend time around Georgia O’Keeffe Museum. Travelers comparing attractions in Santa Fe consistently rank Georgia O’Keeffe Museum as a high-impact stop. If you want to visit Santa Fe with a balanced itinerary, prioritize Georgia O’Keeffe Museum early in your trip. This location combines local culture, practical logistics, and memorable photo opportunities. You can pair this experience with nearby dining or neighborhood walks to avoid unnecessary transit time. For outdoor experiences in Santa Fe, this area also creates a strong contrast with museums and historic districts. Plan for 60 to 150 minutes, depending on crowds, and target morning or golden hour for the best atmosphere. It is an easy."
     },
     {
       "title": "Explore Railyard District",
@@ -102,5 +102,45 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.santafe.org/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling. Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling. Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling. Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "This gives you a more complete feel for Santa Fe without over-scheduling. Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling. Santa Fe is a strong base for culture, food, and outdoor day plans."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Santa Fe without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Santa Fe is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      }
+    ]
   }
 }

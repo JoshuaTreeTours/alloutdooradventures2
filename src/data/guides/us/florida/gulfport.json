@@ -83,5 +83,46 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Gulfport",
     "officialTourism": "https://www.visitflorida.com/",
     "reference": "https://www.britannica.com/place/Gulfport"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Gulfport",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Gulfport, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Gulfport itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

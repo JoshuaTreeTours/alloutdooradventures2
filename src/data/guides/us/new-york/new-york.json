@@ -118,5 +118,45 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.nyctourism.com/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling. New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling. New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling. New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "This gives you a more complete feel for New York without over-scheduling. New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling. New York is a strong base for culture, food, and outdoor day plans."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for New York without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "New York is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      }
+    ]
   }
 }

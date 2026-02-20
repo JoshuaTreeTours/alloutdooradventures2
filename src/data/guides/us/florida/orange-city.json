@@ -83,5 +83,46 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Orange_City",
     "officialTourism": "https://www.visitflorida.com/",
     "reference": "https://www.britannica.com/place/Orange-City"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Orange_City",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Orange City, Florida is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Orange City itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

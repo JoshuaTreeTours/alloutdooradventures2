@@ -82,5 +82,46 @@
   "seoLinks": {
     "wikipedia": "https://en.wikipedia.org/wiki/East_Lyme",
     "reference": "https://www.britannica.com/place/East-Lyme"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/East_Lyme",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "East Lyme, Connecticut is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your East Lyme itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

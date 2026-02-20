@@ -79,5 +79,46 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Airville",
     "officialTourism": "https://www.visitpa.com/",
     "reference": "https://www.britannica.com/place/Airville"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Airville",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Airville, Pennsylvania is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Airville itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

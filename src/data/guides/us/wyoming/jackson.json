@@ -75,5 +75,46 @@
     "wikipedia": "https://en.wikipedia.org/wiki/Jackson",
     "officialTourism": "https://travelwyoming.com/",
     "reference": "https://www.britannica.com/place/Jackson"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Jackson",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Jackson, Wyoming is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Jackson itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

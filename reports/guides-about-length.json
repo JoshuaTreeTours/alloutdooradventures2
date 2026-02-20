@@ -1,0 +1,2576 @@
+[
+  {
+    "city": "Anchorage",
+    "state": "Alaska",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Denali National Park and Preserve",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 394
+  },
+  {
+    "city": "Fairbanks",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Homer",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Ketchikan",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Palmer",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Seward",
+    "state": "Alaska",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cottonwood",
+    "state": "Arizona",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Flagstaff",
+    "state": "Arizona",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Morristown",
+    "state": "Arizona",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Page",
+    "state": "Arizona",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Phoenix",
+    "state": "Arizona",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Prescott",
+    "state": "Arizona",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Scottsdale",
+    "state": "Arizona",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Sedona",
+    "state": "Arizona",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Avalon",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Bonita",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Burlingame",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Calistoga",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Carpinteria",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Coronado",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Del Mar",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Healdsburg",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Indio",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Joshua Tree",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Laguna Beach",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Lake Elsinore",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Marina del Rey",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Napa",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Newport Beach",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Oakhurst",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Oceanside",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Palm Springs",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Pismo Beach",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Poway",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Redondo Beach",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Rio Linda",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Sacramento",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "San Diego",
+    "state": "California",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "San Francisco",
+    "state": "California",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Santa Barbara",
+    "state": "California",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Santa Monica",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Santee",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Solvang",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Sonoma",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Temecula",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Ventura",
+    "state": "California",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Boulder",
+    "state": "Colorado",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Colorado Springs",
+    "state": "Colorado",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Denver",
+    "state": "Colorado",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Durango",
+    "state": "Colorado",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Colchester",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "East Lyme",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Essex",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Haddam",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hartford",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Montville",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "New London",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "New Milford",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Plainville",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Salisbury",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Seymour",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Thomaston",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Wolcott",
+    "state": "Connecticut",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Dewey Beach",
+    "state": "Delaware",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Washington",
+    "state": "District of Columbia",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Apopka",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Bonita Springs",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Bradenton Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Bradenton",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Canal Point",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Cape Canaveral",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Cape Coral",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Clearwater",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Clermont",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cocoa Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Crystal River",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Cudjoe Key",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Daytona Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "DeLand",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Delray Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Destin",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Dunnellon",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Edgewater",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Estero",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Eustis",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Everglades City",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Fellsmere",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Fort Myers Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Fort Myers",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Fort Walton Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Fort White",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Gainesville",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Goodland",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Greenacres",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Gulfport",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Hastings",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hobe Sound",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Hollywood",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Homestead",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Homosassa",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Islamorada",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Jacksonville",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Jupiter",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Key Largo",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Key West",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Kissimmee",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lake Wales",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Lakeland",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lamont",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lecanto",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lighthouse Point",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Marathon",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Marco Island",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Matlacha",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Merritt Island",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Miami Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Miami",
+    "state": "Florida",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Naples",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "New Smyrna Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Nokomis",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "North Fort Myers",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "North Miami",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Orange City",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Orlando",
+    "state": "Florida",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Osprey",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Oviedo",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Palm Coast",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Palm Harbor",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Palmetto",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Panama City Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Parrish",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Pembroke Pines",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Pensacola Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Pompano Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Riviera Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Sanford",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Santa Rosa Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Sarasota",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Silver Springs",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "St. Augustine",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 322
+  },
+  {
+    "city": "St. Cloud",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 322
+  },
+  {
+    "city": "St. Petersburg",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 322
+  },
+  {
+    "city": "Stock Island",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Summerland Key",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Tampa",
+    "state": "Florida",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Tarpon Springs",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Tavernier",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Titusville",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Town 'n' Country",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Venice",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Vero Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Warrington",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "West Palm Beach",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Weston",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Winter Haven",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Winter Park",
+    "state": "Florida",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Albany",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Atlanta",
+    "state": "Georgia",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Augusta",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Blairsville",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Braselton",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Buford",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cleveland",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Covington",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Fortson",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Helen",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hogansville",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Juliette",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Leesburg",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lizella",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Macon",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Peachtree City",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Roswell",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Savannah",
+    "state": "Georgia",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Senoia",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Summerville",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Tybee Island",
+    "state": "Georgia",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Eleele",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Haiku-Pauwela",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hakalau",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Haleiwa",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hanalei",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hilo",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Honomu",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kaaawa",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kahului",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kailua-Kona",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kailua",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kaneohe",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Keaau",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kekaha",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kihei",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lahaina",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Makawao",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Paia",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Waianae",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Waikoloa Village",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Wailea-Makena",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Wailuku",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Waimea",
+    "state": "Hawaii",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Coeur d'Alene",
+    "state": "Idaho",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Chicago",
+    "state": "Illinois",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Louisville",
+    "state": "Kentucky",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "New Haven",
+    "state": "Kentucky",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Park City",
+    "state": "Kentucky",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Abita Springs",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Baton Rouge",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Lafayette",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "LaPlace",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Madisonville",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Marrero",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "New Orleans",
+    "state": "Louisiana",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Ponchatoula",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Vacherie",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Venice",
+    "state": "Louisiana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Bar Harbor",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Bethel",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Harpswell",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kennebunk",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Ogunquit",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Portland",
+    "state": "Maine",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Baltimore",
+    "state": "Maryland",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Cambridge",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cumberland",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Denton",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Edgewater",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Fort Washington",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Glen Burnie",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Lusby",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Monkton",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Ocean City",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Vienna",
+    "state": "Maryland",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Barnstable",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Beverly",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Boston",
+    "state": "Massachusetts",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Brookline",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cambridge",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Chelsea",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Falmouth",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Holbrook",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Lexington",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Marblehead",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Mashpee",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Nantucket",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Natick",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Needham",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Newton",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "North Andover",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Oak Bluffs",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Quincy",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Randolph",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Revere",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Salem",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Sandwich",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Sharon",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Somerville",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Sudbury",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Winthrop",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Wrentham",
+    "state": "Massachusetts",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Detroit",
+    "state": "Michigan",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Grosse Ile Township",
+    "state": "Michigan",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Lake Leelanau",
+    "state": "Michigan",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Mount Pleasant",
+    "state": "Michigan",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Traverse City",
+    "state": "Michigan",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Stillwater",
+    "state": "Minnesota",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Natchez",
+    "state": "Mississippi",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Branson",
+    "state": "Missouri",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Kansas City",
+    "state": "Missouri",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "St Louis",
+    "state": "Missouri",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Bozeman",
+    "state": "Montana",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Missoula",
+    "state": "Montana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Whitefish",
+    "state": "Montana",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Freedom",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Laconia",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "New Castle",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Portsmouth",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Weare",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Wolfeboro",
+    "state": "New Hampshire",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Atlantic Highlands",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Brick Township",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Edgewater",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Fieldsboro",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Hillsdale",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Keyport",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Lavallette",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Middletown Township",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Millville",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Ocean City",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Shamong",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Wallington",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Wildwood Crest",
+    "state": "New Jersey",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Abiquiu",
+    "state": "New Mexico",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Las Cruces",
+    "state": "New Mexico",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Los Ranchos de Albuquerque",
+    "state": "New Mexico",
+    "tier": "tier2",
+    "wordCount": 389
+  },
+  {
+    "city": "Santa Fe Foothills",
+    "state": "New Mexico",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Santa Fe",
+    "state": "New Mexico",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Brooklyn",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Catskill",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Freeport",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Hammondsport",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Hancock",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Ithaca",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Lansing",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Montauk",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Napanoch",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "New York",
+    "state": "New York",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Queens",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Rushville",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Staten Island",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Warwick",
+    "state": "New York",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Asheville",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Black Mountain",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Elkin",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Highlands",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Kill Devil Hills",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Nags Head",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Raleigh",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Ronda",
+    "state": "North Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Cleveland",
+    "state": "Ohio",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Columbus",
+    "state": "Ohio",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Grove City",
+    "state": "Ohio",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Lancaster",
+    "state": "Ohio",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Logan",
+    "state": "Ohio",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Rockbridge",
+    "state": "Ohio",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Oklahoma City",
+    "state": "Oklahoma",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Cascade Locks",
+    "state": "Oregon",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Portland",
+    "state": "Oregon",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Airville",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Bethlehem",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Gettysburg",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hawley",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Levittown",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "New Stanton",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Newville",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Ohiopyle",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Wrightsville",
+    "state": "Pennsylvania",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Little Compton",
+    "state": "Rhode Island",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Warwick",
+    "state": "Rhode Island",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Aiken",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Bluffton",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Charleston",
+    "state": "South Carolina",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Columbia",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Hilton Head Island",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Johns Island",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Mount Pleasant",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Saint Helena Island",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Winnsboro",
+    "state": "South Carolina",
+    "tier": "tier2",
+    "wordCount": 384
+  },
+  {
+    "city": "Rapid City",
+    "state": "South Dakota",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Chattanooga",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Christiana",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Delano",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Franklin",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Granville",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Greenbrier",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Johnson City",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Nashville",
+    "state": "Tennessee",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Pigeon Forge",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Sevierville",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Williamsport",
+    "state": "Tennessee",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Aransas Pass",
+    "state": "Texas",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Austin",
+    "state": "Texas",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Dallas",
+    "state": "Texas",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Fort Worth",
+    "state": "Texas",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Houston",
+    "state": "Texas",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Port Aransas",
+    "state": "Texas",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "San Antonio",
+    "state": "Texas",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Spring",
+    "state": "Texas",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "The Colony",
+    "state": "Texas",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Bryce Canyon City",
+    "state": "Utah",
+    "tier": "tier2",
+    "wordCount": 372
+  },
+  {
+    "city": "Hurricane",
+    "state": "Utah",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Moab",
+    "state": "Utah",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "tier": "tier1",
+    "wordCount": 436
+  },
+  {
+    "city": "Springdale",
+    "state": "Utah",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "St. George",
+    "state": "Utah",
+    "tier": "tier2",
+    "wordCount": 322
+  },
+  {
+    "city": "Braintree",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Bridgewater",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Charleston",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Essex Junction",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Fairlee",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Hartford",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Manchester",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Norwich",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Plymouth",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Royalton",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Springfield",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Stowe",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Thetford",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Waterbury",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Windsor",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Woodford",
+    "state": "Vermont",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Alexandria",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Arlington",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cape Charles",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Charlottesville",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Chincoteague",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Covington",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Eagle Rock",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Great Falls",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Herndon",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Leesburg",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Richmond",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Stafford",
+    "state": "Virginia",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Chelan",
+    "state": "Washington",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Seattle",
+    "state": "Washington",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Harpers Ferry",
+    "state": "West Virginia",
+    "tier": "tier2",
+    "wordCount": 396
+  },
+  {
+    "city": "Darlington",
+    "state": "Wisconsin",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Fish Creek",
+    "state": "Wisconsin",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Milwaukee",
+    "state": "Wisconsin",
+    "tier": "tier1",
+    "wordCount": 404
+  },
+  {
+    "city": "Sister Bay",
+    "state": "Wisconsin",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Sturgeon Bay",
+    "state": "Wisconsin",
+    "tier": "tier2",
+    "wordCount": 390
+  },
+  {
+    "city": "Washburn",
+    "state": "Wisconsin",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Cody",
+    "state": "Wyoming",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Jackson Hole",
+    "state": "Wyoming",
+    "tier": "tier1",
+    "wordCount": 420
+  },
+  {
+    "city": "Jackson",
+    "state": "Wyoming",
+    "tier": "tier2",
+    "wordCount": 378
+  },
+  {
+    "city": "Yellowstone National Park",
+    "state": "Wyoming",
+    "tier": "tier2",
+    "wordCount": 372
+  }
+]

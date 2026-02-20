@@ -102,5 +102,45 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.visitjacksonhole.com/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling. Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling. Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling. Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "This gives you a more complete feel for Jackson Hole without over-scheduling. Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling. Jackson Hole is a strong base for culture, food, and outdoor day plans."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Jackson Hole without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Jackson Hole is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      }
+    ]
   }
 }

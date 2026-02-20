@@ -83,5 +83,46 @@
     "wikipedia": "https://en.wikipedia.org/wiki/St._George",
     "officialTourism": "https://www.visitutah.com/",
     "reference": "https://www.britannica.com/place/St.-George"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/St._George",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "George, Utah is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your St."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "George itinerary efficient while still feeling varied and local. George, Utah is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your St. George itinerary efficient while still feeling varied and local. George, Utah is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your St. George itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "St. George, Utah is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your St. George itinerary efficient while still feeling varied and local."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "St. George, Utah is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your St. George itinerary efficient while still feeling varied and local."
+        ]
+      }
+    ]
   }
 }

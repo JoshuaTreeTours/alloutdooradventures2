@@ -21,10 +21,29 @@ export type GuidePageData = {
     subheadline: string;
   };
   overview: string[];
+  aboutCity?: {
+    sourceUrl?: string;
+    sections: Array<{
+      heading:
+        | "Overview"
+        | "Geography & setting"
+        | "History (brief)"
+        | "Culture & neighborhoods"
+        | "Outdoor & seasonal highlights"
+        | "Getting around";
+      paragraphs: string[];
+    }>;
+  };
+  cityCenter?: {
+    lat: number;
+    lng: number;
+  };
   highlights: Array<{ title: string; description: string }>;
   thingsToDo: Array<{
     title: string;
     description: string;
+    lat?: number;
+    lng?: number;
     wikiUrl?: string;
     sourceUrl?: string;
     source_url?: string;
