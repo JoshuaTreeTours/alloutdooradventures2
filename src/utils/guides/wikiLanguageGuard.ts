@@ -7,7 +7,7 @@ type GuideLike = {
   highlights?: Array<{ description?: string }>;
   faq?: Array<{ a?: string }>;
   aboutCity?: {
-    sections?: Array<{ paragraphs?: string[] }>;
+    factGroups?: Array<{ text?: string }>;
   };
 };
 
@@ -43,12 +43,10 @@ export const cleanGuideTextContent = <T extends GuideLike>(guide: T): T => {
     }));
   }
 
-  if (guide.aboutCity?.sections) {
-    guide.aboutCity.sections = guide.aboutCity.sections.map(section => ({
-      ...section,
-      paragraphs: Array.isArray(section.paragraphs)
-        ? section.paragraphs.map(paragraph => cleanWikiLanguage(paragraph))
-        : section.paragraphs,
+  if (guide.aboutCity?.factGroups) {
+    guide.aboutCity.factGroups = guide.aboutCity.factGroups.map(group => ({
+      ...group,
+      text: cleanWikiLanguage(group.text ?? ""),
     }));
   }
 
@@ -99,13 +97,13 @@ export const assertGuideHasNoWikiLanguage = (
     }
   });
 
-  guide.aboutCity?.sections?.forEach((section, sectionIndex) => {
-    section.paragraphs?.forEach((value, paragraphIndex) => {
+  guide.aboutCity?.factGroups?.forEach((group, groupIndex) => {
+    if (group.text) {
       buckets.push({
-        label: `aboutCity.sections[${sectionIndex}].paragraphs[${paragraphIndex}]`,
-        value,
+        label: `aboutCity.factGroups[${groupIndex}].text`,
+        value: group.text,
       });
-    });
+    }
   });
 
   buckets.forEach(bucket => {

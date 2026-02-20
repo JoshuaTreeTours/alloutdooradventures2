@@ -133,40 +133,33 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         </Section>
 
         <Section title={`About ${place}`}>
-          {guide.aboutCity?.sections?.length ? (
-            <div className="space-y-6">
-              {guide.aboutCity.sections.map(section => (
-                <article key={section.heading} className="space-y-3">
-                  <h3 className="text-base font-semibold text-[#1f2a1f] md:text-lg">
-                    {section.heading}
-                  </h3>
-                  <div className="space-y-3">
-                    {section.paragraphs.map(paragraph => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </article>
+          <div className="space-y-4">
+            <ul className="list-disc space-y-3 pl-5">
+              {(guide.aboutCity?.factGroups?.length
+                ? guide.aboutCity.factGroups
+                : [{ label: "Location", text: guide.overview[0] }]
+              ).map(fact => (
+                <li key={`${fact.label}:${fact.text.slice(0, 40)}`}>
+                  <span className="font-semibold text-[#1f2a1f]">
+                    {fact.label}:
+                  </span>{" "}
+                  <span>{fact.text}</span>
+                </li>
               ))}
-              {guide.aboutCity.sourceUrl ? (
-                <p className="pt-2 text-sm">
-                  <a
-                    href={guide.aboutCity.sourceUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="font-medium text-[#1f2a1f] underline"
-                  >
-                    Source
-                  </a>
-                </p>
-              ) : null}
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {guide.overview.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          )}
+            </ul>
+            {guide.aboutCity?.sourceUrl ? (
+              <p className="pt-2 text-sm">
+                <a
+                  href={guide.aboutCity.sourceUrl}
+                  target="_blank"
+                  rel="nofollow noopener noreferrer"
+                  className="font-medium text-[#1f2a1f] underline"
+                >
+                  Source
+                </a>
+              </p>
+            ) : null}
+          </div>
         </Section>
 
         {!isTier2 ? (
@@ -220,6 +213,16 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </ol>
         </Section>
 
+        {featuredTours.length ? (
+          <Section title={guide.tours.title ?? `Top tours in ${place}`}>
+            <div className="grid gap-6 md:grid-cols-3">
+              {featuredTours.map(tour => (
+                <TourCard key={tour.id} tour={tour} />
+              ))}
+            </div>
+          </Section>
+        ) : null}
+
         <div className="grid gap-6 md:grid-cols-2">
           {!isTier2 ? (
             <Section title="Best time to visit">
@@ -239,16 +242,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             </ul>
           </Section>
         </div>
-
-        {featuredTours.length ? (
-          <Section title={guide.tours.title ?? `Top tours in ${place}`}>
-            <div className="grid gap-6 md:grid-cols-3">
-              {featuredTours.map(tour => (
-                <TourCard key={tour.id} tour={tour} />
-              ))}
-            </div>
-          </Section>
-        ) : null}
 
         {guide.faq?.length ? (
           <Section title={`FAQs about ${place}`}>
@@ -272,7 +265,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 rel="noopener noreferrer"
                 className="text-[#1f2a1f] underline"
               >
-                {`${place} travel guide — Wikipedia`}
+                {`${place} travel reference`}
               </a>
             </li>
             <li>

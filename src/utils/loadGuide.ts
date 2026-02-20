@@ -22,17 +22,18 @@ export type GuidePageData = {
   };
   overview: string[];
   aboutCity?: {
-    sourceUrl?: string;
-    sections: Array<{
-      heading:
-        | "Overview"
-        | "Geography & setting"
-        | "History (brief)"
-        | "Culture & neighborhoods"
-        | "Outdoor & seasonal highlights"
-        | "Getting around";
-      paragraphs: string[];
+    factGroups?: Array<{
+      label:
+        | "Location"
+        | "Population"
+        | "Climate"
+        | "Known For"
+        | "Character / Identity";
+      text: string;
     }>;
+    wikiSummaryText?: string;
+    wikiExtractText?: string;
+    sourceUrl?: string;
   };
   cityCenter?: {
     lat: number;

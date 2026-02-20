@@ -8,8 +8,13 @@ const GENERIC_TRAVEL_ADVICE_PATTERNS = [
   /high-impact\s+stop/i,
   /pair\s+this\s+experience/i,
   /prioritize\s+.+?\s+early\s+in\s+your\s+trip/i,
+  /first-time visitors?/i,
+  /anchor area/i,
+  /reduce transit time/i,
+  /pair landmarks?/i,
+  /pair iconic landmarks?/i,
+  /over-scheduling/i,
 ];
 
 export const isGenericTravelAdvice = (text: string): boolean =>
   GENERIC_TRAVEL_ADVICE_PATTERNS.some(pattern => pattern.test(text));
-

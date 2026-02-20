@@ -16,7 +16,7 @@ type GuideJson = {
   faq?: Array<{ q?: string; a?: string }>;
   aboutCity?: {
     sourceUrl?: string;
-    sections?: Array<{ heading?: string; paragraphs?: string[] }>;
+    factGroups?: Array<{ label?: string; text?: string }>;
   };
 };
 
