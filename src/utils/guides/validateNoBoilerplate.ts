@@ -1,4 +1,9 @@
 const BLACKLIST = [
+  /perfect for/i,
+  /strong base for/i,
+  /over-scheduling/i,
+  /nearby experiences/i,
+  /build each day/i,
   /first-time visitors/i,
   /anchor area/i,
   /pair landmarks/i,

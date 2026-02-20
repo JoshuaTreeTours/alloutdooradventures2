@@ -247,51 +247,41 @@ const run = async () => {
 
     const cityContext = await resolveCityWikiContext(cityCandidates);
 
-    if (cityContext) {
-      const sections = composeAboutSections(
-        cityContext.summary.extract,
-        cityContext.extract,
-        guide.city,
-        guide.state
+    if (!cityContext) {
+      console.log(
+        `INSUFFICIENT AUTHORITY CONTENT: ${guide.city}, ${guide.state}`
       );
-      guide.aboutCity = {
-        sourceUrl: cityContext.summary.url ?? guide.seoLinks?.wikipedia,
-        sections,
-      };
-
-      const count = toWords(
-        sections.map(section => section.paragraphs.join(" ")).join(" ")
-      );
-      lengthReport.push({
-        city: guide.city,
-        state: guide.state,
-        tier,
-        wordCount: count,
-      });
-    } else if (guide.overview?.length) {
-      const repeatedOverview = guide.overview.join(" ");
-      guide.aboutCity = {
-        sourceUrl: guide.seoLinks?.wikipedia,
-        sections: buildCityAboutSection({
-          wikiSummaryText: repeatedOverview,
-          cityName: guide.city,
-          stateName: guide.state,
-          countryName: "United States",
-        }),
-      };
-
-      const count = toWords(
-        guide.aboutCity.sections
-          .map(section => section.paragraphs.join(" "))
-          .join(" ")
-      );
-      lengthReport.push({
-        city: guide.city,
-        state: guide.state,
-        tier,
-        wordCount: count,
-      });
+      continue;
     }
+
+    const sections = composeAboutSections(
+      cityContext.summary.extract,
+      cityContext.extract,
+      guide.city,
+      guide.state
+    );
+
+    if (!sections) {
+      console.log(
+        `INSUFFICIENT AUTHORITY CONTENT: ${guide.city}, ${guide.state}`
+      );
+      continue;
+    }
+
+    guide.aboutCity = {
+      sourceUrl: cityContext.summary.url ?? guide.seoLinks?.wikipedia,
+      sections,
+    };
+
+    const count = toWords(
+      sections.map(section => section.paragraphs.join(" ")).join(" ")
+    );
+    lengthReport.push({
+      city: guide.city,
+      state: guide.state,
+      tier,
+      wordCount: count,
+    });
 
     const cityMetaTitle = cityContext?.title ?? cityCandidates[0];
     const cityMeta = cityMetaTitle ? await fetchPageMeta(cityMetaTitle) : null;

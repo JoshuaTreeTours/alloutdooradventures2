@@ -57,7 +57,7 @@ export const generateTier2Guide = async (
     },
     overview: [
       cleanWikiLanguage(
-        `${cityName}, ${state.name} is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. The guide frames core institutions, notable districts, and natural context in a single narrative so each section reflects the city's historical and cultural depth.`
+        `${cityName}, ${state.name} is a major regional city with layered historical, economic, and civic development. This Tier-2 guide summarizes core institutions, neighborhoods, and landscape context in an editorial format. The guide frames core institutions, notable districts, and natural context in a single narrative so each section reflects the city's historical and cultural depth.`
       ),
     ],
     highlights: [
