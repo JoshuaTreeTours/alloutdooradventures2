@@ -55,6 +55,12 @@ const uniqTitles = (thingsToDo?: GuideThing[]) =>
     new Set((thingsToDo ?? []).map(item => item.title).filter(Boolean))
   );
 
+const trimToTwoSentences = (text: string) =>
+  sentenceSplit(text).slice(0, 2).join(" ");
+
+const withinWordBudget = (groups: AboutFactGroup[]) =>
+  countWords(groups.map(group => group.text).join(" "));
+
 const buildFallbackLocation = ({
   cityName,
   stateName,
@@ -80,11 +86,69 @@ const buildFallbackKnownFor = ({
   return `${place} is known for landmarks such as ${anchors.join(", ")}.`;
 };
 
-const trimToTwoSentences = (text: string) =>
-  sentenceSplit(text).slice(0, 2).join(" ");
+const buildClimateFromSummary = (wikiSummaryText?: string) => {
+  const summarySentences = sentenceSplit(wikiSummaryText ?? "")
+    .map(normalizeSentence)
+    .filter(Boolean);
 
-const withinWordBudget = (groups: AboutFactGroup[]) =>
-  countWords(groups.map(group => group.text).join(" "));
+  const climateSentence = pickFirst(
+    summarySentences,
+    /\b(climate|temperature|precipitation|rainfall|snowfall|mediterranean|oceanic|humid|arid|seasonal|wet season|dry season|monsoon)\b/i
+  );
+
+  if (!climateSentence) {
+    return undefined;
+  }
+
+  const typeMatch = climateSentence.match(
+    /(mediterranean|oceanic|humid subtropical|subtropical|continental|semi-arid|arid|desert|temperate|marine west coast|tropical)/i
+  );
+  const seasonalMatch = climateSentence.match(
+    /(warm,? dry summers? and mild,? wet winters?|hot summers? and mild winters?|four distinct seasons?|mild winters? and warm summers?|wet and dry seasons?|seasonal rainfall|seasonal temperature variation)/i
+  );
+  const featureMatch = climateSentence.match(
+    /(marine influence|coastal fog|snowfall|heat waves|rainfall concentration|low precipitation|high humidity|ocean moderation|temperature range)/i
+  );
+
+  const climateType = typeMatch?.[1] ?? "a documented local climate";
+  const seasonalPattern =
+    seasonalMatch?.[1] ??
+    "with seasonal temperature and precipitation variation";
+  const notableFeature =
+    featureMatch?.[1] ?? "including notable local weather variation";
+
+  let text = `${climateType.charAt(0).toUpperCase()}${climateType.slice(1)} climate with ${seasonalPattern}; notable feature: ${notableFeature}.`;
+
+  while (countWords(text) > 25) {
+    text = text
+      .replace(
+        "seasonal temperature and precipitation variation",
+        "seasonal variation"
+      )
+      .replace(
+        "including notable local weather variation",
+        "local weather variation"
+      )
+      .replace("; notable feature:", ",")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (countWords(text) <= 25) break;
+    text = sentenceSplit(text)[0] ?? text;
+    if (countWords(text) <= 25) break;
+    const words = text.split(/\s+/);
+    text = `${words
+      .slice(0, 25)
+      .join(" ")
+      .replace(/[,:;]?$/, "")}.`;
+    break;
+  }
+
+  if (countWords(text) < 15) {
+    text = `${text.replace(/\.$/, "")}, with seasonal variation and a notable local weather feature.`;
+  }
+
+  return text;
+};
 
 export const buildCityAboutFactGroups = (
   input: BuildCityAboutFactsInput
@@ -108,10 +172,7 @@ export const buildCityAboutFactGroups = (
     /\b(population|inhabitants|residents|census|metro area|metropolitan)\b/i
   );
 
-  const climate = pickFirst(
-    sentences,
-    /\b(climate|temperature|precipitation|rainfall|snowfall|mediterranean|oceanic|humid|arid|seasonal)\b/i
-  );
+  const climate = buildClimateFromSummary(input.wikiSummaryText);
 
   const knownFor =
     pickFirst(
@@ -131,24 +192,16 @@ export const buildCityAboutFactGroups = (
     ...(population
       ? [{ label: "Population" as const, text: trimToTwoSentences(population) }]
       : []),
-    ...(climate
-      ? [{ label: "Climate" as const, text: trimToTwoSentences(climate) }]
-      : []),
+    ...(climate ? [{ label: "Climate" as const, text: climate }] : []),
     { label: "Known For", text: trimToTwoSentences(knownFor) },
     { label: "Character / Identity", text: trimToTwoSentences(character) },
   ];
 
   while (groups.length < 4) {
-    groups.splice(
-      Math.max(groups.length - 1, 1),
-      0,
-      climate
-        ? { label: "Climate", text: trimToTwoSentences(climate) }
-        : {
-            label: "Climate",
-            text: `${input.cityName ?? "This city"} has a documented local climate profile in published reference sources.`,
-          }
-    );
+    groups.splice(1, 0, {
+      label: "Population",
+      text: `${input.cityName ?? "This city"} has population figures reported in published reference records.`,
+    });
   }
 
   const deduped = groups.filter(
@@ -164,21 +217,7 @@ export const buildCityAboutFactGroups = (
       deduped.splice(removableIndex, 1);
       continue;
     }
-    const climateIndex = deduped.findIndex(group => group.label === "Climate");
-    if (climateIndex >= 0) {
-      deduped.splice(climateIndex, 1);
-      continue;
-    }
     break;
-  }
-
-  for (const group of deduped) {
-    while (
-      countWords(group.text) > 24 &&
-      sentenceSplit(group.text).length > 1
-    ) {
-      group.text = sentenceSplit(group.text).slice(0, -1).join(" ");
-    }
   }
 
   if (withinWordBudget(deduped) < MIN_WORDS) {
