@@ -2,13 +2,12 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Seo from "../components/Seo";
-import TourCard from "../components/TourCard";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
-import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
+import { getTopToursForCity } from "../utils/tours/getTopToursForCity";
 
 type GuidePageTemplateProps = {
   guide: GuidePageData;
@@ -34,10 +33,10 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const place = getGuidePlaceName(guide);
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
-  const tours = guide.tours.citySlug
-    ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
-    : getToursByState(guide.tours.stateSlug);
-  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const topTours = getTopToursForCity(
+    guide.tours.citySlug,
+    guide.tours.stateSlug
+  );
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
 
@@ -132,6 +131,83 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           />
         </Section>
 
+        <Section title={`Things to Do in ${place}`}>
+          <ol className="space-y-5">
+            {guide.thingsToDo.map((item, index) => {
+              const sourceUrl =
+                item.sourceUrl ?? item.source_url ?? item.wikiUrl;
+
+              return (
+                <li
+                  key={item.title}
+                  className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
+                >
+                  <p className="font-semibold text-[#1f2a1f]">
+                    {index + 1}. {item.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
+                    {item.description}
+                  </p>
+                  {sourceUrl ? (
+                    <a
+                      href={sourceUrl}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
+                    >
+                      Source
+                    </a>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ol>
+        </Section>
+
+        {topTours.length ? (
+          <Section title={`Top Tours in ${place}`}>
+            <div className="grid gap-6 md:grid-cols-3">
+              {topTours.map(tour => (
+                <article
+                  key={`${tour.title}-${tour.link}`}
+                  className="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
+                >
+                  <a
+                    href={tour.link}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className="absolute inset-0 z-10"
+                    aria-label={`Book ${tour.title}`}
+                  />
+                  <img
+                    src={tour.image}
+                    alt={tour.title}
+                    loading="lazy"
+                    className="h-48 w-full object-cover"
+                  />
+                  <div className="space-y-3 p-4">
+                    <h3 className="text-base font-semibold text-[#1f2a1f]">
+                      {tour.title}
+                    </h3>
+                    <p className="line-clamp-2 text-sm text-[#405040]">
+                      {tour.description}
+                    </p>
+                    <p className="font-semibold text-[#1f2a1f]">{tour.price}</p>
+                    <a
+                      href={tour.link}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      className="relative z-20 inline-flex rounded-full bg-[#1f2a1f] px-4 py-2 text-sm font-semibold text-white"
+                    >
+                      Book Now
+                    </a>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </Section>
+        ) : null}
+
         <Section title={`About ${place}`}>
           {guide.aboutCity?.sections?.length ? (
             <div className="space-y-6">
@@ -169,57 +245,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           )}
         </Section>
 
-        {!isTier2 ? (
-          <Section title={`Top Highlights in ${place}`}>
-            <div className="grid gap-4 md:grid-cols-2">
-              {guide.highlights.map(item => (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-black/10 bg-white p-4"
-                >
-                  <h3 className="font-semibold text-[#1f2a1f]">{item.title}</h3>
-                  <p className="mt-2 text-sm text-[#405040]">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </Section>
-        ) : null}
-
-        <Section title={`Things to Do in ${place}`}>
-          <ol className="space-y-5">
-            {guide.thingsToDo.map((item, index) => {
-              const sourceUrl =
-                item.sourceUrl ?? item.source_url ?? item.wikiUrl;
-
-              return (
-                <li
-                  key={item.title}
-                  className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
-                >
-                  <p className="font-semibold text-[#1f2a1f]">
-                    {index + 1}. {item.title}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-                    {item.description}
-                  </p>
-                  {sourceUrl ? (
-                    <a
-                      href={sourceUrl}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer"
-                      className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-                    >
-                      Source
-                    </a>
-                  ) : null}
-                </li>
-              );
-            })}
-          </ol>
-        </Section>
-
         <div className="grid gap-6 md:grid-cols-2">
           {!isTier2 ? (
             <Section title="Best time to visit">
@@ -239,16 +264,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             </ul>
           </Section>
         </div>
-
-        {featuredTours.length ? (
-          <Section title={guide.tours.title ?? `Top tours in ${place}`}>
-            <div className="grid gap-6 md:grid-cols-3">
-              {featuredTours.map(tour => (
-                <TourCard key={tour.id} tour={tour} />
-              ))}
-            </div>
-          </Section>
-        ) : null}
 
         {guide.faq?.length ? (
           <Section title={`FAQs about ${place}`}>
