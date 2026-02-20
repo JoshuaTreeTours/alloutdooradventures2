@@ -1,4 +1,5 @@
 import { buildSeoLinks } from "./buildSeoLinks";
+import { buildCityAboutFactGroups } from "./buildCityAboutBlurb";
 import { getGuideRecord } from "./guideRegistry";
 import { selectCityHeroFromTours } from "./selectCityHeroFromTours";
 import type { GuidePageData } from "../loadGuide";
@@ -9,12 +10,23 @@ const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
         guide.tours.stateSlug,
         guide.tours.citySlug ?? "",
         guide.city,
-        guide.state,
+        guide.state
       )
     : null;
 
   return {
     ...guide,
+    aboutCity: {
+      ...guide.aboutCity,
+      factGroups: buildCityAboutFactGroups({
+        cityName: guide.city,
+        stateName: guide.state,
+        countryName: guide.country,
+        wikiSummaryText: guide.aboutCity?.wikiSummaryText,
+        wikiExtractText: guide.aboutCity?.wikiExtractText,
+        thingsToDo: guide.thingsToDo,
+      }),
+    },
     hero: {
       ...guide.hero,
       image: heroSelection?.imageUrl ?? guide.hero.image,
