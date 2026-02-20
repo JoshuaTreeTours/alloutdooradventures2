@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
@@ -185,27 +186,15 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 item.sourceUrl ?? item.source_url ?? item.wikiUrl;
 
               return (
-                <li
+                <GuideThingsToDoCard
                   key={item.title}
-                  className="rounded-2xl border border-black/10 bg-white p-4 md:p-5"
-                >
-                  <p className="font-semibold text-[#1f2a1f]">
-                    {index + 1}. {item.title}
-                  </p>
-                  <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
-                    {item.description}
-                  </p>
-                  {sourceUrl ? (
-                    <a
-                      href={sourceUrl}
-                      target="_blank"
-                      rel="nofollow noopener noreferrer"
-                      className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-                    >
-                      Source
-                    </a>
-                  ) : null}
-                </li>
+                  index={index + 1}
+                  city={guide.city ?? place}
+                  title={item.title}
+                  description={item.description}
+                  sourceUrl={sourceUrl}
+                  imageUrl={item.imageUrl}
+                />
               );
             })}
           </ol>

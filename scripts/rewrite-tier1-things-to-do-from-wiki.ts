@@ -14,6 +14,7 @@ type ThingToDo = {
   description: string;
   wikiUrl?: string;
   source_url?: string;
+  imageUrl?: string | null;
 };
 
 type Guide = {
@@ -66,7 +67,8 @@ const countSentences = (text: string) =>
     .map(sentence => sentence.trim())
     .filter(Boolean).length;
 
-const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+const wordCount = (text: string) =>
+  text.trim().split(/\s+/).filter(Boolean).length;
 
 const isHighQuality = (text: string) => {
   const words = wordCount(text);
@@ -89,7 +91,9 @@ const shouldRewriteDescription = (args: {
   const similarityScores = existingDescriptions.map(existing =>
     jaccardSimilarity(description, existing)
   );
-  const maxSimilarity = similarityScores.length ? Math.max(...similarityScores) : 0;
+  const maxSimilarity = similarityScores.length
+    ? Math.max(...similarityScores)
+    : 0;
   const hasBoilerplate = !validateNoBoilerplate(description);
   const hasGenericAdvice = isGenericTravelAdvice(description);
   const tooShort = wordCount(description) < 50;
@@ -154,7 +158,8 @@ const run = async () => {
 
       if (
         !validateNoBoilerplate(description) ||
-        (hasSourceUrl(item) && (wordCount(description) < 80 || wordCount(description) > 120)) ||
+        (hasSourceUrl(item) &&
+          (wordCount(description) < 80 || wordCount(description) > 120)) ||
         (!hasSourceUrl(item) && wordCount(description) > 45) ||
         countSentences(description) > 3
       ) {
@@ -201,7 +206,17 @@ const run = async () => {
         next.wikiUrl = result.wikiUrl;
       }
 
-      if (item.description !== description || item.wikiUrl !== next.wikiUrl) {
+      if (result.imageUrl) {
+        next.imageUrl = result.imageUrl;
+      } else if (item.imageUrl) {
+        next.imageUrl = item.imageUrl;
+      }
+
+      if (
+        item.description !== description ||
+        item.wikiUrl !== next.wikiUrl ||
+        item.imageUrl !== next.imageUrl
+      ) {
         hadChange = true;
       }
 

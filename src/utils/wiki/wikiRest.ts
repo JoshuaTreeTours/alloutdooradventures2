@@ -5,6 +5,12 @@ type WikipediaSummary = {
   title?: string;
   extract?: string;
   type?: string;
+  thumbnail?: {
+    source?: string;
+  };
+  originalimage?: {
+    source?: string;
+  };
   content_urls?: {
     desktop?: { page?: string };
   };
@@ -14,6 +20,7 @@ type CacheEntry = {
   title: string;
   extract: string;
   pageUrl?: string;
+  imageUrl?: string | null;
   type?: string;
 };
 
@@ -80,6 +87,7 @@ const normalizeSummary = (data: WikipediaSummary): CacheEntry | null => {
     title: data.title?.trim() || "",
     extract,
     pageUrl: data.content_urls?.desktop?.page,
+    imageUrl: data.thumbnail?.source ?? data.originalimage?.source ?? null,
     type: data.type,
   };
 };

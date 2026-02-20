@@ -7,6 +7,7 @@ import { fetchWikiSummary } from "../wiki/wikiSummary";
 export type WikiDescResult = {
   description: string;
   wikiUrl?: string | null;
+  imageUrl?: string | null;
   usedWiki: boolean;
 };
 
@@ -48,6 +49,7 @@ export async function buildWikiLandmarkDescription(args: {
         return {
           description: candidate,
           wikiUrl: summary.url,
+          imageUrl: summary.imageUrl,
           usedWiki: true,
         };
       }
@@ -61,14 +63,20 @@ export async function buildWikiLandmarkDescription(args: {
       return {
         description: best,
         wikiUrl: summary.url,
+        imageUrl: summary.imageUrl,
         usedWiki: true,
       };
     }
   }
 
   return {
-    description: fallbackLandmarkDescription({ landmarkName, cityName, stateName }),
+    description: fallbackLandmarkDescription({
+      landmarkName,
+      cityName,
+      stateName,
+    }),
     wikiUrl: null,
+    imageUrl: null,
     usedWiki: false,
   };
 }
