@@ -4,7 +4,10 @@ import { Link } from "wouter";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { cityContext } from "../data/cityContext";
 import type { GuideContent, GuideLink } from "../data/guideData";
-import { getCountryDestinationHref, getGuideTourDetailPath } from "../data/guideData";
+import {
+  getCountryDestinationHref,
+  getGuideTourDetailPath,
+} from "../data/guideData";
 import {
   getAllToursHref,
   getTopCitiesForPlace,
@@ -13,6 +16,7 @@ import {
   isEuropeCountrySlug,
 } from "../data/tourIndex";
 import { slugify } from "../data/tourCatalog";
+import { hasUsGuide } from "../utils/guides/guideIndex";
 import TourCard from "./TourCard";
 
 type GuideInternalLinksProps = {
@@ -88,15 +92,17 @@ const buildCityContextKey = (parentSlug: string, citySlug: string) => {
 
 const buildPlaceLabel = (guide: GuideContent) => {
   if (guide.type === "city") {
-    return guide.parentName
-      ? `${guide.name}, ${guide.parentName}`
-      : guide.name;
+    return guide.parentName ? `${guide.name}, ${guide.parentName}` : guide.name;
   }
 
   return guide.name;
 };
 
-const buildCategoryHref = (guide: GuideContent, activitySlug: string, routeSlug: string) => {
+const buildCategoryHref = (
+  guide: GuideContent,
+  activitySlug: string,
+  routeSlug: string
+) => {
   if (guide.type === "state") {
     return `/tours/${activitySlug}/us/${guide.slug}`;
   }
@@ -140,7 +146,7 @@ const buildPrimaryLinks = (guide: GuideContent): GuideLink[] => {
   const placeLabel = buildPlaceLabel(guide);
   const activityCounts = getTourCountsForActivities(
     place,
-    ACTIVITY_LINKS.map((link) => link.activitySlug),
+    ACTIVITY_LINKS.map(link => link.activitySlug)
   );
   const links: GuideLink[] = [
     {
@@ -169,7 +175,10 @@ const buildAreaLinks = (guide: GuideContent): GuideLink[] => {
 
   if (guide.type === "city") {
     if (guide.regionType === "state") {
-      links.push({ label: "United States destinations", href: "/destinations" });
+      links.push({
+        label: "United States destinations",
+        href: "/destinations",
+      });
       if (guide.parentSlug && guide.parentName) {
         links.push({
           label: `${guide.parentName} destinations`,
@@ -222,29 +231,41 @@ const buildNearbyLinks = (guide: GuideContent): GuideLink[] => {
   if (guide.type === "city") {
     const parentPlace =
       guide.regionType === "country"
-        ? ({ type: "country", slug: guide.parentSlug ?? "", name: guide.parentName ?? "" } as const)
-        : ({ type: "state", slug: guide.parentSlug ?? "", name: guide.parentName ?? "" } as const);
+        ? ({
+            type: "country",
+            slug: guide.parentSlug ?? "",
+            name: guide.parentName ?? "",
+          } as const)
+        : ({
+            type: "state",
+            slug: guide.parentSlug ?? "",
+            name: guide.parentName ?? "",
+          } as const);
     const topCities = getTopCitiesForPlace(parentPlace, 8);
-    const contextKey = buildCityContextKey(
-      guide.parentSlug ?? "",
-      guide.slug,
-    );
+    const contextKey = buildCityContextKey(guide.parentSlug ?? "", guide.slug);
     const nearbyNames = cityContext[contextKey]?.nearby ?? [];
     const mappedNearby = nearbyNames
-      .map((name) =>
+      .map(name =>
         topCities.find(
-          (city) =>
+          city =>
             city.slug === slugify(name) ||
-            city.name.toLowerCase() === name.toLowerCase(),
-        ),
+            city.name.toLowerCase() === name.toLowerCase()
+        )
       )
       .filter((city): city is (typeof topCities)[number] => Boolean(city))
-      .filter((city) => city.slug !== guide.slug);
+      .filter(city => city.slug !== guide.slug);
 
-    const fallbackCities = topCities.filter((city) => city.slug !== guide.slug);
+    const fallbackCities = topCities.filter(city => city.slug !== guide.slug);
     const citiesToUse = mappedNearby.length ? mappedNearby : fallbackCities;
 
-    return citiesToUse.slice(0, 6).map((city) => ({
+    const filteredCities =
+      guide.regionType === "state"
+        ? citiesToUse.filter(city =>
+            hasUsGuide(guide.parentSlug ?? "", city.slug)
+          )
+        : citiesToUse;
+
+    return filteredCities.slice(0, 6).map(city => ({
       label: `${city.name} guide`,
       href:
         guide.regionType === "state"
@@ -255,10 +276,14 @@ const buildNearbyLinks = (guide: GuideContent): GuideLink[] => {
 
   const topCities = getTopCitiesForPlace(
     { type: guide.type, slug: guide.slug, name: guide.name } as const,
-    8,
+    8
   );
+  const filteredTopCities =
+    guide.type === "state"
+      ? topCities.filter(city => hasUsGuide(guide.slug, city.slug))
+      : topCities;
 
-  return topCities.slice(0, 6).map((city) => ({
+  return filteredTopCities.slice(0, 6).map(city => ({
     label: `${city.name} guide`,
     href:
       guide.type === "state"
@@ -333,7 +358,7 @@ export default function GuideInternalLinks({
             <option value="" disabled>
               Select a tour type…
             </option>
-            {primaryLinks.map((link) => (
+            {primaryLinks.map(link => (
               <option key={link.href} value={link.href}>
                 {link.label}
               </option>
@@ -346,7 +371,9 @@ export default function GuideInternalLinks({
             {primaryLinks.map((link, index) => (
               <span key={link.href}>
                 <Link href={link.href}>
-                  <a className="underline underline-offset-2 hover:text-[#2f4a2f]">{link.label}</a>
+                  <a className="underline underline-offset-2 hover:text-[#2f4a2f]">
+                    {link.label}
+                  </a>
                 </Link>
                 {index < primaryLinks.length - 1 ? " · " : null}
               </span>
@@ -397,7 +424,7 @@ export default function GuideInternalLinks({
           {tourTitle}
         </h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {topTours.map((tour) => (
+          {topTours.map(tour => (
             <TourCard
               key={tour.id}
               tour={tour}
@@ -419,7 +446,7 @@ export default function GuideInternalLinks({
         Explore nearby
       </h2>
       <div className="mt-4 flex flex-wrap gap-3 text-sm text-[#405040]">
-        {nearbyLinks.map((link) => (
+        {nearbyLinks.map(link => (
           <Link key={link.href} href={link.href}>
             <a className="inline-flex items-center rounded-full border border-[#2f4a2f]/15 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f] transition hover:bg-[#f0f4ee]">
               {link.label}
