@@ -3,6 +3,8 @@ import { buildSeoLinks } from "./buildSeoLinks";
 import { selectCityHeroFromTours } from "./selectCityHeroFromTours";
 import { extractCityLandmarksFromTours } from "./extractCityLandmarksFromTours";
 import { buildTier2ThingsToDo } from "./buildTier2ThingsToDo";
+import { cleanWikiLanguage } from "../cleanWikiLanguage";
+import { assertGuideHasNoWikiLanguage } from "./wikiLanguageGuard";
 import type { GuidePageData } from "../loadGuide";
 
 type Tier2GenerationResult = {
@@ -28,20 +30,19 @@ export const generateTier2Guide = async (
   );
 
   const landmarks = extractCityLandmarksFromTours(stateSlug, citySlug);
-  const thingsToDo = buildTier2ThingsToDo(
-    cityName,
-    state.name,
-    landmarks
-  ).slice(0, 6);
+  const thingsToDo = buildTier2ThingsToDo(cityName, state.name, landmarks)
+    .slice(0, 6)
+    .map(item => ({
+      ...item,
+      description: cleanWikiLanguage(item.description),
+    }));
 
   const seoLinks = buildSeoLinks({
     city: cityName,
     state: state.name,
   });
 
-  return {
-    usedHeroFallback: !hero,
-    guide: {
+  const guide: GuidePageData = {
       tier: "tier2",
       title: `${cityName}, ${state.name} Travel Guide`,
       country: "United States",
@@ -55,18 +56,20 @@ export const generateTier2Guide = async (
         subheadline: `Plan a focused ${cityName} trip with practical highlights, local context, and easy tour connections.`,
       },
       overview: [
-        `${cityName}, ${state.name} is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your ${cityName} itinerary efficient while still feeling varied and local.`,
+        cleanWikiLanguage(`${cityName}, ${state.name} is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your ${cityName} itinerary efficient while still feeling varied and local.`),
       ],
       highlights: [
         {
           title: `${cityName} essentials`,
-          description:
-            "Prioritize one signature attraction each day for better pacing.",
+          description: cleanWikiLanguage(
+            "Prioritize one signature attraction each day for better pacing."
+          ),
         },
         {
           title: `${cityName} local character`,
-          description:
-            "Add nearby neighborhoods and outdoor stops for variety.",
+          description: cleanWikiLanguage(
+            "Add nearby neighborhoods and outdoor stops for variety."
+          ),
         },
       ],
       thingsToDo,
@@ -79,18 +82,26 @@ export const generateTier2Guide = async (
         ],
       },
       travelTips: [
-        `Group activities by area to reduce transfers across ${cityName}.`,
-        "Pre-book top tours and high-demand attractions when your dates are set.",
-        "Leave one flexible time block each day for weather and local recommendations.",
+        cleanWikiLanguage(`Group activities by area to reduce transfers across ${cityName}.`),
+        cleanWikiLanguage(
+          "Pre-book top tours and high-demand attractions when your dates are set."
+        ),
+        cleanWikiLanguage(
+          "Leave one flexible time block each day for weather and local recommendations."
+        ),
       ],
       faq: [
         {
           q: `How many days should I plan for ${cityName}?`,
-          a: `Two to three days is enough for core ${cityName} highlights plus one or two local experiences.`,
+          a: cleanWikiLanguage(
+            `Two to three days is enough for core ${cityName} highlights plus one or two local experiences.`
+          ),
         },
         {
           q: `Should I book tours ahead in ${cityName}?`,
-          a: "Yes—advance booking is recommended for weekends, holidays, and top-rated operators.",
+          a: cleanWikiLanguage(
+            "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
+          ),
         },
       ],
       tours: {
@@ -100,6 +111,12 @@ export const generateTier2Guide = async (
         title: `Top ${cityName} tours`,
       },
       seoLinks,
-    },
+    };
+
+  assertGuideHasNoWikiLanguage(guide, `us/${stateSlug}/${citySlug}`);
+
+  return {
+    usedHeroFallback: !hero,
+    guide,
   };
 };

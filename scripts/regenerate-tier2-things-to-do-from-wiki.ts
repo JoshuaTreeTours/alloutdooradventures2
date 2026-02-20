@@ -18,6 +18,8 @@ import {
   getLocalPoisForCity,
   getNearbyPoisForCity,
 } from "../src/data/cityTopThings";
+import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
+import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
@@ -109,7 +111,7 @@ const buildFallbackThing = async (
     summary.extract.split(/(?<=[.!?])\s+/)[0] ?? summary.extract;
   return {
     title: summary.title || name,
-    description: `${summary.title || name} is a recognized landmark in or near ${city}. ${firstSentence} Visit for a focused stop with walkable surroundings, photos, and easy pairing with nearby neighborhoods or waterfront areas.`,
+    description: cleanWikiLanguage(`${summary.title || name} is a recognized landmark in or near ${city}. ${firstSentence} Visit for a focused stop with walkable surroundings, photos, and easy pairing with nearby neighborhoods or waterfront areas.`),
     wikiUrl: summary.pageUrl,
   };
 };
@@ -179,7 +181,7 @@ const ensureFourItems = async (
 
     items.push({
       title: name,
-      description: `${name} is a known local point of interest around ${city}. Plan a short stop for views, neighborhood context, and a practical anchor before pairing nearby museums, parks, or waterfront areas.`,
+      description: cleanWikiLanguage(`${name} is a known local point of interest around ${city}. Plan a short stop for views, neighborhood context, and a practical anchor before pairing nearby museums, parks, or waterfront areas.`),
     });
     seen.add(normalize(name));
   }
@@ -189,7 +191,7 @@ const ensureFourItems = async (
     .filter(item => isPlausibleLandmarkName(item.name))
     .map(item => ({
       title: item.name,
-      description: `${item.name} is a practical stop for understanding ${city}'s local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in ${city}, ${state}.`,
+      description: cleanWikiLanguage(`${item.name} is a practical stop for understanding ${city}'s local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in ${city}, ${state}.`),
     }));
 
   items.push(...textOnly);
@@ -268,7 +270,10 @@ const run = async () => {
       }
     }
 
-    guide.thingsToDo = finalThings.slice(0, MAX_ITEMS);
+    guide.thingsToDo = finalThings.slice(0, MAX_ITEMS).map(item => ({
+      ...item,
+      description: cleanWikiLanguage(item.description),
+    }));
 
     if (!guide.seoLinks) {
       guide.seoLinks = {};
@@ -283,6 +288,7 @@ const run = async () => {
       }
     }
 
+    assertGuideHasNoWikiLanguage(guide, routeKey);
     fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
     report.citiesUpdated.push(routeKey);
   }
