@@ -8,6 +8,7 @@ type GuideLike = {
   faq?: Array<{ a?: string }>;
   aboutCity?: {
     sections?: Array<{ paragraphs?: string[] }>;
+    factsCard?: { bullets?: Array<{ label?: string; value?: string }> };
   };
 };
 
@@ -50,6 +51,16 @@ export const cleanGuideTextContent = <T extends GuideLike>(guide: T): T => {
         ? section.paragraphs.map(paragraph => cleanWikiLanguage(paragraph))
         : section.paragraphs,
     }));
+  }
+
+  if (guide.aboutCity?.factsCard?.bullets) {
+    guide.aboutCity.factsCard.bullets = guide.aboutCity.factsCard.bullets.map(
+      bullet => ({
+        ...bullet,
+        label: cleanWikiLanguage(bullet.label ?? ""),
+        value: cleanWikiLanguage(bullet.value ?? ""),
+      })
+    );
   }
 
   return guide;
@@ -106,6 +117,21 @@ export const assertGuideHasNoWikiLanguage = (
         value,
       });
     });
+  });
+
+  guide.aboutCity?.factsCard?.bullets?.forEach((bullet, index) => {
+    if (bullet.label) {
+      buckets.push({
+        label: `aboutCity.factsCard.bullets[${index}].label`,
+        value: bullet.label,
+      });
+    }
+    if (bullet.value) {
+      buckets.push({
+        label: `aboutCity.factsCard.bullets[${index}].value`,
+        value: bullet.value,
+      });
+    }
   });
 
   buckets.forEach(bucket => {

@@ -23,16 +23,12 @@ export type GuidePageData = {
   overview: string[];
   aboutCity?: {
     sourceUrl?: string;
-    sections: Array<{
-      heading:
-        | "Overview"
-        | "Geography & setting"
-        | "History (brief)"
-        | "Culture & neighborhoods"
-        | "Outdoor & seasonal highlights"
-        | "Getting around";
-      paragraphs: string[];
-    }>;
+    wikiSummaryText?: string;
+    wikiExtractText?: string;
+    factsCard?: {
+      title: string;
+      bullets: Array<{ label: string; value: string }>;
+    };
   };
   cityCenter?: {
     lat: number;
