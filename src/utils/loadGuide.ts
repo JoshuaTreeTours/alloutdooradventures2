@@ -13,6 +13,8 @@ export type GuidePageData = {
   country: string;
   state: string;
   city?: string;
+  wikiSummaryText?: string;
+  wikiExtractText?: string;
   slug: string;
   hero: {
     image: string;
@@ -28,9 +30,8 @@ export type GuidePageData = {
         | "Overview"
         | "Geography & setting"
         | "History (brief)"
-        | "Culture & neighborhoods"
-        | "Outdoor & seasonal highlights"
-        | "Getting around";
+        | "Culture & identity"
+        | "Outdoor / natural context";
       paragraphs: string[];
     }>;
   };
