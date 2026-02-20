@@ -37,7 +37,8 @@
     "check:canoeing": "vite-node --script scripts/check-canoeing-tours.ts",
     "check:oregon": "tsx scripts/check-oregon-tours.ts",
     "gen:paris": "tsx --tsconfig tsconfig.node.json scripts/generate-guide-from-wiki.ts",
-    "guides:enrich-about-map": "tsx scripts/enrich-guides-about-and-maps.ts"
+    "guides:enrich-about-map": "tsx scripts/enrich-guides-about-and-maps.ts",
+    "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

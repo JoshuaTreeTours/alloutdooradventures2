@@ -120,43 +120,26 @@
     "officialTourism": "https://www.travelportland.com/"
   },
   "aboutCity": {
-    "sections": [
-      {
-        "heading": "Overview",
-        "paragraphs": [
-          "Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling. Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling. Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling. Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "This gives you a more complete feel for Portland without over-scheduling. Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling. Portland is a strong base for culture, food, and outdoor day plans."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Portland without over-scheduling."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Portland is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
-        ]
-      }
-    ]
+    "factsCard": {
+      "title": "About Portland",
+      "bullets": [
+        {
+          "label": "Location",
+          "value": "Portland is in Oregon, United States."
+        },
+        {
+          "label": "Climate",
+          "value": "Temperate oceanic climate with wet winters and dry summers."
+        },
+        {
+          "label": "Known for",
+          "value": "Washington Park, Powell’s City of Books, Pearl District, Lan Su Chinese Garden, Forest Park"
+        },
+        {
+          "label": "Identity",
+          "value": "Portland is a Pacific Northwest cultural and food hub."
+        }
+      ]
+    }
   }
 }

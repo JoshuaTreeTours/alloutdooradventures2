@@ -9,6 +9,7 @@ import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
+import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
 
 type GuidePageTemplateProps = {
   guide: GuidePageData;
@@ -40,6 +41,23 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
+  const wikiExtractFallback = (
+    guide.aboutCity as
+      | { sections?: Array<{ paragraphs?: string[] }> }
+      | undefined
+  )?.sections
+    ?.flatMap(section => section.paragraphs ?? [])
+    .join(" ");
+  const aboutFactsCard =
+    guide.aboutCity?.factsCard ??
+    buildCityFactsCard({
+      cityName: place,
+      stateName: guide.state,
+      countryName: guide.country,
+      wikiSummaryText: guide.aboutCity?.wikiSummaryText ?? guide.overview[0],
+      wikiExtractText: guide.aboutCity?.wikiExtractText ?? wikiExtractFallback,
+      thingsToDoItems: guide.thingsToDo,
+    });
 
   const breadcrumbs = [
     { name: "Guides", url: "/guides" },
@@ -132,41 +150,14 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           />
         </Section>
 
-        <Section title={`About ${place}`}>
-          {guide.aboutCity?.sections?.length ? (
-            <div className="space-y-6">
-              {guide.aboutCity.sections.map(section => (
-                <article key={section.heading} className="space-y-3">
-                  <h3 className="text-base font-semibold text-[#1f2a1f] md:text-lg">
-                    {section.heading}
-                  </h3>
-                  <div className="space-y-3">
-                    {section.paragraphs.map(paragraph => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </article>
-              ))}
-              {guide.aboutCity.sourceUrl ? (
-                <p className="pt-2 text-sm">
-                  <a
-                    href={guide.aboutCity.sourceUrl}
-                    target="_blank"
-                    rel="nofollow noopener noreferrer"
-                    className="font-medium text-[#1f2a1f] underline"
-                  >
-                    Source
-                  </a>
-                </p>
-              ) : null}
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {guide.overview.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          )}
+        <Section title={aboutFactsCard.title}>
+          <ul className="list-disc space-y-2 pl-5">
+            {aboutFactsCard.bullets.map(bullet => (
+              <li key={`${bullet.label}:${bullet.value}`}>
+                <strong>{bullet.label}:</strong> {bullet.value}
+              </li>
+            ))}
+          </ul>
         </Section>
 
         {!isTier2 ? (
