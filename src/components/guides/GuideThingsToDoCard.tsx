@@ -11,6 +11,7 @@ type GuideThingsToDoCardProps = {
   description: string;
   sourceUrl?: string;
   imageUrl?: string | null;
+  disableImage?: boolean;
 };
 
 export default function GuideThingsToDoCard({
@@ -20,9 +21,10 @@ export default function GuideThingsToDoCard({
   description,
   sourceUrl,
   imageUrl,
+  disableImage,
 }: GuideThingsToDoCardProps) {
   const [resolvedImageUrl, setResolvedImageUrl] = useState<string | null>(
-    imageUrl ?? null
+    disableImage ? null : imageUrl ?? null
   );
 
   const landmarkName = useMemo(
@@ -33,7 +35,7 @@ export default function GuideThingsToDoCard({
   useEffect(() => {
     let cancelled = false;
 
-    if (resolvedImageUrl) {
+    if (disableImage || resolvedImageUrl) {
       return;
     }
 
@@ -46,7 +48,7 @@ export default function GuideThingsToDoCard({
     return () => {
       cancelled = true;
     };
-  }, [city, landmarkName, resolvedImageUrl]);
+  }, [city, disableImage, landmarkName, resolvedImageUrl]);
 
   return (
     <li className="overflow-hidden rounded-2xl border border-black/10 bg-white p-4 md:p-5">
