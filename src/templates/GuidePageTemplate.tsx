@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
@@ -37,6 +38,8 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const mappedThingsLimit = isTier2 ? 5 : 8;
+  const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
 
   const breadcrumbs = [
     { name: "Guides", url: "/guides" },
@@ -120,12 +123,50 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           />
         </div>
 
+        <Section title={`Highlights of "${place}"`}>
+          <GuideThingsMap
+            city={guide.city ?? place}
+            state={guide.state}
+            cityCenter={guide.cityCenter}
+            attractions={mappedThings}
+          />
+        </Section>
+
         <Section title={`About ${place}`}>
-          <div className="space-y-4">
-            {guide.overview.map(paragraph => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
+          {guide.aboutCity?.sections?.length ? (
+            <div className="space-y-6">
+              {guide.aboutCity.sections.map(section => (
+                <article key={section.heading} className="space-y-3">
+                  <h3 className="text-base font-semibold text-[#1f2a1f] md:text-lg">
+                    {section.heading}
+                  </h3>
+                  <div className="space-y-3">
+                    {section.paragraphs.map(paragraph => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
+                </article>
+              ))}
+              {guide.aboutCity.sourceUrl ? (
+                <p className="pt-2 text-sm">
+                  <a
+                    href={guide.aboutCity.sourceUrl}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    className="font-medium text-[#1f2a1f] underline"
+                  >
+                    Source
+                  </a>
+                </p>
+              ) : null}
+            </div>
+          ) : (
+            <div className="space-y-4">
+              {guide.overview.map(paragraph => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          )}
         </Section>
 
         {!isTier2 ? (
@@ -149,7 +190,8 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
-              const sourceUrl = item.sourceUrl ?? item.source_url ?? item.wikiUrl;
+              const sourceUrl =
+                item.sourceUrl ?? item.source_url ?? item.wikiUrl;
 
               return (
                 <li

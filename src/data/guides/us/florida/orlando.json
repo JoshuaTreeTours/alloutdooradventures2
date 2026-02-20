@@ -118,5 +118,45 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.visitorlando.com/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling. Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling. Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling. Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "This gives you a more complete feel for Orlando without over-scheduling. Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling. Orlando is a strong base for culture, food, and outdoor day plans."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Orlando without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Orlando is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      }
+    ]
   }
 }

@@ -118,5 +118,45 @@
   },
   "seoLinks": {
     "officialTourism": "https://www.charlestoncvb.com/"
+  },
+  "aboutCity": {
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Geography & setting",
+        "paragraphs": [
+          "This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "History (brief)",
+        "paragraphs": [
+          "For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling. Charleston is a strong base for culture, food, and outdoor day plans."
+        ]
+      },
+      {
+        "heading": "Culture & neighborhoods",
+        "paragraphs": [
+          "Build each day around one anchor area, then add nearby experiences to reduce transit time. For first-time visitors, pair iconic landmarks with one local neighborhood each day. This gives you a more complete feel for Charleston without over-scheduling."
+        ]
+      },
+      {
+        "heading": "Outdoor & seasonal highlights",
+        "paragraphs": [
+          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      },
+      {
+        "heading": "Getting around",
+        "paragraphs": [
+          "Charleston is a strong base for culture, food, and outdoor day plans. Build each day around one anchor area, then add nearby experiences to reduce transit time."
+        ]
+      }
+    ]
   }
 }
