@@ -23,7 +23,14 @@ type WikidataPopulationClaim = {
   };
 };
 
+type WikidataInstanceOfClaim = {
+  mainsnak?: {
+    datavalue?: { value?: { id?: string } };
+  };
+};
+
 const USER_AGENT = "alloutdooradventures/1.0 (city-population)";
+const WIKIDATA_CITY_ENTITY_ID = "Q515";
 const cityPopulationCache = new Map<string, CityPopulationResult | null>();
 const cityRegistryPopulationCache = new Map<string, CityPopulationResult>();
 const wikidataPopulationCache = new Map<string, CityPopulationResult | null>();
@@ -53,6 +60,9 @@ const parseYear = (time?: string) => {
   return Number.isFinite(year) ? year : undefined;
 };
 
+const getClaimYear = (claim: WikidataPopulationClaim) =>
+  parseYear(claim.qualifiers?.P585?.[0]?.datavalue?.value?.time);
+
 const parsePopulationText = (text?: string) => {
   if (!text) return null;
 
@@ -72,7 +82,6 @@ const parsePopulationText = (text?: string) => {
     year: yearMatch ? Number(yearMatch[1]) : undefined,
   };
 };
-
 
 const fetchJson = async <T>(url: string): Promise<T | null> => {
   try {
@@ -99,7 +108,43 @@ export const cacheCityPopulation = (
   cityRegistryPopulationCache.set(getCityKey({ ...input }), parsed);
 };
 
-const fromWikidata = async (wikidataId: string): Promise<CityPopulationResult | null> => {
+const pickBestPopulationClaim = (claims: WikidataPopulationClaim[]) => {
+  const usableClaims = claims
+    .filter(claim => {
+      if (claim.mainsnak?.snaktype && claim.mainsnak.snaktype !== "value") return false;
+      return Boolean(asNumber(claim.mainsnak?.datavalue?.value?.amount));
+    })
+    .map(claim => ({ claim, year: getClaimYear(claim) }));
+
+  if (!usableClaims.length) return null;
+
+  const pickMostRecent = (
+    candidates: Array<{ claim: WikidataPopulationClaim; year?: number }>
+  ) =>
+    [...candidates].sort((a, b) => {
+      const aYear = a.year ?? -1;
+      const bYear = b.year ?? -1;
+      return bYear - aYear;
+    })[0];
+
+  const preferred = usableClaims.filter(item => item.claim.rank === "preferred");
+  if (preferred.length) return pickMostRecent(preferred);
+
+  const normal = usableClaims.filter(item => item.claim.rank === "normal");
+  if (normal.length) return pickMostRecent(normal);
+
+  return pickMostRecent(usableClaims);
+};
+
+const fromWikidata = async ({
+  wikidataId,
+  cityName,
+  countryName,
+}: {
+  wikidataId: string;
+  cityName: string;
+  countryName: string;
+}): Promise<CityPopulationResult | null> => {
   if (wikidataPopulationCache.has(wikidataId)) {
     return wikidataPopulationCache.get(wikidataId) ?? null;
   }
@@ -112,29 +157,46 @@ const fromWikidata = async (wikidataId: string): Promise<CityPopulationResult | 
   url.searchParams.set("origin", "*");
 
   const data = await fetchJson<{
-    entities?: Record<string, { claims?: { P1082?: WikidataPopulationClaim[] } }>;
+    entities?: Record<
+      string,
+      { claims?: { P1082?: WikidataPopulationClaim[]; P31?: WikidataInstanceOfClaim[] } }
+    >;
   }>(url.toString());
 
-  const claims = data?.entities?.[wikidataId]?.claims?.P1082 ?? [];
-  const sortedClaims = [...claims].sort((a, b) => {
-    const rankScore = (rank?: string) => (rank === "preferred" ? 2 : rank === "normal" ? 1 : 0);
-    return rankScore(b.rank) - rankScore(a.rank);
-  });
+  const entityClaims = data?.entities?.[wikidataId]?.claims;
+  const instanceOfClaims = entityClaims?.P31 ?? [];
+  const isCityEntity = instanceOfClaims.some(
+    claim => claim.mainsnak?.datavalue?.value?.id === WIKIDATA_CITY_ENTITY_ID
+  );
 
-  for (const claim of sortedClaims) {
-    if (claim.mainsnak?.snaktype && claim.mainsnak.snaktype !== "value") continue;
-
-    const value = asNumber(claim.mainsnak?.datavalue?.value?.amount);
-    if (!value) continue;
-
-    const time = claim.qualifiers?.P585?.[0]?.datavalue?.value?.time;
-    const result = { value, year: parseYear(time) };
-    wikidataPopulationCache.set(wikidataId, result);
-    return result;
+  if (!isCityEntity) {
+    wikidataPopulationCache.set(wikidataId, null);
+    return null;
   }
 
-  wikidataPopulationCache.set(wikidataId, null);
-  return null;
+  const pickedClaim = pickBestPopulationClaim(entityClaims?.P1082 ?? []);
+  if (!pickedClaim) {
+    wikidataPopulationCache.set(wikidataId, null);
+    return null;
+  }
+
+  const value = asNumber(pickedClaim.claim.mainsnak?.datavalue?.value?.amount);
+  if (!value) {
+    wikidataPopulationCache.set(wikidataId, null);
+    return null;
+  }
+
+  if (countryName.toLowerCase() === "united states" && value < 5000) {
+    console.warn(
+      `[getCityPopulation] Skipping suspicious US city population for ${cityName} (${wikidataId}): ${value}`
+    );
+    wikidataPopulationCache.set(wikidataId, null);
+    return null;
+  }
+
+  const result = { value, year: pickedClaim.year };
+  wikidataPopulationCache.set(wikidataId, result);
+  return result;
 };
 
 const fromWikipediaSummary = async (
@@ -187,7 +249,11 @@ export const getCityPopulation = async ({
   }
 
   if (wikidataId) {
-    const fromWikidataResult = await fromWikidata(wikidataId);
+    const fromWikidataResult = await fromWikidata({
+      wikidataId,
+      cityName,
+      countryName,
+    });
     if (fromWikidataResult) {
       cityPopulationCache.set(cacheKey, fromWikidataResult);
       return fromWikidataResult;
