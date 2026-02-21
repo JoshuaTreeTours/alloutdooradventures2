@@ -1,5 +1,5 @@
 export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
-  hawaii: "ALL",
+  hawaii: ["haleiwa", "hanalei", "hilo", "honolulu"],
   tennessee: [
     "nashville",
     "chattanooga",
