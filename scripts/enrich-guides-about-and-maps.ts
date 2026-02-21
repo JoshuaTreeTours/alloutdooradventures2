@@ -4,6 +4,12 @@ import {
   assertGuideHasNoWikiLanguage,
   cleanGuideTextContent,
 } from "../src/utils/guides/wikiLanguageGuard";
+import {
+  cleanCannedPhrases,
+  isTier1ProtectedGuide,
+  rewriteCityIntroFromWiki,
+  rewriteOnlyForNonTier1,
+} from "../src/utils/guides/enforceAuthoritativeGuideText";
 
 type GuideThing = {
   title: string;
@@ -19,6 +25,7 @@ type GuideJson = {
   tier?: "tier1" | "tier2";
   city?: string;
   state: string;
+  country?: string;
   seoLinks?: { wikipedia?: string };
   thingsToDo: GuideThing[];
   aboutCity?: {
@@ -230,6 +237,10 @@ const pickSentences = (
 };
 
 const composeAboutSections = (
+  tier: "tier1" | "tier2",
+  cityName: string,
+  stateName: string,
+  countryName: string,
   summary: string,
   extract: string,
   isTier2: boolean
@@ -269,9 +280,22 @@ const composeAboutSections = (
     {
       heading: ABOUT_HEADINGS[0],
       paragraphs: [
-        pickSentences([...summarySentences, ...allSentences], used, 2, 4).join(
-          " "
-        ),
+        rewriteOnlyForNonTier1({
+          tier,
+          originalText: pickSentences(
+            [...summarySentences, ...allSentences],
+            used,
+            2,
+            4
+          ).join(" "),
+          rewrite: text =>
+            rewriteCityIntroFromWiki({
+              cityName,
+              stateName,
+              countryName,
+              wikiText: text,
+            }),
+        }),
       ],
     },
     {
@@ -322,6 +346,11 @@ const composeAboutSections = (
   for (const section of sections) {
     if (!section.paragraphs[0]) {
       section.paragraphs = [pickSentences(allSentences, used, 2, 3).join(" ")];
+    }
+    if (!isTier1ProtectedGuide(tier)) {
+      section.paragraphs = section.paragraphs.map(paragraph =>
+        cleanCannedPhrases(paragraph)
+      );
     }
   }
 
@@ -394,6 +423,10 @@ const run = async () => {
 
     if (cityContext) {
       const sections = composeAboutSections(
+        tier,
+        guide.city,
+        guide.state,
+        guide.country ?? "United States",
         cityContext.summary.extract,
         cityContext.extract,
         tier === "tier2"

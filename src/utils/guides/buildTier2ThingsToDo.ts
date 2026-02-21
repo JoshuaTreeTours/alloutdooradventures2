@@ -3,6 +3,7 @@ import type {
   LandmarkType,
 } from "./extractCityLandmarksFromTours";
 import { cleanLandmarkText, ensureLength } from "./cleanLandmarkText";
+import { cleanCannedPhrases } from "./enforceAuthoritativeGuideText";
 
 export type Tier2ThingToDo = {
   title: string;
@@ -45,7 +46,12 @@ const buildDescription = (
 ) => {
   const sentence = `${title} ${typeLead[type]} in ${cityName}, ${stateName}, known for ${typeExperience[type]}. It helps anchor a practical visit because the area combines orientation, context, and a clear sense of place without requiring a long transfer. The site is useful for first-time visitors who want a factual, city-grounded stop.`;
 
-  return ensureLength(cleanLandmarkText(sentence), cityName, stateName, type);
+  return ensureLength(
+    cleanCannedPhrases(cleanLandmarkText(sentence)),
+    cityName,
+    stateName,
+    type
+  );
 };
 
 export const buildTier2ThingsToDo = (

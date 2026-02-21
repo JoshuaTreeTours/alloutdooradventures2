@@ -187,7 +187,7 @@ export default function ParisGuideRoute() {
       ) : null}
 
       <section className="mt-12 border-t border-[#dde7dd] pt-6">
-        <h2 className="text-xl font-semibold">Sources</h2>
+        <h2 className="text-xl font-semibold">Further reading</h2>
         <ul className="mt-3 list-disc space-y-2 pl-6 text-[#405040]">
           <li>
             <a

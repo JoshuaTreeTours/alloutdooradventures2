@@ -19,6 +19,9 @@ type StaticSeoEntry = {
   title: string;
   description: string;
   image?: string;
+  imageAlt?: string;
+  ogImage?: string;
+  twitterImage?: string;
 };
 
 export const STATIC_PAGE_SEO: Record<string, StaticSeoEntry> = {
@@ -194,5 +197,10 @@ export const getStaticPageSeo = (pathname: string) => {
     url: buildCanonicalUrl(normalized),
     type: DEFAULT_SEO.type,
     image: buildImageUrl(entry.image ?? DEFAULT_SEO.image),
+    ...(entry.imageAlt ? { imageAlt: entry.imageAlt } : {}),
+    ...(entry.ogImage ? { ogImage: buildImageUrl(entry.ogImage) } : {}),
+    ...(entry.twitterImage
+      ? { twitterImage: buildImageUrl(entry.twitterImage) }
+      : {}),
   };
 };

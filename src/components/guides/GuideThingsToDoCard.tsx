@@ -10,6 +10,7 @@ type GuideThingsToDoCardProps = {
   title: string;
   description: string;
   sourceUrl?: string;
+  wikiUrl?: string;
   imageUrl?: string | null;
   disableImage?: boolean;
 };
@@ -20,6 +21,7 @@ export default function GuideThingsToDoCard({
   title,
   description,
   sourceUrl,
+  wikiUrl,
   imageUrl,
   disableImage,
 }: GuideThingsToDoCardProps) {
@@ -68,7 +70,16 @@ export default function GuideThingsToDoCard({
       <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
         {description}
       </p>
-      {sourceUrl ? (
+      {wikiUrl ? (
+        <a
+          href={wikiUrl}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
+          className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
+        >
+          Source: Wikipedia
+        </a>
+      ) : sourceUrl ? (
         <a
           href={sourceUrl}
           target="_blank"

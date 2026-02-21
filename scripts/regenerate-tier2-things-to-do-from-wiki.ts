@@ -20,6 +20,7 @@ import {
 } from "../src/data/cityTopThings";
 import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
 import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
+import { isTopGuide } from "../src/utils/guides/isTopGuide";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
@@ -101,6 +102,38 @@ const mapType = (name: string): CityLandmarkCandidate["type"] => {
 const normalize = (value: string) =>
   value.toLowerCase().replace(/\s+/g, " ").trim();
 
+
+
+const BANNED_FUZZY =
+  /practical stop|easy recommendation|travelers? rank|coverage for|cross-?links?|article set|dataset|according to|this article|this page/i;
+
+const toShortFactual = (title: string, city: string, description: string) => {
+  const cleaned = cleanWikiLanguage(description).replace(/\s+/g, " ").trim();
+  const sentences = cleaned
+    .split(/(?<=[.!?])\s+/)
+    .map(line => line.trim())
+    .filter(Boolean)
+    .filter(line => !BANNED_FUZZY.test(line))
+    .slice(0, 3);
+
+  if (sentences.length >= 2) {
+    return sentences.join(" ");
+  }
+
+  const safeFirst = sentences[0] ?? `${title} is a recognized attraction in ${city}.`;
+  return `${safeFirst} Visitors come here for its setting, local relevance, and well-known features.`;
+};
+
+const canonicalWikiUrl = (title: string, pageUrl?: string) => {
+  if (pageUrl?.trim()) return pageUrl.trim();
+  const normalized = title.trim().replace(/\s+/g, "_");
+  if (!normalized) return undefined;
+  return `https://en.wikipedia.org/wiki/${encodeURIComponent(normalized).replace(
+    /%5F/g,
+    "_"
+  )}`;
+};
+
 const buildFallbackThing = async (
   name: string,
   city: string
@@ -111,10 +144,12 @@ const buildFallbackThing = async (
     summary.extract.split(/(?<=[.!?])\s+/)[0] ?? summary.extract;
   return {
     title: summary.title || name,
-    description: cleanWikiLanguage(
-      `${summary.title || name} is a recognized landmark in or near ${city}. ${firstSentence} Visit for a focused stop with walkable surroundings, photos, and easy pairing with nearby neighborhoods or waterfront areas.`
+    description: toShortFactual(
+      summary.title || name,
+      city,
+      `${summary.title || name} is a recognized landmark in or near ${city}. ${firstSentence}`
     ),
-    wikiUrl: summary.pageUrl,
+    wikiUrl: canonicalWikiUrl(summary.title || name, summary.pageUrl),
     imageUrl: summary.imageUrl,
   };
 };
@@ -184,8 +219,10 @@ const ensureFourItems = async (
 
     items.push({
       title: name,
-      description: cleanWikiLanguage(
-        `${name} is a known local point of interest around ${city}. Plan a short stop for views, neighborhood context, and a practical anchor before pairing nearby museums, parks, or waterfront areas.`
+      description: toShortFactual(
+        name,
+        city,
+        `${name} is a known local point of interest around ${city}. Visitors come here for its setting and notable local character.`
       ),
     });
     seen.add(normalize(name));
@@ -196,8 +233,10 @@ const ensureFourItems = async (
     .filter(item => isPlausibleLandmarkName(item.name))
     .map(item => ({
       title: item.name,
-      description: cleanWikiLanguage(
-        `${item.name} is a practical stop for understanding ${city}'s local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in ${city}, ${state}.`
+      description: toShortFactual(
+        item.name,
+        city,
+        `${item.name} is a well-known place in ${city}, ${state}. It is known for local character and helps visitors understand this part of the city.`
       ),
     }));
 
@@ -221,7 +260,12 @@ const run = async () => {
     const { stateSlug, citySlug } = parseSlugs(file);
     const routeKey = `us/${stateSlug}/${citySlug}`;
 
-    if (guide.tier !== "tier2" || !guide.city || !guide.state) {
+    if (
+      guide.tier !== "tier2" ||
+      !guide.city ||
+      !guide.state ||
+      isTopGuide({ ...guide, slug: routeKey })
+    ) {
       report.citiesSkippedTier1.push(routeKey);
       continue;
     }
@@ -279,7 +323,10 @@ const run = async () => {
 
     guide.thingsToDo = finalThings.slice(0, MAX_ITEMS).map(item => ({
       ...item,
-      description: cleanWikiLanguage(item.description),
+      description: toShortFactual(item.title, guide.city!, item.description),
+      wikiUrl: item.wikiUrl
+        ? canonicalWikiUrl(item.title, item.wikiUrl)
+        : undefined,
     }));
 
     if (!guide.seoLinks) {
