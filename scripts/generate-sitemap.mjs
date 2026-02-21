@@ -104,6 +104,30 @@ const buildCanonicalTourPath = (tour, catalogModule) => {
   return `/tours/${stateSlug}/${citySlug}/${slug}`;
 };
 
+const listUsGuideCitiesByState = async () => {
+  const guidesRoot = path.join(__dirname, "..", "src", "data", "guides", "us");
+  const stateEntries = await readdir(guidesRoot, { withFileTypes: true });
+  const guidesByState = new Map();
+
+  await Promise.all(
+    stateEntries
+      .filter((entry) => entry.isDirectory())
+      .map(async (stateEntry) => {
+        const stateSlug = stateEntry.name;
+        const stateDir = path.join(guidesRoot, stateSlug);
+        const cityEntries = await readdir(stateDir, { withFileTypes: true });
+        const citySlugs = cityEntries
+          .filter((entry) => entry.isFile() && entry.name.endsWith(".json"))
+          .map((entry) => entry.name.replace(/\.json$/, ""))
+          .filter((citySlug) => citySlug !== "index");
+
+        guidesByState.set(stateSlug, new Set(citySlugs));
+      }),
+  );
+
+  return guidesByState;
+};
+
 const escapeXml = (value) =>
   value.replace(/[<>&'"]/g, (char) => {
     switch (char) {
@@ -802,6 +826,7 @@ const buildSitemap = async () => {
 
   const guideStates = new Map();
   const guideCountries = new Map();
+  const allowedUsGuideCities = await listUsGuideCitiesByState();
 
   tours.forEach((tour) => {
     const citySlug = tour.destination.citySlug;
@@ -814,6 +839,11 @@ const buildSitemap = async () => {
       if (!stateSlug) {
         return;
       }
+
+      if (!allowedUsGuideCities.get(stateSlug)?.has(citySlug)) {
+        return;
+      }
+
       if (!guideStates.has(stateSlug)) {
         guideStates.set(stateSlug, new Set());
       }
