@@ -7,10 +7,19 @@ import {
 import { getGuidesByState } from "./guideRegistry";
 
 describe("guideCityAllowlistUS", () => {
-  it("keeps Hawaii guides unpruned", () => {
-    expect(GUIDE_CITY_ALLOWLIST_US.hawaii).toBe("ALL");
+  it("keeps only Hawaii authority guides and always preserves Honolulu", () => {
+    expect(GUIDE_CITY_ALLOWLIST_US.hawaii).toEqual([
+      "maui",
+      "kauai",
+      "hilo",
+      "kona",
+      "lahaina",
+      "waikiki",
+      "hawaii-big-island",
+    ]);
     expect(isGuideCityAllowedUS("hawaii", "honolulu")).toBe(true);
     expect(isGuideCityAllowedUS("hawaii", "hilo")).toBe(true);
+    expect(isGuideCityAllowedUS("hawaii", "kahului")).toBe(false);
   });
 
   it("keeps only allowlisted Florida city guides in the registry", () => {

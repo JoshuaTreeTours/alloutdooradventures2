@@ -6,72 +6,60 @@
   "city": "Lahaina",
   "slug": "guides/us/hawaii/lahaina",
   "hero": {
-    "image": "https://cdn.filestackcontent.com/8pWz6BBrT2kV1O6sIipQ",
-    "alt": "Lahaina, Hawaii — Intro Scuba Class & Reef Dive",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Lahaina_Harbor_Maui.jpg",
+    "alt": "Lahaina Harbor on Maui",
     "headline": "Lahaina, Hawaii Travel Guide",
-    "subheadline": "Plan a focused Lahaina trip with practical highlights, local context, and easy tour connections."
+    "subheadline": "Context on Lahaina's harbor history, landmarks, and coastal setting on West Maui."
   },
   "overview": [
-    "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
+    "Lahaina is a historic town on the west coast of Maui that served as the Hawaiian Kingdom capital from 1820 to 1845. It later developed as a whaling port and commercial harbor, and many surviving landmarks document that period. The district sits on a dry leeward shoreline with direct access to marine channels between Maui, Lanai, and Molokai. Trip planning often focuses on historic sites, waterfront infrastructure, and regional ferry or excursion access."
   ],
   "highlights": [
     {
-      "title": "Lahaina essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
+      "title": "Former royal capital",
+      "description": "Lahaina held administrative importance in the early nineteenth-century Hawaiian Kingdom."
     },
     {
-      "title": "Lahaina local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
+      "title": "Whaling-era harbor town",
+      "description": "The waterfront and preserved structures reflect Lahaina's role in Pacific maritime trade."
     }
   ],
   "thingsToDo": [
     {
-      "title": "Extended Horizons Scuba",
-      "description": "Extended Horizons Scuba is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Lahaina Historic District",
+      "description": "The Lahaina Historic District includes buildings and streetscapes linked to the town's periods as royal center, missionary outpost, and whaling port.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lahaina_Historic_District",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Lahaina_Historic_District",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Lahaina_Historic_District.jpg"
     },
     {
-      "title": "Diving Maui",
-      "description": "Diving Maui is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Banyan Tree Park",
+      "description": "Banyan Tree Park contains a large Ficus benghalensis planted in 1873 and is one of Lahaina's best-known civic spaces near the courthouse and harbor.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Banyan_Tree_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Banyan_Tree_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Banyan_Tree_in_Lahaina%2C_Maui.jpg"
     },
     {
-      "title": "Molokini Crater Backwall",
-      "description": "Molokini Crater Backwall is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Secret Falls",
-      "description": "Secret Falls is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
-    },
-    {
-      "title": "Reef Dive",
-      "description": "Reef Dive is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Hawaii Ocean Rafting",
-      "description": "Hawaii Ocean Rafting is a practical stop for understanding Lahaina's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Lahaina, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Lahaina Harbor",
+      "description": "Lahaina Harbor is a small-boat harbor that historically supported shipping and now functions as an access point for inter-island and offshore marine routes.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Lahaina%2C_Hawaii",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Lahaina%2C_Hawaii",
+      "imageUrl": null,
+      "disableImage": true
     }
   ],
   "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Lahaina",
+    "title": "Leeward weather is generally drier",
     "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
+      "West Maui is typically sunnier than windward districts.",
+      "Book harbor activities early during peak travel months.",
+      "Track local updates for recovery and access changes in Lahaina."
     ]
   },
   "travelTips": [
-    "Group activities by area to reduce transfers across Lahaina.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
-  "faq": [
-    {
-      "q": "How many days should I plan for Lahaina?",
-      "a": "Two to three days is enough for core Lahaina highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Lahaina?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
+    "Use official county and state notices for open-area status.",
+    "Combine nearby historic stops to reduce driving.",
+    "Schedule marine departures with wind and sea conditions in mind."
   ],
   "tours": {
     "stateSlug": "hawaii",
@@ -80,47 +68,15 @@
     "title": "Top Lahaina tours"
   },
   "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Lahaina",
-    "officialTourism": "https://www.gohawaii.com/",
-    "reference": "https://www.britannica.com/place/Lahaina"
+    "wikipedia": "https://en.wikipedia.org/wiki/Lahaina,_Hawaii"
   },
   "aboutCity": {
-    "sourceUrl": "https://en.wikipedia.org/wiki/Lahaina",
+    "sourceUrl": "https://en.wikipedia.org/wiki/Lahaina,_Hawaii",
     "sections": [
       {
         "heading": "Overview",
         "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Lahaina, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Lahaina itinerary efficient while still feeling varied and local."
+          "Lahaina is on Maui's leeward coast and historically functioned as both a royal seat and a Pacific whaling port. The town developed around a protected shoreline used for shipping and fishing, with civic buildings concentrated near the waterfront. Historic district landmarks document nineteenth-century political and commercial periods. Current travel planning centers on open historic areas, harbor access, and nearby West Maui coastal routes."
         ]
       }
     ]

@@ -1,0 +1,84 @@
+{
+  "tier": "tier2",
+  "title": "Maui, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Maui",
+  "slug": "guides/us/hawaii/maui",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Maui_coastline.jpg",
+    "alt": "Maui coastline and volcanic terrain",
+    "headline": "Maui, Hawaii Travel Guide",
+    "subheadline": "A factual island-level guide to Maui geography, protected parks, and historic sites."
+  },
+  "overview": [
+    "Maui is the second-largest Hawaiian island, formed by two volcanic masses connected by a low isthmus where Kahului and Wailuku are located. The island includes major protected landscapes such as Haleakala National Park and the Iao Valley area. Settlement and transport patterns follow coastal belts and mountain gaps rather than a single urban center. Travel planning typically uses island regions, including West Maui, South Maui, Upcountry, and East Maui, as practical itinerary units."
+  ],
+  "highlights": [
+    {
+      "title": "Bi-volcanic island structure",
+      "description": "Maui combines West Maui Mountains terrain with the larger Haleakala volcanic shield."
+    },
+    {
+      "title": "Regional itinerary planning",
+      "description": "Routes are commonly organized by island districts instead of one city core."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Haleakala National Park",
+      "description": "Haleakala National Park protects summit crater landscapes, native ecosystems, and coastal Kipahulu sections across eastern Maui.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Haleakala_Crater%2C_Maui%2C_Hawaii.jpg"
+    },
+    {
+      "title": "Iao Valley",
+      "description": "Iao Valley is a steep, rain-fed valley in the West Maui Mountains known for the Iao Needle and its role in Hawaiian historical events.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
+      "sourceUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Iao_Needle%2C_Maui%2C_Hawaii.jpg"
+    },
+    {
+      "title": "Road to Hana",
+      "description": "The Hana Highway corridor links central Maui with East Maui settlements through bridges, cliffs, and rainforest zones on a narrow coastal route.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
+      "imageUrl": null,
+      "disableImage": true
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Plan by district and drive time",
+    "bullets": [
+      "Use one district per day to limit long cross-island drives.",
+      "Expect variable weather between leeward and windward areas.",
+      "Reserve timed national park entry when required."
+    ]
+  },
+  "travelTips": [
+    "Base lodging near the regions you plan to visit most.",
+    "Check road and park alerts before East Maui drives.",
+    "Start long scenic routes early to avoid congestion."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "maui",
+    "limit": 6,
+    "title": "Top Maui tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Maui"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Maui",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Maui is part of Maui County and consists of two major volcanic landforms joined by an isthmus. Population and services are concentrated in central Maui, while major visitor areas are distributed across west, south, and east coastal districts. The island contains protected volcanic and rainforest environments, creating large differences in climate and travel time. Most practical trip planning is regional, with each day focused on one side of the island."
+        ]
+      }
+    ]
+  }
+}

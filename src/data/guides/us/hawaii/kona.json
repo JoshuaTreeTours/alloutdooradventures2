@@ -1,0 +1,84 @@
+{
+  "tier": "tier2",
+  "title": "Kona, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Kona",
+  "slug": "guides/us/hawaii/kona",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/92/Kailua-Kona_Hawaii.jpg",
+    "alt": "Kailua-Kona coastline on Hawaii Island",
+    "headline": "Kona, Hawaii Travel Guide",
+    "subheadline": "A concise guide to Kona's leeward coast, shoreline landmarks, and historical sites."
+  },
+  "overview": [
+    "Kona generally refers to the leeward districts on the west side of Hawaii Island, with Kailua-Kona as the primary town center. The coast has dry conditions relative to windward Hilo and supports harbors, historic mission-era sites, and offshore marine activity. The area is associated with the Kona coffee belt on upslope volcanic terrain. Visitor itineraries usually combine shoreline historic landmarks with marine sites and upland viewpoints linked by the Mamalahoa corridor."
+  ],
+  "highlights": [
+    {
+      "title": "Leeward island base",
+      "description": "Kona is a practical base for west-coast marine and heritage sites."
+    },
+    {
+      "title": "Historic shoreline sites",
+      "description": "Several protected landmarks document early Hawaiian and missionary-era history."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Hulihee Palace",
+      "description": "Hulihee Palace is a former Hawaiian royal vacation residence in Kailua-Kona built in 1838 and now operated as a museum of nineteenth-century artifacts.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hulihe%CA%BBe_Palace",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hulihe%CA%BBe_Palace",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Hulihee_Palace%2C_Kailua-Kona.jpg"
+    },
+    {
+      "title": "Mokuaikaua Church",
+      "description": "Mokuaikaua Church was completed in 1837 and is recognized as the oldest Christian church building in Hawaii, located on Alii Drive in Kailua-Kona.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mokuaikaua_Church",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mokuaikaua_Church",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Mokuaikaua_Church.jpg"
+    },
+    {
+      "title": "Kamakahonu",
+      "description": "Kamakahonu is a historic site that was once the residence compound of Kamehameha I and remains part of the Ahuena Heiau National Historic Landmark area.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Kamakahonu",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Kamakahonu",
+      "imageUrl": null,
+      "disableImage": true
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Dry-season consistency supports planning",
+    "bullets": [
+      "Leeward weather is often stable compared with the island's east side.",
+      "Morning departures are common for offshore activities.",
+      "Allow extra drive time for upland coffee and viewpoint stops."
+    ]
+  },
+  "travelTips": [
+    "Use Kailua-Kona as the navigation base for west coast routes.",
+    "Check marine advisories for surf and vessel departures.",
+    "Plan upland coffee district visits outside midday heat."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "kona",
+    "limit": 6,
+    "title": "Top Kona tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kona_District,_Hawaii"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Kona_District,_Hawaii",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Kona covers North and South Kona districts on Hawaii Island's western side. The area includes Kailua-Kona, historically important royal and mission-era sites, and coastlines used for fishing and maritime transport. Rainfall is lower than on the island's windward side, creating a different settlement and agricultural pattern. Most visits combine shoreline landmarks with short upland drives toward coffee-growing areas on volcanic slopes."
+        ]
+      }
+    ]
+  }
+}

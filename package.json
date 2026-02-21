@@ -39,7 +39,8 @@
     "gen:paris": "tsx --tsconfig tsconfig.node.json scripts/generate-guide-from-wiki.ts",
     "guides:enrich-about-map": "tsx scripts/enrich-guides-about-and-maps.ts",
     "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts",
-    "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts"
+    "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
+    "validate:hawaii-guides": "tsx scripts/validate-hawaii-guides.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

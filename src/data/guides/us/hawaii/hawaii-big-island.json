@@ -1,0 +1,84 @@
+{
+  "tier": "tier2",
+  "title": "Hawaii Big Island Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Hawaii Big Island",
+  "slug": "guides/us/hawaii/hawaii-big-island",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/95/Hawaii_Big_Island_NASA.jpg",
+    "alt": "Aerial view of Hawaii Island",
+    "headline": "Hawaii Big Island Travel Guide",
+    "subheadline": "Island-scale context for volcanoes, districts, and practical route planning."
+  },
+  "overview": [
+    "Hawaii Island is the largest island in the state and includes multiple volcanic mountains, including Mauna Loa, Mauna Kea, and Kilauea. Distances between districts are significant, and weather can shift quickly from wet windward zones to dry leeward coasts and high-elevation summit environments. Key settlements include Hilo and Kailua-Kona, each serving different regional routes. Most visitors plan by district and use full-day blocks for volcano parks, coastline sites, and upland drives."
+  ],
+  "highlights": [
+    {
+      "title": "Largest Hawaiian island",
+      "description": "The island spans multiple climate zones and long inter-district travel distances."
+    },
+    {
+      "title": "Active volcanic landscape",
+      "description": "Hawaii Volcanoes National Park anchors geologic and ecological interpretation."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Hawaii Volcanoes National Park",
+      "description": "Hawaii Volcanoes National Park preserves Kilauea and Mauna Loa volcanic systems and documents ongoing volcanic processes, ecosystems, and Hawaiian cultural sites.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hawaii_Volcanoes_National_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hawaii_Volcanoes_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Kilauea_Iki_Crater.jpg"
+    },
+    {
+      "title": "Mauna Kea",
+      "description": "Mauna Kea is a shield volcano and high summit on Hawaii Island, known for alpine conditions and astronomical observatories on its upper slopes.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Mauna_Kea",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Mauna_Kea",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Mauna_Kea_from_above.jpg"
+    },
+    {
+      "title": "Puuhonua o Honaunau National Historical Park",
+      "description": "Puuhonua o Honaunau preserves an important traditional place of refuge and adjacent coastal archaeological landscape on the Kona coast.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_National_Historical_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_National_Historical_Park",
+      "imageUrl": null,
+      "disableImage": true
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Use district-based scheduling",
+    "bullets": [
+      "Allocate full days to one side of the island at a time.",
+      "Carry layers for major elevation changes.",
+      "Review volcano and summit access notices before departure."
+    ]
+  },
+  "travelTips": [
+    "Select Hilo or Kona lodging based on your first priority region.",
+    "Do not underestimate drive time between districts.",
+    "Check weather and road conditions for high-elevation routes."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "hawaii-big-island",
+    "limit": 6,
+    "title": "Top Hawaii Big Island tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Hawaii_(island)"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Hawaii_(island)",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Hawaii Island is geologically the youngest and largest of the main Hawaiian islands, built by overlapping shield volcanoes in the hotspot chain. Population and services are distributed across multiple districts, with Hilo and Kailua-Kona as the principal urban nodes. Elevation ranges from sea level to high summits, creating major climate variation in short distances. Effective planning is district-based and should account for long drives and changing road conditions."
+        ]
+      }
+    ]
+  }
+}

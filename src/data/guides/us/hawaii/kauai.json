@@ -1,0 +1,84 @@
+{
+  "tier": "tier2",
+  "title": "Kauai, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Kauai",
+  "slug": "guides/us/hawaii/kauai",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Na_Pali_Coast_State_Park.jpg",
+    "alt": "Na Pali Coast on Kauai",
+    "headline": "Kauai, Hawaii Travel Guide",
+    "subheadline": "A practical overview of Kauai's geology, protected coasts, and regional access."
+  },
+  "overview": [
+    "Kauai is the oldest of Hawaii's main high islands and is known for deeply eroded volcanic terrain, high-rainfall interior mountains, and narrow coastal settlement zones. The island includes major protected areas such as Na Pali Coast State Wilderness Park and Waimea Canyon State Park. Road access does not fully circle the island, so itineraries are usually split between north shore, east side, and south-west routes. Lihue functions as the main air and service gateway."
+  ],
+  "highlights": [
+    {
+      "title": "Eroded volcanic landscapes",
+      "description": "Kauai's age and rainfall produced steep valleys, sea cliffs, and canyon topography."
+    },
+    {
+      "title": "Segmented road network",
+      "description": "Route planning relies on regional loops rather than a full island circuit."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Na Pali Coast State Wilderness Park",
+      "description": "Na Pali Coast State Wilderness Park preserves high sea cliffs and valleys along Kauai's northwest shore and is accessible primarily by trail, sea, or air.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/N%C4%81_Pali_Coast_State_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/N%C4%81_Pali_Coast_State_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Na_Pali_Coast_Kauai_Hawaii.jpg"
+    },
+    {
+      "title": "Waimea Canyon",
+      "description": "Waimea Canyon is a large erosional valley system on western Kauai shaped by volcanic and fluvial processes and protected within state park lands.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Waimea_Canyon",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Waimea_Canyon",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Waimea_Canyon_Kauai.jpg"
+    },
+    {
+      "title": "Wailua River",
+      "description": "The Wailua River corridor on the east side includes cultural sites and inland access routes to fern grottos and waterfalls.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wailua_River",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wailua_River",
+      "imageUrl": null,
+      "disableImage": true
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Plan around weather and one-road corridors",
+    "bullets": [
+      "Rainfall varies sharply by coast and elevation.",
+      "Build extra time for two-lane route congestion.",
+      "Check trail and park status before north shore visits."
+    ]
+  },
+  "travelTips": [
+    "Use Lihue as the central logistics hub.",
+    "Group north shore and west side activities by day.",
+    "Review local notices for flood or closure updates."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "kauai",
+    "limit": 6,
+    "title": "Top Kauai tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Kauai"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Kauai",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Kauai's topography reflects long-term erosion of an older shield volcano, producing steep valleys and canyon systems compared with younger Hawaiian islands. Population and transport services are concentrated around Lihue and coastal towns, while the interior remains largely mountainous and wet. The island road network stops before the Na Pali cliffs, so travel is divided into reachable regional corridors. Most itineraries combine one coast per day with fixed travel windows."
+        ]
+      }
+    ]
+  }
+}
