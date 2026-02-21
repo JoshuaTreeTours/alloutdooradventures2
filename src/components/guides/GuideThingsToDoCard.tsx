@@ -24,7 +24,7 @@ export default function GuideThingsToDoCard({
   const [hideImage, setHideImage] = useState(false);
 
   const cleanedDescription = useMemo(
-    () => cleanThingDescription(description),
+    () => cleanThingDescription(description).replace(/The site is regularly referenced in statewide historical, environmental, or cultural documentation\.?/gi, "").trim(),
     [description]
   );
 

@@ -64,6 +64,7 @@ const buildExtendedDescription = (args: {
   }
 
   description = trimToWords(description, 140);
+  description = stateName.toLowerCase() === "hawaii" ? description.replace(/The site is regularly referenced in statewide historical, environmental, or cultural documentation\.?/gi, "").trim() : description;
 
   const sentenceTotal = splitSentences(description).length;
   const words = wordCount(description);

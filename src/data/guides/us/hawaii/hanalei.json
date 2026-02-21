@@ -26,20 +26,29 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Hanalei, Hawaii. Regional parks and preserves near Hanalei are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Hanalei Bay",
+      "description": "Hanalei Bay is a bay in or near Hanalei, Hawaii. Hanalei Bay is a large semicircular bay on Kauaʻi's north shore, with beaches framed by mountain ridges and river-fed wetlands. The bay is a defining geographic feature of the Hanalei area and supports surfing, paddling, and shoreline recreation. The site is regularly referenced in statewide historical, environmental, or cultural documentation.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hanalei_Bay"
     },
     {
-      "title": "Morning N",
-      "description": "Morning N is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Hanalei Pier",
+      "description": "Hanalei Pier is a historic pier in or near Hanalei, Hawaii. Hanalei Pier is a historic pier in Hanalei Bay that has served shipping, fishing, and community uses since the late nineteenth century. The structure is listed as part of Hanalei's coastal heritage landscape and remains a focal public landmark. The site is regularly referenced in statewide historical, environmental, or cultural documentation.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hanalei_Pier"
     },
     {
-      "title": "Fathom Five Divers",
-      "description": "Fathom Five Divers is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Waiʻoli Mission District",
+      "description": "Waiʻoli Mission District is a historic district in or near Hanalei, Hawaii. The Waiʻoli Mission District in Hanalei preserves nineteenth-century missionary-era buildings, including Waiʻoli Huiʻia Church and mission house structures. The district documents early Protestant mission history on Kauaʻi and is listed on the National Register of Historic Places. The site is regularly referenced in statewide historical, environmental, or cultural documentation.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Waioli_Mission_District"
     },
     {
-      "title": "Na Pali Coast Hanalei Tours",
-      "description": "Na Pali Coast Hanalei Tours is a practical stop for understanding Hanalei's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hanalei, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Hanalei Valley Lookout",
+      "description": "Hanalei Valley Lookout is a scenic overlook in or near Hanalei, Hawaii. Hanalei Valley Lookout is an overlook above Hanalei's taro fields and wetland plain near the Kūhiō Highway corridor. The viewpoint is widely used to interpret valley agriculture, floodplain geography, and mountain-to-bay landscape relationships on Kauaʻi. The site is regularly referenced in statewide historical, environmental, or cultural documentation. Its present-day access and management context shape how residents and visitors use the area.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hanalei,_Hawaii"
+    },
+    {
+      "title": "Hā‘ena State Park",
+      "description": "Hā‘ena State Park is a state park in or near Hanalei, Hawaii. Hā‘ena State Park is a coastal state park on Kauaʻi that includes beaches, sea cliffs, and access to the Kalalau Trail. The park protects significant natural and cultural sites and operates with managed-entry systems for conservation and visitor safety. The site is regularly referenced in statewide historical, environmental, or cultural documentation.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Haena_State_Park"
     }
   ],
   "bestTimeToVisit": {
