@@ -2,19 +2,24 @@ import fs from "node:fs";
 import path from "node:path";
 
 type SummaryResponse = {
-  title?: string;
-  extract?: string;
-  type?: string;
-  thumbnail?: {
-    source?: string;
-  };
-  originalimage?: {
-    source?: string;
-  };
-  content_urls?: {
-    desktop?: {
-      page?: string;
-    };
+  query?: {
+    pages?: Record<
+      string,
+      {
+        title?: string;
+        extract?: string;
+        thumbnail?: {
+          source?: string;
+        };
+        original?: {
+          source?: string;
+        };
+        canonicalurl?: string;
+        fullurl?: string;
+        pageid?: number;
+        missing?: boolean;
+      }
+    >;
   };
 };
 
@@ -105,29 +110,30 @@ export const fetchWikiSummary = async (
   await waitForRequestSlot();
 
   try {
-    const request = fetch(
-      `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(trimmed)}`,
-      {
-        headers: {
-          Accept: "application/json",
-          "User-Agent": USER_AGENT,
-        },
-      }
-    );
+    const apiUrl = new URL("https://en.wikipedia.org/w/api.php");
+    apiUrl.searchParams.set("action", "query");
+    apiUrl.searchParams.set("format", "json");
+    apiUrl.searchParams.set("prop", "extracts|pageimages|info");
+    apiUrl.searchParams.set("titles", trimmed);
+    apiUrl.searchParams.set("exintro", "true");
+    apiUrl.searchParams.set("explaintext", "true");
+    apiUrl.searchParams.set("redirects", "true");
+    apiUrl.searchParams.set("inprop", "url");
+    apiUrl.searchParams.set("pithumbsize", "1200");
+
+    const request = fetch(apiUrl.toString(), {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": USER_AGENT,
+      },
+    });
 
     const response = (await Promise.race([
       request,
-      new Promise<null>(resolve => setTimeout(() => resolve(null), 500)),
+      new Promise<null>(resolve => setTimeout(() => resolve(null), 5000)),
     ])) as Response | null;
 
-    if (!response) {
-      const empty = { extract: null, url: null, imageUrl: null };
-      cacheState.summaries[lookupKey] = empty;
-      cacheDirty = true;
-      return empty;
-    }
-
-    if (!response.ok) {
+    if (!response || !response.ok) {
       const empty = { extract: null, url: null, imageUrl: null };
       cacheState.summaries[lookupKey] = empty;
       cacheDirty = true;
@@ -135,26 +141,22 @@ export const fetchWikiSummary = async (
     }
 
     const payload = (await response.json()) as SummaryResponse;
-    const normalizedTitle = payload.title
-      ? normalizeTitle(payload.title)
-      : lookupKey;
+    const pages = payload.query?.pages ? Object.values(payload.query.pages) : [];
+    const page = pages.find(entry => !entry.missing && entry.extract?.trim());
 
-    const result = {
-      extract: payload.extract?.trim() || null,
-      url: payload.content_urls?.desktop?.page || null,
-      imageUrl:
-        payload.thumbnail?.source ?? payload.originalimage?.source ?? null,
-    };
-
-    if (payload.type === "missing" || !result.extract) {
-      cacheState.summaries[lookupKey] = {
-        extract: null,
-        url: null,
-        imageUrl: null,
-      };
+    if (!page || !page.extract?.trim()) {
+      const empty = { extract: null, url: null, imageUrl: null };
+      cacheState.summaries[lookupKey] = empty;
       cacheDirty = true;
-      return { extract: null, url: null, imageUrl: null };
+      return empty;
     }
+
+    const normalizedTitle = page.title ? normalizeTitle(page.title) : lookupKey;
+    const result = {
+      extract: page.extract.trim(),
+      url: page.fullurl ?? page.canonicalurl ?? null,
+      imageUrl: page.thumbnail?.source ?? page.original?.source ?? null,
+    };
 
     cacheState.summaries[normalizedTitle] = result;
     cacheState.summaries[lookupKey] = result;
