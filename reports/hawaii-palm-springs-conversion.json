@@ -1,0 +1,65 @@
+[
+  {
+    "city": "Haleiwa",
+    "thingsRewritten": 6,
+    "avgWordCount": 135,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Hanalei",
+    "thingsRewritten": 6,
+    "avgWordCount": 136,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Hilo",
+    "thingsRewritten": 6,
+    "avgWordCount": 136,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Kahului",
+    "thingsRewritten": 6,
+    "avgWordCount": 137,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Kailua-Kona",
+    "thingsRewritten": 6,
+    "avgWordCount": 136,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Kihei",
+    "thingsRewritten": 6,
+    "avgWordCount": 136,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Lahaina",
+    "thingsRewritten": 6,
+    "avgWordCount": 136,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Waikoloa Village",
+    "thingsRewritten": 6,
+    "avgWordCount": 138,
+    "wikiLinksPresent": true,
+    "failures": []
+  },
+  {
+    "city": "Wailea-Makena",
+    "thingsRewritten": 6,
+    "avgWordCount": 135,
+    "wikiLinksPresent": true,
+    "failures": []
+  }
+]
