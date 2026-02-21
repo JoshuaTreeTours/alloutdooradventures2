@@ -66,6 +66,71 @@
   ],
   "redirects": [
     {
+      "source": "/guides/us/hawaii/paia",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/wailuku",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/makawao",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/haiku-pauwela",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/eleele",
+      "destination": "/guides/us/hawaii/hanalei",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kekaha",
+      "destination": "/guides/us/hawaii/hanalei",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/hakalau",
+      "destination": "/guides/us/hawaii/hilo",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/keaau",
+      "destination": "/guides/us/hawaii/hilo",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/waimea",
+      "destination": "/guides/us/hawaii/hilo",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kaneohe",
+      "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kailua",
+      "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kaaawa",
+      "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/waianae",
+      "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
       "source": "/destinations/states/:stateSlug",
       "destination": "/guides/us/:stateSlug",
       "permanent": true
