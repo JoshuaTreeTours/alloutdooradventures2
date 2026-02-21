@@ -2,6 +2,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { buildCityFactsCard } from "../src/utils/guides/buildCityFactsCard";
 import {
+  cacheCityPopulation,
+  formatCityPopulation,
+  getCityPopulation,
+} from "../src/utils/guides/getCityPopulation";
+import {
   assertGuideHasNoWikiLanguage,
   cleanGuideTextContent,
 } from "../src/utils/guides/wikiLanguageGuard";
@@ -90,6 +95,24 @@ const fetchExtract = async (title: string) => {
   return pages[0]?.extract?.trim();
 };
 
+const fetchWikidataId = async (title: string) => {
+  const url = new URL("https://en.wikipedia.org/w/api.php");
+  url.searchParams.set("action", "query");
+  url.searchParams.set("prop", "pageprops");
+  url.searchParams.set("titles", title);
+  url.searchParams.set("format", "json");
+  url.searchParams.set("redirects", "1");
+
+  const data = await fetchJson<{
+    query?: {
+      pages?: Record<string, { pageprops?: { wikibase_item?: string } }>;
+    };
+  }>(url.toString());
+
+  const pages = data?.query?.pages ? Object.values(data.query.pages) : [];
+  return pages[0]?.pageprops?.wikibase_item;
+};
+
 const resolveCityWikiContext = async (candidates: string[]) => {
   for (const candidate of candidates) {
     const summary = await fetchSummary(candidate);
@@ -128,6 +151,21 @@ const run = async () => {
       ].filter((candidate): candidate is string => Boolean(candidate));
 
       const cityContext = await resolveCityWikiContext(cityCandidates);
+      const wikidataId = cityContext?.title
+        ? await fetchWikidataId(cityContext.title)
+        : undefined;
+
+      cacheCityPopulation(
+        {
+          cityName: guide.city,
+          stateName: guide.state,
+          countryName: guide.country ?? "United States",
+        },
+        guide.aboutCity?.factsCard?.bullets.find(
+          bullet => bullet.label === "Population"
+        )?.value
+      );
+
       const factsCard = buildCityFactsCard({
         cityName: guide.city,
         stateName: guide.state,
@@ -140,6 +178,29 @@ const run = async () => {
             .join(" "),
         thingsToDoItems: guide.thingsToDo,
       });
+
+      const population = await getCityPopulation({
+        cityName: guide.city,
+        stateName: guide.state,
+        countryName: guide.country ?? "United States",
+        wikidataId,
+      });
+
+      if (population) {
+        const populationValue = formatCityPopulation(population);
+        const nonPopulationBullets = factsCard.bullets.filter(
+          bullet => bullet.label !== "Population"
+        );
+        const locationIndex = nonPopulationBullets.findIndex(
+          bullet => bullet.label === "Location"
+        );
+        const insertIndex = locationIndex >= 0 ? locationIndex + 1 : 0;
+        nonPopulationBullets.splice(insertIndex, 0, {
+          label: "Population",
+          value: populationValue,
+        });
+        factsCard.bullets = nonPopulationBullets;
+      }
 
       if (factsCard.bullets.length < 3) {
         warnings += 1;

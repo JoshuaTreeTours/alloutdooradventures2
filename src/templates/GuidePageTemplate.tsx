@@ -18,6 +18,11 @@ import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
+import {
+  cacheCityPopulation,
+  formatCityPopulation,
+  getCityPopulation,
+} from "../utils/guides/getCityPopulation";
 
 type GuidePageTemplateProps = {
   guide: GuidePageData;
@@ -42,6 +47,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
+  const [populationFact, setPopulationFact] = useState<string | null>(null);
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
@@ -73,6 +79,62 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
       wikiExtractText: guide.aboutCity?.wikiExtractText ?? wikiExtractFallback,
       thingsToDoItems: guide.thingsToDo,
     });
+
+  useEffect(() => {
+    if (!guide.city) {
+      setPopulationFact(null);
+      return;
+    }
+
+    const existingPopulation = aboutFactsCard.bullets.find(
+      bullet => bullet.label === "Population"
+    )?.value;
+
+    cacheCityPopulation(
+      {
+        cityName: guide.city,
+        stateName: guide.state,
+        countryName: guide.country,
+      },
+      existingPopulation
+    );
+
+    let isCancelled = false;
+    void getCityPopulation({
+      cityName: guide.city,
+      stateName: guide.state,
+      countryName: guide.country,
+    }).then(result => {
+      if (isCancelled) return;
+      setPopulationFact(result ? formatCityPopulation(result) : null);
+    });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [aboutFactsCard.bullets, guide.city, guide.country, guide.state]);
+
+  const renderedAboutFactsCard = useMemo(() => {
+    if (!guide.city || !populationFact) return aboutFactsCard;
+
+    const nonPopulationBullets = aboutFactsCard.bullets.filter(
+      bullet => bullet.label !== "Population"
+    );
+    const locationIndex = nonPopulationBullets.findIndex(
+      bullet => bullet.label === "Location"
+    );
+    const insertIndex = locationIndex >= 0 ? locationIndex + 1 : 0;
+
+    nonPopulationBullets.splice(insertIndex, 0, {
+      label: "Population",
+      value: populationFact,
+    });
+
+    return {
+      ...aboutFactsCard,
+      bullets: nonPopulationBullets,
+    };
+  }, [aboutFactsCard, guide.city, populationFact]);
 
   const breadcrumbs = [
     { name: "Guides", url: "/guides" },
@@ -199,9 +261,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           />
         </Section>
 
-        <Section title={aboutFactsCard.title}>
+        <Section title={renderedAboutFactsCard.title}>
           <ul className="list-disc space-y-2 pl-5">
-            {aboutFactsCard.bullets.map(bullet => (
+            {renderedAboutFactsCard.bullets.map(bullet => (
               <li key={`${bullet.label}:${bullet.value}`}>
                 <strong>{bullet.label}:</strong> {bullet.value}
               </li>
