@@ -4,6 +4,8 @@ import {
   getAuthorityLandmarkOverride,
   type AuthorityLandmarkSpec,
 } from "../src/utils/guides/buildAuthorityLandmark";
+import { cleanThingDescription } from "../src/utils/guides/cleanThingDescription";
+import { pickWikiImageUrl } from "../src/utils/wiki/wikiImageUrl";
 
 const MIN_WORDS = 120;
 const MAX_WORDS = 180;
@@ -23,6 +25,7 @@ type GuideThing = {
   title: string;
   description: string;
   wikiUrl?: string;
+  imageUrl?: string | null;
 };
 
 type GuideJson = {
@@ -35,6 +38,8 @@ type WikiSummaryResponse = {
   type?: string;
   title?: string;
   extract?: string;
+  thumbnail?: { source?: string };
+  originalimage?: { source?: string };
   content_urls?: {
     desktop?: {
       page?: string;
@@ -199,9 +204,8 @@ const buildAuthorityDescription = (args: {
   landmark: AuthorityLandmarkSpec;
   city: string;
   summaryExtract: string;
-  wikiUrl: string;
 }) => {
-  const { landmark, city, summaryExtract, wikiUrl } = args;
+  const { landmark, city, summaryExtract } = args;
   const summarySentences = splitSentences(summaryExtract);
 
   const selected = summarySentences.slice(0, 5);
@@ -236,15 +240,14 @@ const buildAuthorityDescription = (args: {
     description = `${description} ${filler}`;
   }
 
-  description = trimToWordLimit(description, MAX_WORDS - 4);
-  description = `${description} Source: Wikipedia → ${wikiUrl}`;
+  description = trimToWordLimit(description, MAX_WORDS);
 
   if (wordCount(description) < MIN_WORDS) {
     description = `${description} ${fillers[fillers.length - 1]}`;
     description = trimToWordLimit(description, MAX_WORDS);
   }
 
-  return description.replace(/\s+/g, " ").trim();
+  return cleanThingDescription(description.replace(/\s+/g, " ").trim());
 };
 
 const findWorkingSummary = async (landmark: AuthorityLandmarkSpec) => {
@@ -310,7 +313,6 @@ const regenerateGuide = async (filePath: string) => {
       landmark,
       city,
       summaryExtract: resolved.summary.extract || "",
-      wikiUrl,
     });
 
     const words = wordCount(description);
@@ -328,6 +330,10 @@ const regenerateGuide = async (filePath: string) => {
       title: landmark.name,
       description,
       wikiUrl,
+      imageUrl: pickWikiImageUrl({
+        originalImageUrl: resolved.summary.originalimage?.source,
+        thumbnailUrl: resolved.summary.thumbnail?.source,
+      }),
     });
   }
 

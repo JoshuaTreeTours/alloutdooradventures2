@@ -1,5 +1,6 @@
 import { getWikipediaSummary } from "../wiki/wikiRest";
 import { cleanWikiLanguage } from "../cleanWikiLanguage";
+import { cleanThingDescription } from "./cleanThingDescription";
 
 export type WikiThingToDo = {
   title: string;
@@ -54,8 +55,10 @@ export const wikiSummaryToThing = async (
 
   return {
     title: summary.title?.trim() || title,
-    description: cleanWikiLanguage(
-      paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
+    description: cleanThingDescription(
+      cleanWikiLanguage(
+        paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
+      )
     ),
     wikiUrl: toCanonicalWikiUrl(summary.title?.trim() || title, summary.pageUrl),
     imageUrl: summary.imageUrl,
