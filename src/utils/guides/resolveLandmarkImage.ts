@@ -1,19 +1,33 @@
 import fs from "node:fs";
 import path from "node:path";
-import { pickWikiImageUrl } from "../wiki/wikiImageUrl";
+import { isValidWikiImageUrl } from "../wiki/wikiImageUrl";
 
 type ResolveLandmarkImageArgs = {
   wikiTitle: string;
   citySlug: string;
   stateSlug: string;
+  wikiUrl?: string;
 };
 
 type WikiSummaryResponse = {
+  title?: string;
   thumbnail?: { source?: string };
   originalimage?: { source?: string };
 };
 
+type WikiPageImagesResponse = {
+  query?: {
+    pages?: Record<string, { thumbnail?: { source?: string } }>;
+  };
+};
+
+export type ResolvedLandmarkImage = {
+  imageUrl: string | null;
+  imageSource: "rest" | "pageimages" | "local" | "none";
+};
+
 const WIKI_SUMMARY_ENDPOINT = "https://en.wikipedia.org/api/rest_v1/page/summary";
+const WIKI_PAGEIMAGES_ENDPOINT = "https://en.wikipedia.org/w/api.php";
 
 const slugifyLandmark = (value: string) =>
   value
@@ -23,7 +37,25 @@ const slugifyLandmark = (value: string) =>
     .replace(/^-+|-+$/g, "")
     .slice(0, 120);
 
-const fetchWikiPageImage = async (wikiTitle: string): Promise<string | null> => {
+const titleFromWikiUrl = (wikiUrl?: string) => {
+  if (!wikiUrl?.trim()) {
+    return null;
+  }
+
+  const cleaned = wikiUrl
+    .trim()
+    .replace(/^https?:\/\/en\.wikipedia\.org\/wiki\//i, "")
+    .replace(/^\//, "")
+    .split("#")[0];
+
+  if (!cleaned) {
+    return null;
+  }
+
+  return decodeURIComponent(cleaned).replace(/_/g, " ").trim() || null;
+};
+
+const fetchRestImage = async (wikiTitle: string): Promise<string | null> => {
   try {
     const response = await fetch(
       `${WIKI_SUMMARY_ENDPOINT}/${encodeURIComponent(wikiTitle)}`,
@@ -41,10 +73,50 @@ const fetchWikiPageImage = async (wikiTitle: string): Promise<string | null> => 
     }
 
     const payload = (await response.json()) as WikiSummaryResponse;
-    return pickWikiImageUrl({
-      originalImageUrl: payload.originalimage?.source,
-      thumbnailUrl: payload.thumbnail?.source,
+    const original = payload.originalimage?.source;
+    if (isValidWikiImageUrl(original)) {
+      return original;
+    }
+
+    const thumbnail = payload.thumbnail?.source;
+    return isValidWikiImageUrl(thumbnail) ? thumbnail : null;
+  } catch {
+    return null;
+  }
+};
+
+const fetchPageImages = async (wikiTitle: string): Promise<string | null> => {
+  try {
+    const url = new URL(WIKI_PAGEIMAGES_ENDPOINT);
+    url.searchParams.set("action", "query");
+    url.searchParams.set("format", "json");
+    url.searchParams.set("origin", "*");
+    url.searchParams.set("prop", "pageimages");
+    url.searchParams.set("pithumbsize", "1600");
+    url.searchParams.set("titles", wikiTitle);
+
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "alloutdooradventures/1.0 (utah-authority-images)",
+      },
+      signal: AbortSignal.timeout(10000),
     });
+
+    if (!response.ok) {
+      return null;
+    }
+
+    const payload = (await response.json()) as WikiPageImagesResponse;
+    const pages = Object.values(payload.query?.pages ?? {});
+    for (const page of pages) {
+      const source = page.thumbnail?.source;
+      if (isValidWikiImageUrl(source)) {
+        return source;
+      }
+    }
+
+    return null;
   } catch {
     return null;
   }
@@ -74,20 +146,49 @@ const resolveLocalAsset = ({
   return null;
 };
 
-export const resolveLandmarkImage = async ({
+export const resolveLandmarkImageDetailed = async ({
   wikiTitle,
   citySlug,
   stateSlug,
-}: ResolveLandmarkImageArgs): Promise<string | null> => {
-  const wikiImage = await fetchWikiPageImage(wikiTitle);
-  if (wikiImage) {
-    return wikiImage;
+  wikiUrl,
+}: ResolveLandmarkImageArgs): Promise<ResolvedLandmarkImage> => {
+  const tryTitles: string[] = [];
+  const trimmedTitle = wikiTitle.trim();
+  if (trimmedTitle) {
+    tryTitles.push(trimmedTitle);
   }
 
-  const slugifiedLandmark = slugifyLandmark(wikiTitle);
-  if (!slugifiedLandmark) {
-    return null;
+  const canonicalTitle = titleFromWikiUrl(wikiUrl);
+  if (canonicalTitle && !tryTitles.includes(canonicalTitle)) {
+    tryTitles.push(canonicalTitle);
   }
 
-  return resolveLocalAsset({ stateSlug, citySlug, slugifiedLandmark });
+  for (const title of tryTitles) {
+    const restImage = await fetchRestImage(title);
+    if (restImage) {
+      return { imageUrl: restImage, imageSource: "rest" };
+    }
+
+    const pageImage = await fetchPageImages(title);
+    if (pageImage) {
+      return { imageUrl: pageImage, imageSource: "pageimages" };
+    }
+  }
+
+  const slugifiedLandmark = slugifyLandmark(trimmedTitle || canonicalTitle || "");
+  if (slugifiedLandmark) {
+    const localAsset = resolveLocalAsset({ stateSlug, citySlug, slugifiedLandmark });
+    if (localAsset) {
+      return { imageUrl: localAsset, imageSource: "local" };
+    }
+  }
+
+  return { imageUrl: null, imageSource: "none" };
+};
+
+export const resolveLandmarkImage = async (
+  args: ResolveLandmarkImageArgs
+): Promise<string | null> => {
+  const resolved = await resolveLandmarkImageDetailed(args);
+  return resolved.imageUrl;
 };
