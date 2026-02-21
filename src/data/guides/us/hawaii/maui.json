@@ -1,0 +1,83 @@
+{
+  "tier": "tier2",
+  "title": "Maui, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Maui",
+  "slug": "guides/us/hawaii/maui",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Maui_coastline.jpg",
+    "alt": "Maui coastline and volcanic terrain",
+    "headline": "Maui, Hawaii Travel Guide",
+    "subheadline": "A factual island-level guide to Maui geography, protected parks, and historic sites."
+  },
+  "overview": [
+    "Maui is the second-largest Hawaiian island, formed by two volcanic masses connected by a low isthmus where Kahului and Wailuku are located. The island includes major protected landscapes such as Haleakala National Park and the Iao Valley area. Settlement and transport patterns follow coastal belts and mountain gaps rather than a single urban center. Travel planning typically uses island regions, including West Maui, South Maui, Upcountry, and East Maui, as practical itinerary units."
+  ],
+  "highlights": [
+    {
+      "title": "Bi-volcanic island structure",
+      "description": "Maui combines West Maui Mountains terrain with the larger Haleakala volcanic shield."
+    },
+    {
+      "title": "Regional itinerary planning",
+      "description": "Routes are commonly organized by island districts instead of one city core."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Haleakala National Park",
+      "description": "Haleakala National Park protects summit crater terrain and coastal Kipahulu ecosystems across eastern Maui. The park preserves high-elevation volcanic landscapes, native species habitat, and culturally significant places associated with long-term Hawaiian land use. Visitors experience the area through summit overlooks, crater trails, and road-accessible viewpoints that differ sharply from Maui's coastal resort zones. Haleakala is notable for combining alpine volcanic scenery and tropical coastal sections within a single protected unit.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Haleakala_Crater%2C_Maui%2C_Hawaii.jpg"
+    },
+    {
+      "title": "Iao Valley",
+      "description": "Iao Valley is a steep, rain-fed valley in the West Maui Mountains known for the Iao Needle rock outcrop and surrounding stream corridor. The valley is significant in Hawaiian history, including the Battle of Kepaniwai, and remains a key reference point for central Maui geography. Visitors use short paved paths and overlooks to view cloud-forest slopes, stream channels, and the distinctive erosional pinnacle. The site is notable because dramatic geomorphology and historical interpretation are concentrated in an accessible state-managed area.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
+      "sourceUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Iao_Needle%2C_Maui%2C_Hawaii.jpg"
+    },
+    {
+      "title": "Road to Hana",
+      "description": "The Hana Highway, commonly called the Road to Hana, connects central Maui to East Maui through a narrow coastal and rainforest corridor. Built in sections during the early twentieth century, the route includes numerous one-lane bridges and curves that reflect the island's rugged topography. Visitors experience waterfalls, sea cliffs, and trailheads by making frequent viewpoint stops rather than treating the drive as a direct transit route. The corridor is notable as one of Hawaii's best-known scenic roads and a practical framework for East Maui trip planning.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Hana_Highway_Maui.jpg"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Plan by district and drive time",
+    "bullets": [
+      "Use one district per day to limit long cross-island drives.",
+      "Expect variable weather between leeward and windward areas.",
+      "Reserve timed national park entry when required."
+    ]
+  },
+  "travelTips": [
+    "Base lodging near the regions you plan to visit most.",
+    "Check road and park alerts before East Maui drives.",
+    "Start long scenic routes early to avoid congestion."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "maui",
+    "limit": 6,
+    "title": "Top Maui tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Maui"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Maui",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Maui is part of Maui County and consists of two major volcanic landforms joined by an isthmus. Population and services are concentrated in central Maui, while major visitor areas are distributed across west, south, and east coastal districts. The island contains protected volcanic and rainforest environments, creating large differences in climate and travel time. Most practical trip planning is regional, with each day focused on one side of the island."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "tier": "tier2",
+  "title": "Waikiki, Hawaii Travel Guide",
+  "country": "United States",
+  "state": "Hawaii",
+  "city": "Waikiki",
+  "slug": "guides/us/hawaii/waikiki",
+  "hero": {
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Waikiki_Beach_Honolulu.jpg",
+    "alt": "Waikiki Beach in Honolulu",
+    "headline": "Waikiki, Hawaii Travel Guide",
+    "subheadline": "A concise guide to Waikiki's shoreline district, historic tourism role, and landmarks."
+  },
+  "overview": [
+    "Waikiki is a coastal neighborhood of Honolulu on Oahu and has been one of Hawaii's primary visitor districts since the early twentieth century. The area was historically wetland and fishpond terrain before canal construction and urban resort development reshaped the shoreline plain. Waikiki sits below Diamond Head and includes major public beaches, historic hotels, and civic infrastructure. Travel planning generally emphasizes walkable beach corridors and short transfers to nearby urban and volcanic landmarks."
+  ],
+  "highlights": [
+    {
+      "title": "Historic resort district",
+      "description": "Waikiki's growth reflects twentieth-century shoreline engineering and tourism development."
+    },
+    {
+      "title": "Walkable coastal corridor",
+      "description": "Most landmarks are concentrated along beaches, parks, and Kalakaua Avenue."
+    }
+  ],
+  "thingsToDo": [
+    {
+      "title": "Waikiki Beach",
+      "description": "Waikiki Beach is a series of shoreline sections in Honolulu that became central to modern surf culture and twentieth-century resort development. Historically, the area transitioned from wetland and fishpond systems to engineered beachfront after canal and drainage projects. Visitors experience the district through walkable beach parks, surf lessons, and views toward Diamond Head along the south shore. The beach is notable because public access, recreation history, and dense urban infrastructure are concentrated in a single coastal corridor.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Waikiki",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Waikiki",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Waikiki_Beach_and_Diamond_Head.jpg"
+    },
+    {
+      "title": "Diamond Head",
+      "description": "Diamond Head is a tuff cone on Oahu's south shore formed by an explosive volcanic eruption within the Honolulu Volcanics series. Its crater and ridgeline became a major navigational and defensive reference in Honolulu's coastal history. Visitors reach summit viewpoints by trail, where they can observe Waikiki, the Pacific shoreline, and the crater interior. The landmark is notable for combining clear volcanic morphology with one of Hawaii's most recognized urban-edge panoramas.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Diamond_Head%2C_Hawaii",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Diamond_Head%2C_Hawaii",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Diamond_Head_from_Waikiki.jpg"
+    },
+    {
+      "title": "Ala Wai Canal",
+      "description": "The Ala Wai Canal was constructed in the 1920s to drain wetlands that once occupied much of the Waikiki plain. This engineering project redirected water flow and enabled large-scale urban and hotel expansion in the district. Visitors encounter the canal as a defining boundary between Waikiki and inland neighborhoods, with promenades and bridges along major access routes. It is notable because modern Waikiki's physical layout and tourism economy were heavily shaped by this single infrastructure intervention.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ala_Wai_Canal",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Ala_Wai_Canal",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ala_Wai_Canal_Honolulu.jpg"
+    }
+  ],
+  "bestTimeToVisit": {
+    "title": "Urban beach logistics are the key planning factor",
+    "bullets": [
+      "Walk or use transit for short-distance Waikiki trips.",
+      "Start popular viewpoints early to reduce crowds.",
+      "Check surf and ocean advisories before water activities."
+    ]
+  },
+  "travelTips": [
+    "Use neighborhood walking routes for most daily stops.",
+    "Reserve timed activities that require vehicle access.",
+    "Pair beach blocks with nearby historic and park visits."
+  ],
+  "tours": {
+    "stateSlug": "hawaii",
+    "citySlug": "waikiki",
+    "limit": 6,
+    "title": "Top Waikiki tours"
+  },
+  "seoLinks": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Waikiki"
+  },
+  "aboutCity": {
+    "sourceUrl": "https://en.wikipedia.org/wiki/Waikiki",
+    "sections": [
+      {
+        "heading": "Overview",
+        "paragraphs": [
+          "Waikiki occupies the south shore plain of Honolulu and developed from former wetlands into Hawaii's best-known urban beach district. Canal and drainage works in the early twentieth century enabled intensive hotel and street-grid construction. Today the area functions as a dense visitor corridor with public beaches, retail streets, and access to nearby volcanic landmarks. Itinerary design is usually neighborhood-based because most major stops are within short urban travel distances."
+        ]
+      }
+    ]
+  }
+}

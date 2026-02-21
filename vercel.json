@@ -66,68 +66,108 @@
   ],
   "redirects": [
     {
+      "source": "/guides/us/hawaii/wailea-makena",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/waikoloa-village",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kihei",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kailua-kona",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/honomu",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/hanalei",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/haleiwa",
+      "destination": "/guides/us/hawaii",
+      "permanent": true
+    },
+    {
       "source": "/guides/us/hawaii/paia",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/wailuku",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/makawao",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/haiku-pauwela",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/eleele",
-      "destination": "/guides/us/hawaii/hanalei",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/kekaha",
-      "destination": "/guides/us/hawaii/hanalei",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/hakalau",
-      "destination": "/guides/us/hawaii/hilo",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/keaau",
-      "destination": "/guides/us/hawaii/hilo",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/waimea",
-      "destination": "/guides/us/hawaii/hilo",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/kaneohe",
-      "destination": "/guides/us/hawaii/honolulu",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/kailua",
-      "destination": "/guides/us/hawaii/honolulu",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/kaaawa",
-      "destination": "/guides/us/hawaii/honolulu",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/waianae",
-      "destination": "/guides/us/hawaii/honolulu",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {

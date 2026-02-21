@@ -1,5 +1,11 @@
+import hawaiiAuthorityCities from "../../../data/guides/hawaiiAuthorityCities.json";
+
+const HAWAII_AUTHORITY_CITIES = [
+  ...hawaiiAuthorityCities,
+] as const satisfies readonly string[];
+
 export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
-  hawaii: "ALL",
+  hawaii: [...HAWAII_AUTHORITY_CITIES],
   tennessee: [
     "nashville",
     "chattanooga",
@@ -55,6 +61,10 @@ export const isGuideCityAllowedUS = (
   stateSlug: string,
   citySlug: string
 ): boolean => {
+  if (stateSlug === "hawaii" && citySlug === "honolulu") {
+    return true;
+  }
+
   const stateAllowlist = GUIDE_CITY_ALLOWLIST_US[stateSlug];
 
   if (!stateAllowlist || stateAllowlist === "ALL") {

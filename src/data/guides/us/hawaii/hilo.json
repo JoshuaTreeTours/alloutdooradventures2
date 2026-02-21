@@ -6,72 +6,59 @@
   "city": "Hilo",
   "slug": "guides/us/hawaii/hilo",
   "hero": {
-    "image": "https://cdn.filestackcontent.com/lOwXJueRhyFujVen9liw",
-    "alt": "Hilo, Hawaii — Hawaiian Craft Chocolate Tasting",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Hilo_Bay_-_Hilo%2C_Hawaii.jpg",
+    "alt": "Hilo Bay waterfront in Hilo, Hawaii",
     "headline": "Hilo, Hawaii Travel Guide",
-    "subheadline": "Plan a focused Hilo trip with practical highlights, local context, and easy tour connections."
+    "subheadline": "A factual planning guide to Hilo's geography, history, and major public landmarks."
   },
   "overview": [
-    "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
+    "Hilo is the largest settlement on Hawaii Island's windward coast and serves as an administrative and transport center for East Hawaii. The city developed around Hilo Bay, where nineteenth-century sugar trade and harbor activity shaped local growth. Current visitor planning often combines downtown historic sites with nearby waterfalls, gardens, and volcanically formed coastlines. Rainfall is high year-round, which supports dense vegetation and differentiates Hilo from drier resort districts on the island's leeward side."
   ],
   "highlights": [
     {
-      "title": "Hilo essentials",
-      "description": "Prioritize one signature attraction each day for better pacing."
+      "title": "Historic bayfront city",
+      "description": "Hilo grew around a working bay and remains a civic center for East Hawaii."
     },
     {
-      "title": "Hilo local character",
-      "description": "Add nearby neighborhoods and outdoor stops for variety."
+      "title": "Volcanic and rainforest setting",
+      "description": "Frequent rainfall and volcanic terrain define local parks, gardens, and coastal viewpoints."
     }
   ],
   "thingsToDo": [
     {
-      "title": "Ultimate Circle Island Explorer",
-      "description": "Ultimate Circle Island Explorer is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Rainbow Falls",
+      "description": "Rainbow Falls is a waterfall on the Wailuku River in Hilo and is one of the most visited natural landmarks in East Hawaii. The falls drop over a lava cave associated in Hawaiian tradition with the goddess Hina, linking the site to both geology and cultural narrative. Visitors typically view the cascade from a developed overlook and continue to nearby river viewpoints within the same state park area. The setting is notable for frequent morning mist and rainbows that appear when sunlight crosses the spray.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Rainbow_Falls_(Hawaii)",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Rainbow_Falls_(Hawaii)",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Rainbow_Falls_Hilo_Hawaii.jpg"
     },
     {
-      "title": "Elite Volcano Hike",
-      "description": "Elite Volcano Hike is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Liliuokalani Park and Gardens",
+      "description": "Liliuokalani Park and Gardens is a public waterfront park on Hilo Bay developed with Japanese garden design elements in the early twentieth century. The grounds include bridges, ponds, and plantings that reflect community ties between Hawaii and Japanese residents during the plantation and post-plantation eras. Visitors walk shoreline paths and garden loops near downtown Hilo, making it a common stop paired with nearby bayfront landmarks. The park is notable as one of the largest authentic Japanese-style gardens outside Japan.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Liliuokalani_Park_and_Gardens",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Liliuokalani_Park_and_Gardens",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Liliuokalani_Gardens%2C_Hilo%2C_Hawaii.jpg"
     },
     {
-      "title": "Kona Pick Up",
-      "description": "Kona Pick Up is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Tank Shore Dive",
-      "description": "Tank Shore Dive is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Evening Volcano Explorer",
-      "description": "Evening Volcano Explorer is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Hawaiian Craft Chocolate Tasting",
-      "description": "Hawaiian Craft Chocolate Tasting is a practical stop for understanding Hilo's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hilo, Hawaii. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Wailuku River State Park",
+      "description": "Wailuku River State Park is a Hawaii state park in Hilo that includes Rainbow Falls and the Boiling Pots area along the Wailuku River. The landscape was formed by historic lava flows and later river erosion, creating stepped channels and plunge pools that are central to East Hawaii geology. Visitors use signed overlooks and short paths to observe the river corridor, especially after rain when flow is stronger and features are most visible. The park is notable because it combines accessible viewpoints with one of the island's best-known volcanic river systems.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Wailuku_River_State_Park",
+      "sourceUrl": "https://en.wikipedia.org/wiki/Wailuku_River_State_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Boiling_Pots_Hilo.jpg"
     }
   ],
   "bestTimeToVisit": {
-    "title": "Shoulder seasons are typically easiest in Hilo",
+    "title": "Weather planning matters in Hilo",
     "bullets": [
-      "Spring and fall usually offer comfortable weather and smoother logistics.",
-      "Reserve popular tours and timed attractions early in busy periods.",
-      "Use morning starts for major sights and photo-heavy locations."
+      "Rainfall is common in all seasons, so carry rain layers.",
+      "Morning hours are often clearer for viewpoints.",
+      "Allow buffer time for weather-related itinerary changes."
     ]
   },
   "travelTips": [
-    "Group activities by area to reduce transfers across Hilo.",
-    "Pre-book top tours and high-demand attractions when your dates are set.",
-    "Leave one flexible time block each day for weather and local recommendations."
-  ],
-  "faq": [
-    {
-      "q": "How many days should I plan for Hilo?",
-      "a": "Two to three days is enough for core Hilo highlights plus one or two local experiences."
-    },
-    {
-      "q": "Should I book tours ahead in Hilo?",
-      "a": "Yes—advance booking is recommended for weekends, holidays, and top-rated operators."
-    }
+    "Use Hilo as a base for East Hawaii day trips.",
+    "Check park advisories for river and waterfall areas.",
+    "Plan driving times around island distances rather than map proximity."
   ],
   "tours": {
     "stateSlug": "hawaii",
@@ -80,9 +67,7 @@
     "title": "Top Hilo tours"
   },
   "seoLinks": {
-    "wikipedia": "https://en.wikipedia.org/wiki/Hilo",
-    "officialTourism": "https://www.gohawaii.com/",
-    "reference": "https://www.britannica.com/place/Hilo"
+    "wikipedia": "https://en.wikipedia.org/wiki/Hilo"
   },
   "aboutCity": {
     "sourceUrl": "https://en.wikipedia.org/wiki/Hilo",
@@ -90,37 +75,7 @@
       {
         "heading": "Overview",
         "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Geography & setting",
-        "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "History (brief)",
-        "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Culture & neighborhoods",
-        "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Outdoor & seasonal highlights",
-        "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
-        ]
-      },
-      {
-        "heading": "Getting around",
-        "paragraphs": [
-          "Hilo, Hawaii is a strong base for travelers who want a concise mix of landmark stops, local neighborhoods, and outdoor time. This Tier-2 guide gives you quick planning coverage with essential experiences and practical pacing. Start each day with one anchor attraction, then add a nearby activity to reduce transit time and keep your Hilo itinerary efficient while still feeling varied and local."
+          "Hilo is on the northeastern coast of Hawai'i Island and functions as the county seat of Hawai'i County. Its growth followed harbor development, sugar-era trade, and regional government services. The city sits in a wet tropical climate zone, producing frequent rain and dense vegetation. Visitors typically use Hilo as a practical base for nearby waterfalls, gardens, and Hawaii Volcanoes National Park routes."
         ]
       }
     ]
