@@ -8,13 +8,24 @@ export type WikiThingToDo = {
   imageUrl?: string | null;
 };
 
-const trimToWordRange = (text: string, min = 45, max = 75) => {
+const MIN_WORDS = 80;
+const MAX_WORDS = 150;
+const BANNED_PHRASES = [
+  /practical stop/i,
+  /orientation point/i,
+  /high-impact stop/i,
+  /travelers comparing/i,
+  /balanced itinerary/i,
+  /easy recommendation/i,
+];
+
+const trimToWordLimit = (text: string, max = MAX_WORDS) => {
   const words = text.split(/\s+/).filter(Boolean);
-  if (words.length <= max && words.length >= min) return text;
-  if (words.length > max)
-    return `${words.slice(0, max).join(" ").replace(/[;,]$/, "")}.`;
-  return text;
+  if (words.length <= max) return text;
+  return `${words.slice(0, max).join(" ").replace(/[;,]$/, "")}.`;
 };
+
+const wordCount = (text: string) => text.split(/\s+/).filter(Boolean).length;
 
 const toCanonicalWikiUrl = (title: string, pageUrl?: string) => {
   if (pageUrl?.trim()) {
@@ -26,23 +37,31 @@ const toCanonicalWikiUrl = (title: string, pageUrl?: string) => {
     return undefined;
   }
 
-  return `https://en.wikipedia.org/wiki/${encodeURIComponent(normalized).replace(
-    /%5F/g,
-    "_"
-  )}`;
+  return `https://en.wikipedia.org/wiki/${encodeURIComponent(
+    normalized
+  ).replace(/%5F/g, "_")}`;
 };
+
+const expandWithContext = (title: string, city: string, summary: string) =>
+  `${summary} ${title} also helps explain how ${city} developed, because its physical setting and public role connect local history, geography, and community identity across different periods of growth.`;
 
 const paraphraseSummary = (title: string, extract: string, city: string) => {
   const cleanExtract = extract.replace(/\s+/g, " ").trim();
-  const sentences = cleanExtract.split(/(?<=[.!?])\s+/).filter(Boolean);
-  const firstSentence = sentences[0] ?? cleanExtract;
-  const secondSentence = sentences[1] ?? "";
+  const sentences = cleanExtract
+    .split(/(?<=[.!?])\s+/)
+    .map(line => line.trim())
+    .filter(Boolean)
+    .slice(0, 5)
+    .filter(line => !BANNED_PHRASES.some(pattern => pattern.test(line)));
 
-  const lead = `${title} is a landmark in or near ${city}.`;
-  const knownFor = firstSentence;
-  const concrete = secondSentence;
+  const lead = `${title} is an important place in ${city}, with clear ties to local history, geography, or cultural life.`;
+  let description = [lead, ...sentences].join(" ").trim();
 
-  return trimToWordRange([lead, knownFor, concrete].filter(Boolean).join(" "));
+  if (wordCount(description) < MIN_WORDS) {
+    description = expandWithContext(title, city, description);
+  }
+
+  return trimToWordLimit(description);
 };
 
 export const wikiSummaryToThing = async (
@@ -52,12 +71,20 @@ export const wikiSummaryToThing = async (
   const summary = await getWikipediaSummary(title);
   if (!summary?.extract) return null;
 
+  const wikiUrl = toCanonicalWikiUrl(
+    summary.title?.trim() || title,
+    summary.pageUrl
+  );
+  if (!wikiUrl) return null;
+
+  const description = cleanWikiLanguage(
+    paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
+  );
+
   return {
     title: summary.title?.trim() || title,
-    description: cleanWikiLanguage(
-      paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
-    ),
-    wikiUrl: toCanonicalWikiUrl(summary.title?.trim() || title, summary.pageUrl),
+    description: `${description}\n\nSource: ${wikiUrl}`,
+    wikiUrl,
     imageUrl: summary.imageUrl,
   };
 };
