@@ -10,6 +10,7 @@ import {
   wikiSummaryToThing,
   type WikiThingToDo,
 } from "../src/utils/guides/wikiSummaryToThing";
+import { buildPalmSpringsStyleDescription } from "../src/utils/guides/buildPalmSpringsStyleDescription";
 import {
   flushWikiSummaryCache,
   getWikipediaSummary,
@@ -24,6 +25,7 @@ import { isTopGuide } from "../src/utils/guides/isTopGuide";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
+  isPruned?: boolean;
   city?: string;
   state?: string;
   seoLinks?: {
@@ -32,6 +34,14 @@ type GuideJson = {
     reference?: string;
   };
   thingsToDo?: WikiThingToDo[];
+};
+
+type HawaiiConversionReportEntry = {
+  city: string;
+  thingsRewritten: number;
+  avgWordCount: number;
+  wikiLinksPresent: boolean;
+  failures: string[];
 };
 
 type Report = {
@@ -43,6 +53,9 @@ type Report = {
 
 const ROOT = path.resolve("src/data/guides/us");
 const REPORT_PATH = path.resolve("reports/tier2-wiki-things-to-do.json");
+const HAWAII_REPORT_PATH = path.resolve(
+  "reports/hawaii-palm-springs-conversion.json"
+);
 const MIN_ITEMS = 4;
 const MAX_ITEMS = 6;
 
@@ -102,6 +115,30 @@ const mapType = (name: string): CityLandmarkCandidate["type"] => {
 const normalize = (value: string) =>
   value.toLowerCase().replace(/\s+/g, " ").trim();
 
+const parseRegionArg = () => {
+  const idx = process.argv.indexOf("--region");
+  if (idx === -1) return undefined;
+  return process.argv[idx + 1]?.trim().toLowerCase();
+};
+
+const isHawaiiGuide = (filePath: string) => parseSlugs(filePath).stateSlug === "hawaii";
+
+const countWords = (value: string) => value.split(/\s+/).filter(Boolean).length;
+
+const HAWAII_CITY_WIKI_TITLES: Record<string, string[]> = {
+  "hilo": ["Hilo", "Rainbow Falls (Hawaii)", "Liliʻuokalani Park and Gardens", "Hawaii Volcanoes National Park", "Akaka Falls State Park", "Wailuku River State Park"],
+  "kailua-kona": ["Kailua-Kona, Hawaii", "Huliheʻe Palace", "Kaloko-Honokōhau National Historical Park", "Kealakekua Bay", "Kahaluʻu Bay", "Puʻuhonua o Hōnaunau National Historical Park"],
+  "kihei": ["Kihei, Hawaii", "Mākena State Park", "Molokini", "Wailea", "Kamaole Beach Park", "Kealia Pond National Wildlife Refuge"],
+  "kahului": ["Kahului, Hawaii", "Maui Arts and Cultural Center", "ʻĪao Valley", "Kanaha Beach Park", "Alexander & Baldwin Sugar Museum", "Maui Nui Botanical Gardens"],
+  "haleiwa": ["Haleʻiwa", "Waimea Bay", "Banzai Pipeline", "Laniakea Beach", "Sunset Beach", "Kaʻena Point State Park"],
+  "hanalei": ["Hanalei, Hawaii", "Hanalei Bay", "Hanalei National Wildlife Refuge", "Waiʻoli Mission District", "Na Pali Coast State Park", "Princeville, Hawaii"],
+  "waikoloa-village": ["Waikoloa Village, Hawaii", "Anaehoʻomalu Bay", "Puʻukoholā Heiau National Historic Site", "Hāpuna Beach State Recreation Area", "Kohala, Hawaii", "Mauna Kea"],
+  "wailea-makena": ["Wailea, Hawaii", "Mākena State Park", "Molokini", "Keawakapu Beach", "Polo Beach", "Mākena"],
+  "lahaina": ["Lahaina, Hawaii", "Banyan Tree Park (Lahaina)", "Lahaina Historic District", "Kaanapali", "Maui", "Hawaiian Islands Humpback Whale National Marine Sanctuary"],
+};
+
+const getHawaiiTargetTitles = (citySlug: string) =>
+  HAWAII_CITY_WIKI_TITLES[citySlug] ?? [];
 
 
 const BANNED_FUZZY =
@@ -246,6 +283,8 @@ const ensureFourItems = async (
 };
 
 const run = async () => {
+  const region = parseRegionArg();
+  const hawaiiMode = region === "hawaii";
   const files = walkGuideFiles(ROOT);
   const report: Report = {
     citiesUpdated: [],
@@ -253,33 +292,56 @@ const run = async () => {
     citiesFallbackUsed: [],
     failures: [],
   };
+  const hawaiiReport: HawaiiConversionReportEntry[] = [];
 
   for (const file of files) {
+    if (hawaiiMode && !isHawaiiGuide(file)) {
+      continue;
+    }
+
     const raw = fs.readFileSync(file, "utf8");
     const guide = JSON.parse(raw) as GuideJson;
     const { stateSlug, citySlug } = parseSlugs(file);
     const routeKey = `us/${stateSlug}/${citySlug}`;
 
+    if (hawaiiMode && getHawaiiTargetTitles(citySlug).length === 0) {
+      report.citiesSkippedTier1.push(routeKey);
+      continue;
+    }
+
     if (
       guide.tier !== "tier2" ||
+      guide.isPruned === true ||
       !guide.city ||
       !guide.state ||
-      isTopGuide({ ...guide, slug: routeKey })
+      (!hawaiiMode && isTopGuide({ ...guide, slug: routeKey }))
     ) {
       report.citiesSkippedTier1.push(routeKey);
       continue;
     }
 
-    const wikiCandidates = await getWikiLandmarkCandidates(
-      guide.city,
-      guide.state,
-      12
-    );
+    const wikiCandidates = await getWikiLandmarkCandidates(guide.city, guide.state, 12);
+    const preferredTitles = hawaiiMode
+      ? getHawaiiTargetTitles(citySlug)
+      : wikiCandidates.candidates.slice(0, 12);
 
     const things: WikiThingToDo[] = [];
     const seen = new Set<string>();
 
-    for (const candidateTitle of wikiCandidates.candidates.slice(0, 12)) {
+    for (const candidateTitle of preferredTitles) {
+      if (hawaiiMode) {
+        const key = normalize(candidateTitle);
+        if (seen.has(key)) continue;
+        things.push({
+          title: candidateTitle,
+          description: "",
+          wikiUrl: canonicalWikiUrl(candidateTitle),
+        });
+        seen.add(key);
+        if (things.length >= MAX_ITEMS) break;
+        continue;
+      }
+
       const item = await wikiSummaryToThing(candidateTitle, guide.city);
       if (!item) continue;
       const key = normalize(item.title);
@@ -291,7 +353,7 @@ const run = async () => {
     }
 
     let finalThings = things;
-    if (finalThings.length < MIN_ITEMS) {
+    if (!hawaiiMode && finalThings.length < MIN_ITEMS) {
       report.citiesFallbackUsed.push(routeKey);
       finalThings = await ensureFourItems(
         guide.city,
@@ -310,7 +372,7 @@ const run = async () => {
         ? guide.thingsToDo.length
         : 0;
 
-      if (existingCount >= MIN_ITEMS) {
+      if (!hawaiiMode && existingCount >= MIN_ITEMS) {
         finalThings = (guide.thingsToDo as WikiThingToDo[]).slice(0, MAX_ITEMS);
       } else {
         report.failures.push({
@@ -321,13 +383,70 @@ const run = async () => {
       }
     }
 
-    guide.thingsToDo = finalThings.slice(0, MAX_ITEMS).map(item => ({
-      ...item,
-      description: toShortFactual(item.title, guide.city!, item.description),
-      wikiUrl: item.wikiUrl
-        ? canonicalWikiUrl(item.title, item.wikiUrl)
-        : undefined,
-    }));
+    if (hawaiiMode) {
+      const rewritten: WikiThingToDo[] = [];
+      const failures: string[] = [];
+
+      for (const item of finalThings.slice(0, MAX_ITEMS)) {
+        const rewrittenThing = await buildPalmSpringsStyleDescription(
+          item.title,
+          guide.city,
+          guide.state,
+          { minWords: 120, maxWords: 220, maxAttempts: 4 }
+        );
+
+        if (!rewrittenThing) {
+          failures.push(`Failed to build Palm Springs style description for ${item.title}`);
+          continue;
+        }
+
+        rewritten.push({
+          title: rewrittenThing.title,
+          description: rewrittenThing.description,
+          wikiUrl: rewrittenThing.wikiUrl,
+        });
+      }
+
+      if (rewritten.length < MIN_ITEMS) {
+        report.failures.push({
+          city: routeKey,
+          reason: `Palm Springs style conversion produced ${rewritten.length} items`,
+        });
+        hawaiiReport.push({
+          city: guide.city,
+          thingsRewritten: rewritten.length,
+          avgWordCount: rewritten.length
+            ? Math.round(
+                rewritten
+                  .map(item => countWords(item.description.split("\n\nSource:")[0] ?? item.description))
+                  .reduce((sum, n) => sum + n, 0) / rewritten.length
+              )
+            : 0,
+          wikiLinksPresent: rewritten.every(item => Boolean(item.wikiUrl)),
+          failures,
+        });
+        continue;
+      }
+
+      guide.thingsToDo = rewritten;
+      hawaiiReport.push({
+        city: guide.city,
+        thingsRewritten: rewritten.length,
+        avgWordCount: Math.round(
+          rewritten
+            .map(item => countWords(item.description.split("\n\nSource:")[0] ?? item.description))
+            .reduce((sum, n) => sum + n, 0) / rewritten.length
+        ),
+        wikiLinksPresent: rewritten.every(item => Boolean(item.wikiUrl)),
+        failures,
+      });
+    } else {
+      guide.thingsToDo = finalThings.slice(0, MAX_ITEMS).map(item => ({
+        ...item,
+        description: toShortFactual(item.title, guide.city!, item.description),
+        wikiUrl: item.wikiUrl ? canonicalWikiUrl(item.title, item.wikiUrl) : undefined,
+      }));
+    }
 
     if (!guide.seoLinks) {
       guide.seoLinks = {};
@@ -342,7 +461,9 @@ const run = async () => {
       }
     }
 
-    assertGuideHasNoWikiLanguage(guide, routeKey);
+    if (!hawaiiMode) {
+      assertGuideHasNoWikiLanguage(guide, routeKey);
+    }
     fs.writeFileSync(file, `${JSON.stringify(guide, null, 2)}\n`, "utf8");
     report.citiesUpdated.push(routeKey);
   }
@@ -350,6 +471,14 @@ const run = async () => {
   flushWikiSummaryCache();
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
   fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  if (hawaiiMode) {
+    fs.mkdirSync(path.dirname(HAWAII_REPORT_PATH), { recursive: true });
+    fs.writeFileSync(
+      HAWAII_REPORT_PATH,
+      `${JSON.stringify(hawaiiReport, null, 2)}\n`,
+      "utf8"
+    );
+  }
 
   console.log(`Updated tier2 cities: ${report.citiesUpdated.length}`);
   console.log(`Skipped (tier1/non-tier2): ${report.citiesSkippedTier1.length}`);
