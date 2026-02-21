@@ -75,7 +75,7 @@ export default function GuideThingsToDoCard({
           rel="nofollow noopener noreferrer"
           className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
         >
-          Source
+          Wikipedia link
         </a>
       ) : null}
     </li>

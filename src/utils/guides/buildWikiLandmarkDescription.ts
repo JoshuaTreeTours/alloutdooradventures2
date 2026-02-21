@@ -1,9 +1,12 @@
 import { hasHighSimilarity } from "./checkDescriptionSimilarity";
-import { cleanLandmarkText } from "./cleanLandmarkText";
 import { fallbackLandmarkDescription } from "./fallbackLandmarkDescription";
-import { paraphraseWikiSummary } from "./paraphraseWikiSummary";
 import { validateNoBoilerplate } from "./validateNoBoilerplate";
 import { fetchWikiSummary } from "../wiki/wikiSummary";
+import {
+  isTier1ProtectedGuide,
+  rewriteOnlyForNonTier1,
+  rewriteLandmarkFromWiki,
+} from "./enforceAuthoritativeGuideText";
 
 export type WikiDescResult = {
   description: string;
@@ -27,39 +30,6 @@ export async function buildWikiLandmarkDescription(args: {
     existingDescriptions = [],
   } = args;
 
-  const toAuthoritativeDescription = (
-    description: string,
-    wikiSummaryText?: string
-  ) => {
-    if (tier !== "tier1") return description;
-
-    let rewritten = cleanLandmarkText(description)
-      .replace(/visitors experience/gi, "The area offers")
-      .replace(/is recognized as/gi, "is")
-      .replace(/is known for/gi, "features")
-      .replace(
-        /provides a practical orientation point/gi,
-        "serves as a major landmark"
-      );
-
-    if (rewritten.split(/\s+/).filter(Boolean).length < 60 && wikiSummaryText) {
-      const firstSentence = wikiSummaryText
-        .split(".")
-        .slice(0, 1)
-        .join(".")
-        .trim();
-      if (firstSentence) {
-        rewritten = `${rewritten} ${firstSentence}`.trim();
-      }
-    }
-
-    if (/article|coverage|dataset/i.test(rewritten)) {
-      console.warn("Non-authoritative text detected", landmarkName);
-    }
-
-    return rewritten;
-  };
-
   const candidateTitles = [
     `${landmarkName}`,
     `${landmarkName} (${cityName})`,
@@ -74,23 +44,39 @@ export async function buildWikiLandmarkDescription(args: {
     }
 
     let best = "";
-    for (let attempt = 0; attempt < 3; attempt += 1) {
-      const candidate = paraphraseWikiSummary({
-        landmarkName,
-        cityName,
-        stateName,
-        extract: summary.extract,
-        variant: attempt,
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      if (isTier1ProtectedGuide(tier)) {
+        return {
+          description: summary.extract,
+          wikiUrl: summary.url,
+          imageUrl: summary.imageUrl,
+          usedWiki: true,
+        };
+      }
+
+      const queryText =
+        attempt === 0
+          ? summary.extract
+          : `${summary.extract} ${summary.extract.split(/(?<=[.!?])\s+/).slice(0, 2).join(" ")}`;
+
+      const candidate = rewriteOnlyForNonTier1({
+        tier,
+        originalText: queryText,
+        rewrite: text =>
+          rewriteLandmarkFromWiki({
+            landmarkName,
+            cityName,
+            stateName,
+            wikiText: text,
+            tier: "tier2",
+          }),
       });
 
       if (!validateNoBoilerplate(candidate)) {
         continue;
       }
 
-      const cleanedCandidate = toAuthoritativeDescription(
-        candidate,
-        summary.extract
-      );
+      const cleanedCandidate = candidate;
 
       if (!hasHighSimilarity(cleanedCandidate, existingDescriptions)) {
         return {

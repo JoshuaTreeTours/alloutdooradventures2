@@ -107,7 +107,7 @@ export default function ThingToDoGuideRoute({
             rel="nofollow noopener noreferrer"
             className="mt-8 inline-block text-sm font-medium underline"
           >
-            Official / Source
+            Official link
           </a>
         ) : null}
 
