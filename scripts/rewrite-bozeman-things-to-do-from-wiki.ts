@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
 import { getWikipediaSummary, flushWikiSummaryCache } from "../src/utils/wiki/wikiRest";
+import { assertNoBoilerplate, BANNED_PHRASES } from "../src/utils/guides/wikiNoBoilerplate";
 
 type Thing = {
   title: string;
@@ -17,14 +18,9 @@ type Guide = {
 
 const GUIDE_PATH = path.resolve("src/data/guides/us/montana/bozeman.json");
 
-const BANNED = [
-  /One of the most valuable things to do/i,
-  /Travelers comparing attractions/i,
-  /easy recommendation/i,
-  /practical stop/i,
-  /plan for\s+\d+/i,
-  /avoid unnecessary transit time/i,
-];
+const BANNED = BANNED_PHRASES.map(
+  phrase => new RegExp(phrase.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i")
+);
 
 const wikiFacts: Record<
   string,
@@ -111,9 +107,7 @@ const run = async () => {
     const description = cleanWikiLanguage(fact.description).replace(/\s+/g, " ").trim();
     const wikiUrl = canonicalUrl(fact.wikiTitle, pageUrl);
 
-    if (BANNED.some(pattern => pattern.test(description))) {
-      throw new Error(`Banned phrase remained for ${thing.title}`);
-    }
+    assertNoBoilerplate(description);
 
     rewritten += 1;
     if (wikiUrl) withWikiUrl += 1;

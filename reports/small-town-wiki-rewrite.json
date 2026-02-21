@@ -1,0 +1,1369 @@
+{
+  "totalGuides": 429,
+  "protectedCount": 396,
+  "protectedSlugs": [
+    "us/alaska/denali-national-park-and-preserve",
+    "us/alaska/fairbanks",
+    "us/alaska/homer",
+    "us/alaska/ketchikan",
+    "us/alaska/palmer",
+    "us/alaska/seward",
+    "us/arizona/cottonwood",
+    "us/arizona/morristown",
+    "us/arizona/page",
+    "us/arizona/phoenix",
+    "us/arizona/prescott",
+    "us/california/avalon",
+    "us/california/bonita",
+    "us/california/burlingame",
+    "us/california/calistoga",
+    "us/california/carpinteria",
+    "us/california/coronado",
+    "us/california/del-mar",
+    "us/california/healdsburg",
+    "us/california/indio",
+    "us/california/joshua-tree",
+    "us/california/laguna-beach",
+    "us/california/lake-elsinore",
+    "us/california/los-angeles",
+    "us/california/marina-del-rey",
+    "us/california/napa",
+    "us/california/newport-beach",
+    "us/california/oakhurst",
+    "us/california/oceanside",
+    "us/california/palm-springs",
+    "us/california/pismo-beach",
+    "us/california/poway",
+    "us/california/redondo-beach",
+    "us/california/rio-linda",
+    "us/california/sacramento",
+    "us/california/san-diego",
+    "us/california/san-francisco",
+    "us/california/santa-barbara",
+    "us/california/santa-monica",
+    "us/california/santee",
+    "us/california/solvang",
+    "us/california/sonoma",
+    "us/california/temecula",
+    "us/california/ventura",
+    "us/colorado/boulder",
+    "us/colorado/colorado-springs",
+    "us/colorado/denver",
+    "us/colorado/durango",
+    "us/connecticut/colchester",
+    "us/connecticut/east-lyme",
+    "us/connecticut/essex",
+    "us/connecticut/haddam",
+    "us/connecticut/hartford",
+    "us/connecticut/montville",
+    "us/connecticut/new-london",
+    "us/connecticut/new-milford",
+    "us/connecticut/plainville",
+    "us/connecticut/salisbury",
+    "us/connecticut/seymour",
+    "us/connecticut/thomaston",
+    "us/connecticut/wolcott",
+    "us/delaware/dewey-beach",
+    "us/district-of-columbia/washington",
+    "us/florida/apopka",
+    "us/florida/bonita-springs",
+    "us/florida/bradenton-beach",
+    "us/florida/bradenton",
+    "us/florida/canal-point",
+    "us/florida/cape-canaveral",
+    "us/florida/cape-coral",
+    "us/florida/clearwater",
+    "us/florida/clermont",
+    "us/florida/cocoa-beach",
+    "us/florida/crystal-river",
+    "us/florida/cudjoe-key",
+    "us/florida/daytona-beach",
+    "us/florida/deland",
+    "us/florida/delray-beach",
+    "us/florida/destin",
+    "us/florida/dunnellon",
+    "us/florida/edgewater",
+    "us/florida/estero",
+    "us/florida/eustis",
+    "us/florida/everglades-city",
+    "us/florida/fellsmere",
+    "us/florida/fort-lauderdale",
+    "us/florida/fort-myers-beach",
+    "us/florida/fort-myers",
+    "us/florida/fort-walton-beach",
+    "us/florida/fort-white",
+    "us/florida/gainesville",
+    "us/florida/goodland",
+    "us/florida/greenacres",
+    "us/florida/gulfport",
+    "us/florida/hallandale-beach",
+    "us/florida/hastings",
+    "us/florida/hobe-sound",
+    "us/florida/hollywood",
+    "us/florida/homestead",
+    "us/florida/homosassa",
+    "us/florida/islamorada",
+    "us/florida/jacksonville",
+    "us/florida/jupiter",
+    "us/florida/key-biscayne",
+    "us/florida/key-largo",
+    "us/florida/key-west",
+    "us/florida/kissimmee",
+    "us/florida/lake-wales",
+    "us/florida/lakeland",
+    "us/florida/lamont",
+    "us/florida/lecanto",
+    "us/florida/lighthouse-point",
+    "us/florida/marathon",
+    "us/florida/marco-island",
+    "us/florida/matlacha",
+    "us/florida/merritt-island",
+    "us/florida/miami-beach",
+    "us/florida/miami",
+    "us/florida/naples",
+    "us/florida/new-smyrna-beach",
+    "us/florida/nokomis",
+    "us/florida/north-fort-myers",
+    "us/florida/north-miami",
+    "us/florida/orange-city",
+    "us/florida/orlando",
+    "us/florida/osprey",
+    "us/florida/oviedo",
+    "us/florida/palm-coast",
+    "us/florida/palm-harbor",
+    "us/florida/palmetto",
+    "us/florida/panama-city-beach",
+    "us/florida/parrish",
+    "us/florida/pembroke-pines",
+    "us/florida/pensacola-beach",
+    "us/florida/pompano-beach",
+    "us/florida/riviera-beach",
+    "us/florida/sanford",
+    "us/florida/santa-rosa-beach",
+    "us/florida/sarasota",
+    "us/florida/silver-springs",
+    "us/florida/st-augustine",
+    "us/florida/st-cloud",
+    "us/florida/st-petersburg",
+    "us/florida/stock-island",
+    "us/florida/summerland-key",
+    "us/florida/tarpon-springs",
+    "us/florida/tavernier",
+    "us/florida/titusville",
+    "us/florida/town-n-country",
+    "us/florida/venice",
+    "us/florida/vero-beach",
+    "us/florida/warrington",
+    "us/florida/west-palm-beach",
+    "us/florida/weston",
+    "us/florida/winter-haven",
+    "us/florida/winter-park",
+    "us/georgia/albany",
+    "us/georgia/augusta",
+    "us/georgia/blairsville",
+    "us/georgia/braselton",
+    "us/georgia/buford",
+    "us/georgia/cleveland",
+    "us/georgia/covington",
+    "us/georgia/fortson",
+    "us/georgia/helen",
+    "us/georgia/hogansville",
+    "us/georgia/juliette",
+    "us/georgia/leesburg",
+    "us/georgia/lizella",
+    "us/georgia/macon",
+    "us/georgia/peachtree-city",
+    "us/georgia/roswell",
+    "us/georgia/senoia",
+    "us/georgia/summerville",
+    "us/georgia/tybee-island",
+    "us/hawaii/eleele",
+    "us/hawaii/haiku-pauwela",
+    "us/hawaii/hakalau",
+    "us/hawaii/haleiwa",
+    "us/hawaii/hanalei",
+    "us/hawaii/hilo",
+    "us/hawaii/honomu",
+    "us/hawaii/kaaawa",
+    "us/hawaii/kahului",
+    "us/hawaii/kailua-kona",
+    "us/hawaii/kailua",
+    "us/hawaii/kaneohe",
+    "us/hawaii/keaau",
+    "us/hawaii/kekaha",
+    "us/hawaii/kihei",
+    "us/hawaii/lahaina",
+    "us/hawaii/makawao",
+    "us/hawaii/paia",
+    "us/hawaii/waianae",
+    "us/hawaii/waikoloa-village",
+    "us/hawaii/wailea-makena",
+    "us/hawaii/wailuku",
+    "us/hawaii/waimea",
+    "us/idaho/coeur-dalene",
+    "us/illinois/chicago",
+    "us/kentucky/louisville",
+    "us/kentucky/new-haven",
+    "us/kentucky/park-city",
+    "us/louisiana/abita-springs",
+    "us/louisiana/baton-rouge",
+    "us/louisiana/lafayette",
+    "us/louisiana/laplace",
+    "us/louisiana/madisonville",
+    "us/louisiana/marrero",
+    "us/louisiana/ponchatoula",
+    "us/louisiana/vacherie",
+    "us/louisiana/venice",
+    "us/maine/bar-harbor",
+    "us/maine/bethel",
+    "us/maine/harpswell",
+    "us/maine/kennebunk",
+    "us/maine/ogunquit",
+    "us/maine/portland",
+    "us/maryland/cambridge",
+    "us/maryland/cumberland",
+    "us/maryland/denton",
+    "us/maryland/edgewater",
+    "us/maryland/fort-washington",
+    "us/maryland/glen-burnie",
+    "us/maryland/lusby",
+    "us/maryland/monkton",
+    "us/maryland/ocean-city",
+    "us/maryland/vienna",
+    "us/massachusetts/barnstable",
+    "us/massachusetts/beverly",
+    "us/massachusetts/boston",
+    "us/massachusetts/brookline",
+    "us/massachusetts/cambridge",
+    "us/massachusetts/chelsea",
+    "us/massachusetts/falmouth",
+    "us/massachusetts/holbrook",
+    "us/massachusetts/lexington",
+    "us/massachusetts/marblehead",
+    "us/massachusetts/mashpee",
+    "us/massachusetts/nantucket",
+    "us/massachusetts/natick",
+    "us/massachusetts/needham",
+    "us/massachusetts/newton",
+    "us/massachusetts/north-andover",
+    "us/massachusetts/oak-bluffs",
+    "us/massachusetts/quincy",
+    "us/massachusetts/randolph",
+    "us/massachusetts/revere",
+    "us/massachusetts/salem",
+    "us/massachusetts/sandwich",
+    "us/massachusetts/sharon",
+    "us/massachusetts/somerville",
+    "us/massachusetts/sudbury",
+    "us/massachusetts/winthrop",
+    "us/massachusetts/wrentham",
+    "us/michigan/grosse-ile-township",
+    "us/michigan/lake-leelanau",
+    "us/michigan/mount-pleasant",
+    "us/michigan/traverse-city",
+    "us/minnesota/stillwater",
+    "us/mississippi/natchez",
+    "us/missouri/branson",
+    "us/montana/missoula",
+    "us/montana/whitefish",
+    "us/nevada/las-vegas",
+    "us/new-hampshire/freedom",
+    "us/new-hampshire/laconia",
+    "us/new-hampshire/new-castle",
+    "us/new-hampshire/portsmouth",
+    "us/new-hampshire/weare",
+    "us/new-hampshire/wolfeboro",
+    "us/new-jersey/atlantic-highlands",
+    "us/new-jersey/brick-township",
+    "us/new-jersey/edgewater",
+    "us/new-jersey/fieldsboro",
+    "us/new-jersey/hillsdale",
+    "us/new-jersey/keyport",
+    "us/new-jersey/lavallette",
+    "us/new-jersey/middletown-township",
+    "us/new-jersey/millville",
+    "us/new-jersey/ocean-city",
+    "us/new-jersey/shamong",
+    "us/new-jersey/wallington",
+    "us/new-jersey/wildwood-crest",
+    "us/new-mexico/abiquiu",
+    "us/new-mexico/los-ranchos-de-albuquerque",
+    "us/new-mexico/santa-fe-foothills",
+    "us/new-york/brooklyn",
+    "us/new-york/catskill",
+    "us/new-york/freeport",
+    "us/new-york/hammondsport",
+    "us/new-york/hancock",
+    "us/new-york/ithaca",
+    "us/new-york/lansing",
+    "us/new-york/montauk",
+    "us/new-york/napanoch",
+    "us/new-york/new-york",
+    "us/new-york/queens",
+    "us/new-york/rushville",
+    "us/new-york/staten-island",
+    "us/new-york/warwick",
+    "us/north-carolina/asheville",
+    "us/north-carolina/black-mountain",
+    "us/north-carolina/elkin",
+    "us/north-carolina/highlands",
+    "us/north-carolina/kill-devil-hills",
+    "us/north-carolina/nags-head",
+    "us/north-carolina/raleigh",
+    "us/north-carolina/ronda",
+    "us/ohio/grove-city",
+    "us/ohio/lancaster",
+    "us/ohio/logan",
+    "us/ohio/rockbridge",
+    "us/oklahoma/oklahoma-city",
+    "us/oregon/cascade-locks",
+    "us/oregon/portland",
+    "us/pennsylvania/airville",
+    "us/pennsylvania/bethlehem",
+    "us/pennsylvania/gettysburg",
+    "us/pennsylvania/hawley",
+    "us/pennsylvania/levittown",
+    "us/pennsylvania/new-stanton",
+    "us/pennsylvania/newville",
+    "us/pennsylvania/ohiopyle",
+    "us/pennsylvania/philadelphia",
+    "us/pennsylvania/wrightsville",
+    "us/rhode-island/little-compton",
+    "us/rhode-island/warwick",
+    "us/south-carolina/aiken",
+    "us/south-carolina/bluffton",
+    "us/south-carolina/columbia",
+    "us/south-carolina/hilton-head-island",
+    "us/south-carolina/johns-island",
+    "us/south-carolina/mount-pleasant",
+    "us/south-carolina/saint-helena-island",
+    "us/south-carolina/winnsboro",
+    "us/south-dakota/rapid-city",
+    "us/tennessee/chattanooga",
+    "us/tennessee/christiana",
+    "us/tennessee/delano",
+    "us/tennessee/franklin",
+    "us/tennessee/granville",
+    "us/tennessee/greenbrier",
+    "us/tennessee/johnson-city",
+    "us/tennessee/nashville",
+    "us/tennessee/pigeon-forge",
+    "us/tennessee/sevierville",
+    "us/tennessee/williamsport",
+    "us/texas/aransas-pass",
+    "us/texas/fort-worth",
+    "us/texas/port-aransas",
+    "us/texas/spring",
+    "us/texas/the-colony",
+    "us/utah/bryce-canyon-city",
+    "us/utah/hurricane",
+    "us/utah/springdale",
+    "us/utah/st-george",
+    "us/vermont/braintree",
+    "us/vermont/bridgewater",
+    "us/vermont/charleston",
+    "us/vermont/essex-junction",
+    "us/vermont/fairlee",
+    "us/vermont/hartford",
+    "us/vermont/manchester",
+    "us/vermont/norwich",
+    "us/vermont/plymouth",
+    "us/vermont/royalton",
+    "us/vermont/springfield",
+    "us/vermont/stowe",
+    "us/vermont/thetford",
+    "us/vermont/waterbury",
+    "us/vermont/windsor",
+    "us/vermont/woodford",
+    "us/virginia/alexandria",
+    "us/virginia/arlington",
+    "us/virginia/cape-charles",
+    "us/virginia/charlottesville",
+    "us/virginia/chincoteague",
+    "us/virginia/covington",
+    "us/virginia/eagle-rock",
+    "us/virginia/great-falls",
+    "us/virginia/herndon",
+    "us/virginia/leesburg",
+    "us/virginia/richmond",
+    "us/virginia/stafford",
+    "us/washington/chelan",
+    "us/washington/seattle",
+    "us/west-virginia/harpers-ferry",
+    "us/wisconsin/darlington",
+    "us/wisconsin/fish-creek",
+    "us/wisconsin/sister-bay",
+    "us/wisconsin/sturgeon-bay",
+    "us/wisconsin/washburn",
+    "us/wyoming/cody",
+    "us/wyoming/jackson",
+    "us/wyoming/yellowstone-national-park"
+  ],
+  "targetedGuides": 33,
+  "rewrittenGuides": [],
+  "rewritesPerGuide": {},
+  "failedWikiLookup": [
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Tony Knowles Coastal Trail"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Anchorage Museum"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Flattop Mountain"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Alaska Native Heritage Center"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Downtown Anchorage"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Kincaid Park"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Turnagain Arm"
+    },
+    {
+      "guide": "us/alaska/anchorage",
+      "item": "Explore Chugach State Park"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Historic Downtown Flagstaff"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Lowell Observatory"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Walnut Canyon National Monument"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Arizona Snowbowl"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Lava River Cave"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Buffalo Park"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Sunset Crater Volcano"
+    },
+    {
+      "guide": "us/arizona/flagstaff",
+      "item": "Explore Oak Creek Canyon"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Old Town Scottsdale"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Scottsdale Waterfront"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore McDowell Sonoran Preserve"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Taliesin West"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Kierland Commons"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Scottsdale Museum of Contemporary Art"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Pinnacle Peak"
+    },
+    {
+      "guide": "us/arizona/scottsdale",
+      "item": "Explore Salt River"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Cathedral Rock"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Bell Rock"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Chapel of the Holy Cross"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Tlaquepaque Arts and Shopping Village"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Airport Mesa"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Red Rock State Park"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Oak Creek"
+    },
+    {
+      "guide": "us/arizona/sedona",
+      "item": "Explore Boynton Canyon"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Tampa Riverwalk"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Ybor City"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Busch Gardens Tampa Bay"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Armature Works"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Tampa Museum of Art"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Bayshore Boulevard"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Sparkman Wharf"
+    },
+    {
+      "guide": "us/florida/tampa",
+      "item": "Explore Fort De Soto Park"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Georgia Aquarium"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore BeltLine Eastside Trail"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Ponce City Market"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Martin Luther King Jr. National Historical Park"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Piedmont Park"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Midtown"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore High Museum of Art"
+    },
+    {
+      "guide": "us/georgia/atlanta",
+      "item": "Explore Stone Mountain Park"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Forsyth Park"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Historic District"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore River Street"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Bonaventure Cemetery"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore City Market"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Wormsloe Historic Site"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Tybee Island"
+    },
+    {
+      "guide": "us/georgia/savannah",
+      "item": "Explore Jones Street"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Monument Circle"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Mass Ave"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore White River State Park"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Indianapolis Motor Speedway Museum"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Canal Walk"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Fountain Square"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Newfields"
+    },
+    {
+      "guide": "us/indiana/indianapolis",
+      "item": "Explore Eagle Creek Park"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Inner Harbor"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Fells Point"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Fort McHenry"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore National Aquarium"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Mount Vernon"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Hampden"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore American Visionary Art Museum"
+    },
+    {
+      "guide": "us/maryland/baltimore",
+      "item": "Explore Patterson Park"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Detroit Institute of Arts"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Eastern Market"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore RiverWalk"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Motown Museum"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Corktown"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Belle Isle Park"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore The Henry Ford"
+    },
+    {
+      "guide": "us/michigan/detroit",
+      "item": "Explore Campus Martius Park"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Chain of Lakes"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Minneapolis Sculpture Garden"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore North Loop"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Stone Arch Bridge"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Mill City Museum"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Minnehaha Falls"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore Nicollet Mall"
+    },
+    {
+      "guide": "us/minnesota/minneapolis",
+      "item": "Explore St. Anthony Main"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore National WWI Museum and Memorial"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore Country Club Plaza"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore Union Station"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore Crossroads Arts District"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore 18th and Vine"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore Nelson-Atkins Museum of Art"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore River Market"
+    },
+    {
+      "guide": "us/missouri/kansas-city",
+      "item": "Explore Loose Park"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Gateway Arch"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Forest Park"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore City Museum"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Soulard"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Missouri Botanical Garden"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore The Hill"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Delmar Loop"
+    },
+    {
+      "guide": "us/missouri/st-louis",
+      "item": "Explore Cahokia Mounds"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Old Town Albuquerque"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Sandia Peak Tramway"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore ABQ BioPark"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Nob Hill"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Indian Pueblo Cultural Center"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Petroglyph National Monument"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Balloon Fiesta Park"
+    },
+    {
+      "guide": "us/new-mexico/albuquerque",
+      "item": "Explore Turquoise Trail"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Old Mesilla"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Organ Mountains"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Dripping Springs Natural Area"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore New Mexico Farm and Ranch Heritage Museum"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Downtown Las Cruces"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Soledad Canyon"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore Rio Grande Trail"
+    },
+    {
+      "guide": "us/new-mexico/las-cruces",
+      "item": "Explore White Sands National Park"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Santa Fe Plaza"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Canyon Road"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Georgia O’Keeffe Museum"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Railyard District"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Meow Wolf Santa Fe"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Loretto Chapel"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Museum Hill"
+    },
+    {
+      "guide": "us/new-mexico/santa-fe",
+      "item": "Explore Bandelier National Monument"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore Uptown Charlotte"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore NASCAR Hall of Fame"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore South End"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore Freedom Park"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore NoDa"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore Mint Museum"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore U.S. National Whitewater Center"
+    },
+    {
+      "guide": "us/north-carolina/charlotte",
+      "item": "Explore Lake Norman"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Over-the-Rhine"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Findlay Market"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Smale Riverfront Park"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Cincinnati Art Museum"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Mount Adams"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Fountain Square"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Cincinnati Zoo"
+    },
+    {
+      "guide": "us/ohio/cincinnati",
+      "item": "Explore Ault Park"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Rock and Roll Hall of Fame"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore West Side Market"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Cleveland Museum of Art"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Edgewater Park"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Ohio City"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Playhouse Square"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore University Circle"
+    },
+    {
+      "guide": "us/ohio/cleveland",
+      "item": "Explore Cuyahoga Valley National Park"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Short North Arts District"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Scioto Mile"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore German Village"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Franklin Park Conservatory"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore North Market"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Columbus Museum of Art"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Ohio State University"
+    },
+    {
+      "guide": "us/ohio/columbus",
+      "item": "Explore Hocking Hills"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Point State Park"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Duquesne Incline"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Strip District"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Phipps Conservatory"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore North Shore"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Andy Warhol Museum"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Lawrenceville"
+    },
+    {
+      "guide": "us/pennsylvania/pittsburgh",
+      "item": "Explore Mount Washington"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Rainbow Row"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Waterfront Park"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore King Street"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Charleston City Market"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Battery and White Point Garden"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Boone Hall Plantation"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Shem Creek"
+    },
+    {
+      "guide": "us/south-carolina/charleston",
+      "item": "Explore Folly Beach"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore South Congress Avenue"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Zilker Park"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Lady Bird Lake"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Texas State Capitol"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Barton Springs Pool"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore East Austin"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Mount Bonnell"
+    },
+    {
+      "guide": "us/texas/austin",
+      "item": "Explore Hamilton Pool Preserve"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Dealey Plaza"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Dallas Arts District"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Klyde Warren Park"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Deep Ellum"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Bishop Arts District"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore Perot Museum"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore White Rock Lake"
+    },
+    {
+      "guide": "us/texas/dallas",
+      "item": "Explore AT&T Discovery District"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Space Center Houston"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Museum District"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Buffalo Bayou Park"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore The Galleria"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Discovery Green"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Montrose"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Hermann Park"
+    },
+    {
+      "guide": "us/texas/houston",
+      "item": "Explore Kemah Boardwalk"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore San Antonio River Walk"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore The Alamo"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore Pearl District"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore Mission San José"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore Market Square"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore San Fernando Cathedral"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore Brackenridge Park"
+    },
+    {
+      "guide": "us/texas/san-antonio",
+      "item": "Explore Natural Bridge Caverns"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Arches National Park"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Canyonlands National Park"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Dead Horse Point State Park"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Colorado River"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Hell’s Revenge"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Downtown Moab"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore Corona Arch"
+    },
+    {
+      "guide": "us/utah/moab",
+      "item": "Explore La Sal Mountains"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Temple Square"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Utah State Capitol"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Red Butte Garden"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Liberty Park"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore 9th and 9th"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Natural History Museum of Utah"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Big Cottonwood Canyon"
+    },
+    {
+      "guide": "us/utah/salt-lake-city",
+      "item": "Explore Antelope Island"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Milwaukee RiverWalk"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Historic Third Ward"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Milwaukee Art Museum"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Lakefront Brewery"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Brady Street"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Harley-Davidson Museum"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Bradford Beach"
+    },
+    {
+      "guide": "us/wisconsin/milwaukee",
+      "item": "Explore Kettle Moraine"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Jackson Town Square"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Grand Teton National Park"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore National Elk Refuge"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Jenny Lake"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Snake River"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Jackson Hole Mountain Resort"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Mormon Row"
+    },
+    {
+      "guide": "us/wyoming/jackson-hole",
+      "item": "Explore Teton Village"
+    }
+  ],
+  "noWikiUrl": [],
+  "dryRun": true
+}
