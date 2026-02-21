@@ -31,6 +31,32 @@ type WikidataInstanceOfClaim = {
 
 const USER_AGENT = "alloutdooradventures/1.0 (city-population)";
 const WIKIDATA_CITY_ENTITY_ID = "Q515";
+const MAJOR_US_CITIES = new Set([
+  "new york",
+  "los angeles",
+  "chicago",
+  "houston",
+  "phoenix",
+  "philadelphia",
+  "san antonio",
+  "san diego",
+  "dallas",
+  "san jose",
+  "austin",
+  "jacksonville",
+  "fort worth",
+  "columbus",
+  "charlotte",
+  "san francisco",
+  "indianapolis",
+  "seattle",
+  "denver",
+  "washington",
+  "boston",
+  "nashville",
+  "detroit",
+  "portland",
+]);
 const cityPopulationCache = new Map<string, CityPopulationResult | null>();
 const cityRegistryPopulationCache = new Map<string, CityPopulationResult>();
 const wikidataPopulationCache = new Map<string, CityPopulationResult | null>();
@@ -78,14 +104,27 @@ const parsePopulationFromFactText = (text?: string): CityPopulationResult | null
   if (!text) return null;
 
   const normalized = text.replace(/\s+/g, " ").trim();
-  const numberMatch = normalized.match(/\b(\d{1,3}(?:,\d{3})+)\b|\b(\d{4,})\b/);
-  const value = Number((numberMatch?.[1] ?? numberMatch?.[2] ?? "").replace(/,/g, ""));
-  if (!Number.isFinite(value)) return null;
+  const rawMatches = Array.from(
+    normalized.matchAll(/\b(\d{1,3}(?:,\d{3})+)\b|\b(\d{4,})\b/g)
+  );
+  if (!rawMatches.length) return null;
+
+  const values = rawMatches
+    .map(match => Number((match[1] ?? match[2] ?? "").replace(/,/g, "")))
+    .filter(value => Number.isFinite(value));
+  if (!values.length) return null;
 
   const yearMatch = normalized.match(/\b(19\d{2}|20\d{2})\b/);
+  const year = yearMatch ? Number(yearMatch[1]) : undefined;
+  const value = values.reduce((max, current) => (current > max ? current : max), 0);
+
+  if (year && value <= 9999 && value === year) {
+    return null;
+  }
+
   return normalizePopulationResult({
     value,
-    year: yearMatch ? Number(yearMatch[1]) : undefined,
+    year,
   });
 };
 
@@ -148,17 +187,22 @@ const pickBestPopulationClaim = (claims: WikidataPopulationClaim[]) => {
       if (claim.mainsnak?.snaktype && claim.mainsnak.snaktype !== "value") return false;
       return Boolean(asNumber(claim.mainsnak?.datavalue?.value?.amount));
     })
-    .map(claim => ({ claim, year: getClaimYear(claim) }));
+    .map(claim => ({
+      claim,
+      year: getClaimYear(claim),
+      value: asNumber(claim.mainsnak?.datavalue?.value?.amount) ?? 0,
+    }));
 
   if (!usableClaims.length) return null;
 
   const pickMostRecent = (
-    candidates: Array<{ claim: WikidataPopulationClaim; year?: number }>
+    candidates: Array<{ claim: WikidataPopulationClaim; year?: number; value: number }>
   ) =>
     [...candidates].sort((a, b) => {
       const aYear = a.year ?? -1;
       const bYear = b.year ?? -1;
-      return bYear - aYear;
+      if (bYear !== aYear) return bYear - aYear;
+      return b.value - a.value;
     })[0];
 
   const preferred = usableClaims.filter(item => item.claim.rank === "preferred");
@@ -220,12 +264,23 @@ const fromWikidata = async ({
     return null;
   }
 
-  if (countryName.toLowerCase() === "united states" && value < 5000) {
-    console.warn(
-      `[getCityPopulation] Skipping suspicious US city population for ${cityName} (${wikidataId}): ${value}`
-    );
-    wikidataPopulationCache.set(wikidataId, null);
-    return null;
+  if (countryName.toLowerCase() === "united states") {
+    const normalizedCity = cityName.trim().toLowerCase();
+    if (value < 5000) {
+      console.warn(
+        `[getCityPopulation] Skipping suspicious US city population for ${cityName} (${wikidataId}): ${value}`
+      );
+      wikidataPopulationCache.set(wikidataId, null);
+      return null;
+    }
+
+    if (MAJOR_US_CITIES.has(normalizedCity) && value < 1000) {
+      console.warn(
+        `[getCityPopulation] Skipping invalid major US city population for ${cityName} (${wikidataId}): ${value}`
+      );
+      wikidataPopulationCache.set(wikidataId, null);
+      return null;
+    }
   }
 
   const result = normalizePopulationResult({
