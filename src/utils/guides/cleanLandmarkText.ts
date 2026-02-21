@@ -1,16 +1,20 @@
-const BANNED_PATTERNS = [
-  /coverage for .*?\./gi,
-  /the same article set references .*?\./gi,
-  /distinct article language .*?\./gi,
-  /cross-?links? .*?\./gi,
-  /article set .*?\./gi,
-  /dataset .*?\./gi,
-  /this article .*?\./gi,
-  /coverage .*?\./gi,
-  /evidence-based .*?\./gi,
-  /\breferences?\b/gi,
-  /\barchives?\b/gi,
-  /\bsources?\b/gi,
+const SENTENCE_BANNED_PATTERNS = [
+  /the same article set/i,
+  /coverage for .* cites dated milestones/i,
+  /cross-?links?\s+them\s+with/i,
+  /\barticle\b/i,
+  /\bcoverage\b/i,
+  /\bdataset\b/i,
+  /\bdesign briefs?\b/i,
+  /\barchives?\b/i,
+  /\brecords?\b/i,
+  /\bengineering records\b/i,
+  /\bplanning archives\b/i,
+  /\bsource\s*:/i,
+  /wikipedia says/i,
+  /\baccording to\b/i,
+  /\bthis page\b/i,
+  /\bthis article\b/i,
 ];
 
 const METRIC_PATTERNS = [
@@ -33,6 +37,31 @@ const trimToMaxWords = (text: string, maxWords: number) => {
   }
 
   return `${words.slice(0, maxWords).join(" ").replace(/[;,]$/, "")}.`;
+};
+
+const splitSentences = (text: string) =>
+  text
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?])\s+/)
+    .map(sentence => sentence.trim())
+    .filter(Boolean);
+
+const normalizeSentence = (sentence: string) =>
+  sentence
+    .replace(/\s+,/g, ",")
+    .replace(/\s+\./g, ".")
+    .replace(/\(\s*\)/g, "")
+    .replace(/\babout\s+from\b/gi, "from")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const fallbackDescription = (
+  landmarkName = "This place",
+  city = "the city",
+  state = ""
+) => {
+  const location = state ? `${city}, ${state}` : city;
+  return `${landmarkName} is a well-known stop in ${location} that helps visitors understand the local character and layout. Visitors come here for a focused experience, easy pairing with nearby neighborhoods, and a practical way to shape a half-day plan.`;
 };
 
 const getTailSentences = (
@@ -69,28 +98,38 @@ const getTailSentences = (
   }
 };
 
-export function cleanLandmarkText(text: string): string {
-  if (!text) return text;
+export function cleanLandmarkText(
+  text: string,
+  context?: { landmarkName?: string; city?: string; state?: string }
+): string {
+  if (!text) {
+    return fallbackDescription(
+      context?.landmarkName,
+      context?.city,
+      context?.state
+    );
+  }
 
   let cleaned = text;
-
-  for (const pattern of BANNED_PATTERNS) {
-    cleaned = cleaned.replace(pattern, "");
-  }
 
   for (const pattern of METRIC_PATTERNS) {
     cleaned = cleaned.replace(pattern, "");
   }
 
-  cleaned = cleaned
-    .replace(/\s+,/g, ",")
-    .replace(/\s+\./g, ".")
-    .replace(/\(\s*\)/g, "")
-    .replace(/\babout\s+from\b/gi, "from")
-    .replace(/\s+/g, " ")
-    .trim();
+  const keptSentences = splitSentences(cleaned)
+    .filter(sentence => !SENTENCE_BANNED_PATTERNS.some(pattern => pattern.test(sentence)))
+    .map(normalizeSentence)
+    .filter(Boolean);
 
-  return cleaned;
+  if (keptSentences.length < 2) {
+    return fallbackDescription(
+      context?.landmarkName,
+      context?.city,
+      context?.state
+    );
+  }
+
+  return keptSentences.join(" ");
 }
 
 export function ensureLength(

@@ -7,31 +7,48 @@ import {
 } from "./cleanLandmarkText";
 
 const wordCount = (text: string) => text.trim().split(/\s+/).filter(Boolean).length;
+const sentenceCount = (text: string) =>
+  text.split(/(?<=[.!?])\s+/).filter(Boolean).length;
 
 describe("cleanLandmarkText", () => {
-  it("removes canned dataset and article boilerplate", () => {
+  it("removes canned boilerplate and third-party reference language", () => {
     const cleaned = cleanLandmarkText(
-      "The city has a major waterfront park. Coverage for this landmark includes key facts. The same article set references linked sources. Distinct article language appears in this paragraph."
+      "City Museum is in the downtown core with architecture from the early twentieth century. The same article set references nearby sources. Coverage for this attraction cites dated milestones. According to Wikipedia says this page is essential. Visitors can tour galleries and learn local history in one stop.",
+      { landmarkName: "City Museum", city: "Portland", state: "Oregon" }
     );
 
-    expect(cleaned).toBe("The city has a major waterfront park.");
+    expect(cleaned).not.toMatch(
+      /article|coverage|dataset|design briefs|archives|records|source\s*:|according to|wikipedia says|this page|this article/i
+    );
+    expect(cleaned).toMatch(/City Museum|Visitors can tour galleries/i);
+    expect(sentenceCount(cleaned)).toBeGreaterThanOrEqual(2);
   });
 
-  it("removes source-style wording and fake metrics", () => {
+  it("falls back to a clean two-sentence authoritative description", () => {
     const cleaned = cleanLandmarkText(
-      "Harbor Walk is a practical stop with references and archives notes, plus cross-links for context. The route covers 12 miles and the venue has capacity of 5,000 for events."
+      "Source: Wikipedia says this article has coverage data and archives records.",
+      {
+        landmarkName: "Riverfront Walk",
+        city: "Portland",
+        state: "Oregon",
+      }
     );
 
-    expect(cleaned).not.toMatch(/references|archives|cross-links/i);
-    expect(cleaned).not.toMatch(/\b\d[\d,]*(?:\.\d+)?\s*(?:acres?|miles?)\b/i);
-    expect(cleaned).not.toMatch(/capacity\s*(?:of\s*)?\d/i);
+    expect(cleaned).toContain("Riverfront Walk is a well-known stop in Portland, Oregon");
+    expect(sentenceCount(cleaned)).toBeGreaterThanOrEqual(2);
+    expect(cleaned).not.toMatch(/source|wikipedia says|according to|article|coverage/i);
   });
 });
 
 describe("ensureLength", () => {
   it("keeps cleaned text inside the configured word count range", () => {
     const short = cleanLandmarkText(
-      "Old Town Plaza includes article set boilerplate and coverage notes with 400 acres mentioned in the fake template."
+      "Old Town Plaza includes article set boilerplate. Visitors can walk the historic blocks and local storefronts.",
+      {
+        landmarkName: "Old Town Plaza",
+        city: "Santa Fe",
+        state: "New Mexico",
+      }
     );
 
     const ensured = ensureLength(short, "Santa Fe", "New Mexico", "district");
@@ -39,7 +56,5 @@ describe("ensureLength", () => {
 
     expect(words).toBeGreaterThanOrEqual(LANDMARK_MIN_WORDS);
     expect(words).toBeLessThanOrEqual(LANDMARK_MAX_WORDS);
-    expect(ensured).not.toMatch(/coverage|article set|sources|references/i);
-    expect(ensured).not.toMatch(/\b\d[\d,]*(?:\.\d+)?\s*(?:acres?|miles?)\b/i);
   });
 });
