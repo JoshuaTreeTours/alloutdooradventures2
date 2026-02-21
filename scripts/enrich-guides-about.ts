@@ -188,18 +188,20 @@ const run = async () => {
 
       if (population) {
         const populationValue = formatCityPopulation(population);
-        const nonPopulationBullets = factsCard.bullets.filter(
-          bullet => bullet.label !== "Population"
-        );
-        const locationIndex = nonPopulationBullets.findIndex(
-          bullet => bullet.label === "Location"
-        );
-        const insertIndex = locationIndex >= 0 ? locationIndex + 1 : 0;
-        nonPopulationBullets.splice(insertIndex, 0, {
-          label: "Population",
-          value: populationValue,
-        });
-        factsCard.bullets = nonPopulationBullets;
+        if (populationValue) {
+          const nonPopulationBullets = factsCard.bullets.filter(
+            bullet => bullet.label !== "Population"
+          );
+          const locationIndex = nonPopulationBullets.findIndex(
+            bullet => bullet.label === "Location"
+          );
+          const insertIndex = locationIndex >= 0 ? locationIndex + 1 : 0;
+          nonPopulationBullets.splice(insertIndex, 0, {
+            label: "Population",
+            value: populationValue,
+          });
+          factsCard.bullets = nonPopulationBullets;
+        }
       }
 
       if (factsCard.bullets.length < 3) {

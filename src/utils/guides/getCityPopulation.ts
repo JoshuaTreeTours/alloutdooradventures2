@@ -60,27 +60,61 @@ const parseYear = (time?: string) => {
   return Number.isFinite(year) ? year : undefined;
 };
 
+const normalizePopulationResult = (
+  candidate: CityPopulationResult | null
+): CityPopulationResult | null => {
+  if (!candidate) return null;
+  if (!Number.isFinite(candidate.value) || candidate.value <= 0) return null;
+  return {
+    value: Math.round(candidate.value),
+    year: candidate.year,
+  };
+};
+
 const getClaimYear = (claim: WikidataPopulationClaim) =>
   parseYear(claim.qualifiers?.P585?.[0]?.datavalue?.value?.time);
 
-const parsePopulationText = (text?: string) => {
+const parsePopulationFromFactText = (text?: string): CityPopulationResult | null => {
   if (!text) return null;
 
   const normalized = text.replace(/\s+/g, " ").trim();
-  const sentence =
-    normalized
-      .split(/(?<=[.!?])\s+/)
-      .find(item => /\bpopulation\b|\bcensus\b/i.test(item)) ?? normalized;
-
-  const numberMatch = sentence.match(/\b(\d{1,3}(?:,\d{3})+)\b|\b(\d{4,})\b/);
+  const numberMatch = normalized.match(/\b(\d{1,3}(?:,\d{3})+)\b|\b(\d{4,})\b/);
   const value = Number((numberMatch?.[1] ?? numberMatch?.[2] ?? "").replace(/,/g, ""));
   if (!Number.isFinite(value)) return null;
 
-  const yearMatch = sentence.match(/\b(19\d{2}|20\d{2})\b/);
-  return {
+  const yearMatch = normalized.match(/\b(19\d{2}|20\d{2})\b/);
+  return normalizePopulationResult({
     value,
     year: yearMatch ? Number(yearMatch[1]) : undefined,
-  };
+  });
+};
+
+const parsePopulationFromWikipediaSummary = (
+  text?: string
+): CityPopulationResult | null => {
+  if (!text) return null;
+
+  const normalized = text.replace(/\s+/g, " ").trim();
+  const sentence = normalized
+    .split(/(?<=[.!?])\s+/)
+    .find(item => /\bpopulation\b|\bcensus\b/i.test(item));
+
+  if (!sentence) return null;
+
+  const values = Array.from(
+    sentence.matchAll(/\b(\d{1,3}(?:,\d{3})+)\b|\b(\d{4,})\b/g),
+    match => Number((match[1] ?? match[2] ?? "").replace(/,/g, ""))
+  ).filter(value => Number.isFinite(value));
+
+  if (!values.length) return null;
+
+  const value = values.reduce((max, current) => (current > max ? current : max), 0);
+  const yearMatch = sentence.match(/\b(19\d{2}|20\d{2})\b/);
+
+  return normalizePopulationResult({
+    value,
+    year: yearMatch ? Number(yearMatch[1]) : undefined,
+  });
 };
 
 const fetchJson = async <T>(url: string): Promise<T | null> => {
@@ -103,7 +137,7 @@ export const cacheCityPopulation = (
   input: Omit<GetCityPopulationInput, "wikidataId">,
   populationText?: string
 ) => {
-  const parsed = parsePopulationText(populationText);
+  const parsed = parsePopulationFromFactText(populationText);
   if (!parsed) return;
   cityRegistryPopulationCache.set(getCityKey({ ...input }), parsed);
 };
@@ -194,7 +228,10 @@ const fromWikidata = async ({
     return null;
   }
 
-  const result = { value, year: pickedClaim.year };
+  const result = normalizePopulationResult({
+    value,
+    year: pickedClaim.year,
+  });
   wikidataPopulationCache.set(wikidataId, result);
   return result;
 };
@@ -220,7 +257,7 @@ const fromWikipediaSummary = async (
     const summary = await fetchJson<{ extract?: string }>(
       `https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`
     );
-    const parsed = parsePopulationText(summary?.extract);
+    const parsed = parsePopulationFromWikipediaSummary(summary?.extract);
     wikipediaPopulationCache.set(title, parsed);
     if (parsed) return parsed;
   }
@@ -266,6 +303,7 @@ export const getCityPopulation = async ({
 };
 
 export const formatCityPopulation = ({ value, year }: CityPopulationResult) => {
-  const formatted = value.toLocaleString("en-US");
+  if (!Number.isFinite(value) || value <= 0) return null;
+  const formatted = Math.round(value).toLocaleString("en-US");
   return year ? `${formatted} (${year})` : formatted;
 };

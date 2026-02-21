@@ -104,10 +104,15 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
       cityName: guide.city,
       stateName: guide.state,
       countryName: guide.country,
-    }).then(result => {
-      if (isCancelled) return;
-      setPopulationFact(result ? formatCityPopulation(result) : null);
-    });
+    })
+      .then(result => {
+        if (isCancelled) return;
+        setPopulationFact(result ? formatCityPopulation(result) : null);
+      })
+      .catch(() => {
+        if (isCancelled) return;
+        setPopulationFact(null);
+      });
 
     return () => {
       isCancelled = true;
