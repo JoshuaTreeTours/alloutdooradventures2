@@ -27,25 +27,24 @@
   "thingsToDo": [
     {
       "title": "Hawaii Volcanoes National Park",
-      "description": "Hawaii Volcanoes National Park preserves Kilauea and Mauna Loa volcanic systems and documents ongoing volcanic processes, ecosystems, and Hawaiian cultural sites.",
+      "description": "Hawaii Volcanoes National Park protects Kilauea and Mauna Loa volcanic systems on Hawaii Island and documents active geologic processes. The park includes lava fields, crater areas, and ecological zones that illustrate how new landforms and habitats develop over time in the Hawaiian archipelago. Visitors use designated roads, overlooks, and trails to observe volcanic terrain while following active hazard advisories. The site is notable as one of the world's most accessible places to interpret ongoing shield-volcano dynamics.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Hawaii_Volcanoes_National_Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/Hawaii_Volcanoes_National_Park",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Kilauea_Iki_Crater.jpg"
     },
     {
       "title": "Mauna Kea",
-      "description": "Mauna Kea is a shield volcano and high summit on Hawaii Island, known for alpine conditions and astronomical observatories on its upper slopes.",
+      "description": "Mauna Kea is a massive shield volcano on Hawaii Island whose summit rises above 13,000 feet and hosts major astronomical observatories. Its elevation, dry atmosphere, and relative isolation made it a globally significant research location while also remaining culturally important in Native Hawaiian traditions. Visitors experience the mountain through designated access roads, visitor-station interpretation, and high-elevation viewpoints where conditions can change rapidly. Mauna Kea is notable for combining scientific infrastructure, alpine terrain, and cultural significance in one summit region.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Mauna_Kea",
       "sourceUrl": "https://en.wikipedia.org/wiki/Mauna_Kea",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Mauna_Kea_from_above.jpg"
     },
     {
       "title": "Puuhonua o Honaunau National Historical Park",
-      "description": "Puuhonua o Honaunau preserves an important traditional place of refuge and adjacent coastal archaeological landscape on the Kona coast.",
+      "description": "Puuhonua o Honaunau National Historical Park preserves a former place of refuge and adjacent coastal archaeological landscape on the Kona coast. The site interprets traditional Hawaiian social systems, temple structures, and reconstructed compounds associated with pre-contact and early historic periods. Visitors walk coastal trails and cultural exhibits that explain how the refuge system functioned within island governance. The park is notable for providing one of Hawaii's clearest protected settings for understanding traditional law, ceremony, and settlement patterns.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_National_Historical_Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_National_Historical_Park",
-      "imageUrl": null,
-      "disableImage": true
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Pu%CA%BBuhonua_o_H%C5%8Dnaunau_NHP.jpg"
     }
   ],
   "bestTimeToVisit": {

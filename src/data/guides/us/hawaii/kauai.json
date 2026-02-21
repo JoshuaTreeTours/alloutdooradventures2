@@ -27,25 +27,24 @@
   "thingsToDo": [
     {
       "title": "Na Pali Coast State Wilderness Park",
-      "description": "Na Pali Coast State Wilderness Park preserves high sea cliffs and valleys along Kauai's northwest shore and is accessible primarily by trail, sea, or air.",
+      "description": "Na Pali Coast State Wilderness Park protects a remote stretch of Kauai's northwest coast characterized by high sea cliffs and deep valleys. The terrain records long-term erosion of volcanic landforms and remains difficult to access by road, which has limited major development. Visitors typically experience the coast by boat, helicopter, or permitted trail travel on routes such as the Kalalau Trail. The park is notable for preserving one of Hawaii's most intact large-scale coastal landscapes.",
       "wikiUrl": "https://en.wikipedia.org/wiki/N%C4%81_Pali_Coast_State_Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/N%C4%81_Pali_Coast_State_Park",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Na_Pali_Coast_Kauai_Hawaii.jpg"
     },
     {
       "title": "Waimea Canyon",
-      "description": "Waimea Canyon is a large erosional valley system on western Kauai shaped by volcanic and fluvial processes and protected within state park lands.",
+      "description": "Waimea Canyon is a large erosional valley system on western Kauai formed by volcanic structure, stream incision, and long-term weathering. Often called the Grand Canyon of the Pacific, it exposes layered rock and broad ridgelines that illustrate Kauai's geological history. Visitors use roadside lookouts and linked trails to view the canyon from multiple elevations along the state park corridor. The site is notable for combining accessible overlooks with one of the island's most significant geologic formations.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Waimea_Canyon",
       "sourceUrl": "https://en.wikipedia.org/wiki/Waimea_Canyon",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Waimea_Canyon_Kauai.jpg"
     },
     {
       "title": "Wailua River",
-      "description": "The Wailua River corridor on the east side includes cultural sites and inland access routes to fern grottos and waterfalls.",
+      "description": "The Wailua River is one of Kauai's principal river corridors and has long historical importance in Hawaiian settlement and ritual landscapes. Its navigable lower reaches and adjacent sites connected inland valleys with the east coast, shaping transportation and land use patterns. Visitors commonly experience the river through boat trips and short hikes to nearby waterfalls and cultural points. Wailua is notable because it combines freshwater geography, archaeological significance, and practical access from the island's main service region.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Wailua_River",
       "sourceUrl": "https://en.wikipedia.org/wiki/Wailua_River",
-      "imageUrl": null,
-      "disableImage": true
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Wailua_River_Kauai.jpg"
     }
   ],
   "bestTimeToVisit": {

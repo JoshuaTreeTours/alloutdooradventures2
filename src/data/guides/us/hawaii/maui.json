@@ -27,25 +27,24 @@
   "thingsToDo": [
     {
       "title": "Haleakala National Park",
-      "description": "Haleakala National Park protects summit crater landscapes, native ecosystems, and coastal Kipahulu sections across eastern Maui.",
+      "description": "Haleakala National Park protects summit crater terrain and coastal Kipahulu ecosystems across eastern Maui. The park preserves high-elevation volcanic landscapes, native species habitat, and culturally significant places associated with long-term Hawaiian land use. Visitors experience the area through summit overlooks, crater trails, and road-accessible viewpoints that differ sharply from Maui's coastal resort zones. Haleakala is notable for combining alpine volcanic scenery and tropical coastal sections within a single protected unit.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/Haleakal%C4%81_National_Park",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Haleakala_Crater%2C_Maui%2C_Hawaii.jpg"
     },
     {
       "title": "Iao Valley",
-      "description": "Iao Valley is a steep, rain-fed valley in the West Maui Mountains known for the Iao Needle and its role in Hawaiian historical events.",
+      "description": "Iao Valley is a steep, rain-fed valley in the West Maui Mountains known for the Iao Needle rock outcrop and surrounding stream corridor. The valley is significant in Hawaiian history, including the Battle of Kepaniwai, and remains a key reference point for central Maui geography. Visitors use short paved paths and overlooks to view cloud-forest slopes, stream channels, and the distinctive erosional pinnacle. The site is notable because dramatic geomorphology and historical interpretation are concentrated in an accessible state-managed area.",
       "wikiUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
       "sourceUrl": "https://en.wikipedia.org/wiki/%CA%BB%C4%AAao_Valley",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Iao_Needle%2C_Maui%2C_Hawaii.jpg"
     },
     {
       "title": "Road to Hana",
-      "description": "The Hana Highway corridor links central Maui with East Maui settlements through bridges, cliffs, and rainforest zones on a narrow coastal route.",
+      "description": "The Hana Highway, commonly called the Road to Hana, connects central Maui to East Maui through a narrow coastal and rainforest corridor. Built in sections during the early twentieth century, the route includes numerous one-lane bridges and curves that reflect the island's rugged topography. Visitors experience waterfalls, sea cliffs, and trailheads by making frequent viewpoint stops rather than treating the drive as a direct transit route. The corridor is notable as one of Hawaii's best-known scenic roads and a practical framework for East Maui trip planning.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
       "sourceUrl": "https://en.wikipedia.org/wiki/Hana_Highway",
-      "imageUrl": null,
-      "disableImage": true
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Hana_Highway_Maui.jpg"
     }
   ],
   "bestTimeToVisit": {

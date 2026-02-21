@@ -27,25 +27,24 @@
   "thingsToDo": [
     {
       "title": "Rainbow Falls",
-      "description": "Rainbow Falls is a waterfall on the Wailuku River in Hilo. The site is associated with lava-formed river channels and a cave beneath the falls referenced in Hawaiian tradition.",
+      "description": "Rainbow Falls is a waterfall on the Wailuku River in Hilo and is one of the most visited natural landmarks in East Hawaii. The falls drop over a lava cave associated in Hawaiian tradition with the goddess Hina, linking the site to both geology and cultural narrative. Visitors typically view the cascade from a developed overlook and continue to nearby river viewpoints within the same state park area. The setting is notable for frequent morning mist and rainbows that appear when sunlight crosses the spray.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Rainbow_Falls_(Hawaii)",
       "sourceUrl": "https://en.wikipedia.org/wiki/Rainbow_Falls_(Hawaii)",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Rainbow_Falls_Hilo_Hawaii.jpg"
     },
     {
       "title": "Liliuokalani Park and Gardens",
-      "description": "Liliuokalani Park and Gardens is a public park on Hilo Bay known for Edo-style landscaping established in the early twentieth century and expanded through Japanese community contributions.",
+      "description": "Liliuokalani Park and Gardens is a public waterfront park on Hilo Bay developed with Japanese garden design elements in the early twentieth century. The grounds include bridges, ponds, and plantings that reflect community ties between Hawaii and Japanese residents during the plantation and post-plantation eras. Visitors walk shoreline paths and garden loops near downtown Hilo, making it a common stop paired with nearby bayfront landmarks. The park is notable as one of the largest authentic Japanese-style gardens outside Japan.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Liliuokalani_Park_and_Gardens",
       "sourceUrl": "https://en.wikipedia.org/wiki/Liliuokalani_Park_and_Gardens",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Liliuokalani_Gardens%2C_Hilo%2C_Hawaii.jpg"
     },
     {
       "title": "Wailuku River State Park",
-      "description": "Wailuku River State Park includes Rainbow Falls and Boiling Pots and preserves river features created by lava flows and subsequent erosion in the Hilo district.",
+      "description": "Wailuku River State Park is a Hawaii state park in Hilo that includes Rainbow Falls and the Boiling Pots area along the Wailuku River. The landscape was formed by historic lava flows and later river erosion, creating stepped channels and plunge pools that are central to East Hawaii geology. Visitors use signed overlooks and short paths to observe the river corridor, especially after rain when flow is stronger and features are most visible. The park is notable because it combines accessible viewpoints with one of the island's best-known volcanic river systems.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Wailuku_River_State_Park",
       "sourceUrl": "https://en.wikipedia.org/wiki/Wailuku_River_State_Park",
-      "imageUrl": null,
-      "disableImage": true
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/db/Boiling_Pots_Hilo.jpg"
     }
   ],
   "bestTimeToVisit": {

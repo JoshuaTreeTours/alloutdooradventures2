@@ -3,7 +3,7 @@ import { Link } from "wouter";
 
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
-import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
+import LandmarkCard from "../components/guides/LandmarkCard";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
@@ -31,6 +31,23 @@ const Section = ({
   </section>
 );
 
+const TOURISM_KEYWORDS = [
+  "park",
+  "beach",
+  "monument",
+  "natural",
+  "cultural",
+  "museum",
+  "historic",
+  "scenic",
+];
+
+const isTourismRelevantThing = (item: { title: string; description: string }) => {
+  const text = `${item.title} ${item.description}`.toLowerCase();
+  return TOURISM_KEYWORDS.some(keyword => text.includes(keyword));
+};
+
+
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
@@ -42,6 +59,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
+  const isHawaiiAuthorityGuide =
+    guide.tours.stateSlug === "hawaii" && guide.tours.citySlug !== "honolulu";
+  const renderedThings = isHawaiiAuthorityGuide
+    ? guide.thingsToDo.filter(item => isTourismRelevantThing({ title: item.title, description: item.description }))
+    : guide.thingsToDo;
   const wikiExtractFallback = (
     guide.aboutCity as
       | { sections?: Array<{ paragraphs?: string[] }> }
@@ -181,21 +203,23 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
-            {guide.thingsToDo.map((item, index) => {
+            {renderedThings.map((item, index) => {
               const sourceUrl =
                 item.sourceUrl ?? item.source_url ?? item.wikiUrl;
 
               return (
-                <GuideThingsToDoCard
+                <LandmarkCard
                   key={item.title}
                   index={index + 1}
                   city={guide.city ?? place}
+                  citySlug={guide.tours.citySlug}
                   title={item.title}
                   description={item.description}
                   sourceUrl={sourceUrl}
                   wikiUrl={item.wikiUrl}
                   imageUrl={item.imageUrl}
                   disableImage={item.disableImage}
+                  requireImage={isHawaiiAuthorityGuide}
                 />
               );
             })}

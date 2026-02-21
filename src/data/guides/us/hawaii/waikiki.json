@@ -27,25 +27,24 @@
   "thingsToDo": [
     {
       "title": "Waikiki Beach",
-      "description": "Waikiki Beach is a series of shoreline sections in Honolulu known for historic surf culture and engineered beachfront adjacent to the district's hotels and parks.",
+      "description": "Waikiki Beach is a series of shoreline sections in Honolulu that became central to modern surf culture and twentieth-century resort development. Historically, the area transitioned from wetland and fishpond systems to engineered beachfront after canal and drainage projects. Visitors experience the district through walkable beach parks, surf lessons, and views toward Diamond Head along the south shore. The beach is notable because public access, recreation history, and dense urban infrastructure are concentrated in a single coastal corridor.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Waikiki",
       "sourceUrl": "https://en.wikipedia.org/wiki/Waikiki",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Waikiki_Beach_and_Diamond_Head.jpg"
     },
     {
       "title": "Diamond Head",
-      "description": "Diamond Head is a tuff cone on the eastern edge of Waikiki and an important geologic landmark within the Honolulu Volcanics series.",
+      "description": "Diamond Head is a tuff cone on Oahu's south shore formed by an explosive volcanic eruption within the Honolulu Volcanics series. Its crater and ridgeline became a major navigational and defensive reference in Honolulu's coastal history. Visitors reach summit viewpoints by trail, where they can observe Waikiki, the Pacific shoreline, and the crater interior. The landmark is notable for combining clear volcanic morphology with one of Hawaii's most recognized urban-edge panoramas.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Diamond_Head%2C_Hawaii",
       "sourceUrl": "https://en.wikipedia.org/wiki/Diamond_Head%2C_Hawaii",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Diamond_Head_from_Waikiki.jpg"
     },
     {
       "title": "Ala Wai Canal",
-      "description": "The Ala Wai Canal was built in the 1920s to drain wetlands and enabled major urban expansion of the Waikiki district.",
+      "description": "The Ala Wai Canal was constructed in the 1920s to drain wetlands that once occupied much of the Waikiki plain. This engineering project redirected water flow and enabled large-scale urban and hotel expansion in the district. Visitors encounter the canal as a defining boundary between Waikiki and inland neighborhoods, with promenades and bridges along major access routes. It is notable because modern Waikiki's physical layout and tourism economy were heavily shaped by this single infrastructure intervention.",
       "wikiUrl": "https://en.wikipedia.org/wiki/Ala_Wai_Canal",
       "sourceUrl": "https://en.wikipedia.org/wiki/Ala_Wai_Canal",
-      "imageUrl": null,
-      "disableImage": true
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Ala_Wai_Canal_Honolulu.jpg"
     }
   ],
   "bestTimeToVisit": {

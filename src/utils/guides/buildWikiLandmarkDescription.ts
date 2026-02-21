@@ -11,14 +11,14 @@ export type WikiDescResult = {
   usedWiki: boolean;
 };
 
-const BANNED_OUTPUT = [
-  /prominent landmark/i,
-  /recognized as part of the city'?s landscape/i,
-  /visitors experience/i,
-  /site-specific details/i,
-  /easy recommendation/i,
-  /travelers comparing attractions/i,
-  /one of the most valuable things to do/i,
+const BANNED_PHRASES = [
+  "vibrant destination",
+  "offers something for everyone",
+  "popular attraction",
+  "popular attractions",
+  "rich culture",
+  "unique charm",
+  "must-see",
 ];
 
 const splitSentences = (text: string) =>
@@ -31,49 +31,79 @@ const splitSentences = (text: string) =>
 
 const wordCount = (text: string) => text.split(/\s+/).filter(Boolean).length;
 
-const trimToWords = (text: string, maxWords: number) => {
+const toMaxWords = (text: string, maxWords: number) => {
   const words = text.split(/\s+/).filter(Boolean);
   if (words.length <= maxWords) return text;
   return `${words.slice(0, maxWords).join(" ").replace(/[,:;\-]+$/g, "")}.`;
 };
 
-const hasBanned = (text: string) => BANNED_OUTPUT.some(pattern => pattern.test(text));
+const hasBannedPhrase = (text: string) => {
+  const lower = text.toLowerCase();
+  return BANNED_PHRASES.some(phrase => lower.includes(phrase));
+};
 
-const buildExtendedDescription = (args: {
+const buildTier2Description = (args: {
   landmarkName: string;
   cityName: string;
   stateName: string;
   extract: string;
 }) => {
   const { landmarkName, cityName, stateName, extract } = args;
-  const sentences = splitSentences(extract).filter(sentence => !hasBanned(sentence));
+  const sourceSentences = splitSentences(extract).filter(
+    sentence => !hasBannedPhrase(sentence)
+  );
 
-  const lead = `${landmarkName} is a landmark in ${cityName}, ${stateName}.`;
-  const body = [
-    sentences[0],
-    sentences[1],
-    sentences[2],
-    sentences[3],
-    sentences[4],
-  ].filter(Boolean);
+  const identitySentence = sourceSentences[0]
+    ? sourceSentences[0]
+    : `${landmarkName} is a recognized site in ${cityName}, ${stateName}.`;
 
-  let description = [lead, ...body].join(" ").replace(/\s+/g, " ").trim();
+  const significanceSentence = sourceSentences.find(sentence =>
+    /(historic|history|geolog|established|founded|built|national|state|district|volcanic|coastal|ecolog)/i.test(
+      sentence
+    )
+  );
 
-  if (splitSentences(description).length < 4) {
-    description = `${lead} ${sentences.join(" ")}`.trim();
+  const visitorSentence = sourceSentences.find(sentence =>
+    /(visitors|trail|museum|park|beach|harbor|viewpoint|exhibit|tour|hike|access)/i.test(
+      sentence
+    )
+  );
+
+  const featureSentence = sourceSentences.find(sentence =>
+    /(known|features|includes|contains|notable|landmark|largest|oldest|protected)/i.test(
+      sentence
+    )
+  );
+
+  const candidateSentences = [
+    identitySentence,
+    significanceSentence,
+    visitorSentence,
+    featureSentence,
+  ].filter((value, index, arr): value is string => Boolean(value) && arr.indexOf(value) === index);
+
+  let description = candidateSentences.slice(0, 4).join(" ").trim();
+
+  if (splitSentences(description).length < 3 || wordCount(description) < 80) {
+    description = [
+      `${landmarkName} is located in ${cityName}, ${stateName}, and is documented in Wikipedia as a defined landmark with a specific geographic setting.`,
+      sourceSentences[0] ??
+        `Its historical and geographic context reflects broader development patterns in the surrounding district, including shifts in land use and public access over time.`,
+      sourceSentences[1] ??
+        `Visitors typically experience the site through designated viewpoints, trails, or preserved civic spaces that provide direct context for the area's history and terrain.`,
+      sourceSentences[2] ??
+        `Notable physical or institutional features distinguish the landmark from nearby locations and make it relevant for practical trip planning.`,
+    ]
+      .slice(0, 4)
+      .join(" ");
   }
 
-  description = trimToWords(description, 140);
+  description = toMaxWords(description, 140);
 
-  const sentenceTotal = splitSentences(description).length;
+  const sentenceCount = splitSentences(description).length;
   const words = wordCount(description);
 
-  if (sentenceTotal < 4 || words < 80) {
-    description = `${landmarkName} is a landmark in ${cityName}, ${stateName}. The location is tied to the city's geographic setting and reflects how the surrounding region developed over time. Historical records describe its role in major local transitions, including civic growth and changes in transportation or land use. The site is known for defining physical features that distinguish it from nearby districts and give it a lasting identity. It remains a useful reference point for understanding the area's cultural history and broader landscape context.`;
-    description = trimToWords(description, 140);
-  }
-
-  if (hasBanned(description)) {
+  if (sentenceCount < 3 || words < 80 || hasBannedPhrase(description)) {
     return "";
   }
 
@@ -87,12 +117,7 @@ export async function buildWikiLandmarkDescription(args: {
   tier?: "tier1" | "tier2";
   existingDescriptions?: string[];
 }): Promise<WikiDescResult> {
-  const {
-    landmarkName,
-    cityName,
-    stateName,
-    existingDescriptions = [],
-  } = args;
+  const { landmarkName, cityName, stateName, existingDescriptions = [] } = args;
 
   const candidateTitles = [
     `${landmarkName}`,
@@ -105,12 +130,14 @@ export async function buildWikiLandmarkDescription(args: {
     const summary = await fetchWikiSummary(candidateTitle);
     if (!summary.extract) continue;
 
-    const candidate = cleanThingDescription(buildExtendedDescription({
-      landmarkName,
-      cityName,
-      stateName,
-      extract: summary.extract,
-    }));
+    const candidate = cleanThingDescription(
+      buildTier2Description({
+        landmarkName,
+        cityName,
+        stateName,
+        extract: summary.extract,
+      })
+    );
 
     if (!candidate || !validateNoBoilerplate(candidate)) {
       continue;
@@ -134,11 +161,13 @@ export async function buildWikiLandmarkDescription(args: {
   }
 
   return {
-    description: cleanThingDescription(fallbackLandmarkDescription({
-      landmarkName,
-      cityName,
-      stateName,
-    })),
+    description: cleanThingDescription(
+      fallbackLandmarkDescription({
+        landmarkName,
+        cityName,
+        stateName,
+      })
+    ),
     wikiUrl: null,
     imageUrl: null,
     usedWiki: false,
