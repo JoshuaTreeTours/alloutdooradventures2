@@ -194,7 +194,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   description={item.description}
                   sourceUrl={sourceUrl}
                   wikiUrl={item.wikiUrl}
-                  imageUrl={item.imageUrl ?? item.image}
+                  imageUrl={item.imageUrl}
                   disableImage={item.disableImage}
                 />
               );

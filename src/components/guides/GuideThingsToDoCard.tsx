@@ -1,4 +1,8 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import {
+  extractLandmarkNameFromTitle,
+  getLandmarkImage,
+} from "../../utils/guides/getLandmarkImage";
 import { cleanThingDescription } from "../../utils/guides/cleanThingDescription";
 
 type GuideThingsToDoCardProps = {
@@ -14,6 +18,7 @@ type GuideThingsToDoCardProps = {
 
 export default function GuideThingsToDoCard({
   index,
+  city,
   title,
   description,
   sourceUrl,
@@ -21,25 +26,55 @@ export default function GuideThingsToDoCard({
   imageUrl,
   disableImage,
 }: GuideThingsToDoCardProps) {
-  const [hideImage, setHideImage] = useState(false);
+  const [resolvedImageUrl, setResolvedImageUrl] = useState<string | null>(
+    disableImage ? null : imageUrl ?? null
+  );
+  const [isImageBroken, setIsImageBroken] = useState(false);
+
+  const landmarkName = useMemo(
+    () => extractLandmarkNameFromTitle(title),
+    [title]
+  );
 
   const cleanedDescription = useMemo(
     () => cleanThingDescription(description),
     [description]
   );
 
-  const canRenderImage = !disableImage && Boolean(imageUrl?.trim()) && !hideImage;
+
+  useEffect(() => {
+    setResolvedImageUrl(disableImage ? null : imageUrl ?? null);
+    setIsImageBroken(false);
+  }, [disableImage, imageUrl]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    if (disableImage || resolvedImageUrl) {
+      return;
+    }
+
+    getLandmarkImage(landmarkName, city).then(result => {
+      if (!cancelled) {
+        setResolvedImageUrl(result);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [city, disableImage, landmarkName, resolvedImageUrl]);
 
   return (
     <li className="overflow-hidden rounded-2xl border border-black/10 bg-white p-4 md:p-5">
-      {canRenderImage ? (
+      {resolvedImageUrl && !isImageBroken ? (
         <div className="-m-4 mb-4 overflow-hidden md:-m-5 md:mb-5">
           <img
-            src={imageUrl as string}
+            src={resolvedImageUrl}
             alt={title}
             loading="lazy"
             className="h-48 w-full object-cover md:h-56"
-            onError={() => setHideImage(true)}
+            onError={() => setIsImageBroken(true)}
           />
         </div>
       ) : null}
