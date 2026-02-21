@@ -18,15 +18,20 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
   const categoryLabel = getActivityLabelFromSlug(categorySource);
   const subtitle = shortDescription || categoryLabel;
-  const regionLabel =
-    tour.destination.state || tour.destination.country || "";
+  const regionLabel = tour.destination.state || tour.destination.country || "";
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
     : tour.destination.city;
   const startingPriceLabel = formatStartingPrice(
     tour.startingPrice,
-    tour.currency,
+    tour.currency
   );
+  const ratingLabel =
+    typeof tour.badges.rating === "number"
+      ? `${tour.badges.rating.toFixed(1)}${
+          tour.badges.reviewCount ? ` (${tour.badges.reviewCount})` : ""
+        }`
+      : null;
   const cardImage = tour.heroImage?.trim() || "/hero.jpg";
 
   return (
@@ -49,7 +54,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         )}
         {tour.tagPills?.length ? (
           <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
-            {tour.tagPills.map((tag) => (
+            {tour.tagPills.map(tag => (
               <span
                 key={tag}
                 className="rounded-full bg-white/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]"
@@ -69,14 +74,13 @@ export default function TourCard({ tour, href }: TourCardProps) {
             {tour.title}
           </h3>
           {subtitle ? (
-            <p className="mt-2 text-sm text-[#405040]">
-              {subtitle}
-            </p>
+            <p className="mt-2 text-sm text-[#405040]">{subtitle}</p>
           ) : null}
-          {startingPriceLabel ? (
-            <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
-              From {startingPriceLabel}
-            </p>
+          <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
+            {startingPriceLabel ? `From ${startingPriceLabel}` : "View pricing"}
+          </p>
+          {ratingLabel ? (
+            <p className="mt-1 text-sm text-[#405040]">★ {ratingLabel}</p>
           ) : null}
         </div>
         <div className="mt-auto">

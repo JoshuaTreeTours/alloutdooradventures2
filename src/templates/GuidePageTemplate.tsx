@@ -2,11 +2,10 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Seo from "../components/Seo";
-import TourCard from "../components/TourCard";
+import TopToursSlider from "../components/guides/TopToursSlider";
 import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
-import { getToursByCity, getToursByState } from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
@@ -36,10 +35,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const place = getGuidePlaceName(guide);
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
-  const tours = guide.tours.citySlug
-    ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
-    : getToursByState(guide.tours.stateSlug);
-  const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
   const wikiExtractFallback = (
@@ -161,24 +156,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </ul>
         </Section>
 
-        {!isTier2 ? (
-          <Section title={`Top Highlights in ${place}`}>
-            <div className="grid gap-4 md:grid-cols-2">
-              {guide.highlights.map(item => (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-black/10 bg-white p-4"
-                >
-                  <h3 className="font-semibold text-[#1f2a1f]">{item.title}</h3>
-                  <p className="mt-2 text-sm text-[#405040]">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </Section>
-        ) : null}
-
         <Section title={`Things to Do in ${place}`}>
           <ol className="space-y-5">
             {guide.thingsToDo.map((item, index) => {
@@ -222,15 +199,14 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </Section>
         </div>
 
-        {featuredTours.length ? (
-          <Section title={guide.tours.title ?? `Top tours in ${place}`}>
-            <div className="grid gap-6 md:grid-cols-3">
-              {featuredTours.map(tour => (
-                <TourCard key={tour.id} tour={tour} />
-              ))}
-            </div>
-          </Section>
-        ) : null}
+        <TopToursSlider
+          city={guide.city}
+          state={guide.state}
+          country={guide.country}
+          stateSlug={guide.tours.stateSlug}
+          citySlug={guide.tours.citySlug}
+          maxTours={guide.tours.limit ?? 12}
+        />
 
         {guide.faq?.length ? (
           <Section title={`FAQs about ${place}`}>
