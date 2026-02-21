@@ -1,10 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import {
-  extractCityLandmarksFromTours,
-  extractStateLandmarksFromTours,
-  type CityLandmarkCandidate,
-} from "../src/utils/guides/extractCityLandmarksFromTours";
+import { extractCityLandmarksFromTours } from "../src/utils/guides/extractCityLandmarksFromTours";
 import { getWikiLandmarkCandidates } from "../src/utils/guides/wikiLandmarks";
 import {
   wikiSummaryToThing,
@@ -18,9 +14,8 @@ import {
   getLocalPoisForCity,
   getNearbyPoisForCity,
 } from "../src/data/cityTopThings";
-import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
 import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
-import { isTopGuide } from "../src/utils/guides/isTopGuide";
+import { shouldPreserveGuideContent } from "../src/utils/guides/shouldPreserveGuideContent";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
@@ -85,74 +80,13 @@ const parseSlugs = (filePath: string) => ({
   citySlug: path.basename(filePath, ".json"),
 });
 
-const mapType = (name: string): CityLandmarkCandidate["type"] => {
-  if (/park|trail|garden|falls|canyon/i.test(name)) return "park";
-  if (/museum|aquarium|zoo|cathedral|market|observatory/i.test(name))
-    return "museum";
-  if (/beach|bay|pier|island|waterfront/i.test(name)) return "beach";
-  if (/bridge/i.test(name)) return "bridge";
-  if (/district|square|old town|plaza/i.test(name)) return "district";
-  if (/harbor|marina/i.test(name)) return "harbor";
-  if (/mountain|peak/i.test(name)) return "mountain";
-  if (/river|lake/i.test(name)) return "river";
-  if (/historic|fort|monument/i.test(name)) return "historic";
-  return "other";
-};
-
 const normalize = (value: string) =>
   value.toLowerCase().replace(/\s+/g, " ").trim();
-
-
-
-const BANNED_FUZZY =
-  /practical stop|easy recommendation|travelers? rank|coverage for|cross-?links?|article set|dataset|according to|this article|this page/i;
-
-const toShortFactual = (title: string, city: string, description: string) => {
-  const cleaned = cleanWikiLanguage(description).replace(/\s+/g, " ").trim();
-  const sentences = cleaned
-    .split(/(?<=[.!?])\s+/)
-    .map(line => line.trim())
-    .filter(Boolean)
-    .filter(line => !BANNED_FUZZY.test(line))
-    .slice(0, 3);
-
-  if (sentences.length >= 2) {
-    return sentences.join(" ");
-  }
-
-  const safeFirst = sentences[0] ?? `${title} is a recognized attraction in ${city}.`;
-  return `${safeFirst} Visitors come here for its setting, local relevance, and well-known features.`;
-};
-
-const canonicalWikiUrl = (title: string, pageUrl?: string) => {
-  if (pageUrl?.trim()) return pageUrl.trim();
-  const normalized = title.trim().replace(/\s+/g, "_");
-  if (!normalized) return undefined;
-  return `https://en.wikipedia.org/wiki/${encodeURIComponent(normalized).replace(
-    /%5F/g,
-    "_"
-  )}`;
-};
 
 const buildFallbackThing = async (
   name: string,
   city: string
-): Promise<WikiThingToDo | null> => {
-  const summary = await getWikipediaSummary(name);
-  if (!summary?.extract) return null;
-  const firstSentence =
-    summary.extract.split(/(?<=[.!?])\s+/)[0] ?? summary.extract;
-  return {
-    title: summary.title || name,
-    description: toShortFactual(
-      summary.title || name,
-      city,
-      `${summary.title || name} is a recognized landmark in or near ${city}. ${firstSentence}`
-    ),
-    wikiUrl: canonicalWikiUrl(summary.title || name, summary.pageUrl),
-    imageUrl: summary.imageUrl,
-  };
-};
+): Promise<WikiThingToDo | null> => wikiSummaryToThing(name, city);
 
 const ensureFourItems = async (
   city: string,
@@ -211,36 +145,10 @@ const ensureFourItems = async (
     if (!name || seen.has(normalize(name))) continue;
     if (!isPlausibleLandmarkName(name)) continue;
     const fromPoi = await buildFallbackThing(name, city);
-    if (fromPoi) {
-      items.push(fromPoi);
-      seen.add(normalize(fromPoi.title));
-      continue;
-    }
-
-    items.push({
-      title: name,
-      description: toShortFactual(
-        name,
-        city,
-        `${name} is a known local point of interest around ${city}. Visitors come here for its setting and notable local character.`
-      ),
-    });
-    seen.add(normalize(name));
+    if (!fromPoi) continue;
+    items.push(fromPoi);
+    seen.add(normalize(fromPoi.title));
   }
-
-  const textOnly = fallbackLandmarks
-    .filter(item => !seen.has(normalize(item.name)))
-    .filter(item => isPlausibleLandmarkName(item.name))
-    .map(item => ({
-      title: item.name,
-      description: toShortFactual(
-        item.name,
-        city,
-        `${item.name} is a well-known place in ${city}, ${state}. It is known for local character and helps visitors understand this part of the city.`
-      ),
-    }));
-
-  items.push(...textOnly);
 
   return items.slice(0, Math.max(MIN_ITEMS, Math.min(MAX_ITEMS, items.length)));
 };
@@ -264,7 +172,7 @@ const run = async () => {
       guide.tier !== "tier2" ||
       !guide.city ||
       !guide.state ||
-      isTopGuide({ ...guide, slug: routeKey })
+      shouldPreserveGuideContent(guide)
     ) {
       report.citiesSkippedTier1.push(routeKey);
       continue;
@@ -323,10 +231,8 @@ const run = async () => {
 
     guide.thingsToDo = finalThings.slice(0, MAX_ITEMS).map(item => ({
       ...item,
-      description: toShortFactual(item.title, guide.city!, item.description),
-      wikiUrl: item.wikiUrl
-        ? canonicalWikiUrl(item.title, item.wikiUrl)
-        : undefined,
+      description: item.description,
+      wikiUrl: item.wikiUrl,
     }));
 
     if (!guide.seoLinks) {

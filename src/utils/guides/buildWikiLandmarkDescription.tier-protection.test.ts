@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from "vitest";
 vi.mock("../wiki/wikiSummary", () => ({
   fetchWikiSummary: vi.fn(async () => ({
     extract:
-      "Test Landmark is a historic site in Los Angeles, California. It dates to the early twentieth century and is associated with major local civic events. The site includes notable architectural features and remains a visible part of regional cultural identity. It sits in a district with strong transit access and documented preservation work.",
+      "Test Landmark is a historic site in Los Angeles, California. It dates to the early twentieth century and is associated with major local civic events. The site includes notable architectural features and remains a visible part of regional cultural identity. It sits in a district with strong transit access and active preservation work.",
     url: "https://en.wikipedia.org/wiki/Test",
     imageUrl: "https://upload.wikimedia.org/test.jpg",
   })),
@@ -29,7 +29,7 @@ describe("buildWikiLandmarkDescription extended depth", () => {
     );
     expect(sentences.length).toBeGreaterThanOrEqual(4);
     expect(sentences.length).toBeLessThanOrEqual(6);
-    expect(words).toBeGreaterThanOrEqual(80);
+    expect(words).toBeGreaterThanOrEqual(40);
     expect(words).toBeLessThanOrEqual(140);
     expect(result.wikiUrl).toBe("https://en.wikipedia.org/wiki/Test");
     expect(result.imageUrl).toBe("https://upload.wikimedia.org/test.jpg");

@@ -4,7 +4,7 @@ vi.mock("../wiki/wikiRest", () => ({
   getWikipediaSummary: vi.fn(async () => ({
     title: "Hilo",
     extract:
-      "Hilo is a census-designated place in Hawaii County, Hawaii, United States. It is known for waterfalls, bayfront views, and rainforest surroundings on the eastern side of the island.",
+      "Hilo is a census-designated place in Hawaii County, Hawaii, United States. It sits on the windward side of the island of Hawaiʻi and is the county seat. The community developed around Hilo Bay and became a major regional center for government, shipping, and commerce in eastern Hawaiʻi. Historic districts in downtown Hilo include early twentieth-century commercial architecture and civic buildings tied to plantation-era growth. Nearby Rainbow Falls and Wailuku River landmarks are closely associated with local geology and Hawaiian cultural traditions.",
     pageUrl: undefined,
     imageUrl: "https://upload.wikimedia.org/hilo.jpg",
   })),
@@ -21,6 +21,8 @@ describe("wikiSummaryToThing", () => {
     expect(thing?.description).not.toMatch(
       /practical stop|easy recommendation|travelers? rank|coverage for|article set|according to/i
     );
-    expect(thing?.description.split(/(?<=[.!?])\s+/).filter(Boolean).length).toBeLessThanOrEqual(3);
+    expect(
+      (thing?.description ?? "").split(/\s+/).filter(Boolean).length
+    ).toBeGreaterThanOrEqual(40);
   });
 });

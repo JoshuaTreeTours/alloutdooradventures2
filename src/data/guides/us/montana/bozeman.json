@@ -35,43 +35,19 @@
   "thingsToDo": [
     {
       "title": "Explore Museum of the Rockies",
-      "description": "Museum of the Rockies is a major museum in Bozeman and part of Montana State University. It is known for one of the world’s largest dinosaur fossil collections, including extensive Tyrannosaurus rex research, and it also includes regional history exhibits and a planetarium.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Museum_of_the_Rockies"
+      "description": "Museum of the Rockies is a major museum in Bozeman and part of Montana State University. It is known for one of the world’s largest dinosaur fossil collections, including extensive Tyrannosaurus rex research, and it also includes regional history exhibits and a planetarium."
     },
     {
       "title": "Explore Main Street Historic District",
-      "description": "Bozeman’s Main Street Historic District sits in the city center and reflects the city’s late nineteenth- and early twentieth-century development. Visitors come for preserved brick commercial buildings, local businesses, and walkable blocks that connect downtown landmarks and cultural venues.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bozeman%2C_Montana"
-    },
-    {
-      "title": "Explore Bozeman Hot Springs",
-      "description": "Bozeman Hot Springs is a geothermal pool complex west of downtown Bozeman in Gallatin County. It is known for indoor and outdoor soaking pools fed by thermal water and serves as a year-round stop after hiking, skiing, and day trips in the surrounding mountains.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bozeman%2C_Montana"
+      "description": "Bozeman’s Main Street Historic District sits in the city center and reflects the city’s late nineteenth- and early twentieth-century development. Visitors come for preserved brick commercial buildings, local businesses, and walkable blocks that connect downtown landmarks and cultural venues."
     },
     {
       "title": "Explore Gallatin River",
-      "description": "The Gallatin River is a major tributary of the Missouri River and runs through Gallatin Canyon near Bozeman. It is known for fly fishing and whitewater sections, and its valley is a key scenic route linking Bozeman with Big Sky and Yellowstone approaches.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Gallatin_River"
+      "description": "The Gallatin River is a major tributary of the Missouri River and runs through Gallatin Canyon near Bozeman. It is known for fly fishing and whitewater sections, and its valley is a key scenic route linking Bozeman with Big Sky and Yellowstone approaches."
     },
     {
       "title": "Explore Bridger Bowl",
-      "description": "Bridger Bowl is a ski area in the Bridger Range north of Bozeman. It is known for steep alpine terrain and community-backed operations, with winter access to a broad range of runs and nearby mountain views across the Gallatin Valley.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bridger_Bowl_Ski_Area"
-    },
-    {
-      "title": "Explore Peets Hill",
-      "description": "Peets Hill is an elevated open-space area on Bozeman’s southeast side with a popular urban trail network. Visitors use it for short walks, city views, and sunset overlooks, and it links easily with nearby neighborhoods and trailheads around town.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Bozeman%2C_Montana"
-    },
-    {
-      "title": "Explore Hyalite Canyon",
-      "description": "Hyalite Canyon lies in the Custer Gallatin National Forest south of Bozeman and leads to Hyalite Reservoir. It is known for hiking trails, waterfalls, and winter ice climbing areas, and it is one of the closest mountain recreation corridors to the city.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Hyalite_Canyon"
-    },
-    {
-      "title": "Explore Yellowstone National Park",
-      "description": "Yellowstone National Park is the first U.S. national park and a major protected geothermal and wildlife landscape south of Bozeman. Visitors come for geysers, hot springs, canyons, and large mammal habitat, and many Bozeman itineraries use it as a full-day excursion.",
-      "wikiUrl": "https://en.wikipedia.org/wiki/Yellowstone_National_Park"
+      "description": "Bridger Bowl is a ski area in the Bridger Range north of Bozeman. It is known for steep alpine terrain and community-backed operations, with winter access to a broad range of runs and nearby mountain views across the Gallatin Valley."
     }
   ],
   "bestTimeToVisit": {
