@@ -44,6 +44,7 @@ export type GuidePageData = {
     sourceUrl?: string;
     source_url?: string;
     imageUrl?: string | null;
+    image?: string | null;
     disableImage?: boolean;
   }>;
   bestTimeToVisit: {
