@@ -16,15 +16,33 @@ const trimToWordRange = (text: string, min = 45, max = 75) => {
   return text;
 };
 
+const toCanonicalWikiUrl = (title: string, pageUrl?: string) => {
+  if (pageUrl?.trim()) {
+    return pageUrl.trim();
+  }
+
+  const normalized = title.trim().replace(/\s+/g, "_");
+  if (!normalized) {
+    return undefined;
+  }
+
+  return `https://en.wikipedia.org/wiki/${encodeURIComponent(normalized).replace(
+    /%5F/g,
+    "_"
+  )}`;
+};
+
 const paraphraseSummary = (title: string, extract: string, city: string) => {
   const cleanExtract = extract.replace(/\s+/g, " ").trim();
-  const firstSentence = cleanExtract.split(/(?<=[.!?])\s+/)[0] ?? cleanExtract;
+  const sentences = cleanExtract.split(/(?<=[.!?])\s+/).filter(Boolean);
+  const firstSentence = sentences[0] ?? cleanExtract;
+  const secondSentence = sentences[1] ?? "";
 
-  const factual = `${title} is a notable place in or around ${city}. ${firstSentence}`;
-  const practical = `Plan time here for walking, photos, and nearby local stops that pair well in the same part of town.`;
-  const logistics = `Aim for earlier or late-day visits when possible to get better light and lighter crowds.`;
+  const lead = `${title} is a landmark in or near ${city}.`;
+  const knownFor = firstSentence;
+  const concrete = secondSentence;
 
-  return trimToWordRange(`${factual} ${practical} ${logistics}`);
+  return trimToWordRange([lead, knownFor, concrete].filter(Boolean).join(" "));
 };
 
 export const wikiSummaryToThing = async (
@@ -39,7 +57,7 @@ export const wikiSummaryToThing = async (
     description: cleanWikiLanguage(
       paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
     ),
-    wikiUrl: summary.pageUrl,
+    wikiUrl: toCanonicalWikiUrl(summary.title?.trim() || title, summary.pageUrl),
     imageUrl: summary.imageUrl,
   };
 };
