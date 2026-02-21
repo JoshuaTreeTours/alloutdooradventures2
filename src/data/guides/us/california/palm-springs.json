@@ -27,28 +27,34 @@
   "thingsToDo": [
     {
       "title": "Palm Springs Aerial Tramway",
-      "description": "Palm Springs Aerial Tramway is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Palm Springs Aerial Tramway is the world’s largest rotating aerial tramway, carrying passengers from the Coachella Valley floor to Mount San Jacinto State Park. It opened in 1963 after years of engineering and financing work to create direct mountain access from Palm Springs. The ride climbs more than 8,000 vertical feet and crosses distinct climate zones from Sonoran Desert conditions to alpine forest. Its mountain station supports a state park visitor center, trail access, and winter snow conditions that contrast with the desert below. The tramway remains one of the defining infrastructure projects in the city’s tourism history.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs_Aerial_Tramway"
     },
     {
       "title": "Indian Canyons",
       "disableImage": true,
-      "description": "Indian Canyons is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Indian Canyons is a protected canyon system on Agua Caliente Band of Cahuilla Indians land at the south edge of Palm Springs. The area includes Palm Canyon, Andreas Canyon, and Murray Canyon, each shaped by faulted desert terrain and perennial water sources. It is historically significant as part of Cahuilla homelands and contains extensive California fan palm groves supported by spring-fed drainage. Trails follow rocky washes and narrow canyon walls, showing how water and geology formed one of the Coachella Valley’s most distinct landscapes. The canyons are central to understanding the region’s Indigenous history and desert ecology.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Indian_Canyons"
     },
     {
       "title": "Tahquitz Canyon",
-      "description": "Tahquitz Canyon is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Tahquitz Canyon is a steep canyon preserve in Palm Springs managed by the Agua Caliente Band of Cahuilla Indians. It is known for a seasonal waterfall and a trail corridor that exposes layered rock formations shaped by tectonic and erosional processes. The canyon holds cultural significance in Cahuilla oral tradition, including stories connected to the spirit figure Tahquitz. Its visitor center and interpretive route focus on Native history, local plants, and the hydrology that sustains desert habitat. The site provides a compact view of how cultural heritage and geology overlap in the San Jacinto foothills.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Tahquitz_Canyon"
     },
     {
       "title": "Moorten Botanical Garden",
-      "description": "Moorten Botanical Garden is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Moorten Botanical Garden is a historic family-run botanical garden established in Palm Springs in 1938. The garden specializes in cacti and desert flora, with documented plant groups from the Mojave and Sonoran deserts as well as other arid regions. Its small scale reflects early twentieth-century private horticultural collections that later became public educational spaces in desert cities. The cactarium greenhouse and labeled outdoor beds make it a reference point for regional plant adaptation and water-efficient landscaping history. The site remains one of Palm Springs’ longest-operating botanical institutions.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Moorten_Botanical_Garden_and_Cactarium"
     },
     {
       "title": "Palm Springs",
-      "description": "Palm Springs is a prominent landmark in Palm Springs, California, recognized as part of the city's physical and cultural landscape. It is known for identifiable design features and long-standing local relevance across civic life. Visitors experience site-specific details, neighborhood context, and a practical orientation point when exploring the surrounding area."
+      "description": "Palm Springs is a city in Riverside County within California’s Coachella Valley, set against the San Jacinto Mountains. It developed from Native Cahuilla settlement areas into a twentieth-century resort city shaped by rail access, postwar growth, and modernist architecture. The city is geographically defined by desert climate, mountain alluvial fans, and hot mineral spring areas that influenced early tourism and health travel. It is widely associated with mid-century design, seasonal events, and entertainment history linked to greater Los Angeles. Palm Springs remains a core urban and cultural center in the inland Southern California desert.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Palm_Springs%2C_California"
     },
     {
       "title": "Palm Springs Joshua Tree National Park",
-      "description": "Palm Springs Joshua Tree National Park is a major urban park in Palm Springs, California, defined by managed green space and public recreation areas. It is known for trails, landscaped sections, and recurring community use that reflect local planning priorities. Visitors experience open views, varied walking routes, and a practical snapshot of how residents use outdoor space across the city."
+      "description": "Joshua Tree National Park lies east of Palm Springs where the Mojave and Colorado Desert ecosystems converge across protected federal land. The park’s designation evolved from national monument status to national park status in 1994, marking its ecological and geological importance. Its terrain includes granite monzogranite formations, dry washes, and broad basins that support Joshua tree habitat and high-desert biodiversity. For Palm Springs itineraries, it represents the region’s most prominent large-scale desert landscape and a key reference for conservation history in Southern California. The park’s geology and biomes explain much of the broader Coachella Valley environmental context.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Joshua_Tree_National_Park"
     }
   ],
   "bestTimeToVisit": {
@@ -125,5 +131,6 @@
         ]
       }
     ]
-  }
+  },
+  "thingsToDoDepth": "extended"
 }
