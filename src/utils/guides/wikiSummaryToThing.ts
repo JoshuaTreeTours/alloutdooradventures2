@@ -1,5 +1,5 @@
-import { getWikipediaSummary } from "../wiki/wikiRest";
 import { cleanWikiLanguage } from "../cleanWikiLanguage";
+import { getWikipediaSummary } from "../wiki/wikiRest";
 
 export type WikiThingToDo = {
   title: string;
@@ -8,8 +8,8 @@ export type WikiThingToDo = {
   imageUrl?: string | null;
 };
 
-const MIN_WORDS = 80;
-const MAX_WORDS = 150;
+const MIN_WORDS_TARGET = 120;
+const MAX_WORDS = 180;
 const BANNED_PHRASES = [
   /practical stop/i,
   /orientation point/i,
@@ -19,49 +19,52 @@ const BANNED_PHRASES = [
   /easy recommendation/i,
 ];
 
+const wordCount = (text: string) => text.split(/\s+/).filter(Boolean).length;
+
+const splitSentences = (text: string) =>
+  text
+    .replace(/\[[^\]]*\]/g, "")
+    .replace(/\s+/g, " ")
+    .split(/(?<=[.!?])\s+/)
+    .map(line => line.trim())
+    .filter(Boolean);
+
 const trimToWordLimit = (text: string, max = MAX_WORDS) => {
   const words = text.split(/\s+/).filter(Boolean);
   if (words.length <= max) return text;
-  return `${words.slice(0, max).join(" ").replace(/[;,]$/, "")}.`;
+  return `${words
+    .slice(0, max)
+    .join(" ")
+    .replace(/[,:;\-]+$/g, "")}.`;
 };
-
-const wordCount = (text: string) => text.split(/\s+/).filter(Boolean).length;
 
 const toCanonicalWikiUrl = (title: string, pageUrl?: string) => {
-  if (pageUrl?.trim()) {
-    return pageUrl.trim();
-  }
-
+  if (pageUrl?.trim()) return pageUrl.trim();
   const normalized = title.trim().replace(/\s+/g, "_");
-  if (!normalized) {
-    return undefined;
-  }
-
-  return `https://en.wikipedia.org/wiki/${encodeURIComponent(
-    normalized
-  ).replace(/%5F/g, "_")}`;
+  if (!normalized) return undefined;
+  return `https://en.wikipedia.org/wiki/${encodeURIComponent(normalized).replace(/%5F/g, "_")}`;
 };
 
-const expandWithContext = (title: string, city: string, summary: string) =>
-  `${summary} ${title} also helps explain how ${city} developed, because its physical setting and public role connect local history, geography, and community identity across different periods of growth.`;
+const buildDescription = (title: string, city: string, extract: string) => {
+  const factualSentences = splitSentences(extract).filter(
+    sentence => !BANNED_PHRASES.some(pattern => pattern.test(sentence))
+  );
 
-const paraphraseSummary = (title: string, extract: string, city: string) => {
-  const cleanExtract = extract.replace(/\s+/g, " ").trim();
-  const sentences = cleanExtract
-    .split(/(?<=[.!?])\s+/)
-    .map(line => line.trim())
-    .filter(Boolean)
-    .slice(0, 5)
-    .filter(line => !BANNED_PHRASES.some(pattern => pattern.test(line)));
+  const lead = `${title} is a notable site in ${city}, with documented significance in local history, geography, or cultural development.`;
 
-  const lead = `${title} is an important place in ${city}, with clear ties to local history, geography, or cultural life.`;
-  let description = [lead, ...sentences].join(" ").trim();
+  let description = [lead, ...factualSentences.slice(0, 8)]
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
 
-  if (wordCount(description) < MIN_WORDS) {
-    description = expandWithContext(title, city, description);
+  description = trimToWordLimit(cleanWikiLanguage(description));
+
+  if (wordCount(description) >= MIN_WORDS_TARGET) {
+    return description;
   }
 
-  return trimToWordLimit(description);
+  // For short extracts, keep factual text concise instead of inventing generic filler.
+  return description;
 };
 
 export const wikiSummaryToThing = async (
@@ -71,19 +74,21 @@ export const wikiSummaryToThing = async (
   const summary = await getWikipediaSummary(title);
   if (!summary?.extract) return null;
 
-  const wikiUrl = toCanonicalWikiUrl(
-    summary.title?.trim() || title,
-    summary.pageUrl
-  );
+  const resolvedTitle = summary.title?.trim() || title;
+  const wikiUrl = toCanonicalWikiUrl(resolvedTitle, summary.pageUrl);
   if (!wikiUrl) return null;
 
-  const description = cleanWikiLanguage(
-    paraphraseSummary(summary.title?.trim() || title, summary.extract, city)
-  );
+  const description = buildDescription(resolvedTitle, city, summary.extract);
+  if (
+    !description ||
+    BANNED_PHRASES.some(pattern => pattern.test(description))
+  ) {
+    return null;
+  }
 
   return {
-    title: summary.title?.trim() || title,
-    description: `${description}\n\nSource: ${wikiUrl}`,
+    title: resolvedTitle,
+    description,
     wikiUrl,
     imageUrl: summary.imageUrl,
   };

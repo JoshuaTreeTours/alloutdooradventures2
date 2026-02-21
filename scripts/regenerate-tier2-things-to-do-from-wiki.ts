@@ -1,10 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import {
-  extractCityLandmarksFromTours,
-  extractStateLandmarksFromTours,
-  type CityLandmarkCandidate,
-} from "../src/utils/guides/extractCityLandmarksFromTours";
+import { extractCityLandmarksFromTours } from "../src/utils/guides/extractCityLandmarksFromTours";
 import { getWikiLandmarkCandidates } from "../src/utils/guides/wikiLandmarks";
 import {
   wikiSummaryToThing,
@@ -18,9 +14,8 @@ import {
   getLocalPoisForCity,
   getNearbyPoisForCity,
 } from "../src/data/cityTopThings";
-import { cleanWikiLanguage } from "../src/utils/cleanWikiLanguage";
 import { assertGuideHasNoWikiLanguage } from "../src/utils/guides/wikiLanguageGuard";
-import { isTopGuide } from "../src/utils/guides/isTopGuide";
+import { shouldPreserveGuideContent } from "../src/utils/guides/shouldPreserveGuideContent";
 
 type GuideJson = {
   tier?: "tier1" | "tier2";
@@ -84,20 +79,6 @@ const parseSlugs = (filePath: string) => ({
   stateSlug: path.basename(path.dirname(filePath)),
   citySlug: path.basename(filePath, ".json"),
 });
-
-const mapType = (name: string): CityLandmarkCandidate["type"] => {
-  if (/park|trail|garden|falls|canyon/i.test(name)) return "park";
-  if (/museum|aquarium|zoo|cathedral|market|observatory/i.test(name))
-    return "museum";
-  if (/beach|bay|pier|island|waterfront/i.test(name)) return "beach";
-  if (/bridge/i.test(name)) return "bridge";
-  if (/district|square|old town|plaza/i.test(name)) return "district";
-  if (/harbor|marina/i.test(name)) return "harbor";
-  if (/mountain|peak/i.test(name)) return "mountain";
-  if (/river|lake/i.test(name)) return "river";
-  if (/historic|fort|monument/i.test(name)) return "historic";
-  return "other";
-};
 
 const normalize = (value: string) =>
   value.toLowerCase().replace(/\s+/g, " ").trim();
@@ -188,9 +169,10 @@ const run = async () => {
     const routeKey = `us/${stateSlug}/${citySlug}`;
 
     if (
+      guide.tier !== "tier2" ||
       !guide.city ||
       !guide.state ||
-      isTopGuide({ ...guide, slug: routeKey })
+      shouldPreserveGuideContent(guide)
     ) {
       report.citiesSkippedTier1.push(routeKey);
       continue;

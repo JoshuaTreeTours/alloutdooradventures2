@@ -24,7 +24,7 @@ const BANNED_OUTPUT = [
   /one of the most valuable things to do/i,
 ];
 
-const MIN_WORDS = 80;
+const MIN_WORDS_TIER2 = 120;
 
 const splitSentences = (text: string) =>
   text
@@ -50,17 +50,6 @@ const hasBanned = (text: string) =>
 
 const appendSourceLine = (description: string, wikiUrl: string) =>
   `${description}\n\nSource: ${wikiUrl}`;
-
-const expandWithContext = (args: {
-  summary: string;
-  landmarkName: string;
-  cityName: string;
-  stateName: string;
-}) => {
-  const { summary, landmarkName, cityName, stateName } = args;
-  const context = `${landmarkName} has shaped how ${cityName}, ${stateName} is understood by residents and visitors, because its setting, structure, and public role capture key parts of the area's development. The site also stands out for physical characteristics that are easy to identify on arrival, helping explain why it remains part of local history and civic identity.`;
-  return `${summary} ${context}`.replace(/\s+/g, " ").trim();
-};
 
 const buildExtendedDescription = (args: {
   landmarkName: string;
@@ -93,6 +82,11 @@ const buildExtendedDescription = (args: {
     sentences[2],
     sentences[3],
     sentences[4],
+    sentences[5],
+    sentences[6],
+    sentences[7],
+    sentences[8],
+    sentences[9],
   ].filter(Boolean);
 
   let description = [lead, ...body].join(" ").replace(/\s+/g, " ").trim();
@@ -106,19 +100,8 @@ const buildExtendedDescription = (args: {
   const sentenceTotal = splitSentences(description).length;
   const words = wordCount(description);
 
-  if (sentenceTotal < 4 || words < minWords) {
-    description = `${landmarkName} in ${cityName}, ${stateName}, has a well-recorded role in local history and regional change over time. The landmark includes physical features that define its character, whether through architecture, waterfront geography, preserved natural terrain, or long-standing public space design. It matters because it anchors major civic narratives, helping explain how the city grew and why this area became culturally recognizable. Current use and preservation work continue to connect the site with community identity, education, and tourism.`;
-    description = trimToWords(description, maxWords);
-  }
-
-  if (wordCount(description) < minWords) {
-    description = expandWithContext({
-      summary: description,
-      landmarkName,
-      cityName,
-      stateName,
-    });
-    description = trimToWords(description, maxWords);
+  if (sentenceTotal < 2 || words < 40) {
+    return "";
   }
 
   if (hasBanned(description)) {
@@ -178,7 +161,7 @@ export async function buildWikiLandmarkDescription(args: {
       extract: summary.extract,
       wikiUrl: summary.url,
       includeSourceLine: tier === "tier2",
-      minWords: tier === "tier2" ? MIN_WORDS : 80,
+      minWords: tier === "tier2" ? MIN_WORDS_TIER2 : 80,
       maxWords: tier === "tier2" ? 170 : 140,
     });
 
