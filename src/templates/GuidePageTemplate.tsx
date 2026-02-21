@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
+import NearbyCluster from "../components/geo/NearbyCluster";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
@@ -11,6 +12,7 @@ import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
+import { getNearbyClusterData } from "../utils/geo/getNearbyByDistance";
 
 type GuidePageTemplateProps = {
   guide: GuidePageData;
@@ -69,6 +71,17 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     },
     ...(guide.city ? [{ name: guide.city, url: urlPath }] : []),
   ];
+  const nearbyData = getNearbyClusterData({
+    context: {
+      type: "guide",
+      citySlug: guide.tours.citySlug,
+      stateSlug: guide.tours.stateSlug,
+      state: guide.state,
+      country: guide.country,
+      lat: guide.cityCenter?.lat,
+      lng: guide.cityCenter?.lng,
+    },
+  });
 
   const structuredDataNodes = useMemo(() => {
     const destinationType = guide.city
@@ -87,6 +100,45 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           name: guide.country,
         },
       },
+      ...(nearbyData.nearbyGuides.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Guides",
+              itemListElement: nearbyData.nearbyGuides.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+              })),
+            },
+          ]
+        : []),
+      ...(nearbyData.nearbyTours.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Tours",
+              itemListElement: nearbyData.nearbyTours.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+                ...(item.ratingCount || item.ratingValue
+                  ? {
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        reviewCount: item.ratingCount ?? 0,
+                        ratingValue: item.ratingValue ?? 0,
+                      },
+                    }
+                  : {}),
+              })),
+            },
+          ]
+        : []),
     ];
   }, [
     breadcrumbs,
@@ -96,6 +148,8 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     sameAs,
     urlPath,
     guide.city,
+    nearbyData.nearbyGuides,
+    nearbyData.nearbyTours,
   ]);
 
   useStructuredData(structuredDataNodes);
@@ -201,6 +255,18 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             })}
           </ol>
         </Section>
+
+        <NearbyCluster
+          context={{
+            type: "guide",
+            citySlug: guide.tours.citySlug,
+            stateSlug: guide.tours.stateSlug,
+            state: guide.state,
+            country: guide.country,
+            lat: guide.cityCenter?.lat,
+            lng: guide.cityCenter?.lng,
+          }}
+        />
 
         <div className="grid gap-6 md:grid-cols-2">
           {!isTier2 ? (

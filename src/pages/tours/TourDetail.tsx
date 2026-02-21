@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
+import NearbyCluster from "../../components/geo/NearbyCluster";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../data/destinations";
 import {
@@ -21,6 +22,7 @@ import {
 import { filterHeroImages, resolveHeroImageForRoute } from "../../utils/hero";
 import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
+import { getNearbyClusterData } from "../../utils/geo/getNearbyByDistance";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
@@ -61,6 +63,19 @@ export default function TourDetail({ params }: TourDetailProps) {
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
+  const nearbyData = getNearbyClusterData({
+    context: {
+      type: "tour",
+      citySlug: tour?.destination.citySlug,
+      stateSlug: tour?.destination.stateSlug,
+      state: tour?.destination.state,
+      country: tour?.destination.country,
+      lat: tour?.destination.lat ?? city?.lat,
+      lng: tour?.destination.lng ?? city?.lng,
+      tourSlug: tour?.slug,
+      tourHref: detailUrl,
+    },
+  });
   const metaDescription = tour
     ? buildTourMetaDescription(tour, {
         isDuplicate: isTourDescriptionDuplicate(tour),
@@ -78,6 +93,9 @@ export default function TourDetail({ params }: TourDetailProps) {
         description: metaDescription,
         image: finalHeroImage,
         mainEntityId: `${detailUrl}#product`,
+        relatedLink: [...nearbyData.nearbyGuides, ...nearbyData.nearbyTours]
+          .slice(0, 10)
+          .map(item => item.href),
       }),
       buildTourProductStructuredData({
         tour,
@@ -95,6 +113,45 @@ export default function TourDetail({ params }: TourDetailProps) {
         { name: "Tours", url: "/tours" },
         { name: tour.title, url: detailUrl },
       ]),
+      ...(nearbyData.nearbyGuides.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Guides",
+              itemListElement: nearbyData.nearbyGuides.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+              })),
+            },
+          ]
+        : []),
+      ...(nearbyData.nearbyTours.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Tours",
+              itemListElement: nearbyData.nearbyTours.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+                ...(item.ratingCount || item.ratingValue
+                  ? {
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        reviewCount: item.ratingCount ?? 0,
+                        ratingValue: item.ratingValue ?? 0,
+                      },
+                    }
+                  : {}),
+              })),
+            },
+          ]
+        : []),
     ];
   }, [
     bookingUrl,
@@ -103,6 +160,8 @@ export default function TourDetail({ params }: TourDetailProps) {
     metaDescription,
     structuredImages,
     tour,
+    nearbyData.nearbyGuides,
+    nearbyData.nearbyTours,
   ]);
 
   useStructuredData(structuredDataNodes);
@@ -273,6 +332,19 @@ export default function TourDetail({ params }: TourDetailProps) {
           </div>
         ) : null}
       </section>
+      <NearbyCluster
+        context={{
+          type: "tour",
+          citySlug: tour.destination.citySlug,
+          stateSlug: tour.destination.stateSlug,
+          state: tour.destination.state,
+          country: tour.destination.country,
+          lat: tour.destination.lat ?? city?.lat,
+          lng: tour.destination.lng ?? city?.lng,
+          tourSlug: tour.slug,
+          tourHref: detailUrl,
+        }}
+      />
     </main>
   );
 }
