@@ -26,28 +26,34 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Historic Downtown Walking Routes",
-      "description": "Historic Downtown Walking Routes is a historic site in Bryce Canyon City, Utah. Historic downtown walking routes in Bryce Canyon City deliver architecture, storefronts, and easy sightseeing in a compact area. These short loops are perfect for a relaxed stroll with coffee stops and people-watching."
+      "title": "Bryce Canyon National Park",
+      "description": "Bryce Canyon National Park is a national park in Bryce Canyon City, Utah. Bryce Canyon National Park in southern Utah protects high-elevation amphitheaters filled with hoodoos carved from the Claron Formation. It was designated a national monument in 1923 and a national park in 1928. The park spans the Paunsaugunt Plateau and is a central gateway landscape for Bryce Canyon City tourism, geology interpretation, and year-round scenic visitation.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Bryce_Canyon_Utah_Aug_2013.jpg"
     },
     {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Bryce Canyon City, Utah. Regional parks and preserves near Bryce Canyon City are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Bryce Amphitheater",
+      "description": "Bryce Amphitheater is a natural amphitheater in Bryce Canyon City, Utah. Bryce Amphitheater is the best-known natural amphitheater in Bryce Canyon National Park and contains dense concentrations of hoodoos shaped by frost weathering and erosion. Major viewpoints, including Sunrise Point and Sunset Point, overlook this basin. The amphitheater defines the park’s visual identity and concentrates trail access, ranger interpretation, and visitor circulation near Bryce Canyon City.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Bryce_Canyon_Amphitheater.jpg"
     },
     {
-      "title": "Visit Scenic Drive Loops",
-      "description": "Scenic Drive Loops is a park in Bryce Canyon City, Utah. Plan a scenic drive loop around Bryce Canyon City to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of the surrounding region without committing to a long hike."
+      "title": "Sunrise Point",
+      "description": "Sunrise Point is a viewpoint in Bryce Canyon City, Utah. Sunrise Point is a primary overlook on the Bryce Amphitheater rim in Bryce Canyon National Park. It gives direct views of hoodoo fields including landmarks such as Boat Mesa and the Sinking Ship formation. The viewpoint connects to the Rim Trail and Queen’s Garden Trail, making it a key orientation area for day visitors entering from Bryce Canyon City.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Sunrise_Point_Bryce_Canyon.jpg"
     },
     {
-      "title": "Visit Local Greenways and Easy Nature Walks",
-      "description": "Local Greenways and Easy Nature Walks is a landmark in Bryce Canyon City, Utah. Local greenways in Bryce Canyon City are perfect for easy walks, casual bike rides, and family-friendly nature strolls. These routes keep you close to town while still feeling outdoorsy. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Sunset Point",
+      "description": "Sunset Point is a viewpoint in Bryce Canyon City, Utah. Sunset Point is a major Bryce Canyon National Park overlook facing the Bryce Amphitheater and the Thor’s Hammer hoodoo formation. It links directly to the Navajo Loop and Rim Trail corridor and is one of the park’s busiest trailheads. Its high rim location provides broad geologic views that frame Bryce Canyon City’s role as the park’s access community.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Bryce_Canyon_National_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Sunset_Point_Bryce_Canyon.jpg"
     },
     {
-      "title": "Visit Viewpoint Overlooks and Photo Stops",
-      "description": "Viewpoint Overlooks and Photo Stops is a park in Bryce Canyon City, Utah. Short viewpoint walks around Bryce Canyon City create quick wins for panoramic photos and big-sky scenery. They are great add-ons between meals or before a longer trail. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Visit Foothill and Ridgeline Hikes",
-      "description": "Foothill and Ridgeline Hikes is a landmark in Bryce Canyon City, Utah. Foothill and ridgeline hikes outside Bryce Canyon City deliver sweeping elevation views without an all-day trek. Look for classic mountain photo spots, rocky overlooks, and cooler air. The site helps explain how Bryce Canyon City developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
+      "title": "Ruby's Inn",
+      "description": "Ruby's Inn is a historic resort complex in Bryce Canyon City, Utah. Ruby’s Inn is a long-running lodging and services complex at Bryce Canyon City founded by Reuben C. Syrett in the early twentieth century. It expanded alongside Bryce Canyon’s growth from monument status to national park designation. Ruby's Inn is one of the best-known public landmarks linked to travel patterns around Bryce Canyon City.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Ruby%27s_Inn",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Rubys_Inn_Bryce_Canyon.jpg"
     }
   ],
   "bestTimeToVisit": {

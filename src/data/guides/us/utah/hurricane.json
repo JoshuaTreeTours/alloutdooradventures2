@@ -26,28 +26,34 @@
   ],
   "thingsToDo": [
     {
-      "title": "Sand Mountain",
-      "description": "Sand Mountain is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Sand Hollow State Park",
+      "description": "Sand Hollow State Park is a state park in Hurricane, Utah. Sand Hollow State Park near Hurricane, Utah, centers on Sand Hollow Reservoir and surrounding red sandstone dunes. The reservoir was completed in 2002 as part of regional water infrastructure and the park developed as a recreation hub for boating, fishing, and off-highway vehicle access. It is now one of Washington County’s primary outdoor destinations.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Sand_Hollow_State_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Sand_Hollow_State_Park.jpg"
     },
     {
-      "title": "One Day",
-      "description": "One Day is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Quail Creek State Park",
+      "description": "Quail Creek State Park is a state park in Hurricane, Utah. Quail Creek State Park in Washington County, Utah, protects Quail Creek Reservoir and nearby red-rock terrain between Hurricane and St. George. The reservoir supports municipal water supply and regional recreation. Quail Creek State Park is one of the best-known public landmarks linked to travel patterns around Hurricane. Its geography and management history help explain why this part of Utah is a major destination corridor.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Quail_Creek_State_Park",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Quail_Creek_Reservoir_Utah.jpg"
     },
     {
-      "title": "Toquerville Falls",
-      "description": "Toquerville Falls is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "Gooseberry Mesa",
+      "description": "Gooseberry Mesa is a mesa in Hurricane, Utah. Gooseberry Mesa is a sandstone mesa southwest of Hurricane that overlooks Zion Canyon, the Virgin River corridor, and surrounding high desert plateaus. The mesa is nationally recognized for technical mountain bike trail networks built on slickrock terrain. Its elevation and open rim viewpoints make it a significant recreation landscape linked to Hurricane’s outdoor tourism economy.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Gooseberry_Mesa",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Gooseberry_Mesa_Utah.jpg"
     },
     {
-      "title": "Flintstone House",
-      "description": "Flintstone House is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Pah Tempe Hot Springs",
+      "description": "Pah Tempe Hot Springs is a hot springs site in Hurricane, Utah. Pah Tempe Hot Springs is a geothermal site near La Verkin and Hurricane along the Virgin River in southwestern Utah. The springs were historically used by Southern Paiute communities and later by settlers during nineteenth-century development. The location remains an important regional landmark in local history discussions about hydrothermal resources, health resorts, and river settlement patterns.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Pah_Tempe_Hot_Springs",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Pah_Tempe_Hot_Springs_Utah.jpg"
     },
     {
-      "title": "West Rim",
-      "description": "West Rim is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
-    },
-    {
-      "title": "Warner Valley",
-      "description": "Warner Valley is a practical stop for understanding Hurricane's local geography and culture. Spend time here for views, short walks, and context before connecting to nearby food, neighborhoods, or other signature landmarks in Hurricane, Utah. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Red Cliffs National Conservation Area",
+      "description": "Red Cliffs National Conservation Area is a conservation area in Hurricane, Utah. Red Cliffs National Conservation Area in southwestern Utah protects desert habitat, sandstone formations, and federally listed Mojave desert tortoise range near Hurricane and St. George. It was designated in 2009 and is managed by the Bureau of Land Management. Red Cliffs National Conservation Area is one of the best-known public landmarks linked to travel patterns around Hurricane.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Red_Cliffs_National_Conservation_Area",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/67/Red_Cliffs_NCA_Utah.jpg"
     }
   ],
   "bestTimeToVisit": {
