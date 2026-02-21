@@ -4,10 +4,16 @@ import { Link } from "wouter";
 
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
+import AvailableToursGrid from "../components/guides/AvailableToursGrid";
 import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
+import SeeAllToursBubble from "../components/guides/SeeAllToursBubble";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
-import { getToursByCity, getToursByState } from "../data/tours";
+import {
+  getToursByCity,
+  getToursByCityUnified,
+  getToursByState,
+} from "../data/tours";
 import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
@@ -44,6 +50,10 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
     ? getToursByCity(guide.tours.stateSlug, guide.tours.citySlug)
     : getToursByState(guide.tours.stateSlug);
   const featuredTours = tours.slice(0, guide.tours.limit ?? 6);
+  const allCityTours =
+    guide.tours.stateSlug && guide.tours.citySlug
+      ? getToursByCityUnified(guide.tours.stateSlug, guide.tours.citySlug)
+      : [];
   const mappedThingsLimit = isTier2 ? 5 : 8;
   const mappedThings = guide.thingsToDo.slice(0, mappedThingsLimit);
   const wikiExtractFallback = (
@@ -204,7 +214,10 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-4">
                 {featuredTours.map(tour => (
-                  <div key={tour.id} className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]">
+                  <div
+                    key={tour.id}
+                    className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]"
+                  >
                     <TourCard tour={tour} />
                   </div>
                 ))}
@@ -218,7 +231,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                     type="button"
                     aria-label={`Go to top tour ${index + 1}`}
                     className={`h-2 w-2 rounded-full transition ${
-                      selectedIndex === index ? "bg-[#2f4a2f]" : "bg-[#2f4a2f]/30"
+                      selectedIndex === index
+                        ? "bg-[#2f4a2f]"
+                        : "bg-[#2f4a2f]/30"
                     }`}
                     onClick={() => scrollTo(index)}
                   />
@@ -241,6 +256,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 </button>
               </div>
             </div>
+            <SeeAllToursBubble
+              cityName={guide.city}
+              citySlug={guide.tours.citySlug}
+              stateSlug={guide.tours.stateSlug}
+            />
           </Section>
         ) : null}
 
@@ -334,6 +354,15 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             </li>
           </ul>
         </Section>
+
+        {guide.tours.citySlug ? (
+          <AvailableToursGrid
+            cityName={guide.city ?? place}
+            citySlug={guide.tours.citySlug}
+            stateSlug={guide.tours.stateSlug}
+            tours={allCityTours}
+          />
+        ) : null}
       </section>
     </main>
   );
