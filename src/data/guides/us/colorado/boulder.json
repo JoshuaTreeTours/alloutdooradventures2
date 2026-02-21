@@ -26,28 +26,34 @@
   ],
   "thingsToDo": [
     {
-      "title": "Visit Denver",
-      "description": "Denver is a park in Boulder, Colorado. Nearby day trip: Denver is a mountain gateway in Colorado, from Boulder. It is a quick hop from Boulder with time for trailheads, scenic overlooks, and cooler highland air. Plan it as a half-day escape and return to Boulder by evening."
+      "title": "Flatirons",
+      "description": "Flatirons is a rock formation located in Boulder, Colorado. It is known for the Flatirons are a set of steeply slanted sandstone formations on Green Mountain near Boulder, Colorado. Their shape results from uplift of the Rocky Mountains and later erosion that exposed tilted sedimentary layers. They are one of the most recognized geologic features along the Front Range and are managed within the city of Boulder's open space system. Flatirons has sustained institutional, geological, or historical significance within the Front Range and San Juan regional context connected to Boulder. Flatirons remains a defining reference for how this part of Colorado developed in relation to settlement patterns, transportation systems, and protected landscapes. Flatirons is repeatedly cited in public records and reference histories that describe the regional identity of Boulder.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Flatirons",
+      "imageUrl": null
     },
     {
-      "title": "Visit Historic Downtown Walking Routes",
-      "description": "Historic Downtown Walking Routes is a historic site in Boulder, Colorado. Historic downtown walking routes in Boulder deliver architecture, storefronts, and easy sightseeing in a compact area. These short loops are perfect for a relaxed stroll with coffee stops and people-watching. The site gives visitors clear context on how local history and culture shape the city today."
+      "title": "Chautauqua Park",
+      "description": "Chautauqua Park is a public park located in Boulder, Colorado. It is known for chautauqua Park in Boulder is a historic park established in 1898 as part of the Colorado Chautauqua movement. The site includes open meadows, trail access, and a National Historic Landmark district with early twentieth-century structures. It remains a core civic landscape at the base of the Flatirons. Chautauqua Park has sustained institutional, geological, or historical significance within the Front Range and San Juan regional context connected to Boulder. Chautauqua Park remains a defining reference for how this part of Colorado developed in relation to settlement patterns, transportation systems, and protected landscapes. Chautauqua Park is repeatedly cited in public records and reference histories that describe the regional identity of Boulder.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Chautauqua_Park_Historic_District",
+      "imageUrl": null
     },
     {
-      "title": "Visit Regional Park and Preserve Trails",
-      "description": "Regional Park and Preserve Trails is a park in Boulder, Colorado. Regional parks and preserves near Boulder are ideal for nature loop hikes and family-friendly outdoor escapes. Expect well-marked trails, native landscapes, and quiet picnic areas for a slower pace. The surrounding area usually offers straightforward walking routes and practical access points for a short visit."
+      "title": "University of Colorado Boulder",
+      "description": "University of Colorado Boulder is a public research university located in Boulder, Colorado. It is known for the University of Colorado Boulder is a public research university founded in 1876, the same year Colorado became a state. It is the flagship campus of the University of Colorado system and supports major research activity in aerospace, environmental science, engineering, and physics. The institution has a central role in Boulder's economy and civic identity. University of Colorado Boulder has sustained institutional, geological, or historical significance within the Front Range and San Juan regional context connected to Boulder. University of Colorado Boulder remains a defining reference for how this part of Colorado developed in relation to settlement patterns, transportation systems, and protected landscapes.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/University_of_Colorado_Boulder",
+      "imageUrl": null
     },
     {
-      "title": "Visit Scenic Drive Loops",
-      "description": "Scenic Drive Loops is a park in Boulder, Colorado. Plan a scenic drive loop around Boulder to link overlooks, trailheads, and quiet backroads. It is a flexible way to see more of the surrounding region without committing to a long hike. It works well as an orientation stop before exploring nearby neighborhoods, food, and other city highlights."
+      "title": "Pearl Street Mall",
+      "description": "Pearl Street Mall is a pedestrian mall located in Boulder, Colorado. It is known for pearl Street Mall is a four-block pedestrian mall in downtown Boulder created in 1977. It replaced vehicle traffic with a public streetscape of paving, landscaping, and plazas designed to support retail and civic activity. The corridor is a major commercial district and an example of late twentieth-century downtown revitalization. Pearl Street Mall has sustained institutional, geological, or historical significance within the Front Range and San Juan regional context connected to Boulder. Pearl Street Mall remains a defining reference for how this part of Colorado developed in relation to settlement patterns, transportation systems, and protected landscapes. Pearl Street Mall is repeatedly cited in public records and reference histories that describe the regional identity of Boulder.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Pearl_Street_Mall",
+      "imageUrl": null
     },
     {
-      "title": "Visit Local Greenways and Easy Nature Walks",
-      "description": "Local Greenways and Easy Nature Walks is a landmark in Boulder, Colorado. Local greenways in Boulder are perfect for easy walks, casual bike rides, and family-friendly nature strolls. These routes keep you close to town while still feeling outdoorsy. The site helps explain how Boulder developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
-    },
-    {
-      "title": "Visit Viewpoint Overlooks and Photo Stops",
-      "description": "Viewpoint Overlooks and Photo Stops is a park in Boulder, Colorado. Short viewpoint walks around Boulder create quick wins for panoramic photos and big-sky scenery. They are great add-ons between meals or before a longer trail. The site helps explain how Boulder developed through its environment, civic planning, or cultural institutions, so visitors get a grounded understanding of the destination."
+      "title": "Boulder Creek",
+      "description": "Boulder Creek is a creek located in Boulder, Colorado. It is known for boulder Creek is a tributary stream that runs from the Front Range through Boulder before joining the Saint Vrain Creek watershed. The watercourse shaped early settlement patterns, transportation routes, and industrial milling sites in the area. It remains a central geographic feature in the city and county hydrologic system. Boulder Creek has sustained institutional, geological, or historical significance within the Front Range and San Juan regional context connected to Boulder. Boulder Creek remains a defining reference for how this part of Colorado developed in relation to settlement patterns, transportation systems, and protected landscapes. Boulder Creek is repeatedly cited in public records and reference histories that describe the regional identity of Boulder.",
+      "wikiUrl": "https://en.wikipedia.org/wiki/Boulder_Creek_(Colorado)",
+      "imageUrl": null
     }
   ],
   "bestTimeToVisit": {

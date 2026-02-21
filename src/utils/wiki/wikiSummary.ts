@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pickWikiImageUrl } from "./wikiImageUrl";
 
 type SummaryResponse = {
   title?: string;
@@ -142,8 +143,10 @@ export const fetchWikiSummary = async (
     const result = {
       extract: payload.extract?.trim() || null,
       url: payload.content_urls?.desktop?.page || null,
-      imageUrl:
-        payload.thumbnail?.source ?? payload.originalimage?.source ?? null,
+      imageUrl: pickWikiImageUrl({
+        originalImageUrl: payload.originalimage?.source,
+        thumbnailUrl: payload.thumbnail?.source,
+      }),
     };
 
     if (payload.type === "missing" || !result.extract) {

@@ -2,6 +2,7 @@ import { hasHighSimilarity } from "./checkDescriptionSimilarity";
 import { fallbackLandmarkDescription } from "./fallbackLandmarkDescription";
 import { validateNoBoilerplate } from "./validateNoBoilerplate";
 import { fetchWikiSummary } from "../wiki/wikiSummary";
+import { cleanThingDescription } from "./cleanThingDescription";
 
 export type WikiDescResult = {
   description: string;
@@ -104,12 +105,12 @@ export async function buildWikiLandmarkDescription(args: {
     const summary = await fetchWikiSummary(candidateTitle);
     if (!summary.extract) continue;
 
-    const candidate = buildExtendedDescription({
+    const candidate = cleanThingDescription(buildExtendedDescription({
       landmarkName,
       cityName,
       stateName,
       extract: summary.extract,
-    });
+    }));
 
     if (!candidate || !validateNoBoilerplate(candidate)) {
       continue;
@@ -133,11 +134,11 @@ export async function buildWikiLandmarkDescription(args: {
   }
 
   return {
-    description: fallbackLandmarkDescription({
+    description: cleanThingDescription(fallbackLandmarkDescription({
       landmarkName,
       cityName,
       stateName,
-    }),
+    })),
     wikiUrl: null,
     imageUrl: null,
     usedWiki: false,

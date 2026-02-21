@@ -1,3 +1,5 @@
+import { isValidWikiImageUrl, pickWikiImageUrl } from "../wiki/wikiImageUrl";
+
 const CACHE_PATH = "data/landmarkImages.json";
 const CONFIDENCE_THRESHOLD = 0.8;
 const COMMONS_ENDPOINT = "https://commons.wikimedia.org/w/api.php";
@@ -141,7 +143,7 @@ const searchCommons = async (name: string, city: string) => {
   const candidates = pages
     .map(page => {
       const imageUrl = page.imageinfo?.[0]?.url ?? null;
-      if (!imageUrl) return null;
+      if (!isValidWikiImageUrl(imageUrl)) return null;
 
       const confidence = scoreCommonsCandidate({ page, name, city });
       return { imageUrl, confidence };
@@ -193,8 +195,10 @@ const fetchWikipediaSummary = async (title: string) => {
     originalimage?: { source?: string };
   };
 
-  const imageUrl =
-    payload.thumbnail?.source ?? payload.originalimage?.source ?? null;
+  const imageUrl = pickWikiImageUrl({
+    originalImageUrl: payload.originalimage?.source,
+    thumbnailUrl: payload.thumbnail?.source,
+  });
   if (!imageUrl) return null;
 
   return {

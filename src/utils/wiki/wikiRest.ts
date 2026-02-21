@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pickWikiImageUrl } from "./wikiImageUrl";
 
 type WikipediaSummary = {
   title?: string;
@@ -87,7 +88,10 @@ const normalizeSummary = (data: WikipediaSummary): CacheEntry | null => {
     title: data.title?.trim() || "",
     extract,
     pageUrl: data.content_urls?.desktop?.page,
-    imageUrl: data.thumbnail?.source ?? data.originalimage?.source ?? null,
+    imageUrl: pickWikiImageUrl({
+      originalImageUrl: data.originalimage?.source,
+      thumbnailUrl: data.thumbnail?.source,
+    }),
     type: data.type,
   };
 };
