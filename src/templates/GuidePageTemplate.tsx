@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { Link } from "wouter";
 
 import Seo from "../components/Seo";
@@ -32,6 +33,9 @@ const Section = ({
 );
 
 export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start" });
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
@@ -100,6 +104,40 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
 
   useStructuredData(structuredDataNodes);
 
+  const scrollPrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      emblaApi?.scrollTo(index);
+    },
+    [emblaApi]
+  );
+
+  useEffect(() => {
+    if (!emblaApi) {
+      return;
+    }
+
+    const onSelect = () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    };
+
+    setScrollSnaps(emblaApi.scrollSnapList());
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
+  }, [emblaApi]);
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
@@ -161,20 +199,47 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
           </ul>
         </Section>
 
-        {!isTier2 ? (
-          <Section title={`Top Highlights in ${place}`}>
-            <div className="grid gap-4 md:grid-cols-2">
-              {guide.highlights.map(item => (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-black/10 bg-white p-4"
+        {!isTier2 && featuredTours.length ? (
+          <Section title="Top Tours">
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex gap-4">
+                {featuredTours.map(tour => (
+                  <div key={tour.id} className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]">
+                    <TourCard tour={tour} />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-4 flex items-center justify-between gap-3">
+              <div className="flex gap-2">
+                {scrollSnaps.map((_, index) => (
+                  <button
+                    key={`top-tours-dot-${index}`}
+                    type="button"
+                    aria-label={`Go to top tour ${index + 1}`}
+                    className={`h-2 w-2 rounded-full transition ${
+                      selectedIndex === index ? "bg-[#2f4a2f]" : "bg-[#2f4a2f]/30"
+                    }`}
+                    onClick={() => scrollTo(index)}
+                  />
+                ))}
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={scrollPrev}
+                  className="rounded-full border border-[#2f4a2f]/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
                 >
-                  <h3 className="font-semibold text-[#1f2a1f]">{item.title}</h3>
-                  <p className="mt-2 text-sm text-[#405040]">
-                    {item.description}
-                  </p>
-                </article>
-              ))}
+                  Prev
+                </button>
+                <button
+                  type="button"
+                  onClick={scrollNext}
+                  className="rounded-full border border-[#2f4a2f]/30 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]"
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </Section>
         ) : null}
@@ -221,16 +286,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             </ul>
           </Section>
         </div>
-
-        {featuredTours.length ? (
-          <Section title={guide.tours.title ?? `Top tours in ${place}`}>
-            <div className="grid gap-6 md:grid-cols-3">
-              {featuredTours.map(tour => (
-                <TourCard key={tour.id} tour={tour} />
-              ))}
-            </div>
-          </Section>
-        ) : null}
 
         {guide.faq?.length ? (
           <Section title={`FAQs about ${place}`}>
