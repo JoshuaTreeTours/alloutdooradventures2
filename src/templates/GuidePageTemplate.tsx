@@ -5,6 +5,7 @@ import { Link } from "wouter";
 import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import GuideThingsToDoCard from "../components/guides/GuideThingsToDoCard";
+import SeeAllToursBubble from "../components/guides/SeeAllToursBubble";
 import GuideThingsMap from "../components/maps/GuideThingsMap";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import { getToursByCity, getToursByState } from "../data/tours";
@@ -204,7 +205,10 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             <div className="overflow-hidden" ref={emblaRef}>
               <div className="flex gap-4">
                 {featuredTours.map(tour => (
-                  <div key={tour.id} className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]">
+                  <div
+                    key={tour.id}
+                    className="min-w-0 flex-[0_0_85%] md:flex-[0_0_50%] lg:flex-[0_0_33%]"
+                  >
                     <TourCard tour={tour} />
                   </div>
                 ))}
@@ -218,7 +222,9 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                     type="button"
                     aria-label={`Go to top tour ${index + 1}`}
                     className={`h-2 w-2 rounded-full transition ${
-                      selectedIndex === index ? "bg-[#2f4a2f]" : "bg-[#2f4a2f]/30"
+                      selectedIndex === index
+                        ? "bg-[#2f4a2f]"
+                        : "bg-[#2f4a2f]/30"
                     }`}
                     onClick={() => scrollTo(index)}
                   />
@@ -241,6 +247,11 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 </button>
               </div>
             </div>
+            <SeeAllToursBubble
+              cityName={guide.city}
+              citySlug={guide.tours.citySlug}
+              stateSlug={guide.tours.stateSlug}
+            />
           </Section>
         ) : null}
 
