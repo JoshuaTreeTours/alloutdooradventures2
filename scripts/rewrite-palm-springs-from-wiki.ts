@@ -64,7 +64,7 @@ const resolveWithWikiPipeline = async (item: Thing, city: string, state: string)
     existingDescriptions: [],
   });
 
-  if (built.usedWiki && built.wikiUrl && built.description) {
+  if (built?.usedWiki && built.wikiUrl && built.description) {
     return {
       description: cleanWikiLanguage(built.description).replace(/\s+/g, " ").trim(),
       wikiUrl: built.wikiUrl,

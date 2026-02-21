@@ -34,6 +34,14 @@ type Report = {
 const ROOT = path.resolve("src/data/guides/us");
 const REPORT_PATH = path.resolve("reports/tier1-wiki-things-to-do.json");
 const SIMILARITY_THRESHOLD = 0.7;
+const FORCE_PSP_STYLE_LOCATIONS = [
+  "hilo",
+  "honolulu",
+  "kailua-kona",
+  "lahaina",
+  "kihei",
+  "waikoloa-village",
+];
 
 const FACT_SIGNAL_PATTERN =
   /(\b\d{2,}\b|\b\d+(?:\.\d+)?\s?(?:acre|acres|mile|miles|km|sq|square|year|ft|feet|percent|%)\b|\b(?:opened|built|founded|established|completed|designated)\s+in\s+\d{4}\b|\bNational\s(?:Park|Scenic Area|Historic Landmark)\b|\b(?:River|Bridge|Museum|Garden|District|Park)\b)/i;
@@ -123,6 +131,8 @@ const run = async () => {
   const files = walkGuideFiles(ROOT);
 
   for (const file of files) {
+    const citySlug = path.basename(file, ".json");
+    const forceAuthorityRewrite = FORCE_PSP_STYLE_LOCATIONS.includes(citySlug);
     const raw = fs.readFileSync(file, "utf8");
     const guide = JSON.parse(raw) as Guide;
 
@@ -153,16 +163,24 @@ const run = async () => {
         stateName: guide.state,
         existingDescriptions: existing,
         tier: "tier1",
+        forceAuthorityRewrite,
       });
+
+      if (!result?.description) {
+        continue;
+      }
 
       let description = cleanWikiLanguage(result.description);
 
       if (
-        !validateNoBoilerplate(description) ||
-        (hasSourceUrl(item) &&
-          (wordCount(description) < 80 || wordCount(description) > 120)) ||
-        (!hasSourceUrl(item) && wordCount(description) > 45) ||
-        countSentences(description) > 3
+        !forceAuthorityRewrite &&
+        (
+          !validateNoBoilerplate(description) ||
+          (hasSourceUrl(item) &&
+            (wordCount(description) < 80 || wordCount(description) > 120)) ||
+          (!hasSourceUrl(item) && wordCount(description) > 45) ||
+          countSentences(description) > 3
+        )
       ) {
         const retry = await buildWikiLandmarkDescription({
           landmarkName: item.title,
@@ -170,7 +188,13 @@ const run = async () => {
           stateName: guide.state,
           existingDescriptions: existing,
           tier: "tier1",
+          forceAuthorityRewrite,
         });
+
+        if (!retry?.description) {
+          continue;
+        }
+
         description = cleanWikiLanguage(retry.description);
       }
 
@@ -190,7 +214,12 @@ const run = async () => {
           stateName: guide.state,
           existingDescriptions: updatedThings.map(entry => entry.description),
           tier: "tier1",
+          forceAuthorityRewrite,
         });
+
+        if (!regenerated?.description) {
+          continue;
+        }
 
         description = cleanWikiLanguage(regenerated.description);
       }
