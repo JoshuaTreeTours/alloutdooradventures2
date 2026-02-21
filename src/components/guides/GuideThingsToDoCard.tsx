@@ -13,6 +13,7 @@ type GuideThingsToDoCardProps = {
   sourceUrl?: string;
   wikiUrl?: string;
   imageUrl?: string | null;
+  fallbackImageUrl?: string;
   disableImage?: boolean;
 };
 
@@ -24,6 +25,7 @@ export default function GuideThingsToDoCard({
   sourceUrl,
   wikiUrl,
   imageUrl,
+  fallbackImageUrl,
   disableImage,
 }: GuideThingsToDoCardProps) {
   const [resolvedImageUrl, setResolvedImageUrl] = useState<string | null>(
@@ -74,7 +76,13 @@ export default function GuideThingsToDoCard({
             alt={title}
             loading="lazy"
             className="h-48 w-full object-cover md:h-56"
-            onError={() => setIsImageBroken(true)}
+            onError={() => {
+              if (fallbackImageUrl && resolvedImageUrl !== fallbackImageUrl) {
+                setResolvedImageUrl(fallbackImageUrl);
+                return;
+              }
+              setIsImageBroken(true);
+            }}
           />
         </div>
       ) : null}
@@ -84,23 +92,14 @@ export default function GuideThingsToDoCard({
       <p className="mt-2 text-sm leading-7 text-[#405040] md:text-base">
         {cleanedDescription}
       </p>
-      {wikiUrl ? (
+      {wikiUrl || sourceUrl ? (
         <a
-          href={wikiUrl}
+          href={wikiUrl ?? sourceUrl}
           target="_blank"
           rel="nofollow noopener noreferrer"
           className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
         >
           Source: Wikipedia
-        </a>
-      ) : sourceUrl ? (
-        <a
-          href={sourceUrl}
-          target="_blank"
-          rel="nofollow noopener noreferrer"
-          className="mt-3 inline-block text-sm font-medium text-[#1f2a1f] underline"
-        >
-          Source
         </a>
       ) : null}
     </li>

@@ -195,6 +195,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                   sourceUrl={sourceUrl}
                   wikiUrl={item.wikiUrl}
                   imageUrl={item.imageUrl}
+                  fallbackImageUrl={guide.hero?.image}
                   disableImage={item.disableImage}
                 />
               );
