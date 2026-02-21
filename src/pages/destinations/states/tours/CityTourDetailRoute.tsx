@@ -3,6 +3,7 @@ import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
 import Seo from "../../../../components/Seo";
+import NearbyCluster from "../../../../components/geo/NearbyCluster";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
@@ -24,7 +25,10 @@ import {
   getFlagstaffTourSlug,
 } from "../../../../data/flagstaffTours";
 import { getExpandedTourDescription } from "../../../../data/tourNarratives";
-import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/hero";
+import {
+  filterHeroImages,
+  resolveHeroImageForRoute,
+} from "../../../../utils/hero";
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
@@ -33,6 +37,7 @@ import {
   buildWebPageStructuredData,
 } from "../../../../utils/structuredData";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
+import { getNearbyClusterData } from "../../../../utils/geo/getNearbyByDistance";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 
 type CityTourDetailRouteProps = {
@@ -49,7 +54,7 @@ export default function CityTourDetailRoute({
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
     params.citySlug,
-    params.tourSlug,
+    params.tourSlug
   );
 
   if (engine2Tour) {
@@ -64,35 +69,40 @@ export default function CityTourDetailRoute({
     getFallbackCityBySlugs(params.stateSlug, params.citySlug);
 
   const isFlagstaff = Boolean(
-    state && city && state.slug === "arizona" && city.slug === "flagstaff",
+    state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tour = state && city
-    ? isFlagstaff
-      ? getFlagstaffTourBySlug(params.tourSlug)
-      : getTourBySlugs(state.slug, city.slug, params.tourSlug)
-    : null;
+  const tour =
+    state && city
+      ? isFlagstaff
+        ? getFlagstaffTourBySlug(params.tourSlug)
+        : getTourBySlugs(state.slug, city.slug, params.tourSlug)
+      : null;
   const canonicalUrl =
     tour && isFlagstaff
       ? getFlagstaffTourDetailPath(tour)
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const heroImage = resolveHeroImageForRoute({
-    route: canonicalUrl,
-    tour,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: canonicalUrl,
+      tour,
+    }) ?? undefined;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
-    "product",
+    "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
-  const seoDescription = tour ? buildTourMeta(tour, canonicalUrl).description : undefined;
+  const seoDescription = tour
+    ? buildTourMeta(tour, canonicalUrl).description
+    : undefined;
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const cityHref = state && city
-    ? `/destinations/states/${state.slug}/cities/${city.slug}`
-    : "";
+  const cityHref =
+    state && city
+      ? `/destinations/states/${state.slug}/cities/${city.slug}`
+      : "";
   const stateHref = state
     ? state.isFallback
       ? "/destinations"
@@ -100,6 +110,19 @@ export default function CityTourDetailRoute({
     : "";
   const toursHref =
     state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+  const nearbyData = getNearbyClusterData({
+    context: {
+      type: "tour",
+      citySlug: city?.slug,
+      stateSlug: state?.slug,
+      state: state?.name,
+      country: state?.isFallback ? state?.name : "United States",
+      lat: tour?.destination.lat ?? city?.lat,
+      lng: tour?.destination.lng ?? city?.lng,
+      tourSlug: tour?.slug,
+      tourHref: canonicalUrl,
+    },
+  });
   const structuredDataNodes = useMemo(() => {
     if (!tour || !canonicalUrl) {
       return null;
@@ -110,6 +133,9 @@ export default function CityTourDetailRoute({
         name: tour.title,
         description: seoDescription,
         image: heroImage,
+        relatedLink: [...nearbyData.nearbyGuides, ...nearbyData.nearbyTours]
+          .slice(0, 10)
+          .map(item => item.href),
       }),
       buildTourProductStructuredData({
         tour,
@@ -130,6 +156,45 @@ export default function CityTourDetailRoute({
         ...(toursHref ? [{ name: "Tours", url: toursHref }] : []),
         { name: tour.title, url: canonicalUrl },
       ]),
+      ...(nearbyData.nearbyGuides.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Guides",
+              itemListElement: nearbyData.nearbyGuides.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+              })),
+            },
+          ]
+        : []),
+      ...(nearbyData.nearbyTours.length >= 3
+        ? [
+            {
+              "@type": "ItemList",
+              name: "Nearby Tours",
+              itemListElement: nearbyData.nearbyTours.map((item, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                url: item.href,
+                name: item.title,
+                ...(item.image ? { image: [item.image] } : {}),
+                ...(item.ratingCount || item.ratingValue
+                  ? {
+                      aggregateRating: {
+                        "@type": "AggregateRating",
+                        reviewCount: item.ratingCount ?? 0,
+                        ratingValue: item.ratingValue ?? 0,
+                      },
+                    }
+                  : {}),
+              })),
+            },
+          ]
+        : []),
     ];
   }, [
     bookingUrl,
@@ -144,6 +209,8 @@ export default function CityTourDetailRoute({
     structuredImages,
     tour,
     toursHref,
+    nearbyData.nearbyGuides,
+    nearbyData.nearbyTours,
   ]);
 
   useStructuredData(structuredDataNodes);
@@ -169,9 +236,7 @@ export default function CityTourDetailRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link
-            href={`/destinations/${state.slug}/${city.slug}/tours`}
-          >
+          <Link href={`/destinations/${state.slug}/${city.slug}/tours`}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
@@ -183,13 +248,12 @@ export default function CityTourDetailRoute({
 
   const tourSlug = isFlagstaff ? getFlagstaffTourSlug(tour) : tour.slug;
   const seoMeta = buildTourMeta(tour, canonicalUrl);
-  const relatedTours = (isFlagstaff
-    ? flagstaffTours
-    : getToursByCity(state.slug, city.slug)
-  ).filter((item) =>
+  const relatedTours = (
+    isFlagstaff ? flagstaffTours : getToursByCity(state.slug, city.slug)
+  ).filter(item =>
     isFlagstaff
       ? getFlagstaffTourSlug(item) !== tourSlug
-      : item.slug !== tour.slug,
+      : item.slug !== tour.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
 
@@ -218,9 +282,7 @@ export default function CityTourDetailRoute({
               <a>{city.name}</a>
             </Link>
             <span>/</span>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a>Tours</a>
             </Link>
             <span>/</span>
@@ -252,16 +314,12 @@ export default function CityTourDetailRoute({
             ) : null}
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link
-              href={bookingUrl}
-            >
+            <Link href={bookingUrl}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 BOOK
               </a>
             </Link>
-            <Link
-              href={toursHref}
-            >
+            <Link href={toursHref}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
               </a>
@@ -286,7 +344,7 @@ export default function CityTourDetailRoute({
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            {getExpandedTourDescription(tour).map((paragraph) => (
+            {getExpandedTourDescription(tour).map(paragraph => (
               <p
                 key={paragraph}
                 className="mt-4 text-sm text-[#405040] leading-relaxed"
@@ -323,7 +381,7 @@ export default function CityTourDetailRoute({
         </div>
         {tour.galleryImages?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map((image) => (
+            {tour.galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
@@ -340,6 +398,20 @@ export default function CityTourDetailRoute({
         ) : null}
       </section>
 
+      <NearbyCluster
+        context={{
+          type: "tour",
+          citySlug: city.slug,
+          stateSlug: state.slug,
+          state: state.name,
+          country: state.isFallback ? state.name : "United States",
+          lat: tour.destination.lat ?? city.lat,
+          lng: tour.destination.lng ?? city.lng,
+          tourSlug: tour.slug,
+          tourHref: canonicalUrl,
+        }}
+      />
+
       {relatedTours.length > 0 && (
         <section className="bg-white/60">
           <div className="mx-auto max-w-6xl px-6 py-14">
@@ -347,7 +419,7 @@ export default function CityTourDetailRoute({
               More tours in {city.name}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {relatedTours.map((related) => (
+              {relatedTours.map(related => (
                 <TourCard
                   key={related.slug}
                   tour={related}

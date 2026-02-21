@@ -287,12 +287,14 @@ export const buildWebPageStructuredData = ({
   description,
   image,
   mainEntityId,
+  relatedLink,
 }: {
   url: string;
   name: string;
   description?: string;
   image?: string;
   mainEntityId?: string;
+  relatedLink?: string[];
 }) => {
   const imageId = image ? `${url}#primaryimage` : undefined;
   return {
@@ -304,6 +306,7 @@ export const buildWebPageStructuredData = ({
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
     ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
+    ...(relatedLink?.length ? { relatedLink } : {}),
     ...(image
       ? {
           primaryImageOfPage: buildImageObject(image, imageId),
