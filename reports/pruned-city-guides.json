@@ -1,0 +1,1860 @@
+{
+  "removedCount": 265,
+  "removed": [
+    {
+      "stateSlug": "arizona",
+      "citySlug": "cottonwood",
+      "tourCount": 3,
+      "source": "/guides/us/arizona/cottonwood",
+      "destination": "/guides/us/arizona"
+    },
+    {
+      "stateSlug": "arizona",
+      "citySlug": "page",
+      "tourCount": 2,
+      "source": "/guides/us/arizona/page",
+      "destination": "/guides/us/arizona"
+    },
+    {
+      "stateSlug": "arizona",
+      "citySlug": "prescott",
+      "tourCount": 1,
+      "source": "/guides/us/arizona/prescott",
+      "destination": "/guides/us/arizona"
+    },
+    {
+      "stateSlug": "arizona",
+      "citySlug": "scottsdale",
+      "tourCount": 2,
+      "source": "/guides/us/arizona/scottsdale",
+      "destination": "/guides/us/arizona"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "avalon",
+      "tourCount": 1,
+      "source": "/guides/us/california/avalon",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "bonita",
+      "tourCount": 2,
+      "source": "/guides/us/california/bonita",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "burlingame",
+      "tourCount": 2,
+      "source": "/guides/us/california/burlingame",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "carpinteria",
+      "tourCount": 1,
+      "source": "/guides/us/california/carpinteria",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "healdsburg",
+      "tourCount": 4,
+      "source": "/guides/us/california/healdsburg",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "indio",
+      "tourCount": 1,
+      "source": "/guides/us/california/indio",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "lake-elsinore",
+      "tourCount": 1,
+      "source": "/guides/us/california/lake-elsinore",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "napa",
+      "tourCount": 2,
+      "source": "/guides/us/california/napa",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "oceanside",
+      "tourCount": 4,
+      "source": "/guides/us/california/oceanside",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "pismo-beach",
+      "tourCount": 1,
+      "source": "/guides/us/california/pismo-beach",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "poway",
+      "tourCount": 1,
+      "source": "/guides/us/california/poway",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "rio-linda",
+      "tourCount": 1,
+      "source": "/guides/us/california/rio-linda",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "santee",
+      "tourCount": 2,
+      "source": "/guides/us/california/santee",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "solvang",
+      "tourCount": 1,
+      "source": "/guides/us/california/solvang",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "sonoma",
+      "tourCount": 2,
+      "source": "/guides/us/california/sonoma",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "temecula",
+      "tourCount": 2,
+      "source": "/guides/us/california/temecula",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "california",
+      "citySlug": "ventura",
+      "tourCount": 2,
+      "source": "/guides/us/california/ventura",
+      "destination": "/guides/us/california"
+    },
+    {
+      "stateSlug": "colorado",
+      "citySlug": "boulder",
+      "tourCount": 3,
+      "source": "/guides/us/colorado/boulder",
+      "destination": "/guides/us/colorado"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "colchester",
+      "tourCount": 2,
+      "source": "/guides/us/connecticut/colchester",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "east-lyme",
+      "tourCount": 1,
+      "source": "/guides/us/connecticut/east-lyme",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "montville",
+      "tourCount": 1,
+      "source": "/guides/us/connecticut/montville",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "new-london",
+      "tourCount": 2,
+      "source": "/guides/us/connecticut/new-london",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "salisbury",
+      "tourCount": 1,
+      "source": "/guides/us/connecticut/salisbury",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "thomaston",
+      "tourCount": 1,
+      "source": "/guides/us/connecticut/thomaston",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "connecticut",
+      "citySlug": "wolcott",
+      "tourCount": 1,
+      "source": "/guides/us/connecticut/wolcott",
+      "destination": "/guides/us/connecticut"
+    },
+    {
+      "stateSlug": "delaware",
+      "citySlug": "dewey-beach",
+      "tourCount": 1,
+      "source": "/guides/us/delaware/dewey-beach",
+      "destination": "/guides/us/delaware"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "apopka",
+      "tourCount": 2,
+      "source": "/guides/us/florida/apopka",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "bonita-springs",
+      "tourCount": 1,
+      "source": "/guides/us/florida/bonita-springs",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "bradenton-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/bradenton-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "canal-point",
+      "tourCount": 1,
+      "source": "/guides/us/florida/canal-point",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "cape-canaveral",
+      "tourCount": 1,
+      "source": "/guides/us/florida/cape-canaveral",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "clearwater",
+      "tourCount": 3,
+      "source": "/guides/us/florida/clearwater",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "clermont",
+      "tourCount": 1,
+      "source": "/guides/us/florida/clermont",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "cocoa-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/cocoa-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "daytona-beach",
+      "tourCount": 4,
+      "source": "/guides/us/florida/daytona-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "deland",
+      "tourCount": 1,
+      "source": "/guides/us/florida/deland",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "delray-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/delray-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "estero",
+      "tourCount": 1,
+      "source": "/guides/us/florida/estero",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "eustis",
+      "tourCount": 1,
+      "source": "/guides/us/florida/eustis",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "fellsmere",
+      "tourCount": 2,
+      "source": "/guides/us/florida/fellsmere",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "fort-myers",
+      "tourCount": 4,
+      "source": "/guides/us/florida/fort-myers",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "fort-myers-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/fort-myers-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "fort-walton-beach",
+      "tourCount": 3,
+      "source": "/guides/us/florida/fort-walton-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "fort-white",
+      "tourCount": 2,
+      "source": "/guides/us/florida/fort-white",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "gainesville",
+      "tourCount": 1,
+      "source": "/guides/us/florida/gainesville",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "greenacres",
+      "tourCount": 1,
+      "source": "/guides/us/florida/greenacres",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "gulfport",
+      "tourCount": 2,
+      "source": "/guides/us/florida/gulfport",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "hallandale-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/hallandale-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "hastings",
+      "tourCount": 1,
+      "source": "/guides/us/florida/hastings",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "hobe-sound",
+      "tourCount": 4,
+      "source": "/guides/us/florida/hobe-sound",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "homosassa",
+      "tourCount": 4,
+      "source": "/guides/us/florida/homosassa",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "key-biscayne",
+      "tourCount": 1,
+      "source": "/guides/us/florida/key-biscayne",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "kissimmee",
+      "tourCount": 2,
+      "source": "/guides/us/florida/kissimmee",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "lake-wales",
+      "tourCount": 3,
+      "source": "/guides/us/florida/lake-wales",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "lakeland",
+      "tourCount": 3,
+      "source": "/guides/us/florida/lakeland",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "lecanto",
+      "tourCount": 1,
+      "source": "/guides/us/florida/lecanto",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "lighthouse-point",
+      "tourCount": 2,
+      "source": "/guides/us/florida/lighthouse-point",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "matlacha",
+      "tourCount": 2,
+      "source": "/guides/us/florida/matlacha",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "new-smyrna-beach",
+      "tourCount": 2,
+      "source": "/guides/us/florida/new-smyrna-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "nokomis",
+      "tourCount": 1,
+      "source": "/guides/us/florida/nokomis",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "north-fort-myers",
+      "tourCount": 3,
+      "source": "/guides/us/florida/north-fort-myers",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "north-miami",
+      "tourCount": 1,
+      "source": "/guides/us/florida/north-miami",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "orange-city",
+      "tourCount": 3,
+      "source": "/guides/us/florida/orange-city",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "osprey",
+      "tourCount": 1,
+      "source": "/guides/us/florida/osprey",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "oviedo",
+      "tourCount": 1,
+      "source": "/guides/us/florida/oviedo",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "palm-coast",
+      "tourCount": 4,
+      "source": "/guides/us/florida/palm-coast",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "palm-harbor",
+      "tourCount": 1,
+      "source": "/guides/us/florida/palm-harbor",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "pembroke-pines",
+      "tourCount": 2,
+      "source": "/guides/us/florida/pembroke-pines",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "pensacola-beach",
+      "tourCount": 1,
+      "source": "/guides/us/florida/pensacola-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "riviera-beach",
+      "tourCount": 2,
+      "source": "/guides/us/florida/riviera-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "sanford",
+      "tourCount": 1,
+      "source": "/guides/us/florida/sanford",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "st-cloud",
+      "tourCount": 2,
+      "source": "/guides/us/florida/st-cloud",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "summerland-key",
+      "tourCount": 1,
+      "source": "/guides/us/florida/summerland-key",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "tampa",
+      "tourCount": 3,
+      "source": "/guides/us/florida/tampa",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "tarpon-springs",
+      "tourCount": 1,
+      "source": "/guides/us/florida/tarpon-springs",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "titusville",
+      "tourCount": 1,
+      "source": "/guides/us/florida/titusville",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "town-n-country",
+      "tourCount": 2,
+      "source": "/guides/us/florida/town-n-country",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "vero-beach",
+      "tourCount": 2,
+      "source": "/guides/us/florida/vero-beach",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "warrington",
+      "tourCount": 1,
+      "source": "/guides/us/florida/warrington",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "weston",
+      "tourCount": 2,
+      "source": "/guides/us/florida/weston",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "winter-haven",
+      "tourCount": 2,
+      "source": "/guides/us/florida/winter-haven",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "florida",
+      "citySlug": "winter-park",
+      "tourCount": 1,
+      "source": "/guides/us/florida/winter-park",
+      "destination": "/guides/us/florida"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "atlanta",
+      "tourCount": 1,
+      "source": "/guides/us/georgia/atlanta",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "blairsville",
+      "tourCount": 2,
+      "source": "/guides/us/georgia/blairsville",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "braselton",
+      "tourCount": 1,
+      "source": "/guides/us/georgia/braselton",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "covington",
+      "tourCount": 3,
+      "source": "/guides/us/georgia/covington",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "helen",
+      "tourCount": 2,
+      "source": "/guides/us/georgia/helen",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "juliette",
+      "tourCount": 1,
+      "source": "/guides/us/georgia/juliette",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "leesburg",
+      "tourCount": 3,
+      "source": "/guides/us/georgia/leesburg",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "macon",
+      "tourCount": 2,
+      "source": "/guides/us/georgia/macon",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "peachtree-city",
+      "tourCount": 1,
+      "source": "/guides/us/georgia/peachtree-city",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "roswell",
+      "tourCount": 2,
+      "source": "/guides/us/georgia/roswell",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "georgia",
+      "citySlug": "summerville",
+      "tourCount": 1,
+      "source": "/guides/us/georgia/summerville",
+      "destination": "/guides/us/georgia"
+    },
+    {
+      "stateSlug": "hawaii",
+      "citySlug": "honomu",
+      "tourCount": 3,
+      "source": "/guides/us/hawaii/honomu",
+      "destination": "/guides/us/hawaii"
+    },
+    {
+      "stateSlug": "idaho",
+      "citySlug": "coeur-dalene",
+      "tourCount": 1,
+      "source": "/guides/us/idaho/coeur-dalene",
+      "destination": "/guides/us/idaho"
+    },
+    {
+      "stateSlug": "indiana",
+      "citySlug": "indianapolis",
+      "tourCount": 0,
+      "source": "/guides/us/indiana/indianapolis",
+      "destination": "/guides/us/indiana"
+    },
+    {
+      "stateSlug": "kentucky",
+      "citySlug": "new-haven",
+      "tourCount": 2,
+      "source": "/guides/us/kentucky/new-haven",
+      "destination": "/guides/us/kentucky"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "abita-springs",
+      "tourCount": 1,
+      "source": "/guides/us/louisiana/abita-springs",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "baton-rouge",
+      "tourCount": 2,
+      "source": "/guides/us/louisiana/baton-rouge",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "laplace",
+      "tourCount": 2,
+      "source": "/guides/us/louisiana/laplace",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "ponchatoula",
+      "tourCount": 1,
+      "source": "/guides/us/louisiana/ponchatoula",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "vacherie",
+      "tourCount": 1,
+      "source": "/guides/us/louisiana/vacherie",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "louisiana",
+      "citySlug": "venice",
+      "tourCount": 3,
+      "source": "/guides/us/louisiana/venice",
+      "destination": "/guides/us/louisiana"
+    },
+    {
+      "stateSlug": "maine",
+      "citySlug": "bar-harbor",
+      "tourCount": 2,
+      "source": "/guides/us/maine/bar-harbor",
+      "destination": "/guides/us/maine"
+    },
+    {
+      "stateSlug": "maine",
+      "citySlug": "bethel",
+      "tourCount": 2,
+      "source": "/guides/us/maine/bethel",
+      "destination": "/guides/us/maine"
+    },
+    {
+      "stateSlug": "maine",
+      "citySlug": "harpswell",
+      "tourCount": 1,
+      "source": "/guides/us/maine/harpswell",
+      "destination": "/guides/us/maine"
+    },
+    {
+      "stateSlug": "maine",
+      "citySlug": "kennebunk",
+      "tourCount": 3,
+      "source": "/guides/us/maine/kennebunk",
+      "destination": "/guides/us/maine"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "cambridge",
+      "tourCount": 2,
+      "source": "/guides/us/maryland/cambridge",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "denton",
+      "tourCount": 1,
+      "source": "/guides/us/maryland/denton",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "edgewater",
+      "tourCount": 3,
+      "source": "/guides/us/maryland/edgewater",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "fort-washington",
+      "tourCount": 4,
+      "source": "/guides/us/maryland/fort-washington",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "lusby",
+      "tourCount": 4,
+      "source": "/guides/us/maryland/lusby",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "monkton",
+      "tourCount": 1,
+      "source": "/guides/us/maryland/monkton",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "ocean-city",
+      "tourCount": 4,
+      "source": "/guides/us/maryland/ocean-city",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "maryland",
+      "citySlug": "vienna",
+      "tourCount": 1,
+      "source": "/guides/us/maryland/vienna",
+      "destination": "/guides/us/maryland"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "beverly",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/beverly",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "brookline",
+      "tourCount": 2,
+      "source": "/guides/us/massachusetts/brookline",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "chelsea",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/chelsea",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "falmouth",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/falmouth",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "holbrook",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/holbrook",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "lexington",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/lexington",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "mashpee",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/mashpee",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "nantucket",
+      "tourCount": 2,
+      "source": "/guides/us/massachusetts/nantucket",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "north-andover",
+      "tourCount": 3,
+      "source": "/guides/us/massachusetts/north-andover",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "oak-bluffs",
+      "tourCount": 3,
+      "source": "/guides/us/massachusetts/oak-bluffs",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "quincy",
+      "tourCount": 3,
+      "source": "/guides/us/massachusetts/quincy",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "revere",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/revere",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "sandwich",
+      "tourCount": 2,
+      "source": "/guides/us/massachusetts/sandwich",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "somerville",
+      "tourCount": 1,
+      "source": "/guides/us/massachusetts/somerville",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "sudbury",
+      "tourCount": 3,
+      "source": "/guides/us/massachusetts/sudbury",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "winthrop",
+      "tourCount": 2,
+      "source": "/guides/us/massachusetts/winthrop",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "massachusetts",
+      "citySlug": "wrentham",
+      "tourCount": 4,
+      "source": "/guides/us/massachusetts/wrentham",
+      "destination": "/guides/us/massachusetts"
+    },
+    {
+      "stateSlug": "michigan",
+      "citySlug": "detroit",
+      "tourCount": 4,
+      "source": "/guides/us/michigan/detroit",
+      "destination": "/guides/us/michigan"
+    },
+    {
+      "stateSlug": "michigan",
+      "citySlug": "grosse-ile-township",
+      "tourCount": 1,
+      "source": "/guides/us/michigan/grosse-ile-township",
+      "destination": "/guides/us/michigan"
+    },
+    {
+      "stateSlug": "michigan",
+      "citySlug": "lake-leelanau",
+      "tourCount": 1,
+      "source": "/guides/us/michigan/lake-leelanau",
+      "destination": "/guides/us/michigan"
+    },
+    {
+      "stateSlug": "michigan",
+      "citySlug": "mount-pleasant",
+      "tourCount": 2,
+      "source": "/guides/us/michigan/mount-pleasant",
+      "destination": "/guides/us/michigan"
+    },
+    {
+      "stateSlug": "michigan",
+      "citySlug": "traverse-city",
+      "tourCount": 1,
+      "source": "/guides/us/michigan/traverse-city",
+      "destination": "/guides/us/michigan"
+    },
+    {
+      "stateSlug": "minnesota",
+      "citySlug": "stillwater",
+      "tourCount": 4,
+      "source": "/guides/us/minnesota/stillwater",
+      "destination": "/guides/us/minnesota"
+    },
+    {
+      "stateSlug": "mississippi",
+      "citySlug": "natchez",
+      "tourCount": 2,
+      "source": "/guides/us/mississippi/natchez",
+      "destination": "/guides/us/mississippi"
+    },
+    {
+      "stateSlug": "missouri",
+      "citySlug": "branson",
+      "tourCount": 1,
+      "source": "/guides/us/missouri/branson",
+      "destination": "/guides/us/missouri"
+    },
+    {
+      "stateSlug": "missouri",
+      "citySlug": "kansas-city",
+      "tourCount": 0,
+      "source": "/guides/us/missouri/kansas-city",
+      "destination": "/guides/us/missouri"
+    },
+    {
+      "stateSlug": "missouri",
+      "citySlug": "st-louis",
+      "tourCount": 0,
+      "source": "/guides/us/missouri/st-louis",
+      "destination": "/guides/us/missouri"
+    },
+    {
+      "stateSlug": "montana",
+      "citySlug": "missoula",
+      "tourCount": 4,
+      "source": "/guides/us/montana/missoula",
+      "destination": "/guides/us/montana"
+    },
+    {
+      "stateSlug": "montana",
+      "citySlug": "whitefish",
+      "tourCount": 4,
+      "source": "/guides/us/montana/whitefish",
+      "destination": "/guides/us/montana"
+    },
+    {
+      "stateSlug": "new-hampshire",
+      "citySlug": "laconia",
+      "tourCount": 1,
+      "source": "/guides/us/new-hampshire/laconia",
+      "destination": "/guides/us/new-hampshire"
+    },
+    {
+      "stateSlug": "new-hampshire",
+      "citySlug": "new-castle",
+      "tourCount": 1,
+      "source": "/guides/us/new-hampshire/new-castle",
+      "destination": "/guides/us/new-hampshire"
+    },
+    {
+      "stateSlug": "new-hampshire",
+      "citySlug": "weare",
+      "tourCount": 2,
+      "source": "/guides/us/new-hampshire/weare",
+      "destination": "/guides/us/new-hampshire"
+    },
+    {
+      "stateSlug": "new-hampshire",
+      "citySlug": "wolfeboro",
+      "tourCount": 1,
+      "source": "/guides/us/new-hampshire/wolfeboro",
+      "destination": "/guides/us/new-hampshire"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "atlantic-highlands",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/atlantic-highlands",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "brick-township",
+      "tourCount": 2,
+      "source": "/guides/us/new-jersey/brick-township",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "edgewater",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/edgewater",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "fieldsboro",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/fieldsboro",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "hillsdale",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/hillsdale",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "keyport",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/keyport",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "lavallette",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/lavallette",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "middletown-township",
+      "tourCount": 3,
+      "source": "/guides/us/new-jersey/middletown-township",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "millville",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/millville",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "ocean-city",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/ocean-city",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "shamong",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/shamong",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "wallington",
+      "tourCount": 2,
+      "source": "/guides/us/new-jersey/wallington",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-jersey",
+      "citySlug": "wildwood-crest",
+      "tourCount": 1,
+      "source": "/guides/us/new-jersey/wildwood-crest",
+      "destination": "/guides/us/new-jersey"
+    },
+    {
+      "stateSlug": "new-mexico",
+      "citySlug": "albuquerque",
+      "tourCount": 2,
+      "source": "/guides/us/new-mexico/albuquerque",
+      "destination": "/guides/us/new-mexico"
+    },
+    {
+      "stateSlug": "new-mexico",
+      "citySlug": "las-cruces",
+      "tourCount": 0,
+      "source": "/guides/us/new-mexico/las-cruces",
+      "destination": "/guides/us/new-mexico"
+    },
+    {
+      "stateSlug": "new-mexico",
+      "citySlug": "los-ranchos-de-albuquerque",
+      "tourCount": 2,
+      "source": "/guides/us/new-mexico/los-ranchos-de-albuquerque",
+      "destination": "/guides/us/new-mexico"
+    },
+    {
+      "stateSlug": "new-mexico",
+      "citySlug": "santa-fe",
+      "tourCount": 4,
+      "source": "/guides/us/new-mexico/santa-fe",
+      "destination": "/guides/us/new-mexico"
+    },
+    {
+      "stateSlug": "new-mexico",
+      "citySlug": "santa-fe-foothills",
+      "tourCount": 1,
+      "source": "/guides/us/new-mexico/santa-fe-foothills",
+      "destination": "/guides/us/new-mexico"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "catskill",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/catskill",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "freeport",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/freeport",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "hammondsport",
+      "tourCount": 2,
+      "source": "/guides/us/new-york/hammondsport",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "hancock",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/hancock",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "ithaca",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/ithaca",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "lansing",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/lansing",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "montauk",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/montauk",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "napanoch",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/napanoch",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "queens",
+      "tourCount": 3,
+      "source": "/guides/us/new-york/queens",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "rushville",
+      "tourCount": 3,
+      "source": "/guides/us/new-york/rushville",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "staten-island",
+      "tourCount": 2,
+      "source": "/guides/us/new-york/staten-island",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "new-york",
+      "citySlug": "warwick",
+      "tourCount": 1,
+      "source": "/guides/us/new-york/warwick",
+      "destination": "/guides/us/new-york"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "charlotte",
+      "tourCount": 0,
+      "source": "/guides/us/north-carolina/charlotte",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "elkin",
+      "tourCount": 1,
+      "source": "/guides/us/north-carolina/elkin",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "highlands",
+      "tourCount": 1,
+      "source": "/guides/us/north-carolina/highlands",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "kill-devil-hills",
+      "tourCount": 2,
+      "source": "/guides/us/north-carolina/kill-devil-hills",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "nags-head",
+      "tourCount": 1,
+      "source": "/guides/us/north-carolina/nags-head",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "north-carolina",
+      "citySlug": "raleigh",
+      "tourCount": 4,
+      "source": "/guides/us/north-carolina/raleigh",
+      "destination": "/guides/us/north-carolina"
+    },
+    {
+      "stateSlug": "ohio",
+      "citySlug": "cincinnati",
+      "tourCount": 0,
+      "source": "/guides/us/ohio/cincinnati",
+      "destination": "/guides/us/ohio"
+    },
+    {
+      "stateSlug": "ohio",
+      "citySlug": "cleveland",
+      "tourCount": 0,
+      "source": "/guides/us/ohio/cleveland",
+      "destination": "/guides/us/ohio"
+    },
+    {
+      "stateSlug": "ohio",
+      "citySlug": "columbus",
+      "tourCount": 0,
+      "source": "/guides/us/ohio/columbus",
+      "destination": "/guides/us/ohio"
+    },
+    {
+      "stateSlug": "ohio",
+      "citySlug": "lancaster",
+      "tourCount": 2,
+      "source": "/guides/us/ohio/lancaster",
+      "destination": "/guides/us/ohio"
+    },
+    {
+      "stateSlug": "ohio",
+      "citySlug": "rockbridge",
+      "tourCount": 1,
+      "source": "/guides/us/ohio/rockbridge",
+      "destination": "/guides/us/ohio"
+    },
+    {
+      "stateSlug": "oklahoma",
+      "citySlug": "oklahoma-city",
+      "tourCount": 2,
+      "source": "/guides/us/oklahoma/oklahoma-city",
+      "destination": "/guides/us/oklahoma"
+    },
+    {
+      "stateSlug": "oregon",
+      "citySlug": "cascade-locks",
+      "tourCount": 2,
+      "source": "/guides/us/oregon/cascade-locks",
+      "destination": "/guides/us/oregon"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "airville",
+      "tourCount": 3,
+      "source": "/guides/us/pennsylvania/airville",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "bethlehem",
+      "tourCount": 2,
+      "source": "/guides/us/pennsylvania/bethlehem",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "gettysburg",
+      "tourCount": 1,
+      "source": "/guides/us/pennsylvania/gettysburg",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "hawley",
+      "tourCount": 4,
+      "source": "/guides/us/pennsylvania/hawley",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "levittown",
+      "tourCount": 1,
+      "source": "/guides/us/pennsylvania/levittown",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "new-stanton",
+      "tourCount": 1,
+      "source": "/guides/us/pennsylvania/new-stanton",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "newville",
+      "tourCount": 4,
+      "source": "/guides/us/pennsylvania/newville",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "ohiopyle",
+      "tourCount": 1,
+      "source": "/guides/us/pennsylvania/ohiopyle",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "pennsylvania",
+      "citySlug": "wrightsville",
+      "tourCount": 1,
+      "source": "/guides/us/pennsylvania/wrightsville",
+      "destination": "/guides/us/pennsylvania"
+    },
+    {
+      "stateSlug": "rhode-island",
+      "citySlug": "little-compton",
+      "tourCount": 4,
+      "source": "/guides/us/rhode-island/little-compton",
+      "destination": "/guides/us/rhode-island"
+    },
+    {
+      "stateSlug": "rhode-island",
+      "citySlug": "warwick",
+      "tourCount": 3,
+      "source": "/guides/us/rhode-island/warwick",
+      "destination": "/guides/us/rhode-island"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "aiken",
+      "tourCount": 1,
+      "source": "/guides/us/south-carolina/aiken",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "bluffton",
+      "tourCount": 3,
+      "source": "/guides/us/south-carolina/bluffton",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "charleston",
+      "tourCount": 3,
+      "source": "/guides/us/south-carolina/charleston",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "columbia",
+      "tourCount": 2,
+      "source": "/guides/us/south-carolina/columbia",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "johns-island",
+      "tourCount": 1,
+      "source": "/guides/us/south-carolina/johns-island",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "mount-pleasant",
+      "tourCount": 2,
+      "source": "/guides/us/south-carolina/mount-pleasant",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-carolina",
+      "citySlug": "saint-helena-island",
+      "tourCount": 1,
+      "source": "/guides/us/south-carolina/saint-helena-island",
+      "destination": "/guides/us/south-carolina"
+    },
+    {
+      "stateSlug": "south-dakota",
+      "citySlug": "rapid-city",
+      "tourCount": 2,
+      "source": "/guides/us/south-dakota/rapid-city",
+      "destination": "/guides/us/south-dakota"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "franklin",
+      "tourCount": 1,
+      "source": "/guides/us/tennessee/franklin",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "granville",
+      "tourCount": 2,
+      "source": "/guides/us/tennessee/granville",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "greenbrier",
+      "tourCount": 1,
+      "source": "/guides/us/tennessee/greenbrier",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "johnson-city",
+      "tourCount": 1,
+      "source": "/guides/us/tennessee/johnson-city",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "pigeon-forge",
+      "tourCount": 4,
+      "source": "/guides/us/tennessee/pigeon-forge",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "sevierville",
+      "tourCount": 4,
+      "source": "/guides/us/tennessee/sevierville",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "tennessee",
+      "citySlug": "williamsport",
+      "tourCount": 1,
+      "source": "/guides/us/tennessee/williamsport",
+      "destination": "/guides/us/tennessee"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "aransas-pass",
+      "tourCount": 1,
+      "source": "/guides/us/texas/aransas-pass",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "dallas",
+      "tourCount": 0,
+      "source": "/guides/us/texas/dallas",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "fort-worth",
+      "tourCount": 1,
+      "source": "/guides/us/texas/fort-worth",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "port-aransas",
+      "tourCount": 2,
+      "source": "/guides/us/texas/port-aransas",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "san-antonio",
+      "tourCount": 2,
+      "source": "/guides/us/texas/san-antonio",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "spring",
+      "tourCount": 1,
+      "source": "/guides/us/texas/spring",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "texas",
+      "citySlug": "the-colony",
+      "tourCount": 4,
+      "source": "/guides/us/texas/the-colony",
+      "destination": "/guides/us/texas"
+    },
+    {
+      "stateSlug": "utah",
+      "citySlug": "bryce-canyon-city",
+      "tourCount": 1,
+      "source": "/guides/us/utah/bryce-canyon-city",
+      "destination": "/guides/us/utah"
+    },
+    {
+      "stateSlug": "utah",
+      "citySlug": "salt-lake-city",
+      "tourCount": 0,
+      "source": "/guides/us/utah/salt-lake-city",
+      "destination": "/guides/us/utah"
+    },
+    {
+      "stateSlug": "utah",
+      "citySlug": "springdale",
+      "tourCount": 1,
+      "source": "/guides/us/utah/springdale",
+      "destination": "/guides/us/utah"
+    },
+    {
+      "stateSlug": "utah",
+      "citySlug": "st-george",
+      "tourCount": 1,
+      "source": "/guides/us/utah/st-george",
+      "destination": "/guides/us/utah"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "braintree",
+      "tourCount": 2,
+      "source": "/guides/us/vermont/braintree",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "fairlee",
+      "tourCount": 2,
+      "source": "/guides/us/vermont/fairlee",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "hartford",
+      "tourCount": 3,
+      "source": "/guides/us/vermont/hartford",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "manchester",
+      "tourCount": 3,
+      "source": "/guides/us/vermont/manchester",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "norwich",
+      "tourCount": 4,
+      "source": "/guides/us/vermont/norwich",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "plymouth",
+      "tourCount": 1,
+      "source": "/guides/us/vermont/plymouth",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "royalton",
+      "tourCount": 2,
+      "source": "/guides/us/vermont/royalton",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "waterbury",
+      "tourCount": 1,
+      "source": "/guides/us/vermont/waterbury",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "windsor",
+      "tourCount": 2,
+      "source": "/guides/us/vermont/windsor",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "vermont",
+      "citySlug": "woodford",
+      "tourCount": 1,
+      "source": "/guides/us/vermont/woodford",
+      "destination": "/guides/us/vermont"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "alexandria",
+      "tourCount": 2,
+      "source": "/guides/us/virginia/alexandria",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "arlington",
+      "tourCount": 2,
+      "source": "/guides/us/virginia/arlington",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "cape-charles",
+      "tourCount": 1,
+      "source": "/guides/us/virginia/cape-charles",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "charlottesville",
+      "tourCount": 1,
+      "source": "/guides/us/virginia/charlottesville",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "covington",
+      "tourCount": 1,
+      "source": "/guides/us/virginia/covington",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "eagle-rock",
+      "tourCount": 2,
+      "source": "/guides/us/virginia/eagle-rock",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "great-falls",
+      "tourCount": 1,
+      "source": "/guides/us/virginia/great-falls",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "herndon",
+      "tourCount": 2,
+      "source": "/guides/us/virginia/herndon",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "leesburg",
+      "tourCount": 2,
+      "source": "/guides/us/virginia/leesburg",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "richmond",
+      "tourCount": 3,
+      "source": "/guides/us/virginia/richmond",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "virginia",
+      "citySlug": "stafford",
+      "tourCount": 1,
+      "source": "/guides/us/virginia/stafford",
+      "destination": "/guides/us/virginia"
+    },
+    {
+      "stateSlug": "washington",
+      "citySlug": "chelan",
+      "tourCount": 1,
+      "source": "/guides/us/washington/chelan",
+      "destination": "/guides/us/washington"
+    },
+    {
+      "stateSlug": "west-virginia",
+      "citySlug": "harpers-ferry",
+      "tourCount": 3,
+      "source": "/guides/us/west-virginia/harpers-ferry",
+      "destination": "/guides/us/west-virginia"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "darlington",
+      "tourCount": 1,
+      "source": "/guides/us/wisconsin/darlington",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "fish-creek",
+      "tourCount": 1,
+      "source": "/guides/us/wisconsin/fish-creek",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "milwaukee",
+      "tourCount": 4,
+      "source": "/guides/us/wisconsin/milwaukee",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "sister-bay",
+      "tourCount": 1,
+      "source": "/guides/us/wisconsin/sister-bay",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "sturgeon-bay",
+      "tourCount": 1,
+      "source": "/guides/us/wisconsin/sturgeon-bay",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wisconsin",
+      "citySlug": "washburn",
+      "tourCount": 2,
+      "source": "/guides/us/wisconsin/washburn",
+      "destination": "/guides/us/wisconsin"
+    },
+    {
+      "stateSlug": "wyoming",
+      "citySlug": "cody",
+      "tourCount": 2,
+      "source": "/guides/us/wyoming/cody",
+      "destination": "/guides/us/wyoming"
+    },
+    {
+      "stateSlug": "wyoming",
+      "citySlug": "jackson",
+      "tourCount": 1,
+      "source": "/guides/us/wyoming/jackson",
+      "destination": "/guides/us/wyoming"
+    },
+    {
+      "stateSlug": "wyoming",
+      "citySlug": "jackson-hole",
+      "tourCount": 0,
+      "source": "/guides/us/wyoming/jackson-hole",
+      "destination": "/guides/us/wyoming"
+    },
+    {
+      "stateSlug": "wyoming",
+      "citySlug": "yellowstone-national-park",
+      "tourCount": 1,
+      "source": "/guides/us/wyoming/yellowstone-national-park",
+      "destination": "/guides/us/wyoming"
+    }
+  ]
+}

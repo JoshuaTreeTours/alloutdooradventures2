@@ -66,23 +66,493 @@
   ],
   "redirects": [
     {
-      "source": "/guides/us/hawaii/paia",
-      "destination": "/guides/us/hawaii/kahului",
+      "source": "/destinations/states/:stateSlug",
+      "destination": "/guides/us/:stateSlug",
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/wailuku",
-      "destination": "/guides/us/hawaii/kahului",
+      "source": "/guides/us/arizona/cottonwood",
+      "destination": "/guides/us/arizona",
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/makawao",
-      "destination": "/guides/us/hawaii/kahului",
+      "source": "/guides/us/arizona/page",
+      "destination": "/guides/us/arizona",
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/haiku-pauwela",
-      "destination": "/guides/us/hawaii/kahului",
+      "source": "/guides/us/arizona/prescott",
+      "destination": "/guides/us/arizona",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/arizona/scottsdale",
+      "destination": "/guides/us/arizona",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/avalon",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/bonita",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/burlingame",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/carpinteria",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/healdsburg",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/indio",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/lake-elsinore",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/napa",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/oceanside",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/pismo-beach",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/poway",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/rio-linda",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/santee",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/solvang",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/sonoma",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/temecula",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/california/ventura",
+      "destination": "/guides/us/california",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/colorado/boulder",
+      "destination": "/guides/us/colorado",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/colchester",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/east-lyme",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/montville",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/new-london",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/salisbury",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/thomaston",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/connecticut/wolcott",
+      "destination": "/guides/us/connecticut",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/delaware/dewey-beach",
+      "destination": "/guides/us/delaware",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/apopka",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/bonita-springs",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/bradenton-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/canal-point",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/cape-canaveral",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/clearwater",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/clermont",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/cocoa-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/daytona-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/deland",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/delray-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/estero",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/eustis",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/fellsmere",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/fort-myers",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/fort-myers-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/fort-walton-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/fort-white",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/gainesville",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/greenacres",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/gulfport",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/hallandale-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/hastings",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/hobe-sound",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/homosassa",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/key-biscayne",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/kissimmee",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/lake-wales",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/lakeland",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/lecanto",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/lighthouse-point",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/matlacha",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/new-smyrna-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/nokomis",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/north-fort-myers",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/north-miami",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/orange-city",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/osprey",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/oviedo",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/palm-coast",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/palm-harbor",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/pembroke-pines",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/pensacola-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/riviera-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/sanford",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/st-cloud",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/summerland-key",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/tampa",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/tarpon-springs",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/titusville",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/town-n-country",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/vero-beach",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/warrington",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/weston",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/winter-haven",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/florida/winter-park",
+      "destination": "/guides/us/florida",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/atlanta",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/blairsville",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/braselton",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/covington",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/helen",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/juliette",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/leesburg",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/macon",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/peachtree-city",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/roswell",
+      "destination": "/guides/us/georgia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/georgia/summerville",
+      "destination": "/guides/us/georgia",
       "permanent": true
     },
     {
@@ -91,8 +561,8 @@
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/kekaha",
-      "destination": "/guides/us/hawaii/hanalei",
+      "source": "/guides/us/hawaii/haiku-pauwela",
+      "destination": "/guides/us/hawaii/kahului",
       "permanent": true
     },
     {
@@ -101,17 +571,12 @@
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/keaau",
-      "destination": "/guides/us/hawaii/hilo",
+      "source": "/guides/us/hawaii/honomu",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/waimea",
-      "destination": "/guides/us/hawaii/hilo",
-      "permanent": true
-    },
-    {
-      "source": "/guides/us/hawaii/kaneohe",
+      "source": "/guides/us/hawaii/kaaawa",
       "destination": "/guides/us/hawaii/honolulu",
       "permanent": true
     },
@@ -121,8 +586,28 @@
       "permanent": true
     },
     {
-      "source": "/guides/us/hawaii/kaaawa",
+      "source": "/guides/us/hawaii/kaneohe",
       "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/keaau",
+      "destination": "/guides/us/hawaii/hilo",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/kekaha",
+      "destination": "/guides/us/hawaii/hanalei",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/makawao",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/paia",
+      "destination": "/guides/us/hawaii/kahului",
       "permanent": true
     },
     {
@@ -131,8 +616,848 @@
       "permanent": true
     },
     {
-      "source": "/destinations/states/:stateSlug",
-      "destination": "/guides/us/:stateSlug",
+      "source": "/guides/us/hawaii/wailuku",
+      "destination": "/guides/us/hawaii/kahului",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/hawaii/waimea",
+      "destination": "/guides/us/hawaii/hilo",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/idaho/coeur-dalene",
+      "destination": "/guides/us/idaho",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/indiana/indianapolis",
+      "destination": "/guides/us/indiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/kentucky/new-haven",
+      "destination": "/guides/us/kentucky",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/abita-springs",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/baton-rouge",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/laplace",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/ponchatoula",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/vacherie",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/louisiana/venice",
+      "destination": "/guides/us/louisiana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maine/bar-harbor",
+      "destination": "/guides/us/maine",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maine/bethel",
+      "destination": "/guides/us/maine",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maine/harpswell",
+      "destination": "/guides/us/maine",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maine/kennebunk",
+      "destination": "/guides/us/maine",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/cambridge",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/denton",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/edgewater",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/fort-washington",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/lusby",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/monkton",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/ocean-city",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/maryland/vienna",
+      "destination": "/guides/us/maryland",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/beverly",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/brookline",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/chelsea",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/falmouth",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/holbrook",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/lexington",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/mashpee",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/nantucket",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/north-andover",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/oak-bluffs",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/quincy",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/revere",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/sandwich",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/somerville",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/sudbury",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/winthrop",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/wrentham",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/michigan/detroit",
+      "destination": "/guides/us/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/michigan/grosse-ile-township",
+      "destination": "/guides/us/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/michigan/lake-leelanau",
+      "destination": "/guides/us/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/michigan/mount-pleasant",
+      "destination": "/guides/us/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/michigan/traverse-city",
+      "destination": "/guides/us/michigan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/minnesota/stillwater",
+      "destination": "/guides/us/minnesota",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/mississippi/natchez",
+      "destination": "/guides/us/mississippi",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/missouri/branson",
+      "destination": "/guides/us/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/missouri/kansas-city",
+      "destination": "/guides/us/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/missouri/st-louis",
+      "destination": "/guides/us/missouri",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/montana/missoula",
+      "destination": "/guides/us/montana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/montana/whitefish",
+      "destination": "/guides/us/montana",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-hampshire/laconia",
+      "destination": "/guides/us/new-hampshire",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-hampshire/new-castle",
+      "destination": "/guides/us/new-hampshire",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-hampshire/weare",
+      "destination": "/guides/us/new-hampshire",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-hampshire/wolfeboro",
+      "destination": "/guides/us/new-hampshire",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/atlantic-highlands",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/brick-township",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/edgewater",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/fieldsboro",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/hillsdale",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/keyport",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/lavallette",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/middletown-township",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/millville",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/ocean-city",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/shamong",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/wallington",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-jersey/wildwood-crest",
+      "destination": "/guides/us/new-jersey",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-mexico/albuquerque",
+      "destination": "/guides/us/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-mexico/las-cruces",
+      "destination": "/guides/us/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-mexico/los-ranchos-de-albuquerque",
+      "destination": "/guides/us/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-mexico/santa-fe",
+      "destination": "/guides/us/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-mexico/santa-fe-foothills",
+      "destination": "/guides/us/new-mexico",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/catskill",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/freeport",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/hammondsport",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/hancock",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/ithaca",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/lansing",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/montauk",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/napanoch",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/queens",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/rushville",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/staten-island",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/warwick",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/charlotte",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/elkin",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/highlands",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/kill-devil-hills",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/nags-head",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/north-carolina/raleigh",
+      "destination": "/guides/us/north-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/ohio/cincinnati",
+      "destination": "/guides/us/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/ohio/cleveland",
+      "destination": "/guides/us/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/ohio/columbus",
+      "destination": "/guides/us/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/ohio/lancaster",
+      "destination": "/guides/us/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/ohio/rockbridge",
+      "destination": "/guides/us/ohio",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/oklahoma/oklahoma-city",
+      "destination": "/guides/us/oklahoma",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/oregon/cascade-locks",
+      "destination": "/guides/us/oregon",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/airville",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/bethlehem",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/gettysburg",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/hawley",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/levittown",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/new-stanton",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/newville",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/ohiopyle",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/pennsylvania/wrightsville",
+      "destination": "/guides/us/pennsylvania",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/rhode-island/little-compton",
+      "destination": "/guides/us/rhode-island",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/rhode-island/warwick",
+      "destination": "/guides/us/rhode-island",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/aiken",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/bluffton",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/charleston",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/columbia",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/johns-island",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/mount-pleasant",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-carolina/saint-helena-island",
+      "destination": "/guides/us/south-carolina",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/south-dakota/rapid-city",
+      "destination": "/guides/us/south-dakota",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/franklin",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/granville",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/greenbrier",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/johnson-city",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/pigeon-forge",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/sevierville",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/tennessee/williamsport",
+      "destination": "/guides/us/tennessee",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/aransas-pass",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/dallas",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/fort-worth",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/port-aransas",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/san-antonio",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/spring",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/the-colony",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/utah/bryce-canyon-city",
+      "destination": "/guides/us/utah",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/utah/salt-lake-city",
+      "destination": "/guides/us/utah",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/utah/springdale",
+      "destination": "/guides/us/utah",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/utah/st-george",
+      "destination": "/guides/us/utah",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/braintree",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/fairlee",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/hartford",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/manchester",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/norwich",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/plymouth",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/royalton",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/waterbury",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/windsor",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/vermont/woodford",
+      "destination": "/guides/us/vermont",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/alexandria",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/arlington",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/cape-charles",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/charlottesville",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/covington",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/eagle-rock",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/great-falls",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/herndon",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/leesburg",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/richmond",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/stafford",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/washington/chelan",
+      "destination": "/guides/us/washington",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/west-virginia/harpers-ferry",
+      "destination": "/guides/us/west-virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/darlington",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/fish-creek",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/milwaukee",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/sister-bay",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/sturgeon-bay",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/washburn",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wyoming/cody",
+      "destination": "/guides/us/wyoming",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wyoming/jackson",
+      "destination": "/guides/us/wyoming",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wyoming/jackson-hole",
+      "destination": "/guides/us/wyoming",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wyoming/yellowstone-national-park",
+      "destination": "/guides/us/wyoming",
       "permanent": true
     }
   ],
