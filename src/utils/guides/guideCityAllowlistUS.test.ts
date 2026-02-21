@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { getToursByCity } from "../../data/tours";
 import {
   GUIDE_CITY_ALLOWLIST_US,
   isGuideCityAllowedUS,
@@ -13,21 +14,20 @@ describe("guideCityAllowlistUS", () => {
     expect(isGuideCityAllowedUS("hawaii", "hilo")).toBe(true);
   });
 
-  it("keeps only allowlisted Florida city guides in the registry", () => {
+  it("removes low-tour city guides from filtered states", () => {
     const floridaGuideSlugs = getGuidesByState("florida").map(
       record => record.citySlug
     );
 
     expect(floridaGuideSlugs).toContain("miami-beach");
     expect(floridaGuideSlugs).toContain("orlando");
-    expect(floridaGuideSlugs).toContain("daytona-beach");
 
     expect(floridaGuideSlugs).not.toContain("canal-point");
-    expect(floridaGuideSlugs).not.toContain("hobe-sound");
-    expect(floridaGuideSlugs).not.toContain("sanford");
+    expect(floridaGuideSlugs).not.toContain("daytona-beach");
+    expect(floridaGuideSlugs).not.toContain("tampa");
   });
 
-  it("keeps only allowlisted Tennessee and Connecticut city guides", () => {
+  it("keeps only guides with at least five tours in Tennessee and Connecticut", () => {
     const tennesseeGuideSlugs = getGuidesByState("tennessee").map(
       record => record.citySlug
     );
@@ -35,16 +35,16 @@ describe("guideCityAllowlistUS", () => {
       record => record.citySlug
     );
 
-    expect(tennesseeGuideSlugs).toEqual([
-      "chattanooga",
-      "franklin",
-      "johnson-city",
-      "nashville",
-      "sevierville",
-    ]);
-    expect(tennesseeGuideSlugs).not.toContain("christiana");
+    expect(tennesseeGuideSlugs).toEqual(["chattanooga", "nashville"]);
+    expect(connecticutGuideSlugs).toEqual(["essex"]);
 
-    expect(connecticutGuideSlugs).toEqual(["east-lyme", "essex", "new-london"]);
-    expect(connecticutGuideSlugs).not.toContain("plainville");
+    for (const citySlug of [...tennesseeGuideSlugs, ...connecticutGuideSlugs]) {
+      const stateSlug = tennesseeGuideSlugs.includes(citySlug)
+        ? "tennessee"
+        : "connecticut";
+      expect(getToursByCity(stateSlug, citySlug).length).toBeGreaterThanOrEqual(
+        5
+      );
+    }
   });
 });

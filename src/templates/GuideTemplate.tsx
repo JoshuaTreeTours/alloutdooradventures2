@@ -102,16 +102,22 @@ const CityGuideLinks = ({ guide }: { guide: GuideContent }) => {
 export default function GuideTemplate({ guide }: GuideTemplateProps) {
   const cityPills =
     guide.topCities
-      ?.filter(
-        city => guide.type !== "state" || hasUsGuide(guide.slug, city.slug)
-      )
-      .map(city => ({
-        label: city.name,
-        href:
-          guide.type === "state"
-            ? `/guides/us/${guide.slug}/${city.slug}`
-            : `/guides/world/${guide.slug}/${city.slug}`,
-      })) ?? [];
+      ?.map(city => {
+        if (guide.type === "state") {
+          const hasCityGuide = hasUsGuide(guide.slug, city.slug);
+          return {
+            label: hasCityGuide ? city.name : `${city.name} tours`,
+            href: hasCityGuide
+              ? `/guides/us/${guide.slug}/${city.slug}`
+              : `/destinations/states/${guide.slug}/cities/${city.slug}/tours`,
+          };
+        }
+
+        return {
+          label: city.name,
+          href: `/guides/world/${guide.slug}/${city.slug}`,
+        };
+      }) ?? [];
 
   const guideImages = guide.type === "city" ? (guide.guideImages ?? []) : [];
   const guideTitle =

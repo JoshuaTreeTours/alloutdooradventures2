@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import GuidePageTemplate from "../../templates/GuidePageTemplate";
 import { loadUsCityGuide } from "../../utils/loadGuide";
+import { useLocation } from "wouter";
 
 type CityGuideUsRouteProps = {
   params: {
@@ -9,18 +11,17 @@ type CityGuideUsRouteProps = {
 };
 
 export default function CityGuideUsRoute({ params }: CityGuideUsRouteProps) {
+  const [, setLocation] = useLocation();
   const guide = loadUsCityGuide(params.stateSlug, params.citySlug);
 
+  useEffect(() => {
+    if (!guide) {
+      setLocation(`/guides/us/${params.stateSlug}`, { replace: true });
+    }
+  }, [guide, params.stateSlug, setLocation]);
+
   if (!guide) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
-        <h1 className="text-2xl font-semibold">Guide not found</h1>
-        <p className="mt-4 text-sm text-[#405040]">
-          We couldn’t find that guide. Explore the main guides list to pick
-          another destination.
-        </p>
-      </main>
-    );
+    return null;
   }
 
   return <GuidePageTemplate guide={guide} />;
