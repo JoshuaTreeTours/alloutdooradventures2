@@ -13,6 +13,7 @@ import {
   getSiteStructuredDataNodes,
   normalizeStructuredData,
   resetMissingGeoFallbackReport,
+  resolveOfferUrl,
 } from "./structuredData";
 import type { Tour } from "../data/tours.types";
 
@@ -288,7 +289,7 @@ describe("tour product/trip schema safety", () => {
     );
   });
 
-  it("uses Product.url as detailUrl and Offer.url as bookingUrl when provided", () => {
+  it("keeps Product.url canonical while Offer.url resolves to /book when route exists", () => {
     const product = buildTourProductStructuredData({
       tour: baseTour,
       detailUrl:
@@ -302,9 +303,53 @@ describe("tour product/trip schema safety", () => {
         "@type": "WebPage",
       },
       offers: {
-        url: "https://booking.example.com/tour-1",
+        url: "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1/book",
       },
     });
+  });
+
+  it("uses /book offer URLs by default when booking routes exist", () => {
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/united-kingdom/london/london-e-bike-tour-private-366443";
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl,
+      bookingUrl: "https://booking.example.com/tour-1",
+    });
+    const trip = buildTourTripStructuredData({
+      tour: baseTour,
+      detailUrl,
+      bookingUrl: "https://booking.example.com/tour-1",
+    });
+
+    expect(product.url).toBe(detailUrl);
+    expect(product.offers).toMatchObject({
+      url: `${detailUrl}/book`,
+    });
+    expect(trip.offers).toMatchObject({
+      url: `${detailUrl}/book`,
+    });
+  });
+
+  it("falls back to partner booking URL then canonical URL when flag is disabled", () => {
+    process.env.ENABLE_AOA_BOOKING_OFFER_URL = "false";
+
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/united-kingdom/london/london-e-bike-tour-private-366443";
+    expect(
+      resolveOfferUrl({
+        canonicalUrl: detailUrl,
+        partnerBookingUrl: "https://booking.example.com/tour-1",
+      })
+    ).toBe("https://booking.example.com/tour-1");
+
+    expect(
+      resolveOfferUrl({
+        canonicalUrl: detailUrl,
+      })
+    ).toBe(detailUrl);
+
+    delete process.env.ENABLE_AOA_BOOKING_OFFER_URL;
   });
 
   it("maps destination country names to ISO 3166-1 alpha-2 codes", () => {

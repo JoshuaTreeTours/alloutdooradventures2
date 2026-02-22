@@ -65,7 +65,7 @@ describe("buildSchemaGraph", () => {
     expect(breadcrumbUrls.join(" ")).not.toContain("/destinations/california");
   });
 
-  it("keeps Product.url canonical and Offer.url as booking URL", () => {
+  it("keeps Product.url canonical and uses /book Offer.url when enabled", () => {
     const graph = buildSchemaGraph(baseTour, seo as never);
     const product = graph.find(node => node["@type"] === "Product") as {
       url: string;
@@ -76,7 +76,7 @@ describe("buildSchemaGraph", () => {
       "https://www.alloutdooradventures.com/destinations/united-states/hawaii/hilo/tours/discover-scuba-diving"
     );
     expect(product.offers.url).toBe(
-      "https://booking.example.com/discover-scuba-diving"
+      "https://www.alloutdooradventures.com/destinations/united-states/hawaii/hilo/tours/discover-scuba-diving/book"
     );
   });
 
@@ -100,4 +100,99 @@ describe("buildSchemaGraph", () => {
     );
     expect(website).toBeTruthy();
   });
+
+  it("falls back to partner booking URL when offer flag is disabled", () => {
+    process.env.ENABLE_AOA_BOOKING_OFFER_URL = "false";
+
+    const graph = buildSchemaGraph(baseTour, seo as never);
+    const product = graph.find(node => node["@type"] === "Product") as {
+      offers: { url: string };
+    };
+
+    expect(product.offers.url).toBe(
+      "https://booking.example.com/discover-scuba-diving"
+    );
+
+    delete process.env.ENABLE_AOA_BOOKING_OFFER_URL;
+  });
+
+  it("keeps org/brand IDs, addressCountry, and priceValidUntil for Hilo/Joshua Tree/London", () => {
+    const samples: Engine2Tour[] = [
+      baseTour,
+      {
+        ...baseTour,
+        id: "eng2-jt",
+        sourceCitySlug: "joshua-tree",
+        slug: "joshua-tree-jeep-tour",
+        name: "Joshua Tree Jeep Tour",
+        seo: {
+          ...baseTour.seo,
+          canonicalPath:
+            "/destinations/united-states/california/joshua-tree/tours/joshua-tree-jeep-tour",
+        },
+        geo: {
+          ...baseTour.geo,
+          region: "California",
+          city: "Joshua Tree",
+        },
+        booking: {
+          bookingUrl: "https://booking.example.com/joshua-tree-jeep-tour",
+        },
+      },
+      {
+        ...baseTour,
+        id: "eng2-london",
+        sourceCountrySlug: "united-kingdom",
+        sourceCitySlug: "london",
+        slug: "london-e-bike-tour-private-366443",
+        name: "London E-Bike Tour",
+        seo: {
+          ...baseTour.seo,
+          canonicalPath:
+            "/tours/united-kingdom/london/london-e-bike-tour-private-366443",
+        },
+        geo: {
+          ...baseTour.geo,
+          country: "United Kingdom",
+          region: "England",
+          city: "London",
+        },
+        booking: {
+          bookingUrl:
+            "https://booking.example.com/london-e-bike-tour-private-366443",
+        },
+      },
+    ];
+
+    for (const sample of samples) {
+      const sampleSeo = {
+        title: sample.seo.title,
+        description: sample.seo.description,
+        canonical: `https://www.alloutdooradventures.com${sample.seo.canonicalPath}`,
+        og: {
+          image: sample.seo.ogImage,
+        },
+      };
+
+      const graph = buildSchemaGraph(sample, sampleSeo as never);
+      const product = graph.find(node => node["@type"] === "Product") as {
+        offers: { priceValidUntil?: string };
+      };
+      const place = graph.find(node => node["@type"] === "Place") as {
+        address: { addressCountry: string };
+      };
+      const org = graph.find(
+        node => node["@id"] === "https://www.alloutdooradventures.com/#org"
+      );
+      const brand = graph.find(
+        node => node["@id"] === "https://www.alloutdooradventures.com/#brand"
+      );
+
+      expect(org).toBeTruthy();
+      expect(brand).toBeTruthy();
+      expect(place.address.addressCountry).toBeTypeOf("string");
+      expect(product.offers.priceValidUntil).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+    }
+  });
+
 });
