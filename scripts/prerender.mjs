@@ -705,14 +705,6 @@ const main = async () => {
     buildImageUrl,
     getStaticPageSeo,
   } = seoModule;
-  const schemaGeoFallbackFromTours = tours
-    .filter(tour => !tour?.destination?.country)
-    .map(tour => ({
-      tourId: tour.id,
-      detailUrl: buildCanonicalUrl(getTourDetailPath(tour)),
-      fallback: "US",
-      reason: "missing destination.country inferred from tour route",
-    }));
   const siteBrandName = siteModule?.SITE_BRAND_NAME ?? "Outdoor Adventures";
   const resolveHeroImageForRoute = heroModule?.resolveHeroImageForRoute ?? null;
   const getStateBySlug = destinationsModule?.getStateBySlug ?? null;
@@ -756,11 +748,13 @@ const main = async () => {
   resetMissingGeoFallbackReport?.();
 
   const writeSchemaMissingGeoReport = async () => {
-    const schemaMissingGeoReport = [
-      ...schemaGeoFallbackFromTours,
-      ...(getMissingGeoFallbackReport ? getMissingGeoFallbackReport() : []),
-    ];
-    const reportPath = path.resolve(__dirname, "../reports/schema-missing-geo.json");
+    const schemaMissingGeoReport = getMissingGeoFallbackReport
+      ? getMissingGeoFallbackReport()
+      : [];
+    const reportPath = path.resolve(
+      __dirname,
+      "../reports/schema-country-fallbacks.json"
+    );
     await mkdir(path.dirname(reportPath), { recursive: true });
     await writeFile(
       reportPath,
@@ -1292,7 +1286,6 @@ const main = async () => {
     });
     throw new Error("Prerender verification failed.");
   }
-
 
   await writeSchemaMissingGeoReport();
 

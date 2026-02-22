@@ -7,6 +7,12 @@ import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages } from "./hero";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 import { SITE_BRAND_NAME } from "./site";
+import {
+  COUNTRY_NAME_TO_ISO2,
+  COUNTRY_SLUG_TO_ISO2,
+  extractCountrySlugFromDestinationsPath,
+  normalizeCountryKey,
+} from "./geo/countryCode";
 
 type StructuredDataValue =
   | string
@@ -253,34 +259,14 @@ const buildImageObject = (url: string, id?: string) => ({
   url,
 });
 
-const COUNTRY_NAME_TO_CODE: Record<string, string> = {
-  "united states": "US",
-  "united states of america": "US",
-  usa: "US",
-  us: "US",
-  australia: "AU",
-  canada: "CA",
-  denmark: "DK",
-  france: "FR",
-  germany: "DE",
-  greece: "GR",
-  iceland: "IS",
-  ireland: "IE",
-  italy: "IT",
-  netherlands: "NL",
-  portugal: "PT",
-  spain: "ES",
-  "united kingdom": "GB",
-  "great britain": "GB",
-  uk: "GB",
-};
-
 const ISO_COUNTRY_CODE_PATTERN = /^[A-Za-z]{2}$/;
 
 type MissingGeoFallback = {
   tourId: string;
+  title: string;
   detailUrl: string;
-  fallback: string;
+  destination: Tour["destination"];
+  inferredISO2: string;
   reason: string;
 };
 
@@ -289,7 +275,7 @@ const missingGeoFallbacks: MissingGeoFallback[] = [];
 const recordMissingGeoFallback = (entry: MissingGeoFallback) => {
   missingGeoFallbacks.push(entry);
   console.warn(
-    `[schema] Tour ${entry.tourId} missing geo metadata (${entry.reason}); using ${entry.fallback}.`
+    `[schema] Tour ${entry.tourId} missing geo metadata (${entry.reason}); using ${entry.inferredISO2}.`
   );
 };
 
@@ -299,42 +285,50 @@ export const resetMissingGeoFallbackReport = () => {
   missingGeoFallbacks.length = 0;
 };
 
-const normalizeCountryKey = (value: string) =>
-  value.trim().toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, " ");
+const resolveISO2CountryCode = ({
+  tour,
+  detailUrl,
+}: {
+  tour: Tour;
+  detailUrl: string;
+}): string => {
+  const rawCountryCode = tour.destination.countryCode?.trim();
+  if (rawCountryCode && ISO_COUNTRY_CODE_PATTERN.test(rawCountryCode)) {
+    return rawCountryCode.toUpperCase();
+  }
 
-const resolveCountryCode = (tour: Tour, detailUrl: string): string => {
-  const country = tour.destination.country?.trim();
-  if (!country) {
-    const normalizedUrl = detailUrl.toLowerCase();
-    const isUnitedStatesRoute =
-      normalizedUrl.includes("/destinations/united-states/") ||
-      normalizedUrl.includes("/tours/");
-    if (isUnitedStatesRoute) {
-      recordMissingGeoFallback({
-        tourId: tour.id,
-        detailUrl,
-        fallback: "US",
-        reason: "missing destination.country inferred from URL",
-      });
-      return "US";
+  const countrySlug = tour.destination.countrySlug?.trim().toLowerCase();
+  if (countrySlug && COUNTRY_SLUG_TO_ISO2[countrySlug]) {
+    return COUNTRY_SLUG_TO_ISO2[countrySlug];
+  }
+
+  const inferredCountrySlug = extractCountrySlugFromDestinationsPath(detailUrl);
+  if (inferredCountrySlug && COUNTRY_SLUG_TO_ISO2[inferredCountrySlug]) {
+    return COUNTRY_SLUG_TO_ISO2[inferredCountrySlug];
+  }
+
+  const countryName = tour.destination.country?.trim();
+  if (countryName) {
+    if (ISO_COUNTRY_CODE_PATTERN.test(countryName)) {
+      return countryName.toUpperCase();
     }
-    recordMissingGeoFallback({
-      tourId: tour.id,
-      detailUrl,
-      fallback: "US",
-      reason: "missing destination.country default fallback",
-    });
-    return "US";
+
+    const normalizedCountry = normalizeCountryKey(countryName);
+    if (COUNTRY_NAME_TO_ISO2[normalizedCountry]) {
+      return COUNTRY_NAME_TO_ISO2[normalizedCountry];
+    }
   }
 
-  if (ISO_COUNTRY_CODE_PATTERN.test(country)) {
-    return country.toUpperCase();
-  }
-
-  const normalizedCountry = normalizeCountryKey(country);
-  if (COUNTRY_NAME_TO_CODE[normalizedCountry]) {
-    return COUNTRY_NAME_TO_CODE[normalizedCountry];
-  }
+  recordMissingGeoFallback({
+    tourId: tour.id,
+    title: tour.title,
+    detailUrl,
+    destination: tour.destination,
+    inferredISO2: "US",
+    reason: inferredCountrySlug
+      ? `unmapped country slug: ${inferredCountrySlug}`
+      : "missing country metadata and URL inference",
+  });
 
   return "US";
 };
@@ -342,7 +336,7 @@ const resolveCountryCode = (tour: Tour, detailUrl: string): string => {
 const buildTourLocationStructuredData = (tour: Tour, detailUrl: string) => {
   const locality = tour.destination.city;
   const region = tour.destination.state;
-  const countryCode = resolveCountryCode(tour, detailUrl);
+  const countryCode = resolveISO2CountryCode({ tour, detailUrl });
   const placeName = region ? `${locality}, ${region}` : locality;
 
   return {
@@ -474,7 +468,8 @@ export const buildTourProductStructuredData = ({
   const offerUrl = bookingUrl || detailUrl;
   const ratingValue = tour.badges?.rating;
   const reviewCount = tour.badges?.reviewCount;
-  const ratingsEnabled = process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const ratingsEnabled =
+    process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
   const aggregateRating =
     ratingsEnabled &&
     typeof ratingValue === "number" &&
@@ -543,7 +538,8 @@ export const buildTourTripStructuredData = ({
   const offerUrl = bookingUrl || detailUrl;
   const ratingValue = tour.badges?.rating;
   const reviewCount = tour.badges?.reviewCount;
-  const ratingsEnabled = process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const ratingsEnabled =
+    process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
   const aggregateRating =
     ratingsEnabled &&
     typeof ratingValue === "number" &&
