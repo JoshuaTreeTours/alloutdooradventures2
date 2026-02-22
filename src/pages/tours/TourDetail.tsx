@@ -23,7 +23,6 @@ import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
 import {
   buildBreadcrumbList,
-  buildTourBreadcrumbItems,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -92,7 +91,10 @@ export default function TourDetail({ params }: TourDetailProps) {
         description: metaDescription,
         images: structuredImages.length ? structuredImages : undefined,
       }),
-      buildBreadcrumbList(buildTourBreadcrumbItems(tour, detailUrl)),
+      buildBreadcrumbList([
+        { name: "Tours", url: "/tours" },
+        { name: tour.title, url: detailUrl },
+      ]),
     ];
   }, [
     bookingUrl,

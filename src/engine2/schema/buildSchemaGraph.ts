@@ -1,8 +1,8 @@
 import {
-  SITE_BRAND_ID,
+  getSiteStructuredDataNodes,
   buildBreadcrumbList,
   buildWebPageStructuredData,
-  getSiteStructuredDataNodes,
+  SITE_ORGANIZATION_ID,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
@@ -13,16 +13,6 @@ import {
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 
 type StructuredDataNode = Record<string, unknown>;
-
-type DestinationMeta = {
-  countryCode: string;
-  countryName: string;
-  stateName?: string;
-  stateSlug?: string;
-  cityUrl: string;
-  toursUrl: string;
-  breadcrumbs: { name: string; url: string }[];
-};
 
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
@@ -41,61 +31,43 @@ const formatCityFromSlug = (slug: string) =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
-const getDestinationMeta = (tour: Engine2Tour): DestinationMeta => {
-  const countrySlug = (tour.sourceCountrySlug || "united-states").trim();
-
-  if (countrySlug === "united-states") {
-    const stateSlug = tour.geo.region.trim().toLowerCase().replace(/\s+/g, "-");
+const getDestinationMeta = (tour: Engine2Tour) => {
+  if (tour.sourceCountrySlug === "canada") {
     return {
-      countryCode: "US",
-      countryName: "United States",
-      stateName: tour.geo.region,
-      stateSlug,
-      cityUrl: `/destinations/united-states/${stateSlug}/${tour.sourceCitySlug}`,
-      toursUrl: `/destinations/united-states/${stateSlug}/${tour.sourceCitySlug}/tours`,
-      breadcrumbs: [
-        { name: "Destinations", url: "/destinations" },
-        { name: "United States", url: "/destinations/united-states" },
-        {
-          name: tour.geo.region,
-          url: `/destinations/united-states/${stateSlug}`,
-        },
-        {
-          name: formatCityFromSlug(tour.sourceCitySlug),
-          url: `/destinations/united-states/${stateSlug}/${tour.sourceCitySlug}`,
-        },
-      ],
+      countryCode: "CA",
+      countryName: "Canada",
+      countryUrl: "/destinations/world/canada",
+      cityUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
     };
   }
 
-  const countryName = tour.geo.country;
-  const cityUrl = `/destinations/${countrySlug}/${tour.sourceCitySlug}`;
+  if (tour.sourceCountrySlug === "mexico") {
+    return {
+      countryCode: "MX",
+      countryName: "Mexico",
+      countryUrl: "/destinations/mexico",
+      cityUrl: `/destinations/mexico/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/mexico/${tour.sourceCitySlug}/tours`,
+    };
+  }
 
-  const countryCode =
-    countrySlug === "canada"
-      ? "CA"
-      : countrySlug === "mexico"
-        ? "MX"
-        : countrySlug === "netherlands"
-          ? "NL"
-          : "US";
+  if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
+    return {
+      countryCode: (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
+      countryName: tour.geo.country,
+      countryUrl: `/destinations/${tour.sourceCountrySlug}`,
+      cityUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
+      toursUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
+    };
+  }
 
   return {
-    countryCode,
-    countryName,
-    cityUrl,
-    toursUrl: `${cityUrl}/tours`,
-    breadcrumbs: [
-      { name: "Destinations", url: "/destinations" },
-      {
-        name: countryName,
-        url: `/destinations/${countrySlug}`,
-      },
-      {
-        name: formatCityFromSlug(tour.sourceCitySlug),
-        url: cityUrl,
-      },
-    ],
+    countryCode: "US",
+    countryName: tour.geo.region,
+    countryUrl: "/destinations/california",
+    cityUrl: `/destinations/california/${tour.sourceCitySlug}`,
+    toursUrl: `/destinations/california/${tour.sourceCitySlug}/tours`,
   };
 };
 
@@ -111,6 +83,13 @@ export const buildSchemaGraph = (
   const flooredPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
+  const offer: Record<string, unknown> = {
+    "@type": "Offer",
+    url: tour.booking.bookingUrl,
+    availability: "https://schema.org/InStock",
+    price: flooredPrice.toFixed(2),
+    priceCurrency: offerCurrency,
+  };
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -119,7 +98,6 @@ export const buildSchemaGraph = (
       name: seo.title,
       description: seo.description,
       image: effectiveHeroImage,
-      mainEntityId: productId,
     }),
     {
       "@type": "Place",
@@ -146,17 +124,9 @@ export const buildSchemaGraph = (
       name: tour.name,
       description: seo.description,
       image: [effectiveHeroImage, ...imageGallery],
-      brand: { "@id": SITE_BRAND_ID },
-      offers: {
-        "@type": "Offer",
-        url: seo.canonical,
-        availability: "https://schema.org/InStock",
-        price: flooredPrice.toFixed(2),
-        priceCurrency: offerCurrency,
-      },
-      location: { "@id": placeId },
-      provider: { "@id": SITE_BRAND_ID },
-      mainEntityOfPage: { "@id": `${seo.canonical}#webpage` },
+      brand: { "@type": "Brand", name: "All Outdoor Adventures" },
+      offers: offer,
+      provider: { "@id": SITE_ORGANIZATION_ID },
     },
     {
       "@type": "TouristTrip",
@@ -164,20 +134,20 @@ export const buildSchemaGraph = (
       name: tour.name,
       description: seo.description,
       itinerary: { "@id": placeId },
-      provider: { "@id": SITE_BRAND_ID },
+      provider: { "@id": SITE_ORGANIZATION_ID },
       touristType: "Adventure travelers",
-      offers: {
-        "@type": "Offer",
-        url: seo.canonical,
-        availability: "https://schema.org/InStock",
-        price: flooredPrice.toFixed(2),
-        priceCurrency: offerCurrency,
-      },
-      location: { "@id": placeId },
-      mainEntityOfPage: { "@id": `${seo.canonical}#webpage` },
+      offers: offer,
     },
     buildBreadcrumbList([
-      ...destinationMeta.breadcrumbs,
+      { name: "Destinations", url: "/destinations" },
+      {
+        name: destinationMeta.countryName,
+        url: destinationMeta.countryUrl,
+      },
+      {
+        name: formatCityFromSlug(tour.sourceCitySlug),
+        url: destinationMeta.cityUrl,
+      },
       {
         name: "Tours",
         url: destinationMeta.toursUrl,

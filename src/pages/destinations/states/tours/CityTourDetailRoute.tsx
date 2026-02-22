@@ -28,7 +28,6 @@ import { filterHeroImages, resolveHeroImageForRoute } from "../../../../utils/he
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
-  buildTourBreadcrumbItems,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -111,7 +110,6 @@ export default function CityTourDetailRoute({
         name: tour.title,
         description: seoDescription,
         image: heroImage,
-        mainEntityId: `${canonicalUrl}#product`,
       }),
       buildTourProductStructuredData({
         tour,
@@ -125,7 +123,13 @@ export default function CityTourDetailRoute({
         description: productDescription,
         images: structuredImages.length ? structuredImages : undefined,
       }),
-      buildBreadcrumbList(buildTourBreadcrumbItems(tour, canonicalUrl)),
+      buildBreadcrumbList([
+        { name: "Destinations", url: "/destinations" },
+        ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
+        ...(cityHref ? [{ name: city?.name ?? "", url: cityHref }] : []),
+        ...(toursHref ? [{ name: "Tours", url: toursHref }] : []),
+        { name: tour.title, url: canonicalUrl },
+      ]),
     ];
   }, [
     bookingUrl,
