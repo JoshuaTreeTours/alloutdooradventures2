@@ -35,25 +35,11 @@ describe("guideCityAllowlistUS", () => {
     expect(vermontGuideSlugs).not.toContain("waterbury");
     expect(vermontGuideSlugs).not.toContain("woodford");
   });
-  it("keeps only high-authority Virginia guides", () => {
+  it("removes all Virginia guides from the registry", () => {
     const virginiaGuideSlugs = getGuidesByState("virginia").map(
       record => record.citySlug
     );
 
-    expect(virginiaGuideSlugs).toEqual([
-      "alexandria",
-      "arlington",
-      "charlottesville",
-      "great-falls",
-      "richmond",
-    ]);
-
-    expect(virginiaGuideSlugs).not.toContain("cape-charles");
-    expect(virginiaGuideSlugs).not.toContain("chincoteague");
-    expect(virginiaGuideSlugs).not.toContain("covington");
-    expect(virginiaGuideSlugs).not.toContain("eagle-rock");
-    expect(virginiaGuideSlugs).not.toContain("herndon");
-    expect(virginiaGuideSlugs).not.toContain("leesburg");
-    expect(virginiaGuideSlugs).not.toContain("stafford");
+    expect(virginiaGuideSlugs).toEqual([]);
   });
 });

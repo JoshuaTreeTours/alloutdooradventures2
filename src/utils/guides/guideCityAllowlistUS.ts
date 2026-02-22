@@ -49,13 +49,6 @@ export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
     "newport-beach",
     "joshua-tree",
   ],
-  virginia: [
-    "alexandria",
-    "arlington",
-    "charlottesville",
-    "richmond",
-    "great-falls",
-  ],
 };
 
 const GUIDE_CITY_BLOCKLIST_US: Record<string, string[]> = {
@@ -113,15 +106,6 @@ const GUIDE_CITY_BLOCKLIST_US: Record<string, string[]> = {
     "woodford",
   ],
   wisconsin: ["darlington"],
-  virginia: [
-    "cape-charles",
-    "chincoteague",
-    "covington",
-    "eagle-rock",
-    "herndon",
-    "leesburg",
-    "stafford",
-  ],
 };
 
 export const isGuideCityBlockedUS = (
