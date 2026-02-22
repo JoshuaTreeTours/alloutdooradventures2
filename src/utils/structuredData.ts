@@ -374,6 +374,50 @@ const parseBuildDate = () => {
   return new Date();
 };
 
+const OFFER_URL_BOOK_ROUTE_PATTERNS = [
+  /^\/destinations\/(?:world\/canada\/[^/]+\/[^/]+|[^/]+\/[^/]+|united-states\/[^/]+\/[^/]+)\/tours\/[^/]+\/?$/,
+  /^\/tours\/[^/]+\/?$/,
+  /^\/tours\/[^/]+\/[^/]+\/[^/]+\/?$/,
+];
+
+const isAoaBookingOfferEnabled = () =>
+  process.env.ENABLE_AOA_BOOKING_OFFER_URL !== "false";
+
+const hasAoaBookingRoute = (canonicalUrl: string): boolean => {
+  try {
+    const { pathname } = new URL(canonicalUrl);
+    return OFFER_URL_BOOK_ROUTE_PATTERNS.some(pattern => pattern.test(pathname));
+  } catch {
+    return OFFER_URL_BOOK_ROUTE_PATTERNS.some(pattern =>
+      pattern.test(canonicalUrl)
+    );
+  }
+};
+
+export const resolveCanonicalProductUrl = (detailUrl: string): string => {
+  const absoluteDetailUrl = toAbsoluteUrl(detailUrl).trim();
+  return absoluteDetailUrl.endsWith("/")
+    ? absoluteDetailUrl.slice(0, -1)
+    : absoluteDetailUrl;
+};
+
+export const buildAoaBookingUrlFromCanonical = (canonicalUrl: string): string =>
+  canonicalUrl.endsWith("/book") ? canonicalUrl : `${canonicalUrl}/book`;
+
+export const resolveOfferUrl = ({
+  canonicalUrl,
+  partnerBookingUrl,
+}: {
+  canonicalUrl: string;
+  partnerBookingUrl?: string;
+}): string => {
+  if (isAoaBookingOfferEnabled() && hasAoaBookingRoute(canonicalUrl)) {
+    return buildAoaBookingUrlFromCanonical(canonicalUrl);
+  }
+
+  return partnerBookingUrl ? toAbsoluteUrl(partnerBookingUrl) : canonicalUrl;
+};
+
 export const getPriceValidUntil = (days = 365): string => {
   const baseDate = parseBuildDate();
   const futureDate = new Date(baseDate);
@@ -465,7 +509,11 @@ export const buildTourProductStructuredData = ({
     ],
     "product"
   );
-  const offerUrl = bookingUrl || detailUrl;
+  const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
+  const offerUrl = resolveOfferUrl({
+    canonicalUrl: canonicalProductUrl,
+    partnerBookingUrl: bookingUrl,
+  });
   const ratingValue = tour.badges?.rating;
   const reviewCount = tour.badges?.reviewCount;
   const ratingsEnabled =
@@ -493,8 +541,8 @@ export const buildTourProductStructuredData = ({
 
   return {
     "@type": "Product",
-    "@id": `${detailUrl}#product`,
-    url: detailUrl,
+    "@id": `${canonicalProductUrl}#product`,
+    url: canonicalProductUrl,
     name: tour.title,
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
@@ -507,8 +555,11 @@ export const buildTourProductStructuredData = ({
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,
     },
-    location: buildTourLocationStructuredData(tour, detailUrl),
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${detailUrl}#webpage` },
+    location: buildTourLocationStructuredData(tour, canonicalProductUrl),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${canonicalProductUrl}#webpage`,
+    },
   };
 };
 
@@ -535,7 +586,11 @@ export const buildTourTripStructuredData = ({
     ],
     "product"
   );
-  const offerUrl = bookingUrl || detailUrl;
+  const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
+  const offerUrl = resolveOfferUrl({
+    canonicalUrl: canonicalProductUrl,
+    partnerBookingUrl: bookingUrl,
+  });
   const ratingValue = tour.badges?.rating;
   const reviewCount = tour.badges?.reviewCount;
   const ratingsEnabled =
@@ -554,7 +609,7 @@ export const buildTourTripStructuredData = ({
 
   return {
     "@type": "TouristTrip",
-    "@id": `${detailUrl}#touristtrip`,
+    "@id": `${canonicalProductUrl}#touristtrip`,
     name: tour.title,
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
@@ -572,8 +627,8 @@ export const buildTourTripStructuredData = ({
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,
     },
-    location: buildTourLocationStructuredData(tour, detailUrl),
-    mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
+    location: buildTourLocationStructuredData(tour, canonicalProductUrl),
+    mainEntityOfPage: { "@id": `${canonicalProductUrl}#webpage` },
   };
 };
 

@@ -5,6 +5,8 @@ import {
   SITE_ORGANIZATION_ID,
   SITE_BRAND_ID,
   getPriceValidUntil,
+  resolveCanonicalProductUrl,
+  resolveOfferUrl,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
@@ -111,9 +113,13 @@ export const buildSchemaGraph = (
   const flooredPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
+  const canonicalProductUrl = resolveCanonicalProductUrl(seo.canonical);
   const offer: Record<string, unknown> = {
     "@type": "Offer",
-    url: tour.booking.bookingUrl,
+    url: resolveOfferUrl({
+      canonicalUrl: canonicalProductUrl,
+      partnerBookingUrl: tour.booking.bookingUrl,
+    }),
     availability: "https://schema.org/InStock",
     price: flooredPrice.toFixed(2),
     priceCurrency: offerCurrency,
@@ -150,7 +156,7 @@ export const buildSchemaGraph = (
     {
       "@type": "Product",
       "@id": productId,
-      url: seo.canonical,
+      url: canonicalProductUrl,
       name: tour.name,
       description: seo.description,
       image: [effectiveHeroImage, ...imageGallery],
