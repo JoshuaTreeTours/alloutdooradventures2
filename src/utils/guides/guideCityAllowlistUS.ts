@@ -12,15 +12,10 @@ export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
     "miami-beach",
     "orlando",
     "tampa",
-    "naples",
     "key-west",
-    "key-largo",
-    "islamorada",
     "st-augustine",
-    "sarasota",
     "clearwater",
     "destin",
-    "panama-city-beach",
     "fort-lauderdale",
     "daytona-beach",
   ],
@@ -52,6 +47,16 @@ export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
 };
 
 const GUIDE_CITY_BLOCKLIST_US: Record<string, string[]> = {
+  hawaii: [
+    "kahului",
+    "kailua-kona",
+    "kihei",
+    "lahaina",
+    "waikoloa-village",
+    "wailea-makena",
+  ],
+  alaska: ["homer", "palmer", "seward"],
+  utah: ["bryce-canyon-city", "hurricane", "springdale", "st-george"],
   florida: [
     "clearwater",
     "daytona-beach",
@@ -59,16 +64,21 @@ const GUIDE_CITY_BLOCKLIST_US: Record<string, string[]> = {
     "islamorada",
     "key-largo",
     "miami-beach",
+    "naples",
     "panama-city-beach",
     "sarasota",
     "st-augustine",
   ],
-  "new-hampshire": ["freedom", "laconia", "new-castle", "weare"],
+  "new-hampshire": ["freedom", "laconia", "new-castle", "weare", "wolfeboro"],
   "new-mexico": ["abiquiu", "los-ranchos-de-albuquerque", "santa-fe-foothills"],
   "new-york": [
+    "catskill",
     "freeport",
     "hancock",
+    "ithaca",
     "lansing",
+    "montauk",
+    "napanach",
     "napanock",
     "queens",
     "staten-island",
@@ -105,7 +115,7 @@ const GUIDE_CITY_BLOCKLIST_US: Record<string, string[]> = {
     "windsor",
     "woodford",
   ],
-  wisconsin: ["darlington"],
+  wisconsin: ["darlington", "fish-creek", "sister-bay", "sturgeon-bay"],
 };
 
 export const isGuideCityBlockedUS = (

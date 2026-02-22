@@ -42,4 +42,37 @@ describe("guideCityAllowlistUS", () => {
 
     expect(virginiaGuideSlugs).toEqual([]);
   });
+  it("removes final aggressive prune slugs across targeted states", () => {
+    const alaska = getGuidesByState("alaska").map(record => record.citySlug);
+    const utah = getGuidesByState("utah").map(record => record.citySlug);
+    const newYork = getGuidesByState("new-york").map(record => record.citySlug);
+    const wisconsin = getGuidesByState("wisconsin").map(
+      record => record.citySlug
+    );
+    const florida = getGuidesByState("florida").map(record => record.citySlug);
+
+    expect(alaska).not.toContain("homer");
+    expect(alaska).not.toContain("palmer");
+    expect(alaska).not.toContain("seward");
+
+    expect(utah).not.toContain("hurricane");
+    expect(utah).not.toContain("bryce-canyon-city");
+    expect(utah).not.toContain("springdale");
+    expect(utah).not.toContain("st-george");
+
+    expect(newYork).not.toContain("catskill");
+    expect(newYork).not.toContain("ithaca");
+    expect(newYork).not.toContain("montauk");
+    expect(newYork).not.toContain("napanach");
+
+    expect(wisconsin).not.toContain("fish-creek");
+    expect(wisconsin).not.toContain("sister-bay");
+    expect(wisconsin).not.toContain("sturgeon-bay");
+
+    expect(florida).not.toContain("naples");
+    expect(florida).not.toContain("islamorada");
+    expect(florida).not.toContain("key-largo");
+    expect(florida).not.toContain("panama-city-beach");
+    expect(florida).not.toContain("sarasota");
+  });
 });

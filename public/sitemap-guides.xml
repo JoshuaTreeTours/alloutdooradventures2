@@ -5,10 +5,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/anchorage</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/fairbanks</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/homer</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/ketchikan</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/palmer</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/seward</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/cottonwood</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/morristown</loc><priority>0.5</priority></url>
@@ -120,7 +117,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/matlacha</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/merritt-island</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/miami</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/florida/naples</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/new-smyrna-beach</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/nokomis</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/florida/north-fort-myers</loc><priority>0.5</priority></url>
@@ -269,7 +265,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/nevada/las-vegas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-hampshire</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-hampshire/portsmouth</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/new-hampshire/wolfeboro</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-jersey</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-jersey/atlantic-highlands</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-jersey/brick-township</loc><priority>0.5</priority></url>
@@ -289,10 +284,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-mexico/santa-fe</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/brooklyn</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/catskill</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/hammondsport</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/ithaca</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/montauk</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/napanoch</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/new-york</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/new-york/rushville</loc><priority>0.5</priority></url>
@@ -349,11 +341,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/spring</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/the-colony</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/utah/bryce-canyon-city</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/utah/hurricane</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah/moab</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/utah/springdale</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/utah/st-george</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/vermont</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/vermont/essex-junction</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/vermont/manchester</loc><priority>0.5</priority></url>
@@ -365,10 +353,7 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/west-virginia</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/west-virginia/harpers-ferry</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin/fish-creek</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin/milwaukee</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin/sister-bay</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin/sturgeon-bay</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/wisconsin/washburn</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/wyoming</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/wyoming/cody</loc><priority>0.5</priority></url>
