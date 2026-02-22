@@ -9,6 +9,7 @@ import {
   buildWebPageStructuredData,
   buildBreadcrumbList,
   dedupeGraphNodesById,
+  getMissingGeoFallbackReport,
   getSiteStructuredDataNodes,
   normalizeStructuredData,
   resetMissingGeoFallbackReport,
@@ -174,8 +175,6 @@ describe("tour product/trip schema safety", () => {
     });
   });
 
-
-
   it("uses US fallback country for united-states URL when destination country is missing", () => {
     resetMissingGeoFallbackReport();
     const trip = buildTourTripStructuredData({
@@ -195,6 +194,98 @@ describe("tour product/trip schema safety", () => {
         addressCountry: "US",
       },
     });
+  });
+
+  it("infers FR from /destinations/europe/france/... URLs", () => {
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          country: undefined,
+        },
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/destinations/europe/france/cities/paris/tours/x-195968",
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "FR",
+      },
+    });
+  });
+
+  it("infers FR from /destinations/france/... URLs", () => {
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          country: undefined,
+        },
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/destinations/france/paris/tours/x-195968",
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "FR",
+      },
+    });
+  });
+
+  it("uses US for state slug routes under /destinations", () => {
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          country: undefined,
+        },
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/destinations/california/joshua-tree/tours/x",
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "US",
+      },
+    });
+  });
+
+  it("records fallback when country slug cannot be mapped", () => {
+    resetMissingGeoFallbackReport();
+
+    const detailUrl =
+      "https://www.alloutdooradventures.com/destinations/atlantis/poseidon/tours/x";
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          country: undefined,
+        },
+      },
+      detailUrl,
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "US",
+      },
+    });
+
+    expect(getMissingGeoFallbackReport()).toContainEqual(
+      expect.objectContaining({
+        tourId: baseTour.id,
+        title: baseTour.title,
+        detailUrl,
+        inferredISO2: "US",
+      })
+    );
   });
 
   it("uses Product.url as detailUrl and Offer.url as bookingUrl when provided", () => {
@@ -322,8 +413,9 @@ describe("graph dedupe by @id", () => {
 
     expect(normalized).not.toBeNull();
     expect(typeof normalized).toBe("object");
-    expect(Array.isArray((normalized as { "@graph": unknown[] })["@graph"]))
-      .toBe(true);
+    expect(
+      Array.isArray((normalized as { "@graph": unknown[] })["@graph"])
+    ).toBe(true);
 
     const graph = (normalized as { "@graph": unknown[] })["@graph"];
     expect(graph.length).toBeGreaterThan(0);

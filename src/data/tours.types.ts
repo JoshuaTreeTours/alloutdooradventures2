@@ -11,6 +11,8 @@ export type TourBadges = {
 
 export type TourDestination = {
   country?: string;
+  countryCode?: string;
+  countrySlug?: string;
   state: string;
   stateSlug: string;
   city: string;
