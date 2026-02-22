@@ -3,6 +3,8 @@ import {
   buildBreadcrumbList,
   buildWebPageStructuredData,
   SITE_ORGANIZATION_ID,
+  SITE_BRAND_ID,
+  getPriceValidUntil,
 } from "../../utils/structuredData";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
@@ -30,6 +32,14 @@ const formatCityFromSlug = (slug: string) =>
     .split("-")
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
+
+const formatNameFromSlug = (slug?: string) =>
+  slug
+    ? slug
+        .split("-")
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" ")
+    : "";
 
 const getDestinationMeta = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
@@ -62,12 +72,30 @@ const getDestinationMeta = (tour: Engine2Tour) => {
     };
   }
 
+  if (tour.seo.canonicalPath.startsWith("/destinations/united-states/")) {
+    const stateSlug = tour.seo.canonicalPath.split("/")[3] || "";
+    const citySlug = tour.sourceCitySlug;
+    return {
+      countryCode: "US",
+      countryName: "United States",
+      stateName: formatNameFromSlug(stateSlug),
+      stateUrl: `/destinations/united-states/${stateSlug}`,
+      cityName: formatCityFromSlug(citySlug),
+      cityUrl: `/destinations/united-states/${stateSlug}/${citySlug}`,
+      toursUrl: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
+    };
+  }
+
+  const stateSlug = tour.seo.canonicalPath.split("/")[2] || "";
+  const citySlug = tour.sourceCitySlug;
   return {
     countryCode: "US",
-    countryName: tour.geo.region,
-    countryUrl: "/destinations/california",
-    cityUrl: `/destinations/california/${tour.sourceCitySlug}`,
-    toursUrl: `/destinations/california/${tour.sourceCitySlug}/tours`,
+    countryName: "United States",
+    stateName: formatNameFromSlug(stateSlug),
+    stateUrl: `/destinations/united-states/${stateSlug}`,
+    cityName: formatCityFromSlug(citySlug),
+    cityUrl: `/destinations/united-states/${stateSlug}/${citySlug}`,
+    toursUrl: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
   };
 };
 
@@ -89,6 +117,7 @@ export const buildSchemaGraph = (
     availability: "https://schema.org/InStock",
     price: flooredPrice.toFixed(2),
     priceCurrency: offerCurrency,
+    priceValidUntil: getPriceValidUntil(),
   };
 
   return [
@@ -121,12 +150,14 @@ export const buildSchemaGraph = (
     {
       "@type": "Product",
       "@id": productId,
+      url: seo.canonical,
       name: tour.name,
       description: seo.description,
       image: [effectiveHeroImage, ...imageGallery],
-      brand: { "@type": "Brand", name: "All Outdoor Adventures" },
+      brand: { "@id": SITE_BRAND_ID },
       offers: offer,
       provider: { "@id": SITE_ORGANIZATION_ID },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `${seo.canonical}#webpage` },
     },
     {
       "@type": "TouristTrip",
@@ -142,10 +173,16 @@ export const buildSchemaGraph = (
       { name: "Destinations", url: "/destinations" },
       {
         name: destinationMeta.countryName,
-        url: destinationMeta.countryUrl,
+        url:
+          "countryUrl" in destinationMeta
+            ? destinationMeta.countryUrl
+            : "/destinations/united-states",
       },
+      ...(destinationMeta.stateName
+        ? [{ name: destinationMeta.stateName, url: destinationMeta.stateUrl }]
+        : []),
       {
-        name: formatCityFromSlug(tour.sourceCitySlug),
+        name: "cityName" in destinationMeta ? destinationMeta.cityName : formatCityFromSlug(tour.sourceCitySlug),
         url: destinationMeta.cityUrl,
       },
       {
