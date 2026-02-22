@@ -21,6 +21,7 @@ import {
 } from "../engine2/data/loadEngine2";
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
+import { isGuideCityAllowedUS } from "../utils/guides/guideCityAllowlistUS";
 
 export type GuideCitySummary = {
   name: string;
@@ -834,7 +835,9 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
   }
 
   const stateName = stateTours[0].destination.state;
-  const cities = buildCitySummaries(stateTours);
+  const cities = buildCitySummaries(stateTours).filter(city =>
+    isGuideCityAllowedUS(stateSlug, city.slug)
+  );
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
