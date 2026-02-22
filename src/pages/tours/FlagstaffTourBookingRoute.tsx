@@ -249,6 +249,8 @@ export default function FlagstaffTourBookingRoute({
         description={metaDescription}
         url={bookingUrl}
         image={heroImage ?? null}
+        robots="noindex,follow,max-image-preview:large"
+        googlebot="noindex,follow,max-image-preview:large"
       />
       <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">
