@@ -7,6 +7,7 @@ import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages } from "./hero";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 import { SITE_BRAND_NAME } from "./site";
+import { slugify } from "./slugify";
 
 type StructuredDataValue =
   | string
@@ -239,7 +240,7 @@ const normalizeCountryKey = (value: string) =>
 const resolveCountryCode = (tour: Tour): string => {
   const country = tour.destination.country?.trim();
   if (!country) {
-    return "US";
+    throw new Error(`Tour ${tour.id} is missing destination country.`);
   }
 
   if (ISO_COUNTRY_CODE_PATTERN.test(country)) {
@@ -251,25 +252,76 @@ const resolveCountryCode = (tour: Tour): string => {
     return COUNTRY_NAME_TO_CODE[normalizedCountry];
   }
 
-  return "US";
+  throw new Error(
+    `Tour ${tour.id} has unsupported destination country: ${country}.`
+  );
 };
 
 const buildTourLocationStructuredData = (tour: Tour) => {
-  const locality = tour.destination.city;
-  const region = tour.destination.state;
+  const locality = tour.destination.city?.trim();
+  const region = tour.destination.state?.trim();
+
+  if (!locality || !region) {
+    throw new Error(`Tour ${tour.id} is missing locality or region data.`);
+  }
+
   const countryCode = resolveCountryCode(tour);
   const placeName = region ? `${locality}, ${region}` : locality;
 
   return {
     "@type": "Place",
     name: placeName,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: locality,
-      ...(region ? { addressRegion: region } : {}),
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: locality,
+        addressRegion: region,
       addressCountry: countryCode,
     },
   };
+};
+
+const isUnitedStatesCountry = (country?: string) => {
+  const normalized = country?.trim().toLowerCase();
+  return (
+    normalized === "united states" ||
+    normalized === "united states of america" ||
+    normalized === "usa" ||
+    normalized === "us"
+  );
+};
+
+export const buildTourBreadcrumbItems = (tour: Tour, detailUrl: string) => {
+  const countryName = tour.destination.country?.trim() || "United States";
+  const countrySlug = slugify(countryName);
+  const citySlug = tour.destination.citySlug;
+  const stateSlug = tour.destination.stateSlug;
+
+  const destinationNodes = isUnitedStatesCountry(countryName)
+    ? [
+        { name: "United States", url: "/destinations/united-states" },
+        {
+          name: tour.destination.state,
+          url: `/destinations/united-states/${stateSlug}`,
+        },
+        {
+          name: tour.destination.city,
+          url: `/destinations/united-states/${stateSlug}/${citySlug}`,
+        },
+      ]
+    : [
+        { name: countryName, url: `/destinations/${countrySlug}` },
+        {
+          name: tour.destination.city,
+          url: `/destinations/${countrySlug}/${citySlug}`,
+        },
+      ];
+
+  return [
+    { name: "Destinations", url: "/destinations" },
+    ...destinationNodes,
+    { name: "Tours", url: `${destinationNodes[destinationNodes.length - 1].url}/tours` },
+    { name: tour.title, url: detailUrl },
+  ];
 };
 
 const TOUR_PRICE_DESCRIPTION =
