@@ -3,9 +3,13 @@ import { useLocation } from "wouter";
 
 import {
   buildWebPageStructuredData,
+  dedupeGraphNodesById,
   getSiteStructuredDataNodes,
   normalizeStructuredData,
   sanitizeSchemaName,
+  SITE_BRAND_ID,
+  SITE_ORGANIZATION_ID,
+  SITE_WEBSITE_ID,
 } from "../utils/structuredData";
 import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
 
@@ -34,42 +38,17 @@ const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
     }),
   );
 
+const SITE_NODE_IDS = new Set([SITE_ORGANIZATION_ID, SITE_BRAND_ID, SITE_WEBSITE_ID]);
 
-const dedupeGraphNodesById = (nodes: StructuredDataNode[]) => {
-  const byId = new Map<string, StructuredDataNode>();
-  const withoutId: StructuredDataNode[] = [];
-
-  nodes.forEach(node => {
-    const nodeId =
-      typeof node?.["@id"] === "string" ? (node["@id"] as string) : null;
-
-    if (!nodeId) {
-      withoutId.push(node);
-      return;
+const includesSiteNodes = (nodes: StructuredDataNode[]) =>
+  nodes.some((node) => {
+    if (!node || typeof node !== "object") {
+      return false;
     }
 
-    const existing = byId.get(nodeId);
-    if (!existing) {
-      byId.set(nodeId, node);
-      return;
-    }
-
-    const mergedSameAs = Array.from(
-      new Set([
-        ...((Array.isArray(existing.sameAs) ? existing.sameAs : []) as string[]),
-        ...((Array.isArray(node.sameAs) ? node.sameAs : []) as string[]),
-      ]),
-    );
-
-    byId.set(nodeId, {
-      ...existing,
-      ...node,
-      ...(mergedSameAs.length ? { sameAs: mergedSameAs } : {}),
-    });
+    const nodeId = node["@id"];
+    return typeof nodeId === "string" && SITE_NODE_IDS.has(nodeId);
   });
-
-  return [...byId.values(), ...withoutId];
-};
 
 const upsertStructuredDataScript = (json: StructuredDataNode | null) => {
   let script = document.head.querySelector<HTMLScriptElement>(
@@ -102,8 +81,8 @@ export const StructuredDataProvider = ({
   const [location] = useLocation();
 
   useEffect(() => {
-    const baseNodes = getSiteStructuredDataNodes();
     const pageNodes = nodes?.length ? nodes : [];
+    const baseNodes = includesSiteNodes(pageNodes) ? [] : getSiteStructuredDataNodes();
     const canonicalUrl =
       document.head
         .querySelector<HTMLLinkElement>("link[rel=\"canonical\"]")
@@ -128,7 +107,7 @@ export const StructuredDataProvider = ({
       ...baseNodes,
       ...pageNodes,
       ...defaultWebPageNode,
-    ]);
+    ]) as StructuredDataNode[];
 
     const graph = {
       "@context": "https://schema.org",

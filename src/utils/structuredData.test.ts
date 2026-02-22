@@ -6,7 +6,11 @@ import {
   SITE_WEBSITE_ID,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
+  buildWebPageStructuredData,
+  buildBreadcrumbList,
+  dedupeGraphNodesById,
   getSiteStructuredDataNodes,
+  normalizeStructuredData,
   resetMissingGeoFallbackReport,
 } from "./structuredData";
 import type { Tour } from "../data/tours.types";
@@ -231,5 +235,146 @@ describe("tour product/trip schema safety", () => {
         addressCountry: "DK",
       },
     });
+  });
+});
+
+describe("graph dedupe by @id", () => {
+  it("keeps first instance for duplicate #org/#brand/#website nodes", () => {
+    const [orgNode, brandNode, webSiteNode] = getSiteStructuredDataNodes();
+
+    const deduped = dedupeGraphNodesById([
+      orgNode,
+      brandNode,
+      webSiteNode,
+      { ...orgNode, name: "Should Not Replace" },
+      { ...brandNode, name: "Should Not Replace" },
+      { ...webSiteNode, name: "Should Not Replace" },
+      buildWebPageStructuredData({
+        url: "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+        name: "Tour 1",
+        description: "Tour 1 description",
+      }),
+    ]);
+
+    expect(
+      deduped.filter(
+        node =>
+          typeof node === "object" &&
+          node !== null &&
+          (node as { "@id"?: string })["@id"] === SITE_ORGANIZATION_ID
+      )
+    ).toHaveLength(1);
+    expect(
+      deduped.filter(
+        node =>
+          typeof node === "object" &&
+          node !== null &&
+          (node as { "@id"?: string })["@id"] === SITE_BRAND_ID
+      )
+    ).toHaveLength(1);
+    expect(
+      deduped.filter(
+        node =>
+          typeof node === "object" &&
+          node !== null &&
+          (node as { "@id"?: string })["@id"] === SITE_WEBSITE_ID
+      )
+    ).toHaveLength(1);
+  });
+
+  it("dedupes @graph payloads while preserving nodes without @id", () => {
+    const [orgNode, brandNode, webSiteNode] = getSiteStructuredDataNodes();
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl,
+    });
+    const trip = buildTourTripStructuredData({
+      tour: baseTour,
+      detailUrl,
+    });
+    const breadcrumb = buildBreadcrumbList([
+      { name: "Destinations", url: "/destinations" },
+      { name: "California", url: "/destinations/united-states/california" },
+    ]);
+    const webPage = buildWebPageStructuredData({
+      url: detailUrl,
+      name: "Tour 1",
+      description: "Tour 1 description",
+    });
+
+    const normalized = normalizeStructuredData({
+      "@context": "https://schema.org",
+      "@graph": [
+        orgNode,
+        brandNode,
+        webSiteNode,
+        { ...orgNode, name: "Duplicate" },
+        { ...brandNode, name: "Duplicate" },
+        { ...webSiteNode, name: "Duplicate" },
+        webPage,
+        product,
+        trip,
+        breadcrumb,
+      ],
+    });
+
+    expect(normalized).not.toBeNull();
+    expect(typeof normalized).toBe("object");
+    expect(Array.isArray((normalized as { "@graph": unknown[] })["@graph"]))
+      .toBe(true);
+
+    const graph = (normalized as { "@graph": unknown[] })["@graph"];
+    expect(graph.length).toBeGreaterThan(0);
+
+    const graphIds = graph
+      .map(node =>
+        typeof node === "object" && node !== null
+          ? (node as { "@id"?: unknown })["@id"]
+          : undefined
+      )
+      .filter((id): id is string => typeof id === "string");
+
+    expect(graphIds.filter(id => id === SITE_ORGANIZATION_ID)).toHaveLength(1);
+    expect(graphIds.filter(id => id === SITE_BRAND_ID)).toHaveLength(1);
+    expect(graphIds.filter(id => id === SITE_WEBSITE_ID)).toHaveLength(1);
+
+    const graphTypes = graph
+      .map(node =>
+        typeof node === "object" && node !== null
+          ? (node as { "@type"?: string | string[] })["@type"]
+          : undefined
+      )
+      .flatMap(type => (Array.isArray(type) ? type : type ? [type] : []));
+
+    expect(graphTypes).toContain("WebPage");
+    expect(graphTypes).toContain("Product");
+    expect(graphTypes).toContain("TouristTrip");
+    expect(graphTypes).toContain("BreadcrumbList");
+  });
+
+  it("is idempotent across repeated normalize calls", () => {
+    const [orgNode, brandNode, webSiteNode] = getSiteStructuredDataNodes();
+    const payload = {
+      "@context": "https://schema.org",
+      "@graph": [
+        orgNode,
+        brandNode,
+        webSiteNode,
+        { ...orgNode, name: "Duplicate" },
+        buildWebPageStructuredData({
+          url: "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+          name: "Tour 1",
+          description: "Tour 1 description",
+        }),
+      ],
+    };
+
+    const once = normalizeStructuredData(payload);
+    expect(once).not.toBeNull();
+    const twice = normalizeStructuredData(once as never);
+    expect(twice).not.toBeNull();
+    expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
   });
 });

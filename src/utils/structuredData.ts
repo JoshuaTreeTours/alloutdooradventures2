@@ -16,6 +16,8 @@ type StructuredDataValue =
   | StructuredDataValue[]
   | { [key: string]: StructuredDataValue };
 
+type StructuredDataNode = Record<string, unknown>;
+
 export const SITE_ORGANIZATION_ID = `${SITE_URL}/#org`;
 export const SITE_BRAND_ID = `${SITE_URL}/#brand`;
 export const SITE_WEBSITE_ID = `${SITE_URL}/#website`;
@@ -145,7 +147,49 @@ export const normalizeStructuredData = (
 
   const normalized = ensureAbsoluteUrls(stripped);
 
+  if (
+    normalized &&
+    typeof normalized === "object" &&
+    !Array.isArray(normalized) &&
+    "@graph" in normalized &&
+    Array.isArray(normalized["@graph"])
+  ) {
+    return hasType(normalized)
+      ? {
+          ...normalized,
+          "@graph": dedupeGraphNodesById(normalized["@graph"]),
+        }
+      : null;
+  }
+
+  if (Array.isArray(normalized)) {
+    const deduped = dedupeGraphNodesById(normalized);
+    return hasType(deduped) ? deduped : null;
+  }
+
   return hasType(normalized) ? normalized : null;
+};
+
+export const dedupeGraphNodesById = (nodes: unknown[]): unknown[] => {
+  const seen = new Set<string>();
+
+  return nodes.filter(node => {
+    if (!node || typeof node !== "object" || Array.isArray(node)) {
+      return true;
+    }
+
+    const nodeId = (node as StructuredDataNode)["@id"];
+    if (typeof nodeId !== "string") {
+      return true;
+    }
+
+    if (seen.has(nodeId)) {
+      return false;
+    }
+
+    seen.add(nodeId);
+    return true;
+  });
 };
 
 export const getSiteStructuredDataNodes = () => {
