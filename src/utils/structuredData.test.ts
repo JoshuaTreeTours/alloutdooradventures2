@@ -4,6 +4,7 @@ import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
+  buildTourBreadcrumbItems,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   getSiteStructuredDataNodes,
@@ -167,6 +168,51 @@ describe("tour product/trip schema safety", () => {
         addressCountry: "US",
       },
     });
+  });
+
+
+  it("builds destination breadcrumbs with United States hierarchy", () => {
+    const breadcrumbs = buildTourBreadcrumbItems(
+      {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          state: "Hawaii",
+          stateSlug: "hawaii",
+          city: "Hilo",
+          citySlug: "hilo",
+        },
+      },
+      "https://www.alloutdooradventures.com/tours/hawaii/hilo/discover-scuba-diving-17418"
+    );
+
+    expect(breadcrumbs).toEqual([
+      { name: "Destinations", url: "/destinations" },
+      { name: "United States", url: "/destinations/united-states" },
+      { name: "Hawaii", url: "/destinations/united-states/hawaii" },
+      { name: "Hilo", url: "/destinations/united-states/hawaii/hilo" },
+      { name: "Tours", url: "/destinations/united-states/hawaii/hilo/tours" },
+      {
+        name: "Test Tour",
+        url: "https://www.alloutdooradventures.com/tours/hawaii/hilo/discover-scuba-diving-17418",
+      },
+    ]);
+  });
+
+  it("throws when location country is missing", () => {
+    expect(() =>
+      buildTourTripStructuredData({
+        tour: {
+          ...baseTour,
+          destination: {
+            ...baseTour.destination,
+            country: undefined,
+          },
+        },
+        detailUrl:
+          "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      })
+    ).toThrow(/missing destination country/i);
   });
 
   it("maps destination country names to ISO 3166-1 alpha-2 codes", () => {

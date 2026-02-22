@@ -8,6 +8,7 @@ import {
   sanitizeSchemaName,
 } from "../utils/structuredData";
 import { buildCanonicalUrl, DEFAULT_SEO } from "../utils/seo";
+import { dedupeStructuredData } from "../utils/dedupeStructuredData";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -89,7 +90,11 @@ export const StructuredDataProvider = ({
 
     const graph = {
       "@context": "https://schema.org",
-      "@graph": [...baseNodes, ...pageNodes, ...defaultWebPageNode],
+      "@graph": dedupeStructuredData([
+        ...baseNodes,
+        ...pageNodes,
+        ...defaultWebPageNode,
+      ]),
     };
 
     const normalized = normalizeStructuredData(graph);
