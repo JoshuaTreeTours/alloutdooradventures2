@@ -50,10 +50,16 @@ describe("guideCityAllowlistUS", () => {
       record => record.citySlug
     );
     const florida = getGuidesByState("florida").map(record => record.citySlug);
+    const texas = getGuidesByState("texas").map(record => record.citySlug);
+    const massachusetts = getGuidesByState("massachusetts").map(
+      record => record.citySlug
+    );
 
     expect(alaska).not.toContain("homer");
     expect(alaska).not.toContain("palmer");
     expect(alaska).not.toContain("seward");
+
+    expect(alaska).not.toContain("ketchikan");
 
     expect(utah).not.toContain("hurricane");
     expect(utah).not.toContain("bryce-canyon-city");
@@ -74,5 +80,13 @@ describe("guideCityAllowlistUS", () => {
     expect(florida).not.toContain("key-largo");
     expect(florida).not.toContain("panama-city-beach");
     expect(florida).not.toContain("sarasota");
+
+    expect(texas).not.toContain("aransas-pass");
+    expect(texas).not.toContain("port-aransas");
+    expect(texas).not.toContain("spring");
+    expect(texas).not.toContain("the-colony");
+
+    expect(massachusetts).not.toContain("falmouth");
+    expect(massachusetts).not.toContain("oak-bluffs");
   });
 });

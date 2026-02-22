@@ -5,7 +5,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/anchorage</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/denali-national-park-and-preserve</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/fairbanks</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/alaska/ketchikan</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/cottonwood</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/arizona/morristown</loc><priority>0.5</priority></url>
@@ -225,7 +224,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/brookline</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/cambridge</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/chelsea</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/falmouth</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/holbrook</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/lexington</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/marblehead</loc><priority>0.5</priority></url>
@@ -235,7 +233,6 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/needham</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/newton</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/north-andover</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/oak-bluffs</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/quincy</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/randolph</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/massachusetts/revere</loc><priority>0.5</priority></url>
@@ -332,14 +329,10 @@
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/sevierville</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/tennessee/williamsport</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/texas/aransas-pass</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/austin</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/fort-worth</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/houston</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/texas/port-aransas</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/texas/san-antonio</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/texas/spring</loc><priority>0.5</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/guides/us/texas/the-colony</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/utah/moab</loc><priority>0.5</priority></url>
   <url><loc>https://www.alloutdooradventures.com/guides/us/vermont</loc><priority>0.5</priority></url>

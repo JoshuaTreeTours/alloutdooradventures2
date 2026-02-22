@@ -67,22 +67,22 @@
   "redirects": [
     {
       "source": "/guides/us/hawaii/paia",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/wailuku",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/makawao",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
       "source": "/guides/us/hawaii/haiku-pauwela",
-      "destination": "/guides/us/hawaii/kahului",
+      "destination": "/guides/us/hawaii",
       "permanent": true
     },
     {
@@ -128,6 +128,146 @@
     {
       "source": "/guides/us/hawaii/waianae",
       "destination": "/guides/us/hawaii/honolulu",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/catskill",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/ithaca",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/napanach",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/freeport",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/hancock",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/lansing",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/warwick",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/new-york/staten-island",
+      "destination": "/guides/us/new-york",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/fish-creek",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/wisconsin/darlington",
+      "destination": "/guides/us/wisconsin",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/alaska/homer",
+      "destination": "/guides/us/alaska",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/alaska/palmer",
+      "destination": "/guides/us/alaska",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/alaska/seward",
+      "destination": "/guides/us/alaska",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/alaska/ketchikan",
+      "destination": "/guides/us/alaska",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/cape-charles",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/chincoteague",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/covington",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/eagle-rock",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/great-falls",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/herndon",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/leesburg",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/virginia/stafford",
+      "destination": "/guides/us/virginia",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/aransas-pass",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/port-aransas",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/spring",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/texas/the-colony",
+      "destination": "/guides/us/texas",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/falmouth",
+      "destination": "/guides/us/massachusetts",
+      "permanent": true
+    },
+    {
+      "source": "/guides/us/massachusetts/oak-bluffs",
+      "destination": "/guides/us/massachusetts",
       "permanent": true
     },
     {

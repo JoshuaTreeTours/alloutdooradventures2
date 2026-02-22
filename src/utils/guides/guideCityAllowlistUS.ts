@@ -23,14 +23,7 @@ export const GUIDE_CITY_ALLOWLIST_US: Record<string, string[] | "ALL"> = {
   georgia: ["savannah", "atlanta", "helen", "tybee-island", "augusta"],
   louisiana: ["new-orleans", "baton-rouge", "lafayette"],
   maryland: ["baltimore", "ocean-city"],
-  massachusetts: [
-    "boston",
-    "cambridge",
-    "salem",
-    "nantucket",
-    "oak-bluffs",
-    "falmouth",
-  ],
+  massachusetts: ["boston", "cambridge", "salem", "nantucket"],
   "new-jersey": ["atlantic-city", "wildwood-crest", "ocean-city"],
   california: [
     "los-angeles",
