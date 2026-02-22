@@ -233,12 +233,53 @@ const COUNTRY_NAME_TO_CODE: Record<string, string> = {
 
 const ISO_COUNTRY_CODE_PATTERN = /^[A-Za-z]{2}$/;
 
+type MissingGeoFallback = {
+  tourId: string;
+  detailUrl: string;
+  fallback: string;
+  reason: string;
+};
+
+const missingGeoFallbacks: MissingGeoFallback[] = [];
+
+const recordMissingGeoFallback = (entry: MissingGeoFallback) => {
+  missingGeoFallbacks.push(entry);
+  console.warn(
+    `[schema] Tour ${entry.tourId} missing geo metadata (${entry.reason}); using ${entry.fallback}.`
+  );
+};
+
+export const getMissingGeoFallbackReport = () => [...missingGeoFallbacks];
+
+export const resetMissingGeoFallbackReport = () => {
+  missingGeoFallbacks.length = 0;
+};
+
 const normalizeCountryKey = (value: string) =>
   value.trim().toLowerCase().replace(/[.,]/g, "").replace(/\s+/g, " ");
 
-const resolveCountryCode = (tour: Tour): string => {
+const resolveCountryCode = (tour: Tour, detailUrl: string): string => {
   const country = tour.destination.country?.trim();
   if (!country) {
+    const normalizedUrl = detailUrl.toLowerCase();
+    const isUnitedStatesRoute =
+      normalizedUrl.includes("/destinations/united-states/") ||
+      normalizedUrl.includes("/tours/");
+    if (isUnitedStatesRoute) {
+      recordMissingGeoFallback({
+        tourId: tour.id,
+        detailUrl,
+        fallback: "US",
+        reason: "missing destination.country inferred from URL",
+      });
+      return "US";
+    }
+    recordMissingGeoFallback({
+      tourId: tour.id,
+      detailUrl,
+      fallback: "US",
+      reason: "missing destination.country default fallback",
+    });
     return "US";
   }
 
@@ -254,10 +295,10 @@ const resolveCountryCode = (tour: Tour): string => {
   return "US";
 };
 
-const buildTourLocationStructuredData = (tour: Tour) => {
+const buildTourLocationStructuredData = (tour: Tour, detailUrl: string) => {
   const locality = tour.destination.city;
   const region = tour.destination.state;
-  const countryCode = resolveCountryCode(tour);
+  const countryCode = resolveCountryCode(tour, detailUrl);
   const placeName = region ? `${locality}, ${region}` : locality;
 
   return {
@@ -280,6 +321,27 @@ const toOfferPrice = (tour: Tour) =>
 
 const toOfferCurrency = (tour: Tour) =>
   tour.currency?.trim().toUpperCase() || DEFAULT_CURRENCY;
+
+const parseBuildDate = () => {
+  const buildDate = process.env.BUILD_DATE;
+  if (buildDate) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(buildDate)) {
+      return new Date(`${buildDate}T00:00:00.000Z`);
+    }
+    const parsed = new Date(buildDate);
+    if (!Number.isNaN(parsed.getTime())) {
+      return parsed;
+    }
+  }
+  return new Date();
+};
+
+export const getPriceValidUntil = (days = 365): string => {
+  const baseDate = parseBuildDate();
+  const futureDate = new Date(baseDate);
+  futureDate.setUTCDate(futureDate.getUTCDate() + days);
+  return futureDate.toISOString().slice(0, 10);
+};
 
 export const buildWebPageStructuredData = ({
   url,
@@ -345,13 +407,17 @@ export const buildItemList = (
 export const buildTourProductStructuredData = ({
   tour,
   detailUrl,
+  bookingUrl,
   description,
   images,
+  ratingsVisible = false,
 }: {
   tour: Tour;
   detailUrl: string;
+  bookingUrl?: string;
   description?: string;
   images?: string[];
+  ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
     images ?? [
@@ -361,41 +427,66 @@ export const buildTourProductStructuredData = ({
     ],
     "product"
   );
+  const offerUrl = bookingUrl || detailUrl;
+  const ratingValue = tour.badges?.rating;
+  const reviewCount = tour.badges?.reviewCount;
+  const ratingsEnabled = process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const aggregateRating =
+    ratingsEnabled &&
+    typeof ratingValue === "number" &&
+    typeof reviewCount === "number" &&
+    reviewCount > 0
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: ratingValue.toFixed(1),
+          reviewCount,
+        }
+      : undefined;
+
+  const offer = {
+    "@type": "Offer",
+    url: offerUrl,
+    availability: "https://schema.org/InStock",
+    price: toOfferPrice(tour).toFixed(2),
+    priceCurrency: toOfferCurrency(tour),
+    priceValidUntil: getPriceValidUntil(),
+  };
+
   return {
     "@type": "Product",
     "@id": `${detailUrl}#product`,
+    url: detailUrl,
     name: tour.title,
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
-    offers: {
-      "@type": "Offer",
-      url: detailUrl,
-      availability: "https://schema.org/InStock",
-      price: toOfferPrice(tour).toFixed(2),
-      priceCurrency: toOfferCurrency(tour),
-    },
+    offers: offer,
+    ...(aggregateRating ? { aggregateRating } : {}),
     priceSpecification: {
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,
     },
-    location: buildTourLocationStructuredData(tour),
-    mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
+    location: buildTourLocationStructuredData(tour, detailUrl),
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${detailUrl}#webpage` },
   };
 };
 
 export const buildTourTripStructuredData = ({
   tour,
   detailUrl,
+  bookingUrl,
   description,
   images,
+  ratingsVisible = false,
 }: {
   tour: Tour;
   detailUrl: string;
+  bookingUrl?: string;
   description?: string;
   images?: string[];
+  ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
     images ?? [
@@ -405,6 +496,22 @@ export const buildTourTripStructuredData = ({
     ],
     "product"
   );
+  const offerUrl = bookingUrl || detailUrl;
+  const ratingValue = tour.badges?.rating;
+  const reviewCount = tour.badges?.reviewCount;
+  const ratingsEnabled = process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const aggregateRating =
+    ratingsEnabled &&
+    typeof ratingValue === "number" &&
+    typeof reviewCount === "number" &&
+    reviewCount > 0
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: ratingValue.toFixed(1),
+          reviewCount,
+        }
+      : undefined;
+
   return {
     "@type": "TouristTrip",
     "@id": `${detailUrl}#touristtrip`,
@@ -414,16 +521,18 @@ export const buildTourTripStructuredData = ({
     provider: { "@id": SITE_BRAND_ID },
     offers: {
       "@type": "Offer",
-      url: detailUrl,
+      url: offerUrl,
       availability: "https://schema.org/InStock",
       price: toOfferPrice(tour).toFixed(2),
       priceCurrency: toOfferCurrency(tour),
+      priceValidUntil: getPriceValidUntil(),
     },
+    ...(aggregateRating ? { aggregateRating } : {}),
     priceSpecification: {
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,
     },
-    location: buildTourLocationStructuredData(tour),
+    location: buildTourLocationStructuredData(tour, detailUrl),
     mainEntityOfPage: { "@id": `${detailUrl}#webpage` },
   };
 };
