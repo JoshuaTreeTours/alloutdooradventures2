@@ -650,6 +650,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/essex/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/haddam</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/haddam/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/hartford</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/hartford/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/montville</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/montville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/connecticut/cities/new-london</loc><priority>0.6</priority></url>
@@ -718,6 +720,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/goodland/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/greenacres</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/greenacres/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/hallandale-beach</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/hallandale-beach/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/hastings</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/hastings/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/florida/cities/hobe-sound</loc><priority>0.6</priority></url>
@@ -982,12 +986,16 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-hampshire/cities/weare/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-hampshire/cities/wolfeboro</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-hampshire/cities/wolfeboro/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/atlantic-highlands</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/atlantic-highlands/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/brick-township</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/brick-township/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/edgewater</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/edgewater/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/fieldsboro</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/fieldsboro/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/hillsdale</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/hillsdale/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/keyport</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/keyport/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/new-jersey/cities/lavallette</loc><priority>0.6</priority></url>
@@ -1054,6 +1062,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/pennsylvania/cities/wrightsville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/rhode-island/cities/warwick</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/rhode-island/cities/warwick/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/cities/columbia</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/cities/columbia/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/cities/hilton-head-island</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/cities/hilton-head-island/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/south-carolina/cities/johns-island</loc><priority>0.6</priority></url>
@@ -1070,12 +1080,16 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/delano/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/franklin</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/franklin/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/granville</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/granville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/greenbrier</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/greenbrier/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/johnson-city</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/johnson-city/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/nashville</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/nashville/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/pigeon-forge</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/pigeon-forge/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/sevierville</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/sevierville/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/states/tennessee/cities/williamsport</loc><priority>0.6</priority></url>
@@ -1128,14 +1142,10 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/states/wyoming/cities/jackson/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/calgary</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/calgary/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/canmore</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/canmore/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/jasper</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/alberta/cities/jasper/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/achada</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/achada/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/ponta-delgada</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/ponta-delgada/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/vila-franca-do-campo</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aores/cities/vila-franca-do-campo/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/airlie-beach</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/airlie-beach/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/alice-springs</loc><priority>0.6</priority></url>
@@ -1264,34 +1274,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/westcourt/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/zeehan</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/australia/cities/zeehan/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro-district/cities/alvarenga</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro-district/cities/alvarenga/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro/cities/arouca</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro/cities/arouca/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro/cities/unio-das-freguesias-de-canelas-e-espiunca</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/aveiro/cities/unio-das-freguesias-de-canelas-e-espiunca/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/bad-bellingen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/bad-bellingen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/beuron</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/beuron/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/efringen-kirchen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/efringen-kirchen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/lichtenstein</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/lichtenstein/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/riegel-am-kaiserstuhl</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/riegel-am-kaiserstuhl/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/sigmaringen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/baden-wrttemberg/cities/sigmaringen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/bavaria/cities/sulzberg</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/bavaria/cities/sulzberg/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/burg-spreewald</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/burg-spreewald/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/neuruppin</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/neuruppin/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/rheinsberg</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/brandenburg/cities/rheinsberg/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/blind-bay</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/blind-bay/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/baja-california-sur/cities/cabo-san-lucas</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/baja-california-sur/cities/cabo-san-lucas/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/egmont</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/egmont/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/gibsons</loc><priority>0.6</priority></url>
@@ -1300,8 +1284,8 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/kamloops/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/kelowna</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/kelowna/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/lake-cowichan</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/lake-cowichan/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/new-westminster</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/new-westminster/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/squamish</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/squamish/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/ucluelet</loc><priority>0.6</priority></url>
@@ -1314,124 +1298,24 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/world/british-columbia/cities/whistler/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ciudad-de-mxico/cities/ciudad-de-mxico</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ciudad-de-mxico/cities/ciudad-de-mxico/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/comunidad-valenciana/cities/xbia</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/comunidad-valenciana/cities/xbia/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-cork/cities/cork</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-cork/cities/cork/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-dublin/cities/dublin-2</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/county-dublin/cities/dublin-2/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/czechia/cities/vy-brod</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/czechia/cities/vy-brod/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/district-of-columbia/cities/washington</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/district-of-columbia/cities/washington/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/emilia-romagna/cities/ca-montanari</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/emilia-romagna/cities/ca-montanari/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/ambergate</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/ambergate/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/beaulieu</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/beaulieu/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/bisham</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/bisham/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/burstwick</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/burstwick/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/cambridge</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/cambridge/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/cromford</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/cromford/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/henley-on-thames</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/henley-on-thames/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/hurley</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/hurley/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/jumpers</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/jumpers/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/lechlade-on-thames</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/lechlade-on-thames/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/milford-on-sea</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/milford-on-sea/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/newby-bridge</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/newby-bridge/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/norwich</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/norwich/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/poole</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/poole/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/reading</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/reading/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/scremerston</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/scremerston/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/sherfield-english</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/sherfield-english/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/sutton</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/sutton/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/torquay</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/torquay/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/whitney-on-wye</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/england/cities/whitney-on-wye/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/jalisco/cities/puerto-vallarta</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/jalisco/cities/puerto-vallarta/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/lajas/cities/la-parguera</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/lajas/cities/la-parguera/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/lappi/cities/enonteki</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/lappi/cities/enonteki/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/lower-saxony/cities/melle</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/lower-saxony/cities/melle/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/aukopae</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/aukopae/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/ohakune</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/ohakune/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/pipiriki</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/pipiriki/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/raetihi</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/raetihi/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/retaruke</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/retaruke/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/taumarunui</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/taumarunui/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/whango</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manawat-whanganui/cities/whango/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manitoba/cities/whiteshell</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/manitoba/cities/whiteshell/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/lisboa/cities/santa-brbara</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/lisboa/cities/santa-brbara/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/manitoba/cities/winnipeg</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/manitoba/cities/winnipeg/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/mecklenburg-vorpommern/cities/warnow</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/mecklenburg-vorpommern/cities/warnow/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/morocco/cities/taouz</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/morocco/cities/taouz/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-brunswick/cities/woodstock-first-nation</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-brunswick/cities/woodstock-first-nation/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/buccarumbi</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/buccarumbi/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/fernmount</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/fernmount/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/kangaroo-valley</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/kangaroo-valley/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/narooma</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/new-south-wales/cities/narooma/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/asendorf</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/asendorf/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/bienenbttel</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/bienenbttel/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/bohmte</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/bohmte/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/damme</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/damme/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/deutsch-evern</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/deutsch-evern/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/diepholz</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/diepholz/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/lembruch</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/lembruch/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/oldendorf-luhe</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/oldendorf-luhe/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/salzhausen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/niedersachsen/cities/salzhausen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/norrbottens-ln/cities/kiruna</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/norrbottens-ln/cities/kiruna/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/northern-ireland/cities/enniskillen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/northern-ireland/cities/enniskillen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/cambridge</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/cambridge/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/fort-frances</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/fort-frances/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/brant</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/brant/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/north-bay</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/north-bay/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/northern-bruce-peninsula</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/northern-bruce-peninsula/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/st-thomas</loc><priority>0.6</priority></url>
@@ -1442,116 +1326,28 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/toronto/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/windsor</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/ontario/cities/windsor/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/otago/cities/dunedin</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/otago/cities/dunedin/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/pohjois-savo/cities/tahkovuori</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/pohjois-savo/cities/tahkovuori/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/longueuil</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/longueuil/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/montral</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/montral/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/qubec</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/qubec/cities/qubec/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/como</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/como/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/maroochydore</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/maroochydore/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/shute-harbour</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/shute-harbour/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/westcourt</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/queensland/cities/westcourt/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/quintana-roo/cities/cancn</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/quintana-roo/cities/cancn/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/quintana-roo/cities/cozumel</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/quintana-roo/cities/cozumel/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/balgstdt</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/balgstdt/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/freyburg-unstrut</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/freyburg-unstrut/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/laucha-an-der-unstrut</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/laucha-an-der-unstrut/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/nebra-unstrut</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/sachsen-anhalt/cities/nebra-unstrut/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/saint-martin/cities/cul-de-sac</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/saint-martin/cities/cul-de-sac/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/saxony-anhalt/cities/nebra-unstrut</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/saxony-anhalt/cities/nebra-unstrut/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/schleswig-holstein/cities/lbeck</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/schleswig-holstein/cities/lbeck/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/aviemore</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/aviemore/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/banavie</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/banavie/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/clovenfords</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/clovenfords/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/crieff</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/crieff/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/edinburgh</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/edinburgh/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/galashiels</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/galashiels/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/innerleithen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/innerleithen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/kinlochard</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/kinlochard/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/moffat</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/moffat/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/peebles</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/peebles/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/riverside</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/riverside/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/selkirk</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/scotland/cities/selkirk/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/setbal/cities/so-simo</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/setbal/cities/so-simo/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/south-bohemian-region/cities/vy-brod</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/south-bohemian-region/cities/vy-brod/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/st-ann-parish/cities/ocho-rios</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/st-ann-parish/cities/ocho-rios/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/stockholms-ln/cities/solna</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/stockholms-ln/cities/solna/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/stockholms-ln/cities/stockholm</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/stockholms-ln/cities/stockholm/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/thringen/cities/dornburg-camburg</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/thringen/cities/dornburg-camburg/tours</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/st-thomas/cities/red-hook</loc><priority>0.6</priority></url>
+  <url><loc>https://www.alloutdooradventures.com/destinations/world/st-thomas/cities/red-hook/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/trelawny-parish/cities/falmouth</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/trelawny-parish/cities/falmouth/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/california</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/california/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/colorado</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/colorado/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/florida</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/florida/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/hawaii</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/hawaii/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/montana</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/montana/tours</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/north-carolina</loc><priority>0.6</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/north-carolina/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/wyoming</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/united-states/cities/wyoming/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/us-virgin-islands/cities/st-thomas</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/us-virgin-islands/cities/st-thomas/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vestland/cities/loen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vestland/cities/loen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vestland/cities/voss</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vestland/cities/voss/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vlaams-gewest/cities/deinze</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/vlaams-gewest/cities/deinze/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/blaenau-ffestiniog</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/blaenau-ffestiniog/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/brecon</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/brecon/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/froncysyllte</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/froncysyllte/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/glasbury</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/glasbury/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/hay-on-wye</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/hay-on-wye/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/llangollen</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/wales/cities/llangollen/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/western-australia/cities/kalbarri</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/western-australia/cities/kalbarri/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/zeeland/cities/middelburg</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/zeeland/cities/middelburg/tours</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/zuid-holland/cities/rotterdam</loc><priority>0.6</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/world/zuid-holland/cities/rotterdam/tours</loc><priority>0.6</priority></url>
 </urlset>
