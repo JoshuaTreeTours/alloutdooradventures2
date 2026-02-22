@@ -7,6 +7,7 @@ import {
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   getSiteStructuredDataNodes,
+  resetMissingGeoFallbackReport,
 } from "./structuredData";
 import type { Tour } from "../data/tours.types";
 
@@ -165,6 +166,48 @@ describe("tour product/trip schema safety", () => {
         addressLocality: "San Diego",
         addressRegion: "California",
         addressCountry: "US",
+      },
+    });
+  });
+
+
+
+  it("uses US fallback country for united-states URL when destination country is missing", () => {
+    resetMissingGeoFallbackReport();
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        destination: {
+          ...baseTour.destination,
+          country: undefined,
+        },
+      },
+      detailUrl:
+        "https://www.alloutdooradventures.com/destinations/united-states/hawaii/hilo/tours/discover-scuba-diving",
+    });
+
+    expect(trip.location).toMatchObject({
+      address: {
+        addressCountry: "US",
+      },
+    });
+  });
+
+  it("uses Product.url as detailUrl and Offer.url as bookingUrl when provided", () => {
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl:
+        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      bookingUrl: "https://booking.example.com/tour-1",
+    });
+
+    expect(product).toMatchObject({
+      url: "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      mainEntityOfPage: {
+        "@type": "WebPage",
+      },
+      offers: {
+        url: "https://booking.example.com/tour-1",
       },
     });
   });

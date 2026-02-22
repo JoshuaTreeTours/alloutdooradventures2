@@ -305,6 +305,8 @@ const extractAttribute = (tag, attrName) => {
 const buildTourBreadcrumbs = ({
   tour,
   detailUrl,
+  countryHref,
+  countryName,
   stateHref,
   cityHref,
   toursHref,
@@ -321,6 +323,9 @@ const buildTourBreadcrumbs = ({
   }
 
   const crumbs = [{ name: "Destinations", url: "/destinations" }];
+  if (countryHref) {
+    crumbs.push({ name: countryName || "United States", url: countryHref });
+  }
   if (stateHref) {
     crumbs.push({ name: tour.destination.state, url: stateHref });
   }
@@ -689,6 +694,7 @@ const main = async () => {
     `/tours/${tour.destination.stateSlug}/${tour.destination.citySlug}/${tour.slug}`;
   const getCityTourDetailPath = tour =>
     `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
+
   const { getFlagstaffTourBySlug, getFlagstaffTourDetailPath } =
     flagstaffModule;
   const {
@@ -699,6 +705,14 @@ const main = async () => {
     buildImageUrl,
     getStaticPageSeo,
   } = seoModule;
+  const schemaGeoFallbackFromTours = tours
+    .filter(tour => !tour?.destination?.country)
+    .map(tour => ({
+      tourId: tour.id,
+      detailUrl: buildCanonicalUrl(getTourDetailPath(tour)),
+      fallback: "US",
+      reason: "missing destination.country inferred from tour route",
+    }));
   const siteBrandName = siteModule?.SITE_BRAND_NAME ?? "Outdoor Adventures";
   const resolveHeroImageForRoute = heroModule?.resolveHeroImageForRoute ?? null;
   const getStateBySlug = destinationsModule?.getStateBySlug ?? null;
@@ -729,14 +743,43 @@ const main = async () => {
     structuredDataModule?.getSiteStructuredDataNodes ?? null;
   const normalizeStructuredData =
     structuredDataModule?.normalizeStructuredData ?? null;
+  const getMissingGeoFallbackReport =
+    structuredDataModule?.getMissingGeoFallbackReport ?? null;
+  const resetMissingGeoFallbackReport =
+    structuredDataModule?.resetMissingGeoFallbackReport ?? null;
   const getTourBookingPath = tourPathsModule?.getTourBookingPath ?? null;
   const getGuideImages = guideImagesModule?.getGuideImages ?? null;
   const getEngine2TourByPath = engine2DataModule?.getEngine2TourByPath ?? null;
   const buildEngine2Seo = engine2SeoModule?.buildEngine2Seo ?? null;
   const buildEngine2SchemaGraph = engine2SchemaModule?.buildSchemaGraph ?? null;
 
+  resetMissingGeoFallbackReport?.();
+
+  const writeSchemaMissingGeoReport = async () => {
+    const schemaMissingGeoReport = [
+      ...schemaGeoFallbackFromTours,
+      ...(getMissingGeoFallbackReport ? getMissingGeoFallbackReport() : []),
+    ];
+    const reportPath = path.resolve(__dirname, "../reports/schema-missing-geo.json");
+    await mkdir(path.dirname(reportPath), { recursive: true });
+    await writeFile(
+      reportPath,
+      JSON.stringify(
+        {
+          generatedAt: new Date().toISOString(),
+          total: schemaMissingGeoReport.length,
+          items: schemaMissingGeoReport,
+        },
+        null,
+        2
+      ),
+      "utf8"
+    );
+  };
+
   const urls = await readSitemapUrls();
   if (!urls.length) {
+    await writeSchemaMissingGeoReport();
     return;
   }
 
@@ -1028,9 +1071,11 @@ const main = async () => {
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
-            stateHref: `/destinations/states/${stateSlug}`,
-            cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+            countryHref: "/destinations/united-states",
+            countryName: "United States",
+            stateHref: `/destinations/united-states/${stateSlug}`,
+            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1053,9 +1098,11 @@ const main = async () => {
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
-            stateHref: `/destinations/states/${stateSlug}`,
-            cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+            countryHref: "/destinations/united-states",
+            countryName: "United States",
+            stateHref: `/destinations/united-states/${stateSlug}`,
+            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1082,9 +1129,11 @@ const main = async () => {
           breadcrumbItems = buildTourBreadcrumbs({
             tour: tourForStructuredData,
             detailUrl: canonicalUrl,
-            stateHref: `/destinations/states/${stateSlug}`,
-            cityHref: `/destinations/states/${stateSlug}/cities/${citySlug}`,
-            toursHref: `/destinations/${stateSlug}/${citySlug}/tours`,
+            countryHref: "/destinations/united-states",
+            countryName: "United States",
+            stateHref: `/destinations/united-states/${stateSlug}`,
+            cityHref: `/destinations/united-states/${stateSlug}/${citySlug}`,
+            toursHref: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
             includeDestinations: true,
           });
         }
@@ -1243,6 +1292,9 @@ const main = async () => {
     });
     throw new Error("Prerender verification failed.");
   }
+
+
+  await writeSchemaMissingGeoReport();
 
   for (const target of verificationTargets) {
     const pathname = normalizePathname(new URL(target.url).pathname);

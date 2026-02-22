@@ -34,6 +34,43 @@ const hasNodeType = (nodes: StructuredDataNode[] | null, type: string) =>
     }),
   );
 
+
+const dedupeGraphNodesById = (nodes: StructuredDataNode[]) => {
+  const byId = new Map<string, StructuredDataNode>();
+  const withoutId: StructuredDataNode[] = [];
+
+  nodes.forEach(node => {
+    const nodeId =
+      typeof node?.["@id"] === "string" ? (node["@id"] as string) : null;
+
+    if (!nodeId) {
+      withoutId.push(node);
+      return;
+    }
+
+    const existing = byId.get(nodeId);
+    if (!existing) {
+      byId.set(nodeId, node);
+      return;
+    }
+
+    const mergedSameAs = Array.from(
+      new Set([
+        ...((Array.isArray(existing.sameAs) ? existing.sameAs : []) as string[]),
+        ...((Array.isArray(node.sameAs) ? node.sameAs : []) as string[]),
+      ]),
+    );
+
+    byId.set(nodeId, {
+      ...existing,
+      ...node,
+      ...(mergedSameAs.length ? { sameAs: mergedSameAs } : {}),
+    });
+  });
+
+  return [...byId.values(), ...withoutId];
+};
+
 const upsertStructuredDataScript = (json: StructuredDataNode | null) => {
   let script = document.head.querySelector<HTMLScriptElement>(
     `script#${SCRIPT_ID}`,
@@ -87,9 +124,15 @@ export const StructuredDataProvider = ({
           }),
         ];
 
+    const mergedNodes = dedupeGraphNodesById([
+      ...baseNodes,
+      ...pageNodes,
+      ...defaultWebPageNode,
+    ]);
+
     const graph = {
       "@context": "https://schema.org",
-      "@graph": [...baseNodes, ...pageNodes, ...defaultWebPageNode],
+      "@graph": mergedNodes,
     };
 
     const normalized = normalizeStructuredData(graph);
