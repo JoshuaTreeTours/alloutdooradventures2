@@ -57,4 +57,35 @@ describe("tourDescription", () => {
       "book your guided trip today."
     );
   });
+
+  it("injects Palm Springs jeep specifics", () => {
+    const result = buildTourDescriptionResult({
+      baseDescription: "Guided desert outing with stops.",
+      tourName: "Private San Andreas Fault Jeep Tour",
+      cityName: "Palm Springs",
+      stateName: "California",
+      citySlug: "palm-springs",
+      tourId: "34897",
+    });
+
+    expect(result.description).toContain(
+      "This tour lasts approximately 3 hours"
+    );
+    expect(result.description).toContain(
+      "includes travel through desert canyons and San Andreas Fault formations in a 4×4 vehicle."
+    );
+  });
+
+  it("does not inject Palm Springs specifics for non-Palm Springs tours", () => {
+    const result = buildTourDescriptionResult({
+      baseDescription: "Guided desert outing with stops.",
+      tourName: "Private San Andreas Fault Jeep Tour",
+      cityName: "Sedona",
+      stateName: "Arizona",
+      citySlug: "sedona",
+      tourId: "34897",
+    });
+
+    expect(result.description).toBe("Guided desert outing with stops.");
+  });
 });

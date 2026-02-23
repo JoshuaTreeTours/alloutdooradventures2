@@ -13,7 +13,7 @@ const AFFILIATE_PARAMS = {
 const hasParamValue = (
   searchParams: URLSearchParams,
   key: string,
-  value: string,
+  value: string
 ) => searchParams.getAll(key).includes(value);
 
 export const getFareharborParams = () => ({
@@ -33,13 +33,13 @@ export const normalizeFareharborUrl = (url?: string) => {
     }
 
     const calendarMatch = normalized.pathname.match(
-      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/,
+      /\/embeds\/calendar\/([^/]+)\/items\/(\d+)/
     );
     const bookCalendarMatch = normalized.pathname.match(
-      /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/,
+      /\/embeds\/book\/([^/]+)\/items\/(\d+)\/calendar/
     );
     const bookMatch = normalized.pathname.match(
-      /\/embeds\/book\/([^/]+)\/items\/(\d+)/,
+      /\/embeds\/book\/([^/]+)\/items\/(\d+)/
     );
 
     if (calendarMatch?.[1] && calendarMatch?.[2]) {
@@ -83,7 +83,9 @@ export const getFareharborItemFromUrl = (url?: string) => {
 
     const match =
       parsed.pathname.match(/\/embeds\/book\/([^/]+)\/items\/(\d+)/) ??
-      parsed.pathname.match(/\/embeds\/calendar\/([^/]+)\/items\/(\d+)/);
+      parsed.pathname.match(/\/embeds\/calendar\/([^/]+)\/items\/(\d+)/) ??
+      parsed.pathname.match(/\/([^/]+)\/items\/(\d+)/) ??
+      parsed.pathname.match(/\/lightframe\/([^/]+)\/items\/(\d+)/);
 
     if (!match?.[1] || !match?.[2]) {
       return null;
