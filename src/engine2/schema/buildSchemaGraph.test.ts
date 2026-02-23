@@ -324,4 +324,24 @@ describe("buildSchemaGraph", () => {
       "38635 Monroe St"
     );
   });
+  it("uses hero plus gallery images in Product.image", () => {
+    const graph = buildSchemaGraph(
+      {
+        ...baseTour,
+        images: {
+          hero: "https://cdn.filestackcontent.com/SHAREDFAULTHERO1",
+          gallery: ["https://cdn.filestackcontent.com/SHAREDFAULTALT2"],
+        },
+      },
+      seo as never
+    );
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+    };
+
+    expect(product.image).toEqual([
+      "https://cdn.filestackcontent.com/SHAREDFAULTHERO1",
+      "https://cdn.filestackcontent.com/SHAREDFAULTALT2",
+    ]);
+  });
 });

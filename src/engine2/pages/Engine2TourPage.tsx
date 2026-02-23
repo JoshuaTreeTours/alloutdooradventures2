@@ -37,15 +37,21 @@ export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const isPalmSprings = isPalmSpringsTour(tour);
+  const overrideContent = getPalmSpringsOverrideContent(tour);
+
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
-    const heroImage =
+    const fallbackHeroImage =
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
         : ENGINE2_DEFAULT_IMAGE;
-    const gallery = normalizeStringArray(tour.images.gallery).filter(
-      image => image !== heroImage
-    );
+    const derivedImages = normalizeStringArray(overrideContent?.derivedImages);
+    const heroImage = derivedImages[0] ?? fallbackHeroImage;
+    const gallerySource = derivedImages.length
+      ? derivedImages.slice(1)
+      : normalizeStringArray(tour.images.gallery);
+    const gallery = gallerySource.filter(image => image !== heroImage);
     const experienceText =
       typeof tour.content.experienceText === "string" &&
       tour.content.experienceText.trim().length > 0
@@ -63,11 +69,9 @@ export default function Engine2TourPage({
         highlights,
       },
     };
-  }, [tour]);
+  }, [overrideContent?.derivedImages, tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
-  const isPalmSprings = isPalmSpringsTour(tour);
-  const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
@@ -222,6 +226,16 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
+        {normalizedTour.images.gallery[0] ? (
+          <div className="mt-4 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={normalizedTour.images.gallery[0]}
+              fallbackSrc={normalizedTour.images.gallery[0]}
+              alt={`${tour.name} secondary image`}
+              className="h-56 w-full object-cover md:h-72"
+            />
+          </div>
+        ) : null}
         {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
             <ul className="space-y-1">

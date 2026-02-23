@@ -7,6 +7,7 @@ import {
 import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
 import { parseFareHarborHtml } from "./parseFareHarborHtml";
 import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
+import { extractFilestackImagesFromHtml } from "../fareharbor/extractFilestackImagesFromHtml";
 import {
   CURATED_34849_FAQS,
   transformToAOAContent,
@@ -18,6 +19,7 @@ export type PalmSpringsOverrideContent = {
   enabled: boolean;
   tourId: number;
   content: TourRewriteV3;
+  derivedImages?: string[];
 };
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
@@ -175,10 +177,12 @@ export const getPalmSpringsOverrideContent = (
     }
 
     const parsedTour = parseFareHarborHtml(fareHarborHtml);
+    const derivedImages = extractFilestackImagesFromHtml(fareHarborHtml);
 
     return {
       enabled: true,
       tourId: 34849,
+      derivedImages,
       content: {
         ...transformToAOAContent(parsedTour),
         canonicalPath: tour.seo.canonicalPath,

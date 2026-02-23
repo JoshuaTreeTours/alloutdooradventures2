@@ -71,6 +71,9 @@ export const buildSchemaGraph = (
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
+  const productImages = imageGallery.length
+    ? [effectiveHeroImage, ...imageGallery]
+    : [effectiveHeroImage];
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
   );
@@ -148,7 +151,7 @@ export const buildSchemaGraph = (
           pilotContent?.whatYoullExperience ??
           seo.description)
         : seo.description,
-      image: [effectiveHeroImage, ...imageGallery],
+      image: productImages,
       category: rewriteV3Content?.category?.primary,
       brand: { "@id": SITE_BRAND_ID },
       offers: offer,
