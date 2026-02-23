@@ -34,6 +34,9 @@ const normalizeStringArray = (value: unknown) => {
     .filter(Boolean);
 };
 
+const isTourSchemaSafeV1Enabled = () =>
+  process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 === "true";
+
 const getDestinationMeta = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
     return { countryCode: "CA" };
@@ -68,7 +71,9 @@ export const buildSchemaGraph = (
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
-  const fallbackPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
+  const fallbackPrice = applyPriceFloor(
+    parsePrice(tour.pricing?.price ?? null)
+  );
   const schemaPrice = rewriteV3Content?.schemaPrice ?? fallbackPrice;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
@@ -83,6 +88,8 @@ export const buildSchemaGraph = (
     fallbackPrice: schemaPrice,
     rewrite: rewriteV3Content,
   });
+  const safeSchemaEnabled = isTourSchemaSafeV1Enabled();
+  const tourDuration = resolveTourDurationISO(rewriteV3Content);
 
   const faqPageNode =
     overrideEnabled && overrideFaqs?.length
@@ -146,6 +153,13 @@ export const buildSchemaGraph = (
       brand: { "@id": SITE_BRAND_ID },
       offers: offer,
       provider: { "@id": SITE_ORGANIZATION_ID },
+      ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
+      ...(safeSchemaEnabled
+        ? {
+            areaServed: { "@id": placeId },
+            isRelatedTo: { "@id": tripId },
+          }
+        : {}),
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${seo.canonical}#webpage`,
@@ -186,8 +200,12 @@ export const buildSchemaGraph = (
           }
         : undefined,
       offers: offer,
-      ...(resolveTourDurationISO(rewriteV3Content)
-        ? { duration: resolveTourDurationISO(rewriteV3Content) }
+      ...(tourDuration ? { duration: tourDuration } : {}),
+      ...(safeSchemaEnabled
+        ? {
+            areaServed: { "@id": placeId },
+            isRelatedTo: { "@id": productId },
+          }
         : {}),
     },
     ...(faqPageNode ? [faqPageNode] : []),

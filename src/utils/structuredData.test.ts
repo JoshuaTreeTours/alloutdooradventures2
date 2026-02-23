@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
 import {
   SITE_BRAND_ID,
@@ -85,6 +85,10 @@ describe("global structured data graph", () => {
 });
 
 describe("tour product/trip schema safety", () => {
+  afterEach(() => {
+    delete process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1;
+    delete process.env.ENABLE_RATINGS_SCHEMA;
+  });
   it("emits Product with Offer and textual price specification", () => {
     const product = buildTourProductStructuredData({
       tour: baseTour,
@@ -137,6 +141,73 @@ describe("tour product/trip schema safety", () => {
         priceCurrency: "USD",
       },
     });
+  });
+
+  it("adds safe-v1 Product/TouristTrip links and areaServed when feature flag is enabled", () => {
+    process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 = "true";
+
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+    const product = buildTourProductStructuredData({
+      tour: {
+        ...baseTour,
+        badges: {
+          ...baseTour.badges,
+          duration: "2 hours",
+        },
+      },
+      detailUrl,
+    });
+    const trip = buildTourTripStructuredData({
+      tour: {
+        ...baseTour,
+        badges: {
+          ...baseTour.badges,
+          duration: "2 hours",
+        },
+      },
+      detailUrl,
+    });
+
+    expect(product).toMatchObject({
+      duration: "2 hours",
+      areaServed: { "@id": `${detailUrl}#place` },
+      isRelatedTo: { "@id": `${detailUrl}#trip` },
+    });
+
+    expect(trip).toMatchObject({
+      duration: "2 hours",
+      areaServed: { "@id": `${detailUrl}#place` },
+      isRelatedTo: { "@id": `${detailUrl}#product` },
+    });
+  });
+
+  it("keeps TouristTrip aggregateRating off in safe-v1 while Product remains eligible", () => {
+    process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 = "true";
+    process.env.ENABLE_RATINGS_SCHEMA = "true";
+
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+    const ratedTour = {
+      ...baseTour,
+      badges: {
+        ...baseTour.badges,
+        rating: 4.7,
+        reviewCount: 120,
+      },
+    };
+
+    const product = buildTourProductStructuredData({
+      tour: ratedTour,
+      detailUrl,
+    }) as { aggregateRating?: unknown };
+    const trip = buildTourTripStructuredData({
+      tour: ratedTour,
+      detailUrl,
+    }) as { aggregateRating?: unknown };
+
+    expect(product.aggregateRating).toBeTruthy();
+    expect(trip.aggregateRating).toBeUndefined();
   });
 
   it("applies a USD 129.00 offer floor when price is missing or below threshold", () => {

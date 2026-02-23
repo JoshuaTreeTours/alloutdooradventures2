@@ -383,10 +383,15 @@ const OFFER_URL_BOOK_ROUTE_PATTERNS = [
 const isAoaBookingOfferEnabled = () =>
   process.env.ENABLE_AOA_BOOKING_OFFER_URL !== "false";
 
+const isTourSchemaSafeV1Enabled = () =>
+  process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 === "true";
+
 const hasAoaBookingRoute = (canonicalUrl: string): boolean => {
   try {
     const { pathname } = new URL(canonicalUrl);
-    return OFFER_URL_BOOK_ROUTE_PATTERNS.some(pattern => pattern.test(pathname));
+    return OFFER_URL_BOOK_ROUTE_PATTERNS.some(pattern =>
+      pattern.test(pathname)
+    );
   } catch {
     return OFFER_URL_BOOK_ROUTE_PATTERNS.some(pattern =>
       pattern.test(canonicalUrl)
@@ -401,7 +406,9 @@ export const resolveCanonicalProductUrl = (detailUrl: string): string => {
     : absoluteDetailUrl;
 };
 
-export const buildAoaBookingUrlFromCanonical = (canonicalUrl: string): string =>
+export const buildAoaBookingUrlFromCanonical = (
+  canonicalUrl: string
+): string =>
   canonicalUrl.endsWith("/book") ? canonicalUrl : `${canonicalUrl}/book`;
 
 export const resolveOfferUrl = ({
@@ -518,6 +525,7 @@ export const buildTourProductStructuredData = ({
   const reviewCount = tour.badges?.reviewCount;
   const ratingsEnabled =
     process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const safeSchemaEnabled = isTourSchemaSafeV1Enabled();
   const aggregateRating =
     ratingsEnabled &&
     typeof ratingValue === "number" &&
@@ -529,6 +537,7 @@ export const buildTourProductStructuredData = ({
           reviewCount,
         }
       : undefined;
+  const tourDuration = tour.badges?.duration?.trim() || undefined;
 
   const offer = {
     "@type": "Offer",
@@ -549,6 +558,13 @@ export const buildTourProductStructuredData = ({
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
+    ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
+    ...(safeSchemaEnabled
+      ? {
+          areaServed: { "@id": `${canonicalProductUrl}#place` },
+          isRelatedTo: { "@id": `${canonicalProductUrl}#trip` },
+        }
+      : {}),
     offers: offer,
     ...(aggregateRating ? { aggregateRating } : {}),
     priceSpecification: {
@@ -595,6 +611,7 @@ export const buildTourTripStructuredData = ({
   const reviewCount = tour.badges?.reviewCount;
   const ratingsEnabled =
     process.env.ENABLE_RATINGS_SCHEMA === "true" || ratingsVisible;
+  const safeSchemaEnabled = isTourSchemaSafeV1Enabled();
   const aggregateRating =
     ratingsEnabled &&
     typeof ratingValue === "number" &&
@@ -606,6 +623,7 @@ export const buildTourTripStructuredData = ({
           reviewCount,
         }
       : undefined;
+  const tourDuration = tour.badges?.duration?.trim() || undefined;
 
   return {
     "@type": "TouristTrip",
@@ -614,6 +632,13 @@ export const buildTourTripStructuredData = ({
     description,
     ...(resolvedImages.length ? { image: resolvedImages } : {}),
     provider: { "@id": SITE_BRAND_ID },
+    ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
+    ...(safeSchemaEnabled
+      ? {
+          areaServed: { "@id": `${canonicalProductUrl}#place` },
+          isRelatedTo: { "@id": `${canonicalProductUrl}#product` },
+        }
+      : {}),
     offers: {
       "@type": "Offer",
       url: offerUrl,
@@ -622,7 +647,7 @@ export const buildTourTripStructuredData = ({
       priceCurrency: toOfferCurrency(tour),
       priceValidUntil: getPriceValidUntil(),
     },
-    ...(aggregateRating ? { aggregateRating } : {}),
+    ...(!safeSchemaEnabled && aggregateRating ? { aggregateRating } : {}),
     priceSpecification: {
       "@type": "PriceSpecification",
       description: TOUR_PRICE_DESCRIPTION,

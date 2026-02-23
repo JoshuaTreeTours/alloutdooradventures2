@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
 import type { Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "./buildSchemaGraph";
@@ -54,9 +54,14 @@ const seo = {
 };
 
 describe("buildSchemaGraph", () => {
+  afterEach(() => {
+    delete process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1;
+  });
   it("builds US breadcrumb URLs from canonical route and never falls back to california", () => {
     const graph = buildSchemaGraph(baseTour, seo as never);
-    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as {
+    const breadcrumb = graph.find(
+      node => node["@type"] === "BreadcrumbList"
+    ) as {
       itemListElement: Array<{ item: string }>;
     };
 
@@ -205,6 +210,42 @@ describe("buildSchemaGraph", () => {
     }
   });
 
+  it("adds safe-v1 links and areaServed to Product/TouristTrip when enabled", () => {
+    process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 = "true";
+
+    const graph = buildSchemaGraph(
+      baseTour,
+      seo as never,
+      null,
+      false,
+      undefined,
+      undefined,
+      true,
+      {
+        whatYoullExperience: ["x"],
+        highlights: ["y"],
+        schemaDescription: "desc",
+        durationISO: "PT3H",
+      }
+    );
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      duration?: string;
+      areaServed?: { "@id": string };
+      isRelatedTo?: { "@id": string };
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      areaServed?: { "@id": string };
+      isRelatedTo?: { "@id": string };
+    };
+
+    expect(product.duration).toBe("PT3H");
+    expect(product.areaServed).toEqual({ "@id": `${seo.canonical}#place` });
+    expect(product.isRelatedTo).toEqual({ "@id": `${seo.canonical}#trip` });
+    expect(trip.areaServed).toEqual({ "@id": `${seo.canonical}#place` });
+    expect(trip.isRelatedTo).toEqual({ "@id": `${seo.canonical}#product` });
+  });
+
   it("uses rewrite-v3 category, meeting point and schema price in Product/TouristTrip", () => {
     const graph = buildSchemaGraph(
       baseTour,
@@ -257,7 +298,9 @@ describe("buildSchemaGraph", () => {
       departureLocation?: { name: string; address: { streetAddress: string } };
       offers: { "@type": string; lowPrice?: string; highPrice?: string };
     };
-    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as {
+    const breadcrumb = graph.find(
+      node => node["@type"] === "BreadcrumbList"
+    ) as {
       itemListElement: Array<{ item: string }>;
     };
 
@@ -273,11 +316,12 @@ describe("buildSchemaGraph", () => {
     expect(breadcrumbUrls.join(" ")).toContain(
       "/destinations/california/palm-springs/tours"
     );
-    expect(breadcrumbUrls.join(" ")).not.toContain("/destinations/united-states");
+    expect(breadcrumbUrls.join(" ")).not.toContain(
+      "/destinations/united-states"
+    );
     expect(trip.departureLocation?.name).toBe("Metate Ranch");
     expect(trip.departureLocation?.address.streetAddress).toBe(
       "38635 Monroe St"
     );
   });
-
 });
