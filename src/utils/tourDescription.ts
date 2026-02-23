@@ -32,6 +32,30 @@ const VARIANT_PATTERNS: Array<{ pattern: RegExp; label: string }> = [
   { pattern: /\bone\s*[- ]?way\b/i, label: "One-way" },
 ];
 
+const getPalmSpringsSpecificDetails = (title: string) => {
+  const lower = title.toLowerCase();
+
+  if (lower.includes("jeep") || lower.includes("hummer")) {
+    return {
+      duration: "approximately 3 hours",
+      detail:
+        "travel through desert canyons and San Andreas Fault formations in a 4×4 vehicle",
+    };
+  }
+
+  if (lower.includes("bike")) {
+    return {
+      duration: "approximately 2–3 hours",
+      detail:
+        "guided ride through Palm Springs neighborhoods and scenic desert routes",
+    };
+  }
+
+  return {
+    duration: "a half-day experience",
+    detail: "guided exploration of desert landscapes and local highlights",
+  };
+};
 type DescriptionInputs = {
   baseDescription: string;
   tourName: string;
@@ -138,6 +162,15 @@ export const buildTourDescriptionResult = ({
     description = normalizeText(
       `${safeBase} ${cleanName}${location ? ` (${location})` : ""} · ID ${tourId}`
     );
+  }
+
+  const isPalmSpringsTour =
+    citySlug === "palm-springs" ||
+    location.toLowerCase().includes("palm springs");
+
+  if (isPalmSpringsTour) {
+    const { duration, detail } = getPalmSpringsSpecificDetails(cleanName);
+    description = `${description} This tour lasts ${duration} and includes ${detail}.`;
   }
 
   description = clampDescription(description, 300);
