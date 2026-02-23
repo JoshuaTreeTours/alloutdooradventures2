@@ -4,6 +4,7 @@ export type ParsedTour = {
   highlights: string[];
   duration: string;
   meetingPoint: string;
+  category: string;
   pricing: string[];
   inclusions: string[];
   exclusions: string[];
@@ -42,6 +43,8 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
   const meetingPoint =
     details.match(/Meeting Point:\s*([^\n]+)$/i)?.[1]?.trim() ?? "";
 
+  const category = stripTags(getSection(html, "category"));
+
   const faqSection = getSection(html, "faq");
   const faq = Array.from(
     faqSection.matchAll(
@@ -57,6 +60,7 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
     highlights: getListItems(getSection(html, "highlights")),
     duration,
     meetingPoint,
+    category,
     pricing: getListItems(getSection(html, "pricing")),
     inclusions: getListItems(getSection(html, "inclusions")),
     exclusions: getListItems(getSection(html, "exclusions")),

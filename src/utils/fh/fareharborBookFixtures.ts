@@ -7,24 +7,31 @@ export const FAREHARBOR_URL_34849 =
 const HTML_34849 = `
 <main>
   <h1>Shared San Andreas Fault Jeep Tour</h1>
+  <section data-fh="category">
+    <p>Jeep tour (geology + nature walk)</p>
+  </section>
   <section data-fh="overview">
     <p>Explore the San Andreas Fault zone with a naturalist guide on an open-air Jeep route through the Coachella Valley's geologically active terrain.</p>
-    <p>Stops include fault-line viewpoints, eroded canyons, and palm oases where guests can walk short segments and discuss the landscape.</p>
+    <p>Stops include fault-line viewpoints, Indio Hills canyons, slot-canyon passages, and palm oasis areas where guests can walk short segments and discuss local geology.</p>
   </section>
   <section data-fh="highlights">
     <ul>
       <li>Guided Jeep access into the active San Andreas Fault system</li>
-      <li>Interpretation of tectonic movement, desert ecology, and local history</li>
+      <li>Interpretation of tectonic movement, desert ecology, and Coachella Valley geology</li>
       <li>Short ground stops for photos and close-up geology observation</li>
       <li>Palm oasis and wash-system viewpoints in the Coachella Valley</li>
+      <li>Cahuilla village history and land-use context at select stops</li>
     </ul>
   </section>
   <section data-fh="details">
     <p><strong>Duration:</strong> 3 hours</p>
-    <p><strong>Meeting Point:</strong> Desert Adventures Metate Ranch base near Palm Desert</p>
+    <p><strong>Meeting Point:</strong> Metate Ranch — 38635 Monroe St, Indio, CA 92203</p>
   </section>
   <section data-fh="pricing">
-    <ul><li>From $98 per person</li></ul>
+    <ul>
+      <li>Adults (18+): $175</li>
+      <li>Children (17 and under, parent required): $150</li>
+    </ul>
   </section>
   <section data-fh="inclusions">
     <ul>
@@ -53,4 +60,3 @@ export const fareHarborHtmlByUrl: Record<string, string> = {
 export const fareHarborUrlByBookPath: Record<string, string> = {
   [BOOK_PATH_34849]: FAREHARBOR_URL_34849,
 };
-

@@ -21,11 +21,13 @@ describe("Palm Springs 34849 override content", () => {
     const parsed = parseFareHarborHtml(fareHarborHtmlByUrl[FAREHARBOR_URL_34849]);
     expect(parsed.title).toContain("Shared San Andreas Fault Jeep Tour");
     expect(parsed.duration).toBe("3 hours");
+    expect(parsed.meetingPoint).toContain("38635 Monroe St");
+    expect(parsed.category).toContain("Jeep tour");
+    expect(parsed.pricing.join(" ")).toContain("$175");
     expect(parsed.highlights.length).toBeGreaterThan(0);
-    expect(parsed.faq.length).toBeGreaterThan(0);
   });
 
-  it("returns non-test override copy for tour 34849", () => {
+  it("returns enriched override copy and labels for tour 34849", () => {
     const tour = getEngine2TourByPath(
       "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849"
     );
@@ -33,9 +35,16 @@ describe("Palm Springs 34849 override content", () => {
 
     const override = getPalmSpringsOverrideContent(tour!);
     expect(override?.enabled).toBe(true);
-    expect(override?.content.whatYoullExperience[0]).not.toContain(
+    expect(override?.content.categoryLabel).toContain("Jeep");
+    expect(override?.content.durationLabel).toBe("3 hours");
+    expect(override?.content.meetingPointLabel).toContain("Indio, CA");
+    expect(override?.content.priceSummaryLabel).toContain("adult");
+    expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(3);
+    expect(override?.content.whatYoullExperience[0]).toContain("San Andreas Fault");
+    expect(override?.content.schemaDescription).toContain("Coachella Valley");
+    expect(override?.content.highlights.length).toBeGreaterThanOrEqual(8);
+    expect(override?.content.whatYoullExperience.join(" ")).not.toContain(
       "OVERRIDE TEST SUCCESS"
     );
-    expect(override?.content.highlights.length).toBeGreaterThan(0);
   });
 });

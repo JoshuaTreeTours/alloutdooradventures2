@@ -94,9 +94,21 @@ export default function Engine2TourPage({
   const isPriceFallbackApplied =
     basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
+  const overrideSchemaDescription =
+    overrideContent?.enabled && overrideContent.tourId === 34849
+      ? overrideContent.content.schemaDescription
+      : undefined;
+
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour, seo, pilotContent, isPalmSprings),
-    [normalizedTour, seo, pilotContent, isPalmSprings]
+    () =>
+      buildSchemaGraph(
+        normalizedTour,
+        seo,
+        pilotContent,
+        isPalmSprings,
+        overrideSchemaDescription
+      ),
+    [normalizedTour, seo, pilotContent, isPalmSprings, overrideSchemaDescription]
   );
 
   const relatedTours = useMemo(
@@ -158,6 +170,14 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
+        {overrideContent?.enabled && overrideContent.tourId === 34849 ? (
+          <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
+            <span><strong>Category:</strong> {overrideContent.content.categoryLabel ?? "Jeep tour"}</span>{" · "}
+            <span><strong>Duration:</strong> {overrideContent.content.durationLabel ?? "3 hours"}</span>{" · "}
+            <span><strong>Meet:</strong> {overrideContent.content.meetingPointLabel ?? "Metate Ranch — 38635 Monroe St, Indio, CA 92203"}</span>{" · "}
+            <span><strong>Price:</strong> {overrideContent.content.priceSummaryLabel ?? "$175 adult / $150 child"}</span>
+          </div>
+        ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>

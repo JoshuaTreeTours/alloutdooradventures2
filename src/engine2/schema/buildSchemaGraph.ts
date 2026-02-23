@@ -107,7 +107,8 @@ export const buildSchemaGraph = (
   tour: Engine2Tour,
   seo: Engine2Seo,
   pilotContent?: AOAEnrichedTourContent | null,
-  isPalmSprings = false
+  isPalmSprings = false,
+  overrideDescription?: string
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -166,7 +167,7 @@ export const buildSchemaGraph = (
       url: canonicalProductUrl,
       name: tour.name,
       description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        ? (overrideDescription ?? pilotContent?.whatYoullExperience ?? seo.description)
         : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@id": SITE_BRAND_ID },
@@ -182,7 +183,7 @@ export const buildSchemaGraph = (
       "@id": tripId,
       name: tour.name,
       description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        ? (overrideDescription ?? pilotContent?.whatYoullExperience ?? seo.description)
         : seo.description,
       itinerary:
         isPalmSprings && pilotContent?.itineraryOutline?.length

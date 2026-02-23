@@ -5,16 +5,17 @@ import {
   type FareHarborStructuredData,
 } from "./transformFareHarborToAOAContent";
 import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
-import { parseFareHarborHtml, type ParsedTour } from "./parseFareHarborHtml";
+import { parseFareHarborHtml } from "./parseFareHarborHtml";
 import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
+import {
+  transformToAOAContent,
+  type AOAOverrideContent,
+} from "./transformToAOAContent";
 
 export type PalmSpringsOverrideContent = {
   enabled: boolean;
   tourId: number;
-  content: {
-    whatYoullExperience: string[];
-    highlights: string[];
-  };
+  content: AOAOverrideContent;
 };
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
@@ -133,9 +134,14 @@ export const getPalmSpringsOverrideContent = (
     return null;
   }
 
-  const fallbackContent = {
+  const fallbackContent: AOAOverrideContent = {
+    categoryLabel: undefined,
+    meetingPointLabel: undefined,
+    priceSummaryLabel: undefined,
+    durationLabel: undefined,
     whatYoullExperience: [tour.content.experienceText],
     highlights: tour.content.highlights,
+    schemaDescription: tour.content.experienceText,
   };
 
   const bookPath = `${tour.seo.canonicalPath}/book`;
@@ -166,28 +172,3 @@ export const getPalmSpringsOverrideContent = (
   };
 };
 
-const toSentences = (value: string) =>
-  value
-    .split(/(?<=[.!?])\s+/)
-    .map(item => item.trim())
-    .filter(Boolean);
-
-const transformToAOAContent = (
-  parsedTour: ParsedTour
-): PalmSpringsOverrideContent["content"] => {
-  const sourceSentences = toSentences(parsedTour.overview);
-  const overviewSentences = sourceSentences.slice(0, 3);
-
-  if (parsedTour.duration) {
-    overviewSentences.push(`The route runs about ${parsedTour.duration}.`);
-  }
-
-  if (parsedTour.meetingPoint) {
-    overviewSentences.push(`Departure is from ${parsedTour.meetingPoint}.`);
-  }
-
-  return {
-    whatYoullExperience: [overviewSentences.slice(0, 4).join(" ")],
-    highlights: parsedTour.highlights.slice(0, 6),
-  };
-};
