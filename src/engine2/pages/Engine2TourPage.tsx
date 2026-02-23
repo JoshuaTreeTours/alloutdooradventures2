@@ -120,11 +120,6 @@ export default function Engine2TourPage({
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
-          {overrideContent?.enabled ? (
-            <p className="mb-4 rounded-md bg-red-700 px-4 py-3 text-center text-xl font-black uppercase tracking-[0.08em] text-white md:text-3xl">
-              OVERRIDE TEST ACTIVE 34849
-            </p>
-          ) : null}
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
             {tour.geo.city}, {tour.geo.region}
           </p>
