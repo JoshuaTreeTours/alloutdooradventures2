@@ -3,11 +3,17 @@ import { Link } from "wouter";
 
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
-import { buildBreadcrumbList, getSiteStructuredDataNodes } from "../../utils/structuredData";
+import {
+  buildBreadcrumbList,
+  getSiteStructuredDataNodes,
+} from "../../utils/structuredData";
 import BookingCtaLink from "../../components/BookingCtaLink";
 import type { Engine2Tour } from "../data/loadEngine2";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
-import { buildFareHarborUrl, normalizeFareHarborUrl } from "../utils/buildFareHarborUrl";
+import {
+  buildFareHarborUrl,
+  normalizeFareHarborUrl,
+} from "../utils/buildFareHarborUrl";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -31,8 +37,14 @@ const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "mexico") {
     return [
       { name: "Mexico", url: "/destinations/mexico" },
-      { name: tour.geo.city, url: `/destinations/mexico/${tour.sourceCitySlug}` },
-      { name: "Tours", url: `/destinations/mexico/${tour.sourceCitySlug}/tours` },
+      {
+        name: tour.geo.city,
+        url: `/destinations/mexico/${tour.sourceCitySlug}`,
+      },
+      {
+        name: "Tours",
+        url: `/destinations/mexico/${tour.sourceCitySlug}/tours`,
+      },
     ];
   }
 
@@ -55,8 +67,14 @@ const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
 
   return [
     { name: "California", url: "/destinations/california" },
-    { name: tour.geo.city, url: `/destinations/california/${tour.sourceCitySlug}` },
-    { name: "Tours", url: `/destinations/california/${tour.sourceCitySlug}/tours` },
+    {
+      name: tour.geo.city,
+      url: `/destinations/california/${tour.sourceCitySlug}`,
+    },
+    {
+      name: "Tours",
+      url: `/destinations/california/${tour.sourceCitySlug}/tours`,
+    },
   ];
 };
 
@@ -70,9 +88,9 @@ export default function Engine2TourBookingPage({
     ? buildFareHarborUrl({
         company: bookingArgs.shortname,
         itemId: bookingArgs.itemId,
-        calendarPath: tour.booking.bookingUrl,
+        calendarPath: tour.bookingUrl ?? tour.booking.bookingUrl,
       })
-    : normalizeFareHarborUrl(tour.booking.bookingUrl);
+    : normalizeFareHarborUrl(tour.bookingUrl ?? tour.booking.bookingUrl);
   const iframeUrl = generatedCalendarUrl;
   const fallbackUrl = generatedCalendarUrl;
 

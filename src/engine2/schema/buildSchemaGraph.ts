@@ -15,6 +15,7 @@ import {
   DEFAULT_IMAGE_URL,
 } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -66,7 +67,8 @@ const getDestinationMeta = (tour: Engine2Tour) => {
 
   if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
     return {
-      countryCode: (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
+      countryCode:
+        (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
       countryName: tour.geo.country,
       countryUrl: `/destinations/${tour.sourceCountrySlug}`,
       cityUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
@@ -103,7 +105,9 @@ const getDestinationMeta = (tour: Engine2Tour) => {
 
 export const buildSchemaGraph = (
   tour: Engine2Tour,
-  seo: Engine2Seo
+  seo: Engine2Seo,
+  pilotContent?: AOAEnrichedTourContent | null,
+  isPalmSprings = false
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -118,7 +122,7 @@ export const buildSchemaGraph = (
     "@type": "Offer",
     url: resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
-      partnerBookingUrl: tour.booking.bookingUrl,
+      partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
     }),
     availability: "https://schema.org/InStock",
     price: flooredPrice.toFixed(2),
@@ -137,7 +141,10 @@ export const buildSchemaGraph = (
     {
       "@type": "Place",
       "@id": placeId,
-      name: `${tour.geo.city}, ${tour.geo.region}`,
+      name:
+        isPalmSprings && pilotContent?.quickFacts?.startLocationArea
+          ? pilotContent.quickFacts.startLocationArea
+          : `${tour.geo.city}, ${tour.geo.region}`,
       geo:
         typeof tour.geo.lat === "number" && typeof tour.geo.lng === "number"
           ? {
@@ -158,19 +165,32 @@ export const buildSchemaGraph = (
       "@id": productId,
       url: canonicalProductUrl,
       name: tour.name,
-      description: seo.description,
+      description: isPalmSprings
+        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@id": SITE_BRAND_ID },
       offers: offer,
       provider: { "@id": SITE_ORGANIZATION_ID },
-      mainEntityOfPage: { "@type": "WebPage", "@id": `${seo.canonical}#webpage` },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${seo.canonical}#webpage`,
+      },
     },
     {
       "@type": "TouristTrip",
       "@id": tripId,
       name: tour.name,
-      description: seo.description,
-      itinerary: { "@id": placeId },
+      description: isPalmSprings
+        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        : seo.description,
+      itinerary:
+        isPalmSprings && pilotContent?.itineraryOutline?.length
+          ? pilotContent.itineraryOutline.map(step => ({
+              "@type": "TouristAttraction",
+              name: step,
+            }))
+          : { "@id": placeId },
       provider: { "@id": SITE_ORGANIZATION_ID },
       touristType: "Adventure travelers",
       offers: offer,
@@ -188,7 +208,10 @@ export const buildSchemaGraph = (
         ? [{ name: destinationMeta.stateName, url: destinationMeta.stateUrl }]
         : []),
       {
-        name: "cityName" in destinationMeta ? destinationMeta.cityName : formatCityFromSlug(tour.sourceCitySlug),
+        name:
+          "cityName" in destinationMeta
+            ? destinationMeta.cityName
+            : formatCityFromSlug(tour.sourceCitySlug),
         url: destinationMeta.cityUrl,
       },
       {
