@@ -18,12 +18,17 @@ describe("Palm Springs 34849 override content", () => {
   });
 
   it("parses FareHarbor HTML into structured content", () => {
-    const parsed = parseFareHarborHtml(fareHarborHtmlByUrl[FAREHARBOR_URL_34849]);
+    const parsed = parseFareHarborHtml(
+      fareHarborHtmlByUrl[FAREHARBOR_URL_34849]
+    );
     expect(parsed.title).toContain("Shared San Andreas Fault Jeep Tour");
     expect(parsed.duration).toBe("3 hours");
     expect(parsed.meetingPoint).toContain("38635 Monroe St");
     expect(parsed.category).toContain("Jeep tour");
     expect(parsed.pricing.join(" ")).toContain("$175");
+    expect(parsed.priceLabel).toBe("$175 adult / $150 child");
+    expect(parsed.priceAdult).toBe(175);
+    expect(parsed.priceChild).toBe(150);
     expect(parsed.highlights.length).toBeGreaterThan(0);
   });
 
@@ -38,9 +43,15 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.categoryLabel).toContain("Jeep");
     expect(override?.content.durationLabel).toBe("3 hours");
     expect(override?.content.meetingPointLabel).toContain("Indio, CA");
-    expect(override?.content.priceSummaryLabel).toContain("adult");
-    expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(3);
-    expect(override?.content.whatYoullExperience[0]).toContain("San Andreas Fault");
+    expect(override?.content.priceLabel).toBe("$175 adult / $150 child");
+    expect(override?.content.priceAdult).toBe(175);
+    expect(override?.content.priceChild).toBe(150);
+    expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(
+      3
+    );
+    expect(override?.content.whatYoullExperience[0]).toContain(
+      "San Andreas Fault"
+    );
     expect(override?.content.schemaDescription).toContain("Coachella Valley");
     expect(override?.content.highlights.length).toBeGreaterThanOrEqual(8);
     expect(override?.content.whatYoullExperience.join(" ")).not.toContain(

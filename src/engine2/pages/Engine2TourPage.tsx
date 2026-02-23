@@ -91,8 +91,15 @@ export default function Engine2TourPage({
   );
   const basePrice = parsePrice(tour.pricing?.price ?? null);
   const displayPrice = applyPriceFloor(basePrice);
-  const isPriceFallbackApplied =
-    basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
+  const enginePriceLabel =
+    basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD
+      ? undefined
+      : `From $${displayPrice.toFixed(2)} per person`;
+  const overridePriceLabel = overrideContent?.enabled
+    ? overrideContent.content.priceLabel
+    : undefined;
+  const headerPriceLabel = overridePriceLabel ?? enginePriceLabel;
+  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
 
   const overrideSchemaDescription =
     overrideContent?.enabled && overrideContent.tourId === 34849
@@ -108,7 +115,13 @@ export default function Engine2TourPage({
         isPalmSprings,
         overrideSchemaDescription
       ),
-    [normalizedTour, seo, pilotContent, isPalmSprings, overrideSchemaDescription]
+    [
+      normalizedTour,
+      seo,
+      pilotContent,
+      isPalmSprings,
+      overrideSchemaDescription,
+    ]
   );
 
   const relatedTours = useMemo(
@@ -141,11 +154,16 @@ export default function Engine2TourPage({
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
-          <p className="mt-4 text-sm font-semibold text-white/90">
-            {isPriceFallbackApplied
-              ? "From $129 per person"
-              : `From $${displayPrice.toFixed(2)} per person`}
-          </p>
+          {headerPriceLabel ? (
+            <p className="mt-4 text-sm font-semibold text-white/90">
+              {headerPriceLabel}
+            </p>
+          ) : null}
+          {showFallbackPrice ? (
+            <p className="mt-4 text-sm font-semibold text-white/90">
+              From $129 per person
+            </p>
+          ) : null}
           <div className="mt-6 flex gap-3">
             <Link href={bookingPath}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
@@ -172,10 +190,29 @@ export default function Engine2TourPage({
         </div>
         {overrideContent?.enabled && overrideContent.tourId === 34849 ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
-            <span><strong>Category:</strong> {overrideContent.content.categoryLabel ?? "Jeep tour"}</span>{" · "}
-            <span><strong>Duration:</strong> {overrideContent.content.durationLabel ?? "3 hours"}</span>{" · "}
-            <span><strong>Meet:</strong> {overrideContent.content.meetingPointLabel ?? "Metate Ranch — 38635 Monroe St, Indio, CA 92203"}</span>{" · "}
-            <span><strong>Price:</strong> {overrideContent.content.priceSummaryLabel ?? "$175 adult / $150 child"}</span>
+            <span>
+              <strong>Category:</strong>{" "}
+              {overrideContent.content.categoryLabel ?? "Jeep tour"}
+            </span>
+            {" · "}
+            <span>
+              <strong>Duration:</strong>{" "}
+              {overrideContent.content.durationLabel ?? "3 hours"}
+            </span>
+            {" · "}
+            <span>
+              <strong>Meet:</strong>{" "}
+              {overrideContent.content.meetingPointLabel ??
+                "Metate Ranch — 38635 Monroe St, Indio, CA 92203"}
+            </span>
+            {" · "}
+            {!headerPriceLabel ? (
+              <span>
+                <strong>Price:</strong>{" "}
+                {overrideContent.content.priceLabel ??
+                  "$175 adult / $150 child"}
+              </span>
+            ) : null}
           </div>
         ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
