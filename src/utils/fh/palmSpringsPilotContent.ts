@@ -4,6 +4,8 @@ import {
   type AOAEnrichedTourContent,
   type FareHarborStructuredData,
 } from "./transformFareHarborToAOAContent";
+import { getFareHarborTourData } from "../../server/fareharbor/getFareHarborTourData";
+import { resolveFareHarborUrlFromBookPage } from "../pilot/resolveFareHarborUrlFromBookPage";
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
   "34849": {
@@ -112,4 +114,64 @@ export const getPalmSpringsPilotContent = (
   }
 
   return transformFareHarborToAOAContent(tour.name, seed);
+};
+
+const build34849Fallback = (tour: Engine2Tour): AOAEnrichedTourContent => {
+  const humanizedSlug = tour.slug
+    .replace(/-\d+$/, "")
+    .split("-")
+    .filter(Boolean)
+    .join(" ");
+
+  return transformFareHarborToAOAContent(tour.name, {
+    title: tour.name,
+    duration: "Approx. half-day desert adventure",
+    meetingLocation: "Palm Springs / Palm Desert area",
+    pickup: "unknown",
+    rawHighlights: [
+      `${tour.name} follows the San Andreas corridor with interpretive Jeep stops`,
+      `Guided context for geology, desert ecosystems, and route history around ${tour.geo.city}`,
+      `More than a ${humanizedSlug} photo stop, with frequent narration and terrain context`,
+      "Short ground-level stops for views, photos, and fault-zone interpretation",
+    ],
+    itinerary: [
+      "Check in, safety orientation, and route overview",
+      "Travel into the San Andreas fault zone with guide commentary",
+      "Stop at selected viewpoints and desert wash areas",
+      "Return to starting area with local recommendations",
+    ],
+    requirements: [
+      "Comfortable closed-toe shoes recommended",
+      "Guests should be prepared for desert temperatures",
+    ],
+  });
+};
+
+export const getTour34849OverrideContent = async (
+  tour: Engine2Tour
+): Promise<AOAEnrichedTourContent> => {
+  const fhUrl = await resolveFareHarborUrlFromBookPage({
+    pathname: tour.seo.canonicalPath,
+  });
+
+  if (!fhUrl) {
+    console.info("34849: usingFH=false");
+    const fallback = build34849Fallback(tour);
+    console.info("34849: overrideBuilt=true");
+    return fallback;
+  }
+
+  const fhData = await getFareHarborTourData(fhUrl);
+  const usingFH = Boolean(fhData);
+  console.info(`34849: usingFH=${usingFH ? "true" : "false"}`);
+
+  if (!fhData) {
+    const fallback = build34849Fallback(tour);
+    console.info("34849: overrideBuilt=true");
+    return fallback;
+  }
+
+  const rewritten = transformFareHarborToAOAContent(tour.name, fhData);
+  console.info("34849: overrideBuilt=true");
+  return rewritten;
 };
