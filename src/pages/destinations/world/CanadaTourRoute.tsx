@@ -11,5 +11,11 @@ export default function CanadaTourRoute({ params }: Props) {
   );
   if (!tour)
     return <main className="mx-auto max-w-4xl px-6 py-16">Tour not found</main>;
-  return <Engine2TourPage tour={tour} isFHPilotEnabled={false} />;
+  return (
+    <Engine2TourPage
+      tour={tour}
+      isFHPilotEnabled={false}
+      isPsp34849DescriptionOverrideEnabled={false}
+    />
+  );
 }
