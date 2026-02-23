@@ -11,6 +11,7 @@ import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
+  getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
@@ -65,10 +66,18 @@ export default function Engine2TourPage({
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
+  const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
+  const engine1Content = {
+    whatYoullExperience: [normalizedTour.content.experienceText],
+    highlights: normalizedTour.content.highlights,
+  };
+  const content = overrideContent?.enabled
+    ? overrideContent.content
+    : engine1Content;
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -111,6 +120,11 @@ export default function Engine2TourPage({
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
+          {overrideContent?.enabled ? (
+            <p className="mb-4 rounded-md bg-red-700 px-4 py-3 text-center text-xl font-black uppercase tracking-[0.08em] text-white md:text-3xl">
+              OVERRIDE TEST ACTIVE 34849
+            </p>
+          ) : null}
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
             {tour.geo.city}, {tour.geo.region}
           </p>
@@ -152,9 +166,11 @@ export default function Engine2TourPage({
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
-        <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
-        </p>
+        <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
+          {content.whatYoullExperience.map(paragraph => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
@@ -208,16 +224,13 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
-          .length ? (
+        {content.highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {(
-                pilotContent?.highlights ?? normalizedTour.content.highlights
-              ).map(highlight => (
+              {content.highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
