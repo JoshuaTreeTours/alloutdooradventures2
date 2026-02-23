@@ -11,13 +11,13 @@ import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
-  getPalmSpringsPilotContent,
   isPalmSpringsTour,
+  type PalmSpringsOverrideContent,
 } from "../../utils/fh/palmSpringsPilotContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
-  isFHPilotEnabled: boolean;
+  overrideContent: PalmSpringsOverrideContent | null;
 };
 
 const normalizeStringArray = (value: unknown) => {
@@ -33,7 +33,7 @@ const normalizeStringArray = (value: unknown) => {
 
 export default function Engine2TourPage({
   tour,
-  isFHPilotEnabled,
+  overrideContent,
 }: Engine2TourPageProps) {
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
@@ -65,15 +65,20 @@ export default function Engine2TourPage({
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
-  const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
-      ? getPalmSpringsPilotContent(tour)
-      : null;
+  const isOverrideActive = Boolean(overrideContent && overrideContent.enabled);
+  const renderSource = isOverrideActive ? "override" : "engine1";
+  const pilotContent = isOverrideActive
+    ? (overrideContent?.content ?? null)
+    : null;
 
-  if (isPalmSprings && typeof window === "undefined") {
-    console.info(
-      `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
-    );
+  if (typeof window !== "undefined") {
+    console.info(`OVERRIDE_USED=${isOverrideActive}`);
+    console.info(`RENDER_SOURCE=${renderSource}`);
+  }
+
+  if (isOverrideActive && typeof window === "undefined") {
+    console.info(`OVERRIDE_USED=${isOverrideActive}`);
+    console.info(`RENDER_SOURCE=${renderSource}`);
   }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
   const backToToursPath = tour.seo.canonicalPath.replace(
@@ -86,8 +91,14 @@ export default function Engine2TourPage({
     basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour, seo, pilotContent, isPalmSprings),
-    [normalizedTour, seo, pilotContent, isPalmSprings]
+    () =>
+      buildSchemaGraph(
+        normalizedTour,
+        seo,
+        isOverrideActive ? pilotContent : null,
+        isPalmSprings
+      ),
+    [normalizedTour, seo, isOverrideActive, pilotContent, isPalmSprings]
   );
 
   const relatedTours = useMemo(
@@ -103,6 +114,11 @@ export default function Engine2TourPage({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      {isOverrideActive ? (
+        <div className="bg-[#8b0000] px-6 py-3 text-center text-xs font-bold uppercase tracking-[0.2em] text-white">
+          ENGINE1 OVERRIDE ACTIVE tourId={tour.id}
+        </div>
+      ) : null}
       <Seo
         title={seo.title}
         description={seo.description}
@@ -153,7 +169,9 @@ export default function Engine2TourPage({
           What you'll experience
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
+          {isOverrideActive
+            ? pilotContent?.whatYoullExperience
+            : normalizedTour.content.experienceText}
         </p>
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
@@ -208,15 +226,18 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
-          .length ? (
+        {(isOverrideActive
+          ? (pilotContent?.highlights ?? [])
+          : normalizedTour.content.highlights
+        ).length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {(
-                pilotContent?.highlights ?? normalizedTour.content.highlights
+              {(isOverrideActive
+                ? (pilotContent?.highlights ?? [])
+                : normalizedTour.content.highlights
               ).map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}

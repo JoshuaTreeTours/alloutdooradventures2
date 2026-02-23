@@ -37,7 +37,10 @@ import {
 } from "../../../../utils/structuredData";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
-import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import {
+  getPalmSpringsPilotContent,
+  isPalmSpringsTour,
+} from "../../../../utils/fh/palmSpringsPilotContent";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -62,13 +65,21 @@ export default function CityTourDetailRoute({
 
   if (engine2Tour) {
     const isPsp = isPalmSpringsTour(engine2Tour);
-    if (isPsp && typeof window === "undefined") {
-      console.info(
-        `[FHPilot] enabled=${isFHPilotEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
-      );
-    }
+    const shouldExecuteOverride =
+      isFHPilotEnabled && isPsp && Boolean(engine2Tour.bookingUrl);
+    const overrideContent = shouldExecuteOverride
+      ? getPalmSpringsPilotContent(engine2Tour)
+      : null;
+    const overrideExecuted = Boolean(shouldExecuteOverride);
+    const overrideUsed = Boolean(overrideContent?.enabled);
+    const renderSource = overrideUsed ? "override" : "engine1";
+
+    console.info(`OVERRIDE_EXECUTED=${overrideExecuted}`);
+    console.info(`OVERRIDE_USED=${overrideUsed}`);
+    console.info(`RENDER_SOURCE=${renderSource}`);
+
     return (
-      <Engine2TourPage tour={engine2Tour} isFHPilotEnabled={isFHPilotEnabled} />
+      <Engine2TourPage tour={engine2Tour} overrideContent={overrideContent} />
     );
   }
 
