@@ -1,5 +1,7 @@
 export type FareHarborStructuredData = {
   title?: string;
+  description?: string;
+  operator?: string;
   duration?: string;
   meetingLocation?: string;
   included?: string[];
@@ -53,16 +55,31 @@ const trimArray = (items?: string[]) =>
 
 export const transformFareHarborToAOAContent = (
   tourName: string,
-  source: FareHarborStructuredData
+  source: FareHarborStructuredData,
+  supplierSource?: {
+    description?: string;
+    highlights?: string[];
+  }
 ): AOAEnrichedTourContent => {
   const introHook = getHook(tourName);
-  const highlights = trimArray(source.rawHighlights).slice(0, 8);
+  const authoritativeHighlights = trimArray(source.rawHighlights);
+  const supplierHighlights = trimArray(supplierSource?.highlights);
+  const highlights = Array.from(
+    new Set([...authoritativeHighlights, ...supplierHighlights])
+  ).slice(0, 8);
   const itinerary = trimArray(source.itinerary).slice(0, 6);
   const included = trimArray(source.included);
   const notIncluded = trimArray(source.notIncluded);
   const rules = trimArray(source.requirements);
   const duration = source.duration?.trim();
   const meetingLocation = source.meetingLocation?.trim();
+
+  const authorityDescription = source.description?.trim();
+  const supplierDescription = supplierSource?.description?.trim();
+  const whatYoullExperience =
+    authorityDescription ??
+    supplierDescription ??
+    `${introHook} with a guide who explains how Palm Springs geology, desert ecology, and route conditions shape the day. This tour balances scenic driving and stop-based interpretation so you are not just passing viewpoints. Expect a practical briefing at the start, followed by a steady pace that leaves time for photos and short walks where conditions allow. Guides typically connect major landmarks to the wider Coachella Valley story, including fault movement, canyons, and water in the desert. Group flow, weather, and seasonal access can shift exact stop timing, so details may vary by departure.`;
 
   return {
     quickFacts: {
@@ -73,7 +90,7 @@ export const transformFareHarborToAOAContent = (
         /age|minimum|child|height|weight/i.test(item)
       ),
     },
-    whatYoullExperience: `${introHook} with a guide who explains how Palm Springs geology, desert ecology, and route conditions shape the day. This tour balances scenic driving and stop-based interpretation so you are not just passing viewpoints. Expect a practical briefing at the start, followed by a steady pace that leaves time for photos and short walks where conditions allow. Guides typically connect major landmarks to the wider Coachella Valley story, including fault movement, canyons, and water in the desert. Group flow, weather, and seasonal access can shift exact stop timing, so details may vary by departure.`,
+    whatYoullExperience,
     experienceInDepth: [
       `After check-in, the guide sets expectations for terrain, temperature, and comfort stops before departure. From there, the route moves through Palm Springs-area desert corridors where road cuts and washes make geologic layers easier to read in the field.`,
       `As the trip develops, narration usually links landforms to present-day travel conditions: where erosion channels form, how wind and water shape canyons, and why oasis pockets exist in otherwise dry zones. Instead of generic commentary, the guide can answer questions tied to the exact sections you are traveling through.`,

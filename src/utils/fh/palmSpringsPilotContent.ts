@@ -7,6 +7,8 @@ import {
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
   "34849": {
+    description:
+      "Travel deep into the San Andreas Fault Zone in a custom open-air Jeep while your naturalist guide explains desert geology, oasis habitats, and Coachella Valley history along the route.",
     duration: "3 hours",
     meetingLocation: "Palm Desert / Palm Springs area",
     pickup: "unknown",
@@ -111,5 +113,8 @@ export const getPalmSpringsPilotContent = (
     return null;
   }
 
-  return transformFareHarborToAOAContent(tour.name, seed);
+  return transformFareHarborToAOAContent(tour.name, seed, {
+    description: tour.content.experienceText,
+    highlights: tour.content.highlights,
+  });
 };
