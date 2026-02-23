@@ -10,10 +10,9 @@ import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
-import {
-  getPalmSpringsPilotContent,
-  isPalmSpringsTour,
-} from "../../utils/fh/palmSpringsPilotContent";
+import { getFareHarborTourData } from "../../server/fareharbor/getFareHarborTourData";
+import { isTour34849 } from "../../utils/pilot/isTour34849";
+import { getTour34849OverrideContent } from "../../utils/pilot/getTour34849OverrideContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -64,15 +63,43 @@ export default function Engine2TourPage({
   }, [tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
-  const isPalmSprings = isPalmSpringsTour(tour);
-  const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
-      ? getPalmSpringsPilotContent(tour)
-      : null;
+  const isTargetTour = isTour34849(tour, tour.seo.canonicalPath);
+  const overrideContent = getTour34849OverrideContent({
+    tour,
+    pathname: tour.seo.canonicalPath,
+    flagEnabled: isFHPilotEnabled,
+  });
+  const contentToRender = overrideContent ?? {
+    whatYoullExperience: normalizedTour.content.experienceText,
+    highlights: normalizedTour.content.highlights,
+    included: [] as string[],
+    notIncluded: [] as string[],
+    rulesAndRequirements: [] as string[],
+    schemaDescription: seo.description,
+  };
 
-  if (isPalmSprings && typeof window === "undefined") {
+  if (isTargetTour && typeof window === "undefined") {
+    console.info(`34849 override: flag ${isFHPilotEnabled ? "on" : "off"}`);
     console.info(
-      `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
+      `34849 override: bookingUrl ${tour.bookingUrl ? "present" : "missing"}`
+    );
+    if (isFHPilotEnabled && tour.bookingUrl) {
+      void getFareHarborTourData(tour.bookingUrl)
+        .then(data => {
+          console.info(`34849 override: FH fetch ${data ? "ok" : "failed"}`);
+          console.info(
+            `34849 override: transform ${overrideContent ? "ok" : "failed"}`
+          );
+        })
+        .catch(() => {
+          console.info("34849 override: FH fetch failed");
+          console.info(
+            `34849 override: transform ${overrideContent ? "ok" : "failed"}`
+          );
+        });
+    }
+    console.info(
+      `34849 override: rendered override content ${overrideContent ? "yes" : "no"}`
     );
   }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
@@ -86,8 +113,8 @@ export default function Engine2TourPage({
     basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour, seo, pilotContent, isPalmSprings),
-    [normalizedTour, seo, pilotContent, isPalmSprings]
+    () => buildSchemaGraph(normalizedTour, seo, overrideContent, isTargetTour),
+    [normalizedTour, seo, overrideContent, isTargetTour]
   );
 
   const relatedTours = useMemo(
@@ -153,128 +180,52 @@ export default function Engine2TourPage({
           What you'll experience
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
+          {contentToRender.whatYoullExperience}
         </p>
-        {pilotContent?.quickFacts ? (
-          <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
-            <h3 className="text-lg font-semibold text-[#2f4a2f]">
-              Quick facts
-            </h3>
-            <ul className="mt-3 space-y-1 text-sm text-[#405040]">
-              {pilotContent.quickFacts.duration ? (
-                <li>
-                  <strong>Duration:</strong> {pilotContent.quickFacts.duration}
-                </li>
-              ) : null}
-              {pilotContent.quickFacts.startLocationArea ? (
-                <li>
-                  <strong>Start area:</strong>{" "}
-                  {pilotContent.quickFacts.startLocationArea}
-                </li>
-              ) : null}
-              {pilotContent.quickFacts.pickup ? (
-                <li>
-                  <strong>Pickup:</strong> {pilotContent.quickFacts.pickup}
-                </li>
-              ) : null}
-              {pilotContent.quickFacts.ageOrMinimumRequirements ? (
-                <li>
-                  <strong>Minimums:</strong>{" "}
-                  {pilotContent.quickFacts.ageOrMinimumRequirements}
-                </li>
-              ) : null}
-            </ul>
-          </div>
-        ) : null}
-        {pilotContent?.whatYoullExperience ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              What You’ll Experience
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.whatYoullExperience}
-            </p>
-          </>
-        ) : null}
-        {pilotContent?.experienceInDepth?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Experience In Depth
-            </h2>
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.experienceInDepth.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
-          </>
-        ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
-          .length ? (
+        {contentToRender.highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {(
-                pilotContent?.highlights ?? normalizedTour.content.highlights
-              ).map(highlight => (
+              {contentToRender.highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {pilotContent?.itineraryOutline?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Itinerary
-            </h2>
-            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.itineraryOutline.map(step => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-          </>
-        ) : null}
-
-        {pilotContent?.quickFacts?.startLocationArea ||
-        pilotContent?.quickFacts?.pickup ? (
+        {overrideContent?.meetingPickupSummary ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Meeting & Pickup
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.quickFacts?.startLocationArea
-                ? `Meeting area: ${pilotContent.quickFacts.startLocationArea}. `
-                : "Meeting location details vary by departure. "}
-              {pilotContent.quickFacts?.pickup
-                ? `Pickup: ${pilotContent.quickFacts.pickup}.`
-                : "Pickup details vary by departure."}
+              {overrideContent.meetingPickupSummary}
             </p>
           </>
         ) : null}
 
-        {pilotContent?.whoItsFor?.length ? (
+        {overrideContent?.whyThisLandscapeMatters ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Who It’s For
+              Why this landscape matters
             </h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.whoItsFor.map(item => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
+            <p className="mt-3 text-sm text-[#405040]">
+              {overrideContent.whyThisLandscapeMatters}
+            </p>
           </>
         ) : null}
 
-        {pilotContent?.included?.length || pilotContent?.notIncluded?.length ? (
+        {contentToRender.included.length ||
+        contentToRender.notIncluded.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div>
               <h2 className="text-xl font-semibold text-[#2f4a2f]">
                 What’s Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.included ?? []).map(item => (
+                {contentToRender.included.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -284,7 +235,7 @@ export default function Engine2TourPage({
                 Not Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.notIncluded ?? []).map(item => (
+                {contentToRender.notIncluded.map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -292,35 +243,24 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {pilotContent?.cancellationSummary ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Cancellation
-            </h2>
-            <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.cancellationSummary}
-            </p>
-          </>
-        ) : null}
-
-        {pilotContent?.rulesAndRequirements?.length ? (
+        {contentToRender.rulesAndRequirements.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Rules & Requirements
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.rulesAndRequirements.map(rule => (
+              {contentToRender.rulesAndRequirements.map(rule => (
                 <li key={rule}>{rule}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {pilotContent?.faq?.length ? (
+        {overrideContent?.faq?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQ</h2>
             <div className="mt-4 space-y-4">
-              {pilotContent.faq.map(item => (
+              {overrideContent.faq.map(item => (
                 <div key={item.question}>
                   <p className="text-sm font-semibold text-[#2f4a2f]">
                     {item.question}

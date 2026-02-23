@@ -15,7 +15,7 @@ import {
   DEFAULT_IMAGE_URL,
 } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
-import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
+import type { Tour34849OverrideContent } from "../../utils/pilot/getTour34849OverrideContent";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -106,8 +106,8 @@ const getDestinationMeta = (tour: Engine2Tour) => {
 export const buildSchemaGraph = (
   tour: Engine2Tour,
   seo: Engine2Seo,
-  pilotContent?: AOAEnrichedTourContent | null,
-  isPalmSprings = false
+  overrideContent?: Tour34849OverrideContent | null,
+  isTargetTour = false
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -142,8 +142,8 @@ export const buildSchemaGraph = (
       "@type": "Place",
       "@id": placeId,
       name:
-        isPalmSprings && pilotContent?.quickFacts?.startLocationArea
-          ? pilotContent.quickFacts.startLocationArea
+        isTargetTour && overrideContent?.meetingPickupSummary
+          ? "Palm Springs Fault Zone"
           : `${tour.geo.city}, ${tour.geo.region}`,
       geo:
         typeof tour.geo.lat === "number" && typeof tour.geo.lng === "number"
@@ -165,8 +165,8 @@ export const buildSchemaGraph = (
       "@id": productId,
       url: canonicalProductUrl,
       name: tour.name,
-      description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+      description: isTargetTour
+        ? (overrideContent?.schemaDescription ?? seo.description)
         : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@id": SITE_BRAND_ID },
@@ -181,16 +181,10 @@ export const buildSchemaGraph = (
       "@type": "TouristTrip",
       "@id": tripId,
       name: tour.name,
-      description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+      description: isTargetTour
+        ? (overrideContent?.schemaDescription ?? seo.description)
         : seo.description,
-      itinerary:
-        isPalmSprings && pilotContent?.itineraryOutline?.length
-          ? pilotContent.itineraryOutline.map(step => ({
-              "@type": "TouristAttraction",
-              name: step,
-            }))
-          : { "@id": placeId },
+      itinerary: { "@id": placeId },
       provider: { "@id": SITE_ORGANIZATION_ID },
       touristType: "Adventure travelers",
       offers: offer,

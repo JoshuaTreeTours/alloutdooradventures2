@@ -37,7 +37,7 @@ import {
 } from "../../../../utils/structuredData";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
-import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import { isTour34849 } from "../../../../utils/pilot/isTour34849";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -52,7 +52,7 @@ export default function CityTourDetailRoute({
 }: CityTourDetailRouteProps) {
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
-    process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+    process.env.ENABLE_PSP_34849_FH_OVERRIDE === "true";
 
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
@@ -61,10 +61,14 @@ export default function CityTourDetailRoute({
   );
 
   if (engine2Tour) {
-    const isPsp = isPalmSpringsTour(engine2Tour);
-    if (isPsp && typeof window === "undefined") {
+    const isTargetTour = isTour34849(
+      engine2Tour,
+      engine2Tour.seo.canonicalPath
+    );
+    if (isTargetTour && typeof window === "undefined") {
+      console.info(`34849 override: flag ${isFHPilotEnabled ? "on" : "off"}`);
       console.info(
-        `[FHPilot] enabled=${isFHPilotEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
+        `34849 override: bookingUrl ${engine2Tour.bookingUrl ? "present" : "missing"}`
       );
     }
     return (
