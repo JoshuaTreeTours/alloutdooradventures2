@@ -12,6 +12,7 @@ import {
   transformToAOAContent,
   type TourRewriteV3,
 } from "./transformToAOAContent";
+import { isPrerenderBuild } from "./isPrerenderBuild";
 
 export type PalmSpringsOverrideContent = {
   enabled: boolean;
@@ -148,30 +149,42 @@ export const getPalmSpringsOverrideContent = (
     schemaDescription: tour.content.experienceText,
   };
 
-  const bookPath = `${tour.seo.canonicalPath}/book`;
-  const fareHarborUrl = resolveFareHarborUrlFromBookPage(bookPath);
-  if (!fareHarborUrl) {
+  if (isPrerenderBuild()) {
+    return null;
+  }
+
+  try {
+    const bookPath = `${tour.seo.canonicalPath}/book`;
+    const fareHarborUrl = resolveFareHarborUrlFromBookPage(bookPath);
+    if (!fareHarborUrl) {
+      return {
+        enabled: true,
+        tourId: 34849,
+        content: fallbackContent,
+      };
+    }
+
+    const fareHarborHtml = fetchFareHarborHtml(fareHarborUrl);
+    if (!fareHarborHtml) {
+      return {
+        enabled: true,
+        tourId: 34849,
+        content: fallbackContent,
+      };
+    }
+
+    const parsedTour = parseFareHarborHtml(fareHarborHtml);
+
     return {
       enabled: true,
       tourId: 34849,
-      content: fallbackContent,
+      content: transformToAOAContent(parsedTour),
     };
+  } catch (error) {
+    console.warn(
+      "[fh-override] Failed to build Palm Springs override. Falling back to engine content.",
+      error
+    );
+    return null;
   }
-
-  const fareHarborHtml = fetchFareHarborHtml(fareHarborUrl);
-  if (!fareHarborHtml) {
-    return {
-      enabled: true,
-      tourId: 34849,
-      content: fallbackContent,
-    };
-  }
-
-  const parsedTour = parseFareHarborHtml(fareHarborHtml);
-
-  return {
-    enabled: true,
-    tourId: 34849,
-    content: transformToAOAContent(parsedTour),
-  };
 };

@@ -39,7 +39,8 @@
     "gen:paris": "tsx --tsconfig tsconfig.node.json scripts/generate-guide-from-wiki.ts",
     "guides:enrich-about-map": "tsx scripts/enrich-guides-about-and-maps.ts",
     "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts",
-    "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts"
+    "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
+    "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
