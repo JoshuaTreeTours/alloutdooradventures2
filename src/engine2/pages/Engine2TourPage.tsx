@@ -15,7 +15,11 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import { extractBookingTourData } from "../../utils/tours/extractBookingTourData";
-import { rewriteSanAndreasTour } from "../../utils/tours/rewriteSanAndreasTour";
+import {
+  rewriteSanAndreasTour,
+  type SanAndreasRewrite,
+} from "../../utils/tours/rewriteSanAndreasTour";
+import { formatTourDetailValue } from "../../utils/tours/formatTourDetailValue";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -106,7 +110,7 @@ export default function Engine2TourPage({
     };
   }, [bookingPath, isSanAndreasSharedTour]);
 
-  const sanAndreasRewrite = useMemo(() => {
+  const sanAndreasRewrite = useMemo<SanAndreasRewrite | null>(() => {
     if (!isSanAndreasSharedTour) {
       return null;
     }
@@ -117,25 +121,21 @@ export default function Engine2TourPage({
     });
 
     const rewritten = rewriteSanAndreasTour(extracted);
-    const sections = rewritten.split("\n\n");
-    const overview = sections[1] ?? "";
-    const details = sections
-      .filter(section => section.startsWith("- "))
-      .slice(0, 6)
-      .map(item => item.replace(/^-\s*/, "").trim());
-    const highlights = sections
-      .filter(section => section.startsWith("- "))
-      .slice(6)
-      .map(item => item.replace(/^-\s*/, "").trim());
-    const localAuthority = sections[sections.length - 1] ?? "";
 
-    return {
-      overview,
-      details,
-      highlights,
-      localAuthority,
-    };
-  }, [bookingPageHtml, isSanAndreasSharedTour, normalizedTour.content.experienceText]);
+    if (process.env.NODE_ENV !== "production") {
+      const durationValue = rewritten.details?.duration;
+      if (durationValue && typeof durationValue === "object") {
+        console.warn("Tour duration is object for slug:", tour.slug, durationValue);
+      }
+    }
+
+    return rewritten;
+  }, [
+    bookingPageHtml,
+    isSanAndreasSharedTour,
+    normalizedTour.content.experienceText,
+    tour.slug,
+  ]);
 
   const backToToursPath = tour.seo.canonicalPath.replace(
     /\/tours\/[^/]+$/,
@@ -224,9 +224,30 @@ export default function Engine2TourPage({
                 Tour details
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-[#405040]">
-                {sanAndreasRewrite.details.map(detail => (
-                  <li key={detail}>{detail}</li>
-                ))}
+                <li>
+                  <strong>Duration:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.duration)}
+                </li>
+                <li>
+                  <strong>Meeting point:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.meetingPoint)}
+                </li>
+                <li>
+                  <strong>Group size:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.groupSize)}
+                </li>
+                <li>
+                  <strong>Age:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.age)}
+                </li>
+                <li>
+                  <strong>Accessibility:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.accessibility)}
+                </li>
+                <li>
+                  <strong>Cancellation:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.cancellation)}
+                </li>
               </ul>
             </div>
 
