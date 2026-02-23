@@ -23,8 +23,9 @@ describe("Palm Springs 34849 override content", () => {
     );
     expect(parsed.title).toContain("Shared San Andreas Fault Jeep Tour");
     expect(parsed.duration).toBe("3 hours");
-    expect(parsed.meetingPoint).toContain("38635 Monroe St");
-    expect(parsed.category).toContain("Jeep tour");
+    expect(parsed.meetingPoint.addressLine1).toContain("38635 Monroe St");
+    expect(parsed.category.primary).toContain("Jeep tour");
+    expect(parsed.category.tags).toContain("geology");
     expect(parsed.pricing.join(" ")).toContain("$175");
     expect(parsed.priceLabel).toBe("$175 adult / $150 child");
     expect(parsed.priceAdult).toBe(175);
@@ -40,12 +41,11 @@ describe("Palm Springs 34849 override content", () => {
 
     const override = getPalmSpringsOverrideContent(tour!);
     expect(override?.enabled).toBe(true);
-    expect(override?.content.categoryLabel).toContain("Jeep");
+    expect(override?.content.category?.primary).toContain("Jeep");
     expect(override?.content.durationLabel).toBe("3 hours");
-    expect(override?.content.meetingPointLabel).toContain("Indio, CA");
-    expect(override?.content.priceLabel).toBe("$175 adult / $150 child");
-    expect(override?.content.priceAdult).toBe(175);
-    expect(override?.content.priceChild).toBe(150);
+    expect(override?.content.meetingPoint?.city).toBe("Indio");
+    expect(override?.content.heroPriceText).toBe("$175 adult / $150 child");
+    expect(override?.content.schemaPrice).toBe(175);
     expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(
       3
     );

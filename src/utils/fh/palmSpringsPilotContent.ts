@@ -10,13 +10,13 @@ import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBook
 import {
   CURATED_34849_FAQS,
   transformToAOAContent,
-  type AOAOverrideContent,
+  type TourRewriteV3,
 } from "./transformToAOAContent";
 
 export type PalmSpringsOverrideContent = {
   enabled: boolean;
   tourId: number;
-  content: AOAOverrideContent;
+  content: TourRewriteV3;
 };
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
@@ -135,12 +135,12 @@ export const getPalmSpringsOverrideContent = (
     return null;
   }
 
-  const fallbackContent: AOAOverrideContent = {
-    categoryLabel: undefined,
-    meetingPointLabel: undefined,
-    priceAdult: undefined,
-    priceChild: undefined,
-    priceLabel: undefined,
+  const fallbackContent: TourRewriteV3 = {
+    category: undefined,
+    meetingPoint: undefined,
+    schemaPrice: undefined,
+    heroPriceText: undefined,
+    priceCurrency: "USD",
     durationLabel: undefined,
     whatYoullExperience: [tour.content.experienceText],
     highlights: tour.content.highlights,
