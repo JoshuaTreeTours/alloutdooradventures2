@@ -1,13 +1,16 @@
 import {
   getSiteStructuredDataNodes,
-  buildBreadcrumbList,
   buildWebPageStructuredData,
   SITE_ORGANIZATION_ID,
   SITE_BRAND_ID,
-  getPriceValidUntil,
   resolveCanonicalProductUrl,
   resolveOfferUrl,
 } from "../../utils/structuredData";
+import {
+  buildTourBreadcrumbNode,
+  buildTourOfferNode,
+  resolveTourDurationISO,
+} from "../../schema/buildTourSchemaGraph";
 import type { Engine2Tour } from "../data/loadEngine2";
 import type { Engine2Seo } from "../seo/buildEngine2Seo";
 import {
@@ -16,7 +19,7 @@ import {
 } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
-import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -31,77 +34,23 @@ const normalizeStringArray = (value: unknown) => {
     .filter(Boolean);
 };
 
-const formatCityFromSlug = (slug: string) =>
-  slug
-    .split("-")
-    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
-
-const formatNameFromSlug = (slug?: string) =>
-  slug
-    ? slug
-        .split("-")
-        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" ")
-    : "";
-
 const getDestinationMeta = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
-    return {
-      countryCode: "CA",
-      countryName: "Canada",
-      countryUrl: "/destinations/world/canada",
-      cityUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
-      toursUrl: `/destinations/world/canada/${tour.sourceProvinceSlug}/${tour.sourceCitySlug}`,
-    };
+    return { countryCode: "CA" };
   }
 
   if (tour.sourceCountrySlug === "mexico") {
-    return {
-      countryCode: "MX",
-      countryName: "Mexico",
-      countryUrl: "/destinations/mexico",
-      cityUrl: `/destinations/mexico/${tour.sourceCitySlug}`,
-      toursUrl: `/destinations/mexico/${tour.sourceCitySlug}/tours`,
-    };
+    return { countryCode: "MX" };
   }
 
   if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
     return {
       countryCode:
         (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
-      countryName: tour.geo.country,
-      countryUrl: `/destinations/${tour.sourceCountrySlug}`,
-      cityUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}`,
-      toursUrl: `/destinations/${tour.sourceCountrySlug}/${tour.sourceCitySlug}/tours`,
     };
   }
 
-  if (tour.seo.canonicalPath.startsWith("/destinations/united-states/")) {
-    const stateSlug = tour.seo.canonicalPath.split("/")[3] || "";
-    const citySlug = tour.sourceCitySlug;
-    return {
-      countryCode: "US",
-      countryName: "United States",
-      stateName: formatNameFromSlug(stateSlug),
-      stateUrl: `/destinations/united-states/${stateSlug}`,
-      cityName: formatCityFromSlug(citySlug),
-      cityUrl: `/destinations/united-states/${stateSlug}/${citySlug}`,
-      toursUrl: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
-    };
-  }
-
-  const stateSlug = tour.seo.canonicalPath.split("/")[2] || "";
-  const citySlug = tour.sourceCitySlug;
-  return {
-    countryCode: "US",
-    countryName: "United States",
-    stateName: formatNameFromSlug(stateSlug),
-    stateUrl: `/destinations/united-states/${stateSlug}`,
-    cityName: formatCityFromSlug(citySlug),
-    cityUrl: `/destinations/united-states/${stateSlug}/${citySlug}`,
-    toursUrl: `/destinations/united-states/${stateSlug}/${citySlug}/tours`,
-  };
+  return { countryCode: "US" };
 };
 
 export const buildSchemaGraph = (
@@ -112,7 +61,7 @@ export const buildSchemaGraph = (
   overrideDescription?: string,
   overrideFaqs?: Array<{ question: string; answer: string }>,
   overrideEnabled = false,
-  rewriteV3Content?: TourRewriteV3
+  rewriteV3Content?: TourRewriteV3_1
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -124,17 +73,16 @@ export const buildSchemaGraph = (
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
   const canonicalProductUrl = resolveCanonicalProductUrl(seo.canonical);
-  const offer: Record<string, unknown> = {
-    "@type": "Offer",
-    url: resolveOfferUrl({
-      canonicalUrl: canonicalProductUrl,
-      partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
-    }),
-    availability: "https://schema.org/InStock",
-    price: schemaPrice.toFixed(2),
-    priceCurrency: rewriteV3Content?.priceCurrency ?? offerCurrency,
-    priceValidUntil: getPriceValidUntil(),
-  };
+  const offerUrl = resolveOfferUrl({
+    canonicalUrl: canonicalProductUrl,
+    partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
+  });
+  const offer = buildTourOfferNode({
+    offerUrl,
+    currency: offerCurrency,
+    fallbackPrice: schemaPrice,
+    rewrite: rewriteV3Content,
+  });
 
   const faqPageNode =
     overrideEnabled && overrideFaqs?.length
@@ -238,32 +186,14 @@ export const buildSchemaGraph = (
           }
         : undefined,
       offers: offer,
+      ...(resolveTourDurationISO(rewriteV3Content)
+        ? { duration: resolveTourDurationISO(rewriteV3Content) }
+        : {}),
     },
     ...(faqPageNode ? [faqPageNode] : []),
-    buildBreadcrumbList([
-      { name: "Destinations", url: "/destinations" },
-      {
-        name: destinationMeta.countryName,
-        url:
-          "countryUrl" in destinationMeta
-            ? destinationMeta.countryUrl
-            : "/destinations/united-states",
-      },
-      ...(destinationMeta.stateName
-        ? [{ name: destinationMeta.stateName, url: destinationMeta.stateUrl }]
-        : []),
-      {
-        name:
-          "cityName" in destinationMeta
-            ? destinationMeta.cityName
-            : formatCityFromSlug(tour.sourceCitySlug),
-        url: destinationMeta.cityUrl,
-      },
-      {
-        name: "Tours",
-        url: destinationMeta.toursUrl,
-      },
-      { name: tour.name, url: tour.seo.canonicalPath },
-    ]),
+    buildTourBreadcrumbNode({
+      canonicalPath: rewriteV3Content?.canonicalPath ?? tour.seo.canonicalPath,
+      tourName: tour.name,
+    }),
   ];
 };

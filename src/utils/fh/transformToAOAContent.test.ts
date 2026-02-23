@@ -32,5 +32,13 @@ describe("transformToAOAContent rewrite-v3", () => {
     expect(rewrite.schemaPrice).toBe(175);
     expect(rewrite.category?.primary).toBe("Jeep tour");
     expect(rewrite.meetingPoint?.addressLine1).toBe("38635 Monroe St");
+    expect(rewrite.durationMinutes).toBe(180);
+    expect(rewrite.durationISO).toBe("PT3H");
+    expect(rewrite.pricing).toMatchObject({
+      currency: "USD",
+      low: 150,
+      high: 175,
+      isAggregate: true,
+    });
   });
 });

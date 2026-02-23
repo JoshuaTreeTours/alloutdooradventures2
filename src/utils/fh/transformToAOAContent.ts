@@ -1,9 +1,19 @@
 import type { ParsedTour } from "./parseFareHarborHtml";
 
-export type TourRewriteV3 = {
+export type TourRewriteV3_1 = {
   heroPriceText?: string;
   schemaPrice?: number;
   priceCurrency?: string;
+  durationMinutes?: number;
+  durationISO?: string;
+  pricing?: {
+    currency: string;
+    low?: number;
+    high?: number;
+    displayText?: string;
+    isAggregate?: boolean;
+  };
+  canonicalPath?: string;
   category?: {
     primary: string;
     tags?: string[];
@@ -23,6 +33,8 @@ export type TourRewriteV3 = {
   faqs?: Array<{ question: string; answer: string }>;
   schemaDescription: string;
 };
+
+export type TourRewriteV3 = TourRewriteV3_1;
 
 const DEFAULT_CATEGORY = "Jeep tour (geology + nature walk)";
 const DEFAULT_MEETING_POINT = "Metate Ranch — 38635 Monroe St, Indio, CA 92203";
@@ -164,9 +176,42 @@ const derivePriceLabel = (
   return fallback ?? `From ${DEFAULT_PRICE}`;
 };
 
+const parseDurationMinutes = (duration: string): number | undefined => {
+  const trimmed = duration.trim();
+  if (!trimmed) {
+    return undefined;
+  }
+
+  const hourMatch = trimmed.match(/(\d+(?:\.\d+)?)\s*(?:hours?|hrs?|hr|h)\b/i);
+  const minuteMatch = trimmed.match(/(\d+)\s*(?:minutes?|mins?|min|m)\b/i);
+  const hours = hourMatch?.[1] ? Number.parseFloat(hourMatch[1]) : 0;
+  const minutes = minuteMatch?.[1] ? Number.parseInt(minuteMatch[1], 10) : 0;
+  const totalMinutes = Math.round(hours * 60 + minutes);
+
+  return Number.isFinite(totalMinutes) && totalMinutes > 0
+    ? totalMinutes
+    : undefined;
+};
+
+const toDurationISO = (durationMinutes?: number): string | undefined => {
+  if (!durationMinutes || durationMinutes <= 0) {
+    return undefined;
+  }
+
+  const hours = Math.floor(durationMinutes / 60);
+  const minutes = durationMinutes % 60;
+  if (hours && minutes) {
+    return `PT${hours}H${minutes}M`;
+  }
+  if (hours) {
+    return `PT${hours}H`;
+  }
+  return `PT${minutes}M`;
+};
+
 export const transformToAOAContent = (
   parsedTour: ParsedTour
-): TourRewriteV3 => {
+): TourRewriteV3_1 => {
   const duration = parsedTour.duration || DEFAULT_DURATION;
   const meetingPoint = parsedTour.meetingPoint.rawText || DEFAULT_MEETING_POINT;
   const category = parsedTour.category.primary || DEFAULT_CATEGORY;
@@ -204,11 +249,32 @@ export const transformToAOAContent = (
     parsedFaqs,
     CURATED_34849_FAQS
   ).slice(0, 5);
+  const durationMinutes = parseDurationMinutes(duration);
+  const durationISO = toDurationISO(durationMinutes);
+  const priceLow = [parsedTour.priceAdult, parsedTour.priceChild]
+    .filter((price): price is number => typeof price === "number")
+    .sort((a, b) => a - b)[0];
+  const priceHigh = [parsedTour.priceAdult, parsedTour.priceChild]
+    .filter((price): price is number => typeof price === "number")
+    .sort((a, b) => b - a)[0];
+  const isAggregate =
+    typeof priceLow === "number" &&
+    typeof priceHigh === "number" &&
+    priceLow !== priceHigh;
 
   return {
     heroPriceText: priceLabel,
     schemaPrice: parsedTour.priceAdult,
     priceCurrency: "USD",
+    durationMinutes,
+    durationISO,
+    pricing: {
+      currency: "USD",
+      low: priceLow,
+      high: priceHigh,
+      displayText: priceLabel,
+      isAggregate,
+    },
     category: parsedTour.category,
     meetingPoint: parsedTour.meetingPoint,
     durationLabel: duration,

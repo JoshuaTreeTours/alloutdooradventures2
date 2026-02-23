@@ -142,6 +142,7 @@ export const getPalmSpringsOverrideContent = (
     schemaPrice: undefined,
     heroPriceText: undefined,
     priceCurrency: "USD",
+    canonicalPath: tour.seo.canonicalPath,
     durationLabel: undefined,
     whatYoullExperience: [tour.content.experienceText],
     highlights: tour.content.highlights,
@@ -178,7 +179,10 @@ export const getPalmSpringsOverrideContent = (
     return {
       enabled: true,
       tourId: 34849,
-      content: transformToAOAContent(parsedTour),
+      content: {
+        ...transformToAOAContent(parsedTour),
+        canonicalPath: tour.seo.canonicalPath,
+      },
     };
   } catch (error) {
     console.warn(
