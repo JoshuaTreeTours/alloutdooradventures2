@@ -103,13 +103,23 @@ export const isPalmSpringsTour = (tour: Engine2Tour) =>
   tour.sourceCitySlug === "palm-springs" ||
   /\/palm-springs\//.test(tour.seo.canonicalPath);
 
+export type PalmSpringsOverrideContent = {
+  enabled: boolean;
+  tourId: string;
+  content: AOAEnrichedTourContent;
+};
+
 export const getPalmSpringsPilotContent = (
   tour: Engine2Tour
-): AOAEnrichedTourContent | null => {
+): PalmSpringsOverrideContent | null => {
   const seed = PALM_SPRINGS_SEEDS[tour.id];
   if (!seed) {
     return null;
   }
 
-  return transformFareHarborToAOAContent(tour.name, seed);
+  return {
+    enabled: true,
+    tourId: tour.id,
+    content: transformFareHarborToAOAContent(tour.name, seed),
+  };
 };
