@@ -38,11 +38,24 @@ const decodeEntities = (value: string) =>
     .replace(/&quot;/gi, '"')
     .replace(/&#39;/gi, "'");
 
+const extractText = (value: unknown): string => {
+  if (typeof value === "string") {
+    return decodeEntities(clean(value));
+  }
+
+  if (typeof value === "number") {
+    return String(value);
+  }
+
+  return "";
+};
+
 const readFirst = (content: string, patterns: RegExp[]) => {
   for (const pattern of patterns) {
     const match = content.match(pattern);
-    if (match?.[1]) {
-      return decodeEntities(clean(match[1]));
+    const text = extractText(match?.[1]);
+    if (text) {
+      return text;
     }
   }
 
@@ -57,79 +70,78 @@ export const extractBookingTourData = ({
   const secondary = pageBodyContent ?? "";
   const combined = `${primary}\n${secondary}`;
 
-  const duration =
-    readFirst(primary, [
-      /Duration\s*[:\-]\s*([^\n<]+)/i,
-      /([0-9]+\s*(?:hour|hours|hr))/i,
-    ]) ||
-    readFirst(secondary, [/([0-9]+\s*(?:hour|hours|hr))/i]) ||
-    HARD_FALLBACK.duration;
+  const data: Partial<Record<keyof BookingTourData, unknown>> = {
+    duration:
+      readFirst(primary, [
+        /Duration\s*[:\-]\s*([^\n<]+)/i,
+        /([0-9]+\s*(?:hour|hours|hr))/i,
+      ]) ||
+      readFirst(secondary, [/([0-9]+\s*(?:hour|hours|hr))/i]) ||
+      "3 hours",
+    meetingPoint:
+      readFirst(primary, [
+        /Meeting\s*(?:Point|Location)\s*[:\-]\s*([^\n<]+)/i,
+        /(Metate Ranch[^\n<]*)/i,
+      ]) ||
+      readFirst(secondary, [/(Metate Ranch[^\n<]*)/i]) ||
+      HARD_FALLBACK.meetingPoint,
+    age:
+      readFirst(primary, [
+        /(?:Minimum\s+Age|Age)\s*[:\-]\s*([^\n<]+)/i,
+        /(\b[0-9]{1,2}\s*\+\b)/i,
+      ]) ||
+      readFirst(secondary, [/(\b[0-9]{1,2}\s*\+\b)/i]) ||
+      HARD_FALLBACK.age,
+    cancellation:
+      readFirst(primary, [
+        /Cancellation\s*[:\-]\s*([^\n<]+)/i,
+        /(\b[0-9]{1,2}\s*hours?[^\n<]*cancellation[^\n<]*)/i,
+        /(free cancellation[^\n<]*)/i,
+      ]) ||
+      readFirst(secondary, [
+        /(\b[0-9]{1,2}\s*hours?[^\n<]*cancellation[^\n<]*)/i,
+        /(free cancellation[^\n<]*)/i,
+      ]) ||
+      HARD_FALLBACK.cancellation,
+    groupSize:
+      readFirst(primary, [
+        /Group\s*Size\s*[:\-]\s*([^\n<]+)/i,
+        /(\b[0-9]+\s*[–-]\s*[0-9]+\s*(?:guests?|people|passengers)[^\n<]*)/i,
+      ]) ||
+      readFirst(secondary, [
+        /(\b[0-9]+\s*[–-]\s*[0-9]+\s*(?:guests?|people|passengers)[^\n<]*)/i,
+      ]) ||
+      HARD_FALLBACK.groupSize,
+    accessibility:
+      readFirst(combined, [
+        /Accessibility\s*[:\-]\s*([^\n<]+)/i,
+        /(not wheelchair accessible[^\n<]*)/i,
+      ]) || HARD_FALLBACK.accessibility,
+    location:
+      readFirst(combined, [
+        /(Indio Hills[^\n<]*)/i,
+        /(San Andreas Fault zone[^\n<]*)/i,
+      ]) || HARD_FALLBACK.location,
+    operator:
+      readFirst(combined, [
+        /Operated by\s*([^\n<]+)/i,
+        /(Red Jeep Tours)/i,
+        /(Desert Adventures Red Jeep Tours)/i,
+      ]) || HARD_FALLBACK.operator,
+  };
 
-  const meetingPoint =
-    readFirst(primary, [
-      /Meeting\s*(?:Point|Location)\s*[:\-]\s*([^\n<]+)/i,
-      /(Metate Ranch[^\n<]*)/i,
-    ]) ||
-    readFirst(secondary, [/(Metate Ranch[^\n<]*)/i]) ||
-    HARD_FALLBACK.meetingPoint;
-
-  const age =
-    readFirst(primary, [
-      /(?:Minimum\s+Age|Age)\s*[:\-]\s*([^\n<]+)/i,
-      /(\b[0-9]{1,2}\s*\+\b)/i,
-    ]) ||
-    readFirst(secondary, [/(\b[0-9]{1,2}\s*\+\b)/i]) ||
-    HARD_FALLBACK.age;
-
-  const cancellationRaw =
-    readFirst(primary, [
-      /Cancellation\s*[:\-]\s*([^\n<]+)/i,
-      /(\b[0-9]{1,2}\s*hours?[^\n<]*cancellation[^\n<]*)/i,
-      /(free cancellation[^\n<]*)/i,
-    ]) ||
-    readFirst(secondary, [
-      /(\b[0-9]{1,2}\s*hours?[^\n<]*cancellation[^\n<]*)/i,
-      /(free cancellation[^\n<]*)/i,
-    ]);
-  const cancellation = cancellationRaw || HARD_FALLBACK.cancellation;
-
-  const groupSize =
-    readFirst(primary, [
-      /Group\s*Size\s*[:\-]\s*([^\n<]+)/i,
-      /(\b[0-9]+\s*[–-]\s*[0-9]+\s*(?:guests?|people|passengers)[^\n<]*)/i,
-    ]) ||
-    readFirst(secondary, [
-      /(\b[0-9]+\s*[–-]\s*[0-9]+\s*(?:guests?|people|passengers)[^\n<]*)/i,
-    ]) ||
-    HARD_FALLBACK.groupSize;
-
-  const accessibility =
-    readFirst(combined, [
-      /Accessibility\s*[:\-]\s*([^\n<]+)/i,
-      /(not wheelchair accessible[^\n<]*)/i,
-    ]) || HARD_FALLBACK.accessibility;
-
-  const location =
-    readFirst(combined, [
-      /(Indio Hills[^\n<]*)/i,
-      /(San Andreas Fault zone[^\n<]*)/i,
-    ]) || HARD_FALLBACK.location;
-
-  const operator =
-    readFirst(combined, [
-      /Operated by\s*([^\n<]+)/i,
-      /(Red Jeep Tours)/i,
-      /(Desert Adventures Red Jeep Tours)/i,
-    ]) || HARD_FALLBACK.operator;
+  if (typeof data.duration === "object") {
+    delete data.duration;
+  }
 
   return {
-    duration,
-    meetingPoint,
-    age,
-    cancellation,
-    groupSize,
-    accessibility,
-    location,
-    operator,
+    duration: extractText(data.duration) || HARD_FALLBACK.duration,
+    meetingPoint: extractText(data.meetingPoint) || HARD_FALLBACK.meetingPoint,
+    age: extractText(data.age) || HARD_FALLBACK.age,
+    cancellation: extractText(data.cancellation) || HARD_FALLBACK.cancellation,
+    groupSize: extractText(data.groupSize) || HARD_FALLBACK.groupSize,
+    accessibility: extractText(data.accessibility) || HARD_FALLBACK.accessibility,
+    location: extractText(data.location) || HARD_FALLBACK.location,
+    operator: extractText(data.operator) || HARD_FALLBACK.operator,
   };
 };

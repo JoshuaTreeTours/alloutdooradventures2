@@ -1,4 +1,5 @@
 import type { BookingTourData } from "./extractBookingTourData";
+import { formatTourValue } from "./formatTourValue";
 
 type RewriteInput = BookingTourData;
 
@@ -6,12 +7,12 @@ export const rewriteSanAndreasTour = (tourData: RewriteInput): string => {
   const overview = `The Shared San Andreas Fault Jeep Tour focuses on one of Southern California’s most studied active fault systems, where the Pacific Plate and North American Plate meet in a right-lateral transform boundary. In the Indio Hills northeast of Palm Springs, this plate motion has uplifted and fractured sedimentary formations, creating fault canyons, narrow washes, and desert oases fed by groundwater moving through alluvial layers. The route uses private access through Metate Ranch, which allows guided entry into terrain not available on standard public roads. Throughout the tour, guides explain how fault slip, erosion, flash flooding, and groundwater recharge shape the landscape over time. The result is a field-based geology experience that connects regional tectonics with visible landforms in the Coachella Valley, while also providing historical context for long-term Indigenous land use in the same corridor.`;
 
   const details = [
-    `Duration: ${tourData.duration}`,
-    `Meeting point: ${tourData.meetingPoint}`,
-    `Group size: ${tourData.groupSize}`,
-    `Age: ${tourData.age}`,
-    `Accessibility: ${tourData.accessibility}`,
-    `Cancellation: ${tourData.cancellation}`,
+    `Duration: ${formatTourValue(tourData.duration)}`,
+    `Meeting point: ${formatTourValue(tourData.meetingPoint)}`,
+    `Group size: ${formatTourValue(tourData.groupSize)}`,
+    `Age: ${formatTourValue(tourData.age)}`,
+    `Accessibility: ${formatTourValue(tourData.accessibility)}`,
+    `Cancellation: ${formatTourValue(tourData.cancellation)}`,
   ];
 
   const highlights = [
