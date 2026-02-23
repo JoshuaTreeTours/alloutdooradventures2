@@ -29,6 +29,7 @@ export const REQUIRED_FH_URL_34849 =
 
 export type Engine2Tour = {
   id: string;
+  bookingUrl?: string;
   sourceDatasetKey?: string;
   sourceCountrySlug?: string;
   sourceProvinceSlug?: string;
@@ -153,6 +154,16 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
             })
           : normalizeFareHarborUrl(tour.booking.bookingUrl),
   },
+  bookingUrl:
+    tour.booking.fareharbor?.itemId === "34849"
+      ? REQUIRED_FH_URL_34849
+      : tour.booking.fareharbor
+        ? buildFareHarborUrl({
+            company: tour.booking.fareharbor.shortname,
+            itemId: tour.booking.fareharbor.itemId,
+            calendarPath: tour.booking.bookingUrl,
+          })
+        : normalizeFareHarborUrl(tour.booking.bookingUrl),
 }));
 
 const byPath = new Map(
