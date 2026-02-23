@@ -4,14 +4,18 @@ import {
   type AOAEnrichedTourContent,
   type FareHarborStructuredData,
 } from "./transformFareHarborToAOAContent";
+import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
+import { parseFareHarborHtml } from "./parseFareHarborHtml";
+import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
+import {
+  transformToAOAContent,
+  type AOAOverrideContent,
+} from "./transformToAOAContent";
 
 export type PalmSpringsOverrideContent = {
   enabled: boolean;
   tourId: number;
-  content: {
-    whatYoullExperience: string[];
-    highlights: string[];
-  };
+  content: AOAOverrideContent;
 };
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
@@ -130,14 +134,41 @@ export const getPalmSpringsOverrideContent = (
     return null;
   }
 
+  const fallbackContent: AOAOverrideContent = {
+    categoryLabel: undefined,
+    meetingPointLabel: undefined,
+    priceSummaryLabel: undefined,
+    durationLabel: undefined,
+    whatYoullExperience: [tour.content.experienceText],
+    highlights: tour.content.highlights,
+    schemaDescription: tour.content.experienceText,
+  };
+
+  const bookPath = `${tour.seo.canonicalPath}/book`;
+  const fareHarborUrl = resolveFareHarborUrlFromBookPage(bookPath);
+  if (!fareHarborUrl) {
+    return {
+      enabled: true,
+      tourId: 34849,
+      content: fallbackContent,
+    };
+  }
+
+  const fareHarborHtml = fetchFareHarborHtml(fareHarborUrl);
+  if (!fareHarborHtml) {
+    return {
+      enabled: true,
+      tourId: 34849,
+      content: fallbackContent,
+    };
+  }
+
+  const parsedTour = parseFareHarborHtml(fareHarborHtml);
+
   return {
     enabled: true,
     tourId: 34849,
-    content: {
-      whatYoullExperience: [
-        "OVERRIDE TEST SUCCESS — If you see this, render override is working.",
-      ],
-      highlights: ["OVERRIDE ACTIVE"],
-    },
+    content: transformToAOAContent(parsedTour),
   };
 };
+
