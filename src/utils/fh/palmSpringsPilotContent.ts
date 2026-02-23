@@ -4,6 +4,9 @@ import {
   type AOAEnrichedTourContent,
   type FareHarborStructuredData,
 } from "./transformFareHarborToAOAContent";
+import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
+import { parseFareHarborHtml, type ParsedTour } from "./parseFareHarborHtml";
+import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
 
 export type PalmSpringsOverrideContent = {
   enabled: boolean;
@@ -130,14 +133,61 @@ export const getPalmSpringsOverrideContent = (
     return null;
   }
 
+  const fallbackContent = {
+    whatYoullExperience: [tour.content.experienceText],
+    highlights: tour.content.highlights,
+  };
+
+  const bookPath = `${tour.seo.canonicalPath}/book`;
+  const fareHarborUrl = resolveFareHarborUrlFromBookPage(bookPath);
+  if (!fareHarborUrl) {
+    return {
+      enabled: true,
+      tourId: 34849,
+      content: fallbackContent,
+    };
+  }
+
+  const fareHarborHtml = fetchFareHarborHtml(fareHarborUrl);
+  if (!fareHarborHtml) {
+    return {
+      enabled: true,
+      tourId: 34849,
+      content: fallbackContent,
+    };
+  }
+
+  const parsedTour = parseFareHarborHtml(fareHarborHtml);
+
   return {
     enabled: true,
     tourId: 34849,
-    content: {
-      whatYoullExperience: [
-        "OVERRIDE TEST SUCCESS — If you see this, render override is working.",
-      ],
-      highlights: ["OVERRIDE ACTIVE"],
-    },
+    content: transformToAOAContent(parsedTour),
+  };
+};
+
+const toSentences = (value: string) =>
+  value
+    .split(/(?<=[.!?])\s+/)
+    .map(item => item.trim())
+    .filter(Boolean);
+
+const transformToAOAContent = (
+  parsedTour: ParsedTour
+): PalmSpringsOverrideContent["content"] => {
+  const sourceSentences = toSentences(parsedTour.overview);
+  const overviewSentences = sourceSentences.slice(0, 3);
+
+  if (parsedTour.duration) {
+    overviewSentences.push(`The route runs about ${parsedTour.duration}.`);
+  }
+
+  if (parsedTour.meetingPoint) {
+    overviewSentences.push(`Departure is from ${parsedTour.meetingPoint}.`);
+  }
+
+  return {
+    whatYoullExperience: [overviewSentences.slice(0, 4).join(" ")],
+    highlights: parsedTour.highlights.slice(0, 6),
   };
 };
