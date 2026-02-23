@@ -75,6 +75,9 @@ export default function Engine2TourPage({
       `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
     );
   }
+  const displayWhatYoullExperience =
+    pilotContent?.whatYoullExperience ?? normalizedTour.content.experienceText;
+
   const bookingPath = `${tour.seo.canonicalPath}/book`;
   const backToToursPath = tour.seo.canonicalPath.replace(
     /\/tours\/[^/]+$/,
@@ -153,7 +156,7 @@ export default function Engine2TourPage({
           What you'll experience
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
+          {displayWhatYoullExperience}
         </p>
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
@@ -185,16 +188,6 @@ export default function Engine2TourPage({
               ) : null}
             </ul>
           </div>
-        ) : null}
-        {pilotContent?.whatYoullExperience ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              What You’ll Experience
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.whatYoullExperience}
-            </p>
-          </>
         ) : null}
         {pilotContent?.experienceInDepth?.length ? (
           <>
