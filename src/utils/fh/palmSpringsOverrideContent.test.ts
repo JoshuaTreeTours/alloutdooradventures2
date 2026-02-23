@@ -46,6 +46,13 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.meetingPoint?.city).toBe("Indio");
     expect(override?.content.heroPriceText).toBe("$175 adult / $150 child");
     expect(override?.content.schemaPrice).toBe(175);
+    expect(override?.content.durationISO).toBe("PT3H");
+    expect(override?.content.pricing).toMatchObject({
+      low: 150,
+      high: 175,
+      isAggregate: true,
+    });
+    expect(override?.content.canonicalPath).toBe(tour?.seo.canonicalPath);
     expect(override?.content.whatYoullExperience.length).toBeGreaterThanOrEqual(
       3
     );

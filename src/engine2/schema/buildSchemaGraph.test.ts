@@ -65,6 +65,16 @@ describe("buildSchemaGraph", () => {
     expect(breadcrumbUrls.join(" ")).not.toContain("/destinations/california");
   });
 
+  it("keeps standard Offer when no rewrite aggregate pricing is provided", () => {
+    const graph = buildSchemaGraph(baseTour, seo as never);
+    const product = graph.find(node => node["@type"] === "Product") as {
+      offers: { "@type": string; price?: string };
+    };
+
+    expect(product.offers["@type"]).toBe("Offer");
+    expect(product.offers.price).toBe("199.00");
+  });
+
   it("keeps Product.url canonical and uses /book Offer.url when enabled", () => {
     const graph = buildSchemaGraph(baseTour, seo as never);
     const product = graph.find(node => node["@type"] === "Product") as {
@@ -218,6 +228,16 @@ describe("buildSchemaGraph", () => {
           country: "US",
         },
         durationLabel: "3 hours",
+        durationISO: "PT3H",
+        pricing: {
+          currency: "USD",
+          low: 150,
+          high: 175,
+          displayText: "$175 adult / $150 child",
+          isAggregate: true,
+        },
+        canonicalPath:
+          "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
         whatYoullExperience: ["x"],
         highlights: ["y"],
         schemaDescription: "desc",
@@ -225,17 +245,35 @@ describe("buildSchemaGraph", () => {
     );
     const product = graph.find(node => node["@type"] === "Product") as {
       category?: string;
-      offers: { price: string; priceCurrency: string };
+      offers: {
+        "@type": string;
+        lowPrice?: string;
+        highPrice?: string;
+        priceCurrency: string;
+      };
     };
     const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      duration?: string;
       departureLocation?: { name: string; address: { streetAddress: string } };
-      offers: { price: string };
+      offers: { "@type": string; lowPrice?: string; highPrice?: string };
+    };
+    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as {
+      itemListElement: Array<{ item: string }>;
     };
 
     expect(product.category).toBe("Jeep tour");
-    expect(product.offers.price).toBe("175.00");
+    expect(product.offers["@type"]).toBe("AggregateOffer");
+    expect(product.offers.lowPrice).toBe("150.00");
+    expect(product.offers.highPrice).toBe("175.00");
     expect(product.offers.priceCurrency).toBe("USD");
-    expect(trip.offers.price).toBe("175.00");
+    expect(trip.offers["@type"]).toBe("AggregateOffer");
+    expect(trip.duration).toBe("PT3H");
+
+    const breadcrumbUrls = breadcrumb.itemListElement.map(item => item.item);
+    expect(breadcrumbUrls.join(" ")).toContain(
+      "/destinations/california/palm-springs/tours"
+    );
+    expect(breadcrumbUrls.join(" ")).not.toContain("/destinations/united-states");
     expect(trip.departureLocation?.name).toBe("Metate Ranch");
     expect(trip.departureLocation?.address.streetAddress).toBe(
       "38635 Monroe St"
