@@ -346,6 +346,7 @@ const verifyPrerenderedPage = async ({
   defaultTitle,
   defaultDescription,
   label,
+  expectedRobots = "index,follow,max-image-preview:large",
   allowDefaultSeo = false,
 }) => {
   const { outputPath, shouldWrite } = buildOutputPath(pathname);
@@ -371,7 +372,7 @@ const verifyPrerenderedPage = async ({
     throw new Error("Prerender verification failed.");
   }
   const robotsContent = extractAttribute(robotsTag, "content");
-  if (robotsContent !== "index,follow,max-image-preview:large") {
+  if (robotsContent !== expectedRobots) {
     logVerificationFailure({
       label,
       url: expectedUrl,
@@ -392,7 +393,7 @@ const verifyPrerenderedPage = async ({
     throw new Error("Prerender verification failed.");
   }
   const googlebotContent = extractAttribute(googlebotTag, "content");
-  if (googlebotContent !== "index,follow,max-image-preview:large") {
+  if (googlebotContent !== expectedRobots) {
     logVerificationFailure({
       label,
       url: expectedUrl,
@@ -1243,16 +1244,29 @@ const main = async () => {
       ),
     },
     {
-      label: "Destination tour",
+      label: "Destination tour detail",
       url: findUrl(
         pathname =>
-          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+$/.test(
             normalizePathname(pathname)
           ) ||
-          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+(\/book)?$/.test(
+          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+$/.test(
             normalizePathname(pathname)
           )
       ),
+    },
+    {
+      label: "Destination tour booking",
+      url: findUrl(
+        pathname =>
+          /^\/destinations\/[^/]+\/[^/]+\/tours\/[^/]+\/book$/.test(
+            normalizePathname(pathname)
+          ) ||
+          /^\/destinations\/states\/[^/]+\/cities\/[^/]+\/tours\/[^/]+\/book$/.test(
+            normalizePathname(pathname)
+          )
+      ),
+      expectedRobots: "noindex,follow,max-image-preview:large",
     },
     {
       label: "Static",
@@ -1300,6 +1314,7 @@ const main = async () => {
       defaultTitle: DEFAULT_SEO.title,
       defaultDescription: DEFAULT_SEO.description,
       label: target.label,
+      expectedRobots: target.expectedRobots,
       allowDefaultSeo,
     });
   }
