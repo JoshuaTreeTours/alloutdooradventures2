@@ -105,6 +105,10 @@ export default function Engine2TourPage({
     overrideContent?.enabled && overrideContent.tourId === 34849
       ? overrideContent.content.schemaDescription
       : undefined;
+  const overrideFaqs =
+    overrideContent?.enabled && overrideContent.tourId === 34849
+      ? overrideContent.content.faqs
+      : undefined;
 
   const structuredDataNodes = useMemo(
     () =>
@@ -113,7 +117,9 @@ export default function Engine2TourPage({
         seo,
         pilotContent,
         isPalmSprings,
-        overrideSchemaDescription
+        overrideSchemaDescription,
+        overrideFaqs,
+        overrideContent?.enabled ?? false
       ),
     [
       normalizedTour,
@@ -121,6 +127,8 @@ export default function Engine2TourPage({
       pilotContent,
       isPalmSprings,
       overrideSchemaDescription,
+      overrideFaqs,
+      overrideContent?.enabled,
     ]
   );
 
@@ -286,6 +294,27 @@ export default function Engine2TourPage({
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
+          </>
+        ) : null}
+
+        {overrideContent?.enabled && overrideContent.content.faqs?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Frequently asked questions
+            </h2>
+            <div className="mt-4 space-y-4">
+              {overrideContent.content.faqs.map(item => (
+                <article
+                  key={item.question}
+                  className="rounded-lg border border-black/10 bg-white p-4"
+                >
+                  <h3 className="text-sm font-semibold text-[#2f4a2f]">
+                    {item.question}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#405040]">{item.answer}</p>
+                </article>
+              ))}
+            </div>
           </>
         ) : null}
 

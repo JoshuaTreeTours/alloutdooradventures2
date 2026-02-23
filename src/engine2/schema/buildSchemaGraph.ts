@@ -108,7 +108,9 @@ export const buildSchemaGraph = (
   seo: Engine2Seo,
   pilotContent?: AOAEnrichedTourContent | null,
   isPalmSprings = false,
-  overrideDescription?: string
+  overrideDescription?: string,
+  overrideFaqs?: Array<{ question: string; answer: string }>,
+  overrideEnabled = false
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -130,6 +132,23 @@ export const buildSchemaGraph = (
     priceCurrency: offerCurrency,
     priceValidUntil: getPriceValidUntil(),
   };
+
+  const faqPageNode =
+    overrideEnabled && overrideFaqs?.length
+      ? {
+          "@type": "FAQPage",
+          "@id": `${seo.canonical}#faqpage`,
+          mainEntityOfPage: seo.canonical,
+          mainEntity: overrideFaqs.map(item => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
 
   return [
     ...getSiteStructuredDataNodes(),
@@ -167,7 +186,9 @@ export const buildSchemaGraph = (
       url: canonicalProductUrl,
       name: tour.name,
       description: isPalmSprings
-        ? (overrideDescription ?? pilotContent?.whatYoullExperience ?? seo.description)
+        ? (overrideDescription ??
+          pilotContent?.whatYoullExperience ??
+          seo.description)
         : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@id": SITE_BRAND_ID },
@@ -183,7 +204,9 @@ export const buildSchemaGraph = (
       "@id": tripId,
       name: tour.name,
       description: isPalmSprings
-        ? (overrideDescription ?? pilotContent?.whatYoullExperience ?? seo.description)
+        ? (overrideDescription ??
+          pilotContent?.whatYoullExperience ??
+          seo.description)
         : seo.description,
       itinerary:
         isPalmSprings && pilotContent?.itineraryOutline?.length
@@ -196,6 +219,7 @@ export const buildSchemaGraph = (
       touristType: "Adventure travelers",
       offers: offer,
     },
+    ...(faqPageNode ? [faqPageNode] : []),
     buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       {

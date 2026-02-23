@@ -8,6 +8,7 @@ import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
 import { parseFareHarborHtml } from "./parseFareHarborHtml";
 import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
 import {
+  CURATED_34849_FAQS,
   transformToAOAContent,
   type AOAOverrideContent,
 } from "./transformToAOAContent";
@@ -143,6 +144,7 @@ export const getPalmSpringsOverrideContent = (
     durationLabel: undefined,
     whatYoullExperience: [tour.content.experienceText],
     highlights: tour.content.highlights,
+    faqs: CURATED_34849_FAQS,
     schemaDescription: tour.content.experienceText,
   };
 
