@@ -804,8 +804,11 @@ const main = async () => {
     return key ? (tourDescriptionCounts.get(key) ?? 0) > 1 : false;
   };
 
+  const routeFailures = [];
+
   for (const url of urls) {
     const pathname = new URL(url).pathname;
+    try {
     const normalizedPathname = normalizePathname(pathname);
     const isBookingRoute = normalizedPathname.endsWith("/book");
     const basePathname = isBookingRoute
@@ -1215,6 +1218,18 @@ const main = async () => {
       structuredData
     );
     await writeFile(outputPath, htmlWithStructuredData, "utf8");
+    } catch (error) {
+      routeFailures.push({
+        route: pathname,
+        error,
+      });
+      console.error(`[prerender] Route failed: ${pathname}`);
+      if (error?.stack) {
+        console.error(error.stack);
+      } else {
+        console.error(error);
+      }
+    }
   }
 
   const findUrl = predicate =>
@@ -1285,7 +1300,10 @@ const main = async () => {
         assertion: "route",
         details: "No matching URL found in sitemap.",
       });
-      throw new Error("Prerender verification failed.");
+      routeFailures.push({
+        route: `[verification-target:${target.label}]`,
+        error: new Error("No matching URL found in sitemap."),
+      });
     }
   });
 
@@ -1298,25 +1316,59 @@ const main = async () => {
       assertion: "prerender",
       details: "Missing prerendered FAQ HTML output.",
     });
-    throw new Error("Prerender verification failed.");
+    routeFailures.push({
+      route: faqPath,
+      error: new Error("Missing prerendered FAQ HTML output."),
+    });
   }
 
   await writeSchemaMissingGeoReport();
 
   for (const target of verificationTargets) {
+    if (!target.url) {
+      continue;
+    }
     const pathname = normalizePathname(new URL(target.url).pathname);
     const expectedUrl = buildCanonicalUrl(pathname);
     const allowDefaultSeo = isHome(pathname);
 
-    await verifyPrerenderedPage({
-      pathname,
-      expectedUrl,
-      defaultTitle: DEFAULT_SEO.title,
-      defaultDescription: DEFAULT_SEO.description,
-      label: target.label,
-      expectedRobots: target.expectedRobots,
-      allowDefaultSeo,
-    });
+    try {
+      await verifyPrerenderedPage({
+        pathname,
+        expectedUrl,
+        defaultTitle: DEFAULT_SEO.title,
+        defaultDescription: DEFAULT_SEO.description,
+        label: target.label,
+        expectedRobots: target.expectedRobots,
+        allowDefaultSeo,
+      });
+    } catch (error) {
+      routeFailures.push({
+        route: pathname,
+        error,
+      });
+      console.error(`[prerender] Verification failed for route: ${pathname}`);
+      if (error?.stack) {
+        console.error(error.stack);
+      } else {
+        console.error(error);
+      }
+    }
+  }
+
+  if (routeFailures.length) {
+    const summary = routeFailures
+      .map(
+        ({ route, error }, index) =>
+          `${index + 1}. ${route} :: ${error?.message ?? String(error)}`
+      )
+      .join("\n");
+    throw new Error(
+      `[prerender] Completed with ${routeFailures.length} failure(s):\n${summary}`,
+      {
+        cause: routeFailures[0]?.error,
+      }
+    );
   }
 };
 

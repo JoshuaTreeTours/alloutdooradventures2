@@ -61,4 +61,25 @@ describe("Palm Springs 34849 override content", () => {
       "OVERRIDE TEST SUCCESS"
     );
   });
+
+  it("returns null override during prerender builds", () => {
+    const tour = getEngine2TourByPath(
+      "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849"
+    );
+    expect(tour).toBeTruthy();
+
+    const previousPrerender = process.env.PRERENDER;
+    process.env.PRERENDER = "1";
+
+    try {
+      const override = getPalmSpringsOverrideContent(tour!);
+      expect(override).toBeNull();
+    } finally {
+      if (previousPrerender === undefined) {
+        delete process.env.PRERENDER;
+      } else {
+        process.env.PRERENDER = previousPrerender;
+      }
+    }
+  });
 });
