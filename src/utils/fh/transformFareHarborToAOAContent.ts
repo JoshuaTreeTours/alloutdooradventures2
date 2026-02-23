@@ -1,3 +1,5 @@
+import { getPalmSpringsAuthorityContext } from "../palmSprings/getPalmSpringsAuthorityContext";
+
 export type FareHarborStructuredData = {
   title?: string;
   duration?: string;
@@ -23,6 +25,8 @@ export type AOAEnrichedTourContent = {
   whatYoullExperience?: string;
   experienceInDepth?: string[];
   highlights?: string[];
+  whyThisLandscapeMatters?: string[];
+  schemaContextSentence?: string;
   itineraryOutline?: string[];
   whoItsFor?: string[];
   included?: string[];
@@ -48,14 +52,39 @@ const getHook = (tourName: string) => {
   return matched?.hook ?? `See a different side of Palm Springs on ${tourName}`;
 };
 
+const openingTemplates = [
+  (hook: string) =>
+    `${hook} while a guide interprets the geology and ecology that shape Palm Springs routes.`,
+  (hook: string) =>
+    `Built around place-based interpretation, this outing starts with ${hook.toLowerCase()} and connects each stop to local geology.`,
+  (hook: string) =>
+    `From the first segment, ${hook.toLowerCase()} becomes a framework for understanding Palm Springs terrain and desert systems.`,
+  (hook: string) =>
+    `${hook} and use each stop to map how tectonics, water, and climate define the Coachella Valley.`,
+];
+
+const hashString = (value: string) =>
+  value.split("").reduce((sum, char) => sum + char.charCodeAt(0), 0);
+
+const buildOpeningSentence = (tourName: string, introHook: string) => {
+  const template =
+    openingTemplates[hashString(tourName) % openingTemplates.length];
+  return template(introHook);
+};
+
 const trimArray = (items?: string[]) =>
   (items ?? []).map(item => item.trim()).filter(Boolean);
 
 export const transformFareHarborToAOAContent = (
   tourName: string,
-  source: FareHarborStructuredData
+  source: FareHarborStructuredData,
+  options?: {
+    tourSlug?: string;
+    tourCategory?: string;
+  }
 ): AOAEnrichedTourContent => {
   const introHook = getHook(tourName);
+  const openingSentence = buildOpeningSentence(tourName, introHook);
   const highlights = trimArray(source.rawHighlights).slice(0, 8);
   const itinerary = trimArray(source.itinerary).slice(0, 6);
   const included = trimArray(source.included);
@@ -63,6 +92,36 @@ export const transformFareHarborToAOAContent = (
   const rules = trimArray(source.requirements);
   const duration = source.duration?.trim();
   const meetingLocation = source.meetingLocation?.trim();
+  const authorityContext = getPalmSpringsAuthorityContext({
+    title: tourName,
+    slug: options?.tourSlug,
+    category: options?.tourCategory,
+  });
+  const authoritySentences = [
+    ...(authorityContext.geology ?? []),
+    ...(authorityContext.environment ?? []),
+    ...(authorityContext.locationContext ?? []),
+    ...(authorityContext.activityContext ?? []),
+  ];
+  const authorityForDepth = authoritySentences.slice(0, 2);
+  const authorityForHighlights = [
+    ...(authorityContext.activityContext ?? []),
+    ...(authorityContext.geology ?? []),
+    ...(authorityContext.environment ?? []),
+    ...(authorityContext.locationContext ?? []),
+  ]
+    .filter(item => !highlights.includes(item))
+    .slice(0, 3);
+  const mergedHighlights = [...highlights, ...authorityForHighlights].slice(
+    0,
+    10
+  );
+  const landscapeMatters = [
+    ...(authorityContext.geology ?? []).slice(0, 2),
+    ...(authorityContext.environment ?? []).slice(0, 2),
+    ...(authorityContext.locationContext ?? []).slice(0, 1),
+  ];
+  const schemaContextSentence = authoritySentences[0];
 
   return {
     quickFacts: {
@@ -73,13 +132,18 @@ export const transformFareHarborToAOAContent = (
         /age|minimum|child|height|weight/i.test(item)
       ),
     },
-    whatYoullExperience: `${introHook} with a guide who explains how Palm Springs geology, desert ecology, and route conditions shape the day. This tour balances scenic driving and stop-based interpretation so you are not just passing viewpoints. Expect a practical briefing at the start, followed by a steady pace that leaves time for photos and short walks where conditions allow. Guides typically connect major landmarks to the wider Coachella Valley story, including fault movement, canyons, and water in the desert. Group flow, weather, and seasonal access can shift exact stop timing, so details may vary by departure.`,
+    whatYoullExperience: `${openingSentence} This tour balances scenic driving and stop-based interpretation so you are not just passing viewpoints. Expect a practical briefing at the start, followed by a steady pace that leaves time for photos and short walks where conditions allow. Guides typically connect major landmarks to the wider Coachella Valley story, including fault movement, canyons, and water in the desert. Group flow, weather, and seasonal access can shift exact stop timing, so details may vary by departure.`,
     experienceInDepth: [
       `After check-in, the guide sets expectations for terrain, temperature, and comfort stops before departure. From there, the route moves through Palm Springs-area desert corridors where road cuts and washes make geologic layers easier to read in the field.`,
       `As the trip develops, narration usually links landforms to present-day travel conditions: where erosion channels form, how wind and water shape canyons, and why oasis pockets exist in otherwise dry zones. Instead of generic commentary, the guide can answer questions tied to the exact sections you are traveling through.`,
       `When the itinerary includes walking segments, they are typically short and focused on observation points rather than endurance hiking. The result is an experience that feels both educational and scenic, with a clear sense of place specific to greater Palm Springs.`,
+      ...authorityForDepth,
     ],
-    highlights,
+    highlights: mergedHighlights,
+    whyThisLandscapeMatters: landscapeMatters.length
+      ? landscapeMatters
+      : undefined,
+    schemaContextSentence,
     itineraryOutline: itinerary.length
       ? itinerary
       : [

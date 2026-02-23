@@ -56,7 +56,9 @@ const seo = {
 describe("buildSchemaGraph", () => {
   it("builds US breadcrumb URLs from canonical route and never falls back to california", () => {
     const graph = buildSchemaGraph(baseTour, seo as never);
-    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList") as {
+    const breadcrumb = graph.find(
+      node => node["@type"] === "BreadcrumbList"
+    ) as {
       itemListElement: Array<{ item: string }>;
     };
 
@@ -195,4 +197,28 @@ describe("buildSchemaGraph", () => {
     }
   });
 
+  it("adds Palm Springs authority sentence to TouristTrip description when available", () => {
+    const graph = buildSchemaGraph(
+      baseTour,
+      seo as never,
+      {
+        whatYoullExperience:
+          "Explore Palm Springs routes with your guide. Scenic stops and narration.",
+        schemaContextSentence:
+          "The San Andreas system marks the transform boundary between the Pacific and North American plates.",
+      },
+      true
+    );
+
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      description: string;
+    };
+
+    expect(trip.description).toContain(
+      "The San Andreas system marks the transform boundary between the Pacific and North American plates."
+    );
+    expect(
+      trip.description.split(/[.!?]/).filter(Boolean).length
+    ).toBeLessThanOrEqual(2);
+  });
 });

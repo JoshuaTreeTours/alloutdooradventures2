@@ -19,6 +19,22 @@ import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborT
 
 type StructuredDataNode = Record<string, unknown>;
 
+const buildPalmSpringsDescription = (
+  seoDescription: string,
+  pilotContent?: AOAEnrichedTourContent | null
+) => {
+  const base = pilotContent?.whatYoullExperience ?? seoDescription;
+  const contextSentence = pilotContent?.schemaContextSentence?.trim();
+
+  if (!contextSentence || base.includes(contextSentence)) {
+    return base;
+  }
+
+  const trimmedBase = base.trim().replace(/\s+/g, " ");
+  const firstSentence = trimmedBase.match(/^[^.!?]+[.!?]/)?.[0] ?? trimmedBase;
+  return `${firstSentence} ${contextSentence}`.trim();
+};
+
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
     return [] as string[];
@@ -166,7 +182,7 @@ export const buildSchemaGraph = (
       url: canonicalProductUrl,
       name: tour.name,
       description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        ? buildPalmSpringsDescription(seo.description, pilotContent)
         : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
       brand: { "@id": SITE_BRAND_ID },
@@ -182,7 +198,7 @@ export const buildSchemaGraph = (
       "@id": tripId,
       name: tour.name,
       description: isPalmSprings
-        ? (pilotContent?.whatYoullExperience ?? seo.description)
+        ? buildPalmSpringsDescription(seo.description, pilotContent)
         : seo.description,
       itinerary:
         isPalmSprings && pilotContent?.itineraryOutline?.length
