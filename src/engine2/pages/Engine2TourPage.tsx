@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
+import SecondaryTourImage from "../../components/tours/SecondaryTourImage";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
 import { ENGINE2_DEFAULT_IMAGE } from "../config/destinations";
@@ -16,6 +17,7 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { selectSecondaryImage } from "../../utils/tours/selectSecondaryImage";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -66,6 +68,16 @@ export default function Engine2TourPage({
   }, [tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const is34849 =
+    tour.id === "34849" ||
+    tour.id === 34849 ||
+    tour.slug.includes("34849") ||
+    tour.seo.canonicalPath.includes("34849");
+  const secondaryImage = selectSecondaryImage({
+    primaryImageUrl: normalizedTour.images.hero,
+    images: normalizedTour.images.gallery,
+    fallbackImageUrl: ENGINE2_DEFAULT_IMAGE,
+  });
   const isPalmSprings = isPalmSpringsTour(tour);
   const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
@@ -251,6 +263,12 @@ export default function Engine2TourPage({
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
+        {is34849 && secondaryImage ? (
+          <SecondaryTourImage
+            src={secondaryImage}
+            alt={`${tour.name} — additional photo`}
+          />
+        ) : null}
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
