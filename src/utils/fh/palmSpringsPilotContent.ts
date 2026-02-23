@@ -111,5 +111,7 @@ export const getPalmSpringsPilotContent = (
     return null;
   }
 
-  return transformFareHarborToAOAContent(tour.name, seed);
+  return transformFareHarborToAOAContent(tour.name, seed, {
+    tourSlug: tour.slug,
+  });
 };

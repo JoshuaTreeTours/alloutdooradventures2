@@ -208,6 +208,19 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
+
+        {pilotContent?.whyThisLandscapeMatters?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Why This Landscape Matters
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+              {pilotContent.whyThisLandscapeMatters.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        ) : null}
         {(pilotContent?.highlights ?? normalizedTour.content.highlights)
           .length ? (
           <>
