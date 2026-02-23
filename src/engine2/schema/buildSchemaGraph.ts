@@ -16,6 +16,7 @@ import {
 } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
+import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -110,14 +111,16 @@ export const buildSchemaGraph = (
   isPalmSprings = false,
   overrideDescription?: string,
   overrideFaqs?: Array<{ question: string; answer: string }>,
-  overrideEnabled = false
+  overrideEnabled = false,
+  rewriteV3Content?: TourRewriteV3
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
-  const flooredPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
+  const fallbackPrice = applyPriceFloor(parsePrice(tour.pricing?.price ?? null));
+  const schemaPrice = rewriteV3Content?.schemaPrice ?? fallbackPrice;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
   const canonicalProductUrl = resolveCanonicalProductUrl(seo.canonical);
@@ -128,8 +131,8 @@ export const buildSchemaGraph = (
       partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
     }),
     availability: "https://schema.org/InStock",
-    price: flooredPrice.toFixed(2),
-    priceCurrency: offerCurrency,
+    price: schemaPrice.toFixed(2),
+    priceCurrency: rewriteV3Content?.priceCurrency ?? offerCurrency,
     priceValidUntil: getPriceValidUntil(),
   };
 
@@ -191,6 +194,7 @@ export const buildSchemaGraph = (
           seo.description)
         : seo.description,
       image: [effectiveHeroImage, ...imageGallery],
+      category: rewriteV3Content?.category?.primary,
       brand: { "@id": SITE_BRAND_ID },
       offers: offer,
       provider: { "@id": SITE_ORGANIZATION_ID },
@@ -217,6 +221,22 @@ export const buildSchemaGraph = (
           : { "@id": placeId },
       provider: { "@id": SITE_ORGANIZATION_ID },
       touristType: "Adventure travelers",
+      departureLocation: rewriteV3Content?.meetingPoint
+        ? {
+            "@type": "Place",
+            name:
+              rewriteV3Content.meetingPoint.name ??
+              rewriteV3Content.meetingPoint.rawText,
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: rewriteV3Content.meetingPoint.addressLine1,
+              addressLocality: rewriteV3Content.meetingPoint.city,
+              addressRegion: rewriteV3Content.meetingPoint.region,
+              postalCode: rewriteV3Content.meetingPoint.postalCode,
+              addressCountry: rewriteV3Content.meetingPoint.country ?? "US",
+            },
+          }
+        : undefined,
       offers: offer,
     },
     ...(faqPageNode ? [faqPageNode] : []),

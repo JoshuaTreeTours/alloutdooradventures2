@@ -1,11 +1,22 @@
 import type { ParsedTour } from "./parseFareHarborHtml";
 
-export type AOAOverrideContent = {
-  categoryLabel?: string;
-  meetingPointLabel?: string;
-  priceAdult?: number;
-  priceChild?: number;
-  priceLabel?: string;
+export type TourRewriteV3 = {
+  heroPriceText?: string;
+  schemaPrice?: number;
+  priceCurrency?: string;
+  category?: {
+    primary: string;
+    tags?: string[];
+  };
+  meetingPoint?: {
+    name?: string;
+    addressLine1?: string;
+    city?: string;
+    region?: string;
+    postalCode?: string;
+    country?: string;
+    rawText?: string;
+  };
   durationLabel?: string;
   whatYoullExperience: string[];
   highlights: string[];
@@ -155,10 +166,10 @@ const derivePriceLabel = (
 
 export const transformToAOAContent = (
   parsedTour: ParsedTour
-): AOAOverrideContent => {
+): TourRewriteV3 => {
   const duration = parsedTour.duration || DEFAULT_DURATION;
-  const meetingPoint = parsedTour.meetingPoint || DEFAULT_MEETING_POINT;
-  const category = parsedTour.category || DEFAULT_CATEGORY;
+  const meetingPoint = parsedTour.meetingPoint.rawText || DEFAULT_MEETING_POINT;
+  const category = parsedTour.category.primary || DEFAULT_CATEGORY;
   const priceLabel = derivePriceLabel(
     parsedTour.pricing,
     parsedTour.priceAdult,
@@ -195,11 +206,11 @@ export const transformToAOAContent = (
   ).slice(0, 5);
 
   return {
-    categoryLabel: category,
-    meetingPointLabel: meetingPoint,
-    priceAdult: parsedTour.priceAdult,
-    priceChild: parsedTour.priceChild,
-    priceLabel,
+    heroPriceText: priceLabel,
+    schemaPrice: parsedTour.priceAdult,
+    priceCurrency: "USD",
+    category: parsedTour.category,
+    meetingPoint: parsedTour.meetingPoint,
     durationLabel: duration,
     whatYoullExperience: paragraphs,
     highlights: uniqueHighlights,

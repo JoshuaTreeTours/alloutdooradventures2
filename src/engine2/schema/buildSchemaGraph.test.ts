@@ -195,4 +195,51 @@ describe("buildSchemaGraph", () => {
     }
   });
 
+  it("uses rewrite-v3 category, meeting point and schema price in Product/TouristTrip", () => {
+    const graph = buildSchemaGraph(
+      baseTour,
+      seo as never,
+      null,
+      false,
+      undefined,
+      undefined,
+      true,
+      {
+        heroPriceText: "$175 adult / $150 child",
+        schemaPrice: 175,
+        priceCurrency: "USD",
+        category: { primary: "Jeep tour", tags: ["geology"] },
+        meetingPoint: {
+          name: "Metate Ranch",
+          addressLine1: "38635 Monroe St",
+          city: "Indio",
+          region: "CA",
+          postalCode: "92203",
+          country: "US",
+        },
+        durationLabel: "3 hours",
+        whatYoullExperience: ["x"],
+        highlights: ["y"],
+        schemaDescription: "desc",
+      }
+    );
+    const product = graph.find(node => node["@type"] === "Product") as {
+      category?: string;
+      offers: { price: string; priceCurrency: string };
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      departureLocation?: { name: string; address: { streetAddress: string } };
+      offers: { price: string };
+    };
+
+    expect(product.category).toBe("Jeep tour");
+    expect(product.offers.price).toBe("175.00");
+    expect(product.offers.priceCurrency).toBe("USD");
+    expect(trip.offers.price).toBe("175.00");
+    expect(trip.departureLocation?.name).toBe("Metate Ranch");
+    expect(trip.departureLocation?.address.streetAddress).toBe(
+      "38635 Monroe St"
+    );
+  });
+
 });

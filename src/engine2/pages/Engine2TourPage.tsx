@@ -15,6 +15,7 @@ import {
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
+import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -96,19 +97,33 @@ export default function Engine2TourPage({
       ? undefined
       : `From $${displayPrice.toFixed(2)} per person`;
   const overridePriceLabel = overrideContent?.enabled
-    ? overrideContent.content.priceLabel
+    ? overrideContent.content.heroPriceText
     : undefined;
   const headerPriceLabel = overridePriceLabel ?? enginePriceLabel;
   const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
 
-  const overrideSchemaDescription =
-    overrideContent?.enabled && overrideContent.tourId === 34849
-      ? overrideContent.content.schemaDescription
-      : undefined;
-  const overrideFaqs =
-    overrideContent?.enabled && overrideContent.tourId === 34849
-      ? overrideContent.content.faqs
-      : undefined;
+  const overrideSchemaDescription = overrideContent?.enabled
+    ? overrideContent.content.schemaDescription
+    : undefined;
+  const overrideFaqs = overrideContent?.enabled
+    ? overrideContent.content.faqs
+    : undefined;
+
+  const rewriteV3Content: TourRewriteV3 | undefined = overrideContent?.enabled
+    ? overrideContent.content
+    : undefined;
+
+  const formattedMeetingPoint = rewriteV3Content?.meetingPoint
+    ? [
+        rewriteV3Content.meetingPoint.name,
+        rewriteV3Content.meetingPoint.addressLine1,
+        rewriteV3Content.meetingPoint.city,
+        rewriteV3Content.meetingPoint.region,
+        rewriteV3Content.meetingPoint.postalCode,
+      ]
+        .filter(Boolean)
+        .join(", ") || rewriteV3Content.meetingPoint.rawText
+    : undefined;
 
   const structuredDataNodes = useMemo(
     () =>
@@ -119,7 +134,8 @@ export default function Engine2TourPage({
         isPalmSprings,
         overrideSchemaDescription,
         overrideFaqs,
-        overrideContent?.enabled ?? false
+        overrideContent?.enabled ?? false,
+        rewriteV3Content
       ),
     [
       normalizedTour,
@@ -129,6 +145,7 @@ export default function Engine2TourPage({
       overrideSchemaDescription,
       overrideFaqs,
       overrideContent?.enabled,
+      rewriteV3Content,
     ]
   );
 
@@ -162,6 +179,15 @@ export default function Engine2TourPage({
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
+          {rewriteV3Content?.category?.primary ? (
+            <p className="mt-2 text-sm text-white/90">
+              {rewriteV3Content.category.primary}
+              {rewriteV3Content.durationLabel
+                ? ` · ${rewriteV3Content.durationLabel}`
+                : ""}
+              {formattedMeetingPoint ? ` · ${formattedMeetingPoint}` : ""}
+            </p>
+          ) : null}
           {headerPriceLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               {headerPriceLabel}
@@ -196,31 +222,25 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
-        {overrideContent?.enabled && overrideContent.tourId === 34849 ? (
+        {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
-            <span>
-              <strong>Category:</strong>{" "}
-              {overrideContent.content.categoryLabel ?? "Jeep tour"}
-            </span>
-            {" · "}
-            <span>
-              <strong>Duration:</strong>{" "}
-              {overrideContent.content.durationLabel ?? "3 hours"}
-            </span>
-            {" · "}
-            <span>
-              <strong>Meet:</strong>{" "}
-              {overrideContent.content.meetingPointLabel ??
-                "Metate Ranch — 38635 Monroe St, Indio, CA 92203"}
-            </span>
-            {" · "}
-            {!headerPriceLabel ? (
-              <span>
-                <strong>Price:</strong>{" "}
-                {overrideContent.content.priceLabel ??
-                  "$175 adult / $150 child"}
-              </span>
-            ) : null}
+            <ul className="space-y-1">
+              {rewriteV3Content?.category?.primary ? (
+                <li>
+                  <strong>Category:</strong> {rewriteV3Content.category.primary}
+                </li>
+              ) : null}
+              {rewriteV3Content?.durationLabel ? (
+                <li>
+                  <strong>Duration:</strong> {rewriteV3Content.durationLabel}
+                </li>
+              ) : null}
+              {formattedMeetingPoint ? (
+                <li>
+                  <strong>Meeting point:</strong> {formattedMeetingPoint}
+                </li>
+              ) : null}
+            </ul>
           </div>
         ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
