@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
@@ -14,6 +14,12 @@ import {
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
+import { extractBookingTourData } from "../../utils/tours/extractBookingTourData";
+import {
+  rewriteSanAndreasTour,
+  type SanAndreasRewrite,
+} from "../../utils/tours/rewriteSanAndreasTour";
+import { formatTourDetailValue } from "../../utils/tours/formatTourDetailValue";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -35,6 +41,9 @@ export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const isSanAndreasSharedTour =
+    tour.slug === "shared-san-andreas-fault-jeep-tour-34849";
+  const [bookingPageHtml, setBookingPageHtml] = useState<string>("");
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const heroImage =
@@ -76,6 +85,58 @@ export default function Engine2TourPage({
     );
   }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
+  useEffect(() => {
+    if (!isSanAndreasSharedTour) {
+      return;
+    }
+
+    let isCancelled = false;
+
+    fetch(bookingPath)
+      .then(response => (response.ok ? response.text() : ""))
+      .then(html => {
+        if (!isCancelled) {
+          setBookingPageHtml(html);
+        }
+      })
+      .catch(() => {
+        if (!isCancelled) {
+          setBookingPageHtml("");
+        }
+      });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [bookingPath, isSanAndreasSharedTour]);
+
+  const sanAndreasRewrite = useMemo<SanAndreasRewrite | null>(() => {
+    if (!isSanAndreasSharedTour) {
+      return null;
+    }
+
+    const extracted = extractBookingTourData({
+      bookingPageHtml,
+      pageBodyContent: normalizedTour.content.experienceText,
+    });
+
+    const rewritten = rewriteSanAndreasTour(extracted);
+
+    if (process.env.NODE_ENV !== "production") {
+      const durationValue = rewritten.details?.duration;
+      if (durationValue && typeof durationValue === "object") {
+        console.warn("Tour duration is object for slug:", tour.slug, durationValue);
+      }
+    }
+
+    return rewritten;
+  }, [
+    bookingPageHtml,
+    isSanAndreasSharedTour,
+    normalizedTour.content.experienceText,
+    tour.slug,
+  ]);
+
   const backToToursPath = tour.seo.canonicalPath.replace(
     /\/tours\/[^/]+$/,
     "/tours"
@@ -152,9 +213,65 @@ export default function Engine2TourPage({
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
-        <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
-        </p>
+        {sanAndreasRewrite ? (
+          <>
+            <p className="mt-4 text-sm leading-relaxed text-[#405040]">
+              {sanAndreasRewrite.overview}
+            </p>
+
+            <div className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+              <h3 className="text-base font-semibold text-[#1f2a1f]">
+                Tour details
+              </h3>
+              <ul className="mt-4 space-y-2 text-sm text-[#405040]">
+                <li>
+                  <strong>Duration:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.duration)}
+                </li>
+                <li>
+                  <strong>Meeting point:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.meetingPoint)}
+                </li>
+                <li>
+                  <strong>Group size:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.groupSize)}
+                </li>
+                <li>
+                  <strong>Age:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.age)}
+                </li>
+                <li>
+                  <strong>Accessibility:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.accessibility)}
+                </li>
+                <li>
+                  <strong>Cancellation:</strong>{" "}
+                  {formatTourDetailValue(sanAndreasRewrite.details.cancellation)}
+                </li>
+              </ul>
+            </div>
+
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Highlights
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+              {sanAndreasRewrite.highlights.map(highlight => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Local authority layer
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-[#405040]">
+              {sanAndreasRewrite.localAuthority}
+            </p>
+          </>
+        ) : (
+          <p className="mt-4 text-sm leading-relaxed text-[#405040]">
+            {normalizedTour.content.experienceText}
+          </p>
+        )}
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
@@ -208,7 +325,8 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
+        {!sanAndreasRewrite &&
+        (pilotContent?.highlights ?? normalizedTour.content.highlights)
           .length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
