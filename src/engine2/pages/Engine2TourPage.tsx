@@ -14,10 +14,13 @@ import {
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
+import { isTour34849 } from "../../utils/palmSprings/isTour34849";
+import { PSP_34849_OVERRIDE } from "../../utils/palmSprings/psp34849OverrideContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
   isFHPilotEnabled: boolean;
+  isPsp34849DescriptionOverrideEnabled: boolean;
 };
 
 const normalizeStringArray = (value: unknown) => {
@@ -34,6 +37,7 @@ const normalizeStringArray = (value: unknown) => {
 export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
+  isPsp34849DescriptionOverrideEnabled,
 }: Engine2TourPageProps) {
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
@@ -65,10 +69,22 @@ export default function Engine2TourPage({
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
+  const is34849 = isTour34849({ pathname: tour.seo.canonicalPath, tour });
+  const is34849OverrideActive =
+    isPsp34849DescriptionOverrideEnabled && is34849;
   const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
+    isFHPilotEnabled && isPalmSprings && tour.bookingUrl && !is34849OverrideActive
       ? getPalmSpringsPilotContent(tour)
       : null;
+  const experienceParagraphs = is34849OverrideActive
+    ? PSP_34849_OVERRIDE.whatYoullExperience
+        .split("\n\n")
+        .map(paragraph => paragraph.trim())
+        .filter(Boolean)
+    : [normalizedTour.content.experienceText];
+  const highlights = is34849OverrideActive
+    ? PSP_34849_OVERRIDE.highlights
+    : (pilotContent?.highlights ?? normalizedTour.content.highlights);
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -86,8 +102,15 @@ export default function Engine2TourPage({
     basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour, seo, pilotContent, isPalmSprings),
-    [normalizedTour, seo, pilotContent, isPalmSprings]
+    () =>
+      buildSchemaGraph(
+        normalizedTour,
+        seo,
+        pilotContent,
+        isPalmSprings,
+        is34849OverrideActive ? PSP_34849_OVERRIDE.schemaDescription : undefined
+      ),
+    [normalizedTour, seo, pilotContent, isPalmSprings, is34849OverrideActive]
   );
 
   const relatedTours = useMemo(
@@ -152,9 +175,16 @@ export default function Engine2TourPage({
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
-        <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
-        </p>
+        {is34849OverrideActive ? (
+          <p className="mt-3 inline-flex rounded-full bg-[#e8f3ea] px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em] text-[#2f6f38]">
+            Pilot override active (34849)
+          </p>
+        ) : null}
+        <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
+          {experienceParagraphs.map(paragraph => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
         {pilotContent?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
@@ -208,19 +238,130 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
-          .length ? (
+        {highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {(
-                pilotContent?.highlights ?? normalizedTour.content.highlights
-              ).map(highlight => (
+              {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
+          </>
+        ) : null}
+
+        {is34849OverrideActive ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Overview
+            </h2>
+            <ul className="mt-4 space-y-1 text-sm text-[#405040]">
+              {PSP_34849_OVERRIDE.overview.duration ? (
+                <li>
+                  <strong>Duration:</strong> {PSP_34849_OVERRIDE.overview.duration}
+                </li>
+              ) : null}
+              {PSP_34849_OVERRIDE.overview.meetingLocation ? (
+                <li>
+                  <strong>Meeting location:</strong>{" "}
+                  {PSP_34849_OVERRIDE.overview.meetingLocation}
+                </li>
+              ) : null}
+              {PSP_34849_OVERRIDE.overview.ageMinimum ? (
+                <li>
+                  <strong>Age minimum:</strong>{" "}
+                  {PSP_34849_OVERRIDE.overview.ageMinimum}
+                </li>
+              ) : null}
+              {PSP_34849_OVERRIDE.overview.groupSize ? (
+                <li>
+                  <strong>Group size:</strong> {PSP_34849_OVERRIDE.overview.groupSize}
+                </li>
+              ) : null}
+              {PSP_34849_OVERRIDE.overview.accessibility ? (
+                <li>
+                  <strong>Accessibility:</strong>{" "}
+                  {PSP_34849_OVERRIDE.overview.accessibility}
+                </li>
+              ) : null}
+              {PSP_34849_OVERRIDE.overview.cancellation ? (
+                <li>
+                  <strong>Cancellation:</strong>{" "}
+                  {PSP_34849_OVERRIDE.overview.cancellation}
+                </li>
+              ) : null}
+            </ul>
+
+            {PSP_34849_OVERRIDE.whatsIncluded.length ? (
+              <>
+                <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+                  What’s Included
+                </h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+                  {PSP_34849_OVERRIDE.whatsIncluded.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {PSP_34849_OVERRIDE.whatsNotIncluded.length ? (
+              <>
+                <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+                  What’s Not Included
+                </h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+                  {PSP_34849_OVERRIDE.whatsNotIncluded.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {PSP_34849_OVERRIDE.additionalInfo.length ? (
+              <>
+                <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+                  Additional Information
+                </h2>
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+                  {PSP_34849_OVERRIDE.additionalInfo.map(item => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {PSP_34849_OVERRIDE.pricing.length ? (
+              <>
+                <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+                  Pricing
+                </h2>
+                <ul className="mt-4 space-y-2 text-sm text-[#405040]">
+                  {PSP_34849_OVERRIDE.pricing.map(item => (
+                    <li key={item.label}>
+                      <strong>{item.label}:</strong> {item.price}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {PSP_34849_OVERRIDE.faq.length ? (
+              <>
+                <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQ</h2>
+                <div className="mt-4 space-y-4">
+                  {PSP_34849_OVERRIDE.faq.map(item => (
+                    <div key={item.q}>
+                      <p className="text-sm font-semibold text-[#2f4a2f]">
+                        {item.q}
+                      </p>
+                      <p className="text-sm text-[#405040]">{item.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : null}
           </>
         ) : null}
 
