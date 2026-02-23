@@ -5,6 +5,15 @@ import {
   type FareHarborStructuredData,
 } from "./transformFareHarborToAOAContent";
 
+export type PalmSpringsOverrideContent = {
+  enabled: boolean;
+  tourId: number;
+  content: {
+    whatYoullExperience: string[];
+    highlights: string[];
+  };
+};
+
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
   "34849": {
     duration: "3 hours",
@@ -112,4 +121,23 @@ export const getPalmSpringsPilotContent = (
   }
 
   return transformFareHarborToAOAContent(tour.name, seed);
+};
+
+export const getPalmSpringsOverrideContent = (
+  tour: Engine2Tour
+): PalmSpringsOverrideContent | null => {
+  if (!/34849/.test(tour.slug) && !/34849/.test(tour.seo.canonicalPath)) {
+    return null;
+  }
+
+  return {
+    enabled: true,
+    tourId: 34849,
+    content: {
+      whatYoullExperience: [
+        "OVERRIDE TEST SUCCESS — If you see this, render override is working.",
+      ],
+      highlights: ["OVERRIDE ACTIVE"],
+    },
+  };
 };
