@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
@@ -14,10 +14,11 @@ import {
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
+import type { AOAEnrichedContent } from "../../utils/fh/transformToAOAContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
-  isFHPilotEnabled: boolean;
+  isPspEngine1FhRewriteEnabled: boolean;
 };
 
 const normalizeStringArray = (value: unknown) => {
@@ -33,8 +34,11 @@ const normalizeStringArray = (value: unknown) => {
 
 export default function Engine2TourPage({
   tour,
-  isFHPilotEnabled,
+  isPspEngine1FhRewriteEnabled,
 }: Engine2TourPageProps) {
+  const [pilotContent, setPilotContent] = useState<AOAEnrichedContent | null>(
+    null
+  );
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const heroImage =
@@ -65,10 +69,25 @@ export default function Engine2TourPage({
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
-  const pilotContent =
-    isFHPilotEnabled && isPalmSprings && tour.bookingUrl
-      ? getPalmSpringsPilotContent(tour)
-      : null;
+  useEffect(() => {
+    if (!isPspEngine1FhRewriteEnabled || !isPalmSprings) {
+      setPilotContent(null);
+      return;
+    }
+
+    let isMounted = true;
+    const origin = window.location.origin;
+
+    getPalmSpringsPilotContent(tour, origin).then(content => {
+      if (isMounted) {
+        setPilotContent(content);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [isPalmSprings, isPspEngine1FhRewriteEnabled, tour]);
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -120,6 +139,11 @@ export default function Engine2TourPage({
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
+          {pilotContent ? (
+            <p className="mt-2 inline-flex w-fit rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.15em] text-white">
+              Pilot enrichment active
+            </p>
+          ) : null}
           <p className="mt-4 text-sm font-semibold text-white/90">
             {isPriceFallbackApplied
               ? "From $129 per person"
@@ -166,21 +190,27 @@ export default function Engine2TourPage({
                   <strong>Duration:</strong> {pilotContent.quickFacts.duration}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.startLocationArea ? (
+              {pilotContent.quickFacts.meetingPoint ? (
                 <li>
-                  <strong>Start area:</strong>{" "}
-                  {pilotContent.quickFacts.startLocationArea}
+                  <strong>Meeting point:</strong>{" "}
+                  {pilotContent.quickFacts.meetingPoint}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.pickup ? (
+              {pilotContent.quickFacts.age ? (
                 <li>
-                  <strong>Pickup:</strong> {pilotContent.quickFacts.pickup}
+                  <strong>Age:</strong> {pilotContent.quickFacts.age}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.ageOrMinimumRequirements ? (
+              {pilotContent.quickFacts.groupSize ? (
                 <li>
-                  <strong>Minimums:</strong>{" "}
-                  {pilotContent.quickFacts.ageOrMinimumRequirements}
+                  <strong>Group size:</strong>{" "}
+                  {pilotContent.quickFacts.groupSize}
+                </li>
+              ) : null}
+              {pilotContent.quickFacts.cancellation ? (
+                <li>
+                  <strong>Cancellation:</strong>{" "}
+                  {pilotContent.quickFacts.cancellation}
                 </li>
               ) : null}
             </ul>
@@ -194,18 +224,6 @@ export default function Engine2TourPage({
             <p className="mt-4 text-sm leading-relaxed text-[#405040]">
               {pilotContent.whatYoullExperience}
             </p>
-          </>
-        ) : null}
-        {pilotContent?.experienceInDepth?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Experience In Depth
-            </h2>
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.experienceInDepth.map(paragraph => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </div>
           </>
         ) : null}
         {(pilotContent?.highlights ?? normalizedTour.content.highlights)
@@ -223,58 +241,15 @@ export default function Engine2TourPage({
             </ul>
           </>
         ) : null}
-
-        {pilotContent?.itineraryOutline?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Itinerary
-            </h2>
-            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.itineraryOutline.map(step => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-          </>
-        ) : null}
-
-        {pilotContent?.quickFacts?.startLocationArea ||
-        pilotContent?.quickFacts?.pickup ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Meeting & Pickup
-            </h2>
-            <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.quickFacts?.startLocationArea
-                ? `Meeting area: ${pilotContent.quickFacts.startLocationArea}. `
-                : "Meeting location details vary by departure. "}
-              {pilotContent.quickFacts?.pickup
-                ? `Pickup: ${pilotContent.quickFacts.pickup}.`
-                : "Pickup details vary by departure."}
-            </p>
-          </>
-        ) : null}
-
-        {pilotContent?.whoItsFor?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Who It’s For
-            </h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.whoItsFor.map(item => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </>
-        ) : null}
-
-        {pilotContent?.included?.length || pilotContent?.notIncluded?.length ? (
+        {pilotContent?.whatsIncluded?.length ||
+        pilotContent?.whatsNotIncluded?.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div>
               <h2 className="text-xl font-semibold text-[#2f4a2f]">
                 What’s Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.included ?? []).map(item => (
+                {(pilotContent?.whatsIncluded ?? []).map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -284,7 +259,7 @@ export default function Engine2TourPage({
                 Not Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.notIncluded ?? []).map(item => (
+                {(pilotContent?.whatsNotIncluded ?? []).map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -292,27 +267,14 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {pilotContent?.cancellationSummary ? (
+        {pilotContent?.quickFacts?.cancellation ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Cancellation
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.cancellationSummary}
+              {pilotContent.quickFacts.cancellation}
             </p>
-          </>
-        ) : null}
-
-        {pilotContent?.rulesAndRequirements?.length ? (
-          <>
-            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Rules & Requirements
-            </h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.rulesAndRequirements.map(rule => (
-                <li key={rule}>{rule}</li>
-              ))}
-            </ul>
           </>
         ) : null}
 
@@ -321,11 +283,11 @@ export default function Engine2TourPage({
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQ</h2>
             <div className="mt-4 space-y-4">
               {pilotContent.faq.map(item => (
-                <div key={item.question}>
+                <div key={item.q}>
                   <p className="text-sm font-semibold text-[#2f4a2f]">
-                    {item.question}
+                    {item.q}
                   </p>
-                  <p className="text-sm text-[#405040]">{item.answer}</p>
+                  <p className="text-sm text-[#405040]">{item.a}</p>
                 </div>
               ))}
             </div>

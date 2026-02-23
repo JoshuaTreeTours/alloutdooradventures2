@@ -50,9 +50,14 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const isFHPilotEnabled =
+  const isPspEngine1FhRewriteEnabled =
     typeof process !== "undefined" &&
-    process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+    process.env.ENABLE_PSP_ENGINE1_FH_REWRITE === "true";
+
+  const routePathname = `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`;
+  const isPalmSpringsPath = routePathname.startsWith(
+    "/destinations/california/palm-springs/tours/"
+  );
 
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
@@ -61,14 +66,17 @@ export default function CityTourDetailRoute({
   );
 
   if (engine2Tour) {
-    const isPsp = isPalmSpringsTour(engine2Tour);
+    const isPsp = isPalmSpringsPath && isPalmSpringsTour(engine2Tour);
     if (isPsp && typeof window === "undefined") {
       console.info(
-        `[FHPilot] enabled=${isFHPilotEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
+        `[FHPilot] enabled=${isPspEngine1FhRewriteEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
       );
     }
     return (
-      <Engine2TourPage tour={engine2Tour} isFHPilotEnabled={isFHPilotEnabled} />
+      <Engine2TourPage
+        tour={engine2Tour}
+        isPspEngine1FhRewriteEnabled={isPspEngine1FhRewriteEnabled}
+      />
     );
   }
 
