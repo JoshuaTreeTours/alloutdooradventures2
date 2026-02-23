@@ -137,7 +137,9 @@ export const getPalmSpringsOverrideContent = (
   const fallbackContent: AOAOverrideContent = {
     categoryLabel: undefined,
     meetingPointLabel: undefined,
-    priceSummaryLabel: undefined,
+    priceAdult: undefined,
+    priceChild: undefined,
+    priceLabel: undefined,
     durationLabel: undefined,
     whatYoullExperience: [tour.content.experienceText],
     highlights: tour.content.highlights,
@@ -171,4 +173,3 @@ export const getPalmSpringsOverrideContent = (
     content: transformToAOAContent(parsedTour),
   };
 };
-

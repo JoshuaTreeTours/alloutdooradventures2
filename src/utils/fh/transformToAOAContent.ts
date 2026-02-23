@@ -3,7 +3,9 @@ import type { ParsedTour } from "./parseFareHarborHtml";
 export type AOAOverrideContent = {
   categoryLabel?: string;
   meetingPointLabel?: string;
-  priceSummaryLabel?: string;
+  priceAdult?: number;
+  priceChild?: number;
+  priceLabel?: string;
   durationLabel?: string;
   whatYoullExperience: string[];
   highlights: string[];
@@ -15,7 +17,20 @@ const DEFAULT_MEETING_POINT = "Metate Ranch — 38635 Monroe St, Indio, CA 92203
 const DEFAULT_DURATION = "3 hours";
 const DEFAULT_PRICE = "$175 adult / $150 child";
 
-const derivePriceSummary = (pricing: string[]) => {
+const derivePriceLabel = (
+  pricing: string[],
+  priceAdult?: number,
+  priceChild?: number,
+  parsedPriceLabel?: string
+) => {
+  if (parsedPriceLabel) {
+    return parsedPriceLabel;
+  }
+
+  if (priceAdult && priceChild) {
+    return `$${priceAdult.toFixed(0)} adult / $${priceChild.toFixed(0)} child`;
+  }
+
   const text = pricing.join(" | ");
   const adult = text.match(/adult[^$]*(\$\d+)/i)?.[1] ?? "";
   const child = text.match(/child[^$]*(\$\d+)/i)?.[1] ?? "";
@@ -32,11 +47,18 @@ const derivePriceSummary = (pricing: string[]) => {
   return fallback ?? `From ${DEFAULT_PRICE}`;
 };
 
-export const transformToAOAContent = (parsedTour: ParsedTour): AOAOverrideContent => {
+export const transformToAOAContent = (
+  parsedTour: ParsedTour
+): AOAOverrideContent => {
   const duration = parsedTour.duration || DEFAULT_DURATION;
   const meetingPoint = parsedTour.meetingPoint || DEFAULT_MEETING_POINT;
   const category = parsedTour.category || DEFAULT_CATEGORY;
-  const priceSummary = derivePriceSummary(parsedTour.pricing);
+  const priceLabel = derivePriceLabel(
+    parsedTour.pricing,
+    parsedTour.priceAdult,
+    parsedTour.priceChild,
+    parsedTour.priceLabel
+  );
 
   const paragraphs = [
     `This ${category.toLowerCase()} explores the San Andreas Fault in the Palm Springs and Coachella Valley region aboard an open-air Jeep through the Indio Hills fault zone, desert canyons, and active wash systems.`,
@@ -61,7 +83,9 @@ export const transformToAOAContent = (parsedTour: ParsedTour): AOAOverrideConten
   return {
     categoryLabel: category,
     meetingPointLabel: meetingPoint,
-    priceSummaryLabel: priceSummary,
+    priceAdult: parsedTour.priceAdult,
+    priceChild: parsedTour.priceChild,
+    priceLabel,
     durationLabel: duration,
     whatYoullExperience: paragraphs,
     highlights: uniqueHighlights,
