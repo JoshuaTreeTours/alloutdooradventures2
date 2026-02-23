@@ -37,7 +37,7 @@ import {
 } from "../../../../utils/structuredData";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
-import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import { isPalmSpringsTour } from "../../../../utils/palmSprings/isPalmSpringsTour";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -50,9 +50,9 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const isFHPilotEnabled =
+  const isPspBookRewriteEnabled =
     typeof process !== "undefined" &&
-    process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+    process.env.ENABLE_PSP_BOOK_FH_REWRITE === "true";
 
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
@@ -64,11 +64,14 @@ export default function CityTourDetailRoute({
     const isPsp = isPalmSpringsTour(engine2Tour);
     if (isPsp && typeof window === "undefined") {
       console.info(
-        `[FHPilot] enabled=${isFHPilotEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
+        `PSP rewrite: eligible=${isPsp} enabled=${isPspBookRewriteEnabled}`
       );
     }
     return (
-      <Engine2TourPage tour={engine2Tour} isFHPilotEnabled={isFHPilotEnabled} />
+      <Engine2TourPage
+        tour={engine2Tour}
+        isPspBookRewriteEnabled={isPspBookRewriteEnabled}
+      />
     );
   }
 
