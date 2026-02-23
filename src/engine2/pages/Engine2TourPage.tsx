@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
@@ -12,12 +12,14 @@ import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
   getPalmSpringsPilotContent,
+  getTour34849OverrideContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
   isFHPilotEnabled: boolean;
+  isPsp34849FhOverrideEnabled?: boolean;
 };
 
 const normalizeStringArray = (value: unknown) => {
@@ -34,6 +36,7 @@ const normalizeStringArray = (value: unknown) => {
 export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
+  isPsp34849FhOverrideEnabled = false,
 }: Engine2TourPageProps) {
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
@@ -69,10 +72,40 @@ export default function Engine2TourPage({
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
+  const is34849 = tour.id === "34849";
+  const [tour34849OverrideContent, setTour34849OverrideContent] = useState(
+    () =>
+      is34849 && isPsp34849FhOverrideEnabled
+        ? getPalmSpringsPilotContent(tour)
+        : null
+  );
+
+  useEffect(() => {
+    if (!is34849 || !isPsp34849FhOverrideEnabled) {
+      return;
+    }
+
+    let isActive = true;
+    void getTour34849OverrideContent(tour).then(content => {
+      if (isActive) {
+        setTour34849OverrideContent(content);
+      }
+    });
+
+    return () => {
+      isActive = false;
+    };
+  }, [is34849, isPsp34849FhOverrideEnabled, tour]);
+
+  const is34849OverrideActive =
+    is34849 && isPsp34849FhOverrideEnabled && Boolean(tour34849OverrideContent);
+  const contentToRender = is34849OverrideActive
+    ? tour34849OverrideContent
+    : pilotContent;
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
-      `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
+      `[FHPilot] fetched=${contentToRender ? "ok" : "failed"} transformed=${contentToRender ? "ok" : "failed"}`
     );
   }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
@@ -86,8 +119,8 @@ export default function Engine2TourPage({
     basePrice === null || basePrice <= 0 || basePrice < PRICE_MIN_THRESHOLD_USD;
 
   const structuredDataNodes = useMemo(
-    () => buildSchemaGraph(normalizedTour, seo, pilotContent, isPalmSprings),
-    [normalizedTour, seo, pilotContent, isPalmSprings]
+    () => buildSchemaGraph(normalizedTour, seo, contentToRender, isPalmSprings),
+    [normalizedTour, seo, contentToRender, isPalmSprings]
   );
 
   const relatedTours = useMemo(
@@ -149,66 +182,75 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
-        <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
+        {is34849OverrideActive ? (
+          <p className="mt-6 inline-flex rounded-full border border-[#2f4a2f]/30 bg-[#f2f7f1] px-3 py-1 text-xs font-semibold text-[#2f4a2f]">
+            Pilot override active (34849)
+          </p>
+        ) : null}
+        <h2 className="mt-3 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-          {normalizedTour.content.experienceText}
+          {is34849OverrideActive
+            ? (contentToRender?.whatYoullExperience ??
+              normalizedTour.content.experienceText)
+            : normalizedTour.content.experienceText}
         </p>
-        {pilotContent?.quickFacts ? (
+        {contentToRender?.quickFacts ? (
           <div className="mt-8 rounded-xl border border-black/10 bg-[#f8f5ee] p-5">
             <h3 className="text-lg font-semibold text-[#2f4a2f]">
               Quick facts
             </h3>
             <ul className="mt-3 space-y-1 text-sm text-[#405040]">
-              {pilotContent.quickFacts.duration ? (
+              {contentToRender.quickFacts?.duration ? (
                 <li>
-                  <strong>Duration:</strong> {pilotContent.quickFacts.duration}
+                  <strong>Duration:</strong>{" "}
+                  {contentToRender.quickFacts.duration}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.startLocationArea ? (
+              {contentToRender.quickFacts?.startLocationArea ? (
                 <li>
                   <strong>Start area:</strong>{" "}
-                  {pilotContent.quickFacts.startLocationArea}
+                  {contentToRender.quickFacts.startLocationArea}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.pickup ? (
+              {contentToRender.quickFacts?.pickup ? (
                 <li>
-                  <strong>Pickup:</strong> {pilotContent.quickFacts.pickup}
+                  <strong>Pickup:</strong> {contentToRender.quickFacts.pickup}
                 </li>
               ) : null}
-              {pilotContent.quickFacts.ageOrMinimumRequirements ? (
+              {contentToRender.quickFacts?.ageOrMinimumRequirements ? (
                 <li>
                   <strong>Minimums:</strong>{" "}
-                  {pilotContent.quickFacts.ageOrMinimumRequirements}
+                  {contentToRender.quickFacts.ageOrMinimumRequirements}
                 </li>
               ) : null}
             </ul>
           </div>
         ) : null}
-        {pilotContent?.whatYoullExperience ? (
+        {!is34849OverrideActive && contentToRender?.whatYoullExperience ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               What You’ll Experience
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.whatYoullExperience}
+              {contentToRender.whatYoullExperience}
             </p>
           </>
         ) : null}
-        {pilotContent?.experienceInDepth?.length ? (
+        {contentToRender?.experienceInDepth?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Experience In Depth
             </h2>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
-              {pilotContent.experienceInDepth.map(paragraph => (
+              {contentToRender.experienceInDepth.map(paragraph => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
           </>
         ) : null}
-        {(pilotContent?.highlights ?? normalizedTour.content.highlights)
+        {(contentToRender?.highlights ?? normalizedTour.content.highlights)
           .length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
@@ -216,7 +258,7 @@ export default function Engine2TourPage({
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
               {(
-                pilotContent?.highlights ?? normalizedTour.content.highlights
+                contentToRender?.highlights ?? normalizedTour.content.highlights
               ).map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
@@ -224,57 +266,58 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
-        {pilotContent?.itineraryOutline?.length ? (
+        {contentToRender?.itineraryOutline?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Itinerary
             </h2>
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.itineraryOutline.map(step => (
+              {contentToRender.itineraryOutline.map(step => (
                 <li key={step}>{step}</li>
               ))}
             </ol>
           </>
         ) : null}
 
-        {pilotContent?.quickFacts?.startLocationArea ||
-        pilotContent?.quickFacts?.pickup ? (
+        {contentToRender?.quickFacts?.startLocationArea ||
+        contentToRender?.quickFacts?.pickup ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Meeting & Pickup
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.quickFacts?.startLocationArea
-                ? `Meeting area: ${pilotContent.quickFacts.startLocationArea}. `
+              {contentToRender.quickFacts?.startLocationArea
+                ? `Meeting area: ${contentToRender.quickFacts.startLocationArea}. `
                 : "Meeting location details vary by departure. "}
-              {pilotContent.quickFacts?.pickup
-                ? `Pickup: ${pilotContent.quickFacts.pickup}.`
+              {contentToRender.quickFacts?.pickup
+                ? `Pickup: ${contentToRender.quickFacts.pickup}.`
                 : "Pickup details vary by departure."}
             </p>
           </>
         ) : null}
 
-        {pilotContent?.whoItsFor?.length ? (
+        {contentToRender?.whoItsFor?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Who It’s For
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.whoItsFor.map(item => (
+              {contentToRender.whoItsFor.map(item => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {pilotContent?.included?.length || pilotContent?.notIncluded?.length ? (
+        {contentToRender?.included?.length ||
+        contentToRender?.notIncluded?.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div>
               <h2 className="text-xl font-semibold text-[#2f4a2f]">
                 What’s Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.included ?? []).map(item => (
+                {(contentToRender?.included ?? []).map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -284,7 +327,7 @@ export default function Engine2TourPage({
                 Not Included
               </h2>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                {(pilotContent?.notIncluded ?? []).map(item => (
+                {(contentToRender?.notIncluded ?? []).map(item => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -292,35 +335,35 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {pilotContent?.cancellationSummary ? (
+        {contentToRender?.cancellationSummary ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Cancellation
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              {pilotContent.cancellationSummary}
+              {contentToRender.cancellationSummary}
             </p>
           </>
         ) : null}
 
-        {pilotContent?.rulesAndRequirements?.length ? (
+        {contentToRender?.rulesAndRequirements?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Rules & Requirements
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {pilotContent.rulesAndRequirements.map(rule => (
+              {contentToRender.rulesAndRequirements.map(rule => (
                 <li key={rule}>{rule}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {pilotContent?.faq?.length ? (
+        {contentToRender?.faq?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQ</h2>
             <div className="mt-4 space-y-4">
-              {pilotContent.faq.map(item => (
+              {contentToRender.faq.map(item => (
                 <div key={item.question}>
                   <p className="text-sm font-semibold text-[#2f4a2f]">
                     {item.question}

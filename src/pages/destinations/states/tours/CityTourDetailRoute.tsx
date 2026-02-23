@@ -53,6 +53,9 @@ export default function CityTourDetailRoute({
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+  const isPsp34849FhOverrideEnabled =
+    typeof process !== "undefined" &&
+    process.env.ENABLE_PSP_34849_FH_OVERRIDE === "true";
 
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
@@ -67,8 +70,17 @@ export default function CityTourDetailRoute({
         `[FHPilot] enabled=${isFHPilotEnabled ? "enabled" : "disabled"} eligible=${isPsp ? "eligible" : "not eligible"} bookingUrl=${engine2Tour.bookingUrl ? "found" : "missing"}`
       );
     }
+    if (engine2Tour.id === "34849" && typeof window === "undefined") {
+      console.info(
+        `34849: flag=${isPsp34849FhOverrideEnabled ? "true" : "false"}`
+      );
+    }
     return (
-      <Engine2TourPage tour={engine2Tour} isFHPilotEnabled={isFHPilotEnabled} />
+      <Engine2TourPage
+        tour={engine2Tour}
+        isFHPilotEnabled={isFHPilotEnabled}
+        isPsp34849FhOverrideEnabled={isPsp34849FhOverrideEnabled}
+      />
     );
   }
 
