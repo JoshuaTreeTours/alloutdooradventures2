@@ -99,6 +99,30 @@ const ensureSeoFaqAnswer = (answer: string) => {
   return normalizeSentences(completed).slice(0, 4).join(" ");
 };
 
+const mergeFareHarborAndCuratedFaqs = (
+  parsedFaqs: Array<{ question: string; answer: string }>,
+  curatedFaqs: Array<{ question: string; answer: string }>
+) => {
+  const faqByQuestion = new Map<string, { question: string; answer: string }>();
+
+  [...parsedFaqs, ...curatedFaqs].forEach(item => {
+    const question = item.question.trim();
+    if (!question) {
+      return;
+    }
+
+    const key = question.toLowerCase();
+    if (!faqByQuestion.has(key)) {
+      faqByQuestion.set(key, {
+        question,
+        answer: ensureSeoFaqAnswer(item.answer),
+      });
+    }
+  });
+
+  return Array.from(faqByQuestion.values());
+};
+
 const derivePriceLabel = (
   pricing: string[],
   priceAdult?: number,
@@ -165,22 +189,10 @@ export const transformToAOAContent = (
     question: item.q,
     answer: ensureSeoFaqAnswer(item.a),
   }));
-  const faqByQuestion = new Map<string, { question: string; answer: string }>();
-  [...parsedFaqs, ...CURATED_34849_FAQS].forEach(item => {
-    const question = item.question.trim();
-    if (!question) {
-      return;
-    }
-
-    const key = question.toLowerCase();
-    if (!faqByQuestion.has(key)) {
-      faqByQuestion.set(key, {
-        question,
-        answer: ensureSeoFaqAnswer(item.answer),
-      });
-    }
-  });
-  const faqs = Array.from(faqByQuestion.values());
+  const mergedFaqs = mergeFareHarborAndCuratedFaqs(
+    parsedFaqs,
+    CURATED_34849_FAQS
+  ).slice(0, 5);
 
   return {
     categoryLabel: category,
@@ -191,7 +203,7 @@ export const transformToAOAContent = (
     durationLabel: duration,
     whatYoullExperience: paragraphs,
     highlights: uniqueHighlights,
-    faqs,
+    faqs: mergedFaqs,
     schemaDescription,
   };
 };

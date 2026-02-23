@@ -54,7 +54,7 @@ describe("Palm Springs 34849 override content", () => {
     );
     expect(override?.content.schemaDescription).toContain("Coachella Valley");
     expect(override?.content.highlights.length).toBeGreaterThanOrEqual(8);
-    expect(override?.content.faqs?.length).toBeGreaterThanOrEqual(6);
+    expect(override?.content.faqs?.length).toBeLessThanOrEqual(5);
     expect(override?.content.faqs?.[0].answer).toContain("Palm Springs");
     expect(override?.content.faqs?.[0].answer).toContain("San Andreas Fault");
     expect(override?.content.whatYoullExperience.join(" ")).not.toContain(

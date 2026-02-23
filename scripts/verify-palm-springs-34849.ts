@@ -55,8 +55,10 @@ if (!override?.enabled) {
 }
 
 const faqs = override.content.faqs ?? [];
-if (faqs.length < 6) {
-  fail(`Expected at least 6 FAQs in override content but got ${faqs.length}.`);
+if (faqs.length > 5) {
+  fail(
+    `Expected no more than 5 FAQs in override content but got ${faqs.length}.`
+  );
 }
 
 const hasFaqHeader = override.enabled && faqs.length > 0;
@@ -78,6 +80,15 @@ const schemaNodes = buildSchemaGraph(
 const faqPage = schemaNodes.find(node => node["@type"] === "FAQPage");
 if (!faqPage) {
   fail('Expected JSON-LD to include "@type":"FAQPage" with override on.');
+}
+
+const faqMainEntity = Array.isArray(faqPage.mainEntity)
+  ? faqPage.mainEntity
+  : [];
+if (faqMainEntity.length > 5) {
+  fail(
+    `Expected FAQPage JSON-LD to include no more than 5 questions but got ${faqMainEntity.length}.`
+  );
 }
 
 const controlTour = getAllEngine2Tours().find(
