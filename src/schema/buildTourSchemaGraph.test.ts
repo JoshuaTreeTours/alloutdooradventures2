@@ -72,10 +72,8 @@ describe("buildTourSchemaGraph", () => {
   it("excludes filestack resize base URL junk from derived images", () => {
     const graph = buildTourSchemaGraph({
       ...baseArgs,
-      derivedImages: [
-        "https://cdn.filestackcontent.com/resize",
-        "https://example.com/tour-1.jpg",
-      ],
+      image2: "https://example.com/tour-1.jpg",
+      derivedImages: ["https://cdn.filestackcontent.com/resize"],
     })["@graph"] as Array<Record<string, unknown>>;
 
     const product = graph.find(node => node["@type"] === "Product") as {
@@ -88,7 +86,7 @@ describe("buildTourSchemaGraph", () => {
     expect(product.image).toContain("https://example.com/tour-1.jpg");
   });
 
-  it("keeps hero first and caps image array at ten", () => {
+  it("keeps hero first and caps image array at two unique urls", () => {
     const graph = buildTourSchemaGraph({
       ...baseArgs,
       derivedImages: Array.from(
@@ -102,7 +100,24 @@ describe("buildTourSchemaGraph", () => {
     };
 
     expect(product.image[0]).toBe("https://example.com/hero.jpg");
-    expect(product.image.length).toBeLessThanOrEqual(10);
+    expect(product.image.length).toBeLessThanOrEqual(2);
+  });
+
+  it("dedupes image2 when it matches hero and emits string image", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      image2: "https://example.com/hero.jpg",
+    })["@graph"] as Array<Record<string, unknown>>;
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string;
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      image: string;
+    };
+
+    expect(product.image).toBe("https://example.com/hero.jpg");
+    expect(trip.image).toBe("https://example.com/hero.jpg");
   });
 
   it("adds WebPage.mainEntity and TouristTrip place destination/itinerary", () => {
@@ -175,6 +190,53 @@ describe("buildTourSchemaGraph", () => {
     };
 
     expect(place.address.addressRegion).toBe("British Columbia");
+  });
+
+  it("adds source attribution nodes and references when source URL is present", () => {
+    const sourceUrl =
+      "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn";
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      derivedImages: ["https://example.com/second.jpg"],
+      source: {
+        name: "FareHarbor",
+        url: sourceUrl,
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+      isBasedOn: string;
+      subjectOf: { "@id": string };
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      image: string[];
+      subjectOf: { "@id": string };
+    };
+    const sourceNode = graph.find(
+      node => node["@id"] === `${sourceUrl}#source`
+    ) as {
+      "@type": string;
+      url: string;
+      name: string;
+    };
+
+    expect(product.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://example.com/second.jpg",
+    ]);
+    expect(trip.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://example.com/second.jpg",
+    ]);
+    expect(product.isBasedOn).toBe(sourceUrl);
+    expect(product.subjectOf).toEqual({ "@id": `${sourceUrl}#source` });
+    expect(trip.subjectOf).toEqual({ "@id": `${sourceUrl}#source` });
+    expect(sourceNode).toMatchObject({
+      "@type": "WebPage",
+      url: sourceUrl,
+      name: "FareHarbor booking page",
+    });
   });
 
   it("derives PT3H from duration minutes", () => {

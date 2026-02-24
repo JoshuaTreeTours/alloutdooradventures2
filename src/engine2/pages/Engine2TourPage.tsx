@@ -9,6 +9,7 @@ import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import { cleanImageUrls } from "../../utils/cleanImageUrls";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
   getPalmSpringsOverrideContent,
@@ -43,8 +44,8 @@ export default function Engine2TourPage({
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
         : ENGINE2_DEFAULT_IMAGE;
-    const gallery = normalizeStringArray(tour.images.gallery).filter(
-      image => image !== heroImage
+    const gallery = cleanImageUrls(normalizeStringArray(tour.images.gallery), 2).filter(
+      image => /^https:\/\//i.test(image) && image !== heroImage
     );
     const experienceText =
       typeof tour.content.experienceText === "string" &&
@@ -84,6 +85,12 @@ export default function Engine2TourPage({
     console.info(
       `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
     );
+  }
+  if (tour.id === "34849" && import.meta.env.DEV && typeof window !== "undefined") {
+    console.info("[FH 34849 images]", {
+      heroUrl: normalizedTour.images.hero,
+      image2Url: normalizedTour.images.gallery[0] ?? null,
+    });
   }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
   const backToToursPath = tour.seo.canonicalPath.replace(
@@ -456,7 +463,8 @@ export default function Engine2TourPage({
                 <Image
                   src={image}
                   fallbackSrc={image}
-                  alt={`${tour.name} gallery`}
+                  loading="lazy"
+                  alt={`${tour.name} photo in ${tour.geo.city}, ${tour.geo.region}`}
                   className="h-56 w-full object-cover md:h-64"
                 />
               </div>
