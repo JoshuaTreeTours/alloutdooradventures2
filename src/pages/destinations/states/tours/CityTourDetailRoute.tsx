@@ -50,6 +50,7 @@ import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import { isJTreeHikeTemplate } from "../../../../utils/tours/isJTreeHikeTemplate";
 import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourDetailRouteProps = {
@@ -146,7 +147,12 @@ export default function CityTourDetailRoute({
     if (!tour || !canonicalUrl) {
       return null;
     }
-    const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
+    const isJTreeHikeClimb = tour
+    ? isJTreeHikeTemplate({ slug: tour.slug, tourId: tour.id })
+    : false;
+    const jt459591Override = isJTreeHikeClimb
+      ? getJoshuaTree459591Override(canonicalUrl)
+      : null;
     const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
     const offerUrl = resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
@@ -207,28 +213,13 @@ export default function CityTourDetailRoute({
             itinerary: jt459591Override
               ? {
                   "@type": "ItemList",
-                  itemListElement: [
-                    {
+                  itemListElement: jt459591Override.itinerarySteps.map(
+                    (stepName, index) => ({
                       "@type": "ListItem",
-                      position: 1,
-                      name: "Meet your guide and review safety systems",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      name: "Hike through Joshua Tree desert terrain to climbing areas",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      name: "Practice climbing movement and route technique on granite",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 4,
-                      name: "Return with debrief, photos, and next-step climbing tips",
-                    },
-                  ],
+                      position: index + 1,
+                      name: stepName,
+                    })
+                  ),
                 }
               : null,
           },
@@ -312,8 +303,13 @@ export default function CityTourDetailRoute({
     toursHref,
   ]);
 
+  const isJTreeHikeClimb = tour
+    ? isJTreeHikeTemplate({ slug: tour.slug, tourId: tour.id })
+    : false;
   const jt459591Override =
-    tour && canonicalUrl ? getJoshuaTree459591Override(canonicalUrl) : null;
+    tour && canonicalUrl && isJTreeHikeClimb
+      ? getJoshuaTree459591Override(canonicalUrl)
+      : null;
   const experienceParagraphs = jt459591Override?.whatYoullExperience?.length
     ? jt459591Override.whatYoullExperience
     : tour
@@ -417,9 +413,11 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {tour.title}
             </h1>
-            {jt459591Override?.heroPriceText ? (
+            {jt459591Override ? (
               <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
-                From {jt459591Override.heroPriceText}
+                {jt459591Override.heroPriceText
+                  ? `From ${jt459591Override.heroPriceText}`
+                  : "Check booking page"}
               </p>
             ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
@@ -493,6 +491,21 @@ export default function CityTourDetailRoute({
                     </li>
                   ))}
                 </ul>
+              </>
+            ) : null}
+
+            {jt459591Override?.itinerarySteps?.length ? (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
+                  Itinerary
+                </h3>
+                <ol className="mt-4 space-y-2 text-sm text-[#405040]">
+                  {jt459591Override.itinerarySteps.slice(0, 6).map(step => (
+                    <li key={step} className="rounded-xl border border-black/10 bg-white px-4 py-3">
+                      {step}
+                    </li>
+                  ))}
+                </ol>
               </>
             ) : null}
 
