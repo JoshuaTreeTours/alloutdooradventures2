@@ -13,6 +13,10 @@ describe("Joshua Tree 459591 override content", () => {
     expect(override?.whatYoullExperience).toHaveLength(4);
     expect(override?.highlights.length).toBeGreaterThanOrEqual(8);
     expect(override?.faqs).toHaveLength(5);
+    expect(
+      override?.faqs[0]?.answer.startsWith("Yes. Beginners are welcome")
+    ).toBe(true);
+    expect(override?.faqs[0]?.answer.includes("No.")).toBe(false);
     expect(override?.meetingPoint?.city).toBe("Joshua Tree");
   });
 });

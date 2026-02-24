@@ -147,8 +147,9 @@ export default function CityTourDetailRoute({
       return null;
     }
     const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
+    const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
     const offerUrl = resolveOfferUrl({
-      canonicalUrl: resolveCanonicalProductUrl(canonicalUrl),
+      canonicalUrl: canonicalProductUrl,
       partnerBookingUrl: bookingUrl,
     });
 
@@ -161,9 +162,11 @@ export default function CityTourDetailRoute({
           derivedImages: structuredImages,
           place: {
             city: jt459591Override ? "Joshua Tree" : tour.destination.city,
-            region: jt459591Override ? "California" : tour.destination.state,
+            region: jt459591Override ? "CA" : tour.destination.state,
             regionCode: jt459591Override ? "CA" : undefined,
-            countryCode: tour.destination.countryCode ?? undefined,
+            countryCode: jt459591Override
+              ? "US"
+              : (tour.destination.countryCode ?? undefined),
             lat: jt459591Override ? 34.1347 : tour.destination.lat,
             lng: jt459591Override ? -116.3131 : tour.destination.lng,
           },
@@ -175,7 +178,9 @@ export default function CityTourDetailRoute({
               productDescription ??
               seoDescription ??
               "",
-            category: tour.primaryCategory,
+            category: jt459591Override
+              ? "Hiking & climbing tour"
+              : tour.primaryCategory,
           },
           trip: {
             id: `${canonicalUrl}#trip`,
@@ -206,34 +211,22 @@ export default function CityTourDetailRoute({
                     {
                       "@type": "ListItem",
                       position: 1,
-                      item: {
-                        "@type": "HowToStep",
-                        name: "Meet your guide and review safety systems",
-                      },
+                      name: "Meet your guide and review safety systems",
                     },
                     {
                       "@type": "ListItem",
                       position: 2,
-                      item: {
-                        "@type": "HowToStep",
-                        name: "Hike through Joshua Tree desert terrain to climbing areas",
-                      },
+                      name: "Hike through Joshua Tree desert terrain to climbing areas",
                     },
                     {
                       "@type": "ListItem",
                       position: 3,
-                      item: {
-                        "@type": "HowToStep",
-                        name: "Practice climbing movement and route technique on granite",
-                      },
+                      name: "Practice climbing movement and route technique on granite",
                     },
                     {
                       "@type": "ListItem",
                       position: 4,
-                      item: {
-                        "@type": "HowToStep",
-                        name: "Return with debrief, photos, and next-step climbing tips",
-                      },
+                      name: "Return with debrief, photos, and next-step climbing tips",
                     },
                   ],
                 }
@@ -283,7 +276,7 @@ export default function CityTourDetailRoute({
       ? {
           "@type": "FAQPage",
           "@id": `${canonicalUrl}#faqpage`,
-          mainEntityOfPage: canonicalUrl,
+          mainEntityOfPage: canonicalProductUrl,
           mainEntity: jt459591Override.faqs.map(item => ({
             "@type": "Question",
             name: item.question,

@@ -20,6 +20,13 @@ const pickFaqAnswer = (
   matcher: RegExp
 ): string | undefined => faqs.find(item => matcher.test(item.q))?.a;
 
+const normalizeBeginnerFaqAnswer = (answer?: string) => {
+  if (!answer) {
+    return "Yes. Beginners are welcome, and this guided trip can work for first-time climbers with steady hiking ability; review current pacing notes on the booking page before reserving.";
+  }
+  return answer.replace(/^\s*No\./i, "Yes.");
+};
+
 const toDurationISO = (durationText?: string) => {
   if (!durationText) return undefined;
   const hours = Number(
@@ -101,9 +108,9 @@ export const getJoshuaTree459591Override = (
     {
       question:
         "Is this suitable for beginners and what fitness level should I have?",
-      answer:
-        pickFaqAnswer(parsed.faq, /beginner|experience|fitness|level/i) ??
-        "This trip is guided and can work for first-time climbers with steady hiking ability; review current pacing notes on the booking page before reserving.",
+      answer: normalizeBeginnerFaqAnswer(
+        pickFaqAnswer(parsed.faq, /beginner|experience|fitness|level/i)
+      ),
     },
     {
       question: "What ages are allowed on the Hike & Climb tour?",
