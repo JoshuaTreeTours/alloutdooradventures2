@@ -34,6 +34,9 @@ import {
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
+  getSiteStructuredDataNodes,
+  resolveCanonicalProductUrl,
+  resolveOfferUrl,
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
@@ -45,6 +48,7 @@ import {
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -132,6 +136,12 @@ export default function CityTourDetailRoute({
     if (!tour || !canonicalUrl) {
       return null;
     }
+    const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
+    const offerUrl = resolveOfferUrl({
+      canonicalUrl: resolveCanonicalProductUrl(canonicalUrl),
+      partnerBookingUrl: bookingUrl,
+    });
+
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: canonicalUrl,
@@ -140,30 +150,97 @@ export default function CityTourDetailRoute({
           heroImage,
           derivedImages: structuredImages,
           place: {
-            city: tour.destination.city,
-            region: tour.destination.state,
+            city: jt459591Override ? "Joshua Tree" : tour.destination.city,
+            region: jt459591Override ? "California" : tour.destination.state,
+            regionCode: jt459591Override ? "CA" : undefined,
             countryCode: tour.destination.countryCode ?? undefined,
-            lat: tour.destination.lat,
-            lng: tour.destination.lng,
+            lat: jt459591Override ? 34.1347 : tour.destination.lat,
+            lng: jt459591Override ? -116.3131 : tour.destination.lng,
           },
           product: {
             id: `${canonicalUrl}#product`,
             name: tour.title,
-            description: productDescription ?? seoDescription ?? "",
+            description:
+              jt459591Override?.schemaDescription ??
+              productDescription ??
+              seoDescription ??
+              "",
             category: tour.primaryCategory,
           },
           trip: {
             id: `${canonicalUrl}#trip`,
             name: tour.title,
-            description: productDescription ?? seoDescription ?? "",
-            duration: tour.badges.duration,
+            description:
+              jt459591Override?.schemaDescription ??
+              productDescription ??
+              seoDescription ??
+              "",
+            duration: jt459591Override?.durationISO ?? tour.badges.duration,
             touristType: "Adventure travelers",
-            departureLocation: null,
+            departureLocation: jt459591Override?.meetingPoint
+              ? {
+                  name:
+                    jt459591Override.meetingPoint.name ??
+                    jt459591Override.meetingPoint.rawText,
+                  streetAddress: jt459591Override.meetingPoint.addressLine1,
+                  addressLocality: jt459591Override.meetingPoint.city,
+                  addressRegion: jt459591Override.meetingPoint.region,
+                  postalCode: jt459591Override.meetingPoint.postalCode,
+                  addressCountry: jt459591Override.meetingPoint.country ?? "US",
+                }
+              : null,
+            itinerary: jt459591Override
+              ? {
+                  "@type": "ItemList",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      item: {
+                        "@type": "HowToStep",
+                        name: "Meet your guide and review safety systems",
+                      },
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 2,
+                      item: {
+                        "@type": "HowToStep",
+                        name: "Hike through Joshua Tree desert terrain to climbing areas",
+                      },
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 3,
+                      item: {
+                        "@type": "HowToStep",
+                        name: "Practice climbing movement and route technique on granite",
+                      },
+                    },
+                    {
+                      "@type": "ListItem",
+                      position: 4,
+                      item: {
+                        "@type": "HowToStep",
+                        name: "Return with debrief, photos, and next-step climbing tips",
+                      },
+                    },
+                  ],
+                }
+              : null,
           },
           offers: {
-            url: bookingUrl,
-            price: tour.startingPrice,
+            url: offerUrl,
+            lowPrice: jt459591Override?.pricing?.low,
+            highPrice: jt459591Override?.pricing?.high,
+            price: jt459591Override?.schemaPrice ?? tour.startingPrice,
             priceCurrency: tour.currency ?? "USD",
+            availability: "https://schema.org/InStock",
+            offerCount:
+              typeof jt459591Override?.pricing?.low === "number" &&
+              typeof jt459591Override?.pricing?.high === "number"
+                ? 2
+                : null,
           },
           brandOrgIds: {
             orgId: SITE_ORGANIZATION_ID,
@@ -192,8 +269,23 @@ export default function CityTourDetailRoute({
           }),
         ];
 
+    const faqNode = jt459591Override?.faqs?.length
+      ? {
+          "@type": "FAQPage",
+          "@id": `${canonicalUrl}#faqpage`,
+          mainEntityOfPage: canonicalUrl,
+          mainEntity: jt459591Override.faqs.map(item => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        }
+      : null;
+
     return [
+      ...getSiteStructuredDataNodes(),
       ...tourSchemaNodes,
+      ...(faqNode ? [faqNode] : []),
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
         ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
@@ -216,6 +308,29 @@ export default function CityTourDetailRoute({
     tour,
     toursHref,
   ]);
+
+  const jt459591Override =
+    tour && canonicalUrl ? getJoshuaTree459591Override(canonicalUrl) : null;
+  const experienceParagraphs = jt459591Override?.whatYoullExperience?.length
+    ? jt459591Override.whatYoullExperience
+    : tour
+      ? getExpandedTourDescription(tour)
+      : [];
+  const logisticsRows = jt459591Override
+    ? [
+        { label: "Duration", value: jt459591Override.logistics.duration },
+        {
+          label: "Meeting point",
+          value: jt459591Override.logistics.meetingPoint,
+        },
+        { label: "Age", value: jt459591Override.logistics.age },
+        { label: "Group size", value: jt459591Override.logistics.groupSize },
+        {
+          label: "Cancellation",
+          value: jt459591Override.logistics.cancellation,
+        },
+      ]
+    : [];
 
   useStructuredData(structuredDataNodes);
 
@@ -299,6 +414,11 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {tour.title}
             </h1>
+            {jt459591Override?.heroPriceText ? (
+              <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
+                From {jt459591Override.heroPriceText}
+              </p>
+            ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
               {tour.badges.duration ? (
                 <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
@@ -348,7 +468,7 @@ export default function CityTourDetailRoute({
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
-            {getExpandedTourDescription(tour).map(paragraph => (
+            {experienceParagraphs.map(paragraph => (
               <p
                 key={paragraph}
                 className="mt-4 text-sm text-[#405040] leading-relaxed"
@@ -356,27 +476,81 @@ export default function CityTourDetailRoute({
                 {paragraph}
               </p>
             ))}
+
+            {jt459591Override?.highlights?.length ? (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
+                  Highlights
+                </h3>
+                <ul className="mt-4 space-y-2 text-sm text-[#405040]">
+                  {jt459591Override.highlights.slice(0, 10).map(highlight => (
+                    <li key={highlight} className="flex gap-2">
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2f8a3d]" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
+
+            {jt459591Override?.faqs?.length ? (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
+                  FAQs
+                </h3>
+                <div className="mt-4 space-y-4">
+                  {jt459591Override.faqs.slice(0, 5).map(item => (
+                    <div
+                      key={item.question}
+                      className="rounded-xl border border-black/10 bg-white p-4"
+                    >
+                      <p className="text-sm font-semibold text-[#1f2a1f]">
+                        {item.question}
+                      </p>
+                      <p className="mt-2 text-sm text-[#405040]">
+                        {item.answer}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </>
+            ) : null}
           </div>
           <div className="space-y-6">
             <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
               <h3 className="text-base font-semibold text-[#1f2a1f]">
-                Tour snapshot
+                {jt459591Override ? "Tour logistics" : "Tour snapshot"}
               </h3>
-              <div className="mt-4 space-y-3 text-sm text-[#405040]">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                    Duration
-                  </span>
-                  <span className="font-semibold text-[#1f2a1f]">
-                    {tour.badges.duration ?? "Check booking page"}
-                  </span>
+              {jt459591Override ? (
+                <div className="mt-4 space-y-3 text-sm text-[#405040]">
+                  {logisticsRows.map(item => (
+                    <div key={item.label}>
+                      <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                        {item.label}
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-[#1f2a1f]">
+                        {item.value ?? "Check booking page"}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-                {tour.badges.likelyToSellOut ? (
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
-                    Likely to sell out
-                  </p>
-                ) : null}
-              </div>
+              ) : (
+                <div className="mt-4 space-y-3 text-sm text-[#405040]">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                      Duration
+                    </span>
+                    <span className="font-semibold text-[#1f2a1f]">
+                      {tour.badges.duration ?? "Check booking page"}
+                    </span>
+                  </div>
+                  {tour.badges.likelyToSellOut ? (
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9a3412]">
+                      Likely to sell out
+                    </p>
+                  ) : null}
+                </div>
+              )}
               {disclosure ? (
                 <p className="mt-6 text-xs text-[#405040]">{disclosure}</p>
               ) : null}
