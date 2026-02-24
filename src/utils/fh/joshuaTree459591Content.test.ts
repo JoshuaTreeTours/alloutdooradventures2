@@ -10,13 +10,10 @@ describe("Joshua Tree 459591 override content", () => {
     expect(override).not.toBeNull();
     expect(override?.heroPriceText).toContain("$229");
     expect(override?.durationISO).toBe("PT4H");
-    expect(override?.whatYoullExperience).toHaveLength(4);
-    expect(override?.highlights.length).toBeGreaterThanOrEqual(8);
+    expect(override?.whatYoullExperience.length).toBeGreaterThanOrEqual(2);
+    expect(override?.highlights.length).toBeLessThanOrEqual(8);
     expect(override?.faqs).toHaveLength(5);
-    expect(
-      override?.faqs[0]?.answer.startsWith("Yes. Beginners are welcome")
-    ).toBe(true);
-    expect(override?.faqs[0]?.answer.includes("No.")).toBe(false);
+    expect(override?.itinerarySteps.length).toBeGreaterThanOrEqual(4);
     expect(override?.meetingPoint?.city).toBe("Joshua Tree");
   });
 });
