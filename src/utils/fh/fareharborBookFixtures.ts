@@ -10,6 +10,10 @@ const HTML_34849 = `
   <section data-fh="category">
     <p>Jeep tour (geology + nature walk)</p>
   </section>
+  <section class="fh-slider">
+    <img src="https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa" />
+    <img data-src="https://cdn.filestackcontent.com/RedJeepSecondary34849" />
+  </section>
   <section data-fh="overview">
     <p>Explore the San Andreas Fault zone with a naturalist guide on an open-air Jeep route through the Coachella Valley's geologically active terrain.</p>
     <p>Stops include fault-line viewpoints, Indio Hills canyons, slot-canyon passages, and palm oasis areas where guests can walk short segments and discuss local geology.</p>

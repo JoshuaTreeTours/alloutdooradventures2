@@ -30,6 +30,8 @@ describe("Palm Springs 34849 override content", () => {
     expect(parsed.priceLabel).toBe("$175 adult / $150 child");
     expect(parsed.priceAdult).toBe(175);
     expect(parsed.priceChild).toBe(150);
+    expect(parsed.heroImage).toBe("https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa");
+    expect(parsed.galleryImages[1]).toBe("https://cdn.filestackcontent.com/RedJeepSecondary34849");
     expect(parsed.highlights.length).toBeGreaterThan(0);
   });
 
@@ -47,6 +49,8 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.heroPriceText).toBe("$175 adult / $150 child");
     expect(override?.content.schemaPrice).toBe(175);
     expect(override?.content.durationISO).toBe("PT3H");
+    expect(override?.content.heroImage).toBe("https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa");
+    expect(override?.content.image2).toBe("https://cdn.filestackcontent.com/RedJeepSecondary34849");
     expect(override?.content.pricing).toMatchObject({
       low: 150,
       high: 175,

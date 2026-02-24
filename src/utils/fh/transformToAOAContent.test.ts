@@ -6,6 +6,11 @@ describe("transformToAOAContent rewrite-v3", () => {
   it("keeps hero price and schema price in sync from override source", () => {
     const rewrite = transformToAOAContent({
       title: "Shared San Andreas Fault Jeep Tour",
+      heroImage: "https://cdn.example.com/hero.jpg",
+      galleryImages: [
+        "https://cdn.example.com/hero.jpg",
+        "https://cdn.example.com/second.jpg",
+      ],
       overview: "",
       highlights: [],
       duration: "3 hours",
@@ -28,6 +33,8 @@ describe("transformToAOAContent rewrite-v3", () => {
       faq: [],
     });
 
+    expect(rewrite.heroImage).toBe("https://cdn.example.com/hero.jpg");
+    expect(rewrite.image2).toBe("https://cdn.example.com/second.jpg");
     expect(rewrite.heroPriceText).toBe("$175 adult / $150 child");
     expect(rewrite.schemaPrice).toBe(175);
     expect(rewrite.category?.primary).toBe("Jeep tour");

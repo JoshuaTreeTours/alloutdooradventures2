@@ -36,6 +36,7 @@ export type Tour = {
   primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
+  image2?: string;
   galleryImages?: string[];
   badges: TourBadges;
   startingPrice?: number;

@@ -31,6 +31,26 @@ describe("parseFareHarborHtml category and meeting point", () => {
     ).toBe("Guided tour");
   });
 
+
+  it("extracts unique ordered gallery images from slider markup", () => {
+    const parsed = parseFareHarborHtml(`
+<main>
+  <section class="fh-slider">
+    <img src="http://cdn.example.com/hero.jpg" />
+    <img data-src="//cdn.example.com/second.jpg" />
+    <img src="https://cdn.example.com/hero.jpg" />
+  </section>
+  ${makeHtml("Slider Tour", "Main Plaza")}
+</main>
+`);
+
+    expect(parsed.heroImage).toBe("https://cdn.example.com/hero.jpg");
+    expect(parsed.galleryImages).toEqual([
+      "https://cdn.example.com/hero.jpg",
+      "https://cdn.example.com/second.jpg",
+    ]);
+  });
+
   it("stores raw text when meeting point cannot be fully parsed", () => {
     const parsed = parseFareHarborHtml(
       makeHtml("Canyon Jeep", "Meet at visitor center lobby next to ticket desk")
