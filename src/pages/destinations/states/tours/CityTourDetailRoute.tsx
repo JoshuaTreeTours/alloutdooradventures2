@@ -50,6 +50,11 @@ import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import {
+  buildTourTemplate,
+  isJoshuaTreeTemplateRoute,
+} from "../../../../utils/tours/buildTourTemplate";
+import { toSchemaItinerary } from "../../../../utils/tours/buildItinerarySteps";
 import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourDetailRouteProps = {
@@ -147,6 +152,26 @@ export default function CityTourDetailRoute({
       return null;
     }
     const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
+    const isJoshuaTreeTemplate = isJoshuaTreeTemplateRoute({
+      citySlug: city?.slug,
+      canonicalPath: canonicalUrl,
+    });
+    const joshuaTreeTemplateModel = isJoshuaTreeTemplate
+      ? buildTourTemplate({
+          title: tour.title,
+          city: tour.destination.city,
+          categories: tour.categories,
+          highlights: jt459591Override?.highlights,
+          duration:
+            jt459591Override?.logistics.duration ?? tour.badges.duration,
+          meetingPoint: jt459591Override?.logistics.meetingPoint,
+          age: jt459591Override?.logistics.age,
+          groupSize: jt459591Override?.logistics.groupSize,
+          cancellation: jt459591Override?.logistics.cancellation,
+          lowPrice: jt459591Override?.pricing?.low,
+          price: jt459591Override?.schemaPrice ?? tour.startingPrice,
+        })
+      : null;
     const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
     const offerUrl = resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
@@ -161,20 +186,21 @@ export default function CityTourDetailRoute({
           heroImage,
           derivedImages: structuredImages,
           place: {
-            city: jt459591Override ? "Joshua Tree" : tour.destination.city,
-            region: jt459591Override ? "CA" : tour.destination.state,
-            regionCode: jt459591Override ? "CA" : undefined,
-            countryCode: jt459591Override
+            city: isJoshuaTreeTemplate ? "Joshua Tree" : tour.destination.city,
+            region: isJoshuaTreeTemplate ? "CA" : tour.destination.state,
+            regionCode: isJoshuaTreeTemplate ? "CA" : undefined,
+            countryCode: isJoshuaTreeTemplate
               ? "US"
               : (tour.destination.countryCode ?? undefined),
-            lat: jt459591Override ? 34.1347 : tour.destination.lat,
-            lng: jt459591Override ? -116.3131 : tour.destination.lng,
+            lat: isJoshuaTreeTemplate ? 34.1347 : tour.destination.lat,
+            lng: isJoshuaTreeTemplate ? -116.3131 : tour.destination.lng,
           },
           product: {
             id: `${canonicalUrl}#product`,
             name: tour.title,
             description:
               jt459591Override?.schemaDescription ??
+              joshuaTreeTemplateModel?.descriptionLong ??
               productDescription ??
               seoDescription ??
               "",
@@ -187,6 +213,7 @@ export default function CityTourDetailRoute({
             name: tour.title,
             description:
               jt459591Override?.schemaDescription ??
+              joshuaTreeTemplateModel?.descriptionLong ??
               productDescription ??
               seoDescription ??
               "",
@@ -230,7 +257,9 @@ export default function CityTourDetailRoute({
                     },
                   ],
                 }
-              : null,
+              : joshuaTreeTemplateModel
+                ? toSchemaItinerary(joshuaTreeTemplateModel.itinerarySteps)
+                : null,
           },
           offers: {
             url: offerUrl,
@@ -272,12 +301,18 @@ export default function CityTourDetailRoute({
           }),
         ];
 
-    const faqNode = jt459591Override?.faqs?.length
+    const effectiveFaqs = jt459591Override?.faqs?.length
+      ? jt459591Override.faqs
+      : joshuaTreeTemplateModel?.faqs?.map(item => ({
+          question: item.q,
+          answer: item.a,
+        }));
+    const faqNode = effectiveFaqs?.length
       ? {
           "@type": "FAQPage",
           "@id": `${canonicalUrl}#faqpage`,
           mainEntityOfPage: canonicalProductUrl,
-          mainEntity: jt459591Override.faqs.map(item => ({
+          mainEntity: effectiveFaqs.map(item => ({
             "@type": "Question",
             name: item.question,
             acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -301,6 +336,7 @@ export default function CityTourDetailRoute({
     bookingUrl,
     canonicalUrl,
     city?.name,
+    city?.slug,
     cityHref,
     heroImage,
     seoDescription,
@@ -314,11 +350,36 @@ export default function CityTourDetailRoute({
 
   const jt459591Override =
     tour && canonicalUrl ? getJoshuaTree459591Override(canonicalUrl) : null;
+  const isJoshuaTreeTemplate =
+    !!tour &&
+    isJoshuaTreeTemplateRoute({
+      citySlug: city?.slug,
+      canonicalPath: canonicalUrl,
+    });
+  const joshuaTreeTemplateModel =
+    tour && isJoshuaTreeTemplate
+      ? buildTourTemplate({
+          title: tour.title,
+          city: tour.destination.city,
+          categories: tour.categories,
+          highlights: jt459591Override?.highlights,
+          duration:
+            jt459591Override?.logistics.duration ?? tour.badges.duration,
+          meetingPoint: jt459591Override?.logistics.meetingPoint,
+          age: jt459591Override?.logistics.age,
+          groupSize: jt459591Override?.logistics.groupSize,
+          cancellation: jt459591Override?.logistics.cancellation,
+          lowPrice: jt459591Override?.pricing?.low,
+          price: jt459591Override?.schemaPrice ?? tour.startingPrice,
+        })
+      : null;
   const experienceParagraphs = jt459591Override?.whatYoullExperience?.length
     ? jt459591Override.whatYoullExperience
-    : tour
-      ? getExpandedTourDescription(tour)
-      : [];
+    : joshuaTreeTemplateModel
+      ? joshuaTreeTemplateModel.descriptionLong.split("\n\n")
+      : tour
+        ? getExpandedTourDescription(tour)
+        : [];
   const logisticsRows = jt459591Override
     ? [
         { label: "Duration", value: jt459591Override.logistics.duration },
@@ -333,7 +394,27 @@ export default function CityTourDetailRoute({
           value: jt459591Override.logistics.cancellation,
         },
       ]
-    : [];
+    : joshuaTreeTemplateModel
+      ? [
+          {
+            label: "Duration",
+            value: joshuaTreeTemplateModel.logistics.durationLabel,
+          },
+          {
+            label: "Meeting point",
+            value: joshuaTreeTemplateModel.logistics.meetingPointLabel,
+          },
+          { label: "Age", value: joshuaTreeTemplateModel.logistics.ageLabel },
+          {
+            label: "Group size",
+            value: joshuaTreeTemplateModel.logistics.groupSizeLabel,
+          },
+          {
+            label: "Cancellation",
+            value: joshuaTreeTemplateModel.logistics.cancellationLabel,
+          },
+        ]
+      : [];
 
   useStructuredData(structuredDataNodes);
 
@@ -417,7 +498,11 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {tour.title}
             </h1>
-            {jt459591Override?.heroPriceText ? (
+            {joshuaTreeTemplateModel?.displayPriceLabel ? (
+              <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
+                {joshuaTreeTemplateModel.displayPriceLabel}
+              </p>
+            ) : jt459591Override?.heroPriceText ? (
               <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
                 From {jt459591Override.heroPriceText}
               </p>
@@ -480,41 +565,74 @@ export default function CityTourDetailRoute({
               </p>
             ))}
 
-            {jt459591Override?.highlights?.length ? (
+            {jt459591Override?.highlights?.length ||
+            joshuaTreeTemplateModel?.highlights.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   Highlights
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-[#405040]">
-                  {jt459591Override.highlights.slice(0, 10).map(highlight => (
-                    <li key={highlight} className="flex gap-2">
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2f8a3d]" />
-                      <span>{highlight}</span>
-                    </li>
-                  ))}
+                  {(
+                    jt459591Override?.highlights ??
+                    joshuaTreeTemplateModel?.highlights ??
+                    []
+                  )
+                    .slice(0, 10)
+                    .map(highlight => (
+                      <li key={highlight} className="flex gap-2">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2f8a3d]" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
                 </ul>
               </>
             ) : null}
 
-            {jt459591Override?.faqs?.length ? (
+            {joshuaTreeTemplateModel?.itinerarySteps.length ? (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
+                  Itinerary
+                </h3>
+                <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+                  {joshuaTreeTemplateModel.itinerarySteps.map(step => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ol>
+              </>
+            ) : null}
+
+            {jt459591Override?.faqs?.length ||
+            joshuaTreeTemplateModel?.faqs.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   FAQs
                 </h3>
                 <div className="mt-4 space-y-4">
-                  {jt459591Override.faqs.slice(0, 5).map(item => (
-                    <div
-                      key={item.question}
-                      className="rounded-xl border border-black/10 bg-white p-4"
-                    >
-                      <p className="text-sm font-semibold text-[#1f2a1f]">
-                        {item.question}
-                      </p>
-                      <p className="mt-2 text-sm text-[#405040]">
-                        {item.answer}
-                      </p>
-                    </div>
-                  ))}
+                  {(
+                    jt459591Override?.faqs?.map(item => ({
+                      question: item.question,
+                      answer: item.answer,
+                    })) ??
+                    joshuaTreeTemplateModel?.faqs?.map(item => ({
+                      question: item.q,
+                      answer: item.a,
+                    })) ??
+                    []
+                  )
+                    .slice(0, 5)
+                    .map(item => (
+                      <div
+                        key={item.question}
+                        className="rounded-xl border border-black/10 bg-white p-4"
+                      >
+                        <p className="text-sm font-semibold text-[#1f2a1f]">
+                          {item.question}
+                        </p>
+                        <p className="mt-2 text-sm text-[#405040]">
+                          {item.answer}
+                        </p>
+                      </div>
+                    ))}
                 </div>
               </>
             ) : null}
@@ -522,12 +640,14 @@ export default function CityTourDetailRoute({
           <div className="space-y-6">
             <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
               <h3 className="text-base font-semibold text-[#1f2a1f]">
-                {jt459591Override ? "Tour logistics" : "Tour snapshot"}
+                {jt459591Override || joshuaTreeTemplateModel
+                  ? "Tour logistics"
+                  : "Tour snapshot"}
               </h3>
-              {jt459591Override ? (
+              {jt459591Override || joshuaTreeTemplateModel ? (
                 <div className="mt-4 space-y-3 text-sm text-[#405040]">
                   {logisticsRows.map(item => (
-                    <div key={item.label}>
+                    <div key={`${item.label}-${item.value}`}>
                       <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
                         {item.label}
                       </p>

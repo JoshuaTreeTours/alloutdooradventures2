@@ -23,6 +23,8 @@ import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 import { buildTourItinerary } from "../../utils/buildTourItinerary";
+import type { TourTemplateModel } from "../../utils/tours/buildTourTemplate";
+import { toSchemaItinerary } from "../../utils/tours/buildItinerarySteps";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -64,7 +66,9 @@ export const buildSchemaGraph = (
   overrideDescription?: string,
   overrideFaqs?: Array<{ question: string; answer: string }>,
   overrideEnabled = false,
-  rewriteV3Content?: TourRewriteV3_1
+  rewriteV3Content?: TourRewriteV3_1,
+  joshuaTreeTemplateModel?: TourTemplateModel | null,
+  isJoshuaTreeTemplate = false
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -85,43 +89,53 @@ export const buildSchemaGraph = (
 
   const itineraryV1Enabled =
     process.env.TOUR_ITINERARY_V1 === "true" || tour.id === "34849";
-  const tourItinerary = itineraryV1Enabled
-    ? buildTourItinerary({
-        tourTitle: tour.name,
-        cityName: tour.geo.city,
-        placeName: tour.geo.city,
-        departureLocationName:
-          rewriteV3Content?.meetingPoint?.name ??
-          rewriteV3Content?.meetingPoint?.rawText ??
-          null,
-        departureAddress: rewriteV3Content?.meetingPoint?.addressLine1 ?? null,
-        duration: rewriteV3Content?.durationLabel ?? tourDuration ?? null,
-        highlights:
-          rewriteV3Content?.highlights?.length
+  const tourItinerary = joshuaTreeTemplateModel
+    ? toSchemaItinerary(joshuaTreeTemplateModel.itinerarySteps)
+    : itineraryV1Enabled
+      ? buildTourItinerary({
+          tourTitle: tour.name,
+          cityName: tour.geo.city,
+          placeName: tour.geo.city,
+          departureLocationName:
+            rewriteV3Content?.meetingPoint?.name ??
+            rewriteV3Content?.meetingPoint?.rawText ??
+            null,
+          departureAddress:
+            rewriteV3Content?.meetingPoint?.addressLine1 ?? null,
+          duration: rewriteV3Content?.durationLabel ?? tourDuration ?? null,
+          highlights: rewriteV3Content?.highlights?.length
             ? rewriteV3Content.highlights
             : tour.content.highlights,
-        experienceText:
-          rewriteV3Content?.whatYoullExperience?.join(" ") ||
-          tour.content.experienceText,
-      })
-    : null;
-
-  const faqPageNode =
-    overrideEnabled && overrideFaqs?.length
-      ? {
-          "@type": "FAQPage",
-          "@id": `${seo.canonical}#faqpage`,
-          mainEntityOfPage: seo.canonical,
-          mainEntity: overrideFaqs.map(item => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: item.answer,
-            },
-          })),
-        }
+          experienceText:
+            rewriteV3Content?.whatYoullExperience?.join(" ") ||
+            tour.content.experienceText,
+        })
       : null;
+
+  const effectiveFaqs = joshuaTreeTemplateModel?.faqs?.length
+    ? joshuaTreeTemplateModel.faqs.map(item => ({
+        question: item.q,
+        answer: item.a,
+      }))
+    : overrideEnabled && overrideFaqs?.length
+      ? overrideFaqs
+      : null;
+
+  const faqPageNode = effectiveFaqs?.length
+    ? {
+        "@type": "FAQPage",
+        "@id": `${seo.canonical}#faqpage`,
+        mainEntityOfPage: seo.canonical,
+        mainEntity: effectiveFaqs.map(item => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
 
   const tourNodes = ENABLE_TOUR_SCHEMA_V1
     ? (buildTourSchemaGraph({
@@ -131,30 +145,37 @@ export const buildSchemaGraph = (
         heroImage: effectiveHeroImage,
         derivedImages: imageGallery,
         place: {
-          city: tour.geo.city,
-          region: tour.geo.region,
-          countryCode: destinationMeta.countryCode,
+          city: isJoshuaTreeTemplate ? "Joshua Tree" : tour.geo.city,
+          region: isJoshuaTreeTemplate ? "CA" : tour.geo.region,
+          regionCode: isJoshuaTreeTemplate ? "CA" : undefined,
+          countryCode: isJoshuaTreeTemplate
+            ? "US"
+            : destinationMeta.countryCode,
           lat: tour.geo.lat,
           lng: tour.geo.lng,
         },
         product: {
           id: productId,
           name: tour.name,
-          description: isPalmSprings
-            ? (overrideDescription ??
-              pilotContent?.whatYoullExperience ??
-              seo.description)
-            : seo.description,
+          description: isJoshuaTreeTemplate
+            ? (joshuaTreeTemplateModel?.descriptionLong ?? seo.description)
+            : isPalmSprings
+              ? (overrideDescription ??
+                pilotContent?.whatYoullExperience ??
+                seo.description)
+              : seo.description,
           category: rewriteV3Content?.category?.primary,
         },
         trip: {
           id: tripId,
           name: tour.name,
-          description: isPalmSprings
-            ? (overrideDescription ??
-              pilotContent?.whatYoullExperience ??
-              seo.description)
-            : seo.description,
+          description: isJoshuaTreeTemplate
+            ? (joshuaTreeTemplateModel?.descriptionLong ?? seo.description)
+            : isPalmSprings
+              ? (overrideDescription ??
+                pilotContent?.whatYoullExperience ??
+                seo.description)
+              : seo.description,
           duration: tourDuration,
           touristType: "Adventure travelers",
           departureLocation: rewriteV3Content?.meetingPoint

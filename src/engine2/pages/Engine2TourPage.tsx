@@ -16,6 +16,10 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import {
+  buildTourTemplate,
+  isJoshuaTreeTemplateRoute,
+} from "../../utils/tours/buildTourTemplate";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -112,6 +116,27 @@ export default function Engine2TourPage({
   const rewriteV3Content: TourRewriteV3 | undefined = overrideContent?.enabled
     ? overrideContent.content
     : undefined;
+  const isJoshuaTreeTemplate = isJoshuaTreeTemplateRoute({
+    citySlug: tour.sourceCitySlug,
+    canonicalPath: tour.seo.canonicalPath,
+  });
+  const joshuaTreeTemplateModel = isJoshuaTreeTemplate
+    ? buildTourTemplate({
+        title: tour.name,
+        city: tour.geo.city,
+        categories: [
+          rewriteV3Content?.category?.primary ?? "",
+          ...tour.content.highlights,
+        ],
+        highlights: rewriteV3Content?.highlights?.length
+          ? rewriteV3Content.highlights
+          : tour.content.highlights,
+        duration: rewriteV3Content?.durationLabel,
+        meetingPoint: rewriteV3Content?.meetingPoint?.rawText,
+        lowPrice: rewriteV3Content?.pricing?.low,
+        price: parsePrice(tour.pricing?.price ?? null),
+      })
+    : null;
 
   const formattedMeetingPoint = rewriteV3Content?.meetingPoint
     ? [
@@ -135,7 +160,9 @@ export default function Engine2TourPage({
         overrideSchemaDescription,
         overrideFaqs,
         overrideContent?.enabled ?? false,
-        rewriteV3Content
+        rewriteV3Content,
+        joshuaTreeTemplateModel,
+        isJoshuaTreeTemplate
       ),
     [
       normalizedTour,
@@ -146,6 +173,8 @@ export default function Engine2TourPage({
       overrideFaqs,
       overrideContent?.enabled,
       rewriteV3Content,
+      joshuaTreeTemplateModel,
+      isJoshuaTreeTemplate,
     ]
   );
 
@@ -188,7 +217,11 @@ export default function Engine2TourPage({
               {formattedMeetingPoint ? ` · ${formattedMeetingPoint}` : ""}
             </p>
           ) : null}
-          {headerPriceLabel ? (
+          {joshuaTreeTemplateModel?.displayPriceLabel ? (
+            <p className="mt-4 text-sm font-semibold text-white/90">
+              {joshuaTreeTemplateModel.displayPriceLabel}
+            </p>
+          ) : headerPriceLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               {headerPriceLabel}
             </p>
@@ -247,7 +280,10 @@ export default function Engine2TourPage({
           What you'll experience
         </h2>
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
-          {content.whatYoullExperience.map(paragraph => (
+          {(joshuaTreeTemplateModel
+            ? joshuaTreeTemplateModel.descriptionLong.split("\n\n")
+            : content.whatYoullExperience
+          ).map(paragraph => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -304,16 +340,53 @@ export default function Engine2TourPage({
             </div>
           </>
         ) : null}
-        {content.highlights.length ? (
+        {joshuaTreeTemplateModel?.highlights.length ||
+        content.highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {content.highlights.map(highlight => (
-                <li key={highlight}>{highlight}</li>
-              ))}
+              {(joshuaTreeTemplateModel?.highlights ?? content.highlights).map(
+                highlight => (
+                  <li key={highlight}>{highlight}</li>
+                )
+              )}
             </ul>
+          </>
+        ) : null}
+
+        {joshuaTreeTemplateModel?.itinerarySteps.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Itinerary
+            </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+              {joshuaTreeTemplateModel.itinerarySteps.map(step => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </>
+        ) : null}
+
+        {joshuaTreeTemplateModel?.faqs.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Frequently asked questions
+            </h2>
+            <div className="mt-4 space-y-4">
+              {joshuaTreeTemplateModel.faqs.map(item => (
+                <article
+                  key={item.q}
+                  className="rounded-lg border border-black/10 bg-white p-4"
+                >
+                  <h3 className="text-sm font-semibold text-[#2f4a2f]">
+                    {item.q}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#405040]">{item.a}</p>
+                </article>
+              ))}
+            </div>
           </>
         ) : null}
 
