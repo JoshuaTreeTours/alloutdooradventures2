@@ -248,6 +248,53 @@ describe("buildSchemaGraph", () => {
     });
   });
 
+
+
+  it("uses 3-5 list-item itinerary steps for tour 34849 rollout", () => {
+    const graph = buildSchemaGraph(
+      { ...baseTour, id: "34849", geo: { ...baseTour.geo, city: "Indio" } },
+      seo as never,
+      null,
+      false,
+      undefined,
+      undefined,
+      true,
+      {
+        whatYoullExperience: [
+          "Open-air Jeep route with geology interpretation in the fault zone.",
+        ],
+        highlights: [
+          "Open-air Jeep drive into the Indio Hills fault zone",
+          "Short stops for geology interpretation and photos near slot canyon views",
+          "Palm oasis habitat viewpoint with local history context",
+        ],
+        schemaDescription: "desc",
+        durationISO: "PT3H",
+        durationLabel: "3 hours",
+        meetingPoint: {
+          name: "Metate Ranch",
+          city: "Indio",
+        },
+      }
+    );
+
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      itinerary?: {
+        "@type": string;
+        itemListElement: Array<{ position: number; name: string }>;
+      };
+    };
+
+    expect(trip.itinerary?.["@type"]).toBe("ItemList");
+    expect(trip.itinerary?.itemListElement.length).toBeGreaterThanOrEqual(3);
+    expect(trip.itinerary?.itemListElement.length).toBeLessThanOrEqual(5);
+    const listItems = trip.itinerary?.itemListElement ?? [];
+
+    expect(listItems[0].name).toContain("Metate Ranch");
+    expect(listItems[listItems.length - 1].name).toContain(
+      "Return to Metate Ranch"
+    );
+  });
   it("uses rewrite-v3 category, meeting point and schema price in Product/TouristTrip", () => {
     const graph = buildSchemaGraph(
       baseTour,

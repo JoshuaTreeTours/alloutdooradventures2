@@ -22,6 +22,7 @@ import {
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
+import { buildTourItinerary } from "../../utils/buildTourItinerary";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -81,6 +82,29 @@ export const buildSchemaGraph = (
     partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
   });
   const tourDuration = resolveTourDurationISO(rewriteV3Content);
+
+  const itineraryV1Enabled =
+    process.env.TOUR_ITINERARY_V1 === "true" || tour.id === "34849";
+  const tourItinerary = itineraryV1Enabled
+    ? buildTourItinerary({
+        tourTitle: tour.name,
+        cityName: tour.geo.city,
+        placeName: tour.geo.city,
+        departureLocationName:
+          rewriteV3Content?.meetingPoint?.name ??
+          rewriteV3Content?.meetingPoint?.rawText ??
+          null,
+        departureAddress: rewriteV3Content?.meetingPoint?.addressLine1 ?? null,
+        duration: rewriteV3Content?.durationLabel ?? tourDuration ?? null,
+        highlights:
+          rewriteV3Content?.highlights?.length
+            ? rewriteV3Content.highlights
+            : tour.content.highlights,
+        experienceText:
+          rewriteV3Content?.whatYoullExperience?.join(" ") ||
+          tour.content.experienceText,
+      })
+    : null;
 
   const faqPageNode =
     overrideEnabled && overrideFaqs?.length
@@ -145,6 +169,7 @@ export const buildSchemaGraph = (
                 addressCountry: rewriteV3Content.meetingPoint.country ?? "US",
               }
             : null,
+          itinerary: tourItinerary,
         },
         offers: {
           url: offerUrl,
