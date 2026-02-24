@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Link } from "wouter";
 
 import Seo from "../../components/Seo";
@@ -14,6 +14,10 @@ import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
 } from "../utils/buildFareHarborUrl";
+import {
+  OPT_OUT_OPERATOR_SLUGS,
+  recordBlockedFareharborEmbed,
+} from "../../utils/fareharbor/optOutOperators";
 
 type Engine2TourBookingPageProps = {
   tour: Engine2Tour;
@@ -83,6 +87,10 @@ export default function Engine2TourBookingPage({
 }: Engine2TourBookingPageProps) {
   const seo = useMemo(() => buildEngine2Seo(tour), [tour]);
   const bookingArgs = tour.booking.fareharbor;
+  const fareharborOperatorSlug = bookingArgs?.shortname ?? null;
+  const isBlockedFareharborEmbed =
+    !!fareharborOperatorSlug &&
+    OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug);
 
   const generatedCalendarUrl = bookingArgs
     ? buildFareHarborUrl({
@@ -91,8 +99,16 @@ export default function Engine2TourBookingPage({
         calendarPath: tour.bookingUrl ?? tour.booking.bookingUrl,
       })
     : normalizeFareHarborUrl(tour.bookingUrl ?? tour.booking.bookingUrl);
-  const iframeUrl = generatedCalendarUrl;
+  const iframeUrl = isBlockedFareharborEmbed ? "" : generatedCalendarUrl;
   const fallbackUrl = generatedCalendarUrl;
+
+  useEffect(() => {
+    if (!isBlockedFareharborEmbed || !fareharborOperatorSlug) {
+      return;
+    }
+
+    recordBlockedFareharborEmbed(fareharborOperatorSlug);
+  }, [fareharborOperatorSlug, isBlockedFareharborEmbed]);
 
   const structuredDataNodes = useMemo(
     () => [
@@ -146,16 +162,33 @@ export default function Engine2TourBookingPage({
       </section>
 
       <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
-        <div className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6">
-          <iframe
-            title={`${tour.name} booking`}
-            src={iframeUrl}
-            className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
-            allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
-            sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
-            loading="lazy"
-          />
-        </div>
+        {isBlockedFareharborEmbed ? (
+          <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-[#1f2a1f]">
+              Unavailable
+            </h2>
+            <p className="mt-3 text-sm text-[#405040]">
+              This operator is temporarily unavailable through our embedded
+              booking flow.
+            </p>
+            <Link href={tour.seo.canonicalPath}>
+              <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
+                Back to tour details
+              </a>
+            </Link>
+          </div>
+        ) : (
+          <div className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6">
+            <iframe
+              title={`${tour.name} booking`}
+              src={iframeUrl}
+              className="h-[720px] w-full rounded-xl border-0 md:h-[820px]"
+              allow="payment *; clipboard-read; clipboard-write; fullscreen; geolocation"
+              sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
+              loading="lazy"
+            />
+          </div>
+        )}
 
         <div className="rounded-2xl border border-dashed border-[#2f4a2f]/30 bg-white/80 p-6 text-[#1f2a1f]">
           <p className="text-sm text-[#405040]">

@@ -18,7 +18,7 @@ type FareHarborBookingArgs = {
 };
 
 const REQUIRED_PARAMS = {
-  asn: "fh",
+  asn: "fhdn",
   "asn-ref": "alloutdooradventures",
   flow: "no",
   "full-items": "yes",
