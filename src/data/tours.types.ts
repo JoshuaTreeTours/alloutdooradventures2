@@ -37,6 +37,11 @@ export type Tour = {
   destination: TourDestination;
   heroImage: string;
   galleryImages?: string[];
+  image2Attribution?: {
+    attributionText: string;
+    sourcePage: string;
+    provider: "wikimedia";
+  };
   badges: TourBadges;
   startingPrice?: number;
   currency?: string;

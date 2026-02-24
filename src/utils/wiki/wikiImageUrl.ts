@@ -1,5 +1,22 @@
 const WIKIMEDIA_UPLOAD_HOST = "upload.wikimedia.org";
 
+export const ensureHttpsUrl = (value: string): string => {
+  const trimmed = value.trim();
+  if (trimmed.startsWith("https://")) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith("http://")) {
+    return `https://${trimmed.slice("http://".length)}`;
+  }
+
+  if (trimmed.startsWith("//")) {
+    return `https:${trimmed}`;
+  }
+
+  return `https://${trimmed.replace(/^\/+/, "")}`;
+};
+
 export const isValidWikiImageUrl = (value?: string | null): value is string => {
   if (!value?.trim()) {
     return false;

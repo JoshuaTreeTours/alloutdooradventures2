@@ -16,6 +16,7 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { ensureHttpsUrl } from "../../utils/wiki/wikiImageUrl";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -66,6 +67,15 @@ export default function Engine2TourPage({
   }, [tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const isWikimediaHost = (value: string) => {
+    try {
+      return new URL(ensureHttpsUrl(value)).hostname === "upload.wikimedia.org";
+    } catch {
+      return false;
+    }
+  };
+
+  const secondaryImage = normalizedTour.images.gallery[0] ?? null;
   const isPalmSprings = isPalmSpringsTour(tour);
   const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
@@ -220,6 +230,7 @@ export default function Engine2TourPage({
             fallbackSrc={normalizedTour.images.hero}
             alt={tour.name}
             className="h-64 w-full object-cover md:h-80"
+            loading="eager"
           />
         </div>
         {overrideContent?.enabled ? (
@@ -453,12 +464,41 @@ export default function Engine2TourPage({
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
               >
-                <Image
-                  src={image}
-                  fallbackSrc={image}
-                  alt={`${tour.name} gallery`}
-                  className="h-56 w-full object-cover md:h-64"
-                />
+                <div className="aspect-[4/3] w-full">
+                  {image === secondaryImage &&
+                  (normalizedTour.image2Attribution?.provider === "wikimedia" ||
+                    isWikimediaHost(image)) ? (
+                    <img
+                      src={ensureHttpsUrl(image)}
+                      alt={`${tour.name} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <Image
+                      src={image}
+                      fallbackSrc={image}
+                      alt={`${tour.name} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                {image === secondaryImage && normalizedTour.image2Attribution ? (
+                  <p className="px-4 py-3 text-xs text-[#405040]">
+                    {normalizedTour.image2Attribution.attributionText} · {" "}
+                    <a
+                      className="underline"
+                      href={normalizedTour.image2Attribution.sourcePage}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      source
+                    </a>
+                  </p>
+                ) : null}
               </div>
             ))}
           </div>
