@@ -67,7 +67,7 @@ export default function CityTourDetailRoute({
     params.tourSlug
   );
 
-  if (engine2Tour) {
+  if (engine2Tour && engine2Tour.id !== "34849") {
     const isPsp = isPalmSpringsTour(engine2Tour);
     if (isPsp && typeof window === "undefined") {
       console.info(
@@ -106,8 +106,19 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const secondaryImage =
+    tour?.secondaryImageUrl && tour.secondaryImageUrl !== heroImage
+      ? tour.secondaryImageUrl
+      : undefined;
+  if (tour?.slug.endsWith("34849") && import.meta.env.DEV && typeof window !== "undefined") {
+    console.info("[Engine1 34849 FH images]", {
+      heroUrl: heroImage ?? null,
+      galleryUrls: tour.galleryImages ?? [],
+      selectedSecondaryUrl: secondaryImage ?? null,
+    });
+  }
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -138,6 +149,7 @@ export default function CityTourDetailRoute({
           pageName: tour.title,
           pageDescription: seoDescription ?? productDescription ?? "",
           heroImage,
+          image2: secondaryImage,
           derivedImages: structuredImages,
           place: {
             city: tour.destination.city,
@@ -383,21 +395,15 @@ export default function CityTourDetailRoute({
             </div>
           </div>
         </div>
-        {tour.galleryImages?.length ? (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map(image => (
-              <div
-                key={image}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
-              >
-                <Image
-                  src={image}
-                  fallbackSrc={image}
-                  alt={`${tour.title} gallery`}
-                  className="h-56 w-full object-cover md:h-64"
-                />
-              </div>
-            ))}
+        {secondaryImage ? (
+          <div className="mt-10 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={secondaryImage}
+              fallbackSrc={secondaryImage}
+              loading="lazy"
+              alt={`${tour.title} photo in ${tour.destination.city}, ${tour.destination.state}`}
+              className="h-56 w-full object-cover md:h-64"
+            />
           </div>
         ) : null}
       </section>
