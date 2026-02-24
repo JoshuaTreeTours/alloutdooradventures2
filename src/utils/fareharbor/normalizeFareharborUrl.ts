@@ -13,7 +13,7 @@ const stats: FareharborNormalizationStats = {
   fixedMissingAsnRef: 0,
 };
 
-const isDev = import.meta.env.DEV;
+const isDev = process.env.NODE_ENV !== "production";
 
 const logStats = (reason: string) => {
   if (!isDev) {
