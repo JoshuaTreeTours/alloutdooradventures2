@@ -3,12 +3,14 @@ import {
   buildWebPageStructuredData,
   SITE_ORGANIZATION_ID,
   SITE_BRAND_ID,
+  SITE_WEBSITE_ID,
   resolveCanonicalProductUrl,
   resolveOfferUrl,
 } from "../../utils/structuredData";
 import {
+  buildTourSchemaGraph,
   buildTourBreadcrumbNode,
-  buildTourOfferNode,
+  ENABLE_TOUR_SCHEMA_V1,
   resolveTourDurationISO,
 } from "../../schema/buildTourSchemaGraph";
 import type { Engine2Tour } from "../data/loadEngine2";
@@ -33,9 +35,6 @@ const normalizeStringArray = (value: unknown) => {
     .map(item => item.trim())
     .filter(Boolean);
 };
-
-const isTourSchemaSafeV1Enabled = () =>
-  process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 === "true";
 
 const getDestinationMeta = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
@@ -68,7 +67,6 @@ export const buildSchemaGraph = (
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
-  const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
   const fallbackPrice = applyPriceFloor(
@@ -82,13 +80,6 @@ export const buildSchemaGraph = (
     canonicalUrl: canonicalProductUrl,
     partnerBookingUrl: tour.bookingUrl ?? tour.booking.bookingUrl,
   });
-  const offer = buildTourOfferNode({
-    offerUrl,
-    currency: offerCurrency,
-    fallbackPrice: schemaPrice,
-    rewrite: rewriteV3Content,
-  });
-  const safeSchemaEnabled = isTourSchemaSafeV1Enabled();
   const tourDuration = resolveTourDurationISO(rewriteV3Content);
 
   const faqPageNode =
@@ -108,106 +99,84 @@ export const buildSchemaGraph = (
         }
       : null;
 
+  const tourNodes = ENABLE_TOUR_SCHEMA_V1
+    ? (buildTourSchemaGraph({
+        url: seo.canonical,
+        pageName: seo.title,
+        pageDescription: seo.description,
+        heroImage: effectiveHeroImage,
+        derivedImages: imageGallery,
+        place: {
+          city: tour.geo.city,
+          region: tour.geo.region,
+          countryCode: destinationMeta.countryCode,
+          lat: tour.geo.lat,
+          lng: tour.geo.lng,
+        },
+        product: {
+          id: productId,
+          name: tour.name,
+          description: isPalmSprings
+            ? (overrideDescription ??
+              pilotContent?.whatYoullExperience ??
+              seo.description)
+            : seo.description,
+          category: rewriteV3Content?.category?.primary,
+        },
+        trip: {
+          id: tripId,
+          name: tour.name,
+          description: isPalmSprings
+            ? (overrideDescription ??
+              pilotContent?.whatYoullExperience ??
+              seo.description)
+            : seo.description,
+          duration: tourDuration,
+          touristType: "Adventure travelers",
+          departureLocation: rewriteV3Content?.meetingPoint
+            ? {
+                name:
+                  rewriteV3Content.meetingPoint.name ??
+                  rewriteV3Content.meetingPoint.rawText,
+                streetAddress: rewriteV3Content.meetingPoint.addressLine1,
+                addressLocality: rewriteV3Content.meetingPoint.city,
+                addressRegion: rewriteV3Content.meetingPoint.region,
+                postalCode: rewriteV3Content.meetingPoint.postalCode,
+                addressCountry: rewriteV3Content.meetingPoint.country ?? "US",
+              }
+            : null,
+        },
+        offers: {
+          url: offerUrl,
+          lowPrice: rewriteV3Content?.pricing?.low,
+          highPrice: rewriteV3Content?.pricing?.high,
+          price: schemaPrice,
+          priceCurrency: offerCurrency,
+          offerCount:
+            typeof rewriteV3Content?.pricing?.low === "number" &&
+            typeof rewriteV3Content?.pricing?.high === "number"
+              ? 2
+              : null,
+          availability: "https://schema.org/InStock",
+        },
+        brandOrgIds: {
+          orgId: SITE_ORGANIZATION_ID,
+          brandId: SITE_BRAND_ID,
+          websiteId: SITE_WEBSITE_ID,
+        },
+      })["@graph"] as StructuredDataNode[])
+    : [
+        buildWebPageStructuredData({
+          url: seo.canonical,
+          name: seo.title,
+          description: seo.description,
+          image: effectiveHeroImage,
+        }),
+      ];
+
   return [
     ...getSiteStructuredDataNodes(),
-    buildWebPageStructuredData({
-      url: seo.canonical,
-      name: seo.title,
-      description: seo.description,
-      image: effectiveHeroImage,
-    }),
-    {
-      "@type": "Place",
-      "@id": placeId,
-      name:
-        isPalmSprings && pilotContent?.quickFacts?.startLocationArea
-          ? pilotContent.quickFacts.startLocationArea
-          : `${tour.geo.city}, ${tour.geo.region}`,
-      geo:
-        typeof tour.geo.lat === "number" && typeof tour.geo.lng === "number"
-          ? {
-              "@type": "GeoCoordinates",
-              latitude: tour.geo.lat,
-              longitude: tour.geo.lng,
-            }
-          : undefined,
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: tour.geo.city,
-        addressRegion: tour.geo.region,
-        addressCountry: destinationMeta.countryCode,
-      },
-    },
-    {
-      "@type": "Product",
-      "@id": productId,
-      url: canonicalProductUrl,
-      name: tour.name,
-      description: isPalmSprings
-        ? (overrideDescription ??
-          pilotContent?.whatYoullExperience ??
-          seo.description)
-        : seo.description,
-      image: [effectiveHeroImage, ...imageGallery],
-      category: rewriteV3Content?.category?.primary,
-      brand: { "@id": SITE_BRAND_ID },
-      offers: offer,
-      provider: { "@id": SITE_ORGANIZATION_ID },
-      ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
-      ...(safeSchemaEnabled
-        ? {
-            areaServed: { "@id": placeId },
-            isRelatedTo: { "@id": tripId },
-          }
-        : {}),
-      mainEntityOfPage: {
-        "@type": "WebPage",
-        "@id": `${seo.canonical}#webpage`,
-      },
-    },
-    {
-      "@type": "TouristTrip",
-      "@id": tripId,
-      name: tour.name,
-      description: isPalmSprings
-        ? (overrideDescription ??
-          pilotContent?.whatYoullExperience ??
-          seo.description)
-        : seo.description,
-      itinerary:
-        isPalmSprings && pilotContent?.itineraryOutline?.length
-          ? pilotContent.itineraryOutline.map(step => ({
-              "@type": "TouristAttraction",
-              name: step,
-            }))
-          : { "@id": placeId },
-      provider: { "@id": SITE_ORGANIZATION_ID },
-      touristType: "Adventure travelers",
-      departureLocation: rewriteV3Content?.meetingPoint
-        ? {
-            "@type": "Place",
-            name:
-              rewriteV3Content.meetingPoint.name ??
-              rewriteV3Content.meetingPoint.rawText,
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: rewriteV3Content.meetingPoint.addressLine1,
-              addressLocality: rewriteV3Content.meetingPoint.city,
-              addressRegion: rewriteV3Content.meetingPoint.region,
-              postalCode: rewriteV3Content.meetingPoint.postalCode,
-              addressCountry: rewriteV3Content.meetingPoint.country ?? "US",
-            },
-          }
-        : undefined,
-      offers: offer,
-      ...(tourDuration ? { duration: tourDuration } : {}),
-      ...(safeSchemaEnabled
-        ? {
-            areaServed: { "@id": placeId },
-            isRelatedTo: { "@id": productId },
-          }
-        : {}),
-    },
+    ...tourNodes,
     ...(faqPageNode ? [faqPageNode] : []),
     buildTourBreadcrumbNode({
       canonicalPath: rewriteV3Content?.canonicalPath ?? tour.seo.canonicalPath,
