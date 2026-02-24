@@ -34,7 +34,14 @@ import {
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
+  SITE_BRAND_ID,
+  SITE_ORGANIZATION_ID,
+  SITE_WEBSITE_ID,
 } from "../../../../utils/structuredData";
+import {
+  buildTourSchemaGraph,
+  ENABLE_TOUR_SCHEMA_V1,
+} from "../../../../schema/buildTourSchemaGraph";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
@@ -125,25 +132,68 @@ export default function CityTourDetailRoute({
     if (!tour || !canonicalUrl) {
       return null;
     }
+    const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
+      ? (buildTourSchemaGraph({
+          url: canonicalUrl,
+          pageName: tour.title,
+          pageDescription: seoDescription ?? productDescription ?? "",
+          heroImage,
+          derivedImages: structuredImages,
+          place: {
+            city: tour.destination.city,
+            region: tour.destination.state,
+            countryCode: tour.destination.countryCode ?? undefined,
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
+          },
+          product: {
+            id: `${canonicalUrl}#product`,
+            name: tour.title,
+            description: productDescription ?? seoDescription ?? "",
+            category: tour.primaryCategory,
+          },
+          trip: {
+            id: `${canonicalUrl}#trip`,
+            name: tour.title,
+            description: productDescription ?? seoDescription ?? "",
+            duration: tour.badges.duration,
+            touristType: "Adventure travelers",
+            departureLocation: null,
+          },
+          offers: {
+            url: bookingUrl,
+            price: tour.startingPrice,
+            priceCurrency: tour.currency ?? "USD",
+          },
+          brandOrgIds: {
+            orgId: SITE_ORGANIZATION_ID,
+            brandId: SITE_BRAND_ID,
+            websiteId: SITE_WEBSITE_ID,
+          },
+        })["@graph"] as Record<string, unknown>[])
+      : [
+          buildWebPageStructuredData({
+            url: canonicalUrl,
+            name: tour.title,
+            description: seoDescription,
+            image: heroImage,
+          }),
+          buildTourProductStructuredData({
+            tour,
+            detailUrl: canonicalUrl,
+            description: productDescription,
+            images: structuredImages.length ? structuredImages : undefined,
+          }),
+          buildTourTripStructuredData({
+            tour,
+            detailUrl: canonicalUrl,
+            description: productDescription,
+            images: structuredImages.length ? structuredImages : undefined,
+          }),
+        ];
+
     return [
-      buildWebPageStructuredData({
-        url: canonicalUrl,
-        name: tour.title,
-        description: seoDescription,
-        image: heroImage,
-      }),
-      buildTourProductStructuredData({
-        tour,
-        detailUrl: canonicalUrl,
-        description: productDescription,
-        images: structuredImages.length ? structuredImages : undefined,
-      }),
-      buildTourTripStructuredData({
-        tour,
-        detailUrl: canonicalUrl,
-        description: productDescription,
-        images: structuredImages.length ? structuredImages : undefined,
-      }),
+      ...tourSchemaNodes,
       buildBreadcrumbList([
         { name: "Destinations", url: "/destinations" },
         ...(stateHref ? [{ name: state?.name ?? "", url: stateHref }] : []),
