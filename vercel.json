@@ -286,6 +286,54 @@
       "destination": "/robots.txt"
     },
     {
+      "source": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849/book",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897/book",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/private-san-andreas-fault-jeep-tour-43915",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/private-san-andreas-fault-jeep-tour-43915/book",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/painted-canyon-jeep-tour-34899",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/painted-canyon-jeep-tour-34899/book",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/private-indian-canyons-hiking-tour-by-jeep-34891",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/private-indian-canyons-hiking-tour-by-jeep-34891/book",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370",
+      "destination": "/api/gone"
+    },
+    {
+      "source": "/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370/book",
+      "destination": "/api/gone"
+    },
+    {
       "source": "/destinations/:state/:rest*/tours/:slug*",
       "has": [
         {

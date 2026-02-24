@@ -163,12 +163,6 @@
   <url><loc>https://www.alloutdooradventures.com/destinations/california/oakland/tours/private-custom-kayak-instruction-jack-london-square-14297</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/oakland/tours/seasonal-california-with-chef-mat-545857</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/oceanside/tours/tour-of-california-surf-museum-413654</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/joshua-tree-national-park-tour-34897</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/painted-canyon-jeep-tour-34899</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/private-indian-canyons-hiking-tour-by-jeep-34891</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/private-san-andreas-fault-jeep-tour-43915</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/shared-indian-canyons-hiking-tour-by-jeep-574370</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/shared-san-andreas-fault-jeep-tour-34849</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/paso-robles/tours/california-coast-adventure-tour-350-408787</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/perris/tours/2024-night-photoshoot-vintage-glow-night-shoot-with-la-s-yellow-cars-283837</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/destinations/california/perris/tours/antique-truck-show-283841</loc><priority>0.8</priority></url>
@@ -2725,7 +2719,6 @@
   <url><loc>https://www.alloutdooradventures.com/tours/california/healdsburg/healdsburg-sip-n-cycle-29264</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/healdsburg/self-guided-e-bike-tour-29272</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/healdsburg/velo-n-vino-tour-29277</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/indio/shared-san-andreas-fault-jeep-tour-34849</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/joshua-tree/1-hour-visitor-pass-404983</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/joshua-tree/campsite-6-515026</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/joshua-tree/campsite-7-520036</loc><priority>0.8</priority></url>
@@ -2771,12 +2764,7 @@
   <url><loc>https://www.alloutdooradventures.com/tours/california/oceanside/afternoon-sail-367207</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/oceanside/morning-sail-367185</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/oceanside/sunset-sail-367215</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/joshua-tree-national-park-tour-34897</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/painted-canyon-jeep-tour-34899</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/palm-canyon-tour-290437</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/private-indian-canyons-hiking-tour-by-jeep-34891</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/private-san-andreas-fault-jeep-tour-43915</loc><priority>0.8</priority></url>
-  <url><loc>https://www.alloutdooradventures.com/tours/california/palm-springs/shared-indian-canyons-hiking-tour-by-jeep-574370</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/pismo-beach/guided-e-bike-tour-of-pismo-beach-shell-beach-and-avila-beach-497473</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/poway/trail-rides-71811</loc><priority>0.8</priority></url>
   <url><loc>https://www.alloutdooradventures.com/tours/california/redondo-beach/1-day-e-bike-rental-including-overnight-478898</loc><priority>0.8</priority></url>

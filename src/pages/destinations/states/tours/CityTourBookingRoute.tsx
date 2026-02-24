@@ -35,6 +35,8 @@ import {
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourBookingPage from "../../../../engine2/pages/Engine2TourBookingPage";
+import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourBookingRouteProps = {
   params: {
@@ -47,6 +49,14 @@ type CityTourBookingRouteProps = {
 export default function CityTourBookingRoute({
   params,
 }: CityTourBookingRouteProps) {
+  if (isRemovedTourSlug(params.tourSlug)) {
+    return (
+      <RemovedTourGone
+        cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
+      />
+    );
+  }
+
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,
     params.citySlug,
