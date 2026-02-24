@@ -2,6 +2,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fareHarborHtmlByUrl } from "../fh/fareharborBookFixtures";
 import { parseFareHarborHtml } from "../fh/parseFareHarborHtml";
+import { sanitizeFhText, isBadTokenString } from "../text/sanitizeFhText";
 
 export type FhTourFacts = {
   title?: string;
@@ -52,12 +53,24 @@ const extractList = (html: string, label: string) => {
 };
 
 const extractFacts = (html: string, fallbackTitle?: string): FhTourFacts => {
-  const title = stripTags(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "") || fallbackTitle;
+  const title = sanitizeFhText(stripTags(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "") || fallbackTitle || "");
   const text = stripTags(html);
-  const durationText = text.match(/Duration\s*:?\s*([^\.\n|]+)/i)?.[1]?.trim();
-  const meetingPoint = text.match(/Meeting(?:\s+Point|\s+Location)?\s*:?\s*([^\.\n|]+)/i)?.[1]?.trim();
-  const cancellationPolicy = text.match(/Cancellation(?:\s+Policy)?\s*:?\s*([^\n]{10,220})/i)?.[1]?.trim();
-  const accessibility = text.match(/Accessibility\s*:?\s*([^\n]{6,180})/i)?.[1]?.trim();
+  const durationText = sanitizeFhText(
+    text.match(/Duration\s*:?\s*([^\.\n|]+)/i)?.[1]?.trim() ?? ""
+  );
+  const meetingPoint = sanitizeFhText(
+    text
+      .match(/Meeting(?:\s+Point|\s+Location)?\s*:?\s*([^\.\n|]+)/i)?.[1]
+      ?.trim() ?? ""
+  );
+  const cancellationPolicy = normalizeCancellationPolicy(
+    text
+      .match(/Cancellation(?:\s+Policy)?\s*:?\s*([^\n]{10,220})/i)?.[1]
+      ?.trim()
+  );
+  const accessibility = sanitizeFhText(
+    text.match(/Accessibility\s*:?\s*([^\n]{6,180})/i)?.[1]?.trim() ?? ""
+  );
   const ageMin = Number.parseInt(text.match(/(?:minimum age|ages?\s+)(\d{1,2})/i)?.[1] ?? "", 10);
   const groupMax = Number.parseInt(text.match(/(?:up to|max(?:imum)? group(?: size)?|group size:?\s*)(\d{1,3})/i)?.[1] ?? "", 10);
   const price = Number.parseFloat((text.match(/from\s*\$\s*([\d,.]+)/i)?.[1] ?? "").replace(/,/g, ""));
@@ -71,10 +84,10 @@ const extractFacts = (html: string, fallbackTitle?: string): FhTourFacts => {
     groupSizeMax: Number.isFinite(groupMax) ? groupMax : undefined,
     cancellationPolicy,
     accessibility,
-    inclusions: extractList(html, "Included"),
-    exclusions: extractList(html, "Not Included"),
-    highlights: extractList(html, "Highlights"),
-    itinerary: extractList(html, "Itinerary"),
+    inclusions: extractList(html, "Included").map(item => sanitizeFhText(item)).filter(Boolean),
+    exclusions: extractList(html, "Not Included").map(item => sanitizeFhText(item)).filter(Boolean),
+    highlights: extractList(html, "Highlights").map(item => sanitizeFhText(item, { itemName: title, durationText })).filter(Boolean),
+    itinerary: extractList(html, "Itinerary").map(item => sanitizeFhText(item, { itemName: title, durationText })).filter(Boolean),
     pricing: {
       pricePerPersonFrom: Number.isFinite(price) ? price : undefined,
       currency: "USD",
@@ -96,7 +109,7 @@ const extractFromFixture = (shortname: string, itemId: string): FhTourFacts | nu
     durationMinutes: parseMinutes(parsed.duration),
     meetingPoint: parsed.meetingPoint.rawText,
     meetingPointAddress: parsed.meetingPoint.addressLine1,
-    cancellationPolicy: parsed.faq.find(item => /cancel/i.test(item.q))?.a,
+    cancellationPolicy: normalizeCancellationPolicy(parsed.faq.find(item => /cancel/i.test(item.q))?.a),
     inclusions: parsed.inclusions,
     exclusions: parsed.exclusions,
     highlights: parsed.highlights,
@@ -106,6 +119,26 @@ const extractFromFixture = (shortname: string, itemId: string): FhTourFacts | nu
       currency: "USD",
     },
   };
+};
+
+
+const normalizeCancellationPolicy = (raw?: string) => {
+  const cleaned = sanitizeFhText(raw ?? "");
+  if (!cleaned) return undefined;
+
+  const cancelWindow = cleaned.match(
+    /(cancel(?:lation)?[^.\n]{0,120}(?:hour|hours|day|days))/i
+  )?.[1];
+  const candidate = cancelWindow ? sanitizeFhText(cancelWindow) : cleaned;
+
+  if (
+    /flownode|policy\{|\{\s*"|\{\s*'/.test(candidate.toLowerCase()) ||
+    isBadTokenString(candidate)
+  ) {
+    return "See booking page for cancellation terms.";
+  }
+
+  return candidate;
 };
 
 const parseUrlBits = (fhEmbedUrl: string) => {

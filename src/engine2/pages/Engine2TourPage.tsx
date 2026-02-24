@@ -10,6 +10,7 @@ import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { isBadTokenString, sanitizeFhText } from "../../utils/text/sanitizeFhText";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
@@ -87,14 +88,35 @@ export default function Engine2TourPage({
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
+  const isJoshuaTreeTour = tour.sourceCitySlug === "joshua-tree";
+  const sanitizeTourText = (value: string) => {
+    const cleaned = sanitizeFhText(value, {
+      itemName: tour.name,
+      durationText: tour.badges?.duration,
+    });
+
+    if (isBadTokenString(cleaned)) {
+      return "This guided experience in Joshua Tree is booked through FareHarbor and includes all logistics details on the booking page.";
+    }
+
+    return cleaned;
+  };
+
   const engine1Content = {
     whatYoullExperience: normalizedTour.content.experienceText
       .split(/\n\n+/)
       .map(paragraph => paragraph.trim())
-      .filter(Boolean),
-    highlights: normalizedTour.content.highlights,
-    faqs: normalizedTour.content.faqs ?? [],
+      .filter(Boolean)
+      .map(paragraph => (isJoshuaTreeTour ? sanitizeTourText(paragraph) : paragraph)),
+    highlights: normalizedTour.content.highlights.map(item =>
+      isJoshuaTreeTour ? sanitizeTourText(item) : item
+    ),
+    faqs: (normalizedTour.content.faqs ?? []).map(item => ({
+      question: isJoshuaTreeTour ? sanitizeTourText(item.question) : item.question,
+      answer: isJoshuaTreeTour ? sanitizeTourText(item.answer) : item.answer,
+    })),
   };
+
   const content = overrideContent?.enabled
     ? overrideContent.content
     : engine1Content;
@@ -200,7 +222,9 @@ export default function Engine2TourPage({
           </p>
           {normalizedTour.content.heroSummary ? (
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-              {normalizedTour.content.heroSummary}
+              {isJoshuaTreeTour
+                ? sanitizeTourText(normalizedTour.content.heroSummary)
+                : normalizedTour.content.heroSummary}
             </p>
           ) : null}
           {rewriteV3Content?.category?.primary ? (

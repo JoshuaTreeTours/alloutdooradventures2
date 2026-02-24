@@ -1,5 +1,10 @@
 import type { FhTourFacts } from "../fareharbor/fetchFhItemDetails";
 import { jaccardTrigramSimilarity } from "../text/similarity";
+import {
+  isBadTokenString,
+  sanitizeFhText,
+  type FhTokenReplacements,
+} from "../text/sanitizeFhText";
 
 type GeneratedFaq = { question: string; answer: string };
 
@@ -31,7 +36,11 @@ export const generateTourDescriptionFromFacts = ({
   keywords?: string[];
   previousDescriptions?: string[];
 }): GeneratedTourContent => {
-  const title = fhFacts.title ?? "Joshua Tree tour";
+  const replacements: FhTokenReplacements = {
+    itemName: fhFacts.title,
+    durationText: fhFacts.durationText,
+  };
+  const title = sanitizeFhText(fhFacts.title ?? "Joshua Tree tour", replacements);
   const activity = pickActivityNoun(fhFacts);
   const firstOpeners = [
     `${title} is a ${activity} in ${destinationContext.city} for travelers who want clear logistics and place-based context.`,
@@ -39,23 +48,36 @@ export const generateTourDescriptionFromFacts = ({
     `This ${activity} in ${destinationContext.city} centers on ${title} and keeps expectations specific from check-in onward.`,
   ];
 
+  const cancellationText = sanitizeFhText(
+    fhFacts.cancellationPolicy ?? "",
+    replacements
+  );
+  const safeCancellation =
+    cancellationText && !/flownode|policy\{|\{\s*"/i.test(cancellationText)
+      ? cancellationText
+      : "See booking page for cancellation terms.";
+
   const factsUsed = [
-    fhFacts.durationText && `Duration is listed as ${fhFacts.durationText}.`,
-    fhFacts.meetingPoint && `Meeting details point to ${fhFacts.meetingPoint}.`,
+    fhFacts.durationText && `Duration is listed as ${sanitizeFhText(fhFacts.durationText, replacements)}.`,
+    fhFacts.meetingPoint && `Meeting details point to ${sanitizeFhText(fhFacts.meetingPoint, replacements)}.`,
     fhFacts.groupSizeMax && `Group size may run up to ${fhFacts.groupSizeMax} guests.`,
     fhFacts.ageMin && `Minimum age guidance starts at ${fhFacts.ageMin}.`,
-    fhFacts.accessibility && `Accessibility notes: ${fhFacts.accessibility}.`,
-    fhFacts.cancellationPolicy && `Cancellation terms: ${fhFacts.cancellationPolicy}.`,
+    fhFacts.accessibility && `Accessibility notes: ${sanitizeFhText(fhFacts.accessibility, replacements)}.`,
+    `Cancellation terms: ${safeCancellation}.`,
   ].filter(Boolean) as string[];
 
   const highlights = Array.from(new Set([...(fhFacts.highlights ?? []), ...(fhFacts.itinerary ?? [])]))
-    .map(line)
+    .map(item => sanitizeFhText(line(item), replacements))
     .filter(Boolean)
     .slice(0, 5);
 
   const logisticsBits = [
-    fhFacts.durationText ? `Duration: ${fhFacts.durationText}` : undefined,
-    fhFacts.meetingPoint ? `Meeting point: ${fhFacts.meetingPoint}` : undefined,
+    fhFacts.durationText
+      ? `Duration: ${sanitizeFhText(fhFacts.durationText, replacements)}`
+      : undefined,
+    fhFacts.meetingPoint
+      ? `Meeting point: ${sanitizeFhText(fhFacts.meetingPoint, replacements)}`
+      : undefined,
     fhFacts.ageMin ? `Minimum age: ${fhFacts.ageMin}+` : undefined,
     fhFacts.groupSizeMax ? `Group size: up to ${fhFacts.groupSizeMax}` : undefined,
     fhFacts.pricing?.pricePerPersonFrom ? `Pricing signal: from $${fhFacts.pricing.pricePerPersonFrom}` : undefined,
@@ -63,19 +85,19 @@ export const generateTourDescriptionFromFacts = ({
 
   const faqPairs: GeneratedFaq[] = [
     fhFacts.durationText
-      ? { question: "How long is the tour?", answer: `FareHarbor lists a duration of ${fhFacts.durationText}.` }
+      ? { question: "How long is the tour?", answer: `FareHarbor lists a duration of ${sanitizeFhText(fhFacts.durationText, replacements)}.` }
       : null,
     fhFacts.meetingPoint
-      ? { question: "Where does the tour meet?", answer: `The listed meeting point is ${fhFacts.meetingPoint}.` }
+      ? { question: "Where does the tour meet?", answer: `The listed meeting point is ${sanitizeFhText(fhFacts.meetingPoint, replacements)}.` }
       : null,
     fhFacts.ageMin
       ? { question: "Is there a minimum age?", answer: `The listing indicates a minimum age of ${fhFacts.ageMin}.` }
       : null,
     fhFacts.cancellationPolicy
-      ? { question: "What is the cancellation policy?", answer: fhFacts.cancellationPolicy }
+      ? { question: "What is the cancellation policy?", answer: safeCancellation }
       : null,
     fhFacts.accessibility
-      ? { question: "Are there accessibility notes?", answer: fhFacts.accessibility }
+      ? { question: "Are there accessibility notes?", answer: sanitizeFhText(fhFacts.accessibility, replacements) }
       : null,
   ].filter(Boolean) as GeneratedFaq[];
 
@@ -99,12 +121,33 @@ export const generateTourDescriptionFromFacts = ({
     openerIndex += 1;
   }
 
-  const heroSummary = `${title} in ${destinationContext.city} is positioned as a ${activity} with details sourced directly from FareHarbor. ${fhFacts.durationText ? `Listed duration: ${fhFacts.durationText}.` : ""}`.trim();
+  const heroSummary = sanitizeFhText(
+    `${title} in ${destinationContext.city} is positioned as a ${activity} with details sourced directly from FareHarbor. ${fhFacts.durationText ? `Listed duration: ${sanitizeFhText(fhFacts.durationText, replacements)}.` : ""}`.trim(),
+    replacements
+  );
+
+  const cleanLongDescription = sanitizeFhText(longDescription, replacements);
+  const finalLongDescription =
+    isBadTokenString(cleanLongDescription) || !cleanLongDescription
+      ? `This guided experience in ${destinationContext.city} is booked through FareHarbor and includes all logistics details on the booking page.`
+      : cleanLongDescription;
 
   return {
     heroSummary,
-    longDescription,
+    longDescription: finalLongDescription,
     highlights,
-    faqs: faqPairs.slice(0, 5),
+    faqs: faqPairs
+      .slice(0, 5)
+      .map(item => ({
+        question: sanitizeFhText(item.question, replacements),
+        answer: sanitizeFhText(item.answer, replacements),
+      }))
+      .filter(
+        item =>
+          item.question.length > 0 &&
+          item.answer.length > 0 &&
+          !isBadTokenString(item.question) &&
+          !isBadTokenString(item.answer)
+      ),
   };
 };
