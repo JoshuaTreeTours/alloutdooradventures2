@@ -48,8 +48,10 @@ import {
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
-import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
+import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
+import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourDetailRouteProps = {
@@ -120,7 +122,7 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
-  const structuredImages = filterHeroImages(
+  const baseStructuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
@@ -142,11 +144,31 @@ export default function CityTourDetailRoute({
     : "";
   const toursHref =
     state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+  const fareHarborParsed = useMemo(() => {
+    if (!tour || tour.bookingProvider !== "fareharbor") {
+      return null;
+    }
+    const fareHarborHtml = fetchFareHarborHtml(tour.bookingUrl);
+    return fareHarborHtml ? parseFareHarborHtml(fareHarborHtml) : null;
+  }, [tour]);
+
+  const hardenedTemplate = tour
+    ? applyEngine1Template(tour, {
+        parsedFareHarbor: fareHarborParsed ?? undefined,
+      })
+    : null;
+
+  const structuredImages = filterHeroImages(
+    hardenedTemplate?.schemaImages?.length
+      ? hardenedTemplate.schemaImages
+      : baseStructuredImages,
+    "product"
+  );
+
   const structuredDataNodes = useMemo(() => {
     if (!tour || !canonicalUrl) {
       return null;
     }
-    const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
     const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
     const offerUrl = resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
@@ -161,89 +183,55 @@ export default function CityTourDetailRoute({
           heroImage,
           derivedImages: structuredImages,
           place: {
-            city: jt459591Override ? "Joshua Tree" : tour.destination.city,
-            region: jt459591Override ? "CA" : tour.destination.state,
-            regionCode: jt459591Override ? "CA" : undefined,
-            countryCode: jt459591Override
-              ? "US"
-              : (tour.destination.countryCode ?? undefined),
-            lat: jt459591Override ? 34.1347 : tour.destination.lat,
-            lng: jt459591Override ? -116.3131 : tour.destination.lng,
+            city: tour.destination.city,
+            region: tour.destination.state,
+            regionCode: undefined,
+            countryCode: tour.destination.countryCode ?? "US",
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
           },
           product: {
             id: `${canonicalUrl}#product`,
             name: tour.title,
             description:
-              jt459591Override?.schemaDescription ??
+              hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
               "",
-            category: jt459591Override
-              ? "Hiking & climbing tour"
-              : tour.primaryCategory,
+            category: tour.primaryCategory,
           },
           trip: {
             id: `${canonicalUrl}#trip`,
             name: tour.title,
             description:
-              jt459591Override?.schemaDescription ??
+              hardenedTemplate?.schemaDescription ??
               productDescription ??
               seoDescription ??
               "",
-            duration: jt459591Override?.durationISO ?? tour.badges.duration,
+            duration: hardenedTemplate?.durationISO ?? tour.badges.duration,
             touristType: "Adventure travelers",
-            departureLocation: jt459591Override?.meetingPoint
-              ? {
-                  name:
-                    jt459591Override.meetingPoint.name ??
-                    jt459591Override.meetingPoint.rawText,
-                  streetAddress: jt459591Override.meetingPoint.addressLine1,
-                  addressLocality: jt459591Override.meetingPoint.city,
-                  addressRegion: jt459591Override.meetingPoint.region,
-                  postalCode: jt459591Override.meetingPoint.postalCode,
-                  addressCountry: jt459591Override.meetingPoint.country ?? "US",
-                }
-              : null,
-            itinerary: jt459591Override
+            departureLocation: null,
+            itinerary: hardenedTemplate
               ? {
                   "@type": "ItemList",
-                  itemListElement: [
-                    {
+                  itemListElement: hardenedTemplate.itinerary.map(
+                    (step, index) => ({
                       "@type": "ListItem",
-                      position: 1,
-                      name: "Meet your guide and review safety systems",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      name: "Hike through Joshua Tree desert terrain to climbing areas",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      name: "Practice climbing movement and route technique on granite",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 4,
-                      name: "Return with debrief, photos, and next-step climbing tips",
-                    },
-                  ],
+                      position: index + 1,
+                      name: step,
+                    })
+                  ),
                 }
               : null,
           },
           offers: {
             url: offerUrl,
-            lowPrice: jt459591Override?.pricing?.low,
-            highPrice: jt459591Override?.pricing?.high,
-            price: jt459591Override?.schemaPrice ?? tour.startingPrice,
+            lowPrice: undefined,
+            highPrice: undefined,
+            price: tour.startingPrice,
             priceCurrency: tour.currency ?? "USD",
             availability: "https://schema.org/InStock",
-            offerCount:
-              typeof jt459591Override?.pricing?.low === "number" &&
-              typeof jt459591Override?.pricing?.high === "number"
-                ? 2
-                : null,
+            offerCount: null,
           },
           brandOrgIds: {
             orgId: SITE_ORGANIZATION_ID,
@@ -272,12 +260,12 @@ export default function CityTourDetailRoute({
           }),
         ];
 
-    const faqNode = jt459591Override?.faqs?.length
+    const faqNode = hardenedTemplate?.faqs?.length
       ? {
           "@type": "FAQPage",
           "@id": `${canonicalUrl}#faqpage`,
           mainEntityOfPage: canonicalProductUrl,
-          mainEntity: jt459591Override.faqs.map(item => ({
+          mainEntity: hardenedTemplate.faqs.map(item => ({
             "@type": "Question",
             name: item.question,
             acceptedAnswer: { "@type": "Answer", text: item.answer },
@@ -308,32 +296,16 @@ export default function CityTourDetailRoute({
     state?.name,
     stateHref,
     structuredImages,
+    hardenedTemplate,
     tour,
     toursHref,
   ]);
 
-  const jt459591Override =
-    tour && canonicalUrl ? getJoshuaTree459591Override(canonicalUrl) : null;
-  const experienceParagraphs = jt459591Override?.whatYoullExperience?.length
-    ? jt459591Override.whatYoullExperience
+  const experienceParagraphs = hardenedTemplate?.overviewParagraphs?.length
+    ? hardenedTemplate.overviewParagraphs
     : tour
       ? getExpandedTourDescription(tour)
       : [];
-  const logisticsRows = jt459591Override
-    ? [
-        { label: "Duration", value: jt459591Override.logistics.duration },
-        {
-          label: "Meeting point",
-          value: jt459591Override.logistics.meetingPoint,
-        },
-        { label: "Age", value: jt459591Override.logistics.age },
-        { label: "Group size", value: jt459591Override.logistics.groupSize },
-        {
-          label: "Cancellation",
-          value: jt459591Override.logistics.cancellation,
-        },
-      ]
-    : [];
 
   useStructuredData(structuredDataNodes);
 
@@ -415,11 +387,11 @@ export default function CityTourDetailRoute({
               {tour.destination.city}, {tour.destination.state}
             </p>
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
-              {tour.title}
+              {hardenedTemplate?.heroTitle ?? tour.title}
             </h1>
-            {jt459591Override?.heroPriceText ? (
-              <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
-                From {jt459591Override.heroPriceText}
+            {hardenedTemplate ? (
+              <p className="mt-4 max-w-3xl text-sm text-white/90 md:text-base">
+                {hardenedTemplate.heroSummary}
               </p>
             ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
@@ -434,7 +406,7 @@ export default function CityTourDetailRoute({
                 </span>
               ) : null}
             </div>
-            {tour.badges.tagline ? (
+            {tour.badges.tagline && !hardenedTemplate ? (
               <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
                 {tour.badges.tagline}
               </p>
@@ -443,14 +415,23 @@ export default function CityTourDetailRoute({
           <div className="flex flex-wrap gap-3">
             <Link href={bookingUrl}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                BOOK
+                {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
               </a>
             </Link>
-            <Link href={toursHref}>
-              <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
-                Back to tours
+            {hardenedTemplate ? (
+              <a
+                href="#booking-section"
+                className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25"
+              >
+                {hardenedTemplate.secondaryCtaLabel}
               </a>
-            </Link>
+            ) : (
+              <Link href={toursHref}>
+                <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
+                  Back to tours
+                </a>
+              </Link>
+            )}
           </div>
         </div>
       </section>
@@ -480,13 +461,27 @@ export default function CityTourDetailRoute({
               </p>
             ))}
 
-            {jt459591Override?.highlights?.length ? (
+            {hardenedTemplate?.secondaryImage ? (
+              <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                <Image
+                  src={hardenedTemplate.secondaryImage}
+                  fallbackSrc={hardenedTemplate.secondaryImage}
+                  alt={
+                    hardenedTemplate.secondaryImageAlt ??
+                    `${tour.title} landscape`
+                  }
+                  className="h-64 w-full object-cover"
+                />
+              </div>
+            ) : null}
+
+            {hardenedTemplate?.highlights?.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   Highlights
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-[#405040]">
-                  {jt459591Override.highlights.slice(0, 10).map(highlight => (
+                  {hardenedTemplate.highlights.slice(0, 10).map(highlight => (
                     <li key={highlight} className="flex gap-2">
                       <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2f8a3d]" />
                       <span>{highlight}</span>
@@ -496,13 +491,13 @@ export default function CityTourDetailRoute({
               </>
             ) : null}
 
-            {jt459591Override?.faqs?.length ? (
+            {hardenedTemplate?.faqs?.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   FAQs
                 </h3>
                 <div className="mt-4 space-y-4">
-                  {jt459591Override.faqs.slice(0, 5).map(item => (
+                  {hardenedTemplate.faqs.slice(0, 5).map(item => (
                     <div
                       key={item.question}
                       className="rounded-xl border border-black/10 bg-white p-4"
@@ -522,20 +517,30 @@ export default function CityTourDetailRoute({
           <div className="space-y-6">
             <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
               <h3 className="text-base font-semibold text-[#1f2a1f]">
-                {jt459591Override ? "Tour logistics" : "Tour snapshot"}
+                {hardenedTemplate ? "What’s included" : "Tour snapshot"}
               </h3>
-              {jt459591Override ? (
-                <div className="mt-4 space-y-3 text-sm text-[#405040]">
-                  {logisticsRows.map(item => (
-                    <div key={item.label}>
-                      <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
-                        {item.label}
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-[#1f2a1f]">
-                        {item.value ?? "Check booking page"}
-                      </p>
-                    </div>
-                  ))}
+              {hardenedTemplate ? (
+                <div className="mt-4 space-y-4 text-sm text-[#405040]">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                      Included
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {hardenedTemplate.includes.map(item => (
+                        <li key={item}>• {item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
+                      Not included
+                    </p>
+                    <ul className="mt-2 space-y-1">
+                      {hardenedTemplate.excludes.map(item => (
+                        <li key={item}>• {item}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               ) : (
                 <div className="mt-4 space-y-3 text-sm text-[#405040]">
@@ -578,7 +583,7 @@ export default function CityTourDetailRoute({
           </div>
         ) : null}
         {bookingUrl ? (
-          <div className="mt-12 text-center">
+          <div id="booking-section" className="mt-12 text-center">
             <Link href={bookingUrl}>
               <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
                 Book This Tour
