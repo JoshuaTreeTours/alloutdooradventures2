@@ -20,6 +20,22 @@ export type PalmSpringsOverrideContent = {
   content: TourRewriteV3;
 };
 
+const PALM_SPRINGS_IMAGE2_URL_BY_TOUR_ID: Record<number, string> = {
+  34849:
+    "https://cdn.filestackcontent.com/UAlzyhkvRvKmb0Y8JQwU/convert?cache=true&compress=true&quality=90&format=webp&rotate=exif&w=1000&fit=max",
+};
+
+export const getPalmSpringsImage2Url = (
+  tourId: number | string
+): string | undefined => {
+  const numericTourId = Number(tourId);
+  if (!Number.isInteger(numericTourId)) {
+    return undefined;
+  }
+
+  return PALM_SPRINGS_IMAGE2_URL_BY_TOUR_ID[numericTourId];
+};
+
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
   "34849": {
     duration: "3 hours",

@@ -106,8 +106,10 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const secondaryImage =
+    tour?.image2 && tour.image2 !== heroImage ? tour.image2 : undefined;
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -345,6 +347,19 @@ export default function CityTourDetailRoute({
                 />
               ) : null}
             </div>
+            {secondaryImage ? (
+              <div className="mt-4 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                <div className="relative aspect-[5/3] w-full">
+                  <Image
+                    src={secondaryImage}
+                    fallbackSrc={secondaryImage}
+                    alt={`${tour.title} secondary view`}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            ) : null}
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>

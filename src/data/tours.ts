@@ -18,6 +18,7 @@ import {
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
+import { getPalmSpringsImage2Url } from "../utils/fh/palmSpringsPilotContent";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -141,15 +142,21 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(tour =>
-  applyTourPricing({
+].map(tour => {
+  const fareHarborItemId = tour.bookingUrl.match(/\/items\/(\d+)/)?.[1];
+  const image2Url = fareHarborItemId
+    ? getPalmSpringsImage2Url(fareHarborItemId)
+    : undefined;
+
+  return applyTourPricing({
     ...tour,
+    ...(image2Url ? { image2: image2Url } : {}),
     destination: {
       ...tour.destination,
       country: tour.destination.country || "United States",
     },
-  })
-);
+  });
+});
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -281,6 +288,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
     lng: tour.geo.lng ?? undefined,
   },
   heroImage: tour.images.hero ?? "/hero.jpg",
+  image2: getPalmSpringsImage2Url(tour.id),
   galleryImages: tour.images.gallery,
   badges: {},
   activitySlugs: ["adventure"],
