@@ -105,6 +105,7 @@ export const buildSchemaGraph = (
         pageName: seo.title,
         pageDescription: seo.description,
         heroImage: effectiveHeroImage,
+        image2: imageGallery[0] ?? null,
         derivedImages: imageGallery,
         place: {
           city: tour.geo.city,

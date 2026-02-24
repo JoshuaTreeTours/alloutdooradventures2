@@ -3,6 +3,7 @@ import {
   getPriceValidUntil,
 } from "../utils/structuredData";
 import { cleanImageUrls, toSchemaImageValue } from "../utils/cleanImageUrls";
+import { selectTourImages } from "../utils/selectTourImages";
 import { resolveUsState } from "../utils/geo/usStates";
 import type { TourRewriteV3_1 } from "../utils/fh/transformToAOAContent";
 
@@ -131,6 +132,7 @@ export function buildTourSchemaGraph(args: {
   pageName: string;
   pageDescription: string;
   heroImage?: string | null;
+  image2?: string | null;
   derivedImages?: string[] | null;
   place?: {
     city?: string | null;
@@ -181,11 +183,11 @@ export function buildTourSchemaGraph(args: {
   };
 }): any {
   const placeId = `${args.url}#place`;
-  const imageList = cleanImageUrls([
+  const imageList = selectTourImages(
     args.heroImage,
-    ...(args.derivedImages ?? []),
-  ]);
-  const webHero = cleanImageUrls([args.heroImage, ...imageList], 1)[0];
+    args.image2 ?? (args.derivedImages ?? [])[0]
+  );
+  const webHero = cleanImageUrls([args.heroImage], 1)[0] || imageList[0];
   const sourceUrl = cleanImageUrls([args.source?.url ?? null], 1)[0];
   const sourceNodeId = sourceUrl ? `${sourceUrl}#source` : null;
 

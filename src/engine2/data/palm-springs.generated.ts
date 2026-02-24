@@ -33,9 +33,7 @@ const palmSpringsTours = [
     },
     "images": {
       "hero": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-      "gallery": [
-        "https://cdn.filestackcontent.com/Pzd5i0RUQxWUsD16YHQv"
-      ]
+      "gallery": []
     },
     "source": {
       "name": "FareHarbor",
