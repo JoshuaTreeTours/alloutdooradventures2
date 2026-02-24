@@ -182,6 +182,10 @@ export default function TourDetail({ params }: TourDetailProps) {
     applyPriceFloor(tour.startingPrice ?? null),
     tour.currency
   );
+  const heroStartingPriceLabel = formatStartingPrice(
+    tour.startingPrice,
+    tour.currency
+  );
   const isPriceFallbackApplied =
     tour.startingPrice === undefined ||
     tour.startingPrice === null ||
@@ -241,9 +245,9 @@ export default function TourDetail({ params }: TourDetailProps) {
                   </span>
                 ) : null}
               </div>
-              {tour.badges.tagline ? (
+              {heroStartingPriceLabel ? (
                 <p className="text-sm text-[#405040] md:text-base">
-                  {tour.badges.tagline}
+                  Prices starting at {heroStartingPriceLabel}
                 </p>
               ) : null}
               {tour.tagPills?.length ? (

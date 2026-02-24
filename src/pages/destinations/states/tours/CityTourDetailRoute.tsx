@@ -52,6 +52,7 @@ import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
 import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
+import { formatStartingPrice } from "../../../../lib/pricing";
 import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourDetailRouteProps = {
@@ -350,6 +351,10 @@ export default function CityTourDetailRoute({
       : item.slug !== tour.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
+  const heroStartingPriceLabel = formatStartingPrice(
+    tour.startingPrice,
+    tour.currency
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -389,11 +394,6 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {hardenedTemplate?.heroTitle ?? tour.title}
             </h1>
-            {hardenedTemplate ? (
-              <p className="mt-4 max-w-3xl text-sm text-white/90 md:text-base">
-                {hardenedTemplate.heroSummary}
-              </p>
-            ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
               {tour.badges.duration ? (
                 <span className="inline-flex items-center rounded-full bg-white/15 px-3 py-1">
@@ -406,9 +406,9 @@ export default function CityTourDetailRoute({
                 </span>
               ) : null}
             </div>
-            {tour.badges.tagline && !hardenedTemplate ? (
+            {heroStartingPriceLabel ? (
               <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-                {tour.badges.tagline}
+                Prices starting at {heroStartingPriceLabel}
               </p>
             ) : null}
           </div>
