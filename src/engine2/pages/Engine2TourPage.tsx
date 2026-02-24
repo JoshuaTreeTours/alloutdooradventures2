@@ -51,6 +51,19 @@ export default function Engine2TourPage({
       tour.content.experienceText.trim().length > 0
         ? tour.content.experienceText
         : `Explore ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`;
+    const heroSummary =
+      typeof tour.content.heroSummary === "string" &&
+      tour.content.heroSummary.trim().length > 0
+        ? tour.content.heroSummary
+        : undefined;
+    const faqs = Array.isArray(tour.content.faqs)
+      ? tour.content.faqs
+          .filter(
+            (item): item is { question: string; answer: string } =>
+              Boolean(item?.question?.trim()) && Boolean(item?.answer?.trim())
+          )
+          .slice(0, 5)
+      : [];
 
     return {
       ...tour,
@@ -61,6 +74,8 @@ export default function Engine2TourPage({
       content: {
         experienceText,
         highlights,
+        heroSummary,
+        faqs,
       },
     };
   }, [tour]);
@@ -73,8 +88,12 @@ export default function Engine2TourPage({
       ? getPalmSpringsPilotContent(tour)
       : null;
   const engine1Content = {
-    whatYoullExperience: [normalizedTour.content.experienceText],
+    whatYoullExperience: normalizedTour.content.experienceText
+      .split(/\n\n+/)
+      .map(paragraph => paragraph.trim())
+      .filter(Boolean),
     highlights: normalizedTour.content.highlights,
+    faqs: normalizedTour.content.faqs ?? [],
   };
   const content = overrideContent?.enabled
     ? overrideContent.content
@@ -179,6 +198,11 @@ export default function Engine2TourPage({
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
+          {normalizedTour.content.heroSummary ? (
+            <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
+              {normalizedTour.content.heroSummary}
+            </p>
+          ) : null}
           {rewriteV3Content?.category?.primary ? (
             <p className="mt-2 text-sm text-white/90">
               {rewriteV3Content.category.primary}
@@ -317,6 +341,27 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
+
+        {!overrideContent?.enabled && content.faqs?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Frequently asked questions
+            </h2>
+            <div className="mt-4 space-y-4">
+              {content.faqs.map(item => (
+                <article
+                  key={item.question}
+                  className="rounded-lg border border-black/10 bg-white p-4"
+                >
+                  <h3 className="text-sm font-semibold text-[#2f4a2f]">
+                    {item.question}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#405040]">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : null}
         {overrideContent?.enabled && overrideContent.content.faqs?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">

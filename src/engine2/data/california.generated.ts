@@ -3577,6 +3577,1299 @@ const californiaEngine2Tours = [
     }
   },
   {
+    "id": "404983",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "1-hour-visitor-pass-404983",
+    "name": "1 Hour Visitor Pass",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "1 Hour Visitor Pass | Joshua Tree, California Outdoor Tour",
+      "description": "1 Hour Visitor Pass in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/1-hour-visitor-pass-404983",
+      "ogImage": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl"
+    },
+    "content": {
+      "experienceText": "1 Hour Visitor Pass with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a 1 hour visitor pass experience with reliable operations and memorable views. It is a polished way to enjoy 1 hour visitor pass moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided 1 hour visitor pass experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/404983/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "404983",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "515026",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "campsite-6-515026",
+    "name": "Campsite #6",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Campsite #6 | Joshua Tree, California Outdoor Tour",
+      "description": "Campsite #6 in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/campsite-6-515026",
+      "ogImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N"
+    },
+    "content": {
+      "experienceText": "Campsite #6 with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a campsite #6 experience with reliable operations and memorable views. It is a polished way to enjoy campsite #6 moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Campsite #6 experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/515026/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "515026",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "520036",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "campsite-7-520036",
+    "name": "Campsite #7",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Campsite #7 | Joshua Tree, California Outdoor Tour",
+      "description": "Campsite #7 in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/campsite-7-520036",
+      "ogImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8"
+    },
+    "content": {
+      "experienceText": "Campsite #7 with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a campsite #7 experience with reliable operations and memorable views. It is a polished way to enjoy campsite #7 moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Campsite #7 experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/520036/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "520036",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "512102",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "custom-groups-512102",
+    "name": "Custom groups",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Custom groups | Joshua Tree, California Outdoor Tour",
+      "description": "Custom groups in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/custom-groups-512102",
+      "ogImage": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D"
+    },
+    "content": {
+      "experienceText": "Custom groups with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a custom groups experience with reliable operations and memorable views. It is a polished way to enjoy custom groups moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Custom groups experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/512102/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "512102",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "568118",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "desert-nature-walk-soundbath-meditation-cacao-ceremony-568118",
+    "name": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony",
+    "provider": {
+      "name": "Joshua Tree Connectivity",
+      "shortName": "joshuatreeconnectivity",
+      "email": "info@joshuatreeconnectivity.com",
+      "phone": "760-974-2011"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.131631,
+      "lng": -116.315824
+    },
+    "seo": {
+      "title": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony | Joshua Tree, California Outdoor Tour",
+      "description": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony in Joshua Tree, California with Joshua Tree Connectivity. Guided experience, clear logistics, and memorable…",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/desert-nature-walk-soundbath-meditation-cacao-ceremony-568118",
+      "ogImage": "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I"
+    },
+    "content": {
+      "experienceText": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony with Joshua Tree Connectivity is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Connectivity keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a desert nature walk + soundbath + meditation + cacao ceremony experience with reliable operations and memorable views. It is a polished way to enjoy desert nature walk + soundbath + meditation + cacao ceremony moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Desert nature walk + soundbath + meditation + cacao ceremony experience in Joshua Tree",
+        "Operated by Joshua Tree Connectivity with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568118/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeconnectivity",
+        "itemId": "568118",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "514094",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "durango-514094",
+    "name": "Durango",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Durango | Joshua Tree, California Outdoor Tour",
+      "description": "Durango in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/durango-514094",
+      "ogImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg"
+    },
+    "content": {
+      "experienceText": "Durango with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a durango experience with reliable operations and memorable views. It is a polished way to enjoy durango moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Durango experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514094/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "514094",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "513079",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "el-dorado-513079",
+    "name": "El Dorado",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "El Dorado | Joshua Tree, California Outdoor Tour",
+      "description": "El Dorado in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/el-dorado-513079",
+      "ogImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI"
+    },
+    "content": {
+      "experienceText": "El Dorado with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a el dorado experience with reliable operations and memorable views. It is a polished way to enjoy el dorado moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided El dorado experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/513079/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "513079",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "365796",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "equine-therapy-365796",
+    "name": "Equine Therapy",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Equine Therapy | Joshua Tree, California Outdoor Tour",
+      "description": "Equine Therapy in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/equine-therapy-365796",
+      "ogImage": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P"
+    },
+    "content": {
+      "experienceText": "Equine Therapy with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a equine therapy experience with reliable operations and memorable views. It is a polished way to enjoy equine therapy moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Equine therapy experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/365796/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "365796",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459591",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "hike-and-climb-459591",
+    "name": "Hike & Climb",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Hike & Climb | Joshua Tree, California Outdoor Tour",
+      "description": "Hike & Climb in Joshua Tree is positioned as a guided hike with details sourced directly from FareHarbor. Listed duration: 4 hours.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/hike-and-climb-459591",
+      "ogImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr"
+    },
+    "content": {
+      "experienceText": "Hike & Climb is a guided hike in Joshua Tree for travelers who want clear logistics and place-based context.\n\nHighlights focus on Guided hike through Joshua Tree desert terrain to selected climbing zones; Hands-on movement coaching and climbing technique instruction; Small-group format with time for questions and route adjustments.\n\nLogistics include Duration: 4 hours; Meeting point: Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252; Pricing signal: from $229.\n\nOperational details include Duration is listed as 4 hours. Meeting details point to Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252. Cancellation terms: Cancellations are accepted with advance notice as listed during checkout..",
+      "highlights": [
+        "Guided hike through Joshua Tree desert terrain to selected climbing zones",
+        "Hands-on movement coaching and climbing technique instruction",
+        "Small-group format with time for questions and route adjustments",
+        "Safety-focused progression from briefing through climbing session",
+        "Scenic boulder fields and granite formations in Joshua Tree"
+      ],
+      "heroSummary": "Hike & Climb in Joshua Tree is positioned as a guided hike with details sourced directly from FareHarbor. Listed duration: 4 hours.",
+      "faqs": [
+        {
+          "question": "How long is the tour?",
+          "answer": "FareHarbor lists a duration of 4 hours."
+        },
+        {
+          "question": "Where does the tour meet?",
+          "answer": "The listed meeting point is Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252."
+        },
+        {
+          "question": "What is the cancellation policy?",
+          "answer": "Cancellations are accepted with advance notice as listed during checkout."
+        }
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459591",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "587300",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "in-the-company-of-horses-and-wine-587300",
+    "name": "In the Company of Horses & Wine",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "In the Company of Horses & Wine | Joshua Tree, California Outdoor Tour",
+      "description": "In the Company of Horses & Wine in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/in-the-company-of-horses-and-wine-587300",
+      "ogImage": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC"
+    },
+    "content": {
+      "experienceText": "In the Company of Horses & Wine with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a in the company of horses & wine experience with reliable operations and memorable views. It is a polished way to enjoy in the company of horses & wine moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided In the company of horses & wine experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "587300",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "444127",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "interactive-equine-visitor-pass-444127",
+    "name": "Interactive Equine Visitor Pass",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Interactive Equine Visitor Pass | Joshua Tree, California Outdoor Tour",
+      "description": "Interactive Equine Visitor Pass in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127",
+      "ogImage": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo"
+    },
+    "content": {
+      "experienceText": "Interactive Equine Visitor Pass with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a interactive equine visitor pass experience with reliable operations and memorable views. It is a polished way to enjoy interactive equine visitor pass moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Interactive equine visitor pass experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/444127/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "444127",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "901301",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "joshua-tree-stargazing-night-walk-901301",
+    "name": "Joshua Tree Stargazing Night Walk",
+    "provider": {
+      "name": "Stargaze Joshua",
+      "shortName": "stargazejoshua",
+      "email": "hello@stargazejoshua.com",
+      "phone": "760-555-0166"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Joshua Tree Stargazing Night Walk | Joshua Tree, California Outdoor Tour",
+      "description": "Joshua Tree Stargazing Night Walk in Joshua Tree, California with Stargaze Joshua. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301",
+      "ogImage": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
+    },
+    "content": {
+      "experienceText": "Joshua Tree Stargazing Night Walk with Stargaze Joshua is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Stargaze Joshua keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a joshua tree stargazing night walk experience with reliable operations and memorable views. It is a polished way to enjoy joshua tree stargazing night walk moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Joshua tree stargazing night walk experience in Joshua Tree",
+        "Operated by Stargaze Joshua with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "stargazejoshua",
+        "itemId": "901301",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "514091",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "la-luna-514091",
+    "name": "La Luna",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "La Luna | Joshua Tree, California Outdoor Tour",
+      "description": "La Luna in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/la-luna-514091",
+      "ogImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA"
+    },
+    "content": {
+      "experienceText": "La Luna with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a la luna experience with reliable operations and memorable views. It is a polished way to enjoy la luna moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided La luna experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514091/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "514091",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "598562",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "morning-trail-ride-598562",
+    "name": "Morning Trail Ride",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Morning Trail Ride | Joshua Tree, California Outdoor Tour",
+      "description": "Morning Trail Ride in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/morning-trail-ride-598562",
+      "ogImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE"
+    },
+    "content": {
+      "experienceText": "Morning Trail Ride with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a morning trail ride experience with reliable operations and memorable views. It is a polished way to enjoy morning trail ride moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Morning trail ride experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/598562/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "598562",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "475064",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "natural-horsemanship-and-basic-riding-lessons-475064",
+    "name": "Natural Horsemanship & Basic Riding Lessons",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Natural Horsemanship & Basic Riding Lessons | Joshua Tree, California Outdoor Tour",
+      "description": "Natural Horsemanship & Basic Riding Lessons in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local…",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/natural-horsemanship-and-basic-riding-lessons-475064",
+      "ogImage": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY"
+    },
+    "content": {
+      "experienceText": "Natural Horsemanship & Basic Riding Lessons with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a natural horsemanship & basic riding lessons experience with reliable operations and memorable views. It is a polished way to enjoy natural horsemanship & basic riding lessons moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Natural horsemanship & basic riding lessons experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475064/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "475064",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "528426",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "photography-hike-528426",
+    "name": "Photography Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Photography Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Photography Hike in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/photography-hike-528426",
+      "ogImage": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa"
+    },
+    "content": {
+      "experienceText": "Photography Hike with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a photography hike experience with reliable operations and memorable views. It is a polished way to enjoy photography hike moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Photography hike experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/528426/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "528426",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "476256",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "photoshoot-476256",
+    "name": "Photoshoot",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Photoshoot | Joshua Tree, California Outdoor Tour",
+      "description": "Photoshoot in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/photoshoot-476256",
+      "ogImage": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3"
+    },
+    "content": {
+      "experienceText": "Photoshoot with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a photoshoot experience with reliable operations and memorable views. It is a polished way to enjoy photoshoot moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Photoshoot experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/476256/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "476256",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "475058",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "pony-ride-475058",
+    "name": "Pony Ride",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Pony Ride | Joshua Tree, California Outdoor Tour",
+      "description": "Pony Ride in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/pony-ride-475058",
+      "ogImage": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29"
+    },
+    "content": {
+      "experienceText": "Pony Ride with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a pony ride experience with reliable operations and memorable views. It is a polished way to enjoy pony ride moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Pony ride experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475058/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "475058",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459589",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-morning-hike-459589",
+    "name": "Private Morning Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Morning Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Private Morning Hike in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-morning-hike-459589",
+      "ogImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA"
+    },
+    "content": {
+      "experienceText": "Private Morning Hike with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a private morning hike experience with reliable operations and memorable views. It is a polished way to enjoy private morning hike moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Private morning hike experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459589",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459584",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-stargazing-with-an-astronomer-459584",
+    "name": "Private Stargazing with an Astronomer",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Stargazing with an Astronomer | Joshua Tree, California Outdoor Tour",
+      "description": "Private Stargazing with an Astronomer in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584",
+      "ogImage": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8"
+    },
+    "content": {
+      "experienceText": "Private Stargazing with an Astronomer with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a private stargazing with an astronomer experience with reliable operations and memorable views. It is a polished way to enjoy private stargazing with an astronomer moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Private stargazing with an astronomer experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459584/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459584",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459590",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-sunset-hike-459590",
+    "name": "Private Sunset Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Sunset Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Private Sunset Hike in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-sunset-hike-459590",
+      "ogImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu"
+    },
+    "content": {
+      "experienceText": "Private Sunset Hike with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a private sunset hike experience with reliable operations and memorable views. It is a polished way to enjoy private sunset hike moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Private sunset hike experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459590/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459590",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "402194",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "scenic-joshua-tree-tour-402194",
+    "name": "H1 Adventure to Joshua Tree",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "H1 Adventure to Joshua Tree | Joshua Tree, California Outdoor Tour",
+      "description": "Joshua Tree Open Air Hummer tour",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/scenic-joshua-tree-tour-402194",
+      "ogImage": "https://adventurehummer.com/wp-content/smush-webp/2025/06/H1-Open-Air-Hummer-in-Joshua-Tree-1.jpg.webp"
+    },
+    "content": {
+      "experienceText": "H1 Adventure to Joshua Tree with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a h1 adventure to joshua tree experience with reliable operations and memorable views. It is a polished way to enjoy h1 adventure to joshua tree moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided H1 adventure to joshua tree experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://adventurehummer.com/wp-content/smush-webp/2025/06/H1-Open-Air-Hummer-in-Joshua-Tree-1.jpg.webp",
+      "gallery": [
+        "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij"
+      ]
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/402194/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "402194",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459544",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sightseeing-tour-459544",
+    "name": "Sightseeing Tour",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sightseeing Tour | Joshua Tree, California Outdoor Tour",
+      "description": "Sightseeing Tour in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sightseeing-tour-459544",
+      "ogImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS"
+    },
+    "content": {
+      "experienceText": "Sightseeing Tour with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a sightseeing tour experience with reliable operations and memorable views. It is a polished way to enjoy sightseeing tour moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Sightseeing tour experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459544/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459544",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "568106",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "soundbath-under-the-stars-joshua-tree-568106",
+    "name": "Soundbath Under The Stars-Joshua Tree",
+    "provider": {
+      "name": "Joshua Tree Connectivity",
+      "shortName": "joshuatreeconnectivity",
+      "email": "info@joshuatreeconnectivity.com",
+      "phone": "760-974-2011"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.134728,
+      "lng": -116.313066
+    },
+    "seo": {
+      "title": "Soundbath Under The Stars-Joshua Tree | Joshua Tree, California Outdoor Tour",
+      "description": "Soundbath Under The Stars-Joshua Tree in Joshua Tree, California with Joshua Tree Connectivity. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/soundbath-under-the-stars-joshua-tree-568106",
+      "ogImage": "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo"
+    },
+    "content": {
+      "experienceText": "Soundbath Under The Stars-Joshua Tree with Joshua Tree Connectivity is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Connectivity keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a soundbath under the stars experience with reliable operations and memorable views. It is a polished way to enjoy joshua tree moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Soundbath under the stars experience in Joshua Tree",
+        "Operated by Joshua Tree Connectivity with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568106/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeconnectivity",
+        "itemId": "568106",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459554",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sunset-hike-dinner-and-night-sky-presentation-459554",
+    "name": "Sunset Hike, Dinner, & Night Sky Presentation",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sunset Hike, Dinner, & Night Sky Presentation | Joshua Tree, California Outdoor Tour",
+      "description": "Sunset Hike, Dinner, & Night Sky Presentation in Joshua Tree, California with Joshua Tree Excursions. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sunset-hike-dinner-and-night-sky-presentation-459554",
+      "ogImage": "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C"
+    },
+    "content": {
+      "experienceText": "Sunset Hike, Dinner, & Night Sky Presentation with Joshua Tree Excursions is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Joshua Tree Excursions keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a sunset hike experience with reliable operations and memorable views. It is a polished way to enjoy & night sky presentation moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Sunset hike experience in Joshua Tree",
+        "Operated by Joshua Tree Excursions with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459554/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459554",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "646142",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sunset-sound-bath-with-wild-horses-646142",
+    "name": "Sunset Sound Bath with Wild Horses",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sunset Sound Bath with Wild Horses | Joshua Tree, California Outdoor Tour",
+      "description": "Sunset Sound Bath with Wild Horses in Joshua Tree, California with Cascade Trails Mustang Sanctuary. Guided experience, clear logistics, and memorable local stops.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142",
+      "ogImage": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh"
+    },
+    "content": {
+      "experienceText": "Sunset Sound Bath with Wild Horses with Cascade Trails Mustang Sanctuary is designed for travelers who want more than a quick photo stop in Joshua Tree. This experience combines local storytelling, practical route planning, and time to explore the landscapes that define Joshua Tree, California. Expect a relaxed but well-paced outing where your guide helps you understand what makes each stop unique, from geology and neighborhood history to small details you might miss on your own. The pace works well for first-time visitors and return travelers who want a dependable, professionally operated day in the desert. Throughout the tour, your guide can share tips on timing, weather, and local recommendations so the rest of your trip in Joshua Tree is even easier to plan. Cascade Trails Mustang Sanctuary keeps the logistics simple, so you can focus on the experience itself and enjoy every segment with confidence. If you are comparing options, this is a strong fit when you want a sunset sound bath with wild horses experience with reliable operations and memorable views. It is a polished way to enjoy sunset sound bath with wild horses moments while making the most of your time in Joshua Tree.",
+      "highlights": [
+        "Guided Sunset sound bath with wild horses experience in Joshua Tree",
+        "Operated by Cascade Trails Mustang Sanctuary with straightforward booking",
+        "Great fit for first-time and repeat visitors to California"
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/646142/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "646142",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
     "id": "485416",
     "sourceCitySlug": "julian",
     "slug": "enrichment-tour-485416",
@@ -15514,6 +16807,17 @@ export const californiaEngine2CitiesIndex = [
       "https://cdn.filestackcontent.com/gMUVFDxZT1yMsWZNb8sg",
       "https://cdn.filestackcontent.com/V26IHeHFRGe7gOczLHbw",
       "https://cdn.filestackcontent.com/9Sh512PXTqitedJNZDWF"
+    ]
+  },
+  {
+    "cityName": "Joshua Tree",
+    "citySlug": "joshua-tree",
+    "tourCount": 26,
+    "sampleImages": [
+      "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+      "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+      "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+      "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D"
     ]
   },
   {
