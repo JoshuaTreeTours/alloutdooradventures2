@@ -7,7 +7,8 @@ const cleanPathToken = (token: string) =>
 const toFilestackUrl = (candidateUrl: string): string | null => {
   try {
     const parsed = new URL(candidateUrl);
-    if (parsed.origin !== "https://cdn.filestackcontent.com") {
+    const isHttp = parsed.protocol === "http:" || parsed.protocol === "https:";
+    if (!isHttp || parsed.hostname !== "cdn.filestackcontent.com") {
       return null;
     }
 
@@ -29,22 +30,19 @@ const toFilestackUrl = (candidateUrl: string): string | null => {
 
 export function extractFilestackImagesFromHtml(
   html: string,
-  max = 6
+  max = 12
 ): string[] {
-  const re = /https:\/\/cdn\.filestackcontent\.com\/[^")'\s<]+/g;
+  const re = /https?:\/\/cdn\.filestackcontent\.com\/[^")'\s<]+/g;
   const found = html.match(re) ?? [];
 
   const unique: string[] = [];
   for (const raw of found) {
     const normalized = toFilestackUrl(cleanPathToken(raw));
-    if (!normalized) {
+    if (!normalized || unique.includes(normalized)) {
       continue;
     }
 
-    if (!unique.includes(normalized)) {
-      unique.push(normalized);
-    }
-
+    unique.push(normalized);
     if (unique.length >= max) {
       break;
     }

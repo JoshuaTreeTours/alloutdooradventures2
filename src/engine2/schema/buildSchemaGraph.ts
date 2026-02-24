@@ -20,6 +20,7 @@ import {
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
+import { selectTourImages } from "../../utils/images/selectTourImages";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -71,9 +72,11 @@ export const buildSchemaGraph = (
   const placeId = `${seo.canonical}#place`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
-  const productImages = imageGallery.length
-    ? [effectiveHeroImage, ...imageGallery]
-    : [effectiveHeroImage];
+  const selectedImages = selectTourImages({
+    derivedImages: [effectiveHeroImage, ...imageGallery],
+    fallbackHeroUrl: effectiveHeroImage,
+    galleryMax: 2,
+  });
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
   );
@@ -151,7 +154,7 @@ export const buildSchemaGraph = (
           pilotContent?.whatYoullExperience ??
           seo.description)
         : seo.description,
-      image: productImages,
+      image: selectedImages.allImagesForSchema,
       category: rewriteV3Content?.category?.primary,
       brand: { "@id": SITE_BRAND_ID },
       offers: offer,
