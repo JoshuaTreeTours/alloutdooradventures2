@@ -16,6 +16,7 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { ensureHttpsUrl } from "../../utils/wiki/wikiImageUrl";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -456,13 +457,25 @@ export default function Engine2TourPage({
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
               >
                 <div className="aspect-[4/3] w-full">
-                  <Image
-                    src={image}
-                    fallbackSrc={image}
-                    alt={`${tour.name} gallery`}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+                  {image === secondaryImage &&
+                  normalizedTour.image2Attribution?.provider === "wikimedia" ? (
+                    <img
+                      src={ensureHttpsUrl(image)}
+                      alt={`${tour.name} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <Image
+                      src={image}
+                      fallbackSrc={image}
+                      alt={`${tour.name} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
                 {image === secondaryImage && normalizedTour.image2Attribution ? (
                   <p className="px-4 py-3 text-xs text-[#405040]">

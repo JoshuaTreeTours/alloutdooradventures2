@@ -45,6 +45,7 @@ import {
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import { ensureHttpsUrl } from "../../../../utils/wiki/wikiImageUrl";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -394,13 +395,25 @@ export default function CityTourDetailRoute({
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
               >
                 <div className="aspect-[4/3] w-full">
-                  <Image
-                    src={image}
-                    fallbackSrc={image}
-                    alt={`${tour.title} gallery`}
-                    className="h-full w-full object-cover"
-                    loading="lazy"
-                  />
+                  {image === secondaryImage &&
+                  tour.image2Attribution?.provider === "wikimedia" ? (
+                    <img
+                      src={ensureHttpsUrl(image)}
+                      alt={`${tour.title} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                    />
+                  ) : (
+                    <Image
+                      src={image}
+                      fallbackSrc={image}
+                      alt={`${tour.title} gallery`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
                 </div>
                 {image === secondaryImage && tour.image2Attribution ? (
                   <p className="px-4 py-3 text-xs text-[#405040]">
