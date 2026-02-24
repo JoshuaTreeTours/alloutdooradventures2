@@ -112,6 +112,11 @@ export default function Engine2TourPage({
   const rewriteV3Content: TourRewriteV3 | undefined = overrideContent?.enabled
     ? overrideContent.content
     : undefined;
+  const secondaryImage =
+    rewriteV3Content?.image2 &&
+    rewriteV3Content.image2 !== normalizedTour.images.hero
+      ? rewriteV3Content.image2
+      : undefined;
 
   const formattedMeetingPoint = rewriteV3Content?.meetingPoint
     ? [
@@ -222,6 +227,18 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
+        {secondaryImage ? (
+          <div className="mt-4 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <div className="aspect-[16/9] w-full">
+              <img
+                src={secondaryImage}
+                alt={`${tour.name} additional view`}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        ) : null}
         {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
             <ul className="space-y-1">

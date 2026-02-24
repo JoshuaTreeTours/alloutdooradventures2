@@ -69,6 +69,11 @@ export const buildSchemaGraph = (
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
+  const overrideImage2 =
+    overrideEnabled && rewriteV3Content?.image2
+      ? rewriteV3Content.image2
+      : undefined;
+  const derivedImages = overrideImage2 ? [overrideImage2] : imageGallery;
   const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
@@ -96,10 +101,9 @@ export const buildSchemaGraph = (
           null,
         departureAddress: rewriteV3Content?.meetingPoint?.addressLine1 ?? null,
         duration: rewriteV3Content?.durationLabel ?? tourDuration ?? null,
-        highlights:
-          rewriteV3Content?.highlights?.length
-            ? rewriteV3Content.highlights
-            : tour.content.highlights,
+        highlights: rewriteV3Content?.highlights?.length
+          ? rewriteV3Content.highlights
+          : tour.content.highlights,
         experienceText:
           rewriteV3Content?.whatYoullExperience?.join(" ") ||
           tour.content.experienceText,
@@ -129,7 +133,7 @@ export const buildSchemaGraph = (
         pageName: seo.title,
         pageDescription: seo.description,
         heroImage: effectiveHeroImage,
-        derivedImages: imageGallery,
+        derivedImages,
         place: {
           city: tour.geo.city,
           region: tour.geo.region,

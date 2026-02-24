@@ -32,6 +32,8 @@ export type TourRewriteV3_1 = {
   highlights: string[];
   faqs?: Array<{ question: string; answer: string }>;
   schemaDescription: string;
+  heroImage?: string;
+  image2?: string;
 };
 
 export type TourRewriteV3 = TourRewriteV3_1;
@@ -210,7 +212,8 @@ const toDurationISO = (durationMinutes?: number): string | undefined => {
 };
 
 export const transformToAOAContent = (
-  parsedTour: ParsedTour
+  parsedTour: ParsedTour,
+  heroImageFallback?: string
 ): TourRewriteV3_1 => {
   const duration = parsedTour.duration || DEFAULT_DURATION;
   const meetingPoint = parsedTour.meetingPoint.rawText || DEFAULT_MEETING_POINT;
@@ -261,6 +264,8 @@ export const transformToAOAContent = (
     typeof priceLow === "number" &&
     typeof priceHigh === "number" &&
     priceLow !== priceHigh;
+  const heroImage = heroImageFallback?.trim() || parsedTour.galleryImages[0];
+  const image2 = parsedTour.galleryImages.find(image => image !== heroImage);
 
   return {
     heroPriceText: priceLabel,
@@ -282,5 +287,7 @@ export const transformToAOAContent = (
     highlights: uniqueHighlights,
     faqs: mergedFaqs,
     schemaDescription,
+    heroImage,
+    image2,
   };
 };

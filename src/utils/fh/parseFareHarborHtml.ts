@@ -24,6 +24,78 @@ export type ParsedTour = {
   inclusions: string[];
   exclusions: string[];
   faq: { q: string; a: string }[];
+  galleryImages: string[];
+};
+
+const parseSrcsetFirstUrl = (value: string) =>
+  value
+    .split(",")
+    .map(candidate => candidate.trim().split(/\s+/)[0]?.trim())
+    .find(Boolean);
+
+const normalizeImageUrl = (value?: string) => {
+  if (!value) {
+    return undefined;
+  }
+
+  const trimmed = value.trim();
+  if (!/^https:\/\//i.test(trimmed)) {
+    return undefined;
+  }
+
+  return trimmed;
+};
+
+const extractImageUrlsFromTag = (tagHtml: string) => {
+  const urls: string[] = [];
+  const attrPatterns: Array<{
+    matcher: RegExp;
+    transform?: (value: string) => string | undefined;
+  }> = [
+    {
+      matcher: /\ssrcset\s*=\s*["']([^"']+)["']/i,
+      transform: parseSrcsetFirstUrl,
+    },
+    { matcher: /\ssrc\s*=\s*["']([^"']+)["']/i },
+    { matcher: /\sdata-src\s*=\s*["']([^"']+)["']/i },
+    { matcher: /\sdata-lazy\s*=\s*["']([^"']+)["']/i },
+  ];
+
+  attrPatterns.forEach(({ matcher, transform }) => {
+    const rawValue = tagHtml.match(matcher)?.[1];
+    const transformed = transform ? transform(rawValue ?? "") : rawValue;
+    const normalized = normalizeImageUrl(transformed);
+    if (normalized) {
+      urls.push(normalized);
+    }
+  });
+
+  return urls;
+};
+
+const extractGalleryImages = (html: string) => {
+  const ordered: string[] = [];
+  const seen = new Set<string>();
+
+  const sliderBlocks = Array.from(
+    html.matchAll(
+      /<(section|div)[^>]*(?:gallery|slider|carousel|slideshow|fh-image|fh-photo)[^>]*>[\s\S]*?<\/\1>/gi
+    )
+  ).map(match => match[0]);
+
+  const extractionSources = sliderBlocks.length ? sliderBlocks : [html];
+  extractionSources.forEach(source => {
+    Array.from(source.matchAll(/<(?:img|source)[^>]*>/gi)).forEach(match => {
+      extractImageUrlsFromTag(match[0]).forEach(url => {
+        if (!seen.has(url)) {
+          seen.add(url);
+          ordered.push(url);
+        }
+      });
+    });
+  });
+
+  return ordered;
 };
 
 const stripTags = (value: string) =>
@@ -58,7 +130,11 @@ const parseDollarAmount = (value: string) => {
   return Number.isFinite(parsed) ? parsed : undefined;
 };
 
-const detectCategory = (value: { title?: string; slug?: string; activityType?: string }) => {
+const detectCategory = (value: {
+  title?: string;
+  slug?: string;
+  activityType?: string;
+}) => {
   const haystack = [value.title, value.slug, value.activityType]
     .filter(Boolean)
     .join(" ")
@@ -186,5 +262,6 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
     inclusions: getListItems(getSection(html, "inclusions")),
     exclusions: getListItems(getSection(html, "exclusions")),
     faq,
+    galleryImages: extractGalleryImages(html),
   };
 };

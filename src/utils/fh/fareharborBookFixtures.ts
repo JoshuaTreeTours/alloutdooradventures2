@@ -23,6 +23,12 @@ const HTML_34849 = `
       <li>Cahuilla village history and land-use context at select stops</li>
     </ul>
   </section>
+  <section data-fh="gallery" class="fh-slider gallery">
+    <img src="https://cdn.filestackcontent.com/H4abOlNUQlmRczadXw7c" alt="Tour hero" />
+    <img data-src="https://cdn.filestackcontent.com/9n2dX1uRT0eI7x9AqkLm" alt="Tour image 2" />
+    <img data-lazy="https://cdn.filestackcontent.com/9n2dX1uRT0eI7x9AqkLm" alt="Tour image 2 duplicate" />
+    <source srcset="https://cdn.filestackcontent.com/7aaYQ2KQ7uXy4kVtM9pN 800w, https://cdn.filestackcontent.com/7aaYQ2KQ7uXy4kVtM9pN 1600w" />
+  </section>
   <section data-fh="details">
     <p><strong>Duration:</strong> 3 hours</p>
     <p><strong>Meeting Point:</strong> Metate Ranch — 38635 Monroe St, Indio, CA 92203</p>

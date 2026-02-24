@@ -180,7 +180,7 @@ export const getPalmSpringsOverrideContent = (
       enabled: true,
       tourId: 34849,
       content: {
-        ...transformToAOAContent(parsedTour),
+        ...transformToAOAContent(parsedTour, tour.images.hero ?? undefined),
         canonicalPath: tour.seo.canonicalPath,
       },
     };

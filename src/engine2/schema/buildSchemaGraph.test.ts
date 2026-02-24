@@ -248,8 +248,6 @@ describe("buildSchemaGraph", () => {
     });
   });
 
-
-
   it("uses 3-5 list-item itinerary steps for tour 34849 rollout", () => {
     const graph = buildSchemaGraph(
       { ...baseTour, id: "34849", geo: { ...baseTour.geo, city: "Indio" } },
@@ -331,10 +329,13 @@ describe("buildSchemaGraph", () => {
         whatYoullExperience: ["x"],
         highlights: ["y"],
         schemaDescription: "desc",
+        heroImage: "https://cdn.filestackcontent.com/H4abOlNUQlmRczadXw7c",
+        image2: "https://cdn.filestackcontent.com/9n2dX1uRT0eI7x9AqkLm",
       }
     );
     const product = graph.find(node => node["@type"] === "Product") as {
       category?: string;
+      image?: string[];
       offers: {
         "@type": string;
         lowPrice?: string;
@@ -344,6 +345,7 @@ describe("buildSchemaGraph", () => {
     };
     const trip = graph.find(node => node["@type"] === "TouristTrip") as {
       duration?: string;
+      image?: string[];
       departureLocation?: { name: string; address: { streetAddress: string } };
       offers: { "@type": string; lowPrice?: string; highPrice?: string };
     };
@@ -360,6 +362,14 @@ describe("buildSchemaGraph", () => {
     expect(product.offers.priceCurrency).toBe("USD");
     expect(trip.offers["@type"]).toBe("AggregateOffer");
     expect(trip.duration).toBe("PT3H");
+    expect(product.image).toEqual([
+      baseTour.images.hero,
+      "https://cdn.filestackcontent.com/9n2dX1uRT0eI7x9AqkLm",
+    ]);
+    expect(trip.image).toEqual([
+      baseTour.images.hero,
+      "https://cdn.filestackcontent.com/9n2dX1uRT0eI7x9AqkLm",
+    ]);
 
     const breadcrumbUrls = breadcrumb.itemListElement.map(item => item.item);
     expect(breadcrumbUrls.join(" ")).toContain(
