@@ -206,7 +206,7 @@ describe("buildSchemaGraph", () => {
       expect(org).toBeTruthy();
       expect(brand).toBeTruthy();
       expect(place.address.addressCountry).toBeTypeOf("string");
-      expect(product.offers.priceValidUntil).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(product.offers.priceValidUntil).toBeUndefined();
     }
   });
 

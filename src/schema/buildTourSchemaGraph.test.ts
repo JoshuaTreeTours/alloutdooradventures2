@@ -131,6 +131,58 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
+  it("normalizes US region names to USPS 2-letter codes", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      place: {
+        ...baseArgs.place,
+        region: "Hawaii",
+        countryCode: "US",
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const place = graph.find(node => node["@type"] === "Place") as {
+      address: { addressRegion: string };
+    };
+
+    expect(place.address.addressRegion).toBe("HI");
+
+    const californiaGraph = buildTourSchemaGraph({
+      ...baseArgs,
+      place: {
+        ...baseArgs.place,
+        region: "California",
+        countryCode: "US",
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const californiaPlace = californiaGraph.find(
+      node => node["@type"] === "Place"
+    ) as {
+      address: { addressRegion: string };
+    };
+
+    expect(californiaPlace.address.addressRegion).toBe("CA");
+  });
+
+  it("keeps non-US region unchanged and omits priceValidUntil", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      place: {
+        ...baseArgs.place,
+        region: "Queensland",
+        countryCode: "AU",
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const place = graph.find(node => node["@type"] === "Place") as {
+      address: { addressRegion: string };
+    };
+    const product = graph.find(node => node["@type"] === "Product") as {
+      offers: { priceValidUntil?: string };
+    };
+
+    expect(place.address.addressRegion).toBe("Queensland");
+    expect(product.offers.priceValidUntil).toBeUndefined();
+  });
+
   it("derives PT3H from duration minutes", () => {
     expect(
       resolveTourDurationISO({
