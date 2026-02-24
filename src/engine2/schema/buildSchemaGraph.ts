@@ -23,6 +23,7 @@ import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 import { buildTourItinerary } from "../../utils/buildTourItinerary";
+import { isJoshuaTreeTour } from "../../utils/tours/cityOverrides/joshuaTreeTourTemplate";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -38,22 +39,27 @@ const normalizeStringArray = (value: unknown) => {
 };
 
 const getDestinationMeta = (tour: Engine2Tour) => {
+  if (isJoshuaTreeTour(tour)) {
+    return { countryCode: "US", region: "CA" };
+  }
+
   if (tour.sourceCountrySlug === "canada") {
-    return { countryCode: "CA" };
+    return { countryCode: "CA", region: tour.geo.region };
   }
 
   if (tour.sourceCountrySlug === "mexico") {
-    return { countryCode: "MX" };
+    return { countryCode: "MX", region: tour.geo.region };
   }
 
   if (tour.sourceCountrySlug && tour.sourceCountrySlug !== "united-states") {
     return {
       countryCode:
         (tour.geo.country || "").toLowerCase() === "netherlands" ? "NL" : "US",
+      region: tour.geo.region,
     };
   }
 
-  return { countryCode: "US" };
+  return { countryCode: "US", region: tour.geo.region };
 };
 
 export const buildSchemaGraph = (
@@ -132,7 +138,7 @@ export const buildSchemaGraph = (
         derivedImages: imageGallery,
         place: {
           city: tour.geo.city,
-          region: tour.geo.region,
+          region: destinationMeta.region,
           countryCode: destinationMeta.countryCode,
           lat: tour.geo.lat,
           lng: tour.geo.lng,
