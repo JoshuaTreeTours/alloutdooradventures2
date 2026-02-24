@@ -308,6 +308,7 @@ export function buildTourSchemaGraph(args: {
       "@type": "PostalAddress",
       ...(args.place?.city ? { addressLocality: args.place.city } : {}),
       ...(regionValue ? { addressRegion: regionValue } : {}),
+      ...(args.place?.region ? { addressRegion: args.place.region } : {}),
       ...(args.place?.countryCode
         ? { addressCountry: args.place.countryCode }
         : {}),
@@ -355,6 +356,7 @@ export function buildTourSchemaGraph(args: {
             ? { price: Number(args.offers.price).toFixed(2) }
             : {}),
           priceCurrency: args.offers.priceCurrency,
+          priceValidUntil: getPriceValidUntil(),
         };
 
   return {
