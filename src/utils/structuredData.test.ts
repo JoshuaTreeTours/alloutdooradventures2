@@ -143,6 +143,21 @@ describe("tour product/trip schema safety", () => {
     });
   });
 
+
+  it("emits a single cleaned hero image and omits the default placeholder", () => {
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl:
+        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      images: [
+        "https://example.com/tour-main.jpg",
+        "https://www.alloutdooradventures.com/default-tour.jpg",
+      ],
+    });
+
+    expect(product.image).toBe("https://example.com/tour-main.jpg");
+  });
+
   it("adds safe-v1 Product/TouristTrip links and areaServed when feature flag is enabled", () => {
     process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 = "true";
 
@@ -228,7 +243,7 @@ describe("tour product/trip schema safety", () => {
     });
   });
 
-  it("emits Place/PostalAddress location with locality and country on tours", () => {
+  it("emits Place/PostalAddress with US region code and containing state on tours", () => {
     const trip = buildTourTripStructuredData({
       tour: baseTour,
       detailUrl:
@@ -241,8 +256,12 @@ describe("tour product/trip schema safety", () => {
       address: {
         "@type": "PostalAddress",
         addressLocality: "San Diego",
-        addressRegion: "California",
+        addressRegion: "CA",
         addressCountry: "US",
+      },
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: "California",
       },
     });
   });

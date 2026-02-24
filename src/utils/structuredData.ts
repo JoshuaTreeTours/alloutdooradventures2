@@ -1,12 +1,13 @@
 import type { Tour } from "../data/tours.types";
 import {
   DEFAULT_CURRENCY,
-  DEFAULT_IMAGE_URL,
 } from "../constants/merchantDefaults";
 import { applyPriceFloor } from "./merchantPricing";
 import { filterHeroImages } from "./hero";
+import { cleanImageUrls, toSchemaImageValue } from "./cleanImageUrls";
 import { buildCanonicalUrl, buildImageUrl, SITE_URL } from "./seo";
 import { SITE_BRAND_NAME } from "./site";
+import { resolveUsState } from "./geo/usStates";
 import {
   COUNTRY_NAME_TO_ISO2,
   COUNTRY_SLUG_TO_ISO2,
@@ -335,9 +336,12 @@ const resolveISO2CountryCode = ({
 
 const buildTourLocationStructuredData = (tour: Tour, detailUrl: string) => {
   const locality = tour.destination.city;
-  const region = tour.destination.state;
   const countryCode = resolveISO2CountryCode({ tour, detailUrl });
-  const placeName = region ? `${locality}, ${region}` : locality;
+  const region = tour.destination.state;
+  const normalizedUsState =
+    countryCode === "US" ? resolveUsState(region) : null;
+  const placeRegion = normalizedUsState?.name ?? region;
+  const placeName = placeRegion ? `${locality}, ${placeRegion}` : locality;
 
   return {
     "@type": "Place",
@@ -345,9 +349,19 @@ const buildTourLocationStructuredData = (tour: Tour, detailUrl: string) => {
     address: {
       "@type": "PostalAddress",
       addressLocality: locality,
-      ...(region ? { addressRegion: region } : {}),
+      ...(placeRegion
+        ? { addressRegion: normalizedUsState?.code ?? placeRegion }
+        : {}),
       addressCountry: countryCode,
     },
+    ...(normalizedUsState
+      ? {
+          containedInPlace: {
+            "@type": "AdministrativeArea",
+            name: normalizedUsState.name,
+          },
+        }
+      : {}),
   };
 };
 
@@ -445,7 +459,8 @@ export const buildWebPageStructuredData = ({
   image?: string;
   mainEntityId?: string;
 }) => {
-  const imageId = image ? `${url}#primaryimage` : undefined;
+  const webPageImage = image ? cleanImageUrls([image], 1)[0] : undefined;
+  const imageId = webPageImage ? `${url}#primaryimage` : undefined;
   return {
     "@type": "WebPage",
     "@id": `${url}#webpage`,
@@ -455,10 +470,10 @@ export const buildWebPageStructuredData = ({
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
     ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
-    ...(image
+    ...(webPageImage
       ? {
-          primaryImageOfPage: buildImageObject(image, imageId),
-          image,
+          primaryImageOfPage: buildImageObject(webPageImage, imageId),
+          image: webPageImage,
         }
       : {}),
   };
@@ -509,13 +524,10 @@ export const buildTourProductStructuredData = ({
   ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [
-      tour.heroImage,
-      ...(tour.galleryImages ?? []),
-      DEFAULT_IMAGE_URL,
-    ],
+    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
     "product"
   );
+  const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
@@ -554,7 +566,9 @@ export const buildTourProductStructuredData = ({
     url: canonicalProductUrl,
     name: tour.title,
     description,
-    ...(resolvedImages.length ? { image: resolvedImages } : {}),
+    ...(toSchemaImageValue(schemaImages)
+      ? { image: toSchemaImageValue(schemaImages) }
+      : {}),
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
     provider: { "@id": SITE_BRAND_ID },
@@ -595,13 +609,10 @@ export const buildTourTripStructuredData = ({
   ratingsVisible?: boolean;
 }) => {
   const resolvedImages = filterHeroImages(
-    images ?? [
-      tour.heroImage,
-      ...(tour.galleryImages ?? []),
-      DEFAULT_IMAGE_URL,
-    ],
+    images ?? [tour.heroImage, ...(tour.galleryImages ?? [])],
     "product"
   );
+  const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
@@ -630,7 +641,9 @@ export const buildTourTripStructuredData = ({
     "@id": `${canonicalProductUrl}#touristtrip`,
     name: tour.title,
     description,
-    ...(resolvedImages.length ? { image: resolvedImages } : {}),
+    ...(toSchemaImageValue(schemaImages)
+      ? { image: toSchemaImageValue(schemaImages) }
+      : {}),
     provider: { "@id": SITE_BRAND_ID },
     ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
     ...(safeSchemaEnabled

@@ -2,130 +2,20 @@ import {
   buildBreadcrumbList,
   getPriceValidUntil,
 } from "../utils/structuredData";
+import { cleanImageUrls, toSchemaImageValue } from "../utils/cleanImageUrls";
+import { resolveUsState } from "../utils/geo/usStates";
 import type { TourRewriteV3_1 } from "../utils/fh/transformToAOAContent";
 
-const DEFAULT_TOUR_IMAGE =
-  "https://www.alloutdooradventures.com/default-tour.jpg";
 export const ENABLE_TOUR_SCHEMA_V1 = true;
 
-type SchemaOffer = Record<string, unknown>;
 
-const US_STATE_MAP: Record<string, string> = {
-  Alabama: "AL",
-  Alaska: "AK",
-  Arizona: "AZ",
-  Arkansas: "AR",
-  California: "CA",
-  Colorado: "CO",
-  Connecticut: "CT",
-  Delaware: "DE",
-  Florida: "FL",
-  Georgia: "GA",
-  Hawaii: "HI",
-  Idaho: "ID",
-  Illinois: "IL",
-  Indiana: "IN",
-  Iowa: "IA",
-  Kansas: "KS",
-  Kentucky: "KY",
-  Louisiana: "LA",
-  Maine: "ME",
-  Maryland: "MD",
-  Massachusetts: "MA",
-  Michigan: "MI",
-  Minnesota: "MN",
-  Mississippi: "MS",
-  Missouri: "MO",
-  Montana: "MT",
-  Nebraska: "NE",
-  Nevada: "NV",
-  NewHampshire: "NH",
-  NewJersey: "NJ",
-  NewMexico: "NM",
-  NewYork: "NY",
-  NorthCarolina: "NC",
-  NorthDakota: "ND",
-  Ohio: "OH",
-  Oklahoma: "OK",
-  Oregon: "OR",
-  Pennsylvania: "PA",
-  RhodeIsland: "RI",
-  SouthCarolina: "SC",
-  SouthDakota: "SD",
-  Tennessee: "TN",
-  Texas: "TX",
-  Utah: "UT",
-  Vermont: "VT",
-  Virginia: "VA",
-  Washington: "WA",
-  WestVirginia: "WV",
-  Wisconsin: "WI",
-  Wyoming: "WY",
-};
+type SchemaOffer = Record<string, unknown>;
 
 const toSlugLabel = (value: string) =>
   value
     .split("-")
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
-
-const isHttpUrl = (value: string) => /^https?:\/\//i.test(value);
-
-const sanitizeImageCandidates = (values: Array<string | null | undefined>) => {
-  const seen = new Set<string>();
-  const sanitized: string[] = [];
-
-  for (const value of values) {
-    if (typeof value !== "string") {
-      continue;
-    }
-
-    const trimmed = value.trim();
-    if (!trimmed || !isHttpUrl(trimmed)) {
-      continue;
-    }
-
-    if (/^https?:\/\/cdn\.filestackcontent\.com\/resize\/?$/i.test(trimmed)) {
-      continue;
-    }
-
-    if (seen.has(trimmed)) {
-      continue;
-    }
-
-    seen.add(trimmed);
-    sanitized.push(trimmed);
-
-    if (sanitized.length >= 10) {
-      break;
-    }
-  }
-
-  return sanitized;
-};
-
-const buildImageArray = ({
-  heroImage,
-  derivedImages,
-}: {
-  heroImage?: string | null;
-  derivedImages?: string[] | null;
-}) => {
-  const sourceCandidates = derivedImages?.length
-    ? [heroImage, ...derivedImages]
-    : [heroImage];
-  const images = sanitizeImageCandidates(sourceCandidates);
-
-  if (!images.length) {
-    images.push(DEFAULT_TOUR_IMAGE);
-  }
-
-  if (images.length === 1) {
-    images.push(DEFAULT_TOUR_IMAGE);
-  }
-
-  return images.slice(0, 10);
-};
 
 export const resolveTourDurationISO = (
   rewrite?: TourRewriteV3_1
@@ -287,28 +177,23 @@ export function buildTourSchemaGraph(args: {
   };
 }): any {
   const placeId = `${args.url}#place`;
-  const imageList = buildImageArray({
-    heroImage: args.heroImage,
-    derivedImages: args.derivedImages,
-  });
-  const webHero =
-    sanitizeImageCandidates([
-      args.heroImage ?? imageList[0] ?? DEFAULT_TOUR_IMAGE,
-    ])[0] ?? DEFAULT_TOUR_IMAGE;
+  const imageList = cleanImageUrls([
+    args.heroImage,
+    ...(args.derivedImages ?? []),
+  ]);
+  const webHero = cleanImageUrls([args.heroImage, ...imageList], 1)[0];
 
   const hasGeo =
     typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
-  let regionValue = args.place?.region ?? null;
-
-  if (args.place?.countryCode === "US" && regionValue) {
-    regionValue =
-      US_STATE_MAP[regionValue.replace(/\s/g, "")] ?? regionValue;
-  }
+  const normalizedUsState =
+    args.place?.countryCode === "US" ? resolveUsState(args.place?.region) : null;
+  const regionName = normalizedUsState?.name ?? args.place?.region ?? null;
+  const regionValue = normalizedUsState?.code ?? regionName;
 
   const placeNode: Record<string, unknown> = {
     "@type": "Place",
     "@id": placeId,
-    name: [args.place?.city, args.place?.region].filter(Boolean).join(", "),
+    name: [args.place?.city, regionName].filter(Boolean).join(", "),
     address: {
       "@type": "PostalAddress",
       ...(args.place?.city ? { addressLocality: args.place.city } : {}),
@@ -317,6 +202,14 @@ export function buildTourSchemaGraph(args: {
         ? { addressCountry: args.place.countryCode }
         : {}),
     },
+    ...(normalizedUsState
+      ? {
+          containedInPlace: {
+            "@type": "AdministrativeArea",
+            name: normalizedUsState.name,
+          },
+        }
+      : {}),
     ...(hasGeo
       ? {
           geo: {
@@ -375,12 +268,16 @@ export function buildTourSchemaGraph(args: {
         isPartOf: { "@id": args.brandOrgIds.websiteId },
         publisher: { "@id": args.brandOrgIds.orgId },
         mainEntity: { "@id": args.product.id },
-        primaryImageOfPage: {
-          "@type": "ImageObject",
-          "@id": `${args.url}#primaryimage`,
-          url: webHero,
-        },
-        image: webHero,
+        ...(webHero
+          ? {
+              primaryImageOfPage: {
+                "@type": "ImageObject",
+                "@id": `${args.url}#primaryimage`,
+                url: webHero,
+              },
+              image: webHero,
+            }
+          : {}),
       },
       placeNode,
       {
@@ -389,7 +286,9 @@ export function buildTourSchemaGraph(args: {
         url: args.url,
         name: args.product.name,
         description: args.product.description,
-        image: imageList,
+        ...(toSchemaImageValue(imageList)
+          ? { image: toSchemaImageValue(imageList) }
+          : {}),
         ...(args.product.category ? { category: args.product.category } : {}),
         brand: { "@id": args.brandOrgIds.brandId },
         provider: { "@id": args.brandOrgIds.orgId },
@@ -404,7 +303,9 @@ export function buildTourSchemaGraph(args: {
         "@id": args.trip.id,
         name: args.trip.name,
         description: args.trip.description,
-        image: imageList,
+        ...(toSchemaImageValue(imageList)
+          ? { image: toSchemaImageValue(imageList) }
+          : {}),
         provider: { "@id": args.brandOrgIds.orgId },
         touristDestination: { "@id": placeId },
         itinerary: {
