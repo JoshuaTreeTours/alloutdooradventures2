@@ -1,5 +1,12 @@
-import { buildBreadcrumbList, getPriceValidUntil } from "../utils/structuredData";
+import {
+  buildBreadcrumbList,
+  getPriceValidUntil,
+} from "../utils/structuredData";
 import type { TourRewriteV3_1 } from "../utils/fh/transformToAOAContent";
+
+const DEFAULT_TOUR_IMAGE =
+  "https://www.alloutdooradventures.com/default-tour.jpg";
+export const ENABLE_TOUR_SCHEMA_V1 = true;
 
 type SchemaOffer = Record<string, unknown>;
 
@@ -8,6 +15,64 @@ const toSlugLabel = (value: string) =>
     .split("-")
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
+
+const isHttpUrl = (value: string) => /^https?:\/\//i.test(value);
+
+const sanitizeImageCandidates = (values: Array<string | null | undefined>) => {
+  const seen = new Set<string>();
+  const sanitized: string[] = [];
+
+  for (const value of values) {
+    if (typeof value !== "string") {
+      continue;
+    }
+
+    const trimmed = value.trim();
+    if (!trimmed || !isHttpUrl(trimmed)) {
+      continue;
+    }
+
+    if (/^https?:\/\/cdn\.filestackcontent\.com\/resize\/?$/i.test(trimmed)) {
+      continue;
+    }
+
+    if (seen.has(trimmed)) {
+      continue;
+    }
+
+    seen.add(trimmed);
+    sanitized.push(trimmed);
+
+    if (sanitized.length >= 10) {
+      break;
+    }
+  }
+
+  return sanitized;
+};
+
+const buildImageArray = ({
+  heroImage,
+  derivedImages,
+}: {
+  heroImage?: string | null;
+  derivedImages?: string[] | null;
+}) => {
+  const sourceCandidates = derivedImages?.length
+    ? [heroImage, ...derivedImages]
+    : [heroImage];
+  const images = sanitizeImageCandidates(sourceCandidates);
+
+  if (!images.length) {
+    images.push(DEFAULT_TOUR_IMAGE);
+  }
+
+  if (images.length === 1) {
+    images.push(DEFAULT_TOUR_IMAGE);
+  }
+
+  return images.slice(0, 10);
+};
 
 export const resolveTourDurationISO = (
   rewrite?: TourRewriteV3_1
@@ -46,13 +111,8 @@ export const buildTourOfferNode = ({
     rewrite?.pricing?.currency ?? rewrite?.priceCurrency ?? currency;
   const pricingLow = rewrite?.pricing?.low;
   const pricingHigh = rewrite?.pricing?.high;
-  const canAggregate =
-    rewrite?.pricing?.isAggregate !== false &&
-    typeof pricingLow === "number" &&
-    typeof pricingHigh === "number" &&
-    pricingLow !== pricingHigh;
 
-  if (canAggregate) {
+  if (typeof pricingLow === "number" && typeof pricingHigh === "number") {
     return {
       "@type": "AggregateOffer",
       url: offerUrl,
@@ -122,3 +182,228 @@ export const buildTourBreadcrumbNode = ({
 
   return buildBreadcrumbList(crumbs);
 };
+
+export function buildTourSchemaGraph(args: {
+  url: string;
+  pageName: string;
+  pageDescription: string;
+  heroImage?: string | null;
+  derivedImages?: string[] | null;
+  place?: {
+    city?: string | null;
+    region?: string | null;
+    regionCode?: string | null;
+    countryCode?: string | null;
+    lat?: number | null;
+    lng?: number | null;
+  };
+  product: {
+    id: string;
+    name: string;
+    description: string;
+    category?: string | null;
+  };
+  trip: {
+    id: string;
+    name: string;
+    description: string;
+    duration?: string | null;
+    departureLocation?: {
+      name?: string | null;
+      streetAddress?: string | null;
+      addressLocality?: string | null;
+      addressRegion?: string | null;
+      postalCode?: string | null;
+      addressCountry?: string | null;
+    } | null;
+    touristType?: string | null;
+  };
+  offers: {
+    url: string;
+    lowPrice?: string | number | null;
+    highPrice?: string | number | null;
+    price?: string | number | null;
+    priceCurrency: string;
+    availability?: string | null;
+    offerCount?: number | null;
+  };
+  brandOrgIds: {
+    orgId: string;
+    brandId: string;
+    websiteId: string;
+  };
+}): any {
+  const placeId = `${args.url}#place`;
+  const imageList = buildImageArray({
+    heroImage: args.heroImage,
+    derivedImages: args.derivedImages,
+  });
+  const webHero =
+    sanitizeImageCandidates([
+      args.heroImage ?? imageList[0] ?? DEFAULT_TOUR_IMAGE,
+    ])[0] ?? DEFAULT_TOUR_IMAGE;
+
+  const hasGeo =
+    typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
+
+  const placeNode: Record<string, unknown> = {
+    "@type": "Place",
+    "@id": placeId,
+    name: [args.place?.city, args.place?.region].filter(Boolean).join(", "),
+    address: {
+      "@type": "PostalAddress",
+      ...(args.place?.city ? { addressLocality: args.place.city } : {}),
+      ...(args.place?.region ? { addressRegion: args.place.region } : {}),
+      ...(args.place?.countryCode
+        ? { addressCountry: args.place.countryCode }
+        : {}),
+    },
+    ...(hasGeo
+      ? {
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: args.place?.lat,
+            longitude: args.place?.lng,
+          },
+        }
+      : {}),
+  };
+
+  const offerAvailability =
+    args.offers.availability ?? "https://schema.org/InStock";
+  const lowPrice =
+    args.offers.lowPrice === null || args.offers.lowPrice === undefined
+      ? null
+      : Number(args.offers.lowPrice);
+  const highPrice =
+    args.offers.highPrice === null || args.offers.highPrice === undefined
+      ? null
+      : Number(args.offers.highPrice);
+
+  const offerNode: Record<string, unknown> =
+    Number.isFinite(lowPrice) && Number.isFinite(highPrice)
+      ? {
+          "@type": "AggregateOffer",
+          url: args.offers.url,
+          availability: offerAvailability,
+          lowPrice: Number(lowPrice).toFixed(2),
+          highPrice: Number(highPrice).toFixed(2),
+          priceCurrency: args.offers.priceCurrency,
+          ...(typeof args.offers.offerCount === "number"
+            ? { offerCount: args.offers.offerCount }
+            : {}),
+        }
+      : {
+          "@type": "Offer",
+          url: args.offers.url,
+          availability: offerAvailability,
+          ...(args.offers.price !== null && args.offers.price !== undefined
+            ? { price: Number(args.offers.price).toFixed(2) }
+            : {}),
+          priceCurrency: args.offers.priceCurrency,
+          priceValidUntil: getPriceValidUntil(),
+        };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${args.url}#webpage`,
+        url: args.url,
+        name: args.pageName,
+        description: args.pageDescription,
+        isPartOf: { "@id": args.brandOrgIds.websiteId },
+        publisher: { "@id": args.brandOrgIds.orgId },
+        mainEntity: { "@id": args.product.id },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          "@id": `${args.url}#primaryimage`,
+          url: webHero,
+        },
+        image: webHero,
+      },
+      placeNode,
+      {
+        "@type": "Product",
+        "@id": args.product.id,
+        url: args.url,
+        name: args.product.name,
+        description: args.product.description,
+        image: imageList,
+        ...(args.product.category ? { category: args.product.category } : {}),
+        brand: { "@id": args.brandOrgIds.brandId },
+        provider: { "@id": args.brandOrgIds.orgId },
+        offers: offerNode,
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `${args.url}#webpage`,
+        },
+      },
+      {
+        "@type": "TouristTrip",
+        "@id": args.trip.id,
+        name: args.trip.name,
+        description: args.trip.description,
+        image: imageList,
+        provider: { "@id": args.brandOrgIds.orgId },
+        touristDestination: { "@id": placeId },
+        itinerary: {
+          "@type": "ItemList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: { "@id": placeId },
+            },
+          ],
+        },
+        ...(args.trip.touristType
+          ? { touristType: args.trip.touristType }
+          : {}),
+        ...(args.trip.duration ? { duration: args.trip.duration } : {}),
+        ...(args.trip.departureLocation
+          ? {
+              departureLocation: {
+                "@type": "Place",
+                ...(args.trip.departureLocation.name
+                  ? { name: args.trip.departureLocation.name }
+                  : {}),
+                address: {
+                  "@type": "PostalAddress",
+                  ...(args.trip.departureLocation.streetAddress
+                    ? {
+                        streetAddress:
+                          args.trip.departureLocation.streetAddress,
+                      }
+                    : {}),
+                  ...(args.trip.departureLocation.addressLocality
+                    ? {
+                        addressLocality:
+                          args.trip.departureLocation.addressLocality,
+                      }
+                    : {}),
+                  ...(args.trip.departureLocation.addressRegion
+                    ? {
+                        addressRegion:
+                          args.trip.departureLocation.addressRegion,
+                      }
+                    : {}),
+                  ...(args.trip.departureLocation.postalCode
+                    ? { postalCode: args.trip.departureLocation.postalCode }
+                    : {}),
+                  ...(args.trip.departureLocation.addressCountry
+                    ? {
+                        addressCountry:
+                          args.trip.departureLocation.addressCountry,
+                      }
+                    : {}),
+                },
+              },
+            }
+          : {}),
+        offers: offerNode,
+      },
+    ],
+  };
+}

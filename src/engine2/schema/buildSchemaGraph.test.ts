@@ -210,9 +210,7 @@ describe("buildSchemaGraph", () => {
     }
   });
 
-  it("adds safe-v1 links and areaServed to Product/TouristTrip when enabled", () => {
-    process.env.NEXT_PUBLIC_SCHEMA_TOUR_SAFE_V1 = "true";
-
+  it("adds WebPage mainEntity and TouristTrip destination itinerary", () => {
     const graph = buildSchemaGraph(
       baseTour,
       seo as never,
@@ -229,21 +227,25 @@ describe("buildSchemaGraph", () => {
       }
     );
 
-    const product = graph.find(node => node["@type"] === "Product") as {
-      duration?: string;
-      areaServed?: { "@id": string };
-      isRelatedTo?: { "@id": string };
+    const webPage = graph.find(node => node["@type"] === "WebPage") as {
+      mainEntity?: { "@id": string };
     };
     const trip = graph.find(node => node["@type"] === "TouristTrip") as {
-      areaServed?: { "@id": string };
-      isRelatedTo?: { "@id": string };
+      touristDestination?: { "@id": string };
+      itinerary?: {
+        "@type": string;
+        itemListElement: Array<{ item: { "@id": string } }>;
+      };
     };
 
-    expect(product.duration).toBe("PT3H");
-    expect(product.areaServed).toEqual({ "@id": `${seo.canonical}#place` });
-    expect(product.isRelatedTo).toEqual({ "@id": `${seo.canonical}#trip` });
-    expect(trip.areaServed).toEqual({ "@id": `${seo.canonical}#place` });
-    expect(trip.isRelatedTo).toEqual({ "@id": `${seo.canonical}#product` });
+    expect(webPage.mainEntity).toEqual({ "@id": `${seo.canonical}#product` });
+    expect(trip.touristDestination).toEqual({
+      "@id": `${seo.canonical}#place`,
+    });
+    expect(trip.itinerary?.["@type"]).toBe("ItemList");
+    expect(trip.itinerary?.itemListElement[0].item).toEqual({
+      "@id": `${seo.canonical}#place`,
+    });
   });
 
   it("uses rewrite-v3 category, meeting point and schema price in Product/TouristTrip", () => {

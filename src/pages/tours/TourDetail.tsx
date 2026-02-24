@@ -26,7 +26,14 @@ import {
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
+  SITE_BRAND_ID,
+  SITE_ORGANIZATION_ID,
+  SITE_WEBSITE_ID,
 } from "../../utils/structuredData";
+import {
+  buildTourSchemaGraph,
+  ENABLE_TOUR_SCHEMA_V1,
+} from "../../schema/buildTourSchemaGraph";
 import { buildTourMeta } from "../../lib/tourMeta";
 import {
   DEFAULT_IMAGE_URL,
@@ -71,26 +78,69 @@ export default function TourDetail({ params }: TourDetailProps) {
     if (!tour || !detailUrl) {
       return null;
     }
+    const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
+      ? (buildTourSchemaGraph({
+          url: detailUrl,
+          pageName: tour.title,
+          pageDescription: metaDescription ?? "",
+          heroImage: finalHeroImage,
+          derivedImages: structuredImages,
+          place: {
+            city: tour.destination.city,
+            region: tour.destination.state,
+            countryCode: tour.destination.countryCode ?? undefined,
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
+          },
+          product: {
+            id: `${detailUrl}#product`,
+            name: tour.title,
+            description: metaDescription ?? "",
+            category: tour.primaryCategory,
+          },
+          trip: {
+            id: `${detailUrl}#trip`,
+            name: tour.title,
+            description: metaDescription ?? "",
+            duration: tour.badges.duration,
+            touristType: "Adventure travelers",
+            departureLocation: null,
+          },
+          offers: {
+            url: bookingUrl,
+            price: applyPriceFloor(tour.startingPrice ?? null),
+            priceCurrency: tour.currency ?? "USD",
+          },
+          brandOrgIds: {
+            orgId: SITE_ORGANIZATION_ID,
+            brandId: SITE_BRAND_ID,
+            websiteId: SITE_WEBSITE_ID,
+          },
+        })["@graph"] as Record<string, unknown>[])
+      : [
+          buildWebPageStructuredData({
+            url: detailUrl,
+            name: tour.title,
+            description: metaDescription,
+            image: finalHeroImage,
+            mainEntityId: `${detailUrl}#product`,
+          }),
+          buildTourProductStructuredData({
+            tour,
+            detailUrl,
+            description: metaDescription,
+            images: structuredImages.length ? structuredImages : undefined,
+          }),
+          buildTourTripStructuredData({
+            tour,
+            detailUrl,
+            description: metaDescription,
+            images: structuredImages.length ? structuredImages : undefined,
+          }),
+        ];
+
     return [
-      buildWebPageStructuredData({
-        url: detailUrl,
-        name: tour.title,
-        description: metaDescription,
-        image: finalHeroImage,
-        mainEntityId: `${detailUrl}#product`,
-      }),
-      buildTourProductStructuredData({
-        tour,
-        detailUrl,
-        description: metaDescription,
-        images: structuredImages.length ? structuredImages : undefined,
-      }),
-      buildTourTripStructuredData({
-        tour,
-        detailUrl,
-        description: metaDescription,
-        images: structuredImages.length ? structuredImages : undefined,
-      }),
+      ...tourSchemaNodes,
       buildBreadcrumbList([
         { name: "Tours", url: "/tours" },
         { name: tour.title, url: detailUrl },
