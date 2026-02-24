@@ -129,6 +129,29 @@ describe("buildTourSchemaGraph", () => {
   });
 
 
+
+  it("uses hero + secondary image for Product while keeping WebPage primary image on hero", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      secondaryImage: "https://example.com/secondary.jpg",
+    })["@graph"] as Array<Record<string, unknown>>;
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+    };
+    const webPage = graph.find(node => node["@type"] === "WebPage") as {
+      image: string;
+      primaryImageOfPage: { url: string };
+    };
+
+    expect(product.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://example.com/secondary.jpg",
+    ]);
+    expect(webPage.image).toBe("https://example.com/hero.jpg");
+    expect(webPage.primaryImageOfPage.url).toBe("https://example.com/hero.jpg");
+  });
+
   it("aligns WebPage.primaryImageOfPage.url and WebPage.image to the hero image", () => {
     const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<Record<string, unknown>>;
     const webPage = graph.find(node => node["@type"] === "WebPage") as {

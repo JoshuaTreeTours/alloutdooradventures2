@@ -1,5 +1,7 @@
 export type ParsedTour = {
   title: string;
+  heroImage: string | null;
+  galleryImages: string[];
   slug?: string;
   overview: string;
   highlights: string[];
@@ -24,6 +26,56 @@ export type ParsedTour = {
   inclusions: string[];
   exclusions: string[];
   faq: { q: string; a: string }[];
+};
+
+const normalizeImageUrl = (value: string) => {
+  const trimmed = value.trim();
+  if (!trimmed) {
+    return null;
+  }
+
+  if (trimmed.startsWith("https://")) {
+    return trimmed;
+  }
+
+  if (trimmed.startsWith("http://")) {
+    return `https://${trimmed.slice("http://".length)}`;
+  }
+
+  if (trimmed.startsWith("//")) {
+    return `https:${trimmed}`;
+  }
+
+  return null;
+};
+
+const parseSliderImages = (html: string): string[] => {
+  const sliderSections = Array.from(
+    html.matchAll(
+      /<section[^>]*(?:class|data-fh)=["'][^"']*(?:slider|gallery|carousel)[^"']*["'][^>]*>([\s\S]*?)<\/section>/gi
+    )
+  )
+    .map(match => match[1] ?? "")
+    .filter(Boolean);
+
+  const sliderHtml = sliderSections.length ? sliderSections.join("\n") : html;
+  const seen = new Set<string>();
+  const images: string[] = [];
+
+  for (const match of Array.from(sliderHtml.matchAll(/<img\b[^>]*>/gi))) {
+    const imgTag = match[0] ?? "";
+    const srcMatch = imgTag.match(/(?:data-src|src)=["']([^"']+)["']/i);
+    const normalized = srcMatch?.[1] ? normalizeImageUrl(srcMatch[1]) : null;
+
+    if (!normalized || seen.has(normalized)) {
+      continue;
+    }
+
+    seen.add(normalized);
+    images.push(normalized);
+  }
+
+  return images;
 };
 
 const stripTags = (value: string) =>
@@ -118,6 +170,8 @@ const parseMeetingPoint = (meetingPointText: string) => {
 };
 
 export const parseFareHarborHtml = (html: string): ParsedTour => {
+  const galleryImages = parseSliderImages(html);
+  const heroImage = galleryImages[0] ?? null;
   const title = stripTags(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "");
   const overviewSection = getSection(html, "overview");
   const overview = Array.from(
@@ -174,6 +228,8 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
 
   return {
     title,
+    heroImage,
+    galleryImages,
     overview,
     highlights: getListItems(getSection(html, "highlights")),
     duration,

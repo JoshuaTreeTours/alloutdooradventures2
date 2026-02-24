@@ -63,8 +63,9 @@ export default function TourDetail({ params }: TourDetailProps) {
       tour,
     }) ?? undefined;
   const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
+  const secondaryImage = tour?.image2 && tour.image2 !== finalHeroImage ? tour.image2 : null;
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -92,6 +93,7 @@ export default function TourDetail({ params }: TourDetailProps) {
             lat: tour.destination.lat,
             lng: tour.destination.lng,
           },
+          secondaryImage,
           product: {
             id: `${detailUrl}#product`,
             name: tour.title,
@@ -150,6 +152,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     bookingUrl,
     detailUrl,
     finalHeroImage,
+    secondaryImage,
     metaDescription,
     structuredImages,
     tour,
@@ -212,14 +215,28 @@ export default function TourDetail({ params }: TourDetailProps) {
         </div>
         <div className="mt-6 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-5">
-            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
-              {finalHeroImage ? (
-                <Image
-                  src={finalHeroImage}
-                  fallbackSrc={finalHeroImage}
-                  alt={tour.title}
-                  className="h-72 w-full object-cover"
-                />
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+                {finalHeroImage ? (
+                  <Image
+                    src={finalHeroImage}
+                    fallbackSrc={finalHeroImage}
+                    alt={tour.title}
+                    loading="eager"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                ) : null}
+              </div>
+              {secondaryImage ? (
+                <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+                  <Image
+                    src={secondaryImage}
+                    fallbackSrc={secondaryImage}
+                    alt={`${tour.title} secondary image`}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
               ) : null}
             </div>
             <div className="space-y-3">

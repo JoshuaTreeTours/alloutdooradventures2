@@ -1,6 +1,8 @@
 import type { ParsedTour } from "./parseFareHarborHtml";
 
 export type TourRewriteV3_1 = {
+  heroImage?: string | null;
+  image2?: string | null;
   heroPriceText?: string;
   schemaPrice?: number;
   priceCurrency?: string;
@@ -212,6 +214,9 @@ const toDurationISO = (durationMinutes?: number): string | undefined => {
 export const transformToAOAContent = (
   parsedTour: ParsedTour
 ): TourRewriteV3_1 => {
+  const gallery = parsedTour.galleryImages ?? [];
+  const hero = parsedTour.heroImage ?? gallery[0] ?? null;
+  const image2 = gallery.find(imageUrl => imageUrl && imageUrl !== hero) ?? null;
   const duration = parsedTour.duration || DEFAULT_DURATION;
   const meetingPoint = parsedTour.meetingPoint.rawText || DEFAULT_MEETING_POINT;
   const category = parsedTour.category.primary || DEFAULT_CATEGORY;
@@ -263,6 +268,8 @@ export const transformToAOAContent = (
     priceLow !== priceHigh;
 
   return {
+    heroImage: hero,
+    image2,
     heroPriceText: priceLabel,
     schemaPrice: parsedTour.priceAdult,
     priceCurrency: "USD",

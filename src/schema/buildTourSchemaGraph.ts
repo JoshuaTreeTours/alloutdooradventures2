@@ -131,6 +131,7 @@ export function buildTourSchemaGraph(args: {
   pageName: string;
   pageDescription: string;
   heroImage?: string | null;
+  secondaryImage?: string | null;
   derivedImages?: string[] | null;
   place?: {
     city?: string | null;
@@ -179,6 +180,7 @@ export function buildTourSchemaGraph(args: {
   const placeId = `${args.url}#place`;
   const imageList = cleanImageUrls([
     args.heroImage,
+    args.secondaryImage,
     ...(args.derivedImages ?? []),
   ]);
   const webHero = cleanImageUrls([args.heroImage, ...imageList], 1)[0];

@@ -106,8 +106,9 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const secondaryImage = tour?.image2 && tour.image2 !== heroImage ? tour.image2 : null;
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -138,6 +139,7 @@ export default function CityTourDetailRoute({
           pageName: tour.title,
           pageDescription: seoDescription ?? productDescription ?? "",
           heroImage,
+          secondaryImage,
           derivedImages: structuredImages,
           place: {
             city: tour.destination.city,
@@ -208,6 +210,7 @@ export default function CityTourDetailRoute({
     city?.name,
     cityHref,
     heroImage,
+    secondaryImage,
     seoDescription,
     productDescription,
     state?.name,
@@ -335,14 +338,28 @@ export default function CityTourDetailRoute({
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
-            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-              {heroImage ? (
-                <Image
-                  src={heroImage}
-                  fallbackSrc={heroImage}
-                  alt={tour.title}
-                  className="h-64 w-full object-cover md:h-80"
-                />
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                {heroImage ? (
+                  <Image
+                    src={heroImage}
+                    fallbackSrc={heroImage}
+                    alt={tour.title}
+                    loading="eager"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                ) : null}
+              </div>
+              {secondaryImage ? (
+                <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                  <Image
+                    src={secondaryImage}
+                    fallbackSrc={secondaryImage}
+                    alt={`${tour.title} secondary image`}
+                    loading="lazy"
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
               ) : null}
             </div>
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
