@@ -4,6 +4,19 @@ export const BOOK_PATH_34849 =
 export const FAREHARBOR_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no";
 
+export type FareHarborItemFixture = {
+  imageUrls: string[];
+};
+
+export const fareHarborItemByUrl: Record<string, FareHarborItemFixture> = {
+  [FAREHARBOR_URL_34849]: {
+    imageUrls: [
+      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+      "https://cdn.filestackcontent.com/Pzd5i0RUQxWUsD16YHQv",
+    ],
+  },
+};
+
 const HTML_34849 = `
 <main>
   <h1>Shared San Andreas Fault Jeep Tour</h1>
