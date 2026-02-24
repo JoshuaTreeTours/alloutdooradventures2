@@ -67,6 +67,14 @@ export default function Engine2TourPage({
   }, [tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
+  const isWikimediaHost = (value: string) => {
+    try {
+      return new URL(ensureHttpsUrl(value)).hostname === "upload.wikimedia.org";
+    } catch {
+      return false;
+    }
+  };
+
   const secondaryImage = normalizedTour.images.gallery[0] ?? null;
   const isPalmSprings = isPalmSpringsTour(tour);
   const overrideContent = getPalmSpringsOverrideContent(tour);
@@ -458,7 +466,8 @@ export default function Engine2TourPage({
               >
                 <div className="aspect-[4/3] w-full">
                   {image === secondaryImage &&
-                  normalizedTour.image2Attribution?.provider === "wikimedia" ? (
+                  (normalizedTour.image2Attribution?.provider === "wikimedia" ||
+                    isWikimediaHost(image)) ? (
                     <img
                       src={ensureHttpsUrl(image)}
                       alt={`${tour.name} gallery`}

@@ -64,6 +64,14 @@ export default function TourDetail({ params }: TourDetailProps) {
       tour,
     }) ?? undefined;
   const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
+  const isWikimediaHost = (value: string) => {
+    try {
+      return new URL(ensureHttpsUrl(value)).hostname === "upload.wikimedia.org";
+    } catch {
+      return false;
+    }
+  };
+
   const secondaryImage =
     tour?.galleryImages?.find((image: string) => image && image !== heroImage) ?? null;
   const structuredImages = filterHeroImages(
@@ -318,7 +326,8 @@ export default function TourDetail({ params }: TourDetailProps) {
               >
                 <div className="aspect-[4/3] w-full">
                   {image === secondaryImage &&
-                  tour.image2Attribution?.provider === "wikimedia" ? (
+                  (tour.image2Attribution?.provider === "wikimedia" ||
+                    isWikimediaHost(image)) ? (
                     <img
                       src={ensureHttpsUrl(image)}
                       alt={`${tour.title} gallery`}

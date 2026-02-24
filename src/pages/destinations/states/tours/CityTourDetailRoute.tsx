@@ -107,6 +107,14 @@ export default function CityTourDetailRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const isWikimediaHost = (value: string) => {
+    try {
+      return new URL(ensureHttpsUrl(value)).hostname === "upload.wikimedia.org";
+    } catch {
+      return false;
+    }
+  };
+
   const secondaryImage =
     tour?.galleryImages?.find((image: string) => image && image !== heroImage) ?? null;
   const structuredImages = filterHeroImages(
@@ -396,7 +404,8 @@ export default function CityTourDetailRoute({
               >
                 <div className="aspect-[4/3] w-full">
                   {image === secondaryImage &&
-                  tour.image2Attribution?.provider === "wikimedia" ? (
+                  (tour.image2Attribution?.provider === "wikimedia" ||
+                    isWikimediaHost(image)) ? (
                     <img
                       src={ensureHttpsUrl(image)}
                       alt={`${tour.title} gallery`}
