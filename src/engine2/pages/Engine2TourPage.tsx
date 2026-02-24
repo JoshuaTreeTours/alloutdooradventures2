@@ -16,6 +16,10 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import {
+  buildJoshuaTreeTemplate,
+  isJoshuaTreeTour,
+} from "../../utils/tours/buildJoshuaTreeTemplate";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -72,10 +76,32 @@ export default function Engine2TourPage({
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
-  const engine1Content = {
-    whatYoullExperience: [normalizedTour.content.experienceText],
-    highlights: normalizedTour.content.highlights,
-  };
+  const isJoshuaTree = isJoshuaTreeTour({
+    citySlug: tour.sourceCitySlug,
+    city: tour.geo.city,
+    canonicalPath: tour.seo.canonicalPath,
+    title: tour.name,
+  });
+  const joshuaTreeTemplate = isJoshuaTree
+    ? buildJoshuaTreeTemplate({
+        title: tour.name,
+        city: tour.geo.city,
+        state: tour.geo.region,
+        citySlug: tour.sourceCitySlug,
+        canonicalPath: tour.seo.canonicalPath,
+        lowPrice: tour.pricing?.price,
+        highlights: normalizedTour.content.highlights,
+      })
+    : null;
+  const engine1Content = joshuaTreeTemplate
+    ? {
+        whatYoullExperience: [joshuaTreeTemplate.description],
+        highlights: joshuaTreeTemplate.highlights,
+      }
+    : {
+        whatYoullExperience: [normalizedTour.content.experienceText],
+        highlights: normalizedTour.content.highlights,
+      };
   const content = overrideContent?.enabled
     ? overrideContent.content
     : engine1Content;
@@ -99,8 +125,13 @@ export default function Engine2TourPage({
   const overridePriceLabel = overrideContent?.enabled
     ? overrideContent.content.heroPriceText
     : undefined;
-  const headerPriceLabel = overridePriceLabel ?? enginePriceLabel;
-  const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+  const headerPriceLabel =
+    joshuaTreeTemplate?.priceLabel ?? overridePriceLabel ?? enginePriceLabel;
+  const showFallbackPrice =
+    !isJoshuaTree &&
+    !joshuaTreeTemplate?.priceLabel &&
+    !overridePriceLabel &&
+    !enginePriceLabel;
 
   const overrideSchemaDescription = overrideContent?.enabled
     ? overrideContent.content.schemaDescription
@@ -135,7 +166,8 @@ export default function Engine2TourPage({
         overrideSchemaDescription,
         overrideFaqs,
         overrideContent?.enabled ?? false,
-        rewriteV3Content
+        rewriteV3Content,
+        joshuaTreeTemplate
       ),
     [
       normalizedTour,
@@ -146,6 +178,7 @@ export default function Engine2TourPage({
       overrideFaqs,
       overrideContent?.enabled,
       rewriteV3Content,
+      joshuaTreeTemplate,
     ]
   );
 
@@ -243,6 +276,32 @@ export default function Engine2TourPage({
             </ul>
           </div>
         ) : null}
+        {isJoshuaTree && joshuaTreeTemplate ? (
+          <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
+            <ul className="space-y-1">
+              {joshuaTreeTemplate.logistics.priceLabel ? (
+                <li>
+                  <strong>Price:</strong> {joshuaTreeTemplate.logistics.priceLabel}
+                </li>
+              ) : null}
+              <li>
+                <strong>Duration:</strong> {joshuaTreeTemplate.logistics.duration}
+              </li>
+              <li>
+                <strong>Meeting point:</strong> {joshuaTreeTemplate.logistics.meetingPoint}
+              </li>
+              <li>
+                <strong>Age:</strong> {joshuaTreeTemplate.logistics.age}
+              </li>
+              <li>
+                <strong>Group size:</strong> {joshuaTreeTemplate.logistics.groupSize}
+              </li>
+              <li>
+                <strong>Cancellation:</strong> {joshuaTreeTemplate.logistics.cancellation}
+              </li>
+            </ul>
+          </div>
+        ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
@@ -317,6 +376,19 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
+        {isJoshuaTree && joshuaTreeTemplate?.itinerarySteps.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Itinerary
+            </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+              {joshuaTreeTemplate.itinerarySteps.slice(0, 6).map(step => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+          </>
+        ) : null}
+
         {overrideContent?.enabled && overrideContent.content.faqs?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
@@ -333,6 +405,19 @@ export default function Engine2TourPage({
                   </h3>
                   <p className="mt-1 text-sm text-[#405040]">{item.answer}</p>
                 </article>
+              ))}
+            </div>
+          </>
+        ) : null}
+        {isJoshuaTree && joshuaTreeTemplate?.faq.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQ</h2>
+            <div className="mt-4 space-y-4">
+              {joshuaTreeTemplate.faq.slice(0, 5).map(item => (
+                <div key={item.q}>
+                  <p className="text-sm font-semibold text-[#2f4a2f]">{item.q}</p>
+                  <p className="text-sm text-[#405040]">{item.a}</p>
+                </div>
               ))}
             </div>
           </>

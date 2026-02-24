@@ -23,6 +23,7 @@ import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import type { AOAEnrichedTourContent } from "../../utils/fh/transformFareHarborToAOAContent";
 import type { TourRewriteV3_1 } from "../../utils/fh/transformToAOAContent";
 import { buildTourItinerary } from "../../utils/buildTourItinerary";
+import type { JoshuaTreeTemplateOutput } from "../../utils/tours/buildJoshuaTreeTemplate";
 
 type StructuredDataNode = Record<string, unknown>;
 
@@ -64,7 +65,8 @@ export const buildSchemaGraph = (
   overrideDescription?: string,
   overrideFaqs?: Array<{ question: string; answer: string }>,
   overrideEnabled = false,
-  rewriteV3Content?: TourRewriteV3_1
+  rewriteV3Content?: TourRewriteV3_1,
+  joshuaTreeTemplate?: JoshuaTreeTemplateOutput | null
 ): StructuredDataNode[] => {
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
@@ -73,6 +75,7 @@ export const buildSchemaGraph = (
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
   );
+  const joshuaTreeLowPrice = parsePrice(tour.pricing?.price ?? null);
   const schemaPrice = rewriteV3Content?.schemaPrice ?? fallbackPrice;
   const offerCurrency = tour.pricing?.currency || DEFAULT_CURRENCY;
   const destinationMeta = getDestinationMeta(tour);
@@ -107,7 +110,21 @@ export const buildSchemaGraph = (
     : null;
 
   const faqPageNode =
-    overrideEnabled && overrideFaqs?.length
+    joshuaTreeTemplate?.faq?.length
+      ? {
+          "@type": "FAQPage",
+          "@id": `${seo.canonical}#faqpage`,
+          mainEntityOfPage: seo.canonical,
+          mainEntity: joshuaTreeTemplate.faq.map(item => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }
+      : overrideEnabled && overrideFaqs?.length
       ? {
           "@type": "FAQPage",
           "@id": `${seo.canonical}#faqpage`,
@@ -140,7 +157,9 @@ export const buildSchemaGraph = (
         product: {
           id: productId,
           name: tour.name,
-          description: isPalmSprings
+          description: joshuaTreeTemplate?.description
+            ? joshuaTreeTemplate.description
+            : isPalmSprings
             ? (overrideDescription ??
               pilotContent?.whatYoullExperience ??
               seo.description)
@@ -150,7 +169,9 @@ export const buildSchemaGraph = (
         trip: {
           id: tripId,
           name: tour.name,
-          description: isPalmSprings
+          description: joshuaTreeTemplate?.description
+            ? joshuaTreeTemplate.description
+            : isPalmSprings
             ? (overrideDescription ??
               pilotContent?.whatYoullExperience ??
               seo.description)
@@ -169,12 +190,23 @@ export const buildSchemaGraph = (
                 addressCountry: rewriteV3Content.meetingPoint.country ?? "US",
               }
             : null,
-          itinerary: tourItinerary,
+          itinerary: joshuaTreeTemplate?.itinerarySteps?.length
+            ? {
+                "@type": "ItemList",
+                itemListElement: joshuaTreeTemplate.itinerarySteps.map(
+                  (step, index) => ({
+                    "@type": "ListItem",
+                    position: index + 1,
+                    name: step,
+                  })
+                ),
+              }
+            : tourItinerary,
         },
         offers: {
           url: offerUrl,
-          lowPrice: rewriteV3Content?.pricing?.low,
-          highPrice: rewriteV3Content?.pricing?.high,
+          lowPrice: joshuaTreeTemplate ? joshuaTreeLowPrice : rewriteV3Content?.pricing?.low,
+          highPrice: joshuaTreeTemplate ? joshuaTreeLowPrice : rewriteV3Content?.pricing?.high,
           price: schemaPrice,
           priceCurrency: offerCurrency,
           offerCount:

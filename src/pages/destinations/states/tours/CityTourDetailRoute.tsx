@@ -48,7 +48,10 @@ import {
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
-import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
+import {
+  buildJoshuaTreeTemplate,
+  isJoshuaTreeTour,
+} from "../../../../utils/tours/buildJoshuaTreeTemplate";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import RemovedTourGone from "../../../RemovedTourGone";
 
@@ -142,11 +145,33 @@ export default function CityTourDetailRoute({
     : "";
   const toursHref =
     state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+  const isJoshuaTree =
+    !!tour &&
+    isJoshuaTreeTour({
+      citySlug: tour.destination.citySlug,
+      city: tour.destination.city,
+      canonicalPath,
+      title: tour.title,
+    });
+  const joshuaTreeTemplate =
+    tour && isJoshuaTree
+      ? buildJoshuaTreeTemplate({
+          title: tour.title,
+          city: tour.destination.city,
+          state: tour.destination.state,
+          citySlug: tour.destination.citySlug,
+          canonicalPath,
+          lowPrice: tour.startingPrice,
+          duration: tour.badges.duration,
+          category: tour.primaryCategory,
+          tags: [...(tour.tags ?? []), ...(tour.categories ?? [])],
+        })
+      : null;
   const structuredDataNodes = useMemo(() => {
     if (!tour || !canonicalUrl) {
       return null;
     }
-    const jt459591Override = getJoshuaTree459591Override(canonicalUrl);
+
     const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
     const offerUrl = resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
@@ -161,89 +186,60 @@ export default function CityTourDetailRoute({
           heroImage,
           derivedImages: structuredImages,
           place: {
-            city: jt459591Override ? "Joshua Tree" : tour.destination.city,
-            region: jt459591Override ? "CA" : tour.destination.state,
-            regionCode: jt459591Override ? "CA" : undefined,
-            countryCode: jt459591Override
-              ? "US"
-              : (tour.destination.countryCode ?? undefined),
-            lat: jt459591Override ? 34.1347 : tour.destination.lat,
-            lng: jt459591Override ? -116.3131 : tour.destination.lng,
+            city: isJoshuaTree ? "Joshua Tree" : tour.destination.city,
+            region: isJoshuaTree ? "CA" : tour.destination.state,
+            regionCode: isJoshuaTree ? "CA" : undefined,
+            countryCode: isJoshuaTree ? "US" : (tour.destination.countryCode ?? undefined),
+            lat: tour.destination.lat,
+            lng: tour.destination.lng,
           },
           product: {
             id: `${canonicalUrl}#product`,
             name: tour.title,
             description:
-              jt459591Override?.schemaDescription ??
+              joshuaTreeTemplate?.description ??
               productDescription ??
               seoDescription ??
               "",
-            category: jt459591Override
-              ? "Hiking & climbing tour"
-              : tour.primaryCategory,
+            category: tour.primaryCategory,
           },
           trip: {
             id: `${canonicalUrl}#trip`,
             name: tour.title,
             description:
-              jt459591Override?.schemaDescription ??
+              joshuaTreeTemplate?.description ??
               productDescription ??
               seoDescription ??
               "",
-            duration: jt459591Override?.durationISO ?? tour.badges.duration,
+            duration: tour.badges.duration,
             touristType: "Adventure travelers",
-            departureLocation: jt459591Override?.meetingPoint
+            departureLocation: joshuaTreeTemplate?.logistics.meetingPoint
               ? {
-                  name:
-                    jt459591Override.meetingPoint.name ??
-                    jt459591Override.meetingPoint.rawText,
-                  streetAddress: jt459591Override.meetingPoint.addressLine1,
-                  addressLocality: jt459591Override.meetingPoint.city,
-                  addressRegion: jt459591Override.meetingPoint.region,
-                  postalCode: jt459591Override.meetingPoint.postalCode,
-                  addressCountry: jt459591Override.meetingPoint.country ?? "US",
+                  name: joshuaTreeTemplate.logistics.meetingPoint,
+                  addressCountry: "US",
                 }
               : null,
-            itinerary: jt459591Override
+            itinerary: joshuaTreeTemplate?.itinerarySteps?.length
               ? {
                   "@type": "ItemList",
-                  itemListElement: [
-                    {
+                  itemListElement: joshuaTreeTemplate.itinerarySteps.map(
+                    (step, index) => ({
                       "@type": "ListItem",
-                      position: 1,
-                      name: "Meet your guide and review safety systems",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 2,
-                      name: "Hike through Joshua Tree desert terrain to climbing areas",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 3,
-                      name: "Practice climbing movement and route technique on granite",
-                    },
-                    {
-                      "@type": "ListItem",
-                      position: 4,
-                      name: "Return with debrief, photos, and next-step climbing tips",
-                    },
-                  ],
+                      position: index + 1,
+                      name: step,
+                    })
+                  ),
                 }
               : null,
           },
           offers: {
             url: offerUrl,
-            lowPrice: jt459591Override?.pricing?.low,
-            highPrice: jt459591Override?.pricing?.high,
-            price: jt459591Override?.schemaPrice ?? tour.startingPrice,
+            lowPrice: tour.startingPrice,
+            highPrice: tour.startingPrice,
+            price: tour.startingPrice,
             priceCurrency: tour.currency ?? "USD",
             availability: "https://schema.org/InStock",
-            offerCount:
-              typeof jt459591Override?.pricing?.low === "number" &&
-              typeof jt459591Override?.pricing?.high === "number"
-                ? 2
-                : null,
+            offerCount: typeof tour.startingPrice === "number" ? 1 : null,
           },
           brandOrgIds: {
             orgId: SITE_ORGANIZATION_ID,
@@ -272,15 +268,15 @@ export default function CityTourDetailRoute({
           }),
         ];
 
-    const faqNode = jt459591Override?.faqs?.length
+    const faqNode = joshuaTreeTemplate?.faq?.length
       ? {
           "@type": "FAQPage",
           "@id": `${canonicalUrl}#faqpage`,
           mainEntityOfPage: canonicalProductUrl,
-          mainEntity: jt459591Override.faqs.map(item => ({
+          mainEntity: joshuaTreeTemplate.faq.map(item => ({
             "@type": "Question",
-            name: item.question,
-            acceptedAnswer: { "@type": "Answer", text: item.answer },
+            name: item.q,
+            acceptedAnswer: { "@type": "Answer", text: item.a },
           })),
         }
       : null;
@@ -310,29 +306,31 @@ export default function CityTourDetailRoute({
     structuredImages,
     tour,
     toursHref,
+    isJoshuaTree,
+    joshuaTreeTemplate,
   ]);
 
-  const jt459591Override =
-    tour && canonicalUrl ? getJoshuaTree459591Override(canonicalUrl) : null;
-  const experienceParagraphs = jt459591Override?.whatYoullExperience?.length
-    ? jt459591Override.whatYoullExperience
+  const experienceParagraphs = joshuaTreeTemplate
+    ? [joshuaTreeTemplate.description]
     : tour
       ? getExpandedTourDescription(tour)
       : [];
-  const logisticsRows = jt459591Override
+  const logisticsRows = joshuaTreeTemplate
     ? [
-        { label: "Duration", value: jt459591Override.logistics.duration },
+        { label: "Price", value: joshuaTreeTemplate.logistics.priceLabel },
+        { label: "Duration", value: joshuaTreeTemplate.logistics.duration },
         {
           label: "Meeting point",
-          value: jt459591Override.logistics.meetingPoint,
+          value: joshuaTreeTemplate.logistics.meetingPoint,
         },
-        { label: "Age", value: jt459591Override.logistics.age },
-        { label: "Group size", value: jt459591Override.logistics.groupSize },
+        { label: "Age", value: joshuaTreeTemplate.logistics.age },
+        { label: "Group size", value: joshuaTreeTemplate.logistics.groupSize },
         {
           label: "Cancellation",
-          value: jt459591Override.logistics.cancellation,
+          value: joshuaTreeTemplate.logistics.cancellation,
         },
       ]
+        .filter(item => (item.label === "Price" ? !!item.value : true))
     : [];
 
   useStructuredData(structuredDataNodes);
@@ -417,9 +415,9 @@ export default function CityTourDetailRoute({
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {tour.title}
             </h1>
-            {jt459591Override?.heroPriceText ? (
+            {joshuaTreeTemplate?.priceLabel ? (
               <p className="mt-2 text-lg font-semibold text-[#d9f99d]">
-                From {jt459591Override.heroPriceText}
+                {joshuaTreeTemplate.priceLabel}
               </p>
             ) : null}
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
@@ -480,13 +478,13 @@ export default function CityTourDetailRoute({
               </p>
             ))}
 
-            {jt459591Override?.highlights?.length ? (
+            {joshuaTreeTemplate?.highlights?.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   Highlights
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-[#405040]">
-                  {jt459591Override.highlights.slice(0, 10).map(highlight => (
+                  {joshuaTreeTemplate.highlights.slice(0, 10).map(highlight => (
                     <li key={highlight} className="flex gap-2">
                       <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[#2f8a3d]" />
                       <span>{highlight}</span>
@@ -496,22 +494,35 @@ export default function CityTourDetailRoute({
               </>
             ) : null}
 
-            {jt459591Override?.faqs?.length ? (
+            {joshuaTreeTemplate?.itinerarySteps?.length ? (
+              <>
+                <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
+                  Itinerary
+                </h3>
+                <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+                  {joshuaTreeTemplate.itinerarySteps.slice(0, 6).map(step => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ol>
+              </>
+            ) : null}
+
+            {joshuaTreeTemplate?.faq?.length ? (
               <>
                 <h3 className="mt-8 text-xl font-semibold text-[#2f4a2f]">
                   FAQs
                 </h3>
                 <div className="mt-4 space-y-4">
-                  {jt459591Override.faqs.slice(0, 5).map(item => (
+                  {joshuaTreeTemplate.faq.slice(0, 5).map(item => (
                     <div
-                      key={item.question}
+                      key={item.q}
                       className="rounded-xl border border-black/10 bg-white p-4"
                     >
                       <p className="text-sm font-semibold text-[#1f2a1f]">
-                        {item.question}
+                        {item.q}
                       </p>
                       <p className="mt-2 text-sm text-[#405040]">
-                        {item.answer}
+                        {item.a}
                       </p>
                     </div>
                   ))}
@@ -522,9 +533,9 @@ export default function CityTourDetailRoute({
           <div className="space-y-6">
             <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
               <h3 className="text-base font-semibold text-[#1f2a1f]">
-                {jt459591Override ? "Tour logistics" : "Tour snapshot"}
+                {joshuaTreeTemplate ? "Tour logistics" : "Tour snapshot"}
               </h3>
-              {jt459591Override ? (
+              {joshuaTreeTemplate ? (
                 <div className="mt-4 space-y-3 text-sm text-[#405040]">
                   {logisticsRows.map(item => (
                     <div key={item.label}>
@@ -532,7 +543,7 @@ export default function CityTourDetailRoute({
                         {item.label}
                       </p>
                       <p className="mt-1 text-sm font-medium text-[#1f2a1f]">
-                        {item.value ?? "Check booking page"}
+                        {item.value}
                       </p>
                     </div>
                   ))}
