@@ -86,6 +86,12 @@ export default function Engine2TourPage({
       `[FHPilot] fetched=${pilotContent ? "ok" : "failed"} transformed=${pilotContent ? "ok" : "failed"}`
     );
   }
+  if (tour.id === "34849" && import.meta.env.DEV && typeof window !== "undefined") {
+    console.info("[FH 34849 images]", {
+      heroUrl: normalizedTour.images.hero,
+      image2Url: normalizedTour.images.gallery[0] ?? null,
+    });
+  }
   const bookingPath = `${tour.seo.canonicalPath}/book`;
   const backToToursPath = tour.seo.canonicalPath.replace(
     /\/tours\/[^/]+$/,
@@ -457,7 +463,8 @@ export default function Engine2TourPage({
                 <Image
                   src={image}
                   fallbackSrc={image}
-                  alt={`${tour.name} gallery`}
+                  loading="lazy"
+                  alt={`${tour.name} photo in ${tour.geo.city}, ${tour.geo.region}`}
                   className="h-56 w-full object-cover md:h-64"
                 />
               </div>
