@@ -17,7 +17,7 @@ assert.equal(
 );
 
 const expectedParams = {
-  asn: "fh",
+  asn: "fhdn",
   "asn-ref": "alloutdooradventures",
   flow: "no",
   "full-items": "yes",
@@ -38,7 +38,7 @@ assert.equal(/flow=\d+/.test(output), false, "should not include numeric flow va
 
 assert.equal(
   output,
-  "https://fareharbor.com/embeds/book/red-jeep/items/34891/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F"
+  "https://fareharbor.com/embeds/book/red-jeep/items/34891/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F"
 );
 
 console.log("engine2 fareharbor url normalization checks passed");

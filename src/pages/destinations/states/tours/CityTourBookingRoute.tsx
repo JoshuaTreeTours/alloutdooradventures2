@@ -23,9 +23,14 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import {
+  getFareharborOperatorSlugFromUrl,
   getFareharborParams,
   normalizeFareharborUrl,
 } from "../../../../lib/fareharbor";
+import {
+  OPT_OUT_OPERATOR_SLUGS,
+  recordBlockedFareharborEmbed,
+} from "../../../../utils/fareharbor/optOutOperators";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import { buildBookingMeta } from "../../../../lib/tourMeta";
 import {
@@ -124,6 +129,12 @@ export default function CityTourBookingRoute({
   // NOTE: useMemo ensures params are captured once per mount.
   const fareharborParams = useMemo(() => getFareharborParams(), []);
   const isFareharbor = tour.bookingProvider === "fareharbor";
+  const fareharborOperatorSlug = isFareharbor
+    ? getFareharborOperatorSlugFromUrl(tour.bookingUrl)
+    : null;
+  const isBlockedFareharborEmbed =
+    !!fareharborOperatorSlug &&
+    OPT_OUT_OPERATOR_SLUGS.has(fareharborOperatorSlug);
 
   const ensureFareharborParams = (url?: string) => {
     if (!url) return undefined;
@@ -133,8 +144,18 @@ export default function CityTourBookingRoute({
 
   const embedSourceUrl = isFareharbor ? tour.bookingUrl : tour.bookingWidgetUrl;
   const attributedBookingUrl = ensureFareharborParams(tour.bookingUrl);
-  const attributedWidgetUrl = ensureFareharborParams(embedSourceUrl);
+  const attributedWidgetUrl = isBlockedFareharborEmbed
+    ? undefined
+    : ensureFareharborParams(embedSourceUrl);
   const fallbackBookingUrl = attributedBookingUrl ?? tour.bookingUrl;
+
+  useEffect(() => {
+    if (!isBlockedFareharborEmbed || !fareharborOperatorSlug) {
+      return;
+    }
+
+    recordBlockedFareharborEmbed(fareharborOperatorSlug);
+  }, [fareharborOperatorSlug, isBlockedFareharborEmbed]);
 
   const disclosure = getAffiliateDisclosure(tour);
   const disclosureText =
@@ -327,7 +348,22 @@ export default function CityTourBookingRoute({
         </section>
 
         <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
-          {attributedWidgetUrl && !redirectMode ? (
+          {isBlockedFareharborEmbed ? (
+            <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+              <h2 className="text-xl font-semibold text-[#1f2a1f]">
+                Unavailable
+              </h2>
+              <p className="mt-3 text-sm text-[#405040]">
+                This operator is temporarily unavailable through our embedded
+                booking flow.
+              </p>
+              <Link href={toursHref}>
+                <a className="mt-4 inline-flex items-center justify-center rounded-md border border-[#2f4a2f]/30 px-4 py-2 text-sm font-semibold text-[#2f4a2f] transition hover:bg-[#f2ebe0]">
+                  Browse city tours
+                </a>
+              </Link>
+            </div>
+          ) : attributedWidgetUrl && !redirectMode ? (
             <div className="rounded-2xl border border-black/10 bg-white p-4 shadow-sm md:p-6">
               <iframe
                 title={`${tour.title} booking`}

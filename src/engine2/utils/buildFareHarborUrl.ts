@@ -5,7 +5,7 @@ const DEFAULT_REF = "https://www.alloutdooradventures.com";
 const DEFAULT_BACK = "https://www.alloutdooradventures.com/";
 
 const REQUIRED_QUERY_PAIRS = [
-  ["asn", "fh"],
+  ["asn", "fhdn"],
   ["asn-ref", "alloutdooradventures"],
   ["flow", "no"],
   ["full-items", "yes"],
