@@ -271,6 +271,34 @@ const getCountrySlugFromTour = (tour, catalogModule) =>
         ? catalogModule.slugify(tour.destination.state)
         : undefined);
 
+const REMOVED_TOUR_IDS = new Set(["34849", "34897", "43915", "34899", "34891", "574370"]);
+const REMOVED_OPERATOR_NAMES = new Set([
+  "desert adventures red jeep tours",
+  "red jeep tours",
+  "red jeep company",
+]);
+const REMOVED_OPERATOR_SHORTNAMES = new Set(["red-jeep"]);
+
+const getTourIdFromSlug = (slug) => {
+  const match = slug?.match?.(/-(\d+)$/);
+  return match?.[1] ?? null;
+};
+
+const isRemovedTour = (tour) => {
+  const tourId = tour.id?.toString?.() ?? getTourIdFromSlug(tour.slug ?? "");
+  if (tourId && REMOVED_TOUR_IDS.has(tourId)) {
+    return true;
+  }
+
+  const operatorName = tour.operator?.trim?.().toLowerCase?.();
+  if (operatorName && REMOVED_OPERATOR_NAMES.has(operatorName)) {
+    return true;
+  }
+
+  const shortName = tour.companyShortname?.trim?.().toLowerCase?.();
+  return Boolean(shortName && REMOVED_OPERATOR_SHORTNAMES.has(shortName));
+};
+
 const buildTourSummaries = async (catalogModule) => {
   const toursGeneratedModule = await tsImport(
     "../src/data/tours.generated.ts",
@@ -408,7 +436,7 @@ const buildTourSummaries = async (catalogModule) => {
     });
   });
 
-  return tours;
+  return tours.filter((tour) => !isRemovedTour(tour));
 };
 
 

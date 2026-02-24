@@ -7,7 +7,6 @@ import { europeTours } from "./europeTours";
 import { australiaTours } from "./australiaTours";
 import { applyTourPricing } from "./tourPricing";
 import {
-  REQUIRED_FH_URL_34849,
   getAllEngine2Tours,
   getEngine2ToursByStateSlug,
   getEngine2ToursBySourceCity,
@@ -18,6 +17,7 @@ import {
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
+import { isTourRemoved } from "../utils/tours/isTourRemoved";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -141,7 +141,13 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(tour =>
+].filter(
+  tour =>
+    !isTourRemoved({
+      tourId: getEngine1FareHarborItemId(tour),
+      operatorName: tour.operator,
+    })
+).map(tour =>
   applyTourPricing({
     ...tour,
     destination: {
@@ -232,14 +238,14 @@ export type UnifiedCityTour = {
   href: string;
 };
 
-const getEngine1FareHarborItemId = (tour: Tour) => {
+function getEngine1FareHarborItemId(tour: Tour) {
   if (tour.bookingProvider !== "fareharbor") {
     return null;
   }
 
   const match = tour.bookingUrl.match(/\/items\/(\d+)/);
   return match?.[1] ?? null;
-};
+}
 
 const toUnifiedEngine1Tour = (tour: Tour): UnifiedCityTour => ({
   tour,
@@ -304,13 +310,8 @@ const getDedupeKey = (entry: UnifiedCityTour) => {
   return `${entry.tour.bookingProvider}:${itemId}`;
 };
 
-const scoreDedupeCandidate = (entry: UnifiedCityTour) => {
-  if (entry.tour.bookingUrl === REQUIRED_FH_URL_34849) {
-    return 2;
-  }
-
-  return entry.tour.id.startsWith("engine2-") ? 1 : 0;
-};
+const scoreDedupeCandidate = (entry: UnifiedCityTour) =>
+  entry.tour.id.startsWith("engine2-") ? 1 : 0;
 
 const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
   const deduped = new Map<string, UnifiedCityTour>();

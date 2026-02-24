@@ -49,6 +49,8 @@ import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { getJoshuaTree459591Override } from "../../../../utils/fh/joshuaTree459591Content";
+import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
+import RemovedTourGone from "../../../RemovedTourGone";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -64,6 +66,14 @@ export default function CityTourDetailRoute({
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
+
+  if (isRemovedTourSlug(params.tourSlug)) {
+    return (
+      <RemovedTourGone
+        cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
+      />
+    );
+  }
 
   const engine2Tour = getEngine2TourBySlug(
     params.stateSlug,

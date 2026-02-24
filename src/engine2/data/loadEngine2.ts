@@ -23,9 +23,7 @@ import { getEngine2MexicoCityTours } from "./mexicoCityTours";
 import { getEngine2AmsterdamTours } from "./amsterdamTours";
 import { getEngine2SpainTours as loadEngine2SpainTours } from "./spainTours";
 import { getEngine2ParisTours } from "./parisTours";
-
-export const REQUIRED_FH_URL_34849 =
-  "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
+import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 
 export type Engine2Tour = {
   id: string;
@@ -135,36 +133,39 @@ const allGeneratedTours = mergeEngine2Tours([
   getEngine2ParisTours(),
 ]);
 
-const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
-  ...tour,
-  images: {
-    ...tour.images,
-    hero: getBestFareHarborImage(tour),
-  },
-  booking: {
-    ...tour.booking,
-    bookingUrl:
-      tour.booking.fareharbor?.itemId === "34849"
-        ? REQUIRED_FH_URL_34849
-        : tour.booking.fareharbor
-          ? buildFareHarborUrl({
-              company: tour.booking.fareharbor.shortname,
-              itemId: tour.booking.fareharbor.itemId,
-              calendarPath: tour.booking.bookingUrl,
-            })
-          : normalizeFareHarborUrl(tour.booking.bookingUrl),
-  },
-  bookingUrl:
-    tour.booking.fareharbor?.itemId === "34849"
-      ? REQUIRED_FH_URL_34849
-      : tour.booking.fareharbor
+const engine2Tours: Engine2Tour[] = allGeneratedTours
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: tour.id,
+        operatorName: tour.provider.name,
+        operatorShortName: tour.provider.shortName,
+      })
+  )
+  .map(tour => ({
+    ...tour,
+    images: {
+      ...tour.images,
+      hero: getBestFareHarborImage(tour),
+    },
+    booking: {
+      ...tour.booking,
+      bookingUrl: tour.booking.fareharbor
         ? buildFareHarborUrl({
             company: tour.booking.fareharbor.shortname,
             itemId: tour.booking.fareharbor.itemId,
             calendarPath: tour.booking.bookingUrl,
           })
         : normalizeFareHarborUrl(tour.booking.bookingUrl),
-}));
+    },
+    bookingUrl: tour.booking.fareharbor
+      ? buildFareHarborUrl({
+          company: tour.booking.fareharbor.shortname,
+          itemId: tour.booking.fareharbor.itemId,
+          calendarPath: tour.booking.bookingUrl,
+        })
+      : normalizeFareHarborUrl(tour.booking.bookingUrl),
+  }));
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])
