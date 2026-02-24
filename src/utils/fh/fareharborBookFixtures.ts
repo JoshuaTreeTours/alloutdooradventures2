@@ -15,9 +15,9 @@ const HTML_34849 = `
     <p>Stops include fault-line viewpoints, Indio Hills canyons, slot-canyon passages, and palm oasis areas where guests can walk short segments and discuss local geology.</p>
   </section>
   <section data-fh="gallery">
-    <img src="https://cdn.filestackcontent.com/SHAREDFAULTHERO1" alt="Fault zone overview" />
-    <img src="https://cdn.filestackcontent.com/SHAREDFAULTALT2" alt="Jeep in canyon" />
-    <img src="https://cdn.filestackcontent.com/SHAREDFAULTALT3" alt="Palm oasis stop" />
+    <img src="https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa" alt="Fault zone overview" />
+    <img src="https://cdn.filestackcontent.com/Gx5pQmN2rT7vKc9LhD4s" alt="Jeep in canyon" />
+    <img src="https://cdn.filestackcontent.com/Qw8Lm3Ty6Pk2Ns7Hd9Vr" alt="Palm oasis stop" />
   </section>
   <section data-fh="highlights">
     <ul>

@@ -41,7 +41,8 @@
     "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts",
     "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
     "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts",
-    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts"
+    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts",
+    "verify:palm-springs-34849-images": "tsx scripts/verify-palm-springs-34849-images.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
