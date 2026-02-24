@@ -131,6 +131,38 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
+  it("normalizes US state names to USPS region codes", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      place: {
+        ...baseArgs.place,
+        region: "California",
+        countryCode: "US",
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const place = graph.find(node => node["@type"] === "Place") as {
+      address: { addressRegion: string };
+    };
+
+    expect(place.address.addressRegion).toBe("CA");
+  });
+
+  it("keeps non-US region values unchanged", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      place: {
+        ...baseArgs.place,
+        region: "British Columbia",
+        countryCode: "CA",
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+    const place = graph.find(node => node["@type"] === "Place") as {
+      address: { addressRegion: string };
+    };
+
+    expect(place.address.addressRegion).toBe("British Columbia");
+  });
+
   it("derives PT3H from duration minutes", () => {
     expect(
       resolveTourDurationISO({

@@ -10,6 +10,59 @@ export const ENABLE_TOUR_SCHEMA_V1 = true;
 
 type SchemaOffer = Record<string, unknown>;
 
+const US_STATE_MAP: Record<string, string> = {
+  Alabama: "AL",
+  Alaska: "AK",
+  Arizona: "AZ",
+  Arkansas: "AR",
+  California: "CA",
+  Colorado: "CO",
+  Connecticut: "CT",
+  Delaware: "DE",
+  Florida: "FL",
+  Georgia: "GA",
+  Hawaii: "HI",
+  Idaho: "ID",
+  Illinois: "IL",
+  Indiana: "IN",
+  Iowa: "IA",
+  Kansas: "KS",
+  Kentucky: "KY",
+  Louisiana: "LA",
+  Maine: "ME",
+  Maryland: "MD",
+  Massachusetts: "MA",
+  Michigan: "MI",
+  Minnesota: "MN",
+  Mississippi: "MS",
+  Missouri: "MO",
+  Montana: "MT",
+  Nebraska: "NE",
+  Nevada: "NV",
+  NewHampshire: "NH",
+  NewJersey: "NJ",
+  NewMexico: "NM",
+  NewYork: "NY",
+  NorthCarolina: "NC",
+  NorthDakota: "ND",
+  Ohio: "OH",
+  Oklahoma: "OK",
+  Oregon: "OR",
+  Pennsylvania: "PA",
+  RhodeIsland: "RI",
+  SouthCarolina: "SC",
+  SouthDakota: "SD",
+  Tennessee: "TN",
+  Texas: "TX",
+  Utah: "UT",
+  Vermont: "VT",
+  Virginia: "VA",
+  Washington: "WA",
+  WestVirginia: "WV",
+  Wisconsin: "WI",
+  Wyoming: "WY",
+};
+
 const toSlugLabel = (value: string) =>
   value
     .split("-")
@@ -245,6 +298,12 @@ export function buildTourSchemaGraph(args: {
 
   const hasGeo =
     typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
+  let regionValue = args.place?.region ?? null;
+
+  if (args.place?.countryCode === "US" && regionValue) {
+    regionValue =
+      US_STATE_MAP[regionValue.replace(/\s/g, "")] ?? regionValue;
+  }
 
   const placeNode: Record<string, unknown> = {
     "@type": "Place",
@@ -253,7 +312,7 @@ export function buildTourSchemaGraph(args: {
     address: {
       "@type": "PostalAddress",
       ...(args.place?.city ? { addressLocality: args.place.city } : {}),
-      ...(args.place?.region ? { addressRegion: args.place.region } : {}),
+      ...(regionValue ? { addressRegion: regionValue } : {}),
       ...(args.place?.countryCode
         ? { addressCountry: args.place.countryCode }
         : {}),
