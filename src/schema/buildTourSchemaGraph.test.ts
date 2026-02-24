@@ -88,6 +88,29 @@ describe("buildTourSchemaGraph", () => {
     expect(product.image).toContain("https://example.com/tour-1.jpg");
   });
 
+  it("sets Product.image and TouristTrip.image to two unique URLs when secondary image exists", () => {
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      derivedImages: [
+        "https://example.com/hero.jpg",
+        "https://cdn.filestackcontent.com/UAlzyhkvRvKmb0Y8JQwU/convert?cache=true&compress=true&quality=90&format=webp&rotate=exif&w=1000&fit=max",
+      ],
+    })["@graph"] as Array<Record<string, unknown>>;
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      image: string[];
+    };
+
+    expect(product.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://cdn.filestackcontent.com/UAlzyhkvRvKmb0Y8JQwU/convert?cache=true&compress=true&quality=90&format=webp&rotate=exif&w=1000&fit=max",
+    ]);
+    expect(trip.image).toEqual(product.image);
+  });
+
   it("keeps hero first and caps image array at ten", () => {
     const graph = buildTourSchemaGraph({
       ...baseArgs,
@@ -128,9 +151,10 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
-
   it("aligns WebPage.primaryImageOfPage.url and WebPage.image to the hero image", () => {
-    const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<Record<string, unknown>>;
+    const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<
+      Record<string, unknown>
+    >;
     const webPage = graph.find(node => node["@type"] === "WebPage") as {
       image: string;
       primaryImageOfPage: { url: string };

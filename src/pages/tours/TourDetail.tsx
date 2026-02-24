@@ -63,8 +63,10 @@ export default function TourDetail({ params }: TourDetailProps) {
       tour,
     }) ?? undefined;
   const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
+  const secondaryImage =
+    tour?.image2 && tour.image2 !== heroImage ? tour.image2 : undefined;
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage, ...(tour?.galleryImages ?? [])],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -222,6 +224,19 @@ export default function TourDetail({ params }: TourDetailProps) {
                 />
               ) : null}
             </div>
+            {secondaryImage ? (
+              <div className="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+                <div className="relative aspect-[5/3] w-full">
+                  <Image
+                    src={secondaryImage}
+                    fallbackSrc={secondaryImage}
+                    alt={`${tour.title} secondary view`}
+                    loading="lazy"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            ) : null}
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-[0.2em] text-[#7a8a6b]">
                 {destinationLabel}

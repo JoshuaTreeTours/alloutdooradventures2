@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
 
 import { getEngine2TourByPath } from "../../engine2/data/loadEngine2";
-import { getPalmSpringsOverrideContent } from "./palmSpringsPilotContent";
+import {
+  getPalmSpringsImage2Url,
+  getPalmSpringsOverrideContent,
+} from "./palmSpringsPilotContent";
 import { parseFareHarborHtml } from "./parseFareHarborHtml";
 import {
   BOOK_PATH_34849,
@@ -11,6 +14,12 @@ import {
 import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
 
 describe("Palm Springs 34849 override content", () => {
+  it("provides a secondary image override URL only for tour 34849", () => {
+    expect(getPalmSpringsImage2Url(34849)).toBe(
+      "https://cdn.filestackcontent.com/UAlzyhkvRvKmb0Y8JQwU/convert?cache=true&compress=true&quality=90&format=webp&rotate=exif&w=1000&fit=max"
+    );
+    expect(getPalmSpringsImage2Url(34897)).toBeUndefined();
+  });
   it("resolves the FareHarbor URL from book path", () => {
     expect(resolveFareHarborUrlFromBookPage(BOOK_PATH_34849)).toBe(
       FAREHARBOR_URL_34849
