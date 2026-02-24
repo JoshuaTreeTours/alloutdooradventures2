@@ -43,7 +43,13 @@ const normalizeImageUrl = (value?: string) => {
     return undefined;
   }
 
-  return trimmed;
+  try {
+    const parsed = new URL(trimmed);
+    parsed.hash = "";
+    return parsed.toString();
+  } catch {
+    return trimmed;
+  }
 };
 
 const extractImageUrlsFromTag = (tagHtml: string) => {
@@ -52,20 +58,21 @@ const extractImageUrlsFromTag = (tagHtml: string) => {
     matcher: RegExp;
     transform?: (value: string) => string | undefined;
   }> = [
+    { matcher: /\sdata-src\s*=\s*["']([^"']+)["']/i },
+    { matcher: /\sdata-lazy\s*=\s*["']([^"']+)["']/i },
+    { matcher: /\sdata-original\s*=\s*["']([^"']+)["']/i },
+    { matcher: /\ssrc\s*=\s*["']([^"']+)["']/i },
     {
       matcher: /\ssrcset\s*=\s*["']([^"']+)["']/i,
       transform: parseSrcsetFirstUrl,
     },
-    { matcher: /\ssrc\s*=\s*["']([^"']+)["']/i },
-    { matcher: /\sdata-src\s*=\s*["']([^"']+)["']/i },
-    { matcher: /\sdata-lazy\s*=\s*["']([^"']+)["']/i },
   ];
 
   attrPatterns.forEach(({ matcher, transform }) => {
     const rawValue = tagHtml.match(matcher)?.[1];
     const transformed = transform ? transform(rawValue ?? "") : rawValue;
     const normalized = normalizeImageUrl(transformed);
-    if (normalized) {
+    if (normalized && /filestackcontent/i.test(normalized)) {
       urls.push(normalized);
     }
   });
@@ -248,6 +255,11 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
     }))
     .filter(item => item.q && item.a);
 
+  const galleryImages = extractGalleryImages(html);
+  if (process.env.NODE_ENV !== "production" && /\b34849\b/.test(html)) {
+    console.info("[fh-34849] galleryImages", galleryImages);
+  }
+
   return {
     title,
     overview,
@@ -262,6 +274,6 @@ export const parseFareHarborHtml = (html: string): ParsedTour => {
     inclusions: getListItems(getSection(html, "inclusions")),
     exclusions: getListItems(getSection(html, "exclusions")),
     faq,
-    galleryImages: extractGalleryImages(html),
+    galleryImages,
   };
 };
