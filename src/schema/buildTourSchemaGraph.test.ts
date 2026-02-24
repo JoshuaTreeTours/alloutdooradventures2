@@ -58,18 +58,15 @@ describe("buildTourSchemaGraph", () => {
     expect(urls.join(" ")).not.toContain("/destinations/united-states");
   });
 
-  it("ensures two schema images when only hero image is valid", () => {
+  it("uses a single hero image without default fallback", () => {
     const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<
       Record<string, unknown>
     >;
     const product = graph.find(node => node["@type"] === "Product") as {
-      image: string[];
+      image: string;
     };
 
-    expect(product.image).toEqual([
-      "https://example.com/hero.jpg",
-      "https://www.alloutdooradventures.com/default-tour.jpg",
-    ]);
+    expect(product.image).toBe("https://example.com/hero.jpg");
   });
 
   it("excludes filestack resize base URL junk from derived images", () => {
@@ -131,7 +128,19 @@ describe("buildTourSchemaGraph", () => {
     });
   });
 
-  it("normalizes US state names to USPS region codes", () => {
+
+  it("aligns WebPage.primaryImageOfPage.url and WebPage.image to the hero image", () => {
+    const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<Record<string, unknown>>;
+    const webPage = graph.find(node => node["@type"] === "WebPage") as {
+      image: string;
+      primaryImageOfPage: { url: string };
+    };
+
+    expect(webPage.image).toBe("https://example.com/hero.jpg");
+    expect(webPage.primaryImageOfPage.url).toBe("https://example.com/hero.jpg");
+  });
+
+  it("normalizes US state names to USPS region codes and adds containing state", () => {
     const graph = buildTourSchemaGraph({
       ...baseArgs,
       place: {
@@ -142,9 +151,14 @@ describe("buildTourSchemaGraph", () => {
     })["@graph"] as Array<Record<string, unknown>>;
     const place = graph.find(node => node["@type"] === "Place") as {
       address: { addressRegion: string };
+      containedInPlace: { "@type": string; name: string };
     };
 
     expect(place.address.addressRegion).toBe("CA");
+    expect(place.containedInPlace).toEqual({
+      "@type": "AdministrativeArea",
+      name: "California",
+    });
   });
 
   it("keeps non-US region values unchanged", () => {
