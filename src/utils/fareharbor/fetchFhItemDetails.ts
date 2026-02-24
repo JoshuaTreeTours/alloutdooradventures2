@@ -3,6 +3,7 @@ import path from "node:path";
 import { fareHarborHtmlByUrl } from "../fh/fareharborBookFixtures";
 import { parseFareHarborHtml } from "../fh/parseFareHarborHtml";
 import { sanitizeFhText, isBadTokenString } from "../text/sanitizeFhText";
+import { normalizeDurationText } from "./normalizeDuration";
 
 export type FhTourFacts = {
   title?: string;
@@ -38,15 +39,6 @@ const stripTags = (value: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
-const parseMinutes = (value?: string) => {
-  if (!value) return undefined;
-  const txt = value.toLowerCase();
-  const hours = txt.match(/(\d+(?:\.\d+)?)\s*(hour|hr|hrs)/)?.[1];
-  const minutes = txt.match(/(\d+(?:\.\d+)?)\s*(minute|min|mins)/)?.[1];
-  const total = (hours ? Number.parseFloat(hours) * 60 : 0) + (minutes ? Number.parseFloat(minutes) : 0);
-  return Number.isFinite(total) && total > 0 ? Math.round(total) : undefined;
-};
-
 const extractList = (html: string, label: string) => {
   const block = html.match(new RegExp(`<[^>]+>${label}<\\/[^>]+>([\\s\\S]{0,1200}?)<\\/(ul|ol|div)>`, "i"))?.[1] ?? "";
   return Array.from(block.matchAll(/<li[^>]*>([\s\S]*?)<\/li>/gi)).map(m => stripTags(m[1] ?? "")).filter(Boolean);
@@ -55,9 +47,11 @@ const extractList = (html: string, label: string) => {
 const extractFacts = (html: string, fallbackTitle?: string): FhTourFacts => {
   const title = sanitizeFhText(stripTags(html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? "") || fallbackTitle || "");
   const text = stripTags(html);
-  const durationText = sanitizeFhText(
+  const durationRaw = sanitizeFhText(
     text.match(/Duration\s*:?\s*([^\.\n|]+)/i)?.[1]?.trim() ?? ""
   );
+  const normalizedDuration = normalizeDurationText(durationRaw);
+  const durationText = normalizedDuration?.text;
   const meetingPoint = sanitizeFhText(
     text
       .match(/Meeting(?:\s+Point|\s+Location)?\s*:?\s*([^\.\n|]+)/i)?.[1]
@@ -78,7 +72,7 @@ const extractFacts = (html: string, fallbackTitle?: string): FhTourFacts => {
   return {
     title,
     durationText,
-    durationMinutes: parseMinutes(durationText),
+    durationMinutes: normalizedDuration?.minutes,
     meetingPoint,
     ageMin: Number.isFinite(ageMin) ? ageMin : undefined,
     groupSizeMax: Number.isFinite(groupMax) ? groupMax : undefined,
@@ -105,8 +99,8 @@ const extractFromFixture = (shortname: string, itemId: string): FhTourFacts | nu
   const parsed = parseFareHarborHtml(fareHarborHtmlByUrl[key]);
   return {
     title: parsed.title,
-    durationText: parsed.duration,
-    durationMinutes: parseMinutes(parsed.duration),
+    durationText: normalizeDurationText(parsed.duration)?.text,
+    durationMinutes: normalizeDurationText(parsed.duration)?.minutes,
     meetingPoint: parsed.meetingPoint.rawText,
     meetingPointAddress: parsed.meetingPoint.addressLine1,
     cancellationPolicy: normalizeCancellationPolicy(parsed.faq.find(item => /cancel/i.test(item.q))?.a),
@@ -126,19 +120,35 @@ const normalizeCancellationPolicy = (raw?: string) => {
   const cleaned = sanitizeFhText(raw ?? "");
   if (!cleaned) return undefined;
 
-  const cancelWindow = cleaned.match(
-    /(cancel(?:lation)?[^.\n]{0,120}(?:hour|hours|day|days))/i
+  let candidate = cleaned;
+  if (/^\s*\{/.test(cleaned)) {
+    try {
+      const parsed = JSON.parse(cleaned) as Record<string, unknown>;
+      const best =
+        (typeof parsed.short_description === "string" && parsed.short_description) ||
+        (typeof parsed.description === "string" && parsed.description) ||
+        (typeof parsed.policy_text === "string" && parsed.policy_text) ||
+        "";
+      candidate = sanitizeFhText(best || "");
+    } catch {
+      candidate = "";
+    }
+  }
+
+  const cancelWindow = candidate.match(
+    /(cancel(?:lation)?[^.\n]{0,180}(?:hour|hours|day|days))/i
   )?.[1];
-  const candidate = cancelWindow ? sanitizeFhText(cancelWindow) : cleaned;
+  const normalized = sanitizeFhText(cancelWindow || candidate);
 
   if (
-    /flownode|policy\{|\{\s*"|\{\s*'/.test(candidate.toLowerCase()) ||
-    isBadTokenString(candidate)
+    !normalized ||
+    /flownode|policy\{|\{\s*"|\{\s*'/.test(normalized.toLowerCase()) ||
+    isBadTokenString(normalized)
   ) {
     return "See booking page for cancellation terms.";
   }
 
-  return candidate;
+  return normalized;
 };
 
 const parseUrlBits = (fhEmbedUrl: string) => {

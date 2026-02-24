@@ -63,8 +63,9 @@ export default function Engine2TourPage({
             (item): item is { question: string; answer: string } =>
               Boolean(item?.question?.trim()) && Boolean(item?.answer?.trim())
           )
-          .slice(0, 5)
+          .slice(0, 10)
       : [];
+    const practicalNotes = normalizeStringArray(tour.content.practicalNotes).slice(0, 8);
 
     return {
       ...tour,
@@ -77,6 +78,7 @@ export default function Engine2TourPage({
         highlights,
         heroSummary,
         faqs,
+        practicalNotes,
       },
     };
   }, [tour]);
@@ -92,7 +94,7 @@ export default function Engine2TourPage({
   const sanitizeTourText = (value: string) => {
     const cleaned = sanitizeFhText(value, {
       itemName: tour.name,
-      durationText: tour.badges?.duration,
+      durationText: undefined,
     });
 
     if (isBadTokenString(cleaned)) {
@@ -115,6 +117,9 @@ export default function Engine2TourPage({
       question: isJoshuaTreeTour ? sanitizeTourText(item.question) : item.question,
       answer: isJoshuaTreeTour ? sanitizeTourText(item.answer) : item.answer,
     })),
+    practicalNotes: (normalizedTour.content.practicalNotes ?? []).map(item =>
+      isJoshuaTreeTour ? sanitizeTourText(item) : item
+    ),
   };
 
   const content = overrideContent?.enabled
@@ -365,6 +370,18 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
+        {!overrideContent?.enabled && content.practicalNotes?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Practical notes
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+              {content.practicalNotes.map(note => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </>
+        ) : null}
 
         {!overrideContent?.enabled && content.faqs?.length ? (
           <>

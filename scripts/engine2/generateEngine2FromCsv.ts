@@ -1,6 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { fetchFhItemDetails } from "../../src/utils/fareharbor/fetchFhItemDetails";
-import { generateTourDescriptionFromFacts } from "../../src/utils/tours/generateTourDescriptionFromFacts";
+import { composeJoshuaTreeTourContent } from "../../src/utils/tours/composeJoshuaTreeTourContent";
 import path from "node:path";
 
 import { ENGINE2_DEFAULT_IMAGE } from "../../src/engine2/config/destinations";
@@ -45,6 +45,7 @@ type GeneratedTour = {
     highlights: string[];
     heroSummary?: string;
     faqs?: Array<{ question: string; answer: string }>;
+    practicalNotes?: string[];
   };
   images: {
     hero: string | null;
@@ -107,6 +108,13 @@ const slugify = (value: string) =>
 const uniq = (arr: string[]) => Array.from(new Set(arr));
 
 const clean = (value?: string) => (value ?? "").trim();
+
+
+const splitTags = (value?: string) =>
+  clean(value)
+    .split(/[-|,]/)
+    .map(item => item.trim())
+    .filter(Boolean);
 
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
@@ -366,40 +374,43 @@ const buildTour = async (
       cacheTtlHours: 24,
     });
 
-    if (fhFacts) {
-      const generated = generateTourDescriptionFromFacts({
-        fhFacts: {
-          ...fhFacts,
-          title: fhFacts.title ?? name,
-          operatorName: fhFacts.operatorName ?? providerName,
-        },
-        destinationContext: {
-          city: "Joshua Tree",
-          region: "Joshua Tree National Park",
-        },
-        previousDescriptions: joshuaTreeDescriptions,
-      });
+    const generated = composeJoshuaTreeTourContent({
+      fhFacts: fhFacts
+        ? {
+            ...fhFacts,
+            title: fhFacts.title ?? name,
+            operatorName: fhFacts.operatorName ?? providerName,
+          }
+        : null,
+      tour: {
+        id,
+        slug,
+        title: name,
+        tags: splitTags(row.tags),
+        categories: splitTags(row.tags),
+        operatorName: providerName,
+      },
+      destination: {
+        city: "Joshua Tree",
+        region: "Joshua Tree National Park",
+      },
+    });
 
-      draftTour.content.experienceText = generated.longDescription;
-      draftTour.content.highlights = generated.highlights.length
-        ? generated.highlights
-        : draftTour.content.highlights;
-      draftTour.content.heroSummary = generated.heroSummary;
-      draftTour.content.faqs = generated.faqs;
-      draftTour.seo.description = generated.heroSummary;
-      joshuaTreeDescriptions.push(generated.longDescription);
-      joshuaTreeSummaryLog.push({
-        tourSlug: slug,
-        factsFound: true,
-        usedFallback: false,
-      });
-    } else {
-      joshuaTreeSummaryLog.push({
-        tourSlug: slug,
-        factsFound: false,
-        usedFallback: true,
-      });
-    }
+    const composedText = generated.whatYoullExperience.join("\n\n");
+    draftTour.content.experienceText = composedText;
+    draftTour.content.highlights = generated.highlights.length
+      ? generated.highlights
+      : draftTour.content.highlights;
+    draftTour.content.heroSummary = generated.heroSummary;
+    draftTour.content.faqs = generated.faqs;
+    draftTour.content.practicalNotes = generated.practicalNotes;
+    draftTour.seo.description = generated.heroSummary;
+    joshuaTreeDescriptions.push(composedText);
+    joshuaTreeSummaryLog.push({
+      tourSlug: slug,
+      factsFound: Boolean(fhFacts),
+      usedFallback: !fhFacts,
+    });
   }
   const builtSeo = buildEngine2Seo(draftTour);
 
@@ -436,6 +447,31 @@ const buildCityIndex = (tours: GeneratedTour[]): CityIndexEntry[] => {
   }
 
   return Array.from(cityMap.values()).sort((a, b) => b.tourCount - a.tourCount || a.citySlug.localeCompare(b.citySlug));
+};
+
+
+const assertJoshuaTreeContentClean = (tours: GeneratedTour[]) => {
+  const badPatterns = [/\[!/i, /!\]/i, /%\(/i, /\\u00/i, /\)s\b/i, /durationTypes/i];
+  const offenders: string[] = [];
+
+  for (const tour of tours) {
+    if (tour.sourceCitySlug !== "joshua-tree") continue;
+    const haystack = [
+      tour.content.experienceText,
+      tour.content.heroSummary ?? "",
+      ...(tour.content.highlights ?? []),
+      ...(tour.content.faqs ?? []).flatMap(item => [item.question, item.answer]),
+      ...(tour.content.practicalNotes ?? []),
+    ].join("\n");
+
+    if (badPatterns.some(pattern => pattern.test(haystack))) {
+      offenders.push(tour.slug);
+    }
+  }
+
+  if (offenders.length) {
+    throw new Error(`Joshua Tree content failed token assertions for: ${offenders.join(", ")}`);
+  }
 };
 
 const main = async () => {
@@ -499,6 +535,7 @@ const main = async () => {
   }
 
   validateGeneratedTours(tours);
+  assertJoshuaTreeContentClean(tours);
 
   const outPath = path.resolve(process.cwd(), "src/engine2/data/california.generated.ts");
   const fileContents = `const californiaEngine2Tours = ${JSON.stringify(tours, null, 2)} as const;\n\nexport const californiaEngine2CitiesIndex = ${JSON.stringify(citiesIndex, null, 2)} as const;\n\nexport default californiaEngine2Tours;\n`;
