@@ -8,6 +8,7 @@ import { fetchFareHarborHtml } from "./fetchFareHarborHtml";
 import { parseFareHarborHtml } from "./parseFareHarborHtml";
 import { resolveFareHarborUrlFromBookPage } from "./resolveFareHarborUrlFromBookPage";
 import { extractFilestackImagesFromHtml } from "../fareharbor/extractFilestackImagesFromHtml";
+import { selectTourImages } from "../images/selectTourImages";
 import {
   CURATED_34849_FAQS,
   transformToAOAContent,
@@ -20,6 +21,8 @@ export type PalmSpringsOverrideContent = {
   tourId: number;
   content: TourRewriteV3;
   derivedImages?: string[];
+  heroImage?: string;
+  galleryImages?: string[];
 };
 
 const PALM_SPRINGS_SEEDS: Record<string, FareHarborStructuredData> = {
@@ -177,12 +180,24 @@ export const getPalmSpringsOverrideContent = (
     }
 
     const parsedTour = parseFareHarborHtml(fareHarborHtml);
-    const derivedImages = extractFilestackImagesFromHtml(fareHarborHtml);
+    const extractedImages = extractFilestackImagesFromHtml(fareHarborHtml);
+    const selectedImages = selectTourImages({
+      derivedImages: extractedImages
+        .filter(image => /^https?:\/\//i.test(image))
+        .filter(image => !image.includes("cdn.filestackcontent.com/resize")),
+      fallbackHeroUrl: tour.images.hero ?? "",
+      galleryMax: 2,
+    });
 
     return {
       enabled: true,
       tourId: 34849,
-      derivedImages,
+      derivedImages: [
+        selectedImages.heroImage,
+        ...selectedImages.galleryImages,
+      ].filter(Boolean),
+      heroImage: selectedImages.heroImage || undefined,
+      galleryImages: selectedImages.galleryImages,
       content: {
         ...transformToAOAContent(parsedTour),
         canonicalPath: tour.seo.canonicalPath,

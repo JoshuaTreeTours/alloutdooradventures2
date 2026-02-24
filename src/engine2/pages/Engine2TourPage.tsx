@@ -50,11 +50,18 @@ export default function Engine2TourPage({
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
         : ENGINE2_DEFAULT_IMAGE;
+    const overrideHero = overrideContent?.heroImage?.trim();
+    const overrideGallery = normalizeStringArray(
+      overrideContent?.galleryImages
+    );
     const derivedImages = normalizeStringArray(overrideContent?.derivedImages);
     const selectedImages = selectTourImages({
-      derivedImages: derivedImages.length
-        ? derivedImages
-        : [fallbackHeroImage, ...normalizeStringArray(tour.images.gallery)],
+      derivedImages:
+        overrideHero || overrideGallery.length
+          ? [overrideHero ?? "", ...overrideGallery]
+          : derivedImages.length
+            ? derivedImages
+            : [fallbackHeroImage, ...normalizeStringArray(tour.images.gallery)],
       fallbackHeroUrl: fallbackHeroImage,
       galleryMax: 2,
     });

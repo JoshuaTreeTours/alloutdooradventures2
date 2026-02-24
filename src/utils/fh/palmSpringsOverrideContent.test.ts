@@ -67,6 +67,12 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.whatYoullExperience.join(" ")).not.toContain(
       "OVERRIDE TEST SUCCESS"
     );
+    expect(override?.heroImage).toMatch(/^https?:\/\//);
+    expect(override?.galleryImages?.length ?? 0).toBeLessThanOrEqual(2);
+    expect(override?.derivedImages?.length ?? 0).toBeGreaterThanOrEqual(1);
+    expect(
+      override?.derivedImages?.some(image => image.includes("/resize"))
+    ).toBe(false);
   });
 
   it("returns null override during prerender builds", () => {
