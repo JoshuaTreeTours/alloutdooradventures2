@@ -38,6 +38,9 @@ import {
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
+import { extractFilestackImagesFromHtml } from "../../../../utils/fareharbor/extractFilestackImagesFromHtml";
+import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
+import { resolveFareHarborUrlFromBookPage } from "../../../../utils/fh/resolveFareHarborUrlFromBookPage";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -94,13 +97,38 @@ export default function CityTourDetailRoute({
       : tour
         ? getCityTourDetailPath(tour)
         : "";
-  const heroImage =
+  const existingHeroImage =
     resolveHeroImageForRoute({
       route: canonicalUrl,
       tour,
     }) ?? undefined;
+  const derivedImages = useMemo(() => {
+    if (!tour || !canonicalUrl) {
+      return [] as string[];
+    }
+
+    const fareHarborUrl = resolveFareHarborUrlFromBookPage(
+      `${canonicalUrl}/book`
+    );
+    if (!fareHarborUrl) {
+      return [] as string[];
+    }
+
+    const html = fetchFareHarborHtml(fareHarborUrl);
+    if (!html) {
+      return [] as string[];
+    }
+
+    return extractFilestackImagesFromHtml(html);
+  }, [canonicalUrl, tour]);
+  const heroImage = derivedImages[0] ?? existingHeroImage;
+  const secondaryImage = derivedImages[1];
+  const galleryImages =
+    derivedImages.length > 1
+      ? derivedImages.slice(1)
+      : (tour?.galleryImages ?? []);
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, ...galleryImages],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -295,6 +323,16 @@ export default function CityTourDetailRoute({
                 />
               ) : null}
             </div>
+            {secondaryImage?.startsWith("https://cdn.filestackcontent.com/") ? (
+              <div className="mt-4 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                <Image
+                  src={secondaryImage}
+                  fallbackSrc={secondaryImage}
+                  alt={`${tour.title} secondary image`}
+                  className="h-56 w-full object-cover md:h-72"
+                />
+              </div>
+            ) : null}
             <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
               What you’ll experience
             </h2>
@@ -333,9 +371,9 @@ export default function CityTourDetailRoute({
             </div>
           </div>
         </div>
-        {tour.galleryImages?.length ? (
+        {galleryImages.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map(image => (
+            {galleryImages.map(image => (
               <div
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"

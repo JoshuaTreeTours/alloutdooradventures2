@@ -324,4 +324,56 @@ describe("buildSchemaGraph", () => {
       "38635 Monroe St"
     );
   });
+  it("uses hero plus gallery images in Product.image", () => {
+    const graph = buildSchemaGraph(
+      {
+        ...baseTour,
+        images: {
+          hero: "https://cdn.filestackcontent.com/SHAREDFAULTHERO1",
+          gallery: ["https://cdn.filestackcontent.com/SHAREDFAULTALT2"],
+        },
+      },
+      seo as never
+    );
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+    };
+
+    expect(product.image).toEqual([
+      "https://cdn.filestackcontent.com/SHAREDFAULTHERO1",
+      "https://cdn.filestackcontent.com/SHAREDFAULTALT2",
+    ]);
+  });
+  it("caps Product.image to hero + 2 gallery images with no duplicates", () => {
+    const graph = buildSchemaGraph(
+      {
+        ...baseTour,
+        images: {
+          hero: "https://cdn.filestackcontent.com/HEROIMAGEHANDLE01",
+          gallery: [
+            "https://cdn.filestackcontent.com/HEROIMAGEHANDLE01",
+            "https://cdn.filestackcontent.com/GALLERYHANDLE0002",
+            "https://cdn.filestackcontent.com/GALLERYHANDLE0003",
+            "https://cdn.filestackcontent.com/GALLERYHANDLE0004",
+          ],
+        },
+      },
+      seo as never
+    );
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+    };
+
+    expect(product.image[0]).toBe(
+      "https://cdn.filestackcontent.com/HEROIMAGEHANDLE01"
+    );
+    expect(product.image.length).toBeLessThanOrEqual(3);
+    expect(new Set(product.image).size).toBe(product.image.length);
+    expect(product.image).toEqual([
+      "https://cdn.filestackcontent.com/HEROIMAGEHANDLE01",
+      "https://cdn.filestackcontent.com/GALLERYHANDLE0002",
+      "https://cdn.filestackcontent.com/GALLERYHANDLE0003",
+    ]);
+  });
 });

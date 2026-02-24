@@ -228,6 +228,22 @@ describe("tour product/trip schema safety", () => {
     });
   });
 
+  it("emits Product.image as an array when hero + gallery images are provided", () => {
+    const product = buildTourProductStructuredData({
+      tour: baseTour,
+      detailUrl:
+        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1",
+      images: [
+        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+        "https://cdn.filestackcontent.com/Gx5pQmN2rT7vKc9LhD4s",
+      ],
+    }) as { image?: string[] };
+
+    expect(product.image).toEqual([
+      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+      "https://cdn.filestackcontent.com/Gx5pQmN2rT7vKc9LhD4s",
+    ]);
+  });
   it("emits Place/PostalAddress location with locality and country on tours", () => {
     const trip = buildTourTripStructuredData({
       tour: baseTour,

@@ -10,12 +10,16 @@ import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { selectTourImages } from "../../utils/images/selectTourImages";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+
+const isRenderableImage = (src: string | null | undefined) =>
+  Boolean(src) && src.startsWith("http");
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -37,15 +41,30 @@ export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const isPalmSprings = isPalmSpringsTour(tour);
+  const overrideContent = getPalmSpringsOverrideContent(tour);
+
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
-    const heroImage =
+    const fallbackHeroImage =
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
         : ENGINE2_DEFAULT_IMAGE;
-    const gallery = normalizeStringArray(tour.images.gallery).filter(
-      image => image !== heroImage
+    const overrideHero = overrideContent?.heroImage?.trim();
+    const overrideGallery = normalizeStringArray(
+      overrideContent?.galleryImages
     );
+    const derivedImages = normalizeStringArray(overrideContent?.derivedImages);
+    const selectedImages = selectTourImages({
+      derivedImages:
+        overrideHero || overrideGallery.length
+          ? [overrideHero ?? "", ...overrideGallery]
+          : derivedImages.length
+            ? derivedImages
+            : [fallbackHeroImage, ...normalizeStringArray(tour.images.gallery)],
+      fallbackHeroUrl: fallbackHeroImage,
+      galleryMax: 2,
+    });
     const experienceText =
       typeof tour.content.experienceText === "string" &&
       tour.content.experienceText.trim().length > 0
@@ -55,19 +74,17 @@ export default function Engine2TourPage({
     return {
       ...tour,
       images: {
-        hero: heroImage,
-        gallery,
+        hero: selectedImages.heroImage,
+        gallery: selectedImages.galleryImages,
       },
       content: {
         experienceText,
         highlights,
       },
     };
-  }, [tour]);
+  }, [overrideContent?.derivedImages, tour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
-  const isPalmSprings = isPalmSpringsTour(tour);
-  const overrideContent = getPalmSpringsOverrideContent(tour);
   const pilotContent =
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
@@ -214,14 +231,16 @@ export default function Engine2TourPage({
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-14">
-        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-          <Image
-            src={normalizedTour.images.hero}
-            fallbackSrc={normalizedTour.images.hero}
-            alt={tour.name}
-            className="h-64 w-full object-cover md:h-80"
-          />
-        </div>
+        {isRenderableImage(normalizedTour.images.hero) ? (
+          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={normalizedTour.images.hero}
+              fallbackSrc={normalizedTour.images.hero}
+              alt={tour.name}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        ) : null}
         {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
             <ul className="space-y-1">
@@ -446,21 +465,23 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
-        {normalizedTour.images.gallery.length ? (
+        {normalizedTour.images.gallery.some(isRenderableImage) ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {normalizedTour.images.gallery.map(image => (
-              <div
-                key={image}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
-              >
-                <Image
-                  src={image}
-                  fallbackSrc={image}
-                  alt={`${tour.name} gallery`}
-                  className="h-56 w-full object-cover md:h-64"
-                />
-              </div>
-            ))}
+            {normalizedTour.images.gallery
+              .filter(image => isRenderableImage(image))
+              .map(image => (
+                <div
+                  key={image}
+                  className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
+                >
+                  <Image
+                    src={image}
+                    fallbackSrc={image}
+                    alt={`${tour.name} gallery`}
+                    className="h-56 w-full object-cover md:h-64"
+                  />
+                </div>
+              ))}
           </div>
         ) : null}
       </section>

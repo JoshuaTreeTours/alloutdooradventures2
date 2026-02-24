@@ -14,6 +14,11 @@ const HTML_34849 = `
     <p>Explore the San Andreas Fault zone with a naturalist guide on an open-air Jeep route through the Coachella Valley's geologically active terrain.</p>
     <p>Stops include fault-line viewpoints, Indio Hills canyons, slot-canyon passages, and palm oasis areas where guests can walk short segments and discuss local geology.</p>
   </section>
+  <section data-fh="gallery">
+    <img src="https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa" alt="Fault zone overview" />
+    <img src="https://cdn.filestackcontent.com/Gx5pQmN2rT7vKc9LhD4s" alt="Jeep in canyon" />
+    <img src="https://cdn.filestackcontent.com/Qw8Lm3Ty6Pk2Ns7Hd9Vr" alt="Palm oasis stop" />
+  </section>
   <section data-fh="highlights">
     <ul>
       <li>Guided Jeep access into the active San Andreas Fault system</li>
