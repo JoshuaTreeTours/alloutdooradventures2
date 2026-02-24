@@ -351,8 +351,10 @@ export default function CityTourDetailRoute({
       : item.slug !== tour.slug
   );
   const disclosure = getAffiliateDisclosure(tour);
+  const fareHarborHeroStartingPrice =
+    fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
   const heroStartingPriceLabel = formatStartingPrice(
-    tour.startingPrice,
+    fareHarborHeroStartingPrice ?? tour.startingPrice,
     tour.currency
   );
 
@@ -418,20 +420,6 @@ export default function CityTourDetailRoute({
                 {hardenedTemplate?.primaryCtaLabel ?? "BOOK"}
               </a>
             </Link>
-            {hardenedTemplate ? (
-              <a
-                href="#booking-section"
-                className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25"
-              >
-                {hardenedTemplate.secondaryCtaLabel}
-              </a>
-            ) : (
-              <Link href={toursHref}>
-                <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
-                  Back to tours
-                </a>
-              </Link>
-            )}
           </div>
         </div>
       </section>

@@ -40,6 +40,8 @@ import {
   PRICE_MIN_THRESHOLD_USD,
 } from "../../constants/merchantDefaults";
 import { applyPriceFloor } from "../../utils/merchantPricing";
+import { fetchFareHarborHtml } from "../../utils/fh/fetchFareHarborHtml";
+import { parseFareHarborHtml } from "../../utils/fh/parseFareHarborHtml";
 
 type TourDetailProps = {
   params: {
@@ -74,6 +76,13 @@ export default function TourDetail({ params }: TourDetailProps) {
         diagnosticsLabel: `tour:${tour.id}`,
       })
     : undefined;
+  const fareHarborParsed = useMemo(() => {
+    if (!tour || tour.bookingProvider !== "fareharbor") {
+      return null;
+    }
+    const fareHarborHtml = fetchFareHarborHtml(tour.bookingUrl);
+    return fareHarborHtml ? parseFareHarborHtml(fareHarborHtml) : null;
+  }, [tour]);
   const structuredDataNodes = useMemo(() => {
     if (!tour || !detailUrl) {
       return null;
@@ -182,8 +191,10 @@ export default function TourDetail({ params }: TourDetailProps) {
     applyPriceFloor(tour.startingPrice ?? null),
     tour.currency
   );
+  const fareHarborHeroStartingPrice =
+    fareHarborParsed?.priceAdult ?? fareHarborParsed?.priceChild;
   const heroStartingPriceLabel = formatStartingPrice(
-    tour.startingPrice,
+    fareHarborHeroStartingPrice ?? tour.startingPrice,
     tour.currency
   );
   const isPriceFallbackApplied =
