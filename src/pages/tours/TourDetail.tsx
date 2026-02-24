@@ -322,6 +322,15 @@ export default function TourDetail({ params }: TourDetailProps) {
             ))}
           </div>
         ) : null}
+        {bookingUrl ? (
+          <div className="mt-12 text-center">
+            <Link href={bookingUrl}>
+              <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                Book This Tour
+              </a>
+            </Link>
+          </div>
+        ) : null}
       </section>
     </main>
   );
