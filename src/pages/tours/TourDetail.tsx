@@ -63,6 +63,8 @@ export default function TourDetail({ params }: TourDetailProps) {
       tour,
     }) ?? undefined;
   const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
+  const secondaryImage =
+    tour?.galleryImages?.find((image: string) => image && image !== heroImage) ?? null;
   const structuredImages = filterHeroImages(
     [heroImage, ...(tour?.galleryImages ?? [])],
     "product"
@@ -219,6 +221,7 @@ export default function TourDetail({ params }: TourDetailProps) {
                   fallbackSrc={finalHeroImage}
                   alt={tour.title}
                   className="h-72 w-full object-cover"
+                  loading="eager"
                 />
               ) : null}
             </div>
@@ -312,12 +315,28 @@ export default function TourDetail({ params }: TourDetailProps) {
                 key={image}
                 className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
               >
-                <Image
-                  src={image}
-                  fallbackSrc={image}
-                  alt={`${tour.title} gallery`}
-                  className="h-56 w-full object-cover md:h-72"
-                />
+                <div className="aspect-[4/3] w-full">
+                  <Image
+                    src={image}
+                    fallbackSrc={image}
+                    alt={`${tour.title} gallery`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                {image === secondaryImage && tour.image2Attribution ? (
+                  <p className="px-4 py-3 text-xs text-[#405040]">
+                    {tour.image2Attribution.attributionText} · {" "}
+                    <a
+                      className="underline"
+                      href={tour.image2Attribution.sourcePage}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      source
+                    </a>
+                  </p>
+                ) : null}
               </div>
             ))}
           </div>

@@ -23,6 +23,7 @@ import { getEngine2MexicoCityTours } from "./mexicoCityTours";
 import { getEngine2AmsterdamTours } from "./amsterdamTours";
 import { getEngine2SpainTours as loadEngine2SpainTours } from "./spainTours";
 import { getEngine2ParisTours } from "./parisTours";
+import { getWikiImageByTourId } from "../../data/wikiImages";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -63,6 +64,11 @@ export type Engine2Tour = {
     hero: string | null;
     gallery: string[];
   };
+  image2Attribution?: {
+    attributionText: string;
+    sourcePage: string;
+    provider: "wikimedia";
+  };
   booking: {
     bookingUrl: string;
     fareharbor?: {
@@ -93,6 +99,36 @@ const getBestFareHarborImage = (tour: Engine2Tour) => {
   }
 
   return null;
+};
+
+const normalizeId = (value: string) => {
+  const match = value.match(/(\d{3,})/);
+  return match?.[1] ?? value;
+};
+
+const applyWikiImage2Fallback = (tour: Engine2Tour) => {
+  const heroImage = tour.images.hero ?? "";
+  const dedupedGallery = Array.from(
+    new Set((tour.images.gallery ?? []).filter(Boolean)),
+  );
+  const hasFareHarborImage2 = dedupedGallery.some(image => image !== heroImage);
+  if (hasFareHarborImage2) {
+    return { gallery: dedupedGallery };
+  }
+
+  const wikiImage = getWikiImageByTourId(normalizeId(tour.id));
+  if (!wikiImage) {
+    return { gallery: dedupedGallery };
+  }
+
+  return {
+    gallery: [...dedupedGallery, wikiImage.url],
+    image2Attribution: {
+      attributionText: wikiImage.attributionText,
+      sourcePage: wikiImage.sourcePage,
+      provider: wikiImage.provider,
+    },
+  };
 };
 
 const mergeEngine2Tours = (datasets: Engine2Tour[][]) => {
@@ -136,11 +172,18 @@ const allGeneratedTours = mergeEngine2Tours([
 ]);
 
 const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
-  ...tour,
-  images: {
-    ...tour.images,
-    hero: getBestFareHarborImage(tour),
-  },
+  ...(function () {
+    const fallback = applyWikiImage2Fallback(tour);
+    return {
+      ...tour,
+      image2Attribution: fallback.image2Attribution,
+      images: {
+        ...tour.images,
+        hero: getBestFareHarborImage(tour),
+        gallery: fallback.gallery,
+      },
+    };
+  })(),
   booking: {
     ...tour.booking,
     bookingUrl:

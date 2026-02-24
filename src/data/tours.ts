@@ -18,6 +18,7 @@ import {
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
+import { getWikiImageByTourId } from "./wikiImages";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -26,6 +27,33 @@ type ProviderConfig = {
   label: string;
   requiresDisclosure: boolean;
   affiliateDisclosure?: string;
+};
+
+const normalizeTourId = (value: string) => {
+  const match = value.match(/(\d{3,})/);
+  return match?.[1] ?? value;
+};
+
+const applyWikiFallbackToImages = (tourId: string, heroImage: string, galleryImages: string[] = []) => {
+  const dedupedGallery = Array.from(new Set(galleryImages.filter(Boolean)));
+  const hasFareHarborImage2 = dedupedGallery.some(image => image !== heroImage);
+  if (hasFareHarborImage2) {
+    return { galleryImages: dedupedGallery };
+  }
+
+  const wikiImage = getWikiImageByTourId(normalizeTourId(tourId));
+  if (!wikiImage) {
+    return { galleryImages: dedupedGallery };
+  }
+
+  return {
+    galleryImages: [...dedupedGallery, wikiImage.url],
+    image2Attribution: {
+      attributionText: wikiImage.attributionText,
+      sourcePage: wikiImage.sourcePage,
+      provider: wikiImage.provider,
+    },
+  };
 };
 
 const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
@@ -141,15 +169,23 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].map(tour =>
-  applyTourPricing({
+].map(tour => {
+  const fallback = applyWikiFallbackToImages(
+    tour.id,
+    tour.heroImage,
+    tour.galleryImages ?? [],
+  );
+
+  return applyTourPricing({
     ...tour,
+    galleryImages: fallback.galleryImages,
+    image2Attribution: fallback.image2Attribution,
     destination: {
       ...tour.destination,
       country: tour.destination.country || "United States",
     },
-  })
-);
+  });
+});
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -263,31 +299,37 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
   return parts[1] || slugify(tour.geo.region || "california");
 };
 
-const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-${tour.id}`,
-  slug: tour.slug,
-  title: tour.name,
-  shortDescription: tour.content.highlights[0],
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country || "United States",
-    state: tour.geo.region,
-    stateSlug: getEngine2StateSlug(tour),
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug,
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero ?? "/hero.jpg",
-  galleryImages: tour.images.gallery,
-  badges: {},
-  activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText,
-});
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
+  const heroImage = tour.images.hero ?? "/hero.jpg";
+  const fallback = applyWikiFallbackToImages(`engine2-${tour.id}`, heroImage, tour.images.gallery);
+
+  return {
+    id: `engine2-${tour.id}`,
+    slug: tour.slug,
+    title: tour.name,
+    shortDescription: tour.content.highlights[0],
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country || "United States",
+      state: tour.geo.region,
+      stateSlug: getEngine2StateSlug(tour),
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug,
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage,
+    galleryImages: fallback.galleryImages,
+    image2Attribution: fallback.image2Attribution ?? tour.image2Attribution,
+    badges: {},
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText,
+  };
+};
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),
