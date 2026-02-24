@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../components/Image";
@@ -16,6 +16,8 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import { fetchFareHarborItemJson } from "../../utils/fh/fetchFareHarborItemJson";
+import { extractGalleryImagesFromItemJson } from "../../utils/fh/extractGalleryImagesFromItemJson";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -37,6 +39,7 @@ export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const [tourImage2, setTourImage2] = useState<string | null>(null);
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const heroImage =
@@ -64,6 +67,67 @@ export default function Engine2TourPage({
       },
     };
   }, [tour]);
+
+  useEffect(() => {
+    if (tour.id !== "34849") {
+      setTourImage2(null);
+      return;
+    }
+
+    let active = true;
+
+    const heroImage = normalizedTour.images.hero;
+    const operator = tour.booking.fareharbor?.shortname ?? "red-jeep";
+    const itemId = tour.booking.fareharbor?.itemId ?? "34849";
+
+    void fetchFareHarborItemJson({ operator, itemId }).then(item => {
+      if (!active) {
+        return;
+      }
+
+      const galleryImages = extractGalleryImagesFromItemJson(item);
+      const image2 = galleryImages.find(image => image !== heroImage) ?? null;
+
+      if (typeof window === "undefined") {
+        console.info(
+          `[FHItemJSON][34849] heroImage=${heroImage ?? ""} galleryImages=${galleryImages
+            .slice(0, 5)
+            .join(" | ")} selectedImage2=${image2 ?? ""}`
+        );
+      } else {
+        console.info("[FHItemJSON][34849]", {
+          heroImage,
+          galleryImages: galleryImages.slice(0, 5),
+          selectedImage2: image2,
+        });
+      }
+
+      setTourImage2(image2);
+    });
+
+    return () => {
+      active = false;
+    };
+  }, [
+    normalizedTour.images.hero,
+    tour.booking.fareharbor?.itemId,
+    tour.booking.fareharbor?.shortname,
+    tour.id,
+  ]);
+
+  const schemaTour = useMemo(() => {
+    if (tour.id !== "34849" || !tourImage2) {
+      return normalizedTour;
+    }
+
+    return {
+      ...normalizedTour,
+      images: {
+        ...normalizedTour.images,
+        gallery: [tourImage2],
+      },
+    };
+  }, [normalizedTour, tour.id, tourImage2]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
@@ -128,7 +192,7 @@ export default function Engine2TourPage({
   const structuredDataNodes = useMemo(
     () =>
       buildSchemaGraph(
-        normalizedTour,
+        schemaTour,
         seo,
         pilotContent,
         isPalmSprings,
@@ -138,7 +202,7 @@ export default function Engine2TourPage({
         rewriteV3Content
       ),
     [
-      normalizedTour,
+      schemaTour,
       seo,
       pilotContent,
       isPalmSprings,
@@ -222,6 +286,16 @@ export default function Engine2TourPage({
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
+        {tourImage2 && tour.id === "34849" ? (
+          <div className="mt-4 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={tourImage2}
+              fallbackSrc={normalizedTour.images.hero}
+              alt={`${tour.name} gallery image`}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        ) : null}
         {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
             <ul className="space-y-1">

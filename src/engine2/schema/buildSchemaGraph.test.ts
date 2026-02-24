@@ -248,8 +248,6 @@ describe("buildSchemaGraph", () => {
     });
   });
 
-
-
   it("uses 3-5 list-item itinerary steps for tour 34849 rollout", () => {
     const graph = buildSchemaGraph(
       { ...baseTour, id: "34849", geo: { ...baseTour.geo, city: "Indio" } },
@@ -372,5 +370,35 @@ describe("buildSchemaGraph", () => {
     expect(trip.departureLocation?.address.streetAddress).toBe(
       "38635 Monroe St"
     );
+  });
+
+  it("uses two unique images for 34849 when image2 exists", () => {
+    const graph = buildSchemaGraph(
+      {
+        ...baseTour,
+        id: "34849",
+        images: {
+          hero: "https://cdn.example.com/hero.jpg",
+          gallery: ["https://cdn.example.com/image2.jpg"],
+        },
+      },
+      seo as never
+    );
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image?: string[] | string;
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      image?: string[] | string;
+    };
+
+    expect(product.image).toEqual([
+      "https://cdn.example.com/hero.jpg",
+      "https://cdn.example.com/image2.jpg",
+    ]);
+    expect(trip.image).toEqual([
+      "https://cdn.example.com/hero.jpg",
+      "https://cdn.example.com/image2.jpg",
+    ]);
   });
 });
