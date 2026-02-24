@@ -18,6 +18,14 @@ import {
   normalizeDescriptionForDedupe,
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
+import {
+  FAREHARBOR_URL_34849,
+  fareHarborItemByUrl,
+} from "../utils/fh/fareharborBookFixtures";
+import {
+  extractFareHarborGalleryImages,
+  selectSecondaryImage,
+} from "../utils/tours/extractFareHarborImages";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -149,7 +157,22 @@ export const tours: Tour[] = [
       country: tour.destination.country || "United States",
     },
   })
-);
+).map(tour => {
+  if (!/34849$/.test(tour.slug)) {
+    return tour;
+  }
+
+  const galleryUrls = extractFareHarborGalleryImages(
+    fareHarborItemByUrl[FAREHARBOR_URL_34849]
+  );
+  const secondaryImageUrl = selectSecondaryImage(tour.heroImage, galleryUrls);
+
+  return {
+    ...tour,
+    secondaryImageUrl,
+    galleryImages: secondaryImageUrl ? [secondaryImageUrl] : [],
+  };
+});
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -263,31 +286,42 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
   return parts[1] || slugify(tour.geo.region || "california");
 };
 
-const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-${tour.id}`,
-  slug: tour.slug,
-  title: tour.name,
-  shortDescription: tour.content.highlights[0],
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country || "United States",
-    state: tour.geo.region,
-    stateSlug: getEngine2StateSlug(tour),
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug,
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero ?? "/hero.jpg",
-  galleryImages: tour.images.gallery,
-  badges: {},
-  activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText,
-});
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
+  const secondaryImageUrl =
+    tour.id === "34849"
+      ? selectSecondaryImage(
+          tour.images.hero,
+          extractFareHarborGalleryImages(fareHarborItemByUrl[FAREHARBOR_URL_34849])
+        )
+      : undefined;
+
+  return {
+    id: `engine2-${tour.id}`,
+    slug: tour.slug,
+    title: tour.name,
+    shortDescription: tour.content.highlights[0],
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country || "United States",
+      state: tour.geo.region,
+      stateSlug: getEngine2StateSlug(tour),
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug,
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: tour.images.hero ?? "/hero.jpg",
+    galleryImages: secondaryImageUrl ? [secondaryImageUrl] : tour.images.gallery,
+    ...(secondaryImageUrl ? { secondaryImageUrl } : {}),
+    badges: {},
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText,
+  };
+};
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),

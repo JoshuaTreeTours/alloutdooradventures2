@@ -35,6 +35,10 @@ const palmSpringsTours = [
       "hero": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
       "gallery": []
     },
+    "source": {
+      "name": "FareHarbor",
+      "url": "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no"
+    },
     "booking": {
       "bookingUrl": "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
       "fareharbor": {

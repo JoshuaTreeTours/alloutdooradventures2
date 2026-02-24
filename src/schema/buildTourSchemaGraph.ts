@@ -3,6 +3,7 @@ import {
   getPriceValidUntil,
 } from "../utils/structuredData";
 import { cleanImageUrls, toSchemaImageValue } from "../utils/cleanImageUrls";
+import { selectTourImages } from "../utils/selectTourImages";
 import { resolveUsState } from "../utils/geo/usStates";
 import type { TourRewriteV3_1 } from "../utils/fh/transformToAOAContent";
 
@@ -131,6 +132,7 @@ export function buildTourSchemaGraph(args: {
   pageName: string;
   pageDescription: string;
   heroImage?: string | null;
+  image2?: string | null;
   derivedImages?: string[] | null;
   place?: {
     city?: string | null;
@@ -175,13 +177,19 @@ export function buildTourSchemaGraph(args: {
     brandId: string;
     websiteId: string;
   };
+  source?: {
+    name?: string | null;
+    url?: string | null;
+  };
 }): any {
   const placeId = `${args.url}#place`;
-  const imageList = cleanImageUrls([
+  const imageList = selectTourImages(
     args.heroImage,
-    ...(args.derivedImages ?? []),
-  ]);
-  const webHero = cleanImageUrls([args.heroImage, ...imageList], 1)[0];
+    args.image2 ?? (args.derivedImages ?? [])[0]
+  );
+  const webHero = cleanImageUrls([args.heroImage], 1)[0] || imageList[0];
+  const sourceUrl = cleanImageUrls([args.source?.url ?? null], 1)[0];
+  const sourceNodeId = sourceUrl ? `${sourceUrl}#source` : null;
 
   const hasGeo =
     typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
@@ -297,6 +305,8 @@ export function buildTourSchemaGraph(args: {
           "@type": "WebPage",
           "@id": `${args.url}#webpage`,
         },
+        ...(sourceUrl ? { isBasedOn: sourceUrl } : {}),
+        ...(sourceNodeId ? { subjectOf: { "@id": sourceNodeId } } : {}),
       },
       {
         "@type": "TouristTrip",
@@ -363,7 +373,22 @@ export function buildTourSchemaGraph(args: {
             }
           : {}),
         offers: offerNode,
+        ...(sourceNodeId ? { subjectOf: { "@id": sourceNodeId } } : {}),
       },
+      ...(sourceUrl
+        ? [
+            {
+              "@type": "WebPage",
+              "@id": sourceNodeId,
+              url: sourceUrl,
+              name: `${args.source?.name || "FareHarbor"} booking page`,
+              publisher: {
+                "@type": "Organization",
+                name: args.source?.name || "FareHarbor",
+              },
+            },
+          ]
+        : []),
     ],
   };
 }

@@ -23,6 +23,11 @@ import { getEngine2MexicoCityTours } from "./mexicoCityTours";
 import { getEngine2AmsterdamTours } from "./amsterdamTours";
 import { getEngine2SpainTours as loadEngine2SpainTours } from "./spainTours";
 import { getEngine2ParisTours } from "./parisTours";
+import {
+  FAREHARBOR_URL_34849,
+  fareHarborItemByUrl,
+} from "../../utils/fh/fareharborBookFixtures";
+import { getSecondGalleryImageUrl } from "../../utils/fh/getSecondGalleryImageUrl";
 
 export const REQUIRED_FH_URL_34849 =
   "https://fareharbor.com/embeds/book/red-jeep/items/34849/calendar/2026/02/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&marketplace=yes&flow=no&full-items=yes";
@@ -63,6 +68,10 @@ export type Engine2Tour = {
     hero: string | null;
     gallery: string[];
   };
+  source?: {
+    name?: string;
+    url?: string;
+  };
   booking: {
     bookingUrl: string;
     fareharbor?: {
@@ -80,16 +89,16 @@ export type Engine2Tour = {
 };
 
 const getBestFareHarborImage = (tour: Engine2Tour) => {
+  if (tour.images?.hero) {
+    return tour.images.hero;
+  }
+
   if (tour.images?.gallery?.length) {
     return tour.images.gallery[0];
   }
 
   if (tour.seo?.ogImage) {
     return tour.seo.ogImage;
-  }
-
-  if (tour.images?.hero) {
-    return tour.images.hero;
   }
 
   return null;
@@ -135,12 +144,22 @@ const allGeneratedTours = mergeEngine2Tours([
   getEngine2ParisTours(),
 ]);
 
-const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
-  ...tour,
-  images: {
-    ...tour.images,
-    hero: getBestFareHarborImage(tour),
-  },
+const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => {
+  const image2Url =
+    tour.id === "34849"
+      ? getSecondGalleryImageUrl(
+          fareHarborItemByUrl[FAREHARBOR_URL_34849],
+          tour.images.hero
+        )
+      : null;
+
+  return {
+    ...tour,
+    images: {
+      ...tour.images,
+      hero: getBestFareHarborImage(tour),
+      ...(tour.id === "34849" ? { gallery: image2Url ? [image2Url] : [] } : {}),
+    },
   booking: {
     ...tour.booking,
     bookingUrl:
@@ -164,7 +183,8 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours.map(tour => ({
             calendarPath: tour.booking.bookingUrl,
           })
         : normalizeFareHarborUrl(tour.booking.bookingUrl),
-}));
+  };
+});
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])

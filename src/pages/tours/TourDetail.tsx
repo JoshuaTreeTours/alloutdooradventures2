@@ -62,9 +62,20 @@ export default function TourDetail({ params }: TourDetailProps) {
       route: detailUrl,
       tour,
     }) ?? undefined;
+  const secondaryImage =
+    tour?.secondaryImageUrl && tour.secondaryImageUrl !== heroImage
+      ? tour.secondaryImageUrl
+      : undefined;
+  if (tour?.slug.endsWith("34849") && import.meta.env.DEV && typeof window !== "undefined") {
+    console.info("[Engine1 34849 FH images]", {
+      heroUrl: heroImage ?? null,
+      galleryUrls: tour.galleryImages ?? [],
+      selectedSecondaryUrl: secondaryImage ?? null,
+    });
+  }
   const finalHeroImage = heroImage ?? DEFAULT_IMAGE_URL;
   const structuredImages = filterHeroImages(
-    [heroImage, ...(tour?.galleryImages ?? [])],
+    [heroImage, secondaryImage],
     "product"
   );
   const bookingUrl = tour ? getTourBookingPath(tour) : "";
@@ -79,11 +90,12 @@ export default function TourDetail({ params }: TourDetailProps) {
       return null;
     }
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
-      ? (buildTourSchemaGraph({
+        ? (buildTourSchemaGraph({
           url: detailUrl,
           pageName: tour.title,
           pageDescription: metaDescription ?? "",
           heroImage: finalHeroImage,
+          image2: secondaryImage,
           derivedImages: structuredImages,
           place: {
             city: tour.destination.city,
@@ -305,21 +317,15 @@ export default function TourDetail({ params }: TourDetailProps) {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        {tour.galleryImages?.length ? (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
-            {tour.galleryImages.map(image => (
-              <div
-                key={image}
-                className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
-              >
-                <Image
-                  src={image}
-                  fallbackSrc={image}
-                  alt={`${tour.title} gallery`}
-                  className="h-56 w-full object-cover md:h-72"
-                />
-              </div>
-            ))}
+        {secondaryImage ? (
+          <div className="mt-10 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={secondaryImage}
+              fallbackSrc={secondaryImage}
+              loading="lazy"
+              alt={`${tour.title} photo in ${tour.destination.city}, ${tour.destination.state}`}
+              className="h-56 w-full object-cover md:h-72"
+            />
           </div>
         ) : null}
       </section>
