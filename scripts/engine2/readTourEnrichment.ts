@@ -17,6 +17,9 @@ export type TourEnrichment = {
   merchant_title: string;
   merchant_description: string;
   source_url: string;
+  sourceUrl: string;
+  sourceName: string;
+  image2: string;
   last_updated: string;
 };
 
@@ -37,6 +40,9 @@ const KNOWN_COLUMNS: (keyof TourEnrichment)[] = [
   "merchant_title",
   "merchant_description",
   "source_url",
+  "sourceUrl",
+  "sourceName",
+  "image2",
   "last_updated",
 ];
 
@@ -88,6 +94,9 @@ const blankEnrichment = (): TourEnrichment => ({
   merchant_title: "",
   merchant_description: "",
   source_url: "",
+  sourceUrl: "",
+  sourceName: "",
+  image2: "",
   last_updated: "",
 });
 

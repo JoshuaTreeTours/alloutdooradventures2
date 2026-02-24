@@ -175,6 +175,10 @@ export function buildTourSchemaGraph(args: {
     brandId: string;
     websiteId: string;
   };
+  source?: {
+    name?: string | null;
+    url?: string | null;
+  };
 }): any {
   const placeId = `${args.url}#place`;
   const imageList = cleanImageUrls([
@@ -182,6 +186,8 @@ export function buildTourSchemaGraph(args: {
     ...(args.derivedImages ?? []),
   ]);
   const webHero = cleanImageUrls([args.heroImage, ...imageList], 1)[0];
+  const sourceUrl = cleanImageUrls([args.source?.url ?? null], 1)[0];
+  const sourceNodeId = sourceUrl ? `${sourceUrl}#source` : null;
 
   const hasGeo =
     typeof args.place?.lat === "number" && typeof args.place?.lng === "number";
@@ -297,6 +303,8 @@ export function buildTourSchemaGraph(args: {
           "@type": "WebPage",
           "@id": `${args.url}#webpage`,
         },
+        ...(sourceUrl ? { isBasedOn: sourceUrl } : {}),
+        ...(sourceNodeId ? { subjectOf: { "@id": sourceNodeId } } : {}),
       },
       {
         "@type": "TouristTrip",
@@ -363,7 +371,22 @@ export function buildTourSchemaGraph(args: {
             }
           : {}),
         offers: offerNode,
+        ...(sourceNodeId ? { subjectOf: { "@id": sourceNodeId } } : {}),
       },
+      ...(sourceUrl
+        ? [
+            {
+              "@type": "WebPage",
+              "@id": sourceNodeId,
+              url: sourceUrl,
+              name: `${args.source?.name || "FareHarbor"} booking page`,
+              publisher: {
+                "@type": "Organization",
+                name: args.source?.name || "FareHarbor",
+              },
+            },
+          ]
+        : []),
     ],
   };
 }

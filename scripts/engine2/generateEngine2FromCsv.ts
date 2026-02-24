@@ -5,6 +5,7 @@ import { ENGINE2_DEFAULT_IMAGE } from "../../src/engine2/config/destinations";
 import { buildTourCopy } from "../../src/engine2/content/templates/buildTourCopy";
 import { buildEngine2Seo } from "../../src/engine2/seo/buildEngine2Seo";
 import { buildSchemaGraph } from "../../src/engine2/schema/buildSchemaGraph";
+import { cleanImageUrls } from "../../src/utils/cleanImageUrls";
 import {
   buildFareHarborUrl,
   normalizeFareHarborUrl,
@@ -45,6 +46,10 @@ type GeneratedTour = {
   images: {
     hero: string | null;
     gallery: string[];
+  };
+  source?: {
+    name?: string;
+    url?: string;
   };
   booking: {
     bookingUrl: string;
@@ -103,6 +108,10 @@ const slugify = (value: string) =>
 const uniq = (arr: string[]) => Array.from(new Set(arr));
 
 const clean = (value?: string) => (value ?? "").trim();
+const cleanHttps = (value?: string) => {
+  const normalized = clean(value);
+  return /^https:\/\//i.test(normalized) ? normalized : "";
+};
 
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
@@ -291,15 +300,26 @@ const buildTour = (
   });
 
   const primaryImage =
-    clean(enrichment?.image) ||
-    clean(row.hero_image_url) ||
-    clean(row.og_image_url) ||
-    clean(row.image_url) ||
-    ENGINE2_DEFAULT_IMAGE;
+    cleanImageUrls(
+      [
+        cleanHttps(enrichment?.image),
+        cleanHttps(row.hero_image_url),
+        cleanHttps(row.og_image_url),
+        cleanHttps(row.image_url),
+      ],
+      1
+    )[0] || ENGINE2_DEFAULT_IMAGE;
 
-  const gallery = uniq([clean(row.image_url), clean(row.alt_image_url)]).filter(
-    url => Boolean(url) && url !== primaryImage
-  );
+  const gallery = cleanImageUrls(
+    [cleanHttps(enrichment?.image2), cleanHttps(row.image_url), cleanHttps(row.alt_image_url)],
+    2
+  ).filter(url => url !== primaryImage);
+
+  const sourceUrl =
+    id === "34849"
+      ? cleanHttps(enrichment?.sourceUrl) || cleanHttps(enrichment?.source_url)
+      : "";
+  const sourceName = id === "34849" ? clean(enrichment?.sourceName) : "";
 
   const coords = parseLatLng(row.location_lat, row.location_long);
   const parsedPrice = Number.parseFloat(clean(enrichment?.price));
@@ -339,6 +359,13 @@ const buildTour = (
       hero: primaryImage,
       gallery,
     },
+    source:
+      sourceUrl || sourceName
+        ? {
+            ...(sourceName ? { name: sourceName } : {}),
+            ...(sourceUrl ? { url: sourceUrl } : {}),
+          }
+        : undefined,
     booking: {
       bookingUrl,
       fareharbor,

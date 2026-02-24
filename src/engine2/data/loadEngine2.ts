@@ -63,6 +63,10 @@ export type Engine2Tour = {
     hero: string | null;
     gallery: string[];
   };
+  source?: {
+    name?: string;
+    url?: string;
+  };
   booking: {
     bookingUrl: string;
     fareharbor?: {
@@ -80,16 +84,16 @@ export type Engine2Tour = {
 };
 
 const getBestFareHarborImage = (tour: Engine2Tour) => {
+  if (tour.images?.hero) {
+    return tour.images.hero;
+  }
+
   if (tour.images?.gallery?.length) {
     return tour.images.gallery[0];
   }
 
   if (tour.seo?.ogImage) {
     return tour.seo.ogImage;
-  }
-
-  if (tour.images?.hero) {
-    return tour.images.hero;
   }
 
   return null;

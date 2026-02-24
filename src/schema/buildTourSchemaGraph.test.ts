@@ -177,6 +177,53 @@ describe("buildTourSchemaGraph", () => {
     expect(place.address.addressRegion).toBe("British Columbia");
   });
 
+  it("adds source attribution nodes and references when source URL is present", () => {
+    const sourceUrl =
+      "https://fareharbor.com/embeds/book/red-jeep/items/34849/?asn=fhdn";
+    const graph = buildTourSchemaGraph({
+      ...baseArgs,
+      derivedImages: ["https://example.com/second.jpg"],
+      source: {
+        name: "FareHarbor",
+        url: sourceUrl,
+      },
+    })["@graph"] as Array<Record<string, unknown>>;
+
+    const product = graph.find(node => node["@type"] === "Product") as {
+      image: string[];
+      isBasedOn: string;
+      subjectOf: { "@id": string };
+    };
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as {
+      image: string[];
+      subjectOf: { "@id": string };
+    };
+    const sourceNode = graph.find(
+      node => node["@id"] === `${sourceUrl}#source`
+    ) as {
+      "@type": string;
+      url: string;
+      name: string;
+    };
+
+    expect(product.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://example.com/second.jpg",
+    ]);
+    expect(trip.image).toEqual([
+      "https://example.com/hero.jpg",
+      "https://example.com/second.jpg",
+    ]);
+    expect(product.isBasedOn).toBe(sourceUrl);
+    expect(product.subjectOf).toEqual({ "@id": `${sourceUrl}#source` });
+    expect(trip.subjectOf).toEqual({ "@id": `${sourceUrl}#source` });
+    expect(sourceNode).toMatchObject({
+      "@type": "WebPage",
+      url: sourceUrl,
+      name: "FareHarbor booking page",
+    });
+  });
+
   it("derives PT3H from duration minutes", () => {
     expect(
       resolveTourDurationISO({

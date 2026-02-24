@@ -164,6 +164,10 @@ export const buildSchemaGraph = (
           brandId: SITE_BRAND_ID,
           websiteId: SITE_WEBSITE_ID,
         },
+        source: {
+          name: tour.source?.name,
+          url: tour.source?.url,
+        },
       })["@graph"] as StructuredDataNode[])
     : [
         buildWebPageStructuredData({
