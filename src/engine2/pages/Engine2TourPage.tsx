@@ -16,6 +16,10 @@ import {
   isPalmSpringsTour,
 } from "../../utils/fh/palmSpringsPilotContent";
 import type { TourRewriteV3 } from "../../utils/fh/transformToAOAContent";
+import {
+  applyJoshuaTreeTemplate,
+  isJoshuaTreeTour,
+} from "../../utils/tours/cityOverrides/joshuaTreeTourTemplate";
 
 type Engine2TourPageProps = {
   tour: Engine2Tour;
@@ -68,6 +72,8 @@ export default function Engine2TourPage({
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
   const overrideContent = getPalmSpringsOverrideContent(tour);
+  const joshuaTreeTemplate = applyJoshuaTreeTemplate(normalizedTour);
+  const isJoshuaTree = isJoshuaTreeTour(tour);
   const pilotContent =
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
@@ -78,7 +84,12 @@ export default function Engine2TourPage({
   };
   const content = overrideContent?.enabled
     ? overrideContent.content
-    : engine1Content;
+    : joshuaTreeTemplate
+      ? {
+          whatYoullExperience: joshuaTreeTemplate.description,
+          highlights: joshuaTreeTemplate.highlights,
+        }
+      : engine1Content;
 
   if (isPalmSprings && typeof window === "undefined") {
     console.info(
@@ -107,11 +118,19 @@ export default function Engine2TourPage({
     : undefined;
   const overrideFaqs = overrideContent?.enabled
     ? overrideContent.content.faqs
-    : undefined;
+    : joshuaTreeTemplate?.faq;
 
   const rewriteV3Content: TourRewriteV3 | undefined = overrideContent?.enabled
     ? overrideContent.content
-    : undefined;
+    : joshuaTreeTemplate?.rewrite;
+
+  if (process.env.NODE_ENV !== "production" && isJoshuaTree) {
+    console.info("[JoshuaTreeTemplate]", {
+      tourSlug: tour.slug,
+      heroImage: normalizedTour.images.hero,
+      contentImage: joshuaTreeTemplate?.contentImage ?? null,
+    });
+  }
 
   const formattedMeetingPoint = rewriteV3Content?.meetingPoint
     ? [
@@ -243,6 +262,16 @@ export default function Engine2TourPage({
             </ul>
           </div>
         ) : null}
+        {isJoshuaTree && rewriteV3Content?.meetingPoint?.rawText ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Meeting point
+            </h2>
+            <p className="mt-3 text-sm text-[#405040]">
+              {rewriteV3Content.meetingPoint.rawText}
+            </p>
+          </>
+        ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
           What you'll experience
         </h2>
@@ -317,13 +346,17 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
-        {overrideContent?.enabled && overrideContent.content.faqs?.length ? (
+        {(overrideContent?.enabled && overrideContent.content.faqs?.length) ||
+        (isJoshuaTree && joshuaTreeTemplate?.faq.length) ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Frequently asked questions
             </h2>
             <div className="mt-4 space-y-4">
-              {overrideContent.content.faqs.map(item => (
+              {(overrideContent?.enabled
+                ? overrideContent.content.faqs
+                : joshuaTreeTemplate?.faq ?? []
+              ).map(item => (
                 <article
                   key={item.question}
                   className="rounded-lg border border-black/10 bg-white p-4"
@@ -335,6 +368,19 @@ export default function Engine2TourPage({
                 </article>
               ))}
             </div>
+          </>
+        ) : null}
+
+        {isJoshuaTree && joshuaTreeTemplate?.itinerary.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Itinerary
+            </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+              {joshuaTreeTemplate.itinerary.map(step => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
           </>
         ) : null}
 
@@ -446,7 +492,18 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
-        {normalizedTour.images.gallery.length ? (
+        {isJoshuaTree && joshuaTreeTemplate?.contentImage ? (
+          <div className="mt-10 overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={joshuaTreeTemplate.contentImage}
+              fallbackSrc={normalizedTour.images.hero}
+              alt={`${tour.name} in Joshua Tree`}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        ) : null}
+
+        {!isJoshuaTree && normalizedTour.images.gallery.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {normalizedTour.images.gallery.map(image => (
               <div
@@ -463,6 +520,14 @@ export default function Engine2TourPage({
             ))}
           </div>
         ) : null}
+
+        <div className="mt-10">
+          <Link href={bookingPath}>
+            <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+              Book this tour
+            </a>
+          </Link>
+        </div>
       </section>
 
       {relatedTours.length ? (
