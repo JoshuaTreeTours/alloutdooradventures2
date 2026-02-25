@@ -31,6 +31,7 @@ describe("Palm Springs 34849 override content", () => {
     expect(parsed.priceAdult).toBe(175);
     expect(parsed.priceChild).toBe(150);
     expect(parsed.highlights.length).toBeGreaterThan(0);
+    expect(parsed.galleryImages.length).toBeGreaterThanOrEqual(2);
   });
 
   it("returns enriched override copy and labels for tour 34849", () => {
@@ -47,6 +48,8 @@ describe("Palm Springs 34849 override content", () => {
     expect(override?.content.heroPriceText).toBe("$175 adult / $150 child");
     expect(override?.content.schemaPrice).toBe(175);
     expect(override?.content.durationISO).toBe("PT3H");
+    expect(override?.content.image2).toBeDefined();
+    expect(override?.content.image2).not.toBe(override?.content.heroImage);
     expect(override?.content.pricing).toMatchObject({
       low: 150,
       high: 175,
