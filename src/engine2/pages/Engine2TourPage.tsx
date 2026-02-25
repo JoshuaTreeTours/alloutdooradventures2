@@ -10,6 +10,7 @@ import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
+import { isBadTokenString, sanitizeFhText } from "../../utils/text/sanitizeFhText";
 import {
   getPalmSpringsOverrideContent,
   getPalmSpringsPilotContent,
@@ -51,6 +52,20 @@ export default function Engine2TourPage({
       tour.content.experienceText.trim().length > 0
         ? tour.content.experienceText
         : `Explore ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`;
+    const heroSummary =
+      typeof tour.content.heroSummary === "string" &&
+      tour.content.heroSummary.trim().length > 0
+        ? tour.content.heroSummary
+        : undefined;
+    const faqs = Array.isArray(tour.content.faqs)
+      ? tour.content.faqs
+          .filter(
+            (item): item is { question: string; answer: string } =>
+              Boolean(item?.question?.trim()) && Boolean(item?.answer?.trim())
+          )
+          .slice(0, 10)
+      : [];
+    const practicalNotes = normalizeStringArray(tour.content.practicalNotes).slice(0, 8);
 
     return {
       ...tour,
@@ -61,6 +76,9 @@ export default function Engine2TourPage({
       content: {
         experienceText,
         highlights,
+        heroSummary,
+        faqs,
+        practicalNotes,
       },
     };
   }, [tour]);
@@ -72,10 +90,38 @@ export default function Engine2TourPage({
     isFHPilotEnabled && isPalmSprings && tour.bookingUrl
       ? getPalmSpringsPilotContent(tour)
       : null;
-  const engine1Content = {
-    whatYoullExperience: [normalizedTour.content.experienceText],
-    highlights: normalizedTour.content.highlights,
+  const isJoshuaTreeTour = tour.sourceCitySlug === "joshua-tree";
+  const sanitizeTourText = (value: string) => {
+    const cleaned = sanitizeFhText(value, {
+      itemName: tour.name,
+      durationText: undefined,
+    });
+
+    if (isBadTokenString(cleaned)) {
+      return "This guided experience in Joshua Tree is booked through FareHarbor and includes all logistics details on the booking page.";
+    }
+
+    return cleaned;
   };
+
+  const engine1Content = {
+    whatYoullExperience: normalizedTour.content.experienceText
+      .split(/\n\n+/)
+      .map(paragraph => paragraph.trim())
+      .filter(Boolean)
+      .map(paragraph => (isJoshuaTreeTour ? sanitizeTourText(paragraph) : paragraph)),
+    highlights: normalizedTour.content.highlights.map(item =>
+      isJoshuaTreeTour ? sanitizeTourText(item) : item
+    ),
+    faqs: (normalizedTour.content.faqs ?? []).map(item => ({
+      question: isJoshuaTreeTour ? sanitizeTourText(item.question) : item.question,
+      answer: isJoshuaTreeTour ? sanitizeTourText(item.answer) : item.answer,
+    })),
+    practicalNotes: (normalizedTour.content.practicalNotes ?? []).map(item =>
+      isJoshuaTreeTour ? sanitizeTourText(item) : item
+    ),
+  };
+
   const content = overrideContent?.enabled
     ? overrideContent.content
     : engine1Content;
@@ -179,6 +225,13 @@ export default function Engine2TourPage({
           <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
             Operated by {tour.provider.name}
           </p>
+          {normalizedTour.content.heroSummary ? (
+            <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
+              {isJoshuaTreeTour
+                ? sanitizeTourText(normalizedTour.content.heroSummary)
+                : normalizedTour.content.heroSummary}
+            </p>
+          ) : null}
           {rewriteV3Content?.category?.primary ? (
             <p className="mt-2 text-sm text-white/90">
               {rewriteV3Content.category.primary}
@@ -317,6 +370,39 @@ export default function Engine2TourPage({
           </>
         ) : null}
 
+        {!overrideContent?.enabled && content.practicalNotes?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Practical notes
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+              {content.practicalNotes.map(note => (
+                <li key={note}>{note}</li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+
+        {!overrideContent?.enabled && content.faqs?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Frequently asked questions
+            </h2>
+            <div className="mt-4 space-y-4">
+              {content.faqs.map(item => (
+                <article
+                  key={item.question}
+                  className="rounded-lg border border-black/10 bg-white p-4"
+                >
+                  <h3 className="text-sm font-semibold text-[#2f4a2f]">
+                    {item.question}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#405040]">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : null}
         {overrideContent?.enabled && overrideContent.content.faqs?.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">

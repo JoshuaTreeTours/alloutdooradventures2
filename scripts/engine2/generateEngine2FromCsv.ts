@@ -1,4 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { fetchFhItemDetails } from "../../src/utils/fareharbor/fetchFhItemDetails";
+import { composeJoshuaTreeTourContent } from "../../src/utils/tours/composeJoshuaTreeTourContent";
 import path from "node:path";
 
 import { ENGINE2_DEFAULT_IMAGE } from "../../src/engine2/config/destinations";
@@ -41,6 +43,9 @@ type GeneratedTour = {
   content: {
     experienceText: string;
     highlights: string[];
+    heroSummary?: string;
+    faqs?: Array<{ question: string; answer: string }>;
+    practicalNotes?: string[];
   };
   images: {
     hero: string | null;
@@ -103,6 +108,13 @@ const slugify = (value: string) =>
 const uniq = (arr: string[]) => Array.from(new Set(arr));
 
 const clean = (value?: string) => (value ?? "").trim();
+
+
+const splitTags = (value?: string) =>
+  clean(value)
+    .split(/[-|,]/)
+    .map(item => item.trim())
+    .filter(Boolean);
 
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
@@ -240,11 +252,13 @@ const validateGeneratedTours = (tours: GeneratedTour[]) => {
   }
 };
 
-const buildTour = (
+const buildTour = async (
   row: CsvRow,
   enrichmentByTourId: Map<string, Record<string, string>>,
-  sourceKey: "santa-barbara" | "california"
-): GeneratedTour | { skipped: string } => {
+  sourceKey: "santa-barbara" | "california",
+  joshuaTreeDescriptions: string[],
+  joshuaTreeSummaryLog: Array<{tourSlug:string; factsFound:boolean; usedFallback:boolean}>
+): Promise<GeneratedTour | { skipped: string }> => {
   const id = clean(row.item_id);
   if (!id) return { skipped: "missing id" };
 
@@ -289,6 +303,8 @@ const buildTour = (
     city: location.city,
     region: "California",
   });
+
+  const isJoshuaTree = location.citySlug === "joshua-tree";
 
   const primaryImage =
     clean(enrichment?.image) ||
@@ -350,6 +366,52 @@ const buildTour = (
     },
   };
 
+
+  if (isJoshuaTree && bookingUrl) {
+    const fhFacts = await fetchFhItemDetails({
+      fhEmbedUrl: bookingUrl,
+      cacheKey: `joshua-tree-${id}`,
+      cacheTtlHours: 24,
+    });
+
+    const generated = composeJoshuaTreeTourContent({
+      fhFacts: fhFacts
+        ? {
+            ...fhFacts,
+            title: fhFacts.title ?? name,
+            operatorName: fhFacts.operatorName ?? providerName,
+          }
+        : null,
+      tour: {
+        id,
+        slug,
+        title: name,
+        tags: splitTags(row.tags),
+        categories: splitTags(row.tags),
+        operatorName: providerName,
+      },
+      destination: {
+        city: "Joshua Tree",
+        region: "Joshua Tree National Park",
+      },
+    });
+
+    const composedText = generated.whatYoullExperience.join("\n\n");
+    draftTour.content.experienceText = composedText;
+    draftTour.content.highlights = generated.highlights.length
+      ? generated.highlights
+      : draftTour.content.highlights;
+    draftTour.content.heroSummary = generated.heroSummary;
+    draftTour.content.faqs = generated.faqs;
+    draftTour.content.practicalNotes = generated.practicalNotes;
+    draftTour.seo.description = generated.heroSummary;
+    joshuaTreeDescriptions.push(composedText);
+    joshuaTreeSummaryLog.push({
+      tourSlug: slug,
+      factsFound: Boolean(fhFacts),
+      usedFallback: !fhFacts,
+    });
+  }
   const builtSeo = buildEngine2Seo(draftTour);
 
   return {
@@ -387,10 +449,36 @@ const buildCityIndex = (tours: GeneratedTour[]): CityIndexEntry[] => {
   return Array.from(cityMap.values()).sort((a, b) => b.tourCount - a.tourCount || a.citySlug.localeCompare(b.citySlug));
 };
 
+
+const assertJoshuaTreeContentClean = (tours: GeneratedTour[]) => {
+  const badPatterns = [/\[!/i, /!\]/i, /%\(/i, /\\u00/i, /\)s\b/i, /durationTypes/i];
+  const offenders: string[] = [];
+
+  for (const tour of tours) {
+    if (tour.sourceCitySlug !== "joshua-tree") continue;
+    const haystack = [
+      tour.content.experienceText,
+      tour.content.heroSummary ?? "",
+      ...(tour.content.highlights ?? []),
+      ...(tour.content.faqs ?? []).flatMap(item => [item.question, item.answer]),
+      ...(tour.content.practicalNotes ?? []),
+    ].join("\n");
+
+    if (badPatterns.some(pattern => pattern.test(haystack))) {
+      offenders.push(tour.slug);
+    }
+  }
+
+  if (offenders.length) {
+    throw new Error(`Joshua Tree content failed token assertions for: ${offenders.join(", ")}`);
+  }
+};
+
 const main = async () => {
   const csvSources = [
     { path: "data/santa-barbara.csv", key: "santa-barbara" as const },
     { path: "data/California.csv", key: "california" as const },
+    { path: "data/joshua-tree.csv", key: "california" as const },
   ];
 
   const enrichmentByTourId = await readTourEnrichment(
@@ -408,6 +496,8 @@ const main = async () => {
   };
 
   const tourById = new Map<string, GeneratedTour>();
+  const joshuaTreeDescriptions: string[] = [];
+  const joshuaTreeSummaryLog: Array<{tourSlug:string; factsFound:boolean; usedFallback:boolean}> = [];
 
   for (const source of csvSources) {
     const csvPath = path.resolve(process.cwd(), source.path);
@@ -423,7 +513,7 @@ const main = async () => {
       }
       diagnostics.activeRows += 1;
 
-      const built = buildTour(row, enrichmentByTourId, source.key);
+      const built = await buildTour(row, enrichmentByTourId, source.key, joshuaTreeDescriptions, joshuaTreeSummaryLog);
       if ("skipped" in built) {
         diagnostics.skippedRows += 1;
         incrementReason(diagnostics.skippedReasons, built.skipped);
@@ -445,6 +535,7 @@ const main = async () => {
   }
 
   validateGeneratedTours(tours);
+  assertJoshuaTreeContentClean(tours);
 
   const outPath = path.resolve(process.cwd(), "src/engine2/data/california.generated.ts");
   const fileContents = `const californiaEngine2Tours = ${JSON.stringify(tours, null, 2)} as const;\n\nexport const californiaEngine2CitiesIndex = ${JSON.stringify(citiesIndex, null, 2)} as const;\n\nexport default californiaEngine2Tours;\n`;
@@ -468,6 +559,10 @@ const main = async () => {
     for (const [reason, count] of skippedReasons.slice(0, 10)) {
       console.log(`  - ${reason}: ${count}`);
     }
+  }
+
+  if (joshuaTreeSummaryLog.length) {
+    console.log("[joshua-tree-fh] content summary:", JSON.stringify(joshuaTreeSummaryLog));
   }
 
   console.log(`Generated ${tours.length} Engine2 tours -> ${outPath}`);

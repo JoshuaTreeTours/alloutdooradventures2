@@ -56,6 +56,9 @@ export type Engine2Tour = {
   content: {
     experienceText: string;
     highlights: string[];
+    heroSummary?: string;
+    faqs?: Array<{ question: string; answer: string }>;
+    practicalNotes?: string[];
   };
   images: {
     hero: string | null;

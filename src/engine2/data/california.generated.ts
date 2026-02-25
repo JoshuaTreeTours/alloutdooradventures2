@@ -3577,6 +3577,2634 @@ const californiaEngine2Tours = [
     }
   },
   {
+    "id": "404983",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "1-hour-visitor-pass-404983",
+    "name": "1 Hour Visitor Pass",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "1 Hour Visitor Pass | Joshua Tree, California Outdoor Tour",
+      "description": "1 Hour Visitor Pass is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/1-hour-visitor-pass-404983",
+      "ogImage": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl"
+    },
+    "content": {
+      "experienceText": "1 Hour Visitor Pass is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Guide narration often connects visible landforms to climate and water scarcity.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Expect timing adjustments for weather and group flow.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns.",
+        "Guide narration often connects visible landforms to climate and water scarcity."
+      ],
+      "heroSummary": "1 Hour Visitor Pass is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement. Expect timing adjustments for weather and group flow."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/404983/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "404983",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "515026",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "campsite-6-515026",
+    "name": "Campsite #6",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Campsite #6 | Joshua Tree, California Outdoor Tour",
+      "description": "Campsite #6 is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/campsite-6-515026",
+      "ogImage": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N"
+    },
+    "content": {
+      "experienceText": "Campsite #6 is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Layered clothing improves comfort between drive segments and viewpoints.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Drive transitions can show rapid shifts in terrain texture and vegetation density.",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns."
+      ],
+      "heroSummary": "Campsite #6 is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops. Layered clothing improves comfort between drive segments and viewpoints."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/515026/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "515026",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "520036",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "campsite-7-520036",
+    "name": "Campsite #7",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Campsite #7 | Joshua Tree, California Outdoor Tour",
+      "description": "Campsite #7 is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/campsite-7-520036",
+      "ogImage": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8"
+    },
+    "content": {
+      "experienceText": "Campsite #7 operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nGuide narration often connects visible landforms to climate and water scarcity. Sightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow.\n\nExpect timing adjustments for weather and group flow. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Drive transitions can show rapid shifts in terrain texture and vegetation density.",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns."
+      ],
+      "heroSummary": "Campsite #7 is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Carry water for both riding and stop-based movement. Expect timing adjustments for weather and group flow. Use stable footwear even on brief walk segments."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/520036/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "520036",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "512102",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "custom-groups-512102",
+    "name": "Custom groups",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Custom groups | Joshua Tree, California Outdoor Tour",
+      "description": "Custom groups is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/custom-groups-512102",
+      "ogImage": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D"
+    },
+    "content": {
+      "experienceText": "Custom groups operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nDrive transitions can show rapid shifts in terrain texture and vegetation density. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nShort walks may still involve uneven ground and limited shade. This style suits travelers who want landscape context without sustained hiking intensity.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Drive transitions can show rapid shifts in terrain texture and vegetation density.",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns."
+      ],
+      "heroSummary": "Custom groups is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/512102/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "512102",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "568118",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "desert-nature-walk-soundbath-meditation-cacao-ceremony-568118",
+    "name": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony",
+    "provider": {
+      "name": "Joshua Tree Connectivity",
+      "shortName": "joshuatreeconnectivity",
+      "email": "info@joshuatreeconnectivity.com",
+      "phone": "760-974-2011"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.131631,
+      "lng": -116.315824
+    },
+    "seo": {
+      "title": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony | Joshua Tree, California Outdoor Tour",
+      "description": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/desert-nature-walk-soundbath-meditation-cacao-ceremony-568118",
+      "ogImage": "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I"
+    },
+    "content": {
+      "experienceText": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nDrive transitions can show rapid shifts in terrain texture and vegetation density. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nShort walks may still involve uneven ground and limited shade. This style suits travelers who want landscape context without sustained hiking intensity.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ],
+      "heroSummary": "Desert Nature Walk + Soundbath + Meditation + Cacao Ceremony is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/U2rkMAfjSfmFA7jshw3I",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568118/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeconnectivity",
+        "itemId": "568118",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "514094",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "durango-514094",
+    "name": "Durango",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Durango | Joshua Tree, California Outdoor Tour",
+      "description": "Durango is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/durango-514094",
+      "ogImage": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg"
+    },
+    "content": {
+      "experienceText": "Durango operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nGuide narration often connects visible landforms to climate and water scarcity. This style suits travelers who want landscape context without sustained hiking intensity.\n\nLayered clothing improves comfort between drive segments and viewpoints. Sightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ],
+      "heroSummary": "Durango is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Wind and sun exposure can change quickly during open-air stops. Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/XQmjkdyTjmvynf1vUTMg",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514094/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "514094",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "513079",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "el-dorado-513079",
+    "name": "El Dorado",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "El Dorado | Joshua Tree, California Outdoor Tour",
+      "description": "El Dorado is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/el-dorado-513079",
+      "ogImage": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI"
+    },
+    "content": {
+      "experienceText": "El Dorado is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Layered clothing improves comfort between drive segments and viewpoints.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Desert plant communities reflect elevation and soil differences across short distances.",
+        "Operated by Cascade Trails Mustang Sanctuary"
+      ],
+      "heroSummary": "El Dorado is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops. Layered clothing improves comfort between drive segments and viewpoints."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/i2eqYwwzSEWuSuZqdGMI",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/513079/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "513079",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "365796",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "equine-therapy-365796",
+    "name": "Equine Therapy",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Equine Therapy | Joshua Tree, California Outdoor Tour",
+      "description": "Equine Therapy is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/equine-therapy-365796",
+      "ogImage": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P"
+    },
+    "content": {
+      "experienceText": "Equine Therapy is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Expect timing adjustments for weather and group flow.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns.",
+        "Guide narration often connects visible landforms to climate and water scarcity."
+      ],
+      "heroSummary": "Equine Therapy is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement. Expect timing adjustments for weather and group flow."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/pZEW0QshTZ2ldQHCsQ7P",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/365796/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "365796",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459591",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "hike-and-climb-459591",
+    "name": "Hike & Climb",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Hike & Climb | Joshua Tree, California Outdoor Tour",
+      "description": "Hike & Climb is a climb experience in Joshua Tree. FareHarbor lists approximately 4 hours.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/hike-and-climb-459591",
+      "ogImage": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr"
+    },
+    "content": {
+      "experienceText": "Hike & Climb is designed as a climb experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Listed duration is 4 hours.\n\nGuided climbing days generally include repeated safety checks and practical coaching adjusted to participant comfort. Joshua Tree granite provides textured surfaces that reward precise foot placement.\n\nSessions often focus on body positioning, balance, and progression rather than volume or speed. Listen for guide instructions on spacing and movement sequence.\n\nClimbing-oriented formats pair walking approaches with instruction on movement efficiency and controlled pacing on stone. Meeting details currently reference Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nColder stone temperatures can reduce grip comfort early in the day.",
+      "highlights": [
+        "Duration listed in FareHarbor: 4 hours",
+        "Meeting details currently listed as: Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252",
+        "Inclusions listed by operator: Professional guide, Climbing instruction",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Operated by Joshua Tree Excursions",
+        "Closed-toe shoes and sun protection are important for both approach and climbing segments."
+      ],
+      "heroSummary": "Hike & Climb is a climb experience in Joshua Tree. FareHarbor lists approximately 4 hours.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "FareHarbor currently lists a duration of 4 hours."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Current booking details indicate the meeting point as Joshua Tree Visitor Center — 6554 Park Blvd, Joshua Tree, CA 92252."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Temperature and rock-surface heat can influence route choice throughout the day. Expect rest intervals between efforts to maintain movement quality. Listen for guide instructions on spacing and movement sequence."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Many climbing-focused departures use progressive coaching and pacing, but the exact level is confirmed by the operator in booking details."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Listed inclusions include Professional guide, Climbing instruction, Technical climbing gear for the session."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "Cancellations are accepted with advance notice as listed during checkout."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Colder stone temperatures can reduce grip comfort early in the day."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Temperature and rock-surface heat can influence route choice throughout the day.",
+        "Expect rest intervals between efforts to maintain movement quality.",
+        "Listen for guide instructions on spacing and movement sequence.",
+        "Wind can affect comfort at exposed walls and boulder zones.",
+        "Closed-toe shoes and sun protection are important for both approach and climbing segments.",
+        "Hand care and hydration become more important in dry, abrasive conditions."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/HRCEcRa9TJmx1IJAyXAr",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459591/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459591",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "587300",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "in-the-company-of-horses-and-wine-587300",
+    "name": "In the Company of Horses & Wine",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "In the Company of Horses & Wine | Joshua Tree, California Outdoor Tour",
+      "description": "In the Company of Horses & Wine is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/in-the-company-of-horses-and-wine-587300",
+      "ogImage": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC"
+    },
+    "content": {
+      "experienceText": "In the Company of Horses & Wine operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nDrive transitions can show rapid shifts in terrain texture and vegetation density. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nShort walks may still involve uneven ground and limited shade. This style suits travelers who want landscape context without sustained hiking intensity.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Rock forms and basin views help illustrate long-term desert erosion patterns.",
+        "Guide narration often connects visible landforms to climate and water scarcity."
+      ],
+      "heroSummary": "In the Company of Horses & Wine is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/s8zBlMtqQz6kYBTWK8DC",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/587300/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "587300",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "444127",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "interactive-equine-visitor-pass-444127",
+    "name": "Interactive Equine Visitor Pass",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Interactive Equine Visitor Pass | Joshua Tree, California Outdoor Tour",
+      "description": "Interactive Equine Visitor Pass is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/interactive-equine-visitor-pass-444127",
+      "ogImage": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo"
+    },
+    "content": {
+      "experienceText": "Interactive Equine Visitor Pass is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Expect timing adjustments for weather and group flow.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments."
+      ],
+      "heroSummary": "Interactive Equine Visitor Pass is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement. Expect timing adjustments for weather and group flow."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/SsNrNK15RiyMCfZshddo",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/444127/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "444127",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "901301",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "joshua-tree-stargazing-night-walk-901301",
+    "name": "Joshua Tree Stargazing Night Walk",
+    "provider": {
+      "name": "Stargaze Joshua",
+      "shortName": "stargazejoshua",
+      "email": "hello@stargazejoshua.com",
+      "phone": "760-555-0166"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Joshua Tree Stargazing Night Walk | Joshua Tree, California Outdoor Tour",
+      "description": "Joshua Tree Stargazing Night Walk is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/joshua-tree-stargazing-night-walk-901301",
+      "ogImage": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80"
+    },
+    "content": {
+      "experienceText": "Joshua Tree Stargazing Night Walk is designed as a stargazing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nNight outings prioritize comfort planning, layered clothing, and careful footing on uneven ground. Open desert horizons support broad sky visibility in clear conditions.\n\nGuides typically explain sky navigation basics before deeper viewing so participants can track major celestial references. Plan hydration and snacks before night temperatures drop.\n\nStargazing experiences emphasize dark-sky timing, orientation, and controlled pacing in low-light terrain. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nClear winter nights can be excellent for visibility but require warm layers.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Plan hydration and snacks before night temperatures drop.",
+        "Wind can increase perceived cold after sunset."
+      ],
+      "heroSummary": "Joshua Tree Stargazing Night Walk is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Move deliberately on dark terrain and maintain group spacing. Limit screen brightness when checking devices. Plan hydration and snacks before night temperatures drop."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Clear winter nights can be excellent for visibility but require warm layers."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Move deliberately on dark terrain and maintain group spacing.",
+        "Limit screen brightness when checking devices.",
+        "Plan hydration and snacks before night temperatures drop.",
+        "Wind can increase perceived cold after sunset.",
+        "Bring warm layers even when daytime temperatures were mild.",
+        "Use red-light or low-intensity lighting to preserve night vision."
+      ]
+    },
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=80",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/stargazejoshua/items/901301/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "stargazejoshua",
+        "itemId": "901301",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "514091",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "la-luna-514091",
+    "name": "La Luna",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "La Luna | Joshua Tree, California Outdoor Tour",
+      "description": "La Luna is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/la-luna-514091",
+      "ogImage": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA"
+    },
+    "content": {
+      "experienceText": "La Luna operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nDrive transitions can show rapid shifts in terrain texture and vegetation density. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nShort walks may still involve uneven ground and limited shade. This style suits travelers who want landscape context without sustained hiking intensity.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ],
+      "heroSummary": "La Luna is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/rnpEn0QT6Dimqxm2yUgA",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/514091/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "514091",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "598562",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "morning-trail-ride-598562",
+    "name": "Morning Trail Ride",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Morning Trail Ride | Joshua Tree, California Outdoor Tour",
+      "description": "Morning Trail Ride is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/morning-trail-ride-598562",
+      "ogImage": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE"
+    },
+    "content": {
+      "experienceText": "Morning Trail Ride operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nGuide narration often connects visible landforms to climate and water scarcity. This style suits travelers who want landscape context without sustained hiking intensity.\n\nLayered clothing improves comfort between drive segments and viewpoints. Sightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ],
+      "heroSummary": "Morning Trail Ride is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Wind and sun exposure can change quickly during open-air stops. Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/Ir4znAwvSAGoPUPSgXqE",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/598562/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "598562",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "475064",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "natural-horsemanship-and-basic-riding-lessons-475064",
+    "name": "Natural Horsemanship & Basic Riding Lessons",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Natural Horsemanship & Basic Riding Lessons | Joshua Tree, California Outdoor Tour",
+      "description": "Natural Horsemanship & Basic Riding Lessons is a family easy experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/natural-horsemanship-and-basic-riding-lessons-475064",
+      "ogImage": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY"
+    },
+    "content": {
+      "experienceText": "Natural Horsemanship & Basic Riding Lessons operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nEasy routes can still provide clear views of desert rock and plant systems. Family-oriented and easier-paced experiences emphasize comfort, frequent pauses, and simple movement patterns.\n\nExpect pacing adjustments based on group needs. This format is designed to reduce route stress while maintaining meaningful desert context.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nLayered clothing is useful for cool starts and milder midday windows.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Layering helps manage rapid temperature shifts.",
+        "Expect pacing adjustments based on group needs."
+      ],
+      "heroSummary": "Natural Horsemanship & Basic Riding Lessons is a family easy experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Layering helps manage rapid temperature shifts. Expect pacing adjustments based on group needs. Confirm age and participation guidance on the booking page."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Layered clothing is useful for cool starts and milder midday windows."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Layering helps manage rapid temperature shifts.",
+        "Expect pacing adjustments based on group needs.",
+        "Confirm age and participation guidance on the booking page.",
+        "Frequent water breaks help maintain comfort across mixed age groups.",
+        "Choose footwear that supports short walks on uneven surfaces.",
+        "Plan for sun protection even on brief outings."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/pzVf33h6RaC4Ddxw9JQY",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475064/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "475064",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "528426",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "photography-hike-528426",
+    "name": "Photography Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Photography Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Photography Hike is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/photography-hike-528426",
+      "ogImage": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa"
+    },
+    "content": {
+      "experienceText": "Photography Hike is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Guide narration often connects visible landforms to climate and water scarcity.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Short walks may still involve uneven ground and limited shade.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ],
+      "heroSummary": "Photography Hike is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Expect timing adjustments for weather and group flow. Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/lA6YOUdiQGGbV7T1ZuIa",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/528426/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "528426",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "476256",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "photoshoot-476256",
+    "name": "Photoshoot",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Photoshoot | Joshua Tree, California Outdoor Tour",
+      "description": "Photoshoot is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/photoshoot-476256",
+      "ogImage": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3"
+    },
+    "content": {
+      "experienceText": "Photoshoot is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Guide narration often connects visible landforms to climate and water scarcity.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Short walks may still involve uneven ground and limited shade.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Use stable footwear even on brief walk segments.",
+        "Drive transitions can show rapid shifts in terrain texture and vegetation density."
+      ],
+      "heroSummary": "Photoshoot is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Expect timing adjustments for weather and group flow. Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/2mxrExMkRtq7dBBXoXN3",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/476256/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "476256",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "475058",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "pony-ride-475058",
+    "name": "Pony Ride",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Pony Ride | Joshua Tree, California Outdoor Tour",
+      "description": "Pony Ride is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/pony-ride-475058",
+      "ogImage": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29"
+    },
+    "content": {
+      "experienceText": "Pony Ride is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Expect timing adjustments for weather and group flow.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ],
+      "heroSummary": "Pony Ride is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Layered clothing improves comfort between drive segments and viewpoints. Carry water for both riding and stop-based movement. Expect timing adjustments for weather and group flow."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/GnZRHlivRSvjZoo19R29",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/475058/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "475058",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459589",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-morning-hike-459589",
+    "name": "Private Morning Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Morning Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Private Morning Hike is a family easy experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-morning-hike-459589",
+      "ogImage": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA"
+    },
+    "content": {
+      "experienceText": "Private Morning Hike operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nShort interpretive stops can show how terrain affects route planning. Guides typically focus on practical interpretation and terrain awareness suitable for mixed age ranges.\n\nPlan for sun protection even on brief outings. Family-oriented and easier-paced experiences emphasize comfort, frequent pauses, and simple movement patterns.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPrivate groups usually get more flexibility in stop timing and movement rhythm. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nLayered clothing is useful for cool starts and milder midday windows.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be private or private-ready",
+        "Plan for sun protection even on brief outings.",
+        "Layering helps manage rapid temperature shifts."
+      ],
+      "heroSummary": "Private Morning Hike is a family easy experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Choose footwear that supports short walks on uneven surfaces. Plan for sun protection even on brief outings. Layering helps manage rapid temperature shifts."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Layered clothing is useful for cool starts and milder midday windows."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "FareHarbor indicators suggest a private format, though final booking options are shown at checkout."
+        }
+      ],
+      "practicalNotes": [
+        "Choose footwear that supports short walks on uneven surfaces.",
+        "Plan for sun protection even on brief outings.",
+        "Layering helps manage rapid temperature shifts.",
+        "Expect pacing adjustments based on group needs.",
+        "Confirm age and participation guidance on the booking page.",
+        "Frequent water breaks help maintain comfort across mixed age groups."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/4bQTUQjQxu0HnhIofAkA",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459589/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459589",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459584",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-stargazing-with-an-astronomer-459584",
+    "name": "Private Stargazing with an Astronomer",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Stargazing with an Astronomer | Joshua Tree, California Outdoor Tour",
+      "description": "Private Stargazing with an Astronomer is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-stargazing-with-an-astronomer-459584",
+      "ogImage": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8"
+    },
+    "content": {
+      "experienceText": "Private Stargazing with an Astronomer operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nNight activity patterns differ from daytime, affecting sound and movement cues. Guides typically explain sky navigation basics before deeper viewing so participants can track major celestial references.\n\nMove deliberately on dark terrain and maintain group spacing. Stargazing experiences emphasize dark-sky timing, orientation, and controlled pacing in low-light terrain.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPrivate groups usually get more flexibility in stop timing and movement rhythm. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nClear winter nights can be excellent for visibility but require warm layers.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be private or private-ready",
+        "Bring warm layers even when daytime temperatures were mild.",
+        "Use red-light or low-intensity lighting to preserve night vision."
+      ],
+      "heroSummary": "Private Stargazing with an Astronomer is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use red-light or low-intensity lighting to preserve night vision. Move deliberately on dark terrain and maintain group spacing. Limit screen brightness when checking devices."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Clear winter nights can be excellent for visibility but require warm layers."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "FareHarbor indicators suggest a private format, though final booking options are shown at checkout."
+        }
+      ],
+      "practicalNotes": [
+        "Use red-light or low-intensity lighting to preserve night vision.",
+        "Move deliberately on dark terrain and maintain group spacing.",
+        "Limit screen brightness when checking devices.",
+        "Plan hydration and snacks before night temperatures drop.",
+        "Wind can increase perceived cold after sunset.",
+        "Bring warm layers even when daytime temperatures were mild."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/AuIFxsfS7ewtuucDaAB8",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459584/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459584",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459590",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "private-sunset-hike-459590",
+    "name": "Private Sunset Hike",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Private Sunset Hike | Joshua Tree, California Outdoor Tour",
+      "description": "Private Sunset Hike is a private sunset experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/private-sunset-hike-459590",
+      "ogImage": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu"
+    },
+    "content": {
+      "experienceText": "Private Sunset Hike operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nLow-angle sunset light highlights texture in rock faces and desert washes. Evening outings often shift from warm daytime temperatures to cooler post-sunset conditions quickly.\n\nBring both sun protection and a warm layer for temperature swings. Guides can adapt stop length and movement rhythm to group preference while preserving safety margins.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPrivate groups usually get more flexibility in stop timing and movement rhythm. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nSunset windows are shorter in winter and can cool rapidly afterward.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be private or private-ready",
+        "Operated by Joshua Tree Excursions",
+        "Bring both sun protection and a warm layer for temperature swings."
+      ],
+      "heroSummary": "Private Sunset Hike is a private sunset experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Private pacing allows additional buffer for photo and rest stops. Bring both sun protection and a warm layer for temperature swings. Low-angle light can reduce contrast on trails and uneven surfaces."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Sunset windows are shorter in winter and can cool rapidly afterward."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "FareHarbor indicators suggest a private format, though final booking options are shown at checkout."
+        }
+      ],
+      "practicalNotes": [
+        "Private pacing allows additional buffer for photo and rest stops.",
+        "Bring both sun protection and a warm layer for temperature swings.",
+        "Low-angle light can reduce contrast on trails and uneven surfaces.",
+        "Hydration remains important even during shorter evening windows.",
+        "Expect variable wind as temperatures drop near dusk.",
+        "Footwear with grip supports safer movement during fading light."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/DNm8050SkSrT6n4nlCPu",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459590/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459590",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "402194",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "scenic-joshua-tree-tour-402194",
+    "name": "H1 Adventure to Joshua Tree",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "H1 Adventure to Joshua Tree | Joshua Tree, California Outdoor Tour",
+      "description": "H1 Adventure to Joshua Tree is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/scenic-joshua-tree-tour-402194",
+      "ogImage": "https://adventurehummer.com/wp-content/smush-webp/2025/06/H1-Open-Air-Hummer-in-Joshua-Tree-1.jpg.webp"
+    },
+    "content": {
+      "experienceText": "H1 Adventure to Joshua Tree operates in Joshua Tree National Park conditions where sun, wind, and surface temperature can change quickly over a single outing. Duration details appear in the selected booking slot.\n\nGuide narration often connects visible landforms to climate and water scarcity. Guides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation.\n\nShort walks may still involve uneven ground and limited shade. This style suits travelers who want landscape context without sustained hiking intensity.\n\nMeeting and timing instructions are supplied during checkout. Age guidance can vary by operator settings and should be reviewed before booking.\n\nPublic departures usually keep a consistent rhythm to support mixed participant needs. Accessibility and pace should be reviewed in booking notes for the selected date.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Operated by Cascade Trails Mustang Sanctuary",
+        "Short walks may still involve uneven ground and limited shade."
+      ],
+      "heroSummary": "H1 Adventure to Joshua Tree is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow."
+      ]
+    },
+    "images": {
+      "hero": "https://adventurehummer.com/wp-content/smush-webp/2025/06/H1-Open-Air-Hummer-in-Joshua-Tree-1.jpg.webp",
+      "gallery": [
+        "https://cdn.filestackcontent.com/pXFOly2EQPSCLq4kuMij"
+      ]
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/402194/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "402194",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459544",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sightseeing-tour-459544",
+    "name": "Sightseeing Tour",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sightseeing Tour | Joshua Tree, California Outdoor Tour",
+      "description": "Sightseeing Tour is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sightseeing-tour-459544",
+      "ogImage": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS"
+    },
+    "content": {
+      "experienceText": "Sightseeing Tour is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Drive transitions can show rapid shifts in terrain texture and vegetation density.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Short walks may still involve uneven ground and limited shade.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops."
+      ],
+      "heroSummary": "Sightseeing Tour is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Expect timing adjustments for weather and group flow. Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/aMGGC3clTQOSy3ObhErS",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459544/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459544",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "568106",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "soundbath-under-the-stars-joshua-tree-568106",
+    "name": "Soundbath Under The Stars-Joshua Tree",
+    "provider": {
+      "name": "Joshua Tree Connectivity",
+      "shortName": "joshuatreeconnectivity",
+      "email": "info@joshuatreeconnectivity.com",
+      "phone": "760-974-2011"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.134728,
+      "lng": -116.313066
+    },
+    "seo": {
+      "title": "Soundbath Under The Stars-Joshua Tree | Joshua Tree, California Outdoor Tour",
+      "description": "Soundbath Under The Stars-Joshua Tree is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/soundbath-under-the-stars-joshua-tree-568106",
+      "ogImage": "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo"
+    },
+    "content": {
+      "experienceText": "Soundbath Under The Stars-Joshua Tree is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Guide narration often connects visible landforms to climate and water scarcity.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Layered clothing improves comfort between drive segments and viewpoints.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Guide narration often connects visible landforms to climate and water scarcity.",
+        "Desert plant communities reflect elevation and soil differences across short distances."
+      ],
+      "heroSummary": "Soundbath Under The Stars-Joshua Tree is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Short walks may still involve uneven ground and limited shade. Wind and sun exposure can change quickly during open-air stops. Layered clothing improves comfort between drive segments and viewpoints."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement.",
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/5csRkZS6RIymoUKK8qwo",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeconnectivity/items/568106/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeconnectivity",
+        "itemId": "568106",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "459554",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sunset-hike-dinner-and-night-sky-presentation-459554",
+    "name": "Sunset Hike, Dinner, & Night Sky Presentation",
+    "provider": {
+      "name": "Joshua Tree Excursions",
+      "shortName": "joshuatreeexcursions",
+      "email": "Info@joshuatreeexcursions.com",
+      "phone": "17609749536"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sunset Hike, Dinner, & Night Sky Presentation | Joshua Tree, California Outdoor Tour",
+      "description": "Sunset Hike, Dinner, & Night Sky Presentation is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sunset-hike-dinner-and-night-sky-presentation-459554",
+      "ogImage": "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C"
+    },
+    "content": {
+      "experienceText": "Sunset Hike, Dinner, & Night Sky Presentation is designed as a stargazing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nStargazing experiences emphasize dark-sky timing, orientation, and controlled pacing in low-light terrain. Night activity patterns differ from daytime, affecting sound and movement cues.\n\nNight outings prioritize comfort planning, layered clothing, and careful footing on uneven ground. Move deliberately on dark terrain and maintain group spacing.\n\nGuides typically explain sky navigation basics before deeper viewing so participants can track major celestial references. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nClear winter nights can be excellent for visibility but require warm layers.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Operated by Joshua Tree Excursions",
+        "Bring warm layers even when daytime temperatures were mild."
+      ],
+      "heroSummary": "Sunset Hike, Dinner, & Night Sky Presentation is a stargazing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Bring warm layers even when daytime temperatures were mild. Use red-light or low-intensity lighting to preserve night vision. Move deliberately on dark terrain and maintain group spacing."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Clear winter nights can be excellent for visibility but require warm layers."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Bring warm layers even when daytime temperatures were mild.",
+        "Use red-light or low-intensity lighting to preserve night vision.",
+        "Move deliberately on dark terrain and maintain group spacing.",
+        "Limit screen brightness when checking devices.",
+        "Plan hydration and snacks before night temperatures drop.",
+        "Wind can increase perceived cold after sunset."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/dO0XzxdVSXeJgDAC5H5C",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/joshuatreeexcursions/items/459554/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "joshuatreeexcursions",
+        "itemId": "459554",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "646142",
+    "sourceCitySlug": "joshua-tree",
+    "slug": "sunset-sound-bath-with-wild-horses-646142",
+    "name": "Sunset Sound Bath with Wild Horses",
+    "provider": {
+      "name": "Cascade Trails Mustang Sanctuary",
+      "shortName": "mustangsanctuary",
+      "email": "cascadetrailsmustangs@gmail.com",
+      "phone": "7609107220"
+    },
+    "geo": {
+      "country": "usa",
+      "region": "California",
+      "city": "Joshua Tree",
+      "lat": 34.1341,
+      "lng": -116.3131
+    },
+    "seo": {
+      "title": "Sunset Sound Bath with Wild Horses | Joshua Tree, California Outdoor Tour",
+      "description": "Sunset Sound Bath with Wild Horses is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "canonicalPath": "/destinations/california/joshua-tree/tours/sunset-sound-bath-with-wild-horses-646142",
+      "ogImage": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh"
+    },
+    "content": {
+      "experienceText": "Sunset Sound Bath with Wild Horses is designed as a sightseeing experience in Joshua Tree, with logistics anchored in FareHarbor booking details. Duration varies by departure and is confirmed at booking.\n\nThis style suits travelers who want landscape context without sustained hiking intensity. Guide narration often connects visible landforms to climate and water scarcity.\n\nSightseeing and drive-led formats combine vehicle movement with short interpretive stops where conditions allow. Short walks may still involve uneven ground and limited shade.\n\nGuides often balance scenic pacing with practical logistics so guests can focus on observation rather than navigation. Meeting instructions are finalized in booking confirmation.\n\nShared departures typically follow a structured pace so all participants can keep timing and safety aligned. Group size depends on departure configuration.\n\nWinter often supports comfortable daytime sightseeing with cooler wind exposure.",
+      "highlights": [
+        "Duration is confirmed by departure in FareHarbor",
+        "Meeting details are provided at booking confirmation",
+        "Inclusions vary by departure and are shown in FareHarbor",
+        "Exclusions and optional extras are clarified at checkout",
+        "Group size depends on booking configuration",
+        "Tour format appears to be shared departure",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints."
+      ],
+      "heroSummary": "Sunset Sound Bath with Wild Horses is a sightseeing experience in Joshua Tree. Timing is confirmed in booking for each departure.",
+      "faqs": [
+        {
+          "question": "How long is this Joshua Tree tour?",
+          "answer": "Duration can vary by departure and is shown on the booking page before checkout."
+        },
+        {
+          "question": "Where do participants meet?",
+          "answer": "Meeting instructions are confirmed in FareHarbor during booking."
+        },
+        {
+          "question": "What should participants bring?",
+          "answer": "Expect timing adjustments for weather and group flow. Use stable footwear even on brief walk segments. Short walks may still involve uneven ground and limited shade."
+        },
+        {
+          "question": "Is this suitable for beginners or mixed fitness levels?",
+          "answer": "Most guided departures use managed pacing and breaks; participants should review current operator notes for movement level expectations."
+        },
+        {
+          "question": "What is included with booking?",
+          "answer": "Inclusions are operator-defined and shown in FareHarbor for each departure."
+        },
+        {
+          "question": "How do cancellations work?",
+          "answer": "See booking page for cancellation terms."
+        },
+        {
+          "question": "Are park fees included?",
+          "answer": "Park entry fees may apply depending on the tour format and operator policy; verify fee handling on the booking page."
+        },
+        {
+          "question": "How does weather affect this experience?",
+          "answer": "Winter often supports comfortable daytime sightseeing with cooler wind exposure."
+        },
+        {
+          "question": "Is this private or shared?",
+          "answer": "The current listing appears to be shared, with final format and availability shown during booking."
+        }
+      ],
+      "practicalNotes": [
+        "Expect timing adjustments for weather and group flow.",
+        "Use stable footwear even on brief walk segments.",
+        "Short walks may still involve uneven ground and limited shade.",
+        "Wind and sun exposure can change quickly during open-air stops.",
+        "Layered clothing improves comfort between drive segments and viewpoints.",
+        "Carry water for both riding and stop-based movement."
+      ]
+    },
+    "images": {
+      "hero": "https://cdn.filestackcontent.com/uK3SSJDlS4ikEEyzE6vh",
+      "gallery": []
+    },
+    "booking": {
+      "bookingUrl": "https://fareharbor.com/embeds/book/mustangsanctuary/items/646142/calendar/2026/02/?asn=fh&asn-ref=alloutdooradventures&flow=no&full-items=yes&g4=yes&ref=https%3A%2F%2Fwww.alloutdooradventures.com&back=https%3A%2F%2Fwww.alloutdooradventures.com%2F",
+      "fareharbor": {
+        "shortname": "mustangsanctuary",
+        "itemId": "646142",
+        "refUrl": "https://www.alloutdooradventures.com",
+        "backUrl": "https://www.alloutdooradventures.com/"
+      }
+    },
+    "pricing": {
+      "currency": "USD"
+    }
+  },
+  {
     "id": "485416",
     "sourceCitySlug": "julian",
     "slug": "enrichment-tour-485416",
@@ -15514,6 +18142,17 @@ export const californiaEngine2CitiesIndex = [
       "https://cdn.filestackcontent.com/gMUVFDxZT1yMsWZNb8sg",
       "https://cdn.filestackcontent.com/V26IHeHFRGe7gOczLHbw",
       "https://cdn.filestackcontent.com/9Sh512PXTqitedJNZDWF"
+    ]
+  },
+  {
+    "cityName": "Joshua Tree",
+    "citySlug": "joshua-tree",
+    "tourCount": 26,
+    "sampleImages": [
+      "https://cdn.filestackcontent.com/sdDXkES9SBGh2gbGErzl",
+      "https://cdn.filestackcontent.com/AHzRqO2bR5q6JRWhBz7N",
+      "https://cdn.filestackcontent.com/ls30OCxpT0tC44Qxd4i8",
+      "https://cdn.filestackcontent.com/Y12ZerTQHWO2gQ7Uy83D"
     ]
   },
   {
