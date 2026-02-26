@@ -47,6 +47,8 @@ import {
 } from "../../../../schema/buildTourSchemaGraph";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
+import { getViatorTourBySlugs } from "../../../../data/viatorRegistry";
+import ViatorTourPage from "../../../../components/tours/ViatorTourPage";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -76,6 +78,16 @@ export default function CityTourDetailRoute({
         cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
       />
     );
+  }
+
+  const viatorTour = getViatorTourBySlugs(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+
+  if (viatorTour) {
+    return <ViatorTourPage entry={viatorTour} />;
   }
 
   const engine2Tour = getEngine2TourBySlug(

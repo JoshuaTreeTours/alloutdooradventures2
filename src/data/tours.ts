@@ -18,6 +18,10 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import {
+  getViatorToursByDestination,
+  toViatorListingTour,
+} from "./viatorRegistry";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -141,21 +145,23 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].filter(
-  tour =>
-    !isTourRemoved({
-      tourId: getEngine1FareHarborItemId(tour),
-      operatorName: tour.operator,
+]
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: getEngine1FareHarborItemId(tour),
+        operatorName: tour.operator,
+      })
+  )
+  .map(tour =>
+    applyTourPricing({
+      ...tour,
+      destination: {
+        ...tour.destination,
+        country: tour.destination.country || "United States",
+      },
     })
-).map(tour =>
-  applyTourPricing({
-    ...tour,
-    destination: {
-      ...tour.destination,
-      country: tour.destination.country || "United States",
-    },
-  })
-);
+  );
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -236,6 +242,7 @@ export const getCityTourDetailPath = (tour: Tour) =>
 export type UnifiedCityTour = {
   tour: Tour;
   href: string;
+  source?: "engine1" | "engine2" | "viator";
 };
 
 function getEngine1FareHarborItemId(tour: Tour) {
@@ -250,6 +257,7 @@ function getEngine1FareHarborItemId(tour: Tour) {
 const toUnifiedEngine1Tour = (tour: Tour): UnifiedCityTour => ({
   tour,
   href: getCityTourDetailPath(tour),
+  source: "engine1",
 });
 
 const getEngine2StateSlug = (tour: Engine2Tour) => {
@@ -298,6 +306,15 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),
   href: tour.seo.canonicalPath,
+  source: "engine2",
+});
+
+const toUnifiedViatorTour = (
+  item: ReturnType<typeof getViatorToursByDestination>[number]
+): UnifiedCityTour => ({
+  tour: toViatorListingTour(item),
+  href: item.pagePath,
+  source: "viator",
 });
 
 const getDedupeKey = (entry: UnifiedCityTour) => {
@@ -356,17 +373,28 @@ export const getToursByCityUnified = (
   const engine1Tours = getToursByCity(stateSlug, citySlug).map(
     toUnifiedEngine1Tour
   );
+  const viatorTours = getViatorToursByDestination(stateSlug, citySlug).map(
+    toUnifiedViatorTour
+  );
 
   if (stateSlug !== "california") {
     const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
       toUnifiedEngine2Tour
     );
-    return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
+    return dedupeUnifiedCityTours([
+      ...engine1Tours,
+      ...engine2Tours,
+      ...viatorTours,
+    ]);
   }
 
   const engine2Tours =
     getEngine2ToursBySourceCity(citySlug).map(toUnifiedEngine2Tour);
-  return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
+  return dedupeUnifiedCityTours([
+    ...engine1Tours,
+    ...engine2Tours,
+    ...viatorTours,
+  ]);
 };
 
 export const getAffiliateDisclosure = (tour: Tour) =>
