@@ -28,6 +28,8 @@ const isLikelyTourImage = (url: string) => {
     "avatar",
     "placeholder",
     "1x1",
+    "favicon",
+    "data:image",
   ].some(token => lowered.includes(token));
 };
 
@@ -234,17 +236,34 @@ export function parseViatorTour(
   )
     .map(match => stripHtml(match[1]))
     .filter(Boolean);
-  if (includedMatches.length) {
-    parsed.included = Array.from(new Set(includedMatches)).slice(0, 12);
-  }
 
   const notIncludedMatches = Array.from(
     html.matchAll(/Not included[\s\S]{0,1200}?<li[^>]*>([\s\S]*?)<\/li>/gi)
   )
     .map(match => stripHtml(match[1]))
     .filter(Boolean);
-  if (notIncludedMatches.length) {
-    parsed.notIncluded = Array.from(new Set(notIncludedMatches)).slice(0, 12);
+
+  const notIncludedNormalized = Array.from(new Set(notIncludedMatches));
+  const includedNormalized = Array.from(
+    new Set(
+      includedMatches.filter(item => {
+        const lowered = item.toLowerCase();
+        if (lowered.includes("gratuities")) {
+          return false;
+        }
+
+        return !notIncludedNormalized.some(
+          excluded => excluded.toLowerCase() === lowered
+        );
+      })
+    )
+  );
+
+  if (includedNormalized.length) {
+    parsed.included = includedNormalized.slice(0, 12);
+  }
+  if (notIncludedNormalized.length) {
+    parsed.notIncluded = notIncludedNormalized.slice(0, 12);
   }
 
   const knowBefore = Array.from(

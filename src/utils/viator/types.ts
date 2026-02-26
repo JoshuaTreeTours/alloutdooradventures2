@@ -38,7 +38,7 @@ export type ViatorTourTemplateModel = {
   title: string;
   destinationText?: string;
   durationText?: string;
-  heroImageUrl: string;
+  heroImageUrl?: string;
   galleryImageUrls: string[];
   included?: string[];
   notIncluded?: string[];

@@ -1,6 +1,7 @@
 import type { ViatorParsedTour, ViatorTourTemplateModel } from "./types";
 
-const FALLBACK_IMAGE = "/hero.jpg";
+const normalize = (items?: string[]) =>
+  Array.from(new Set((items ?? []).filter(Boolean)));
 
 export function mapViatorToTourModel(input: {
   parsed: ViatorParsedTour;
@@ -11,15 +12,12 @@ export function mapViatorToTourModel(input: {
   viatorUrl: string;
 }): ViatorTourTemplateModel {
   const { parsed, derived, viatorUrl } = input;
-  const heroImageUrl =
-    parsed.primaryImage ?? parsed.images?.[0] ?? FALLBACK_IMAGE;
 
-  const remainingImages = (parsed.images ?? []).filter(
-    image => image !== heroImageUrl
-  );
-  const galleryImageUrls = remainingImages.length
-    ? remainingImages.slice(0, 4)
-    : [heroImageUrl, FALLBACK_IMAGE].filter(Boolean).slice(0, 2);
+  const dedupedImages = normalize(parsed.images);
+  const heroImageUrl = parsed.primaryImage ?? dedupedImages[0] ?? undefined;
+  const galleryImageUrls = dedupedImages
+    .filter(image => image !== heroImageUrl)
+    .slice(0, 4);
 
   return {
     title: parsed.title ?? "Viator tour",

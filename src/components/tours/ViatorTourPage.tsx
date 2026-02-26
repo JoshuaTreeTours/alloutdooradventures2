@@ -4,6 +4,7 @@ import Seo from "../Seo";
 import Image from "../Image";
 import { useStructuredData } from "../StructuredDataProvider";
 import BookItButton from "./BookItButton";
+import TourBottomPhotoRow from "./TourBottomPhotoRow";
 import type { ViatorRegistryEntry } from "../../utils/viator/types";
 import { mapViatorToTourModel } from "../../utils/viator/mapViatorToTourModel";
 
@@ -122,30 +123,14 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="grid gap-8 md:grid-cols-[2fr_1fr]">
           <div>
-            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-              <Image
-                src={model.heroImageUrl}
-                fallbackSrc="/hero.jpg"
-                alt={model.title}
-                className="h-64 w-full object-cover md:h-80"
-              />
-            </div>
-
-            {model.galleryImageUrls.length ? (
-              <div className="mt-6 grid gap-4 sm:grid-cols-2">
-                {model.galleryImageUrls.slice(0, 2).map(image => (
-                  <div
-                    key={image}
-                    className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm"
-                  >
-                    <Image
-                      src={image}
-                      fallbackSrc={model.heroImageUrl}
-                      alt={`${model.title} gallery`}
-                      className="h-56 w-full object-cover"
-                    />
-                  </div>
-                ))}
+            {model.heroImageUrl ? (
+              <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+                <Image
+                  src={model.heroImageUrl}
+                  fallbackSrc={model.heroImageUrl}
+                  alt={model.title}
+                  className="h-64 w-full object-cover md:h-80"
+                />
               </div>
             ) : null}
 
@@ -264,6 +249,8 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
             ) : null}
           </div>
         </div>
+
+        <TourBottomPhotoRow imageUrls={model.galleryImageUrls} />
 
         <div className="mt-12 text-center">
           <BookItButton href={model.bookingUrl} />
