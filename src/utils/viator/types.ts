@@ -20,6 +20,11 @@ export type ViatorParsedTour = {
   primaryImage?: string;
 };
 
+export type ViatorImageOverrides = {
+  heroImageUrlOverride?: string;
+  bottomImageUrlOverride?: string;
+};
+
 export type ViatorRegistryEntry = {
   slug: string;
   pagePath: string;
@@ -32,6 +37,7 @@ export type ViatorRegistryEntry = {
     highlights: string[];
     description: string;
   };
+  imageOverrides?: ViatorImageOverrides;
 };
 
 export type ViatorTourTemplateModel = {
@@ -39,7 +45,7 @@ export type ViatorTourTemplateModel = {
   destinationText?: string;
   durationText?: string;
   heroImageUrl?: string;
-  galleryImageUrls: string[];
+  bottomImageUrl?: string;
   included?: string[];
   notIncluded?: string[];
   longDescription: string;

@@ -13,9 +13,21 @@ type ViatorTourPageProps = {
 };
 
 export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
-  const { parsed, derived, viatorUrl, pagePath, regionSlug, destinationSlug } =
-    entry;
-  const model = mapViatorToTourModel({ parsed, derived, viatorUrl });
+  const {
+    parsed,
+    derived,
+    viatorUrl,
+    pagePath,
+    regionSlug,
+    destinationSlug,
+    imageOverrides,
+  } = entry;
+  const model = mapViatorToTourModel({
+    parsed,
+    derived,
+    viatorUrl,
+    imageOverrides,
+  });
 
   const productNode: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -250,7 +262,9 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
           </div>
         </div>
 
-        <TourBottomPhotoRow imageUrls={model.galleryImageUrls} />
+        <TourBottomPhotoRow
+          imageUrls={model.bottomImageUrl ? [model.bottomImageUrl] : []}
+        />
 
         <div className="mt-12 text-center">
           <BookItButton href={model.bookingUrl} />

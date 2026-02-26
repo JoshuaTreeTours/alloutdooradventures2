@@ -20,6 +20,10 @@ const toAbsoluteUrl = (url: string, pageUrl?: string) => {
 
 const isLikelyTourImage = (url: string) => {
   const lowered = url.toLowerCase();
+  if (!lowered.startsWith("https://")) {
+    return false;
+  }
+
   return ![
     "sprite",
     "icon",

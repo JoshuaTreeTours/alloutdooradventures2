@@ -18,6 +18,8 @@ type ViatorSeed = {
   viatorUrl: string;
   destinationSlug: string;
   regionSlug: string;
+  heroImageUrlOverride?: string;
+  bottomImageUrlOverride?: string;
 };
 
 const seedsPath = path.resolve("data/viatorSeeds.json");
@@ -64,6 +66,13 @@ async function run() {
         highlights: deriveHighlights(parsed),
         description: deriveLongDescription(parsed),
       },
+      imageOverrides:
+        seed.heroImageUrlOverride || seed.bottomImageUrlOverride
+          ? {
+              heroImageUrlOverride: seed.heroImageUrlOverride,
+              bottomImageUrlOverride: seed.bottomImageUrlOverride,
+            }
+          : undefined,
     });
   }
 

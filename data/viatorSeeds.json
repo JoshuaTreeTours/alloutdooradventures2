@@ -2,6 +2,8 @@
   {
     "viatorUrl": "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
     "destinationSlug": "palm-springs",
-    "regionSlug": "california"
+    "regionSlug": "california",
+    "heroImageUrlOverride": "https://upload.wikimedia.org/wikipedia/commons/8/83/San_Andreas_Fault_in_the_Coachella_Valley.jpg",
+    "bottomImageUrlOverride": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80"
   }
 ]

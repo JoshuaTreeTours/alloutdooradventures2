@@ -1,7 +1,39 @@
-import type { ViatorParsedTour, ViatorTourTemplateModel } from "./types";
+import type {
+  ViatorImageOverrides,
+  ViatorParsedTour,
+  ViatorTourTemplateModel,
+} from "./types";
 
 const normalize = (items?: string[]) =>
   Array.from(new Set((items ?? []).filter(Boolean)));
+
+const hasAllowedImagePattern = (url: string) => {
+  const lowered = url.toLowerCase();
+  if (!lowered.startsWith("https://")) {
+    return false;
+  }
+  if (
+    ["data:image", "sprite", "icon", "logo", "favicon"].some(token =>
+      lowered.includes(token)
+    )
+  ) {
+    return false;
+  }
+
+  return (
+    /(\.jpg|\.jpeg|\.png|\.webp)(\?|$)/i.test(lowered) ||
+    lowered.includes("images.unsplash.com/") ||
+    lowered.includes("upload.wikimedia.org/")
+  );
+};
+
+const cleanImageUrl = (url?: string) => {
+  if (!url) {
+    return undefined;
+  }
+
+  return hasAllowedImagePattern(url) ? url : undefined;
+};
 
 export function mapViatorToTourModel(input: {
   parsed: ViatorParsedTour;
@@ -10,21 +42,25 @@ export function mapViatorToTourModel(input: {
     description: string;
   };
   viatorUrl: string;
+  imageOverrides?: ViatorImageOverrides;
 }): ViatorTourTemplateModel {
-  const { parsed, derived, viatorUrl } = input;
+  const { parsed, derived, viatorUrl, imageOverrides } = input;
 
-  const dedupedImages = normalize(parsed.images);
-  const heroImageUrl = parsed.primaryImage ?? dedupedImages[0] ?? undefined;
-  const galleryImageUrls = dedupedImages
-    .filter(image => image !== heroImageUrl)
-    .slice(0, 4);
+  const dedupedImages = normalize(parsed.images).filter(hasAllowedImagePattern);
+  const overrideHero = cleanImageUrl(imageOverrides?.heroImageUrlOverride);
+  const overrideBottom = cleanImageUrl(imageOverrides?.bottomImageUrlOverride);
+
+  const heroImageUrl =
+    overrideHero ?? cleanImageUrl(parsed.primaryImage) ?? dedupedImages[0];
+  const bottomImageUrl =
+    overrideBottom ?? dedupedImages.find(image => image !== heroImageUrl);
 
   return {
     title: parsed.title ?? "Viator tour",
     destinationText: parsed.destinationText,
     durationText: parsed.durationText,
     heroImageUrl,
-    galleryImageUrls,
+    bottomImageUrl,
     included: parsed.included?.length ? parsed.included : undefined,
     notIncluded: parsed.notIncluded?.length ? parsed.notIncluded : undefined,
     longDescription: derived.description,
