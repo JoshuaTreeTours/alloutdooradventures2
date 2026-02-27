@@ -4,6 +4,7 @@ import {
   SITE_BRAND_ID,
   SITE_ORGANIZATION_ID,
   SITE_WEBSITE_ID,
+  buildTourProductNodeId,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -98,10 +99,10 @@ describe("tour product/trip schema safety", () => {
 
     expect(product).toMatchObject({
       "@type": "Product",
-      "@id":
-        "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1#product",
+      "@id": "https://www.alloutdooradventures.com/#ptour-1",
       brand: { "@id": SITE_BRAND_ID },
       provider: { "@id": SITE_BRAND_ID },
+      seller: { "@id": SITE_ORGANIZATION_ID },
       priceSpecification: {
         "@type": "PriceSpecification",
       },
@@ -117,6 +118,12 @@ describe("tour product/trip schema safety", () => {
     );
     expect(validIds.has((product.brand as { "@id": string })["@id"])).toBe(
       true
+    );
+  });
+
+  it("builds stable product node IDs from tour IDs", () => {
+    expect(buildTourProductNodeId("2335P1")).toBe(
+      "https://www.alloutdooradventures.com/#p2335P1"
     );
   });
 
@@ -193,7 +200,7 @@ describe("tour product/trip schema safety", () => {
     expect(trip).toMatchObject({
       duration: "2 hours",
       areaServed: { "@id": `${detailUrl}#place` },
-      isRelatedTo: { "@id": `${detailUrl}#product` },
+      isRelatedTo: { "@id": "https://www.alloutdooradventures.com/#ptour-1" },
     });
   });
 
@@ -579,6 +586,25 @@ describe("graph dedupe by @id", () => {
     expect(graphTypes).toContain("Product");
     expect(graphTypes).toContain("TouristTrip");
     expect(graphTypes).toContain("BreadcrumbList");
+  });
+
+  it("sets both about and mainEntity when mainEntityId is provided", () => {
+    const detailUrl =
+      "https://www.alloutdooradventures.com/tours/california/san-diego/tour-1";
+    const productNodeId = "https://www.alloutdooradventures.com/#ptour-1";
+
+    const webPage = buildWebPageStructuredData({
+      url: detailUrl,
+      name: "Tour 1",
+      description: "Tour 1 description",
+      mainEntityId: productNodeId,
+    });
+
+    expect(webPage).toMatchObject({
+      "@id": `${detailUrl}#webpage`,
+      about: { "@id": productNodeId },
+      mainEntity: { "@id": productNodeId },
+    });
   });
 
   it("is idempotent across repeated normalize calls", () => {

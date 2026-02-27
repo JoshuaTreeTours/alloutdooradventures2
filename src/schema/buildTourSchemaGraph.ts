@@ -268,6 +268,7 @@ export function buildTourSchemaGraph(args: {
         description: args.pageDescription,
         isPartOf: { "@id": args.brandOrgIds.websiteId },
         publisher: { "@id": args.brandOrgIds.orgId },
+        about: { "@id": args.product.id },
         mainEntity: { "@id": args.product.id },
         ...(webHero
           ? {
@@ -292,6 +293,7 @@ export function buildTourSchemaGraph(args: {
           : {}),
         ...(args.product.category ? { category: args.product.category } : {}),
         brand: { "@id": args.brandOrgIds.brandId },
+        seller: { "@id": args.brandOrgIds.orgId },
         provider: { "@id": args.brandOrgIds.orgId },
         offers: offerNode,
         mainEntityOfPage: {

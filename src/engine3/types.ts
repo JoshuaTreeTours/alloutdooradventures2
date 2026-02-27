@@ -26,6 +26,7 @@ export type Engine3FaqItem = {
 };
 
 export type Engine3TourViewModel = {
+  tourId: string;
   title: string;
   city: string;
   region: string;

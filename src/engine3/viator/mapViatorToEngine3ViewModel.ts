@@ -29,6 +29,7 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.bookingUrl) ?? cleanText(tour.booking.bookingUrl);
 
   return {
+    tourId: tour.id,
     title: cleanText(productData?.title) ?? tour.name,
     city: tour.geo.city,
     region: tour.geo.region,
