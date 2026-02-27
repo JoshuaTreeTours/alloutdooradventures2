@@ -368,10 +368,6 @@ const palmSpringsTours = [
         "Guide gratuities",
         "Hotel pickup and drop-off unless selected",
       ],
-      meetingPoint: {
-        name: "Desert Adventures Metate Ranch",
-        address: "74735 Joe Davis Dr, Palm Desert, CA 92260, USA",
-      },
       itinerary: [
         {
           title: "Meet at Desert Adventures base",
@@ -406,9 +402,8 @@ const palmSpringsTours = [
             "The guided tour duration is approximately 3 hours, including transportation and interpretive stops.",
         },
         {
-          question: "Where is the meeting point?",
-          answer:
-            "The listed meeting point is Desert Adventures Metate Ranch, 74735 Joe Davis Dr, Palm Desert, CA 92260, USA.",
+          question: "Where can I confirm meeting and pickup details?",
+          answer: "See booking page for the latest meeting and pickup details.",
         },
       ],
     },

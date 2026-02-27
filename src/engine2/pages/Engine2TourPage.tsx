@@ -527,20 +527,21 @@ export default function Engine2TourPage({
           </div>
         ) : null}
 
-        {isViatorTour &&
-        (tour.content.meetingPoint?.name ||
-          tour.content.meetingPoint?.address) ? (
+        {isViatorTour ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Meeting point
             </h2>
             <p className="mt-3 text-sm text-[#405040]">
-              {[
-                tour.content.meetingPoint?.name,
-                tour.content.meetingPoint?.address,
-              ]
-                .filter(Boolean)
-                .join(" — ")}
+              {tour.content.meetingPoint?.name ||
+              tour.content.meetingPoint?.address
+                ? [
+                    tour.content.meetingPoint?.name,
+                    tour.content.meetingPoint?.address,
+                  ]
+                    .filter(Boolean)
+                    .join(" — ")
+                : "See booking page for the latest meeting and pickup details."}
             </p>
           </>
         ) : null}
