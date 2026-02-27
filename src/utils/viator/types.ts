@@ -16,13 +16,13 @@ export type ViatorParsedTour = {
   recommendedPercent?: number;
   cancellationText?: string;
   knowBeforeYouGo?: string[];
-  images?: string[];
+  images: string[];
   primaryImage?: string;
 };
 
-export type ViatorImageOverrides = {
-  heroImageUrlOverride?: string;
-  bottomImageUrlOverride?: string;
+export type ViatorMedia = {
+  primaryImage?: string;
+  images: string[];
 };
 
 export type ViatorRegistryEntry = {
@@ -33,19 +33,21 @@ export type ViatorRegistryEntry = {
   viatorUrl: string;
   source: "viator";
   parsed: ViatorParsedTour;
+  media: ViatorMedia;
+  heroImageUrl: string;
+  bottomImageUrl: string;
   derived: {
     highlights: string[];
     description: string;
   };
-  imageOverrides?: ViatorImageOverrides;
 };
 
 export type ViatorTourTemplateModel = {
   title: string;
   destinationText?: string;
   durationText?: string;
-  heroImageUrl?: string;
-  bottomImageUrl?: string;
+  heroImageUrl: string;
+  bottomImageUrl: string;
   included?: string[];
   notIncluded?: string[];
   longDescription: string;

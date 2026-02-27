@@ -12,14 +12,14 @@ import {
 } from "../src/utils/viator/deriveContent";
 import { fetchViatorHtml } from "../src/utils/viator/fetchViatorHtml";
 import { parseViatorTour } from "../src/utils/viator/parseViatorTour";
+import { getViatorMedia } from "../src/utils/viator/getViatorMedia";
+import { getDestinationFallbackImages } from "../src/utils/images/destinationFallback";
 import type { ViatorRegistryEntry } from "../src/utils/viator/types";
 
 type ViatorSeed = {
   viatorUrl: string;
   destinationSlug: string;
   regionSlug: string;
-  heroImageUrlOverride?: string;
-  bottomImageUrlOverride?: string;
 };
 
 const seedsPath = path.resolve("data/viatorSeeds.json");
@@ -50,6 +50,15 @@ async function run() {
     }
 
     const parsed = parseViatorTour(html, seed.viatorUrl);
+    const media = await getViatorMedia(seed.viatorUrl);
+    const fallback = getDestinationFallbackImages(
+      seed.regionSlug,
+      seed.destinationSlug
+    );
+    const heroImageUrl = media.primaryImage ?? media.images[0] ?? fallback.hero;
+    const bottomImageUrl =
+      media.images.find(image => image !== heroImageUrl) ?? fallback.secondary;
+
     const titleSlug = slugify(parsed.title ?? "viator-tour");
     const productCode = extractProductCode(seed.viatorUrl);
     const slug = productCode ? `${titleSlug}-${productCode}` : titleSlug;
@@ -62,17 +71,13 @@ async function run() {
       viatorUrl: seed.viatorUrl,
       source: "viator",
       parsed,
+      media,
+      heroImageUrl,
+      bottomImageUrl,
       derived: {
         highlights: deriveHighlights(parsed),
         description: deriveLongDescription(parsed),
       },
-      imageOverrides:
-        seed.heroImageUrlOverride || seed.bottomImageUrlOverride
-          ? {
-              heroImageUrlOverride: seed.heroImageUrlOverride,
-              bottomImageUrlOverride: seed.bottomImageUrlOverride,
-            }
-          : undefined,
     });
   }
 

@@ -1,59 +1,46 @@
 import type {
-  ViatorImageOverrides,
+  ViatorMedia,
   ViatorParsedTour,
   ViatorTourTemplateModel,
 } from "./types";
+import { getDestinationFallbackImages } from "../images/destinationFallback";
 
 const normalize = (items?: string[]) =>
   Array.from(new Set((items ?? []).filter(Boolean)));
 
-const hasAllowedImagePattern = (url: string) => {
-  const lowered = url.toLowerCase();
-  if (!lowered.startsWith("https://")) {
-    return false;
-  }
-  if (
-    ["data:image", "sprite", "icon", "logo", "favicon"].some(token =>
-      lowered.includes(token)
-    )
-  ) {
-    return false;
-  }
-
-  return (
-    /(\.jpg|\.jpeg|\.png|\.webp)(\?|$)/i.test(lowered) ||
-    lowered.includes("images.unsplash.com/") ||
-    lowered.includes("upload.wikimedia.org/")
-  );
-};
-
-const cleanImageUrl = (url?: string) => {
-  if (!url) {
-    return undefined;
-  }
-
-  return hasAllowedImagePattern(url) ? url : undefined;
-};
-
 export function mapViatorToTourModel(input: {
   parsed: ViatorParsedTour;
+  media: ViatorMedia;
   derived: {
     highlights: string[];
     description: string;
   };
   viatorUrl: string;
-  imageOverrides?: ViatorImageOverrides;
+  regionSlug: string;
+  destinationSlug: string;
+  heroImageUrl?: string;
+  bottomImageUrl?: string;
 }): ViatorTourTemplateModel {
-  const { parsed, derived, viatorUrl, imageOverrides } = input;
+  const {
+    parsed,
+    media,
+    derived,
+    viatorUrl,
+    regionSlug,
+    destinationSlug,
+    heroImageUrl: heroPrefilled,
+    bottomImageUrl: bottomPrefilled,
+  } = input;
 
-  const dedupedImages = normalize(parsed.images).filter(hasAllowedImagePattern);
-  const overrideHero = cleanImageUrl(imageOverrides?.heroImageUrlOverride);
-  const overrideBottom = cleanImageUrl(imageOverrides?.bottomImageUrlOverride);
+  const fallback = getDestinationFallbackImages(regionSlug, destinationSlug);
+  const images = normalize(media.images);
 
   const heroImageUrl =
-    overrideHero ?? cleanImageUrl(parsed.primaryImage) ?? dedupedImages[0];
+    heroPrefilled ?? media.primaryImage ?? images[0] ?? fallback.hero;
   const bottomImageUrl =
-    overrideBottom ?? dedupedImages.find(image => image !== heroImageUrl);
+    bottomPrefilled ??
+    images.find(image => image !== heroImageUrl) ??
+    fallback.secondary;
 
   return {
     title: parsed.title ?? "Viator tour",

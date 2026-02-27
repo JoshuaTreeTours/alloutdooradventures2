@@ -42,7 +42,7 @@ export const toViatorListingTour = (item: ViatorRegistryEntry): Tour => ({
     city: item.destinationSlug,
     citySlug: item.destinationSlug,
   },
-  heroImage: "/hero.jpg",
+  heroImage: item.heroImageUrl,
   badges: {
     duration: item.parsed.durationText,
     priceFrom:
