@@ -141,21 +141,23 @@ export const tours: Tour[] = [
   ...sedonaTours,
   ...europeTours,
   ...australiaTours,
-].filter(
-  tour =>
-    !isTourRemoved({
-      tourId: getEngine1FareHarborItemId(tour),
-      operatorName: tour.operator,
+]
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: getEngine1FareHarborItemId(tour),
+        operatorName: tour.operator,
+      })
+  )
+  .map(tour =>
+    applyTourPricing({
+      ...tour,
+      destination: {
+        ...tour.destination,
+        country: tour.destination.country || "United States",
+      },
     })
-).map(tour =>
-  applyTourPricing({
-    ...tour,
-    destination: {
-      ...tour.destination,
-      country: tour.destination.country || "United States",
-    },
-  })
-);
+  );
 
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
@@ -286,11 +288,11 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
     lat: tour.geo.lat ?? undefined,
     lng: tour.geo.lng ?? undefined,
   },
-  heroImage: tour.images.hero ?? "/hero.jpg",
+  heroImage: tour.images.hero ?? "",
   galleryImages: tour.images.gallery,
   badges: {},
   activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
+  bookingProvider: tour.bookingProvider ?? "fareharbor",
   bookingUrl: tour.booking.bookingUrl,
   longDescription: tour.content.experienceText,
 });
