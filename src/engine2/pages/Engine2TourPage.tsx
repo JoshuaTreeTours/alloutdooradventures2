@@ -9,6 +9,7 @@ import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
   getPalmSpringsOverrideContent,
@@ -127,6 +128,15 @@ export default function Engine2TourPage({
     viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
   const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
 
+  const viatorRatingValue =
+    typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
+      ? tour.viatorRatingValue
+      : null;
+  const viatorReviewCount =
+    typeof tour.viatorReviewCount === "number" && tour.viatorReviewCount > 0
+      ? tour.viatorReviewCount
+      : null;
+
   const overrideSchemaDescription = overrideContent?.enabled
     ? overrideContent.content.schemaDescription
     : undefined;
@@ -227,6 +237,12 @@ export default function Engine2TourPage({
             <p className="mt-4 text-sm font-semibold text-white/90">
               From $129 per person
             </p>
+          ) : null}
+          {isViatorTour && viatorRatingValue && viatorReviewCount ? (
+            <TourRating
+              rating={viatorRatingValue}
+              reviewCount={viatorReviewCount}
+            />
           ) : null}
           <div className="mt-6 flex gap-3">
             {isViatorTour ? (

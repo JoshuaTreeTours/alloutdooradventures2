@@ -419,6 +419,8 @@ const palmSpringsTours = [
       price: "175",
       currency: "USD",
     },
+    viatorRatingValue: 4.5,
+    viatorReviewCount: 117,
   },
 ] as const;
 

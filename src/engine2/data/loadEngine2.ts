@@ -89,6 +89,8 @@ export type Engine2Tour = {
     currency?: string;
     priceRange?: string;
   };
+  viatorRatingValue?: number | null;
+  viatorReviewCount?: number | null;
 };
 
 const getBestFareHarborImage = (tour: Engine2Tour) => {
