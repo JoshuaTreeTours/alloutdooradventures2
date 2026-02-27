@@ -368,6 +368,14 @@ const palmSpringsTours = [
         "Guide gratuities",
         "Hotel pickup and drop-off unless selected",
       ],
+      meetingPoint: {
+        name: "Desert Adventures Metate Ranch",
+        address: "74735 Joe Davis Dr, Palm Desert, CA 92260, USA",
+        instructions:
+          "Please arrive 15 minutes before your scheduled departure for check-in.",
+        mapsUrl:
+          "https://maps.google.com/?q=74735+Joe+Davis+Dr,+Palm+Desert,+CA+92260",
+      },
       itinerary: [
         {
           title: "Meet at Desert Adventures base",

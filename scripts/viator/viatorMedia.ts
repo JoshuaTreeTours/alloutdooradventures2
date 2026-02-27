@@ -42,11 +42,82 @@ const toNumberOrNull = (value: unknown): number | null => {
   return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
 };
 
+const decodeQuotedString = (quotedLiteral: string): string | null => {
+  try {
+    return JSON.parse(
+      `"${quotedLiteral.replace(/\\/g, "\\\\").replace(/\"/g, '\\\"')}"`
+    );
+  } catch {
+    return null;
+  }
+};
+
+const extractJsonLikeBlocks = (body: string): string[] => {
+  const blocks: string[] = [];
+  const stack: string[] = [];
+
+  let startIndex = -1;
+  let inString = false;
+  let quoteChar = "";
+  let isEscaped = false;
+
+  for (let i = 0; i < body.length; i += 1) {
+    const char = body[i];
+
+    if (inString) {
+      if (isEscaped) {
+        isEscaped = false;
+        continue;
+      }
+      if (char === "\\") {
+        isEscaped = true;
+        continue;
+      }
+      if (char === quoteChar) {
+        inString = false;
+        quoteChar = "";
+      }
+      continue;
+    }
+
+    if (char === '"' || char === "'") {
+      inString = true;
+      quoteChar = char;
+      continue;
+    }
+
+    if (char === "{" || char === "[") {
+      if (stack.length === 0) {
+        startIndex = i;
+      }
+      stack.push(char === "{" ? "}" : "]");
+      continue;
+    }
+
+    if (char === "}" || char === "]") {
+      const expectedClose = stack[stack.length - 1];
+      if (expectedClose !== char) {
+        stack.length = 0;
+        startIndex = -1;
+        continue;
+      }
+
+      stack.pop();
+      if (stack.length === 0 && startIndex >= 0) {
+        blocks.push(body.slice(startIndex, i + 1));
+        startIndex = -1;
+      }
+    }
+  }
+
+  return blocks;
+};
+
 const parseJsonScriptCandidates = (html: string): unknown[] => {
   const scripts = html.match(/<script[^>]*>([\s\S]*?)<\/script>/gi) ?? [];
   const parsed: unknown[] = [];
 
-  const maybeParse = (candidate: string) => {
+  const tryParse = (candidate: string) => {
     const value = candidate.trim();
     if (!value) {
       return;
@@ -65,16 +136,34 @@ const parseJsonScriptCandidates = (html: string): unknown[] => {
       .replace(/<\/script>$/i, "")
       .trim();
 
-    if (body.startsWith("{") || body.startsWith("[")) {
-      maybeParse(body);
+    if (!body) {
       continue;
     }
 
-    const objectMatch = body.match(/([\[{][\s\S]*[\]}])/);
-    if (objectMatch?.[1]) {
-      maybeParse(objectMatch[1]);
+    if (body.startsWith("{") || body.startsWith("[")) {
+      tryParse(body);
+    }
+
+    for (const block of extractJsonLikeBlocks(body)) {
+      tryParse(block);
+    }
+
+    const jsonParseMatches = body.matchAll(
+      /JSON\.parse\(\s*['"]([\s\S]*?)['"]\s*\)/g
+    );
+
+    for (const match of jsonParseMatches) {
+      const raw = match[1];
+      if (!raw) {
+        continue;
+      }
+      const decoded = decodeQuotedString(raw);
+      if (decoded) {
+        tryParse(decoded);
+      }
     }
   }
+
   return parsed;
 };
 
@@ -359,11 +448,13 @@ export const parseViatorMediaFromHtml = (
   sourceUrl?: string
 ): ViatorMediaParseResult => {
   const jsonCandidates = parseJsonScriptCandidates(html);
+  const jsonLdCandidates = parseJsonLdCandidates(html);
+  const allEmbeddedJson = [...jsonCandidates, ...jsonLdCandidates];
 
   let heroImageUrl: string | null = null;
   let imageSource: ViatorMediaParseResult["imageSource"] = "none";
 
-  for (const node of jsonCandidates) {
+  for (const node of allEmbeddedJson) {
     const supplierImage = deepFindSupplierImage(node);
     if (supplierImage) {
       heroImageUrl = supplierImage;
@@ -383,33 +474,21 @@ export const parseViatorMediaFromHtml = (
     }
   }
 
-  const jsonLdCandidates = parseJsonLdCandidates(html);
   let viatorRatingValue: number | null = null;
   let viatorReviewCount: number | null = null;
 
-  for (const node of jsonLdCandidates) {
+  for (const node of allEmbeddedJson) {
     const found = deepFindReviewData(node);
-    if (found.viatorRatingValue || found.viatorReviewCount) {
-      viatorRatingValue = found.viatorRatingValue;
-      viatorReviewCount = found.viatorReviewCount;
+    viatorRatingValue = viatorRatingValue ?? found.viatorRatingValue;
+    viatorReviewCount = viatorReviewCount ?? found.viatorReviewCount;
+
+    if (viatorRatingValue && viatorReviewCount) {
       break;
     }
   }
 
-  if (!viatorRatingValue || !viatorReviewCount) {
-    for (const node of jsonCandidates) {
-      const found = deepFindReviewData(node);
-      viatorRatingValue = viatorRatingValue ?? found.viatorRatingValue;
-      viatorReviewCount = viatorReviewCount ?? found.viatorReviewCount;
-
-      if (viatorRatingValue && viatorReviewCount) {
-        break;
-      }
-    }
-  }
-
   let meetingPoint: ViatorMeetingPoint | null = null;
-  for (const node of jsonCandidates) {
+  for (const node of allEmbeddedJson) {
     meetingPoint = findMeetingPointInObject(node);
     if (meetingPoint) {
       break;
@@ -419,6 +498,7 @@ export const parseViatorMediaFromHtml = (
   if (sourceUrl?.includes(TARGET_VIATOR_TOUR_FRAGMENT)) {
     console.info("[viator-parser:meeting-point]", {
       sourceUrl,
+      parsedBlocks: allEmbeddedJson.length,
       pathMatched: Boolean(meetingPoint),
       meetingPoint,
     });
