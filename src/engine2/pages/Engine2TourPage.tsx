@@ -9,6 +9,7 @@ import { getAllEngine2Tours, type Engine2Tour } from "../data/loadEngine2";
 import { buildSchemaGraph } from "../schema/buildSchemaGraph";
 import { buildEngine2Seo } from "../seo/buildEngine2Seo";
 import { PRICE_MIN_THRESHOLD_USD } from "../../constants/merchantDefaults";
+import TourRating from "../components/TourRating";
 import { applyPriceFloor, parsePrice } from "../../utils/merchantPricing";
 import {
   getPalmSpringsOverrideContent,
@@ -21,6 +22,8 @@ type Engine2TourPageProps = {
   tour: Engine2Tour;
   isFHPilotEnabled: boolean;
 };
+
+const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
 
 const normalizeStringArray = (value: unknown) => {
   if (!Array.isArray(value)) {
@@ -37,15 +40,33 @@ export default function Engine2TourPage({
   tour,
   isFHPilotEnabled,
 }: Engine2TourPageProps) {
+  const isViatorTour = (() => {
+    if (tour.bookingProvider === "viator") {
+      return true;
+    }
+
+    try {
+      const bookingHost = new URL(tour.bookingUrl ?? tour.booking.bookingUrl)
+        .hostname;
+      return /(^|\.)viator\.com$/i.test(bookingHost);
+    } catch {
+      return false;
+    }
+  })();
+
   const normalizedTour = useMemo(() => {
     const highlights = normalizeStringArray(tour.content.highlights);
     const heroImage =
       typeof tour.images.hero === "string" && tour.images.hero.trim().length > 0
         ? tour.images.hero
-        : ENGINE2_DEFAULT_IMAGE;
-    const gallery = normalizeStringArray(tour.images.gallery).filter(
-      image => image !== heroImage
-    );
+        : isViatorTour
+          ? null
+          : ENGINE2_DEFAULT_IMAGE;
+    const gallery = isViatorTour
+      ? []
+      : normalizeStringArray(tour.images.gallery).filter(
+          image => image !== heroImage
+        );
     const experienceText =
       typeof tour.content.experienceText === "string" &&
       tour.content.experienceText.trim().length > 0
@@ -63,7 +84,7 @@ export default function Engine2TourPage({
         highlights,
       },
     };
-  }, [tour]);
+  }, [tour, isViatorTour]);
 
   const seo = useMemo(() => buildEngine2Seo(normalizedTour), [normalizedTour]);
   const isPalmSprings = isPalmSpringsTour(tour);
@@ -99,8 +120,22 @@ export default function Engine2TourPage({
   const overridePriceLabel = overrideContent?.enabled
     ? overrideContent.content.heroPriceText
     : undefined;
-  const headerPriceLabel = overridePriceLabel ?? enginePriceLabel;
+  const viatorPriceLabel =
+    isViatorTour && tour.pricing?.currency && displayPrice > 0
+      ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
+      : undefined;
+  const headerPriceLabel =
+    viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
   const showFallbackPrice = !overridePriceLabel && !enginePriceLabel;
+
+  const viatorRatingValue =
+    typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
+      ? tour.viatorRatingValue
+      : null;
+  const viatorReviewCount =
+    typeof tour.viatorReviewCount === "number" && tour.viatorReviewCount > 0
+      ? tour.viatorReviewCount
+      : null;
 
   const overrideSchemaDescription = overrideContent?.enabled
     ? overrideContent.content.schemaDescription
@@ -188,6 +223,11 @@ export default function Engine2TourPage({
               {formattedMeetingPoint ? ` · ${formattedMeetingPoint}` : ""}
             </p>
           ) : null}
+          {isViatorTour && tour.content.duration ? (
+            <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
+              {tour.content.duration}
+            </p>
+          ) : null}
           {headerPriceLabel ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
               {headerPriceLabel}
@@ -198,12 +238,29 @@ export default function Engine2TourPage({
               From $129 per person
             </p>
           ) : null}
+          {isViatorTour && viatorRatingValue && viatorReviewCount ? (
+            <TourRating
+              rating={viatorRatingValue}
+              reviewCount={viatorReviewCount}
+            />
+          ) : null}
           <div className="mt-6 flex gap-3">
-            <Link href={bookingPath}>
-              <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-                BOOK
+            {isViatorTour ? (
+              <a
+                href={tour.bookingUrl ?? tour.booking.bookingUrl}
+                target="_blank"
+                rel={EXTERNAL_CTA_REL}
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
+                Book This Tour
               </a>
-            </Link>
+            ) : (
+              <Link href={bookingPath}>
+                <a className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
+                  BOOK
+                </a>
+              </Link>
+            )}
             <Link href={backToToursPath}>
               <a className="inline-flex items-center justify-center rounded-md bg-white/15 px-4 py-2 text-sm font-semibold text-white transition hover:bg-white/25">
                 Back to tours
@@ -214,14 +271,28 @@ export default function Engine2TourPage({
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-14">
-        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-          <Image
-            src={normalizedTour.images.hero}
-            fallbackSrc={normalizedTour.images.hero}
-            alt={tour.name}
-            className="h-64 w-full object-cover md:h-80"
-          />
-        </div>
+        {isViatorTour ? (
+          normalizedTour.images.hero ? (
+            <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+              <img
+                src={normalizedTour.images.hero}
+                alt={tour.name}
+                referrerPolicy="no-referrer"
+                loading="eager"
+                className="h-64 w-full object-cover md:h-80"
+              />
+            </div>
+          ) : null
+        ) : (
+          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <Image
+              src={normalizedTour.images.hero}
+              fallbackSrc={normalizedTour.images.hero}
+              alt={tour.name}
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        )}
         {overrideContent?.enabled ? (
           <div className="mt-6 rounded-lg border border-black/10 bg-[#f8f5ee] px-4 py-3 text-xs leading-relaxed text-[#405040] md:text-sm">
             <ul className="space-y-1">
@@ -444,6 +515,122 @@ export default function Engine2TourPage({
               ))}
             </div>
           </>
+        ) : null}
+
+        {isViatorTour &&
+        (tour.content.included?.length || tour.content.notIncluded?.length) ? (
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div>
+              <h2 className="text-xl font-semibold text-[#2f4a2f]">
+                What’s included
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+                {(tour.content.included ?? []).map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className="text-xl font-semibold text-[#2f4a2f]">
+                Not included
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+                {(tour.content.notIncluded ?? []).map(item => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : null}
+
+        {isViatorTour ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Meeting and Pickup
+            </h2>
+            {tour.content.meetingPoint?.name ||
+            tour.content.meetingPoint?.address ||
+            tour.content.meetingPoint?.mapsUrl ? (
+              <div className="mt-3 space-y-2 text-sm text-[#405040]">
+                {tour.content.meetingPoint?.name ? (
+                  <p className="font-semibold text-[#2f4a2f]">
+                    {tour.content.meetingPoint.name}
+                  </p>
+                ) : null}
+                {tour.content.meetingPoint?.address ? (
+                  <p>{tour.content.meetingPoint.address}</p>
+                ) : null}
+                {tour.content.meetingPoint?.instructions ? (
+                  <p>{tour.content.meetingPoint.instructions}</p>
+                ) : null}
+                {tour.content.meetingPoint?.mapsUrl ? (
+                  <p>
+                    <a
+                      href={tour.content.meetingPoint.mapsUrl}
+                      target="_blank"
+                      rel={EXTERNAL_CTA_REL}
+                      className="font-semibold text-[#2f8a3d] hover:underline"
+                    >
+                      Open in Google Maps
+                    </a>
+                  </p>
+                ) : null}
+              </div>
+            ) : (
+              <p className="mt-3 text-sm text-[#405040]">
+                See booking page for the latest meeting and pickup details.
+              </p>
+            )}
+          </>
+        ) : null}
+
+        {isViatorTour && tour.content.itinerary?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Itinerary
+            </h2>
+            <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
+              {tour.content.itinerary.map(step => (
+                <li key={step.title}>
+                  {step.title}
+                  {step.duration ? ` (${step.duration})` : ""}
+                  {step.description ? ` — ${step.description}` : ""}
+                </li>
+              ))}
+            </ol>
+          </>
+        ) : null}
+
+        {isViatorTour && tour.content.faqs?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">FAQs</h2>
+            <div className="mt-4 space-y-4">
+              {tour.content.faqs.map(item => (
+                <article
+                  key={item.question}
+                  className="rounded-lg border border-black/10 bg-white p-4"
+                >
+                  <h3 className="text-sm font-semibold text-[#2f4a2f]">
+                    {item.question}
+                  </h3>
+                  <p className="mt-1 text-sm text-[#405040]">{item.answer}</p>
+                </article>
+              ))}
+            </div>
+          </>
+        ) : null}
+
+        {isViatorTour ? (
+          <div className="mt-10">
+            <a
+              href={tour.bookingUrl ?? tour.booking.bookingUrl}
+              target="_blank"
+              rel={EXTERNAL_CTA_REL}
+              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+            >
+              Book This Tour
+            </a>
+          </div>
         ) : null}
 
         {normalizedTour.images.gallery.length ? (

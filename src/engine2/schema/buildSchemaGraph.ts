@@ -69,7 +69,10 @@ export const buildSchemaGraph = (
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
-  const effectiveHeroImage = tour.images.hero || DEFAULT_IMAGE_URL;
+  const isViatorTour = tour.bookingProvider === "viator";
+  const effectiveHeroImage = isViatorTour
+    ? (tour.images.hero ?? undefined)
+    : tour.images.hero || DEFAULT_IMAGE_URL;
   const fallbackPrice = applyPriceFloor(
     parsePrice(tour.pricing?.price ?? null)
   );
@@ -96,32 +99,37 @@ export const buildSchemaGraph = (
           null,
         departureAddress: rewriteV3Content?.meetingPoint?.addressLine1 ?? null,
         duration: rewriteV3Content?.durationLabel ?? tourDuration ?? null,
-        highlights:
-          rewriteV3Content?.highlights?.length
-            ? rewriteV3Content.highlights
-            : tour.content.highlights,
+        highlights: rewriteV3Content?.highlights?.length
+          ? rewriteV3Content.highlights
+          : tour.content.highlights,
         experienceText:
           rewriteV3Content?.whatYoullExperience?.join(" ") ||
           tour.content.experienceText,
       })
     : null;
 
-  const faqPageNode =
+  const faqSource =
     overrideEnabled && overrideFaqs?.length
-      ? {
-          "@type": "FAQPage",
-          "@id": `${seo.canonical}#faqpage`,
-          mainEntityOfPage: seo.canonical,
-          mainEntity: overrideFaqs.map(item => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
+      ? overrideFaqs
+      : tour.content.faqs?.length
+        ? tour.content.faqs
+        : null;
+
+  const faqPageNode = faqSource?.length
+    ? {
+        "@type": "FAQPage",
+        "@id": `${seo.canonical}#faqpage`,
+        mainEntityOfPage: seo.canonical,
+        mainEntity: faqSource.map(item => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      }
+    : null;
 
   const tourNodes = ENABLE_TOUR_SCHEMA_V1
     ? (buildTourSchemaGraph({

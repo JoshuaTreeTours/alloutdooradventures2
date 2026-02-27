@@ -27,6 +27,7 @@ import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 
 export type Engine2Tour = {
   id: string;
+  bookingProvider?: "fareharbor" | "viator";
   bookingUrl?: string;
   sourceDatasetKey?: string;
   sourceCountrySlug?: string;
@@ -56,6 +57,21 @@ export type Engine2Tour = {
   content: {
     experienceText: string;
     highlights: string[];
+    included?: string[];
+    notIncluded?: string[];
+    itinerary?: Array<{
+      title: string;
+      description?: string;
+      duration?: string;
+    }>;
+    faqs?: Array<{ question: string; answer: string }>;
+    meetingPoint?: {
+      name?: string;
+      address?: string;
+      instructions?: string;
+      mapsUrl?: string;
+    };
+    duration?: string;
   };
   images: {
     hero: string | null;
@@ -75,9 +91,15 @@ export type Engine2Tour = {
     currency?: string;
     priceRange?: string;
   };
+  viatorRatingValue?: number | null;
+  viatorReviewCount?: number | null;
 };
 
 const getBestFareHarborImage = (tour: Engine2Tour) => {
+  if (tour.bookingProvider === "viator") {
+    return tour.images?.hero ?? null;
+  }
+
   if (tour.images?.gallery?.length) {
     return tour.images.gallery[0];
   }
@@ -144,27 +166,32 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours
   )
   .map(tour => ({
     ...tour,
+    bookingProvider: tour.bookingProvider ?? "fareharbor",
     images: {
       ...tour.images,
       hero: getBestFareHarborImage(tour),
     },
     booking: {
       ...tour.booking,
-      bookingUrl: tour.booking.fareharbor
+      bookingUrl:
+        (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
+        tour.booking.fareharbor
+          ? buildFareHarborUrl({
+              company: tour.booking.fareharbor.shortname,
+              itemId: tour.booking.fareharbor.itemId,
+              calendarPath: tour.booking.bookingUrl,
+            })
+          : normalizeFareHarborUrl(tour.booking.bookingUrl),
+    },
+    bookingUrl:
+      (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
+      tour.booking.fareharbor
         ? buildFareHarborUrl({
             company: tour.booking.fareharbor.shortname,
             itemId: tour.booking.fareharbor.itemId,
             calendarPath: tour.booking.bookingUrl,
           })
         : normalizeFareHarborUrl(tour.booking.bookingUrl),
-    },
-    bookingUrl: tour.booking.fareharbor
-      ? buildFareHarborUrl({
-          company: tour.booking.fareharbor.shortname,
-          itemId: tour.booking.fareharbor.itemId,
-          calendarPath: tour.booking.bookingUrl,
-        })
-      : normalizeFareHarborUrl(tour.booking.bookingUrl),
   }));
 
 const byPath = new Map(
