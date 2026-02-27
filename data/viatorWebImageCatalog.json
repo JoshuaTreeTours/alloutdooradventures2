@@ -1,0 +1,13 @@
+[
+  {
+    "match": {
+      "titleIncludesAny": ["san andreas", "fault"],
+      "titleIncludesAll": ["jeep"],
+      "operatorIncludesAny": ["red jeep", "desert adventures"]
+    },
+    "images": {
+      "hero": "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_525,q_65,w_920/v1/clients/palmsprings/San_Andreas_Fault_Jeep_Tour_81f9f2ea-8405-4acb-a6bb-245323f45f68.jpg",
+      "bottom": "https://www.mantripping.com/images/stories/Western_Trips/Red-Jeep-Tours-Palm-Springs-San-Andreas-Fault.jpg"
+    }
+  }
+]

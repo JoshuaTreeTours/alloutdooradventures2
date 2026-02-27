@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "vite --host",
     "fetch:fareharbor-prices": "tsx scripts/fetch-fareharbor-pricing.ts",
-    "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts",
+    "prebuild": "npm run generate:tour-descriptions && tsx scripts/import-tours-from-csv.ts && tsx scripts/engine2/generateEngine2FromCsv.ts && tsx scripts/validate-featured-destinations.ts && tsx scripts/validate-image-paths.ts && npm run build:viator-registry",
     "ingest:viator": "tsx scripts/ingest-viator.ts",
     "build": "node scripts/vercel-build.mjs",
     "preview": "vite preview --host",
@@ -41,7 +41,10 @@
     "guides:enrich-city-facts": "node scripts/enrich-guides-about.ts",
     "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
     "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts",
-    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts"
+    "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts",
+    "build:viator-registry": "tsx scripts/buildViatorRegistry.ts",
+    "images:generate:tours": "tsx scripts/generateTourImages.ts --limit=50",
+    "images:generate:all": "tsx scripts/generateTourImages.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
