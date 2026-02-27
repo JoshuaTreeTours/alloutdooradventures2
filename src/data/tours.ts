@@ -22,6 +22,7 @@ import {
   getViatorToursByDestination,
   toViatorListingTour,
 } from "./viatorRegistry";
+import { getGeneratedTourImageEntry } from "./generatedTourImages";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -45,6 +46,18 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
     affiliateDisclosure:
       "Affiliate disclosure: We may receive a commission when you book through our Viator partner link.",
   },
+};
+
+const getGeneratedBottomFirstGallery = (
+  tourId: string,
+  existing?: string[]
+): string[] | undefined => {
+  const generated = getGeneratedTourImageEntry(tourId);
+  if (!generated?.bottomUrl) {
+    return existing;
+  }
+
+  return Array.from(new Set([generated.bottomUrl, ...(existing ?? [])]));
 };
 
 // TODO: Remaining Montana tours in data/heartland/montana.csv not yet added.
@@ -156,6 +169,11 @@ export const tours: Tour[] = [
   .map(tour =>
     applyTourPricing({
       ...tour,
+      heroImage: getGeneratedTourImageEntry(tour.id)?.heroUrl ?? tour.heroImage,
+      galleryImages: getGeneratedBottomFirstGallery(
+        tour.id,
+        tour.galleryImages
+      ),
       destination: {
         ...tour.destination,
         country: tour.destination.country || "United States",
@@ -277,31 +295,39 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
   return parts[1] || slugify(tour.geo.region || "california");
 };
 
-const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-${tour.id}`,
-  slug: tour.slug,
-  title: tour.name,
-  shortDescription: tour.content.highlights[0],
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country || "United States",
-    state: tour.geo.region,
-    stateSlug: getEngine2StateSlug(tour),
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug,
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero ?? "/hero.jpg",
-  galleryImages: tour.images.gallery,
-  badges: {},
-  activitySlugs: ["adventure"],
-  bookingProvider: "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText,
-});
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
+  const generated = getGeneratedTourImageEntry(`engine2-${tour.id}`);
+
+  return {
+    id: `engine2-${tour.id}`,
+    slug: tour.slug,
+    title: tour.name,
+    shortDescription: tour.content.highlights[0],
+    operator: tour.provider.name,
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: tour.geo.country || "United States",
+      state: tour.geo.region,
+      stateSlug: getEngine2StateSlug(tour),
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug,
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage:
+      generated?.heroUrl ?? tour.images.hero ?? "/images/hiking-hero.jpg",
+    galleryImages: getGeneratedBottomFirstGallery(
+      `engine2-${tour.id}`,
+      tour.images.gallery
+    ),
+    badges: {},
+    activitySlugs: ["adventure"],
+    bookingProvider: "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText,
+  };
+};
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),

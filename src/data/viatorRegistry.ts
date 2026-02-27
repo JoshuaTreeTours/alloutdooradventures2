@@ -2,6 +2,7 @@ import viatorRegistryRaw from "../../data/generated/viatorRegistry.json";
 import type { ViatorRegistryEntry } from "../utils/viator/types";
 import type { Tour } from "./tours.types";
 import { buildImageProxyUrl } from "../utils/images/buildImageProxyUrl";
+import { getGeneratedTourImageEntry } from "./generatedTourImages";
 
 const registry = (viatorRegistryRaw as ViatorRegistryEntry[]) ?? [];
 
@@ -28,33 +29,42 @@ export const getViatorToursByDestination = (
       item.regionSlug === regionSlug && item.destinationSlug === destinationSlug
   );
 
-export const toViatorListingTour = (item: ViatorRegistryEntry): Tour => ({
-  id: `viator-${item.slug}`,
-  slug: item.slug,
-  title: item.parsed.title ?? item.slug,
-  shortDescription: item.derived.highlights[0],
-  operator: "Viator partner",
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: "United States",
-    state: item.regionSlug,
-    stateSlug: item.regionSlug,
-    city: item.destinationSlug,
-    citySlug: item.destinationSlug,
-  },
-  heroImage: buildImageProxyUrl(item.heroImageUrl) ?? item.heroImageUrl,
-  badges: {
-    duration: item.parsed.durationText,
-    priceFrom:
-      typeof item.parsed.priceFrom === "number"
-        ? `From $${item.parsed.priceFrom}`
-        : undefined,
-  },
-  startingPrice: item.parsed.priceFrom,
-  currency: item.parsed.currency,
-  activitySlugs: ["adventure"],
-  bookingProvider: "viator",
-  bookingUrl: item.viatorUrl,
-  longDescription: item.derived.description,
-});
+export const toViatorListingTour = (item: ViatorRegistryEntry): Tour => {
+  const tourId = `viator-${item.slug}`;
+  const generated = getGeneratedTourImageEntry(tourId);
+
+  return {
+    id: tourId,
+    slug: item.slug,
+    title: item.parsed.title ?? item.slug,
+    shortDescription: item.derived.highlights[0],
+    operator: "Viator partner",
+    categories: ["adventure"],
+    primaryCategory: "adventure",
+    destination: {
+      country: "United States",
+      state: item.regionSlug,
+      stateSlug: item.regionSlug,
+      city: item.destinationSlug,
+      citySlug: item.destinationSlug,
+    },
+    heroImage:
+      generated?.heroUrl ??
+      buildImageProxyUrl(item.heroImageUrl) ??
+      item.heroImageUrl,
+    galleryImages: generated?.bottomUrl ? [generated.bottomUrl] : undefined,
+    badges: {
+      duration: item.parsed.durationText,
+      priceFrom:
+        typeof item.parsed.priceFrom === "number"
+          ? `From $${item.parsed.priceFrom}`
+          : undefined,
+    },
+    startingPrice: item.parsed.priceFrom,
+    currency: item.parsed.currency,
+    activitySlugs: ["adventure"],
+    bookingProvider: "viator",
+    bookingUrl: item.viatorUrl,
+    longDescription: item.derived.description,
+  };
+};

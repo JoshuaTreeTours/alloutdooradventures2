@@ -42,7 +42,9 @@
     "guides:resolve-images": "tsx scripts/resolve-guide-landmark-images.ts",
     "verify:prerender": "PRERENDER=1 CI=true node scripts/run-prerender.mjs && tsx scripts/verify-palm-springs-34849.ts",
     "test:schema-tour-diff": "tsx scripts/schema-diff-tour.ts",
-    "build:viator-registry": "tsx scripts/buildViatorRegistry.ts"
+    "build:viator-registry": "tsx scripts/buildViatorRegistry.ts",
+    "images:generate:tours": "tsx scripts/generateTourImages.ts --limit=50",
+    "images:generate:all": "tsx scripts/generateTourImages.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -8,6 +8,7 @@ import TourBottomPhotoRow from "./TourBottomPhotoRow";
 import { buildImageProxyUrl } from "../../utils/images/buildImageProxyUrl";
 import type { ViatorRegistryEntry } from "../../utils/viator/types";
 import { mapViatorToTourModel } from "../../utils/viator/mapViatorToTourModel";
+import { getGeneratedTourImageEntry } from "../../data/generatedTourImages";
 
 type ViatorTourPageProps = {
   entry: ViatorRegistryEntry;
@@ -16,6 +17,7 @@ type ViatorTourPageProps = {
 export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
   const { parsed, derived, viatorUrl, pagePath, regionSlug, destinationSlug } =
     entry;
+  const generated = getGeneratedTourImageEntry(`viator-${entry.slug}`);
   const model = mapViatorToTourModel({
     parsed,
     media: entry.media,
@@ -24,8 +26,8 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
     viatorUrl,
     regionSlug,
     destinationSlug,
-    heroImageUrl: entry.heroImageUrl,
-    bottomImageUrl: entry.bottomImageUrl,
+    heroImageUrl: generated?.heroUrl ?? entry.heroImageUrl,
+    bottomImageUrl: generated?.bottomUrl ?? entry.bottomImageUrl,
   });
 
   const proxiedHeroImageUrl =
