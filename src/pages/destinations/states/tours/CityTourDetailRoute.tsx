@@ -47,6 +47,9 @@ import {
 } from "../../../../schema/buildTourSchemaGraph";
 import { getEngine2TourBySlug } from "../../../../engine2/data/loadEngine2";
 import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
+import Engine3TourPage from "../../../../engine3/components/Engine3TourPage";
+import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViatorToEngine3ViewModel";
+import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -85,6 +88,18 @@ export default function CityTourDetailRoute({
   );
 
   if (engine2Tour) {
+    if (
+      engine2Tour.engine === "engine3" &&
+      engine2Tour.bookingProvider === "viator"
+    ) {
+      const productData = viatorProductCacheByCode[engine2Tour.id];
+      return (
+        <Engine3TourPage
+          tour={mapViatorToEngine3ViewModel(engine2Tour, productData)}
+        />
+      );
+    }
+
     const isPsp = isPalmSpringsTour(engine2Tour);
     if (isPsp && typeof window === "undefined") {
       console.info(
