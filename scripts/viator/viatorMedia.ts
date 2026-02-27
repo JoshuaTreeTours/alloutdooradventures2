@@ -20,6 +20,35 @@ export type ViatorMediaParseResult = {
   meetingPoint?: ViatorMeetingPoint;
 };
 
+type ViatorDepartureLocation = {
+  title?: string;
+  description?: string;
+  instructions?: string;
+  googleMapsUrl?: string;
+};
+
+export function extractMeetingPointFromViatorPayload(payload: any) {
+  const loc: ViatorDepartureLocation | undefined =
+    payload?.departureAndReturnLocations?.departureLocations?.[0];
+
+  const description =
+    typeof loc?.description === "string" ? loc.description.trim() : "";
+  if (!description) return null;
+
+  return {
+    title: typeof loc?.title === "string" ? loc.title.trim() : undefined,
+    address: description,
+    instructions:
+      typeof loc?.instructions === "string"
+        ? loc.instructions.trim()
+        : undefined,
+    mapsUrl:
+      typeof loc?.googleMapsUrl === "string"
+        ? loc.googleMapsUrl.trim()
+        : undefined,
+  };
+}
+
 const toAbsoluteHttpsUrl = (value: unknown): string | null => {
   if (typeof value !== "string") {
     return null;
@@ -385,6 +414,19 @@ const findMeetingPointInObject = (
   }
 
   const record = input as Record<string, unknown>;
+
+  const departureMeetingPoint = extractMeetingPointFromViatorPayload(record);
+  if (departureMeetingPoint?.address || departureMeetingPoint?.mapsUrl) {
+    return {
+      meetingPoint: {
+        name: departureMeetingPoint.title,
+        address: departureMeetingPoint.address,
+        instructions: departureMeetingPoint.instructions,
+        mapsUrl: departureMeetingPoint.mapsUrl,
+      },
+      sourcePath: `${currentPath}.departureAndReturnLocations.departureLocations[0]`,
+    };
+  }
 
   const directMeetingPoint = toMeetingPoint(record.meetingPoint);
   if (directMeetingPoint) {
