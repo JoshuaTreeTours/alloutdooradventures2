@@ -4,9 +4,13 @@ import type {
   ViatorTourTemplateModel,
 } from "./types";
 import { getDestinationFallbackImages } from "../images/destinationFallback";
+import { selectHeroImage } from "./selectHeroImage";
 
 const normalize = (items?: string[]) =>
   Array.from(new Set((items ?? []).filter(Boolean)));
+
+const GENERIC_OFFROAD_FALLBACK =
+  "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80";
 
 export function mapViatorToTourModel(input: {
   parsed: ViatorParsedTour;
@@ -36,11 +40,19 @@ export function mapViatorToTourModel(input: {
   const images = normalize(media.images);
 
   const heroImageUrl =
-    heroPrefilled ?? media.primaryImage ?? images[0] ?? fallback.hero;
+    heroPrefilled ??
+    selectHeroImage({
+      title: parsed.title ?? "Viator tour",
+      destinationSlug,
+      images,
+      destinationFallbackHero: fallback.hero,
+      genericOffroadFallback: GENERIC_OFFROAD_FALLBACK,
+    });
+
   const bottomImageUrl =
     bottomPrefilled ??
     images.find(image => image !== heroImageUrl) ??
-    fallback.secondary;
+    undefined;
 
   return {
     title: parsed.title ?? "Viator tour",

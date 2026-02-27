@@ -259,7 +259,9 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
           </div>
         </div>
 
-        <TourBottomPhotoRow imageUrls={[model.bottomImageUrl]} />
+        <TourBottomPhotoRow
+          imageUrls={model.bottomImageUrl ? [model.bottomImageUrl] : []}
+        />
 
         <div className="mt-12 text-center">
           <BookItButton href={model.bookingUrl} />

@@ -14,6 +14,7 @@ import { fetchViatorHtml } from "../src/utils/viator/fetchViatorHtml";
 import { parseViatorTour } from "../src/utils/viator/parseViatorTour";
 import { getViatorMedia } from "../src/utils/viator/getViatorMedia";
 import { getDestinationFallbackImages } from "../src/utils/images/destinationFallback";
+import { selectHeroImage } from "../src/utils/viator/selectHeroImage";
 import type { ViatorRegistryEntry } from "../src/utils/viator/types";
 
 type ViatorSeed = {
@@ -55,9 +56,16 @@ async function run() {
       seed.regionSlug,
       seed.destinationSlug
     );
-    const heroImageUrl = media.primaryImage ?? media.images[0] ?? fallback.hero;
+    const heroImageUrl = selectHeroImage({
+      title: parsed.title ?? "Viator tour",
+      destinationSlug: seed.destinationSlug,
+      images: media.images,
+      destinationFallbackHero: fallback.hero,
+      genericOffroadFallback:
+        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+    });
     const bottomImageUrl =
-      media.images.find(image => image !== heroImageUrl) ?? fallback.secondary;
+      media.images.find(image => image !== heroImageUrl) ?? undefined;
 
     const titleSlug = slugify(parsed.title ?? "viator-tour");
     const productCode = extractProductCode(seed.viatorUrl);
