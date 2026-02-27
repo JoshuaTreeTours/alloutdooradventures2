@@ -254,6 +254,9 @@ export const getSiteStructuredDataNodes = () => {
 export const sanitizeSchemaName = (value: string) =>
   value.replace(LEGACY_BRAND_PATTERN, SITE_BRAND_NAME).trim();
 
+export const buildTourProductNodeId = (tourId: string) =>
+  `${SITE_URL}/#p${tourId.toLowerCase()}`;
+
 const buildImageObject = (url: string, id?: string) => ({
   "@type": "ImageObject",
   ...(id ? { "@id": id } : {}),
@@ -469,6 +472,7 @@ export const buildWebPageStructuredData = ({
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
+    ...(mainEntityId ? { about: { "@id": mainEntityId } } : {}),
     ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
     ...(webPageImage
       ? {
@@ -550,6 +554,7 @@ export const buildTourProductStructuredData = ({
         }
       : undefined;
   const tourDuration = tour.badges?.duration?.trim() || undefined;
+  const productNodeId = buildTourProductNodeId(tour.id);
 
   const offer = {
     "@type": "Offer",
@@ -562,7 +567,7 @@ export const buildTourProductStructuredData = ({
 
   return {
     "@type": "Product",
-    "@id": `${canonicalProductUrl}#product`,
+    "@id": productNodeId,
     url: canonicalProductUrl,
     name: tour.title,
     description,
@@ -571,6 +576,7 @@ export const buildTourProductStructuredData = ({
       : {}),
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
+    seller: { "@id": SITE_ORGANIZATION_ID },
     provider: { "@id": SITE_BRAND_ID },
     ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
     ...(safeSchemaEnabled
@@ -635,6 +641,7 @@ export const buildTourTripStructuredData = ({
         }
       : undefined;
   const tourDuration = tour.badges?.duration?.trim() || undefined;
+  const productNodeId = buildTourProductNodeId(tour.id);
 
   return {
     "@type": "TouristTrip",
@@ -649,7 +656,7 @@ export const buildTourTripStructuredData = ({
     ...(safeSchemaEnabled
       ? {
           areaServed: { "@id": `${canonicalProductUrl}#place` },
-          isRelatedTo: { "@id": `${canonicalProductUrl}#product` },
+          isRelatedTo: { "@id": productNodeId },
         }
       : {}),
     offers: {

@@ -29,6 +29,7 @@ import { buildMetaDescription } from "../../utils/seo";
 import {
   buildBreadcrumbList,
   buildTourProductStructuredData,
+  buildTourProductNodeId,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
   SITE_BRAND_ID,
@@ -97,6 +98,7 @@ export default function FlagstaffTourDetailRoute({
     if (!tour || !detailUrl) {
       return null;
     }
+    const productNodeId = buildTourProductNodeId(tour.id);
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: detailUrl,
@@ -112,7 +114,7 @@ export default function FlagstaffTourDetailRoute({
             lng: tour.destination.lng,
           },
           product: {
-            id: `${detailUrl}#product`,
+            id: productNodeId,
             name: tour.title,
             description: productDescription ?? metaDescription ?? "",
             category: tour.primaryCategory,
@@ -142,6 +144,7 @@ export default function FlagstaffTourDetailRoute({
             name: tour.title,
             description: metaDescription,
             image: finalHeroImage,
+            mainEntityId: productNodeId,
           }),
           buildTourProductStructuredData({
             tour,
