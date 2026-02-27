@@ -546,19 +546,41 @@ export default function Engine2TourPage({
         {isViatorTour ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
-              Meeting point
+              Meeting and Pickup
             </h2>
-            <p className="mt-3 text-sm text-[#405040]">
-              {tour.content.meetingPoint?.name ||
-              tour.content.meetingPoint?.address
-                ? [
-                    tour.content.meetingPoint?.name,
-                    tour.content.meetingPoint?.address,
-                  ]
-                    .filter(Boolean)
-                    .join(" — ")
-                : "See booking page for the latest meeting and pickup details."}
-            </p>
+            {tour.content.meetingPoint?.name ||
+            tour.content.meetingPoint?.address ||
+            tour.content.meetingPoint?.mapsUrl ? (
+              <div className="mt-3 space-y-2 text-sm text-[#405040]">
+                {tour.content.meetingPoint?.name ? (
+                  <p className="font-semibold text-[#2f4a2f]">
+                    {tour.content.meetingPoint.name}
+                  </p>
+                ) : null}
+                {tour.content.meetingPoint?.address ? (
+                  <p>{tour.content.meetingPoint.address}</p>
+                ) : null}
+                {tour.content.meetingPoint?.instructions ? (
+                  <p>{tour.content.meetingPoint.instructions}</p>
+                ) : null}
+                {tour.content.meetingPoint?.mapsUrl ? (
+                  <p>
+                    <a
+                      href={tour.content.meetingPoint.mapsUrl}
+                      target="_blank"
+                      rel={EXTERNAL_CTA_REL}
+                      className="font-semibold text-[#2f8a3d] hover:underline"
+                    >
+                      Open in Google Maps
+                    </a>
+                  </p>
+                ) : null}
+              </div>
+            ) : (
+              <p className="mt-3 text-sm text-[#405040]">
+                See booking page for the latest meeting and pickup details.
+              </p>
+            )}
           </>
         ) : null}
 

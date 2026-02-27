@@ -68,6 +68,8 @@ export type Engine2Tour = {
     meetingPoint?: {
       name?: string;
       address?: string;
+      instructions?: string;
+      mapsUrl?: string;
     };
     duration?: string;
   };

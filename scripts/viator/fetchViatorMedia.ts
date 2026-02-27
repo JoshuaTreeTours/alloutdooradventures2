@@ -44,7 +44,7 @@ if (!sourceUrl) {
 
 const run = async () => {
   const html = await fetchWithRetry(sourceUrl, 3);
-  const media = parseViatorMediaFromHtml(html);
+  const media = parseViatorMediaFromHtml(html, sourceUrl);
   const cacheKey = getViatorMediaCacheKey(sourceUrl);
   const cachePath = path.join(CACHE_DIR, `${cacheKey}.json`);
   fs.mkdirSync(CACHE_DIR, { recursive: true });
