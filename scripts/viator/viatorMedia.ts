@@ -17,7 +17,7 @@ export type ViatorMediaParseResult = {
   imageSource: "supplierImages[0].fullSizeImage.src" | "og:image" | "none";
   viatorRatingValue: number | null;
   viatorReviewCount: number | null;
-  meetingPoint: ViatorMeetingPoint | null;
+  meetingPoint?: ViatorMeetingPoint;
 };
 
 const toAbsoluteHttpsUrl = (value: unknown): string | null => {
@@ -55,7 +55,6 @@ const decodeQuotedString = (quotedLiteral: string): string | null => {
 const extractJsonLikeBlocks = (body: string): string[] => {
   const blocks: string[] = [];
   const stack: string[] = [];
-
   let startIndex = -1;
   let inString = false;
   let quoteChar = "";
@@ -277,17 +276,6 @@ const deepFindReviewData = (
     }
   }
 
-  const nestedTour =
-    record.tour && typeof record.tour === "object"
-      ? (record.tour as Record<string, unknown>)
-      : null;
-  if (nestedTour) {
-    const nestedFound = deepFindReviewData(nestedTour);
-    if (nestedFound.viatorRatingValue || nestedFound.viatorReviewCount) {
-      return nestedFound;
-    }
-  }
-
   for (const value of Object.values(record)) {
     const found = deepFindReviewData(value);
     if (found.viatorRatingValue || found.viatorReviewCount) {
@@ -298,9 +286,9 @@ const deepFindReviewData = (
   return { viatorRatingValue: null, viatorReviewCount: null };
 };
 
-const toMeetingPoint = (input: unknown): ViatorMeetingPoint | null => {
+const toMeetingPoint = (input: unknown): ViatorMeetingPoint | undefined => {
   if (!input || typeof input !== "object") {
-    return null;
+    return undefined;
   }
 
   const record = input as Record<string, unknown>;
@@ -357,7 +345,7 @@ const toMeetingPoint = (input: unknown): ViatorMeetingPoint | null => {
     Boolean(addressRecord?.addressLocality);
 
   if (!address && !hasStructuredAddress && !mapsUrl) {
-    return null;
+    return undefined;
   }
 
   return {
@@ -379,68 +367,59 @@ const toMeetingPoint = (input: unknown): ViatorMeetingPoint | null => {
 };
 
 const findMeetingPointInObject = (
-  input: unknown
-): ViatorMeetingPoint | null => {
+  input: unknown,
+  currentPath = "root"
+): { meetingPoint?: ViatorMeetingPoint; sourcePath: string } => {
   if (!input || typeof input !== "object") {
-    return null;
+    return { sourcePath: "none" };
   }
 
   if (Array.isArray(input)) {
-    for (const item of input) {
-      const found = findMeetingPointInObject(item);
-      if (found) {
+    for (let i = 0; i < input.length; i += 1) {
+      const found = findMeetingPointInObject(input[i], `${currentPath}[${i}]`);
+      if (found.meetingPoint) {
         return found;
       }
     }
-    return null;
+    return { sourcePath: "none" };
   }
 
   const record = input as Record<string, unknown>;
 
   const directMeetingPoint = toMeetingPoint(record.meetingPoint);
   if (directMeetingPoint) {
-    return directMeetingPoint;
-  }
-
-  const logistics =
-    record.logistics && typeof record.logistics === "object"
-      ? (record.logistics as Record<string, unknown>)
-      : null;
-  const logisticsMeetingPoint = toMeetingPoint(logistics?.meetingPoint);
-  if (logisticsMeetingPoint) {
-    return logisticsMeetingPoint;
-  }
-
-  const meetingAndPickup =
-    record.meetingAndPickup && typeof record.meetingAndPickup === "object"
-      ? (record.meetingAndPickup as Record<string, unknown>)
-      : null;
-  const meetingAndPickupPoint = toMeetingPoint(meetingAndPickup?.meetingPoint);
-  if (meetingAndPickupPoint) {
-    return meetingAndPickupPoint;
+    return {
+      meetingPoint: directMeetingPoint,
+      sourcePath: `${currentPath}.meetingPoint`,
+    };
   }
 
   const locations = Array.isArray(record.locations)
     ? (record.locations as Array<Record<string, unknown>>)
     : [];
-  const locationMatch = locations.find(
+  const locationIndex = locations.findIndex(
     location =>
       typeof location === "object" &&
       String(location.type ?? "").toUpperCase() === "MEETING_POINT"
   );
-  const locationsMeetingPoint = toMeetingPoint(locationMatch);
-  if (locationsMeetingPoint) {
-    return locationsMeetingPoint;
+  if (locationIndex >= 0) {
+    const locationsMeetingPoint = toMeetingPoint(locations[locationIndex]);
+    if (locationsMeetingPoint) {
+      return {
+        meetingPoint: locationsMeetingPoint,
+        sourcePath: `${currentPath}.locations[${locationIndex}]`,
+      };
+    }
   }
 
-  for (const value of Object.values(record)) {
-    const found = findMeetingPointInObject(value);
-    if (found) {
+  for (const [key, value] of Object.entries(record)) {
+    const found = findMeetingPointInObject(value, `${currentPath}.${key}`);
+    if (found.meetingPoint) {
       return found;
     }
   }
 
-  return null;
+  return { sourcePath: "none" };
 };
 
 export const parseViatorMediaFromHtml = (
@@ -487,21 +466,20 @@ export const parseViatorMediaFromHtml = (
     }
   }
 
-  let meetingPoint: ViatorMeetingPoint | null = null;
+  let meetingPoint: ViatorMeetingPoint | undefined;
+  let sourcePath = "none";
+
   for (const node of allEmbeddedJson) {
-    meetingPoint = findMeetingPointInObject(node);
-    if (meetingPoint) {
+    const found = findMeetingPointInObject(node);
+    if (found.meetingPoint) {
+      meetingPoint = found.meetingPoint;
+      sourcePath = found.sourcePath;
       break;
     }
   }
 
   if (sourceUrl?.includes(TARGET_VIATOR_TOUR_FRAGMENT)) {
-    console.info("[viator-parser:meeting-point]", {
-      sourceUrl,
-      parsedBlocks: allEmbeddedJson.length,
-      pathMatched: Boolean(meetingPoint),
-      meetingPoint,
-    });
+    console.log("MeetingPointSource:", sourcePath);
   }
 
   return {
@@ -509,7 +487,7 @@ export const parseViatorMediaFromHtml = (
     imageSource,
     viatorRatingValue,
     viatorReviewCount,
-    meetingPoint,
+    ...(meetingPoint ? { meetingPoint } : {}),
   };
 };
 
