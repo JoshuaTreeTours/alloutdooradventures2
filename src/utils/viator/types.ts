@@ -1,6 +1,7 @@
 export type ViatorParsedTour = {
   title?: string;
   destinationText?: string;
+  operatorName?: string;
   durationText?: string;
   priceFrom?: number;
   currency?: string;
@@ -46,6 +47,7 @@ export type ViatorRegistryEntry = {
 export type ViatorTourTemplateModel = {
   title: string;
   destinationText?: string;
+  operatorName?: string;
   durationText?: string;
   heroImageUrl: string;
   bottomImageUrl?: string;

@@ -5,6 +5,7 @@ import type {
 } from "./types";
 import { getDestinationFallbackImages } from "../images/destinationFallback";
 import { selectBestHeroImage } from "./selectBestHeroImage";
+import { selectFromWebImageCatalog } from "./selectFromWebImageCatalog";
 
 const normalize = (items?: string[]) =>
   Array.from(new Set((items ?? []).filter(Boolean)));

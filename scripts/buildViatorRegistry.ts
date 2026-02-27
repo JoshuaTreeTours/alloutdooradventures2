@@ -19,6 +19,7 @@ import {
   bestOperatorMatchForTour,
   getOperatorImages,
 } from "../src/utils/operators/getOperatorImages";
+import { selectFromWebImageCatalog } from "../src/utils/viator/selectFromWebImageCatalog";
 import type { ViatorRegistryEntry } from "../src/utils/viator/types";
 
 type ViatorSeed = {
@@ -77,12 +78,17 @@ async function run() {
     }
 
     const operatorHero = selectBestHeroImage({ title, images: operatorImages });
+    const catalogMatch = selectFromWebImageCatalog({
+      title,
+      operatorName: parsed.operatorName,
+    });
     const fallback = getDestinationFallbackImages(
       seed.regionSlug,
       seed.destinationSlug
     );
 
-    let heroImageUrl = viatorHero ?? operatorHero ?? operatorImages[0];
+    let heroImageUrl =
+      viatorHero ?? catalogMatch?.hero ?? operatorHero ?? operatorImages[0];
     if (!heroImageUrl && fallback.hero && !isCityGeneric(fallback.hero)) {
       heroImageUrl = fallback.hero;
     }
@@ -91,7 +97,9 @@ async function run() {
     }
 
     const bottomSource = media.images.length ? media.images : operatorImages;
-    const bottomImageUrl = bottomSource.find(image => image !== heroImageUrl);
+    const bottomImageUrl =
+      bottomSource.find(image => image !== heroImageUrl) ??
+      catalogMatch?.bottom;
 
     const titleSlug = slugify(title);
     const productCode = extractProductCode(seed.viatorUrl);

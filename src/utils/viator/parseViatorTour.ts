@@ -254,6 +254,43 @@ export function parseViatorTour(
       parsed.reviewCount = aggregate.reviewCount;
   }
 
+  const provider = productNode?.provider as Record<string, unknown> | undefined;
+  const organizer = productNode?.organizer as
+    | Record<string, unknown>
+    | undefined;
+  const seller = productNode?.seller as Record<string, unknown> | undefined;
+  const brand = productNode?.brand as
+    | Record<string, unknown>
+    | string
+    | undefined;
+  parsed.operatorName =
+    (provider && typeof provider.name === "string"
+      ? provider.name
+      : undefined) ??
+    (organizer && typeof organizer.name === "string"
+      ? organizer.name
+      : undefined) ??
+    (seller && typeof seller.name === "string" ? seller.name : undefined) ??
+    (typeof brand === "string"
+      ? brand
+      : brand && typeof brand.name === "string"
+        ? (brand.name as string)
+        : undefined);
+
+  if (!parsed.operatorName) {
+    const operatedBy = html.match(
+      /Operated by[\s\S]{0,120}?<[^>]+>([\s\S]{1,180}?)<\//i
+    );
+    const providerText = html.match(
+      /Provider[\s\S]{0,120}?<[^>]+>([\s\S]{1,180}?)<\//i
+    );
+    parsed.operatorName = operatedBy
+      ? stripHtml(operatedBy[1])
+      : providerText
+        ? stripHtml(providerText[1])
+        : undefined;
+  }
+
   if (faqNode && Array.isArray(faqNode.mainEntity)) {
     const faqs = faqNode.mainEntity
       .map((entry: Record<string, unknown>) => {
