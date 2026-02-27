@@ -1,6 +1,7 @@
 import viatorRegistryRaw from "../../data/generated/viatorRegistry.json";
 import type { ViatorRegistryEntry } from "../utils/viator/types";
 import type { Tour } from "./tours.types";
+import { buildImageProxyUrl } from "../utils/images/buildImageProxyUrl";
 
 const registry = (viatorRegistryRaw as ViatorRegistryEntry[]) ?? [];
 
@@ -42,7 +43,7 @@ export const toViatorListingTour = (item: ViatorRegistryEntry): Tour => ({
     city: item.destinationSlug,
     citySlug: item.destinationSlug,
   },
-  heroImage: item.heroImageUrl,
+  heroImage: buildImageProxyUrl(item.heroImageUrl) ?? item.heroImageUrl,
   badges: {
     duration: item.parsed.durationText,
     priceFrom:

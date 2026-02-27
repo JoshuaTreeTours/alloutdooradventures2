@@ -5,6 +5,7 @@ import Image from "../Image";
 import { useStructuredData } from "../StructuredDataProvider";
 import BookItButton from "./BookItButton";
 import TourBottomPhotoRow from "./TourBottomPhotoRow";
+import { buildImageProxyUrl } from "../../utils/images/buildImageProxyUrl";
 import type { ViatorRegistryEntry } from "../../utils/viator/types";
 import { mapViatorToTourModel } from "../../utils/viator/mapViatorToTourModel";
 
@@ -26,6 +27,12 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
     heroImageUrl: entry.heroImageUrl,
     bottomImageUrl: entry.bottomImageUrl,
   });
+
+  const proxiedHeroImageUrl =
+    buildImageProxyUrl(model.heroImageUrl) ?? model.heroImageUrl;
+  const proxiedBottomImageUrl = model.bottomImageUrl
+    ? (buildImageProxyUrl(model.bottomImageUrl) ?? model.bottomImageUrl)
+    : undefined;
 
   const productNode: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -136,8 +143,8 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
             {model.heroImageUrl ? (
               <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
                 <Image
-                  src={model.heroImageUrl}
-                  fallbackSrc={model.heroImageUrl}
+                  src={proxiedHeroImageUrl}
+                  fallbackSrc={proxiedHeroImageUrl}
                   alt={model.title}
                   className="h-64 w-full object-cover md:h-80"
                 />
@@ -261,7 +268,7 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
         </div>
 
         <TourBottomPhotoRow
-          imageUrls={model.bottomImageUrl ? [model.bottomImageUrl] : []}
+          imageUrls={proxiedBottomImageUrl ? [proxiedBottomImageUrl] : []}
         />
 
         <div className="mt-12 text-center">
