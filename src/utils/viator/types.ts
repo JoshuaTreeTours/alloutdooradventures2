@@ -35,9 +35,7 @@ export type ViatorRegistryEntry = {
   source: "viator";
   parsed: ViatorParsedTour;
   media: ViatorMedia;
-  operatorImages?: string[];
-  heroImageUrl: string;
-  bottomImageUrl?: string;
+  heroImageUrl?: string;
   derived: {
     highlights: string[];
     description: string;
@@ -49,8 +47,7 @@ export type ViatorTourTemplateModel = {
   destinationText?: string;
   operatorName?: string;
   durationText?: string;
-  heroImageUrl: string;
-  bottomImageUrl?: string;
+  heroImageUrl?: string;
   included?: string[];
   notIncluded?: string[];
   longDescription: string;

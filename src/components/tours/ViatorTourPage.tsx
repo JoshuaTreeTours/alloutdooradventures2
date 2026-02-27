@@ -4,11 +4,9 @@ import Seo from "../Seo";
 import Image from "../Image";
 import { useStructuredData } from "../StructuredDataProvider";
 import BookItButton from "./BookItButton";
-import TourBottomPhotoRow from "./TourBottomPhotoRow";
 import { buildImageProxyUrl } from "../../utils/images/buildImageProxyUrl";
 import type { ViatorRegistryEntry } from "../../utils/viator/types";
 import { mapViatorToTourModel } from "../../utils/viator/mapViatorToTourModel";
-import { getGeneratedTourImageEntry } from "../../data/generatedTourImages";
 
 type ViatorTourPageProps = {
   entry: ViatorRegistryEntry;
@@ -17,25 +15,17 @@ type ViatorTourPageProps = {
 export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
   const { parsed, derived, viatorUrl, pagePath, regionSlug, destinationSlug } =
     entry;
-  const generated = getGeneratedTourImageEntry(`viator-${entry.slug}`);
   const model = mapViatorToTourModel({
     parsed,
     media: entry.media,
-    operatorImages: entry.operatorImages,
     derived,
     viatorUrl,
-    regionSlug,
-    destinationSlug,
-    heroImageUrl: generated?.heroUrl ?? entry.heroImageUrl,
-    bottomImageUrl: generated?.bottomUrl ?? entry.bottomImageUrl,
+    heroImageUrl: entry.heroImageUrl,
   });
 
-  const proxiedHeroImageUrl =
-    buildImageProxyUrl(model.heroImageUrl) ?? model.heroImageUrl;
-  const proxiedBottomImageUrl = model.bottomImageUrl
-    ? (buildImageProxyUrl(model.bottomImageUrl) ?? model.bottomImageUrl)
+  const proxiedHeroImageUrl = model.heroImageUrl
+    ? (buildImageProxyUrl(model.heroImageUrl) ?? model.heroImageUrl)
     : undefined;
-
   const productNode: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -268,10 +258,6 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
             ) : null}
           </div>
         </div>
-
-        <TourBottomPhotoRow
-          imageUrls={proxiedBottomImageUrl ? [proxiedBottomImageUrl] : []}
-        />
 
         <div className="mt-12 text-center">
           <BookItButton href={model.bookingUrl} />

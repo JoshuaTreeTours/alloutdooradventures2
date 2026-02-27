@@ -63,10 +63,13 @@ export async function getViatorMedia(viatorUrl: string): Promise<ViatorMedia> {
 
   const html =
     readViatorCachedHtml(viatorUrl) ?? (await fetchViatorHtml(viatorUrl));
-  if (!readViatorCachedHtml(viatorUrl)) {
-    writeViatorCachedHtml(viatorUrl, html);
-  }
   const parsed = parseViatorTour(html, viatorUrl);
+  if (!readViatorCachedHtml(viatorUrl)) {
+    writeViatorCachedHtml(viatorUrl, html, {
+      primaryImage: parsed.primaryImage,
+      images: parsed.images,
+    });
+  }
   const media: ViatorMedia = {
     primaryImage: parsed.primaryImage,
     images: parsed.images,

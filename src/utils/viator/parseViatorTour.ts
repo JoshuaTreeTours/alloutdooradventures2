@@ -1,6 +1,6 @@
 import type { ViatorParsedTour } from "./types";
 
-const PHOTO_CDN_HINTS = ["viator", "tripadvisor", "unsplash", "wikimedia"];
+const PHOTO_CDN_HINTS = ["viator", "tripadvisor", "tacdn", "cdn", "cloudfront"];
 
 const stripHtml = (value: string) =>
   value
@@ -12,9 +12,7 @@ const stripHtml = (value: string) =>
 const toAbsoluteUrl = (url: string, pageUrl?: string) => {
   try {
     const absolute = pageUrl ? new URL(url, pageUrl) : new URL(url);
-    if (absolute.protocol === "http:") {
-      absolute.protocol = "https:";
-    }
+    if (absolute.protocol === "http:") absolute.protocol = "https:";
     return absolute.toString();
   } catch {
     return null;
@@ -24,19 +22,15 @@ const toAbsoluteUrl = (url: string, pageUrl?: string) => {
 const normalizeImageUrl = (url: string) => {
   const parsed = new URL(url);
   const preservedKeys = new Set(["w", "h", "fit", "crop", "q", "fm", "auto"]);
-  for (const key of [...parsed.searchParams.keys()]) {
-    if (!preservedKeys.has(key)) {
-      parsed.searchParams.delete(key);
-    }
+  for (const key of Array.from(parsed.searchParams.keys())) {
+    if (!preservedKeys.has(key)) parsed.searchParams.delete(key);
   }
   return parsed.toString().trim();
 };
 
 const isLikelyTourImage = (url: string) => {
   const lowered = url.toLowerCase();
-  if (!(lowered.startsWith("https://") || lowered.startsWith("http://"))) {
-    return false;
-  }
+  if (!/^https?:\/\//.test(lowered)) return false;
   if (
     ["data:image", "sprite", "icon", "logo", "favicon", "avatar"].some(token =>
       lowered.includes(token)
@@ -52,48 +46,9 @@ const isLikelyTourImage = (url: string) => {
 };
 
 const appendImage = (bucket: string[], candidate: string | null) => {
-  if (!candidate) return;
-  if (!isLikelyTourImage(candidate)) return;
+  if (!candidate || !isLikelyTourImage(candidate)) return;
   const normalized = normalizeImageUrl(candidate);
-  if (!bucket.includes(normalized)) {
-    bucket.push(normalized);
-  }
-};
-
-const extractUrlsFromUnknown = (value: unknown, bucket: string[]) => {
-  if (!value) return;
-
-  if (typeof value === "string") {
-    appendImage(bucket, toAbsoluteUrl(value));
-    return;
-  }
-
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      extractUrlsFromUnknown(item, bucket);
-    }
-    return;
-  }
-
-  if (typeof value === "object") {
-    const record = value as Record<string, unknown>;
-    for (const [key, nested] of Object.entries(record)) {
-      if (
-        [
-          "image",
-          "photo",
-          "url",
-          "contentUrl",
-          "src",
-          "associatedMedia",
-        ].includes(key)
-      ) {
-        extractUrlsFromUnknown(nested, bucket);
-      } else if (nested && typeof nested === "object") {
-        extractUrlsFromUnknown(nested, bucket);
-      }
-    }
-  }
+  if (!bucket.includes(normalized)) bucket.push(normalized);
 };
 
 const parseJsonScript = (content: string): unknown => {
@@ -126,22 +81,20 @@ const parseStateAssignment = (html: string, symbol: string): unknown => {
   const regex = new RegExp(`${symbol}\\s*=\\s*(\\{[\\s\\S]*?\\});`, "i");
   const match = html.match(regex);
   if (!match) return null;
-
   const raw = match[1].endsWith(";") ? match[1].slice(0, -1) : match[1];
   return parseJsonScript(raw);
 };
 
 const extractByLabel = (html: string, label: string) => {
   const pattern = new RegExp(
-    `${label}[\\s\\S]{0,300}?<[^>]+>([\\s\\S]{1,300}?)<\\/`,
+    `${label}[\\s\\S]{0,300}?<[^>]+>([\\s\\S]{1,300}?)<\/`,
     "i"
   );
   const match = html.match(pattern);
   return match ? stripHtml(match[1]) : undefined;
 };
 
-const extractDomGalleryImages = (html: string, pageUrl?: string) => {
-  const bucket: string[] = [];
+const extractDomGalleryImage = (html: string, pageUrl?: string) => {
   for (const match of Array.from(
     html.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi)
   )) {
@@ -151,10 +104,77 @@ const extractDomGalleryImages = (html: string, pageUrl?: string) => {
     const width = widthMatch ? Number(widthMatch[1]) : undefined;
     const height = heightMatch ? Number(heightMatch[1]) : undefined;
     if ((width && width < 200) || (height && height < 200)) continue;
-    appendImage(bucket, toAbsoluteUrl(src, pageUrl));
-    if (bucket.length >= 5) break;
+    const absolute = toAbsoluteUrl(src, pageUrl);
+    if (absolute && isLikelyTourImage(absolute))
+      return normalizeImageUrl(absolute);
   }
-  return bucket;
+  return undefined;
+};
+
+const extractUrlsFromUnknown = (value: unknown, bucket: string[]) => {
+  if (!value) return;
+  if (typeof value === "string") {
+    appendImage(bucket, toAbsoluteUrl(value));
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const item of value) extractUrlsFromUnknown(item, bucket);
+    return;
+  }
+  if (typeof value === "object") {
+    const record = value as Record<string, unknown>;
+    for (const [key, nested] of Object.entries(record)) {
+      if (
+        [
+          "image",
+          "photo",
+          "url",
+          "contentUrl",
+          "src",
+          "associatedMedia",
+        ].includes(key)
+      ) {
+        extractUrlsFromUnknown(nested, bucket);
+      } else if (nested && typeof nested === "object") {
+        extractUrlsFromUnknown(nested, bucket);
+      }
+    }
+  }
+};
+
+const findSupplierHero = (value: unknown): string | undefined => {
+  if (!value) return undefined;
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = findSupplierHero(item);
+      if (found) return found;
+    }
+    return undefined;
+  }
+
+  if (typeof value !== "object") return undefined;
+
+  const record = value as Record<string, unknown>;
+  const supplierImages = record.supplierImages;
+  if (Array.isArray(supplierImages)) {
+    const candidate = (supplierImages[0] as Record<string, unknown> | undefined)
+      ?.fullSizeImage as Record<string, unknown> | undefined;
+    const src =
+      typeof candidate?.src === "string" ? toAbsoluteUrl(candidate.src) : null;
+    if (src && isLikelyTourImage(src)) {
+      return normalizeImageUrl(src);
+    }
+  }
+
+  for (const nested of Object.values(record)) {
+    if (nested && typeof nested === "object") {
+      const found = findSupplierHero(nested);
+      if (found) return found;
+    }
+  }
+
+  return undefined;
 };
 
 export function parseViatorTour(
@@ -167,68 +187,65 @@ export function parseViatorTour(
   const flatJsonLd = jsonLdNodes.flatMap(node =>
     Array.isArray(node) ? node : [node]
   );
+  const applicationJsonNodes = parseApplicationJsonNodes(html);
+  const nextData = html.match(
+    /<script[^>]*id=["']__NEXT_DATA__["'][^>]*type=["']application\/json["'][^>]*>([\s\S]*?)<\/script>/i
+  );
+  const nextDataNode = nextData?.[1] ? parseJsonScript(nextData[1]) : null;
+  const apolloNode = parseStateAssignment(html, "window\\.__APOLLO_STATE__");
+  const initialStateNode = parseStateAssignment(
+    html,
+    "window\\.__INITIAL_STATE__"
+  );
+
+  const supplierHero =
+    findSupplierHero(nextDataNode) ??
+    findSupplierHero(applicationJsonNodes) ??
+    findSupplierHero(apolloNode) ??
+    findSupplierHero(initialStateNode) ??
+    findSupplierHero(flatJsonLd);
+
+  if (supplierHero) {
+    parsed.primaryImage = supplierHero;
+    parsed.images = [supplierHero];
+  } else {
+    const fallbackImages: string[] = [];
+
+    const ogImage = html.match(
+      /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i
+    );
+    appendImage(
+      fallbackImages,
+      ogImage?.[1] ? toAbsoluteUrl(ogImage[1], pageUrl) : null
+    );
+
+    for (const node of flatJsonLd) {
+      extractUrlsFromUnknown(node, fallbackImages);
+      if (fallbackImages.length) break;
+    }
+
+    if (!fallbackImages.length) {
+      const domGalleryImage = extractDomGalleryImage(html, pageUrl);
+      if (domGalleryImage) fallbackImages.push(domGalleryImage);
+    }
+
+    parsed.images = fallbackImages.slice(0, 1);
+    parsed.primaryImage = parsed.images[0];
+  }
+
   const productNode = flatJsonLd.find(
     node =>
       node &&
       typeof node === "object" &&
       (node as Record<string, unknown>)["@type"] === "Product"
   ) as Record<string, unknown> | undefined;
+
   const faqNode = flatJsonLd.find(
     node =>
       node &&
       typeof node === "object" &&
       (node as Record<string, unknown>)["@type"] === "FAQPage"
   ) as Record<string, unknown> | undefined;
-
-  const orderedImages: string[] = [];
-
-  for (const node of flatJsonLd) {
-    extractUrlsFromUnknown(node, orderedImages);
-    if (orderedImages.length >= 5) break;
-  }
-
-  if (orderedImages.length < 5) {
-    const nextData = html.match(
-      /<script[^>]*id=["']__NEXT_DATA__["'][^>]*type=["']application\/json["'][^>]*>([\s\S]*?)<\/script>/i
-    );
-    if (nextData?.[1]) {
-      extractUrlsFromUnknown(parseJsonScript(nextData[1]), orderedImages);
-    }
-  }
-
-  if (orderedImages.length < 5) {
-    for (const node of parseApplicationJsonNodes(html)) {
-      extractUrlsFromUnknown(node, orderedImages);
-      if (orderedImages.length >= 5) break;
-    }
-  }
-
-  if (orderedImages.length < 5) {
-    extractUrlsFromUnknown(
-      parseStateAssignment(html, "window\\.__APOLLO_STATE__"),
-      orderedImages
-    );
-    extractUrlsFromUnknown(
-      parseStateAssignment(html, "window\\.__INITIAL_STATE__"),
-      orderedImages
-    );
-  }
-
-  if (orderedImages.length < 1) {
-    const ogImage = html.match(
-      /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i
-    );
-    if (ogImage?.[1]) {
-      appendImage(orderedImages, toAbsoluteUrl(ogImage[1], pageUrl));
-    }
-  }
-
-  if (orderedImages.length < 5) {
-    for (const image of extractDomGalleryImages(html, pageUrl)) {
-      appendImage(orderedImages, image);
-      if (orderedImages.length >= 5) break;
-    }
-  }
 
   if (productNode) {
     parsed.title =
@@ -237,6 +254,7 @@ export function parseViatorTour(
       typeof productNode.description === "string"
         ? stripHtml(productNode.description)
         : undefined;
+
     const offers = productNode.offers as Record<string, unknown> | undefined;
     if (offers && typeof offers.price === "string") {
       const numeric = Number(offers.price.replace(/[^\d.]/g, ""));
@@ -245,6 +263,7 @@ export function parseViatorTour(
     if (offers && typeof offers.priceCurrency === "string") {
       parsed.currency = offers.priceCurrency;
     }
+
     const aggregate = productNode.aggregateRating as
       | Record<string, unknown>
       | undefined;
@@ -252,30 +271,32 @@ export function parseViatorTour(
       parsed.ratingValue = aggregate.ratingValue;
     if (aggregate && typeof aggregate.reviewCount === "number")
       parsed.reviewCount = aggregate.reviewCount;
-  }
 
-  const provider = productNode?.provider as Record<string, unknown> | undefined;
-  const organizer = productNode?.organizer as
-    | Record<string, unknown>
-    | undefined;
-  const seller = productNode?.seller as Record<string, unknown> | undefined;
-  const brand = productNode?.brand as
-    | Record<string, unknown>
-    | string
-    | undefined;
-  parsed.operatorName =
-    (provider && typeof provider.name === "string"
-      ? provider.name
-      : undefined) ??
-    (organizer && typeof organizer.name === "string"
-      ? organizer.name
-      : undefined) ??
-    (seller && typeof seller.name === "string" ? seller.name : undefined) ??
-    (typeof brand === "string"
-      ? brand
-      : brand && typeof brand.name === "string"
-        ? (brand.name as string)
-        : undefined);
+    const provider = productNode.provider as
+      | Record<string, unknown>
+      | undefined;
+    const organizer = productNode.organizer as
+      | Record<string, unknown>
+      | undefined;
+    const seller = productNode.seller as Record<string, unknown> | undefined;
+    const brand = productNode.brand as
+      | Record<string, unknown>
+      | string
+      | undefined;
+    parsed.operatorName =
+      (provider && typeof provider.name === "string"
+        ? provider.name
+        : undefined) ??
+      (organizer && typeof organizer.name === "string"
+        ? organizer.name
+        : undefined) ??
+      (seller && typeof seller.name === "string" ? seller.name : undefined) ??
+      (typeof brand === "string"
+        ? brand
+        : brand && typeof brand.name === "string"
+          ? brand.name
+          : undefined);
+  }
 
   if (!parsed.operatorName) {
     const operatedBy = html.match(
@@ -322,34 +343,6 @@ export function parseViatorTour(
   );
   if (meetingPoint)
     parsed.meetingPoint = { address: stripHtml(meetingPoint[1]) };
-  const meetingName = html.match(
-    /Meeting point[\s\S]{0,250}?<h\d[^>]*>([\s\S]*?)<\/h\d>/i
-  );
-  if (meetingName)
-    parsed.meetingPoint = {
-      ...(parsed.meetingPoint ?? {}),
-      name: stripHtml(meetingName[1]),
-    };
-  const meetingNote = html.match(
-    /Meeting point[\s\S]{0,900}?<p[^>]*>([\s\S]*?)<\/p>/i
-  );
-  if (meetingNote)
-    parsed.meetingPoint = {
-      ...(parsed.meetingPoint ?? {}),
-      notes: stripHtml(meetingNote[1]),
-    };
-
-  const itineraryMatches = Array.from(
-    html.matchAll(
-      /<h3[^>]*>([^<]{3,200})<\/h3>[\s\S]{0,240}?([0-9]+\s*(?:hour|hr|min|minute)s?)/gi
-    )
-  );
-  if (itineraryMatches.length) {
-    parsed.itinerary = itineraryMatches.map(match => ({
-      title: stripHtml(match[1]),
-      duration: stripHtml(match[2]),
-    }));
-  }
 
   const includedMatches = Array.from(
     html.matchAll(/Included[\s\S]{0,1200}?<li[^>]*>([\s\S]*?)<\/li>/gi)
@@ -374,32 +367,17 @@ export function parseViatorTour(
       })
     )
   );
+
   if (includedNormalized.length)
     parsed.included = includedNormalized.slice(0, 12);
   if (notIncludedNormalized.length)
     parsed.notIncluded = notIncludedNormalized.slice(0, 12);
-
-  const knowBefore = Array.from(
-    html.matchAll(
-      /Know before you go[\s\S]{0,1200}?<li[^>]*>([\s\S]*?)<\/li>/gi
-    )
-  )
-    .map(match => stripHtml(match[1]))
-    .filter(Boolean);
-  if (knowBefore.length)
-    parsed.knowBeforeYouGo = Array.from(new Set(knowBefore)).slice(0, 10);
-
-  const cancellation = extractByLabel(html, "Cancellation policy");
-  if (cancellation) parsed.cancellationText = cancellation;
 
   parsed.highlightsSourceText = [
     ...(parsed.overviewText ? [parsed.overviewText] : []),
     ...(parsed.itinerary ?? []).map(item => item.title),
     ...(parsed.included ?? []).slice(0, 3),
   ].slice(0, 8);
-
-  parsed.images = orderedImages.slice(0, 5);
-  parsed.primaryImage = parsed.images[0];
 
   return parsed;
 }
