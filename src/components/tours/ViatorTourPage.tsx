@@ -18,6 +18,7 @@ export default function ViatorTourPage({ entry }: ViatorTourPageProps) {
   const model = mapViatorToTourModel({
     parsed,
     media: entry.media,
+    operatorImages: entry.operatorImages,
     derived,
     viatorUrl,
     regionSlug,

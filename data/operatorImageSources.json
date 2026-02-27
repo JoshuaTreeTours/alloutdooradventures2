@@ -1,0 +1,9 @@
+{
+  "red-jeep.com": {
+    "match": ["Red Jeep", "San Andreas Fault", "Metate Ranch"],
+    "tourPages": [
+      "https://www.red-jeep.com/tours",
+      "https://www.red-jeep.com/tours/san-andreas-fault-tour"
+    ]
+  }
+}
