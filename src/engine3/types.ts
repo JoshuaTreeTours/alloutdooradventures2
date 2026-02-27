@@ -1,0 +1,62 @@
+export type Engine3Tour = {
+  engine: "engine3";
+  bookingProvider: "viator";
+  viator: {
+    url: string;
+    productCode: string;
+  };
+  slug: string;
+  destination: {
+    country: string;
+    region?: string;
+    state?: string;
+    city: string;
+  };
+};
+
+export type Engine3ItineraryItem = {
+  title: string;
+  description?: string;
+  duration?: string;
+};
+
+export type Engine3FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type Engine3TourViewModel = {
+  title: string;
+  city: string;
+  region: string;
+  canonicalPath: string;
+  bookingUrl: string;
+  duration?: string;
+  heroImageUrl?: string;
+  priceFrom?: string;
+  rating?: number;
+  reviewCount?: number;
+  highlights?: string[];
+  included?: string[];
+  notIncluded?: string[];
+  meetingPointDescription?: string;
+  itinerary?: Engine3ItineraryItem[];
+  faqs?: Engine3FaqItem[];
+};
+
+export type ViatorProductData = {
+  sourceUrl: string;
+  productCode: string;
+  title?: string;
+  supplierImage?: string;
+  priceFrom?: string;
+  rating?: number;
+  reviewCount?: number;
+  highlights?: string[];
+  included?: string[];
+  notIncluded?: string[];
+  meetingPointDescription?: string;
+  itinerary?: Engine3ItineraryItem[];
+  faqs?: Engine3FaqItem[];
+  duration?: string;
+};

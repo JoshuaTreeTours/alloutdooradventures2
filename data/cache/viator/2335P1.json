@@ -1,0 +1,42 @@
+{
+  "cacheVersion": 1,
+  "fetchedAt": "2026-02-27T00:00:00.000Z",
+  "sourceUrl": "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+  "data": {
+    "sourceUrl": "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+    "productCode": "2335P1",
+    "title": "San Andreas Fault Jeep Tour from Palm Springs",
+    "supplierImage": "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    "priceFrom": "USD 175",
+    "rating": 4.5,
+    "reviewCount": 117,
+    "highlights": [
+      "Open-air Jeep ride through the San Andreas Fault zone",
+      "Guide-led geology interpretation at key viewpoints",
+      "Stops near desert washes and fan-palm oasis habitat"
+    ],
+    "included": [
+      "Professional guide",
+      "Guided Jeep transportation",
+      "Interpretive geology commentary"
+    ],
+    "notIncluded": [
+      "Guide gratuities",
+      "Hotel pickup and drop-off unless selected"
+    ],
+    "itinerary": [
+      {
+        "title": "Meet at Desert Adventures base",
+        "duration": "15 minutes",
+        "description": "Check in and receive a quick terrain and safety briefing before departure."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the San Andreas Fault Jeep Tour from Palm Springs?",
+        "answer": "The guided tour duration is approximately 3 hours, including transportation and interpretive stops."
+      }
+    ],
+    "duration": "3 hours"
+  }
+}

@@ -27,6 +27,7 @@ import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 
 export type Engine2Tour = {
   id: string;
+  engine?: "engine2" | "engine3";
   bookingProvider?: "fareharbor" | "viator";
   bookingUrl?: string;
   sourceDatasetKey?: string;
@@ -167,6 +168,10 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours
   .map(tour => ({
     ...tour,
     bookingProvider: tour.bookingProvider ?? "fareharbor",
+    engine:
+      (tour.bookingProvider ?? "fareharbor") === "viator"
+        ? "engine3"
+        : "engine2",
     images: {
       ...tour.images,
       hero: getBestFareHarborImage(tour),
