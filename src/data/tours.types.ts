@@ -27,6 +27,8 @@ export type TourPricing = {
 
 export type Tour = {
   id: string;
+  engine?: "engine1" | "engine2" | "engine3";
+  productCode?: string;
   slug: string;
   title: string;
   shortDescription?: string;
@@ -36,6 +38,7 @@ export type Tour = {
   primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
+  primaryImageUrl?: string;
   galleryImages?: string[];
   badges: TourBadges;
   startingPrice?: number;

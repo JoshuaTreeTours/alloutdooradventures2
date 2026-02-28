@@ -4,6 +4,7 @@ export type Engine3Tour = {
   viator: {
     url: string;
     productCode: string;
+    heroImageOverrideUrl?: string;
   };
   slug: string;
   destination: {
@@ -31,11 +32,15 @@ export type Engine3TourViewModel = {
   title: string;
   description: string;
   country?: string;
+  stateSlug?: string;
   city: string;
+  citySlug?: string;
   region: string;
   canonicalPath: string;
   bookingUrl: string;
   duration?: string;
+  primaryImageUrl?: string;
+  heroImageOverrideUrl?: string;
   heroImageUrl?: string;
   priceFrom?: string;
   priceCurrency?: string;
@@ -45,6 +50,10 @@ export type Engine3TourViewModel = {
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
+  operatorName?: string;
+  availability?: string;
+  latitude?: number;
+  longitude?: number;
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
 };
@@ -55,10 +64,13 @@ export type ViatorProductData = {
   title?: string;
   description?: string;
   supplierImage?: string;
+  imageCandidates?: string[];
   priceFrom?: string;
   priceCurrency?: string;
+  availability?: string;
   rating?: number;
   reviewCount?: number;
+  operatorName?: string;
   highlights?: string[];
   included?: string[];
   notIncluded?: string[];
@@ -66,4 +78,13 @@ export type ViatorProductData = {
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
   duration?: string;
+  meetingLocation?: string;
+  departureLocation?: string;
+  minAge?: number;
+  maxGroupSize?: number;
+  cancellationWindowHours?: number;
+  vehicleType?: string;
+  signatureHighlight?: string;
+  latitude?: number;
+  longitude?: number;
 };

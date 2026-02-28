@@ -2,7 +2,9 @@ import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
+import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
+import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import type { Engine3TourViewModel } from "../types";
 
 type Engine3TourPageProps = {
@@ -23,15 +25,6 @@ const priceLabel = (priceFrom?: string) => {
     : `Prices starting at ${priceFrom}`;
 };
 
-const titleCaseFromSlug = (value: string) =>
-  value
-    .split("-")
-    .filter(Boolean)
-    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
-    .join(" ");
-
-const cleanSegment = (value?: string) => value?.trim().toLowerCase();
-
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const canonicalUrl = tour.canonicalPath;
@@ -39,37 +32,27 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     ?.toLowerCase()
     .endsWith(POSTER_CHILD_PATH);
 
-  const regionSlug =
-    cleanSegment(tour.region) ?? (isPosterChild2335p1 ? "california" : "");
-  const citySlug =
-    cleanSegment(tour.city) ?? (isPosterChild2335p1 ? "palm-springs" : "");
   const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
     .filter(Boolean)
     .join(", ");
   const pageDescription =
     tour.description ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
+  const heroUrl =
+    tour.primaryImageUrl ||
+    tour.heroImageOverrideUrl ||
+    DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
-  const breadcrumbItems = [
-    { label: "Destinations", href: "/destinations" },
-    ...(regionSlug
-      ? [
-          {
-            label: titleCaseFromSlug(regionSlug),
-            href: `/destinations/${regionSlug}`,
-          },
-        ]
-      : []),
-    ...(regionSlug && citySlug
-      ? [
-          {
-            label: titleCaseFromSlug(citySlug),
-            href: `/destinations/${regionSlug}/${citySlug}`,
-          },
-        ]
-      : []),
-    { label: tour.title, href: canonicalUrl },
-  ];
+  const breadcrumbItems = buildEngine3BreadcrumbItems({
+    title: tour.title,
+    canonicalUrl,
+    stateSlug:
+      tour.stateSlug ?? (isPosterChild2335p1 ? "california" : undefined),
+    citySlug:
+      tour.citySlug ?? (isPosterChild2335p1 ? "palm-springs" : undefined),
+    region: tour.region,
+    city: tour.city,
+  });
 
   const structuredData = useMemo(
     () =>
@@ -89,7 +72,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         title={tour.title}
         description={pageDescription}
         url={canonicalUrl}
-        image={tour.heroImageUrl}
+        image={heroUrl}
       />
       <script
         id="structured-data-engine3-viator"
@@ -155,6 +138,16 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
+        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          <img
+            src={heroUrl}
+            alt={tour.title}
+            referrerPolicy="no-referrer"
+            loading="eager"
+            className="h-64 w-full object-cover md:h-80"
+          />
+        </div>
+
         {tour.description ? (
           <>
             <h2 className="text-2xl font-semibold text-[#2f4a2f]">Overview</h2>
@@ -162,18 +155,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.description}
             </p>
           </>
-        ) : null}
-
-        {tour.heroImageUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-            <img
-              src={tour.heroImageUrl}
-              alt={tour.title}
-              referrerPolicy="no-referrer"
-              loading="eager"
-              className="h-64 w-full object-cover md:h-80"
-            />
-          </div>
         ) : null}
 
         {tour.highlights?.length ? (

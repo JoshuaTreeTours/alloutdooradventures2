@@ -1,0 +1,1 @@
+export const DEFAULT_ENGINE3_HERO_IMAGE_URL = "/hero.jpg";

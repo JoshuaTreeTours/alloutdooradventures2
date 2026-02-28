@@ -217,9 +217,19 @@ const parseViatorHtml = (
 ): ViatorProductData => {
   const scripts = parseJsonScripts(html);
 
-  const supplierImage = deepFind(scripts, node =>
-    text((node.supplierImages as any)?.[0]?.fullSizeImage?.src)
-  );
+  const imageCandidates = deepFindArrayByKey(scripts, "supplierImages")
+    ?.map(entry => {
+      if (!entry || typeof entry !== "object") {
+        return undefined;
+      }
+
+      const record = entry as Record<string, unknown>;
+      const full = record.fullSizeImage as Record<string, unknown> | undefined;
+      return text((full?.src as string) ?? (record.src as string));
+    })
+    .filter((entry): entry is string => Boolean(entry));
+
+  const supplierImage = imageCandidates?.[0];
   const title =
     text(
       deepFind(scripts, node => text(node.title) ?? text(node.name)) as
@@ -283,17 +293,45 @@ const parseViatorHtml = (
     )
   );
 
+  const operatorName = text(
+    deepFind(
+      scripts,
+      node =>
+        text((node.supplier as Record<string, unknown> | undefined)?.name) ??
+        text(node.providerName as string)
+    )
+  );
+
+  const availability = text(
+    deepFind(scripts, node => text(node.availability as string))
+  );
+
+  const latitude = toNumber(
+    deepFind(
+      scripts,
+      node => toNumber(node.latitude) ?? toNumber((node.geo as any)?.latitude)
+    )
+  );
+  const longitude = toNumber(
+    deepFind(
+      scripts,
+      node => toNumber(node.longitude) ?? toNumber((node.geo as any)?.longitude)
+    )
+  );
+
   return {
     sourceUrl,
     productCode,
     title,
     description,
-    supplierImage:
-      typeof supplierImage === "string" ? supplierImage : undefined,
+    supplierImage,
+    imageCandidates,
     priceFrom,
     priceCurrency,
+    availability,
     rating,
     reviewCount,
+    operatorName,
     highlights: asList(
       deepFind(scripts, node =>
         Array.isArray(node.highlights) ? node.highlights : undefined
@@ -312,6 +350,8 @@ const parseViatorHtml = (
     meetingPointDescription,
     itinerary,
     faqs,
+    latitude,
+    longitude,
   };
 };
 
