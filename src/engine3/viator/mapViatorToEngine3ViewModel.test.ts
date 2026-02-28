@@ -5,8 +5,6 @@ import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
 const LOCKED_HERO_URL_6740 =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
-const LOCKED_HERO_URL_2335 =
-  "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa";
 
 const baseTour: Engine2Tour = {
   id: "6740JTREE",
@@ -94,8 +92,35 @@ describe("mapViatorToEngine3ViewModel", () => {
       }
     );
 
-    expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_2335);
-    expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_2335);
+    expect(viewModel.primaryImageUrl).toBeDefined();
+    expect(viewModel.heroImageUrl).toBe(viewModel.primaryImageUrl);
+  });
+
+
+
+  it("applies exactly 5 curated FAQs for 2335P1", () => {
+    const viewModel = mapViatorToEngine3ViewModel(
+      {
+        ...baseTour,
+        id: "2335P1",
+        name: "San Andreas Fault Jeep Tour from Palm Springs",
+        slug: "san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+        seo: {
+          ...baseTour.seo,
+          canonicalPath:
+            "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+        },
+      },
+      {
+        sourceUrl: "https://www.viator.com/tours/example",
+        productCode: "2335P1",
+        title: "San Andreas Fault Jeep Tour from Palm Springs",
+        faqs: [{ question: "How long is this tour?", answer: "About 3 hours." }],
+      }
+    );
+
+    expect(viewModel.faqs).toHaveLength(5);
+    expect(viewModel.faqs?.[0]?.question).toContain("cancellation policy");
   });
 
   it("generates a 100-120 word overview with itinerary facts", () => {

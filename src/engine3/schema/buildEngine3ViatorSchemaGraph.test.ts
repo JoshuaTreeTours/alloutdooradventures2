@@ -7,33 +7,32 @@ const canonicalBase =
   "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours";
 
 const baseTour: Engine3TourViewModel = {
-  tourId: "6740JTREE",
-  title: "Joshua Tree Hummer Adventure from Palm Desert",
+  tourId: "2335P1",
+  title: "San Andreas Fault Jeep Tour from Palm Springs",
   description:
-    "Authoritative summary for Joshua Tree Hummer Adventure from Palm Desert.",
+    "Authoritative summary for San Andreas Fault Jeep Tour from Palm Springs.",
   country: "United States",
   stateSlug: "california",
   city: "Palm Springs",
   citySlug: "palm-springs",
   region: "California",
   canonicalPath:
-    "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+    "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl:
-    "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
-  primaryImageUrl:
-    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
-  priceFrom: "USD 199",
+    "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1",
+  primaryImageUrl: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+  priceFrom: "USD 175",
   priceCurrency: "USD",
-  rating: 4.8,
-  reviewCount: 642,
+  rating: 4.5,
+  reviewCount: 117,
   operatorName: "Desert Adventures Red Jeep Tours",
   latitude: 33.7226,
   longitude: -116.3745,
 };
 
 describe("buildEngine3ViatorSchemaGraph", () => {
-  it("adds Product schema + WebPage.mainEntity for the 6740JTREE canonical URL", () => {
-    const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
+  it("adds Product schema + WebPage.mainEntity for the 2335P1 canonical URL", () => {
+    const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
 
     const graph = buildEngine3ViatorSchemaGraph(
       {
@@ -51,7 +50,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
             item: "/tours?state=california&city=palm-springs",
           },
           {
-            name: "Joshua Tree Hummer Adventure from Palm Desert",
+            name: "San Andreas Fault Jeep Tour from Palm Springs",
             item: canonicalUrl,
           },
         ],
@@ -82,7 +81,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     expect(offer?.url).toBe(canonicalUrl);
     expect(offer?.priceCurrency).toBe("USD");
     expect(offer?.availability).toBe("https://schema.org/InStock");
-    expect(offer?.price).toBe("199");
+    expect(offer?.price).toBe("175");
 
     const trip = nodes.find(node => node["@type"] === "TouristTrip") as
       | Record<string, unknown>
@@ -90,7 +89,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     expect(
       (product?.aggregateRating as Record<string, unknown> | undefined)
         ?.ratingValue
-    ).toBe(4.8);
+    ).toBe(4.5);
     expect(trip?.aggregateRating).toBeUndefined();
 
     const breadcrumb = nodes.find(
@@ -104,16 +103,52 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     );
   });
 
-  it("does not emit Product node for non-allowlisted Engine3 tours", () => {
+  it("fail-closes provider, aggregateRating, geo and FAQ schema when data is invalid", () => {
     const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
 
     const graph = buildEngine3ViatorSchemaGraph(
       {
         ...baseTour,
-        tourId: "2335P1",
-        title: "San Andreas Fault Jeep Tour from Palm Springs",
+        operatorName: "",
+        rating: Number.NaN,
+        reviewCount: 0,
+        latitude: Number.NaN,
+        longitude: -116.3745,
+        faqs: [
+          { question: "Q1", answer: "A1" },
+          { question: "Q2", answer: "A2" },
+          { question: "Q3", answer: "A3" },
+          { question: "Q4", answer: "A4" },
+        ],
+      },
+      canonicalUrl
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(nodes.find(node => node["@id"] === `${canonicalUrl}#provider`)).toBeUndefined();
+    expect(trip?.provider).toBeUndefined();
+    expect(product?.aggregateRating).toBeUndefined();
+    expect(trip?.location).toBeUndefined();
+    expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
+  });
+
+  it("omits Product node for non-paragon Engine3 tours", () => {
+    const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        tourId: "6740JTREE",
+        title: "Joshua Tree Hummer Adventure from Palm Desert",
         canonicalPath:
-          "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+          "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
       },
       canonicalUrl
     );

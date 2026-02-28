@@ -1,6 +1,7 @@
 import { viatorTours } from "../data/viatorTours";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import {
+  collectEngine3ImageCandidates,
   isRejectedCandidate,
   selectEngine3PrimaryImage,
 } from "./selectEngine3PrimaryImage";
@@ -38,16 +39,39 @@ export const resolveEngine3PrimaryImage = (input: {
 }) => {
   const heroImageOverrideUrl = getHeroImageOverride(input.productCode);
 
-  const selectedImage = selectEngine3PrimaryImage({
+  const discoveredCandidates = collectEngine3ImageCandidates({
+    viatorImageCandidates: input.imageCandidates,
+  });
+
+  const discoveredFromViator = selectEngine3PrimaryImage({
     viatorImageCandidates: input.imageCandidates,
     fallbackImageUrl: input.fallbackImageUrl,
   });
 
-  const primaryImageUrl =
-    heroImageOverrideUrl ?? selectedImage ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+  const heroImageUrl =
+    heroImageOverrideUrl ?? discoveredFromViator ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+
+  const gallery = Array.from(
+    new Set([
+      ...discoveredCandidates,
+      discoveredFromViator,
+      heroImageOverrideUrl,
+      input.fallbackImageUrl,
+    ])
+  ).filter((value): value is string => typeof value === "string" && value.length > 0);
+
+  const secondaryImageUrl =
+    gallery[1] && gallery[1] !== heroImageUrl
+      ? gallery[1]
+      : gallery.find(image => image !== heroImageUrl) ??
+        gallery[0] ??
+        DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
   return {
-    primaryImageUrl,
+    primaryImageUrl: heroImageUrl,
     heroImageOverrideUrl,
+    discoveredFromViator,
+    secondaryImageUrl,
+    gallery,
   };
 };

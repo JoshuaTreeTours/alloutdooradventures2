@@ -24,6 +24,57 @@ const normalizeList = (values?: string[]): string[] | undefined => {
   return normalized.length > 0 ? normalized : undefined;
 };
 
+const normalizeSentenceKey = (value: string): string =>
+  value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+const dedupeList = (values?: string[]): string[] | undefined => {
+  const normalized = normalizeList(values);
+  if (!normalized?.length) {
+    return undefined;
+  }
+
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const item of normalized) {
+    const key = normalizeSentenceKey(item);
+    if (!key || seen.has(key)) {
+      continue;
+    }
+    seen.add(key);
+    result.push(item);
+  }
+
+  return result.length > 0 ? result : undefined;
+};
+
+const normalizeFaqs = (
+  faqs?: Array<{ question: string; answer: string }>
+): Array<{ question: string; answer: string }> | undefined => {
+  if (!faqs?.length) {
+    return undefined;
+  }
+
+  const seen = new Set<string>();
+  const normalized = faqs
+    .map(item => ({
+      question: cleanText(item.question),
+      answer: cleanText(item.answer),
+    }))
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item.question && item.answer)
+    )
+    .filter(item => {
+      const key = normalizeSentenceKey(item.question);
+      if (!key || seen.has(key)) {
+        return false;
+      }
+      seen.add(key);
+      return true;
+    });
+
+  return normalized.length > 0 ? normalized : undefined;
+};
+
 const getStateSlugFromCanonicalPath = (
   canonicalPath?: string
 ): string | undefined => {
@@ -48,11 +99,9 @@ export const mapViatorToEngine3ViewModel = (
 
   const title = cleanText(productData?.title) ?? tour.name;
   const highlights =
-    normalizeList(productData?.highlights) ??
-    normalizeList(tour.content.highlights);
+    dedupeList(productData?.highlights) ?? dedupeList(tour.content.highlights);
   const included =
-    normalizeList(productData?.included) ??
-    normalizeList(tour.content.included);
+    dedupeList(productData?.included) ?? dedupeList(tour.content.included);
   const itinerary =
     productData?.itinerary
       ?.map((item, index) => ({
@@ -120,6 +169,11 @@ export const mapViatorToEngine3ViewModel = (
       })
     : undefined;
 
+  const normalizedFaqs =
+    normalizeFaqs(overrideEntry?.faqs) ??
+    normalizeFaqs(productData?.faqs) ??
+    normalizeFaqs(tour.content.faqs);
+
   const fallbackOneLiner = `${title} in ${
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
@@ -160,8 +214,8 @@ export const mapViatorToEngine3ViewModel = (
     highlights,
     included,
     notIncluded:
-      normalizeList(productData?.notIncluded) ??
-      normalizeList(tour.content.notIncluded),
+      dedupeList(productData?.notIncluded) ??
+      dedupeList(tour.content.notIncluded),
     meetingPointDescription:
       cleanText(productData?.meetingPointDescription) ??
       cleanText(tour.content.meetingPoint?.address) ??
@@ -172,6 +226,9 @@ export const mapViatorToEngine3ViewModel = (
     latitude: productData?.latitude ?? tour.geo.lat ?? undefined,
     longitude: productData?.longitude ?? tour.geo.lng ?? undefined,
     itinerary,
-    faqs: productData?.faqs?.length ? productData.faqs : tour.content.faqs,
+    faqs:
+      productData?.productCode === "2335P1"
+        ? normalizedFaqs?.slice(0, 5)
+        : normalizedFaqs,
   };
 };

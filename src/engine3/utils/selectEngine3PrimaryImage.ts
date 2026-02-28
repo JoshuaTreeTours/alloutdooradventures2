@@ -79,10 +79,9 @@ const candidatePriority = (urlValue: string): number => {
   return 5;
 };
 
-export const selectEngine3PrimaryImage = (input: {
+export const collectEngine3ImageCandidates = (input: {
   viatorImageCandidates?: string[];
-  fallbackImageUrl?: string;
-}): string | undefined => {
+}): string[] => {
   const deduped = Array.from(
     new Set(
       (input.viatorImageCandidates ?? [])
@@ -93,6 +92,16 @@ export const selectEngine3PrimaryImage = (input: {
 
   const valid = deduped.filter(candidate => !isRejectedCandidate(candidate));
   valid.sort((a, b) => candidatePriority(a) - candidatePriority(b));
+  return valid;
+};
+
+export const selectEngine3PrimaryImage = (input: {
+  viatorImageCandidates?: string[];
+  fallbackImageUrl?: string;
+}): string | undefined => {
+  const valid = collectEngine3ImageCandidates({
+    viatorImageCandidates: input.viatorImageCandidates,
+  });
 
   if (valid.length > 0) {
     return valid[0];
