@@ -3,7 +3,15 @@ const toSlug = (value?: string): string | undefined => {
     return undefined;
   }
 
-  const cleaned = value
+  const decoded = (() => {
+    try {
+      return decodeURIComponent(value);
+    } catch {
+      return value;
+    }
+  })();
+
+  const cleaned = decoded
     .trim()
     .toLowerCase()
     .replace(/[_\s]+/g, "-")

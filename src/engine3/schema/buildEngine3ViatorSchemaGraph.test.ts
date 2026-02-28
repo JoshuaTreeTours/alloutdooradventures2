@@ -91,9 +91,16 @@ describe("buildEngine3ViatorSchemaGraph", () => {
 
       expect(product?.name).toBe(title);
       expect(product?.image).toEqual([primaryImageUrl]);
+      expect((product?.offers as Record<string, unknown> | undefined)?.priceCurrency).toBe("USD");
       expect(offer?.priceCurrency).toBe("USD");
       expect(offer?.price).toBeDefined();
       expect(offer?.url).toBe(bookingUrl);
+
+      const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+        | Record<string, unknown>
+        | undefined;
+      expect((product?.aggregateRating as Record<string, unknown> | undefined)?.ratingValue).toBe(4.8);
+      expect(trip?.aggregateRating).toBeUndefined();
 
       const items =
         (breadcrumb.itemListElement as Record<string, unknown>[] | undefined) ??
