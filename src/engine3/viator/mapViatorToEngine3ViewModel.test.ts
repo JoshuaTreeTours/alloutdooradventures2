@@ -96,8 +96,6 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.heroImageUrl).toBe(viewModel.primaryImageUrl);
   });
 
-
-
   it("applies exactly 5 curated FAQs for 2335P1", () => {
     const viewModel = mapViatorToEngine3ViewModel(
       {
@@ -115,12 +113,37 @@ describe("mapViatorToEngine3ViewModel", () => {
         sourceUrl: "https://www.viator.com/tours/example",
         productCode: "2335P1",
         title: "San Andreas Fault Jeep Tour from Palm Springs",
-        faqs: [{ question: "How long is this tour?", answer: "About 3 hours." }],
+        faqs: [
+          { question: "How long is this tour?", answer: "About 3 hours." },
+        ],
       }
     );
 
     expect(viewModel.faqs).toHaveLength(5);
     expect(viewModel.faqs?.[0]?.question).toContain("cancellation policy");
+  });
+
+  it("normalizes and limits FAQs to 5 for 3351P15", () => {
+    const viewModel = mapViatorToEngine3ViewModel(
+      {
+        ...baseTour,
+        id: "3351P15",
+        name: "Palm Springs Indian Canyons Bike and Hike",
+        slug: "palm-springs-indian-canyons-bike-and-hike-3351p15",
+        seo: {
+          ...baseTour.seo,
+          canonicalPath:
+            "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
+        },
+      },
+      {
+        sourceUrl: "https://www.viator.com/tours/example",
+        productCode: "3351P15",
+        title: "Palm Springs Indian Canyons Bike and Hike",
+      }
+    );
+
+    expect(viewModel.faqs).toHaveLength(5);
   });
 
   it("generates a 100-120 word overview with itinerary facts", () => {

@@ -17,8 +17,10 @@ type Engine3TourPageProps = {
 };
 
 const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
-const POSTER_CHILD_PATH =
-  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
+const POSTER_CHILD_PATHS = new Set([
+  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+  "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
+]);
 
 const priceLabel = (priceFrom?: string) => {
   if (!priceFrom) {
@@ -30,12 +32,33 @@ const priceLabel = (priceFrom?: string) => {
     : `Prices starting at ${priceFrom}`;
 };
 
+const parsePriceValue = (priceFrom?: string): number | undefined => {
+  if (!priceFrom) {
+    return undefined;
+  }
+
+  const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : undefined;
+};
+
+const formatUsdPrice = (value: number): string => {
+  const normalized = Number.isInteger(value) ? String(value) : value.toFixed(2);
+  return `USD ${normalized}`;
+};
+
+const isValidMetric = (value?: number): value is number =>
+  typeof value === "number" && Number.isFinite(value) && value > 0;
+
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const canonicalUrl = tour.canonicalPath;
-  const isPosterChild2335p1 = canonicalUrl
-    ?.toLowerCase()
-    .endsWith(POSTER_CHILD_PATH);
+  const canonicalUrlLower = canonicalUrl?.toLowerCase();
+  const isPosterChildPalmSprings = Boolean(
+    canonicalUrlLower &&
+    Array.from(POSTER_CHILD_PATHS).some(path =>
+      canonicalUrlLower.endsWith(path)
+    )
+  );
 
   const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
     .filter(Boolean)
@@ -52,9 +75,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     title: tour.title,
     canonicalUrl,
     stateSlug:
-      tour.stateSlug ?? (isPosterChild2335p1 ? "california" : undefined),
+      tour.stateSlug ?? (isPosterChildPalmSprings ? "california" : undefined),
     citySlug:
-      tour.citySlug ?? (isPosterChild2335p1 ? "palm-springs" : undefined),
+      tour.citySlug ?? (isPosterChildPalmSprings ? "palm-springs" : undefined),
     region: tour.region,
     city: tour.city,
   });
@@ -64,6 +87,20 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     ? peekViatorFromPriceCache(viatorProductCode, "USD")
     : null;
 
+  const staticPriceValue = parsePriceValue(tour.priceFrom);
+  const runtimePriceValue =
+    viatorFromPrice && Number.isFinite(viatorFromPrice.price)
+      ? viatorFromPrice.price
+      : undefined;
+  const resolvedPriceFrom =
+    staticPriceValue !== undefined
+      ? tour.priceFrom
+      : runtimePriceValue && runtimePriceValue > 0
+        ? formatUsdPrice(runtimePriceValue)
+        : undefined;
+  const showRating =
+    isValidMetric(tour.rating) && isValidMetric(tour.reviewCount);
+
   if (typeof window === "undefined" && viatorProductCode) {
     void getViatorFromPrice(viatorProductCode, "USD");
   }
@@ -71,7 +108,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const structuredData = useMemo(
     () =>
       buildEngine3ViatorSchemaGraph(tour, canonicalUrl, {
-        tripDescription: isPosterChild2335p1 ? pageDescription : undefined,
+        tripDescription: isPosterChildPalmSprings ? pageDescription : undefined,
         breadcrumbItems: breadcrumbItems.map(item => ({
           name: item.label,
           item: item.href,
@@ -84,7 +121,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     [
       breadcrumbItems,
       canonicalUrl,
-      isPosterChild2335p1,
+      isPosterChildPalmSprings,
       pageDescription,
       tour,
       viatorFromPrice,
@@ -142,12 +179,12 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          {priceLabel(tour.priceFrom) ? (
+          {priceLabel(resolvedPriceFrom) ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
-              {priceLabel(tour.priceFrom)}
+              {priceLabel(resolvedPriceFrom)}
             </p>
           ) : null}
-          {tour.rating && tour.reviewCount ? (
+          {showRating ? (
             <TourRating rating={tour.rating} reviewCount={tour.reviewCount} />
           ) : null}
           <div className="mt-6">

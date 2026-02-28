@@ -63,4 +63,35 @@ describe("Engine3TourPage", () => {
 
     expect(html).toContain('src="/hero.jpg"');
   });
+
+  it("renders price and rating only when values are valid", () => {
+    const withValidMeta = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          priceFrom: "USD 175",
+          rating: 4.5,
+          reviewCount: 117,
+        }}
+      />
+    );
+
+    expect(withValidMeta).toContain("Prices starting at USD 175");
+    expect(withValidMeta).toContain("4.5");
+    expect(withValidMeta).toContain("117 reviews");
+
+    const withInvalidMeta = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          priceFrom: "USD 0",
+          rating: Number.NaN,
+          reviewCount: 117,
+        }}
+      />
+    );
+
+    expect(withInvalidMeta).not.toContain("Prices starting at");
+    expect(withInvalidMeta).not.toContain("reviews");
+  });
 });

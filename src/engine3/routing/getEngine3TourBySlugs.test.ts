@@ -30,4 +30,15 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
 
+  it("returns 3351P15 with a non-empty hero image", () => {
+    const tour = getEngine3TourBySlugs(
+      "california",
+      "palm-springs",
+      "palm-springs-indian-canyons-bike-and-hike-3351p15"
+    );
+
+    expect(tour?.id).toBe("3351P15");
+    expect(tour?.images.hero).toBeTruthy();
+    expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
+  });
 });

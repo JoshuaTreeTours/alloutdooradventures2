@@ -20,6 +20,20 @@ export const viatorTours: readonly Engine3Tour[] = [
     engine: "engine3",
     bookingProvider: "viator",
     viator: {
+      productCode: "3351P15",
+      url: "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
+    },
+    destination: {
+      country: "usa",
+      state: "california",
+      city: "palm-springs",
+    },
+    slug: "palm-springs-indian-canyons-bike-and-hike",
+  },
+  {
+    engine: "engine3",
+    bookingProvider: "viator",
+    viator: {
       productCode: "6740JTREE",
       url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
       heroImageOverrideUrl:

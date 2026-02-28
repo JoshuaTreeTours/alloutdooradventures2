@@ -20,6 +20,7 @@ describe("getToursByCityUnified Palm Springs dedupe", () => {
     }
 
     expect(byCode.get("2335P1")?.tour.engine).toBe("engine3");
+    expect(byCode.get("3351P15")?.tour.engine).toBe("engine3");
     expect(byCode.get("6740JTREE")?.tour.engine).toBe("engine3");
   });
 
