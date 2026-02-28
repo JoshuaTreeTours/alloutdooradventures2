@@ -33,4 +33,29 @@ describe("Engine3 Viator unified primary image", () => {
     );
     expect(listing!.tour.heroImage).toBe(detailModel.primaryImageUrl);
   });
+
+  it("keeps listing card and detail hero parity for poster child 2335P1", () => {
+    const engine2Tour = getEngine2TourBySlug(
+      "california",
+      "palm-springs",
+      "san-andreas-fault-jeep-tour-from-palm-springs-2335p1"
+    );
+
+    expect(engine2Tour).toBeTruthy();
+
+    const detailModel = mapViatorToEngine3ViewModel(
+      engine2Tour!,
+      viatorProductCacheByCode[engine2Tour!.id]
+    );
+
+    const listing = getToursByCityUnified("california", "palm-springs").find(
+      entry =>
+        entry.href ===
+        "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1"
+    );
+
+    expect(listing).toBeTruthy();
+    expect(detailModel.primaryImageUrl).toContain("media.tacdn.com");
+    expect(listing!.tour.heroImage).toBe(detailModel.primaryImageUrl);
+  });
 });

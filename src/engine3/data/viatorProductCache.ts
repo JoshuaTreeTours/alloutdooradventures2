@@ -7,6 +7,8 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     productCode: "2335P1",
     title: "San Andreas Fault Jeep Tour from Palm Springs",
     supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    viatorHtml:
+      '<img src="https://cache.vtrcdn.com/orion/images/globalNav/fallback-top-activities_100x100.webp" /><img src="https://media.tacdn.com/media/attractions-splice-spp-360x240/06/e0/2f/52.jpg" /><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg" />',
     priceFrom: "USD 175",
     rating: 4.5,
     reviewCount: 117,

@@ -332,6 +332,7 @@ const parseViatorHtml = (
     supplierImage:
       typeof supplierImage === "string" ? supplierImage : undefined,
     imageUrls: imageUrls.length ? imageUrls : undefined,
+    viatorHtml: productCode === "2335P1" ? html : undefined,
     priceFrom,
     priceCurrency,
     rating,

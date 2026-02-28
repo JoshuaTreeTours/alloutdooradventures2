@@ -1,5 +1,6 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { selectViatorPrimaryImage } from "../utils/selectViatorPrimaryImage";
+import { extractHeroFromViatorHtml } from "./extractHeroFromViatorHtml";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -20,6 +21,21 @@ const normalizeList = (values?: string[]): string[] | undefined => {
     .filter((item): item is string => Boolean(item));
 
   return normalized.length > 0 ? normalized : undefined;
+};
+
+const FALLBACK_TOUR_IMAGE_URL = "/hero.jpg";
+
+const isFallbackTourImage = (value?: string): boolean => {
+  const normalized = cleanText(value)?.toLowerCase();
+  if (!normalized) {
+    return true;
+  }
+
+  if (normalized === FALLBACK_TOUR_IMAGE_URL) {
+    return true;
+  }
+
+  return normalized.endsWith(FALLBACK_TOUR_IMAGE_URL);
 };
 
 const defaultItineraryFromHighlights = [
@@ -87,12 +103,31 @@ export const mapViatorToEngine3ViewModel = (
   const city = cleanText(tour.geo.city);
   const state = cleanText(tour.geo.region);
 
-  const primaryImageUrl = selectViatorPrimaryImage({
+  const selectedPrimaryImageUrl = selectViatorPrimaryImage({
     primaryImageUrl:
       cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
     imageUrls: heroImageCandidates,
-    fallbackImageUrl: "/hero.jpg",
+    fallbackImageUrl: FALLBACK_TOUR_IMAGE_URL,
   });
+
+  const extractedFromHtml = productData?.viatorHtml
+    ? extractHeroFromViatorHtml(productData.viatorHtml)
+    : {};
+
+  const isPosterChild2335P1 =
+    (productData?.productCode ?? tour.id) === "2335P1";
+
+  const primaryImageUrl =
+    isPosterChild2335P1 && extractedFromHtml.heroUrl
+      ? extractedFromHtml.heroUrl
+      : isFallbackTourImage(selectedPrimaryImageUrl) &&
+          extractedFromHtml.heroUrl
+        ? extractedFromHtml.heroUrl
+        : selectedPrimaryImageUrl;
+
+  const primaryImageAlt =
+    extractedFromHtml.heroAlt ??
+    `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`;
 
   return {
     tourId: tour.id,
@@ -105,9 +140,9 @@ export const mapViatorToEngine3ViewModel = (
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
     primaryImageUrl,
-    primaryImageAlt: `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`,
+    primaryImageAlt,
     heroImageUrl: primaryImageUrl,
-    heroImageAlt: `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`,
+    heroImageAlt: primaryImageAlt,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),

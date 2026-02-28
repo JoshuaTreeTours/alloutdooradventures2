@@ -74,4 +74,32 @@ describe("mapViatorToEngine3ViewModel", () => {
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg"
     );
   });
+
+  it("uses Viator HTML extracted hero for poster child 2335P1 when selector falls back", () => {
+    const posterChildTour = {
+      ...baseTour,
+      id: "2335P1",
+      name: "San Andreas Fault Jeep Tour from Palm Springs",
+      seo: {
+        ...baseTour.seo,
+        canonicalPath:
+          "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+      },
+    };
+
+    const model = mapViatorToEngine3ViewModel(posterChildTour, {
+      sourceUrl: "https://www.viator.com/tours/example",
+      productCode: "2335P1",
+      title: "San Andreas Fault Jeep Tour from Palm Springs",
+      imageUrls: [
+        "https://cache.vtrcdn.com/orion/images/globalNav/fallback-top-activities_100x100.webp",
+      ],
+      viatorHtml:
+        '<img src="https://media.tacdn.com/media/attractions-splice-spp-360x240/06/e0/2f/52.jpg" /><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg" />',
+    });
+
+    expect(model.primaryImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg"
+    );
+  });
 });
