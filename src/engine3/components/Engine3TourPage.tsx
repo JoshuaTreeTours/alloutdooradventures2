@@ -6,6 +6,11 @@ import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import type { Engine3TourViewModel } from "../types";
+import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
+import {
+  getViatorFromPrice,
+  peekViatorFromPriceCache,
+} from "../../server/viator/getViatorFromPrice";
 
 type Engine3TourPageProps = {
   tour: Engine3TourViewModel;
@@ -54,6 +59,15 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     city: tour.city,
   });
 
+  const viatorProductCode = extractViatorProductCode(tour.bookingUrl);
+  const viatorFromPrice = viatorProductCode
+    ? peekViatorFromPriceCache(viatorProductCode, "USD")
+    : null;
+
+  if (typeof window === "undefined" && viatorProductCode) {
+    void getViatorFromPrice(viatorProductCode, "USD");
+  }
+
   const structuredData = useMemo(
     () =>
       buildEngine3ViatorSchemaGraph(tour, canonicalUrl, {
@@ -62,8 +76,19 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           name: item.label,
           item: item.href,
         })),
+        offerPrice:
+          viatorFromPrice && Number.isFinite(viatorFromPrice.price)
+            ? viatorFromPrice.price
+            : undefined,
       }),
-    [breadcrumbItems, canonicalUrl, isPosterChild2335p1, pageDescription, tour]
+    [
+      breadcrumbItems,
+      canonicalUrl,
+      isPosterChild2335p1,
+      pageDescription,
+      tour,
+      viatorFromPrice,
+    ]
   );
 
   return (
