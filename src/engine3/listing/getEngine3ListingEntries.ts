@@ -43,6 +43,8 @@ export const getEngine3ListingEntries = (
         href,
         tour: {
           id: `engine3-${productCode}`,
+          engine: "engine3",
+          productCode,
           slug: href.split("/").at(-1) ?? "",
           title: productData?.title ?? toTitleCase(tour.slug),
           shortDescription: productData?.highlights?.[0],
@@ -58,7 +60,8 @@ export const getEngine3ListingEntries = (
             lat: productData?.latitude,
             lng: productData?.longitude,
           },
-          heroImage: primaryImageUrl,
+          heroImage: primaryImageUrl || "/hero.jpg",
+          primaryImageUrl: primaryImageUrl || "/hero.jpg",
           galleryImages: primaryImageUrl ? [primaryImageUrl] : [],
           badges: {
             rating: productData?.rating,

@@ -27,16 +27,14 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.currency
   );
   const cardImage =
-    tour.bookingProvider === "viator"
-      ? tour.heroImage?.trim() || ""
-      : tour.heroImage?.trim() || "/hero.jpg";
+    tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={cardImage}
-          fallbackSrc={cardImage}
+          fallbackSrc={"/hero.jpg"}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

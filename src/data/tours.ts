@@ -274,6 +274,8 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
 
 const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
   id: `engine2-${tour.id}`,
+  engine: tour.engine ?? "engine2",
+  productCode: tour.bookingProvider === "viator" ? tour.id : undefined,
   slug: tour.slug,
   title: tour.name,
   shortDescription: tour.content.highlights[0],
@@ -290,6 +292,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
     lng: tour.geo.lng ?? undefined,
   },
   heroImage: tour.images.hero ?? "",
+  primaryImageUrl: tour.images.hero ?? undefined,
   galleryImages: tour.images.gallery,
   badges: {},
   activitySlugs: ["adventure"],
@@ -304,45 +307,53 @@ const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
 });
 
 const getDedupeKey = (entry: UnifiedCityTour) => {
-  const itemId = getEngine1FareHarborItemId(entry.tour);
-
-  if (!itemId) {
-    return null;
+  if (entry.tour.productCode) {
+    return `viator:${entry.tour.productCode.toUpperCase()}`;
   }
 
-  return `${entry.tour.bookingProvider}:${itemId}`;
+  const itemId = getEngine1FareHarborItemId(entry.tour);
+
+  if (itemId) {
+    return `${entry.tour.bookingProvider}:${itemId}`;
+  }
+
+  return `${entry.href}::${entry.tour.id}`;
 };
 
-const scoreDedupeCandidate = (entry: UnifiedCityTour) =>
-  entry.tour.id.startsWith("engine2-") ? 1 : 0;
+const engineRank = (tour: Tour) => {
+  if (tour.engine === "engine3") {
+    return 3;
+  }
+
+  if (tour.engine === "engine2") {
+    return 2;
+  }
+
+  return 1;
+};
 
 const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
   const deduped = new Map<string, UnifiedCityTour>();
 
   for (const entry of entries) {
     const key = getDedupeKey(entry);
-
-    if (!key) {
-      deduped.set(`${entry.href}::${entry.tour.id}`, entry);
-      continue;
-    }
-
     const existing = deduped.get(key);
+
     if (!existing) {
       deduped.set(key, entry);
       continue;
     }
 
-    const existingScore = scoreDedupeCandidate(existing);
-    const nextScore = scoreDedupeCandidate(entry);
+    const nextRank = engineRank(entry.tour);
+    const existingRank = engineRank(existing.tour);
 
-    if (nextScore > existingScore) {
+    if (nextRank > existingRank) {
       deduped.set(key, entry);
       continue;
     }
 
     if (
-      nextScore === existingScore &&
+      nextRank === existingRank &&
       entry.href.localeCompare(existing.href) < 0
     ) {
       deduped.set(key, entry);
