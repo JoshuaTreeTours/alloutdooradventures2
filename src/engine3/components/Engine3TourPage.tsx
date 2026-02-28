@@ -10,6 +10,8 @@ type Engine3TourPageProps = {
 };
 
 const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
+const POSTER_CHILD_PATH =
+  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
 
 const priceLabel = (priceFrom?: string) => {
   if (!priceFrom) {
@@ -28,40 +30,70 @@ const titleCaseFromSlug = (value: string) =>
     .map(token => token.charAt(0).toUpperCase() + token.slice(1))
     .join(" ");
 
+const cleanSegment = (value?: string) => value?.trim().toLowerCase();
+
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
-  const pageDescription = `${tour.title} in ${tour.city}, ${tour.region}`;
+  const canonicalUrl = tour.canonicalPath;
+  const isPosterChild2335p1 = canonicalUrl
+    ?.toLowerCase()
+    .endsWith(POSTER_CHILD_PATH);
 
-  const structuredData = useMemo(
-    () => buildEngine3ViatorSchemaGraph(tour, tour.canonicalPath),
-    [tour]
-  );
-
-  const regionSlug = tour.region.trim();
-  const citySlug = tour.city.trim();
+  const regionSlug =
+    cleanSegment(tour.region) ?? (isPosterChild2335p1 ? "california" : "");
+  const citySlug =
+    cleanSegment(tour.city) ?? (isPosterChild2335p1 ? "palm-springs" : "");
+  const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
+    .filter(Boolean)
+    .join(", ");
+  const pageDescription = cityRegionLabel
+    ? `${tour.title} in ${cityRegionLabel}`
+    : undefined;
 
   const breadcrumbItems = [
     { label: "Destinations", href: "/destinations" },
-    {
-      label: titleCaseFromSlug(regionSlug),
-      href: `/destinations/${regionSlug}`,
-    },
-    {
-      label: titleCaseFromSlug(citySlug),
-      href: `/destinations/${regionSlug}/${citySlug}`,
-    },
-    { label: tour.title, href: tour.canonicalPath },
+    ...(regionSlug
+      ? [
+          {
+            label: titleCaseFromSlug(regionSlug),
+            href: `/destinations/${regionSlug}`,
+          },
+        ]
+      : []),
+    ...(regionSlug && citySlug
+      ? [
+          {
+            label: titleCaseFromSlug(citySlug),
+            href: `/destinations/${regionSlug}/${citySlug}`,
+          },
+        ]
+      : []),
+    { label: tour.title, href: canonicalUrl },
   ];
+
+  const structuredData = useMemo(
+    () =>
+      buildEngine3ViatorSchemaGraph(tour, canonicalUrl, {
+        tripDescription: isPosterChild2335p1 ? pageDescription : undefined,
+        breadcrumbItems: breadcrumbItems.map(item => ({
+          name: item.label,
+          item: item.href,
+        })),
+      }),
+    [breadcrumbItems, canonicalUrl, isPosterChild2335p1, pageDescription, tour]
+  );
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={tour.title}
         description={pageDescription}
-        url={tour.canonicalPath}
+        url={canonicalUrl}
         image={tour.heroImageUrl}
       />
       <script
+        id="structured-data-engine3-viator"
+        key="structured-data-engine3-viator"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />

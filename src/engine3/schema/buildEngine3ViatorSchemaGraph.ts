@@ -1,6 +1,16 @@
 import { SITE_BRAND_ID } from "../../utils/structuredData";
 import type { Engine3TourViewModel } from "../types";
 
+type SchemaBreadcrumbItem = {
+  name: string;
+  item: string;
+};
+
+type BuildEngine3ViatorSchemaGraphOptions = {
+  tripDescription?: string;
+  breadcrumbItems?: SchemaBreadcrumbItem[];
+};
+
 const trim = (value?: string): string | undefined => {
   if (!value) {
     return undefined;
@@ -60,9 +70,12 @@ const normalizeFaqs = (faqs: Engine3TourViewModel["faqs"]) => {
 
 export const buildEngine3ViatorSchemaGraph = (
   input: Engine3TourViewModel,
-  canonicalUrl: string
+  canonicalUrl: string,
+  options?: BuildEngine3ViatorSchemaGraphOptions
 ) => {
-  const description = trim(`${input.title} in ${input.city}, ${input.region}`);
+  const description =
+    trim(options?.tripDescription) ??
+    trim(`${input.title} in ${input.city}, ${input.region}`);
 
   const regionSlug = trim(input.region);
   const citySlug = trim(input.city);
@@ -73,7 +86,7 @@ export const buildEngine3ViatorSchemaGraph = (
       ? `${destinationsUrl}/${regionSlug}/${citySlug}`
       : undefined;
 
-  const breadcrumbItems = [
+  const fallbackBreadcrumbItems = [
     { name: "Destinations", item: destinationsUrl },
     ...(regionUrl && regionSlug
       ? [{ name: titleCaseFromSlug(regionSlug) ?? regionSlug, item: regionUrl }]
@@ -83,6 +96,12 @@ export const buildEngine3ViatorSchemaGraph = (
       : []),
     { name: input.title, item: canonicalUrl },
   ];
+
+  const breadcrumbItems =
+    options?.breadcrumbItems?.length &&
+    options.breadcrumbItems.every(item => trim(item.name) && trim(item.item))
+      ? options.breadcrumbItems
+      : fallbackBreadcrumbItems;
 
   const offerId = `${canonicalUrl}#offer`;
 

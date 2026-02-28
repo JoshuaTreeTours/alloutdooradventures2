@@ -18,7 +18,10 @@ describe("buildEngine3ViatorSchemaGraph", () => {
   it("builds minimal graph with Offer and TouristTrip but no FAQ or itinerary", () => {
     const graph = buildEngine3ViatorSchemaGraph(
       baseTour,
-      baseTour.canonicalPath
+      baseTour.canonicalPath,
+      {
+        tripDescription: "Sunset Jeep Adventure in Palm Springs, California",
+      }
     );
     const nodes = graph["@graph"] as Record<string, unknown>[];
 
@@ -33,6 +36,49 @@ describe("buildEngine3ViatorSchemaGraph", () => {
 
     const faq = nodes.find(node => node["@type"] === "FAQPage");
     expect(faq).toBeUndefined();
+  });
+
+  it("poster child emits Offer + BreadcrumbList + TouristTrip with #offer reference", () => {
+    const posterChildCanonicalPath =
+      "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        title: "San Andreas Fault Jeep Tour from Palm Springs",
+        canonicalPath: posterChildCanonicalPath,
+      },
+      posterChildCanonicalPath,
+      {
+        tripDescription:
+          "San Andreas Fault Jeep Tour from Palm Springs in Palm Springs, California",
+        breadcrumbItems: [
+          { name: "Destinations", item: "/destinations" },
+          { name: "California", item: "/destinations/california" },
+          {
+            name: "Palm Springs",
+            item: "/destinations/california/palm-springs",
+          },
+          {
+            name: "San Andreas Fault Jeep Tour from Palm Springs",
+            item: posterChildCanonicalPath,
+          },
+        ],
+      }
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const offer = nodes.find(node => node["@type"] === "Offer");
+    const breadcrumb = nodes.find(node => node["@type"] === "BreadcrumbList");
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(offer?.["@id"]).toBe(`${posterChildCanonicalPath}#offer`);
+    expect(breadcrumb).toBeTruthy();
+    expect((trip?.offers as Record<string, unknown>)["@id"]).toBe(
+      `${posterChildCanonicalPath}#offer`
+    );
   });
 
   it("emits FAQPage with normalized de-duplicated questions", () => {
