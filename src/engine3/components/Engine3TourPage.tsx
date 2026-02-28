@@ -2,15 +2,7 @@ import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
-import { useStructuredData } from "../../components/StructuredDataProvider";
-import {
-  buildTourProductNodeId,
-  buildWebPageStructuredData,
-  SITE_BRAND_ID,
-  SITE_ORGANIZATION_ID,
-  SITE_WEBSITE_ID,
-} from "../../utils/structuredData";
-import { buildTourSchemaGraph } from "../../schema/buildTourSchemaGraph";
+import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import type { Engine3TourViewModel } from "../types";
 
 type Engine3TourPageProps = {
@@ -29,61 +21,37 @@ const priceLabel = (priceFrom?: string) => {
     : `Prices starting at ${priceFrom}`;
 };
 
+const titleCaseFromSlug = (value: string) =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
+    .join(" ");
+
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const pageDescription = `${tour.title} in ${tour.city}, ${tour.region}`;
-  const productNodeId = buildTourProductNodeId(tour.tourId);
 
-  const structuredDataNodes = useMemo(() => {
-    const tourSchemaNodes = buildTourSchemaGraph({
-      url: tour.canonicalPath,
-      pageName: tour.title,
-      pageDescription,
-      heroImage: tour.heroImageUrl,
-      derivedImages: tour.heroImageUrl ? [tour.heroImageUrl] : [],
-      place: {
-        city: tour.city,
-        region: tour.region,
-      },
-      product: {
-        id: productNodeId,
-        name: tour.title,
-        description: pageDescription,
-      },
-      trip: {
-        id: `${tour.canonicalPath}#trip`,
-        name: tour.title,
-        description: pageDescription,
-        duration: tour.duration,
-        touristType: "Adventure travelers",
-        departureLocation: null,
-      },
-      offers: {
-        url: tour.bookingUrl,
-        priceCurrency: "USD",
-      },
-      brandOrgIds: {
-        orgId: SITE_ORGANIZATION_ID,
-        brandId: SITE_BRAND_ID,
-        websiteId: SITE_WEBSITE_ID,
-      },
-    })["@graph"] as Record<string, unknown>[];
+  const structuredData = useMemo(
+    () => buildEngine3ViatorSchemaGraph(tour, tour.canonicalPath),
+    [tour]
+  );
 
-    const webPageNode = buildWebPageStructuredData({
-      url: tour.canonicalPath,
-      name: tour.title,
-      description: pageDescription,
-      image: tour.heroImageUrl,
-      mainEntityId: productNodeId,
-    });
+  const regionSlug = tour.region.trim();
+  const citySlug = tour.city.trim();
 
-    return [
-      ...tourSchemaNodes.filter(node => node["@type"] !== "WebPage"),
-      webPageNode,
-    ];
-  }, [pageDescription, productNodeId, tour]);
-
-  useStructuredData(structuredDataNodes);
+  const breadcrumbItems = [
+    { label: "Destinations", href: "/destinations" },
+    {
+      label: titleCaseFromSlug(regionSlug),
+      href: `/destinations/${regionSlug}`,
+    },
+    {
+      label: titleCaseFromSlug(citySlug),
+      href: `/destinations/${regionSlug}/${citySlug}`,
+    },
+    { label: tour.title, href: tour.canonicalPath },
+  ];
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -93,6 +61,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         url={tour.canonicalPath}
         image={tour.heroImageUrl}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
@@ -101,6 +73,30 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.title}
           </h1>
+          <nav aria-label="Breadcrumb" className="mt-4 text-xs text-white/85">
+            <ol className="flex flex-wrap items-center gap-2">
+              {breadcrumbItems.map((item, index) => (
+                <li key={item.href} className="inline-flex items-center gap-2">
+                  {index > 0 ? <span aria-hidden="true">&gt;</span> : null}
+                  {index === breadcrumbItems.length - 1 ? (
+                    <span
+                      aria-current="page"
+                      className="font-semibold text-white"
+                    >
+                      {item.label}
+                    </span>
+                  ) : (
+                    <a
+                      className="underline decoration-white/50"
+                      href={item.href}
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
           {tour.duration ? (
             <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
               {tour.duration}
@@ -198,9 +194,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               Itinerary
             </h2>
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-[#405040]">
-              {tour.itinerary.map(step => (
-                <li key={step.title}>
-                  {step.title}
+              {tour.itinerary.map((step, index) => (
+                <li key={`${step.title ?? "step"}-${index}`}>
+                  {step.title ?? "Stop"}
                   {step.duration ? ` (${step.duration})` : ""}
                   {step.description ? ` — ${step.description}` : ""}
                 </li>
