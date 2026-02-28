@@ -98,7 +98,7 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_2335);
   });
 
-  it("generates a 100-140 word overview with concrete facts", () => {
+  it("generates a 100-120 word overview with itinerary facts", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
       productCode: "6740JTREE",
@@ -109,16 +109,19 @@ describe("mapViatorToEngine3ViewModel", () => {
         "Stop at Joshua Tree viewpoints",
         "Learn geology with a guide",
       ],
-      included: ["Professional guide", "Bottled water"],
-      meetingPointDescription:
-        "Palm Desert departure details appear in booking confirmation",
+      itinerary: [
+        { title: "Keys View" },
+        { title: "Barker Dam Trail" },
+        { title: "Cap Rock Trail" },
+      ],
+      meetingPointDescription: "Palm Desert Visitor Center",
     });
 
     const words = viewModel.description.split(/\s+/).filter(Boolean).length;
     expect(words).toBeGreaterThanOrEqual(100);
-    expect(words).toBeLessThanOrEqual(140);
-    expect(viewModel.description).toContain(
-      "Departures operate from Palm Desert"
-    );
+    expect(words).toBeLessThanOrEqual(120);
+    expect(viewModel.description).toContain("After meeting in Palm Desert");
+    expect(viewModel.description).toContain("Keys View");
+    expect(viewModel.description.toLowerCase()).not.toContain("confirmation");
   });
 });

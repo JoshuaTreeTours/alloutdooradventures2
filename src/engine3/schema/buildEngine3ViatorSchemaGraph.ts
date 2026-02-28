@@ -11,6 +11,10 @@ type BuildEngine3ViatorSchemaGraphOptions = {
   breadcrumbItems?: SchemaBreadcrumbItem[];
 };
 
+const PRODUCT_SCHEMA_CANONICAL_ALLOWLIST = new Set([
+  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+]);
+
 const trim = (value?: string): string | undefined => {
   if (!value) {
     return undefined;
@@ -81,6 +85,31 @@ const toShortDescription = (value?: string): string | undefined => {
   return short || text;
 };
 
+const dedupeSentenceDescription = (value?: string): string | undefined => {
+  const text = trim(value);
+  if (!text) {
+    return undefined;
+  }
+
+  const sentences =
+    text.match(/[^.!?]+[.!?]?/g)?.map(item => item.trim()) ?? [];
+  if (!sentences.length) {
+    return text;
+  }
+
+  const seen = new Set<string>();
+  const unique = sentences.filter(sentence => {
+    const key = sentence.toLowerCase();
+    if (seen.has(key)) {
+      return false;
+    }
+    seen.add(key);
+    return true;
+  });
+
+  return unique.join(" ").trim();
+};
+
 const buildFallbackBreadcrumbItems = (
   input: Engine3TourViewModel,
   canonicalUrl: string
@@ -110,7 +139,8 @@ export const buildEngine3ViatorSchemaGraph = (
     trim(options?.tripDescription) ??
     trim(`${input.title} in ${input.city}, ${input.region}`);
   const shortDescription = toShortDescription(description);
-  const viatorAffiliateUrl = trim(input.bookingUrl);
+
+  const websiteId = "https://www.alloutdooradventures.com/#website";
 
   const breadcrumbItems =
     options?.breadcrumbItems?.length &&
@@ -118,47 +148,39 @@ export const buildEngine3ViatorSchemaGraph = (
       ? options.breadcrumbItems
       : buildFallbackBreadcrumbItems(input, canonicalUrl);
 
-  const offerId = `${absoluteCanonicalUrl}#offer`;
   const productId = `${absoluteCanonicalUrl}#product`;
   const tripId = `${absoluteCanonicalUrl}#trip`;
   const webpageId = `${absoluteCanonicalUrl}#webpage`;
   const providerId = `${absoluteCanonicalUrl}#provider`;
   const brandId = "https://www.alloutdooradventures.com/#brand";
+  const shouldEmitProductSchema = PRODUCT_SCHEMA_CANONICAL_ALLOWLIST.has(
+    absoluteCanonicalUrl.toLowerCase()
+  );
 
   const price = parsePriceValue(input.priceFrom);
-  const currency = trim(input.priceCurrency) ?? "USD";
-  const shouldEmitOffer = Boolean(price);
-
-  const offerNode: Record<string, unknown> | undefined = shouldEmitOffer
-    ? {
-        "@type": "Offer",
-        "@id": offerId,
-        url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
-        price,
-        priceCurrency: currency,
-        availability: trim(input.availability) ?? "https://schema.org/InStock",
-      }
-    : undefined;
-
   const productName = trim(input.title);
-  const productNode: Record<string, unknown> | undefined = productName
-    ? {
-        "@type": "Product",
-        "@id": productId,
-        url: absoluteCanonicalUrl,
-        name: productName,
-        ...(description ? { description } : {}),
-        ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
-        brand: {
-          "@id": brandId,
-        },
-        ...(offerNode
-          ? {
-              offers: offerNode,
-            }
-          : {}),
-      }
-    : undefined;
+  const productDescription = dedupeSentenceDescription(description);
+  const productNode: Record<string, unknown> | undefined =
+    shouldEmitProductSchema && productName
+      ? {
+          "@type": "Product",
+          "@id": productId,
+          url: absoluteCanonicalUrl,
+          name: productName,
+          ...(productDescription ? { description: productDescription } : {}),
+          ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
+          brand: {
+            "@id": brandId,
+          },
+          offers: {
+            "@type": "Offer",
+            url: absoluteCanonicalUrl,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            ...(price ? { price } : {}),
+          },
+        }
+      : undefined;
 
   const tripNode: Record<string, unknown> = {
     "@type": "TouristTrip",
@@ -170,13 +192,6 @@ export const buildEngine3ViatorSchemaGraph = (
     provider: {
       "@id": providerId,
     },
-    ...(shouldEmitOffer
-      ? {
-          offers: {
-            "@id": offerId,
-          },
-        }
-      : {}),
     touristType: "Sightseeing",
     areaServed: [
       { "@type": "Country", name: "United States" },
@@ -187,11 +202,27 @@ export const buildEngine3ViatorSchemaGraph = (
 
   const graph: Record<string, unknown>[] = [
     {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: "https://www.alloutdooradventures.com",
+      name: "All Outdoor Adventures",
+    },
+    {
       "@type": "WebPage",
       "@id": webpageId,
       url: absoluteCanonicalUrl,
       name: input.title,
       ...(shortDescription ? { description: shortDescription } : {}),
+      ...(productNode
+        ? {
+            mainEntity: {
+              "@id": productId,
+            },
+          }
+        : {}),
+      isPartOf: {
+        "@id": websiteId,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -216,7 +247,6 @@ export const buildEngine3ViatorSchemaGraph = (
       name: trim(input.operatorName) ?? "Local Tour Operator",
     },
     ...(productNode ? [productNode] : []),
-    ...(offerNode ? [offerNode] : []),
   ];
 
   if (input.itinerary?.length) {
