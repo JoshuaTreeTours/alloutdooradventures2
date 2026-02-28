@@ -210,6 +210,49 @@ const asFaqs = (value: unknown): Engine3FaqItem[] | undefined => {
   return normalized.length ? normalized : undefined;
 };
 
+const collectImageUrls = (value: unknown): string[] => {
+  const seen = new Set<string>();
+
+  const visit = (node: unknown) => {
+    if (!node) {
+      return;
+    }
+
+    if (typeof node === "string") {
+      const normalized = text(node);
+      if (normalized) {
+        seen.add(normalized);
+      }
+      return;
+    }
+
+    if (Array.isArray(node)) {
+      for (const item of node) {
+        visit(item);
+      }
+      return;
+    }
+
+    if (typeof node !== "object") {
+      return;
+    }
+
+    const record = node as Record<string, unknown>;
+    visit(record.src);
+    visit(record.url);
+    visit(record.imageUrl);
+    visit(record.fullSizeImage);
+    visit(record.mediumImage);
+    visit(record.largeImage);
+    visit(record.heroImage);
+    visit(record.srcSet);
+    visit(record.srcset);
+  };
+
+  visit(value);
+  return Array.from(seen);
+};
+
 const parseViatorHtml = (
   html: string,
   sourceUrl: string,
@@ -220,6 +263,11 @@ const parseViatorHtml = (
   const supplierImage = deepFind(scripts, node =>
     text((node.supplierImages as any)?.[0]?.fullSizeImage?.src)
   );
+  const imageUrls = [
+    ...collectImageUrls(deepFindArrayByKey(scripts, "supplierImages")),
+    ...collectImageUrls(deepFindArrayByKey(scripts, "images")),
+    ...collectImageUrls(deepFindArrayByKey(scripts, "galleryImages")),
+  ];
   const title =
     text(
       deepFind(scripts, node => text(node.title) ?? text(node.name)) as
@@ -283,6 +331,8 @@ const parseViatorHtml = (
     title,
     supplierImage:
       typeof supplierImage === "string" ? supplierImage : undefined,
+    imageUrls: imageUrls.length ? imageUrls : undefined,
+    viatorHtml: productCode === "2335P1" ? html : undefined,
     priceFrom,
     priceCurrency,
     rating,

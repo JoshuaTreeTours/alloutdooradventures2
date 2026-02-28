@@ -18,6 +18,8 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { mapViatorToEngine3ViewModel } from "../engine3/viator/mapViatorToEngine3ViewModel";
+import { viatorProductCacheByCode } from "../engine3/data/viatorProductCache";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -271,6 +273,18 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
   return parts[1] || slugify(tour.geo.region || "california");
 };
 
+const resolveEngine3ViatorPrimaryImage = (tour: Engine2Tour): string => {
+  if (tour.bookingProvider !== "viator" || tour.engine !== "engine3") {
+    return tour.images.hero ?? "";
+  }
+
+  const mapped = mapViatorToEngine3ViewModel(
+    tour,
+    viatorProductCacheByCode[tour.id]
+  );
+  return mapped.primaryImageUrl;
+};
+
 const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
   id: `engine2-${tour.id}`,
   slug: tour.slug,
@@ -288,7 +302,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
     lat: tour.geo.lat ?? undefined,
     lng: tour.geo.lng ?? undefined,
   },
-  heroImage: tour.images.hero ?? "",
+  heroImage: resolveEngine3ViatorPrimaryImage(tour),
   galleryImages: tour.images.gallery,
   badges: {},
   activitySlugs: ["adventure"],

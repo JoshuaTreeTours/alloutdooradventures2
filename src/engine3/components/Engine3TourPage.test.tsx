@@ -17,6 +17,10 @@ const posterChildTour: Engine3TourViewModel = {
   canonicalPath:
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl: "https://www.viator.com/tours/Palm-Springs/example",
+  primaryImageUrl:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg",
+  primaryImageAlt:
+    "San Andreas Fault Jeep Tour from Palm Springs — Palm Springs, California",
 };
 
 describe("Engine3TourPage", () => {

@@ -12,6 +12,9 @@ const baseTour: Engine3TourViewModel = {
   canonicalPath:
     "/destinations/california/palm-springs/tours/sunset-jeep-adventure-abc123",
   bookingUrl: "https://www.viator.com/tours/example",
+  primaryImageUrl:
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg",
+  primaryImageAlt: "Sunset Jeep Adventure — Palm Springs, California",
 };
 
 const canonicalUrl =

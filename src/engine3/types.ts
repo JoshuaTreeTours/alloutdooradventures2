@@ -35,7 +35,10 @@ export type Engine3TourViewModel = {
   canonicalPath: string;
   bookingUrl: string;
   duration?: string;
+  primaryImageUrl: string;
+  primaryImageAlt: string;
   heroImageUrl?: string;
+  heroImageAlt?: string;
   priceFrom?: string;
   priceCurrency?: string;
   rating?: number;
@@ -53,6 +56,8 @@ export type ViatorProductData = {
   productCode: string;
   title?: string;
   supplierImage?: string;
+  imageUrls?: string[];
+  viatorHtml?: string;
   priceFrom?: string;
   priceCurrency?: string;
   rating?: number;

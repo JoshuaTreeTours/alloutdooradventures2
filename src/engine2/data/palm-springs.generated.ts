@@ -422,6 +422,61 @@ const palmSpringsTours = [
     viatorRatingValue: 4.5,
     viatorReviewCount: 117,
   },
+
+  {
+    id: "6740JTREE",
+    bookingProvider: "viator",
+    sourceCitySlug: "palm-springs",
+    slug: "joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+    name: "Joshua Tree Hummer Adventure from Palm Desert",
+    provider: {
+      name: "Viator Partner",
+      shortName: "viator",
+    },
+    geo: {
+      country: "United States",
+      region: "California",
+      city: "Palm Springs",
+      lat: 33.7223,
+      lng: -116.3766,
+    },
+    seo: {
+      title:
+        "Joshua Tree Hummer Adventure from Palm Desert | Palm Springs, California Tour",
+      description:
+        "Ride into the Joshua Tree region by Hummer from Palm Desert with a guide covering geology, desert ecology, and scenic viewpoints.",
+      canonicalPath:
+        "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+      ogImage: "https://cdn.filestackcontent.com/T2m7xjS4SpCGn12DbNOf",
+    },
+    content: {
+      duration: "3 hours",
+      experienceText:
+        "Head into the desert landscapes near Joshua Tree in an open-air Hummer built for rugged terrain and big views. This guided Palm Desert departure focuses on regional geology, desert ecology, and local context while balancing drive time with scenic pullouts. Expect a mix of interpretive narration and photo-friendly stops that highlight the terrain transitions between Coachella Valley and the Joshua Tree region. The route is designed for travelers who want a guided off-road style outing with educational commentary and dependable pacing.",
+      highlights: [
+        "Guided Hummer ride into Joshua Tree region",
+        "Geology and desert ecology interpretation",
+        "Scenic stops and photo opportunities",
+        "Return transfer",
+      ],
+      included: ["Professional guide", "Hummer transportation"],
+      notIncluded: ["Guide gratuities"],
+    },
+    images: {
+      hero: "https://cdn.filestackcontent.com/T2m7xjS4SpCGn12DbNOf",
+      gallery: ["https://cdn.filestackcontent.com/T2m7xjS4SpCGn12DbNOf"],
+    },
+    booking: {
+      bookingUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+    },
+    pricing: {
+      price: "195",
+      currency: "USD",
+    },
+    viatorRatingValue: 4.5,
+    viatorReviewCount: 28,
+  },
 ] as const;
 
 export default palmSpringsTours;

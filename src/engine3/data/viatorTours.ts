@@ -20,6 +20,20 @@ export const viatorTours: readonly Engine3Tour[] = [
     },
     slug: "san-andreas-fault-jeep-tour-from-palm-springs",
   },
+  {
+    engine: "engine3",
+    bookingProvider: "viator",
+    viator: {
+      productCode: "6740JTREE",
+      url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
+    },
+    destination: {
+      country: "usa",
+      state: "california",
+      city: "palm-springs",
+    },
+    slug: "joshua-tree-hummer-adventure-from-palm-desert",
+  },
   ...(devOnlySecondTourEnabled
     ? [
         {
