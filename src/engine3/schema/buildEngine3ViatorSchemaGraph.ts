@@ -112,6 +112,8 @@ export const buildEngine3ViatorSchemaGraph = (
   const shortDescription = toShortDescription(description);
   const viatorAffiliateUrl = trim(input.bookingUrl);
 
+  const websiteId = "https://www.alloutdooradventures.com/#website";
+
   const breadcrumbItems =
     options?.breadcrumbItems?.length &&
     options.breadcrumbItems.every(item => trim(item.name) && trim(item.item))
@@ -127,18 +129,14 @@ export const buildEngine3ViatorSchemaGraph = (
 
   const price = parsePriceValue(input.priceFrom);
   const currency = trim(input.priceCurrency) ?? "USD";
-  const shouldEmitOffer = Boolean(price);
-
-  const offerNode: Record<string, unknown> | undefined = shouldEmitOffer
-    ? {
-        "@type": "Offer",
-        "@id": offerId,
-        url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
-        price,
-        priceCurrency: currency,
-        availability: trim(input.availability) ?? "https://schema.org/InStock",
-      }
-    : undefined;
+  const offerNode: Record<string, unknown> = {
+    "@type": "Offer",
+    "@id": offerId,
+    url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
+    priceCurrency: currency,
+    availability: trim(input.availability) ?? "https://schema.org/InStock",
+    ...(price ? { price } : {}),
+  };
 
   const productName = trim(input.title);
   const productNode: Record<string, unknown> | undefined = productName
@@ -152,11 +150,7 @@ export const buildEngine3ViatorSchemaGraph = (
         brand: {
           "@id": brandId,
         },
-        ...(offerNode
-          ? {
-              offers: offerNode,
-            }
-          : {}),
+        offers: offerNode,
       }
     : undefined;
 
@@ -170,13 +164,9 @@ export const buildEngine3ViatorSchemaGraph = (
     provider: {
       "@id": providerId,
     },
-    ...(shouldEmitOffer
-      ? {
-          offers: {
-            "@id": offerId,
-          },
-        }
-      : {}),
+    offers: {
+      "@id": offerId,
+    },
     touristType: "Sightseeing",
     areaServed: [
       { "@type": "Country", name: "United States" },
@@ -187,11 +177,27 @@ export const buildEngine3ViatorSchemaGraph = (
 
   const graph: Record<string, unknown>[] = [
     {
+      "@type": "WebSite",
+      "@id": websiteId,
+      url: "https://www.alloutdooradventures.com",
+      name: "All Outdoor Adventures",
+    },
+    {
       "@type": "WebPage",
       "@id": webpageId,
       url: absoluteCanonicalUrl,
       name: input.title,
       ...(shortDescription ? { description: shortDescription } : {}),
+      ...(productNode
+        ? {
+            mainEntity: {
+              "@id": productId,
+            },
+          }
+        : {}),
+      isPartOf: {
+        "@id": websiteId,
+      },
     },
     {
       "@type": "BreadcrumbList",
@@ -216,7 +222,7 @@ export const buildEngine3ViatorSchemaGraph = (
       name: trim(input.operatorName) ?? "Local Tour Operator",
     },
     ...(productNode ? [productNode] : []),
-    ...(offerNode ? [offerNode] : []),
+    offerNode,
   ];
 
   if (input.itinerary?.length) {

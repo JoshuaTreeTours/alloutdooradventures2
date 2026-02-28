@@ -79,6 +79,9 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       );
 
       const nodes = graph["@graph"] as Record<string, unknown>[];
+      const webpage = nodes.find(node => node["@type"] === "WebPage") as
+        | Record<string, unknown>
+        | undefined;
       const breadcrumb = nodes.find(
         node => node["@type"] === "BreadcrumbList"
       ) as Record<string, unknown>;
@@ -89,9 +92,14 @@ describe("buildEngine3ViatorSchemaGraph", () => {
         | Record<string, unknown>
         | undefined;
 
+      expect(
+        (webpage?.mainEntity as Record<string, unknown> | undefined)?.["@id"]
+      ).toBe(`${canonicalUrl}#product`);
       expect(product?.name).toBe(title);
       expect(product?.image).toEqual([primaryImageUrl]);
-      expect((product?.offers as Record<string, unknown> | undefined)?.priceCurrency).toBe("USD");
+      expect(
+        (product?.offers as Record<string, unknown> | undefined)?.priceCurrency
+      ).toBe("USD");
       expect(offer?.priceCurrency).toBe("USD");
       expect(offer?.price).toBeDefined();
       expect(offer?.url).toBe(bookingUrl);
@@ -99,7 +107,10 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       const trip = nodes.find(node => node["@type"] === "TouristTrip") as
         | Record<string, unknown>
         | undefined;
-      expect((product?.aggregateRating as Record<string, unknown> | undefined)?.ratingValue).toBe(4.8);
+      expect(
+        (product?.aggregateRating as Record<string, unknown> | undefined)
+          ?.ratingValue
+      ).toBe(4.8);
       expect(trip?.aggregateRating).toBeUndefined();
 
       const items =
@@ -111,7 +122,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     }
   );
 
-  it("omits Offer and Product.offers when price is missing", () => {
+  it("keeps Product offers with default USD currency when price is missing", () => {
     const canonicalUrl =
       "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/no-price";
 
@@ -124,7 +135,9 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     );
 
     const nodes = graph["@graph"] as Record<string, unknown>[];
-    const offer = nodes.find(node => node["@type"] === "Offer");
+    const offer = nodes.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
     const product = nodes.find(node => node["@type"] === "Product") as
       | Record<string, unknown>
       | undefined;
@@ -132,8 +145,17 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       | Record<string, unknown>
       | undefined;
 
-    expect(offer).toBeUndefined();
-    expect(product?.offers).toBeUndefined();
-    expect(trip?.offers).toBeUndefined();
+    expect(
+      (product?.offers as Record<string, unknown> | undefined)?.priceCurrency
+    ).toBe("USD");
+    expect((offer as Record<string, unknown> | undefined)?.priceCurrency).toBe(
+      "USD"
+    );
+    expect(
+      (offer as Record<string, unknown> | undefined)?.price
+    ).toBeUndefined();
+    expect((trip?.offers as Record<string, unknown> | undefined)?.["@id"]).toBe(
+      `${canonicalUrl}#offer`
+    );
   });
 });

@@ -1,5 +1,5 @@
 const MIN_WORDS = 100;
-const MAX_WORDS = 140;
+const MAX_WORDS = 120;
 
 const FORBIDDEN_TERMS = [
   /\bviator\b/gi,
@@ -115,7 +115,7 @@ export const generateEngine3Description = (input: {
   title: string;
   duration?: string;
   highlights?: string[];
-  shortInclusions?: string[];
+  itineraryStopNames?: string[];
   meetingPoint?: string;
   departureLocation?: string;
   maxGroupSize?: number;
@@ -127,13 +127,14 @@ export const generateEngine3Description = (input: {
   region?: string;
   viatorDescription?: string;
 }): string => {
-  const title = sanitize(input.title) ?? "This guided tour";
   const city = sanitize(input.city) ?? "Palm Springs";
   const region = sanitize(input.region) ?? "California";
   const duration = parseHours(input.duration) ?? "3 hours";
 
   const highlights = dedupe(input.highlights).slice(0, 2);
-  const inclusions = dedupe(input.shortInclusions).slice(0, 2);
+  const itineraryStops = dedupe(input.itineraryStopNames).slice(0, 3);
+
+  const locationLabel = [city, region].filter(Boolean).join(", ");
 
   const signatureHighlight =
     sanitize(input.specialHighlightPhrase) ??
@@ -146,55 +147,51 @@ export const generateEngine3Description = (input: {
   const meetingPoint =
     sanitize(input.departureLocation) ?? sanitize(input.meetingPoint);
 
-  const factSentences = [
-    duration ? `The guided route runs about ${duration}` : undefined,
-    meetingPoint ? `Departures operate from ${meetingPoint}` : undefined,
-    input.cancellationWindowHours
-      ? `Cancel up to ${input.cancellationWindowHours} hours in advance for a full refund`
-      : undefined,
+  const optionalPolicyFact = withFallback(
     input.maxGroupSize
-      ? `Group size is limited to ${input.maxGroupSize} guests per vehicle`
+      ? `Group size is capped at ${input.maxGroupSize} guests per vehicle`
       : undefined,
-    input.minAge ? `The minimum participant age is ${input.minAge}` : undefined,
-    input.vehicleType
-      ? `Transportation is provided in a ${sanitize(input.vehicleType)}`
+    input.minAge
+      ? `Guests should be at least ${input.minAge} years old`
       : undefined,
-    inclusions.length
-      ? `Included services cover ${inclusions.join(" and ")}`
-      : undefined,
-  ].filter((item): item is string => Boolean(item));
+    input.cancellationWindowHours
+      ? `Free cancellation is available up to ${input.cancellationWindowHours} hours before departure`
+      : undefined
+  );
 
-  const selectedFacts = factSentences.slice(0, 5);
+  const stopSentence =
+    itineraryStops.length >= 3
+      ? `Notable itinerary stops include ${itineraryStops[0]}, ${itineraryStops[1]}, and ${itineraryStops[2]}`
+      : itineraryStops.length === 2
+        ? `Notable itinerary stops include ${itineraryStops[0]} and ${itineraryStops[1]}`
+        : itineraryStops.length === 1
+          ? `A featured itinerary stop is ${itineraryStops[0]}`
+          : highlights.length >= 2
+            ? `Route highlights include ${highlights[0]} and ${highlights[1]}`
+            : highlights.length === 1
+              ? `A route highlight is ${highlights[0]}`
+              : "The route emphasizes scenic overlooks and geologic interpretation across desert terrain";
 
   const sentences = [
-    `${title} is a guided off-road tour in ${city}, ${region}`,
+    `Travel by ${sanitize(input.vehicleType) ?? "open-air off-road vehicle"} on a guided route near ${locationLabel} in about ${duration}`,
+    meetingPoint
+      ? `After meeting in ${meetingPoint}, guides set context on terrain, route pacing, and safety before departure`
+      : `Guides set context on terrain, route pacing, and safety before departure`,
+    stopSentence,
     signatureHighlight,
-    selectedFacts[0] ??
-      "The itinerary includes planned stops for photographs and field interpretation",
-    selectedFacts[1] ??
-      "Professional guide service keeps the route informative and well paced",
-    selectedFacts[2] ??
-      "The experience balances scenic driving with focused regional context at key viewpoints",
-    selectedFacts[3],
-    selectedFacts[4],
-  ].filter((item): item is string => Boolean(item)).map(toSentence);
+    "The itinerary is paced to reduce long transfers while preserving time at major viewpoints for photos and on-site interpretation",
+    "This format works well for visitors seeking iconic desert landscapes in a focused half-day outing",
+    optionalPolicyFact,
+  ]
+    .filter((item): item is string => Boolean(item))
+    .map(toSentence);
 
   let description = sentences.join(" ");
 
-  if (countWords(description) < MIN_WORDS) {
-    const remainingFacts = factSentences.slice(3, 5).map(toSentence);
-    for (const fact of remainingFacts) {
-      if (countWords(description) >= MIN_WORDS) {
-        break;
-      }
-      description = `${description} ${fact}`.trim();
-    }
-  }
-
   const fallbackSentences = [
-    "Interpretive commentary connects visible terrain features to regional natural history throughout the outing",
-    "Planned stop timing is structured to allow photographs, short walks, and clear orientation at each location",
-    "This small-format approach keeps the experience efficient while preserving depth at key points along the route",
+    "Interpretive commentary links visible fault lines, rock formations, and desert ecology to regional natural history",
+    "Stop sequencing is arranged to keep transitions efficient while still allowing meaningful time at key pullouts",
+    "It is a practical option for travelers who want field context and signature views without committing a full day",
   ];
 
   for (const sentence of fallbackSentences) {

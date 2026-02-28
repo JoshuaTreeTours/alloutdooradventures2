@@ -113,9 +113,9 @@ export const mapViatorToEngine3ViewModel = (
         specialHighlightPhrase:
           cleanText(overviewFactsOverride?.signatureHighlight) ??
           cleanText(productData?.signatureHighlight),
-        shortInclusions: overviewFactsOverride?.included?.length
-          ? overviewFactsOverride.included
-          : included,
+        itineraryStopNames: itinerary
+          ?.map(item => cleanText(item.title))
+          .filter((item): item is string => Boolean(item)),
         viatorDescription: sourceDescription,
       })
     : undefined;
