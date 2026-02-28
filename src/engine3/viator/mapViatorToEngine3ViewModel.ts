@@ -31,6 +31,7 @@ export const mapViatorToEngine3ViewModel = (
   return {
     tourId: tour.id,
     title: cleanText(productData?.title) ?? tour.name,
+    country: cleanText(tour.geo.country),
     city: tour.geo.city,
     region: tour.geo.region,
     canonicalPath: tour.seo.canonicalPath,
@@ -41,6 +42,7 @@ export const mapViatorToEngine3ViewModel = (
       cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
+    priceCurrency: cleanText(productData?.priceCurrency),
     rating: productData?.rating ?? tour.viatorRatingValue ?? undefined,
     reviewCount:
       productData?.reviewCount ?? tour.viatorReviewCount ?? undefined,
@@ -57,9 +59,32 @@ export const mapViatorToEngine3ViewModel = (
       cleanText(productData?.meetingPointDescription) ??
       cleanText(tour.content.meetingPoint?.address) ??
       cleanText(tour.content.meetingPoint?.instructions),
-    itinerary: productData?.itinerary?.length
-      ? productData.itinerary
-      : tour.content.itinerary,
+    itinerary:
+      productData?.itinerary
+        ?.map((item, index) => ({
+          title: cleanText(item.title),
+          description: cleanText(item.description),
+          duration: cleanText(item.duration),
+          order: item.order ?? index + 1,
+        }))
+        .filter(item =>
+          Boolean(item.title || item.description || item.duration)
+        )
+        .sort(
+          (a, b) =>
+            (a.order ?? Number.MAX_SAFE_INTEGER) -
+            (b.order ?? Number.MAX_SAFE_INTEGER)
+        ) ??
+      tour.content.itinerary
+        ?.map((item, index) => ({
+          title: cleanText(item.title),
+          description: cleanText(item.description),
+          duration: cleanText(item.duration),
+          order: index + 1,
+        }))
+        .filter(item =>
+          Boolean(item.title || item.description || item.duration)
+        ),
     faqs: productData?.faqs?.length ? productData.faqs : tour.content.faqs,
   };
 };

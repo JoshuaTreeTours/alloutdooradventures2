@@ -1,7 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import type { ViatorProductData } from "../types";
+import type {
+  Engine3FaqItem,
+  Engine3ItineraryItem,
+  ViatorProductData,
+} from "../types";
 
 type ViatorCachePayload = {
   cacheVersion: number;
@@ -103,6 +107,109 @@ const deepFind = (
   return undefined;
 };
 
+const deepFindArrayByKey = (
+  input: unknown,
+  key: string
+): unknown[] | undefined => {
+  if (!input || typeof input !== "object") {
+    return undefined;
+  }
+
+  if (Array.isArray(input)) {
+    for (const item of input) {
+      const found = deepFindArrayByKey(item, key);
+      if (found) {
+        return found;
+      }
+    }
+    return undefined;
+  }
+
+  const record = input as Record<string, unknown>;
+  const direct = record[key];
+  if (Array.isArray(direct)) {
+    return direct;
+  }
+
+  for (const value of Object.values(record)) {
+    const found = deepFindArrayByKey(value, key);
+    if (found) {
+      return found;
+    }
+  }
+
+  return undefined;
+};
+
+const asItinerary = (value: unknown): Engine3ItineraryItem[] | undefined => {
+  if (!Array.isArray(value)) {
+    return undefined;
+  }
+
+  const normalized = value
+    .map((entry, index) => {
+      if (!entry || typeof entry !== "object") {
+        return null;
+      }
+
+      const record = entry as Record<string, unknown>;
+      const title = text(record.title) ?? text(record.name);
+      const description =
+        text(record.description) ??
+        text(record.summary) ??
+        text(record.details);
+      const duration = text(record.duration) ?? text(record.durationText);
+      const order = toNumber(record.order) ?? index + 1;
+
+      if (!title && !description && !duration) {
+        return null;
+      }
+
+      return {
+        title,
+        description,
+        duration,
+        order,
+      } satisfies Engine3ItineraryItem;
+    })
+    .filter((entry): entry is Engine3ItineraryItem => Boolean(entry));
+
+  return normalized.length ? normalized : undefined;
+};
+
+const asFaqs = (value: unknown): Engine3FaqItem[] | undefined => {
+  if (!Array.isArray(value)) {
+    return undefined;
+  }
+
+  const normalized = value
+    .map(entry => {
+      if (!entry || typeof entry !== "object") {
+        return null;
+      }
+
+      const record = entry as Record<string, unknown>;
+      const question = text(record.question) ?? text(record.title);
+      const answer =
+        text(record.answer) ??
+        text(
+          (record.acceptedAnswer as Record<string, unknown> | undefined)?.text
+        );
+
+      if (!question || !answer) {
+        return null;
+      }
+
+      return {
+        question,
+        answer,
+      };
+    })
+    .filter((entry): entry is Engine3FaqItem => Boolean(entry));
+
+  return normalized.length ? normalized : undefined;
+};
+
 const parseViatorHtml = (
   html: string,
   sourceUrl: string,
@@ -142,11 +249,24 @@ const parseViatorHtml = (
   const priceFrom = text(
     deepFind(scripts, node => {
       const summary = node.summary as Record<string, unknown> | undefined;
-      return (
-        text(summary?.fromPrice as string) ?? text(node.fromPrice as string)
-      );
+      return text(summary?.fromPrice) ?? text(node.fromPrice as string);
     })
   );
+
+  const priceCurrency = text(
+    deepFind(scripts, node => {
+      const summary = node.summary as Record<string, unknown> | undefined;
+      return text(summary?.currencyCode) ?? text(node.priceCurrency as string);
+    })
+  );
+
+  const itinerary =
+    asItinerary(deepFindArrayByKey(scripts, "itineraryItems")) ??
+    asItinerary(deepFindArrayByKey(scripts, "itinerary"));
+
+  const faqs =
+    asFaqs(deepFindArrayByKey(scripts, "faqs")) ??
+    asFaqs(deepFindArrayByKey(scripts, "questions"));
 
   const meetingPointDescription = text(
     deepFind(scripts, node =>
@@ -164,6 +284,7 @@ const parseViatorHtml = (
     supplierImage:
       typeof supplierImage === "string" ? supplierImage : undefined,
     priceFrom,
+    priceCurrency,
     rating,
     reviewCount,
     highlights: asList(
@@ -182,6 +303,8 @@ const parseViatorHtml = (
       )
     ),
     meetingPointDescription,
+    itinerary,
+    faqs,
   };
 };
 

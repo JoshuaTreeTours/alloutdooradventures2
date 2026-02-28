@@ -15,9 +15,10 @@ export type Engine3Tour = {
 };
 
 export type Engine3ItineraryItem = {
-  title: string;
+  title?: string;
   description?: string;
   duration?: string;
+  order?: number;
 };
 
 export type Engine3FaqItem = {
@@ -28,6 +29,7 @@ export type Engine3FaqItem = {
 export type Engine3TourViewModel = {
   tourId: string;
   title: string;
+  country?: string;
   city: string;
   region: string;
   canonicalPath: string;
@@ -35,6 +37,7 @@ export type Engine3TourViewModel = {
   duration?: string;
   heroImageUrl?: string;
   priceFrom?: string;
+  priceCurrency?: string;
   rating?: number;
   reviewCount?: number;
   highlights?: string[];
@@ -51,6 +54,7 @@ export type ViatorProductData = {
   title?: string;
   supplierImage?: string;
   priceFrom?: string;
+  priceCurrency?: string;
   rating?: number;
   reviewCount?: number;
   highlights?: string[];
