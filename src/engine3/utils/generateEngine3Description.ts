@@ -1,5 +1,5 @@
 const MIN_WORDS = 100;
-const MAX_WORDS = 120;
+const MAX_WORDS = 140;
 
 const FORBIDDEN_TERMS = [
   /\bviator\b/gi,
@@ -147,14 +147,15 @@ export const generateEngine3Description = (input: {
     sanitize(input.departureLocation) ?? sanitize(input.meetingPoint);
 
   const factSentences = [
+    duration ? `The guided route runs about ${duration}` : undefined,
     meetingPoint ? `Departures operate from ${meetingPoint}` : undefined,
+    input.cancellationWindowHours
+      ? `Cancel up to ${input.cancellationWindowHours} hours in advance for a full refund`
+      : undefined,
     input.maxGroupSize
       ? `Group size is limited to ${input.maxGroupSize} guests per vehicle`
       : undefined,
     input.minAge ? `The minimum participant age is ${input.minAge}` : undefined,
-    input.cancellationWindowHours
-      ? `Cancellations are accepted up to ${input.cancellationWindowHours} hours in advance`
-      : undefined,
     input.vehicleType
       ? `Transportation is provided in a ${sanitize(input.vehicleType)}`
       : undefined,
@@ -163,10 +164,10 @@ export const generateEngine3Description = (input: {
       : undefined,
   ].filter((item): item is string => Boolean(item));
 
-  const selectedFacts = factSentences.slice(0, 3);
+  const selectedFacts = factSentences.slice(0, 5);
 
   const sentences = [
-    `${title} is a guided off-road tour in ${city}, ${region}, lasting about ${duration}`,
+    `${title} is a guided off-road tour in ${city}, ${region}`,
     signatureHighlight,
     selectedFacts[0] ??
       "The itinerary includes planned stops for photographs and field interpretation",
@@ -174,7 +175,9 @@ export const generateEngine3Description = (input: {
       "Professional guide service keeps the route informative and well paced",
     selectedFacts[2] ??
       "The experience balances scenic driving with focused regional context at key viewpoints",
-  ].map(toSentence);
+    selectedFacts[3],
+    selectedFacts[4],
+  ].filter((item): item is string => Boolean(item)).map(toSentence);
 
   let description = sentences.join(" ");
 

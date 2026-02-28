@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { generateEngine3Description } from "./generateEngine3Description";
 
 describe("generateEngine3Description", () => {
-  it("returns 100-120 words without third-party terms and includes at least three facts", () => {
+  it("returns 100-140 words without third-party terms and includes at least three facts", () => {
     const description = generateEngine3Description({
       title: "San Andreas Fault Jeep Tour from Palm Springs",
       city: "Palm Springs",
@@ -21,9 +21,9 @@ describe("generateEngine3Description", () => {
 
     const wordCount = description.split(/\s+/).filter(Boolean).length;
     expect(wordCount).toBeGreaterThanOrEqual(100);
-    expect(wordCount).toBeLessThanOrEqual(120);
+    expect(wordCount).toBeLessThanOrEqual(140);
 
-    expect(description).toContain("lasting about 3 hours");
+    expect(description).toContain("The guided route runs about 3 hours");
     expect(description).toContain(
       "Departures operate from Metate Ranch in Indio"
     );

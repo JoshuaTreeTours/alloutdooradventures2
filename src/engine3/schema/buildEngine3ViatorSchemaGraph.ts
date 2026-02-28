@@ -20,6 +20,20 @@ const trim = (value?: string): string | undefined => {
   return normalized.length > 0 ? normalized : undefined;
 };
 
+const toSlug = (value?: string): string | undefined => {
+  const cleaned = trim(value);
+  if (!cleaned) {
+    return undefined;
+  }
+
+  return cleaned
+    .toLowerCase()
+    .replace(/%20/gi, "-")
+    .replace(/[_\s]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+};
+
 const parsePriceValue = (value?: string): string | undefined => {
   const cleaned = trim(value);
   if (!cleaned) {
@@ -71,8 +85,8 @@ const buildFallbackBreadcrumbItems = (
   input: Engine3TourViewModel,
   canonicalUrl: string
 ): SchemaBreadcrumbItem[] => {
-  const stateSlug = trim(input.stateSlug) ?? "california";
-  const citySlug = trim(input.citySlug) ?? "palm-springs";
+  const stateSlug = toSlug(input.stateSlug) ?? "california";
+  const citySlug = toSlug(input.citySlug ?? input.city) ?? "palm-springs";
 
   return [
     { name: "Home", item: "/" },
@@ -138,11 +152,9 @@ export const buildEngine3ViatorSchemaGraph = (
         brand: {
           "@id": brandId,
         },
-        ...(shouldEmitOffer
+        ...(offerNode
           ? {
-              offers: {
-                "@id": offerId,
-              },
+              offers: offerNode,
             }
           : {}),
       }
@@ -201,7 +213,7 @@ export const buildEngine3ViatorSchemaGraph = (
     {
       "@type": "Organization",
       "@id": providerId,
-      name: trim(input.operatorName) ?? "Viator Operator",
+      name: trim(input.operatorName) ?? "Local Tour Operator",
     },
     ...(productNode ? [productNode] : []),
     ...(offerNode ? [offerNode] : []),
@@ -234,18 +246,12 @@ export const buildEngine3ViatorSchemaGraph = (
     }
   }
 
-  if (input.rating && input.reviewCount) {
-    const aggregateRating = {
+  if (input.rating && input.reviewCount && productNode) {
+    productNode.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: input.rating,
       reviewCount: input.reviewCount,
     };
-
-    if (productNode) {
-      productNode.aggregateRating = aggregateRating;
-    }
-
-    tripNode.aggregateRating = aggregateRating;
   }
 
   if (input.latitude && input.longitude) {
