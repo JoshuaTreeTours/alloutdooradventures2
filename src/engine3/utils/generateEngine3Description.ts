@@ -1,5 +1,5 @@
-const MIN_WORDS = 100;
-const MAX_WORDS = 120;
+const MIN_WORDS = 120;
+const MAX_WORDS = 170;
 
 const FORBIDDEN_TERMS = [
   /\bviator\b/gi,
@@ -72,41 +72,113 @@ const words = (value: string): string[] => value.split(/\s+/).filter(Boolean);
 
 const countWords = (value: string): number => words(value).length;
 
-const clampWordCount = (value: string): string => {
-  let current = value.trim();
+const trimToWordLimit = (value: string, wordLimit: number): string =>
+  `${words(value)
+    .slice(0, wordLimit)
+    .join(" ")
+    .replace(/[.!?]*$/, "")}.`;
 
-  if (countWords(current) > MAX_WORDS) {
-    current = `${words(current)
-      .slice(0, MAX_WORDS)
-      .join(" ")
-      .replace(/[.!?]*$/, "")}.`;
-  }
+const appendUntilMinWords = (
+  base: string,
+  fallbackSentences: string[]
+): string => {
+  let current = base.trim();
 
-  if (countWords(current) >= MIN_WORDS) {
-    return current;
-  }
-
-  const authoritativePadding = [
-    "The route is designed to balance scenic driving with guided interpretation and regular stops that add context to each landscape feature.",
-    "Each segment is paced to maintain comfort while preserving enough time for observation, photographs, and focused discussion of the surrounding terrain.",
-  ];
-
-  for (const sentence of authoritativePadding) {
+  for (const sentence of fallbackSentences) {
     if (countWords(current) >= MIN_WORDS) {
       break;
     }
-
-    current = `${current} ${sentence}`.trim();
+    current = `${current} ${toSentence(sentence)}`.trim();
   }
 
-  if (countWords(current) <= MAX_WORDS) {
-    return current;
+  return current;
+};
+
+const sanitizeFactValue = (value?: string): string | undefined => {
+  if (!value) {
+    return undefined;
   }
 
-  return `${words(current)
-    .slice(0, MAX_WORDS)
-    .join(" ")
-    .replace(/[.!?]*$/, "")}.`;
+  const cleaned = cleanText(stripForbiddenTerms(value));
+
+  if (!cleaned) {
+    return undefined;
+  }
+
+  if (/(booking|confirmation|checkout|third-party)/i.test(cleaned)) {
+    return undefined;
+  }
+
+  return cleaned;
+};
+
+const extractDepartureFromTitle = (title: string): string | undefined => {
+  const match = title.match(/\bfrom\s+([^,.-]+(?:\s[^,.-]+){0,3})/i);
+  if (!match?.[1]) {
+    return undefined;
+  }
+
+  return sanitizeFactValue(match[1]);
+};
+
+const pickFactSentences = (input: {
+  meetingPoint?: string;
+  departureLocation?: string;
+  maxGroupSize?: number;
+  cancellationWindowHours?: number;
+  minAge?: number;
+  vehicleType?: string;
+  specialHighlightPhrase?: string;
+  shortInclusions?: string[];
+  title: string;
+}): string[] => {
+  const facts: string[] = [];
+
+  const departure =
+    sanitizeFactValue(input.departureLocation) ??
+    extractDepartureFromTitle(input.title) ??
+    sanitizeFactValue(input.meetingPoint);
+
+  if (departure) {
+    facts.push(`Departures operate from ${departure}`);
+  }
+
+  if (input.maxGroupSize && input.maxGroupSize > 0) {
+    facts.push(
+      `Group size is limited to ${input.maxGroupSize} guests per vehicle for focused guide interaction`
+    );
+  }
+
+  if (input.cancellationWindowHours && input.cancellationWindowHours > 0) {
+    facts.push(
+      `Cancellations are accepted up to ${input.cancellationWindowHours} hours before departure`
+    );
+  }
+
+  if (input.minAge && input.minAge > 0) {
+    facts.push(`Participants must be at least ${input.minAge} years old`);
+  }
+
+  const vehicleType = sanitizeFactValue(input.vehicleType);
+  if (vehicleType) {
+    facts.push(`Transportation is provided in a ${vehicleType}`);
+  }
+
+  const inclusionFacts = dedupe(input.shortInclusions)
+    .filter(item =>
+      /(water|guide|transport|vehicle|admission|ticket)/i.test(item)
+    )
+    .slice(0, 1)
+    .map(item => `${item} is included`);
+
+  facts.push(...inclusionFacts);
+
+  const specialHighlight = sanitizeFactValue(input.specialHighlightPhrase);
+  if (specialHighlight) {
+    facts.push(specialHighlight);
+  }
+
+  return facts.slice(0, 3).map(toSentence);
 };
 
 export const generateEngine3Description = (input: {
@@ -115,6 +187,12 @@ export const generateEngine3Description = (input: {
   highlights?: string[];
   shortInclusions?: string[];
   meetingPoint?: string;
+  departureLocation?: string;
+  maxGroupSize?: number;
+  cancellationWindowHours?: number;
+  minAge?: number;
+  vehicleType?: string;
+  specialHighlightPhrase?: string;
   city?: string;
   region?: string;
   viatorDescription?: string;
@@ -126,48 +204,76 @@ export const generateEngine3Description = (input: {
   ]
     .filter(Boolean)
     .join(", ");
+
   const duration =
     cleanText(stripForbiddenTerms(input.duration ?? "")) ??
     "a half-day experience";
 
   const highlights = dedupe(input.highlights).slice(0, 3);
-  const inclusions = dedupe(input.shortInclusions).slice(0, 3);
+  const inclusionSummary = dedupe(input.shortInclusions).slice(0, 2);
 
-  const sanitizedMeetingPoint = cleanText(
-    stripForbiddenTerms(input.meetingPoint ?? "")
+  const activitySentence = toSentence(
+    `${title} is a guided off-road experience${
+      location ? ` in ${location}` : ""
+    } lasting approximately ${duration}`
   );
 
-  const experienceSummary =
+  const terrainSentence = toSentence(
+    `The route combines scenic desert driving with interpretive commentary on local geology, ecology, and regional history`
+  );
+
+  const highlightSentence = toSentence(
     highlights.length > 0
-      ? highlights.join(", ")
-      : "desert washes, geologic viewpoints, and notable landscape features";
+      ? `Scheduled stops feature ${highlights.join(", ")}, creating dedicated time for observation and photographs`
+      : "Scheduled stops at key viewpoints and natural features provide time for photographs and guided discussion"
+  );
 
-  const inclusionSummary =
-    inclusions.length > 0
-      ? inclusions.join(", ")
-      : "professional guide service and specialized vehicle transportation";
+  const factSentences = pickFactSentences({
+    meetingPoint: input.meetingPoint,
+    departureLocation: input.departureLocation,
+    maxGroupSize: input.maxGroupSize,
+    cancellationWindowHours: input.cancellationWindowHours,
+    minAge: input.minAge,
+    vehicleType: input.vehicleType,
+    specialHighlightPhrase: input.specialHighlightPhrase,
+    shortInclusions: input.shortInclusions,
+    title,
+  });
 
-  const distinctiveness = sanitizedMeetingPoint
-    ? `The itinerary maintains a relaxed, well-paced flow with practical arrival guidance and consistent interpretive commentary throughout the route`
-    : `This experience stands out for its blend of scenic off-road segments, thoughtful interpretation, and a relaxed pacing that supports exploration at each stop`;
+  const inclusionSentence = toSentence(
+    inclusionSummary.length > 0
+      ? `Included services include ${inclusionSummary.join(", ")}, supporting a comfortable and well-paced excursion`
+      : "Professional guide service and specialized vehicle transportation are included for a comfortable and well-paced excursion"
+  );
 
-  const description = [
-    toSentence(
-      `${title} is a guided off-road adventure${
-        location ? ` in ${location}` : ""
-      } lasting approximately ${duration}`
-    ),
-    toSentence(
-      `Guests travel through dramatic terrain as the guide explains the geology, ecology, and regional history that shape the landscape`
-    ),
-    toSentence(
-      `Scenic driving segments include scheduled stops featuring ${experienceSummary}, with time for observation and photographs`
-    ),
-    toSentence(
-      `Included services cover ${inclusionSummary}, supporting a comfortable and informative experience from start to finish`
-    ),
-    toSentence(distinctiveness),
+  const closingSentence =
+    "This itinerary maintains a focused pace that balances scenic exploration, practical logistics, and consistent interpretive depth across each segment";
+
+  const assembled = [
+    activitySentence,
+    terrainSentence,
+    highlightSentence,
+    ...factSentences,
+    inclusionSentence,
+    toSentence(closingSentence),
   ].join(" ");
 
-  return clampWordCount(description);
+  let description = assembled;
+
+  if (countWords(description) > MAX_WORDS) {
+    description = trimToWordLimit(description, MAX_WORDS);
+  }
+
+  if (countWords(description) < MIN_WORDS) {
+    description = appendUntilMinWords(description, [
+      "The pacing is designed to keep transitions efficient while preserving meaningful time at each featured stop",
+      "Guide interpretation remains central throughout the route, connecting visible landmarks to broader environmental processes",
+    ]);
+  }
+
+  if (countWords(description) > MAX_WORDS) {
+    description = trimToWordLimit(description, MAX_WORDS);
+  }
+
+  return description;
 };

@@ -98,7 +98,7 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_2335);
   });
 
-  it("generates a 100-120 word overview", () => {
+  it("generates a 120-170 word overview with concrete facts", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
       productCode: "6740JTREE",
@@ -115,7 +115,10 @@ describe("mapViatorToEngine3ViewModel", () => {
     });
 
     const words = viewModel.description.split(/\s+/).filter(Boolean).length;
-    expect(words).toBeGreaterThanOrEqual(100);
-    expect(words).toBeLessThanOrEqual(120);
+    expect(words).toBeGreaterThanOrEqual(120);
+    expect(words).toBeLessThanOrEqual(170);
+    expect(viewModel.description).toContain(
+      "Departures operate from Palm Desert"
+    );
   });
 });
