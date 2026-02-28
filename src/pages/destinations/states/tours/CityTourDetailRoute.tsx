@@ -59,6 +59,11 @@ import { fetchFareHarborHtml } from "../../../../utils/fh/fetchFareHarborHtml";
 import { parseFareHarborHtml } from "../../../../utils/fh/parseFareHarborHtml";
 import { formatStartingPrice } from "../../../../lib/pricing";
 import RemovedTourGone from "../../../RemovedTourGone";
+import { extractViatorProductCode } from "../../../../utils/viator/extractViatorProductCode";
+import {
+  getViatorFromPrice,
+  peekViatorFromPriceCache,
+} from "../../../../server/viator/getViatorFromPrice";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -168,6 +173,15 @@ export default function CityTourDetailRoute({
     return fareHarborHtml ? parseFareHarborHtml(fareHarborHtml) : null;
   }, [tour]);
 
+  const viatorProductCode = extractViatorProductCode(tour?.bookingUrl);
+  const viatorFromPrice = viatorProductCode
+    ? peekViatorFromPriceCache(viatorProductCode, "USD")
+    : null;
+
+  if (typeof window === "undefined" && viatorProductCode) {
+    void getViatorFromPrice(viatorProductCode, "USD");
+  }
+
   const hardenedTemplate = tour
     ? applyEngine1Template(tour, {
         parsedFareHarbor: fareHarborParsed ?? undefined,
@@ -245,8 +259,16 @@ export default function CityTourDetailRoute({
             url: offerUrl,
             lowPrice: undefined,
             highPrice: undefined,
-            price: tour.startingPrice,
-            priceCurrency: tour.currency ?? "USD",
+            price:
+              viatorProductCode && tour.bookingProvider === "viator"
+                ? viatorFromPrice && Number.isFinite(viatorFromPrice.price)
+                  ? viatorFromPrice.price
+                  : undefined
+                : tour.startingPrice,
+            priceCurrency:
+              viatorProductCode && tour.bookingProvider === "viator"
+                ? "USD"
+                : tour.currency ?? "USD",
             availability: "https://schema.org/InStock",
             offerCount: null,
           },
@@ -317,6 +339,8 @@ export default function CityTourDetailRoute({
     stateHref,
     structuredImages,
     hardenedTemplate,
+    viatorProductCode,
+    viatorFromPrice,
     tour,
     toursHref,
   ]);

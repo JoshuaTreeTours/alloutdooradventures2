@@ -9,6 +9,7 @@ type SchemaBreadcrumbItem = {
 type BuildEngine3ViatorSchemaGraphOptions = {
   tripDescription?: string;
   breadcrumbItems?: SchemaBreadcrumbItem[];
+  offerPrice?: number;
 };
 
 const PRODUCT_SCHEMA_CANONICAL_ALLOWLIST = new Set([
@@ -157,7 +158,12 @@ export const buildEngine3ViatorSchemaGraph = (
     absoluteCanonicalUrl.toLowerCase()
   );
 
-  const price = parsePriceValue(input.priceFrom);
+  const price =
+    typeof options?.offerPrice === "number" &&
+    Number.isFinite(options.offerPrice) &&
+    options.offerPrice > 0
+      ? String(options.offerPrice)
+      : parsePriceValue(input.priceFrom);
   const productName = trim(input.title);
   const productDescription = dedupeSentenceDescription(description);
   const productNode: Record<string, unknown> | undefined =
