@@ -107,6 +107,7 @@ export const buildEngine3ViatorSchemaGraph = (
       : fallbackBreadcrumbItems;
 
   const offerId = `${absoluteCanonicalUrl}#offer`;
+  const productId = `${absoluteCanonicalUrl}#product`;
   const tripId = `${absoluteCanonicalUrl}#trip`;
   const webpageId = `${absoluteCanonicalUrl}#webpage`;
   const providerId = `${absoluteCanonicalUrl}#provider`;
@@ -114,7 +115,7 @@ export const buildEngine3ViatorSchemaGraph = (
   const offerNode: Record<string, unknown> = {
     "@type": "Offer",
     "@id": offerId,
-    url: viatorAffiliateUrl,
+    url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
   };
 
   const price = parsePriceValue(input.priceFrom);
@@ -122,10 +123,23 @@ export const buildEngine3ViatorSchemaGraph = (
     offerNode.price = price;
   }
 
-  const currency = trim(input.priceCurrency);
-  if (currency) {
-    offerNode.priceCurrency = currency;
-  }
+  const currency = trim(input.priceCurrency) ?? "USD";
+  offerNode.priceCurrency = currency;
+
+  const productNode: Record<string, unknown> = {
+    "@type": "Product",
+    "@id": productId,
+    url: absoluteCanonicalUrl,
+    name: input.title,
+    ...(description ? { description } : {}),
+    ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
+    offers: {
+      "@id": offerId,
+    },
+    brand: {
+      "@id": providerId,
+    },
+  };
 
   const availability = trim(input.availability);
   if (availability) {
@@ -175,6 +189,7 @@ export const buildEngine3ViatorSchemaGraph = (
       "@id": providerId,
       name: trim(input.operatorName) ?? "Viator Operator",
     },
+    productNode,
     offerNode,
   ];
 
@@ -210,6 +225,12 @@ export const buildEngine3ViatorSchemaGraph = (
   }
 
   if (input.rating && input.reviewCount && tripNode) {
+    productNode.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: input.rating,
+      reviewCount: input.reviewCount,
+    };
+
     tripNode.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: input.rating,

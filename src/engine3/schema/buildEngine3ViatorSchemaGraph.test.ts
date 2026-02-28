@@ -30,13 +30,16 @@ const canonicalUrl =
   "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree";
 
 describe("buildEngine3ViatorSchemaGraph", () => {
-  it("emits TouristTrip, Offer, BreadcrumbList, and WebPage with offer URL on Viator", () => {
+  it("emits Product, TouristTrip, Offer, BreadcrumbList, and WebPage with offer URL on Viator", () => {
     const graph = buildEngine3ViatorSchemaGraph(baseTour, canonicalUrl);
     const nodes = graph["@graph"] as Record<string, unknown>[];
 
     const webpage = nodes.find(node => node["@type"] === "WebPage");
     const breadcrumb = nodes.find(node => node["@type"] === "BreadcrumbList");
     const offer = nodes.find(node => node["@type"] === "Offer");
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
     const trip = nodes.find(node => node["@type"] === "TouristTrip") as
       | Record<string, unknown>
       | undefined;
@@ -46,6 +49,17 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     expect(breadcrumb).toBeTruthy();
     expect(offer?.["@id"]).toBe(`${canonicalUrl}#offer`);
     expect((offer as Record<string, unknown>).url).toBe(baseTour.bookingUrl);
+    expect((offer as Record<string, unknown>).priceCurrency).toBe("USD");
+
+    expect(product?.["@id"]).toBe(`${canonicalUrl}#product`);
+    expect(product?.name).toBe(baseTour.title);
+    expect((product as Record<string, unknown>).image).toEqual([
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    ]);
+    expect(
+      (product?.aggregateRating as Record<string, unknown>)?.ratingValue
+    ).toBe(4.8);
+
     expect(trip?.["@id"]).toBe(`${canonicalUrl}#trip`);
     expect((trip?.offers as Record<string, unknown>)?.["@id"]).toBe(
       `${canonicalUrl}#offer`
@@ -84,11 +98,21 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     );
 
     const nodes = graph["@graph"] as Record<string, unknown>[];
+    const offer = nodes.find(node => node["@type"] === "Offer") as Record<
+      string,
+      unknown
+    >;
+    const product = nodes.find(node => node["@type"] === "Product") as Record<
+      string,
+      unknown
+    >;
     const trip = nodes.find(node => node["@type"] === "TouristTrip") as Record<
       string,
       unknown
     >;
 
+    expect(offer.priceCurrency).toBe("USD");
+    expect(product.aggregateRating).toBeUndefined();
     expect(trip.aggregateRating).toBeUndefined();
     expect(trip.location).toBeUndefined();
   });
