@@ -14,8 +14,10 @@ const posterChildTour: Engine3TourViewModel = {
   description:
     "Structured content for the San Andreas Fault Jeep Tour from Palm Springs.",
   country: "usa",
-  city: "palm-springs",
-  region: "california",
+  stateSlug: "california",
+  city: "Palm Springs",
+  citySlug: "palm-springs",
+  region: "California",
   canonicalPath:
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl: "https://www.viator.com/tours/Palm-Springs/example",
@@ -33,6 +35,7 @@ describe("Engine3TourPage", () => {
     expect(html).toContain("/destinations");
     expect(html).toContain("/destinations/california");
     expect(html).toContain("/destinations/california/palm-springs");
+    expect(html).not.toContain("palm%20springs");
   });
 
   it("renders hero before the Overview section", () => {

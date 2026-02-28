@@ -4,6 +4,7 @@ import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
+import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import type { Engine3TourViewModel } from "../types";
 
 type Engine3TourPageProps = {
@@ -24,15 +25,6 @@ const priceLabel = (priceFrom?: string) => {
     : `Prices starting at ${priceFrom}`;
 };
 
-const titleCaseFromSlug = (value: string) =>
-  value
-    .split("-")
-    .filter(Boolean)
-    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
-    .join(" ");
-
-const cleanSegment = (value?: string) => value?.trim().toLowerCase();
-
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const canonicalUrl = tour.canonicalPath;
@@ -40,10 +32,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     ?.toLowerCase()
     .endsWith(POSTER_CHILD_PATH);
 
-  const regionSlug =
-    cleanSegment(tour.region) ?? (isPosterChild2335p1 ? "california" : "");
-  const citySlug =
-    cleanSegment(tour.city) ?? (isPosterChild2335p1 ? "palm-springs" : "");
   const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
     .filter(Boolean)
     .join(", ");
@@ -55,26 +43,16 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     tour.heroImageOverrideUrl ||
     DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
-  const breadcrumbItems = [
-    { label: "Destinations", href: "/destinations" },
-    ...(regionSlug
-      ? [
-          {
-            label: titleCaseFromSlug(regionSlug),
-            href: `/destinations/${regionSlug}`,
-          },
-        ]
-      : []),
-    ...(regionSlug && citySlug
-      ? [
-          {
-            label: titleCaseFromSlug(citySlug),
-            href: `/destinations/${regionSlug}/${citySlug}`,
-          },
-        ]
-      : []),
-    { label: tour.title, href: canonicalUrl },
-  ];
+  const breadcrumbItems = buildEngine3BreadcrumbItems({
+    title: tour.title,
+    canonicalUrl,
+    stateSlug:
+      tour.stateSlug ?? (isPosterChild2335p1 ? "california" : undefined),
+    citySlug:
+      tour.citySlug ?? (isPosterChild2335p1 ? "palm-springs" : undefined),
+    region: tour.region,
+    city: tour.city,
+  });
 
   const structuredData = useMemo(
     () =>

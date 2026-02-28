@@ -32,7 +32,9 @@ export type Engine3TourViewModel = {
   title: string;
   description: string;
   country?: string;
+  stateSlug?: string;
   city: string;
+  citySlug?: string;
   region: string;
   canonicalPath: string;
   bookingUrl: string;

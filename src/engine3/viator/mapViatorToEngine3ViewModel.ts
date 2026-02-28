@@ -24,6 +24,21 @@ const normalizeList = (values?: string[]): string[] | undefined => {
   return normalized.length > 0 ? normalized : undefined;
 };
 
+const getStateSlugFromCanonicalPath = (
+  canonicalPath?: string
+): string | undefined => {
+  if (!canonicalPath) {
+    return undefined;
+  }
+
+  const parts = canonicalPath.split("/").filter(Boolean);
+  if (parts[0] !== "destinations") {
+    return undefined;
+  }
+
+  return parts[1] ?? undefined;
+};
+
 export const mapViatorToEngine3ViewModel = (
   tour: Engine2Tour,
   productData?: ViatorProductData
@@ -107,7 +122,9 @@ export const mapViatorToEngine3ViewModel = (
       sourceDescription ??
       fallbackOneLiner,
     country: cleanText(tour.geo.country),
+    stateSlug: getStateSlugFromCanonicalPath(tour.seo.canonicalPath),
     city: tour.geo.city,
+    citySlug: cleanText(tour.sourceCitySlug),
     region: tour.geo.region,
     canonicalPath: tour.seo.canonicalPath,
     bookingUrl: bookingUrl ?? "",
