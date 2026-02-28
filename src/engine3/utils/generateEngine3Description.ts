@@ -1,6 +1,15 @@
 const MIN_WORDS = 100;
 const MAX_WORDS = 120;
 
+const FORBIDDEN_TERMS = [
+  /\bviator\b/gi,
+  /\btripadvisor\b/gi,
+  /\bthird-party\b/gi,
+  /\bbooking page\b/gi,
+  /\bconfirmation\b/gi,
+  /\bcheckout\b/gi,
+];
+
 const stripHtml = (value: string): string =>
   value
     .replace(/<[^>]*>/g, " ")
@@ -20,6 +29,16 @@ const cleanText = (value?: string): string | undefined => {
   return normalized || undefined;
 };
 
+const stripForbiddenTerms = (value: string): string => {
+  let sanitized = value;
+
+  for (const pattern of FORBIDDEN_TERMS) {
+    sanitized = sanitized.replace(pattern, "");
+  }
+
+  return sanitized.replace(/\s+/g, " ").trim();
+};
+
 const dedupe = (values?: string[]): string[] => {
   if (!values?.length) {
     return [];
@@ -29,7 +48,7 @@ const dedupe = (values?: string[]): string[] => {
   const result: string[] = [];
 
   for (const value of values) {
-    const cleaned = cleanText(value);
+    const cleaned = cleanText(stripForbiddenTerms(value));
     if (!cleaned) {
       continue;
     }
@@ -53,7 +72,7 @@ const words = (value: string): string[] => value.split(/\s+/).filter(Boolean);
 
 const countWords = (value: string): number => words(value).length;
 
-const clampWordCount = (value: string, targetMin = MIN_WORDS): string => {
+const clampWordCount = (value: string): string => {
   let current = value.trim();
 
   if (countWords(current) > MAX_WORDS) {
@@ -63,21 +82,21 @@ const clampWordCount = (value: string, targetMin = MIN_WORDS): string => {
       .replace(/[.!?]*$/, "")}.`;
   }
 
-  if (countWords(current) >= targetMin) {
+  if (countWords(current) >= MIN_WORDS) {
     return current;
   }
 
-  const paddingSentences = [
-    "Published details focus on route conditions, guide interpretation, and practical pacing for a half-day desert excursion around Palm Desert and Joshua Tree.",
-    "The itinerary emphasizes scenic driving segments with scheduled stops, while final timing and meeting logistics remain listed directly in the Viator confirmation.",
+  const authoritativePadding = [
+    "The route is designed to balance scenic driving with guided interpretation and regular stops that add context to each landscape feature.",
+    "Each segment is paced to maintain comfort while preserving enough time for observation, photographs, and focused discussion of the surrounding terrain.",
   ];
 
-  for (const padding of paddingSentences) {
-    if (countWords(current) >= targetMin) {
+  for (const sentence of authoritativePadding) {
+    if (countWords(current) >= MIN_WORDS) {
       break;
     }
 
-    current = `${current} ${padding}`.trim();
+    current = `${current} ${sentence}`.trim();
   }
 
   if (countWords(current) <= MAX_WORDS) {
@@ -100,50 +119,55 @@ export const generateEngine3Description = (input: {
   region?: string;
   viatorDescription?: string;
 }): string => {
-  const title = cleanText(input.title) ?? "This tour";
-  const location = [cleanText(input.city), cleanText(input.region)]
-    .filter(Boolean)
-    .join(", ");
-  const duration = cleanText(input.duration);
-  const highlights = dedupe(input.highlights).slice(0, 3);
-  const inclusions = dedupe(input.shortInclusions).slice(0, 2);
-  const meetingPoint = cleanText(input.meetingPoint);
-
-  const normalizedViatorDescription = cleanText(input.viatorDescription);
-  if (normalizedViatorDescription) {
-    return clampWordCount(normalizedViatorDescription);
-  }
-
-  const sentenceOne = toSentence(
-    `${title} is a guided off-road sightseeing tour${
-      location ? ` in ${location}` : ""
-    }`
-  );
-
-  const sentenceTwo = toSentence(
-    `The route typically covers ${
-      highlights.length
-        ? highlights.join(", ")
-        : "desert washes, geological viewpoints, and notable Joshua Tree landscapes"
-    } with interpretation from a local guide`
-  );
-
-  const logistics = [
-    duration ? `Viator lists a duration of ${duration}` : undefined,
-    inclusions.length
-      ? `common inclusions are ${inclusions.join(" and ")}`
-      : undefined,
-    meetingPoint
-      ? `meeting details are provided as ${meetingPoint}`
-      : undefined,
+  const title = cleanText(stripForbiddenTerms(input.title)) ?? "This tour";
+  const location = [
+    cleanText(stripForbiddenTerms(input.city ?? "")),
+    cleanText(stripForbiddenTerms(input.region ?? "")),
   ]
     .filter(Boolean)
-    .join("; ");
+    .join(", ");
+  const duration =
+    cleanText(stripForbiddenTerms(input.duration ?? "")) ??
+    "a half-day experience";
 
-  const sentenceThree = toSentence(
-    logistics ||
-      "Logistics are published with standard check-in timing, transport details, and confirmation steps on the booking page"
+  const highlights = dedupe(input.highlights).slice(0, 3);
+  const inclusions = dedupe(input.shortInclusions).slice(0, 3);
+
+  const sanitizedMeetingPoint = cleanText(
+    stripForbiddenTerms(input.meetingPoint ?? "")
   );
 
-  return clampWordCount(`${sentenceOne} ${sentenceTwo} ${sentenceThree}`);
+  const experienceSummary =
+    highlights.length > 0
+      ? highlights.join(", ")
+      : "desert washes, geologic viewpoints, and notable landscape features";
+
+  const inclusionSummary =
+    inclusions.length > 0
+      ? inclusions.join(", ")
+      : "professional guide service and specialized vehicle transportation";
+
+  const distinctiveness = sanitizedMeetingPoint
+    ? `The itinerary maintains a relaxed, well-paced flow with practical arrival guidance and consistent interpretive commentary throughout the route`
+    : `This experience stands out for its blend of scenic off-road segments, thoughtful interpretation, and a relaxed pacing that supports exploration at each stop`;
+
+  const description = [
+    toSentence(
+      `${title} is a guided off-road adventure${
+        location ? ` in ${location}` : ""
+      } lasting approximately ${duration}`
+    ),
+    toSentence(
+      `Guests travel through dramatic terrain as the guide explains the geology, ecology, and regional history that shape the landscape`
+    ),
+    toSentence(
+      `Scenic driving segments include scheduled stops featuring ${experienceSummary}, with time for observation and photographs`
+    ),
+    toSentence(
+      `Included services cover ${inclusionSummary}, supporting a comfortable and informative experience from start to finish`
+    ),
+    toSentence(distinctiveness),
+  ].join(" ");
+
+  return clampWordCount(description);
 };

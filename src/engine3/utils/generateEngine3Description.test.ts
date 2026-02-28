@@ -21,5 +21,10 @@ describe("generateEngine3Description", () => {
     const wordCount = description.split(/\s+/).filter(Boolean).length;
     expect(wordCount).toBeGreaterThanOrEqual(100);
     expect(wordCount).toBeLessThanOrEqual(120);
+    expect(description.toLowerCase()).not.toContain("viator");
+    expect(description.toLowerCase()).not.toContain("tripadvisor");
+    expect(description.toLowerCase()).not.toContain("booking page");
+    expect(description.toLowerCase()).not.toContain("confirmation");
+    expect(description.toLowerCase()).not.toContain("checkout");
   });
 });
