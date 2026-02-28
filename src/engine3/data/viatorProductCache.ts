@@ -39,7 +39,11 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     productCode: "2335P1",
     title: "San Andreas Fault Jeep Tour from Palm Springs",
     supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    imageCandidates: [
+      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    ],
     priceFrom: "USD 175",
+    priceCurrency: "USD",
     rating: 4.5,
     reviewCount: 117,
     highlights: [
@@ -65,5 +69,6 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     signatureHighlight:
       "The route explores the San Andreas Fault zone and nearby desert oasis terrain.",
     duration: "3 hours",
+    operatorName: "Desert Adventures Red Jeep Tours",
   },
 };

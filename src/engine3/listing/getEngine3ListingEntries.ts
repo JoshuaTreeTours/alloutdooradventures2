@@ -29,7 +29,7 @@ export const getEngine3ListingEntries = (
     .map(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
-      const { primaryImageUrl } = resolveEngine3PrimaryImage({
+      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
         productCode,
         imageCandidates: [
           ...(productData?.imageCandidates ?? []),
@@ -62,7 +62,14 @@ export const getEngine3ListingEntries = (
           },
           heroImage: primaryImageUrl,
           primaryImageUrl,
-          galleryImages: primaryImageUrl ? [primaryImageUrl] : [],
+          galleryImages: Array.from(
+            new Set(
+              [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
+                (value): value is string =>
+                  typeof value === "string" && value.length > 0
+              )
+            )
+          ),
           badges: {
             rating: productData?.rating,
             reviewCount: productData?.reviewCount,

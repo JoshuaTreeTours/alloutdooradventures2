@@ -17,4 +17,17 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.images.hero).toBe(LOCKED_HERO_URL);
     expect(tour?.seo.ogImage).toBe(LOCKED_HERO_URL);
   });
+
+  it("ensures 2335P1 has non-empty hero and a secondary gallery fallback", () => {
+    const tour = getEngine3TourBySlugs(
+      "california",
+      "palm-springs",
+      "san-andreas-fault-jeep-tour-from-palm-springs-2335p1"
+    );
+
+    expect(tour?.id).toBe("2335P1");
+    expect(tour?.images.hero).toBeTruthy();
+    expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
+  });
+
 });

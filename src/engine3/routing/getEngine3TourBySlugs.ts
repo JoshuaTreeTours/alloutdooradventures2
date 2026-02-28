@@ -17,7 +17,7 @@ export const getEngine3TourBySlugs = (
   }
 
   const productData = viatorProductCacheByCode[entry.viator.productCode];
-  const { primaryImageUrl } = resolveEngine3PrimaryImage({
+  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
     productCode: entry.viator.productCode,
     imageCandidates: [
       ...(productData?.imageCandidates ?? []),
@@ -69,7 +69,13 @@ export const getEngine3TourBySlugs = (
     },
     images: {
       hero: primaryImageUrl,
-      gallery: primaryImageUrl ? [primaryImageUrl] : [],
+      gallery: Array.from(
+        new Set(
+          [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
+            (value): value is string => typeof value === "string" && value.length > 0
+          )
+        )
+      ),
     },
     booking: {
       bookingUrl: entry.viator.url,

@@ -13,7 +13,7 @@ type BuildEngine3ViatorSchemaGraphOptions = {
 };
 
 const PRODUCT_SCHEMA_CANONICAL_ALLOWLIST = new Set([
-  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
 ]);
 
 const trim = (value?: string): string | undefined => {
@@ -45,8 +45,12 @@ const parsePriceValue = (value?: string): string | undefined => {
     return undefined;
   }
 
-  const number = cleaned.replace(/[^\d.]/g, "");
-  return number.length > 0 ? number : undefined;
+  const numeric = Number.parseFloat(cleaned.replace(/[^\d.]/g, ""));
+  if (!Number.isFinite(numeric) || numeric <= 0) {
+    return undefined;
+  }
+
+  return String(numeric);
 };
 
 const normalizeFaqs = (faqs: Engine3TourViewModel["faqs"]) => {
@@ -164,6 +168,7 @@ export const buildEngine3ViatorSchemaGraph = (
     options.offerPrice > 0
       ? String(options.offerPrice)
       : parsePriceValue(input.priceFrom);
+  const providerName = trim(input.operatorName);
   const productName = trim(input.title);
   const productDescription = dedupeSentenceDescription(description);
   const productNode: Record<string, unknown> | undefined =
@@ -195,9 +200,13 @@ export const buildEngine3ViatorSchemaGraph = (
     url: absoluteCanonicalUrl,
     ...(description ? { description } : {}),
     ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
-    provider: {
-      "@id": providerId,
-    },
+    ...(providerName
+      ? {
+          provider: {
+            "@id": providerId,
+          },
+        }
+      : {}),
     touristType: "Sightseeing",
     areaServed: [
       { "@type": "Country", name: "United States" },
@@ -247,11 +256,15 @@ export const buildEngine3ViatorSchemaGraph = (
       name: "All Outdoor Adventures",
       url: "https://www.alloutdooradventures.com",
     },
-    {
-      "@type": "Organization",
-      "@id": providerId,
-      name: trim(input.operatorName) ?? "Local Tour Operator",
-    },
+    ...(providerName
+      ? [
+          {
+            "@type": "Organization",
+            "@id": providerId,
+            name: providerName,
+          },
+        ]
+      : []),
     ...(productNode ? [productNode] : []),
   ];
 
@@ -282,7 +295,15 @@ export const buildEngine3ViatorSchemaGraph = (
     }
   }
 
-  if (input.rating && input.reviewCount && productNode) {
+  if (
+    productNode &&
+    typeof input.rating === "number" &&
+    Number.isFinite(input.rating) &&
+    input.rating > 0 &&
+    typeof input.reviewCount === "number" &&
+    Number.isFinite(input.reviewCount) &&
+    input.reviewCount > 0
+  ) {
     productNode.aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: input.rating,
@@ -290,7 +311,12 @@ export const buildEngine3ViatorSchemaGraph = (
     };
   }
 
-  if (input.latitude && input.longitude) {
+  if (
+    typeof input.latitude === "number" &&
+    Number.isFinite(input.latitude) &&
+    typeof input.longitude === "number" &&
+    Number.isFinite(input.longitude)
+  ) {
     tripNode.location = {
       "@type": "Place",
       name: `${input.city}, ${input.region}`,
@@ -303,7 +329,7 @@ export const buildEngine3ViatorSchemaGraph = (
   }
 
   const normalizedFaqs = normalizeFaqs(input.faqs);
-  if (normalizedFaqs.length > 0) {
+  if (normalizedFaqs.length === 5) {
     graph.push({
       "@type": "FAQPage",
       "@id": `${absoluteCanonicalUrl}#faq`,
