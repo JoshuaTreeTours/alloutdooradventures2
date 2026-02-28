@@ -14,6 +14,7 @@ type BuildEngine3ViatorSchemaGraphOptions = {
 
 const PRODUCT_SCHEMA_CANONICAL_ALLOWLIST = new Set([
   "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
 ]);
 
 const trim = (value?: string): string | undefined => {

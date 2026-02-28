@@ -1,6 +1,21 @@
 import type { ViatorProductData } from "../types";
 
 export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
+  "3351P15": {
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
+    productCode: "3351P15",
+    title: "Palm Springs Indian Canyons Bike and Hike",
+    supplierImage: "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
+    imageCandidates: ["https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"],
+    highlights: [
+      "Guided bike-and-hike format in the Indian Canyons area near Palm Springs",
+      "Combines cycling segments with on-foot trail exploration",
+      "Focus on canyon landscapes and desert scenery",
+    ],
+    meetingPointDescription:
+      "Departure point details are provided on the Viator booking page.",
+  },
   "6740JTREE": {
     sourceUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
@@ -39,9 +54,7 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     productCode: "2335P1",
     title: "San Andreas Fault Jeep Tour from Palm Springs",
     supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-    imageCandidates: [
-      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-    ],
+    imageCandidates: ["https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"],
     priceFrom: "USD 175",
     priceCurrency: "USD",
     rating: 4.5,

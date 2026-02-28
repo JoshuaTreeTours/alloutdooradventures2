@@ -48,4 +48,15 @@ describe("getEngine3ListingEntries", () => {
     expect(detailVm.primaryImageUrl).toBeDefined();
     expect(listingEntry?.tour.primaryImageUrl).toBe(detailVm.primaryImageUrl);
   });
+  it("includes 3351P15 with the required product-code suffix in the canonical href", () => {
+    const entries = getEngine3ListingEntries("california", "palm-springs");
+
+    const target = entries.find(entry => entry.tour.productCode === "3351P15");
+
+    expect(target).toBeTruthy();
+    expect(target?.href).toBe(
+      "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15"
+    );
+    expect(target?.tour.heroImage).toBeTruthy();
+  });
 });

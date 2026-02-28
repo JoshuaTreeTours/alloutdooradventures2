@@ -25,7 +25,10 @@ const normalizeList = (values?: string[]): string[] | undefined => {
 };
 
 const normalizeSentenceKey = (value: string): string =>
-  value.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 
 const dedupeList = (values?: string[]): string[] | undefined => {
   const normalized = normalizeList(values);
@@ -226,9 +229,6 @@ export const mapViatorToEngine3ViewModel = (
     latitude: productData?.latitude ?? tour.geo.lat ?? undefined,
     longitude: productData?.longitude ?? tour.geo.lng ?? undefined,
     itinerary,
-    faqs:
-      productData?.productCode === "2335P1"
-        ? normalizedFaqs?.slice(0, 5)
-        : normalizedFaqs,
+    faqs: normalizedFaqs?.slice(0, 5),
   };
 };

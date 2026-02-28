@@ -46,14 +46,49 @@ export const ENGINE3_VIATOR_OVERRIDES: Record<
           "Guests should bring sun protection, closed-toe footwear, drinking water, and weather-appropriate layers for an open-air vehicle ride.",
       },
       {
-        question: "Is the tour suitable for children or guests needing accessibility support?",
+        question:
+          "Is the tour suitable for children or guests needing accessibility support?",
         answer:
           "Published details list a minimum age of 5 years; accessibility requirements should be confirmed with the operator before booking.",
       },
       {
-        question: "How long is the tour and how many people are in each vehicle?",
+        question:
+          "How long is the tour and how many people are in each vehicle?",
         answer:
           "The experience is typically about 3 hours, and listed maximum group size is 7 guests per vehicle.",
+      },
+    ],
+  },
+  "3351P15": {
+    description: `Palm Springs Indian Canyons Bike and Hike is a guided bike-and-hike outing in the Indian Canyons area of Palm Springs that alternates between riding segments and short trail walks. The format is built around transition points where the group moves from bike travel to on-foot exploration, creating a structured route that covers more ground than a hike-only outing while still allowing time in key canyon sections. Guide-led pacing keeps the day organized and focused on terrain, route flow, and desert context.
+
+Participants experience a mix of active movement and stop-and-explore intervals through canyon landscapes, fan-palm oasis zones, and open desert corridors. The ride-and-walk sequence distinguishes this itinerary from a standard point-to-point bike tour by combining continuous cycling with dedicated hiking segments in areas best explored on foot. The result is a field-oriented experience that balances scenery, interpretation, and moderate physical effort across two activity modes.`,
+    faqs: [
+      {
+        question:
+          "What is the tour duration and pace for the bike-and-hike format?",
+        answer:
+          "This experience is published as a combined bike-and-hike tour, with the operator managing pacing between cycling and walking segments; confirm the current total duration on the live Viator listing for product 3351P15.",
+      },
+      {
+        question: "Where is the meeting point or start location?",
+        answer:
+          "Departure details are provided on the Viator booking page and in your confirmation for Palm Springs Indian Canyons Bike and Hike.",
+      },
+      {
+        question: "What is included and what should I bring?",
+        answer:
+          "Inclusions vary by departure; check the Viator listing details and confirmation notes for current included equipment and recommended personal items.",
+      },
+      {
+        question: "What is the cancellation policy window?",
+        answer:
+          "Cancellation terms are shown on the Viator product page at booking time; review the policy window listed for your selected departure before checkout.",
+      },
+      {
+        question: "Are there accessibility, fitness, or age requirements?",
+        answer:
+          "Any minimum age, accessibility notes, and fitness guidance are specified by the operator on the Viator listing and booking confirmation.",
       },
     ],
   },

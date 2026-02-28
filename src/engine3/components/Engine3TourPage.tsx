@@ -17,8 +17,10 @@ type Engine3TourPageProps = {
 };
 
 const EXTERNAL_CTA_REL = "nofollow sponsored noopener noreferrer";
-const POSTER_CHILD_PATH =
-  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
+const POSTER_CHILD_PATHS = new Set([
+  "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+  "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
+]);
 
 const priceLabel = (priceFrom?: string) => {
   if (!priceFrom) {
@@ -33,9 +35,13 @@ const priceLabel = (priceFrom?: string) => {
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const canonicalUrl = tour.canonicalPath;
-  const isPosterChild2335p1 = canonicalUrl
-    ?.toLowerCase()
-    .endsWith(POSTER_CHILD_PATH);
+  const canonicalUrlLower = canonicalUrl?.toLowerCase();
+  const isPosterChildPalmSprings = Boolean(
+    canonicalUrlLower &&
+    Array.from(POSTER_CHILD_PATHS).some(path =>
+      canonicalUrlLower.endsWith(path)
+    )
+  );
 
   const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
     .filter(Boolean)
@@ -52,9 +58,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     title: tour.title,
     canonicalUrl,
     stateSlug:
-      tour.stateSlug ?? (isPosterChild2335p1 ? "california" : undefined),
+      tour.stateSlug ?? (isPosterChildPalmSprings ? "california" : undefined),
     citySlug:
-      tour.citySlug ?? (isPosterChild2335p1 ? "palm-springs" : undefined),
+      tour.citySlug ?? (isPosterChildPalmSprings ? "palm-springs" : undefined),
     region: tour.region,
     city: tour.city,
   });
@@ -71,7 +77,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const structuredData = useMemo(
     () =>
       buildEngine3ViatorSchemaGraph(tour, canonicalUrl, {
-        tripDescription: isPosterChild2335p1 ? pageDescription : undefined,
+        tripDescription: isPosterChildPalmSprings ? pageDescription : undefined,
         breadcrumbItems: breadcrumbItems.map(item => ({
           name: item.label,
           item: item.href,
@@ -84,7 +90,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     [
       breadcrumbItems,
       canonicalUrl,
-      isPosterChild2335p1,
+      isPosterChildPalmSprings,
       pageDescription,
       tour,
       viatorFromPrice,

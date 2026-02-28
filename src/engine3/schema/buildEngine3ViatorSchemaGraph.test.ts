@@ -132,11 +132,35 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       | Record<string, unknown>
       | undefined;
 
-    expect(nodes.find(node => node["@id"] === `${canonicalUrl}#provider`)).toBeUndefined();
+    expect(
+      nodes.find(node => node["@id"] === `${canonicalUrl}#provider`)
+    ).toBeUndefined();
     expect(trip?.provider).toBeUndefined();
     expect(product?.aggregateRating).toBeUndefined();
     expect(trip?.location).toBeUndefined();
     expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
+  });
+
+  it("emits Product schema for the 3351P15 canonical URL", () => {
+    const canonicalUrl = `${canonicalBase}/palm-springs-indian-canyons-bike-and-hike-3351p15`;
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        tourId: "3351P15",
+        title: "Palm Springs Indian Canyons Bike and Hike",
+        canonicalPath:
+          "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
+      },
+      canonicalUrl
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(product?.url).toBe(canonicalUrl);
   });
 
   it("omits Product node for non-paragon Engine3 tours", () => {
