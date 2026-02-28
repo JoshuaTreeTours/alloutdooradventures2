@@ -34,12 +34,12 @@ const cleanSegment = (value?: string) => value?.trim().toLowerCase();
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
-  const [heroSrc, setHeroSrc] = useState(tour.heroImageUrl ?? "/hero.jpg");
+  const [heroSrc, setHeroSrc] = useState(tour.primaryImageUrl ?? "/hero.jpg");
   const canonicalUrl = tour.canonicalPath;
 
   useEffect(() => {
-    setHeroSrc(tour.heroImageUrl ?? "/hero.jpg");
-  }, [tour.heroImageUrl]);
+    setHeroSrc(tour.primaryImageUrl ?? "/hero.jpg");
+  }, [tour.primaryImageUrl]);
   const isPosterChild2335p1 = canonicalUrl
     ?.toLowerCase()
     .endsWith(POSTER_CHILD_PATH);
@@ -95,7 +95,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         title={tour.title}
         description={pageDescription}
         url={canonicalUrl}
-        image={tour.heroImageUrl}
+        image={tour.primaryImageUrl}
       />
       <script
         id="structured-data-engine3-viator"
@@ -164,7 +164,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
           <img
             src={heroSrc}
-            alt={tour.heroImageAlt ?? tour.title}
+            alt={tour.primaryImageAlt ?? tour.title}
             referrerPolicy="no-referrer"
             loading="eager"
             onError={() => {

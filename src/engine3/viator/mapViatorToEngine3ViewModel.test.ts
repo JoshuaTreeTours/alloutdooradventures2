@@ -52,10 +52,10 @@ describe("mapViatorToEngine3ViewModel", () => {
       ],
     });
 
-    expect(model.heroImageUrl).toBe(
+    expect(model.primaryImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg"
     );
-    expect(model.heroImageAlt).toBe(
+    expect(model.primaryImageAlt).toBe(
       "Joshua Tree Hummer Adventure from Palm Desert — Palm Springs, California"
     );
   });
@@ -70,7 +70,7 @@ describe("mapViatorToEngine3ViewModel", () => {
       ],
     });
 
-    expect(model.heroImageUrl).toBe(
+    expect(model.primaryImageUrl).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg"
     );
   });

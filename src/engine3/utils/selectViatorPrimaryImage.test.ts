@@ -1,13 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { scoreImage, selectViatorHeroImage } from "./selectViatorHeroImage";
+import {
+  scoreViatorPrimaryImage,
+  selectViatorPrimaryImage,
+} from "./selectViatorPrimaryImage";
 
-describe("selectViatorHeroImage", () => {
+describe("selectViatorPrimaryImage", () => {
   it("picks larger TACDN image over smaller TACDN image", () => {
-    const selected = selectViatorHeroImage({
-      title: "Joshua Tree Hummer Adventure",
-      city: "Palm Springs",
-      state: "California",
+    const selected = selectViatorPrimaryImage({
       imageUrls: [
         "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/e0/2f/52.jpg",
         "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg",
@@ -24,10 +24,9 @@ describe("selectViatorHeroImage", () => {
     const junk =
       "https://cache.vtrcdn.com/orion/images/globalNav/fallback-top-activities_100x100.webp";
 
-    expect(scoreImage(junk)).toBe(-9999);
+    expect(scoreViatorPrimaryImage(junk)).toBe(-9999);
 
-    const selected = selectViatorHeroImage({
-      title: "Joshua Tree Hummer Adventure",
+    const selected = selectViatorPrimaryImage({
       primaryImageUrl: junk,
       imageUrls: [
         junk,
@@ -42,8 +41,7 @@ describe("selectViatorHeroImage", () => {
   });
 
   it("returns fallback when only junk candidates exist", () => {
-    const selected = selectViatorHeroImage({
-      title: "Joshua Tree Hummer Adventure",
+    const selected = selectViatorPrimaryImage({
       imageUrls: [
         "https://cache.vtrcdn.com/orion/images/globalNav/fallback-top-activities_100x100.webp",
       ],
@@ -54,8 +52,7 @@ describe("selectViatorHeroImage", () => {
   });
 
   it("normalizes protocol-relative TACDN URLs", () => {
-    const selected = selectViatorHeroImage({
-      title: "Joshua Tree Hummer Adventure",
+    const selected = selectViatorPrimaryImage({
       imageUrls: [
         "//media.tacdn.com/media/attractions-splice-spp-674x446/06/e0/2f/52.jpg",
       ],

@@ -1,5 +1,5 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
-import { selectViatorHeroImage } from "../utils/selectViatorHeroImage";
+import { selectViatorPrimaryImage } from "../utils/selectViatorPrimaryImage";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -87,10 +87,7 @@ export const mapViatorToEngine3ViewModel = (
   const city = cleanText(tour.geo.city);
   const state = cleanText(tour.geo.region);
 
-  const heroImageUrl = selectViatorHeroImage({
-    title,
-    city,
-    state,
+  const primaryImageUrl = selectViatorPrimaryImage({
     primaryImageUrl:
       cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
     imageUrls: heroImageCandidates,
@@ -107,7 +104,9 @@ export const mapViatorToEngine3ViewModel = (
     bookingUrl: bookingUrl ?? "",
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
-    heroImageUrl,
+    primaryImageUrl,
+    primaryImageAlt: `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`,
+    heroImageUrl: primaryImageUrl,
     heroImageAlt: `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
