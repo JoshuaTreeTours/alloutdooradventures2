@@ -2,6 +2,7 @@ import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
+import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import type { Engine3TourViewModel } from "../types";
 
@@ -49,6 +50,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const pageDescription =
     tour.description ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
+  const heroUrl =
+    tour.primaryImageUrl ||
+    tour.heroImageOverrideUrl ||
+    DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
   const breadcrumbItems = [
     { label: "Destinations", href: "/destinations" },
@@ -89,7 +94,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         title={tour.title}
         description={pageDescription}
         url={canonicalUrl}
-        image={tour.primaryImageUrl}
+        image={heroUrl}
       />
       <script
         id="structured-data-engine3-viator"
@@ -155,17 +160,15 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
-        {tour.primaryImageUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-            <img
-              src={tour.primaryImageUrl}
-              alt={tour.title}
-              referrerPolicy="no-referrer"
-              loading="eager"
-              className="h-64 w-full object-cover md:h-80"
-            />
-          </div>
-        ) : null}
+        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          <img
+            src={heroUrl}
+            alt={tour.title}
+            referrerPolicy="no-referrer"
+            loading="eager"
+            className="h-64 w-full object-cover md:h-80"
+          />
+        </div>
 
         {tour.description ? (
           <>

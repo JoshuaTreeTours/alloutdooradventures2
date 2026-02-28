@@ -24,6 +24,8 @@ export const viatorTours: readonly Engine3Tour[] = [
     viator: {
       productCode: "2335P1",
       url: "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1",
+      heroImageOverrideUrl:
+        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
     },
     destination: {
       country: "usa",

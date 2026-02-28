@@ -1,5 +1,5 @@
 const ALLOWED_HOST_PATTERN =
-  /(?:^|\.)media\.tacdn\.com$|(?:^|\.)dynamic-media\.tacdn\.com$|(?:^|\.)cache\.vtrcdn\.com$/i;
+  /(?:^|\.)media\.tacdn\.com$|(?:^|\.)dynamic-media\.tacdn\.com$|(?:^|\.)cache\.vtrcdn\.com$|(?:^|\.)cdn\.filestackcontent\.com$/i;
 
 const ALLOWED_EXTENSION_PATTERN = /\.(jpg|jpeg|png|webp|gif)(?:$|[?#])/i;
 
@@ -30,6 +30,7 @@ export const isRejectedCandidate = (urlValue: string): boolean => {
   }
 
   const parsed = new URL(normalized);
+  const host = parsed.hostname.toLowerCase();
   const pathAndQuery = `${parsed.pathname}${parsed.search}`;
 
   if (!ALLOWED_HOST_PATTERN.test(parsed.hostname)) {
@@ -40,7 +41,11 @@ export const isRejectedCandidate = (urlValue: string): boolean => {
     return true;
   }
 
-  if (!ALLOWED_EXTENSION_PATTERN.test(pathAndQuery)) {
+  const hasAllowedExtension = ALLOWED_EXTENSION_PATTERN.test(pathAndQuery);
+  const isFilestackAsset =
+    host.includes("cdn.filestackcontent.com") && parsed.pathname.length > 1;
+
+  if (!hasAllowedExtension && !isFilestackAsset) {
     return true;
   }
 
@@ -67,7 +72,11 @@ const candidatePriority = (urlValue: string): number => {
     return 3;
   }
 
-  return 4;
+  if (host.includes("cdn.filestackcontent.com")) {
+    return 4;
+  }
+
+  return 5;
 };
 
 export const selectEngine3PrimaryImage = (input: {

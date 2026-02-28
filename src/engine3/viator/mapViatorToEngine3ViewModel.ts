@@ -1,11 +1,7 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
-import { viatorTours } from "../data/viatorTours";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { generateEngine3Description } from "../utils/generateEngine3Description";
-import {
-  isRejectedCandidate,
-  selectEngine3PrimaryImage,
-} from "../utils/selectEngine3PrimaryImage";
+import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -26,23 +22,6 @@ const normalizeList = (values?: string[]): string[] | undefined => {
     .filter((item): item is string => Boolean(item));
 
   return normalized.length > 0 ? normalized : undefined;
-};
-
-const getHeroImageOverride = (productCode?: string): string | undefined => {
-  if (!productCode) {
-    return undefined;
-  }
-
-  const entry = viatorTours.find(
-    tour => tour.viator.productCode === productCode
-  );
-  const override = cleanText(entry?.viator.heroImageOverrideUrl);
-
-  if (!override || isRejectedCandidate(override)) {
-    return undefined;
-  }
-
-  return override;
 };
 
 export const mapViatorToEngine3ViewModel = (
@@ -112,13 +91,12 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const selectedImage = selectEngine3PrimaryImage({
-    viatorImageCandidates: productData?.imageCandidates,
+  const { primaryImageUrl, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+    productCode: productData?.productCode ?? tour.id,
+    imageCandidates: productData?.imageCandidates,
     fallbackImageUrl:
       cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
   });
-  const primaryImageUrl =
-    getHeroImageOverride(productData?.productCode ?? tour.id) ?? selectedImage;
 
   return {
     tourId: tour.id,
@@ -136,6 +114,7 @@ export const mapViatorToEngine3ViewModel = (
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
     primaryImageUrl,
+    heroImageOverrideUrl,
     heroImageUrl: primaryImageUrl,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),

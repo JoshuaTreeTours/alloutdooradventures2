@@ -28,4 +28,12 @@ describe("viatorTours", () => {
 
     expect(productCodes).toEqual(["2335P1", "6740JTREE"]);
   });
+
+  it("locks 2335P1 to a deterministic hero override", () => {
+    const tour = viatorTours.find(item => item.viator.productCode === "2335P1");
+
+    expect(tour?.viator.heroImageOverrideUrl).toBe(
+      "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"
+    );
+  });
 });

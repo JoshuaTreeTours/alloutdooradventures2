@@ -2,7 +2,7 @@ import type { Tour } from "../../data/tours.types";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../routing/buildEngine3TourPath";
-import { selectEngine3PrimaryImage } from "../utils/selectEngine3PrimaryImage";
+import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 
 type Engine3ListingEntry = {
   tour: Tour;
@@ -29,14 +29,14 @@ export const getEngine3ListingEntries = (
     .map(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
-      const primaryImageUrl =
-        selectEngine3PrimaryImage({
-          viatorImageCandidates: [
-            tour.viator.heroImageOverrideUrl,
-            ...(productData?.imageCandidates ?? []),
-          ],
-          fallbackImageUrl: productData?.supplierImage,
-        }) ?? "";
+      const { primaryImageUrl } = resolveEngine3PrimaryImage({
+        productCode,
+        imageCandidates: [
+          ...(productData?.imageCandidates ?? []),
+          productData?.supplierImage,
+        ].filter((value): value is string => typeof value === "string"),
+        fallbackImageUrl: productData?.supplierImage,
+      });
       const href = buildEngine3TourPath(tour);
 
       return {
@@ -60,8 +60,8 @@ export const getEngine3ListingEntries = (
             lat: productData?.latitude,
             lng: productData?.longitude,
           },
-          heroImage: primaryImageUrl || "/hero.jpg",
-          primaryImageUrl: primaryImageUrl || "/hero.jpg",
+          heroImage: primaryImageUrl,
+          primaryImageUrl,
           galleryImages: primaryImageUrl ? [primaryImageUrl] : [],
           badges: {
             rating: productData?.rating,

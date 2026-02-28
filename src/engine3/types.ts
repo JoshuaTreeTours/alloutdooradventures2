@@ -38,6 +38,7 @@ export type Engine3TourViewModel = {
   bookingUrl: string;
   duration?: string;
   primaryImageUrl?: string;
+  heroImageOverrideUrl?: string;
   heroImageUrl?: string;
   priceFrom?: string;
   priceCurrency?: string;

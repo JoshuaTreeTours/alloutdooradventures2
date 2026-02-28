@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
 
+import { getEngine2TourBySlug } from "../../engine2/data/loadEngine2";
+import { viatorProductCacheByCode } from "../data/viatorProductCache";
+import { mapViatorToEngine3ViewModel } from "../viator/mapViatorToEngine3ViewModel";
 import { getEngine3ListingEntries } from "./getEngine3ListingEntries";
 
 const LOCKED =
@@ -22,5 +25,27 @@ describe("getEngine3ListingEntries", () => {
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE"
     );
     expect(target?.tour.heroImage).toBe(LOCKED);
+  });
+
+  it("keeps 2335P1 listing image equal to the detail page hero image", () => {
+    const entries = getEngine3ListingEntries("california", "palm-springs");
+    const listingEntry = entries.find(
+      entry => entry.tour.productCode === "2335P1"
+    );
+
+    const detailTour = getEngine2TourBySlug(
+      "california",
+      "palm-springs",
+      "san-andreas-fault-jeep-tour-from-palm-springs-2335p1"
+    );
+
+    expect(detailTour).toBeTruthy();
+    const detailVm = mapViatorToEngine3ViewModel(
+      detailTour!,
+      viatorProductCacheByCode["2335P1"]
+    );
+
+    expect(detailVm.primaryImageUrl).toBeDefined();
+    expect(listingEntry?.tour.primaryImageUrl).toBe(detailVm.primaryImageUrl);
   });
 });

@@ -47,4 +47,18 @@ describe("Engine3TourPage", () => {
     expect(overviewIndex).toBeGreaterThan(-1);
     expect(heroIndex).toBeLessThan(overviewIndex);
   });
+
+  it("always renders hero image even when primaryImageUrl is missing", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          primaryImageUrl: undefined,
+          heroImageOverrideUrl: undefined,
+        }}
+      />
+    );
+
+    expect(html).toContain('src="/hero.jpg"');
+  });
 });

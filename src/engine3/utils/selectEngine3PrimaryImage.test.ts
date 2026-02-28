@@ -32,4 +32,14 @@ describe("selectEngine3PrimaryImage", () => {
       )
     ).toBe(true);
   });
+
+  it("accepts legacy Viator filestack hero URLs", () => {
+    const image = selectEngine3PrimaryImage({
+      viatorImageCandidates: [
+        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+      ],
+    });
+
+    expect(image).toBe("https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa");
+  });
 });

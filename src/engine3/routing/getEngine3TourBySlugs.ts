@@ -1,7 +1,7 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
-import { selectEngine3PrimaryImage } from "../utils/selectEngine3PrimaryImage";
+import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 import { buildEngine3TourPath } from "./buildEngine3TourPath";
 
 export const getEngine3TourBySlugs = (
@@ -17,14 +17,14 @@ export const getEngine3TourBySlugs = (
   }
 
   const productData = viatorProductCacheByCode[entry.viator.productCode];
-  const primaryImageUrl =
-    selectEngine3PrimaryImage({
-      viatorImageCandidates: [
-        entry.viator.heroImageOverrideUrl,
-        ...(productData?.imageCandidates ?? []),
-      ],
-      fallbackImageUrl: productData?.supplierImage,
-    }) ?? null;
+  const { primaryImageUrl } = resolveEngine3PrimaryImage({
+    productCode: entry.viator.productCode,
+    imageCandidates: [
+      ...(productData?.imageCandidates ?? []),
+      productData?.supplierImage,
+    ].filter((value): value is string => typeof value === "string"),
+    fallbackImageUrl: productData?.supplierImage,
+  });
 
   return {
     id: entry.viator.productCode,
