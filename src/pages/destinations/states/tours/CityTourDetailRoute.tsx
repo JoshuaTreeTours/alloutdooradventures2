@@ -31,6 +31,7 @@ import {
 import { buildTourMeta } from "../../../../lib/tourMeta";
 import {
   buildBreadcrumbList,
+  buildTourProductNodeId,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -186,6 +187,7 @@ export default function CityTourDetailRoute({
       return null;
     }
     const canonicalProductUrl = resolveCanonicalProductUrl(canonicalUrl);
+    const productNodeId = buildTourProductNodeId(tour.id);
     const offerUrl = resolveOfferUrl({
       canonicalUrl: canonicalProductUrl,
       partnerBookingUrl: bookingUrl,
@@ -207,7 +209,7 @@ export default function CityTourDetailRoute({
             lng: tour.destination.lng,
           },
           product: {
-            id: `${canonicalUrl}#product`,
+            id: productNodeId,
             name: tour.title,
             description:
               hardenedTemplate?.schemaDescription ??
@@ -261,16 +263,19 @@ export default function CityTourDetailRoute({
             name: tour.title,
             description: seoDescription,
             image: heroImage,
+            mainEntityId: productNodeId,
           }),
           buildTourProductStructuredData({
             tour,
             detailUrl: canonicalUrl,
+            productNodeId,
             description: productDescription,
             images: structuredImages.length ? structuredImages : undefined,
           }),
           buildTourTripStructuredData({
             tour,
             detailUrl: canonicalUrl,
+            productNodeId,
             description: productDescription,
             images: structuredImages.length ? structuredImages : undefined,
           }),

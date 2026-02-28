@@ -23,6 +23,7 @@ import { buildTourMetaDescription } from "../../utils/seo";
 import { SITE_URL } from "../../utils/seo";
 import {
   buildBreadcrumbList,
+  buildTourProductNodeId,
   buildTourProductStructuredData,
   buildTourTripStructuredData,
   buildWebPageStructuredData,
@@ -87,6 +88,7 @@ export default function TourDetail({ params }: TourDetailProps) {
     if (!tour || !detailUrl) {
       return null;
     }
+    const productNodeId = buildTourProductNodeId(tour.id);
     const tourSchemaNodes = ENABLE_TOUR_SCHEMA_V1
       ? (buildTourSchemaGraph({
           url: detailUrl,
@@ -102,7 +104,7 @@ export default function TourDetail({ params }: TourDetailProps) {
             lng: tour.destination.lng,
           },
           product: {
-            id: `${detailUrl}#product`,
+            id: productNodeId,
             name: tour.title,
             description: metaDescription ?? "",
             category: tour.primaryCategory,
@@ -132,17 +134,19 @@ export default function TourDetail({ params }: TourDetailProps) {
             name: tour.title,
             description: metaDescription,
             image: finalHeroImage,
-            mainEntityId: `${detailUrl}#product`,
+            mainEntityId: productNodeId,
           }),
           buildTourProductStructuredData({
             tour,
             detailUrl,
+            productNodeId,
             description: metaDescription,
             images: structuredImages.length ? structuredImages : undefined,
           }),
           buildTourTripStructuredData({
             tour,
             detailUrl,
+            productNodeId,
             description: metaDescription,
             images: structuredImages.length ? structuredImages : undefined,
           }),

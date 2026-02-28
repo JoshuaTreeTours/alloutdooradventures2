@@ -19,7 +19,7 @@ const baseArgs = {
     lng: -155.08,
   },
   product: {
-    id: "https://www.alloutdooradventures.com/tours/test-tour#product",
+    id: "https://www.alloutdooradventures.com/#ptest-tour",
     name: "Test Tour",
     description: "Product description",
     category: "Kayaking",
@@ -64,9 +64,11 @@ describe("buildTourSchemaGraph", () => {
     >;
     const product = graph.find(node => node["@type"] === "Product") as {
       image: string;
+      seller: { "@id": string };
     };
 
     expect(product.image).toBe("https://example.com/hero.jpg");
+    expect(product.seller).toEqual({ "@id": baseArgs.brandOrgIds.orgId });
   });
 
   it("excludes filestack resize base URL junk from derived images", () => {
@@ -105,11 +107,12 @@ describe("buildTourSchemaGraph", () => {
     expect(product.image.length).toBeLessThanOrEqual(10);
   });
 
-  it("adds WebPage.mainEntity and TouristTrip place destination/itinerary", () => {
+  it("adds WebPage.about/mainEntity and TouristTrip place destination/itinerary", () => {
     const graph = buildTourSchemaGraph(baseArgs)["@graph"] as Array<
       Record<string, unknown>
     >;
     const webPage = graph.find(node => node["@type"] === "WebPage") as {
+      about: { "@id": string };
       mainEntity: { "@id": string };
     };
     const trip = graph.find(node => node["@type"] === "TouristTrip") as {
@@ -120,7 +123,8 @@ describe("buildTourSchemaGraph", () => {
       };
     };
 
-    expect(webPage.mainEntity).toEqual({ "@id": `${baseArgs.url}#product` });
+    expect(webPage.about).toEqual({ "@id": baseArgs.product.id });
+    expect(webPage.mainEntity).toEqual({ "@id": baseArgs.product.id });
     expect(trip.touristDestination).toEqual({ "@id": `${baseArgs.url}#place` });
     expect(trip.itinerary["@type"]).toBe("ItemList");
     expect(trip.itinerary.itemListElement[0].item).toEqual({

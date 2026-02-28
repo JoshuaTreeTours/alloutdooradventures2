@@ -1,5 +1,16 @@
+import { useMemo } from "react";
+
 import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
+import { useStructuredData } from "../../components/StructuredDataProvider";
+import {
+  buildTourProductNodeId,
+  buildWebPageStructuredData,
+  SITE_BRAND_ID,
+  SITE_ORGANIZATION_ID,
+  SITE_WEBSITE_ID,
+} from "../../utils/structuredData";
+import { buildTourSchemaGraph } from "../../schema/buildTourSchemaGraph";
 import type { Engine3TourViewModel } from "../types";
 
 type Engine3TourPageProps = {
@@ -20,12 +31,65 @@ const priceLabel = (priceFrom?: string) => {
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
+  const pageDescription = `${tour.title} in ${tour.city}, ${tour.region}`;
+  const productNodeId = buildTourProductNodeId(tour.tourId);
+
+  const structuredDataNodes = useMemo(() => {
+    const tourSchemaNodes = buildTourSchemaGraph({
+      url: tour.canonicalPath,
+      pageName: tour.title,
+      pageDescription,
+      heroImage: tour.heroImageUrl,
+      derivedImages: tour.heroImageUrl ? [tour.heroImageUrl] : [],
+      place: {
+        city: tour.city,
+        region: tour.region,
+      },
+      product: {
+        id: productNodeId,
+        name: tour.title,
+        description: pageDescription,
+      },
+      trip: {
+        id: `${tour.canonicalPath}#trip`,
+        name: tour.title,
+        description: pageDescription,
+        duration: tour.duration,
+        touristType: "Adventure travelers",
+        departureLocation: null,
+      },
+      offers: {
+        url: tour.bookingUrl,
+        priceCurrency: "USD",
+      },
+      brandOrgIds: {
+        orgId: SITE_ORGANIZATION_ID,
+        brandId: SITE_BRAND_ID,
+        websiteId: SITE_WEBSITE_ID,
+      },
+    })["@graph"] as Record<string, unknown>[];
+
+    const webPageNode = buildWebPageStructuredData({
+      url: tour.canonicalPath,
+      name: tour.title,
+      description: pageDescription,
+      image: tour.heroImageUrl,
+      mainEntityId: productNodeId,
+    });
+
+    return [
+      ...tourSchemaNodes.filter(node => node["@type"] !== "WebPage"),
+      webPageNode,
+    ];
+  }, [pageDescription, productNodeId, tour]);
+
+  useStructuredData(structuredDataNodes);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={tour.title}
-        description={`${tour.title} in ${tour.city}, ${tour.region}`}
+        description={pageDescription}
         url={tour.canonicalPath}
         image={tour.heroImageUrl}
       />

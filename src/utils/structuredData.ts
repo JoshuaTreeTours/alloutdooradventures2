@@ -420,6 +420,9 @@ export const resolveCanonicalProductUrl = (detailUrl: string): string => {
     : absoluteDetailUrl;
 };
 
+export const buildTourProductNodeId = (tourId: string): string =>
+  `${SITE_URL}/#p${tourId}`;
+
 export const buildAoaBookingUrlFromCanonical = (
   canonicalUrl: string
 ): string =>
@@ -469,7 +472,12 @@ export const buildWebPageStructuredData = ({
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
-    ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
+    ...(mainEntityId
+      ? {
+          about: { "@id": mainEntityId },
+          mainEntity: { "@id": mainEntityId },
+        }
+      : {}),
     ...(webPageImage
       ? {
           primaryImageOfPage: buildImageObject(webPageImage, imageId),
@@ -511,6 +519,7 @@ export const buildItemList = (
 export const buildTourProductStructuredData = ({
   tour,
   detailUrl,
+  productNodeId,
   bookingUrl,
   description,
   images,
@@ -518,6 +527,7 @@ export const buildTourProductStructuredData = ({
 }: {
   tour: Tour;
   detailUrl: string;
+  productNodeId?: string;
   bookingUrl?: string;
   description?: string;
   images?: string[];
@@ -529,6 +539,7 @@ export const buildTourProductStructuredData = ({
   );
   const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
+  const resolvedProductNodeId = productNodeId ?? buildTourProductNodeId(tour.id);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
     partnerBookingUrl: bookingUrl,
@@ -562,7 +573,7 @@ export const buildTourProductStructuredData = ({
 
   return {
     "@type": "Product",
-    "@id": `${canonicalProductUrl}#product`,
+    "@id": resolvedProductNodeId,
     url: canonicalProductUrl,
     name: tour.title,
     description,
@@ -571,6 +582,7 @@ export const buildTourProductStructuredData = ({
       : {}),
     sku: tour.id,
     brand: { "@id": SITE_BRAND_ID },
+    seller: { "@id": SITE_ORGANIZATION_ID },
     provider: { "@id": SITE_BRAND_ID },
     ...(safeSchemaEnabled && tourDuration ? { duration: tourDuration } : {}),
     ...(safeSchemaEnabled
@@ -596,6 +608,7 @@ export const buildTourProductStructuredData = ({
 export const buildTourTripStructuredData = ({
   tour,
   detailUrl,
+  productNodeId,
   bookingUrl,
   description,
   images,
@@ -603,6 +616,7 @@ export const buildTourTripStructuredData = ({
 }: {
   tour: Tour;
   detailUrl: string;
+  productNodeId?: string;
   bookingUrl?: string;
   description?: string;
   images?: string[];
@@ -614,6 +628,7 @@ export const buildTourTripStructuredData = ({
   );
   const schemaImages = cleanImageUrls(resolvedImages);
   const canonicalProductUrl = resolveCanonicalProductUrl(detailUrl);
+  const resolvedProductNodeId = productNodeId ?? buildTourProductNodeId(tour.id);
   const offerUrl = resolveOfferUrl({
     canonicalUrl: canonicalProductUrl,
     partnerBookingUrl: bookingUrl,
@@ -649,7 +664,7 @@ export const buildTourTripStructuredData = ({
     ...(safeSchemaEnabled
       ? {
           areaServed: { "@id": `${canonicalProductUrl}#place` },
-          isRelatedTo: { "@id": `${canonicalProductUrl}#product` },
+          isRelatedTo: { "@id": resolvedProductNodeId },
         }
       : {}),
     offers: {
