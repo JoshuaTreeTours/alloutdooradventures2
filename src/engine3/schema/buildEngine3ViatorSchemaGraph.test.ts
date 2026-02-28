@@ -14,25 +14,104 @@ const baseTour: Engine3TourViewModel = {
   bookingUrl: "https://www.viator.com/tours/example",
 };
 
+const canonicalUrl =
+  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/sunset-jeep-adventure-abc123";
+
 describe("buildEngine3ViatorSchemaGraph", () => {
-  it("builds minimal graph with Offer and TouristTrip but no FAQ or itinerary", () => {
-    const graph = buildEngine3ViatorSchemaGraph(
-      baseTour,
-      baseTour.canonicalPath
-    );
+  it("builds Product + Offer + TouristTrip with absolute IDs", () => {
+    const graph = buildEngine3ViatorSchemaGraph(baseTour, canonicalUrl, {
+      tripDescription: "Sunset Jeep Adventure in Palm Springs, California",
+    });
     const nodes = graph["@graph"] as Record<string, unknown>[];
 
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    expect(product?.["@id"]).toBe(`${canonicalUrl}#product`);
+    expect(product?.url).toBe(canonicalUrl);
+    expect((product?.offers as Record<string, unknown>)?.["@id"]).toBe(
+      `${canonicalUrl}#offer`
+    );
+
+    const reserveAction = product?.potentialAction as
+      | Record<string, unknown>
+      | undefined;
+    expect(reserveAction?.["@type"]).toBe("ReserveAction");
+    expect(reserveAction?.target).toBe(baseTour.bookingUrl);
+
     const offer = nodes.find(node => node["@type"] === "Offer");
-    expect(offer?.["@id"]).toBe(`${baseTour.canonicalPath}#offer`);
+    expect(offer?.["@id"]).toBe(`${canonicalUrl}#offer`);
+    expect(offer?.url).toBe(canonicalUrl);
 
     const trip = nodes.find(node => node["@type"] === "TouristTrip");
     expect((trip?.offers as Record<string, unknown>)["@id"]).toBe(
-      `${baseTour.canonicalPath}#offer`
+      `${canonicalUrl}#offer`
     );
     expect(trip?.itinerary).toBeUndefined();
 
     const faq = nodes.find(node => node["@type"] === "FAQPage");
     expect(faq).toBeUndefined();
+  });
+
+  it("poster child emits Offer + BreadcrumbList + TouristTrip with #offer reference", () => {
+    const posterChildCanonicalUrl =
+      "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1";
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        title: "San Andreas Fault Jeep Tour from Palm Springs",
+        canonicalPath: posterChildCanonicalUrl,
+      },
+      posterChildCanonicalUrl,
+      {
+        tripDescription:
+          "San Andreas Fault Jeep Tour from Palm Springs in Palm Springs, California",
+        breadcrumbItems: [
+          { name: "Destinations", item: "/destinations" },
+          { name: "California", item: "/destinations/california" },
+          {
+            name: "Palm Springs",
+            item: "/destinations/california/palm-springs",
+          },
+          {
+            name: "San Andreas Fault Jeep Tour from Palm Springs",
+            item: posterChildCanonicalUrl,
+          },
+        ],
+      }
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const offer = nodes.find(node => node["@type"] === "Offer");
+    const breadcrumb = nodes.find(node => node["@type"] === "BreadcrumbList");
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(offer?.["@id"]).toBe(`${posterChildCanonicalUrl}#offer`);
+    expect(breadcrumb).toBeTruthy();
+    expect((trip?.offers as Record<string, unknown>)["@id"]).toBe(
+      `${posterChildCanonicalUrl}#offer`
+    );
+  });
+
+  it("does not include ReserveAction when Viator URL is missing", () => {
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        bookingUrl: "   ",
+      },
+      canonicalUrl
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(product).toBeTruthy();
+    expect(product?.potentialAction).toBeUndefined();
   });
 
   it("emits FAQPage with normalized de-duplicated questions", () => {
@@ -51,7 +130,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
           { question: "Is this kid friendly?", answer: "Yes." },
         ],
       },
-      baseTour.canonicalPath
+      canonicalUrl
     );
 
     const nodes = graph["@graph"] as Record<string, unknown>[];
@@ -75,7 +154,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
           { title: "Stop A", order: 1, description: "First stop" },
         ],
       },
-      baseTour.canonicalPath
+      canonicalUrl
     );
 
     const nodes = graph["@graph"] as Record<string, unknown>[];

@@ -1,5 +1,16 @@
 import { SITE_BRAND_ID } from "../../utils/structuredData";
+import { buildCanonicalUrl } from "../../utils/seo";
 import type { Engine3TourViewModel } from "../types";
+
+type SchemaBreadcrumbItem = {
+  name: string;
+  item: string;
+};
+
+type BuildEngine3ViatorSchemaGraphOptions = {
+  tripDescription?: string;
+  breadcrumbItems?: SchemaBreadcrumbItem[];
+};
 
 const trim = (value?: string): string | undefined => {
   if (!value) {
@@ -60,9 +71,14 @@ const normalizeFaqs = (faqs: Engine3TourViewModel["faqs"]) => {
 
 export const buildEngine3ViatorSchemaGraph = (
   input: Engine3TourViewModel,
-  canonicalUrl: string
+  canonicalUrl: string,
+  options?: BuildEngine3ViatorSchemaGraphOptions
 ) => {
-  const description = trim(`${input.title} in ${input.city}, ${input.region}`);
+  const absoluteCanonicalUrl = buildCanonicalUrl(canonicalUrl);
+  const description =
+    trim(options?.tripDescription) ??
+    trim(`${input.title} in ${input.city}, ${input.region}`);
+  const viatorAffiliateUrl = trim(input.bookingUrl);
 
   const regionSlug = trim(input.region);
   const citySlug = trim(input.city);
@@ -73,7 +89,7 @@ export const buildEngine3ViatorSchemaGraph = (
       ? `${destinationsUrl}/${regionSlug}/${citySlug}`
       : undefined;
 
-  const breadcrumbItems = [
+  const fallbackBreadcrumbItems = [
     { name: "Destinations", item: destinationsUrl },
     ...(regionUrl && regionSlug
       ? [{ name: titleCaseFromSlug(regionSlug) ?? regionSlug, item: regionUrl }]
@@ -84,12 +100,19 @@ export const buildEngine3ViatorSchemaGraph = (
     { name: input.title, item: canonicalUrl },
   ];
 
-  const offerId = `${canonicalUrl}#offer`;
+  const breadcrumbItems =
+    options?.breadcrumbItems?.length &&
+    options.breadcrumbItems.every(item => trim(item.name) && trim(item.item))
+      ? options.breadcrumbItems
+      : fallbackBreadcrumbItems;
+
+  const offerId = `${absoluteCanonicalUrl}#offer`;
+  const productId = `${absoluteCanonicalUrl}#product`;
 
   const offerNode: Record<string, unknown> = {
     "@type": "Offer",
     "@id": offerId,
-    url: input.bookingUrl,
+    url: absoluteCanonicalUrl,
     availability: "https://schema.org/InStock",
   };
 
@@ -112,7 +135,7 @@ export const buildEngine3ViatorSchemaGraph = (
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${canonicalUrl}#breadcrumb`,
+      "@id": `${absoluteCanonicalUrl}#breadcrumb`,
       itemListElement: breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
@@ -120,13 +143,29 @@ export const buildEngine3ViatorSchemaGraph = (
         item: item.item,
       })),
     },
+    {
+      "@type": "Product",
+      "@id": productId,
+      url: absoluteCanonicalUrl,
+      offers: {
+        "@id": offerId,
+      },
+      ...(viatorAffiliateUrl
+        ? {
+            potentialAction: {
+              "@type": "ReserveAction",
+              target: viatorAffiliateUrl,
+            },
+          }
+        : {}),
+    },
     offerNode,
   ];
 
   if (trim(input.title) && description) {
     const tripNode: Record<string, unknown> = {
       "@type": "TouristTrip",
-      "@id": `${canonicalUrl}#trip`,
+      "@id": `${absoluteCanonicalUrl}#trip`,
       name: input.title,
       description,
       provider: {
@@ -172,7 +211,7 @@ export const buildEngine3ViatorSchemaGraph = (
   if (normalizedFaqs.length > 0) {
     graph.push({
       "@type": "FAQPage",
-      "@id": `${canonicalUrl}#faq`,
+      "@id": `${absoluteCanonicalUrl}#faq`,
       mainEntity: normalizedFaqs.map(item => ({
         "@type": "Question",
         name: item.question,
