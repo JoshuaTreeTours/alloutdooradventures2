@@ -1,38 +1,20 @@
 import type { ViatorProductData } from "../types";
-import cache2335P1 from "../../../data/cache/viator/2335P1.json";
-import cache3351P15 from "../../../data/cache/viator/3351P15.json";
-
-type ViatorCachePayload = {
-  data?: ViatorProductData;
-};
-
-const fromViatorCachePayload = (
-  payload: ViatorCachePayload,
-  fallback: ViatorProductData
-): ViatorProductData => ({
-  ...fallback,
-  ...(payload.data ?? {}),
-});
 
 export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
   "3351P15": {
-    ...fromViatorCachePayload(cache3351P15 as ViatorCachePayload, {
-      sourceUrl:
-        "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
-      productCode: "3351P15",
-      title: "Palm Springs Indian Canyons Bike and Hike",
-      supplierImage: "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
-      imageCandidates: [
-        "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
-      ],
-      highlights: [
-        "Guided bike-and-hike format in the Indian Canyons area near Palm Springs",
-        "Combines cycling segments with on-foot trail exploration",
-        "Focus on canyon landscapes and desert scenery",
-      ],
-      meetingPointDescription:
-        "Departure point details are provided on the Viator booking page.",
-    }),
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15",
+    productCode: "3351P15",
+    title: "Palm Springs Indian Canyons Bike and Hike",
+    supplierImage: "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
+    imageCandidates: ["https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"],
+    highlights: [
+      "Guided bike-and-hike format in the Indian Canyons area near Palm Springs",
+      "Combines cycling segments with on-foot trail exploration",
+      "Focus on canyon landscapes and desert scenery",
+    ],
+    meetingPointDescription:
+      "Departure point details are provided on the Viator booking page.",
   },
   "6740JTREE": {
     sourceUrl:
@@ -67,43 +49,39 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     longitude: -116.3745,
   },
   "2335P1": {
-    ...fromViatorCachePayload(cache2335P1 as ViatorCachePayload, {
-      sourceUrl:
-        "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
-      productCode: "2335P1",
-      title: "San Andreas Fault Jeep Tour from Palm Springs",
-      supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-      imageCandidates: [
-        "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
-      ],
-      priceFrom: "USD 175",
-      priceCurrency: "USD",
-      rating: 4.5,
-      reviewCount: 117,
-      highlights: [
-        "Open-air Jeep ride through the San Andreas Fault zone",
-        "Guide-led geology interpretation at key viewpoints",
-        "Stops near desert washes and fan-palm oasis habitat",
-      ],
-      included: [
-        "Professional guide",
-        "Guided Jeep transportation",
-        "Interpretive geology commentary",
-      ],
-      notIncluded: [
-        "Guide gratuities",
-        "Hotel pickup and drop-off unless selected",
-      ],
-      meetingPointDescription: "Tours meet at Metate Ranch in Indio.",
-      meetingLocation: "Metate Ranch in Indio",
-      maxGroupSize: 7,
-      minAge: 5,
-      cancellationWindowHours: 48,
-      vehicleType: "open-air Jeep",
-      signatureHighlight:
-        "The route explores the San Andreas Fault zone and nearby desert oasis terrain.",
-      duration: "3 hours",
-      operatorName: "Desert Adventures Red Jeep Tours",
-    }),
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+    productCode: "2335P1",
+    title: "San Andreas Fault Jeep Tour from Palm Springs",
+    supplierImage: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+    imageCandidates: ["https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa"],
+    priceFrom: "USD 175",
+    priceCurrency: "USD",
+    rating: 4.5,
+    reviewCount: 117,
+    highlights: [
+      "Open-air Jeep ride through the San Andreas Fault zone",
+      "Guide-led geology interpretation at key viewpoints",
+      "Stops near desert washes and fan-palm oasis habitat",
+    ],
+    included: [
+      "Professional guide",
+      "Guided Jeep transportation",
+      "Interpretive geology commentary",
+    ],
+    notIncluded: [
+      "Guide gratuities",
+      "Hotel pickup and drop-off unless selected",
+    ],
+    meetingPointDescription: "Tours meet at Metate Ranch in Indio.",
+    meetingLocation: "Metate Ranch in Indio",
+    maxGroupSize: 7,
+    minAge: 5,
+    cancellationWindowHours: 48,
+    vehicleType: "open-air Jeep",
+    signatureHighlight:
+      "The route explores the San Andreas Fault zone and nearby desert oasis terrain.",
+    duration: "3 hours",
+    operatorName: "Desert Adventures Red Jeep Tours",
   },
 };

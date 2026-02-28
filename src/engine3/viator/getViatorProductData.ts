@@ -17,8 +17,6 @@ type ViatorCachePayload = {
 const CACHE_VERSION = 1;
 const CACHE_DIR = path.resolve(process.cwd(), "data/cache/viator");
 
-type ExtractionStrategy = "json-ld" | "embedded-json" | "none";
-
 const toNumber = (value: unknown): number | undefined => {
   const parsed =
     typeof value === "number"
@@ -51,82 +49,9 @@ const asList = (value: unknown): string[] | undefined => {
   return normalized.length ? normalized : undefined;
 };
 
-const extractJsonLikeBlocks = (body: string): string[] => {
-  const blocks: string[] = [];
-  const stack: string[] = [];
-  let startIndex = -1;
-  let inString = false;
-  let quoteChar = "";
-  let isEscaped = false;
-
-  for (let i = 0; i < body.length; i += 1) {
-    const char = body[i];
-
-    if (inString) {
-      if (isEscaped) {
-        isEscaped = false;
-        continue;
-      }
-      if (char === "\\") {
-        isEscaped = true;
-        continue;
-      }
-      if (char === quoteChar) {
-        inString = false;
-        quoteChar = "";
-      }
-      continue;
-    }
-
-    if (char === '"' || char === "'") {
-      inString = true;
-      quoteChar = char;
-      continue;
-    }
-
-    if (char === "{" || char === "[") {
-      if (stack.length === 0) {
-        startIndex = i;
-      }
-      stack.push(char === "{" ? "}" : "]");
-      continue;
-    }
-
-    if (char === "}" || char === "]") {
-      const expectedClose = stack[stack.length - 1];
-      if (expectedClose !== char) {
-        stack.length = 0;
-        startIndex = -1;
-        continue;
-      }
-
-      stack.pop();
-      if (stack.length === 0 && startIndex >= 0) {
-        blocks.push(body.slice(startIndex, i + 1));
-        startIndex = -1;
-      }
-    }
-  }
-
-  return blocks;
-};
-
 const parseJsonScripts = (html: string): unknown[] => {
   const scripts = html.match(/<script[^>]*>([\s\S]*?)<\/script>/gi) ?? [];
   const parsed: unknown[] = [];
-
-  const tryParse = (candidate: string) => {
-    const value = candidate.trim();
-    if (!value) {
-      return;
-    }
-
-    try {
-      parsed.push(JSON.parse(value));
-    } catch {
-      // ignore invalid JSON fragments
-    }
-  };
 
   for (const script of scripts) {
     const body = script
@@ -134,44 +59,18 @@ const parseJsonScripts = (html: string): unknown[] => {
       .replace(/<\/script>$/i, "")
       .trim();
 
-    if (!body) {
+    if (!body.startsWith("{") && !body.startsWith("[")) {
       continue;
     }
 
-    if (body.startsWith("{") || body.startsWith("[")) {
-      tryParse(body);
-    }
-
-    for (const block of extractJsonLikeBlocks(body)) {
-      tryParse(block);
+    try {
+      parsed.push(JSON.parse(body));
+    } catch {
+      // ignore non-json script blocks
     }
   }
 
   return parsed;
-};
-
-const parseJsonLdScripts = (html: string): unknown[] => {
-  const matches = html.match(
-    /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi
-  );
-  if (!matches) {
-    return [];
-  }
-
-  const nodes: unknown[] = [];
-  for (const match of matches) {
-    const body = match
-      .replace(/^<script[^>]*>/i, "")
-      .replace(/<\/script>$/i, "")
-      .trim();
-    try {
-      nodes.push(JSON.parse(body));
-    } catch {
-      // ignore malformed JSON-LD blocks
-    }
-  }
-
-  return nodes;
 };
 
 const deepFind = (
@@ -311,20 +210,12 @@ const asFaqs = (value: unknown): Engine3FaqItem[] | undefined => {
   return normalized.length ? normalized : undefined;
 };
 
-export const parseViatorHtml = (
+const parseViatorHtml = (
   html: string,
   sourceUrl: string,
   productCode: string
 ): ViatorProductData => {
-  const embeddedScripts = parseJsonScripts(html);
-  const jsonLdScripts = parseJsonLdScripts(html);
-  const scripts = [...jsonLdScripts, ...embeddedScripts];
-
-  const extractionStrategy: ExtractionStrategy = jsonLdScripts.length
-    ? "json-ld"
-    : embeddedScripts.length
-      ? "embedded-json"
-      : "none";
+  const scripts = parseJsonScripts(html);
 
   const imageCandidates = deepFindArrayByKey(scripts, "supplierImages")
     ?.map(entry => {
@@ -374,18 +265,7 @@ export const parseViatorHtml = (
   const priceFrom = text(
     deepFind(scripts, node => {
       const summary = node.summary as Record<string, unknown> | undefined;
-      const offers = node.offers as Record<string, unknown> | undefined;
-      const priceSpecification = offers?.priceSpecification as
-        | Record<string, unknown>
-        | undefined;
-
-      return (
-        text(summary?.fromPrice) ??
-        text(node.fromPrice as string) ??
-        text(offers?.price as string) ??
-        text(offers?.lowPrice as string) ??
-        text(priceSpecification?.price as string)
-      );
+      return text(summary?.fromPrice) ?? text(node.fromPrice as string);
     })
   );
 
@@ -439,7 +319,7 @@ export const parseViatorHtml = (
     )
   );
 
-  const parsed: ViatorProductData = {
+  return {
     sourceUrl,
     productCode,
     title,
@@ -473,25 +353,6 @@ export const parseViatorHtml = (
     latitude,
     longitude,
   };
-
-  const shouldLogExtraction =
-    process.env.NODE_ENV !== "production" &&
-    (process.env.ENGINE3_DEBUG_VIATOR_EXTRACTION === "1" ||
-      productCode.toUpperCase() === "3351P15");
-
-  if (shouldLogExtraction) {
-    console.info("[engine3][viator-extract]", {
-      productCode,
-      extractionStrategy,
-      priceFrom: parsed.priceFrom,
-      priceCurrency: parsed.priceCurrency,
-      rating: parsed.rating,
-      reviewCount: parsed.reviewCount,
-      sourceUrl,
-    });
-  }
-
-  return parsed;
 };
 
 export const getViatorProductData = async ({
