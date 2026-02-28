@@ -89,7 +89,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         title={tour.title}
         description={pageDescription}
         url={canonicalUrl}
-        image={tour.heroImageUrl}
+        image={tour.primaryImageUrl}
       />
       <script
         id="structured-data-engine3-viator"
@@ -155,6 +155,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
+        {tour.primaryImageUrl ? (
+          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <img
+              src={tour.primaryImageUrl}
+              alt={tour.title}
+              referrerPolicy="no-referrer"
+              loading="eager"
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        ) : null}
+
         {tour.description ? (
           <>
             <h2 className="text-2xl font-semibold text-[#2f4a2f]">Overview</h2>
@@ -162,18 +174,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.description}
             </p>
           </>
-        ) : null}
-
-        {tour.heroImageUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-            <img
-              src={tour.heroImageUrl}
-              alt={tour.title}
-              referrerPolicy="no-referrer"
-              loading="eager"
-              className="h-64 w-full object-cover md:h-80"
-            />
-          </div>
         ) : null}
 
         {tour.highlights?.length ? (

@@ -1,6 +1,11 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
-import { generateAuthoritativeDescription } from "../utils/generateAuthoritativeDescription";
+import { viatorTours } from "../data/viatorTours";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
+import { generateEngine3Description } from "../utils/generateEngine3Description";
+import {
+  isRejectedCandidate,
+  selectEngine3PrimaryImage,
+} from "../utils/selectEngine3PrimaryImage";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -21,6 +26,23 @@ const normalizeList = (values?: string[]): string[] | undefined => {
     .filter((item): item is string => Boolean(item));
 
   return normalized.length > 0 ? normalized : undefined;
+};
+
+const getHeroImageOverride = (productCode?: string): string | undefined => {
+  if (!productCode) {
+    return undefined;
+  }
+
+  const entry = viatorTours.find(
+    tour => tour.viator.productCode === productCode
+  );
+  const override = cleanText(entry?.viator.heroImageOverrideUrl);
+
+  if (!override || isRejectedCandidate(override)) {
+    return undefined;
+  }
+
+  return override;
 };
 
 export const mapViatorToEngine3ViewModel = (
@@ -70,23 +92,19 @@ export const mapViatorToEngine3ViewModel = (
   );
 
   const generatedDescription = hasNarrativeSources
-    ? generateAuthoritativeDescription({
+    ? generateEngine3Description({
         title,
         city: cleanText(tour.geo.city),
-        state: cleanText(tour.geo.region),
-        country: cleanText(tour.geo.country),
-        durationText:
+        region: cleanText(tour.geo.region),
+        duration:
           cleanText(productData?.duration) ?? cleanText(tour.content.duration),
         highlights,
-        itineraryTitles: itinerary
-          ?.map(item => item.title ?? "")
-          .filter(Boolean),
-        inclusions: included,
-        meetingPointText:
+        shortInclusions: included,
+        meetingPoint:
           cleanText(productData?.meetingPointDescription) ??
           cleanText(tour.content.meetingPoint?.address) ??
           cleanText(tour.content.meetingPoint?.instructions),
-        operatorName: cleanText(tour.provider.name),
+        viatorDescription: sourceDescription,
       })
     : undefined;
 
@@ -94,13 +112,21 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
+  const selectedImage = selectEngine3PrimaryImage({
+    viatorImageCandidates: productData?.imageCandidates,
+    fallbackImageUrl:
+      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+  });
+  const primaryImageUrl =
+    getHeroImageOverride(productData?.productCode ?? tour.id) ?? selectedImage;
+
   return {
     tourId: tour.id,
     title,
     description:
       overrideDescription ??
-      sourceDescription ??
       generatedDescription ??
+      sourceDescription ??
       fallbackOneLiner,
     country: cleanText(tour.geo.country),
     city: tour.geo.city,
@@ -109,8 +135,8 @@ export const mapViatorToEngine3ViewModel = (
     bookingUrl: bookingUrl ?? "",
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
-    heroImageUrl:
-      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+    primaryImageUrl,
+    heroImageUrl: primaryImageUrl,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),
@@ -126,6 +152,11 @@ export const mapViatorToEngine3ViewModel = (
       cleanText(productData?.meetingPointDescription) ??
       cleanText(tour.content.meetingPoint?.address) ??
       cleanText(tour.content.meetingPoint?.instructions),
+    operatorName:
+      cleanText(productData?.operatorName) ?? cleanText(tour.provider.name),
+    availability: cleanText(productData?.availability),
+    latitude: productData?.latitude ?? tour.geo.lat ?? undefined,
+    longitude: productData?.longitude ?? tour.geo.lng ?? undefined,
     itinerary,
     faqs: productData?.faqs?.length ? productData.faqs : tour.content.faqs,
   };

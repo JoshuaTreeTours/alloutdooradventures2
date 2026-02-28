@@ -1,4 +1,3 @@
-import { SITE_BRAND_ID } from "../../utils/structuredData";
 import { buildCanonicalUrl } from "../../utils/seo";
 import type { Engine3TourViewModel } from "../types";
 
@@ -108,13 +107,14 @@ export const buildEngine3ViatorSchemaGraph = (
       : fallbackBreadcrumbItems;
 
   const offerId = `${absoluteCanonicalUrl}#offer`;
-  const productId = `${absoluteCanonicalUrl}#product`;
+  const tripId = `${absoluteCanonicalUrl}#trip`;
+  const webpageId = `${absoluteCanonicalUrl}#webpage`;
+  const providerId = `${absoluteCanonicalUrl}#provider`;
 
   const offerNode: Record<string, unknown> = {
     "@type": "Offer",
     "@id": offerId,
-    url: absoluteCanonicalUrl,
-    availability: "https://schema.org/InStock",
+    url: viatorAffiliateUrl,
   };
 
   const price = parsePriceValue(input.priceFrom);
@@ -127,12 +127,18 @@ export const buildEngine3ViatorSchemaGraph = (
     offerNode.priceCurrency = currency;
   }
 
+  const availability = trim(input.availability);
+  if (availability) {
+    offerNode.availability = availability;
+  }
+
   const graph: Record<string, unknown>[] = [
     {
-      "@type": ["Organization", "TravelAgency"],
-      "@id": SITE_BRAND_ID,
-      name: "All Outdoor Adventures",
-      url: "/",
+      "@type": "WebPage",
+      "@id": webpageId,
+      url: absoluteCanonicalUrl,
+      name: input.title,
+      ...(description ? { description } : {}),
     },
     {
       "@type": "BreadcrumbList",
@@ -141,72 +147,86 @@ export const buildEngine3ViatorSchemaGraph = (
         "@type": "ListItem",
         position: index + 1,
         name: item.name,
-        item: item.item,
+        item: buildCanonicalUrl(item.item),
       })),
     },
     {
-      "@type": "Product",
-      "@id": productId,
+      "@type": "TouristTrip",
+      "@id": tripId,
+      name: input.title,
       url: absoluteCanonicalUrl,
       ...(description ? { description } : {}),
-      offers: {
-        "@id": offerId,
-      },
-      ...(viatorAffiliateUrl
-        ? {
-            potentialAction: {
-              "@type": "ReserveAction",
-              target: viatorAffiliateUrl,
-            },
-          }
-        : {}),
-    },
-    offerNode,
-  ];
-
-  if (trim(input.title) && description) {
-    const tripNode: Record<string, unknown> = {
-      "@type": "TouristTrip",
-      "@id": `${absoluteCanonicalUrl}#trip`,
-      name: input.title,
-      description,
+      ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
       provider: {
-        "@id": SITE_BRAND_ID,
+        "@id": providerId,
       },
       offers: {
         "@id": offerId,
       },
       touristType: "Sightseeing",
-    };
+      areaServed: [
+        { "@type": "Country", name: "United States" },
+        { "@type": "AdministrativeArea", name: "California" },
+        { "@type": "City", name: "Palm Springs" },
+      ],
+    },
+    {
+      "@type": "Organization",
+      "@id": providerId,
+      name: trim(input.operatorName) ?? "Viator Operator",
+    },
+    offerNode,
+  ];
 
-    if (input.itinerary?.length) {
-      const itinerary = input.itinerary
-        .filter(
-          item =>
-            trim(item.title) || trim(item.description) || trim(item.duration)
-        )
-        .sort(
-          (a, b) =>
-            (a.order ?? Number.MAX_SAFE_INTEGER) -
-            (b.order ?? Number.MAX_SAFE_INTEGER)
-        )
-        .map((item, index) => ({
-          "@type": "TouristAttraction",
-          name: trim(item.title),
-          description: trim(item.description),
-          timeRequired: trim(item.duration),
-          position: item.order ?? index + 1,
-        }));
+  const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+    | Record<string, unknown>
+    | undefined;
 
-      if (itinerary.length > 0) {
-        tripNode.itinerary = {
-          "@type": "ItemList",
-          itemListElement: itinerary,
-        };
-      }
+  if (tripNode && input.itinerary?.length) {
+    const itinerary = input.itinerary
+      .filter(
+        item =>
+          trim(item.title) || trim(item.description) || trim(item.duration)
+      )
+      .sort(
+        (a, b) =>
+          (a.order ?? Number.MAX_SAFE_INTEGER) -
+          (b.order ?? Number.MAX_SAFE_INTEGER)
+      )
+      .map((item, index) => ({
+        "@type": "TouristAttraction",
+        name: trim(item.title),
+        description: trim(item.description),
+        timeRequired: trim(item.duration),
+        position: item.order ?? index + 1,
+      }));
+
+    if (itinerary.length > 0) {
+      tripNode.itinerary = {
+        "@type": "ItemList",
+        itemListElement: itinerary,
+      };
     }
+  }
 
-    graph.push(tripNode);
+  if (input.rating && input.reviewCount && tripNode) {
+    tripNode.aggregateRating = {
+      "@type": "AggregateRating",
+      ratingValue: input.rating,
+      reviewCount: input.reviewCount,
+    };
+  }
+
+  if (input.latitude && input.longitude && tripNode) {
+    tripNode.location = {
+      "@type": "Place",
+      name: `${input.city}, ${input.region}`,
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: input.latitude,
+        longitude: input.longitude,
+      },
+    };
   }
 
   const normalizedFaqs = normalizeFaqs(input.faqs);
