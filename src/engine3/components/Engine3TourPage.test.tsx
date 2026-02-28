@@ -11,6 +11,8 @@ import type { Engine3TourViewModel } from "../types";
 const posterChildTour: Engine3TourViewModel = {
   tourId: "2335P1",
   title: "San Andreas Fault Jeep Tour from Palm Springs",
+  description:
+    "Structured content for the San Andreas Fault Jeep Tour from Palm Springs.",
   country: "usa",
   city: "palm-springs",
   region: "california",

@@ -228,6 +228,12 @@ const parseViatorHtml = (
     ) ??
     text(html.match(/<title>(.*?)<\/title>/i)?.[1]?.replace(/\s*\|.*$/, ""));
 
+  const description = text(
+    deepFind(scripts, node => text(node.description as string)) as
+      | string
+      | undefined
+  );
+
   const rating = toNumber(
     deepFind(
       scripts,
@@ -281,6 +287,7 @@ const parseViatorHtml = (
     sourceUrl,
     productCode,
     title,
+    description,
     supplierImage:
       typeof supplierImage === "string" ? supplierImage : undefined,
     priceFrom,

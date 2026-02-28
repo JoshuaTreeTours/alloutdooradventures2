@@ -29,6 +29,7 @@ export type Engine3FaqItem = {
 export type Engine3TourViewModel = {
   tourId: string;
   title: string;
+  description: string;
   country?: string;
   city: string;
   region: string;
@@ -52,6 +53,7 @@ export type ViatorProductData = {
   sourceUrl: string;
   productCode: string;
   title?: string;
+  description?: string;
   supplierImage?: string;
   priceFrom?: string;
   priceCurrency?: string;
