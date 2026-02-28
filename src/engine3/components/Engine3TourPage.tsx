@@ -46,9 +46,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const cityRegionLabel = [tour.city?.trim(), tour.region?.trim()]
     .filter(Boolean)
     .join(", ");
-  const pageDescription = cityRegionLabel
-    ? `${tour.title} in ${cityRegionLabel}`
-    : undefined;
+  const pageDescription =
+    tour.description ||
+    (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
 
   const breadcrumbItems = [
     { label: "Destinations", href: "/destinations" },
@@ -155,6 +155,15 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
+        {tour.description ? (
+          <>
+            <h2 className="text-2xl font-semibold text-[#2f4a2f]">Overview</h2>
+            <p className="mt-3 text-sm leading-7 text-[#405040]">
+              {tour.description}
+            </p>
+          </>
+        ) : null}
+
         {tour.heroImageUrl ? (
           <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
             <img

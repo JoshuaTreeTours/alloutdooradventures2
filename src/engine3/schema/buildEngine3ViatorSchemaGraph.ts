@@ -76,6 +76,7 @@ export const buildEngine3ViatorSchemaGraph = (
 ) => {
   const absoluteCanonicalUrl = buildCanonicalUrl(canonicalUrl);
   const description =
+    trim(input.description) ??
     trim(options?.tripDescription) ??
     trim(`${input.title} in ${input.city}, ${input.region}`);
   const viatorAffiliateUrl = trim(input.bookingUrl);
@@ -147,6 +148,7 @@ export const buildEngine3ViatorSchemaGraph = (
       "@type": "Product",
       "@id": productId,
       url: absoluteCanonicalUrl,
+      ...(description ? { description } : {}),
       offers: {
         "@id": offerId,
       },

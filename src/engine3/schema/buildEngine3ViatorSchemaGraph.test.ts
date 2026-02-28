@@ -6,6 +6,7 @@ import type { Engine3TourViewModel } from "../types";
 const baseTour: Engine3TourViewModel = {
   tourId: "abc123",
   title: "Sunset Jeep Adventure",
+  description: "Authoritative test description for Sunset Jeep Adventure.",
   country: "usa",
   city: "palm-springs",
   region: "california",
@@ -46,6 +47,10 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     const trip = nodes.find(node => node["@type"] === "TouristTrip");
     expect((trip?.offers as Record<string, unknown>)["@id"]).toBe(
       `${canonicalUrl}#offer`
+    );
+    expect(product?.description).toBe(baseTour.description);
+    expect((trip as Record<string, unknown>)?.description).toBe(
+      baseTour.description
     );
     expect(trip?.itinerary).toBeUndefined();
 
