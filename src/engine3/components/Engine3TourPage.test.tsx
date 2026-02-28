@@ -32,9 +32,8 @@ describe("Engine3TourPage", () => {
     );
 
     expect(html).toContain('id="structured-data-engine3-viator"');
-    expect(html).toContain("/destinations");
-    expect(html).toContain("/destinations/california");
-    expect(html).toContain("/destinations/california/palm-springs");
+    expect(html).toContain("/tours");
+    expect(html).toContain("/tours?state=california&amp;city=palm-springs");
     expect(html).not.toContain("palm%20springs");
   });
 

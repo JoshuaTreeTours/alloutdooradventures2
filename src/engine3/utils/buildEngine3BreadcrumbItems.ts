@@ -13,13 +13,6 @@ const toSlug = (value?: string): string | undefined => {
   return cleaned || undefined;
 };
 
-const titleCaseFromSlug = (value: string) =>
-  value
-    .split("-")
-    .filter(Boolean)
-    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
-    .join(" ");
-
 export type Engine3BreadcrumbItem = {
   label: string;
   href: string;
@@ -33,24 +26,22 @@ export const buildEngine3BreadcrumbItems = (input: {
   region?: string;
   city?: string;
 }): Engine3BreadcrumbItem[] => {
-  const regionSlug = toSlug(input.stateSlug) ?? toSlug(input.region);
+  const stateSlug = toSlug(input.stateSlug) ?? toSlug(input.region);
   const citySlug = toSlug(input.citySlug) ?? toSlug(input.city);
 
+  const cityToursUrl =
+    stateSlug && citySlug
+      ? `/tours?state=${stateSlug}&city=${citySlug}`
+      : "/tours";
+
   return [
-    { label: "Destinations", href: "/destinations" },
-    ...(regionSlug
+    { label: "Home", href: "/" },
+    { label: "Tours", href: "/tours" },
+    ...(citySlug
       ? [
           {
-            label: titleCaseFromSlug(regionSlug),
-            href: `/destinations/${regionSlug}`,
-          },
-        ]
-      : []),
-    ...(regionSlug && citySlug
-      ? [
-          {
-            label: titleCaseFromSlug(citySlug),
-            href: `/destinations/${regionSlug}/${citySlug}`,
+            label: input.city?.trim() || citySlug,
+            href: cityToursUrl,
           },
         ]
       : []),

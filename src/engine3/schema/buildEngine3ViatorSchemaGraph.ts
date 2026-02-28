@@ -20,19 +20,6 @@ const trim = (value?: string): string | undefined => {
   return normalized.length > 0 ? normalized : undefined;
 };
 
-const titleCaseFromSlug = (value?: string): string | undefined => {
-  const cleaned = trim(value);
-  if (!cleaned) {
-    return undefined;
-  }
-
-  return cleaned
-    .split("-")
-    .filter(Boolean)
-    .map(token => token.charAt(0).toUpperCase() + token.slice(1))
-    .join(" ");
-};
-
 const parsePriceValue = (value?: string): string | undefined => {
   const cleaned = trim(value);
   if (!cleaned) {
@@ -68,6 +55,36 @@ const normalizeFaqs = (faqs: Engine3TourViewModel["faqs"]) => {
     });
 };
 
+const toShortDescription = (value?: string): string | undefined => {
+  const text = trim(value);
+  if (!text) {
+    return undefined;
+  }
+
+  const sentences =
+    text.match(/[^.!?]+[.!?]?/g)?.map(item => item.trim()) ?? [];
+  const short = sentences.slice(0, 2).join(" ").trim();
+  return short || text;
+};
+
+const buildFallbackBreadcrumbItems = (
+  input: Engine3TourViewModel,
+  canonicalUrl: string
+): SchemaBreadcrumbItem[] => {
+  const stateSlug = trim(input.stateSlug) ?? "california";
+  const citySlug = trim(input.citySlug) ?? "palm-springs";
+
+  return [
+    { name: "Home", item: "/" },
+    { name: "Tours", item: "/tours" },
+    {
+      name: trim(input.city) ?? "Palm Springs",
+      item: `/tours?state=${stateSlug}&city=${citySlug}`,
+    },
+    { name: input.title, item: canonicalUrl },
+  ];
+};
+
 export const buildEngine3ViatorSchemaGraph = (
   input: Engine3TourViewModel,
   canonicalUrl: string,
@@ -78,33 +95,14 @@ export const buildEngine3ViatorSchemaGraph = (
     trim(input.description) ??
     trim(options?.tripDescription) ??
     trim(`${input.title} in ${input.city}, ${input.region}`);
+  const shortDescription = toShortDescription(description);
   const viatorAffiliateUrl = trim(input.bookingUrl);
-
-  const regionSlug = trim(input.region);
-  const citySlug = trim(input.city);
-  const destinationsUrl = "/destinations";
-  const regionUrl = regionSlug ? `${destinationsUrl}/${regionSlug}` : undefined;
-  const cityUrl =
-    regionSlug && citySlug
-      ? `${destinationsUrl}/${regionSlug}/${citySlug}`
-      : undefined;
-
-  const fallbackBreadcrumbItems = [
-    { name: "Destinations", item: destinationsUrl },
-    ...(regionUrl && regionSlug
-      ? [{ name: titleCaseFromSlug(regionSlug) ?? regionSlug, item: regionUrl }]
-      : []),
-    ...(cityUrl && citySlug
-      ? [{ name: titleCaseFromSlug(citySlug) ?? citySlug, item: cityUrl }]
-      : []),
-    { name: input.title, item: canonicalUrl },
-  ];
 
   const breadcrumbItems =
     options?.breadcrumbItems?.length &&
     options.breadcrumbItems.every(item => trim(item.name) && trim(item.item))
       ? options.breadcrumbItems
-      : fallbackBreadcrumbItems;
+      : buildFallbackBreadcrumbItems(input, canonicalUrl);
 
   const offerId = `${absoluteCanonicalUrl}#offer`;
   const productId = `${absoluteCanonicalUrl}#product`;
@@ -112,39 +110,67 @@ export const buildEngine3ViatorSchemaGraph = (
   const webpageId = `${absoluteCanonicalUrl}#webpage`;
   const providerId = `${absoluteCanonicalUrl}#provider`;
 
-  const offerNode: Record<string, unknown> = {
-    "@type": "Offer",
-    "@id": offerId,
-    url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
-  };
-
   const price = parsePriceValue(input.priceFrom);
-  if (price) {
-    offerNode.price = price;
-  }
-
   const currency = trim(input.priceCurrency) ?? "USD";
-  offerNode.priceCurrency = currency;
+  const shouldEmitOffer = Boolean(price);
 
-  const productNode: Record<string, unknown> = {
-    "@type": "Product",
-    "@id": productId,
-    url: absoluteCanonicalUrl,
+  const offerNode: Record<string, unknown> | undefined = shouldEmitOffer
+    ? {
+        "@type": "Offer",
+        "@id": offerId,
+        url: viatorAffiliateUrl ?? absoluteCanonicalUrl,
+        price,
+        priceCurrency: currency,
+        availability: trim(input.availability) ?? "https://schema.org/InStock",
+      }
+    : undefined;
+
+  const productName = trim(input.title);
+  const productNode: Record<string, unknown> | undefined = productName
+    ? {
+        "@type": "Product",
+        "@id": productId,
+        url: absoluteCanonicalUrl,
+        name: productName,
+        ...(description ? { description } : {}),
+        ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
+        brand: {
+          "@id": providerId,
+        },
+        ...(shouldEmitOffer
+          ? {
+              offers: {
+                "@id": offerId,
+              },
+            }
+          : {}),
+      }
+    : undefined;
+
+  const tripNode: Record<string, unknown> = {
+    "@type": "TouristTrip",
+    "@id": tripId,
     name: input.title,
+    url: absoluteCanonicalUrl,
     ...(description ? { description } : {}),
     ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
-    offers: {
-      "@id": offerId,
-    },
-    brand: {
+    provider: {
       "@id": providerId,
     },
+    ...(shouldEmitOffer
+      ? {
+          offers: {
+            "@id": offerId,
+          },
+        }
+      : {}),
+    touristType: "Sightseeing",
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "AdministrativeArea", name: "California" },
+      { "@type": "City", name: "Palm Springs" },
+    ],
   };
-
-  const availability = trim(input.availability);
-  if (availability) {
-    offerNode.availability = availability;
-  }
 
   const graph: Record<string, unknown>[] = [
     {
@@ -152,7 +178,7 @@ export const buildEngine3ViatorSchemaGraph = (
       "@id": webpageId,
       url: absoluteCanonicalUrl,
       name: input.title,
-      ...(description ? { description } : {}),
+      ...(shortDescription ? { description: shortDescription } : {}),
     },
     {
       "@type": "BreadcrumbList",
@@ -164,40 +190,17 @@ export const buildEngine3ViatorSchemaGraph = (
         item: buildCanonicalUrl(item.item),
       })),
     },
-    {
-      "@type": "TouristTrip",
-      "@id": tripId,
-      name: input.title,
-      url: absoluteCanonicalUrl,
-      ...(description ? { description } : {}),
-      ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
-      provider: {
-        "@id": providerId,
-      },
-      offers: {
-        "@id": offerId,
-      },
-      touristType: "Sightseeing",
-      areaServed: [
-        { "@type": "Country", name: "United States" },
-        { "@type": "AdministrativeArea", name: "California" },
-        { "@type": "City", name: "Palm Springs" },
-      ],
-    },
+    tripNode,
     {
       "@type": "Organization",
       "@id": providerId,
       name: trim(input.operatorName) ?? "Viator Operator",
     },
-    productNode,
-    offerNode,
+    ...(productNode ? [productNode] : []),
+    ...(offerNode ? [offerNode] : []),
   ];
 
-  const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
-    | Record<string, unknown>
-    | undefined;
-
-  if (tripNode && input.itinerary?.length) {
+  if (input.itinerary?.length) {
     const itinerary = input.itinerary
       .filter(
         item =>
@@ -224,21 +227,21 @@ export const buildEngine3ViatorSchemaGraph = (
     }
   }
 
-  if (input.rating && input.reviewCount && tripNode) {
-    productNode.aggregateRating = {
+  if (input.rating && input.reviewCount) {
+    const aggregateRating = {
       "@type": "AggregateRating",
       ratingValue: input.rating,
       reviewCount: input.reviewCount,
     };
 
-    tripNode.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: input.rating,
-      reviewCount: input.reviewCount,
-    };
+    if (productNode) {
+      productNode.aggregateRating = aggregateRating;
+    }
+
+    tripNode.aggregateRating = aggregateRating;
   }
 
-  if (input.latitude && input.longitude && tripNode) {
+  if (input.latitude && input.longitude) {
     tripNode.location = {
       "@type": "Place",
       name: `${input.city}, ${input.region}`,
