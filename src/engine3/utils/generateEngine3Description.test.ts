@@ -3,57 +3,65 @@ import { describe, expect, it } from "vitest";
 import { generateEngine3Description } from "./generateEngine3Description";
 
 describe("generateEngine3Description", () => {
-  it("returns an authoritative paragraph between 120 and 170 words with structured facts", () => {
+  it("returns 100-120 words without third-party terms and includes at least three facts", () => {
     const description = generateEngine3Description({
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
-      duration: "3 hours",
-      highlights: [
-        "open-air Hummer travel through desert washes",
-        "geologic landmarks and panoramic viewpoints",
-        "guide commentary on geology and desert ecology",
-      ],
-      shortInclusions: ["professional guide", "bottled water"],
-      meetingPoint: "Palm Desert",
-      cancellationWindowHours: 48,
+      title: "San Andreas Fault Jeep Tour from Palm Springs",
       city: "Palm Springs",
       region: "California",
+      duration: "3 hours",
+      departureLocation: "Metate Ranch in Indio",
+      maxGroupSize: 7,
+      minAge: 5,
+      cancellationWindowHours: 48,
+      specialHighlightPhrase:
+        "The route explores the San Andreas Fault zone and desert oasis terrain.",
+      shortInclusions: ["Professional guide", "Open-air Jeep transportation"],
+      highlights: ["Geologic viewpoints", "Fan-palm oasis habitat"],
     });
 
     const wordCount = description.split(/\s+/).filter(Boolean).length;
-    expect(wordCount).toBeGreaterThanOrEqual(120);
-    expect(wordCount).toBeLessThanOrEqual(170);
+    expect(wordCount).toBeGreaterThanOrEqual(100);
+    expect(wordCount).toBeLessThanOrEqual(120);
 
-    expect(description).toContain("Departures operate from Palm Desert");
+    expect(description).toContain("lasting about 3 hours");
     expect(description).toContain(
-      "Cancellations are accepted up to 48 hours before departure"
+      "Departures operate from Metate Ranch in Indio"
     );
-
-    expect(description.toLowerCase()).not.toContain("viator");
-    expect(description.toLowerCase()).not.toContain("tripadvisor");
-    expect(description.toLowerCase()).not.toContain("booking page");
-    expect(description.toLowerCase()).not.toContain("confirmation");
-    expect(description.toLowerCase()).not.toContain("checkout");
-  });
-
-  it("injects group size and age facts when available", () => {
-    const description = generateEngine3Description({
-      title: "San Andreas Fault Jeep Tour from Palm Springs",
-      duration: "3 hours",
-      highlights: [
-        "open-air Jeep ride through the San Andreas Fault zone",
-        "stops near desert washes and fan-palm oasis habitat",
-      ],
-      shortInclusions: ["guided Jeep transportation"],
-      meetingPoint: "Metate Ranch - Indio",
-      maxGroupSize: 7,
-      minAge: 5,
-      city: "Palm Springs",
-      region: "California",
-    });
-
     expect(description).toContain(
       "Group size is limited to 7 guests per vehicle"
     );
-    expect(description).toContain("Participants must be at least 5 years old");
+
+    const lowered = description.toLowerCase();
+    for (const forbidden of [
+      "viator",
+      "tripadvisor",
+      "tacdn",
+      "confirmation",
+      "booking page",
+      "listed as",
+      "published details",
+    ]) {
+      expect(lowered).not.toContain(forbidden);
+    }
+  });
+
+  it("uses Joshua Tree-specific facts when provided", () => {
+    const description = generateEngine3Description({
+      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      city: "Palm Springs",
+      region: "California",
+      duration: "3 hours",
+      departureLocation: "Palm Desert",
+      cancellationWindowHours: 48,
+      vehicleType: "open-air Hummer",
+      specialHighlightPhrase:
+        "Guests ride in an open-air Hummer through Joshua Tree desert scenery and geologic viewpoints.",
+      shortInclusions: ["Professional guide", "Bottled water"],
+      highlights: ["Panoramic viewpoints", "Geologic landmarks"],
+    });
+
+    expect(description).toContain("Palm Desert");
+    expect(description).toContain("open-air Hummer");
+    expect(description).toContain("48 hours");
   });
 });

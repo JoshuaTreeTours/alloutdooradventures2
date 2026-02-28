@@ -76,9 +76,10 @@ export const mapViatorToEngine3ViewModel = (
       }))
       .filter(item => Boolean(item.title || item.description || item.duration));
 
-  const overrideDescription = cleanText(
-    ENGINE3_VIATOR_OVERRIDES[productData?.productCode ?? ""]?.description
-  );
+  const overrideEntry =
+    ENGINE3_VIATOR_OVERRIDES[productData?.productCode ?? ""];
+  const overrideDescription = cleanText(overrideEntry?.description);
+  const overviewFactsOverride = overrideEntry?.overviewFactsOverride;
   const sourceDescription = cleanText(productData?.description);
   const hasNarrativeSources = Boolean(
     (highlights && highlights.length > 0) ||
@@ -93,11 +94,28 @@ export const mapViatorToEngine3ViewModel = (
         duration:
           cleanText(productData?.duration) ?? cleanText(tour.content.duration),
         highlights,
-        shortInclusions: included,
         meetingPoint:
+          cleanText(overviewFactsOverride?.meetingPoint) ??
+          cleanText(productData?.meetingLocation) ??
           cleanText(productData?.meetingPointDescription) ??
           cleanText(tour.content.meetingPoint?.address) ??
           cleanText(tour.content.meetingPoint?.instructions),
+        departureLocation:
+          cleanText(productData?.departureLocation) ??
+          cleanText(overviewFactsOverride?.meetingPoint),
+        maxGroupSize:
+          overviewFactsOverride?.groupMax ?? productData?.maxGroupSize,
+        minAge: overviewFactsOverride?.ageMin ?? productData?.minAge,
+        cancellationWindowHours:
+          overviewFactsOverride?.cancellationHours ??
+          productData?.cancellationWindowHours,
+        vehicleType: cleanText(productData?.vehicleType),
+        specialHighlightPhrase:
+          cleanText(overviewFactsOverride?.signatureHighlight) ??
+          cleanText(productData?.signatureHighlight),
+        shortInclusions: overviewFactsOverride?.included?.length
+          ? overviewFactsOverride.included
+          : included,
         viatorDescription: sourceDescription,
       })
     : undefined;

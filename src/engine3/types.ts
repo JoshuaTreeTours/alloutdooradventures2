@@ -78,6 +78,13 @@ export type ViatorProductData = {
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
   duration?: string;
+  meetingLocation?: string;
+  departureLocation?: string;
+  minAge?: number;
+  maxGroupSize?: number;
+  cancellationWindowHours?: number;
+  vehicleType?: string;
+  signatureHighlight?: string;
   latitude?: number;
   longitude?: number;
 };

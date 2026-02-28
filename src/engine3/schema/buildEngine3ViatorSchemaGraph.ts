@@ -109,6 +109,7 @@ export const buildEngine3ViatorSchemaGraph = (
   const tripId = `${absoluteCanonicalUrl}#trip`;
   const webpageId = `${absoluteCanonicalUrl}#webpage`;
   const providerId = `${absoluteCanonicalUrl}#provider`;
+  const brandId = "https://www.alloutdooradventures.com/#brand";
 
   const price = parsePriceValue(input.priceFrom);
   const currency = trim(input.priceCurrency) ?? "USD";
@@ -135,7 +136,7 @@ export const buildEngine3ViatorSchemaGraph = (
         ...(description ? { description } : {}),
         ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
         brand: {
-          "@id": providerId,
+          "@id": brandId,
         },
         ...(shouldEmitOffer
           ? {
@@ -191,6 +192,12 @@ export const buildEngine3ViatorSchemaGraph = (
       })),
     },
     tripNode,
+    {
+      "@type": "Organization",
+      "@id": brandId,
+      name: "All Outdoor Adventures",
+      url: "https://www.alloutdooradventures.com",
+    },
     {
       "@type": "Organization",
       "@id": providerId,

@@ -23,8 +23,12 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
       "Guide commentary on desert ecology and regional history",
     ],
     included: ["Professional guide", "Bottled water"],
-    meetingPointDescription:
-      "Departure and return details are confirmed on the Viator booking page after checkout.",
+    meetingPointDescription: "Departures operate from Palm Desert.",
+    departureLocation: "Palm Desert",
+    cancellationWindowHours: 48,
+    vehicleType: "open-air Hummer",
+    signatureHighlight:
+      "The route features Joshua Tree desert scenery with geologic stops and panoramic viewpoints.",
     duration: "3 hours",
     latitude: 33.7226,
     longitude: -116.3745,
@@ -52,6 +56,14 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
       "Guide gratuities",
       "Hotel pickup and drop-off unless selected",
     ],
+    meetingPointDescription: "Tours meet at Metate Ranch in Indio.",
+    meetingLocation: "Metate Ranch in Indio",
+    maxGroupSize: 7,
+    minAge: 5,
+    cancellationWindowHours: 48,
+    vehicleType: "open-air Jeep",
+    signatureHighlight:
+      "The route explores the San Andreas Fault zone and nearby desert oasis terrain.",
     duration: "3 hours",
   },
 };
