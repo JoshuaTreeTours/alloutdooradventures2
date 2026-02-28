@@ -32,6 +32,23 @@ const priceLabel = (priceFrom?: string) => {
     : `Prices starting at ${priceFrom}`;
 };
 
+const parsePriceValue = (priceFrom?: string): number | undefined => {
+  if (!priceFrom) {
+    return undefined;
+  }
+
+  const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : undefined;
+};
+
+const formatUsdPrice = (value: number): string => {
+  const normalized = Number.isInteger(value) ? String(value) : value.toFixed(2);
+  return `USD ${normalized}`;
+};
+
+const isValidMetric = (value?: number): value is number =>
+  typeof value === "number" && Number.isFinite(value) && value > 0;
+
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const canonicalUrl = tour.canonicalPath;
@@ -69,6 +86,20 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const viatorFromPrice = viatorProductCode
     ? peekViatorFromPriceCache(viatorProductCode, "USD")
     : null;
+
+  const staticPriceValue = parsePriceValue(tour.priceFrom);
+  const runtimePriceValue =
+    viatorFromPrice && Number.isFinite(viatorFromPrice.price)
+      ? viatorFromPrice.price
+      : undefined;
+  const resolvedPriceFrom =
+    staticPriceValue !== undefined
+      ? tour.priceFrom
+      : runtimePriceValue && runtimePriceValue > 0
+        ? formatUsdPrice(runtimePriceValue)
+        : undefined;
+  const showRating =
+    isValidMetric(tour.rating) && isValidMetric(tour.reviewCount);
 
   if (typeof window === "undefined" && viatorProductCode) {
     void getViatorFromPrice(viatorProductCode, "USD");
@@ -148,12 +179,12 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          {priceLabel(tour.priceFrom) ? (
+          {priceLabel(resolvedPriceFrom) ? (
             <p className="mt-4 text-sm font-semibold text-white/90">
-              {priceLabel(tour.priceFrom)}
+              {priceLabel(resolvedPriceFrom)}
             </p>
           ) : null}
-          {tour.rating && tour.reviewCount ? (
+          {showRating ? (
             <TourRating rating={tour.rating} reviewCount={tour.reviewCount} />
           ) : null}
           <div className="mt-6">
