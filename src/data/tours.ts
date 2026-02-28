@@ -18,6 +18,7 @@ import {
 } from "../utils/tourDescription";
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
+import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -368,7 +369,17 @@ export const getToursByCityUnified = (
 
   const engine2Tours =
     getEngine2ToursBySourceCity(citySlug).map(toUnifiedEngine2Tour);
-  return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
+  const engine3Tours = getEngine3ListingEntries(stateSlug, citySlug).map(
+    entry => ({
+      tour: entry.tour,
+      href: entry.href,
+    })
+  );
+  return dedupeUnifiedCityTours([
+    ...engine1Tours,
+    ...engine2Tours,
+    ...engine3Tours,
+  ]);
 };
 
 export const getAffiliateDisclosure = (tour: Tour) =>
