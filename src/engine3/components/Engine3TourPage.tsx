@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import TourRating from "../../engine2/components/TourRating";
@@ -34,7 +34,12 @@ const cleanSegment = (value?: string) => value?.trim().toLowerCase();
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
+  const [heroSrc, setHeroSrc] = useState(tour.heroImageUrl ?? "/hero.jpg");
   const canonicalUrl = tour.canonicalPath;
+
+  useEffect(() => {
+    setHeroSrc(tour.heroImageUrl ?? "/hero.jpg");
+  }, [tour.heroImageUrl]);
   const isPosterChild2335p1 = canonicalUrl
     ?.toLowerCase()
     .endsWith(POSTER_CHILD_PATH);
@@ -51,6 +56,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     : undefined;
 
   const breadcrumbItems = [
+    { label: "Home", href: "/" },
     { label: "Destinations", href: "/destinations" },
     ...(regionSlug
       ? [
@@ -155,17 +161,20 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
-        {tour.heroImageUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-            <img
-              src={tour.heroImageUrl}
-              alt={tour.title}
-              referrerPolicy="no-referrer"
-              loading="eager"
-              className="h-64 w-full object-cover md:h-80"
-            />
-          </div>
-        ) : null}
+        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          <img
+            src={heroSrc}
+            alt={tour.heroImageAlt ?? tour.title}
+            referrerPolicy="no-referrer"
+            loading="eager"
+            onError={() => {
+              if (heroSrc !== "/hero.jpg") {
+                setHeroSrc("/hero.jpg");
+              }
+            }}
+            className="h-64 w-full object-cover md:h-80"
+          />
+        </div>
 
         {tour.highlights?.length ? (
           <>

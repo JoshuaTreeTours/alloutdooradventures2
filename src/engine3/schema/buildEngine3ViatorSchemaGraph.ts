@@ -75,6 +75,8 @@ export const buildEngine3ViatorSchemaGraph = (
   options?: BuildEngine3ViatorSchemaGraphOptions
 ) => {
   const absoluteCanonicalUrl = buildCanonicalUrl(canonicalUrl);
+  const pageUrl = absoluteCanonicalUrl;
+  const id = (hash: string) => `${pageUrl}${hash}`;
   const description =
     trim(options?.tripDescription) ??
     trim(`${input.title} in ${input.city}, ${input.region}`);
@@ -106,14 +108,17 @@ export const buildEngine3ViatorSchemaGraph = (
       ? options.breadcrumbItems
       : fallbackBreadcrumbItems;
 
-  const offerId = `${absoluteCanonicalUrl}#offer`;
-  const productId = `${absoluteCanonicalUrl}#product`;
+  const offerId = id("#offer");
+  const productId = id("#product");
 
   const offerNode: Record<string, unknown> = {
     "@type": "Offer",
     "@id": offerId,
-    url: absoluteCanonicalUrl,
+    url: pageUrl,
     availability: "https://schema.org/InStock",
+    seller: {
+      "@id": SITE_BRAND_ID,
+    },
   };
 
   const price = parsePriceValue(input.priceFrom);
@@ -131,22 +136,27 @@ export const buildEngine3ViatorSchemaGraph = (
       "@type": ["Organization", "TravelAgency"],
       "@id": SITE_BRAND_ID,
       name: "All Outdoor Adventures",
-      url: "/",
+      url: buildCanonicalUrl("/"),
     },
     {
       "@type": "BreadcrumbList",
-      "@id": `${absoluteCanonicalUrl}#breadcrumb`,
+      "@id": id("#breadcrumb"),
       itemListElement: breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: item.name,
-        item: item.item,
+        item: buildCanonicalUrl(item.item),
       })),
     },
     {
       "@type": "Product",
       "@id": productId,
-      url: absoluteCanonicalUrl,
+      url: pageUrl,
+      name: input.title,
+      description,
+      brand: {
+        "@id": SITE_BRAND_ID,
+      },
       offers: {
         "@id": offerId,
       },
@@ -165,7 +175,7 @@ export const buildEngine3ViatorSchemaGraph = (
   if (trim(input.title) && description) {
     const tripNode: Record<string, unknown> = {
       "@type": "TouristTrip",
-      "@id": `${absoluteCanonicalUrl}#trip`,
+      "@id": id("#trip"),
       name: input.title,
       description,
       provider: {
@@ -211,7 +221,7 @@ export const buildEngine3ViatorSchemaGraph = (
   if (normalizedFaqs.length > 0) {
     graph.push({
       "@type": "FAQPage",
-      "@id": `${absoluteCanonicalUrl}#faq`,
+      "@id": id("#faq"),
       mainEntity: normalizedFaqs.map(item => ({
         "@type": "Question",
         name: item.question,

@@ -1,4 +1,5 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
+import { selectViatorHeroImage } from "../utils/selectViatorHeroImage";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -21,6 +22,48 @@ const normalizeList = (values?: string[]): string[] | undefined => {
   return normalized.length > 0 ? normalized : undefined;
 };
 
+const defaultItineraryFromHighlights = [
+  "Guided Hummer ride into Joshua Tree region",
+  "Geology and desert ecology interpretation",
+  "Scenic stops and photo opportunities",
+  "Return transfer",
+];
+
+const splitSrcSetCandidates = (values?: string[]): string[] => {
+  if (!values?.length) {
+    return [];
+  }
+
+  return values.flatMap(value =>
+    value
+      .split(",")
+      .map(entry => cleanText(entry.trim().split(/\s+/)[0]))
+      .filter((entry): entry is string => Boolean(entry))
+  );
+};
+
+const mapStructuredItinerary = (
+  itinerary?: Array<{
+    title?: string;
+    description?: string;
+    duration?: string;
+    order?: number;
+  }>
+) =>
+  itinerary
+    ?.map((item, index) => ({
+      title: cleanText(item.title),
+      description: cleanText(item.description),
+      duration: cleanText(item.duration),
+      order: item.order ?? index + 1,
+    }))
+    .filter(item => Boolean(item.title || item.description || item.duration))
+    .sort(
+      (a, b) =>
+        (a.order ?? Number.MAX_SAFE_INTEGER) -
+        (b.order ?? Number.MAX_SAFE_INTEGER)
+    );
+
 export const mapViatorToEngine3ViewModel = (
   tour: Engine2Tour,
   productData?: ViatorProductData
@@ -28,9 +71,35 @@ export const mapViatorToEngine3ViewModel = (
   const bookingUrl =
     cleanText(tour.bookingUrl) ?? cleanText(tour.booking.bookingUrl);
 
+  const rawImageCandidates = [
+    ...(productData?.imageUrls ?? []),
+    cleanText(productData?.supplierImage),
+    cleanText(tour.images.hero),
+    ...(tour.images.gallery ?? []),
+  ].filter((item): item is string => Boolean(item));
+
+  const heroImageCandidates = [
+    ...rawImageCandidates,
+    ...splitSrcSetCandidates(rawImageCandidates),
+  ];
+
+  const title = cleanText(productData?.title) ?? tour.name;
+  const city = cleanText(tour.geo.city);
+  const state = cleanText(tour.geo.region);
+
+  const heroImageUrl = selectViatorHeroImage({
+    title,
+    city,
+    state,
+    primaryImageUrl:
+      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+    imageUrls: heroImageCandidates,
+    fallbackImageUrl: "/hero.jpg",
+  });
+
   return {
     tourId: tour.id,
-    title: cleanText(productData?.title) ?? tour.name,
+    title,
     country: cleanText(tour.geo.country),
     city: tour.geo.city,
     region: tour.geo.region,
@@ -38,8 +107,8 @@ export const mapViatorToEngine3ViewModel = (
     bookingUrl: bookingUrl ?? "",
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
-    heroImageUrl:
-      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+    heroImageUrl,
+    heroImageAlt: `${title}${city ? ` — ${city}` : ""}${state ? `, ${state}` : ""}`,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),
@@ -60,31 +129,26 @@ export const mapViatorToEngine3ViewModel = (
       cleanText(tour.content.meetingPoint?.address) ??
       cleanText(tour.content.meetingPoint?.instructions),
     itinerary:
-      productData?.itinerary
-        ?.map((item, index) => ({
-          title: cleanText(item.title),
-          description: cleanText(item.description),
-          duration: cleanText(item.duration),
-          order: item.order ?? index + 1,
-        }))
-        .filter(item =>
-          Boolean(item.title || item.description || item.duration)
-        )
-        .sort(
-          (a, b) =>
-            (a.order ?? Number.MAX_SAFE_INTEGER) -
-            (b.order ?? Number.MAX_SAFE_INTEGER)
-        ) ??
-      tour.content.itinerary
-        ?.map((item, index) => ({
-          title: cleanText(item.title),
-          description: cleanText(item.description),
-          duration: cleanText(item.duration),
+      mapStructuredItinerary(productData?.itinerary) ??
+      mapStructuredItinerary(
+        tour.content.itinerary?.map((item, index) => ({
+          title: item.title,
+          description: item.description,
+          duration: item.duration,
           order: index + 1,
         }))
-        .filter(item =>
-          Boolean(item.title || item.description || item.duration)
-        ),
+      ) ??
+      (
+        normalizeList(productData?.highlights) ??
+        normalizeList(tour.content.highlights)
+      )?.map((title, index) => ({
+        title,
+        order: index + 1,
+      })) ??
+      defaultItineraryFromHighlights.map((title, index) => ({
+        title,
+        order: index + 1,
+      })),
     faqs: productData?.faqs?.length ? productData.faqs : tour.content.faqs,
   };
 };
