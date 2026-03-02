@@ -37,6 +37,44 @@ const normalizeStringArray = (value: unknown) => {
     .filter(Boolean);
 };
 
+const buildViatorItinerary = (tour: Engine2Tour) => {
+  if (!tour.content.itinerary?.length) {
+    return null;
+  }
+
+  const itemListElement = tour.content.itinerary
+    .map((step, index) => {
+      const nameParts = [step.title, step.duration ? `(${step.duration})` : null]
+        .filter(Boolean)
+        .join(" ");
+      const description =
+        typeof step.description === "string" && step.description.trim().length
+          ? step.description
+          : undefined;
+
+      if (!nameParts) {
+        return null;
+      }
+
+      return {
+        "@type": "ListItem",
+        position: index + 1,
+        name: nameParts,
+        ...(description ? { description } : {}),
+      };
+    })
+    .filter((step): step is Record<string, unknown> => Boolean(step));
+
+  if (!itemListElement.length) {
+    return null;
+  }
+
+  return {
+    "@type": "ItemList",
+    itemListElement,
+  };
+};
+
 const getDestinationMeta = (tour: Engine2Tour) => {
   if (tour.sourceCountrySlug === "canada") {
     return { countryCode: "CA" };
@@ -107,6 +145,7 @@ export const buildSchemaGraph = (
           tour.content.experienceText,
       })
     : null;
+  const viatorItinerary = isViatorTour ? buildViatorItinerary(tour) : null;
 
   const faqSource =
     overrideEnabled && overrideFaqs?.length
@@ -178,6 +217,7 @@ export const buildSchemaGraph = (
               }
             : null,
           itinerary: tourItinerary,
+          suppressFallbackItinerary: isViatorTour,
         },
         offers: {
           url: offerUrl,
@@ -206,6 +246,45 @@ export const buildSchemaGraph = (
           image: effectiveHeroImage,
         }),
       ];
+
+  if (isViatorTour) {
+    const ratingValue =
+      typeof tour.viatorRatingValue === "number" && tour.viatorRatingValue > 0
+        ? tour.viatorRatingValue
+        : null;
+    const reviewCount =
+      typeof tour.viatorReviewCount === "number" && tour.viatorReviewCount > 0
+        ? tour.viatorReviewCount
+        : null;
+    const aggregateRating =
+      ratingValue && reviewCount
+        ? {
+            "@type": "AggregateRating",
+            ratingValue,
+            reviewCount,
+          }
+        : null;
+
+    for (const node of tourNodes) {
+      if (node["@type"] === "Product") {
+        if (aggregateRating) {
+          node.aggregateRating = aggregateRating;
+        }
+      }
+
+      if (node["@type"] === "TouristTrip") {
+        if (viatorItinerary) {
+          node.itinerary = viatorItinerary;
+        } else {
+          delete node.itinerary;
+        }
+
+        if (aggregateRating) {
+          node.aggregateRating = aggregateRating;
+        }
+      }
+    }
+  }
 
   return [
     ...getSiteStructuredDataNodes(),

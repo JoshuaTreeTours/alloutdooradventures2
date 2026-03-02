@@ -422,6 +422,88 @@ const palmSpringsTours = [
     viatorRatingValue: 4.5,
     viatorReviewCount: 117,
   },
+  {
+    id: "3351P13",
+    bookingProvider: "viator",
+    sourceCitySlug: "palm-springs",
+    slug: "earthquake-canyon-express-downhill-bicycle-adventure-3351p13",
+    name: "Earthquake Canyon Express Downhill Bike Adventure",
+    provider: {
+      name: "Viator Partner",
+      shortName: "viator",
+    },
+    geo: {
+      country: "United States",
+      region: "California",
+      city: "Palm Springs",
+      lat: 33.7653,
+      lng: -116.2382,
+    },
+    seo: {
+      title:
+        "Earthquake Canyon Express Downhill Bike Adventure | Palm Springs, California Tour",
+      description:
+        "Ride a paved downhill route along the San Andreas Fault where the Mojave Desert transitions into the Colorado Desert on this guided Palm Springs bike tour.",
+      canonicalPath:
+        "/destinations/california/palm-springs/tours/earthquake-canyon-express-downhill-bicycle-adventure-3351p13",
+      ogImage:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1400&h=1000&s=1",
+    },
+    content: {
+      duration: "4 hours",
+      experienceText:
+        "This guided downhill bike tour follows a paved route along the San Andreas Fault, tracing the point where the Mojave Desert transitions into the Colorado Desert. The route focuses on changing desert terrain, fault-zone scenery, and interpretation from your guide throughout the ride. Travelers can expect a structured outing that balances active riding with context on the landscape and geologic setting around Palm Springs.",
+      highlights: [
+        "Downhill paved route along the San Andreas Fault",
+        "Guide-led interpretation of fault-zone terrain and desert transitions",
+        "Scenery where the Mojave Desert meets the Colorado Desert",
+      ],
+      included: [
+        "Bike",
+        "Helmet",
+        "Professional guide",
+        "Water",
+        "Snacks",
+      ],
+      itinerary: [
+        {
+          title: "San Andreas Fault",
+          duration: "1 hour",
+        },
+        {
+          title: "Salton Sea",
+          description: "Pass by",
+        },
+      ],
+      meetingPoint: {
+        name: "Big Wheel Bikes & Palm Desert Bike Rentals",
+        address: "74200 CA-111, Palm Desert, CA 92260",
+      },
+      additionalInfo: [
+        "Maximum of 12 travelers",
+        "Recommended by 98% of travelers",
+        "Ages 12 years and older",
+      ],
+      cancellationPolicy:
+        "Cancel up to 24 hours in advance for a full refund.",
+    },
+    images: {
+      hero: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1400&h=1000&s=1",
+      gallery: [
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1400&h=1000&s=1",
+      ],
+    },
+    booking: {
+      bookingUrl:
+        "https://www.viator.com/tours/Palm-Springs/Earthquake-Canyon-Express-Downhill-Bike-Adventure/d648-3351P13?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",
+    },
+    pricing: {
+      price: "255",
+      currency: "USD",
+    },
+    viatorRatingValue: 4.9,
+    viatorReviewCount: 265,
+  },
 ] as const;
 
 export default palmSpringsTours;
