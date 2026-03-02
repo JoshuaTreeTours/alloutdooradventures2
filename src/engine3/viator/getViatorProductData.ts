@@ -6,6 +6,7 @@ import type {
   Engine3ItineraryItem,
   ViatorProductData,
 } from "../types";
+import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
 
 type ViatorCachePayload = {
   cacheVersion: number;
@@ -293,6 +294,20 @@ const parseViatorHtml = (
     )
   );
 
+  const meetingPointText = extractMeetingPointText({
+    structuredLocation: (deepFind(
+      scripts,
+      node =>
+        ((node.departureAndReturnLocations as any)?.departureLocations?.[0] as
+          | Record<string, unknown>
+          | undefined) ??
+        ((node.meetingPoint as any)?.location as
+          | Record<string, unknown>
+          | undefined)
+    ) ?? null) as Record<string, unknown> | null,
+    fallbackText: meetingPointDescription,
+  });
+
   const operatorName = text(
     deepFind(
       scripts,
@@ -348,6 +363,7 @@ const parseViatorHtml = (
       )
     ),
     meetingPointDescription,
+    meetingPointText,
     itinerary,
     faqs,
     latitude,

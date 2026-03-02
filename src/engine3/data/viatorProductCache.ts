@@ -8,13 +8,17 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     title: "Palm Springs Indian Canyons Bike and Hike",
     supplierImage: "https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm",
     imageCandidates: ["https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"],
+    priceFrom: "$149.00",
+    priceCurrency: "USD",
+    reviewCount: 216,
     highlights: [
       "Guided bike-and-hike format in the Indian Canyons area near Palm Springs",
       "Combines cycling segments with on-foot trail exploration",
       "Focus on canyon landscapes and desert scenery",
     ],
     meetingPointDescription:
-      "Departure point details are provided on the Viator booking page.",
+      "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
+    meetingPointText: "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
   },
   "6740JTREE": {
     sourceUrl:

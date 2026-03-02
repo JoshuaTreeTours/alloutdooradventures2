@@ -60,9 +60,8 @@ export const ENGINE3_VIATOR_OVERRIDES: Record<
     ],
   },
   "3351P15": {
-    description: `Palm Springs Indian Canyons Bike and Hike is a guided bike-and-hike outing in the Indian Canyons area of Palm Springs that alternates between riding segments and short trail walks. The format is built around transition points where the group moves from bike travel to on-foot exploration, creating a structured route that covers more ground than a hike-only outing while still allowing time in key canyon sections. Guide-led pacing keeps the day organized and focused on terrain, route flow, and desert context.
-
-Participants experience a mix of active movement and stop-and-explore intervals through canyon landscapes, fan-palm oasis zones, and open desert corridors. The ride-and-walk sequence distinguishes this itinerary from a standard point-to-point bike tour by combining continuous cycling with dedicated hiking segments in areas best explored on foot. The result is a field-oriented experience that balances scenery, interpretation, and moderate physical effort across two activity modes.`,
+    description:
+      "See Palm Springs from the saddle, then step into a desert oasis on this guided Bike & Hike to Indian Canyons. Start in downtown and cruise a 10-mile (17-km) loop through classic neighborhoods on a provided bike and helmet, with a guide setting an easy pace. At the canyon entrance—ancestral home of the Agua Caliente Band of Cahuilla Indians—swap pedals for a short nature walk along a palm-shaded stream and canyon rock formations. Snacks and bottled water are included, as are entry fees. Plan on about 3.5 hours total, best for reasonably active travelers who want scenery and local context without an all-day commitment. Free cancellation is available up to 24 hours before start time, and tours often book ahead.",
     faqs: [
       {
         question:

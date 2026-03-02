@@ -1,4 +1,5 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
+import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { generateEngine3Description } from "../utils/generateEngine3Description";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
@@ -190,6 +191,7 @@ export const mapViatorToEngine3ViewModel = (
 
   return {
     tourId: tour.id,
+    bookingProvider: "viator",
     title,
     description:
       overrideDescription ??
@@ -214,6 +216,14 @@ export const mapViatorToEngine3ViewModel = (
     rating: productData?.rating ?? tour.viatorRatingValue ?? undefined,
     reviewCount:
       productData?.reviewCount ?? tour.viatorReviewCount ?? undefined,
+    meetingPointText: extractMeetingPointText({
+      structuredLocation: undefined,
+      fallbackText:
+        cleanText(productData?.meetingPointText) ??
+        cleanText(productData?.meetingPointDescription) ??
+        cleanText(tour.content.meetingPoint?.address) ??
+        cleanText(tour.content.meetingPoint?.instructions),
+    }),
     highlights,
     included,
     notIncluded:
