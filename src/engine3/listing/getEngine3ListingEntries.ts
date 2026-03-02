@@ -16,6 +16,15 @@ const toTitleCase = (value: string): string =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
+const parseStartingPrice = (priceFrom?: string): number | undefined => {
+  if (!priceFrom) {
+    return undefined;
+  }
+
+  const parsed = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
+};
+
 export const getEngine3ListingEntries = (
   stateSlug: string,
   citySlug: string
@@ -53,9 +62,9 @@ export const getEngine3ListingEntries = (
           primaryCategory: "adventure",
           destination: {
             country: "United States",
-            state: "California",
+            state: toTitleCase(stateSlug),
             stateSlug,
-            city: "Palm Springs",
+            city: toTitleCase(citySlug),
             citySlug,
             lat: productData?.latitude,
             lng: productData?.longitude,
@@ -73,7 +82,10 @@ export const getEngine3ListingEntries = (
           badges: {
             rating: productData?.rating,
             reviewCount: productData?.reviewCount,
+            priceFrom: productData?.priceFrom,
           },
+          startingPrice: parseStartingPrice(productData?.priceFrom),
+          currency: productData?.priceCurrency ?? "USD",
           activitySlugs: ["adventure"],
           bookingProvider: "viator",
           bookingUrl: tour.viator.url,

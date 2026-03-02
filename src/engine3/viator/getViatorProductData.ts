@@ -74,6 +74,19 @@ const parseJsonScripts = (html: string): unknown[] => {
   return parsed;
 };
 
+const collapseWhitespace = (value: string): string =>
+  value.replace(/\s+/g, " ").trim();
+
+const extractTextMatch = (
+  html: string,
+  pattern: RegExp,
+  group = 1
+): string | undefined => {
+  const match = html.match(pattern);
+  const value = match?.[group];
+  return value ? collapseWhitespace(value) : undefined;
+};
+
 const deepFind = (
   input: unknown,
   checker: (node: Record<string, unknown>) => string | number | undefined
@@ -263,18 +276,34 @@ const parseViatorHtml = (
     )
   );
 
-  const priceFrom = text(
-    deepFind(scripts, node => {
-      const summary = node.summary as Record<string, unknown> | undefined;
-      return text(summary?.fromPrice) ?? text(node.fromPrice as string);
-    })
+  const fallbackRating = toNumber(
+    extractTextMatch(html, /([0-5](?:\.\d)?)\s*[·•]\s*([\d,]+)\s*Reviews?/i, 1)
   );
+  const fallbackReviewCount = toNumber(
+    extractTextMatch(html, /([0-5](?:\.\d)?)\s*[·•]\s*([\d,]+)\s*Reviews?/i, 2)
+  );
+
+  const fallbackPriceFrom = extractTextMatch(html, /From\s*\$\s*([\d,.]+)/i);
+
+  const priceFrom =
+    text(
+      deepFind(scripts, node => {
+        const summary = node.summary as Record<string, unknown> | undefined;
+        return text(summary?.fromPrice) ?? text(node.fromPrice as string);
+      })
+    ) ?? (fallbackPriceFrom ? `$${fallbackPriceFrom}` : undefined);
 
   const priceCurrency = text(
     deepFind(scripts, node => {
       const summary = node.summary as Record<string, unknown> | undefined;
       return text(summary?.currencyCode) ?? text(node.priceCurrency as string);
     })
+  );
+
+  const fallbackDuration = extractTextMatch(
+    html,
+    /([\d\s\w]+to[\d\s\w]+hours\s*\(approx\.\))/i,
+    1
   );
 
   const itinerary =
@@ -307,6 +336,15 @@ const parseViatorHtml = (
     ) ?? null) as Record<string, unknown> | null,
     fallbackText: meetingPointDescription,
   });
+
+  const overviewText = extractTextMatch(
+    html,
+    /<h2[^>]*>\s*Overview\s*<\/h2>[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>/i
+  );
+  const fallbackMeetingFromOverview = extractTextMatch(
+    overviewText ?? "",
+    /from\s+(Palm\s+Springs\s+Art\s+Museum[^.,;]*)/i
+  );
 
   const operatorName = text(
     deepFind(
@@ -342,10 +380,13 @@ const parseViatorHtml = (
     supplierImage,
     imageCandidates,
     priceFrom,
+    duration: text(
+      deepFind(scripts, node => text(node.duration as string))
+    ) ?? fallbackDuration,
     priceCurrency,
     availability,
-    rating,
-    reviewCount,
+    rating: rating ?? fallbackRating,
+    reviewCount: reviewCount ?? fallbackReviewCount,
     operatorName,
     highlights: asList(
       deepFind(scripts, node =>
@@ -363,7 +404,11 @@ const parseViatorHtml = (
       )
     ),
     meetingPointDescription,
-    meetingPointText,
+    meetingPointText:
+      meetingPointText ??
+      (fallbackMeetingFromOverview
+        ? `${fallbackMeetingFromOverview} (select at booking)`
+        : "Select a meeting point"),
     itinerary,
     faqs,
     latitude,
@@ -397,7 +442,15 @@ export const getViatorProductData = async ({
     },
   });
   if (!response.ok) {
-    throw new Error(`Failed to fetch Viator product: ${response.status}`);
+    return {
+      cacheVersion: CACHE_VERSION,
+      fetchedAt: new Date().toISOString(),
+      sourceUrl,
+      data: {
+        sourceUrl,
+        productCode,
+      },
+    };
   }
 
   const html = await response.text();

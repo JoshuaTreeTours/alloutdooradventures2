@@ -52,6 +52,39 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
     latitude: 33.7226,
     longitude: -116.3745,
   },
+  "6740P7": {
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    productCode: "6740P7",
+    title: "Joshua Tree National Park Scenic Tour",
+    supplierImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    imageCandidates: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    ],
+    priceFrom: "$159.00",
+    priceCurrency: "USD",
+    rating: 4.7,
+    reviewCount: 519,
+    operatorName: "Desert Adventures Red Jeep Tours",
+    highlights: [
+      "Small-group scenic route through Joshua Tree National Park basins and granite formations",
+      "Photo stops and short walks at Cap Rock, Intersection Rock, Barker Dam, and Keys View",
+      "Guide context on desert geology, the San Andreas Fault, and Cahuilla cultural history",
+    ],
+    description:
+      "See Joshua Tree National Park on a small-group scenic tour that trades guesswork for a guide who actually knows where the good stuff is. Starting from the Palm Springs Art Museum area, you’ll ride in an air-conditioned vehicle and spend roughly 3–5 hours exploring desert basins, granite formations, and classic Joshua tree scenery. Along the way, your route includes photo stops and short walks at well-known points like Cap Rock, Intersection Rock, Barker Dam, and Keys View—so you get both the big vistas and the up-close textures. Expect context on the forces that shaped this landscape, including the San Andreas Fault, plus regional cultural history tied to the Cahuilla people.",
+    meetingPointDescription: "Meeting point: Palm Springs Art Museum area.",
+    meetingPointText: "Palm Springs Art Museum (select at booking)",
+    duration: "3 to 5 hours (approx.)",
+    itinerary: [
+      { title: "Joshua Tree National Park", order: 1 },
+      { title: "Cap Rock Trail", order: 2 },
+      { title: "Intersection Rock", order: 3 },
+      { title: "Barker Dam Trail", order: 4 },
+      { title: "Keys View", order: 5 },
+    ],
+  },
   "2335P1": {
     sourceUrl:
       "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482&mcid=58086&currency=USD",

@@ -46,6 +46,22 @@ export const viatorTours: readonly Engine3Tour[] = [
     },
     slug: "joshua-tree-hummer-adventure-from-palm-desert",
   },
+  {
+    engine: "engine3",
+    bookingProvider: "viator",
+    viator: {
+      productCode: "6740P7",
+      url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+      heroImageOverrideUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    },
+    destination: {
+      country: "usa",
+      state: "california",
+      city: "joshua-tree",
+    },
+    slug: "joshua-tree-national-park-scenic-tour",
+  },
 ] as const;
 
 export const viatorTourPaths = viatorTours.map(buildEngine3TourPath);
