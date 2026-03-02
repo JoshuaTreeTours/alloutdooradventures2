@@ -10,6 +10,7 @@ import Engine3TourPage from "./Engine3TourPage";
 
 const posterChildTour: Engine3TourViewModel = {
   tourId: "2335P1",
+  bookingProvider: "viator",
   title: "San Andreas Fault Jeep Tour from Palm Springs",
   description:
     "Structured content for the San Andreas Fault Jeep Tour from Palm Springs.",
@@ -69,16 +70,19 @@ describe("Engine3TourPage", () => {
       <Engine3TourPage
         tour={{
           ...posterChildTour,
-          priceFrom: "USD 175",
+          priceFrom: "$175.00",
+          priceCurrency: "USD",
           rating: 4.5,
           reviewCount: 117,
+          meetingPointText: "Metate Ranch in Indio",
         }}
       />
     );
 
-    expect(withValidMeta).toContain("Prices starting at USD 175");
+    expect(withValidMeta).toContain("From $175.00 per person");
     expect(withValidMeta).toContain("4.5");
     expect(withValidMeta).toContain("117 reviews");
+    expect(withValidMeta).toContain("Meeting point:");
 
     const withInvalidMeta = renderToStaticMarkup(
       <Engine3TourPage
@@ -86,12 +90,14 @@ describe("Engine3TourPage", () => {
           ...posterChildTour,
           priceFrom: "USD 0",
           rating: Number.NaN,
-          reviewCount: 117,
+          reviewCount: undefined,
+          meetingPointText: undefined,
         }}
       />
     );
 
-    expect(withInvalidMeta).not.toContain("Prices starting at");
+    expect(withInvalidMeta).not.toContain("From USD 0 per person");
     expect(withInvalidMeta).not.toContain("reviews");
+    expect(withInvalidMeta).not.toContain("Meeting point:");
   });
 });

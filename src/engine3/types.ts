@@ -29,6 +29,7 @@ export type Engine3FaqItem = {
 
 export type Engine3TourViewModel = {
   tourId: string;
+  bookingProvider?: "viator";
   title: string;
   description: string;
   country?: string;
@@ -46,6 +47,7 @@ export type Engine3TourViewModel = {
   priceCurrency?: string;
   rating?: number;
   reviewCount?: number;
+  meetingPointText?: string;
   highlights?: string[];
   included?: string[];
   notIncluded?: string[];
@@ -70,6 +72,8 @@ export type ViatorProductData = {
   availability?: string;
   rating?: number;
   reviewCount?: number;
+  ratingValue?: number;
+  meetingPointText?: string;
   operatorName?: string;
   highlights?: string[];
   included?: string[];

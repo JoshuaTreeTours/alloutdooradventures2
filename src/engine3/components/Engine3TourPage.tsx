@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
-import TourRating from "../../engine2/components/TourRating";
+import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
@@ -22,16 +22,6 @@ const POSTER_CHILD_PATHS = new Set([
   "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
 ]);
 
-const priceLabel = (priceFrom?: string) => {
-  if (!priceFrom) {
-    return undefined;
-  }
-
-  return /^prices?\s+starting/i.test(priceFrom)
-    ? priceFrom
-    : `Prices starting at ${priceFrom}`;
-};
-
 const parsePriceValue = (priceFrom?: string): number | undefined => {
   if (!priceFrom) {
     return undefined;
@@ -45,9 +35,6 @@ const formatUsdPrice = (value: number): string => {
   const normalized = Number.isInteger(value) ? String(value) : value.toFixed(2);
   return `USD ${normalized}`;
 };
-
-const isValidMetric = (value?: number): value is number =>
-  typeof value === "number" && Number.isFinite(value) && value > 0;
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
@@ -98,9 +85,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       : runtimePriceValue && runtimePriceValue > 0
         ? formatUsdPrice(runtimePriceValue)
         : undefined;
-  const showRating =
-    isValidMetric(tour.rating) && isValidMetric(tour.reviewCount);
-
   if (typeof window === "undefined" && viatorProductCode) {
     void getViatorFromPrice(viatorProductCode, "USD");
   }
@@ -150,6 +134,14 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.title}
           </h1>
+          <ParagonMetaRow
+            bookingProvider={tour.bookingProvider}
+            priceFrom={resolvedPriceFrom}
+            currency={tour.priceCurrency}
+            ratingValue={tour.rating}
+            reviewCount={tour.reviewCount}
+            meetingPointText={tour.meetingPointText}
+          />
           <nav aria-label="Breadcrumb" className="mt-4 text-xs text-white/85">
             <ol className="flex flex-wrap items-center gap-2">
               {breadcrumbItems.map((item, index) => (
@@ -178,14 +170,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             <p className="mt-3 inline-flex rounded-full bg-white/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.08em]">
               {tour.duration}
             </p>
-          ) : null}
-          {priceLabel(resolvedPriceFrom) ? (
-            <p className="mt-4 text-sm font-semibold text-white/90">
-              {priceLabel(resolvedPriceFrom)}
-            </p>
-          ) : null}
-          {showRating ? (
-            <TourRating rating={tour.rating} reviewCount={tour.reviewCount} />
           ) : null}
           <div className="mt-6">
             <a
