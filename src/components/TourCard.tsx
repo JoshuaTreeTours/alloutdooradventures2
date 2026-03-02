@@ -28,6 +28,16 @@ export default function TourCard({ tour, href }: TourCardProps) {
   );
   const cardImage =
     tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+  const ratingValue =
+    typeof tour.badges.rating === "number" && Number.isFinite(tour.badges.rating)
+      ? tour.badges.rating
+      : undefined;
+  const reviewCount =
+    typeof tour.badges.reviewCount === "number" &&
+    Number.isFinite(tour.badges.reviewCount) &&
+    tour.badges.reviewCount > 0
+      ? Math.round(tour.badges.reviewCount)
+      : undefined;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -74,6 +84,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
           {startingPriceLabel ? (
             <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
               From {startingPriceLabel}
+            </p>
+          ) : null}
+          {ratingValue && reviewCount ? (
+            <p className="mt-1 text-sm text-[#1f2a1f]">
+              {ratingValue.toFixed(1)} ★ ({reviewCount.toLocaleString()})
             </p>
           ) : null}
         </div>

@@ -1,0 +1,27 @@
+{
+  "cacheVersion": 1,
+  "fetchedAt": "2026-03-02T00:00:00.000Z",
+  "sourceUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+  "data": {
+    "sourceUrl": "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    "productCode": "6740P7",
+    "title": "Joshua Tree National Park Scenic Tour",
+    "supplierImage": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    "imageCandidates": ["https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"],
+    "priceFrom": "$159.00",
+    "priceCurrency": "USD",
+    "rating": 4.7,
+    "reviewCount": 519,
+    "duration": "3 to 5 hours (approx.)",
+    "description": "See Joshua Tree National Park on a small-group scenic tour that trades guesswork for a guide who actually knows where the good stuff is. Starting from the Palm Springs Art Museum area, you’ll ride in an air-conditioned vehicle and spend roughly 3–5 hours exploring desert basins, granite formations, and classic Joshua tree scenery. Along the way, your route includes photo stops and short walks at well-known points like Cap Rock, Intersection Rock, Barker Dam, and Keys View—so you get both the big vistas and the up-close textures. Expect context on the forces that shaped this landscape, including the San Andreas Fault, plus regional cultural history tied to the Cahuilla people.",
+    "meetingPointText": "Palm Springs Art Museum (select at booking)",
+    "meetingPointDescription": "Meeting point: Palm Springs Art Museum area.",
+    "itinerary": [
+      { "title": "Joshua Tree National Park", "order": 1 },
+      { "title": "Cap Rock Trail", "order": 2 },
+      { "title": "Intersection Rock", "order": 3 },
+      { "title": "Barker Dam Trail", "order": 4 },
+      { "title": "Keys View", "order": 5 }
+    ]
+  }
+}

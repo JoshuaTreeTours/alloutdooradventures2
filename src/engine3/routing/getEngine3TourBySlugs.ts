@@ -4,6 +4,13 @@ import { viatorTours } from "../data/viatorTours";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 import { buildEngine3TourPath } from "./buildEngine3TourPath";
 
+const toTitleCase = (value: string): string =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
 export const getEngine3TourBySlugs = (
   stateSlug: string,
   citySlug: string,
@@ -40,8 +47,8 @@ export const getEngine3TourBySlugs = (
     },
     geo: {
       country: "United States",
-      region: "California",
-      city: "Palm Springs",
+      region: toTitleCase(entry.destination.state ?? stateSlug),
+      city: toTitleCase(entry.destination.city),
       lat: productData?.latitude ?? null,
       lng: productData?.longitude ?? null,
     },
