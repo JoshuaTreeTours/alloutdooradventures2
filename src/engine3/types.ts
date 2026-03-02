@@ -39,6 +39,7 @@ export type Engine3TourViewModel = {
   region: string;
   canonicalPath: string;
   bookingUrl: string;
+  viatorAffiliateUrl?: string;
   duration?: string;
   primaryImageUrl?: string;
   heroImageOverrideUrl?: string;

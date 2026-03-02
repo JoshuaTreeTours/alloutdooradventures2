@@ -1,4 +1,5 @@
 import { buildCanonicalUrl } from "../../utils/seo";
+import { toIsoDuration } from "../../lib/isoDuration";
 import type { Engine3TourViewModel } from "../types";
 
 type SchemaBreadcrumbItem = {
@@ -170,6 +171,11 @@ export const buildEngine3ViatorSchemaGraph = (
       ? String(options.offerPrice)
       : parsePriceValue(input.priceFrom);
   const providerName = trim(input.operatorName);
+  const offerUrl =
+    input.paragonPlus?.sourceUrl ||
+    input.viatorAffiliateUrl ||
+    input.bookingUrl ||
+    absoluteCanonicalUrl;
   const productName = trim(input.title);
   const productDescription = dedupeSentenceDescription(description);
   const productNode: Record<string, unknown> | undefined =
@@ -186,7 +192,7 @@ export const buildEngine3ViatorSchemaGraph = (
           },
           offers: {
             "@type": "Offer",
-            url: absoluteCanonicalUrl,
+            url: offerUrl,
             priceCurrency: "USD",
             availability: "https://schema.org/InStock",
             ...(price ? { price } : {}),
@@ -216,10 +222,7 @@ export const buildEngine3ViatorSchemaGraph = (
             "@type": "Offer",
             price: String(input.paragonPlus.price),
             priceCurrency: input.paragonPlus.priceCurrency,
-            url:
-              input.paragonPlus.sourceUrl ||
-              input.bookingUrl ||
-              absoluteCanonicalUrl,
+            url: offerUrl,
             availability: "https://schema.org/InStock",
           },
         }
@@ -254,19 +257,9 @@ export const buildEngine3ViatorSchemaGraph = (
       url: absoluteCanonicalUrl,
       name: input.title,
       ...(shortDescription ? { description: shortDescription } : {}),
-      ...(input.paragonPlus
-        ? {
-            mainEntity: {
-              "@id": tripId,
-            },
-          }
-        : productNode
-          ? {
-              mainEntity: {
-                "@id": productId,
-              },
-            }
-          : {}),
+      mainEntity: {
+        "@id": tripId,
+      },
       isPartOf: {
         "@id": websiteId,
       },
@@ -311,13 +304,16 @@ export const buildEngine3ViatorSchemaGraph = (
           (a.order ?? Number.MAX_SAFE_INTEGER) -
           (b.order ?? Number.MAX_SAFE_INTEGER)
       )
-      .map((item, index) => ({
-        "@type": "TouristAttraction",
-        name: trim(item.title),
-        description: trim(item.description),
-        timeRequired: trim(item.duration),
-        position: item.order ?? index + 1,
-      }));
+      .map((item, index) => {
+        const timeRequired = toIsoDuration(item.duration);
+        return {
+          "@type": "TouristAttraction",
+          name: trim(item.title),
+          description: trim(item.description),
+          ...(timeRequired ? { timeRequired } : {}),
+          position: item.order ?? index + 1,
+        };
+      });
 
     if (itinerary.length > 0) {
       tripNode.itinerary = {

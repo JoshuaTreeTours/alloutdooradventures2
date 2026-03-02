@@ -234,6 +234,7 @@ export const mapViatorToEngine3ViewModel = (
     region: tour.geo.region,
     canonicalPath: tour.seo.canonicalPath,
     bookingUrl: bookingUrl ?? "",
+    viatorAffiliateUrl: bookingUrl ?? "",
     duration:
       cleanText(paragonPlus?.duration) ??
       cleanText(productData?.duration) ??

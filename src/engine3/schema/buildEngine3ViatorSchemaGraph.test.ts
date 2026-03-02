@@ -31,7 +31,7 @@ const baseTour: Engine3TourViewModel = {
 };
 
 describe("buildEngine3ViatorSchemaGraph", () => {
-  it("adds Product schema + WebPage.mainEntity for the 2335P1 canonical URL", () => {
+  it("adds Product schema and points WebPage.mainEntity at TouristTrip", () => {
     const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
 
     const graph = buildEngine3ViatorSchemaGraph(
@@ -67,7 +67,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
 
     expect(
       (webpage?.mainEntity as Record<string, unknown> | undefined)?.["@id"]
-    ).toBe(`${canonicalUrl}#product`);
+    ).toBe(`${canonicalUrl}#trip`);
 
     expect(product?.name).toBe(baseTour.title);
     expect(product?.url).toBe(canonicalUrl);
@@ -78,7 +78,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
 
     const offer = product?.offers as Record<string, unknown> | undefined;
     expect(offer?.["@type"]).toBe("Offer");
-    expect(offer?.url).toBe(canonicalUrl);
+    expect(offer?.url).toBe(baseTour.bookingUrl);
     expect(offer?.priceCurrency).toBe("USD");
     expect(offer?.availability).toBe("https://schema.org/InStock");
     expect(offer?.price).toBe("175");
@@ -140,6 +140,41 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     expect((trip.aggregateRating as Record<string, unknown>).ratingValue).toBe(
       "4.5"
     );
+  });
+
+  it("uses affiliate offer URL precedence and ISO-8601 itinerary durations", () => {
+    const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
+    const affiliateUrl =
+      "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00058975&uid=U00174482";
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        viatorAffiliateUrl: affiliateUrl,
+        itinerary: [
+          { title: "Stop 1", duration: "15 minutes" },
+          { title: "Stop 2", duration: "1 hour 30 minutes" },
+          { title: "Stop 3", duration: "about two hours" },
+        ],
+      },
+      canonicalUrl
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect((product?.offers as Record<string, unknown>).url).toBe(affiliateUrl);
+
+    const itinerary = (trip?.itinerary as Record<string, unknown>)
+      ?.itemListElement as Array<Record<string, unknown>>;
+    expect(itinerary[0].timeRequired).toBe("PT15M");
+    expect(itinerary[1].timeRequired).toBe("PT1H30M");
+    expect(itinerary[2].timeRequired).toBeUndefined();
   });
   it("fail-closes provider, aggregateRating, geo and FAQ schema when data is invalid", () => {
     const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
@@ -221,6 +256,8 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       | undefined;
 
     expect(nodes.find(node => node["@type"] === "Product")).toBeUndefined();
-    expect(webpage?.mainEntity).toBeUndefined();
+    expect((webpage?.mainEntity as Record<string, unknown>)?.["@id"]).toBe(
+      `${canonicalUrl}#trip`
+    );
   });
 });
