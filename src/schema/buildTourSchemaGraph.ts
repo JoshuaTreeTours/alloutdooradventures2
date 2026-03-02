@@ -161,6 +161,7 @@ export function buildTourSchemaGraph(args: {
     } | null;
     touristType?: string | null;
     itinerary?: Record<string, unknown> | null;
+    suppressFallbackItinerary?: boolean;
   };
   offers: {
     url: string;
@@ -311,18 +312,22 @@ export function buildTourSchemaGraph(args: {
           : {}),
         provider: { "@id": args.brandOrgIds.orgId },
         touristDestination: { "@id": placeId },
-        itinerary:
-          args.trip.itinerary ??
-          {
-            "@type": "ItemList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                item: { "@id": placeId },
-              },
-            ],
-          },
+        ...(!args.trip.suppressFallbackItinerary || args.trip.itinerary
+          ? {
+              itinerary:
+                args.trip.itinerary ??
+                {
+                  "@type": "ItemList",
+                  itemListElement: [
+                    {
+                      "@type": "ListItem",
+                      position: 1,
+                      item: { "@id": placeId },
+                    },
+                  ],
+                },
+            }
+          : {}),
         ...(args.trip.touristType
           ? { touristType: args.trip.touristType }
           : {}),

@@ -73,6 +73,8 @@ export type Engine2Tour = {
       mapsUrl?: string;
     };
     duration?: string;
+    additionalInfo?: string[];
+    cancellationPolicy?: string;
   };
   images: {
     hero: string | null;

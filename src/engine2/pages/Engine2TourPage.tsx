@@ -122,7 +122,7 @@ export default function Engine2TourPage({
     : undefined;
   const viatorPriceLabel =
     isViatorTour && tour.pricing?.currency && displayPrice > 0
-      ? `Prices starting at ${tour.pricing.currency} ${displayPrice.toFixed(0)}`
+      ? `From $${displayPrice.toFixed(0)} pp`
       : undefined;
   const headerPriceLabel =
     viatorPriceLabel ?? overridePriceLabel ?? enginePriceLabel;
@@ -315,7 +315,7 @@ export default function Engine2TourPage({
           </div>
         ) : null}
         <h2 className="mt-6 text-2xl font-semibold text-[#2f4a2f]">
-          What you'll experience
+          {isViatorTour ? "Overview" : "What you'll experience"}
         </h2>
         <div className="mt-4 space-y-3 text-sm leading-relaxed text-[#405040]">
           {content.whatYoullExperience.map(paragraph => (
@@ -598,6 +598,30 @@ export default function Engine2TourPage({
                 </li>
               ))}
             </ol>
+          </>
+        ) : null}
+
+        {isViatorTour && tour.content.additionalInfo?.length ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Additional info
+            </h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
+              {tour.content.additionalInfo.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        ) : null}
+
+        {isViatorTour && tour.content.cancellationPolicy ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
+              Cancellation policy
+            </h2>
+            <p className="mt-3 text-sm text-[#405040]">
+              {tour.content.cancellationPolicy}
+            </p>
           </>
         ) : null}
 
