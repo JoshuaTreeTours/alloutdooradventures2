@@ -200,11 +200,36 @@ export const buildEngine3ViatorSchemaGraph = (
     name: input.title,
     url: absoluteCanonicalUrl,
     ...(description ? { description } : {}),
-    ...(input.primaryImageUrl ? { image: [input.primaryImageUrl] } : {}),
+    ...(input.paragonPlus?.supplierImage || input.primaryImageUrl
+      ? { image: [input.paragonPlus?.supplierImage || input.primaryImageUrl] }
+      : {}),
     ...(providerName
       ? {
           provider: {
             "@id": providerId,
+          },
+        }
+      : {}),
+    ...(input.paragonPlus?.price && input.paragonPlus.priceCurrency
+      ? {
+          offers: {
+            "@type": "Offer",
+            price: String(input.paragonPlus.price),
+            priceCurrency: input.paragonPlus.priceCurrency,
+            url:
+              input.paragonPlus.sourceUrl ||
+              input.bookingUrl ||
+              absoluteCanonicalUrl,
+            availability: "https://schema.org/InStock",
+          },
+        }
+      : {}),
+    ...(input.paragonPlus?.rating && input.paragonPlus.reviewCount
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: String(input.paragonPlus.rating),
+            reviewCount: String(input.paragonPlus.reviewCount),
           },
         }
       : {}),
@@ -229,13 +254,19 @@ export const buildEngine3ViatorSchemaGraph = (
       url: absoluteCanonicalUrl,
       name: input.title,
       ...(shortDescription ? { description: shortDescription } : {}),
-      ...(productNode
+      ...(input.paragonPlus
         ? {
             mainEntity: {
-              "@id": productId,
+              "@id": tripId,
             },
           }
-        : {}),
+        : productNode
+          ? {
+              mainEntity: {
+                "@id": productId,
+              },
+            }
+          : {}),
       isPartOf: {
         "@id": websiteId,
       },

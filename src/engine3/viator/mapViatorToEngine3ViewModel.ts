@@ -1,5 +1,7 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
+import { enhanceHighlights } from "../../lib/highlightEnhancer";
+import { loadViatorCache, parsePriceFrom } from "../../lib/viatorCache";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { generateEngine3Description } from "../utils/generateEngine3Description";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
@@ -94,10 +96,37 @@ const getStateSlugFromCanonicalPath = (
   return parts[1] ?? undefined;
 };
 
+const buildParagonPlusOverlay = (
+  tour: Engine2Tour
+): Engine3TourViewModel["paragonPlus"] => {
+  if (tour.bookingProvider !== "viator") return null;
+  if (tour.id !== "2335P1") return null;
+
+  const cache = loadViatorCache(tour.id);
+  const cached = cache?.data;
+  if (!cached) return null;
+
+  const { currency, amount } = parsePriceFrom(cached.priceFrom);
+
+  return {
+    sourceUrl: cached.sourceUrl || cache?.sourceUrl,
+    price: amount,
+    priceCurrency: currency,
+    rating: cached.rating,
+    reviewCount: cached.reviewCount,
+    duration: cached.duration,
+    highlights: enhanceHighlights(cached.highlights, 3),
+    supplierImage: cached.supplierImage,
+    itinerary: cached.itinerary || [],
+    faqs: cached.faqs || [],
+  };
+};
+
 export const mapViatorToEngine3ViewModel = (
   tour: Engine2Tour,
   productData?: ViatorProductData
 ): Engine3TourViewModel => {
+  const paragonPlus = buildParagonPlusOverlay(tour);
   const bookingUrl =
     cleanText(tour.bookingUrl) ?? cleanText(tour.booking.bookingUrl);
 
@@ -206,16 +235,31 @@ export const mapViatorToEngine3ViewModel = (
     canonicalPath: tour.seo.canonicalPath,
     bookingUrl: bookingUrl ?? "",
     duration:
-      cleanText(productData?.duration) ?? cleanText(tour.content.duration),
+      cleanText(paragonPlus?.duration) ??
+      cleanText(productData?.duration) ??
+      cleanText(tour.content.duration),
     primaryImageUrl,
     heroImageOverrideUrl,
     heroImageUrl: primaryImageUrl,
     priceFrom:
-      cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
-    priceCurrency: cleanText(productData?.priceCurrency),
-    rating: productData?.rating ?? tour.viatorRatingValue ?? undefined,
+      (paragonPlus?.price && paragonPlus.priceCurrency
+        ? `${paragonPlus.priceCurrency} ${paragonPlus.price}`
+        : undefined) ??
+      cleanText(productData?.priceFrom) ??
+      cleanText(tour.pricing?.price),
+    priceCurrency:
+      cleanText(paragonPlus?.priceCurrency) ??
+      cleanText(productData?.priceCurrency),
+    rating:
+      paragonPlus?.rating ??
+      productData?.rating ??
+      tour.viatorRatingValue ??
+      undefined,
     reviewCount:
-      productData?.reviewCount ?? tour.viatorReviewCount ?? undefined,
+      paragonPlus?.reviewCount ??
+      productData?.reviewCount ??
+      tour.viatorReviewCount ??
+      undefined,
     meetingPointText: extractMeetingPointText({
       structuredLocation: undefined,
       fallbackText:
@@ -224,7 +268,9 @@ export const mapViatorToEngine3ViewModel = (
         cleanText(tour.content.meetingPoint?.address) ??
         cleanText(tour.content.meetingPoint?.instructions),
     }),
-    highlights,
+    highlights: paragonPlus?.highlights?.length
+      ? paragonPlus.highlights
+      : highlights,
     included,
     notIncluded:
       dedupeList(productData?.notIncluded) ??
@@ -238,7 +284,12 @@ export const mapViatorToEngine3ViewModel = (
     availability: cleanText(productData?.availability),
     latitude: productData?.latitude ?? tour.geo.lat ?? undefined,
     longitude: productData?.longitude ?? tour.geo.lng ?? undefined,
-    itinerary,
-    faqs: normalizedFaqs?.slice(0, 5),
+    itinerary: paragonPlus?.itinerary?.length
+      ? paragonPlus.itinerary
+      : itinerary,
+    faqs: paragonPlus?.faqs?.length
+      ? paragonPlus.faqs.slice(0, 5)
+      : normalizedFaqs?.slice(0, 5),
+    paragonPlus,
   };
 };

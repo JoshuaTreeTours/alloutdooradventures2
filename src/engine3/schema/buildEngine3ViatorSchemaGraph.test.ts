@@ -103,6 +103,44 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     );
   });
 
+  it("adds TouristTrip Offer + AggregateRating and WebPage.mainEntity for Paragon+", () => {
+    const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
+
+    const graph = buildEngine3ViatorSchemaGraph(
+      {
+        ...baseTour,
+        paragonPlus: {
+          sourceUrl:
+            "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1",
+          price: 175,
+          priceCurrency: "USD",
+          rating: 4.5,
+          reviewCount: 117,
+          supplierImage:
+            "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
+        },
+      },
+      canonicalUrl
+    );
+
+    const nodes = graph["@graph"] as Record<string, unknown>[];
+    const webPage = nodes.find(node => node["@type"] === "WebPage") as Record<
+      string,
+      unknown
+    >;
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as Record<
+      string,
+      unknown
+    >;
+
+    expect((webPage.mainEntity as Record<string, unknown>)["@id"]).toBe(
+      `${canonicalUrl}#trip`
+    );
+    expect((trip.offers as Record<string, unknown>).price).toBe("175");
+    expect((trip.aggregateRating as Record<string, unknown>).ratingValue).toBe(
+      "4.5"
+    );
+  });
   it("fail-closes provider, aggregateRating, geo and FAQ schema when data is invalid", () => {
     const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
 

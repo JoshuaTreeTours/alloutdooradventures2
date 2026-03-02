@@ -6,11 +6,6 @@ import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import type { Engine3TourViewModel } from "../types";
-import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
-import {
-  getViatorFromPrice,
-  peekViatorFromPriceCache,
-} from "../../server/viator/getViatorFromPrice";
 
 type Engine3TourPageProps = {
   tour: Engine3TourViewModel;
@@ -21,20 +16,6 @@ const POSTER_CHILD_PATHS = new Set([
   "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
 ]);
-
-const parsePriceValue = (priceFrom?: string): number | undefined => {
-  if (!priceFrom) {
-    return undefined;
-  }
-
-  const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
-  return Number.isFinite(numeric) && numeric > 0 ? numeric : undefined;
-};
-
-const formatUsdPrice = (value: number): string => {
-  const normalized = Number.isInteger(value) ? String(value) : value.toFixed(2);
-  return `USD ${normalized}`;
-};
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
@@ -69,25 +50,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     city: tour.city,
   });
 
-  const viatorProductCode = extractViatorProductCode(tour.bookingUrl);
-  const viatorFromPrice = viatorProductCode
-    ? peekViatorFromPriceCache(viatorProductCode, "USD")
-    : null;
-
-  const staticPriceValue = parsePriceValue(tour.priceFrom);
-  const runtimePriceValue =
-    viatorFromPrice && Number.isFinite(viatorFromPrice.price)
-      ? viatorFromPrice.price
-      : undefined;
+  const paragonPlus = tour.paragonPlus;
   const resolvedPriceFrom =
-    staticPriceValue !== undefined
-      ? tour.priceFrom
-      : runtimePriceValue && runtimePriceValue > 0
-        ? formatUsdPrice(runtimePriceValue)
-        : undefined;
-  if (typeof window === "undefined" && viatorProductCode) {
-    void getViatorFromPrice(viatorProductCode, "USD");
-  }
+    paragonPlus?.price && paragonPlus.priceCurrency
+      ? `${paragonPlus.priceCurrency} ${paragonPlus.price}`
+      : tour.priceFrom;
 
   const structuredData = useMemo(
     () =>
@@ -97,10 +64,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           name: item.label,
           item: item.href,
         })),
-        offerPrice:
-          viatorFromPrice && Number.isFinite(viatorFromPrice.price)
-            ? viatorFromPrice.price
-            : undefined,
+        offerPrice: paragonPlus?.price,
       }),
     [
       breadcrumbItems,
@@ -108,7 +72,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       isPosterChildPalmSprings,
       pageDescription,
       tour,
-      viatorFromPrice,
+      paragonPlus,
     ]
   );
 
@@ -142,6 +106,30 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             reviewCount={tour.reviewCount}
             meetingPointText={tour.meetingPointText}
           />
+          {paragonPlus ? (
+            <div className="mt-4 space-y-3 text-sm text-white/90">
+              {paragonPlus.price && paragonPlus.priceCurrency ? (
+                <div className="tour-price">
+                  From {paragonPlus.priceCurrency} {paragonPlus.price}
+                </div>
+              ) : null}
+              {paragonPlus.rating && paragonPlus.reviewCount ? (
+                <div className="tour-rating">
+                  ★ {paragonPlus.rating} ({paragonPlus.reviewCount})
+                </div>
+              ) : null}
+              {paragonPlus.duration ? (
+                <div className="tour-duration">{paragonPlus.duration}</div>
+              ) : null}
+              {paragonPlus.highlights?.length ? (
+                <ul className="tour-highlights list-disc space-y-1 pl-5">
+                  {paragonPlus.highlights.map(highlight => (
+                    <li key={highlight}>{highlight}</li>
+                  ))}
+                </ul>
+              ) : null}
+            </div>
+          ) : null}
           <nav aria-label="Breadcrumb" className="mt-4 text-xs text-white/85">
             <ol className="flex flex-wrap items-center gap-2">
               {breadcrumbItems.map((item, index) => (

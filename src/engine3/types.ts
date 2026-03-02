@@ -58,6 +58,18 @@ export type Engine3TourViewModel = {
   longitude?: number;
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
+  paragonPlus?: {
+    sourceUrl?: string;
+    price?: number;
+    priceCurrency?: string;
+    rating?: number;
+    reviewCount?: number;
+    duration?: string;
+    highlights?: string[];
+    supplierImage?: string;
+    itinerary?: Engine3ItineraryItem[];
+    faqs?: Engine3FaqItem[];
+  } | null;
 };
 
 export type ViatorProductData = {
