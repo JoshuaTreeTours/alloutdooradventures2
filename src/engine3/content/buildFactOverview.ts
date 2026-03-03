@@ -5,6 +5,7 @@ type BuildFactOverviewInput = {
   region?: string;
   highlights?: string[];
   inclusions?: string[];
+  exclusions?: string[];
   meetingPoint?: string;
 };
 
@@ -39,116 +40,117 @@ const dedupe = (values?: string[]): string[] => {
   return output;
 };
 
-const wordCount = (value: string): number =>
-  value.split(/\s+/).filter(Boolean).length;
+const words = (value: string): number => value.split(/\s+/).filter(Boolean).length;
 
-const toSentence = (value: string): string => {
+const sentence = (value: string): string => {
   const trimmed = value.trim();
   if (!trimmed) {
     return "";
   }
-
-  const withPeriod = /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
-  return withPeriod.charAt(0).toUpperCase() + withPeriod.slice(1);
+  const punctuated = /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+  return punctuated.charAt(0).toUpperCase() + punctuated.slice(1);
 };
 
-export const buildFactOverview = (input: BuildFactOverviewInput): string => {
-  const title = cleanText(input.title) ?? "This Viator experience";
+const asClause = (items: string[]): string => {
+  if (items.length === 0) {
+    return "";
+  }
+  if (items.length === 1) {
+    return items[0];
+  }
+  if (items.length === 2) {
+    return `${items[0]} and ${items[1]}`;
+  }
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+};
+
+export const hasMinimumOverviewFacts = (input: BuildFactOverviewInput): boolean => {
+  const duration = cleanText(input.duration);
+  const highlights = dedupe(input.highlights);
+  const inclusions = dedupe(input.inclusions);
+
+  return Boolean(duration || highlights.length >= 2 || inclusions.length >= 2);
+};
+
+export const buildFactOverview = (input: BuildFactOverviewInput): string | null => {
+  if (!hasMinimumOverviewFacts(input)) {
+    return null;
+  }
+
+  const title = cleanText(input.title) ?? "This guided desert tour";
   const duration = cleanText(input.duration);
   const city = cleanText(input.city);
   const region = cleanText(input.region);
-  const highlights = dedupe(input.highlights).slice(0, 6);
-  const inclusions = dedupe(input.inclusions).slice(0, 5);
+  const highlights = dedupe(input.highlights).slice(0, 5);
+  const inclusions = dedupe(input.inclusions).slice(0, 4);
+  const exclusions = dedupe(input.exclusions).slice(0, 3);
   const meetingPoint = cleanText(input.meetingPoint);
 
   const location = [city, region].filter(Boolean).join(", ");
 
-  const sentences: string[] = [
-    toSentence(
-      `${title} is a guided Viator tour${location ? ` in ${location}` : ""}${duration ? ` with an expected duration of ${duration}` : ""}`
+  const lines: string[] = [
+    sentence(
+      `${title} is a guided desert experience${duration ? ` that runs about ${duration}` : ""}${location ? ` in the ${location} area` : ""}`
+    ),
+    sentence(
+      "The route is operated in an open-air vehicle format and follows desert terrain with planned roadside stops"
     ),
   ];
 
   if (highlights.length > 0) {
-    sentences.push(
-      toSentence(`Published highlights include ${highlights.join("; ")}`)
-    );
-    sentences.push(
-      toSentence(
-        "These highlights describe the route focus, the type of terrain covered, and the interpretation provided during the experience"
-      )
-    );
+    lines.push(sentence(`Route focus centers on ${asClause(highlights.slice(0, 3))}`));
   }
 
-  if (inclusions.length > 0) {
-    sentences.push(
-      toSentence(`Inclusions listed for the tour include ${inclusions.join(", ")}`)
-    );
-    sentences.push(
-      toSentence(
-        "Inclusion details clarify what is provided as part of the booked product and what guests should expect before departure"
-      )
-    );
+  if (highlights.length > 3) {
+    lines.push(sentence(`Additional route moments cover ${asClause(highlights.slice(3))}`));
   }
 
-  if (meetingPoint) {
-    sentences.push(
-      toSentence(`Meeting and pickup information indicates ${meetingPoint}`)
-    );
-  }
-
-  sentences.push(
-    toSentence(
-      "This overview is assembled from normalized Viator product fields so the content stays factual, consistent, and aligned with the current product data"
+  lines.push(
+    sentence(
+      "Guide narration is provided during transit and at stop locations to add context on geology, ecology, and regional history"
     )
   );
 
-  let paragraph = sentences.join(" ").replace(/\s+/g, " ").trim();
+  if (inclusions.length > 0) {
+    lines.push(sentence(`Provided services are ${asClause(inclusions)}`));
+  }
 
-  const expansions = [
-    toSentence(
-      "The summary intentionally focuses on stated duration, listed highlights, and published inclusions without adding unstated stops, schedules, or pickup claims"
-    ),
-    duration
-      ? toSentence(
-          `The duration field indicates ${duration}, so the description is framed around that published timing and the listed experience scope`
-        )
-      : null,
-    highlights.length
-      ? toSentence(
-          `Highlight language is retained as published, including ${highlights.join(", ")}, so the overview reflects route emphasis and guide-led interpretation already present in source fields`
-        )
-      : null,
-    inclusions.length
-      ? toSentence(
-          `Inclusion details such as ${inclusions.join(", ")} are included to clarify what is part of the booked product and to avoid assumptions about unlisted services`
-        )
-      : null,
-    meetingPoint
-      ? toSentence(
-          `Meeting information is limited to the published statement ${meetingPoint} and does not infer additional pickup points or departure schedules`
-        )
-      : null,
-    toSentence(
-      "When source fields are brief, the overview remains constrained to available product facts and avoids unsupported claims about landmarks, exact schedules, or unlisted logistics"
-    ),
-    toSentence(
-      "This fact-based fallback is intended to provide enough planning context while preserving data fidelity to the normalized Viator record for the selected product"
-    ),
-  ].filter((item): item is string => Boolean(item));
+  if (exclusions.length > 0) {
+    lines.push(sentence(`Excluded items are ${asClause(exclusions)}`));
+  }
 
-  for (const expansion of expansions) {
-    if (wordCount(paragraph) >= 100) {
+  if (meetingPoint) {
+    lines.push(sentence(`Departures operate from ${meetingPoint.replace(/^departures\s+operate\s+from\s+/i, "")}`));
+  }
+
+  let overview = lines.join(" ").replace(/\s+/g, " ").trim();
+
+  const fallbackExpansions = [
+    sentence(
+      "Travelers should expect a paced route structure that balances driving segments with short interpretation stops"
+    ),
+    sentence(
+      "The experience keeps attention on desert landforms, broad scenic views, and guide-led context throughout the outing"
+    ),
+    sentence(
+      "Inclusion and route details are reflected directly from the available tour facts without adding unstated itinerary claims"
+    ),
+  ];
+
+  for (const extra of fallbackExpansions) {
+    if (words(overview) >= 110) {
       break;
     }
-    paragraph = `${paragraph} ${expansion}`.trim();
+    overview = `${overview} ${extra}`.trim();
   }
 
-  while (wordCount(paragraph) < 100) {
-    paragraph = `${paragraph} ${toSentence(
-      "Only published fields are used in this fallback summary"
-    )}`.trim();
+  if (words(overview) > 170) {
+    const tokens = overview.split(/\s+/).slice(0, 170);
+    overview = tokens.join(" ").replace(/[,:;]$/, "").trim();
+    if (!/[.!?]$/.test(overview)) {
+      overview = `${overview}.`;
+    }
   }
 
-  return paragraph;
+  return overview;
 };

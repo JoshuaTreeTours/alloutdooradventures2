@@ -9,6 +9,12 @@ describe("normalizeViatorTourContent", () => {
         sourceUrl: "https://www.viator.com/tours/example",
         productCode: "EX1",
         title: "San Andreas Fault Jeep Tour",
+        duration: "3 hours",
+        highlights: [
+          "Open-air Jeep ride through the San Andreas Fault zone",
+          "Guide-led geology interpretation at key viewpoints",
+        ],
+        inclusions: ["Professional guide", "Guided Jeep transportation"],
         description:
           "<p>You'll travel along the San Andreas Fault corridor with a guide. <strong>This route includes geology-focused stops and desert terrain context.</strong> The operator shares on-route commentary during the drive.</p><p>This sentence adds extra detail so the overview can be trimmed cleanly when needed.</p>",
       },

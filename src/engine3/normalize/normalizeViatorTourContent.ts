@@ -1,5 +1,12 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
-import { buildFactOverview } from "../content/buildFactOverview";
+import {
+  buildFactOverview,
+  hasMinimumOverviewFacts,
+} from "../content/buildFactOverview";
+import {
+  containsMetaLanguage,
+  sanitizeAuthorityOverview,
+} from "../content/authoritySanitizer";
 import type { ViatorProductData } from "../types";
 
 type NormalizeViatorTourContentInput = {
@@ -15,7 +22,7 @@ export type NormalizedViatorTourContent = {
 };
 
 const SENTENCE_TRIM_WORD_LIMIT = 140;
-const MIN_OVERVIEW_WORDS = 100;
+const MIN_OVERVIEW_WORDS = 110;
 const MAX_HIGHLIGHTS = 10;
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -167,37 +174,40 @@ export const normalizeViatorTourContent = ({
     normalizeOverview(productData?.description) ??
     normalizeOverview(storedTour?.content.overview) ??
     normalizeOverview(storedTour?.content.experienceText);
+  const sanitizedOverview = sanitizeAuthorityOverview(parsedOverview);
 
-  const hasFallbackFacts = Boolean(
-    productData?.title ||
-      storedTour?.name ||
-      productData?.duration ||
-      storedTour?.content.duration ||
-      highlights.length ||
-      inclusions.length ||
-      productData?.meetingPointDescription ||
-      productData?.meetingPointText ||
-      storedTour?.content.meetingPoint?.address ||
-      storedTour?.content.meetingPoint?.instructions
+  const shouldForceComposer = Boolean(
+    !sanitizedOverview ||
+      sanitizedOverview.length < 60 ||
+      wordCount(sanitizedOverview) < 12 ||
+      containsMetaLanguage(sanitizedOverview)
   );
 
+  const factInput = {
+    title: productData?.title ?? storedTour?.name,
+    duration: productData?.duration ?? storedTour?.content.duration,
+    city: storedTour?.geo.city,
+    region: storedTour?.geo.region,
+    highlights,
+    inclusions,
+    exclusions,
+    meetingPoint:
+      productData?.meetingPointDescription ??
+      productData?.meetingPointText ??
+      storedTour?.content.meetingPoint?.address ??
+      storedTour?.content.meetingPoint?.instructions,
+  };
+
+  const hasFallbackFacts = hasMinimumOverviewFacts(factInput);
+  const composedOverview = hasFallbackFacts ? buildFactOverview(factInput) : null;
+
   const overview =
-    parsedOverview && wordCount(parsedOverview) >= MIN_OVERVIEW_WORDS
-      ? parsedOverview
+    !shouldForceComposer &&
+    sanitizedOverview &&
+    wordCount(sanitizedOverview) >= MIN_OVERVIEW_WORDS
+      ? sanitizedOverview
       : hasFallbackFacts
-        ? buildFactOverview({
-            title: productData?.title ?? storedTour?.name,
-            duration: productData?.duration ?? storedTour?.content.duration,
-            city: storedTour?.geo.city,
-            region: storedTour?.geo.region,
-            highlights,
-            inclusions,
-            meetingPoint:
-              productData?.meetingPointDescription ??
-              productData?.meetingPointText ??
-              storedTour?.content.meetingPoint?.address ??
-              storedTour?.content.meetingPoint?.instructions,
-          })
+        ? composedOverview
         : null;
 
   return {
