@@ -1,8 +1,9 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
+import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
-import { generateEngine3Description } from "../utils/generateEngine3Description";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -13,43 +14,11 @@ const cleanText = (value?: string | null): string | undefined => {
   return trimmed.length > 0 ? trimmed : undefined;
 };
 
-const normalizeList = (values?: string[]): string[] | undefined => {
-  if (!Array.isArray(values)) {
-    return undefined;
-  }
-
-  const normalized = values
-    .map(item => cleanText(item))
-    .filter((item): item is string => Boolean(item));
-
-  return normalized.length > 0 ? normalized : undefined;
-};
-
 const normalizeSentenceKey = (value: string): string =>
   value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
-
-const dedupeList = (values?: string[]): string[] | undefined => {
-  const normalized = normalizeList(values);
-  if (!normalized?.length) {
-    return undefined;
-  }
-
-  const seen = new Set<string>();
-  const result: string[] = [];
-  for (const item of normalized) {
-    const key = normalizeSentenceKey(item);
-    if (!key || seen.has(key)) {
-      continue;
-    }
-    seen.add(key);
-    result.push(item);
-  }
-
-  return result.length > 0 ? result : undefined;
-};
 
 const normalizeFaqs = (
   faqs?: Array<{ question: string; answer: string }>
@@ -100,12 +69,27 @@ export const mapViatorToEngine3ViewModel = (
 ): Engine3TourViewModel => {
   const bookingUrl =
     cleanText(tour.bookingUrl) ?? cleanText(tour.booking.bookingUrl);
+  const attributedBookingUrl = bookingUrl
+    ? buildViatorAffiliateUrl(bookingUrl)
+    : null;
 
   const title = cleanText(productData?.title) ?? tour.name;
+  const normalizedContent = normalizeViatorTourContent({
+    productData,
+    storedTour: tour,
+  });
   const highlights =
-    dedupeList(productData?.highlights) ?? dedupeList(tour.content.highlights);
-  const included =
-    dedupeList(productData?.included) ?? dedupeList(tour.content.included);
+    normalizedContent.highlights.length > 0
+      ? normalizedContent.highlights
+      : undefined;
+  const inclusions =
+    normalizedContent.inclusions.length > 0
+      ? normalizedContent.inclusions
+      : undefined;
+  const exclusions =
+    normalizedContent.exclusions.length > 0
+      ? normalizedContent.exclusions
+      : undefined;
   const itinerary =
     productData?.itinerary
       ?.map((item, index) => ({
@@ -132,46 +116,7 @@ export const mapViatorToEngine3ViewModel = (
   const overrideEntry =
     ENGINE3_VIATOR_OVERRIDES[productData?.productCode ?? ""];
   const overrideDescription = cleanText(overrideEntry?.description);
-  const overviewFactsOverride = overrideEntry?.overviewFactsOverride;
   const sourceDescription = cleanText(productData?.description);
-  const hasNarrativeSources = Boolean(
-    (highlights && highlights.length > 0) ||
-    (itinerary && itinerary.some(item => Boolean(item.title)))
-  );
-
-  const generatedDescription = hasNarrativeSources
-    ? generateEngine3Description({
-        title,
-        city: cleanText(tour.geo.city),
-        region: cleanText(tour.geo.region),
-        duration:
-          cleanText(productData?.duration) ?? cleanText(tour.content.duration),
-        highlights,
-        meetingPoint:
-          cleanText(overviewFactsOverride?.meetingPoint) ??
-          cleanText(productData?.meetingLocation) ??
-          cleanText(productData?.meetingPointDescription) ??
-          cleanText(tour.content.meetingPoint?.address) ??
-          cleanText(tour.content.meetingPoint?.instructions),
-        departureLocation:
-          cleanText(productData?.departureLocation) ??
-          cleanText(overviewFactsOverride?.meetingPoint),
-        maxGroupSize:
-          overviewFactsOverride?.groupMax ?? productData?.maxGroupSize,
-        minAge: overviewFactsOverride?.ageMin ?? productData?.minAge,
-        cancellationWindowHours:
-          overviewFactsOverride?.cancellationHours ??
-          productData?.cancellationWindowHours,
-        vehicleType: cleanText(productData?.vehicleType),
-        specialHighlightPhrase:
-          cleanText(overviewFactsOverride?.signatureHighlight) ??
-          cleanText(productData?.signatureHighlight),
-        itineraryStopNames: itinerary
-          ?.map(item => cleanText(item.title))
-          .filter((item): item is string => Boolean(item)),
-        viatorDescription: sourceDescription,
-      })
-    : undefined;
 
   const normalizedFaqs =
     normalizeFaqs(overrideEntry?.faqs) ??
@@ -195,16 +140,17 @@ export const mapViatorToEngine3ViewModel = (
     title,
     description:
       overrideDescription ??
-      generatedDescription ??
+      normalizedContent.overview ??
       sourceDescription ??
       fallbackOneLiner,
+    overview: normalizedContent.overview,
     country: cleanText(tour.geo.country),
     stateSlug: getStateSlugFromCanonicalPath(tour.seo.canonicalPath),
     city: tour.geo.city,
     citySlug: cleanText(tour.sourceCitySlug),
     region: tour.geo.region,
     canonicalPath: tour.seo.canonicalPath,
-    bookingUrl: bookingUrl ?? "",
+    bookingUrl: attributedBookingUrl ?? "",
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
     primaryImageUrl,
@@ -225,10 +171,10 @@ export const mapViatorToEngine3ViewModel = (
         cleanText(tour.content.meetingPoint?.instructions),
     }),
     highlights,
-    included,
-    notIncluded:
-      dedupeList(productData?.notIncluded) ??
-      dedupeList(tour.content.notIncluded),
+    inclusions,
+    exclusions,
+    included: inclusions,
+    notIncluded: exclusions,
     meetingPointDescription:
       cleanText(productData?.meetingPointDescription) ??
       cleanText(tour.content.meetingPoint?.address) ??

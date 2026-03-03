@@ -57,7 +57,10 @@ export type Engine2Tour = {
   };
   content: {
     experienceText: string;
+    overview?: string | null;
     highlights: string[];
+    inclusions?: string[];
+    exclusions?: string[];
     included?: string[];
     notIncluded?: string[];
     itinerary?: Array<{

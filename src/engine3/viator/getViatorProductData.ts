@@ -339,6 +339,7 @@ const parseViatorHtml = (
     productCode,
     title,
     description,
+    overview: description,
     supplierImage,
     imageCandidates,
     priceFrom,
@@ -350,6 +351,16 @@ const parseViatorHtml = (
     highlights: asList(
       deepFind(scripts, node =>
         Array.isArray(node.highlights) ? node.highlights : undefined
+      )
+    ),
+    inclusions: asList(
+      deepFind(scripts, node =>
+        Array.isArray(node.inclusions) ? node.inclusions : undefined
+      )
+    ),
+    exclusions: asList(
+      deepFind(scripts, node =>
+        Array.isArray(node.exclusions) ? node.exclusions : undefined
       )
     ),
     included: asList(

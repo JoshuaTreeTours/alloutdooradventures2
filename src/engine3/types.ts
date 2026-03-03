@@ -32,6 +32,7 @@ export type Engine3TourViewModel = {
   bookingProvider?: "viator";
   title: string;
   description: string;
+  overview?: string | null;
   country?: string;
   stateSlug?: string;
   city: string;
@@ -49,6 +50,8 @@ export type Engine3TourViewModel = {
   reviewCount?: number;
   meetingPointText?: string;
   highlights?: string[];
+  inclusions?: string[];
+  exclusions?: string[];
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
@@ -65,6 +68,7 @@ export type ViatorProductData = {
   productCode: string;
   title?: string;
   description?: string;
+  overview?: string | null;
   supplierImage?: string;
   imageCandidates?: string[];
   priceFrom?: string;
@@ -76,6 +80,8 @@ export type ViatorProductData = {
   meetingPointText?: string;
   operatorName?: string;
   highlights?: string[];
+  inclusions?: string[];
+  exclusions?: string[];
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;

@@ -5,6 +5,7 @@ import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
+import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import {
@@ -37,7 +38,44 @@ const formatUsdPrice = (value: number): string => {
 };
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
+  const safeBookingUrl = useMemo(() => {
+    const rawUrl = tour.bookingUrl?.trim();
+    if (!rawUrl) {
+      console.warn(`[engine3] Missing bookingUrl for tour ${tour.tourId}`);
+      return null;
+    }
+
+    try {
+      const parsed = new URL(rawUrl);
+      const isViatorHost =
+        parsed.hostname === "viator.com" ||
+        parsed.hostname.endsWith(".viator.com");
+
+      if (!isViatorHost) {
+        console.warn(
+          `[engine3] Non-Viator bookingUrl for tour ${tour.tourId}: ${rawUrl}`
+        );
+        return null;
+      }
+
+      const attributedUrl = buildViatorAffiliateUrl(rawUrl);
+      if (!attributedUrl) {
+        console.warn(
+          `[engine3] Unable to build affiliate URL for tour ${tour.tourId}: ${rawUrl}`
+        );
+      }
+      return attributedUrl;
+    } catch {
+      console.warn(`[engine3] Invalid bookingUrl for tour ${tour.tourId}: ${rawUrl}`);
+      return null;
+    }
+  }, [tour.bookingUrl, tour.tourId]);
+
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
+  const overviewText = tour.overview ?? tour.description;
+  const highlights = tour.highlights ?? [];
+  const inclusions = tour.inclusions ?? tour.included ?? [];
+  const exclusions = tour.exclusions ?? tour.notIncluded ?? [];
   const canonicalUrl = tour.canonicalPath;
   const canonicalUrlLower = canonicalUrl?.toLowerCase();
   const isPosterChildPalmSprings = Boolean(
@@ -51,7 +89,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     .filter(Boolean)
     .join(", ");
   const pageDescription =
-    tour.description ||
+    overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
     tour.primaryImageUrl ||
@@ -69,7 +107,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     city: tour.city,
   });
 
-  const viatorProductCode = extractViatorProductCode(tour.bookingUrl);
+  const viatorProductCode = extractViatorProductCode(safeBookingUrl ?? "");
   const viatorFromPrice = viatorProductCode
     ? peekViatorFromPriceCache(viatorProductCode, "USD")
     : null;
@@ -171,16 +209,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          <div className="mt-6">
-            <a
-              href={tour.bookingUrl}
-              target="_blank"
-              rel={EXTERNAL_CTA_REL}
-              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            >
-              Book This Tour
-            </a>
-          </div>
+          {safeBookingUrl ? (
+            <div className="mt-6">
+              <a
+                href={safeBookingUrl}
+                target="_blank"
+                rel={EXTERNAL_CTA_REL}
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
+                Book This Tour
+              </a>
+            </div>
+          ) : null}
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
@@ -188,55 +228,54 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           <img
             src={heroUrl}
             alt={tour.title}
-            referrerPolicy="no-referrer"
             loading="eager"
             className="h-64 w-full object-cover md:h-80"
           />
         </div>
 
-        {tour.description ? (
+        {overviewText ? (
           <>
             <h2 className="text-2xl font-semibold text-[#2f4a2f]">Overview</h2>
             <p className="mt-3 text-sm leading-7 text-[#405040]">
-              {tour.description}
+              {overviewText}
             </p>
           </>
         ) : null}
 
-        {tour.highlights?.length ? (
+        {highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {tour.highlights.map(highlight => (
+              {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {tour.included?.length || tour.notIncluded?.length ? (
+        {inclusions.length || exclusions.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {tour.included?.length ? (
+            {inclusions.length ? (
               <div>
                 <h2 className="text-xl font-semibold text-[#2f4a2f]">
                   Included
                 </h2>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                  {tour.included.map(item => (
+                  {inclusions.map(item => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               </div>
             ) : null}
-            {tour.notIncluded?.length ? (
+            {exclusions.length ? (
               <div>
                 <h2 className="text-xl font-semibold text-[#2f4a2f]">
                   Not included
                 </h2>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                  {tour.notIncluded.map(item => (
+                  {exclusions.map(item => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
@@ -292,16 +331,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           </>
         ) : null}
 
-        <div className="mt-10">
-          <a
-            href={tour.bookingUrl}
-            target="_blank"
-            rel={EXTERNAL_CTA_REL}
-            className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-          >
-            Book This Tour
-          </a>
-        </div>
+        {safeBookingUrl ? (
+          <div className="mt-10">
+            <a
+              href={safeBookingUrl}
+              target="_blank"
+              rel={EXTERNAL_CTA_REL}
+              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+            >
+              Book This Tour
+            </a>
+          </div>
+        ) : null}
       </section>
     </main>
   );

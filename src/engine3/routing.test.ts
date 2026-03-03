@@ -20,6 +20,9 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.id).toBe("6740JTREE");
     expect(tour?.images.hero).toBe(LOCKED_HERO_URL);
     expect(tour?.seo.ogImage).toBe(LOCKED_HERO_URL);
+    expect(tour?.bookingUrl).toContain("pid=P00290915");
+    expect(tour?.bookingUrl).toContain("mcid=42383");
+    expect(tour?.bookingUrl).toContain("medium=link");
   });
 
   it("ensures 2335P1 has non-empty hero and a secondary gallery fallback", () => {
