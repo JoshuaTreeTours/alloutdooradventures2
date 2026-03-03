@@ -3,7 +3,7 @@ import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
-import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
+import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 
 type Engine3ListingEntry = {
   tour: Tour;
@@ -30,7 +30,10 @@ export const getEngine3ListingEntries = (
     .map(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
-      const attributedBookingUrl = buildViatorAffiliateUrl(tour.viator.url);
+      const attributedBookingUrl = buildViatorAffiliateUrl({
+        baseUrl: productData?.sourceUrl,
+        fallbackUrl: tour.viator.url,
+      });
 
       if (!attributedBookingUrl) {
         console.warn(

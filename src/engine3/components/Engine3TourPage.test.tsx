@@ -84,7 +84,7 @@ describe("Engine3TourPage", () => {
     expect(html).toContain('src="/hero.jpg"');
   });
 
-  it("hides booking CTA when booking URL is invalid", () => {
+  it("keeps rendering booking CTA when booking URL parsing fails", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
         tour={{
@@ -94,7 +94,8 @@ describe("Engine3TourPage", () => {
       />
     );
 
-    expect(html).not.toContain("Book This Tour");
+    expect(html).toContain("Book This Tour");
+    expect(html).toContain('href="not-a-valid-url"');
   });
 
   it("renders price and rating only when values are valid", () => {

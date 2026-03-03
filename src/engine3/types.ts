@@ -30,6 +30,9 @@ export type Engine3FaqItem = {
 export type Engine3TourViewModel = {
   tourId: string;
   bookingProvider?: "viator";
+  viator?: {
+    productUrl?: string;
+  };
   title: string;
   description: string;
   overview?: string | null;
