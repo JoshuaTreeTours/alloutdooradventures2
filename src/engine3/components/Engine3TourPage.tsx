@@ -3,11 +3,12 @@ import { useMemo } from "react";
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
-import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
+import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
+import { normalizeStructuredData } from "../../utils/structuredData";
 import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
@@ -121,16 +122,42 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
 
   const structuredData = useMemo(
     () =>
-      buildEngine3ViatorSchemaGraph(tour, canonicalUrl, {
-        tripDescription: isPosterChildPalmSprings ? pageDescription : undefined,
-        breadcrumbItems: breadcrumbItems.map(item => ({
-          name: item.label,
-          item: item.href,
-        })),
-        offerPrice:
-          viatorFromPrice && Number.isFinite(viatorFromPrice.price)
-            ? viatorFromPrice.price
-            : undefined,
+      normalizeStructuredData({
+        "@context": "https://schema.org",
+        "@graph": buildEngine3SchemaGraph({
+          tour: {
+            ...tour,
+            description:
+              (isPosterChildPalmSprings ? pageDescription : undefined) ??
+              tour.description,
+            priceFrom:
+              viatorFromPrice && Number.isFinite(viatorFromPrice.price)
+                ? formatUsdPrice(viatorFromPrice.price)
+                : tour.priceFrom,
+          },
+          seo: {
+            canonicalUrl,
+            title: tour.title,
+            description: pageDescription,
+            image: heroUrl,
+          },
+          route: {
+            pathname:
+              typeof window === "undefined"
+                ? canonicalUrl
+                : window.location.pathname,
+            isBookingRoute:
+              (typeof window === "undefined"
+                ? canonicalUrl
+                : window.location.pathname
+              ).endsWith("/book"),
+          },
+          affiliateBookingUrl: safeBookingUrl ?? undefined,
+          breadcrumbs: breadcrumbItems.map(item => ({
+            name: item.label,
+            url: item.href,
+          })),
+        }),
       }),
     [
       breadcrumbItems,
@@ -154,7 +181,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         id="structured-data-engine3-viator"
         key="structured-data-engine3-viator"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData ?? {}) }}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
