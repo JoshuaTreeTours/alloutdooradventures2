@@ -22,7 +22,7 @@ describe("getEngine3ListingEntries", () => {
       "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree"
     );
     expect(target?.tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/d648-6740JTREE?pid=P00290915&mcid=42383&medium=link"
     );
     expect(target?.tour.heroImage).toBe(LOCKED);
   });

@@ -5,7 +5,7 @@ import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
-import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
+import { withViatorAffiliateParams } from "../utils/viatorAffiliate";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import {
@@ -45,6 +45,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       return null;
     }
 
+    if (tour.bookingProvider !== "viator") {
+      return rawUrl;
+    }
+
     try {
       const parsed = new URL(rawUrl);
       const isViatorHost =
@@ -58,18 +62,12 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         return null;
       }
 
-      const attributedUrl = buildViatorAffiliateUrl(rawUrl);
-      if (!attributedUrl) {
-        console.warn(
-          `[engine3] Unable to build affiliate URL for tour ${tour.tourId}: ${rawUrl}`
-        );
-      }
-      return attributedUrl;
+      return withViatorAffiliateParams(rawUrl);
     } catch {
       console.warn(`[engine3] Invalid bookingUrl for tour ${tour.tourId}: ${rawUrl}`);
       return null;
     }
-  }, [tour.bookingUrl, tour.tourId]);
+  }, [tour.bookingProvider, tour.bookingUrl, tour.tourId]);
 
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const overviewText = tour.overview ?? tour.description;

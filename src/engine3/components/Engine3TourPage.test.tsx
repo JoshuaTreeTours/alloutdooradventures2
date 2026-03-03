@@ -21,7 +21,7 @@ const posterChildTour: Engine3TourViewModel = {
   region: "California",
   canonicalPath:
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-  bookingUrl: "https://www.viator.com/tours/Palm-Springs/example",
+  bookingUrl: "https://www.viator.com/tours/Palm-Springs/San-Andreas/d648-2335P1",
   primaryImageUrl:
     "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
 };
@@ -39,6 +39,7 @@ describe("Engine3TourPage", () => {
     expect(html).toContain("pid=P00290915");
     expect(html).toContain("mcid=42383");
     expect(html).toContain("medium=link");
+    expect(html).toContain("https://www.viator.com/d648-2335P1");
   });
 
   it("renders hero before the Overview section", () => {
