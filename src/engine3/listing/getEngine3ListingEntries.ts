@@ -3,6 +3,7 @@ import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolvePreferredViatorTourUrl } from "../utils/viatorAffiliate";
 import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
 
 type Engine3ListingEntry = {
@@ -30,11 +31,15 @@ export const getEngine3ListingEntries = (
     .map(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
-      const attributedBookingUrl = buildViatorAffiliateUrl(tour.viator.url);
+      const canonicalViatorUrl = resolvePreferredViatorTourUrl(
+        tour.viator.url,
+        productData?.sourceUrl
+      );
+      const attributedBookingUrl = buildViatorAffiliateUrl(canonicalViatorUrl);
 
       if (!attributedBookingUrl) {
         console.warn(
-          `[engine3] Skipping listing entry due to invalid Viator URL for ${productCode}: ${tour.viator.url}`
+          `[engine3] Skipping listing entry due to invalid Viator URL for ${productCode}: ${canonicalViatorUrl}`
         );
         return null;
       }

@@ -3,6 +3,7 @@ import { extractMeetingPointText } from "../../utils/providers/viator/extractMee
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolvePreferredViatorTourUrl } from "../utils/viatorAffiliate";
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
@@ -69,8 +70,11 @@ export const mapViatorToEngine3ViewModel = (
 ): Engine3TourViewModel => {
   const bookingUrl =
     cleanText(tour.bookingUrl) ?? cleanText(tour.booking.bookingUrl);
+  const canonicalBookingUrl = bookingUrl
+    ? resolvePreferredViatorTourUrl(bookingUrl, cleanText(productData?.sourceUrl))
+    : undefined;
   const attributedBookingUrl = bookingUrl
-    ? buildViatorAffiliateUrl(bookingUrl)
+    ? buildViatorAffiliateUrl(canonicalBookingUrl ?? bookingUrl)
     : null;
 
   const title = cleanText(productData?.title) ?? tour.name;
