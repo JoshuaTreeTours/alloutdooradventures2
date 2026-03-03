@@ -39,6 +39,7 @@ export type Engine3TourViewModel = {
   region: string;
   canonicalPath: string;
   bookingUrl: string;
+  viatorAffiliateUrl?: string;
   duration?: string;
   primaryImageUrl?: string;
   heroImageOverrideUrl?: string;
@@ -58,6 +59,18 @@ export type Engine3TourViewModel = {
   longitude?: number;
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
+  paragonPlus?: {
+    sourceUrl?: string;
+    price?: number;
+    priceCurrency?: string;
+    rating?: number;
+    reviewCount?: number;
+    duration?: string;
+    highlights?: string[];
+    supplierImage?: string;
+    itinerary?: Engine3ItineraryItem[];
+    faqs?: Engine3FaqItem[];
+  } | null;
 };
 
 export type ViatorProductData = {
