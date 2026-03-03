@@ -228,7 +228,6 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           <img
             src={heroUrl}
             alt={tour.title}
-            referrerPolicy="no-referrer"
             loading="eager"
             className="h-64 w-full object-cover md:h-80"
           />
