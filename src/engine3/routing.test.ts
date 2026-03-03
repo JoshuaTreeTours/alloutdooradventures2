@@ -1,11 +1,15 @@
 import { describe, expect, it } from "vitest";
 
-import { getEngine3TourBySlugs } from "./getEngine3TourBySlugs";
+import { getEngine3TourBySlugs, resolveEngine3Route } from "./routing";
 
 const LOCKED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
 
 describe("getEngine3TourBySlugs", () => {
+  it("resolves Engine3 routing exports for SSR", () => {
+    expect(typeof resolveEngine3Route).toBe("function");
+  });
+
   it("returns Engine3 6740JTREE with hero image equal to locked primary image", () => {
     const tour = getEngine3TourBySlugs(
       "california",

@@ -1,4 +1,4 @@
-import { buildEngine3TourPath } from "../routing/buildEngine3TourPath";
+import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import type { Engine3Tour } from "../types";
 
 export const viatorTours: readonly Engine3Tour[] = [

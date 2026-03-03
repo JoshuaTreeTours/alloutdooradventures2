@@ -1,4 +1,4 @@
-import type { Engine3Tour } from "../types";
+import type { Engine3Tour } from "./types";
 
 export const buildEngine3TourPath = (tour: Engine3Tour): string => {
   const productCodeLower = tour.viator.productCode.toLowerCase();
