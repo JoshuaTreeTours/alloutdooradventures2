@@ -5,7 +5,7 @@ import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
-import { buildViatorAffiliateUrl } from "./viator/buildViatorAffiliateUrl";
+import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
 export const getEngine3TourBySlugs = (
   stateSlug: string,
@@ -20,7 +20,10 @@ export const getEngine3TourBySlugs = (
   }
 
   const productData = viatorProductCacheByCode[entry.viator.productCode];
-  const attributedBookingUrl = buildViatorAffiliateUrl(entry.viator.url);
+  const attributedBookingUrl = buildViatorAffiliateUrl({
+    baseUrl: productData?.sourceUrl,
+    fallbackUrl: entry.viator.url,
+  });
 
   if (!attributedBookingUrl) {
     console.warn(

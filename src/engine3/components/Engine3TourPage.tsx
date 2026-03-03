@@ -5,7 +5,7 @@ import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
-import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
+import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import {
@@ -45,31 +45,23 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       return null;
     }
 
-    try {
-      const parsed = new URL(rawUrl);
-      const isViatorHost =
-        parsed.hostname === "viator.com" ||
-        parsed.hostname.endsWith(".viator.com");
+    if (tour.bookingProvider === "viator") {
+      const attributedUrl = buildViatorAffiliateUrl({
+        baseUrl: tour.viator?.productUrl,
+        fallbackUrl: rawUrl,
+      });
 
-      if (!isViatorHost) {
-        console.warn(
-          `[engine3] Non-Viator bookingUrl for tour ${tour.tourId}: ${rawUrl}`
-        );
-        return null;
-      }
-
-      const attributedUrl = buildViatorAffiliateUrl(rawUrl);
       if (!attributedUrl) {
         console.warn(
           `[engine3] Unable to build affiliate URL for tour ${tour.tourId}: ${rawUrl}`
         );
       }
-      return attributedUrl;
-    } catch {
-      console.warn(`[engine3] Invalid bookingUrl for tour ${tour.tourId}: ${rawUrl}`);
-      return null;
+
+      return attributedUrl ?? rawUrl;
     }
-  }, [tour.bookingUrl, tour.tourId]);
+
+    return rawUrl;
+  }, [tour.bookingProvider, tour.bookingUrl, tour.tourId, tour.viator?.productUrl]);
 
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const overviewText = tour.overview ?? tour.description;
