@@ -8,14 +8,15 @@ describe("normalizeViatorTourContent", () => {
       productData: {
         sourceUrl: "https://www.viator.com/tours/example",
         productCode: "EX1",
+        title: "San Andreas Fault Jeep Tour",
         description:
           "<p>You'll travel along the San Andreas Fault corridor with a guide. <strong>This route includes geology-focused stops and desert terrain context.</strong> The operator shares on-route commentary during the drive.</p><p>This sentence adds extra detail so the overview can be trimmed cleanly when needed.</p>",
       },
     });
 
     expect(normalized.overview).not.toContain("<p>");
-    expect(normalized.overview).toContain("Travelers will travel along the San Andreas Fault corridor");
-    expect(normalized.overview?.split(/\s+/).length).toBeLessThanOrEqual(140);
+    expect(normalized.overview).toContain("San Andreas Fault Jeep Tour");
+    expect(normalized.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
   });
 
   it("deduplicates highlights and included/excluded lists", () => {

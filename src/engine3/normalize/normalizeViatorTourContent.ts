@@ -1,4 +1,5 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
+import { buildFactOverview } from "../content/buildFactOverview";
 import type { ViatorProductData } from "../types";
 
 type NormalizeViatorTourContentInput = {
@@ -14,7 +15,7 @@ export type NormalizedViatorTourContent = {
 };
 
 const SENTENCE_TRIM_WORD_LIMIT = 140;
-const MIN_OVERVIEW_WORDS = 90;
+const MIN_OVERVIEW_WORDS = 100;
 const MAX_HIGHLIGHTS = 10;
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -140,12 +141,6 @@ export const normalizeViatorTourContent = ({
   productData,
   storedTour,
 }: NormalizeViatorTourContentInput): NormalizedViatorTourContent => {
-  const overview =
-    normalizeOverview(productData?.overview) ??
-    normalizeOverview(productData?.description) ??
-    normalizeOverview(storedTour?.content.overview) ??
-    normalizeOverview(storedTour?.content.experienceText);
-
   const highlights = dedupeList([
     ...(productData?.highlights ?? []),
     ...(storedTour?.content.highlights ?? []),
@@ -166,6 +161,44 @@ export const normalizeViatorTourContent = ({
     ...(storedTour?.content.exclusions ?? []),
     ...(storedTour?.content.notIncluded ?? []),
   ]).map(item => sanitizeVoice(item));
+
+  const parsedOverview =
+    normalizeOverview(productData?.overview) ??
+    normalizeOverview(productData?.description) ??
+    normalizeOverview(storedTour?.content.overview) ??
+    normalizeOverview(storedTour?.content.experienceText);
+
+  const hasFallbackFacts = Boolean(
+    productData?.title ||
+      storedTour?.name ||
+      productData?.duration ||
+      storedTour?.content.duration ||
+      highlights.length ||
+      inclusions.length ||
+      productData?.meetingPointDescription ||
+      productData?.meetingPointText ||
+      storedTour?.content.meetingPoint?.address ||
+      storedTour?.content.meetingPoint?.instructions
+  );
+
+  const overview =
+    parsedOverview && wordCount(parsedOverview) >= MIN_OVERVIEW_WORDS
+      ? parsedOverview
+      : hasFallbackFacts
+        ? buildFactOverview({
+            title: productData?.title ?? storedTour?.name,
+            duration: productData?.duration ?? storedTour?.content.duration,
+            city: storedTour?.geo.city,
+            region: storedTour?.geo.region,
+            highlights,
+            inclusions,
+            meetingPoint:
+              productData?.meetingPointDescription ??
+              productData?.meetingPointText ??
+              storedTour?.content.meetingPoint?.address ??
+              storedTour?.content.meetingPoint?.instructions,
+          })
+        : null;
 
   return {
     overview,

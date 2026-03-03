@@ -165,7 +165,8 @@ describe("mapViatorToEngine3ViewModel", () => {
       exclusions: ["Gratuities", "Gratuities"],
     });
 
-    expect(viewModel.overview).toContain("Travelers will travel with a guide");
+    expect(viewModel.overview).toContain("Joshua Tree Hummer Adventure from Palm Desert");
+    expect(viewModel.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
     expect(viewModel.highlights).toEqual([
       "Drive through desert washes",
       "Stop at Joshua Tree viewpoints",
