@@ -48,8 +48,18 @@ export const resolveEngine3PrimaryImage = (input: {
     fallbackImageUrl: input.fallbackImageUrl,
   });
 
+  if (
+    process.env.NODE_ENV !== "production" &&
+    input.productCode &&
+    discoveredCandidates.length === 0
+  ) {
+    console.warn(
+      `[engine3] missing images for productCode=${input.productCode}`
+    );
+  }
+
   const heroImageUrl =
-    heroImageOverrideUrl ?? discoveredFromViator ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+    discoveredFromViator ?? heroImageOverrideUrl ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
   const gallery = Array.from(
     new Set([
@@ -71,6 +81,7 @@ export const resolveEngine3PrimaryImage = (input: {
     primaryImageUrl: heroImageUrl,
     heroImageOverrideUrl,
     discoveredFromViator,
+    viatorImages: discoveredCandidates,
     secondaryImageUrl,
     gallery,
   };

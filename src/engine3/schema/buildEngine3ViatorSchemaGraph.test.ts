@@ -106,20 +106,20 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
   });
 
   it("omits FAQ and itinerary nodes when data is missing", () => {
-    const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
+    const canonicalUrl = `${canonicalBase}/joshua-tree-backroads-hummer-h2-tour-6740p7`;
 
     const nodes = buildEngine3SchemaGraph({
       tour: {
         ...baseTour,
         canonicalPath:
-          "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
+          "/destinations/california/palm-springs/tours/joshua-tree-backroads-hummer-h2-tour-6740p7",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
         faqs: [],
         itinerary: [],
       },
       seo: {
         canonicalUrl,
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
       },
       route: {
         pathname: canonicalUrl,
@@ -128,11 +128,13 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
       affiliateBookingUrl: baseTour.bookingUrl,
       breadcrumbs: [
         { name: "Tours", url: "/tours" },
-        { name: "Joshua Tree Hummer Adventure from Palm Desert", url: canonicalUrl },
+        { name: "Joshua Tree Backroads Hummer H2 Tour", url: canonicalUrl },
       ],
     });
 
     expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
-    expect(nodes.find(node => node["@id"] === `${canonicalUrl}#itinerary`)).toBeUndefined();
+    expect(
+      nodes.find(node => node["@id"] === `${canonicalUrl}#itinerary`)
+    ).toBeUndefined();
   });
 });

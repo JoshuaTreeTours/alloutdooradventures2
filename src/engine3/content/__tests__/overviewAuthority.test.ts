@@ -11,7 +11,7 @@ describe("overview authority hardening", () => {
       productData: {
         sourceUrl: "https://www.viator.com/tours/example",
         productCode: "AUTH1",
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
         duration: "3 hours",
         highlights: [
           "Travel in an open-air Hummer through Joshua Tree National Park terrain",
@@ -27,7 +27,13 @@ describe("overview authority hardening", () => {
     expect(countWords(overview)).toBeGreaterThanOrEqual(100);
 
     const lowered = overview.toLowerCase();
-    for (const token of ["viator", "published", "normalized", "assembled", "api"]) {
+    for (const token of [
+      "viator",
+      "published",
+      "normalized",
+      "assembled",
+      "api",
+    ]) {
       expect(lowered).not.toContain(token);
     }
   });
@@ -36,8 +42,8 @@ describe("overview authority hardening", () => {
     const normalized = normalizeViatorTourContent({
       productData: {
         sourceUrl: "https://www.viator.com/tours/example",
-        productCode: "6740JTREE",
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
+        productCode: "6740P7",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
         description: "Short overview.",
         duration: "3 hours",
         highlights: [

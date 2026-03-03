@@ -33,6 +33,7 @@ export const getEngine3ListingEntries = (
       const attributedBookingUrl = buildViatorAffiliateUrl({
         baseUrl: productData?.sourceUrl,
         fallbackUrl: tour.viator.url,
+        productCode,
       });
 
       if (!attributedBookingUrl) {
@@ -42,14 +43,15 @@ export const getEngine3ListingEntries = (
         return null;
       }
 
-      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
-        productCode,
-        imageCandidates: [
-          ...(productData?.imageCandidates ?? []),
-          productData?.supplierImage,
-        ].filter((value): value is string => typeof value === "string"),
-        fallbackImageUrl: productData?.supplierImage,
-      });
+      const { primaryImageUrl, secondaryImageUrl, gallery } =
+        resolveEngine3PrimaryImage({
+          productCode,
+          imageCandidates: [
+            ...(productData?.imageCandidates ?? []),
+            productData?.supplierImage,
+          ].filter((value): value is string => typeof value === "string"),
+          fallbackImageUrl: productData?.supplierImage,
+        });
       const href = buildEngine3TourPath(tour);
 
       return {

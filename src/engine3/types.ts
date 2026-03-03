@@ -30,6 +30,10 @@ export type Engine3FaqItem = {
 export type Engine3TourViewModel = {
   tourId: string;
   bookingProvider?: "viator";
+  heroImage?: string;
+  content?: {
+    images?: string[];
+  };
   viator?: {
     productUrl?: string;
   };
@@ -58,6 +62,9 @@ export type Engine3TourViewModel = {
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
+  meetingPointName?: string;
+  meetingPointAddress?: string;
+  departureTimeLabel?: string;
   operatorName?: string;
   availability?: string;
   latitude?: number;
@@ -88,6 +95,9 @@ export type ViatorProductData = {
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
+  meetingPointName?: string;
+  meetingPointAddress?: string;
+  departureTimeLabel?: string;
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
   duration?: string;

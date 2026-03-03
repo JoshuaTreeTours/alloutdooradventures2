@@ -34,11 +34,11 @@ describe("buildEngine3BreadcrumbItems", () => {
     expect(city?.href).toBe("/tours?state=california&city=palm-springs");
   });
 
-  it("builds Palm Springs breadcrumb URL for 6740JTREE routes", () => {
+  it("builds Palm Springs breadcrumb URL for 6740P7 routes", () => {
     const items = buildEngine3BreadcrumbItems({
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      title: "Joshua Tree Backroads Hummer H2 Tour",
       canonicalUrl:
-        "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+        "/destinations/california/palm-springs/tours/joshua-tree-backroads-hummer-h2-tour-6740p7",
       stateSlug: "california",
       citySlug: "Palm Springs",
       city: "Palm Springs",
