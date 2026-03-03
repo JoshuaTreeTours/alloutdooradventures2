@@ -163,7 +163,7 @@ describe("buildEngine3ViatorSchemaGraph", () => {
     expect(product?.url).toBe(canonicalUrl);
   });
 
-  it("omits Product node for non-paragon Engine3 tours", () => {
+  it("emits Product node for all Engine3 Viator tours", () => {
     const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
 
     const graph = buildEngine3ViatorSchemaGraph(
@@ -182,7 +182,13 @@ describe("buildEngine3ViatorSchemaGraph", () => {
       | Record<string, unknown>
       | undefined;
 
-    expect(nodes.find(node => node["@type"] === "Product")).toBeUndefined();
-    expect(webpage?.mainEntity).toBeUndefined();
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(product?.url).toBe(canonicalUrl);
+    expect(
+      (webpage?.mainEntity as Record<string, unknown> | undefined)?.["@id"]
+    ).toBe(`${canonicalUrl}#product`);
   });
 });

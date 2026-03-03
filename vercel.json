@@ -334,6 +334,10 @@
       "destination": "/api/gone"
     },
     {
+      "source": "/destinations/:stateSlug/:citySlug/tours/:tourSlug(.*-[0-9]+p[0-9]+)",
+      "destination": "/api/engine3-html?path=/destinations/:stateSlug/:citySlug/tours/:tourSlug"
+    },
+    {
       "source": "/destinations/:state/:rest*/tours/:slug*",
       "has": [
         {
