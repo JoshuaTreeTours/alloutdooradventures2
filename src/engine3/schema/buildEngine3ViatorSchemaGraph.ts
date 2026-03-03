@@ -12,11 +12,6 @@ type BuildEngine3ViatorSchemaGraphOptions = {
   offerPrice?: number;
 };
 
-const PRODUCT_SCHEMA_CANONICAL_ALLOWLIST = new Set([
-  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-  "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
-]);
-
 const trim = (value?: string): string | undefined => {
   if (!value) {
     return undefined;
@@ -159,10 +154,6 @@ export const buildEngine3ViatorSchemaGraph = (
   const webpageId = `${absoluteCanonicalUrl}#webpage`;
   const providerId = `${absoluteCanonicalUrl}#provider`;
   const brandId = "https://www.alloutdooradventures.com/#brand";
-  const shouldEmitProductSchema = PRODUCT_SCHEMA_CANONICAL_ALLOWLIST.has(
-    absoluteCanonicalUrl.toLowerCase()
-  );
-
   const price =
     typeof options?.offerPrice === "number" &&
     Number.isFinite(options.offerPrice) &&
@@ -173,7 +164,7 @@ export const buildEngine3ViatorSchemaGraph = (
   const productName = trim(input.title);
   const productDescription = dedupeSentenceDescription(description);
   const productNode: Record<string, unknown> | undefined =
-    shouldEmitProductSchema && productName
+    productName
       ? {
           "@type": "Product",
           "@id": productId,
