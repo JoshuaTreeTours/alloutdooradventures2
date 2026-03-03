@@ -36,6 +36,9 @@ describe("Engine3TourPage", () => {
     expect(html).toContain("/tours");
     expect(html).toContain("/tours?state=california&amp;city=palm-springs");
     expect(html).not.toContain("palm%20springs");
+    expect(html).toContain("pid=P00290915");
+    expect(html).toContain("mcid=42383");
+    expect(html).toContain("medium=link");
   });
 
   it("renders hero before the Overview section", () => {
@@ -79,6 +82,19 @@ describe("Engine3TourPage", () => {
     );
 
     expect(html).toContain('src="/hero.jpg"');
+  });
+
+  it("hides booking CTA when booking URL is invalid", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          bookingUrl: "not-a-valid-url",
+        }}
+      />
+    );
+
+    expect(html).not.toContain("Book This Tour");
   });
 
   it("renders price and rating only when values are valid", () => {

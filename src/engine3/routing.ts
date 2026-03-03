@@ -5,6 +5,7 @@ import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
+import { buildViatorAffiliateUrl } from "./viator/buildViatorAffiliateUrl";
 
 export const getEngine3TourBySlugs = (
   stateSlug: string,
@@ -19,6 +20,15 @@ export const getEngine3TourBySlugs = (
   }
 
   const productData = viatorProductCacheByCode[entry.viator.productCode];
+  const attributedBookingUrl = buildViatorAffiliateUrl(entry.viator.url);
+
+  if (!attributedBookingUrl) {
+    console.warn(
+      `[engine3] Invalid Viator booking URL for ${entry.viator.productCode}: ${entry.viator.url}`
+    );
+    return null;
+  }
+
   const normalizedContent = normalizeViatorTourContent({ productData });
   const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
     productCode: entry.viator.productCode,
@@ -33,7 +43,7 @@ export const getEngine3TourBySlugs = (
     id: entry.viator.productCode,
     engine: "engine3",
     bookingProvider: "viator",
-    bookingUrl: entry.viator.url,
+    bookingUrl: attributedBookingUrl,
     sourceCitySlug: entry.destination.city,
     slug: `${entry.slug}-${entry.viator.productCode.toLowerCase()}`,
     name: productData?.title ?? entry.slug,
@@ -84,7 +94,7 @@ export const getEngine3TourBySlugs = (
       ),
     },
     booking: {
-      bookingUrl: entry.viator.url,
+      bookingUrl: attributedBookingUrl,
     },
     pricing: {
       price: productData?.priceFrom,

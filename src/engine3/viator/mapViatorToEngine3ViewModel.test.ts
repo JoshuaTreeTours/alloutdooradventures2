@@ -69,6 +69,9 @@ describe("mapViatorToEngine3ViewModel", () => {
 
     expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
+    expect(viewModel.bookingUrl).toContain("pid=P00290915");
+    expect(viewModel.bookingUrl).toContain("mcid=42383");
+    expect(viewModel.bookingUrl).toContain("medium=link");
   });
 
   it("keeps San Andreas 2335P1 hero deterministic and defined", () => {

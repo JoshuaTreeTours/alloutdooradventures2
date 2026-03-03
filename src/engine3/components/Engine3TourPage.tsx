@@ -5,6 +5,7 @@ import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
 import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3ViatorSchemaGraph } from "../schema/buildEngine3ViatorSchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
+import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import {
@@ -37,6 +38,39 @@ const formatUsdPrice = (value: number): string => {
 };
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
+  const safeBookingUrl = useMemo(() => {
+    const rawUrl = tour.bookingUrl?.trim();
+    if (!rawUrl) {
+      console.warn(`[engine3] Missing bookingUrl for tour ${tour.tourId}`);
+      return null;
+    }
+
+    try {
+      const parsed = new URL(rawUrl);
+      const isViatorHost =
+        parsed.hostname === "viator.com" ||
+        parsed.hostname.endsWith(".viator.com");
+
+      if (!isViatorHost) {
+        console.warn(
+          `[engine3] Non-Viator bookingUrl for tour ${tour.tourId}: ${rawUrl}`
+        );
+        return null;
+      }
+
+      const attributedUrl = buildViatorAffiliateUrl(rawUrl);
+      if (!attributedUrl) {
+        console.warn(
+          `[engine3] Unable to build affiliate URL for tour ${tour.tourId}: ${rawUrl}`
+        );
+      }
+      return attributedUrl;
+    } catch {
+      console.warn(`[engine3] Invalid bookingUrl for tour ${tour.tourId}: ${rawUrl}`);
+      return null;
+    }
+  }, [tour.bookingUrl, tour.tourId]);
+
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const overviewText = tour.overview ?? tour.description;
   const highlights = tour.highlights ?? [];
@@ -73,7 +107,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     city: tour.city,
   });
 
-  const viatorProductCode = extractViatorProductCode(tour.bookingUrl);
+  const viatorProductCode = extractViatorProductCode(safeBookingUrl ?? "");
   const viatorFromPrice = viatorProductCode
     ? peekViatorFromPriceCache(viatorProductCode, "USD")
     : null;
@@ -175,16 +209,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               {tour.duration}
             </p>
           ) : null}
-          <div className="mt-6">
-            <a
-              href={tour.bookingUrl}
-              target="_blank"
-              rel={EXTERNAL_CTA_REL}
-              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            >
-              Book This Tour
-            </a>
-          </div>
+          {safeBookingUrl ? (
+            <div className="mt-6">
+              <a
+                href={safeBookingUrl}
+                target="_blank"
+                rel={EXTERNAL_CTA_REL}
+                className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+              >
+                Book This Tour
+              </a>
+            </div>
+          ) : null}
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
@@ -296,16 +332,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           </>
         ) : null}
 
-        <div className="mt-10">
-          <a
-            href={tour.bookingUrl}
-            target="_blank"
-            rel={EXTERNAL_CTA_REL}
-            className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-          >
-            Book This Tour
-          </a>
-        </div>
+        {safeBookingUrl ? (
+          <div className="mt-10">
+            <a
+              href={safeBookingUrl}
+              target="_blank"
+              rel={EXTERNAL_CTA_REL}
+              className="inline-flex items-center justify-center rounded-md bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
+            >
+              Book This Tour
+            </a>
+          </div>
+        ) : null}
       </section>
     </main>
   );

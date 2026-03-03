@@ -3,6 +3,7 @@ import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { buildViatorAffiliateUrl } from "../viator/buildViatorAffiliateUrl";
 
 type Engine3ListingEntry = {
   tour: Tour;
@@ -29,6 +30,15 @@ export const getEngine3ListingEntries = (
     .map(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
+      const attributedBookingUrl = buildViatorAffiliateUrl(tour.viator.url);
+
+      if (!attributedBookingUrl) {
+        console.warn(
+          `[engine3] Skipping listing entry due to invalid Viator URL for ${productCode}: ${tour.viator.url}`
+        );
+        return null;
+      }
+
       const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
         productCode,
         imageCandidates: [
@@ -76,9 +86,10 @@ export const getEngine3ListingEntries = (
           },
           activitySlugs: ["adventure"],
           bookingProvider: "viator",
-          bookingUrl: tour.viator.url,
+          bookingUrl: attributedBookingUrl,
           longDescription: productData?.description ?? "",
         },
       } satisfies Engine3ListingEntry;
-    });
+    })
+    .filter((entry): entry is Engine3ListingEntry => Boolean(entry));
 };
