@@ -38,6 +38,10 @@ const formatUsdPrice = (value: number): string => {
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
+  const overviewText = tour.overview ?? tour.description;
+  const highlights = tour.highlights ?? [];
+  const inclusions = tour.inclusions ?? tour.included ?? [];
+  const exclusions = tour.exclusions ?? tour.notIncluded ?? [];
   const canonicalUrl = tour.canonicalPath;
   const canonicalUrlLower = canonicalUrl?.toLowerCase();
   const isPosterChildPalmSprings = Boolean(
@@ -51,7 +55,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     .filter(Boolean)
     .join(", ");
   const pageDescription =
-    tour.description ||
+    overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
     tour.primaryImageUrl ||
@@ -194,49 +198,49 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
           />
         </div>
 
-        {tour.description ? (
+        {overviewText ? (
           <>
             <h2 className="text-2xl font-semibold text-[#2f4a2f]">Overview</h2>
             <p className="mt-3 text-sm leading-7 text-[#405040]">
-              {tour.description}
+              {overviewText}
             </p>
           </>
         ) : null}
 
-        {tour.highlights?.length ? (
+        {highlights.length ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold text-[#2f4a2f]">
               Highlights
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-              {tour.highlights.map(highlight => (
+              {highlights.map(highlight => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           </>
         ) : null}
 
-        {tour.included?.length || tour.notIncluded?.length ? (
+        {inclusions.length || exclusions.length ? (
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {tour.included?.length ? (
+            {inclusions.length ? (
               <div>
                 <h2 className="text-xl font-semibold text-[#2f4a2f]">
                   Included
                 </h2>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                  {tour.included.map(item => (
+                  {inclusions.map(item => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
               </div>
             ) : null}
-            {tour.notIncluded?.length ? (
+            {exclusions.length ? (
               <div>
                 <h2 className="text-xl font-semibold text-[#2f4a2f]">
                   Not included
                 </h2>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-[#405040]">
-                  {tour.notIncluded.map(item => (
+                  {exclusions.map(item => (
                     <li key={item}>{item}</li>
                   ))}
                 </ul>

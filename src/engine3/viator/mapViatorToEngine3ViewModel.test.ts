@@ -146,30 +146,29 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.faqs).toHaveLength(5);
   });
 
-  it("generates a 100-120 word overview with itinerary facts", () => {
+  it("maps normalized overview/highlights/inclusions/exclusions from Viator content", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
       productCode: "6740JTREE",
       title: "Joshua Tree Hummer Adventure from Palm Desert",
-      duration: "3 hours",
+      description:
+        "<p>You'll travel with a guide through desert terrain and geology-focused areas near Palm Springs.</p><p>The operator provides route context and scheduled stops during the experience.</p>",
       highlights: [
         "Drive through desert washes",
+        "Drive through desert washes",
         "Stop at Joshua Tree viewpoints",
-        "Learn geology with a guide",
       ],
-      itinerary: [
-        { title: "Keys View" },
-        { title: "Barker Dam Trail" },
-        { title: "Cap Rock Trail" },
-      ],
-      meetingPointDescription: "Palm Desert Visitor Center",
+      inclusions: ["Guide", "Guide", "Bottled water"],
+      exclusions: ["Gratuities", "Gratuities"],
     });
 
-    const words = viewModel.description.split(/\s+/).filter(Boolean).length;
-    expect(words).toBeGreaterThanOrEqual(100);
-    expect(words).toBeLessThanOrEqual(120);
-    expect(viewModel.description).toContain("After meeting in Palm Desert");
-    expect(viewModel.description).toContain("Keys View");
-    expect(viewModel.description.toLowerCase()).not.toContain("confirmation");
+    expect(viewModel.overview).toContain("Travelers will travel with a guide");
+    expect(viewModel.highlights).toEqual([
+      "Drive through desert washes",
+      "Stop at Joshua Tree viewpoints",
+      "Scenic desert views",
+    ]);
+    expect(viewModel.inclusions).toEqual(["Guide", "Bottled water"]);
+    expect(viewModel.exclusions).toEqual(["Gratuities"]);
   });
 });

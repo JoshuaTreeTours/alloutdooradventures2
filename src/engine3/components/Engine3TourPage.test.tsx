@@ -51,6 +51,22 @@ describe("Engine3TourPage", () => {
     expect(heroIndex).toBeLessThan(overviewIndex);
   });
 
+  it("hides Overview and Highlights sections when normalized fields are empty", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          description: "",
+          overview: null,
+          highlights: [],
+        }}
+      />
+    );
+
+    expect(html).not.toContain(">Overview<");
+    expect(html).not.toContain(">Highlights<");
+  });
+
   it("always renders hero image even when primaryImageUrl is missing", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage

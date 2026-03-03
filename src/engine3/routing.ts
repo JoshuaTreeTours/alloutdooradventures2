@@ -2,6 +2,7 @@ import type { Engine2Tour } from "../engine2/data/loadEngine2";
 
 import { buildEngine3TourPath } from "./buildEngine3TourPath";
 import { viatorProductCacheByCode } from "./data/viatorProductCache";
+import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
 
@@ -18,6 +19,7 @@ export const getEngine3TourBySlugs = (
   }
 
   const productData = viatorProductCacheByCode[entry.viator.productCode];
+  const normalizedContent = normalizeViatorTourContent({ productData });
   const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
     productCode: entry.viator.productCode,
     imageCandidates: [
@@ -53,10 +55,13 @@ export const getEngine3TourBySlugs = (
       ogImage: primaryImageUrl ?? "",
     },
     content: {
-      experienceText: productData?.description ?? "",
-      highlights: productData?.highlights ?? [],
-      included: productData?.included,
-      notIncluded: productData?.notIncluded,
+      experienceText: normalizedContent.overview ?? productData?.description ?? "",
+      overview: normalizedContent.overview,
+      highlights: normalizedContent.highlights,
+      inclusions: normalizedContent.inclusions,
+      exclusions: normalizedContent.exclusions,
+      included: normalizedContent.inclusions,
+      notIncluded: normalizedContent.exclusions,
       faqs: productData?.faqs,
       itinerary: productData?.itinerary?.map(item => ({
         title: item.title ?? "",
