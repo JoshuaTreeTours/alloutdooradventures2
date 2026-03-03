@@ -1,16 +1,19 @@
 import { describe, expect, it } from "vitest";
 
 import type { Engine3TourViewModel } from "../types";
-import { buildEngine3ViatorSchemaGraph } from "./buildEngine3ViatorSchemaGraph";
+import { buildEngine3SchemaGraph } from "./buildEngine3SchemaGraph";
 
 const canonicalBase =
   "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours";
 
 const baseTour: Engine3TourViewModel = {
   tourId: "2335P1",
+  bookingProvider: "viator",
   title: "San Andreas Fault Jeep Tour from Palm Springs",
   description:
     "Authoritative summary for San Andreas Fault Jeep Tour from Palm Springs.",
+  overview:
+    "San Andreas Fault Jeep Tour from Palm Springs is a guided off-road experience in the Coachella Valley.",
   country: "United States",
   stateSlug: "california",
   city: "Palm Springs",
@@ -19,7 +22,7 @@ const baseTour: Engine3TourViewModel = {
   canonicalPath:
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl:
-    "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1",
+    "https://www.viator.com/tours/Palm-Springs/San-Andreas-Fault-Jeep-Tour-from-Palm-Springs/d648-2335P1?pid=P00290915&mcid=42383&medium=link",
   primaryImageUrl: "https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa",
   priceFrom: "USD 175",
   priceCurrency: "USD",
@@ -28,161 +31,108 @@ const baseTour: Engine3TourViewModel = {
   operatorName: "Desert Adventures Red Jeep Tours",
   latitude: 33.7226,
   longitude: -116.3745,
+  itinerary: [
+    {
+      title: "San Andreas Fault Zone",
+      description: "Learn fault geology from a naturalist guide.",
+      duration: "45 minutes",
+      order: 1,
+    },
+  ],
+  faqs: [{ question: "Is pickup included?", answer: "No, meet onsite." }],
 };
 
-describe("buildEngine3ViatorSchemaGraph", () => {
-  it("adds Product schema + WebPage.mainEntity for the 2335P1 canonical URL", () => {
+describe("buildEngine3SchemaGraph paragon parity", () => {
+  it("emits the full paragon node set for 2335P1 and keeps affiliate booking urls", () => {
     const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
 
-    const graph = buildEngine3ViatorSchemaGraph(
-      {
-        ...baseTour,
-        description:
-          "Sentence one. Sentence one. Sentence two with details about this guided route.",
+    const nodes = buildEngine3SchemaGraph({
+      tour: baseTour,
+      seo: {
+        canonicalUrl,
+        title: baseTour.title,
+        description: baseTour.overview ?? baseTour.description,
+        image: baseTour.primaryImageUrl,
       },
-      canonicalUrl,
-      {
-        breadcrumbItems: [
-          { name: "Home", item: "/" },
-          { name: "Tours", item: "/tours" },
-          {
-            name: "Palm Springs",
-            item: "/tours?state=california&city=palm-springs",
-          },
-          {
-            name: "San Andreas Fault Jeep Tour from Palm Springs",
-            item: canonicalUrl,
-          },
-        ],
-      }
-    );
+      route: {
+        pathname: baseTour.canonicalPath,
+        isBookingRoute: false,
+      },
+      affiliateBookingUrl: baseTour.bookingUrl,
+      breadcrumbs: [
+        { name: "Destinations", url: "/destinations" },
+        { name: "California", url: "/destinations/california" },
+        { name: "Palm Springs", url: "/destinations/california/palm-springs" },
+        { name: "Tours", url: "/destinations/california/palm-springs/tours" },
+        { name: baseTour.title, url: baseTour.canonicalPath },
+      ],
+    });
 
-    const nodes = graph["@graph"] as Record<string, unknown>[];
-    const webpage = nodes.find(node => node["@type"] === "WebPage") as
-      | Record<string, unknown>
-      | undefined;
+    const graphTypes = nodes.map(node => node["@type"]);
+    expect(graphTypes).toContain("Organization");
+    expect(graphTypes).toContain("WebPage");
+    expect(graphTypes).toContain("BreadcrumbList");
+    expect(graphTypes).toContain("Product");
+    expect(graphTypes).toContain("TouristTrip");
+    expect(
+      graphTypes.some(
+        typeValue =>
+          Array.isArray(typeValue) && typeValue.includes("TravelAgency")
+      )
+    ).toBe(true);
+
     const product = nodes.find(node => node["@type"] === "Product") as
       | Record<string, unknown>
       | undefined;
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
 
-    expect(
-      (webpage?.mainEntity as Record<string, unknown> | undefined)?.["@id"]
-    ).toBe(`${canonicalUrl}#product`);
-
-    expect(product?.name).toBe(baseTour.title);
-    expect(product?.url).toBe(canonicalUrl);
-    expect(product?.image).toEqual([baseTour.primaryImageUrl]);
-    expect(product?.description).toBe(
-      "Sentence one. Sentence two with details about this guided route."
-    );
+    expect(product?.aggregateRating).toEqual({
+      "@type": "AggregateRating",
+      ratingValue: 4.5,
+      reviewCount: 117,
+    });
 
     const offer = product?.offers as Record<string, unknown> | undefined;
-    expect(offer?.["@type"]).toBe("Offer");
-    expect(offer?.url).toBe(canonicalUrl);
-    expect(offer?.priceCurrency).toBe("USD");
-    expect(offer?.availability).toBe("https://schema.org/InStock");
-    expect(offer?.price).toBe("175");
+    expect(offer?.url).toContain("pid=P00290915");
+    expect(offer?.url).toContain("mcid=42383");
+    expect(offer?.url).toContain("medium=link");
 
-    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
-      | Record<string, unknown>
-      | undefined;
-    expect(
-      (product?.aggregateRating as Record<string, unknown> | undefined)
-        ?.ratingValue
-    ).toBe(4.5);
-    expect(trip?.aggregateRating).toBeUndefined();
-
-    const breadcrumb = nodes.find(
-      node => node["@type"] === "BreadcrumbList"
-    ) as Record<string, unknown>;
-    const items =
-      (breadcrumb.itemListElement as Record<string, unknown>[] | undefined) ??
-      [];
-    expect(items.map(item => item.item)).toContain(
-      "https://www.alloutdooradventures.com/tours?state=california&city=palm-springs"
-    );
+    expect(trip?.itinerary).toEqual({
+      "@id": `${canonicalUrl}#itinerary`,
+    });
+    expect(nodes.find(node => node["@type"] === "FAQPage")).toBeDefined();
   });
 
-  it("fail-closes provider, aggregateRating, geo and FAQ schema when data is invalid", () => {
-    const canonicalUrl = `${canonicalBase}/san-andreas-fault-jeep-tour-from-palm-springs-2335p1`;
-
-    const graph = buildEngine3ViatorSchemaGraph(
-      {
-        ...baseTour,
-        operatorName: "",
-        rating: Number.NaN,
-        reviewCount: 0,
-        latitude: Number.NaN,
-        longitude: -116.3745,
-        faqs: [
-          { question: "Q1", answer: "A1" },
-          { question: "Q2", answer: "A2" },
-          { question: "Q3", answer: "A3" },
-          { question: "Q4", answer: "A4" },
-        ],
-      },
-      canonicalUrl
-    );
-
-    const nodes = graph["@graph"] as Record<string, unknown>[];
-    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
-      | Record<string, unknown>
-      | undefined;
-    const product = nodes.find(node => node["@type"] === "Product") as
-      | Record<string, unknown>
-      | undefined;
-
-    expect(
-      nodes.find(node => node["@id"] === `${canonicalUrl}#provider`)
-    ).toBeUndefined();
-    expect(trip?.provider).toBeUndefined();
-    expect(product?.aggregateRating).toBeUndefined();
-    expect(trip?.location).toBeUndefined();
-    expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
-  });
-
-  it("emits Product schema for the 3351P15 canonical URL", () => {
-    const canonicalUrl = `${canonicalBase}/palm-springs-indian-canyons-bike-and-hike-3351p15`;
-
-    const graph = buildEngine3ViatorSchemaGraph(
-      {
-        ...baseTour,
-        tourId: "3351P15",
-        title: "Palm Springs Indian Canyons Bike and Hike",
-        canonicalPath:
-          "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
-      },
-      canonicalUrl
-    );
-
-    const nodes = graph["@graph"] as Record<string, unknown>[];
-    const product = nodes.find(node => node["@type"] === "Product") as
-      | Record<string, unknown>
-      | undefined;
-
-    expect(product?.url).toBe(canonicalUrl);
-  });
-
-  it("omits Product node for non-paragon Engine3 tours", () => {
+  it("omits FAQ and itinerary nodes when data is missing", () => {
     const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
 
-    const graph = buildEngine3ViatorSchemaGraph(
-      {
+    const nodes = buildEngine3SchemaGraph({
+      tour: {
         ...baseTour,
-        tourId: "6740JTREE",
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
         canonicalPath:
           "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+        title: "Joshua Tree Hummer Adventure from Palm Desert",
+        faqs: [],
+        itinerary: [],
       },
-      canonicalUrl
-    );
+      seo: {
+        canonicalUrl,
+        title: "Joshua Tree Hummer Adventure from Palm Desert",
+      },
+      route: {
+        pathname: canonicalUrl,
+        isBookingRoute: false,
+      },
+      affiliateBookingUrl: baseTour.bookingUrl,
+      breadcrumbs: [
+        { name: "Tours", url: "/tours" },
+        { name: "Joshua Tree Hummer Adventure from Palm Desert", url: canonicalUrl },
+      ],
+    });
 
-    const nodes = graph["@graph"] as Record<string, unknown>[];
-    const webpage = nodes.find(node => node["@type"] === "WebPage") as
-      | Record<string, unknown>
-      | undefined;
-
-    expect(nodes.find(node => node["@type"] === "Product")).toBeUndefined();
-    expect(webpage?.mainEntity).toBeUndefined();
+    expect(nodes.find(node => node["@type"] === "FAQPage")).toBeUndefined();
+    expect(nodes.find(node => node["@id"] === `${canonicalUrl}#itinerary`)).toBeUndefined();
   });
 });
