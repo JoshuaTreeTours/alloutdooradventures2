@@ -1,7 +1,7 @@
 import type { Tour } from "../../data/tours.types";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
-import { buildEngine3TourPath } from "../routing/buildEngine3TourPath";
+import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 
 type Engine3ListingEntry = {

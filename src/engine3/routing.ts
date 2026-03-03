@@ -1,8 +1,9 @@
-import type { Engine2Tour } from "../../engine2/data/loadEngine2";
-import { viatorProductCacheByCode } from "../data/viatorProductCache";
-import { viatorTours } from "../data/viatorTours";
-import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import type { Engine2Tour } from "../engine2/data/loadEngine2";
+
 import { buildEngine3TourPath } from "./buildEngine3TourPath";
+import { viatorProductCacheByCode } from "./data/viatorProductCache";
+import { viatorTours } from "./data/viatorTours";
+import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
 
 export const getEngine3TourBySlugs = (
   stateSlug: string,
@@ -88,3 +89,7 @@ export const getEngine3TourBySlugs = (
     viatorReviewCount: productData?.reviewCount ?? null,
   };
 };
+
+export const resolveEngine3Route = getEngine3TourBySlugs;
+
+export { buildEngine3TourPath };

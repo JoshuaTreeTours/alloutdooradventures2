@@ -51,7 +51,7 @@ import Engine2TourPage from "../../../../engine2/pages/Engine2TourPage";
 import Engine3TourPage from "../../../../engine3/components/Engine3TourPage";
 import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViatorToEngine3ViewModel";
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
-import { getEngine3TourBySlugs } from "../../../../engine3/routing/getEngine3TourBySlugs";
+import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
