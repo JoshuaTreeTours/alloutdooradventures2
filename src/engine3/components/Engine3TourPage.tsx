@@ -2,7 +2,6 @@ import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
@@ -85,9 +84,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
-    tour.primaryImageUrl ||
-    tour.heroImageOverrideUrl ||
-    DEFAULT_ENGINE3_HERO_IMAGE_URL;
+    tour.bookingProvider === "viator"
+      ? tour.heroImage ?? null
+      : tour.primaryImageUrl || tour.heroImageUrl || null;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
@@ -139,7 +138,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             canonicalUrl,
             title: tour.title,
             description: pageDescription,
-            image: heroUrl,
+            image: heroUrl ?? undefined,
           },
           route: {
             pathname:
@@ -175,7 +174,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         title={tour.title}
         description={pageDescription}
         url={canonicalUrl}
-        image={heroUrl}
+        image={heroUrl ?? undefined}
       />
       <script
         id="structured-data-engine3-viator"
@@ -244,12 +243,18 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
         <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-          <img
-            src={heroUrl}
-            alt={tour.title}
-            loading="eager"
-            className="h-64 w-full object-cover md:h-80"
-          />
+          {heroUrl ? (
+            <img
+              src={heroUrl}
+              alt={tour.title}
+              loading="eager"
+              className="h-64 w-full object-cover md:h-80"
+            />
+          ) : (
+            <div className="flex h-64 w-full items-center justify-center bg-gradient-to-br from-[#e7efe2] to-[#cfdcc7] px-6 text-center text-xs font-semibold uppercase tracking-[0.14em] text-[#405040] md:h-80">
+              Viator experience image unavailable
+            </div>
+          )}
         </div>
 
         {overviewText ? (

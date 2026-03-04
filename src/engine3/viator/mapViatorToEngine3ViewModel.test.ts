@@ -4,7 +4,7 @@ import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
 const LOCKED_HERO_URL_6740 =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg";
 
 const baseTour: Engine2Tour = {
   id: "6740JTREE",
@@ -68,6 +68,7 @@ describe("mapViatorToEngine3ViewModel", () => {
     });
 
     expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
+    expect(viewModel.heroImage).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.bookingUrl).toContain("pid=P00290915");
     expect(viewModel.bookingUrl).toContain("mcid=42383");

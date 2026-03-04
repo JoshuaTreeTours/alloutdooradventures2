@@ -11,6 +11,15 @@ type TourCardProps = {
   href?: string;
 };
 
+const ViatorImagePlaceholder = ({ title }: { title: string }) => (
+  <div
+    aria-label={`${title} image unavailable`}
+    className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#e7efe2] to-[#cfdcc7] text-center text-xs font-semibold uppercase tracking-[0.14em] text-[#405040]"
+  >
+    Viator experience image unavailable
+  </div>
+);
+
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
   const shortDescription = tour.shortDescription?.trim();
@@ -26,19 +35,26 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency
   );
+  const viatorHeroImage = tour.heroImage?.trim() || null;
   const cardImage =
-    tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+    tour.bookingProvider === "viator"
+      ? viatorHeroImage
+      : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
-        <Image
-          src={cardImage}
-          fallbackSrc={"/hero.jpg"}
-          alt={tour.title}
-          loading="lazy"
-          className="h-full w-full object-cover"
-        />
+        {tour.bookingProvider === "viator" && !cardImage ? (
+          <ViatorImagePlaceholder title={tour.title} />
+        ) : (
+          <Image
+            src={cardImage ?? "/hero.jpg"}
+            fallbackSrc={"/hero.jpg"}
+            alt={tour.title}
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        )}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         {tour.badges.likelyToSellOut && (
           <div className="absolute left-3 top-3 flex flex-wrap items-center gap-2">

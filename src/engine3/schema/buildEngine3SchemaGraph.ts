@@ -89,6 +89,7 @@ export const buildEngine3SchemaGraph = (
 
   const images = cleanImageUrls([
     input.seo.image,
+    input.tour.heroImage,
     input.tour.primaryImageUrl,
     input.tour.heroImageOverrideUrl,
     input.tour.heroImageUrl,

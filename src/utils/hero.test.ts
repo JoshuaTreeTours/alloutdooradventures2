@@ -129,6 +129,19 @@ describe("isImageInCityTour", () => {
 
 describe("resolveHeroImageForRoute city hub", () => {
 
+  it("does not leak destination defaults for viator tours without hero images", () => {
+    const image = resolveHeroImageForRoute({
+      route: "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+      tour: {
+        bookingProvider: "viator",
+        heroImage: "",
+        galleryImages: ["/images/canoe-hero.jpg"],
+      },
+    });
+
+    expect(image).toBeNull();
+  });
+
 
   it("keeps city hub and city tours routes on the exact same hero URL", () => {
     const cityTours = [

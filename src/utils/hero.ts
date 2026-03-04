@@ -20,6 +20,7 @@ export type HeroRouteContext = {
   tour?: {
     heroImage?: string;
     galleryImages?: string[];
+    bookingProvider?: "viator" | "fareharbor";
   } | null;
   guide?: {
     type?: "state" | "country" | "city";
@@ -358,6 +359,10 @@ export const resolveHeroImageForRoute = ({
   let resolvedImage: string | undefined;
 
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
+    if (tour?.bookingProvider === "viator") {
+      return tour.heroImage ? buildImageUrl(tour.heroImage) : null;
+    }
+
     resolvedImage = resolveHeroImage({
       pageType: "product",
       primary: tour?.heroImage ?? tour?.galleryImages?.[0],

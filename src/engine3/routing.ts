@@ -4,7 +4,7 @@ import { buildEngine3TourPath } from "./buildEngine3TourPath";
 import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
-import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
+import { resolveViatorHeroImage } from "./viator/resolveViatorHeroImage";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
 export const getEngine3TourBySlugs = (
@@ -33,13 +33,10 @@ export const getEngine3TourBySlugs = (
   }
 
   const normalizedContent = normalizeViatorTourContent({ productData });
-  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
+  const primaryImageUrl = resolveViatorHeroImage({
     productCode: entry.viator.productCode,
-    imageCandidates: [
-      ...(productData?.imageCandidates ?? []),
-      productData?.supplierImage,
-    ].filter((value): value is string => typeof value === "string"),
-    fallbackImageUrl: productData?.supplierImage,
+    primaryImageUrl: productData?.supplierImage,
+    imageGallery: productData?.imageCandidates,
   });
 
   return {
@@ -87,14 +84,8 @@ export const getEngine3TourBySlugs = (
       duration: productData?.duration,
     },
     images: {
-      hero: primaryImageUrl,
-      gallery: Array.from(
-        new Set(
-          [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
-            (value): value is string => typeof value === "string" && value.length > 0
-          )
-        )
-      ),
+      hero: primaryImageUrl ?? "",
+      gallery: primaryImageUrl ? [primaryImageUrl] : [],
     },
     booking: {
       bookingUrl: attributedBookingUrl,
