@@ -3,7 +3,7 @@ import { extractMeetingPointText } from "../../utils/providers/viator/extractMee
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
-import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
+import { pickViatorPrimaryImage } from "../utils/viatorImages";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
@@ -157,12 +157,9 @@ export const mapViatorToEngine3ViewModel = (
   });
 
   const contentImages = gallery;
+  const pickedImage = pickViatorPrimaryImage(productData);
   const primaryImageUrl =
-    resolveEngine3ViatorHero({
-      bookingProvider: "viator",
-      heroImageOverrideUrl,
-      contentImages,
-    }) ?? undefined;
+    pickedImage.heroUrl ?? heroImageOverrideUrl ?? contentImages[0] ?? undefined;
 
   const apiPrice = parsePrice(productData?.priceFrom);
   const priceOverride = overrideEntry?.startingPriceOverride;

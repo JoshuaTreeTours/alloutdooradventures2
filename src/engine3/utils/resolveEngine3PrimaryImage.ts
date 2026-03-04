@@ -1,55 +1,53 @@
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
+import type { ViatorProductData } from "../types";
 import {
   collectEngine3ImageCandidates,
   selectEngine3PrimaryImage,
 } from "./selectEngine3PrimaryImage";
+import { pickViatorPrimaryImage } from "./viatorImages";
 
 export const resolveEngine3PrimaryImage = (input: {
   productCode?: string;
   imageCandidates?: string[];
   fallbackImageUrl?: string;
 }) => {
+  const productStub: Partial<ViatorProductData> = {
+    productCode: input.productCode,
+    imageCandidates: input.imageCandidates,
+    supplierImage: input.fallbackImageUrl,
+  };
+
+  const picked = pickViatorPrimaryImage(productStub);
   const discoveredCandidates = collectEngine3ImageCandidates({
     viatorImageCandidates: input.imageCandidates,
   });
 
-  const discoveredFromViator = selectEngine3PrimaryImage({
-    viatorImageCandidates: input.imageCandidates,
-    fallbackImageUrl: input.fallbackImageUrl,
-  });
-
-  const usedFallback =
-    Boolean(input.fallbackImageUrl) &&
-    Boolean(discoveredFromViator) &&
-    discoveredCandidates.length === 0;
+  const discoveredFromViator =
+    picked.heroUrl ??
+    selectEngine3PrimaryImage({
+      viatorImageCandidates: input.imageCandidates,
+      fallbackImageUrl: input.fallbackImageUrl,
+    });
 
   if (!discoveredFromViator) {
     console.warn(
-      `[engine3] Missing API image candidates for ${input.productCode ?? "unknown-product"}; using default fallback hero.`
-    );
-  } else if (usedFallback) {
-    console.warn(
-      `[engine3] API image array empty for ${input.productCode ?? "unknown-product"}; using fallback supplier image.`
+      `[engine3] Missing API image candidates for ${input.productCode ?? "unknown-product"}; no hero image will be rendered.`
     );
   }
 
-  const heroImageUrl = discoveredFromViator ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
-
   const gallery = Array.from(
     new Set([
-      ...discoveredCandidates,
       discoveredFromViator,
+      picked.cardUrl,
+      ...discoveredCandidates,
       input.fallbackImageUrl,
     ])
   ).filter((value): value is string => typeof value === "string" && value.length > 0);
 
   const secondaryImageUrl =
-    gallery.find(image => image !== heroImageUrl) ??
-    gallery[0] ??
-    DEFAULT_ENGINE3_HERO_IMAGE_URL;
+    gallery.find(image => image !== discoveredFromViator) ?? gallery[0];
 
   return {
-    primaryImageUrl: heroImageUrl,
+    primaryImageUrl: discoveredFromViator,
     heroImageOverrideUrl: undefined,
     discoveredFromViator,
     secondaryImageUrl,

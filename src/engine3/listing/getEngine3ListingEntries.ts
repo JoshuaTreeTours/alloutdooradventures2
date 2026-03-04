@@ -3,7 +3,7 @@ import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
-import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
+import { pickViatorPrimaryImage } from "../utils/viatorImages";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 
 type Engine3ListingEntry = {
@@ -60,12 +60,9 @@ export const getEngine3ListingEntries = (
       });
       const href = buildEngine3TourPath(tour);
       const contentImages = gallery;
+      const pickedImage = pickViatorPrimaryImage(productData);
       const heroImage =
-        resolveEngine3ViatorHero({
-          bookingProvider: "viator",
-          heroImageOverrideUrl: undefined,
-          contentImages,
-        }) ?? "";
+        pickedImage.cardUrl ?? pickedImage.heroUrl ?? contentImages[0] ?? "";
 
       return {
         href,
@@ -125,11 +122,8 @@ export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
         ...(productData?.imageCandidates ?? []),
         productData?.supplierImage,
       ].filter((value): value is string => typeof value === "string" && value.trim().length > 0);
-      const hero = resolveEngine3ViatorHero({
-        bookingProvider: "viator",
-        heroImageOverrideUrl: undefined,
-        contentImages,
-      });
+      const pickedImage = pickViatorPrimaryImage(productData);
+      const hero = pickedImage.heroUrl ?? contentImages[0];
 
       if (hero) {
         return null;

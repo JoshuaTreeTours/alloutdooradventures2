@@ -40,6 +40,9 @@ describe("getEngine3ListingEntries", () => {
     expect(target?.tour.bookingUrl).toContain("pid=P00290915");
     expect(target?.tour.bookingUrl).toContain("mcid=42383");
     expect(target?.tour.bookingUrl).toContain("medium=link");
+    expect(target?.tour.heroImage).toBeTruthy();
+    expect(target?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(target?.tour.heroImage).not.toContain("jerry-sybers");
   });
 
   it("keeps 2335P1 listing image equal to the detail page hero image", () => {
