@@ -2,7 +2,9 @@ import { describe, expect, it } from "vitest";
 
 import {
   CITY_NEUTRAL_BRAND_IMAGE,
+  ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
   HOME_HERO_IMAGE,
+  coerceViatorHeroCandidate,
   isImageInCityTour,
   resolveCityHeroImage,
   resolveHeroImageForRoute,
@@ -190,6 +192,19 @@ describe("resolveHeroImageForRoute city hub", () => {
 
 
 describe("resolveHeroImageForRoute viator tour detail", () => {
+  it("rejects known-bad dynamic-media caption.jpg candidates", () => {
+    expect(
+      coerceViatorHeroCandidate(
+        "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/caption.jpg",
+      ),
+    ).toBeUndefined();
+    expect(
+      coerceViatorHeroCandidate(
+        "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/caption.jpg?w=1200",
+      ),
+    ).toBeUndefined();
+  });
+
   it("uses viator override before content images", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/california/palm-springs/tours/sample",
@@ -203,7 +218,7 @@ describe("resolveHeroImageForRoute viator tour detail", () => {
     expect(image).toBe("https://cdn.example.com/override.jpg");
   });
 
-  it("does not fall back to destination defaults when viator hero is missing", () => {
+  it("falls back to Engine3 Viator default hero when candidate is missing", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/california/palm-springs/tours/sample",
       tour: {
@@ -211,6 +226,22 @@ describe("resolveHeroImageForRoute viator tour detail", () => {
       },
     });
 
-    expect(image).toBeNull();
+    expect(image).toBe(ENGINE3_VIATOR_FALLBACK_HERO_IMAGE);
+  });
+
+  it("falls back to Engine3 Viator default hero when candidate is known-bad", () => {
+    const image = resolveHeroImageForRoute({
+      route: "/destinations/california/palm-springs/tours/sample",
+      tour: {
+        bookingProvider: "viator",
+        content: {
+          images: [
+            "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/caption.jpg",
+          ],
+        },
+      },
+    });
+
+    expect(image).toBe(ENGINE3_VIATOR_FALLBACK_HERO_IMAGE);
   });
 });

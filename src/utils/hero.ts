@@ -13,6 +13,8 @@ export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
 export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
 export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
 export const CITY_NEUTRAL_BRAND_IMAGE = "/logo.svg";
+export const ENGINE3_VIATOR_FALLBACK_HERO_IMAGE =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg";
 
 export type HeroRouteContext = {
   route: string;
@@ -83,6 +85,22 @@ type CityTourImageCandidate = {
 };
 
 const normalizeHeroImage = (image?: string) => (image ?? "").trim();
+
+export const isKnownBadViatorHeroCandidate = (image?: string) => {
+  const normalized = normalizeHeroImage(image);
+  if (!normalized) return false;
+
+  return (
+    normalized.includes("dynamic-media.tacdn.com/media/photo-o/") &&
+    /\/caption\.jpg(?:\?.*)?$/.test(normalized)
+  );
+};
+
+export const coerceViatorHeroCandidate = (image?: string) => {
+  if (!image) return undefined;
+  if (isKnownBadViatorHeroCandidate(image)) return undefined;
+  return image;
+};
 
 const normalizeCountryCode = (value?: string) =>
   value ? value.trim().toUpperCase() : undefined;
@@ -364,9 +382,13 @@ export const resolveHeroImageForRoute = ({
 
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
     if (tour?.bookingProvider === "viator") {
+      const viatorPrimary = coerceViatorHeroCandidate(
+        tour.heroImageOverride ?? tour.content?.images?.[0],
+      );
+
       resolvedImage = resolveHeroImage({
         pageType: "product",
-        primary: tour.heroImageOverride ?? tour.content?.images?.[0],
+        primary: viatorPrimary ?? ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
         fallbacks: [],
       });
     } else {

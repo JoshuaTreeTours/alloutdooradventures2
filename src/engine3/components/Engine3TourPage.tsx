@@ -7,6 +7,10 @@ import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItem
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import type { Engine3TourViewModel } from "../types";
 import { normalizeStructuredData } from "../../utils/structuredData";
+import {
+  coerceViatorHeroCandidate,
+  ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
+} from "../../utils/hero";
 
 type Engine3TourPageProps = {
   tour: Engine3TourViewModel;
@@ -73,8 +77,16 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
-    tour.primaryImageUrl || tour.heroImageOverrideUrl || tour.content?.images?.[0] ||
-    undefined;
+    tour.bookingProvider === "viator"
+      ? coerceViatorHeroCandidate(
+          tour.primaryImageUrl ||
+            tour.heroImageOverrideUrl ||
+            tour.content?.images?.[0]
+        ) ?? ENGINE3_VIATOR_FALLBACK_HERO_IMAGE
+      : tour.primaryImageUrl ||
+        tour.heroImageOverrideUrl ||
+        tour.content?.images?.[0] ||
+        undefined;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
