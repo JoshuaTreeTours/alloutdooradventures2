@@ -85,8 +85,7 @@ const westStates: StateDestination[] = [
     description: "Coastal drives, alpine hikes, and redwood escapes.",
     featuredDescription:
       "Surf to summit with coastal cliffs, redwood groves, and alpine trails.",
-    heroImage:
-      "/images/california/california-hero.jpg",
+    heroImage: "/images/california/california-hero.jpg",
     region: "West",
     intro:
       "California is a choose-your-own-adventure state, pairing Pacific coastlines with desert basins and granite peaks in a single road trip.",
@@ -110,7 +109,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
     topRegions: [
       {
         title: "Coastal Escapes",
-        description: "Bluff hikes, sea caves, and surf culture along the Pacific edge.",
+        description:
+          "Bluff hikes, sea caves, and surf culture along the Pacific edge.",
       },
       {
         title: "High Sierra",
@@ -118,7 +118,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
       },
       {
         title: "Desert Wonders",
-        description: "Joshua tree forests, slot canyons, and stargazing basins.",
+        description:
+          "Joshua tree forests, slot canyons, and stargazing basins.",
       },
     ],
     cities: [
@@ -129,7 +130,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "South Coast",
         lat: 32.7157,
         lng: -117.1611,
-        shortDescription: "Coastal paddles, cliff walks, and sunny beach culture.",
+        shortDescription:
+          "Coastal paddles, cliff walks, and sunny beach culture.",
         intro:
           "San Diego blends beach-town energy with dramatic coastal trails and harbor adventures. It is ideal for travelers who want surf breaks in the morning and bluff-top hikes by late afternoon.",
         heroImages: [
@@ -209,7 +211,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "Sierra Nevada",
         lat: 39.0968,
         lng: -120.0324,
-        shortDescription: "Crystal waters, alpine peaks, and year-round trails.",
+        shortDescription:
+          "Crystal waters, alpine peaks, and year-round trails.",
         intro:
           "Lake Tahoe is an alpine escape wrapped in pine forests and granite peaks. The lake’s cobalt water pairs with ridge hikes, paddle routes, and cozy mountain towns that make for a perfect basecamp.",
         heroImages: [
@@ -272,8 +275,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
           },
           {
             question: "What time should I paddle?",
-            answer:
-              "Early morning is best for calm water and minimal wind.",
+            answer: "Early morning is best for calm water and minimal wind.",
           },
           {
             question: "Do I need to book lodging early?",
@@ -289,7 +291,8 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "High Desert",
         lat: 34.1347,
         lng: -116.3131,
-        shortDescription: "Desert boulders, stargazing skies, and golden light.",
+        shortDescription:
+          "Desert boulders, stargazing skies, and golden light.",
         intro:
           "Joshua Tree delivers otherworldly desert scenes with an easygoing town vibe. It is a haven for climbers, photographers, and anyone who wants wide-open silence and glowing sunsets.",
         heroImages: ["/images/california/cities/hero.jpg"],
@@ -366,12 +369,11 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "Bay Area & Marin Coast",
         lat: 37.7749,
         lng: -122.4194,
-        shortDescription: "Foggy headlands, bay trails, and iconic coastal views.",
+        shortDescription:
+          "Foggy headlands, bay trails, and iconic coastal views.",
         intro:
           "San Francisco pairs classic city energy with quick access to rugged coastal trails and bayfront parks. It is ideal for travelers who want outdoor mornings and city evenings without long drives.",
-        heroImages: [
-          "/images/california/cities/san-francisco-hero.jpg",
-        ],
+        heroImages: ["/images/california/cities/san-francisco-hero.jpg"],
         activityTags: ["coastal", "urban-trails", "scenic"],
         whereItIs: [
           "San Francisco sits on a narrow peninsula between the Pacific Ocean and the San Francisco Bay. The city’s hills create instant viewpoints, while parks and waterfront promenades thread through iconic neighborhoods.",
@@ -448,9 +450,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         shortDescription: "Urban energy with canyon hikes and beach sunsets.",
         intro:
           "Los Angeles blends iconic city culture with easy access to beaches, canyon trails, and coastal viewpoints. It is a choose-your-own-pace destination with endless outdoor options.",
-        heroImages: [
-          "/images/california/cities/los-angeles.jpg",
-        ],
+        heroImages: ["/images/california/cities/los-angeles.jpg"],
         activityTags: ["coastal", "hiking", "urban-trails"],
         whereItIs: [
           "Los Angeles sprawls between the Santa Monica Mountains and the Pacific, which means trailheads and beaches are sprinkled across the city. Short drives can take you from downtown to canyon ridges or oceanfront bike paths.",
@@ -523,12 +523,11 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "Central Coast",
         lat: 34.4208,
         lng: -119.6982,
-        shortDescription: "Coastal bluffs, wine-country days, and easygoing surf.",
+        shortDescription:
+          "Coastal bluffs, wine-country days, and easygoing surf.",
         intro:
           "Santa Barbara pairs Mediterranean-style charm with coastal trails and mellow ocean adventures. It is a relaxed basecamp where beach mornings, canyon hikes, and vineyard afternoons all fit in the same weekend.",
-        heroImages: [
-          "/images/california/cities/Santa-Barbara.jpg",
-        ],
+        heroImages: ["/images/california/cities/Santa-Barbara.jpg"],
         activityTags: ["coastal", "hiking", "wine-country"],
         whereItIs: [
           "Santa Barbara sits along the Central Coast between Los Angeles and Big Sur, backed by the Santa Ynez Mountains and fronted by a calm, south-facing stretch of the Pacific. The city’s beaches, bluffs, and harbor are all within a short drive of downtown.",
@@ -665,8 +664,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
           },
           {
             question: "Do I need to book the tram ahead?",
-            answer:
-              "Advance tickets are recommended on weekends and holidays.",
+            answer: "Advance tickets are recommended on weekends and holidays.",
           },
           {
             question: "What is the best season?",
@@ -683,12 +681,11 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         region: "Yosemite National Park",
         lat: 37.8651,
         lng: -119.5383,
-        shortDescription: "Granite icons, waterfall valleys, and alpine meadows.",
+        shortDescription:
+          "Granite icons, waterfall valleys, and alpine meadows.",
         intro:
           "Yosemite is California’s granite cathedral, famous for towering cliffs, thundering waterfalls, and sweeping meadow views. It is a must for hikers who want iconic scenery.",
-        heroImages: [
-          "/images/california/cities/yosemite.jpg",
-        ],
+        heroImages: ["/images/california/cities/yosemite.jpg"],
         activityTags: ["alpine", "waterfalls", "hiking"],
         whereItIs: [
           "Yosemite National Park sits in the central Sierra Nevada, about 4–5 hours from the Bay Area. The Valley is the heart of the park, with iconic cliffs like El Capitan and Half Dome towering above.",
@@ -765,9 +762,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
         shortDescription: "Dramatic cliffs, redwood canyons, and ocean hikes.",
         intro:
           "Big Sur is California’s iconic coastal stretch, where rugged cliffs drop into the Pacific and redwood groves hide inland trails. It is built for scenic drives and short, memorable hikes.",
-       heroImages: [
-  "/images/california/cities/big-sur-hero.gif",
-],
+        heroImages: ["/images/california/cities/big-sur-hero.gif"],
         activityTags: ["coastal", "redwoods", "scenic"],
         whereItIs: [
           "Big Sur stretches along Highway 1 between Carmel and San Simeon, with steep cliffs, ocean overlooks, and hidden redwood canyons. The area feels remote despite being just a few hours from major cities.",
@@ -841,8 +836,7 @@ California’s outdoor identity is a blend of rugged landscapes and thoughtful a
     description: "Desert sunrises, canyon overlooks, and stargazing nights.",
     featuredDescription:
       "Sunrise hikes, canyon overlooks, and desert skies that glow at dusk.",
-    heroImage:
-      "/images/arizona/arizona-hero.jpg",
+    heroImage: "/images/arizona/arizona-hero.jpg",
     region: "West",
     intro:
       "Arizona is defined by canyon country and high desert skies, offering red rock hikes, alpine forests, and legendary sunsets.",
@@ -885,12 +879,11 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         region: "Red Rock Country",
         lat: 34.8697,
         lng: -111.761,
-        shortDescription: "Red rock trails, vortex viewpoints, and canyon sunsets.",
+        shortDescription:
+          "Red rock trails, vortex viewpoints, and canyon sunsets.",
         intro:
           "Sedona is a red rock dreamscape with glowing canyon walls and sweeping trail systems. It is a top pick for sunrise hikes and layered desert panoramas.",
-        heroImages: [
-          "/images/arizona/cities/sedona-hero.jpg"
-        ],
+        heroImages: ["/images/arizona/cities/sedona-hero.jpg"],
         activityTags: ["canyons", "hiking", "scenic"],
         whereItIs: [
           "Sedona sits between the Coconino National Forest and a maze of red rock buttes, about two hours north of Phoenix. The town is nestled in a canyon basin, so every direction offers another viewpoint.",
@@ -946,8 +939,7 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
           },
           {
             question: "Is Sedona good for beginners?",
-            answer:
-              "Absolutely—many trails are short and well-marked.",
+            answer: "Absolutely—many trails are short and well-marked.",
           },
           {
             question: "Are permits required?",
@@ -963,9 +955,9 @@ Arizona’s outdoor experiences feel timeless. They offer both big, bucket-list 
         region: "High Country",
         lat: 35.1983,
         lng: -111.6513,
-        shortDescription: "Pine forests, volcanic peaks, and cool mountain air.",
-        intro:
-          `Flagstaff is a high-elevation mountain town surrounded by ponderosa pine forests, volcanic landscapes, and the soaring San Francisco Peaks. The altitude keeps days crisp and nights cool, making it a welcome escape when the desert heats up. Just as important, the city sits in the perfect position for day trips to the Grand Canyon South Rim, with trailheads and viewpoints close enough for a sunrise-to-sunset loop.
+        shortDescription:
+          "Pine forests, volcanic peaks, and cool mountain air.",
+        intro: `Flagstaff is a high-elevation mountain town surrounded by ponderosa pine forests, volcanic landscapes, and the soaring San Francisco Peaks. The altitude keeps days crisp and nights cool, making it a welcome escape when the desert heats up. Just as important, the city sits in the perfect position for day trips to the Grand Canyon South Rim, with trailheads and viewpoints close enough for a sunrise-to-sunset loop.
 
 Flagstaff is also a four-season adventure basecamp. Summer and early fall bring big hiking days, mountain bike loops, and wildflower meadows. Autumn colors light up the aspens on the peaks, while winter transforms the slopes into a snow-sport hub at Arizona Snowbowl. When daylight fades, the town’s dark-sky reputation delivers some of the best stargazing in the Southwest, whether you are at Lowell Observatory or on a forest road just outside town.
 
@@ -1041,8 +1033,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
           },
           {
             question: "When is snow season?",
-            answer:
-              "Snow can arrive in late fall and lasts into early spring.",
+            answer: "Snow can arrive in late fall and lasts into early spring.",
           },
         ],
       },
@@ -1056,9 +1047,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
         shortDescription: "Saguaro trails, desert sunsets, and mountain views.",
         intro:
           "Tucson is wrapped by saguaro cactus forests and rugged mountain ranges. It is a sun-soaked destination for desert hikes and scenic drives.",
-        heroImages: [
-          "/images/arizona/cities/tucson.webp",
-        ],
+        heroImages: ["/images/arizona/cities/tucson.webp"],
         activityTags: ["desert", "wildlife", "scenic"],
         whereItIs: [
           "Tucson sits in the heart of the Sonoran Desert, surrounded by Saguaro National Park and the Santa Catalina Mountains. The dramatic elevation change means you can hike deserts and pine forests in the same day.",
@@ -1119,8 +1108,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
           },
           {
             question: "Do I need a park pass?",
-            answer:
-              "Saguaro National Park requires an entry fee or park pass.",
+            answer: "Saguaro National Park requires an entry fee or park pass.",
           },
         ],
       },
@@ -1132,8 +1120,7 @@ Between outings, the historic Route 66 corridor and walkable downtown add brewer
     description: "Wide-open basins, hot springs, and starry skies.",
     featuredDescription:
       "Remote hot springs, dark-sky nights, and wide-open desert basins.",
-    heroImage:
-      "/images/nevada/nevada-hero.png",
+    heroImage: "/images/nevada/nevada-hero.png",
     region: "West",
     intro:
       "Nevada is a high-desert playground of basin-and-range mountains, quiet hot springs, and wide-open horizons.",
@@ -1196,8 +1183,7 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
             "Paddle the Truckee River or head to Tahoe’s east shore for lake time.",
           desertForest:
             "High desert landscapes surround the city, with sagebrush valleys and open skies.",
-          cycling:
-            "Bike the Truckee River path for a mellow, scenic ride.",
+          cycling: "Bike the Truckee River path for a mellow, scenic ride.",
           scenicDrives:
             "Take Mount Rose Highway for sweeping views into Tahoe country.",
           seasonalNotes:
@@ -1234,13 +1220,11 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
         faq: [
           {
             question: "Is Reno close to Lake Tahoe?",
-            answer:
-              "Yes, the north shore is about a 45-minute drive.",
+            answer: "Yes, the north shore is about a 45-minute drive.",
           },
           {
             question: "Is summer hot?",
-            answer:
-              "Days are warm but evenings cool down thanks to elevation.",
+            answer: "Days are warm but evenings cool down thanks to elevation.",
           },
           {
             question: "Can I visit without skiing?",
@@ -1417,8 +1401,7 @@ For those seeking quiet, open landscapes and a feeling of discovery, Nevada deli
     description: "Slot canyons, iconic arches, and sandstone vistas.",
     featuredDescription:
       "Iconic arches, canyon slots, and sandstone trails made for exploration.",
-    heroImage:
-      "/images/utah/utah-hero.webp",
+    heroImage: "/images/utah/utah-hero.webp",
     region: "West",
     intro:
       "Utah is the heart of canyon country, mixing red rock drama with alpine escapes in the Wasatch Range.",
@@ -1463,7 +1446,8 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         region: "Canyon Country",
         lat: 38.5733,
         lng: -109.5498,
-        shortDescription: "Red rock playground for biking, hiking, and rafting.",
+        shortDescription:
+          "Red rock playground for biking, hiking, and rafting.",
         intro:
           "Moab is the adventure epicenter of Utah, surrounded by red rock cliffs and desert trails. It is the ideal base for mountain biking, canyon hikes, and river adventures.",
         heroImages: [
@@ -1483,8 +1467,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
             "Float or raft the Colorado River for a different perspective on the canyon walls.",
           desertForest:
             "Slickrock domes and desert mesas define the landscape, with scattered desert flora.",
-          cycling:
-            "Ride the Slickrock Trail or nearby singletrack networks.",
+          cycling: "Ride the Slickrock Trail or nearby singletrack networks.",
           scenicDrives:
             "Drive the Arches National Park loop or Shafer Trail for dramatic overlooks.",
           seasonalNotes:
@@ -1531,8 +1514,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
           },
           {
             question: "Can I visit in summer?",
-            answer:
-              "Yes, but plan early starts and plenty of water.",
+            answer: "Yes, but plan early starts and plenty of water.",
           },
         ],
       },
@@ -1606,8 +1588,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
           },
           {
             question: "Is Zion crowded?",
-            answer:
-              "It can be, so arrive early or visit shoulder seasons.",
+            answer: "It can be, so arrive early or visit shoulder seasons.",
           },
           {
             question: "Are there easy hikes?",
@@ -1623,7 +1604,8 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         region: "Wasatch Mountains",
         lat: 40.6461,
         lng: -111.498,
-        shortDescription: "Alpine trails, mountain bike parks, and summer festivals.",
+        shortDescription:
+          "Alpine trails, mountain bike parks, and summer festivals.",
         intro:
           "Park City mixes mountain-town charm with accessible alpine trails. It is a cooler summer escape with easy hikes, biking, and scenic chairlift rides.",
         heroImages: [
@@ -1643,8 +1625,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
             "Alpine reservoirs nearby offer paddle and picnic options.",
           desertForest:
             "Aspen groves and pine forests create cool, shaded trails.",
-          cycling:
-            "Ride lift-served mountain bike trails at the resort parks.",
+          cycling: "Ride lift-served mountain bike trails at the resort parks.",
           scenicDrives:
             "Drive Guardsman Pass for sweeping views across the Wasatch.",
           seasonalNotes:
@@ -1681,13 +1662,11 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
         faq: [
           {
             question: "Is Park City only for winter?",
-            answer:
-              "No, summer and fall are excellent for hiking and biking.",
+            answer: "No, summer and fall are excellent for hiking and biking.",
           },
           {
             question: "Are trails crowded?",
-            answer:
-              "Resort areas can be busy on weekends, so start early.",
+            answer: "Resort areas can be busy on weekends, so start early.",
           },
           {
             question: "Do I need a bike pass?",
@@ -1704,8 +1683,7 @@ Whether you are chasing the sunrise in a slot canyon or cruising a scenic byway 
     description: "Waterfalls, misty forests, and volcanic ridgelines.",
     featuredDescription:
       "Waterfalls, misty forests, and volcanic peaks around every bend.",
-    heroImage:
-      "/images/oregon/oregon-hero.JPG",
+    heroImage: "/images/oregon/oregon-hero.JPG",
     region: "West",
     intro:
       "Oregon blends Pacific coastline with waterfall hikes and volcanic peaks, perfect for travelers who want a mix of forest, river, and ocean.",
@@ -1750,12 +1728,11 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         region: "Columbia Gorge Gateway",
         lat: 45.5152,
         lng: -122.6784,
-        shortDescription: "Urban gateway to the Columbia Gorge and forest trails.",
+        shortDescription:
+          "Urban gateway to the Columbia Gorge and forest trails.",
         intro:
           "Portland is the ideal launch point for waterfall hikes, forest walks, and river adventures. It pairs an outdoor-friendly city vibe with quick access to the Gorge and Mount Hood.",
-        heroImages: [
-          "/images/oregon/cities/portland-hero.jpg",
-        ],
+        heroImages: ["/images/oregon/cities/portland-hero.jpg"],
         activityTags: ["waterfalls", "biking", "alpine"],
         whereItIs: [
           "Portland sits on the Willamette River and is less than an hour from the Columbia River Gorge. It is the perfect mix of city comfort and quick nature access.",
@@ -1811,8 +1788,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
           },
           {
             question: "When is waterfall season?",
-            answer:
-              "Late winter through spring offers the strongest flows.",
+            answer: "Late winter through spring offers the strongest flows.",
           },
           {
             question: "Do I need a car?",
@@ -1828,12 +1804,11 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         region: "High Desert",
         lat: 44.0582,
         lng: -121.3153,
-        shortDescription: "High desert trails, river floats, and volcanic vistas.",
+        shortDescription:
+          "High desert trails, river floats, and volcanic vistas.",
         intro:
           "Bend blends sunny high-desert weather with easy access to volcanic peaks and river adventures. It is a playground for biking, paddling, and casual hikes.",
-        heroImages: [
-          "/images/oregon/cities/bend-hero.webp",
-        ],
+        heroImages: ["/images/oregon/cities/bend-hero.webp"],
         activityTags: ["biking", "paddling", "volcanic"],
         whereItIs: [
           "Bend sits on the Deschutes River in Central Oregon, framed by volcanic peaks and high desert landscapes. The climate is sunny and dry, perfect for outdoor days.",
@@ -1884,8 +1859,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         faq: [
           {
             question: "Is Bend good for beginners?",
-            answer:
-              "Yes, there are easy river floats and mellow hikes.",
+            answer: "Yes, there are easy river floats and mellow hikes.",
           },
           {
             question: "When is the river float season?",
@@ -1894,8 +1868,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
           },
           {
             question: "Do I need a car?",
-            answer:
-              "A car is helpful for the Cascade Lakes and trailheads.",
+            answer: "A car is helpful for the Cascade Lakes and trailheads.",
           },
         ],
       },
@@ -1909,9 +1882,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
         shortDescription: "Sea stacks, sandy coves, and coastal strolls.",
         intro:
           "Cannon Beach is famous for Haystack Rock and a charming coastal vibe. It is perfect for beach walks, tide pooling, and sunset photography.",
-        heroImages: [
-          "/images/oregon/cities/canon-beach-hero.jpg",
-        ],
+        heroImages: ["/images/oregon/cities/canon-beach-hero.jpg"],
         activityTags: ["coastal", "scenic", "wildlife"],
         whereItIs: [
           "Cannon Beach sits on Oregon’s north coast, about 90 minutes from Portland. It is known for its wide sandy beach and the iconic Haystack Rock.",
@@ -1924,8 +1895,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
             "The Pacific is the star here—tide pools, surf breaks, and cool ocean air.",
           desertForest:
             "Coastal forests and headlands offer mossy trails and sea-sprayed viewpoints.",
-          cycling:
-            "Ride coastal bike paths for gentle, scenic routes.",
+          cycling: "Ride coastal bike paths for gentle, scenic routes.",
           scenicDrives:
             "Drive to Ecola State Park for sweeping coastline overlooks.",
           seasonalNotes:
@@ -1985,8 +1955,7 @@ Whether you are exploring rainforest trails, watching the sun set over the Pacif
     description: "Rainforests, alpine lakes, and glacier-capped peaks.",
     featuredDescription:
       "Coastal rainforests, alpine lakes, and glacier-capped peaks to explore.",
-    heroImage:
-      "/images/washington/washington-hero.jpg",
+    heroImage: "/images/washington/washington-hero.jpg",
     region: "West",
     intro:
       "Washington is a landscape of misty rainforests and glacier-fed lakes, offering everything from coastal paddles to alpine hikes.",
@@ -2029,7 +1998,8 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         region: "Olympic National Park",
         lat: 47.8021,
         lng: -123.6044,
-        shortDescription: "Rainforest walks, rugged beaches, and alpine ridges.",
+        shortDescription:
+          "Rainforest walks, rugged beaches, and alpine ridges.",
         intro:
           "The Olympic Peninsula is a choose-your-own landscape—rainforest, mountains, and wild coastline all in one region. It is an unforgettable loop for hikers and photographers.",
         heroImages: [
@@ -2087,18 +2057,15 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         faq: [
           {
             question: "Is the Olympic Peninsula a day trip?",
-            answer:
-              "It is best as a 2–3 day loop to see multiple regions.",
+            answer: "It is best as a 2–3 day loop to see multiple regions.",
           },
           {
             question: "Are rainforests accessible year-round?",
-            answer:
-              "Yes, but expect wet trails outside of summer.",
+            answer: "Yes, but expect wet trails outside of summer.",
           },
           {
             question: "Do I need a park pass?",
-            answer:
-              "Olympic National Park requires an entry pass.",
+            answer: "Olympic National Park requires an entry pass.",
           },
         ],
       },
@@ -2109,7 +2076,8 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         region: "Cascade Mountains",
         lat: 47.5962,
         lng: -120.6615,
-        shortDescription: "Alpine village charm with lake hikes and river floats.",
+        shortDescription:
+          "Alpine village charm with lake hikes and river floats.",
         intro:
           "Leavenworth blends alpine scenery with a charming Bavarian village feel. Nearby trails and rivers provide quick outdoor escapes in a picturesque setting.",
         heroImages: [
@@ -2125,8 +2093,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         experiences: {
           mountains:
             "Hike to Colchuck Lake or nearby alpine trails for glacier views.",
-          lakesWater:
-            "Float the Wenatchee River for a relaxed summer paddle.",
+          lakesWater: "Float the Wenatchee River for a relaxed summer paddle.",
           desertForest:
             "Dense pine forests surround the town, offering shaded hikes and scenic drives.",
           cycling:
@@ -2167,13 +2134,11 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         faq: [
           {
             question: "Is Leavenworth good in summer?",
-            answer:
-              "Yes, alpine hiking and river floats are at their best.",
+            answer: "Yes, alpine hiking and river floats are at their best.",
           },
           {
             question: "Are hikes crowded?",
-            answer:
-              "Popular trails like Colchuck Lake are busy—start early.",
+            answer: "Popular trails like Colchuck Lake are busy—start early.",
           },
           {
             question: "Do I need a pass?",
@@ -2189,12 +2154,11 @@ Washington invites exploration with a sense of wonder. It is a state where the o
         region: "Puget Sound",
         lat: 47.6062,
         lng: -122.3321,
-        shortDescription: "Waterfront trails, ferry rides, and quick mountain access.",
+        shortDescription:
+          "Waterfront trails, ferry rides, and quick mountain access.",
         intro:
           "Seattle is a vibrant city base with easy access to Puget Sound, mountain trails, and island escapes. It is perfect for mixing urban energy with outdoor excursions.",
-        heroImages: [
-          "/images/washington/Seattle.jpg",
-        ],
+        heroImages: ["/images/washington/Seattle.jpg"],
         activityTags: ["paddling", "urban-trails", "alpine"],
         whereItIs: [
           "Seattle sits between Puget Sound and Lake Washington, with the Cascades rising to the east. It is a city where ferry rides and waterfront walks are part of daily life.",
@@ -2207,8 +2171,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
             "Paddle Lake Union or head to Puget Sound for sea kayaking.",
           desertForest:
             "Dense evergreen forests and coastal parks offer easy nature escapes.",
-          cycling:
-            "Bike the Burke-Gilman Trail for an urban-to-nature ride.",
+          cycling: "Bike the Burke-Gilman Trail for an urban-to-nature ride.",
           scenicDrives:
             "Drive to Snoqualmie Pass for waterfalls and mountain viewpoints.",
           seasonalNotes:
@@ -2250,8 +2213,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
           },
           {
             question: "Is it rainy year-round?",
-            answer:
-              "Winters are wet, but summers are typically dry and sunny.",
+            answer: "Winters are wet, but summers are typically dry and sunny.",
           },
           {
             question: "Are there easy hikes nearby?",
@@ -2268,8 +2230,7 @@ Washington invites exploration with a sense of wonder. It is a state where the o
     description: "Front Range foothills, alpine peaks, and red-rock vistas.",
     featuredDescription:
       "Plan hiking and cycling days with mountain towns and Front Range basecamps.",
-    heroImage:
-      "/images/colorado-hero.jpg",
+    heroImage: "/images/colorado-hero.jpg",
     region: "Heartland",
     intro:
       "Colorado delivers high-elevation trails, scenic drives, and easygoing cities that keep adventure planning simple.",
@@ -2294,6 +2255,82 @@ Denver, Boulder, Colorado Springs, Fort Collins, and Durango make reliable basec
       },
     ],
     cities: [
+      {
+        name: "Aspen",
+        slug: "aspen",
+        stateSlug: "colorado",
+        region: "Roaring Fork Valley",
+        lat: 39.1911,
+        lng: -106.8175,
+        shortDescription:
+          "High-country trails, historic downtown streets, and easy access to guided hikes.",
+        intro:
+          "Aspen blends mountain scenery with walkable downtown blocks, making it simple to pair guided hikes with cafes, galleries, and riverfront strolls.",
+        heroImages: [
+          "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+          "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+          "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80",
+        ],
+        activityTags: ["hiking", "scenic-drives", "walking"],
+        whereItIs: [
+          "Aspen sits in the Roaring Fork Valley in central Colorado, about a four-hour drive from Denver depending on route and weather.",
+          "The city center is compact, and many trailheads and meeting points are close enough for short transfers.",
+        ],
+        experiences: {
+          mountains:
+            "Aspen is surrounded by alpine terrain with guided and self-guided routes that range from light walks to steeper mountain climbs.",
+          lakesWater:
+            "Mountain streams and nearby reservoirs offer calm waterside stops and short scenic detours.",
+          desertForest:
+            "Aspen’s trails move through mixed forests and open slopes with seasonal wildflowers and fall color.",
+          cycling:
+            "Paved valley paths and rolling roads make it easy to add cycling between hiking days.",
+          scenicDrives:
+            "Highway approaches and mountain passes deliver classic Colorado viewpoints around town.",
+          seasonalNotes:
+            "Summer and early fall are prime for light hiking, with crisp mornings and cooler temperatures at elevation.",
+        },
+        thingsToDo: [
+          "Join a guided light hike on Aspen’s East End.",
+          "Walk downtown Aspen and nearby historic blocks.",
+          "Take a scenic drive through surrounding mountain passes.",
+          "Plan an early-morning trail outing before afternoon weather shifts.",
+          "Pair outdoor time with local cafes and art stops in town.",
+        ],
+        toursCopy: [
+          "Guided light hikes are a strong option for visitors who want local trail context without a full-day itinerary.",
+          "Morning departures help you enjoy cooler trail conditions and clear mountain views.",
+          "Use Aspen as a basecamp for short active outings followed by relaxed downtown time.",
+        ],
+        weekendItinerary: {
+          dayOne: [
+            "Morning: guided light hike on the East End.",
+            "Afternoon: lunch and downtown Aspen walk.",
+            "Evening: scenic overlook stop and casual dinner.",
+          ],
+          dayTwo: [
+            "Morning: easy trail or valley path ride.",
+            "Afternoon: scenic drive and short photo stops.",
+            "Evening: riverfront stroll.",
+          ],
+        },
+        gettingThere: [
+          "Aspen/Pitkin County Airport serves regional flights close to downtown.",
+          "Driving access from Denver typically takes several hours and can vary by season.",
+        ],
+        faq: [
+          {
+            question: "When is the best time for light hikes in Aspen?",
+            answer:
+              "Summer through early fall typically offers the most reliable trail conditions for light hiking itineraries.",
+          },
+          {
+            question: "Is Aspen walkable for visitors?",
+            answer:
+              "Yes, central Aspen is generally walkable, and many tours use convenient in-town meeting points.",
+          },
+        ],
+      },
       {
         name: "Denver",
         slug: "denver",
@@ -2682,8 +2719,7 @@ Denver, Boulder, Colorado Springs, Fort Collins, and Durango make reliable basec
     description: "Big-sky valleys, glacier lakes, and trail-first towns.",
     featuredDescription:
       "Plan hiking, cycling, and canoeing days across Montana's mountain gateways.",
-    heroImage:
-      "/images/montana-hero.jpg",
+    heroImage: "/images/montana-hero.jpg",
     region: "Heartland",
     intro:
       "Montana pairs rugged ranges with wide-open rivers, making it a natural fit for multi-activity trips.",
@@ -2719,9 +2755,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
           "College-town energy with rivers, trailheads, and Yellowstone access.",
         intro:
           "Bozeman is a lively basecamp with quick access to the Gallatin Valley, mountain trails, and Yellowstone day trips.",
-        heroImages: [
-          "/images/bozeman.jpg",
-        ],
+        heroImages: ["/images/bozeman.jpg"],
         activityTags: ["hiking", "cycling", "canoeing"],
         whereItIs: [
           "Bozeman sits in the Gallatin Valley, about 90 minutes from the north entrance to Yellowstone National Park.",
@@ -2806,12 +2840,10 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         experiences: {
           mountains:
             "Head to the Rattlesnake National Recreation Area for quick hikes.",
-          lakesWater:
-            "Float the Clark Fork River or paddle nearby reservoirs.",
+          lakesWater: "Float the Clark Fork River or paddle nearby reservoirs.",
           desertForest:
             "Forested foothills provide shaded trails and wildlife sightings.",
-          cycling:
-            "Use the Riverfront and Bitterroot paths for easy miles.",
+          cycling: "Use the Riverfront and Bitterroot paths for easy miles.",
           scenicDrives:
             "Drive south along the Bitterroot Valley for quiet views.",
           seasonalNotes:
@@ -2867,11 +2899,8 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         lng: -114.3376,
         shortDescription:
           "Glacier access, lake paddles, and alpine climbing routes.",
-        intro:
-          `Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.`,
-        heroImages: [
-          "/images/whitefish.jpg",
-        ],
+        intro: `Whitefish is a compact mountain town with quick access to Glacier National Park and Whitefish Lake.`,
+        heroImages: ["/images/whitefish.jpg"],
         activityTags: ["hiking", "canoeing"],
         whereItIs: [
           "Whitefish sits in the Flathead Valley, about 30 minutes from Glacier National Park.",
@@ -2880,8 +2909,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
         experiences: {
           mountains:
             "Hike or climb in nearby alpine zones before heading into Glacier.",
-          lakesWater:
-            "Paddle Whitefish Lake for a calm evening on the water.",
+          lakesWater: "Paddle Whitefish Lake for a calm evening on the water.",
           desertForest:
             "Dense pine forests around town keep trails shaded and cool.",
           cycling:
@@ -2927,8 +2955,7 @@ Basecamping in Bozeman, Missoula, or Whitefish keeps logistics simple while lett
           },
           {
             question: "Is Whitefish Lake easy to access?",
-            answer:
-              "Yes, public access points and rentals are close to town.",
+            answer: "Yes, public access points and rentals are close to town.",
           },
         ],
       },
@@ -2940,7 +2967,8 @@ export const tours: Tour[] = [
   {
     id: "ca-coast-kayak",
     name: "Pacific Coast Sea Caves Kayak",
-    description: "Paddle along kelp forests and explore sea caves with a guide.",
+    description:
+      "Paddle along kelp forests and explore sea caves with a guide.",
     duration: "3 hours",
     stateSlug: "california",
     tags: ["coastal", "paddling"],
@@ -3083,11 +3111,11 @@ export const tours: Tour[] = [
   },
 ];
 
-
 const minnesotaState: StateDestination = {
   slug: "minnesota",
   name: "Minnesota",
-  description: "North woods trails, lake-country paddling, and Twin Cities basecamps.",
+  description:
+    "North woods trails, lake-country paddling, and Twin Cities basecamps.",
   featuredDescription:
     "City-to-lakes itineraries with guided outings across Minnesota’s four-season landscapes.",
   heroImage:
@@ -3117,7 +3145,8 @@ const minnesotaState: StateDestination = {
       region: "Twin Cities",
       lat: 44.9778,
       lng: -93.265,
-      shortDescription: "Urban basecamp with river trails, lakes, and year-round day tours.",
+      shortDescription:
+        "Urban basecamp with river trails, lakes, and year-round day tours.",
       intro:
         "Minneapolis pairs city convenience with easy access to waterfront parks, bike networks, and guided outings.",
       heroImages: [
@@ -3128,11 +3157,16 @@ const minnesotaState: StateDestination = {
         "Minneapolis sits along the Mississippi River in eastern Minnesota, linked to Saint Paul and a broad metro trail network.",
       ],
       experiences: {
-        mountains: "Regional bluffs and river overlooks deliver easy half-day hikes.",
-        lakesWater: "City lakes and nearby waterways support paddling and sightseeing tours.",
-        desertForest: "Forest parks and river greenways shape most outdoor routes here.",
-        cycling: "Miles of connected bike trails make guided rides beginner-friendly.",
-        scenicDrives: "Short drives reach lake towns, bluff roads, and state-park day trips.",
+        mountains:
+          "Regional bluffs and river overlooks deliver easy half-day hikes.",
+        lakesWater:
+          "City lakes and nearby waterways support paddling and sightseeing tours.",
+        desertForest:
+          "Forest parks and river greenways shape most outdoor routes here.",
+        cycling:
+          "Miles of connected bike trails make guided rides beginner-friendly.",
+        scenicDrives:
+          "Short drives reach lake towns, bluff roads, and state-park day trips.",
         seasonalNotes:
           "Summer and early fall are peak for biking and paddling, while winter adds snow-focused tours.",
       },
@@ -3161,7 +3195,8 @@ const minnesotaState: StateDestination = {
       ],
       faq: [
         {
-          question: "Is Minneapolis good for outdoor trips without long drives?",
+          question:
+            "Is Minneapolis good for outdoor trips without long drives?",
           answer:
             "Yes. Trails, waterfront routes, and guided experiences are accessible from central neighborhoods.",
         },
@@ -3174,7 +3209,8 @@ const minnesotaState: StateDestination = {
       region: "North Shore",
       lat: 46.7867,
       lng: -92.1005,
-      shortDescription: "Lake Superior gateway for shoreline hikes and scenic tours.",
+      shortDescription:
+        "Lake Superior gateway for shoreline hikes and scenic tours.",
       intro:
         "Duluth anchors North Shore adventures with quick access to lake views, forest trails, and day-trip routes.",
       heroImages: ["/hero.jpg"],
@@ -3184,23 +3220,43 @@ const minnesotaState: StateDestination = {
       ],
       experiences: {
         mountains: "Ridge trails above the lake deliver broad Superior views.",
-        lakesWater: "Harbor cruises and shoreline walks define many first-time visits.",
-        desertForest: "Pine forests and rocky shoreline parks dominate local terrain.",
+        lakesWater:
+          "Harbor cruises and shoreline walks define many first-time visits.",
+        desertForest:
+          "Pine forests and rocky shoreline parks dominate local terrain.",
         cycling: "Lakefront paths offer easy, scenic riding options.",
         scenicDrives: "Highway 61 day trips are a Minnesota classic.",
-        seasonalNotes: "Late spring through fall is ideal for mixed hiking and shoreline touring.",
+        seasonalNotes:
+          "Late spring through fall is ideal for mixed hiking and shoreline touring.",
       },
-      thingsToDo: ["Walk Canal Park.", "Plan a North Shore scenic drive.", "Visit lake overlooks and local trailheads."],
-      toursCopy: ["Duluth-based tours are great for combining city comforts with North Shore scenery."],
+      thingsToDo: [
+        "Walk Canal Park.",
+        "Plan a North Shore scenic drive.",
+        "Visit lake overlooks and local trailheads.",
+      ],
+      toursCopy: [
+        "Duluth-based tours are great for combining city comforts with North Shore scenery.",
+      ],
       weekendItinerary: {
-        dayOne: ["Morning: Canal Park stroll.", "Afternoon: guided shoreline outing.", "Evening: harbor sunset."],
-        dayTwo: ["Morning: North Shore drive.", "Afternoon: waterfall or ridge hike.", "Evening: return to Duluth."],
+        dayOne: [
+          "Morning: Canal Park stroll.",
+          "Afternoon: guided shoreline outing.",
+          "Evening: harbor sunset.",
+        ],
+        dayTwo: [
+          "Morning: North Shore drive.",
+          "Afternoon: waterfall or ridge hike.",
+          "Evening: return to Duluth.",
+        ],
       },
-      gettingThere: ["Drive from the Twin Cities in about 2.5 hours or fly into Duluth International Airport."],
+      gettingThere: [
+        "Drive from the Twin Cities in about 2.5 hours or fly into Duluth International Airport.",
+      ],
       faq: [
         {
           question: "Can I do North Shore highlights in a weekend?",
-          answer: "Yes. Base in Duluth and prioritize one scenic drive plus one guided outdoor tour.",
+          answer:
+            "Yes. Base in Duluth and prioritize one scenic drive plus one guided outdoor tour.",
         },
       ],
     },
@@ -3211,7 +3267,8 @@ const minnesotaState: StateDestination = {
 const wyomingState: StateDestination = {
   slug: "wyoming",
   name: "Wyoming",
-  description: "Wide-open basins, alpine peaks, and iconic national park gateways.",
+  description:
+    "Wide-open basins, alpine peaks, and iconic national park gateways.",
   featuredDescription:
     "Wild landscapes and mountain towns that make Wyoming a year-round adventure basecamp.",
   heroImage:
@@ -3241,7 +3298,8 @@ const wyomingState: StateDestination = {
       region: "Jackson Hole",
       lat: 43.4799,
       lng: -110.7624,
-      shortDescription: "Mountain-town basecamp for Tetons and Yellowstone day tours.",
+      shortDescription:
+        "Mountain-town basecamp for Tetons and Yellowstone day tours.",
       intro:
         "Jackson is a high-energy mountain town with quick access to iconic Wyoming landscapes.",
       heroImages: [
@@ -3253,10 +3311,13 @@ const wyomingState: StateDestination = {
       ],
       experiences: {
         mountains: "Ride or hike ridge lines with expansive Teton views.",
-        lakesWater: "Plan float trips and lakeside stops during summer itineraries.",
-        desertForest: "High-elevation forests and sage valleys create varied terrain.",
+        lakesWater:
+          "Plan float trips and lakeside stops during summer itineraries.",
+        desertForest:
+          "High-elevation forests and sage valleys create varied terrain.",
         cycling: "Ride scenic roads and paved paths around the valley floor.",
-        scenicDrives: "Use Jackson as a launch point for Grand Teton and Yellowstone loops.",
+        scenicDrives:
+          "Use Jackson as a launch point for Grand Teton and Yellowstone loops.",
         seasonalNotes:
           "Summer and early fall are prime for trails; winter adds snow-focused adventures.",
       },
@@ -3303,7 +3364,7 @@ export const states: StateDestination[] = [
   wyomingState,
 ];
 
-export const destinations: Destination[] = states.map((state) => ({
+export const destinations: Destination[] = states.map(state => ({
   name: state.name,
   stateSlug: state.slug,
   description: state.description,
@@ -3315,12 +3376,12 @@ export const destinations: Destination[] = states.map((state) => ({
 
 export const featuredDestinations = destinations;
 
-export const allCities = states.flatMap((state) => state.cities);
+export const allCities = states.flatMap(state => state.cities);
 
 export const getStateBySlug = (slug: string) =>
-  states.find((state) => state.slug === slug);
+  states.find(state => state.slug === slug);
 
 export const getCityBySlugs = (stateSlug: string, citySlug: string) =>
   states
-    .find((state) => state.slug === stateSlug)
-    ?.cities.find((city) => city.slug === citySlug);
+    .find(state => state.slug === stateSlug)
+    ?.cities.find(city => city.slug === citySlug);
