@@ -2,7 +2,7 @@ import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
-import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolveEngine3ViatorHero } from "./resolveHeroImage";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
@@ -129,12 +129,27 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { primaryImageUrl, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
-    productCode: productData?.productCode ?? tour.id,
-    imageCandidates: productData?.imageCandidates,
-    fallbackImageUrl:
-      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
-  });
+  const primaryImageUrl =
+    resolveEngine3ViatorHero({
+      bookingProvider: "viator",
+      productCode: productData?.productCode ?? tour.id,
+      heroImageOverride: cleanText(
+        (tour as { heroImageOverride?: string }).heroImageOverride
+      ),
+      heroImageOverrideUrl: cleanText(
+        (tour as { heroImageOverrideUrl?: string }).heroImageOverrideUrl
+      ),
+      primaryImageUrl: cleanText(productData?.primaryImageUrl),
+      coverImageUrl: cleanText(productData?.coverImageUrl),
+      imageCandidates: productData?.imageCandidates,
+      galleryImages: tour.images.gallery,
+      supplierImage:
+        cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+    }) ?? undefined;
+  const heroImageOverrideUrl =
+    cleanText(
+      (tour as { heroImageOverrideUrl?: string }).heroImageOverrideUrl
+    ) ?? undefined;
 
   return {
     tourId: tour.id,

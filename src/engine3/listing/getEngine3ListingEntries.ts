@@ -2,7 +2,7 @@ import type { Tour } from "../../data/tours.types";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
-import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolveEngine3ViatorHero } from "../viator/resolveHeroImage";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 
 type Engine3ListingEntry = {
@@ -42,14 +42,25 @@ export const getEngine3ListingEntries = (
         return null;
       }
 
-      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
-        productCode,
-        imageCandidates: [
-          ...(productData?.imageCandidates ?? []),
-          productData?.supplierImage,
-        ].filter((value): value is string => typeof value === "string"),
-        fallbackImageUrl: productData?.supplierImage,
-      });
+      const primaryImageUrl =
+        resolveEngine3ViatorHero({
+          bookingProvider: "viator",
+          productCode,
+          heroImageOverrideUrl: tour.viator.heroImageOverrideUrl,
+          primaryImageUrl: productData?.primaryImageUrl,
+          coverImageUrl: productData?.coverImageUrl,
+          imageCandidates: productData?.imageCandidates,
+          galleryImages: productData?.imageCandidates,
+          supplierImage: productData?.supplierImage,
+        }) ?? undefined;
+      const gallery = Array.from(
+        new Set(
+          [primaryImageUrl, ...(productData?.imageCandidates ?? [])].filter(
+            (value): value is string =>
+              typeof value === "string" && value.length > 0
+          )
+        )
+      );
       const href = buildEngine3TourPath(tour);
 
       return {
@@ -77,7 +88,7 @@ export const getEngine3ListingEntries = (
           primaryImageUrl,
           galleryImages: Array.from(
             new Set(
-              [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
+              [primaryImageUrl, ...gallery].filter(
                 (value): value is string =>
                   typeof value === "string" && value.length > 0
               )

@@ -37,7 +37,7 @@ export const viatorTours: readonly Engine3Tour[] = [
       productCode: "6740JTREE",
       url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
       heroImageOverrideUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
     },
     destination: {
       country: "usa",

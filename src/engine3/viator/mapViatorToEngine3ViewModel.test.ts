@@ -4,7 +4,7 @@ import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
 const LOCKED_HERO_URL_6740 =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg";
 
 const baseTour: Engine2Tour = {
   id: "6740JTREE",
@@ -47,7 +47,7 @@ const baseTour: Engine2Tour = {
 };
 
 describe("mapViatorToEngine3ViewModel", () => {
-  it("locks 6740JTREE primary/hero image to the known-good override URL", () => {
+  it("locks 6740JTREE primary/hero image to the approved per-tour override URL", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
       productCode: "6740JTREE",
@@ -165,7 +165,9 @@ describe("mapViatorToEngine3ViewModel", () => {
       exclusions: ["Gratuities", "Gratuities"],
     });
 
-    expect(viewModel.overview).toContain("Joshua Tree Hummer Adventure from Palm Desert");
+    expect(viewModel.overview).toContain(
+      "Joshua Tree Hummer Adventure from Palm Desert"
+    );
     expect(viewModel.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
     expect(viewModel.highlights).toEqual([
       "Drive through desert washes",
@@ -174,5 +176,20 @@ describe("mapViatorToEngine3ViewModel", () => {
     ]);
     expect(viewModel.inclusions).toEqual(["Guide", "Bottled water"]);
     expect(viewModel.exclusions).toEqual(["Gratuities"]);
+  });
+
+  it("keeps hero/primary fields aligned for downstream OG and JSON-LD surfaces", () => {
+    const viewModel = mapViatorToEngine3ViewModel(baseTour, {
+      sourceUrl: "https://www.viator.com/tours/example",
+      productCode: "6740JTREE",
+      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      primaryImageUrl: LOCKED_HERO_URL_6740,
+      imageCandidates: [
+        "https://media.tacdn.com/media/attractions-splice-spp-674x446/09/09/09/09.jpg",
+      ],
+    });
+
+    expect(viewModel.primaryImageUrl).toBe(viewModel.heroImageUrl);
+    expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
   });
 });

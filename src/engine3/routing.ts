@@ -4,7 +4,7 @@ import { buildEngine3TourPath } from "./buildEngine3TourPath";
 import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
-import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
+import { resolveEngine3ViatorHero } from "./viator/resolveHeroImage";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
 export const getEngine3TourBySlugs = (
@@ -33,14 +33,25 @@ export const getEngine3TourBySlugs = (
   }
 
   const normalizedContent = normalizeViatorTourContent({ productData });
-  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
-    productCode: entry.viator.productCode,
-    imageCandidates: [
-      ...(productData?.imageCandidates ?? []),
-      productData?.supplierImage,
-    ].filter((value): value is string => typeof value === "string"),
-    fallbackImageUrl: productData?.supplierImage,
-  });
+  const primaryImageUrl =
+    resolveEngine3ViatorHero({
+      bookingProvider: "viator",
+      productCode: entry.viator.productCode,
+      heroImageOverrideUrl: entry.viator.heroImageOverrideUrl,
+      primaryImageUrl: productData?.primaryImageUrl,
+      coverImageUrl: productData?.coverImageUrl,
+      imageCandidates: productData?.imageCandidates,
+      galleryImages: productData?.imageCandidates,
+      supplierImage: productData?.supplierImage,
+    }) ?? undefined;
+  const gallery = Array.from(
+    new Set(
+      [primaryImageUrl, ...(productData?.imageCandidates ?? [])].filter(
+        (value): value is string =>
+          typeof value === "string" && value.length > 0
+      )
+    )
+  );
 
   return {
     id: entry.viator.productCode,
@@ -68,7 +79,8 @@ export const getEngine3TourBySlugs = (
       ogImage: primaryImageUrl ?? "",
     },
     content: {
-      experienceText: normalizedContent.overview ?? productData?.description ?? "",
+      experienceText:
+        normalizedContent.overview ?? productData?.description ?? "",
       overview: normalizedContent.overview,
       highlights: normalizedContent.highlights,
       inclusions: normalizedContent.inclusions,
@@ -90,8 +102,9 @@ export const getEngine3TourBySlugs = (
       hero: primaryImageUrl,
       gallery: Array.from(
         new Set(
-          [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
-            (value): value is string => typeof value === "string" && value.length > 0
+          [primaryImageUrl, ...gallery].filter(
+            (value): value is string =>
+              typeof value === "string" && value.length > 0
           )
         )
       ),

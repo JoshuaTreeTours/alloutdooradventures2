@@ -27,7 +27,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.currency
   );
   const cardImage =
-    tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+    tour.heroImage?.trim() || tour.primaryImageUrl?.trim() || "/hero.jpg";
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
