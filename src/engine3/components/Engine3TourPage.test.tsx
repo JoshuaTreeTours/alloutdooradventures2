@@ -70,19 +70,18 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
-  it("hides hero image when viator hero contract has no image", () => {
+  it("always renders hero image even when primaryImageUrl is missing", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
         tour={{
           ...posterChildTour,
           primaryImageUrl: undefined,
           heroImageOverrideUrl: undefined,
-          content: { images: [] },
         }}
       />
     );
 
-    expect(html).not.toContain("object-cover");
+    expect(html).toContain('src="/hero.jpg"');
   });
 
   it("keeps rendering booking CTA when booking URL parsing fails", () => {
