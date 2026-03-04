@@ -11,12 +11,12 @@ export function buildViatorAffiliateUrl(args: {
   fallbackUrl?: string | null;
 }): string | null {
   const candidate =
-    (args.baseUrl && hasCanonicalViatorPath(args.baseUrl) ? args.baseUrl : null) ||
+    (args.baseUrl && hasCanonicalViatorPath(args.baseUrl)
+      ? args.baseUrl
+      : null) ||
     (args.fallbackUrl && hasCanonicalViatorPath(args.fallbackUrl)
       ? args.fallbackUrl
-      : null) ||
-    args.baseUrl ||
-    args.fallbackUrl;
+      : null);
 
   if (!candidate) {
     return null;
@@ -31,7 +31,6 @@ export function buildViatorAffiliateUrl(args: {
 
     return url.toString();
   } catch {
-    return candidate;
+    return null;
   }
 }
-

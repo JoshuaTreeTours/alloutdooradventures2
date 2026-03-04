@@ -8,6 +8,13 @@ import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
 import { resolveEngine3ViatorHero } from "./utils/resolveEngine3ViatorHero";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
+const toTitleCase = (value: string): string =>
+  value
+    .split("-")
+    .filter(Boolean)
+    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
+
 export const getEngine3TourBySlugs = (
   stateSlug: string,
   citySlug: string,
@@ -64,8 +71,8 @@ export const getEngine3TourBySlugs = (
     },
     geo: {
       country: "United States",
-      region: "California",
-      city: "Palm Springs",
+      region: toTitleCase(stateSlug),
+      city: toTitleCase(citySlug),
       lat: productData?.latitude ?? null,
       lng: productData?.longitude ?? null,
     },
@@ -76,7 +83,8 @@ export const getEngine3TourBySlugs = (
       ogImage: heroImage ?? "",
     },
     content: {
-      experienceText: normalizedContent.overview ?? productData?.description ?? "",
+      experienceText:
+        normalizedContent.overview ?? productData?.description ?? "",
       overview: normalizedContent.overview,
       highlights: normalizedContent.highlights,
       images: contentImages,
@@ -100,7 +108,8 @@ export const getEngine3TourBySlugs = (
       gallery: Array.from(
         new Set(
           [heroImage, secondaryImageUrl, ...gallery].filter(
-            (value): value is string => typeof value === "string" && value.length > 0
+            (value): value is string =>
+              typeof value === "string" && value.length > 0
           )
         )
       ),

@@ -18,6 +18,23 @@ const toTitleCase = (value: string): string =>
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
     .join(" ");
 
+const toActivitySlugs = (category?: string): string[] => {
+  switch (category) {
+    case "sailing":
+      return ["canoeing"];
+    case "wine-tours":
+    case "food-tours":
+    case "day-trips":
+      return ["detours"];
+    case "e-bike":
+      return ["cycling"];
+    case "walking-tours":
+      return ["hiking"];
+    default:
+      return ["adventure"];
+  }
+};
+
 export type Engine3MissingHeroEntry = {
   productCode: string;
   slug: string;
@@ -78,13 +95,13 @@ export const getEngine3ListingEntries = (
           title: productData?.title ?? toTitleCase(tour.slug),
           shortDescription: productData?.highlights?.[0],
           operator: productData?.operatorName,
-          categories: ["adventure"],
+          categories: [tour.category ?? "adventure"],
           primaryCategory: "adventure",
           destination: {
             country: "United States",
-            state: "California",
+            state: toTitleCase(stateSlug),
             stateSlug,
-            city: "Palm Springs",
+            city: toTitleCase(citySlug),
             citySlug,
             lat: productData?.latitude,
             lng: productData?.longitude,
@@ -107,7 +124,7 @@ export const getEngine3ListingEntries = (
             rating: productData?.rating,
             reviewCount: productData?.reviewCount,
           },
-          activitySlugs: ["adventure"],
+          activitySlugs: toActivitySlugs(tour.category),
           bookingProvider: "viator",
           bookingUrl: attributedBookingUrl,
           longDescription: productData?.description ?? "",
@@ -126,7 +143,10 @@ export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
       const contentImages = [
         ...(productData?.imageCandidates ?? []),
         productData?.supplierImage,
-      ].filter((value): value is string => typeof value === "string" && value.trim().length > 0);
+      ].filter(
+        (value): value is string =>
+          typeof value === "string" && value.trim().length > 0
+      );
       const hero = resolveEngine3ViatorHero({
         bookingProvider: "viator",
         heroImageOverrideUrl: tour.viator.heroImageOverrideUrl,

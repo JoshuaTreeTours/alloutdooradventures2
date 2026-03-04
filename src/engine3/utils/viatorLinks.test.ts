@@ -27,7 +27,18 @@ describe("buildViatorAffiliateUrl", () => {
     );
   });
 
+  it("returns null when no canonical d### path is available", () => {
+    expect(
+      buildViatorAffiliateUrl({
+        baseUrl: "https://www.viator.com/tours/Palm-Springs/example",
+        fallbackUrl: undefined,
+      })
+    ).toBeNull();
+  });
+
   it("returns null when no URL candidate exists", () => {
-    expect(buildViatorAffiliateUrl({ baseUrl: null, fallbackUrl: undefined })).toBeNull();
+    expect(
+      buildViatorAffiliateUrl({ baseUrl: null, fallbackUrl: undefined })
+    ).toBeNull();
   });
 });

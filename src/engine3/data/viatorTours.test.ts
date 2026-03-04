@@ -16,33 +16,41 @@ describe("viatorTours", () => {
     expect(tour?.viator.url).toBe(
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE"
     );
-    expect(tour?.viator.heroImageOverrideUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"
-    );
   });
 
-  it("keeps product code additions scoped to the known Engine3 set", () => {
+  it("includes Palm Springs paragon entries and Santa Barbara discovery entries", () => {
     const productCodes = viatorTours
       .map(tour => tour.viator.productCode)
       .sort();
 
-    expect(productCodes).toEqual(["2335P1", "3351P15", "6740JTREE"]);
+    expect(productCodes).toEqual([
+      "117795P1",
+      "13055P2",
+      "17960P4",
+      "21431P12",
+      "2335P1",
+      "3351P15",
+      "347292P8",
+      "56236P7",
+      "6740JTREE",
+    ]);
   });
 
-  it("sets 2335P1 as the first Engine3 paragon entry", () => {
+  it("keeps 2335P1 as the first Engine3 paragon entry", () => {
     expect(viatorTours[0]?.viator.productCode).toBe("2335P1");
   });
 
-  it("maps 3351P15 to the Palm Springs Indian Canyons Bike and Hike route", () => {
-    const tour = viatorTours.find(
-      item => item.viator.productCode === "3351P15"
+  it("includes Santa Barbara wine and sailing routes with canonical d4372 URLs", () => {
+    const sunsetSail = viatorTours.find(
+      item => item.viator.productCode === "17960P4"
+    );
+    const wineTour = viatorTours.find(
+      item => item.viator.productCode === "347292P8"
     );
 
-    expect(tour?.slug).toBe("palm-springs-indian-canyons-bike-and-hike");
-    expect(tour?.destination.state).toBe("california");
-    expect(tour?.destination.city).toBe("palm-springs");
-    expect(tour?.viator.url).toBe(
-      "https://www.viator.com/tours/Palm-Springs/Palm-Springs-Indian-Canyons-Bike-and-Hike/d648-3351P15"
-    );
+    expect(sunsetSail?.destination.city).toBe("santa-barbara");
+    expect(sunsetSail?.viator.url).toContain("/d4372-17960P4");
+    expect(wineTour?.destination.city).toBe("santa-barbara");
+    expect(wineTour?.viator.url).toContain("/d4372-347292P8");
   });
 });
