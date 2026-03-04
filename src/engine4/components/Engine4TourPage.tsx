@@ -6,8 +6,13 @@ type Engine4TourPageProps = {
   tour: Engine4TourViewModel;
 };
 
+const BOOK_CTA_CLASSES =
+  "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
+
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
+  const hasHighlights = tour.highlights.length > 0;
+  const hasFaqs = tour.faqs.length > 0;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -53,10 +58,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
                 <strong>Duration:</strong> {tour.duration}
               </p>
             </div>
-            <a
-              href={tour.bookingUrl}
-              className="mt-6 inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]"
-            >
+            <a href={tour.bookingUrl} className={`mt-6 ${BOOK_CTA_CLASSES}`}>
               Book This Tour
             </a>
           </div>
@@ -72,21 +74,37 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
         <h2 className="text-2xl font-semibold">Overview</h2>
         <p className="mt-3 text-[#334433]">{tour.overview}</p>
 
-        <h2 className="mt-8 text-2xl font-semibold">Highlights</h2>
-        <ul className="mt-3 list-disc space-y-2 pl-6 text-[#334433]">
-          {tour.highlights.map(item => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        {hasHighlights ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">Highlights</h2>
+            <ul className="mt-3 list-disc space-y-2 pl-6 text-[#334433]">
+              {tour.highlights.map(item => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </>
+        ) : null}
 
-        <h2 className="mt-8 text-2xl font-semibold">FAQs</h2>
-        <div className="mt-3 space-y-4">
-          {tour.faqs.map(faq => (
-            <div key={faq.question}>
-              <h3 className="font-semibold">{faq.question}</h3>
-              <p className="text-[#334433]">{faq.answer}</p>
+        {hasFaqs ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">FAQs</h2>
+            <div className="mt-3 space-y-4">
+              {tour.faqs.map(faq => (
+                <div key={faq.question}>
+                  <h3 className="font-semibold">{faq.question}</h3>
+                  <p className="text-[#334433]">{faq.answer}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          </>
+        ) : null}
+
+        <div className="mt-10 text-center">
+          <h2 className="text-2xl font-semibold">Ready to book?</h2>
+          <p className="mt-2 text-[#405040]">Secure your spot in minutes.</p>
+          <a href={tour.bookingUrl} className={`mt-5 ${BOOK_CTA_CLASSES}`}>
+            Book This Tour
+          </a>
         </div>
       </section>
     </main>
