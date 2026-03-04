@@ -2,7 +2,7 @@ import type { Tour } from "../../data/tours.types";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
-import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolveViatorHeroImage } from "../viator/resolveViatorHeroImage";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 
 type Engine3ListingEntry = {
@@ -42,13 +42,10 @@ export const getEngine3ListingEntries = (
         return null;
       }
 
-      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
+      const heroImage = resolveViatorHeroImage({
         productCode,
-        imageCandidates: [
-          ...(productData?.imageCandidates ?? []),
-          productData?.supplierImage,
-        ].filter((value): value is string => typeof value === "string"),
-        fallbackImageUrl: productData?.supplierImage,
+        primaryImageUrl: productData?.supplierImage,
+        imageGallery: productData?.imageCandidates,
       });
       const href = buildEngine3TourPath(tour);
 
@@ -73,16 +70,9 @@ export const getEngine3ListingEntries = (
             lat: productData?.latitude,
             lng: productData?.longitude,
           },
-          heroImage: primaryImageUrl,
-          primaryImageUrl,
-          galleryImages: Array.from(
-            new Set(
-              [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
-                (value): value is string =>
-                  typeof value === "string" && value.length > 0
-              )
-            )
-          ),
+          heroImage: heroImage ?? "",
+          primaryImageUrl: heroImage,
+          galleryImages: heroImage ? [heroImage] : [],
           badges: {
             rating: productData?.rating,
             reviewCount: productData?.reviewCount,

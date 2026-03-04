@@ -44,9 +44,10 @@ export type Engine3TourViewModel = {
   canonicalPath: string;
   bookingUrl: string;
   duration?: string;
-  primaryImageUrl?: string;
+  heroImage?: string;
+  primaryImageUrl?: string | null;
   heroImageOverrideUrl?: string;
-  heroImageUrl?: string;
+  heroImageUrl?: string | null;
   priceFrom?: string;
   priceCurrency?: string;
   rating?: number;

@@ -2,9 +2,9 @@ import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
-import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
+import { resolveViatorHeroImage } from "./resolveViatorHeroImage";
 
 const cleanText = (value?: string | null): string | undefined => {
   if (typeof value !== "string") {
@@ -129,11 +129,14 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { primaryImageUrl, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+  const heroImage = resolveViatorHeroImage({
     productCode: productData?.productCode ?? tour.id,
-    imageCandidates: productData?.imageCandidates,
-    fallbackImageUrl:
-      cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
+    primaryImageUrl: cleanText(productData?.supplierImage),
+    imageGallery: [
+      ...(productData?.imageCandidates ?? []),
+      cleanText(tour.images.hero) ?? "",
+      ...(tour.images.gallery ?? []),
+    ].filter((value): value is string => Boolean(value)),
   });
 
   return {
@@ -158,9 +161,9 @@ export const mapViatorToEngine3ViewModel = (
     },
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
-    primaryImageUrl,
-    heroImageOverrideUrl,
-    heroImageUrl: primaryImageUrl,
+    heroImage: heroImage ?? undefined,
+    primaryImageUrl: heroImage ?? null,
+    heroImageUrl: heroImage ?? null,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),

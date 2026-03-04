@@ -68,6 +68,7 @@ describe("mapViatorToEngine3ViewModel", () => {
     });
 
     expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
+    expect(viewModel.heroImage).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
     expect(viewModel.bookingUrl).toContain("pid=P00290915");
     expect(viewModel.bookingUrl).toContain("mcid=42383");
@@ -97,6 +98,33 @@ describe("mapViatorToEngine3ViewModel", () => {
 
     expect(viewModel.primaryImageUrl).toBeDefined();
     expect(viewModel.heroImageUrl).toBe(viewModel.primaryImageUrl);
+  });
+
+
+  it("uses dynamic caption when 3351P15 only has dynamic-gallery images", () => {
+    const viewModel = mapViatorToEngine3ViewModel(
+      {
+        ...baseTour,
+        id: "3351P15",
+        name: "Palm Springs Indian Canyons Bike and Hike",
+        images: {
+          hero: "",
+          gallery: [],
+        },
+      },
+      {
+        sourceUrl: "https://www.viator.com/tours/example",
+        productCode: "3351P15",
+        title: "Palm Springs Indian Canyons Bike and Hike",
+        imageCandidates: [
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1",
+        ],
+      }
+    );
+
+    expect(viewModel.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1"
+    );
   });
 
   it("applies exactly 5 curated FAQs for 2335P1", () => {
