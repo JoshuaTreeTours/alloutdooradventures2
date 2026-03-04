@@ -19,6 +19,7 @@ import {
 import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
+import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -321,6 +322,10 @@ const getDedupeKey = (entry: UnifiedCityTour) => {
 };
 
 const engineRank = (tour: Tour) => {
+  if (tour.engine === "engine4") {
+    return 4;
+  }
+
   if (tour.engine === "engine3") {
     return 3;
   }
@@ -371,11 +376,22 @@ export const getToursByCityUnified = (
     toUnifiedEngine1Tour
   );
 
+  const engine4Tours = getEngine4ListingEntries(stateSlug, citySlug).map(
+    entry => ({
+      tour: entry.tour,
+      href: entry.href,
+    })
+  );
+
   if (stateSlug !== "california") {
     const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
       toUnifiedEngine2Tour
     );
-    return dedupeUnifiedCityTours([...engine1Tours, ...engine2Tours]);
+    return dedupeUnifiedCityTours([
+      ...engine1Tours,
+      ...engine2Tours,
+      ...engine4Tours,
+    ]);
   }
 
   const engine2Tours =
@@ -390,6 +406,7 @@ export const getToursByCityUnified = (
     ...engine1Tours,
     ...engine2Tours,
     ...engine3Tours,
+    ...engine4Tours,
   ]);
 };
 

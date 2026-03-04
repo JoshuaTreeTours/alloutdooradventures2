@@ -27,7 +27,7 @@ import { isTourRemoved } from "../../utils/tours/isTourRemoved";
 
 export type Engine2Tour = {
   id: string;
-  engine?: "engine2" | "engine3";
+  engine?: "engine2" | "engine3" | "engine4";
   bookingProvider?: "fareharbor" | "viator";
   bookingUrl?: string;
   sourceDatasetKey?: string;

@@ -52,6 +52,13 @@ import Engine3TourPage from "../../../../engine3/components/Engine3TourPage";
 import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViatorToEngine3ViewModel";
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
+import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
+import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
+import {
+  engine4ViatorApiFallbackByProductCode,
+  engine4ViatorTours,
+} from "../../../../engine4/data/viatorTours";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -90,9 +97,33 @@ export default function CityTourDetailRoute({
 
   const engine2Tour =
     getEngine2TourBySlug(params.stateSlug, params.citySlug, params.tourSlug) ??
-    getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
+    getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
+    getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
 
   if (engine2Tour) {
+    if (
+      engine2Tour.engine === "engine4" &&
+      engine2Tour.bookingProvider === "viator"
+    ) {
+      const productCode = engine2Tour.id.toUpperCase();
+      const tourRecord = engine4ViatorTours.find(
+        entry => entry.viator.productCode.toUpperCase() === productCode
+      );
+
+      if (!tourRecord) {
+        return null;
+      }
+
+      return (
+        <Engine4TourPage
+          tour={mapViatorToEngine4Tour({
+            record: tourRecord,
+            apiTour: engine4ViatorApiFallbackByProductCode[productCode],
+          })}
+        />
+      );
+    }
+
     if (
       engine2Tour.engine === "engine3" &&
       engine2Tour.bookingProvider === "viator"
@@ -268,7 +299,7 @@ export default function CityTourDetailRoute({
             priceCurrency:
               viatorProductCode && tour.bookingProvider === "viator"
                 ? "USD"
-                : tour.currency ?? "USD",
+                : (tour.currency ?? "USD"),
             availability: "https://schema.org/InStock",
             offerCount: null,
           },
