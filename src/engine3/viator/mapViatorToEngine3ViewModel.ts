@@ -21,6 +21,17 @@ const normalizeSentenceKey = (value: string): string =>
     .replace(/[^a-z0-9]+/g, " ")
     .trim();
 
+const parsePrice = (value?: string): number | undefined => {
+  const cleaned = cleanText(value);
+  if (!cleaned) {
+    return undefined;
+  }
+  const parsed = Number.parseFloat(cleaned.replace(/[^\d.]/g, ""));
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
+};
+
+const formatUsdPrice = (amount: number): string => `$${amount.toFixed(2)}`;
+
 const normalizeFaqs = (
   faqs?: Array<{ question: string; answer: string }>
 ): Array<{ question: string; answer: string }> | undefined => {
@@ -81,6 +92,7 @@ export const mapViatorToEngine3ViewModel = (
     productData,
     storedTour: tour,
   });
+
   const highlights =
     normalizedContent.highlights.length > 0
       ? normalizedContent.highlights
@@ -116,10 +128,17 @@ export const mapViatorToEngine3ViewModel = (
       }))
       .filter(item => Boolean(item.title || item.description || item.duration));
 
-  const overrideEntry =
-    ENGINE3_VIATOR_OVERRIDES[productData?.productCode ?? ""];
+  const overrideEntry = ENGINE3_VIATOR_OVERRIDES[productData?.productCode ?? ""];
   const overrideDescription = cleanText(overrideEntry?.description);
   const sourceDescription = cleanText(productData?.description);
+  const meetingPointText = extractMeetingPointText({
+    structuredLocation: undefined,
+    fallbackText:
+      cleanText(productData?.meetingPointText) ??
+      cleanText(productData?.meetingPointDescription) ??
+      cleanText(tour.content.meetingPoint?.address) ??
+      cleanText(tour.content.meetingPoint?.instructions),
+  });
 
   const normalizedFaqs =
     normalizeFaqs(overrideEntry?.faqs) ??
@@ -138,11 +157,37 @@ export const mapViatorToEngine3ViewModel = (
   });
 
   const contentImages = gallery;
-  const primaryImageUrl = resolveEngine3ViatorHero({
-    bookingProvider: "viator",
-    heroImageOverrideUrl,
-    contentImages,
-  }) ?? undefined;
+  const primaryImageUrl =
+    resolveEngine3ViatorHero({
+      bookingProvider: "viator",
+      heroImageOverrideUrl,
+      contentImages,
+    }) ?? undefined;
+
+  const apiPrice = parsePrice(productData?.priceFrom);
+  const priceOverride = overrideEntry?.startingPriceOverride;
+  const tolerance = priceOverride?.tolerance ?? 30;
+  let resolvedPrice = apiPrice;
+  let resolvedCurrency = cleanText(productData?.priceCurrency) ?? "USD";
+
+  if (priceOverride) {
+    const delta =
+      typeof apiPrice === "number" ? Math.abs(apiPrice - priceOverride.amount) : null;
+
+    if (apiPrice === undefined || apiPrice <= 0 || (delta !== null && delta <= tolerance)) {
+      resolvedPrice = priceOverride.amount;
+      resolvedCurrency = priceOverride.currency;
+    } else {
+      console.warn(
+        `[engine3] Price override ignored for ${productData?.productCode}: API price ${apiPrice} is outside tolerance ±${tolerance} from override ${priceOverride.amount}`
+      );
+    }
+  }
+
+  const departureMatchToken = cleanText(overrideEntry?.departureMeetingPointMatchContains);
+  const showDepartureNote =
+    Boolean(departureMatchToken) &&
+    Boolean(meetingPointText?.toLowerCase().includes(departureMatchToken!.toLowerCase()));
 
   return {
     tourId: tour.id,
@@ -172,20 +217,13 @@ export const mapViatorToEngine3ViewModel = (
     content: {
       images: contentImages,
     },
-    priceFrom:
-      cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
-    priceCurrency: cleanText(productData?.priceCurrency),
+    priceFrom: typeof resolvedPrice === "number" ? formatUsdPrice(resolvedPrice) : undefined,
+    priceCurrency: resolvedCurrency,
     rating: productData?.rating ?? tour.viatorRatingValue ?? undefined,
     reviewCount:
       productData?.reviewCount ?? tour.viatorReviewCount ?? undefined,
-    meetingPointText: extractMeetingPointText({
-      structuredLocation: undefined,
-      fallbackText:
-        cleanText(productData?.meetingPointText) ??
-        cleanText(productData?.meetingPointDescription) ??
-        cleanText(tour.content.meetingPoint?.address) ??
-        cleanText(tour.content.meetingPoint?.instructions),
-    }),
+    meetingPointText,
+    departureNote: showDepartureNote ? cleanText(overrideEntry?.departureNote) : undefined,
     highlights,
     inclusions,
     exclusions,

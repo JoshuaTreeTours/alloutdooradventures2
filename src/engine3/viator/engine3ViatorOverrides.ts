@@ -8,11 +8,20 @@ export type Engine3OverviewFactsOverride = {
   included?: string[];
 };
 
+export type Engine3StartingPriceOverride = {
+  amount: number;
+  currency: string;
+  tolerance?: number;
+};
+
 export const ENGINE3_VIATOR_OVERRIDES: Record<
   string,
   {
     description?: string;
     overviewFactsOverride?: Engine3OverviewFactsOverride;
+    departureNote?: string;
+    departureMeetingPointMatchContains?: string;
+    startingPriceOverride?: Engine3StartingPriceOverride;
     faqs?: Array<{ question: string; answer: string }>;
   }
 > = {
@@ -99,6 +108,15 @@ export const ENGINE3_VIATOR_OVERRIDES: Record<
       signatureHighlight:
         "Guests ride in an open-air Hummer through Joshua Tree desert scenery and geologic viewpoints.",
       included: ["Professional guide", "Bottled water"],
+    },
+  },
+  "6740P7": {
+    departureNote: "Departs daily from Palm Springs Art Museum at 8:30 a.m.",
+    departureMeetingPointMatchContains: "Palm Springs Art Museum",
+    startingPriceOverride: {
+      amount: 179,
+      currency: "USD",
+      tolerance: 30,
     },
   },
 };

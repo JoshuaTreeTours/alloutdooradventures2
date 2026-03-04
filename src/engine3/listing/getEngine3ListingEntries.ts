@@ -60,11 +60,10 @@ export const getEngine3ListingEntries = (
       });
       const href = buildEngine3TourPath(tour);
       const contentImages = gallery;
-      const heroImageOverride = tour.viator.heroImageOverrideUrl;
       const heroImage =
         resolveEngine3ViatorHero({
           bookingProvider: "viator",
-          heroImageOverrideUrl: heroImageOverride,
+          heroImageOverrideUrl: undefined,
           contentImages,
         }) ?? "";
 
@@ -90,7 +89,6 @@ export const getEngine3ListingEntries = (
             lng: productData?.longitude,
           },
           heroImage,
-          heroImageOverride,
           content: {
             images: contentImages,
           },
@@ -129,7 +127,7 @@ export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
       ].filter((value): value is string => typeof value === "string" && value.trim().length > 0);
       const hero = resolveEngine3ViatorHero({
         bookingProvider: "viator",
-        heroImageOverrideUrl: tour.viator.heroImageOverrideUrl,
+        heroImageOverrideUrl: undefined,
         contentImages,
       });
 

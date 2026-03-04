@@ -25,6 +25,24 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.bookingUrl).toContain("medium=link");
   });
 
+
+  it("resolves 6740P7 by product-code slug and preserves API hero + affiliate URL", () => {
+    const tour = getEngine3TourBySlugs(
+      "california",
+      "palm-springs",
+      "joshua-tree-national-park-scenic-tour-6740p7"
+    );
+
+    expect(tour?.id).toBe("6740P7");
+    expect(tour?.name).toBe("Joshua Tree National Park Scenic Tour");
+    expect(tour?.images.hero).toBeTruthy();
+    expect(tour?.seo.ogImage).toBe(tour?.images.hero);
+    expect(tour?.bookingUrl).toContain("/d648-6740P7");
+    expect(tour?.bookingUrl).toContain("pid=P00290915");
+    expect(tour?.bookingUrl).toContain("mcid=42383");
+    expect(tour?.bookingUrl).toContain("medium=link");
+  });
+
   it("ensures 2335P1 has non-empty hero and a secondary gallery fallback", () => {
     const tour = getEngine3TourBySlugs(
       "california",

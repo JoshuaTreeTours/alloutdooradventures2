@@ -46,7 +46,7 @@ export const getEngine3TourBySlugs = (
   const contentImages = gallery;
   const heroImage = resolveEngine3ViatorHero({
     bookingProvider: "viator",
-    heroImageOverrideUrl: entry.viator.heroImageOverrideUrl,
+    heroImageOverrideUrl: undefined,
     contentImages,
   });
 

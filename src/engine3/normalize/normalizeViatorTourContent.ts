@@ -148,32 +148,23 @@ export const normalizeViatorTourContent = ({
   productData,
   storedTour,
 }: NormalizeViatorTourContentInput): NormalizedViatorTourContent => {
-  const highlights = dedupeList([
-    ...(productData?.highlights ?? []),
-    ...(storedTour?.content.highlights ?? []),
-  ])
+  const highlights = dedupeList([...(productData?.highlights ?? [])])
     .map(item => sanitizeVoice(item))
     .slice(0, MAX_HIGHLIGHTS);
 
   const inclusions = dedupeList([
     ...(productData?.inclusions ?? []),
     ...(productData?.included ?? []),
-    ...(storedTour?.content.inclusions ?? []),
-    ...(storedTour?.content.included ?? []),
   ]).map(item => sanitizeVoice(item));
 
   const exclusions = dedupeList([
     ...(productData?.exclusions ?? []),
     ...(productData?.notIncluded ?? []),
-    ...(storedTour?.content.exclusions ?? []),
-    ...(storedTour?.content.notIncluded ?? []),
   ]).map(item => sanitizeVoice(item));
 
   const parsedOverview =
     normalizeOverview(productData?.overview) ??
-    normalizeOverview(productData?.description) ??
-    normalizeOverview(storedTour?.content.overview) ??
-    normalizeOverview(storedTour?.content.experienceText);
+    normalizeOverview(productData?.description);
   const sanitizedOverview = sanitizeAuthorityOverview(parsedOverview);
 
   const shouldForceComposer = Boolean(
@@ -196,6 +187,9 @@ export const normalizeViatorTourContent = ({
       productData?.meetingPointText ??
       storedTour?.content.meetingPoint?.address ??
       storedTour?.content.meetingPoint?.instructions,
+    itineraryStopNames: (productData?.itinerary ?? [])
+      .map(item => item.title)
+      .filter((title): title is string => typeof title === "string" && title.trim().length > 0),
   };
 
   const hasFallbackFacts = hasMinimumOverviewFacts(factInput);

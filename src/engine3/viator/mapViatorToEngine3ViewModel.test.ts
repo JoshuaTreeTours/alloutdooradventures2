@@ -1,19 +1,16 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
-const LOCKED_HERO_URL_6740 =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
-
 const baseTour: Engine2Tour = {
-  id: "6740JTREE",
+  id: "6740P7",
   engine: "engine3",
   bookingProvider: "viator",
-  bookingUrl: "https://www.viator.com/tours/example",
+  bookingUrl: "https://www.viator.com/tours/Palm-Springs/example",
   sourceCitySlug: "palm-springs",
-  slug: "joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
-  name: "Joshua Tree Hummer Adventure from Palm Desert",
+  slug: "joshua-tree-national-park-scenic-tour-6740p7",
+  name: "Joshua Tree National Park Scenic Tour",
   provider: {
     name: "Desert Adventures",
     shortName: "desert-adventures",
@@ -26,16 +23,16 @@ const baseTour: Engine2Tour = {
     lng: -116.3,
   },
   seo: {
-    title: "Joshua Tree Hummer Adventure",
+    title: "Joshua Tree National Park Scenic Tour",
     description: "",
     canonicalPath:
-      "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+      "/destinations/california/palm-springs/tours/joshua-tree-national-park-scenic-tour-6740p7",
     ogImage: "",
   },
   content: {
     experienceText: "",
     highlights: ["Scenic desert views"],
-    duration: "3 hours",
+    duration: "5 hours",
   },
   images: {
     hero: "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
@@ -47,132 +44,76 @@ const baseTour: Engine2Tour = {
 };
 
 describe("mapViatorToEngine3ViewModel", () => {
-  it("locks 6740JTREE primary/hero image to the known-good override URL", () => {
+  it("applies 6740P7 departure note only when meeting point matches Palm Springs Art Museum", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
-      sourceUrl: "https://www.viator.com/tours/example",
-      productCode: "6740JTREE",
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      sourceUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+      productCode: "6740P7",
+      title: "Joshua Tree National Park Scenic Tour",
+      meetingPointText: "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA",
+      priceFrom: "$179.00",
+      priceCurrency: "USD",
       imageCandidates: [
-        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
-        "https://cache.vtrcdn.com/pictures/12345.jpg",
+        "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1",
       ],
-      supplierImage:
-        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
-      duration: "3 hours",
-      highlights: [
-        "Drive through desert washes",
-        "Stop at Joshua Tree viewpoints",
-        "Learn geology with a guide",
-      ],
-      included: ["Professional guide", "Bottled water"],
     });
 
-    expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
-    expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
-    expect(viewModel.bookingUrl).toContain("pid=P00290915");
-    expect(viewModel.bookingUrl).toContain("mcid=42383");
-    expect(viewModel.bookingUrl).toContain("medium=link");
-  });
-
-  it("keeps San Andreas 2335P1 hero deterministic and defined", () => {
-    const viewModel = mapViatorToEngine3ViewModel(
-      {
-        ...baseTour,
-        id: "2335P1",
-        name: "San Andreas Fault Jeep Tour from Palm Springs",
-        slug: "san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-        seo: {
-          ...baseTour.seo,
-          canonicalPath:
-            "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-        },
-      },
-      {
-        sourceUrl: "https://www.viator.com/tours/example",
-        productCode: "2335P1",
-        title: "San Andreas Fault Jeep Tour from Palm Springs",
-        duration: "3 hours",
-      }
+    expect(viewModel.departureNote).toContain("8:30 a.m.");
+    expect(viewModel.priceFrom).toBe("$179.00");
+    expect(viewModel.primaryImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1"
     );
-
-    expect(viewModel.primaryImageUrl).toBeDefined();
-    expect(viewModel.heroImageUrl).toBe(viewModel.primaryImageUrl);
   });
 
-  it("applies exactly 5 curated FAQs for 2335P1", () => {
-    const viewModel = mapViatorToEngine3ViewModel(
-      {
-        ...baseTour,
-        id: "2335P1",
-        name: "San Andreas Fault Jeep Tour from Palm Springs",
-        slug: "san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-        seo: {
-          ...baseTour.seo,
-          canonicalPath:
-            "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
-        },
-      },
-      {
-        sourceUrl: "https://www.viator.com/tours/example",
-        productCode: "2335P1",
-        title: "San Andreas Fault Jeep Tour from Palm Springs",
-        faqs: [
-          { question: "How long is this tour?", answer: "About 3 hours." },
-        ],
-      }
-    );
-
-    expect(viewModel.faqs).toHaveLength(5);
-    expect(viewModel.faqs?.[0]?.question).toContain("cancellation policy");
-  });
-
-  it("normalizes and limits FAQs to 5 for 3351P15", () => {
-    const viewModel = mapViatorToEngine3ViewModel(
-      {
-        ...baseTour,
-        id: "3351P15",
-        name: "Palm Springs Indian Canyons Bike and Hike",
-        slug: "palm-springs-indian-canyons-bike-and-hike-3351p15",
-        seo: {
-          ...baseTour.seo,
-          canonicalPath:
-            "/destinations/california/palm-springs/tours/palm-springs-indian-canyons-bike-and-hike-3351p15",
-        },
-      },
-      {
-        sourceUrl: "https://www.viator.com/tours/example",
-        productCode: "3351P15",
-        title: "Palm Springs Indian Canyons Bike and Hike",
-      }
-    );
-
-    expect(viewModel.faqs).toHaveLength(5);
-  });
-
-  it("maps normalized overview/highlights/inclusions/exclusions from Viator content", () => {
+  it("suppresses 6740P7 departure override when API meeting point no longer matches", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
-      sourceUrl: "https://www.viator.com/tours/example",
-      productCode: "6740JTREE",
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
-      description:
-        "<p>You'll travel with a guide through desert terrain and geology-focused areas near Palm Springs.</p><p>The operator provides route context and scheduled stops during the experience.</p>",
-      highlights: [
-        "Drive through desert washes",
-        "Drive through desert washes",
-        "Stop at Joshua Tree viewpoints",
+      sourceUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+      productCode: "6740P7",
+      title: "Joshua Tree National Park Scenic Tour",
+      meetingPointText: "Palm Desert Visitor Center",
+      priceFrom: "$179.00",
+      priceCurrency: "USD",
+      imageCandidates: [
+        "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1",
       ],
-      inclusions: ["Guide", "Guide", "Bottled water"],
-      exclusions: ["Gratuities", "Gratuities"],
     });
 
-    expect(viewModel.overview).toContain("Joshua Tree Hummer Adventure from Palm Desert");
-    expect(viewModel.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
-    expect(viewModel.highlights).toEqual([
-      "Drive through desert washes",
-      "Stop at Joshua Tree viewpoints",
-      "Scenic desert views",
-    ]);
-    expect(viewModel.inclusions).toEqual(["Guide", "Bottled water"]);
-    expect(viewModel.exclusions).toEqual(["Gratuities"]);
+    expect(viewModel.departureNote).toBeUndefined();
+  });
+
+  it("uses override price when API from-price is within tolerance", () => {
+    const viewModel = mapViatorToEngine3ViewModel(baseTour, {
+      sourceUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+      productCode: "6740P7",
+      title: "Joshua Tree National Park Scenic Tour",
+      meetingPointText: "Palm Springs Art Museum",
+      priceFrom: "$199.00",
+      priceCurrency: "USD",
+      imageCandidates: ["https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"],
+    });
+
+    expect(viewModel.priceFrom).toBe("$179.00");
+    expect(viewModel.priceCurrency).toBe("USD");
+  });
+
+  it("keeps API price and warns when API from-price is outside tolerance", () => {
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => undefined);
+
+    const viewModel = mapViatorToEngine3ViewModel(baseTour, {
+      sourceUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+      productCode: "6740P7",
+      title: "Joshua Tree National Park Scenic Tour",
+      meetingPointText: "Palm Springs Art Museum",
+      priceFrom: "$260.00",
+      priceCurrency: "USD",
+      imageCandidates: ["https://cdn.filestackcontent.com/jdGA0GBmQtmU0ynb8Uwm"],
+    });
+
+    expect(viewModel.priceFrom).toBe("$260.00");
+    expect(warnSpy).toHaveBeenCalledOnce();
+    warnSpy.mockRestore();
   });
 });

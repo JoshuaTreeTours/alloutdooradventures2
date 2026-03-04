@@ -26,7 +26,19 @@ describe("viatorTours", () => {
       .map(tour => tour.viator.productCode)
       .sort();
 
-    expect(productCodes).toEqual(["2335P1", "3351P15", "6740JTREE"]);
+    expect(productCodes).toEqual(["2335P1", "3351P15", "6740JTREE", "6740P7"]);
+  });
+
+
+  it("maps 6740P7 to the Joshua Tree National Park scenic route", () => {
+    const tour = viatorTours.find(item => item.viator.productCode === "6740P7");
+
+    expect(tour?.slug).toBe("joshua-tree-national-park-scenic-tour");
+    expect(tour?.destination.state).toBe("california");
+    expect(tour?.destination.city).toBe("palm-springs");
+    expect(tour?.viator.url).toBe(
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7"
+    );
   });
 
   it("sets 2335P1 as the first Engine3 paragon entry", () => {

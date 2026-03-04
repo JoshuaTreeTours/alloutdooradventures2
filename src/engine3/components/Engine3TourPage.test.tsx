@@ -70,6 +70,21 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
+
+  it("renders departure note when override conditions are met", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          departureNote: "Departs daily from Palm Springs Art Museum at 8:30 a.m.",
+        }}
+      />
+    );
+
+    expect(html).toContain("Departure:");
+    expect(html).toContain("8:30 a.m.");
+  });
+
   it("hides hero image when viator hero contract has no image", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
