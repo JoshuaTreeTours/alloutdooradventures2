@@ -52,6 +52,21 @@ export const isRejectedCandidate = (urlValue: string): boolean => {
   return false;
 };
 
+
+const parseDimensions = (urlValue: string): { width: number; height: number } => {
+  try {
+    const url = new URL(urlValue);
+    const width = Number.parseInt(url.searchParams.get("w") ?? "", 10);
+    const height = Number.parseInt(url.searchParams.get("h") ?? "", 10);
+    return {
+      width: Number.isFinite(width) && width > 0 ? width : 0,
+      height: Number.isFinite(height) && height > 0 ? height : 0,
+    };
+  } catch {
+    return { width: 0, height: 0 };
+  }
+};
+
 const candidatePriority = (urlValue: string): number => {
   const parsed = new URL(urlValue);
   const host = parsed.hostname.toLowerCase();
@@ -91,7 +106,19 @@ export const collectEngine3ImageCandidates = (input: {
   );
 
   const valid = deduped.filter(candidate => !isRejectedCandidate(candidate));
-  valid.sort((a, b) => candidatePriority(a) - candidatePriority(b));
+  valid.sort((a, b) => {
+    const priorityDelta = candidatePriority(a) - candidatePriority(b);
+    if (priorityDelta !== 0) {
+      return priorityDelta;
+    }
+
+    const aDimensions = parseDimensions(a);
+    const bDimensions = parseDimensions(b);
+    const aArea = aDimensions.width * aDimensions.height;
+    const bArea = bDimensions.width * bDimensions.height;
+
+    return bArea - aArea;
+  });
   return valid;
 };
 

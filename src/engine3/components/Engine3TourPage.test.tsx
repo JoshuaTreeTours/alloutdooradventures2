@@ -99,6 +99,32 @@ describe("Engine3TourPage", () => {
     expect(html).toContain('href="not-a-valid-url"');
   });
 
+  it("renders 6740P7 hero media and meeting/pickup schedule", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          tourId: "6740P7",
+          title: "Joshua Tree Backroads Hummer H2 Tour",
+          canonicalPath:
+            "/destinations/california/palm-springs/tours/joshua-tree-backroads-hummer-h2-tour-6740p7",
+          bookingUrl:
+            "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+          primaryImageUrl:
+            "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/7a/caption.jpg?w=1200&h=800&s=1",
+          meetingPointDescription:
+            "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA",
+          departureTimeText: "Daily at 8:30 a.m.",
+        }}
+      />
+    );
+
+    expect(html).toContain("Joshua Tree Backroads Hummer H2 Tour");
+    expect(html).toContain("media/photo-o/2f/4f/17/7a/caption.jpg");
+    expect(html).toContain("Palm Springs Art Museum");
+    expect(html).toContain("Departures operate Daily at 8:30 a.m.");
+  });
+
   it("renders price and rating only when values are valid", () => {
     const withValidMeta = renderToStaticMarkup(
       <Engine3TourPage

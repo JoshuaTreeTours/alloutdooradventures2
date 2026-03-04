@@ -105,6 +105,56 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
     expect(nodes.find(node => node["@type"] === "FAQPage")).toBeDefined();
   });
 
+  it("uses 6740P7 hero image and affiliate offer URL in Product and TouristTrip", () => {
+    const canonicalUrl = `${canonicalBase}/joshua-tree-backroads-hummer-h2-tour-6740p7`;
+    const heroUrl =
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/7a/caption.jpg?w=1200&h=800&s=1";
+    const bookingUrl =
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?pid=P00290915&mcid=42383&medium=link";
+
+    const nodes = buildEngine3SchemaGraph({
+      tour: {
+        ...baseTour,
+        tourId: "6740P7",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
+        canonicalPath:
+          "/destinations/california/palm-springs/tours/joshua-tree-backroads-hummer-h2-tour-6740p7",
+        bookingUrl,
+        primaryImageUrl: heroUrl,
+        heroImageUrl: heroUrl,
+      },
+      seo: {
+        canonicalUrl,
+        title: "Joshua Tree Backroads Hummer H2 Tour",
+        image: heroUrl,
+      },
+      route: {
+        pathname: canonicalUrl,
+        isBookingRoute: false,
+      },
+      affiliateBookingUrl: bookingUrl,
+      breadcrumbs: [
+        { name: "Tours", url: "/tours" },
+        { name: "Joshua Tree Backroads Hummer H2 Tour", url: canonicalUrl },
+      ],
+    });
+
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const trip = nodes.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect((product?.offers as Record<string, unknown>)?.url).toContain(
+      "pid=P00290915"
+    );
+    expect((trip?.offers as Record<string, unknown>)?.url).toContain(
+      "pid=P00290915"
+    );
+    expect(product?.image).toBe(heroUrl);
+  });
+
   it("omits FAQ and itinerary nodes when data is missing", () => {
     const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
 

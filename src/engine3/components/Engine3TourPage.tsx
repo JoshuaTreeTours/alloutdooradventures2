@@ -85,6 +85,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const pageDescription =
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
+  const departureScheduleText = tour.departureTimeText?.trim().replace(/[.\s]+$/, "");
   const heroUrl =
     (tour.bookingProvider === "viator"
       ? resolveEngine3ViatorHero({
@@ -322,6 +323,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             <p className="mt-3 text-sm text-[#405040]">
               {tour.meetingPointDescription}
             </p>
+            {departureScheduleText ? (
+              <p className="mt-2 text-sm text-[#405040]">
+                Departures operate {departureScheduleText}.
+              </p>
+            ) : null}
           </>
         ) : null}
 

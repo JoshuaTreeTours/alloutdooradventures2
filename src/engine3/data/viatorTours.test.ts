@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { viatorProductCacheByCode } from "./viatorProductCache";
 import { viatorTours } from "./viatorTours";
 
 describe("viatorTours", () => {
@@ -26,6 +27,18 @@ describe("viatorTours", () => {
 
   it("sets 2335P1 as the first Engine3 paragon entry", () => {
     expect(viatorTours[0]?.viator.productCode).toBe("2335P1");
+  });
+
+  it("keeps 6740P7 title and hero distinct from older Joshua Tree product fixtures", () => {
+    expect(viatorProductCacheByCode["6740P7"]?.title).toContain(
+      "Joshua Tree Backroads Hummer H2 Tour"
+    );
+
+    const hero6740P7 = viatorProductCacheByCode["6740P7"]?.supplierImage;
+    const hero2335P1 = viatorProductCacheByCode["2335P1"]?.supplierImage;
+
+    expect(hero6740P7).toBeTruthy();
+    expect(hero6740P7).not.toBe(hero2335P1);
   });
 
   it("maps 3351P15 to the Palm Springs Indian Canyons Bike and Hike route", () => {

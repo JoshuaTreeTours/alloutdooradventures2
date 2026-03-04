@@ -66,8 +66,11 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
         order: 3,
       },
     ],
-    meetingPointDescription: "Departures operate from Palm Desert.",
-    departureLocation: "Palm Desert",
+    meetingPointText:
+      "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA",
+    meetingPointDescription:
+      "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA",
+    departureTimeText: "Daily at 8:30 a.m.",
     cancellationWindowHours: 48,
     vehicleType: "open-air Hummer H2",
     signatureHighlight:

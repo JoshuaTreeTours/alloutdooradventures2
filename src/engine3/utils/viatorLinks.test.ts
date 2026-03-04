@@ -29,6 +29,20 @@ describe("buildViatorAffiliateUrl", () => {
     );
   });
 
+  it("preserves existing query params while overwriting affiliate params", () => {
+    const url = buildViatorAffiliateUrl({
+      baseUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?foo=bar&pid=OLD",
+      fallbackUrl: undefined,
+      productCode: "6740P7",
+    });
+
+    expect(url).toContain("foo=bar");
+    expect(url).toContain("pid=P00290915");
+    expect(url).toContain("mcid=42383");
+    expect(url).toContain("medium=link");
+  });
+
   it("returns null when no URL candidate exists", () => {
     expect(
       buildViatorAffiliateUrl({ baseUrl: null, fallbackUrl: undefined })
