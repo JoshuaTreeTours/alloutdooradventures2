@@ -40,9 +40,7 @@ describe("getEngine3ListingEntries", () => {
     expect(target?.tour.bookingUrl).toContain("pid=P00290915");
     expect(target?.tour.bookingUrl).toContain("mcid=42383");
     expect(target?.tour.bookingUrl).toContain("medium=link");
-    expect(target?.tour.heroImage).toBeTruthy();
-    expect(target?.tour.heroImage).not.toContain("/hero.jpg");
-    expect(target?.tour.heroImage).not.toContain("jerry-sybers");
+    expect(target?.tour.heroImage).toBe("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg");
   });
 
   it("keeps 2335P1 listing image equal to the detail page hero image", () => {

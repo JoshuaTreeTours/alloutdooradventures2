@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   CITY_NEUTRAL_BRAND_IMAGE,
-  ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
+  TOUR_FALLBACK_HERO_IMAGE,
   HOME_HERO_IMAGE,
   coerceViatorHeroCandidate,
   isImageInCityTour,
@@ -218,7 +218,7 @@ describe("resolveHeroImageForRoute viator tour detail", () => {
     expect(image).toBe("https://cdn.example.com/override.jpg");
   });
 
-  it("falls back to Engine3 Viator default hero when candidate is missing", () => {
+  it("falls back to tour fallback hero when candidate is missing", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/california/palm-springs/tours/sample",
       tour: {
@@ -226,10 +226,10 @@ describe("resolveHeroImageForRoute viator tour detail", () => {
       },
     });
 
-    expect(image).toBe(ENGINE3_VIATOR_FALLBACK_HERO_IMAGE);
+    expect(image).toBe(buildImageUrl(TOUR_FALLBACK_HERO_IMAGE));
   });
 
-  it("falls back to Engine3 Viator default hero when candidate is known-bad", () => {
+  it("falls back to tour fallback hero when candidate is known-bad", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/california/palm-springs/tours/sample",
       tour: {
@@ -242,6 +242,6 @@ describe("resolveHeroImageForRoute viator tour detail", () => {
       },
     });
 
-    expect(image).toBe(ENGINE3_VIATOR_FALLBACK_HERO_IMAGE);
+    expect(image).toBe(buildImageUrl(TOUR_FALLBACK_HERO_IMAGE));
   });
 });

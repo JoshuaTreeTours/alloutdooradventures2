@@ -16,9 +16,7 @@ describe("viatorTours", () => {
     expect(tour?.viator.url).toBe(
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE"
     );
-    expect(tour?.viator.heroImageOverrideUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"
-    );
+    expect(tour?.viator.heroImageOverrideUrl).toBeUndefined();
   });
 
   it("keeps product code additions scoped to the known Engine3 set", () => {

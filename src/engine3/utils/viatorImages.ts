@@ -1,4 +1,3 @@
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import type { ViatorProductData } from "../types";
 
 const KNOWN_VIATOR_CDN_PATTERN =
@@ -72,10 +71,13 @@ export const pickViatorPrimaryImage = (
   product?: Partial<ViatorProductData>
 ): { heroUrl?: string; cardUrl?: string } => {
   const best = product ? getPreferredCandidate(product) : undefined;
-  const resolved = best ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+
+  if (!best) {
+    return {};
+  }
 
   return {
-    heroUrl: resolved,
-    cardUrl: resolved,
+    heroUrl: best,
+    cardUrl: best,
   };
 };

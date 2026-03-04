@@ -61,7 +61,10 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.departureNote).toContain("8:30 a.m.");
     expect(viewModel.priceFrom).toBe("$179.00");
     expect(viewModel.primaryImageUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg"
+    );
+    expect(viewModel.heroImageOverrideUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg"
     );
   });
 

@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
 import type { Tour } from "../data/tours.types";
-import { ENGINE3_VIATOR_FALLBACK_HERO_IMAGE } from "../utils/hero";
+import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 import TourCard from "./TourCard";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -43,7 +43,7 @@ describe("TourCard", () => {
       />,
     );
 
-    expect(html).toContain(ENGINE3_VIATOR_FALLBACK_HERO_IMAGE);
+    expect(html).toContain(TOUR_FALLBACK_HERO_IMAGE);
     expect(html).not.toContain("/12/34/56/caption.jpg");
   });
 });

@@ -9,7 +9,7 @@ import type { Engine3TourViewModel } from "../types";
 import { normalizeStructuredData } from "../../utils/structuredData";
 import {
   coerceViatorHeroCandidate,
-  ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
+  TOUR_FALLBACK_HERO_IMAGE,
 } from "../../utils/hero";
 
 type Engine3TourPageProps = {
@@ -79,10 +79,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const heroUrl =
     tour.bookingProvider === "viator"
       ? coerceViatorHeroCandidate(
-          tour.primaryImageUrl ||
-            tour.heroImageOverrideUrl ||
+          tour.heroImageOverrideUrl ||
+            tour.primaryImageUrl ||
             tour.content?.images?.[0]
-        ) ?? ENGINE3_VIATOR_FALLBACK_HERO_IMAGE
+        ) ?? TOUR_FALLBACK_HERO_IMAGE
       : tour.primaryImageUrl ||
         tour.heroImageOverrideUrl ||
         tour.content?.images?.[0] ||

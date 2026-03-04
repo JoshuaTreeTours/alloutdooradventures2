@@ -35,9 +35,7 @@ describe("getEngine3TourBySlugs", () => {
 
     expect(tour?.id).toBe("6740P7");
     expect(tour?.name).toBe("Joshua Tree National Park Scenic Tour");
-    expect(tour?.images.hero).toBeTruthy();
-    expect(tour?.images.hero).not.toContain("/hero.jpg");
-    expect(tour?.images.hero).not.toContain("jerry-sybers");
+    expect(tour?.images.hero).toBe("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg");
     expect(tour?.seo.ogImage).toBe(tour?.images.hero);
     expect(tour?.bookingUrl).toContain("/d648-6740P7");
     expect(tour?.bookingUrl).toContain("pid=P00290915");
@@ -55,7 +53,6 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.id).toBe("2335P1");
     expect(tour?.images.hero).toBeTruthy();
     expect(tour?.images.hero).not.toContain("/hero.jpg");
-    expect(tour?.images.hero).not.toContain("jerry-sybers");
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
 
@@ -69,7 +66,6 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.id).toBe("3351P15");
     expect(tour?.images.hero).toBeTruthy();
     expect(tour?.images.hero).not.toContain("/hero.jpg");
-    expect(tour?.images.hero).not.toContain("jerry-sybers");
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
 });

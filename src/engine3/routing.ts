@@ -4,6 +4,7 @@ import { buildEngine3TourPath } from "./buildEngine3TourPath";
 import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
+import { getViatorHeroImageOverride } from "./overrides/viatorImageOverrides";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
 import { pickViatorPrimaryImage } from "./utils/viatorImages";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
@@ -45,7 +46,8 @@ export const getEngine3TourBySlugs = (
 
   const contentImages = gallery;
   const pickedImage = pickViatorPrimaryImage(productData);
-  const heroImage = pickedImage.heroUrl ?? contentImages[0];
+  const heroImageOverride = getViatorHeroImageOverride(entry.viator.productCode);
+  const heroImage = heroImageOverride ?? pickedImage.heroUrl ?? contentImages[0];
 
   return {
     id: entry.viator.productCode,

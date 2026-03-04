@@ -1,6 +1,7 @@
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { extractMeetingPointText } from "../../utils/providers/viator/extractMeetingPointText";
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
+import { getViatorHeroImageOverride } from "../overrides/viatorImageOverrides";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
 import { pickViatorPrimaryImage } from "../utils/viatorImages";
@@ -149,7 +150,7 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { gallery, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+  const { gallery } = resolveEngine3PrimaryImage({
     productCode: productData?.productCode ?? tour.id,
     imageCandidates: productData?.imageCandidates,
     fallbackImageUrl:
@@ -158,8 +159,9 @@ export const mapViatorToEngine3ViewModel = (
 
   const contentImages = gallery;
   const pickedImage = pickViatorPrimaryImage(productData);
+  const heroOverrideUrl = getViatorHeroImageOverride(productData?.productCode ?? tour.id);
   const primaryImageUrl =
-    pickedImage.heroUrl ?? heroImageOverrideUrl ?? contentImages[0] ?? undefined;
+    heroOverrideUrl ?? pickedImage.heroUrl ?? contentImages[0] ?? undefined;
 
   const apiPrice = parsePrice(productData?.priceFrom);
   const priceOverride = overrideEntry?.startingPriceOverride;
@@ -209,7 +211,7 @@ export const mapViatorToEngine3ViewModel = (
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
     primaryImageUrl,
-    heroImageOverrideUrl,
+    heroImageOverrideUrl: heroOverrideUrl,
     heroImageUrl: primaryImageUrl,
     content: {
       images: contentImages,

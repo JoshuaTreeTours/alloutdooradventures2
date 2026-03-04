@@ -13,8 +13,6 @@ export const TOUR_FALLBACK_HERO_IMAGE = "/images/hiking-hero.jpg";
 export const GUIDE_FALLBACK_HERO_IMAGE = "/images/cycling-hero.jpg";
 export const DESTINATION_FALLBACK_HERO_IMAGE = "/images/canoe-hero.jpg";
 export const CITY_NEUTRAL_BRAND_IMAGE = "/logo.svg";
-export const ENGINE3_VIATOR_FALLBACK_HERO_IMAGE =
-  "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg";
 
 export type HeroRouteContext = {
   route: string;
@@ -383,13 +381,15 @@ export const resolveHeroImageForRoute = ({
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
     if (tour?.bookingProvider === "viator") {
       const viatorPrimary = coerceViatorHeroCandidate(
-        tour.heroImageOverride ?? tour.content?.images?.[0],
+        tour.heroImageOverride ??
+          tour.heroImage ??
+          tour.content?.images?.[0],
       );
 
       resolvedImage = resolveHeroImage({
         pageType: "product",
-        primary: viatorPrimary ?? ENGINE3_VIATOR_FALLBACK_HERO_IMAGE,
-        fallbacks: [],
+        primary: viatorPrimary,
+        fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
       });
     } else {
       resolvedImage = resolveHeroImage({
