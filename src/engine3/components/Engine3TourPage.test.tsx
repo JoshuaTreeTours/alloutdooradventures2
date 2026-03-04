@@ -70,7 +70,7 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
-  it("falls back to the default hero image when viator hero contract has no image", () => {
+  it("hides hero image when viator hero contract has no image", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
         tour={{
@@ -82,7 +82,7 @@ describe("Engine3TourPage", () => {
       />
     );
 
-    expect(html).toContain("/hero.jpg");
+    expect(html).not.toContain("object-cover");
   });
 
   it("keeps rendering booking CTA when booking URL parsing fails", () => {
@@ -121,6 +121,7 @@ describe("Engine3TourPage", () => {
 
     expect(html).toContain("Joshua Tree Backroads Hummer H2 Tour");
     expect(html).toContain("media/photo-o/2f/4f/17/7a/caption.jpg");
+    expect(html).not.toContain("/hero.jpg");
     expect(html).toContain("Palm Springs Art Museum");
     expect(html).toContain("Departures operate Daily at 8:30 a.m.");
   });

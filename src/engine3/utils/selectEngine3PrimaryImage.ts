@@ -141,3 +141,13 @@ export const selectEngine3PrimaryImage = (input: {
 
   return normalizedFallback;
 };
+
+
+export const pickBestViatorImageUrl = (input: {
+  imageCandidates?: string[];
+  supplierImage?: string;
+}): string | undefined =>
+  selectEngine3PrimaryImage({
+    viatorImageCandidates: input.imageCandidates,
+    fallbackImageUrl: input.supplierImage,
+  });

@@ -1,9 +1,8 @@
 import { viatorTours } from "../data/viatorTours";
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import {
   collectEngine3ImageCandidates,
   isRejectedCandidate,
-  selectEngine3PrimaryImage,
+  pickBestViatorImageUrl,
 } from "./selectEngine3PrimaryImage";
 
 const cleanText = (value?: string | null): string | undefined => {
@@ -43,13 +42,12 @@ export const resolveEngine3PrimaryImage = (input: {
     viatorImageCandidates: input.imageCandidates,
   });
 
-  const discoveredFromViator = selectEngine3PrimaryImage({
-    viatorImageCandidates: input.imageCandidates,
-    fallbackImageUrl: input.fallbackImageUrl,
+  const discoveredFromViator = pickBestViatorImageUrl({
+    imageCandidates: input.imageCandidates,
+    supplierImage: input.fallbackImageUrl,
   });
 
-  const heroImageUrl =
-    heroImageOverrideUrl ?? discoveredFromViator ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+  const heroImageUrl = heroImageOverrideUrl ?? discoveredFromViator;
 
   const gallery = Array.from(
     new Set([
@@ -64,8 +62,7 @@ export const resolveEngine3PrimaryImage = (input: {
     gallery[1] && gallery[1] !== heroImageUrl
       ? gallery[1]
       : gallery.find(image => image !== heroImageUrl) ??
-        gallery[0] ??
-        DEFAULT_ENGINE3_HERO_IMAGE_URL;
+        gallery[0];
 
   return {
     primaryImageUrl: heroImageUrl,

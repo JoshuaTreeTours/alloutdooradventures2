@@ -1,5 +1,3 @@
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
-
 const cleanText = (value?: string | null): string | undefined => {
   if (typeof value !== "string") {
     return undefined;
@@ -31,15 +29,16 @@ export const resolveEngine3ViatorHero = (input: {
   }
 
   const fallback =
-    cleanText(input.fallbackImageUrl) ??
-    cleanText(input.contentImages?.[0]) ??
-    DEFAULT_ENGINE3_HERO_IMAGE_URL;
+    cleanText(input.fallbackImageUrl) ?? cleanText(input.contentImages?.[0]);
 
-  console.warn(
-    `[engine3] Falling back to default hero image for ${provider} tour${
-      input.productCode ? ` ${input.productCode}` : ""
-    }`
-  );
+  if (!fallback) {
+    console.warn(
+      `[engine3] Missing Viator hero image for ${provider} tour${
+        input.productCode ? ` ${input.productCode}` : ""
+      }`
+    );
+    return null;
+  }
 
   return fallback;
 };
