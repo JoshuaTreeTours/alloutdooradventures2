@@ -73,6 +73,8 @@ export type ViatorProductData = {
   description?: string;
   overview?: string | null;
   supplierImage?: string;
+  primaryImageUrl?: string;
+  coverImageUrl?: string;
   imageCandidates?: string[];
   priceFrom?: string;
   priceCurrency?: string;

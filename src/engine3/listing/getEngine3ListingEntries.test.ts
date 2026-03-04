@@ -6,10 +6,10 @@ import { mapViatorToEngine3ViewModel } from "../viator/mapViatorToEngine3ViewMod
 import { getEngine3ListingEntries } from "./getEngine3ListingEntries";
 
 const LOCKED =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg";
 
 describe("getEngine3ListingEntries", () => {
-  it("includes 6740JTREE for Palm Springs with canonical slug and locked image", () => {
+  it("includes 6740JTREE for Palm Springs with canonical slug and approved locked image", () => {
     const entries = getEngine3ListingEntries("california", "palm-springs");
 
     const target = entries.find(

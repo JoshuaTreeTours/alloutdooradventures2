@@ -23,7 +23,7 @@ const posterChildTour: Engine3TourViewModel = {
     "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
   bookingUrl: "https://www.viator.com/tours/Palm-Springs/example",
   primaryImageUrl:
-    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
 };
 
 describe("Engine3TourPage", () => {
@@ -54,6 +54,16 @@ describe("Engine3TourPage", () => {
     expect(heroIndex).toBeLessThan(overviewIndex);
   });
 
+  it("keeps OG image and JSON-LD image aligned with the rendered hero image", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage tour={posterChildTour} />
+    );
+
+    const imageUrl = posterChildTour.primaryImageUrl as string;
+    expect(html).toContain(`"image":"${imageUrl}"`);
+    expect(html).toContain(`src="${imageUrl}"`);
+    expect(html.split(imageUrl).length - 1).toBeGreaterThanOrEqual(3);
+  });
   it("hides Overview and Highlights sections when normalized fields are empty", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage

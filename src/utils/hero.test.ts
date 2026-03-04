@@ -103,8 +103,8 @@ describe("isImageInCityTour", () => {
           stateSlug: "california",
           countryCode: "US",
         },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(true);
 
     expect(
@@ -114,22 +114,20 @@ describe("isImageInCityTour", () => {
           tourCitySlug: "joshua-tree",
           citySlug: "joshua-tree",
         },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(false);
 
     expect(
       isImageInCityTour(
         { src: "https://cdn.example.com/unbound.jpg" },
-        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" },
-      ),
+        { citySlug: "joshua-tree", stateSlug: "california", countryCode: "US" }
+      )
     ).toBe(false);
   });
 });
 
 describe("resolveHeroImageForRoute city hub", () => {
-
-
   it("keeps city hub and city tours routes on the exact same hero URL", () => {
     const cityTours = [
       {
@@ -166,8 +164,15 @@ describe("resolveHeroImageForRoute city hub", () => {
   it("uses same city-tour resolver for destination city routes", () => {
     const image = resolveHeroImageForRoute({
       route: "/destinations/states/california/cities/joshua-tree",
-      city: { slug: "joshua-tree", stateSlug: "california", heroImages: [HOME_HERO_IMAGE] },
-      state: { heroImage: "https://cdn.example.com/california-state.jpg", slug: "california" },
+      city: {
+        slug: "joshua-tree",
+        stateSlug: "california",
+        heroImages: [HOME_HERO_IMAGE],
+      },
+      state: {
+        heroImage: "https://cdn.example.com/california-state.jpg",
+        slug: "california",
+      },
       cityTours: [
         {
           id: "jt-city",
@@ -185,5 +190,32 @@ describe("resolveHeroImageForRoute city hub", () => {
 
     expect(image).toBe("https://cdn.example.com/joshua-tree-city-tour.jpg");
     expect(image).not.toContain("canoe-hero");
+  });
+});
+
+describe("resolveHeroImageForRoute viator", () => {
+  it("returns only the viator tour hero and skips generic tour fallbacks", () => {
+    const resolved = resolveHeroImageForRoute({
+      route:
+        "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+      tour: {
+        bookingProvider: "viator",
+        heroImage:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/21/21/21/21.jpg",
+      },
+    });
+
+    const noHero = resolveHeroImageForRoute({
+      route:
+        "/destinations/california/palm-springs/tours/san-andreas-fault-jeep-tour-from-palm-springs-2335p1",
+      tour: {
+        bookingProvider: "viator",
+      },
+    });
+
+    expect(resolved).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/21/21/21/21.jpg"
+    );
+    expect(noHero).toBeNull();
   });
 });
