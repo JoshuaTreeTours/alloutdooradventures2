@@ -1,6 +1,7 @@
 export type Engine3Tour = {
   engine: "engine3";
   bookingProvider: "viator";
+  category?: string;
   viator: {
     url: string;
     productCode: string;

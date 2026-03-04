@@ -21,6 +21,16 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
+import { santaBarbaraCategoryHeadings } from "../../../../engine3/cities/santa-barbara";
+
+const SANTA_BARBARA_SECTION_ORDER = [
+  "sailing",
+  "wine-tours",
+  "e-bike",
+  "walking-tours",
+  "food-tours",
+  "day-trips",
+] as const;
 
 type CityToursIndexRouteProps = {
   params: {
@@ -121,6 +131,39 @@ export default function CityToursIndexRoute({
     );
   }
 
+  const isSantaBarbara =
+    state.slug === "california" && city.slug === "santa-barbara";
+
+  const santaBarbaraEngine3Sections = isSantaBarbara
+    ? SANTA_BARBARA_SECTION_ORDER.map(category => ({
+        heading: santaBarbaraCategoryHeadings[category],
+        entries: filteredTours.filter(
+          entry =>
+            entry.tour.engine === "engine3" &&
+            entry.tour.bookingProvider === "viator" &&
+            entry.tour.categories.includes(category)
+        ),
+      })).filter(section => section.entries.length > 0)
+    : [];
+
+  const featuredSantaBarbaraEntries = isSantaBarbara
+    ? filteredTours
+        .filter(
+          entry =>
+            entry.tour.engine === "engine3" &&
+            entry.tour.bookingProvider === "viator"
+        )
+        .slice()
+        .sort((a, b) => {
+          const leftScore =
+            (a.tour.badges.reviewCount ?? 0) * (a.tour.badges.rating ?? 0);
+          const rightScore =
+            (b.tour.badges.reviewCount ?? 0) * (b.tour.badges.rating ?? 0);
+          return rightScore - leftScore;
+        })
+        .slice(0, 6)
+    : [];
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <section className="bg-[#2f4a2f] text-white">
@@ -166,7 +209,38 @@ export default function CityToursIndexRoute({
             <div className="h-64 w-full bg-[#2f4a2f]/10 md:h-80" />
           )}
         </div>
-        {filteredTours.length ? (
+        {isSantaBarbara && !activityFilter ? (
+          <div className="mt-10 space-y-10">
+            {featuredSantaBarbaraEntries.length ? (
+              <section>
+                <h2 className="text-2xl font-semibold">Featured</h2>
+                <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {featuredSantaBarbaraEntries.map(({ tour, href }) => (
+                    <TourCard
+                      key={`${tour.id}-${href}`}
+                      tour={tour}
+                      href={href}
+                    />
+                  ))}
+                </div>
+              </section>
+            ) : null}
+            {santaBarbaraEngine3Sections.map(section => (
+              <section key={section.heading}>
+                <h2 className="text-2xl font-semibold">{section.heading}</h2>
+                <div className="mt-5 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                  {section.entries.map(({ tour, href }) => (
+                    <TourCard
+                      key={`${tour.id}-${href}`}
+                      tour={tour}
+                      href={href}
+                    />
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        ) : filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {filteredTours.map(({ tour, href }) => (
               <TourCard key={tour.id} tour={tour} href={href} />
