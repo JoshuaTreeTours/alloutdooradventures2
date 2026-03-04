@@ -3,6 +3,7 @@ import { extractMeetingPointText } from "../../utils/providers/viator/extractMee
 import { normalizeViatorTourContent } from "../normalize/normalizeViatorTourContent";
 import type { Engine3TourViewModel, ViatorProductData } from "../types";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
+import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import { ENGINE3_VIATOR_OVERRIDES } from "./engine3ViatorOverrides";
 
@@ -129,12 +130,19 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { primaryImageUrl, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+  const { gallery, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
     productCode: productData?.productCode ?? tour.id,
     imageCandidates: productData?.imageCandidates,
     fallbackImageUrl:
       cleanText(productData?.supplierImage) ?? cleanText(tour.images.hero),
   });
+
+  const contentImages = gallery;
+  const primaryImageUrl = resolveEngine3ViatorHero({
+    bookingProvider: "viator",
+    heroImageOverrideUrl,
+    contentImages,
+  }) ?? undefined;
 
   return {
     tourId: tour.id,
@@ -161,6 +169,9 @@ export const mapViatorToEngine3ViewModel = (
     primaryImageUrl,
     heroImageOverrideUrl,
     heroImageUrl: primaryImageUrl,
+    content: {
+      images: contentImages,
+    },
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),
