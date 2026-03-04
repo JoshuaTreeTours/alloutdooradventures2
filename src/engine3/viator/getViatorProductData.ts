@@ -76,8 +76,8 @@ const parseJsonScripts = (html: string): unknown[] => {
 
 const deepFind = (
   input: unknown,
-  checker: (node: Record<string, unknown>) => string | number | undefined
-): string | number | undefined => {
+  checker: (node: Record<string, unknown>) => unknown
+): unknown => {
   if (!input || typeof input !== "object") {
     return undefined;
   }
@@ -173,7 +173,7 @@ const asItinerary = (value: unknown): Engine3ItineraryItem[] | undefined => {
         order,
       } satisfies Engine3ItineraryItem;
     })
-    .filter((entry): entry is Engine3ItineraryItem => Boolean(entry));
+    .filter(Boolean) as Engine3ItineraryItem[];
 
   return normalized.length ? normalized : undefined;
 };
@@ -232,18 +232,10 @@ const parseViatorHtml = (
 
   const supplierImage = imageCandidates?.[0];
   const title =
-    text(
-      deepFind(scripts, node => text(node.title) ?? text(node.name)) as
-        | string
-        | undefined
-    ) ??
+    text(deepFind(scripts, node => text(node.title) ?? text(node.name))) ??
     text(html.match(/<title>(.*?)<\/title>/i)?.[1]?.replace(/\s*\|.*$/, ""));
 
-  const description = text(
-    deepFind(scripts, node => text(node.description as string)) as
-      | string
-      | undefined
-  );
+  const description = text(deepFind(scripts, node => text(node.description)));
 
   const rating = toNumber(
     deepFind(
@@ -295,16 +287,17 @@ const parseViatorHtml = (
   );
 
   const meetingPointText = extractMeetingPointText({
-    structuredLocation: (deepFind(
-      scripts,
-      node =>
-        ((node.departureAndReturnLocations as any)?.departureLocations?.[0] as
-          | Record<string, unknown>
-          | undefined) ??
-        ((node.meetingPoint as any)?.location as
-          | Record<string, unknown>
-          | undefined)
-    ) ?? null) as Record<string, unknown> | null,
+    structuredLocation:
+      (deepFind(
+        scripts,
+        node =>
+          ((node.departureAndReturnLocations as any)?.departureLocations?.[0] as
+            | Record<string, unknown>
+            | undefined) ??
+          ((node.meetingPoint as any)?.location as
+            | Record<string, unknown>
+            | undefined)
+      ) as Record<string, unknown> | null | undefined) ?? null,
     fallbackText: meetingPointDescription,
   });
 

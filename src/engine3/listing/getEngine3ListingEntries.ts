@@ -35,22 +35,23 @@ export const getEngine3ListingEntries = (
         (tour.destination.state ?? tour.destination.region) === stateSlug &&
         tour.destination.city === citySlug
     )
-    .map(tour => {
+    .flatMap(tour => {
       const productCode = tour.viator.productCode;
       const productData = viatorProductCacheByCode[productCode];
       const attributedBookingUrl = buildViatorAffiliateUrl({
         baseUrl: productData?.sourceUrl,
         fallbackUrl: tour.viator.url,
+        productCode,
       });
 
       if (!attributedBookingUrl) {
         console.warn(
           `[engine3] Skipping listing entry due to invalid Viator URL for ${productCode}: ${tour.viator.url}`
         );
-        return null;
+        return [];
       }
 
-      const { secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
+      const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
         productCode,
         imageCandidates: [
           ...(productData?.imageCandidates ?? []),
@@ -64,11 +65,14 @@ export const getEngine3ListingEntries = (
       const heroImage =
         resolveEngine3ViatorHero({
           bookingProvider: "viator",
+          viatorPrimaryImageUrl: primaryImageUrl,
           heroImageOverrideUrl: heroImageOverride,
           contentImages,
+          fallbackImageUrl: productData?.supplierImage,
+          productCode,
         }) ?? "";
 
-      return {
+      return [{
         href,
         tour: {
           id: `engine3-${productCode}`,
@@ -112,14 +116,13 @@ export const getEngine3ListingEntries = (
           bookingUrl: attributedBookingUrl,
           longDescription: productData?.description ?? "",
         },
-      } satisfies Engine3ListingEntry;
-    })
-    .filter((entry): entry is Engine3ListingEntry => Boolean(entry));
+      } satisfies Engine3ListingEntry];
+    });
 };
 
 export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
   viatorTours
-    .map(tour => {
+    .flatMap(tour => {
       const productCode = tour.viator.productCode;
       const path = buildEngine3TourPath(tour);
       const productData = viatorProductCacheByCode[productCode];
@@ -129,19 +132,21 @@ export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
       ].filter((value): value is string => typeof value === "string" && value.trim().length > 0);
       const hero = resolveEngine3ViatorHero({
         bookingProvider: "viator",
+        viatorPrimaryImageUrl: contentImages[0],
         heroImageOverrideUrl: tour.viator.heroImageOverrideUrl,
         contentImages,
+        fallbackImageUrl: productData?.supplierImage,
+        productCode,
       });
 
       if (hero) {
-        return null;
+        return [];
       }
 
-      return {
+      return [{
         productCode,
         slug: tour.slug,
         bookingUrl: tour.viator.url,
         canonicalPath: path,
-      } satisfies Engine3MissingHeroEntry;
-    })
-    .filter((entry): entry is Engine3MissingHeroEntry => Boolean(entry));
+      } satisfies Engine3MissingHeroEntry];
+    });

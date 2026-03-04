@@ -24,6 +24,7 @@ export const getEngine3TourBySlugs = (
   const attributedBookingUrl = buildViatorAffiliateUrl({
     baseUrl: productData?.sourceUrl,
     fallbackUrl: entry.viator.url,
+    productCode: entry.viator.productCode,
   });
 
   if (!attributedBookingUrl) {
@@ -34,7 +35,7 @@ export const getEngine3TourBySlugs = (
   }
 
   const normalizedContent = normalizeViatorTourContent({ productData });
-  const { secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
+  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
     productCode: entry.viator.productCode,
     imageCandidates: [
       ...(productData?.imageCandidates ?? []),
@@ -46,8 +47,11 @@ export const getEngine3TourBySlugs = (
   const contentImages = gallery;
   const heroImage = resolveEngine3ViatorHero({
     bookingProvider: "viator",
+    viatorPrimaryImageUrl: primaryImageUrl,
     heroImageOverrideUrl: entry.viator.heroImageOverrideUrl,
     contentImages,
+    fallbackImageUrl: productData?.supplierImage,
+    productCode: entry.viator.productCode,
   });
 
   return {

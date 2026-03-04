@@ -61,6 +61,7 @@ export type Engine3TourViewModel = {
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
+  departureTimeText?: string;
   operatorName?: string;
   availability?: string;
   latitude?: number;
@@ -91,6 +92,7 @@ export type ViatorProductData = {
   included?: string[];
   notIncluded?: string[];
   meetingPointDescription?: string;
+  departureTimeText?: string;
   itinerary?: Engine3ItineraryItem[];
   faqs?: Engine3FaqItem[];
   duration?: string;

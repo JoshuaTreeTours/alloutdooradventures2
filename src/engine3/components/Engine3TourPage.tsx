@@ -6,6 +6,7 @@ import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import type { Engine3TourViewModel } from "../types";
+import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import { normalizeStructuredData } from "../../utils/structuredData";
 import {
@@ -49,6 +50,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       const attributedUrl = buildViatorAffiliateUrl({
         baseUrl: tour.viator?.productUrl,
         fallbackUrl: rawUrl,
+        productCode: tour.tourId,
       });
 
       if (!attributedUrl) {
@@ -83,9 +85,17 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const pageDescription =
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
+  const departureScheduleText = tour.departureTimeText?.trim().replace(/[.\s]+$/, "");
   const heroUrl =
     (tour.bookingProvider === "viator"
-      ? tour.heroImageOverrideUrl || tour.content?.images?.[0]
+      ? resolveEngine3ViatorHero({
+          bookingProvider: "viator",
+          viatorPrimaryImageUrl: tour.primaryImageUrl,
+          contentImages: tour.content?.images,
+          heroImageOverrideUrl: tour.heroImageOverrideUrl,
+          fallbackImageUrl: tour.heroImageUrl,
+          productCode: tour.tourId,
+        })
       : tour.primaryImageUrl || tour.heroImageOverrideUrl || tour.content?.images?.[0]) ??
     undefined;
 
@@ -158,7 +168,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             url: item.href,
           })),
         }),
-      }),
+      } as any),
     [
       breadcrumbItems,
       canonicalUrl,
@@ -313,6 +323,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             <p className="mt-3 text-sm text-[#405040]">
               {tour.meetingPointDescription}
             </p>
+            {departureScheduleText ? (
+              <p className="mt-2 text-sm text-[#405040]">
+                Departures operate {departureScheduleText}.
+              </p>
+            ) : null}
           </>
         ) : null}
 

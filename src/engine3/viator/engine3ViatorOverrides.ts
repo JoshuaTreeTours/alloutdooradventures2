@@ -91,9 +91,9 @@ export const ENGINE3_VIATOR_OVERRIDES: Record<
       },
     ],
   },
-  "6740JTREE": {
+  "6740P7": {
     overviewFactsOverride: {
-      meetingPoint: "Palm Desert",
+      meetingPoint: "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA",
       durationHours: 3,
       cancellationHours: 48,
       signatureHighlight:
