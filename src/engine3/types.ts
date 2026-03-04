@@ -47,6 +47,9 @@ export type Engine3TourViewModel = {
   primaryImageUrl?: string;
   heroImageOverrideUrl?: string;
   heroImageUrl?: string;
+  content?: {
+    images?: string[];
+  };
   priceFrom?: string;
   priceCurrency?: string;
   rating?: number;

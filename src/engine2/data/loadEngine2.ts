@@ -78,6 +78,7 @@ export type Engine2Tour = {
     duration?: string;
     additionalInfo?: string[];
     cancellationPolicy?: string;
+    images?: string[];
   };
   images: {
     hero: string | null;

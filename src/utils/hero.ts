@@ -18,8 +18,13 @@ export type HeroRouteContext = {
   route: string;
   params?: Record<string, string | undefined>;
   tour?: {
+    bookingProvider?: "fareharbor" | "viator";
     heroImage?: string;
+    heroImageOverride?: string;
     galleryImages?: string[];
+    content?: {
+      images?: string[];
+    };
   } | null;
   guide?: {
     type?: "state" | "country" | "city";
@@ -358,11 +363,19 @@ export const resolveHeroImageForRoute = ({
   let resolvedImage: string | undefined;
 
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
-    resolvedImage = resolveHeroImage({
-      pageType: "product",
-      primary: tour?.heroImage ?? tour?.galleryImages?.[0],
-      fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
-    });
+    if (tour?.bookingProvider === "viator") {
+      resolvedImage = resolveHeroImage({
+        pageType: "product",
+        primary: tour.heroImageOverride ?? tour.content?.images?.[0],
+        fallbacks: [],
+      });
+    } else {
+      resolvedImage = resolveHeroImage({
+        pageType: "product",
+        primary: tour?.heroImage ?? tour?.galleryImages?.[0],
+        fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
+      });
+    }
   } else if (isGuideRoute(normalizedRoute) || guide) {
     const isCityGuidePage =
       resolveGuidePageType(normalizedRoute, guide?.type) === "city";

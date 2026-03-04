@@ -5,6 +5,7 @@ import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
+import { resolveEngine3ViatorHero } from "./utils/resolveEngine3ViatorHero";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
 export const getEngine3TourBySlugs = (
@@ -33,13 +34,20 @@ export const getEngine3TourBySlugs = (
   }
 
   const normalizedContent = normalizeViatorTourContent({ productData });
-  const { primaryImageUrl, secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
+  const { secondaryImageUrl, gallery } = resolveEngine3PrimaryImage({
     productCode: entry.viator.productCode,
     imageCandidates: [
       ...(productData?.imageCandidates ?? []),
       productData?.supplierImage,
     ].filter((value): value is string => typeof value === "string"),
     fallbackImageUrl: productData?.supplierImage,
+  });
+
+  const contentImages = gallery;
+  const heroImage = resolveEngine3ViatorHero({
+    bookingProvider: "viator",
+    heroImageOverrideUrl: entry.viator.heroImageOverrideUrl,
+    contentImages,
   });
 
   return {
@@ -65,12 +73,13 @@ export const getEngine3TourBySlugs = (
       title: productData?.title ?? entry.slug,
       description: productData?.description ?? "",
       canonicalPath: path,
-      ogImage: primaryImageUrl ?? "",
+      ogImage: heroImage ?? "",
     },
     content: {
       experienceText: normalizedContent.overview ?? productData?.description ?? "",
       overview: normalizedContent.overview,
       highlights: normalizedContent.highlights,
+      images: contentImages,
       inclusions: normalizedContent.inclusions,
       exclusions: normalizedContent.exclusions,
       included: normalizedContent.inclusions,
@@ -87,10 +96,10 @@ export const getEngine3TourBySlugs = (
       duration: productData?.duration,
     },
     images: {
-      hero: primaryImageUrl,
+      hero: heroImage,
       gallery: Array.from(
         new Set(
-          [primaryImageUrl, secondaryImageUrl, ...gallery].filter(
+          [heroImage, secondaryImageUrl, ...gallery].filter(
             (value): value is string => typeof value === "string" && value.length > 0
           )
         )

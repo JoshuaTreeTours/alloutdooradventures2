@@ -38,6 +38,10 @@ export type Tour = {
   primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
+  heroImageOverride?: string;
+  content?: {
+    images?: string[];
+  };
   primaryImageUrl?: string;
   galleryImages?: string[];
   badges: TourBadges;
