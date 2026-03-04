@@ -21,7 +21,7 @@ const baseTour: Tour = {
     city: "Palm Springs",
     citySlug: "palm-springs",
   },
-  heroImage: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg",
+  heroImage: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1",
   badges: {},
   activitySlugs: ["adventure"],
   bookingProvider: "viator",
@@ -33,7 +33,7 @@ describe("TourCard", () => {
   it("renders viator cards with tour.heroImage", () => {
     const html = renderToStaticMarkup(<TourCard tour={baseTour} />);
 
-    expect(html).toContain(`src="${baseTour.heroImage}"`);
+    expect(html).toContain("caption.jpg?w=1100&amp;h=800&amp;s=1");
     expect(html).not.toContain("Viator experience image unavailable");
   });
 

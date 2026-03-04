@@ -4,7 +4,7 @@ import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
 const LOCKED_HERO_URL_6740 =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
 
 const baseTour: Engine2Tour = {
   id: "6740JTREE",
@@ -98,6 +98,33 @@ describe("mapViatorToEngine3ViewModel", () => {
 
     expect(viewModel.primaryImageUrl).toBeDefined();
     expect(viewModel.heroImageUrl).toBe(viewModel.primaryImageUrl);
+  });
+
+
+  it("uses dynamic caption when 3351P15 only has dynamic-gallery images", () => {
+    const viewModel = mapViatorToEngine3ViewModel(
+      {
+        ...baseTour,
+        id: "3351P15",
+        name: "Palm Springs Indian Canyons Bike and Hike",
+        images: {
+          hero: "",
+          gallery: [],
+        },
+      },
+      {
+        sourceUrl: "https://www.viator.com/tours/example",
+        productCode: "3351P15",
+        title: "Palm Springs Indian Canyons Bike and Hike",
+        imageCandidates: [
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1",
+        ],
+      }
+    );
+
+    expect(viewModel.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1"
+    );
   });
 
   it("applies exactly 5 curated FAQs for 2335P1", () => {

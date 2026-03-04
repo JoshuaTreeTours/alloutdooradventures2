@@ -105,6 +105,49 @@ describe("buildEngine3SchemaGraph paragon parity", () => {
     expect(nodes.find(node => node["@type"] === "FAQPage")).toBeDefined();
   });
 
+
+  it("keeps chosen hero consistent for SEO/OG input and JSON-LD images", () => {
+    const canonicalUrl = `${canonicalBase}/palm-springs-indian-canyons-bike-and-hike-3351p15`;
+    const hero =
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1";
+
+    const nodes = buildEngine3SchemaGraph({
+      tour: {
+        ...baseTour,
+        tourId: "3351P15",
+        title: "Palm Springs Indian Canyons Bike and Hike",
+        heroImage: hero,
+        primaryImageUrl: hero,
+        heroImageUrl: hero,
+      },
+      seo: {
+        canonicalUrl,
+        title: "Palm Springs Indian Canyons Bike and Hike",
+        description: baseTour.overview ?? baseTour.description,
+        image: hero,
+      },
+      route: {
+        pathname: canonicalUrl,
+        isBookingRoute: false,
+      },
+      affiliateBookingUrl: baseTour.bookingUrl,
+      breadcrumbs: [
+        { name: "Tours", url: "/tours" },
+        { name: "Palm Springs Indian Canyons Bike and Hike", url: canonicalUrl },
+      ],
+    });
+
+    const product = nodes.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const webPage = nodes.find(node => node["@type"] === "WebPage") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect([product?.image].flat()).toContain(hero);
+    expect([webPage?.image].flat()).toContain(hero);
+  });
+
   it("omits FAQ and itinerary nodes when data is missing", () => {
     const canonicalUrl = `${canonicalBase}/joshua-tree-hummer-adventure-from-palm-desert-6740jtree`;
 

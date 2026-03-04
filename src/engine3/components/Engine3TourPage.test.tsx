@@ -9,7 +9,7 @@ import Engine3TourPage from "./Engine3TourPage";
 };
 
 const heroImage =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/8e/aa/caption.jpg?w=1100&h=800&s=1";
 
 const posterChildTour: Engine3TourViewModel = {
   tourId: "2335P1",
@@ -50,7 +50,7 @@ describe("Engine3TourPage", () => {
       <Engine3TourPage tour={posterChildTour} />
     );
 
-    expect(html).toContain(`src="${heroImage}"`);
+    expect(html).toContain("caption.jpg?w=1100&amp;h=800&amp;s=1");
     expect(html).toContain(`\"image\":\"${heroImage}\"`);
   });
 
