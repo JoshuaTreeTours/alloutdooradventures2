@@ -187,30 +187,3 @@ describe("resolveHeroImageForRoute city hub", () => {
     expect(image).not.toContain("canoe-hero");
   });
 });
-
-
-describe("resolveHeroImageForRoute viator tour detail", () => {
-  it("uses viator override before content images", () => {
-    const image = resolveHeroImageForRoute({
-      route: "/destinations/california/palm-springs/tours/sample",
-      tour: {
-        bookingProvider: "viator",
-        heroImageOverride: "https://cdn.example.com/override.jpg",
-        content: { images: ["https://cdn.example.com/api-image.jpg"] },
-      },
-    });
-
-    expect(image).toBe("https://cdn.example.com/override.jpg");
-  });
-
-  it("does not fall back to destination defaults when viator hero is missing", () => {
-    const image = resolveHeroImageForRoute({
-      route: "/destinations/california/palm-springs/tours/sample",
-      tour: {
-        bookingProvider: "viator",
-      },
-    });
-
-    expect(image).toBeNull();
-  });
-});

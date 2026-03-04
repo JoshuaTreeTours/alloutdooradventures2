@@ -2,6 +2,7 @@ import { useMemo } from "react";
 
 import Seo from "../../components/Seo";
 import ParagonMetaRow from "../../components/tours/ParagonMetaRow";
+import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
@@ -84,10 +85,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
-    (tour.bookingProvider === "viator"
-      ? tour.heroImageOverrideUrl || tour.content?.images?.[0]
-      : tour.primaryImageUrl || tour.heroImageOverrideUrl || tour.content?.images?.[0]) ??
-    undefined;
+    tour.primaryImageUrl ||
+    tour.heroImageOverrideUrl ||
+    DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
@@ -243,16 +243,14 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
-        {heroUrl ? (
-          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-            <img
-              src={heroUrl}
-              alt={tour.title}
-              loading="eager"
-              className="h-64 w-full object-cover md:h-80"
-            />
-          </div>
-        ) : null}
+        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+          <img
+            src={heroUrl}
+            alt={tour.title}
+            loading="eager"
+            className="h-64 w-full object-cover md:h-80"
+          />
+        </div>
 
         {overviewText ? (
           <>
