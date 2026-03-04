@@ -34,10 +34,22 @@ export const viatorTours: readonly Engine3Tour[] = [
     engine: "engine3",
     bookingProvider: "viator",
     viator: {
+      productCode: "6740P7",
+      url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+    },
+    destination: {
+      country: "usa",
+      state: "california",
+      city: "palm-springs",
+    },
+    slug: "joshua-tree-national-park-scenic-tour",
+  },
+  {
+    engine: "engine3",
+    bookingProvider: "viator",
+    viator: {
       productCode: "6740JTREE",
       url: "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
-      heroImageOverrideUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
     },
     destination: {
       country: "usa",

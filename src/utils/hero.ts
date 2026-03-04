@@ -84,6 +84,22 @@ type CityTourImageCandidate = {
 
 const normalizeHeroImage = (image?: string) => (image ?? "").trim();
 
+export const isKnownBadViatorHeroCandidate = (image?: string) => {
+  const normalized = normalizeHeroImage(image);
+  if (!normalized) return false;
+
+  return (
+    normalized.includes("dynamic-media.tacdn.com/media/photo-o/") &&
+    /\/caption\.jpg(?:\?.*)?$/.test(normalized)
+  );
+};
+
+export const coerceViatorHeroCandidate = (image?: string) => {
+  if (!image) return undefined;
+  if (isKnownBadViatorHeroCandidate(image)) return undefined;
+  return image;
+};
+
 const normalizeCountryCode = (value?: string) =>
   value ? value.trim().toUpperCase() : undefined;
 
@@ -364,10 +380,16 @@ export const resolveHeroImageForRoute = ({
 
   if (isBookingRoute(normalizedRoute) || isTourDetailRoute(normalizedRoute) || tour) {
     if (tour?.bookingProvider === "viator") {
+      const viatorPrimary = coerceViatorHeroCandidate(
+        tour.heroImageOverride ??
+          tour.heroImage ??
+          tour.content?.images?.[0],
+      );
+
       resolvedImage = resolveHeroImage({
         pageType: "product",
-        primary: tour.heroImageOverride ?? tour.content?.images?.[0],
-        fallbacks: [],
+        primary: viatorPrimary,
+        fallbacks: [TOUR_FALLBACK_HERO_IMAGE],
       });
     } else {
       resolvedImage = resolveHeroImage({

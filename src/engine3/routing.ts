@@ -4,8 +4,9 @@ import { buildEngine3TourPath } from "./buildEngine3TourPath";
 import { viatorProductCacheByCode } from "./data/viatorProductCache";
 import { normalizeViatorTourContent } from "./normalize/normalizeViatorTourContent";
 import { viatorTours } from "./data/viatorTours";
+import { getViatorHeroImageOverride } from "./overrides/viatorImageOverrides";
 import { resolveEngine3PrimaryImage } from "./utils/resolveEngine3PrimaryImage";
-import { resolveEngine3ViatorHero } from "./utils/resolveEngine3ViatorHero";
+import { pickViatorPrimaryImage } from "./utils/viatorImages";
 import { buildViatorAffiliateUrl } from "./utils/viatorLinks";
 
 export const getEngine3TourBySlugs = (
@@ -44,11 +45,9 @@ export const getEngine3TourBySlugs = (
   });
 
   const contentImages = gallery;
-  const heroImage = resolveEngine3ViatorHero({
-    bookingProvider: "viator",
-    heroImageOverrideUrl: entry.viator.heroImageOverrideUrl,
-    contentImages,
-  });
+  const pickedImage = pickViatorPrimaryImage(productData);
+  const heroImageOverride = getViatorHeroImageOverride(entry.viator.productCode);
+  const heroImage = heroImageOverride ?? pickedImage.heroUrl ?? contentImages[0];
 
   return {
     id: entry.viator.productCode,

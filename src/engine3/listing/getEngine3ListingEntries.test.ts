@@ -27,6 +27,22 @@ describe("getEngine3ListingEntries", () => {
     expect(target?.tour.heroImage).toBe(LOCKED);
   });
 
+
+  it("includes 6740P7 with API title and canonical product path", () => {
+    const entries = getEngine3ListingEntries("california", "palm-springs");
+    const target = entries.find(entry => entry.tour.productCode === "6740P7");
+
+    expect(target?.tour.title).toBe("Joshua Tree National Park Scenic Tour");
+    expect(target?.href).toBe(
+      "/destinations/california/palm-springs/tours/joshua-tree-national-park-scenic-tour-6740p7"
+    );
+    expect(target?.tour.bookingUrl).toContain("/d648-6740P7");
+    expect(target?.tour.bookingUrl).toContain("pid=P00290915");
+    expect(target?.tour.bookingUrl).toContain("mcid=42383");
+    expect(target?.tour.bookingUrl).toContain("medium=link");
+    expect(target?.tour.heroImage).toBe("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg");
+  });
+
   it("keeps 2335P1 listing image equal to the detail page hero image", () => {
     const entries = getEngine3ListingEntries("california", "palm-springs");
     const listingEntry = entries.find(

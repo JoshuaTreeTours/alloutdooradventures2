@@ -4,6 +4,10 @@ import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
+import {
+  coerceViatorHeroCandidate,
+  TOUR_FALLBACK_HERO_IMAGE,
+} from "../utils/hero";
 import Image from "./Image";
 
 type TourCardProps = {
@@ -26,15 +30,25 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency
   );
+  const isEngine3Viator =
+    tour.engine === "engine3" && tour.bookingProvider === "viator";
+  const defaultCardImage = isEngine3Viator ? TOUR_FALLBACK_HERO_IMAGE : "/hero.jpg";
+
   const cardImage =
-    tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+    (isEngine3Viator
+      ? coerceViatorHeroCandidate(tour.heroImageOverride?.trim()) ??
+        coerceViatorHeroCandidate(tour.primaryImageUrl?.trim()) ??
+        coerceViatorHeroCandidate(tour.heroImage?.trim()) ??
+        coerceViatorHeroCandidate(tour.galleryImages?.[0]?.trim())
+      : tour.primaryImageUrl?.trim() || tour.heroImage?.trim()) ||
+    defaultCardImage;
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={cardImage}
-          fallbackSrc={"/hero.jpg"}
+          fallbackSrc={defaultCardImage}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

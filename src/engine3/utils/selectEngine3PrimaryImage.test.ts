@@ -6,7 +6,7 @@ import {
 } from "./selectEngine3PrimaryImage";
 
 describe("selectEngine3PrimaryImage", () => {
-  it("prefers dynamic-media photo-o hero images over other valid candidates", () => {
+  it("uses the first valid API image candidate in provider order", () => {
     const image = selectEngine3PrimaryImage({
       viatorImageCandidates: [
         "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/34/56/78.jpg",
@@ -16,7 +16,7 @@ describe("selectEngine3PrimaryImage", () => {
     });
 
     expect(image).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/34/56/78.jpg"
     );
   });
 

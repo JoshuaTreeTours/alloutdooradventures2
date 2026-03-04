@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
+import { TOUR_FALLBACK_HERO_IMAGE } from "../../utils/hero";
 import type { Engine3TourViewModel } from "../types";
 import Engine3TourPage from "./Engine3TourPage";
 
@@ -46,7 +47,7 @@ describe("Engine3TourPage", () => {
       <Engine3TourPage tour={posterChildTour} />
     );
 
-    const heroIndex = html.indexOf(posterChildTour.primaryImageUrl as string);
+    const heroIndex = html.indexOf(TOUR_FALLBACK_HERO_IMAGE);
     const overviewIndex = html.indexOf(">Overview<");
 
     expect(heroIndex).toBeGreaterThan(-1);
@@ -70,7 +71,22 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
-  it("hides hero image when viator hero contract has no image", () => {
+
+  it("renders departure note when override conditions are met", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          departureNote: "Departs daily from Palm Springs Art Museum at 8:30 a.m.",
+        }}
+      />
+    );
+
+    expect(html).toContain("Departure:");
+    expect(html).toContain("8:30 a.m.");
+  });
+
+  it("uses Viator fallback hero image when viator hero contract has no image", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
         tour={{
@@ -82,7 +98,7 @@ describe("Engine3TourPage", () => {
       />
     );
 
-    expect(html).not.toContain("object-cover");
+    expect(html).toContain(TOUR_FALLBACK_HERO_IMAGE);
   });
 
   it("keeps rendering booking CTA when booking URL parsing fails", () => {

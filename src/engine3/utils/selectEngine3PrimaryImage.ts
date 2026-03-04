@@ -52,33 +52,6 @@ export const isRejectedCandidate = (urlValue: string): boolean => {
   return false;
 };
 
-const candidatePriority = (urlValue: string): number => {
-  const parsed = new URL(urlValue);
-  const host = parsed.hostname.toLowerCase();
-  const path = parsed.pathname.toLowerCase();
-
-  if (host.includes("dynamic-media.tacdn.com") && path.includes("/photo-o/")) {
-    return 1;
-  }
-
-  if (
-    host.includes("media.tacdn.com") &&
-    path.includes("attractions-splice-spp")
-  ) {
-    return 2;
-  }
-
-  if (host.includes("cache.vtrcdn.com")) {
-    return 3;
-  }
-
-  if (host.includes("cdn.filestackcontent.com")) {
-    return 4;
-  }
-
-  return 5;
-};
-
 export const collectEngine3ImageCandidates = (input: {
   viatorImageCandidates?: string[];
 }): string[] => {
@@ -90,9 +63,7 @@ export const collectEngine3ImageCandidates = (input: {
     )
   );
 
-  const valid = deduped.filter(candidate => !isRejectedCandidate(candidate));
-  valid.sort((a, b) => candidatePriority(a) - candidatePriority(b));
-  return valid;
+  return deduped.filter(candidate => !isRejectedCandidate(candidate));
 };
 
 export const selectEngine3PrimaryImage = (input: {

@@ -6,12 +6,11 @@ import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 import type { Engine3TourViewModel } from "../types";
-import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import { normalizeStructuredData } from "../../utils/structuredData";
 import {
-  getViatorFromPrice,
-  peekViatorFromPriceCache,
-} from "../../server/viator/getViatorFromPrice";
+  coerceViatorHeroCandidate,
+  TOUR_FALLBACK_HERO_IMAGE,
+} from "../../utils/hero";
 
 type Engine3TourPageProps = {
   tour: Engine3TourViewModel;
@@ -27,14 +26,8 @@ const parsePriceValue = (priceFrom?: string): number | undefined => {
   if (!priceFrom) {
     return undefined;
   }
-
   const numeric = Number.parseFloat(priceFrom.replace(/[^\d.]/g, ""));
-  return Number.isFinite(numeric) && numeric > 0 ? numeric : undefined;
-};
-
-const formatUsdPrice = (value: number): string => {
-  const normalized = Number.isInteger(value) ? String(value) : value.toFixed(2);
-  return `USD ${normalized}`;
+  return Number.isFinite(numeric) ? numeric : undefined;
 };
 
 export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
@@ -84,10 +77,16 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
   const heroUrl =
-    (tour.bookingProvider === "viator"
-      ? tour.heroImageOverrideUrl || tour.content?.images?.[0]
-      : tour.primaryImageUrl || tour.heroImageOverrideUrl || tour.content?.images?.[0]) ??
-    undefined;
+    tour.bookingProvider === "viator"
+      ? coerceViatorHeroCandidate(
+          tour.heroImageOverrideUrl ||
+            tour.primaryImageUrl ||
+            tour.content?.images?.[0]
+        ) ?? TOUR_FALLBACK_HERO_IMAGE
+      : tour.primaryImageUrl ||
+        tour.heroImageOverrideUrl ||
+        tour.content?.images?.[0] ||
+        undefined;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
@@ -100,25 +99,8 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     city: tour.city,
   });
 
-  const viatorProductCode = extractViatorProductCode(safeBookingUrl ?? "");
-  const viatorFromPrice = viatorProductCode
-    ? peekViatorFromPriceCache(viatorProductCode, "USD")
-    : null;
-
-  const staticPriceValue = parsePriceValue(tour.priceFrom);
-  const runtimePriceValue =
-    viatorFromPrice && Number.isFinite(viatorFromPrice.price)
-      ? viatorFromPrice.price
-      : undefined;
-  const resolvedPriceFrom =
-    staticPriceValue !== undefined
-      ? tour.priceFrom
-      : runtimePriceValue && runtimePriceValue > 0
-        ? formatUsdPrice(runtimePriceValue)
-        : undefined;
-  if (typeof window === "undefined" && viatorProductCode) {
-    void getViatorFromPrice(viatorProductCode, "USD");
-  }
+  const parsedPrice = parsePriceValue(tour.priceFrom);
+  const resolvedPriceFrom = parsedPrice !== undefined && parsedPrice <= 0 ? undefined : tour.priceFrom;
 
   const structuredData = useMemo(
     () =>
@@ -130,10 +112,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             description:
               (isPosterChildPalmSprings ? pageDescription : undefined) ??
               tour.description,
-            priceFrom:
-              viatorFromPrice && Number.isFinite(viatorFromPrice.price)
-                ? formatUsdPrice(viatorFromPrice.price)
-                : tour.priceFrom,
+            priceFrom: resolvedPriceFrom,
           },
           seo: {
             canonicalUrl,
@@ -164,8 +143,8 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       canonicalUrl,
       isPosterChildPalmSprings,
       pageDescription,
+      resolvedPriceFrom,
       tour,
-      viatorFromPrice,
     ]
   );
 
@@ -199,6 +178,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             reviewCount={tour.reviewCount}
             meetingPointText={tour.meetingPointText}
           />
+          {tour.departureNote ? (
+            <p className="mt-2 text-sm text-white/90">
+              <span className="font-semibold">Departure:</span> {tour.departureNote}
+            </p>
+          ) : null}
           <nav aria-label="Breadcrumb" className="mt-4 text-xs text-white/85">
             <ol className="flex flex-wrap items-center gap-2">
               {breadcrumbItems.map((item, index) => (
@@ -313,6 +297,11 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
             <p className="mt-3 text-sm text-[#405040]">
               {tour.meetingPointDescription}
             </p>
+            {tour.departureNote ? (
+              <p className="mt-2 text-sm font-medium text-[#405040]">
+                Departure: {tour.departureNote}
+              </p>
+            ) : null}
           </>
         ) : null}
 

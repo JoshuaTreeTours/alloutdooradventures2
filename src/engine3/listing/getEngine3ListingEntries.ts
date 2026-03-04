@@ -2,8 +2,9 @@ import type { Tour } from "../../data/tours.types";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { viatorTours } from "../data/viatorTours";
 import { buildEngine3TourPath } from "../buildEngine3TourPath";
+import { getViatorHeroImageOverride } from "../overrides/viatorImageOverrides";
 import { resolveEngine3PrimaryImage } from "../utils/resolveEngine3PrimaryImage";
-import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
+import { pickViatorPrimaryImage } from "../utils/viatorImages";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
 
 type Engine3ListingEntry = {
@@ -60,13 +61,10 @@ export const getEngine3ListingEntries = (
       });
       const href = buildEngine3TourPath(tour);
       const contentImages = gallery;
-      const heroImageOverride = tour.viator.heroImageOverrideUrl;
+      const pickedImage = pickViatorPrimaryImage(productData);
+      const heroImageOverride = getViatorHeroImageOverride(productCode);
       const heroImage =
-        resolveEngine3ViatorHero({
-          bookingProvider: "viator",
-          heroImageOverrideUrl: heroImageOverride,
-          contentImages,
-        }) ?? "";
+        heroImageOverride ?? pickedImage.cardUrl ?? pickedImage.heroUrl ?? contentImages[0] ?? "";
 
       return {
         href,
@@ -90,7 +88,7 @@ export const getEngine3ListingEntries = (
             lng: productData?.longitude,
           },
           heroImage,
-          heroImageOverride,
+          heroImageOverride: heroImageOverride,
           content: {
             images: contentImages,
           },
@@ -127,11 +125,9 @@ export const getEngine3MissingHeroEntries = (): Engine3MissingHeroEntry[] =>
         ...(productData?.imageCandidates ?? []),
         productData?.supplierImage,
       ].filter((value): value is string => typeof value === "string" && value.trim().length > 0);
-      const hero = resolveEngine3ViatorHero({
-        bookingProvider: "viator",
-        heroImageOverrideUrl: tour.viator.heroImageOverrideUrl,
-        contentImages,
-      });
+      const pickedImage = pickViatorPrimaryImage(productData);
+      const heroOverride = getViatorHeroImageOverride(productCode);
+      const hero = heroOverride ?? pickedImage.heroUrl ?? contentImages[0];
 
       if (hero) {
         return null;

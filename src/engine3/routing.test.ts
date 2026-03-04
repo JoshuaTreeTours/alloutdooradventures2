@@ -25,6 +25,24 @@ describe("getEngine3TourBySlugs", () => {
     expect(tour?.bookingUrl).toContain("medium=link");
   });
 
+
+  it("resolves 6740P7 by product-code slug and preserves API hero + affiliate URL", () => {
+    const tour = getEngine3TourBySlugs(
+      "california",
+      "palm-springs",
+      "joshua-tree-national-park-scenic-tour-6740p7"
+    );
+
+    expect(tour?.id).toBe("6740P7");
+    expect(tour?.name).toBe("Joshua Tree National Park Scenic Tour");
+    expect(tour?.images.hero).toBe("https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg");
+    expect(tour?.seo.ogImage).toBe(tour?.images.hero);
+    expect(tour?.bookingUrl).toContain("/d648-6740P7");
+    expect(tour?.bookingUrl).toContain("pid=P00290915");
+    expect(tour?.bookingUrl).toContain("mcid=42383");
+    expect(tour?.bookingUrl).toContain("medium=link");
+  });
+
   it("ensures 2335P1 has non-empty hero and a secondary gallery fallback", () => {
     const tour = getEngine3TourBySlugs(
       "california",
@@ -34,6 +52,7 @@ describe("getEngine3TourBySlugs", () => {
 
     expect(tour?.id).toBe("2335P1");
     expect(tour?.images.hero).toBeTruthy();
+    expect(tour?.images.hero).not.toContain("/hero.jpg");
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
 
@@ -46,6 +65,7 @@ describe("getEngine3TourBySlugs", () => {
 
     expect(tour?.id).toBe("3351P15");
     expect(tour?.images.hero).toBeTruthy();
+    expect(tour?.images.hero).not.toContain("/hero.jpg");
     expect(tour?.images.gallery?.length).toBeGreaterThanOrEqual(1);
   });
 });

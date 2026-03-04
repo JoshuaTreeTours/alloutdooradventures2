@@ -20,6 +20,74 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
       "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
     meetingPointText: "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
   },
+  "6740P7": {
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-National-Park-Scenic-Tour/d648-6740P7",
+    productCode: "6740P7",
+    title: "Joshua Tree National Park Scenic Tour",
+    supplierImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1",
+    imageCandidates: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/da/caption.jpg?w=1200&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/d9/caption.jpg?w=1200&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/4e/7a/d8/caption.jpg?w=1200&h=800&s=1",
+    ],
+    priceFrom: "$179.00",
+    priceCurrency: "USD",
+    rating: 4.8,
+    reviewCount: 642,
+    operatorName: "Desert Adventures Red Jeep Tours",
+    overview:
+      "Travel from Palm Springs into Joshua Tree National Park on a guided scenic route focused on desert geology, native plant communities, and sweeping Coachella Valley viewpoints. The itinerary includes timed stops for short walks, photos, and interpretive commentary at designated overlooks and signature rock formations. Transportation, park entry logistics, and route pacing are managed by the guide so travelers can concentrate on the landscape. The tour is designed as a half-day outing with structured stops and returns to Palm Springs after park exploration.",
+    highlights: [
+      "Guided scenic drive through Joshua Tree National Park",
+      "Interpretive stops at Keys View and Cap Rock",
+      "Photo opportunities among Joshua trees and granite boulder fields",
+      "Round-trip transport from Palm Springs Art Museum",
+    ],
+    inclusions: [
+      "Professional guide",
+      "National park fees",
+      "Bottled water",
+      "Air-conditioned vehicle transportation",
+    ],
+    exclusions: ["Guide gratuities", "Personal purchases"],
+    meetingPointText: "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA 92262, USA",
+    meetingPointDescription:
+      "Palm Springs Art Museum, 101 N Museum Dr, Palm Springs, CA 92262, USA",
+    itinerary: [
+      {
+        title: "Palm Springs Art Museum",
+        description: "Check in and depart from downtown Palm Springs.",
+        duration: "15 minutes",
+        order: 1,
+      },
+      {
+        title: "Joshua Tree National Park",
+        description:
+          "Travel through park corridors with guided commentary on desert ecology and geology.",
+        duration: "2 hours",
+        order: 2,
+      },
+      {
+        title: "Keys View",
+        description:
+          "Stop at a panoramic overlook with views across the Coachella Valley.",
+        duration: "20 minutes",
+        order: 3,
+      },
+      {
+        title: "Cap Rock",
+        description:
+          "Short interpretive stop among granite formations and Joshua tree habitat.",
+        duration: "20 minutes",
+        order: 4,
+      },
+    ],
+    duration: "5 hours",
+    latitude: 33.8256,
+    longitude: -116.5453,
+  },
   "6740JTREE": {
     sourceUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",

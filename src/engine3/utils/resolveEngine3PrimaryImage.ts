@@ -1,75 +1,54 @@
-import { viatorTours } from "../data/viatorTours";
-import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
+import type { ViatorProductData } from "../types";
 import {
   collectEngine3ImageCandidates,
-  isRejectedCandidate,
   selectEngine3PrimaryImage,
 } from "./selectEngine3PrimaryImage";
-
-const cleanText = (value?: string | null): string | undefined => {
-  if (typeof value !== "string") {
-    return undefined;
-  }
-
-  const trimmed = value.trim();
-  return trimmed.length > 0 ? trimmed : undefined;
-};
-
-const getHeroImageOverride = (productCode?: string): string | undefined => {
-  if (!productCode) {
-    return undefined;
-  }
-
-  const entry = viatorTours.find(
-    tour => tour.viator.productCode.toUpperCase() === productCode.toUpperCase()
-  );
-  const override = cleanText(entry?.viator.heroImageOverrideUrl);
-
-  if (!override || isRejectedCandidate(override)) {
-    return undefined;
-  }
-
-  return override;
-};
+import { pickViatorPrimaryImage } from "./viatorImages";
 
 export const resolveEngine3PrimaryImage = (input: {
   productCode?: string;
   imageCandidates?: string[];
   fallbackImageUrl?: string;
 }) => {
-  const heroImageOverrideUrl = getHeroImageOverride(input.productCode);
+  const productStub: Partial<ViatorProductData> = {
+    productCode: input.productCode,
+    imageCandidates: input.imageCandidates,
+    supplierImage: input.fallbackImageUrl,
+  };
 
+  const picked = pickViatorPrimaryImage(productStub);
   const discoveredCandidates = collectEngine3ImageCandidates({
     viatorImageCandidates: input.imageCandidates,
   });
 
-  const discoveredFromViator = selectEngine3PrimaryImage({
-    viatorImageCandidates: input.imageCandidates,
-    fallbackImageUrl: input.fallbackImageUrl,
-  });
+  const discoveredFromViator =
+    picked.heroUrl ??
+    selectEngine3PrimaryImage({
+      viatorImageCandidates: input.imageCandidates,
+      fallbackImageUrl: input.fallbackImageUrl,
+    });
 
-  const heroImageUrl =
-    heroImageOverrideUrl ?? discoveredFromViator ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
+  if (!discoveredFromViator) {
+    console.warn(
+      `[engine3] Missing API image candidates for ${input.productCode ?? "unknown-product"}; no hero image will be rendered.`
+    );
+  }
 
   const gallery = Array.from(
     new Set([
-      ...discoveredCandidates,
       discoveredFromViator,
-      heroImageOverrideUrl,
+      picked.cardUrl,
+      ...discoveredCandidates,
       input.fallbackImageUrl,
     ])
   ).filter((value): value is string => typeof value === "string" && value.length > 0);
 
   const secondaryImageUrl =
-    gallery[1] && gallery[1] !== heroImageUrl
-      ? gallery[1]
-      : gallery.find(image => image !== heroImageUrl) ??
-        gallery[0] ??
-        DEFAULT_ENGINE3_HERO_IMAGE_URL;
+    gallery.find(image => image !== discoveredFromViator) ?? gallery[0];
 
   return {
-    primaryImageUrl: heroImageUrl,
-    heroImageOverrideUrl,
+    primaryImageUrl: discoveredFromViator,
+    heroImageOverrideUrl: undefined,
     discoveredFromViator,
     secondaryImageUrl,
     gallery,

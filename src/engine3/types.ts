@@ -55,6 +55,7 @@ export type Engine3TourViewModel = {
   rating?: number;
   reviewCount?: number;
   meetingPointText?: string;
+  departureNote?: string;
   highlights?: string[];
   inclusions?: string[];
   exclusions?: string[];
@@ -84,6 +85,7 @@ export type ViatorProductData = {
   reviewCount?: number;
   ratingValue?: number;
   meetingPointText?: string;
+  departureNote?: string;
   operatorName?: string;
   highlights?: string[];
   inclusions?: string[];

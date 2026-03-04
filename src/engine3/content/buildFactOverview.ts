@@ -7,6 +7,7 @@ type BuildFactOverviewInput = {
   inclusions?: string[];
   exclusions?: string[];
   meetingPoint?: string;
+  itineraryStopNames?: string[];
 };
 
 const cleanText = (value?: string | null): string | null => {
@@ -85,6 +86,7 @@ export const buildFactOverview = (input: BuildFactOverviewInput): string | null 
   const inclusions = dedupe(input.inclusions).slice(0, 4);
   const exclusions = dedupe(input.exclusions).slice(0, 3);
   const meetingPoint = cleanText(input.meetingPoint);
+  const itineraryStopNames = dedupe(input.itineraryStopNames).slice(0, 4);
 
   const location = [city, region].filter(Boolean).join(", ");
 
@@ -93,7 +95,7 @@ export const buildFactOverview = (input: BuildFactOverviewInput): string | null 
       `${title} is a guided desert experience${duration ? ` that runs about ${duration}` : ""}${location ? ` in the ${location} area` : ""}`
     ),
     sentence(
-      "The route is operated in an open-air vehicle format and follows desert terrain with planned roadside stops"
+      "The route follows a structured day plan with transport and interpretive stops managed by a professional guide"
     ),
   ];
 
@@ -101,8 +103,12 @@ export const buildFactOverview = (input: BuildFactOverviewInput): string | null 
     lines.push(sentence(`Route focus centers on ${asClause(highlights.slice(0, 3))}`));
   }
 
-  if (highlights.length > 3) {
-    lines.push(sentence(`Additional route moments cover ${asClause(highlights.slice(3))}`));
+  if (itineraryStopNames.length > 0) {
+    lines.push(
+      sentence(
+        `Named itinerary stops include ${asClause(itineraryStopNames)}, with time at each location based on operating conditions`
+      )
+    );
   }
 
   lines.push(
@@ -120,7 +126,11 @@ export const buildFactOverview = (input: BuildFactOverviewInput): string | null 
   }
 
   if (meetingPoint) {
-    lines.push(sentence(`Departures operate from ${meetingPoint.replace(/^departures\s+operate\s+from\s+/i, "")}`));
+    lines.push(
+      sentence(
+        `Departures operate from ${meetingPoint.replace(/^departures\s+operate\s+from\s+/i, "")}`
+      )
+    );
   }
 
   let overview = lines.join(" ").replace(/\s+/g, " ").trim();
@@ -133,7 +143,7 @@ export const buildFactOverview = (input: BuildFactOverviewInput): string | null 
       "The experience keeps attention on desert landforms, broad scenic views, and guide-led context throughout the outing"
     ),
     sentence(
-      "Inclusion and route details are reflected directly from the available tour facts without adding unstated itinerary claims"
+      "All details in this summary are grounded in the current normalized product highlights, itinerary, and inclusions"
     ),
   ];
 
