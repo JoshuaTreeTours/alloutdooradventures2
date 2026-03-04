@@ -9,10 +9,15 @@ type Engine4TourPageProps = {
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
 
+const isExternalBookingUrl = (url: string) => /^https?:\/\//i.test(url);
+
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
   const hasHighlights = tour.highlights.length > 0;
   const hasFaqs = tour.faqs.length > 0;
+  const bookingLinkProps = isExternalBookingUrl(tour.bookingUrl)
+    ? ({ target: "_blank", rel: "noopener" } as const)
+    : undefined;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -58,7 +63,11 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
                 <strong>Duration:</strong> {tour.duration}
               </p>
             </div>
-            <a href={tour.bookingUrl} className={`mt-6 ${BOOK_CTA_CLASSES}`}>
+            <a
+              href={tour.bookingUrl}
+              {...bookingLinkProps}
+              className={`mt-6 ${BOOK_CTA_CLASSES}`}
+            >
               Book This Tour
             </a>
           </div>
@@ -102,7 +111,11 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
         <div className="mt-10 text-center">
           <h2 className="text-2xl font-semibold">Ready to book?</h2>
           <p className="mt-2 text-[#405040]">Secure your spot in minutes.</p>
-          <a href={tour.bookingUrl} className={`mt-5 ${BOOK_CTA_CLASSES}`}>
+          <a
+            href={tour.bookingUrl}
+            {...bookingLinkProps}
+            className={`mt-5 ${BOOK_CTA_CLASSES}`}
+          >
             Book This Tour
           </a>
         </div>

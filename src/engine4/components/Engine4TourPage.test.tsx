@@ -69,6 +69,23 @@ describe("Engine4TourPage booking CTA", () => {
     expect(hrefMatches).toHaveLength(2);
     expect(html.split("Book This Tour").length - 1).toBe(2);
     expect(html).toContain("Ready to book?");
+    expect(html.match(/target="_blank"/g) ?? []).toHaveLength(2);
+    expect(html.match(/rel="noopener"/g) ?? []).toHaveLength(2);
+  });
+
+  it("does not force new-tab behavior for internal booking links", () => {
+    const html = renderToStaticMarkup(
+      <Engine4TourPage
+        tour={{
+          ...engine4Tour,
+          bookingUrl:
+            "/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5/book",
+        }}
+      />
+    );
+
+    expect(html).not.toContain('target="_blank"');
+    expect(html).not.toContain('rel="noopener"');
   });
 
   it("keeps non-Engine4 tour rendering unchanged", () => {
