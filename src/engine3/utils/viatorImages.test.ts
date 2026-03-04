@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 
+import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { viatorProductCacheByCode } from "../data/viatorProductCache";
 import { pickViatorPrimaryImage } from "./viatorImages";
 
@@ -13,14 +14,21 @@ describe("pickViatorPrimaryImage", () => {
     expect(picked.cardUrl).toMatch(/^https:\/\//);
   });
 
-  it("returns undefined urls when no valid API image is present", () => {
+  it("falls back to Engine3 Viator default image when API images are invalid", () => {
     const picked = pickViatorPrimaryImage({
       productCode: "TEST",
       imageCandidates: ["http://example.com/test.jpg", "not-a-url"],
       supplierImage: "",
     });
 
-    expect(picked.heroUrl).toBeUndefined();
-    expect(picked.cardUrl).toBeUndefined();
+    expect(picked.heroUrl).toBe(DEFAULT_ENGINE3_HERO_IMAGE_URL);
+    expect(picked.cardUrl).toBe(DEFAULT_ENGINE3_HERO_IMAGE_URL);
+  });
+
+  it("falls back to Engine3 Viator default image when product is missing", () => {
+    const picked = pickViatorPrimaryImage(undefined);
+
+    expect(picked.heroUrl).toBe(DEFAULT_ENGINE3_HERO_IMAGE_URL);
+    expect(picked.cardUrl).toBe(DEFAULT_ENGINE3_HERO_IMAGE_URL);
   });
 });
