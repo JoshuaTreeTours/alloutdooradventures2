@@ -20,34 +20,58 @@ export const viatorProductCacheByCode: Record<string, ViatorProductData> = {
       "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
     meetingPointText: "1590 S Palm Canyon Dr, Palm Springs, CA 92264, USA",
   },
-  "6740JTREE": {
+  "6740P7": {
     sourceUrl:
-      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Hummer-Adventure-from-Palm-Desert/d648-6740JTREE",
-    productCode: "6740JTREE",
-    title: "Joshua Tree Hummer Adventure from Palm Desert",
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    productCode: "6740P7",
+    title: "Joshua Tree Backroads Hummer H2 Tour",
     supplierImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/7a/caption.jpg?w=1200&h=800&s=1",
     imageCandidates: [
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/globalNav/fallback-image.webp",
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/7a/caption.jpg?w=1200&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/87/caption.jpg?w=1200&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/4f/17/91/caption.jpg?w=1200&h=800&s=1",
     ],
     priceFrom: "USD 199",
     priceCurrency: "USD",
     rating: 4.8,
     reviewCount: 642,
     operatorName: "Desert Adventures Red Jeep Tours",
+    overview:
+      "This guided Joshua Tree outing uses an open-air Hummer H2 to access backroad terrain across the national park landscape from the Palm Springs area. Travelers follow a structured route with a professional guide who explains desert geology, native plant zones, and regional history while moving between key viewpoints. Depending on conditions, itinerary stops can include Cap Rock Trail, Barker Dam Trail, and Keys View, each selected for distinctive terrain and broad park perspectives. The experience is designed as a small-group format with planned timing, water support, and interpretation throughout the drive and stop sequence. This format works well for visitors who want a vehicle-based park introduction with context on landmarks, habitat, and route logistics in one half-day program.",
     highlights: [
-      "Travel in an open-air Hummer through Joshua Tree National Park terrain",
-      "Stop at geologic landmarks and panoramic viewpoints",
-      "Guide commentary on desert ecology and regional history",
+      "Travel in an open-air Hummer H2 through Joshua Tree backroad terrain",
+      "Guide-led interpretation focused on geology, ecology, and regional history",
+      "Itinerary can include Cap Rock Trail, Barker Dam Trail, and Keys View when operating conditions allow",
+      "Small-group format with planned stops and desert viewpoint access",
     ],
     included: ["Professional guide", "Bottled water"],
+    itinerary: [
+      {
+        title: "Cap Rock Trail",
+        description:
+          "Short interpretive stop in a rock formation area used to explain desert geology and vegetation patterns.",
+        order: 1,
+      },
+      {
+        title: "Barker Dam Trail",
+        description:
+          "Park stop with guide context on historical water management, habitat, and trail conditions.",
+        order: 2,
+      },
+      {
+        title: "Keys View",
+        description:
+          "Panoramic overlook used for orientation to the Coachella Valley and surrounding mountain ranges.",
+        order: 3,
+      },
+    ],
     meetingPointDescription: "Departures operate from Palm Desert.",
     departureLocation: "Palm Desert",
     cancellationWindowHours: 48,
-    vehicleType: "open-air Hummer",
+    vehicleType: "open-air Hummer H2",
     signatureHighlight:
-      "The route features Joshua Tree desert scenery with geologic stops and panoramic viewpoints.",
+      "The route combines Joshua Tree backroads access with named park viewpoint stops and guide interpretation.",
     duration: "3 hours",
     latitude: 33.7226,
     longitude: -116.3745,

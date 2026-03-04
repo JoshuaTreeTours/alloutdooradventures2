@@ -74,6 +74,7 @@ export const mapViatorToEngine3ViewModel = (
   const attributedBookingUrl = buildViatorAffiliateUrl({
     baseUrl: canonicalProductUrl,
     fallbackUrl: bookingUrl,
+    productCode: productData?.productCode ?? tour.id,
   });
 
   const title = cleanText(productData?.title) ?? tour.name;
@@ -130,7 +131,11 @@ export const mapViatorToEngine3ViewModel = (
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { gallery, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+  const {
+    primaryImageUrl: viatorPrimaryImageUrl,
+    gallery,
+    heroImageOverrideUrl,
+  } = resolveEngine3PrimaryImage({
     productCode: productData?.productCode ?? tour.id,
     imageCandidates: productData?.imageCandidates,
     fallbackImageUrl:
@@ -140,8 +145,11 @@ export const mapViatorToEngine3ViewModel = (
   const contentImages = gallery;
   const primaryImageUrl = resolveEngine3ViatorHero({
     bookingProvider: "viator",
+    viatorPrimaryImageUrl,
     heroImageOverrideUrl,
     contentImages,
+    fallbackImageUrl: cleanText(tour.images.hero),
+    productCode: productData?.productCode ?? tour.id,
   }) ?? undefined;
 
   return {
