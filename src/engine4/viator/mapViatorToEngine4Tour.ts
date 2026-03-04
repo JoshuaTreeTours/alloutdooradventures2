@@ -3,7 +3,10 @@ import type {
   Engine4TourViewModel,
   Engine4ViatorTourRecord,
 } from "../types";
-import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
+import {
+  ENGINE4_VIATOR_PLACEHOLDER_HERO,
+  resolveEngine4ViatorHero,
+} from "./resolveEngine4ViatorHero";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -15,7 +18,7 @@ const cleanText = (value?: string | null) => {
 
 const buildOverview = (apiTour?: Engine4ViatorApiTour) =>
   cleanText(apiTour?.overview) ??
-  "This guided Aspen East End light hike lasts about 2 hours and departs at 8:15 AM from Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611. The experience is designed as a guided hike format in Aspen’s East End and is listed from $65.00 per person. Current listing details show a 4.7 rating from 3 reviews. Free cancellation is available up to 24 hours in advance.";
+  "Discover Aspen on a guided walking experience featuring local history, culture, and scenic routes.";
 
 const buildFallbackFaqs = () => [
   {
@@ -42,6 +45,15 @@ export const mapViatorToEngine4Tour = (input: {
     apiTour,
   });
 
+  if (
+    heroImage !== ENGINE4_VIATOR_PLACEHOLDER_HERO &&
+    !heroImage.includes("tacdn")
+  ) {
+    throw new Error(
+      `Engine4 Viator hero must be a tacdn image for ${record.viator.productCode}`
+    );
+  }
+
   const highlights =
     apiTour?.highlights && apiTour.highlights.length > 0
       ? apiTour.highlights
@@ -56,7 +68,7 @@ export const mapViatorToEngine4Tour = (input: {
   return {
     tourId: `engine4-${record.viator.productCode}`,
     productCode: record.viator.productCode,
-    title: cleanText(apiTour?.title) ?? "Aspen East End Light Hike",
+    title: cleanText(apiTour?.title) ?? "Aspen Walking Tour",
     canonicalPath: `/destinations/${record.destination.state}/${record.destination.city}/tours/${record.slug}-${record.viator.productCode.toLowerCase()}`,
     bookingUrl: cleanText(apiTour?.sourceUrl) ?? record.viator.url,
     city: "Aspen",
@@ -66,18 +78,18 @@ export const mapViatorToEngine4Tour = (input: {
     galleryImages: Array.from(
       new Set([heroImage, ...(apiTour?.galleryImages ?? [])].filter(Boolean))
     ),
-    fromPrice: cleanText(apiTour?.fromPrice) ?? "$65.00",
-    rating: apiTour?.rating ?? 4.7,
-    reviewCount: apiTour?.reviewCount ?? 3,
-    duration: cleanText(apiTour?.duration) ?? "2 hours",
-    startTime: cleanText(apiTour?.startTime) ?? "8:15 AM",
-    meetingPoint:
-      cleanText(apiTour?.meetingPoint) ??
-      "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611",
-    meetingPointShort: "Wheeler Opera House",
-    cancellationPolicy:
-      cleanText(apiTour?.cancellationPolicy) ??
-      "Free cancellation up to 24 hours in advance.",
+    fromPrice: cleanText(apiTour?.fromPrice),
+    rating: apiTour?.rating,
+    reviewCount: apiTour?.reviewCount,
+    duration: cleanText(apiTour?.duration),
+    startTime: cleanText(apiTour?.startTime),
+    meetingPoint: cleanText(apiTour?.meetingPoint),
+    meetingPointShort: cleanText(apiTour?.meetingPoint)?.includes(
+      "pedestrian mall"
+    )
+      ? "Wheeler Opera House pedestrian mall"
+      : "Wheeler Opera House",
+    cancellationPolicy: cleanText(apiTour?.cancellationPolicy),
     inclusions: apiTour?.inclusions,
     overview: buildOverview(apiTour),
     highlights,

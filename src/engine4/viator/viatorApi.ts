@@ -35,6 +35,29 @@ const asImage = (value: unknown): string | undefined => {
   }
 };
 
+const extractSourceHeroImage = (html: string): string | undefined => {
+  const ogMatch = html.match(
+    /<meta[^>]+property=["']og:image["'][^>]+content=["'](https:\/\/[^"']+)["'][^>]*>/i
+  );
+  const ogImage = cleanText(ogMatch?.[1]);
+  if (ogImage && /(?:dynamic-media|media)\.tacdn\.com/i.test(ogImage)) {
+    return ogImage;
+  }
+
+  const imgMatch = html.match(
+    /<img[^>]+src=["'](https:\/\/[^"']+(?:caption\.jpg|photo-o\/[^"']+))["'][^>]*>/i
+  );
+  const imgSrc = cleanText(imgMatch?.[1]);
+  if (imgSrc && /(?:dynamic-media|media)\.tacdn\.com/i.test(imgSrc)) {
+    return imgSrc;
+  }
+
+  const genericCaption = html.match(
+    /https:\/\/(?:dynamic-media|media)\.tacdn\.com\/[^"'\s>]*caption\.jpg[^"'\s<]*/i
+  );
+  return cleanText(genericCaption?.[0]);
+};
+
 export const getEngine4ViatorTourData = async (
   productCode: string
 ): Promise<Engine4ViatorApiTour | undefined> => {
@@ -81,14 +104,38 @@ export const getEngine4ViatorTourData = async (
       )
       .filter((image): image is string => Boolean(image));
 
+    const sourceUrl =
+      cleanText(product.productUrl) ??
+      cleanText(product.seoUrl) ??
+      engine4ViatorApiFallbackByProductCode[normalizedCode]?.sourceUrl ??
+      "";
+
+    let sourceDerivedImageUrl =
+      engine4ViatorApiFallbackByProductCode[normalizedCode]
+        ?.sourceDerivedImageUrl;
+    if (sourceUrl) {
+      try {
+        const htmlResponse = await fetch(sourceUrl, {
+          method: "GET",
+          headers: {
+            "User-Agent":
+              "Mozilla/5.0 (compatible; AOA-Engine4Bot/1.0; +https://www.alloutdooradventures.com)",
+          },
+        });
+        if (htmlResponse.ok) {
+          const sourceHtml = await htmlResponse.text();
+          sourceDerivedImageUrl =
+            extractSourceHeroImage(sourceHtml) ?? sourceDerivedImageUrl;
+        }
+      } catch {
+        // Keep fallback source-derived image if source HTML fetch fails.
+      }
+    }
+
     return {
       productCode: normalizedCode,
       title: cleanText(product.title) ?? cleanText(product.productTitle) ?? "",
-      sourceUrl:
-        cleanText(product.productUrl) ??
-        cleanText(product.seoUrl) ??
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.sourceUrl ??
-        "",
+      sourceUrl,
       duration:
         cleanText(product.duration) ??
         cleanText((product as Record<string, unknown>).durationText),
@@ -111,9 +158,7 @@ export const getEngine4ViatorTourData = async (
           : undefined,
       primaryImageUrl,
       galleryImages,
-      sourceDerivedImageUrl:
-        engine4ViatorApiFallbackByProductCode[normalizedCode]
-          ?.sourceDerivedImageUrl,
+      sourceDerivedImageUrl,
       meetingPoint:
         cleanText((product as Record<string, unknown>).meetingPoint) ??
         engine4ViatorApiFallbackByProductCode[normalizedCode]?.meetingPoint,
