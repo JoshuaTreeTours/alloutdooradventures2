@@ -8,9 +8,44 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "BreadcrumbList",
+        "@id": `${canonicalUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Destinations",
+            item: buildCanonicalUrl("/destinations"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: tour.state,
+            item: buildCanonicalUrl(
+              `/destinations/${tour.state.toLowerCase()}`
+            ),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: tour.city,
+            item: buildCanonicalUrl(
+              `/destinations/${tour.state.toLowerCase()}/${tour.city.toLowerCase()}`
+            ),
+          },
+          {
+            "@type": "ListItem",
+            position: 4,
+            name: tour.title,
+            item: canonicalUrl,
+          },
+        ],
+      },
+      {
         "@type": "TouristTrip",
         "@id": `${canonicalUrl}#trip`,
         name: tour.title,
+        image: tour.heroImage,
         description: tour.overview,
         touristType: "Adventure travelers",
         itinerary: {
@@ -26,7 +61,7 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         "@type": "Product",
         "@id": `${canonicalUrl}#product`,
         name: tour.title,
-        image: [tour.heroImage],
+        image: tour.heroImage,
         description: tour.overview,
         brand: {
           "@type": "Brand",

@@ -11,6 +11,13 @@ const BOOK_CTA_CLASSES =
 
 const isExternalBookingUrl = (url: string) => /^https?:\/\//i.test(url);
 
+const formatRatingStars = (rating?: number) => {
+  if (typeof rating !== "number") {
+    return "N/A";
+  }
+  return "★★★★★";
+};
+
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
   const hasHighlights = tour.highlights.length > 0;
@@ -47,7 +54,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
                 <strong>From:</strong> {tour.fromPrice} per person
               </p>
               <p>
-                <strong>Rating:</strong>{" "}
+                <strong>Rating:</strong> {formatRatingStars(tour.rating)}{" "}
                 {typeof tour.rating === "number"
                   ? tour.rating.toFixed(1)
                   : "N/A"}{" "}
@@ -55,9 +62,6 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               </p>
               <p>
                 <strong>Meeting point:</strong> {tour.meetingPointShort}
-              </p>
-              <p>
-                <strong>Start time:</strong> {tour.startTime}
               </p>
               <p>
                 <strong>Duration:</strong> {tour.duration}
@@ -109,7 +113,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
         ) : null}
 
         <div className="mt-10 text-center">
-          <h2 className="text-2xl font-semibold">Ready to book?</h2>
+          <h2 className="text-2xl font-semibold">Ready to Book?</h2>
           <p className="mt-2 text-[#405040]">Secure your spot in minutes.</p>
           <a
             href={tour.bookingUrl}

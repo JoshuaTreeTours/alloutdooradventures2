@@ -5,7 +5,6 @@ export type Engine4ViatorTourRecord = {
     productCode: string;
     url: string;
     heroImageOverrideUrl?: string;
-    sourceHeroImageUrl?: string;
   };
   slug: string;
   destination: {

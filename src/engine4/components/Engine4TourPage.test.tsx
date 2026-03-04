@@ -7,35 +7,39 @@ import type { Engine4TourViewModel } from "../types";
 import Engine4TourPage from "./Engine4TourPage";
 
 const engine4Tour: Engine4TourViewModel = {
-  tourId: "engine4-74828P5",
-  productCode: "74828P5",
-  title: "Aspen East End Light Hike",
+  tourId: "engine4-74828P4",
+  productCode: "74828P4",
+  title: "Aspen’s Off the Beaten Path Tour",
   canonicalPath:
-    "/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5",
+    "/destinations/colorado/aspen/tours/aspens-off-the-beaten-path-tour-74828p4",
   bookingUrl:
-    "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5?pid=P00290915&mcid=42383&medium=link",
+    "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4",
   city: "Aspen",
   state: "Colorado",
   country: "United States",
   heroImage:
-    "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
   galleryImages: [
-    "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
   ],
-  fromPrice: "$65.00",
-  rating: 4.7,
-  reviewCount: 3,
-  duration: "2 hours",
-  startTime: "8:15 AM",
-  meetingPoint: "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611",
-  meetingPointShort: "Wheeler Opera House",
+  fromPrice: "$45",
+  rating: 5.0,
+  reviewCount: 23,
+  duration: "1h 30m",
+  meetingPoint:
+    "Across from Wheeler Opera House on the downtown brick pedestrian mall",
+  meetingPointShort: "Wheeler Opera House pedestrian mall",
   cancellationPolicy: "Free cancellation up to 24 hours in advance.",
   overview: "Sample overview",
-  highlights: ["Guided hike", "2-hour duration"],
+  highlights: [
+    "Guided walking tour through Aspen’s historic West End",
+    "Approximate duration of 1 hour 30 minutes",
+  ],
   faqs: [
     {
-      question: "Where do we meet?",
-      answer: "Wheeler Opera House",
+      question: "Where does the tour start?",
+      answer:
+        "Meet near the Wheeler Opera House on Aspen’s downtown pedestrian mall.",
     },
   ],
 };
@@ -64,11 +68,11 @@ const engine3Tour: Engine3TourViewModel = {
 describe("Engine4TourPage booking CTA", () => {
   it("renders two booking CTA links for Engine4 Viator tours", () => {
     const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
-    const hrefMatches = html.match(/href="[^"]*74828P5[^"]*"/g) ?? [];
+    const hrefMatches = html.match(/href="[^"]*74828P4[^"]*"/g) ?? [];
 
     expect(hrefMatches).toHaveLength(2);
     expect(html.split("Book This Tour").length - 1).toBe(2);
-    expect(html).toContain("Ready to book?");
+    expect(html).toContain("Ready to Book?");
     expect(html.match(/target="_blank"/g) ?? []).toHaveLength(2);
     expect(html.match(/rel="noopener"/g) ?? []).toHaveLength(2);
   });
@@ -79,7 +83,7 @@ describe("Engine4TourPage booking CTA", () => {
         tour={{
           ...engine4Tour,
           bookingUrl:
-            "/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5/book",
+            "/destinations/colorado/aspen/tours/aspens-off-the-beaten-path-tour-74828p4/book",
         }}
       />
     );
@@ -91,6 +95,6 @@ describe("Engine4TourPage booking CTA", () => {
   it("keeps non-Engine4 tour rendering unchanged", () => {
     const html = renderToStaticMarkup(<Engine3TourPage tour={engine3Tour} />);
 
-    expect(html).not.toContain("Ready to book?");
+    expect(html).not.toContain("Ready to Book?");
   });
 });

@@ -1,41 +1,56 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
 
+export const ENGINE4_VIATOR_PLACEHOLDER_HERO = "/images/tour-placeholder.jpg";
+
 const isTrackerPixel = (url: string) =>
   /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
     url
   );
 
-const isBrokenHeroCandidate = (value?: string): boolean => {
+const isTacdnCaptionUrl = (url: string): boolean => {
+  try {
+    const parsed = new URL(url.trim());
+    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
+      return false;
+    }
+
+    const host = parsed.hostname.toLowerCase();
+    const path = parsed.pathname.toLowerCase();
+    const isTacdnHost =
+      host === "dynamic-media.tacdn.com" || host === "media.tacdn.com";
+
+    return (
+      isTacdnHost &&
+      path.includes("/caption.jpg") &&
+      (path.includes("/photo-o/") || path.includes("/media/photo-o/"))
+    );
+  } catch {
+    return false;
+  }
+};
+
+const isValidHeroCandidate = (value?: string): boolean => {
   if (!value) {
-    return true;
+    return false;
   }
 
   const trimmed = value.trim();
-  if (!trimmed) {
-    return true;
-  }
-
-  if (trimmed.startsWith("data:text/html")) {
-    return true;
+  if (!trimmed || trimmed.startsWith("data:text/html")) {
+    return false;
   }
 
   try {
     const parsed = new URL(trimmed);
     if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
-      return true;
+      return false;
     }
-    return isTrackerPixel(trimmed);
+
+    return !isTrackerPixel(trimmed);
   } catch {
-    return true;
+    return false;
   }
 };
-
-const toInlinePlaceholder = () =>
-  "data:image/svg+xml;utf8," +
-  encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><rect width='1200' height='675' fill='#e7eadf'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='42' fill='#2f4a2f'>Tour image unavailable</text></svg>`
-  );
 
 export const resolveEngine4ViatorHero = (input: {
   productCode: string;
@@ -46,17 +61,20 @@ export const resolveEngine4ViatorHero = (input: {
     tour => tour.viator.productCode.toUpperCase() === normalizedCode
   );
 
+  const pageSourceHero = input.apiTour?.sourceDerivedImageUrl;
+  const sourceHeroCandidate = isTacdnCaptionUrl(pageSourceHero ?? "")
+    ? pageSourceHero
+    : undefined;
+
   const candidates = [
     tourRecord?.viator.heroImageOverrideUrl,
+    sourceHeroCandidate,
     input.apiTour?.primaryImageUrl,
     input.apiTour?.galleryImages?.[0],
-    input.apiTour?.sourceDerivedImageUrl,
-    tourRecord?.viator.sourceHeroImageUrl,
   ];
 
-  const heroImage =
-    candidates.find(candidate => !isBrokenHeroCandidate(candidate)) ??
-    toInlinePlaceholder();
-
-  return heroImage;
+  return (
+    candidates.find(candidate => isValidHeroCandidate(candidate)) ??
+    ENGINE4_VIATOR_PLACEHOLDER_HERO
+  );
 };
