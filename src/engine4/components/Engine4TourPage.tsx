@@ -181,9 +181,22 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
           </>
         ) : null}
 
+        <div className="mt-10 text-center">
+          <h2 className="text-2xl font-semibold">Ready to book?</h2>
+          <p className="mt-2 text-[#405040]">Secure your spot in minutes.</p>
+          <a
+            href={tour.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-5 ${BOOK_CTA_CLASSES}`}
+          >
+            Book This Tour
+          </a>
+        </div>
+
         {moreTours.length ? (
           <>
-            <h2 className="mt-8 text-2xl font-semibold">
+            <h2 className="mt-12 text-2xl font-semibold">
               More tours in {tour.destination.city}
             </h2>
             <div className="mt-4 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -197,19 +210,6 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
             </div>
           </>
         ) : null}
-
-        <div className="mt-10 text-center">
-          <h2 className="text-2xl font-semibold">Ready to book?</h2>
-          <p className="mt-2 text-[#405040]">Secure your spot in minutes.</p>
-          <a
-            href={tour.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`mt-5 ${BOOK_CTA_CLASSES}`}
-          >
-            Book This Tour
-          </a>
-        </div>
       </section>
     </main>
   );

@@ -146,6 +146,12 @@ describe("Engine4TourPage booking CTA", () => {
 
     expect(html).toContain("More tours in Aspen");
     expect(html.match(/View Tour/g)?.length ?? 0).toBeGreaterThanOrEqual(1);
+
+    const ctaIndex = html.indexOf("Ready to book?");
+    const moreToursIndex = html.indexOf("More tours in Aspen");
+    expect(ctaIndex).toBeGreaterThanOrEqual(0);
+    expect(moreToursIndex).toBeGreaterThanOrEqual(0);
+    expect(ctaIndex).toBeLessThan(moreToursIndex);
   });
 
   it("uses the same hero image for page hero and JSON-LD graph", () => {
