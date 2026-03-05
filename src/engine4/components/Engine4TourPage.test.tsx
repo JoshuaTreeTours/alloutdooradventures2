@@ -80,6 +80,44 @@ describe("Engine4TourPage booking CTA", () => {
     expect(html).toContain("Ready to book?");
   });
 
+
+  it("does not render empty fact placeholders and renders fallback price when present", () => {
+    const withoutFacts: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        priceFrom: undefined,
+        ratingValue: undefined,
+        reviewCount: undefined,
+        duration: undefined,
+        startTime: undefined,
+        meetingPointShort: undefined,
+      },
+    };
+
+    const emptyFactsHtml = renderToStaticMarkup(
+      <Engine4TourPage tour={withoutFacts} />
+    );
+    expect(emptyFactsHtml).not.toContain("From:</strong>  per person");
+    expect(emptyFactsHtml).not.toContain("Rating:");
+    expect(emptyFactsHtml).not.toContain("Meeting point:");
+    expect(emptyFactsHtml).not.toContain("Start time:");
+    expect(emptyFactsHtml).not.toContain("Duration:");
+
+    const withFallbackPrice: Engine4TourViewModel = {
+      ...withoutFacts,
+      facts: {
+        ...withoutFacts.facts,
+        priceFrom: "$199.00",
+      },
+    };
+
+    const withPriceHtml = renderToStaticMarkup(
+      <Engine4TourPage tour={withFallbackPrice} />
+    );
+    expect(withPriceHtml).toContain("From:</strong> $199.00 per person");
+  });
+
   it("keeps non-Engine4 tour rendering unchanged", () => {
     const html = renderToStaticMarkup(<Engine3TourPage tour={engine3Tour} />);
 

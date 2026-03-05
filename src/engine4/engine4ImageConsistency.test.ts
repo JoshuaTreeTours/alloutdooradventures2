@@ -44,7 +44,7 @@ describe("Engine4 Viator image consistency", () => {
     const routeTour = getEngine4TourBySlugs(
       "california",
       "santa-barbara",
-      "santa-barbara-vineyard-to-table-taste-tour-by-bike-63657p1"
+      "santa-barbara-vineyard-to-table-taste-tour-by-ebike-63657p1"
     );
 
     const schema = buildEngine4ViatorSchemaGraph(pageTour);

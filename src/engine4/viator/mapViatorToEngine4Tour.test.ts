@@ -32,4 +32,31 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.content.overview.length).toBeGreaterThan(120);
     expect(vm.content.highlights.length).toBeGreaterThan(2);
   });
+
+  it("merges fallback facts when API payload is partial", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "63657P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "63657P1",
+        title: "Santa Barbara Vineyard to Table Taste Tour by Bike",
+        sourceUrl:
+          "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+      },
+    });
+
+    expect(vm.facts.priceFrom).toBe("$199.00");
+    expect(vm.facts.meetingPointFull).toBe(
+      "3850 State St, Santa Barbara, CA 93105, USA"
+    );
+    expect(vm.facts.cancellationPolicy).toBe(
+      "Free cancellation up to 24 hours in advance."
+    );
+    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+  });
+
 });
