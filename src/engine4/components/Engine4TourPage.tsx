@@ -16,7 +16,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasHighlights = tour.highlights.length > 0;
   const hasFaqs = tour.faqs.length > 0;
   const bookingLinkProps = isExternalBookingUrl(tour.bookingUrl)
-    ? ({ target: "_blank", rel: "noopener" } as const)
+    ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : undefined;
 
   return (
