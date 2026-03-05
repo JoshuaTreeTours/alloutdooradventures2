@@ -11,6 +11,8 @@ import { mapViatorToEngine4Tour } from "./viator/mapViatorToEngine4Tour";
 
 const PALM_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+const COLORADO_SPRINGS_HERO =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -28,19 +30,20 @@ describe("Engine4 Viator image consistency", () => {
     expect(p5.heroImage).not.toBe(PALM_SPRINGS_HERO);
   });
 
-  it("uses the same hero for page, card, og:image, and schema image", () => {
+  it("uses the Colorado Springs hero consistently for page, card, og:image, and schema image", () => {
     const pageTour = mapViatorToEngine4Tour({
-      record: engine4ViatorTours.find(tour => tour.productCode === "74828P3")!,
-      apiTour: engine4ViatorApiFallbackByProductCode["74828P3"],
+      record: engine4ViatorTours.find(tour => tour.productCode === "41410P10")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["41410P10"],
     });
 
-    const listingTour = getEngine4ListingEntries("colorado", "aspen").find(
-      entry => entry.tour.productCode === "74828P3"
-    )?.tour;
+    const listingTour = getEngine4ListingEntries(
+      "colorado",
+      "colorado-springs"
+    ).find(entry => entry.tour.productCode === "41410P10")?.tour;
     const routeTour = getEngine4TourBySlugs(
       "colorado",
-      "aspen",
-      "glimpse-of-aspen-tour-74828p3"
+      "colorado-springs",
+      "small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10"
     );
 
     const schema = buildEngine4ViatorSchemaGraph(pageTour);
@@ -48,8 +51,15 @@ describe("Engine4 Viator image consistency", () => {
       schema["@graph"] as Array<Record<string, unknown>>
     ).find(node => node["@type"] === "Product") as Record<string, unknown>;
 
+    expect(pageTour.heroImage).toBe(COLORADO_SPRINGS_HERO);
+    expect(pageTour.heroImage).toMatch(
+      /^https:\/\/dynamic-media\.tacdn\.com\/media\/photo-o\/2f\/0c\/fe\/02\/caption\.jpg/
+    );
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
     expect(productNode.image).toBe(pageTour.heroImage);
+
+    expect(pageTour.heroImage).not.toContain("Tour image unavailable");
+    expect(pageTour.heroImage?.startsWith("data:image/svg+xml")).toBe(false);
   });
 });
