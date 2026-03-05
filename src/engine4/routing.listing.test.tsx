@@ -5,7 +5,9 @@ import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
 import { getEngine4TourBySlugs } from "./routing";
 
-(globalThis as { location?: { pathname: string } }).location = { pathname: "/" };
+(globalThis as { location?: { pathname: string } }).location = {
+  pathname: "/",
+};
 
 describe("Engine4 Aspen routing/listing", () => {
   it("renders Engine4 cards with the mapped hero image URL", () => {
@@ -20,6 +22,34 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(html).toContain(target!.tour.heroImage!);
     expect(html).not.toContain("default-tour.jpg");
+  });
+
+  it("uses overview snippet for zipline card subtext instead of stop labels", () => {
+    const entries = getEngine4ListingEntries("california", "santa-barbara");
+    const target = entries.find(entry => entry.tour.productCode === "421920P2");
+
+    const html = renderToStaticMarkup(
+      <TourCard tour={target!.tour} href={target!.href} />
+    );
+
+    expect(html).toContain(
+      "The Epic Zipline Tour over the Santa Ynez Valley is a guided aerial adventure"
+    );
+    expect(html).not.toContain("Stop:");
+  });
+
+  it("keeps pikes peak card blurb readable", () => {
+    const entries = getEngine4ListingEntries("colorado", "colorado-springs");
+    const target = entries.find(entry => entry.tour.productCode === "41410P10");
+
+    const html = renderToStaticMarkup(
+      <TourCard tour={target!.tour} href={target!.href} />
+    );
+
+    expect(html).toContain(
+      "This small-group day trip heads from Denver into the Front Range"
+    );
+    expect(html).not.toContain("Stop:");
   });
 
   it("builds the 74828P4 route and exposes it in Aspen listing", () => {
@@ -57,5 +87,4 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("74828P3");
   });
-
 });

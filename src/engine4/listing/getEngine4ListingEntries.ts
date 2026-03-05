@@ -62,6 +62,10 @@ export const getEngine4ListingEntries = (
           startingPrice:
             Number(vm.facts.priceFrom?.replace(/[^0-9.]/g, "")) || undefined,
           currency: "USD",
+          content: {
+            overview: vm.content.overview,
+            highlights: vm.content.highlights,
+          },
         },
       } satisfies Engine4ListingEntry;
     });

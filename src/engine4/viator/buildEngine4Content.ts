@@ -46,6 +46,7 @@ export const buildOverview = (input: {
     .join(", ");
 
   const candidates = dedupe([
+    cleanText(apiTour?.overview),
     cleanText(apiTour?.descriptionLong),
     firstParagraph(apiTour?.whatToExpect),
     firstParagraph(itinerary.map(step => step.description).find(Boolean)),

@@ -12,13 +12,62 @@ type TourCardProps = {
 };
 
 const CARD_BLURB_MAX_CHARS = 150;
+const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
+const NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX =
+  /(check-?in|safety briefing|meet(ing)? point|pickup|drop-?off)/i;
 
 type TourCardBlurbSource = {
   summary?: string;
   excerpt?: string;
+  content?: {
+    overview?: string;
+    highlights?: string[];
+  };
 };
 
+function toSnippet(text: string, maxChars: number): string {
+  const normalizedText = text.trim().replace(/\s+/g, " ");
+  if (!normalizedText) {
+    return "";
+  }
+
+  const firstSentence =
+    normalizedText.match(/^.*?[.!?](?=\s|$)/)?.[0] ?? normalizedText;
+  if (firstSentence.length <= maxChars) {
+    return firstSentence;
+  }
+
+  const clipped = firstSentence.slice(0, maxChars);
+  const lastWordBoundary = clipped.lastIndexOf(" ");
+  const snippet =
+    lastWordBoundary > maxChars * 0.6
+      ? clipped.slice(0, lastWordBoundary)
+      : clipped;
+
+  return `${snippet.trim()}…`;
+}
+
+function pickNonTrivialHighlight(highlights?: string[]): string {
+  return (
+    highlights?.find(highlight => {
+      const normalizedHighlight = highlight?.trim();
+      return (
+        normalizedHighlight &&
+        !NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX.test(normalizedHighlight)
+      );
+    }) ?? ""
+  );
+}
+
 function getCardBlurb(tour: Tour): string {
+  if (tour.engine === "engine4") {
+    const content = (tour as TourCardBlurbSource).content;
+    const overview = content?.overview?.trim() ?? "";
+    return overview
+      ? toSnippet(overview, ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS)
+      : pickNonTrivialHighlight(content?.highlights);
+  }
+
   const shortSummaryCandidate = [
     (tour as TourCardBlurbSource).summary,
     (tour as TourCardBlurbSource).excerpt,
@@ -29,7 +78,9 @@ function getCardBlurb(tour: Tour): string {
     return shortSummaryCandidate.trim().replace(/\s+/g, " ");
   }
 
-  const normalizedDescription = tour.longDescription?.trim().replace(/\s+/g, " ");
+  const normalizedDescription = tour.longDescription
+    ?.trim()
+    .replace(/\s+/g, " ");
   if (!normalizedDescription) {
     return "";
   }
