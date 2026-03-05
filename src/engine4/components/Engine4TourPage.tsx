@@ -17,13 +17,14 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const itinerary = tour.content.itinerary ?? [];
   const hasHighlights = highlights.length > 0;
   const hasFaqs = faqs.length > 0;
-  const hasPrice = Boolean(tour.facts.priceFrom);
+  const hasText = (value?: string) => Boolean(value?.trim());
+  const hasPrice = hasText(tour.facts.priceFrom);
   const hasRating =
     typeof tour.facts.ratingValue === "number" &&
     typeof tour.facts.reviewCount === "number";
-  const hasMeetingPoint = Boolean(tour.facts.meetingPointShort);
-  const hasStartTime = Boolean(tour.facts.startTime);
-  const hasDuration = Boolean(tour.facts.duration);
+  const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
+  const hasStartTime = hasText(tour.facts.startTime);
+  const hasDuration = hasText(tour.facts.duration);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
