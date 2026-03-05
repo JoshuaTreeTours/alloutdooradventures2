@@ -94,35 +94,6 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Bring water for warm days",
     ],
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
-    overview:
-      "The Glimpse of Aspen Tour is a guided Aspen experience that runs for approximately 2 hours and is currently listed from $55.00 per person. The published meeting point is 320 E Hyman Ave, Aspen, CO 81611, USA, giving you a central in-town starting location. Current listing metrics show a 4.8 average rating based on 14 reviews. This format is built as a shorter option for travelers who want a focused introduction to Aspen within a compact timeframe. Booking details are provided directly on the live product page, where you can review current availability and final checkout terms before confirming your reservation.",
-    highlights: [
-      "Guided Glimpse of Aspen Tour experience",
-      "Approximate duration of 2 hours",
-      "From price listed at $55.00 per person",
-      "Current listing rating of 4.8 based on 14 reviews",
-      "Meeting point listed as 320 E Hyman Ave, Aspen, CO 81611, USA",
-      "Product code 74828P3 for quick listing verification",
-    ],
-    faqs: [
-      {
-        question: "Where is the meeting point for the Glimpse of Aspen Tour?",
-        answer:
-          "The listed meeting point is 320 E Hyman Ave, Aspen, CO 81611, USA.",
-      },
-      {
-        question: "How long is the Glimpse of Aspen Tour?",
-        answer: "The listed duration is approximately 2 hours.",
-      },
-      {
-        question: "What is the listed starting price?",
-        answer: "The current from price is listed as $55.00 per person.",
-      },
-      {
-        question: "How is this tour currently rated?",
-        answer: "The listing currently shows a 4.8 rating based on 14 reviews.",
-      },
-    ],
   },
   "74828P5": {
     productCode: "74828P5",
