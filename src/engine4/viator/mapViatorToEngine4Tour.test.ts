@@ -89,4 +89,36 @@ describe("mapViatorToEngine4Tour", () => {
     expect(bookingUrl.searchParams.get("medium")).toBe("link");
   });
 
+  it("maps Joshua Tree API facts without hardcoded fallbacks", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "6740P7"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "6740P7",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+        fromPrice: "219.00",
+        priceCurrency: "USD",
+        rating: 4.9,
+        reviewCount: 88,
+        duration: "5 hours",
+        startTime: "8:00 AM",
+        meetingPoint: "Palm Springs, California, USA",
+      },
+    });
+
+    expect(vm.facts.priceFrom).toBe("$219.00");
+    expect(vm.facts.ratingValue).toBe(4.9);
+    expect(vm.facts.reviewCount).toBe(88);
+    expect(vm.facts.duration).toBe("5 hours");
+    expect(vm.facts.startTime).toBe("8:00 AM");
+    expect(vm.facts.meetingPointFull).toBe("Palm Springs, California, USA");
+    expect(vm.facts.meetingPointShort).toBe("Palm Springs");
+  });
+
 });

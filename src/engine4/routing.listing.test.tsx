@@ -87,4 +87,22 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("74828P3");
   });
+  it("builds the 6740P7 route and exposes it in Joshua Tree listing", () => {
+    const entries = getEngine4ListingEntries("california", "joshua-tree");
+    const target = entries.find(entry => entry.tour.productCode === "6740P7");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/joshua-tree/tours/joshua-tree-backroads-hummer-h2-tour-6740p7"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "joshua-tree",
+      "joshua-tree-backroads-hummer-h2-tour-6740p7"
+    );
+
+    expect(routed?.id).toBe("6740P7");
+  });
+
 });
