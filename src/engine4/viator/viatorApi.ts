@@ -1,14 +1,6 @@
+import { fetchViator } from "../../../api/viator/client";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
-
-const VIATOR_BASE_URL = "https://api.viator.com/partner";
-
-const buildHeaders = (apiKey: string) => ({
-  "Content-Type": "application/json;version=2.0",
-  Accept: "application/json;version=2.0",
-  "Accept-Language": "en-US",
-  "exp-api-key": apiKey,
-});
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") {
@@ -35,6 +27,73 @@ const asImage = (value: unknown): string | undefined => {
   }
 };
 
+const toStringArray = (value: unknown): string[] => {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+  return value
+    .map(item => cleanText(item))
+    .filter((item): item is string => Boolean(item));
+};
+
+const asRecord = (value: unknown): Record<string, unknown> | undefined =>
+  typeof value === "object" && value !== null
+    ? (value as Record<string, unknown>)
+    : undefined;
+
+const extractItinerary = (product: Record<string, unknown>) => {
+  const rawItinerary =
+    (product.itineraryItems as unknown[]) ??
+    (product.itinerary as unknown[]) ??
+    (asRecord(product["whatToExpect"])?.items as unknown[]);
+
+  if (!Array.isArray(rawItinerary)) {
+    return undefined;
+  }
+
+  const itinerary = rawItinerary
+    .map(item => {
+      const row = asRecord(item);
+      if (!row) {
+        return undefined;
+      }
+
+      const title =
+        cleanText(row.title) ??
+        cleanText(row.name) ??
+        cleanText(row.label) ??
+        cleanText(row.point);
+      const description =
+        cleanText(row.description) ??
+        cleanText(row.summary) ??
+        cleanText(row.details);
+      const duration = cleanText(row.duration) ?? cleanText(row.durationText);
+
+      if (!title && !description && !duration) {
+        return undefined;
+      }
+
+      return {
+        title: title ?? "Tour stop",
+        description,
+        duration,
+      };
+    })
+    .filter(
+      (
+        item
+      ): item is { title: string; description?: string; duration?: string } =>
+        Boolean(item)
+    );
+
+  return itinerary.length > 0 ? itinerary : undefined;
+};
+
+const joinTextArray = (value: unknown): string | undefined => {
+  const parts = toStringArray(value);
+  return parts.length > 0 ? parts.join(" ") : undefined;
+};
+
 export const getEngine4ViatorTourData = async (
   productCode: string
 ): Promise<Engine4ViatorApiTour | undefined> => {
@@ -49,19 +108,13 @@ export const getEngine4ViatorTourData = async (
   }
 
   try {
-    const response = await fetch(
-      `${VIATOR_BASE_URL}/products/${normalizedCode}`,
+    const payload = await fetchViator<Record<string, unknown>>(
+      apiKey,
+      `/products/${normalizedCode}`,
       {
         method: "GET",
-        headers: buildHeaders(apiKey),
       }
     );
-
-    if (!response.ok) {
-      return engine4ViatorApiFallbackByProductCode[normalizedCode];
-    }
-
-    const payload = (await response.json()) as Record<string, unknown>;
     const product =
       (payload.product as Record<string, unknown> | undefined) ?? payload;
 
@@ -81,6 +134,27 @@ export const getEngine4ViatorTourData = async (
       )
       .filter((image): image is string => Boolean(image));
 
+    const itinerary = extractItinerary(product);
+    const description =
+      cleanText(product.shortDescription) ??
+      cleanText(product.summary) ??
+      cleanText(
+        (product.description as Record<string, unknown> | undefined)?.text
+      );
+    const descriptionLong =
+      cleanText(product.description) ??
+      cleanText(
+        (product.description as Record<string, unknown> | undefined)?.full
+      ) ??
+      cleanText(
+        (product.fullDescription as Record<string, unknown> | undefined)?.text
+      );
+
+    const whatToExpect =
+      cleanText(product.whatToExpect) ??
+      cleanText((product as Record<string, unknown>).whatToExpectText) ??
+      joinTextArray((product as Record<string, unknown>).whatToExpectItems);
+
     return {
       productCode: normalizedCode,
       title: cleanText(product.title) ?? cleanText(product.productTitle) ?? "",
@@ -89,6 +163,10 @@ export const getEngine4ViatorTourData = async (
         cleanText(product.seoUrl) ??
         engine4ViatorApiFallbackByProductCode[normalizedCode]?.sourceUrl ??
         "",
+      description,
+      descriptionLong,
+      itinerary,
+      whatToExpect,
       duration:
         cleanText(product.duration) ??
         cleanText((product as Record<string, unknown>).durationText),
@@ -121,14 +199,23 @@ export const getEngine4ViatorTourData = async (
         cleanText((product as Record<string, unknown>).cancellationPolicy) ??
         engine4ViatorApiFallbackByProductCode[normalizedCode]
           ?.cancellationPolicy,
+      inclusions:
+        toStringArray((product as Record<string, unknown>).inclusions).length >
+        0
+          ? toStringArray((product as Record<string, unknown>).inclusions)
+          : engine4ViatorApiFallbackByProductCode[normalizedCode]?.inclusions,
+      exclusions: toStringArray(
+        (product as Record<string, unknown>).exclusions
+      ),
+      additionalInfo: toStringArray(
+        (product as Record<string, unknown>).additionalInfo
+      ),
       overview:
         cleanText((product as Record<string, unknown>).description) ??
         engine4ViatorApiFallbackByProductCode[normalizedCode]?.overview,
       highlights:
         engine4ViatorApiFallbackByProductCode[normalizedCode]?.highlights,
       faqs: engine4ViatorApiFallbackByProductCode[normalizedCode]?.faqs,
-      inclusions:
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.inclusions,
     };
   } catch {
     return engine4ViatorApiFallbackByProductCode[normalizedCode];

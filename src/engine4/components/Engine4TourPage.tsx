@@ -1,6 +1,11 @@
 import Seo from "../../components/Seo";
 import { buildEngine4ViatorSchemaGraph } from "../schema/buildEngine4ViatorSchemaGraph";
 import type { Engine4TourViewModel } from "../types";
+import {
+  buildFaqs,
+  buildHighlights,
+  buildOverview,
+} from "../viator/buildEngine4Content";
 
 type Engine4TourPageProps = {
   tour: Engine4TourViewModel;
@@ -13,8 +18,11 @@ const isExternalBookingUrl = (url: string) => /^https?:\/\//i.test(url);
 
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
-  const hasHighlights = tour.highlights.length > 0;
-  const hasFaqs = tour.faqs.length > 0;
+  const overview = buildOverview(tour);
+  const highlights = buildHighlights(tour);
+  const faqs = buildFaqs(tour);
+  const hasHighlights = highlights.length > 0;
+  const hasFaqs = faqs.length > 0;
   const bookingLinkProps = isExternalBookingUrl(tour.bookingUrl)
     ? ({ target: "_blank", rel: "noopener noreferrer" } as const)
     : undefined;
@@ -23,7 +31,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={tour.title}
-        description={tour.overview}
+        description={overview}
         url={tour.canonicalPath}
         image={tour.heroImage}
       />
@@ -81,13 +89,13 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
         <h2 className="text-2xl font-semibold">Overview</h2>
-        <p className="mt-3 text-[#334433]">{tour.overview}</p>
+        <p className="mt-3 text-[#334433]">{overview}</p>
 
         {hasHighlights ? (
           <>
             <h2 className="mt-8 text-2xl font-semibold">Highlights</h2>
             <ul className="mt-3 list-disc space-y-2 pl-6 text-[#334433]">
-              {tour.highlights.map(item => (
+              {highlights.map(item => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
@@ -98,7 +106,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
           <>
             <h2 className="mt-8 text-2xl font-semibold">FAQs</h2>
             <div className="mt-3 space-y-4">
-              {tour.faqs.map(faq => (
+              {faqs.map(faq => (
                 <div key={faq.question}>
                   <h3 className="font-semibold">{faq.question}</h3>
                   <p className="text-[#334433]">{faq.answer}</p>

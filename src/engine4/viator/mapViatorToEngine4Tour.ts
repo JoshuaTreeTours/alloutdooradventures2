@@ -15,7 +15,10 @@ const cleanText = (value?: string | null) => {
   return trimmed.length > 0 ? trimmed : undefined;
 };
 
-const buildOverview = (apiTour?: Engine4ViatorApiTour) => cleanText(apiTour?.overview);
+const buildOverview = (apiTour?: Engine4ViatorApiTour) =>
+  cleanText(apiTour?.overview) ??
+  cleanText(apiTour?.descriptionLong) ??
+  cleanText(apiTour?.description);
 
 const buildFallbackFaqs = (apiTour?: Engine4ViatorApiTour) => {
   const meetingPoint = cleanText(apiTour?.meetingPoint);
@@ -67,6 +70,17 @@ export const mapViatorToEngine4Tour = (input: {
   const meetingPointShort = meetingPoint?.split(",")[0]?.trim();
   const cancellationPolicy = cleanText(resolvedApiTour?.cancellationPolicy);
 
+  const itinerary = resolvedApiTour?.itinerary?.length
+    ? resolvedApiTour.itinerary
+    : resolvedApiTour?.descriptionLong
+      ? [
+          {
+            title: "Tour experience",
+            description: cleanText(resolvedApiTour.descriptionLong),
+          },
+        ]
+      : undefined;
+
   return {
     tourId: `engine4-${record.viator.productCode}`,
     productCode: record.viator.productCode,
@@ -78,7 +92,9 @@ export const mapViatorToEngine4Tour = (input: {
     country: "United States",
     heroImage,
     galleryImages: Array.from(
-      new Set([heroImage, ...(resolvedApiTour?.galleryImages ?? [])].filter(Boolean))
+      new Set(
+        [heroImage, ...(resolvedApiTour?.galleryImages ?? [])].filter(Boolean)
+      )
     ),
     fromPrice: cleanText(resolvedApiTour?.fromPrice),
     rating: resolvedApiTour?.rating,
@@ -87,8 +103,14 @@ export const mapViatorToEngine4Tour = (input: {
     startTime: cleanText(resolvedApiTour?.startTime),
     meetingPoint,
     meetingPointShort,
+    description: cleanText(resolvedApiTour?.description),
+    descriptionLong: cleanText(resolvedApiTour?.descriptionLong),
+    itinerary,
+    whatToExpect: cleanText(resolvedApiTour?.whatToExpect),
     cancellationPolicy,
     inclusions: resolvedApiTour?.inclusions,
+    exclusions: resolvedApiTour?.exclusions,
+    additionalInfo: resolvedApiTour?.additionalInfo,
     overview: buildOverview(resolvedApiTour) ?? "",
     highlights,
     faqs:
