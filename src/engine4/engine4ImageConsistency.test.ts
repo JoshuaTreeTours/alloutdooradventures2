@@ -21,7 +21,8 @@ describe("Engine4 Viator image consistency", () => {
 
     const pageTour = mapViatorToEngine4Tour({
       record: tourRecord!,
-      apiTour: engine4ViatorApiFallbackByProductCode[tourRecord!.viator.productCode],
+      apiTour:
+        engine4ViatorApiFallbackByProductCode[tourRecord!.viator.productCode],
     });
     const listingTour = getEngine4ListingEntries("colorado", "aspen").find(
       entry => entry.tour.productCode === "74828P3"
@@ -36,15 +37,20 @@ describe("Engine4 Viator image consistency", () => {
     expect(routeTour).not.toBeNull();
 
     const schema = buildEngine4ViatorSchemaGraph(pageTour);
-    const productNode = (schema["@graph"] as Array<Record<string, unknown>>).find(
-      node => node["@type"] === "Product"
-    ) as Record<string, unknown>;
+    const productNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
     const schemaImage = (productNode.image as string[])[0];
 
     expect(pageTour.heroImage).toBe(
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
     );
+    const p5Hero =
+      engine4ViatorApiFallbackByProductCode["74828P5"]?.sourceDerivedImageUrl;
+
     expect(pageTour.heroImage).not.toBe(PALM_SPRINGS_HERO);
+    expect(pageTour.heroImage).not.toBe(p5Hero);
+    expect(pageTour.heroImage).not.toContain("Tour%20image%20unavailable");
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
     expect(listingTour?.primaryImageUrl).toBe(pageTour.heroImage);
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
