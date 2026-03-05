@@ -20,6 +20,10 @@ describe("mapViatorToEngine4Tour", () => {
 
     expect(vm.engine).toBe("engine4");
     expect(vm.bookingProvider).toBe("viator");
+    const bookingUrl = new URL(vm.bookingUrl);
+    expect(bookingUrl.searchParams.get("pid")).toBe("P00290915");
+    expect(bookingUrl.searchParams.get("mcid")).toBe("42383");
+    expect(bookingUrl.searchParams.get("medium")).toBe("link");
     expect(vm.facts.priceFrom).toBe("$65.00");
     expect(vm.facts.ratingValue).toBe(4.7);
     expect(vm.facts.duration).toBe("2 hours");

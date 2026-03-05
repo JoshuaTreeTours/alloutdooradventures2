@@ -12,6 +12,7 @@ import {
   buildOverview,
   normalizeItinerary,
 } from "./buildEngine4Content";
+import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
 
 const cleanText = (value?: string | null) => {
@@ -62,7 +63,7 @@ export const mapViatorToEngine4Tour = (input: {
     slug: record.slug,
     title: cleanText(resolvedApiTour?.title) ?? "Tour",
     canonicalPath: buildEngine4TourPath(record),
-    bookingUrl: record.bookingUrl,
+    bookingUrl: buildViatorAffiliateUrl(record.productCode),
     destination: record.destination,
     heroImage: resolveEngine4ViatorHero({
       productCode: record.productCode,
