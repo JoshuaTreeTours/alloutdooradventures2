@@ -72,6 +72,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "63657P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Santa Barbara",
+      citySlug: "santa-barbara",
+    },
+    slug: "santa-barbara-vineyard-to-table-taste-tour-by-bike-63657p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "41410P10",
     bookingUrl:
       "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10?pid=P00290915&mcid=42383&medium=link",
@@ -327,6 +344,27 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     additionalInfo: [
       "Weather can change quickly at high elevation—dress in layers.",
       "Not recommended for travelers with severe altitude sensitivity.",
+    ],
+  },
+  "63657P1": {
+    productCode: "63657P1",
+    title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+    sourceUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Ride an e-bike through Santa Barbara to visit a local vineyard and enjoy a guided farm-to-table tasting experience.",
+    overview:
+      "This small-group e-bike experience explores Santa Barbara’s wine-country edge with a guide and a curated tasting stop. Riders follow a route designed for relaxed sightseeing, using electric-assist bikes to cover more ground with less effort. The tour includes a visit to a local vineyard and a vineyard-to-table tasting component focused on regional produce and wines. Along the way, guests see sections of Santa Barbara’s urban and agricultural landscape while learning practical context about local food and wine production. The format is suited to travelers who want an active outing that combines light cycling, tasting, and destination orientation in a single half-day activity.",
+    highlights: [
+      "Guided e-bike tour in and around Santa Barbara",
+      "Visit to a local vineyard",
+      "Vineyard-to-table tasting component",
+      "Electric-assist bikes support a lower-effort ride",
+      "Small-group format with a guide",
+      "Combines city and agricultural-area sightseeing",
+      "Focus on regional food-and-wine context",
     ],
   },
 };
