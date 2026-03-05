@@ -3,6 +3,7 @@ import type {
   Engine4TourViewModel,
   Engine4ViatorTourRecord,
 } from "../types";
+import { buildEngine4TourPath } from "../buildEngine4TourPath";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
 
 const cleanText = (value?: string | null) => {
@@ -57,8 +58,8 @@ export const mapViatorToEngine4Tour = (input: {
     tourId: `engine4-${record.viator.productCode}`,
     productCode: record.viator.productCode,
     title: cleanText(apiTour?.title) ?? "Aspen East End Light Hike",
-    canonicalPath: `/destinations/${record.destination.state}/${record.destination.city}/tours/${record.slug}-${record.viator.productCode.toLowerCase()}`,
-    bookingUrl: cleanText(apiTour?.sourceUrl) ?? record.viator.url,
+    canonicalPath: buildEngine4TourPath(record),
+    bookingUrl: record.viator.url,
     city: "Aspen",
     state: "Colorado",
     country: "United States",
