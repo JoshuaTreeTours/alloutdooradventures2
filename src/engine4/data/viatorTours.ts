@@ -103,6 +103,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "421920P2",
+    bookingUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/49/e8/5c/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Santa Barbara",
+      citySlug: "santa-barbara",
+    },
+    slug: "epic-zipline-tour-over-the-santa-ynez-valley-421920p2",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -372,6 +389,65 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Transportation included for tasting logistics",
       "Electric-assist bicycle and helmet included",
       "Local guide throughout the experience",
+    ],
+  },
+  "421920P2": {
+    productCode: "421920P2",
+    title: "Epic Zipline Tour Over The Santa Ynez Valley",
+    sourceUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2",
+    fromPrice: "$139.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 11,
+    duration: "2 hours 30 minutes",
+    startTime: "9:00 AM",
+    meetingPoint: "Camp 4 Wine Café, 2369 Alamo Pintado Ave, Los Olivos, CA 93441, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/49/e8/5c/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Soar across the Santa Ynez Valley on a guided zipline adventure with multiple runs and sweeping vineyard and mountain views.",
+    overview:
+      "The Epic Zipline Tour over the Santa Ynez Valley is a guided aerial adventure that combines a sequence of ziplines with broad views across vineyards, ranchland, and foothills. Guests check in near Los Olivos, gear up with safety equipment, and complete a ground briefing before heading to the launch points. The experience is designed to be active but approachable for first-time zipliners, with staff managing setup and transitions between lines while sharing local context about the valley landscape.",
+    highlights: [
+      "Multiple zipline runs with wide Santa Ynez Valley views",
+      "Safety briefing and gear provided before launch",
+      "Guided format suitable for first-time zipliners",
+      "Scenic setting near Los Olivos in Santa Barbara wine country",
+      "Listed start time of 9:00 AM",
+    ],
+    itinerary: [
+      {
+        title: "Check-in and safety briefing",
+        description:
+          "Meet guides, get fitted with harnesses and helmets, and review zipline safety procedures.",
+      },
+      {
+        title: "Guided zipline sequence",
+        description:
+          "Complete the line course with guided transitions between platforms and launch points.",
+      },
+      {
+        title: "Valley overlooks",
+        description:
+          "Pause between runs for views of the Santa Ynez Valley, vineyards, and surrounding ridgelines.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where does the Epic Zipline Tour meet?",
+        answer:
+          "The listed meeting point is Camp 4 Wine Café, 2369 Alamo Pintado Ave, Los Olivos, CA 93441, USA.",
+      },
+      {
+        question: "How long is the zipline experience?",
+        answer: "The listed duration is approximately 2 hours 30 minutes.",
+      },
+      {
+        question: "Can I cancel if my plans change?",
+        answer: "This listing shows free cancellation up to 24 hours in advance.",
+      },
     ],
   },
 };
