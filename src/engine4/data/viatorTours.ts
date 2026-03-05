@@ -69,6 +69,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "aspens-off-the-beaten-path-tour-74828p4",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "41410P10",
+    bookingUrl:
+      "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Colorado Springs",
+      citySlug: "colorado-springs",
+    },
+    slug: "small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -259,6 +276,57 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         answer:
           "Yes. The listing indicates free cancellation up to 24 hours in advance.",
       },
+    ],
+  },
+  "41410P10": {
+    productCode: "41410P10",
+    title:
+      "Small Group Tour of Pikes Peak and the Garden of the Gods from Denver",
+    sourceUrl:
+      "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
+    fromPrice: "$179.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 131,
+    duration: "8 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "1747 Wynkoop St, Denver, CO 80202, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Travel from Denver to two Front Range icons with guided stops at Garden of the Gods and the summit area of Pikes Peak.",
+    descriptionLong:
+      "This small-group day trip heads from Denver into the Front Range for a full day of mountain scenery and geologic landmarks. At Garden of the Gods, the route winds through towering red-rock formations with time for short walks, photos, and stories about how the sandstone fins were formed. The tour then climbs toward Pikes Peak, where high-elevation overlooks and alpine views open across the surrounding ranges. Along the way, guests ride with a local guide who shares regional history, mountain ecology, and context about Colorado Springs and the Pike National Forest corridor.",
+    itinerary: [
+      {
+        title: "Garden of the Gods",
+        description:
+          "Walk among dramatic red-rock formations with guided commentary and dedicated photo stops.",
+      },
+      {
+        title: "Pikes Peak Highway",
+        description:
+          "Ascend through changing forest and alpine zones on the scenic climb toward the summit area.",
+      },
+      {
+        title: "Pikes Peak Summit Area",
+        description:
+          "Take in panoramic mountain views and free time at one of Colorado's signature high-elevation viewpoints.",
+      },
+    ],
+    whatToExpect:
+      "Expect an early departure from Denver, mountain driving with regular scenic stops, and a mix of guided interpretation and free time at major viewpoints.",
+    inclusions: [
+      "Professional guide",
+      "Round-trip transportation from Denver",
+      "Bottled water",
+      "Entry and toll fees along the Pikes Peak route",
+    ],
+    exclusions: ["Lunch", "Guide gratuities"],
+    additionalInfo: [
+      "Weather can change quickly at high elevation—dress in layers.",
+      "Not recommended for travelers with severe altitude sensitivity.",
     ],
   },
 };

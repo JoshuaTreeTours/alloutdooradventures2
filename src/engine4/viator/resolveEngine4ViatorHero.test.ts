@@ -23,6 +23,21 @@ describe("resolveEngine4ViatorHero", () => {
     expect(hero).toContain("dynamic-media.tacdn.com");
   });
 
+  it("accepts media.tacdn.com image URLs", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "99999P3",
+      apiTour: {
+        productCode: "99999P3",
+        title: "Other Tour",
+        sourceUrl: "https://www.viator.com/tours/Other/example/d123-99999P3",
+        primaryImageUrl:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
+      },
+    });
+
+    expect(hero).toContain("media.tacdn.com");
+  });
+
   it("rejects non-http or tracker pixel values", () => {
     const hero = resolveEngine4ViatorHero({
       productCode: "99999P2",

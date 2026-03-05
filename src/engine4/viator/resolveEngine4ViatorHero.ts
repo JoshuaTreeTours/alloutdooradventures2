@@ -2,6 +2,7 @@ import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
 
 const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
+const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
 
 const isTrackerPixel = (url: string) =>
   /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
@@ -12,6 +13,9 @@ const hasAllowedImagePath = (pathname: string) =>
   /\/(?:media\/photo-o|media\/attractions-splice-|media\/photo-l|media\/photo-s)\//i.test(
     pathname
   ) || /\.(?:jpg|jpeg|png|webp)$/i.test(pathname);
+
+const hasAllowedImageHost = (host: string) =>
+  ALLOWED_HOSTS.some(pattern => pattern.test(host));
 
 const isValidHeroCandidate = (value?: string): boolean => {
   if (!value) {
@@ -39,7 +43,10 @@ const isValidHeroCandidate = (value?: string): boolean => {
       return false;
     }
 
-    return hasAllowedImagePath(parsed.pathname);
+    return (
+      hasAllowedImageHost(parsed.hostname) &&
+      hasAllowedImagePath(parsed.pathname)
+    );
   } catch {
     return false;
   }
