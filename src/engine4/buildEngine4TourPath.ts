@@ -8,4 +8,4 @@ const ensureProductCodeSuffix = (slug: string, productCode: string) => {
 };
 
 export const buildEngine4TourPath = (tour: Engine4ViatorTourRecord) =>
-  `/destinations/${tour.destination.state}/${tour.destination.city}/tours/${ensureProductCodeSuffix(tour.slug, tour.viator.productCode)}`;
+  `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${ensureProductCodeSuffix(tour.slug, tour.productCode)}`;

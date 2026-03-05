@@ -18,50 +18,49 @@ export const getEngine4ListingEntries = (
   engine4ViatorTours
     .filter(
       tour =>
-        tour.destination.state === stateSlug &&
-        tour.destination.city === citySlug
+        tour.destination.stateSlug === stateSlug &&
+        tour.destination.citySlug === citySlug
     )
     .map(record => {
       const vm = mapViatorToEngine4Tour({
         record,
-        apiTour:
-          engine4ViatorApiFallbackByProductCode[record.viator.productCode],
+        apiTour: engine4ViatorApiFallbackByProductCode[record.productCode],
       });
       const href = buildEngine4TourPath(record);
 
       return {
         href,
         tour: {
-          id: `engine4-${record.viator.productCode}`,
+          id: `engine4-${record.productCode}`,
           engine: "engine4",
-          productCode: record.viator.productCode,
+          productCode: record.productCode,
           slug: href.split("/").at(-1) ?? "",
           title: vm.title,
-          shortDescription: vm.highlights[0],
+          shortDescription: vm.content.highlights[0],
           categories: ["hiking"],
           primaryCategory: "hiking",
           destination: {
-            country: "United States",
-            state: "Colorado",
-            stateSlug,
-            city: "Aspen",
-            citySlug,
+            country: record.destination.country,
+            state: record.destination.state,
+            stateSlug: record.destination.stateSlug,
+            city: record.destination.city,
+            citySlug: record.destination.citySlug,
           },
-          heroImage: vm.heroImage,
-          primaryImageUrl: vm.heroImage,
+          heroImage: vm.heroImage ?? undefined,
+          primaryImageUrl: vm.heroImage ?? undefined,
           galleryImages: vm.galleryImages,
           badges: {
-            rating: vm.rating,
-            reviewCount: vm.reviewCount,
-            duration: vm.duration,
-            priceFrom: vm.fromPrice,
+            rating: vm.facts.ratingValue,
+            reviewCount: vm.facts.reviewCount,
+            duration: vm.facts.duration,
+            priceFrom: vm.facts.priceFrom,
           },
           activitySlugs: ["hiking"],
           bookingProvider: "viator",
           bookingUrl: vm.bookingUrl,
-          longDescription: vm.overview,
+          longDescription: vm.content.overview,
           startingPrice:
-            Number(vm.fromPrice?.replace(/[^0-9.]/g, "")) || undefined,
+            Number(vm.facts.priceFrom?.replace(/[^0-9.]/g, "")) || undefined,
           currency: "USD",
         },
       } satisfies Engine4ListingEntry;

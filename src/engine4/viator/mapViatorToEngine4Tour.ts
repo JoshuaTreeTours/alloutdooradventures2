@@ -1,10 +1,17 @@
-import type {
-  Engine4ViatorApiTour,
-  Engine4TourViewModel,
-  Engine4ViatorTourRecord,
-} from "../types";
 import { buildEngine4TourPath } from "../buildEngine4TourPath";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
+import {
+  assertEngine4ViatorTour,
+  type Engine4TourViewModel,
+  type Engine4ViatorApiTour,
+  type Engine4ViatorTourRecord,
+} from "../types";
+import {
+  buildFaqs,
+  buildHighlights,
+  buildOverview,
+  normalizeItinerary,
+} from "./buildEngine4Content";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
 
 const cleanText = (value?: string | null) => {
@@ -15,37 +22,7 @@ const cleanText = (value?: string | null) => {
   return trimmed.length > 0 ? trimmed : undefined;
 };
 
-const buildOverview = (apiTour?: Engine4ViatorApiTour) =>
-  cleanText(apiTour?.overview) ??
-  cleanText(apiTour?.descriptionLong) ??
-  cleanText(apiTour?.description);
-
-const buildFallbackFaqs = (apiTour?: Engine4ViatorApiTour) => {
-  const meetingPoint = cleanText(apiTour?.meetingPoint);
-  const duration = cleanText(apiTour?.duration);
-  const cancellationPolicy = cleanText(apiTour?.cancellationPolicy);
-
-  return [
-    meetingPoint
-      ? {
-          question: "Where do we meet?",
-          answer: `The listed meeting point is ${meetingPoint}.`,
-        }
-      : undefined,
-    duration
-      ? {
-          question: "How long is the tour?",
-          answer: `The listed duration is approximately ${duration}.`,
-        }
-      : undefined,
-    cancellationPolicy
-      ? {
-          question: "What is the cancellation policy?",
-          answer: cancellationPolicy,
-        }
-      : undefined,
-  ].filter((faq): faq is { question: string; answer: string } => Boolean(faq));
-};
+const toSentence = (values: string[]) => values.join(" ").trim();
 
 export const mapViatorToEngine4Tour = (input: {
   record: Engine4ViatorTourRecord;
@@ -53,69 +30,69 @@ export const mapViatorToEngine4Tour = (input: {
 }): Engine4TourViewModel => {
   const { record, apiTour } = input;
   const fallbackTour =
-    engine4ViatorApiFallbackByProductCode[record.viator.productCode];
+    engine4ViatorApiFallbackByProductCode[record.productCode];
   const resolvedApiTour = apiTour ?? fallbackTour;
 
-  const heroImage = resolveEngine4ViatorHero({
-    productCode: record.viator.productCode,
+  const meetingPointFull = cleanText(resolvedApiTour?.meetingPoint);
+  const itinerary = normalizeItinerary(resolvedApiTour);
+  const whatToExpect = cleanText(resolvedApiTour?.whatToExpect);
+  const overview = buildOverview({
     apiTour: resolvedApiTour,
+    destination: record.destination,
+    title: cleanText(resolvedApiTour?.title) ?? "Tour",
+    itinerary,
+  });
+  const highlights = buildHighlights({
+    apiTour: resolvedApiTour,
+    itinerary,
+    duration: cleanText(resolvedApiTour?.duration),
+  });
+  const faqs = buildFaqs({
+    apiTour: resolvedApiTour,
+    meetingPointFull,
+    duration: cleanText(resolvedApiTour?.duration),
+    cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
   });
 
-  const highlights =
-    resolvedApiTour?.highlights && resolvedApiTour.highlights.length > 0
-      ? resolvedApiTour.highlights
-      : [];
-
-  const meetingPoint = cleanText(resolvedApiTour?.meetingPoint);
-  const meetingPointShort = meetingPoint?.split(",")[0]?.trim();
-  const cancellationPolicy = cleanText(resolvedApiTour?.cancellationPolicy);
-
-  const itinerary = resolvedApiTour?.itinerary?.length
-    ? resolvedApiTour.itinerary
-    : resolvedApiTour?.descriptionLong
-      ? [
-          {
-            title: "Tour experience",
-            description: cleanText(resolvedApiTour.descriptionLong),
-          },
-        ]
-      : undefined;
-
-  return {
-    tourId: `engine4-${record.viator.productCode}`,
-    productCode: record.viator.productCode,
+  const tour: Engine4TourViewModel = {
+    tourId: `engine4-${record.productCode}`,
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: record.productCode,
+    slug: record.slug,
     title: cleanText(resolvedApiTour?.title) ?? "Tour",
     canonicalPath: buildEngine4TourPath(record),
-    bookingUrl: record.viator.url,
-    city: "Aspen",
-    state: "Colorado",
-    country: "United States",
-    heroImage,
+    bookingUrl: record.bookingUrl,
+    destination: record.destination,
+    heroImage: resolveEngine4ViatorHero({
+      productCode: record.productCode,
+      apiTour: resolvedApiTour,
+    }),
     galleryImages: Array.from(
-      new Set(
-        [heroImage, ...(resolvedApiTour?.galleryImages ?? [])].filter(Boolean)
-      )
+      new Set((resolvedApiTour?.galleryImages ?? []).filter(Boolean))
     ),
-    fromPrice: cleanText(resolvedApiTour?.fromPrice),
-    rating: resolvedApiTour?.rating,
-    reviewCount: resolvedApiTour?.reviewCount,
-    duration: cleanText(resolvedApiTour?.duration),
-    startTime: cleanText(resolvedApiTour?.startTime),
-    meetingPoint,
-    meetingPointShort,
-    description: cleanText(resolvedApiTour?.description),
-    descriptionLong: cleanText(resolvedApiTour?.descriptionLong),
-    itinerary,
-    whatToExpect: cleanText(resolvedApiTour?.whatToExpect),
-    cancellationPolicy,
-    inclusions: resolvedApiTour?.inclusions,
-    exclusions: resolvedApiTour?.exclusions,
-    additionalInfo: resolvedApiTour?.additionalInfo,
-    overview: buildOverview(resolvedApiTour) ?? "",
-    highlights,
-    faqs:
-      resolvedApiTour?.faqs && resolvedApiTour.faqs.length > 0
-        ? resolvedApiTour.faqs
-        : buildFallbackFaqs(resolvedApiTour),
+    facts: {
+      priceFrom: cleanText(resolvedApiTour?.fromPrice),
+      ratingValue: resolvedApiTour?.rating,
+      reviewCount: resolvedApiTour?.reviewCount,
+      duration: cleanText(resolvedApiTour?.duration),
+      startTime: cleanText(resolvedApiTour?.startTime),
+      meetingPointShort: meetingPointFull?.split(",")[0]?.trim(),
+      meetingPointFull,
+      cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
+    },
+    content: {
+      overview,
+      highlights,
+      faqs,
+      itinerary: itinerary.length ? itinerary : undefined,
+      inclusions: resolvedApiTour?.inclusions ?? [],
+      exclusions: resolvedApiTour?.exclusions ?? [],
+      whatToExpect,
+      additionalInfo: toSentence(resolvedApiTour?.additionalInfo ?? []),
+    },
   };
+
+  assertEngine4ViatorTour(tour);
+  return tour;
 };

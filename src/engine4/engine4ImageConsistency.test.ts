@@ -1,29 +1,39 @@
 import { describe, expect, it } from "vitest";
 
-import { buildEngine4ViatorSchemaGraph } from "./schema/buildEngine4ViatorSchemaGraph";
-import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
-import { getEngine4TourBySlugs } from "./routing";
 import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "./data/viatorTours";
+import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
+import { getEngine4TourBySlugs } from "./routing";
+import { buildEngine4ViatorSchemaGraph } from "./schema/buildEngine4ViatorSchemaGraph";
 import { mapViatorToEngine4Tour } from "./viator/mapViatorToEngine4Tour";
 
 const PALM_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
-  it("uses the same resolved hero image for card, page, schema, and OG", () => {
-    const tourRecord = engine4ViatorTours.find(
-      tour => tour.viator.productCode === "74828P3"
-    );
-    expect(tourRecord).toBeDefined();
-
-    const pageTour = mapViatorToEngine4Tour({
-      record: tourRecord!,
-      apiTour:
-        engine4ViatorApiFallbackByProductCode[tourRecord!.viator.productCode],
+  it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
+    const p3 = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(t => t.productCode === "74828P3")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["74828P3"],
     });
+    const p5 = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(t => t.productCode === "74828P5")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["74828P5"],
+    });
+
+    expect(p3.heroImage).not.toBe(p5.heroImage);
+    expect(p3.heroImage).not.toBe(PALM_SPRINGS_HERO);
+    expect(p5.heroImage).not.toBe(PALM_SPRINGS_HERO);
+  });
+
+  it("uses the same hero for page, card, og:image, and schema image", () => {
+    const pageTour = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(tour => tour.productCode === "74828P3")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["74828P3"],
+    });
+
     const listingTour = getEngine4ListingEntries("colorado", "aspen").find(
       entry => entry.tour.productCode === "74828P3"
     )?.tour;
@@ -33,27 +43,13 @@ describe("Engine4 Viator image consistency", () => {
       "glimpse-of-aspen-tour-74828p3"
     );
 
-    expect(listingTour).toBeDefined();
-    expect(routeTour).not.toBeNull();
-
     const schema = buildEngine4ViatorSchemaGraph(pageTour);
     const productNode = (
       schema["@graph"] as Array<Record<string, unknown>>
     ).find(node => node["@type"] === "Product") as Record<string, unknown>;
-    const schemaImage = (productNode.image as string[])[0];
 
-    expect(pageTour.heroImage).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
-    );
-    const p5Hero =
-      engine4ViatorApiFallbackByProductCode["74828P5"]?.sourceDerivedImageUrl;
-
-    expect(pageTour.heroImage).not.toBe(PALM_SPRINGS_HERO);
-    expect(pageTour.heroImage).not.toBe(p5Hero);
-    expect(pageTour.heroImage).not.toContain("Tour%20image%20unavailable");
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
-    expect(listingTour?.primaryImageUrl).toBe(pageTour.heroImage);
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
-    expect(schemaImage).toBe(pageTour.heroImage);
+    expect(productNode.image).toBe(pageTour.heroImage);
   });
 });

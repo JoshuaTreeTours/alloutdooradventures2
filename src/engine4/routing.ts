@@ -1,6 +1,9 @@
 import type { Engine2Tour } from "../engine2/data/loadEngine2";
 import { buildEngine4TourPath } from "./buildEngine4TourPath";
-import { engine4ViatorApiFallbackByProductCode, engine4ViatorTours } from "./data/viatorTours";
+import {
+  engine4ViatorApiFallbackByProductCode,
+  engine4ViatorTours,
+} from "./data/viatorTours";
 import { mapViatorToEngine4Tour } from "./viator/mapViatorToEngine4Tour";
 
 export const getEngine4TourBySlugs = (
@@ -9,7 +12,9 @@ export const getEngine4TourBySlugs = (
   tourSlug: string
 ): Engine2Tour | null => {
   const path = `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`;
-  const record = engine4ViatorTours.find(tour => buildEngine4TourPath(tour) === path);
+  const record = engine4ViatorTours.find(
+    tour => buildEngine4TourPath(tour) === path
+  );
 
   if (!record) {
     return null;
@@ -17,7 +22,7 @@ export const getEngine4TourBySlugs = (
 
   const vm = mapViatorToEngine4Tour({
     record,
-    apiTour: engine4ViatorApiFallbackByProductCode[record.viator.productCode],
+    apiTour: engine4ViatorApiFallbackByProductCode[record.productCode],
   });
 
   return {
@@ -25,36 +30,36 @@ export const getEngine4TourBySlugs = (
     engine: "engine4",
     bookingProvider: "viator",
     bookingUrl: vm.bookingUrl,
-    sourceCitySlug: record.destination.city,
-    slug: `${record.slug}-${record.viator.productCode.toLowerCase()}`,
+    sourceCitySlug: record.destination.citySlug,
+    slug: `${record.slug}-${record.productCode.toLowerCase()}`,
     name: vm.title,
     provider: {
       name: "Viator",
       shortName: "viator",
     },
     geo: {
-      country: "United States",
-      region: "Colorado",
-      city: "Aspen",
+      country: record.destination.country,
+      region: record.destination.state,
+      city: record.destination.city,
       lat: null,
       lng: null,
     },
     seo: {
       title: vm.title,
-      description: vm.overview,
+      description: vm.content.overview,
       canonicalPath: vm.canonicalPath,
-      ogImage: vm.heroImage,
+      ogImage: vm.heroImage ?? undefined,
     },
     content: {
-      experienceText: vm.overview,
-      overview: vm.overview,
-      highlights: vm.highlights,
-      faqs: vm.faqs,
+      experienceText: vm.content.overview,
+      overview: vm.content.overview,
+      highlights: vm.content.highlights,
+      faqs: vm.content.faqs,
       meetingPoint: {
-        address: vm.meetingPoint,
+        address: vm.facts.meetingPointFull,
       },
-      duration: vm.duration,
-      cancellationPolicy: vm.cancellationPolicy,
+      duration: vm.facts.duration,
+      cancellationPolicy: vm.facts.cancellationPolicy,
     },
     images: {
       hero: vm.heroImage,
@@ -64,10 +69,10 @@ export const getEngine4TourBySlugs = (
       bookingUrl: vm.bookingUrl,
     },
     pricing: {
-      price: vm.fromPrice,
+      price: vm.facts.priceFrom,
       currency: "USD",
     },
-    viatorRatingValue: vm.rating ?? null,
-    viatorReviewCount: vm.reviewCount ?? null,
+    viatorRatingValue: vm.facts.ratingValue ?? null,
+    viatorReviewCount: vm.facts.reviewCount ?? null,
   };
 };

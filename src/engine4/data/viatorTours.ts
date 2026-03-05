@@ -4,52 +4,55 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
-    viator: {
-      productCode: "74828P3",
-      url: "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3?pid=P00290915&mcid=42383&medium=link",
-      sourceHeroImageUrl:
-        "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg",
-    },
+    productCode: "74828P3",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg",
     destination: {
-      country: "united-states",
-      state: "colorado",
-      city: "aspen",
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
     },
     slug: "glimpse-of-aspen-tour-74828p3",
   },
   {
     engine: "engine4",
     bookingProvider: "viator",
-    viator: {
-      productCode: "74828P5",
-      url: "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5?pid=P00290915&mcid=42383&medium=link",
-      sourceHeroImageUrl:
-        "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
-    },
+    productCode: "74828P5",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
     destination: {
-      country: "united-states",
-      state: "colorado",
-      city: "aspen",
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
     },
     slug: "aspen-east-end-light-hike",
   },
   {
     engine: "engine4",
     bookingProvider: "viator",
-    viator: {
-      productCode: "74828P4",
-      url: "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4?pid=P00290915&mcid=42383&medium=link",
-      sourceHeroImageUrl:
-        "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg",
-    },
+    productCode: "74828P4",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Aspens-Off-the-Beaten-Path-Tour/d26395-74828P4?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg",
     destination: {
-      country: "united-states",
-      state: "colorado",
-      city: "aspen",
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
     },
     slug: "aspens-off-the-beaten-path-tour-74828p4",
   },
-] as const;
+];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
   string,
