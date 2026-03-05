@@ -11,13 +11,49 @@ type TourCardProps = {
   href?: string;
 };
 
+const CARD_BLURB_MAX_CHARS = 150;
+
+type TourCardBlurbSource = {
+  summary?: string;
+  excerpt?: string;
+};
+
+function getCardBlurb(tour: Tour): string {
+  const shortSummaryCandidate = [
+    (tour as TourCardBlurbSource).summary,
+    (tour as TourCardBlurbSource).excerpt,
+    tour.shortDescription,
+  ].find(value => value?.trim());
+
+  if (shortSummaryCandidate?.trim()) {
+    return shortSummaryCandidate.trim().replace(/\s+/g, " ");
+  }
+
+  const normalizedDescription = tour.longDescription?.trim().replace(/\s+/g, " ");
+  if (!normalizedDescription) {
+    return "";
+  }
+
+  if (normalizedDescription.length <= CARD_BLURB_MAX_CHARS) {
+    return normalizedDescription;
+  }
+
+  const clipped = normalizedDescription.slice(0, CARD_BLURB_MAX_CHARS);
+  const lastWordBoundary = clipped.lastIndexOf(" ");
+  const snippet =
+    lastWordBoundary > CARD_BLURB_MAX_CHARS * 0.6
+      ? clipped.slice(0, lastWordBoundary)
+      : clipped;
+
+  return `${snippet.trim()}…`;
+}
+
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
-  const shortDescription = tour.shortDescription?.trim();
+  const blurb = getCardBlurb(tour);
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
   const categoryLabel = getActivityLabelFromSlug(categorySource);
-  const subtitle = shortDescription || categoryLabel;
   const regionLabel = tour.destination.state || tour.destination.country || "";
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
@@ -70,8 +106,12 @@ export default function TourCard({ tour, href }: TourCardProps) {
           <h3 className="mt-2 text-lg font-semibold text-[#1f2a1f]">
             {tour.title}
           </h3>
-          {subtitle ? (
-            <p className="mt-2 text-sm text-[#405040]">{subtitle}</p>
+          {blurb ? (
+            <p className="mt-2 overflow-hidden text-sm text-[#405040] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2] md:[-webkit-line-clamp:3]">
+              {blurb}
+            </p>
+          ) : categoryLabel ? (
+            <p className="mt-2 text-sm text-[#405040]">{categoryLabel}</p>
           ) : null}
           {startingPriceLabel ? (
             <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">

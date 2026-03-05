@@ -21,6 +21,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "172188P151",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Private-Professional-photoshoot-in-Aspen/d26395-172188P151",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
+    },
+    slug: "private-professional-photoshoot-in-aspen-172188p151",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "74828P5",
     bookingUrl:
       "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5?pid=P00290915&mcid=42383&medium=link",
@@ -58,6 +75,31 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "172188P151": {
+    productCode: "172188P151",
+    title: "Private Professional Photoshoot in Aspen",
+    sourceUrl:
+      "https://www.viator.com/tours/Aspen/Private-Professional-photoshoot-in-Aspen/d26395-172188P151",
+    fromPrice: "$299.00",
+    priceCurrency: "USD",
+    duration: "1 hour",
+    cancellationPolicy: "Non-refundable.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Capture your Aspen visit with a private session led by a professional photographer.",
+    descriptionLong:
+      "A private photoshoot experience in Aspen pairs guests with a professional photographer who guides posing, framing, and location choices while exploring the town’s scenic backdrops. The session moves through picturesque downtown streets and mountain viewpoints, creating polished portraits and candid images against Aspen’s alpine setting. Participants receive direction on composition and style throughout the experience. The relaxed format allows couples, families, or solo travelers to capture memorable moments while enjoying the atmosphere of one of Colorado’s most iconic mountain towns.",
+    overview:
+      "A private photoshoot experience in Aspen pairs guests with a professional photographer who guides posing, framing, and location choices while exploring the town’s scenic backdrops. The session moves through picturesque downtown streets and mountain viewpoints, creating polished portraits and candid images against Aspen’s alpine setting. Participants receive direction on composition and style throughout the experience. The relaxed format allows couples, families, or solo travelers to capture memorable moments while enjoying the atmosphere of one of Colorado’s most iconic mountain towns.",
+    highlights: [
+      "Professional photographer guiding poses and composition",
+      "Walk through photogenic Aspen locations",
+      "Portrait session in scenic alpine surroundings",
+      "Ideal for couples, families, or solo travelers",
+      "Digital photos delivered after the session",
+    ],
+  },
   "74828P3": {
     productCode: "74828P3",
     title: "Glimpse of Aspen Tour",
