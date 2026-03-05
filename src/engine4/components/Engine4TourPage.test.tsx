@@ -132,6 +132,29 @@ describe("Engine4TourPage booking CTA", () => {
     expect(withRatingHtml).toContain("Rating:</strong> 4.9 (12 reviews)");
   });
 
+  it("renders destination tree links above the heading", () => {
+    const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
+
+    expect(html).toContain('aria-label="Destination breadcrumb"');
+    expect(html).toContain('href="/destinations"');
+    expect(html).toContain('href="/destinations/colorado"');
+    expect(html).toContain('href="/destinations/colorado/aspen"');
+  });
+
+  it("renders same-city tour cards in a More tours section", () => {
+    const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
+
+    expect(html).toContain("More tours in Aspen");
+    expect(html.match(/View Tour/g)?.length ?? 0).toBeGreaterThanOrEqual(1);
+  });
+
+  it("uses the same hero image for page hero and JSON-LD graph", () => {
+    const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
+
+    expect(html).toContain(`src="${engine4Tour.heroImage}"`);
+    expect(html).toContain(`"image":"${engine4Tour.heroImage}"`);
+  });
+
   it("keeps non-Engine4 tour rendering unchanged", () => {
     const html = renderToStaticMarkup(<Engine3TourPage tour={engine3Tour} />);
 
