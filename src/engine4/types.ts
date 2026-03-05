@@ -90,6 +90,19 @@ export type Engine4TourViewModel = {
 const isNonEmptyString = (value: unknown): value is string =>
   typeof value === "string" && value.trim().length > 0;
 
+const ENGINE4_TACDN_HERO_REGEX =
+  /^https:\/\/(dynamic-media|media)\.tacdn\.com\/.+/i;
+
+const looksLikeImageUrl = (value: string): boolean => {
+  const normalized = value.trim().toLowerCase();
+
+  if (normalized.includes("/photo-o/") || normalized.includes("attractions-splice")) {
+    return true;
+  }
+
+  return /\.(jpg|jpeg|png|webp)(\?.*)?$/.test(normalized);
+};
+
 export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
   if (
     process.env.NODE_ENV !== "development" &&
@@ -108,8 +121,19 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     throw new Error("Invalid Engine4 Viator contract: missing identifiers");
   }
 
-  if (!isNonEmptyString(tour.bookingUrl)) {
-    throw new Error("Invalid Engine4 Viator contract: bookingUrl is required");
+  if (
+    !isNonEmptyString(tour.canonicalPath) ||
+    !tour.canonicalPath.startsWith("/destinations/")
+  ) {
+    throw new Error("Invalid Engine4 Viator contract: canonicalPath is invalid");
+  }
+
+  if (
+    !isNonEmptyString(tour.bookingUrl) ||
+    (!tour.bookingUrl.startsWith("https://www.viator.com/") &&
+      !tour.bookingUrl.startsWith("https://travelagents.viator.com/"))
+  ) {
+    throw new Error("Invalid Engine4 Viator contract: bookingUrl is invalid");
   }
 
   const { destination } = tour;
@@ -125,9 +149,15 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     );
   }
 
-  if (tour.heroImage !== null && !isNonEmptyString(tour.heroImage)) {
+  if (!isNonEmptyString(tour.heroImage) || !ENGINE4_TACDN_HERO_REGEX.test(tour.heroImage)) {
     throw new Error(
-      "Invalid Engine4 Viator contract: heroImage must be string|null"
+      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
+    );
+  }
+
+  if (!looksLikeImageUrl(tour.heroImage)) {
+    throw new Error(
+      "Engine4 heroImage must look like an image URL"
     );
   }
 

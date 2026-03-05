@@ -1,9 +1,27 @@
+import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
+import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
 import { getEngine4TourBySlugs } from "./routing";
 
+(globalThis as { location?: { pathname: string } }).location = { pathname: "/" };
+
 describe("Engine4 Aspen routing/listing", () => {
+  it("renders Engine4 cards with the mapped hero image URL", () => {
+    const entries = getEngine4ListingEntries("colorado", "aspen");
+    const target = entries.find(entry => entry.tour.productCode === "74828P5");
+
+    expect(target?.tour.heroImage).toBeTruthy();
+
+    const html = renderToStaticMarkup(
+      <TourCard tour={target!.tour} href={target!.href} />
+    );
+
+    expect(html).toContain(target!.tour.heroImage!);
+    expect(html).not.toContain("default-tour.jpg");
+  });
+
   it("builds the 74828P4 route and exposes it in Aspen listing", () => {
     const entries = getEngine4ListingEntries("colorado", "aspen");
     const target = entries.find(entry => entry.tour.productCode === "74828P4");

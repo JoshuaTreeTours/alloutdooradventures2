@@ -35,23 +35,28 @@ describe("mapViatorToEngine4Tour", () => {
 
   it("merges fallback facts when API payload is partial", () => {
     const record = engine4ViatorTours.find(
-      tour => tour.productCode === "63657P1"
+      tour => tour.productCode === "41410P10"
     );
     expect(record).toBeDefined();
 
     const vm = mapViatorToEngine4Tour({
       record: record!,
       apiTour: {
-        productCode: "63657P1",
-        title: "Santa Barbara Vineyard to Table Taste Tour by Bike",
+        productCode: "41410P10",
+        title:
+          "Small Group Tour of Pikes Peak and the Garden of the Gods from Denver",
         sourceUrl:
-          "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10",
       },
     });
 
-    expect(vm.facts.priceFrom).toBe("$199.00");
+    expect(vm.facts.priceFrom).toBe("$179.00");
+    expect(vm.facts.ratingValue).toBe(5);
+    expect(vm.facts.reviewCount).toBe(131);
+    expect(vm.facts.duration).toBe("8 hours");
+    expect(vm.facts.startTime).toBe("8:00 AM");
     expect(vm.facts.meetingPointFull).toBe(
-      "3850 State St, Santa Barbara, CA 93105, USA"
+      "1747 Wynkoop St, Denver, CO 80202, USA"
     );
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours in advance."

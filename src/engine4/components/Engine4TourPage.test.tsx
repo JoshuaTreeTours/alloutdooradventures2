@@ -81,7 +81,7 @@ describe("Engine4TourPage booking CTA", () => {
   });
 
 
-  it("does not render empty fact placeholders and renders fallback price when present", () => {
+  it("hides empty fact rows and renders rows only when values exist", () => {
     const withoutFacts: Engine4TourViewModel = {
       ...engine4Tour,
       facts: {
@@ -98,7 +98,7 @@ describe("Engine4TourPage booking CTA", () => {
     const emptyFactsHtml = renderToStaticMarkup(
       <Engine4TourPage tour={withoutFacts} />
     );
-    expect(emptyFactsHtml).not.toContain("From:</strong>  per person");
+    expect(emptyFactsHtml).not.toContain("From:</strong>");
     expect(emptyFactsHtml).not.toContain("Rating:");
     expect(emptyFactsHtml).not.toContain("Meeting point:");
     expect(emptyFactsHtml).not.toContain("Start time:");
@@ -116,6 +116,20 @@ describe("Engine4TourPage booking CTA", () => {
       <Engine4TourPage tour={withFallbackPrice} />
     );
     expect(withPriceHtml).toContain("From:</strong> $199.00 per person");
+
+    const withRating: Engine4TourViewModel = {
+      ...withoutFacts,
+      facts: {
+        ...withoutFacts.facts,
+        ratingValue: 4.9,
+        reviewCount: 12,
+      },
+    };
+
+    const withRatingHtml = renderToStaticMarkup(
+      <Engine4TourPage tour={withRating} />
+    );
+    expect(withRatingHtml).toContain("Rating:</strong> 4.9 (12 reviews)");
   });
 
   it("keeps non-Engine4 tour rendering unchanged", () => {
