@@ -23,3 +23,20 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.cancellationPolicy).toContain("24 hours");
   });
 });
+
+
+it("maps Aspen off-the-beaten-path facts for above-the-fold content", () => {
+  const record = engine4ViatorTours.find(tour => tour.viator.productCode === "74828P4");
+  expect(record).toBeDefined();
+
+  const vm = mapViatorToEngine4Tour({
+    record: record!,
+    apiTour: engine4ViatorApiFallbackByProductCode["74828P4"],
+  });
+
+  expect(vm.fromPrice).toBe("$145.00");
+  expect(vm.rating).toBe(5);
+  expect(vm.reviewCount).toBe(42);
+  expect(vm.duration).toBe("3 hours");
+  expect(vm.cancellationPolicy).toContain("24 hours");
+});
