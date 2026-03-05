@@ -72,6 +72,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "63657P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "USA",
+      state: "California",
+      stateSlug: "california",
+      city: "Santa Barbara",
+      citySlug: "santa-barbara",
+    },
+    slug: "santa-barbara-vineyard-to-table-taste-tour-by-ebike-63657p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "41410P10",
     bookingUrl:
       "https://www.viator.com/tours/Denver/Small-group-tour-of-Pikes-Peak-and-the-Garden-of-the-Gods-from-Denver/d4837-41410P10?pid=P00290915&mcid=42383&medium=link",
@@ -327,6 +344,31 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     additionalInfo: [
       "Weather can change quickly at high elevation—dress in layers.",
       "Not recommended for travelers with severe altitude sensitivity.",
+    ],
+  },
+  "63657P1": {
+    productCode: "63657P1",
+    title: "Santa Barbara Vineyard to Table Taste Tour by Bike",
+    sourceUrl:
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    fromPrice: "199.00",
+    priceCurrency: "USD",
+    meetingPoint: "3850 State St, Santa Barbara, CA 93105, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Ride an e-bike through Santa Barbara to visit a local vineyard and enjoy a guided farm-to-table tasting experience.",
+    overview:
+      "This Santa Barbara Vineyard-to-Table Taste Tour by Bike combines a guided electric-bike ride with a food-and-wine focused tasting experience. Guests travel with a guide and visit local tasting locations connected to the region’s vineyard culture. The itinerary features wine tasting, olive-oil tasting, and a picnic lunch, with transportation logistics included as part of the experience. The e-bike format keeps the ride approachable while still covering meaningful ground around Santa Barbara. This half-day outing is designed for travelers who want active sightseeing paired with practical, destination-specific culinary context.",
+    highlights: [
+      "Guided e-bike ride through Santa Barbara",
+      "Wine tasting included",
+      "Olive-oil tasting included",
+      "Picnic lunch included",
+      "Transportation included for tasting logistics",
+      "Electric-assist bicycle and helmet included",
+      "Local guide throughout the experience",
     ],
   },
 };

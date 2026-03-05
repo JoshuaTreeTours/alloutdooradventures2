@@ -13,6 +13,8 @@ const PALM_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
 const COLORADO_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1";
+const SANTA_BARBARA_HERO =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -28,6 +30,36 @@ describe("Engine4 Viator image consistency", () => {
     expect(p3.heroImage).not.toBe(p5.heroImage);
     expect(p3.heroImage).not.toBe(PALM_SPRINGS_HERO);
     expect(p5.heroImage).not.toBe(PALM_SPRINGS_HERO);
+  });
+
+  it("uses the Santa Barbara hero consistently for page, card, og:image, and schema image", () => {
+    const pageTour = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(tour => tour.productCode === "63657P1")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["63657P1"],
+    });
+
+    const listingTour = getEngine4ListingEntries("california", "santa-barbara").find(
+      entry => entry.tour.productCode === "63657P1"
+    )?.tour;
+    const routeTour = getEngine4TourBySlugs(
+      "california",
+      "santa-barbara",
+      "santa-barbara-vineyard-to-table-taste-tour-by-ebike-63657p1"
+    );
+
+    const schema = buildEngine4ViatorSchemaGraph(pageTour);
+    const productNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
+    const touristTripNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
+
+    expect(pageTour.heroImage).toBe(SANTA_BARBARA_HERO);
+    expect(listingTour?.heroImage).toBe(pageTour.heroImage);
+    expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
+    expect(productNode.image).toBe(pageTour.heroImage);
+    expect(touristTripNode.image).toBe(pageTour.heroImage);
   });
 
   it("uses the Colorado Springs hero consistently for page, card, og:image, and schema image", () => {

@@ -17,6 +17,13 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const itinerary = tour.content.itinerary ?? [];
   const hasHighlights = highlights.length > 0;
   const hasFaqs = faqs.length > 0;
+  const hasPrice = Boolean(tour.facts.priceFrom);
+  const hasRating =
+    typeof tour.facts.ratingValue === "number" &&
+    typeof tour.facts.reviewCount === "number";
+  const hasMeetingPoint = Boolean(tour.facts.meetingPointShort);
+  const hasStartTime = Boolean(tour.facts.startTime);
+  const hasDuration = Boolean(tour.facts.duration);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -42,25 +49,31 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               {tour.title}
             </h1>
             <div className="mt-6 grid gap-3 text-sm text-white/95 md:grid-cols-2">
-              <p>
-                <strong>From:</strong> {tour.facts.priceFrom} per person
-              </p>
-              <p>
-                <strong>Rating:</strong>{" "}
-                {typeof tour.facts.ratingValue === "number"
-                  ? tour.facts.ratingValue.toFixed(1)
-                  : "N/A"}{" "}
-                ({tour.facts.reviewCount} reviews)
-              </p>
-              <p>
-                <strong>Meeting point:</strong> {tour.facts.meetingPointShort}
-              </p>
-              <p>
-                <strong>Start time:</strong> {tour.facts.startTime}
-              </p>
-              <p>
-                <strong>Duration:</strong> {tour.facts.duration}
-              </p>
+              {hasPrice ? (
+                <p>
+                  <strong>From:</strong> {tour.facts.priceFrom} per person
+                </p>
+              ) : null}
+              {hasRating ? (
+                <p>
+                  <strong>Rating:</strong> {tour.facts.ratingValue?.toFixed(1)} ({tour.facts.reviewCount} reviews)
+                </p>
+              ) : null}
+              {hasMeetingPoint ? (
+                <p>
+                  <strong>Meeting point:</strong> {tour.facts.meetingPointShort}
+                </p>
+              ) : null}
+              {hasStartTime ? (
+                <p>
+                  <strong>Start time:</strong> {tour.facts.startTime}
+                </p>
+              ) : null}
+              {hasDuration ? (
+                <p>
+                  <strong>Duration:</strong> {tour.facts.duration}
+                </p>
+              ) : null}
             </div>
             <a
               href={tour.bookingUrl}
