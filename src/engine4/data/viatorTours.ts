@@ -4,6 +4,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "76007P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Denver/Best-of-Denver-Tour-and-City-Lights-Tour/d4837-76007P1?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2b/b9/77/8f/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Denver",
+      citySlug: "denver",
+    },
+    slug: "best-of-denver-tour-and-city-lights-tour-76007p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "74828P3",
     bookingUrl:
       "https://www.viator.com/tours/Aspen/Glimpse-of-Aspen-Tour/d26395-74828P3?pid=P00290915&mcid=42383&medium=link",
@@ -75,6 +92,27 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "76007P1": {
+    productCode: "76007P1",
+    title: "Best of Denver Tour and City Lights Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Denver/Best-of-Denver-Tour-and-City-Lights-Tour/d4837-76007P1",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2b/b9/77/8f/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "See Denver highlights by day and skyline viewpoints after dark on a guided city tour.",
+    descriptionLong:
+      "This guided Denver experience combines a daytime highlights tour with an evening city-lights segment, covering major landmarks and neighborhoods while your guide shares local context and history. Expect multiple stops for photos and short walks, with time to take in skyline viewpoints after dark. The format is designed for visitors who want a broad introduction to the city in a single outing, with transportation between key sights and a structured route that balances orientation, scenery, and commentary.",
+    overview:
+      "This guided Denver experience combines a daytime highlights tour with an evening city-lights segment, covering major landmarks and neighborhoods while your guide shares local context and history. Expect multiple stops for photos and short walks, with time to take in skyline viewpoints after dark. The format is designed for visitors who want a broad introduction to the city in a single outing, with transportation between key sights and a structured route that balances orientation, scenery, and commentary.",
+    highlights: [
+      "Guided overview of Denver’s key neighborhoods and landmarks",
+      "Photo stops and short walks at scenic points",
+      "Evening city-lights segment with skyline views",
+      "Narrated local history and context from your guide",
+      "Efficient way to see a broad cross-section of Denver",
+    ],
+  },
   "172188P151": {
     productCode: "172188P151",
     title: "Private Professional Photoshoot in Aspen",
