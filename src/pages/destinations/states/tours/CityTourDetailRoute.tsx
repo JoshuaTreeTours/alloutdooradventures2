@@ -107,7 +107,7 @@ export default function CityTourDetailRoute({
     ) {
       const productCode = engine2Tour.id.toUpperCase();
       const tourRecord = engine4ViatorTours.find(
-        entry => entry.viator.productCode.toUpperCase() === productCode
+        entry => entry.productCode.toUpperCase() === productCode
       );
 
       if (!tourRecord) {

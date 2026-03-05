@@ -1,4 +1,4 @@
-import type { Engine4TourViewModel } from "../types";
+import type { Engine4ViatorApiTour, Engine4ViatorTourRecord } from "../types";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -6,55 +6,6 @@ const cleanText = (value?: string | null) => {
   }
   const trimmed = value.trim();
   return trimmed.length > 0 ? trimmed : undefined;
-};
-
-const dedupe = (items: Array<string | undefined>): string[] => {
-  const seen = new Set<string>();
-  return items
-    .map(item => cleanText(item))
-    .filter((item): item is string => Boolean(item))
-    .filter(item => {
-      const key = item.toLowerCase();
-      if (seen.has(key)) {
-        return false;
-      }
-      seen.add(key);
-      return true;
-    });
-};
-
-const detectFormat = (tour: Engine4TourViewModel): string => {
-  const haystack = [tour.title, tour.description, tour.whatToExpect]
-    .filter(Boolean)
-    .join(" ")
-    .toLowerCase();
-
-  if (haystack.includes("e-bike") || haystack.includes("ebike"))
-    return "e-bike";
-  if (haystack.includes("jeep")) return "jeep";
-  if (haystack.includes("walk") || haystack.includes("walking"))
-    return "walking";
-  if (haystack.includes("hike") || haystack.includes("trail")) return "hiking";
-  if (haystack.includes("bike") || haystack.includes("cycling")) return "bike";
-
-  return "guided";
-};
-
-const stopNames = (tour: Engine4TourViewModel) =>
-  dedupe((tour.itinerary ?? []).map(stop => stop.title));
-
-const itinerarySummary = (tour: Engine4TourViewModel): string | undefined => {
-  const stops = stopNames(tour);
-  if (stops.length >= 3) {
-    return `The route visits ${stops[0]}, ${stops[1]}, and ${stops[2]}.`;
-  }
-  if (stops.length === 2) {
-    return `The route visits ${stops[0]} and ${stops[1]}.`;
-  }
-  if (stops.length === 1) {
-    return `A featured stop is ${stops[0]}.`;
-  }
-  return undefined;
 };
 
 const firstParagraph = (text?: string): string | undefined => {
@@ -66,107 +17,121 @@ const firstParagraph = (text?: string): string | undefined => {
     .join(" ");
 };
 
-export const buildOverview = (tour: Engine4TourViewModel): string => {
-  const format = detectFormat(tour);
-  const durationPart = cleanText(tour.duration)
-    ? `The experience runs for about ${tour.duration}.`
-    : undefined;
-  const routePart = itinerarySummary(tour);
-  const experiencePart =
-    firstParagraph(tour.whatToExpect) ??
-    firstParagraph(tour.descriptionLong) ??
-    firstParagraph(tour.description) ??
-    firstParagraph(tour.overview);
+const dedupe = (items: Array<string | undefined>): string[] => {
+  const seen = new Set<string>();
+  return items
+    .map(item => cleanText(item))
+    .filter((item): item is string => Boolean(item))
+    .filter(item => {
+      const key = item.toLowerCase();
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+};
 
-  const inclusionPart =
-    tour.inclusions && tour.inclusions.length > 0
-      ? `Included features may cover ${tour.inclusions.slice(0, 2).join(" and ")}.`
-      : undefined;
+export const normalizeItinerary = (apiTour?: Engine4ViatorApiTour) =>
+  (apiTour?.itinerary ?? []).filter(item => cleanText(item.title));
 
-  const sentences = dedupe([
-    `${tour.title} is a ${format} tour in ${tour.city} designed around local routes and key points of interest.`,
-    durationPart,
-    routePart,
-    experiencePart,
-    inclusionPart,
+export const buildOverview = (input: {
+  apiTour?: Engine4ViatorApiTour;
+  destination: Engine4ViatorTourRecord["destination"];
+  title: string;
+  itinerary: Array<{ title: string; description?: string; duration?: string }>;
+}): string => {
+  const { apiTour, destination, title, itinerary } = input;
+  const itinerarySummary = itinerary
+    .slice(0, 3)
+    .map(stop => stop.title)
+    .join(", ");
+
+  const candidates = dedupe([
+    cleanText(apiTour?.descriptionLong),
+    firstParagraph(apiTour?.whatToExpect),
+    firstParagraph(itinerary.map(step => step.description).find(Boolean)),
+    cleanText(apiTour?.description),
   ]);
 
-  return sentences.join(" ");
+  const base =
+    candidates[0] ??
+    `${title} explores ${destination.city} with a guided format and local context.`;
+
+  const supplement = dedupe([
+    candidates[1],
+    itinerarySummary
+      ? `Featured stops include ${itinerarySummary}.`
+      : undefined,
+  ]);
+
+  return [base, ...supplement].join(" ").trim();
 };
 
-export const buildHighlights = (tour: Engine4TourViewModel): string[] => {
-  const highlights: string[] = [];
+export const buildHighlights = (input: {
+  apiTour?: Engine4ViatorApiTour;
+  itinerary: Array<{ title: string; description?: string; duration?: string }>;
+  duration?: string;
+}): string[] => {
+  const { apiTour, itinerary, duration } = input;
+  const highlights = dedupe([
+    ...itinerary.slice(0, 3).map(stop => `Stop: ${stop.title}`),
+    ...itinerary
+      .map(stop => firstParagraph(stop.description))
+      .filter((item): item is string => Boolean(item))
+      .slice(0, 2),
+    firstParagraph(apiTour?.whatToExpect),
+    firstParagraph(apiTour?.descriptionLong),
+    ...(apiTour?.inclusions ?? []).slice(0, 2).map(item => `Includes ${item}`),
+    duration ? `Duration: ${duration}` : undefined,
+    cleanText(apiTour?.cancellationPolicy)
+      ? `Cancellation: ${apiTour?.cancellationPolicy}`
+      : undefined,
+  ]);
 
-  (tour.itinerary ?? []).forEach(stop => {
-    if (highlights.length < 5 && stop.title) {
-      highlights.push(`Visit ${stop.title}`);
-    }
-  });
-
-  [tour.whatToExpect, tour.description, tour.descriptionLong]
-    .map(firstParagraph)
-    .filter((item): item is string => Boolean(item))
-    .forEach(text => {
-      if (highlights.length < 6) {
-        highlights.push(text);
-      }
-    });
-
-  (tour.inclusions ?? []).forEach(item => {
-    if (highlights.length < 7) {
-      highlights.push(`Includes ${item}`);
-    }
-  });
-
-  if (tour.cancellationPolicy && highlights.length < 8) {
-    highlights.push(`Cancellation: ${tour.cancellationPolicy}`);
-  }
-
-  if (tour.duration && highlights.length < 8) {
-    highlights.push(`Duration: ${tour.duration}`);
-  }
-
-  return dedupe(highlights).slice(0, 8);
+  return highlights.slice(0, 8);
 };
 
-export const buildFaqs = (
-  tour: Engine4TourViewModel
-): Array<{ question: string; answer: string }> => {
+export const buildFaqs = (input: {
+  apiTour?: Engine4ViatorApiTour;
+  meetingPointFull?: string;
+  duration?: string;
+  cancellationPolicy?: string;
+}): Array<{ question: string; answer: string }> => {
+  const { apiTour, meetingPointFull, duration, cancellationPolicy } = input;
+
   const faqs: Array<{ question: string; answer: string } | undefined> = [
-    tour.meetingPoint
+    meetingPointFull
       ? {
-          question: "Where does the tour start?",
-          answer: `The listed start point is ${tour.meetingPoint}.`,
+          question: "Where is the meeting point?",
+          answer: `The listed meeting point is ${meetingPointFull}.`,
         }
       : undefined,
-    tour.duration
+    duration
       ? {
-          question: "How long is the tour?",
-          answer: `The tour duration is approximately ${tour.duration}.`,
+          question: "How long is this tour?",
+          answer: `The experience lasts about ${duration}.`,
         }
       : undefined,
-    tour.cancellationPolicy
+    cancellationPolicy
       ? {
           question: "What is the cancellation policy?",
-          answer: tour.cancellationPolicy,
+          answer: cancellationPolicy,
         }
       : undefined,
-    (tour.additionalInfo ?? []).length > 0
+    (apiTour?.additionalInfo ?? []).length
       ? {
           question: "What should I bring?",
-          answer: `Additional tour notes include: ${(tour.additionalInfo ?? []).slice(0, 2).join(" ")}`,
+          answer: (apiTour?.additionalInfo ?? []).slice(0, 2).join(" "),
         }
       : undefined,
-    {
-      question: "Is the tour suitable for beginners?",
-      answer:
-        cleanText(tour.whatToExpect) ??
-        cleanText(tour.description) ??
-        "The route is guided, so review the activity details to match your comfort level.",
-    },
+    (apiTour?.exclusions ?? []).length
+      ? {
+          question: "What is not included?",
+          answer: `Exclusions may include ${(apiTour?.exclusions ?? []).slice(0, 2).join(" and ")}.`,
+        }
+      : undefined,
   ];
 
-  return faqs.filter((item): item is { question: string; answer: string } =>
-    Boolean(item)
+  return faqs.filter(
+    (item): item is { question: string; answer: string } => !!item
   );
 };

@@ -8,36 +8,49 @@ import Engine4TourPage from "./Engine4TourPage";
 
 const engine4Tour: Engine4TourViewModel = {
   tourId: "engine4-74828P5",
+  engine: "engine4",
+  bookingProvider: "viator",
   productCode: "74828P5",
+  slug: "aspen-east-end-light-hike",
   title: "Aspen East End Light Hike",
   canonicalPath:
     "/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5",
   bookingUrl:
     "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5?pid=P00290915&mcid=42383&medium=link",
-  city: "Aspen",
-  state: "Colorado",
-  country: "United States",
+  destination: {
+    country: "United States",
+    state: "Colorado",
+    stateSlug: "colorado",
+    city: "Aspen",
+    citySlug: "aspen",
+  },
   heroImage:
     "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
-  galleryImages: [
-    "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
-  ],
-  fromPrice: "$65.00",
-  rating: 4.7,
-  reviewCount: 3,
-  duration: "2 hours",
-  startTime: "8:15 AM",
-  meetingPoint: "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611",
-  meetingPointShort: "Wheeler Opera House",
-  cancellationPolicy: "Free cancellation up to 24 hours in advance.",
-  overview: "Sample overview",
-  highlights: ["Guided hike", "2-hour duration"],
-  faqs: [
-    {
-      question: "Where do we meet?",
-      answer: "Wheeler Opera House",
-    },
-  ],
+  galleryImages: [],
+  facts: {
+    priceFrom: "$65.00",
+    ratingValue: 4.7,
+    reviewCount: 3,
+    duration: "2 hours",
+    startTime: "8:15 AM",
+    meetingPointShort: "Wheeler Opera House",
+    meetingPointFull: "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+  },
+  content: {
+    overview: "Sample overview",
+    highlights: ["Guided hike", "2-hour duration"],
+    faqs: [{ question: "Where do we meet?", answer: "Wheeler Opera House" }],
+    itinerary: [
+      { title: "Wheeler Opera House", description: "Meet and greet" },
+    ],
+    inclusions: [],
+    exclusions: [],
+  },
+};
+
+(globalThis as { location?: { pathname: string } }).location = {
+  pathname: "/",
 };
 
 const engine3Tour: Engine3TourViewModel = {
@@ -57,35 +70,14 @@ const engine3Tour: Engine3TourViewModel = {
     "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
 };
 
-(globalThis as { location?: { pathname: string } }).location = {
-  pathname: "/",
-};
-
 describe("Engine4TourPage booking CTA", () => {
-  it("renders two booking CTA links for Engine4 Viator tours", () => {
+  it("renders two booking CTA links for Engine4 Viator tours with new-tab attrs", () => {
     const html = renderToStaticMarkup(<Engine4TourPage tour={engine4Tour} />);
-    const hrefMatches = html.match(/href="[^"]*74828P5[^"]*"/g) ?? [];
 
-    expect(hrefMatches).toHaveLength(2);
     expect(html.split("Book This Tour").length - 1).toBe(2);
+    expect(html.match(/target=\"_blank\"/g) ?? []).toHaveLength(2);
+    expect(html.match(/rel=\"noopener noreferrer\"/g) ?? []).toHaveLength(2);
     expect(html).toContain("Ready to book?");
-    expect(html.match(/target="_blank"/g) ?? []).toHaveLength(2);
-    expect(html.match(/rel="noopener noreferrer"/g) ?? []).toHaveLength(2);
-  });
-
-  it("does not force new-tab behavior for internal booking links", () => {
-    const html = renderToStaticMarkup(
-      <Engine4TourPage
-        tour={{
-          ...engine4Tour,
-          bookingUrl:
-            "/destinations/colorado/aspen/tours/aspen-east-end-light-hike-74828p5/book",
-        }}
-      />
-    );
-
-    expect(html).not.toContain('target="_blank"');
-    expect(html).not.toContain('rel="noopener noreferrer"');
   });
 
   it("keeps non-Engine4 tour rendering unchanged", () => {

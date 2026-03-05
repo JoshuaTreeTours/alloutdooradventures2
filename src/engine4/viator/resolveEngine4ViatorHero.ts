@@ -1,33 +1,47 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
 
+const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
+
 const isTrackerPixel = (url: string) =>
   /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
     url
   );
 
-const isBrokenHeroCandidate = (value?: string): boolean => {
+const hasAllowedImagePath = (pathname: string) =>
+  /\/(?:media\/photo-o|media\/attractions-splice-|media\/photo-l|media\/photo-s)\//i.test(
+    pathname
+  ) || /\.(?:jpg|jpeg|png|webp)$/i.test(pathname);
+
+const isValidHeroCandidate = (value?: string): boolean => {
   if (!value) {
-    return true;
+    return false;
   }
 
   const trimmed = value.trim();
   if (!trimmed) {
-    return true;
+    return false;
   }
 
-  if (trimmed.startsWith("data:text/html")) {
-    return true;
+  if (
+    INVALID_SCHEMES.some(scheme => trimmed.toLowerCase().startsWith(scheme))
+  ) {
+    return false;
   }
 
   try {
     const parsed = new URL(trimmed);
     if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
-      return true;
+      return false;
     }
-    return isTrackerPixel(trimmed);
+
+    if (isTrackerPixel(trimmed)) {
+      return false;
+    }
+
+    return hasAllowedImagePath(parsed.pathname);
   } catch {
-    return true;
+    return false;
   }
 };
 
@@ -43,20 +57,18 @@ export const resolveEngine4ViatorHero = (input: {
 }) => {
   const normalizedCode = input.productCode.toUpperCase();
   const tourRecord = engine4ViatorTours.find(
-    tour => tour.viator.productCode.toUpperCase() === normalizedCode
+    tour => tour.productCode.toUpperCase() === normalizedCode
   );
 
   const candidates = [
-    tourRecord?.viator.heroImageOverrideUrl,
+    tourRecord?.heroImage,
     input.apiTour?.primaryImageUrl,
     input.apiTour?.galleryImages?.[0],
     input.apiTour?.sourceDerivedImageUrl,
-    tourRecord?.viator.sourceHeroImageUrl,
   ];
 
-  const heroImage =
-    candidates.find(candidate => !isBrokenHeroCandidate(candidate)) ??
-    toInlinePlaceholder();
-
-  return heroImage;
+  return (
+    candidates.find(candidate => isValidHeroCandidate(candidate)) ??
+    toInlinePlaceholder()
+  );
 };
