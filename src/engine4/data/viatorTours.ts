@@ -52,6 +52,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "aspens-off-the-beaten-path-tour-74828p4",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "172188P151",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Private-Professional-photoshoot-in-Aspen/d26395-172188P151?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/f1/9d/df/caption.jpg?w=1200&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
+    },
+    slug: "private-professional-photoshoot-in-aspen-172188p151",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -216,6 +233,81 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "Is free cancellation available?",
         answer:
           "Yes. The listing indicates free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
+  "172188P151": {
+    productCode: "172188P151",
+    title: "Private Professional Photoshoot in Aspen",
+    sourceUrl:
+      "https://www.viator.com/tours/Aspen/Private-Professional-photoshoot-in-Aspen/d26395-172188P151",
+    fromPrice: "$299.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 1,
+    duration: "1 hour",
+    meetingPoint: "Aspen, CO 81611, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/f1/9d/df/caption.jpg?w=1200&h=800&s=1",
+    description:
+      "Capture your Aspen trip with a private photographer in a one-on-one outdoor photo session.",
+    descriptionLong:
+      "This private photoshoot pairs you with a professional photographer who helps direct posing, framing, and location selection so you leave Aspen with polished keepsake images.",
+    itinerary: [
+      {
+        title: "Downtown Aspen meeting area",
+        description:
+          "Meet your photographer and align on preferred style, outfits, and shot list.",
+      },
+      {
+        title: "Curated Aspen backdrop walk",
+        description:
+          "Move through a short route with mountain-town streetscapes and scenic compositions.",
+      },
+      {
+        title: "Final portrait set",
+        description:
+          "Wrap with signature shots and confirm post-session image delivery details.",
+      },
+    ],
+    whatToExpect:
+      "Expect a relaxed private session with direction on posing and composition while you explore photogenic Aspen locations.",
+    inclusions: [
+      "Private professional photographer",
+      "Guided posing and composition support",
+      "Digital photo delivery",
+    ],
+    additionalInfo: [
+      "Bring weather-appropriate layers",
+      "Comfortable walking shoes are recommended",
+      "Confirm final meeting spot after booking",
+    ],
+    overview:
+      "Private Professional Photoshoot in Aspen is designed for travelers who want professionally composed vacation portraits without joining a group activity. The experience is run as a private session, giving you dedicated photographer attention from start to finish and flexibility to shape the style around couples, solo travelers, families, or special occasions. Current listing details show the experience from $299.00 per person with a duration of approximately 1 hour and a meeting point in Aspen, Colorado. The listing currently reflects a 5.0 rating based on 1 review and includes free cancellation up to 24 hours before the scheduled start.",
+    highlights: [
+      "Private Aspen photoshoot led by a professional photographer",
+      "Approximate duration of 1 hour for a focused portrait session",
+      "Current listing price from $299.00 per person",
+      "Meeting point listed in Aspen, Colorado",
+      "Free cancellation up to 24 hours before the session",
+      "Current listing rating of 5.0 based on 1 review",
+    ],
+    faqs: [
+      {
+        question: "Where is the meeting point for this Aspen photoshoot?",
+        answer:
+          "The listing shows a meeting point in Aspen, CO 81611, USA. Exact meetup instructions are typically confirmed after booking.",
+      },
+      {
+        question:
+          "How long does the Private Professional Photoshoot in Aspen last?",
+        answer: "The listed experience duration is approximately 1 hour.",
+      },
+      {
+        question: "What cancellation terms are listed?",
+        answer:
+          "The current listing indicates free cancellation up to 24 hours in advance.",
       },
     ],
   },
