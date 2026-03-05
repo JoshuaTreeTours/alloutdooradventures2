@@ -4,6 +4,22 @@ import type { Engine4TourViewModel } from "../types";
 export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
 
+  const itinerary =
+    tour.itinerary && tour.itinerary.length > 0
+      ? {
+          "@type": "ItemList",
+          itemListElement: tour.itinerary.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "TouristAttraction",
+              name: item.title,
+              ...(item.description ? { description: item.description } : {}),
+            },
+          })),
+        }
+      : undefined;
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -13,14 +29,7 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         name: tour.title,
         description: tour.overview,
         touristType: "Adventure travelers",
-        itinerary: {
-          "@type": "ItemList",
-          itemListElement: tour.highlights.map((item, index) => ({
-            "@type": "ListItem",
-            position: index + 1,
-            name: item,
-          })),
-        },
+        itinerary,
       },
       {
         "@type": "Product",

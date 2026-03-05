@@ -68,6 +68,32 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     meetingPoint: "320 E Hyman Ave, Aspen, CO 81611, USA",
     sourceDerivedImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg",
+    description:
+      "Get oriented in Aspen with a guided walk through historic blocks and cultural landmarks.",
+    descriptionLong:
+      "This small-group introduction covers Aspen's downtown stories, architecture, and mountain-town culture with regular photo and interpretation stops.",
+    itinerary: [
+      {
+        title: "Wheeler Opera House",
+        description: "Historic theater and local gathering point.",
+      },
+      {
+        title: "Aspen Art Museum",
+        description: "Contemporary arts stop with city context.",
+      },
+      {
+        title: "Koch Park",
+        description: "Scenic park area with mountain views.",
+      },
+    ],
+    whatToExpect:
+      "Expect a relaxed pace with commentary about Aspen history, neighborhoods, and notable landmarks.",
+    inclusions: ["Local guide", "Walking route through downtown Aspen"],
+    additionalInfo: [
+      "Wear comfortable walking shoes",
+      "Bring water for warm days",
+    ],
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     overview:
       "The Glimpse of Aspen Tour is a guided Aspen experience that runs for approximately 2 hours and is currently listed from $55.00 per person. The published meeting point is 320 E Hyman Ave, Aspen, CO 81611, USA, giving you a central in-town starting location. Current listing metrics show a 4.8 average rating based on 14 reviews. This format is built as a shorter option for travelers who want a focused introduction to Aspen within a compact timeframe. Booking details are provided directly on the live product page, where you can review current availability and final checkout terms before confirming your reservation.",
     highlights: [
@@ -101,7 +127,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   "74828P5": {
     productCode: "74828P5",
     title: "Aspen East End Light Hike",
-    sourceUrl: "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+    sourceUrl:
+      "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
     fromPrice: "$65.00",
     priceCurrency: "USD",
     rating: 4.7,
@@ -112,6 +139,26 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+    description:
+      "Join a light guided hike through Aspen's East End to explore local trails and residential history.",
+    descriptionLong:
+      "The route blends mellow elevation, neighborhood context, and mountain scenery while keeping the pace beginner-friendly.",
+    itinerary: [
+      { title: "Wheeler Opera House", description: "Meet and route briefing." },
+      {
+        title: "Ute Trail Access",
+        description: "Intro segment through Aspen's East End.",
+      },
+      {
+        title: "Smuggler Mountain Viewpoint",
+        description: "Panoramic valley overlook.",
+      },
+    ],
+    whatToExpect:
+      "Expect moderate walking on maintained paths with frequent stops for scenery and local storytelling.",
+    inclusions: ["Professional guide", "Trail interpretation"],
+    exclusions: ["Hotel pickup and drop-off"],
+    additionalInfo: ["Wear trail shoes", "Bring a refillable water bottle"],
     overview:
       "Explore Aspen’s East End on a guided light hike designed for travelers who want a shorter, approachable outing. This experience runs for about 2 hours and departs at 8:15 AM, with meeting at Wheeler Opera House, 320 E Hyman Ave in Aspen. The route focuses on the East End area and is led by a guide, making it a straightforward way to get outside without committing to a full-day trek. At booking time, this tour is listed from $65.00 per person and currently shows a 4.7 rating based on 3 reviews. If your plans change, you can cancel up to 24 hours before the start time for a full refund under the listed cancellation terms.",
     highlights: [
@@ -151,6 +198,28 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg",
+    description:
+      "Discover quieter Aspen corners with a local guide and scenic neighborhood route.",
+    descriptionLong:
+      "This outing focuses on less-traveled viewpoints, local stories, and flexible pacing for travelers seeking deeper context.",
+    itinerary: [
+      {
+        title: "Historic West End",
+        description: "Victorian-era district and architecture.",
+      },
+      {
+        title: "Rio Grande Trail Segment",
+        description: "Riverside perspective and local history.",
+      },
+      {
+        title: "Hallam Lake Area",
+        description: "Nature-focused stop with interpretation.",
+      },
+    ],
+    whatToExpect:
+      "Expect a conversational, small-group format with stops in areas many visitors miss.",
+    inclusions: ["Guide", "Local insights"],
+    additionalInfo: ["Dress in layers for mountain weather"],
     overview:
       "Aspen's Off the Beaten Path Tour explores lesser-known corners of Aspen with a local guide and a small-group format. The experience is designed for travelers who want a flexible, half-day outing that balances local context with scenic viewpoints around town. Current listing details show this tour from $145.00 per person, with an average 5.0 rating based on 42 reviews and a duration of approximately 3 hours. The listing also indicates free cancellation up to 24 hours in advance.",
     highlights: [
@@ -171,7 +240,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
       {
         question: "Is free cancellation available?",
-        answer: "Yes. The listing indicates free cancellation up to 24 hours in advance.",
+        answer:
+          "Yes. The listing indicates free cancellation up to 24 hours in advance.",
       },
     ],
   },

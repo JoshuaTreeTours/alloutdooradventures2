@@ -16,6 +16,17 @@ export type Engine4ViatorTourRecord = {
 };
 
 export type Engine4ViatorApiTour = {
+  description?: string;
+  descriptionLong?: string;
+  itinerary?: Array<{
+    title: string;
+    description?: string;
+    duration?: string;
+  }>;
+  whatToExpect?: string;
+  inclusions?: string[];
+  exclusions?: string[];
+  additionalInfo?: string[];
   productCode: string;
   title: string;
   sourceUrl: string;
@@ -27,7 +38,6 @@ export type Engine4ViatorApiTour = {
   reviewCount?: number;
   meetingPoint?: string;
   cancellationPolicy?: string;
-  inclusions?: string[];
   highlights?: string[];
   faqs?: Array<{ question: string; answer: string }>;
   overview?: string;
@@ -54,8 +64,18 @@ export type Engine4TourViewModel = {
   startTime?: string;
   meetingPoint?: string;
   meetingPointShort?: string;
+  description?: string;
+  descriptionLong?: string;
+  itinerary?: Array<{
+    title: string;
+    description?: string;
+    duration?: string;
+  }>;
+  whatToExpect?: string;
   cancellationPolicy?: string;
   inclusions?: string[];
+  exclusions?: string[];
+  additionalInfo?: string[];
   overview: string;
   highlights: string[];
   faqs: Array<{ question: string; answer: string }>;
