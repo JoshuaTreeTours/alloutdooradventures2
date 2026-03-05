@@ -70,7 +70,7 @@ describe("Engine4TourPage booking CTA", () => {
     expect(html.split("Book This Tour").length - 1).toBe(2);
     expect(html).toContain("Ready to book?");
     expect(html.match(/target="_blank"/g) ?? []).toHaveLength(2);
-    expect(html.match(/rel="noopener"/g) ?? []).toHaveLength(2);
+    expect(html.match(/rel="noopener noreferrer"/g) ?? []).toHaveLength(2);
   });
 
   it("does not force new-tab behavior for internal booking links", () => {
@@ -85,7 +85,7 @@ describe("Engine4TourPage booking CTA", () => {
     );
 
     expect(html).not.toContain('target="_blank"');
-    expect(html).not.toContain('rel="noopener"');
+    expect(html).not.toContain('rel="noopener noreferrer"');
   });
 
   it("keeps non-Engine4 tour rendering unchanged", () => {

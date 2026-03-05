@@ -8,10 +8,11 @@ import { mapViatorToEngine4Tour } from "./mapViatorToEngine4Tour";
 
 describe("mapViatorToEngine4Tour", () => {
   it("maps Aspen facts for above-the-fold content", () => {
-    const record = engine4ViatorTours[0];
+    const record = engine4ViatorTours.find(tour => tour.viator.productCode === "74828P5");
+    expect(record).toBeDefined();
     const vm = mapViatorToEngine4Tour({
-      record,
-      apiTour: engine4ViatorApiFallbackByProductCode[record.viator.productCode],
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode[record!.viator.productCode],
     });
 
     expect(vm.fromPrice).toBe("$65.00");
@@ -39,4 +40,24 @@ it("maps Aspen off-the-beaten-path facts for above-the-fold content", () => {
   expect(vm.reviewCount).toBe(42);
   expect(vm.duration).toBe("3 hours");
   expect(vm.cancellationPolicy).toContain("24 hours");
+});
+
+it("maps Glimpse of Aspen Tour facts for above-the-fold content", () => {
+  const record = engine4ViatorTours.find(tour => tour.viator.productCode === "74828P3");
+  expect(record).toBeDefined();
+
+  const vm = mapViatorToEngine4Tour({
+    record: record!,
+    apiTour: engine4ViatorApiFallbackByProductCode["74828P3"],
+  });
+
+  expect(vm.title).toBe("Glimpse of Aspen Tour");
+  expect(vm.fromPrice).toBe("$55.00");
+  expect(vm.rating).toBe(4.8);
+  expect(vm.reviewCount).toBe(14);
+  expect(vm.duration).toBe("2 hours");
+  expect(vm.meetingPoint).toContain("320 E Hyman Ave");
+  expect(vm.heroImage).toBe(
+    "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
+  );
 });

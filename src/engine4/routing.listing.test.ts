@@ -21,4 +21,23 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("74828P4");
   });
+
+  it("builds the 74828P3 route and exposes it in Aspen listing", () => {
+    const entries = getEngine4ListingEntries("colorado", "aspen");
+    const target = entries.find(entry => entry.tour.productCode === "74828P3");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/colorado/aspen/tours/glimpse-of-aspen-tour-74828p3"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "colorado",
+      "aspen",
+      "glimpse-of-aspen-tour-74828p3"
+    );
+
+    expect(routed?.id).toBe("74828P3");
+  });
+
 });

@@ -39,6 +39,26 @@ describe("resolveEngine4ViatorHero", () => {
     expect(hero).toContain("caption.jpg");
   });
 
+
+
+  it("resolves 74828P3 hero from its own source-derived fallback image", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "74828P3",
+      apiTour: {
+        productCode: "74828P3",
+        title: "Glimpse of Aspen Tour",
+        sourceUrl: "https://www.viator.com/tours/Aspen/example/d26395-74828P3",
+        sourceDerivedImageUrl:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg",
+      },
+    });
+
+    expect(hero).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
+    );
+    expect(hero).not.toContain("2f/38/a3/07/caption.jpg");
+  });
+
   it("does not leak per-tour override across other product codes", () => {
     const hero = resolveEngine4ViatorHero({
       productCode: "99999P1",

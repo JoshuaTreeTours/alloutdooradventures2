@@ -15,7 +15,7 @@ const PALM_SPRINGS_HERO =
 describe("Engine4 Viator image consistency", () => {
   it("uses the same resolved hero image for card, page, schema, and OG", () => {
     const tourRecord = engine4ViatorTours.find(
-      tour => tour.viator.productCode === "74828P4"
+      tour => tour.viator.productCode === "74828P3"
     );
     expect(tourRecord).toBeDefined();
 
@@ -24,12 +24,12 @@ describe("Engine4 Viator image consistency", () => {
       apiTour: engine4ViatorApiFallbackByProductCode[tourRecord!.viator.productCode],
     });
     const listingTour = getEngine4ListingEntries("colorado", "aspen").find(
-      entry => entry.tour.productCode === "74828P4"
+      entry => entry.tour.productCode === "74828P3"
     )?.tour;
     const routeTour = getEngine4TourBySlugs(
       "colorado",
       "aspen",
-      "aspens-off-the-beaten-path-tour-74828p4"
+      "glimpse-of-aspen-tour-74828p3"
     );
 
     expect(listingTour).toBeDefined();
@@ -42,7 +42,7 @@ describe("Engine4 Viator image consistency", () => {
     const schemaImage = (productNode.image as string[])[0];
 
     expect(pageTour.heroImage).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
     );
     expect(pageTour.heroImage).not.toBe(PALM_SPRINGS_HERO);
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
