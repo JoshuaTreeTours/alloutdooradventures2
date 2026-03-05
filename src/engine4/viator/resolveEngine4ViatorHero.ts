@@ -1,17 +1,19 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
 
-const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
+const INVALID_SCHEMES = ["javascript:", "data:"];
+const ALLOWED_TACDN_HOSTS = new Set([
+  "dynamic-media.tacdn.com",
+  "media.tacdn.com",
+]);
 
 const isTrackerPixel = (url: string) =>
   /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
     url
   );
 
-const hasAllowedImagePath = (pathname: string) =>
-  /\/(?:media\/photo-o|media\/attractions-splice-|media\/photo-l|media\/photo-s)\//i.test(
-    pathname
-  ) || /\.(?:jpg|jpeg|png|webp)$/i.test(pathname);
+const hasAllowedImagePath = (pathname: string, search: string) =>
+  /\.(?:jpg|jpeg|png|webp)(?:\?|$)/i.test(`${pathname}${search}`);
 
 const isValidHeroCandidate = (value?: string): boolean => {
   if (!value) {
@@ -35,11 +37,15 @@ const isValidHeroCandidate = (value?: string): boolean => {
       return false;
     }
 
+    if (!ALLOWED_TACDN_HOSTS.has(parsed.hostname.toLowerCase())) {
+      return false;
+    }
+
     if (isTrackerPixel(trimmed)) {
       return false;
     }
 
-    return hasAllowedImagePath(parsed.pathname);
+    return hasAllowedImagePath(parsed.pathname, parsed.search);
   } catch {
     return false;
   }

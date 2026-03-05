@@ -20,7 +20,40 @@ describe("resolveEngine4ViatorHero", () => {
       },
     });
 
-    expect(hero).toContain("dynamic-media.tacdn.com");
+    expect(hero).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"
+    );
+  });
+
+  it("accepts media.tacdn.com image URLs with query strings", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "99999P4",
+      apiTour: {
+        productCode: "99999P4",
+        title: "Other Tour",
+        sourceUrl: "https://www.viator.com/tours/Other/example/d123-99999P4",
+        primaryImageUrl:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg?w=1100&h=800&s=1",
+      },
+    });
+
+    expect(hero).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg?w=1100&h=800&s=1"
+    );
+  });
+
+  it("rejects non-TACDN hosts even if extension matches", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "99999P5",
+      apiTour: {
+        productCode: "99999P5",
+        title: "Other Tour",
+        sourceUrl: "https://www.viator.com/tours/Other/example/d123-99999P5",
+        primaryImageUrl: "https://example.com/path/caption.jpg?w=1100&h=800",
+      },
+    });
+
+    expect(hero).toContain("data:image/svg+xml");
   });
 
   it("rejects non-http or tracker pixel values", () => {

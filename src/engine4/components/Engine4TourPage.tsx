@@ -9,6 +9,12 @@ type Engine4TourPageProps = {
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
 
+const ENGINE4_PAGE_PLACEHOLDER =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><rect width='1200' height='675' fill='#e7eadf'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='42' fill='#2f4a2f'>Tour image unavailable</text></svg>`
+  );
+
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
   const overview = tour.content.overview;
@@ -17,6 +23,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const itinerary = tour.content.itinerary ?? [];
   const hasHighlights = highlights.length > 0;
   const hasFaqs = faqs.length > 0;
+  const heroImageSrc = tour.heroImage ?? ENGINE4_PAGE_PLACEHOLDER;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -24,7 +31,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
         title={tour.title}
         description={overview}
         url={tour.canonicalPath}
-        image={tour.heroImage}
+        image={heroImageSrc}
       />
       <script
         id="structured-data-engine4-viator"
@@ -72,7 +79,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
             </a>
           </div>
           <img
-            src={tour.heroImage ?? undefined}
+            src={heroImageSrc}
             alt={tour.title}
             className="h-80 w-full rounded-2xl object-cover"
           />
