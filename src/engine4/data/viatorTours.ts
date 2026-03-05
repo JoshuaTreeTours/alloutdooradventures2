@@ -117,6 +117,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     fromPrice: "$299.00",
     priceCurrency: "USD",
     duration: "1 hour",
+    meetingPoint: "Wagner Park, 350 E Durant Ave, Aspen, CO 81611, USA",
     cancellationPolicy: "Non-refundable.",
     sourceDerivedImageUrl:
       "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
@@ -245,6 +246,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     rating: 5,
     reviewCount: 42,
     duration: "3 hours",
+    meetingPoint: "Wheeler Opera House, 320 E Hyman Ave, Aspen, CO 81611",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg",
@@ -353,6 +355,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
     fromPrice: "199.00",
     priceCurrency: "USD",
+    duration: "4 hours",
     meetingPoint: "3850 State St, Santa Barbara, CA 93105, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:

@@ -26,7 +26,11 @@ const baseTour: Engine4TourViewModel = {
   heroImage:
     "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
   galleryImages: [],
-  facts: {},
+  facts: {
+    priceFrom: "$65.00",
+    duration: "2 hours",
+    meetingPointShort: "Wheeler Opera House",
+  },
   content: {
     overview: "Sample overview that satisfies the runtime contract.",
     highlights: [],
@@ -47,9 +51,7 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://example.com/foo.jpg",
       })
-    ).toThrow(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
-    );
+    ).toThrow("Engine4 heroImage must be TACDN for 74828P5: https://example.com/foo.jpg");
   });
 
   it("rejects TACDN host URLs without an image path", () => {
@@ -58,8 +60,41 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://media.tacdn.com",
       })
-    ).toThrow(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
-    );
+    ).toThrow("Engine4 heroImage must be TACDN for 74828P5: https://media.tacdn.com");
+  });
+
+  it("rejects missing minimum facts", () => {
+    expect(() =>
+      assertEngine4ViatorTour({
+        ...baseTour,
+        facts: {
+          priceFrom: undefined,
+          duration: undefined,
+          meetingPointShort: undefined,
+          meetingPointFull: undefined,
+        },
+      })
+    ).toThrow("Invalid Engine4 Viator contract: missing facts.priceFrom for 74828P5");
+
+    expect(() =>
+      assertEngine4ViatorTour({
+        ...baseTour,
+        facts: {
+          ...baseTour.facts,
+          duration: undefined,
+        },
+      })
+    ).toThrow("Invalid Engine4 Viator contract: missing facts.duration for 74828P5");
+
+    expect(() =>
+      assertEngine4ViatorTour({
+        ...baseTour,
+        facts: {
+          ...baseTour.facts,
+          meetingPointShort: undefined,
+          meetingPointFull: undefined,
+        },
+      })
+    ).toThrow("Invalid Engine4 Viator contract: missing facts.meetingPoint for 74828P5");
   });
 });

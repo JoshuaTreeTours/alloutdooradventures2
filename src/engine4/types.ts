@@ -149,9 +149,12 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     );
   }
 
-  if (!isNonEmptyString(tour.heroImage) || !ENGINE4_TACDN_HERO_REGEX.test(tour.heroImage)) {
+  if (
+    !isNonEmptyString(tour.heroImage) ||
+    !ENGINE4_TACDN_HERO_REGEX.test(tour.heroImage)
+  ) {
     throw new Error(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
+      `Engine4 heroImage must be TACDN for ${tour.productCode}: ${tour.heroImage ?? "<missing>"}`
     );
   }
 
@@ -164,6 +167,27 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
   if (!isNonEmptyString(tour.content.overview)) {
     throw new Error(
       "Invalid Engine4 Viator contract: content.overview is required"
+    );
+  }
+
+  if (!isNonEmptyString(tour.facts.priceFrom)) {
+    throw new Error(
+      `Invalid Engine4 Viator contract: missing facts.priceFrom for ${tour.productCode}`
+    );
+  }
+
+  if (!isNonEmptyString(tour.facts.duration)) {
+    throw new Error(
+      `Invalid Engine4 Viator contract: missing facts.duration for ${tour.productCode}`
+    );
+  }
+
+  if (
+    !isNonEmptyString(tour.facts.meetingPointShort) &&
+    !isNonEmptyString(tour.facts.meetingPointFull)
+  ) {
+    throw new Error(
+      `Invalid Engine4 Viator contract: missing facts.meetingPoint for ${tour.productCode}`
     );
   }
 };
