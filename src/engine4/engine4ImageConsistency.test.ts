@@ -15,6 +15,8 @@ const COLORADO_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1";
 const SANTA_BARBARA_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1";
+const SB_ZIPLINE_HERO =
+  "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -56,6 +58,37 @@ describe("Engine4 Viator image consistency", () => {
     ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
 
     expect(pageTour.heroImage).toBe(SANTA_BARBARA_HERO);
+    expect(listingTour?.heroImage).toBe(pageTour.heroImage);
+    expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
+    expect(productNode.image).toBe(pageTour.heroImage);
+    expect(touristTripNode.image).toBe(pageTour.heroImage);
+  });
+
+
+  it("uses the Santa Barbara zipline hero consistently for page, card, og:image, and schema image", () => {
+    const pageTour = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(tour => tour.productCode === "421920P2")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
+    });
+
+    const listingTour = getEngine4ListingEntries("california", "santa-barbara").find(
+      entry => entry.tour.productCode === "421920P2"
+    )?.tour;
+    const routeTour = getEngine4TourBySlugs(
+      "california",
+      "santa-barbara",
+      "epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
+    );
+
+    const schema = buildEngine4ViatorSchemaGraph(pageTour);
+    const productNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
+    const touristTripNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
+
+    expect(pageTour.heroImage).toBe(SB_ZIPLINE_HERO);
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
     expect(productNode.image).toBe(pageTour.heroImage);

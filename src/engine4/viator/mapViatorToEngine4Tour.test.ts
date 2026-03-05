@@ -64,4 +64,29 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
   });
 
+  it("maps the Santa Barbara zipline tour with TACDN hero, populated facts, and affiliate booking URL", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "421920P2"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
+    });
+
+    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.facts.priceFrom).toBeTruthy();
+    expect(vm.facts.ratingValue).toBeTruthy();
+    expect(vm.facts.reviewCount).toBeTruthy();
+    expect(vm.facts.duration).toBeTruthy();
+    expect(vm.facts.startTime).toBeTruthy();
+    expect(vm.facts.meetingPointFull).toBeTruthy();
+
+    const bookingUrl = new URL(vm.bookingUrl);
+    expect(bookingUrl.searchParams.get("pid")).toBe("P00290915");
+    expect(bookingUrl.searchParams.get("mcid")).toBe("42383");
+    expect(bookingUrl.searchParams.get("medium")).toBe("link");
+  });
+
 });
