@@ -85,4 +85,13 @@ describe("Engine4TourPage booking CTA", () => {
 
     expect(html).not.toContain("Ready to book?");
   });
+
+  it("renders inline placeholder when heroImage is null", () => {
+    const html = renderToStaticMarkup(
+      <Engine4TourPage tour={{ ...engine4Tour, heroImage: null }} />
+    );
+
+    expect(html).toContain("data:image/svg+xml;utf8,");
+    expect(html).toContain("Tour%20image%20unavailable");
+  });
 });

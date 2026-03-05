@@ -11,6 +11,7 @@ import { mapViatorToEngine4Tour } from "./viator/mapViatorToEngine4Tour";
 
 const PALM_SPRINGS_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+const DEFAULT_SCENIC_HERO = "/hero.jpg";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -33,6 +34,7 @@ describe("Engine4 Viator image consistency", () => {
     expect(p3.heroImage).not.toBe(PALM_SPRINGS_HERO);
     expect(p5.heroImage).not.toBe(PALM_SPRINGS_HERO);
     expect(p151.heroImage).not.toBe(PALM_SPRINGS_HERO);
+    expect(p151.heroImage).not.toBe(DEFAULT_SCENIC_HERO);
   });
 
   it("uses the same hero for page, card, og:image, and schema image", () => {
@@ -58,7 +60,10 @@ describe("Engine4 Viator image consistency", () => {
     ).find(node => node["@type"] === "Product") as Record<string, unknown>;
 
     expect(listingTour?.heroImage).toBe(pageTour.heroImage);
+    expect(listingTour?.primaryImageUrl).toBe(pageTour.heroImage);
+    expect(routeTour?.images.hero).toBe(pageTour.heroImage);
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
     expect(productNode.image).toBe(pageTour.heroImage);
+    expect(pageTour.heroImage).not.toBe(DEFAULT_SCENIC_HERO);
   });
 });

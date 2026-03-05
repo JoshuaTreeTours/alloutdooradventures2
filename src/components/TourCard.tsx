@@ -11,6 +11,12 @@ type TourCardProps = {
   href?: string;
 };
 
+const ENGINE4_CARD_PLACEHOLDER =
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 900'><rect width='1200' height='900' fill='#e7eadf'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='42' fill='#2f4a2f'>Tour image unavailable</text></svg>`
+  );
+
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
   const shortDescription = tour.shortDescription?.trim();
@@ -28,15 +34,18 @@ export default function TourCard({ tour, href }: TourCardProps) {
   );
   const cardImage =
     tour.engine === "engine4"
-      ? tour.heroImage?.trim() || "/hero.jpg"
+      ? tour.heroImage?.trim() || ENGINE4_CARD_PLACEHOLDER
       : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+
+  const fallbackImage =
+    tour.engine === "engine4" ? ENGINE4_CARD_PLACEHOLDER : "/hero.jpg";
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={cardImage}
-          fallbackSrc={"/hero.jpg"}
+          fallbackSrc={fallbackImage}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"
