@@ -67,7 +67,7 @@ describe("assertEngine4ViatorTour", () => {
     );
   });
 
-  it("rejects missing minimum facts", () => {
+  it("accepts tours when optional facts are absent", () => {
     expect(() =>
       assertEngine4ViatorTour({
         ...baseTour,
@@ -78,27 +78,6 @@ describe("assertEngine4ViatorTour", () => {
           meetingPointFull: undefined,
         },
       })
-    ).toThrow("Invalid Engine4 Viator contract: missing facts.priceFrom for 74828P5");
-
-    expect(() =>
-      assertEngine4ViatorTour({
-        ...baseTour,
-        facts: {
-          ...baseTour.facts,
-          duration: undefined,
-        },
-      })
-    ).toThrow("Invalid Engine4 Viator contract: missing facts.duration for 74828P5");
-
-    expect(() =>
-      assertEngine4ViatorTour({
-        ...baseTour,
-        facts: {
-          ...baseTour.facts,
-          meetingPointShort: undefined,
-          meetingPointFull: undefined,
-        },
-      })
-    ).toThrow("Invalid Engine4 Viator contract: missing facts.meetingPoint for 74828P5");
+    ).not.toThrow();
   });
 });

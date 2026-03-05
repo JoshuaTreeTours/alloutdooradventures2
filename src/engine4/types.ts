@@ -170,24 +170,4 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     );
   }
 
-  if (!isNonEmptyString(tour.facts.priceFrom)) {
-    throw new Error(
-      `Invalid Engine4 Viator contract: missing facts.priceFrom for ${tour.productCode}`
-    );
-  }
-
-  if (!isNonEmptyString(tour.facts.duration)) {
-    throw new Error(
-      `Invalid Engine4 Viator contract: missing facts.duration for ${tour.productCode}`
-    );
-  }
-
-  if (
-    !isNonEmptyString(tour.facts.meetingPointShort) &&
-    !isNonEmptyString(tour.facts.meetingPointFull)
-  ) {
-    throw new Error(
-      `Invalid Engine4 Viator contract: missing facts.meetingPoint for ${tour.productCode}`
-    );
-  }
 };

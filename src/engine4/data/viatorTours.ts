@@ -120,6 +120,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "epic-zipline-tour-over-the-santa-ynez-valley-421920p2",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "6740P7",
+    bookingUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Joshua Tree",
+      citySlug: "joshua-tree",
+    },
+    slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -448,6 +465,24 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "Can I cancel if my plans change?",
         answer: "This listing shows free cancellation up to 24 hours in advance.",
       },
+    ],
+  },
+  "6740P7": {
+    productCode: "6740P7",
+    title: "Joshua Tree Backroads Hummer H2 Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    sourceDerivedImageUrl:
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+    overview:
+      "Explore Joshua Tree National Park on a small-group scenic tour designed for travelers who want big views and backroad character without the stress of self-driving. Ride in a climate-controlled H2 Hummer or touring van as your guide connects the park’s iconic Joshua Tree forests with the rugged granite landscapes that make this desert famous. The route focuses on photo-worthy stops and short, easy walks at signature areas—think boulder piles, open desert panoramas, and historic water features—so you get out of the vehicle often without turning the day into a hike. Along the way, you’ll hear clear, field-ready context on local geology, desert ecology, and human history—then return with a camera full of views and your bearings set for the rest of your trip.",
+    highlights: [
+      "Small-group sightseeing tour into Joshua Tree National Park in an H2 Hummer or touring van",
+      "Frequent scenic stops for photos plus short, easy walks at signature viewpoints",
+      "Granite boulder landscapes, Joshua tree woodlands, and wide-open Mojave desert panoramas",
+      "Guide-led interpretation focused on geology, desert ecology, and local history",
+      "A comfortable, time-efficient way to see multiple key areas in one outing",
+      "Free cancellation up to 24 hours in advance (where offered on the listing)",
     ],
   },
 };
