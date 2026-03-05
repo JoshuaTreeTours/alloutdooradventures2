@@ -154,7 +154,7 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     !ENGINE4_TACDN_HERO_REGEX.test(tour.heroImage)
   ) {
     throw new Error(
-      `Engine4 heroImage must be TACDN for ${tour.productCode}: ${tour.heroImage ?? "<missing>"}`
+      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
     );
   }
 

@@ -16,7 +16,7 @@ const COLORADO_SPRINGS_HERO =
 const SANTA_BARBARA_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1";
 const SB_ZIPLINE_HERO =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/49/e8/5c/caption.jpg?w=1100&h=800&s=1";
+  "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {

@@ -51,7 +51,9 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://example.com/foo.jpg",
       })
-    ).toThrow("Engine4 heroImage must be TACDN for 74828P5: https://example.com/foo.jpg");
+    ).toThrow(
+      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
+    );
   });
 
   it("rejects TACDN host URLs without an image path", () => {
@@ -60,7 +62,9 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://media.tacdn.com",
       })
-    ).toThrow("Engine4 heroImage must be TACDN for 74828P5: https://media.tacdn.com");
+    ).toThrow(
+      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
+    );
   });
 
   it("rejects missing minimum facts", () => {

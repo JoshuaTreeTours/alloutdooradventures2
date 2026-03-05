@@ -110,7 +110,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2?pid=P00290915&mcid=42383&medium=link",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/49/e8/5c/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "California",
@@ -405,7 +405,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     meetingPoint: "Camp 4 Wine Café, 2369 Alamo Pintado Ave, Los Olivos, CA 93441, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/49/e8/5c/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
     description:
       "Soar across the Santa Ynez Valley on a guided zipline adventure with multiple runs and sweeping vineyard and mountain views.",
     overview:
