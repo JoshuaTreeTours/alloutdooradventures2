@@ -14,6 +14,31 @@ type Engine4TourPageProps = {
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
 
+const normalizePriceLabel = (priceFrom?: string) => {
+  if (!priceFrom) {
+    return undefined;
+  }
+
+  const cleaned = priceFrom.trim().replace(/^from\s*/i, "");
+  if (!cleaned) {
+    return undefined;
+  }
+
+  const numericMatch = cleaned.match(/\d+(?:\.\d{1,2})?/);
+  if (numericMatch) {
+    const numericValue = Number.parseFloat(numericMatch[0]);
+    if (Number.isFinite(numericValue) && numericValue > 0) {
+      return `$${numericValue.toFixed(2)}`;
+    }
+  }
+
+  if (/see\s+current\s+pricing/i.test(cleaned)) {
+    return undefined;
+  }
+
+  return cleaned;
+};
+
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
   const heroImage = tour.primaryImage ?? tour.heroImage ?? "";
@@ -24,10 +49,11 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasHighlights = highlights.length > 0;
   const hasFaqs = faqs.length > 0;
   const hasText = (value?: string) => Boolean(value?.trim());
-  const hasPrice = hasText(tour.facts.priceFrom);
+  const priceLabel = normalizePriceLabel(tour.facts.priceFrom);
+  const hasPrice = hasText(priceLabel);
   const rating = Number(tour.facts.ratingValue);
   const reviewCount = Number(tour.facts.reviewCount);
-  const hasRatingRow = Number.isFinite(rating) && Number.isFinite(reviewCount);
+  const hasRatingRow = Number.isFinite(rating);
   const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
   const hasStartTime = hasText(tour.facts.startTime);
   const hasDuration = hasText(tour.facts.duration);
@@ -109,7 +135,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               <div className="space-y-3">
                 {hasPrice ? (
                   <p>
-                    <strong>From:</strong> {tour.facts.priceFrom} per person
+                    <strong>From:</strong> {priceLabel} per person
                   </p>
                 ) : null}
                 {hasRatingRow ? (

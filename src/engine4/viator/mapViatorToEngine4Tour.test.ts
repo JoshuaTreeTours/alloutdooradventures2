@@ -61,7 +61,9 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours in advance."
     );
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
   });
 
   it("maps the Santa Barbara zipline tour with TACDN hero, populated facts, and affiliate booking URL", () => {
@@ -75,7 +77,9 @@ describe("mapViatorToEngine4Tour", () => {
       apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
     });
 
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
     expect(vm.facts.priceFrom).toBeTruthy();
     expect(vm.facts.ratingValue).toBeTruthy();
     expect(vm.facts.reviewCount).toBeTruthy();
@@ -121,4 +125,23 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
   });
 
+  it("normalizes malformed source price strings before writing Engine4 facts", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "91782P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "91782P1",
+        title: "Moab Private Half-Day Canyoneering",
+        sourceUrl:
+          "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1",
+        fromPrice: "$See current pricing on Viator",
+      },
+    });
+
+    expect(vm.facts.priceFrom).toBeUndefined();
+  });
 });

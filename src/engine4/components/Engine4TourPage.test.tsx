@@ -4,6 +4,11 @@ import { describe, expect, it } from "vitest";
 import Engine3TourPage from "../../engine3/components/Engine3TourPage";
 import type { Engine3TourViewModel } from "../../engine3/types";
 import type { Engine4TourViewModel } from "../types";
+import {
+  engine4ViatorApiFallbackByProductCode,
+  engine4ViatorTours,
+} from "../data/viatorTours";
+import { mapViatorToEngine4Tour } from "../viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "./Engine4TourPage";
 
 const engine4Tour: Engine4TourViewModel = {
@@ -158,7 +163,7 @@ describe("Engine4TourPage booking CTA", () => {
     expect(meetingIndex).toBeGreaterThan(ratingIndex);
   });
 
-  it("does not render the rating row when rating or review count is missing", () => {
+  it("renders stars whenever rating exists and only shows review text when review count exists", () => {
     const withoutRating: Engine4TourViewModel = {
       ...engine4Tour,
       facts: {
@@ -185,7 +190,54 @@ describe("Engine4TourPage booking CTA", () => {
     );
 
     expect(noRatingHtml).not.toContain('data-testid="rating-stars"');
-    expect(noReviewsHtml).not.toContain('data-testid="rating-stars"');
+    expect(noReviewsHtml).toContain('data-testid="rating-stars"');
+    expect(noReviewsHtml).not.toContain("reviews");
+  });
+
+  it("does not render malformed fallback price copy", () => {
+    const withMalformedPrice: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        priceFrom: "$See current pricing on Viator",
+      },
+    };
+
+    const html = renderToStaticMarkup(
+      <Engine4TourPage tour={withMalformedPrice} />
+    );
+
+    expect(html).not.toContain("From:</strong>");
+    expect(html).not.toContain("See current pricing");
+  });
+
+  it("renders full Pike Paragon hero facts for the Moab Engine4 validation case when normalized facts exist", () => {
+    const moabRecord = engine4ViatorTours.find(
+      tour => tour.productCode === "91782P1"
+    );
+    expect(moabRecord).toBeDefined();
+
+    const moabTour = mapViatorToEngine4Tour({
+      record: moabRecord!,
+      apiTour: {
+        ...engine4ViatorApiFallbackByProductCode["91782P1"],
+        fromPrice: "$179.00",
+        rating: 4.8,
+        reviewCount: 123,
+        startTime: "8:00 AM",
+      },
+    });
+
+    const html = renderToStaticMarkup(<Engine4TourPage tour={moabTour} />);
+
+    expect(html).toContain("Moab Private Half-Day Canyoneering");
+    expect(html).toContain("From:</strong> $179.00 per person");
+    expect(html).toContain('data-testid="rating-stars"');
+    expect(html).toContain("123 reviews");
+    expect(html).toContain("Meeting point:</strong>");
+    expect(html).toContain("Start time:</strong> 8:00 AM");
+    expect(html).toContain("Duration:</strong> 4 hours");
+    expect(html).toContain("Book This Tour");
   });
 
   it("renders destination tree links above the heading", () => {
