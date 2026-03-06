@@ -14,7 +14,6 @@ import {
 } from "./buildEngine4Content";
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
-import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -163,9 +162,9 @@ const logEngine4ApiProvenance = (input: {
         : fallbackTour?.itinerary && fallbackTour.itinerary.length > 0
           ? "fallback"
           : "missing",
-    image: resolveViatorPrimaryImageFromApiTour(apiTour)
+    image: cleanText(apiTour?.sourceDerivedImageUrl)
       ? "api"
-      : resolveViatorPrimaryImageFromApiTour(fallbackTour)
+      : cleanText(fallbackTour?.sourceDerivedImageUrl)
         ? "fallback"
         : "missing",
   };
@@ -176,7 +175,7 @@ const logEngine4ApiProvenance = (input: {
 
   console.info(`[engine4-api] product=${productCode}`);
   console.info(`[engine4-api] apiFetch=${String(Boolean(apiTour))}`);
-  console.info(`[engine4-api] primaryImageSource=${sourceFor.image}`);
+  console.info(`[engine4-api] sourceDerivedImageSource=${sourceFor.image}`);
   console.info(`[engine4-api] priceSource=${sourceFor.price}`);
   console.info(`[engine4-api] ratingSource=${sourceFor.rating}`);
   console.info(`[engine4-api] reviewCountSource=${sourceFor.reviewCount}`);
@@ -311,16 +310,15 @@ export const mapViatorToEngine4Tour = (input: {
     cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
   });
 
-  const canonicalImage =
-    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
-    cleanText(resolvedApiTour?.primaryImageUrl) ??
-    cleanText(resolvedApiTour?.galleryImages?.[0]) ??
-    cleanText(resolvedApiTour?.sourceDerivedImageUrl);
+  const sourceCodeTacdnImage = cleanText(resolvedApiTour?.sourceDerivedImageUrl);
+  const fallbackRecordImage = cleanText(record.heroImage);
 
   const resolvedHeroImage = resolveEngine4ViatorHero({
     productCode: record.productCode,
     apiTour: resolvedApiTour,
   });
+
+  const canonicalImage = cleanText(resolvedHeroImage);
 
   const tour: Engine4TourViewModel = {
     tourId: `engine4-${record.productCode}`,
@@ -362,14 +360,32 @@ export const mapViatorToEngine4Tour = (input: {
   const candidates = Array.from(
     new Set(
       [
+        sourceCodeTacdnImage,
+        fallbackRecordImage,
         canonicalImage,
-        resolvedApiTour?.primaryImageUrl,
-        ...(resolvedApiTour?.galleryImages ?? []),
-        resolvedApiTour?.sourceDerivedImageUrl,
-        record.heroImage ?? undefined,
       ].filter((value): value is string => Boolean(cleanText(value)))
     )
   );
+
+  const imageSource = sourceCodeTacdnImage
+    ? "source-code"
+    : fallbackRecordImage
+      ? "fallback-record"
+      : canonicalImage
+        ? "destination-fallback"
+        : "placeholder";
+
+  if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
+    console.info(`[engine4-image] product=${record.productCode}`);
+    console.info(`[engine4-image] imageSource=${imageSource}`);
+    console.info("[engine4-image] apiImageIgnored=true");
+    console.info(`[engine4-image] resolvedPrimaryImage=${canonicalImage ?? "<none>"}`);
+    console.info(
+      `[engine4-image] homepageFallbackUsed=${String(
+        imageSource === "destination-fallback"
+      )}`
+    );
+  }
 
   logEngine4ImageDecision({
     productCode: record.productCode,

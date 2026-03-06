@@ -230,4 +230,61 @@ describe("Engine4 Viator image consistency", () => {
     expect(productNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(touristTripNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
   });
+
+  it("ignores API media image fields for canonical rendering when source-code TACDN exists", () => {
+    const record = engine4ViatorTours.find(tour => tour.productCode === "91873P1")!;
+
+    const pageTour = mapViatorToEngine4Tour({
+      record,
+      apiTour: {
+        ...(engine4ViatorApiFallbackByProductCode["91873P1"] ?? {}),
+        productCode: "91873P1",
+        title:
+          "4-Hour Private Guided Rock Climbing Trip in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/4-Hour-Private-Guided-Rock-Climbing-Trip-in-Joshua-Tree-National-Park/d648-91873P1",
+        sourceDerivedImageUrl: JOSHUA_TREE_CLIMB_HERO,
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/41/api-primary.jpg?w=1100&h=800&s=1",
+        galleryImages: [
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/api-gallery.jpg?w=1100&h=800&s=1",
+        ],
+      },
+    });
+
+    expect(pageTour.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(pageTour.primaryImage).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(pageTour.heroImage).not.toContain("api-primary.jpg");
+  });
+
+  it("does not fall through to destination/home fallback when source-code TACDN image exists", () => {
+    const record = engine4ViatorTours.find(tour => tour.productCode === "91873P1")!;
+    const pageTour = mapViatorToEngine4Tour({
+      record: {
+        ...record,
+        heroImage:
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/99/fallback-record.jpg?w=1100&h=800&s=1",
+      },
+      apiTour: {
+        productCode: "91873P1",
+        title:
+          "4-Hour Private Guided Rock Climbing Trip in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/4-Hour-Private-Guided-Rock-Climbing-Trip-in-Joshua-Tree-National-Park/d648-91873P1",
+        sourceDerivedImageUrl: JOSHUA_TREE_CLIMB_HERO,
+        fromPrice: "225.00",
+        priceCurrency: "USD",
+        rating: 5,
+        reviewCount: 20,
+        duration: "4 hours",
+      },
+    });
+
+    expect(pageTour.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(pageTour.heroImage).not.toContain("fallback-record.jpg");
+    expect(pageTour.facts.priceFrom).toBe("$225.00");
+    expect(pageTour.facts.ratingValue).toBe(5);
+    expect(pageTour.facts.duration).toBe("4 hours");
+  });
+
 });

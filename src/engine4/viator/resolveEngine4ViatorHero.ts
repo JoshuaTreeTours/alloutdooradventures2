@@ -1,6 +1,5 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
-import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
 
 const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
 const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
@@ -62,20 +61,18 @@ const toInlinePlaceholder = () =>
 export const resolveEngine4ViatorHero = (input: {
   productCode: string;
   apiTour?: Engine4ViatorApiTour;
+  destinationFallbackImage?: string;
 }) => {
   const normalizedCode = input.productCode.toUpperCase();
   const tourRecord = engine4ViatorTours.find(
     tour => tour.productCode.toUpperCase() === normalizedCode
   );
 
-  const canonicalApiImage = resolveViatorPrimaryImageFromApiTour(input.apiTour);
-
+  const sourceCodeTacdnImage = input.apiTour?.sourceDerivedImageUrl;
   const candidates = [
-    canonicalApiImage,
-    input.apiTour?.primaryImageUrl,
-    input.apiTour?.galleryImages?.[0],
-    input.apiTour?.sourceDerivedImageUrl,
+    sourceCodeTacdnImage,
     tourRecord?.heroImage,
+    input.destinationFallbackImage,
   ];
 
   const selected = candidates.find(candidate =>

@@ -142,6 +142,8 @@ describe("mapViatorToEngine4Tour", () => {
         duration: "4 hours",
         meetingPoint: "Joshua Tree Visitor Center, Joshua Tree, CA, USA",
         cancellationPolicy: "Free cancellation up to 24 hours before start.",
+        sourceDerivedImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
         primaryImageUrl:
           "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/41/api-primary.jpg?w=1100&h=800&s=1",
         galleryImages: [
@@ -163,7 +165,8 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours before start."
     );
-    expect(vm.heroImage).toContain("api-primary.jpg");
+    expect(vm.heroImage).toContain("private-guided-rock.jpg");
+    expect(vm.heroImage).not.toContain("api-primary.jpg");
   });
 
 });
