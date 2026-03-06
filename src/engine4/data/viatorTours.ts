@@ -587,7 +587,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     title: "Joshua Tree National Park Scenic Tour | Rated #1",
     sourceUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
-    fromPrice: "$219.00",
+    fromPrice: "$159.00",
     priceCurrency: "USD",
     rating: 4.9,
     reviewCount: 88,
