@@ -45,6 +45,28 @@ const coalesceNumber = (...values: Array<number | undefined>) => {
   return undefined;
 };
 
+const normalizePriceFact = (value?: string) => {
+  const cleaned = cleanText(value);
+  if (!cleaned) {
+    return undefined;
+  }
+
+  const withoutFromPrefix = cleaned.replace(/^from\s*/i, "").trim();
+  const numericMatch = withoutFromPrefix.match(/\d+(?:\.\d{1,2})?/);
+  if (numericMatch) {
+    const numericValue = Number.parseFloat(numericMatch[0]);
+    if (Number.isFinite(numericValue) && numericValue > 0) {
+      return `$${numericValue.toFixed(2)}`;
+    }
+  }
+
+  if (/see\s+current\s+pricing/i.test(withoutFromPrefix)) {
+    return undefined;
+  }
+
+  return withoutFromPrefix;
+};
+
 const resolvePriceFrom = (input: { fromPrice?: string; currency?: string }) => {
   const rawPrice = cleanText(input.fromPrice);
   if (!rawPrice) {
@@ -89,6 +111,37 @@ const logEngine4ImageDecision = (input: {
   console.info(
     `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
   );
+};
+
+const logEngine4FactsDecision = (input: {
+  productCode: string;
+  priceFrom?: string;
+  ratingValue?: number;
+  reviewCount?: number;
+  meetingPointShort?: string;
+  startTime?: string;
+  duration?: string;
+}) => {
+  if (
+    process.env.NODE_ENV !== "development" &&
+    process.env.NODE_ENV !== "test"
+  ) {
+    return;
+  }
+
+  console.info(`[engine4-facts] product=${input.productCode}`);
+  console.info(`[engine4-facts] priceFrom=${input.priceFrom ?? "<none>"}`);
+  console.info(
+    `[engine4-facts] ratingValue=${String(input.ratingValue ?? "<none>")}`
+  );
+  console.info(
+    `[engine4-facts] reviewCount=${String(input.reviewCount ?? "<none>")}`
+  );
+  console.info(
+    `[engine4-facts] meetingPointShort=${input.meetingPointShort ?? "<none>"}`
+  );
+  console.info(`[engine4-facts] startTime=${input.startTime ?? "<none>"}`);
+  console.info(`[engine4-facts] duration=${input.duration ?? "<none>"}`);
 };
 
 export const mapViatorToEngine4Tour = (input: {
@@ -239,7 +292,7 @@ export const mapViatorToEngine4Tour = (input: {
       new Set((resolvedApiTour?.galleryImages ?? []).filter(Boolean))
     ),
     facts: {
-      priceFrom: cleanText(resolvedApiTour?.fromPrice),
+      priceFrom: normalizePriceFact(resolvedApiTour?.fromPrice),
       ratingValue: resolvedApiTour?.rating,
       reviewCount: resolvedApiTour?.reviewCount,
       duration: cleanText(resolvedApiTour?.duration),
@@ -279,6 +332,16 @@ export const mapViatorToEngine4Tour = (input: {
     resolvedHeroImage: tour.heroImage ?? undefined,
     fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
     downstreamOverwriteBlocked: Boolean(tour.primaryImage),
+  });
+
+  logEngine4FactsDecision({
+    productCode: record.productCode,
+    priceFrom: tour.facts.priceFrom,
+    ratingValue: tour.facts.ratingValue,
+    reviewCount: tour.facts.reviewCount,
+    meetingPointShort: tour.facts.meetingPointShort,
+    startTime: tour.facts.startTime,
+    duration: tour.facts.duration,
   });
 
   assertEngine4ViatorTour(tour);
