@@ -68,8 +68,8 @@ export const resolveEngine4ViatorHero = (input: {
   );
 
   const candidates = [
-    tourRecord?.heroImage,
     input.apiTour?.primaryImageUrl,
+    tourRecord?.heroImage,
     input.apiTour?.galleryImages?.[0],
     input.apiTour?.sourceDerivedImageUrl,
   ];

@@ -3,9 +3,19 @@ import { describe, expect, it } from "vitest";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
 
 describe("resolveEngine4ViatorHero", () => {
-  it("prefers stored per-tour hero first", () => {
-    const hero = resolveEngine4ViatorHero({ productCode: "74828P5" });
-    expect(hero).toContain("11/8a/ad/05.jpg");
+  it("prefers API primary image over stored hero when available", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "74828P5",
+      apiTour: {
+        productCode: "74828P5",
+        title: "Aspen East End Light Hike",
+        sourceUrl:
+          "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+      },
+    });
+    expect(hero).toContain("30/70/d3/6d/caption.jpg");
   });
 
   it("accepts dynamic-media caption.jpg URLs", () => {

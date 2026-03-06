@@ -103,6 +103,24 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10",
   },
+
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "180019P2",
+    bookingUrl:
+      "https://www.viator.com/tours/Colorado-Springs/Garden-of-the-Gods-Tour/d22201-180019P2?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Colorado Springs",
+      citySlug: "colorado-springs",
+    },
+    slug: "garden-of-the-gods-tour-180019p2",
+  },
   {
     engine: "engine4",
     bookingProvider: "viator",
@@ -331,6 +349,25 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
   },
+
+  "180019P2": {
+    productCode: "180019P2",
+    title: "Garden of the Gods Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Colorado-Springs/Garden-of-the-Gods-Tour/d22201-180019P2",
+    duration: "2 hours",
+    meetingPoint: "1046 Manitou Ave, Manitou Springs, CO 80829, USA",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+    overview:
+      "Explore Colorado Springs' iconic Garden of the Gods on a guided sightseeing Jeep tour designed for travelers who want big scenery without an all-day commitment. This experience runs about 2 hours and focuses on the park's dramatic red-rock formations and viewpoints. You'll ride with a local guide who shares context about the landscape and highlights the most photogenic stops along the route. The tour meets at 1046 Manitou Ave in Manitou Springs, Colorado, with the exact logistics confirmed at booking.",
+    highlights: [
+      "About 2 hours of sightseeing in Garden of the Gods",
+      "Guided Jeep route focused on major red-rock viewpoints",
+      "Short-format experience designed for tighter schedules",
+      "Meeting point at 1046 Manitou Ave in Manitou Springs",
+    ],
+  },
   "41410P10": {
     productCode: "41410P10",
     title:
@@ -419,7 +456,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     reviewCount: 11,
     duration: "2 hours 30 minutes",
     startTime: "9:00 AM",
-    meetingPoint: "Camp 4 Wine Café, 2369 Alamo Pintado Ave, Los Olivos, CA 93441, USA",
+    meetingPoint:
+      "Camp 4 Wine Café, 2369 Alamo Pintado Ave, Los Olivos, CA 93441, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
       "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
@@ -463,7 +501,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
       {
         question: "Can I cancel if my plans change?",
-        answer: "This listing shows free cancellation up to 24 hours in advance.",
+        answer:
+          "This listing shows free cancellation up to 24 hours in advance.",
       },
     ],
   },
