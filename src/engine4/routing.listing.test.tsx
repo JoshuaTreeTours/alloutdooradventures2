@@ -111,13 +111,13 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(target).toBeDefined();
     expect(target?.href).toBe(
-      "/destinations/california/joshua-tree/tours/joshua-tree-backroads-hummer-h2-tour-6740p7"
+      "/destinations/california/joshua-tree/tours/joshua-tree-scenic-tour-6740p7"
     );
 
     const routed = getEngine4TourBySlugs(
       "california",
       "joshua-tree",
-      "joshua-tree-backroads-hummer-h2-tour-6740p7"
+      "joshua-tree-scenic-tour-6740p7"
     );
 
     expect(routed?.id).toBe("6740P7");
