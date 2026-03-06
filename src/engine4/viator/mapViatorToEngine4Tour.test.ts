@@ -121,4 +121,49 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
   });
 
+  it("keeps API values as source of truth for Joshua Tree climbing when fallback also exists", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "91873P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "91873P1",
+        title:
+          "4-Hour Private Guided Rock Climbing Trip in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/4-Hour-Private-Guided-Rock-Climbing-Trip-in-Joshua-Tree-National-Park/d648-91873P1",
+        fromPrice: "249.00",
+        priceCurrency: "USD",
+        rating: 4.9,
+        reviewCount: 27,
+        duration: "4 hours",
+        meetingPoint: "Joshua Tree Visitor Center, Joshua Tree, CA, USA",
+        cancellationPolicy: "Free cancellation up to 24 hours before start.",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/41/api-primary.jpg?w=1100&h=800&s=1",
+        galleryImages: [
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/api-gallery.jpg?w=1100&h=800&s=1",
+        ],
+      },
+    });
+
+    expect(vm.title).toBe(
+      "4-Hour Private Guided Rock Climbing Trip in Joshua Tree National Park"
+    );
+    expect(vm.facts.priceFrom).toBe("$249.00");
+    expect(vm.facts.ratingValue).toBe(4.9);
+    expect(vm.facts.reviewCount).toBe(27);
+    expect(vm.facts.duration).toBe("4 hours");
+    expect(vm.facts.meetingPointFull).toBe(
+      "Joshua Tree Visitor Center, Joshua Tree, CA, USA"
+    );
+    expect(vm.facts.cancellationPolicy).toBe(
+      "Free cancellation up to 24 hours before start."
+    );
+    expect(vm.heroImage).toContain("api-primary.jpg");
+  });
+
 });

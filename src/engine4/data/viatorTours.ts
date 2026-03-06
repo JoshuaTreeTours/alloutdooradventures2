@@ -158,6 +158,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "91873P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Palm-Springs/4-Hour-Private-Guided-Rock-Climbing-Trip-in-Joshua-Tree-National-Park/d648-91873P1?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Joshua Tree",
+      citySlug: "joshua-tree",
+    },
+    slug: "private-guided-rock-climbing-trip-in-joshua-tree-national-park-91873p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -582,6 +599,89 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
   },
+  "91873P1": {
+    productCode: "91873P1",
+    title:
+      "4-Hour Private Guided Rock Climbing Trip in Joshua Tree National Park",
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/4-Hour-Private-Guided-Rock-Climbing-Trip-in-Joshua-Tree-National-Park/d648-91873P1",
+    fromPrice: "$225.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 20,
+    duration: "4 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "Joshua Tree National Park, California, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/40/joshua-tree-climbing.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+    description:
+      "Private, guide-led rock climbing experience in Joshua Tree with instruction and route selection tailored to your group.",
+    descriptionLong:
+      "This private half-day rock climbing tour in Joshua Tree National Park is built for travelers who want hands-on instruction and a real outdoor climbing session without committing to a full-day program. Your guide selects routes based on your group’s experience and comfort level, then coaches core movement, rope systems, and safety habits throughout the outing. The private format keeps the pace flexible, making it a strong fit for first-time climbers, returning gym climbers, couples, and small groups who want personal attention on natural rock. Expect an active session focused on technique, confidence, and desert climbing fundamentals while you spend time among Joshua Tree’s signature granite formations. It is a technical but approachable adventure for guests who want instruction, challenge, and scenery in one professionally guided experience.",
+    whatToExpect:
+      "Expect a guide-led climbing session with route selection, safety setup, movement coaching, and a pace matched to your private group.",
+    overview:
+      "This private half-day rock climbing tour in Joshua Tree National Park is built for travelers who want hands-on instruction and a real outdoor climbing session without committing to a full-day program. Your guide selects routes based on your group’s experience and comfort level, then coaches core movement, rope systems, and safety habits throughout the outing. The private format keeps the pace flexible, making it a strong fit for first-time climbers, returning gym climbers, couples, and small groups who want personal attention on natural rock. Expect an active session focused on technique, confidence, and desert climbing fundamentals while you spend time among Joshua Tree’s signature granite formations. It is a technical but approachable adventure for guests who want instruction, challenge, and scenery in one professionally guided experience.",
+    highlights: [
+      "Private guided rock climbing format in Joshua Tree National Park",
+      "Half-day pacing with instruction matched to group ability",
+      "Guide-led coaching on movement, safety, and climbing technique",
+      "Natural granite climbing environment with tailored route choice",
+      "Commercially focused private experience for couples and small groups",
+    ],
+    inclusions: [
+      "Professional climbing guide",
+      "Technical climbing equipment",
+      "Safety orientation and route coaching",
+    ],
+    exclusions: ["Guide gratuities", "Hotel pickup and drop-off"],
+    additionalInfo: [
+      "Participants should be comfortable with moderate physical activity.",
+      "Wear closed-toe footwear suitable for desert rock surfaces.",
+      "Start location details are confirmed after booking.",
+    ],
+    itinerary: [
+      {
+        title: "Meet guide and gear orientation",
+        description:
+          "Meet your guide, review goals for the session, and complete safety and equipment setup.",
+      },
+      {
+        title: "Private climbing session",
+        description:
+          "Climb selected Joshua Tree routes with ongoing movement coaching, belay support, and technique feedback.",
+      },
+      {
+        title: "Wrap-up and return",
+        description:
+          "Finish with a debrief on skills covered and return from the climbing area.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who is this private climbing trip best for?",
+        answer:
+          "It suits adventurous beginners through intermediate climbers who want personalized guide support in Joshua Tree.",
+      },
+      {
+        question: "How long is the experience?",
+        answer: "The listed duration is approximately 4 hours.",
+      },
+      {
+        question: "Can I cancel if plans change?",
+        answer:
+          "This product lists free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
+
   "6740P7": {
     productCode: "6740P7",
     title: "Joshua Tree National Park Scenic Tour | Rated #1",
