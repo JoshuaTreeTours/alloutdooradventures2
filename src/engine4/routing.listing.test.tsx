@@ -52,6 +52,24 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(html).not.toContain("Stop:");
   });
 
+  it("builds the 180019P2 route and exposes it in Colorado Springs listing", () => {
+    const entries = getEngine4ListingEntries("colorado", "colorado-springs");
+    const target = entries.find(entry => entry.tour.productCode === "180019P2");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/colorado/colorado-springs/tours/garden-of-the-gods-tour-180019p2"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "colorado",
+      "colorado-springs",
+      "garden-of-the-gods-tour-180019p2"
+    );
+
+    expect(routed?.id).toBe("180019P2");
+  });
+
   it("builds the 74828P4 route and exposes it in Aspen listing", () => {
     const entries = getEngine4ListingEntries("colorado", "aspen");
     const target = entries.find(entry => entry.tour.productCode === "74828P4");
@@ -104,5 +122,4 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("6740P7");
   });
-
 });

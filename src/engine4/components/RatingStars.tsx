@@ -1,34 +1,41 @@
 type RatingStarsProps = {
-  rating?: number;
+  ratingValue: number;
+  reviewCount?: number;
   className?: string;
 };
 
-type StarFill = "full" | "half" | "empty";
+type StarFill = "full" | "partial" | "empty";
 
 const STAR_PATH =
   "M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z";
 
-const getStarFill = (rating: number, index: number): StarFill => {
-  const position = index + 1;
+const clampRating = (ratingValue: number): number =>
+  Math.max(0, Math.min(5, ratingValue));
 
-  if (rating >= position) {
+const getStarFill = (ratingValue: number, index: number): StarFill => {
+  const fillAmount = clampRating(ratingValue) - index;
+
+  if (fillAmount >= 1) {
     return "full";
   }
 
-  const delta = rating - index;
-  if (delta >= 0.75) {
-    return "full";
-  }
-
-  if (delta >= 0.25) {
-    return "half";
+  if (fillAmount > 0) {
+    return "partial";
   }
 
   return "empty";
 };
 
-function StarIcon({ fill, index }: { fill: StarFill; index: number }) {
-  const halfGradientId = `engine4-star-half-${index}`;
+function StarIcon({
+  fill,
+  fillRatio,
+  index,
+}: {
+  fill: StarFill;
+  fillRatio: number;
+  index: number;
+}) {
+  const gradientId = `engine4-star-fill-${index}`;
 
   return (
     <svg
@@ -39,11 +46,17 @@ function StarIcon({ fill, index }: { fill: StarFill; index: number }) {
       xmlns="http://www.w3.org/2000/svg"
       data-testid="rating-star"
     >
-      {fill === "half" ? (
+      {fill === "partial" ? (
         <defs>
-          <linearGradient id={halfGradientId} x1="0" y1="0" x2="1" y2="0">
-            <stop offset="50%" stopColor="currentColor" />
-            <stop offset="50%" stopColor="transparent" />
+          <linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="0">
+            <stop
+              offset={`${Math.round(fillRatio * 100)}%`}
+              stopColor="currentColor"
+            />
+            <stop
+              offset={`${Math.round(fillRatio * 100)}%`}
+              stopColor="transparent"
+            />
           </linearGradient>
         </defs>
       ) : null}
@@ -54,8 +67,8 @@ function StarIcon({ fill, index }: { fill: StarFill; index: number }) {
         fill={
           fill === "full"
             ? "currentColor"
-            : fill === "half"
-              ? `url(#${halfGradientId})`
+            : fill === "partial"
+              ? `url(#${gradientId})`
               : "transparent"
         }
       />
@@ -63,17 +76,37 @@ function StarIcon({ fill, index }: { fill: StarFill; index: number }) {
   );
 }
 
-export default function RatingStars({ rating, className }: RatingStarsProps) {
-  const safeRating = Number.isFinite(rating) ? Math.max(0, Math.min(5, rating as number)) : 0;
+export default function RatingStars({
+  ratingValue,
+  reviewCount,
+  className,
+}: RatingStarsProps) {
+  const safeRating = clampRating(ratingValue);
 
   return (
     <span
       aria-label={`Rated ${safeRating.toFixed(1)} out of 5 stars`}
-      className={`inline-flex items-center gap-1 text-[#8BFF8B] ${className ?? ""}`.trim()}
+      className={`inline-flex items-center gap-2 text-[#8BFF8B] ${className ?? ""}`.trim()}
+      data-testid="rating-stars"
     >
-      {Array.from({ length: 5 }, (_, index) => (
-        <StarIcon key={index} fill={getStarFill(safeRating, index)} index={index} />
-      ))}
+      <span className="inline-flex items-center gap-1">
+        {Array.from({ length: 5 }, (_, index) => {
+          const fillAmount = Math.max(0, Math.min(1, safeRating - index));
+          return (
+            <StarIcon
+              key={index}
+              index={index}
+              fill={getStarFill(safeRating, index)}
+              fillRatio={fillAmount}
+            />
+          );
+        })}
+      </span>
+      {Number.isFinite(reviewCount) ? (
+        <span className="text-sm text-white/95">
+          {Math.round(reviewCount!)} reviews
+        </span>
+      ) : null}
     </span>
   );
 }

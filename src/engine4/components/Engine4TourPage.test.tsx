@@ -80,7 +80,6 @@ describe("Engine4TourPage booking CTA", () => {
     expect(html).toContain("Ready to book?");
   });
 
-
   it("hides empty fact rows and renders rows only when values exist", () => {
     const withoutFacts: Engine4TourViewModel = {
       ...engine4Tour,
@@ -99,11 +98,10 @@ describe("Engine4TourPage booking CTA", () => {
       <Engine4TourPage tour={withoutFacts} />
     );
     expect(emptyFactsHtml).not.toContain("From:</strong>");
-    expect(emptyFactsHtml).not.toContain("Rating:");
     expect(emptyFactsHtml).not.toContain("Meeting point:");
     expect(emptyFactsHtml).not.toContain("Start time:");
     expect(emptyFactsHtml).not.toContain("Duration:");
-    expect(emptyFactsHtml).not.toContain("data-testid=\"rating-star\"");
+    expect(emptyFactsHtml).not.toContain('data-testid="rating-star"');
 
     const withFallbackPrice: Engine4TourViewModel = {
       ...withoutFacts,
@@ -130,9 +128,64 @@ describe("Engine4TourPage booking CTA", () => {
     const withRatingHtml = renderToStaticMarkup(
       <Engine4TourPage tour={withRating} />
     );
-    expect(withRatingHtml).toContain("Rating:</strong>");
-    expect(withRatingHtml).toContain("4.9 (12 reviews)");
-    expect(withRatingHtml.match(/data-testid="rating-star"/g) ?? []).toHaveLength(5);
+    expect(withRatingHtml).toContain('data-testid="rating-stars"');
+    expect(withRatingHtml).toContain("12 reviews");
+    expect(
+      withRatingHtml.match(/data-testid="rating-star"/g) ?? []
+    ).toHaveLength(5);
+  });
+
+  it("renders a rating stars row with review count when rating and reviews exist", () => {
+    const withRating: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        ratingValue: 4.7,
+        reviewCount: 342,
+      },
+    };
+
+    const html = renderToStaticMarkup(<Engine4TourPage tour={withRating} />);
+
+    expect(html).toContain('data-testid="rating-stars"');
+    expect(html).toContain("342 reviews");
+    expect(html.match(/data-testid="rating-star"/g) ?? []).toHaveLength(5);
+    const fromIndex = html.indexOf("From:</strong>");
+    const ratingIndex = html.indexOf('data-testid="rating-stars"');
+    const meetingIndex = html.indexOf("Meeting point:</strong>");
+    expect(fromIndex).toBeGreaterThanOrEqual(0);
+    expect(ratingIndex).toBeGreaterThan(fromIndex);
+    expect(meetingIndex).toBeGreaterThan(ratingIndex);
+  });
+
+  it("does not render the rating row when rating or review count is missing", () => {
+    const withoutRating: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        ratingValue: undefined,
+        reviewCount: 342,
+      },
+    };
+
+    const withoutReviews: Engine4TourViewModel = {
+      ...engine4Tour,
+      facts: {
+        ...engine4Tour.facts,
+        ratingValue: 4.7,
+        reviewCount: undefined,
+      },
+    };
+
+    const noRatingHtml = renderToStaticMarkup(
+      <Engine4TourPage tour={withoutRating} />
+    );
+    const noReviewsHtml = renderToStaticMarkup(
+      <Engine4TourPage tour={withoutReviews} />
+    );
+
+    expect(noRatingHtml).not.toContain('data-testid="rating-stars"');
+    expect(noReviewsHtml).not.toContain('data-testid="rating-stars"');
   });
 
   it("renders destination tree links above the heading", () => {

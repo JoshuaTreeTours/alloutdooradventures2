@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   assertEngine4ViatorTour,
+  assertEngine4ViatorTourHero,
   type Engine4TourViewModel,
 } from "./types";
 
@@ -51,9 +52,7 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://example.com/foo.jpg",
       })
-    ).toThrow(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
-    );
+    ).toThrow("Engine4 heroImage must be a TACDN image");
   });
 
   it("rejects TACDN host URLs without an image path", () => {
@@ -62,9 +61,7 @@ describe("assertEngine4ViatorTour", () => {
         ...baseTour,
         heroImage: "https://media.tacdn.com",
       })
-    ).toThrow(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
-    );
+    ).toThrow("Engine4 heroImage must look like an image URL");
   });
 
   it("accepts tours when optional facts are absent", () => {
@@ -79,5 +76,27 @@ describe("assertEngine4ViatorTour", () => {
         },
       })
     ).not.toThrow();
+  });
+});
+
+describe("assertEngine4ViatorTourHero", () => {
+  it("accepts media.tacdn.com and dynamic-media.tacdn.com with query params", () => {
+    expect(() =>
+      assertEngine4ViatorTourHero(
+        "https://media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1"
+      )
+    ).not.toThrow();
+
+    expect(() =>
+      assertEngine4ViatorTourHero(
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1"
+      )
+    ).not.toThrow();
+  });
+
+  it("rejects non-TACDN hosts", () => {
+    expect(() =>
+      assertEngine4ViatorTourHero("https://example.com/image.jpg")
+    ).toThrow("Engine4 heroImage must be a TACDN image");
   });
 });

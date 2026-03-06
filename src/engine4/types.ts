@@ -91,12 +91,21 @@ const isNonEmptyString = (value: unknown): value is string =>
   typeof value === "string" && value.trim().length > 0;
 
 const ENGINE4_TACDN_HERO_REGEX =
-  /^https:\/\/(dynamic-media|media)\.tacdn\.com\/.+/i;
+  /^https:\/\/(dynamic-media|media)\.tacdn\.com/i;
+
+export function assertEngine4ViatorTourHero(heroImage: string) {
+  if (!ENGINE4_TACDN_HERO_REGEX.test(heroImage)) {
+    throw new Error("Engine4 heroImage must be a TACDN image");
+  }
+}
 
 const looksLikeImageUrl = (value: string): boolean => {
   const normalized = value.trim().toLowerCase();
 
-  if (normalized.includes("/photo-o/") || normalized.includes("attractions-splice")) {
+  if (
+    normalized.includes("/photo-o/") ||
+    normalized.includes("attractions-splice")
+  ) {
     return true;
   }
 
@@ -125,7 +134,9 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     !isNonEmptyString(tour.canonicalPath) ||
     !tour.canonicalPath.startsWith("/destinations/")
   ) {
-    throw new Error("Invalid Engine4 Viator contract: canonicalPath is invalid");
+    throw new Error(
+      "Invalid Engine4 Viator contract: canonicalPath is invalid"
+    );
   }
 
   if (
@@ -153,15 +164,13 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
     !isNonEmptyString(tour.heroImage) ||
     !ENGINE4_TACDN_HERO_REGEX.test(tour.heroImage)
   ) {
-    throw new Error(
-      "Engine4 heroImage must be a TACDN image (dynamic-media|media.tacdn.com)"
-    );
+    throw new Error("Engine4 heroImage must be a TACDN image");
   }
 
+  assertEngine4ViatorTourHero(tour.heroImage);
+
   if (!looksLikeImageUrl(tour.heroImage)) {
-    throw new Error(
-      "Engine4 heroImage must look like an image URL"
-    );
+    throw new Error("Engine4 heroImage must look like an image URL");
   }
 
   if (!isNonEmptyString(tour.content.overview)) {
@@ -169,5 +178,4 @@ export const assertEngine4ViatorTour = (tour: Engine4TourViewModel): void => {
       "Invalid Engine4 Viator contract: content.overview is required"
     );
   }
-
 };

@@ -27,8 +27,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasPrice = hasText(tour.facts.priceFrom);
   const rating = Number(tour.facts.ratingValue);
   const reviewCount = Number(tour.facts.reviewCount);
-  const hasRating = Number.isFinite(rating);
-  const hasReviewCount = Number.isFinite(reviewCount);
+  const hasRatingRow = Number.isFinite(rating) && Number.isFinite(reviewCount);
   const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
   const hasStartTime = hasText(tour.facts.startTime);
   const hasDuration = hasText(tour.facts.duration);
@@ -41,7 +40,10 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
     .filter(entry => entry.tour.productCode !== tour.productCode)
     .slice(0, 6);
 
-  if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.NODE_ENV === "test"
+  ) {
     const graphNodes = schema["@graph"];
     const schemaImages = graphNodes
       .filter(
@@ -80,15 +82,21 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               className="text-xs text-white/80"
             >
               <Link href="/destinations">
-                <a className="underline-offset-4 hover:underline">Destinations</a>
+                <a className="underline-offset-4 hover:underline">
+                  Destinations
+                </a>
               </Link>{" "}
               /{" "}
               <Link href={destinationStatePath}>
-                <a className="underline-offset-4 hover:underline">{tour.destination.state}</a>
+                <a className="underline-offset-4 hover:underline">
+                  {tour.destination.state}
+                </a>
               </Link>{" "}
               /{" "}
               <Link href={destinationCityPath}>
-                <a className="underline-offset-4 hover:underline">{tour.destination.city}</a>
+                <a className="underline-offset-4 hover:underline">
+                  {tour.destination.city}
+                </a>
               </Link>
             </nav>
             <p className="text-xs uppercase tracking-[0.3em] text-white/75">
@@ -98,36 +106,34 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               {tour.title}
             </h1>
             <div className="mt-6 grid gap-3 text-sm text-white/95 md:grid-cols-2">
-              {hasPrice ? (
-                <p>
-                  <strong>From:</strong> {tour.facts.priceFrom} per person
-                </p>
-              ) : null}
-              {hasRating ? (
-                <p className="flex flex-wrap items-center gap-2">
-                  <strong>Rating:</strong>
-                  <RatingStars rating={rating} />
-                  <span>
-                    {rating.toFixed(1)}
-                    {hasReviewCount ? ` (${Math.round(reviewCount)} reviews)` : ""}
-                  </span>
-                </p>
-              ) : null}
-              {hasMeetingPoint ? (
-                <p>
-                  <strong>Meeting point:</strong> {tour.facts.meetingPointShort}
-                </p>
-              ) : null}
-              {hasStartTime ? (
-                <p>
-                  <strong>Start time:</strong> {tour.facts.startTime}
-                </p>
-              ) : null}
-              {hasDuration ? (
-                <p>
-                  <strong>Duration:</strong> {tour.facts.duration}
-                </p>
-              ) : null}
+              <div className="space-y-3">
+                {hasPrice ? (
+                  <p>
+                    <strong>From:</strong> {tour.facts.priceFrom} per person
+                  </p>
+                ) : null}
+                {hasRatingRow ? (
+                  <RatingStars ratingValue={rating} reviewCount={reviewCount} />
+                ) : null}
+              </div>
+              <div className="space-y-3">
+                {hasMeetingPoint ? (
+                  <p>
+                    <strong>Meeting point:</strong>{" "}
+                    {tour.facts.meetingPointShort}
+                  </p>
+                ) : null}
+                {hasStartTime ? (
+                  <p>
+                    <strong>Start time:</strong> {tour.facts.startTime}
+                  </p>
+                ) : null}
+                {hasDuration ? (
+                  <p>
+                    <strong>Duration:</strong> {tour.facts.duration}
+                  </p>
+                ) : null}
+              </div>
             </div>
             <a
               href={tour.bookingUrl}
