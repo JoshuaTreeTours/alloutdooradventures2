@@ -185,7 +185,10 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1",
     fromPrice: "$145.00",
     priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 412,
     duration: "4 hours",
+    startTime: "8:00 AM",
     meetingPoint: "225 S Main St, Moab, UT 84532, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
@@ -195,12 +198,43 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     galleryImages: [
       "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
     ],
+    description:
+      "Private half-day canyoneering trip near Moab with guided instruction, rappels, and sandstone scrambling.",
+    descriptionLong:
+      "This private Moab canyoneering experience is built for travelers who want real adventure without committing to a full-day expedition. Over roughly four hours, your guide leads your group into Utah sandstone terrain where you learn movement techniques, descend rappels, and scramble through sculpted canyon corridors at a manageable pace. The private format keeps the day tailored to your comfort level, so adventurous beginners can build confidence while experienced guests still enjoy technical variety. Expect a hands-on outing with route guidance, safety coaching, and time to appreciate the red-rock setting that makes Moab a canyoneering favorite. It's an active, skills-focused desert excursion that balances challenge, scenery, and personalized guiding.",
+    whatToExpect:
+      "Expect a safety briefing, gear setup, guided canyon travel, rappels, and scrambling through sandstone features at a pace matched to your private group.",
     overview:
-      "Explore sandstone canyons around Moab on a guided half-day canyoneering outing with rappels, scrambles, and scenic desert views.",
+      "This private Moab canyoneering experience is built for travelers who want real adventure without committing to a full-day expedition. Over roughly four hours, your guide leads your group into Utah sandstone terrain where you learn movement techniques, descend rappels, and scramble through sculpted canyon corridors at a manageable pace. The private format keeps the day tailored to your comfort level, so adventurous beginners can build confidence while experienced guests still enjoy technical variety. Expect a hands-on outing with route guidance, safety coaching, and time to appreciate the red-rock setting that makes Moab a canyoneering favorite. It's an active, skills-focused desert excursion that balances challenge, scenery, and personalized guiding.",
     highlights: [
-      "Half-day canyoneering adventure near Moab",
-      "Guided rappels and technical instruction",
-      "Small-group format with desert canyon scenery",
+      "Private half-day canyoneering route near Moab",
+      "Guided rappels and sandstone scrambling",
+      "Instruction designed for adventurous beginners",
+      "Route and pace tailored to your private group",
+      "Red-rock canyon scenery throughout the outing",
+    ],
+    inclusions: [
+      "Professional canyoneering guide",
+      "Technical instruction and safety orientation",
+      "Canyoneering equipment",
+    ],
+    exclusions: ["Guide gratuities", "Hotel pickup and drop-off"],
+    additionalInfo: [
+      "Wear closed-toe shoes suitable for scrambling on sandstone.",
+      "Guests should be comfortable with heights and moderate physical activity.",
+      "Start time may vary by season and operational conditions.",
+    ],
+    faqs: [
+      {
+        question: "Is this suitable for beginners?",
+        answer:
+          "Yes, the private guided format is approachable for adventurous beginners who are comfortable with moderate activity and heights.",
+      },
+      {
+        question: "What will we do during the experience?",
+        answer:
+          "Your guide leads canyon travel that includes rappels, scrambling, and movement instruction across Moab sandstone terrain.",
+      },
     ],
   },
   "172188P151": {

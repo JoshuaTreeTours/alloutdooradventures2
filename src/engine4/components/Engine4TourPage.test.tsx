@@ -217,6 +217,27 @@ describe("Engine4TourPage booking CTA", () => {
     expect(html).toContain(`"image":"${engine4Tour.heroImage}"`);
   });
 
+  it("renders extended detail sections when data is available", () => {
+    const richTour: Engine4TourViewModel = {
+      ...engine4Tour,
+      content: {
+        ...engine4Tour.content,
+        inclusions: ["Guide", "Safety equipment"],
+        exclusions: ["Gratuities"],
+        whatToExpect: "Expect hands-on canyon instruction.",
+        additionalInfo: "Wear closed-toe shoes.",
+      },
+    };
+
+    const html = renderToStaticMarkup(<Engine4TourPage tour={richTour} />);
+
+    expect(html).toContain("What&#x27;s Included");
+    expect(html).toContain("Good to Know / Requirements");
+    expect(html).toContain("Meeting &amp; Pickup");
+    expect(html).toContain("Cancellation Policy");
+    expect(html).toContain("Cancellation:</strong>");
+  });
+
   it("keeps non-Engine4 tour rendering unchanged", () => {
     const html = renderToStaticMarkup(<Engine3TourPage tour={engine3Tour} />);
 
