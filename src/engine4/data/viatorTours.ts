@@ -155,12 +155,54 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "91782P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Utah",
+      stateSlug: "utah",
+      city: "Moab",
+      citySlug: "moab",
+    },
+    slug: "half-day-day-canyoneering-91782p1",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "91782P1": {
+    productCode: "91782P1",
+    title: "Moab Private Half-Day Canyoneering",
+    sourceUrl:
+      "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1",
+    fromPrice: "$145.00",
+    priceCurrency: "USD",
+    duration: "4 hours",
+    meetingPoint: "225 S Main St, Moab, UT 84532, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    ],
+    overview:
+      "Explore sandstone canyons around Moab on a guided half-day canyoneering outing with rappels, scrambles, and scenic desert views.",
+    highlights: [
+      "Half-day canyoneering adventure near Moab",
+      "Guided rappels and technical instruction",
+      "Small-group format with desert canyon scenery",
+    ],
+  },
   "172188P151": {
     productCode: "172188P151",
     title: "Private Professional Photoshoot in Aspen",

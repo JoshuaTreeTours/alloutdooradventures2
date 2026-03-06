@@ -1,6 +1,7 @@
 import { fetchViator } from "../../../api/viator/client";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
+import { resolveViatorPrimaryImage } from "./resolveViatorPrimaryImage";
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") {
@@ -118,9 +119,7 @@ export const getEngine4ViatorTourData = async (
     const product =
       (payload.product as Record<string, unknown> | undefined) ?? payload;
 
-    const primaryImageUrl = asImage(
-      (product.images as Array<Record<string, unknown>> | undefined)?.[0]?.url
-    );
+    const primaryImageUrl = asImage(resolveViatorPrimaryImage(product));
 
     const galleryImages = (
       (product.images as Array<Record<string, unknown>> | undefined) ?? []
@@ -216,6 +215,7 @@ export const getEngine4ViatorTourData = async (
       highlights:
         engine4ViatorApiFallbackByProductCode[normalizedCode]?.highlights,
       faqs: engine4ViatorApiFallbackByProductCode[normalizedCode]?.faqs,
+      rawProductPayload: product,
     };
   } catch {
     return engine4ViatorApiFallbackByProductCode[normalizedCode];

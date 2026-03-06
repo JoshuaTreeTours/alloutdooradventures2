@@ -69,6 +69,7 @@ export type Engine4ViatorApiTour = {
   primaryImageUrl?: string;
   galleryImages?: string[];
   sourceDerivedImageUrl?: string;
+  rawProductPayload?: Record<string, unknown>;
 };
 
 export type Engine4TourViewModel = {
@@ -82,6 +83,7 @@ export type Engine4TourViewModel = {
   bookingUrl: string;
   destination: Engine4ViatorTourRecord["destination"];
   heroImage: string | null;
+  primaryImage: string | null;
   galleryImages: string[];
   facts: Engine4TourFacts;
   content: Engine4TourContent;

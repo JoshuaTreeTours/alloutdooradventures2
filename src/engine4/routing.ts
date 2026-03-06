@@ -48,7 +48,7 @@ export const getEngine4TourBySlugs = (
       title: vm.title,
       description: vm.content.overview,
       canonicalPath: vm.canonicalPath,
-      ogImage: vm.heroImage ?? undefined,
+      ogImage: vm.primaryImage ?? vm.heroImage ?? undefined,
     },
     content: {
       experienceText: vm.content.overview,

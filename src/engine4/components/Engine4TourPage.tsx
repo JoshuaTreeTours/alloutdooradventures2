@@ -16,7 +16,7 @@ const BOOK_CTA_CLASSES =
 
 export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
-  const heroImage = tour.heroImage ?? "";
+  const heroImage = tour.primaryImage ?? tour.heroImage ?? "";
   const overview = tour.content.overview;
   const highlights = tour.content.highlights;
   const faqs = tour.content.faqs;

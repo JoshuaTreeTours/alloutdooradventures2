@@ -14,6 +14,7 @@ import {
 } from "./buildEngine4Content";
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
+import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -44,10 +45,7 @@ const coalesceNumber = (...values: Array<number | undefined>) => {
   return undefined;
 };
 
-const resolvePriceFrom = (input: {
-  fromPrice?: string;
-  currency?: string;
-}) => {
+const resolvePriceFrom = (input: { fromPrice?: string; currency?: string }) => {
   const rawPrice = cleanText(input.fromPrice);
   if (!rawPrice) {
     return undefined;
@@ -64,6 +62,35 @@ const resolvePriceFrom = (input: {
   return rawPrice;
 };
 
+const logEngine4ImageDecision = (input: {
+  productCode: string;
+  title: string;
+  candidates: string[];
+  resolvedHeroImage?: string;
+  fallbackUsed: boolean;
+  downstreamOverwriteBlocked: boolean;
+}) => {
+  if (
+    process.env.NODE_ENV !== "development" &&
+    process.env.NODE_ENV !== "test"
+  ) {
+    return;
+  }
+
+  console.info(`[engine4-image] product=${input.productCode}`);
+  console.info(`[engine4-image] title=${input.title}`);
+  console.info(
+    `[engine4-image] candidates=${JSON.stringify(input.candidates)}`
+  );
+  console.info(
+    `[engine4-image] resolvedHeroImage=${input.resolvedHeroImage ?? "<none>"}`
+  );
+  console.info(`[engine4-image] fallbackUsed=${String(input.fallbackUsed)}`);
+  console.info(
+    `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
+  );
+};
+
 export const mapViatorToEngine4Tour = (input: {
   record: Engine4ViatorTourRecord;
   apiTour?: Engine4ViatorApiTour;
@@ -72,14 +99,18 @@ export const mapViatorToEngine4Tour = (input: {
   const fallbackTour =
     engine4ViatorApiFallbackByProductCode[record.productCode];
 
-  const meetingPointFull = coalesceText(apiTour?.meetingPoint, fallbackTour?.meetingPoint);
+  const meetingPointFull = coalesceText(
+    apiTour?.meetingPoint,
+    fallbackTour?.meetingPoint
+  );
   const resolvedApiTour: Engine4ViatorApiTour | undefined =
     apiTour || fallbackTour
       ? {
           ...(fallbackTour ?? {}),
           ...(apiTour ?? {}),
           title: coalesceText(apiTour?.title, fallbackTour?.title) ?? "",
-          sourceUrl: coalesceText(apiTour?.sourceUrl, fallbackTour?.sourceUrl) ?? "",
+          sourceUrl:
+            coalesceText(apiTour?.sourceUrl, fallbackTour?.sourceUrl) ?? "",
           sourceDerivedImageUrl: coalesceText(
             apiTour?.sourceDerivedImageUrl,
             fallbackTour?.sourceDerivedImageUrl
@@ -89,10 +120,19 @@ export const mapViatorToEngine4Tour = (input: {
             fallbackTour?.primaryImageUrl
           ),
           fromPrice: resolvePriceFrom({
-            fromPrice: coalesceText(apiTour?.fromPrice, fallbackTour?.fromPrice),
-            currency: coalesceText(apiTour?.priceCurrency, fallbackTour?.priceCurrency),
+            fromPrice: coalesceText(
+              apiTour?.fromPrice,
+              fallbackTour?.fromPrice
+            ),
+            currency: coalesceText(
+              apiTour?.priceCurrency,
+              fallbackTour?.priceCurrency
+            ),
           }),
-          priceCurrency: coalesceText(apiTour?.priceCurrency, fallbackTour?.priceCurrency),
+          priceCurrency: coalesceText(
+            apiTour?.priceCurrency,
+            fallbackTour?.priceCurrency
+          ),
           duration: coalesceText(apiTour?.duration, fallbackTour?.duration),
           startTime: coalesceText(apiTour?.startTime, fallbackTour?.startTime),
           meetingPoint: meetingPointFull,
@@ -100,24 +140,38 @@ export const mapViatorToEngine4Tour = (input: {
             apiTour?.cancellationPolicy,
             fallbackTour?.cancellationPolicy
           ),
-          whatToExpect: coalesceText(apiTour?.whatToExpect, fallbackTour?.whatToExpect),
-          description: coalesceText(apiTour?.description, fallbackTour?.description),
+          whatToExpect: coalesceText(
+            apiTour?.whatToExpect,
+            fallbackTour?.whatToExpect
+          ),
+          description: coalesceText(
+            apiTour?.description,
+            fallbackTour?.description
+          ),
           descriptionLong: coalesceText(
             apiTour?.descriptionLong,
             fallbackTour?.descriptionLong
           ),
           overview: coalesceText(apiTour?.overview, fallbackTour?.overview),
           rating: coalesceNumber(apiTour?.rating, fallbackTour?.rating),
-          reviewCount: coalesceNumber(apiTour?.reviewCount, fallbackTour?.reviewCount),
+          reviewCount: coalesceNumber(
+            apiTour?.reviewCount,
+            fallbackTour?.reviewCount
+          ),
           galleryImages: Array.from(
-            new Set([...(apiTour?.galleryImages ?? []), ...(fallbackTour?.galleryImages ?? [])])
+            new Set([
+              ...(apiTour?.galleryImages ?? []),
+              ...(fallbackTour?.galleryImages ?? []),
+            ])
           ),
           highlights:
             (apiTour?.highlights && apiTour.highlights.length > 0
               ? apiTour.highlights
               : fallbackTour?.highlights) ?? [],
           faqs:
-            (apiTour?.faqs && apiTour.faqs.length > 0 ? apiTour.faqs : fallbackTour?.faqs) ?? [],
+            (apiTour?.faqs && apiTour.faqs.length > 0
+              ? apiTour.faqs
+              : fallbackTour?.faqs) ?? [],
           itinerary:
             (apiTour?.itinerary && apiTour.itinerary.length > 0
               ? apiTour.itinerary
@@ -137,6 +191,7 @@ export const mapViatorToEngine4Tour = (input: {
           productCode: record.productCode,
         }
       : undefined;
+
   const itinerary = normalizeItinerary(resolvedApiTour);
   const whatToExpect = cleanText(resolvedApiTour?.whatToExpect);
   const overview = buildOverview({
@@ -157,6 +212,17 @@ export const mapViatorToEngine4Tour = (input: {
     cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
   });
 
+  const canonicalImage =
+    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
+    cleanText(resolvedApiTour?.primaryImageUrl) ??
+    cleanText(resolvedApiTour?.galleryImages?.[0]) ??
+    cleanText(resolvedApiTour?.sourceDerivedImageUrl);
+
+  const resolvedHeroImage = resolveEngine4ViatorHero({
+    productCode: record.productCode,
+    apiTour: resolvedApiTour,
+  });
+
   const tour: Engine4TourViewModel = {
     tourId: `engine4-${record.productCode}`,
     engine: "engine4",
@@ -167,10 +233,8 @@ export const mapViatorToEngine4Tour = (input: {
     canonicalPath: buildEngine4TourPath(record),
     bookingUrl: buildViatorAffiliateUrl(record.productCode),
     destination: record.destination,
-    heroImage: resolveEngine4ViatorHero({
-      productCode: record.productCode,
-      apiTour: resolvedApiTour,
-    }),
+    heroImage: resolvedHeroImage,
+    primaryImage: resolvedHeroImage,
     galleryImages: Array.from(
       new Set((resolvedApiTour?.galleryImages ?? []).filter(Boolean))
     ),
@@ -195,6 +259,27 @@ export const mapViatorToEngine4Tour = (input: {
       additionalInfo: toSentence(resolvedApiTour?.additionalInfo ?? []),
     },
   };
+
+  const candidates = Array.from(
+    new Set(
+      [
+        canonicalImage,
+        resolvedApiTour?.primaryImageUrl,
+        ...(resolvedApiTour?.galleryImages ?? []),
+        resolvedApiTour?.sourceDerivedImageUrl,
+        record.heroImage ?? undefined,
+      ].filter((value): value is string => Boolean(cleanText(value)))
+    )
+  );
+
+  logEngine4ImageDecision({
+    productCode: record.productCode,
+    title: tour.title,
+    candidates,
+    resolvedHeroImage: tour.heroImage ?? undefined,
+    fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
+    downstreamOverwriteBlocked: Boolean(tour.primaryImage),
+  });
 
   assertEngine4ViatorTour(tour);
   return tour;
