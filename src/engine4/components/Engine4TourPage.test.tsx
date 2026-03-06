@@ -103,6 +103,7 @@ describe("Engine4TourPage booking CTA", () => {
     expect(emptyFactsHtml).not.toContain("Meeting point:");
     expect(emptyFactsHtml).not.toContain("Start time:");
     expect(emptyFactsHtml).not.toContain("Duration:");
+    expect(emptyFactsHtml).not.toContain("data-testid=\"rating-star\"");
 
     const withFallbackPrice: Engine4TourViewModel = {
       ...withoutFacts,
@@ -129,7 +130,9 @@ describe("Engine4TourPage booking CTA", () => {
     const withRatingHtml = renderToStaticMarkup(
       <Engine4TourPage tour={withRating} />
     );
-    expect(withRatingHtml).toContain("Rating:</strong> 4.9 (12 reviews)");
+    expect(withRatingHtml).toContain("Rating:</strong>");
+    expect(withRatingHtml).toContain("4.9 (12 reviews)");
+    expect(withRatingHtml.match(/data-testid="rating-star"/g) ?? []).toHaveLength(5);
   });
 
   it("renders destination tree links above the heading", () => {
