@@ -2,6 +2,7 @@ import { Link } from "wouter";
 
 import TourCard from "../../components/TourCard";
 import Seo from "../../components/Seo";
+import RatingStars from "./RatingStars";
 import { getEngine4ListingEntries } from "../listing/getEngine4ListingEntries";
 import { buildEngine4ViatorSchemaGraph } from "../schema/buildEngine4ViatorSchemaGraph";
 import type { Engine4TourViewModel } from "../types";
@@ -24,9 +25,10 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasFaqs = faqs.length > 0;
   const hasText = (value?: string) => Boolean(value?.trim());
   const hasPrice = hasText(tour.facts.priceFrom);
-  const hasRating =
-    typeof tour.facts.ratingValue === "number" &&
-    typeof tour.facts.reviewCount === "number";
+  const rating = Number(tour.facts.ratingValue);
+  const reviewCount = Number(tour.facts.reviewCount);
+  const hasRating = Number.isFinite(rating);
+  const hasReviewCount = Number.isFinite(reviewCount);
   const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
   const hasStartTime = hasText(tour.facts.startTime);
   const hasDuration = hasText(tour.facts.duration);
@@ -102,8 +104,13 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
                 </p>
               ) : null}
               {hasRating ? (
-                <p>
-                  <strong>Rating:</strong> {tour.facts.ratingValue?.toFixed(1)} ({tour.facts.reviewCount} reviews)
+                <p className="flex flex-wrap items-center gap-2">
+                  <strong>Rating:</strong>
+                  <RatingStars rating={rating} />
+                  <span>
+                    {rating.toFixed(1)}
+                    {hasReviewCount ? ` (${Math.round(reviewCount)} reviews)` : ""}
+                  </span>
                 </p>
               ) : null}
               {hasMeetingPoint ? (
