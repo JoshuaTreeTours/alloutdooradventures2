@@ -1,4 +1,4 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 
 import {
   engine4ViatorApiFallbackByProductCode,
@@ -132,6 +132,8 @@ describe("Engine4 Viator image consistency", () => {
   });
 
   it("uses the Moab canyoneering TACDN image consistently for page, card, og:image, and schema image", () => {
+    const infoSpy = vi.spyOn(console, "info").mockImplementation(() => undefined);
+
     const pageTour = mapViatorToEngine4Tour({
       record: engine4ViatorTours.find(tour => tour.productCode === "91782P1")!,
       apiTour: engine4ViatorApiFallbackByProductCode["91782P1"],
@@ -161,6 +163,21 @@ describe("Engine4 Viator image consistency", () => {
     expect(routeTour?.seo.ogImage).toBe(MOAB_CANYONEERING_HERO);
     expect(productNode.image).toBe(MOAB_CANYONEERING_HERO);
     expect(touristTripNode.image).toBe(MOAB_CANYONEERING_HERO);
+    expect(pageTour.heroImage.startsWith("data:image/svg+xml")).toBe(false);
+
+    const engine4ImageLogs = infoSpy.mock.calls
+      .map(args => String(args[0]))
+      .filter(line => line.includes("[engine4-image]"));
+
+    expect(engine4ImageLogs).toEqual(
+      expect.arrayContaining([
+        "[engine4-image] product=91782P1",
+        `[engine4-image] resolvedHeroImage=${MOAB_CANYONEERING_HERO}`,
+        "[engine4-image] fallbackUsed=false",
+      ])
+    );
+
+    infoSpy.mockRestore();
   });
 
   it("uses the Colorado Springs hero consistently for page, card, og:image, and schema image", () => {
