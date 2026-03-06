@@ -153,7 +153,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
       city: "Joshua Tree",
       citySlug: "joshua-tree",
     },
-    slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
+    slug: "joshua-tree-scenic-tour-6740p7",
   },
   {
     engine: "engine4",
@@ -584,20 +584,85 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   },
   "6740P7": {
     productCode: "6740P7",
-    title: "Joshua Tree Backroads Hummer H2 Tour",
+    title: "Joshua Tree National Park Scenic Tour | Rated #1",
     sourceUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+    fromPrice: "$219.00",
+    priceCurrency: "USD",
+    rating: 4.9,
+    reviewCount: 88,
+    duration: "5 hours",
+    startTime: "8:00 AM",
+    meetingPoint:
+      "The Palm Springs Art Museum at 8:30 am, returning 1:30 pm",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    primaryImageUrl:
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+    galleryImages: [
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+    ],
     sourceDerivedImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+    description:
+      "Guided Joshua Tree scenic and backroads experience in a Hummer H2 or Adventure Van from Palm Springs.",
+    descriptionLong:
+      "This Joshua Tree Scenic Tour is designed for travelers who want more than a windshield drive through the park. Departing from Palm Springs, you ride with a guide in a rugged Hummer H2 or Adventure Van to reach scenic backroad terrain and signature desert viewpoints with less navigation stress. The experience pairs comfortable transport with frequent photo stops, short easy walks, and interpretation focused on the park's geology, ecology, and desert history. Instead of rushing from turnout to turnout, the route is paced to let guests absorb the landscape and ask questions while still covering multiple notable areas in one outing. It's a strong fit for first-time Joshua Tree visitors, photographers, and small groups who want a guided, story-rich park day with clear logistics and high scenic payoff.",
+    whatToExpect:
+      "Expect hotel-area pickup options from Palm Springs, a guided drive in a Hummer H2 or Adventure Van, scenic pullouts, short walks, and interpretive commentary on Joshua Tree National Park.",
     overview:
-      "Explore Joshua Tree National Park on a small-group scenic tour designed for travelers who want big views and backroad character without the stress of self-driving. Ride in a climate-controlled H2 Hummer or touring van as your guide connects the park’s iconic Joshua Tree forests with the rugged granite landscapes that make this desert famous. The route focuses on photo-worthy stops and short, easy walks at signature areas—think boulder piles, open desert panoramas, and historic water features—so you get out of the vehicle often without turning the day into a hike. Along the way, you’ll hear clear, field-ready context on local geology, desert ecology, and human history—then return with a camera full of views and your bearings set for the rest of your trip.",
+      "This Joshua Tree Scenic Tour gives guests a guided, backroads-focused way to experience the national park from Palm Springs without the pressure of planning every turn. Travel in a rugged Hummer H2 or Adventure Van with a guide who links major desert landmarks to useful context on geology, ecology, and regional history. The day is structured around scenic drive segments plus regular stops for photos and short walks, so you get close to the landscape rather than only viewing it from the road. Compared with ordinary self-drive sightseeing, the format combines easier logistics, local interpretation, and access to route choices that feel more immersive and less rushed. It suits first-time Joshua Tree visitors, couples, families with older kids, and photographers who want a comfortable pace with strong scenery and clear storytelling throughout the outing.",
     highlights: [
-      "Small-group sightseeing tour into Joshua Tree National Park in an H2 Hummer or touring van",
-      "Frequent scenic stops for photos plus short, easy walks at signature viewpoints",
-      "Granite boulder landscapes, Joshua tree woodlands, and wide-open Mojave desert panoramas",
-      "Guide-led interpretation focused on geology, desert ecology, and local history",
-      "A comfortable, time-efficient way to see multiple key areas in one outing",
-      "Free cancellation up to 24 hours in advance (where offered on the listing)",
+      "Small-group Joshua Tree National Park tour in a Hummer H2 or Adventure Van",
+      "Backroads-oriented scenic routing designed to go beyond a standard park drive",
+      "Regular photo stops and short, easy walks at notable desert viewpoints",
+      "Guide-led commentary on geology, desert ecology, and regional history",
+      "Round-trip logistics from the Palm Springs area with a clearly timed half-day format",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    inclusions: [
+      "Professional guide",
+      "Transport by Hummer H2 or Adventure Van",
+      "Joshua Tree National Park access and scenic stops",
+    ],
+    exclusions: ["Guide gratuities", "Food and drinks"],
+    additionalInfo: [
+      "Guests should wear comfortable layers suitable for desert temperature swings.",
+      "Start time and exact pickup timing can vary by season and operations.",
+      "Short walks are included at select scenic stops.",
+    ],
+    itinerary: [
+      {
+        title: "Palm Springs departure",
+        description:
+          "Meet your guide in Palm Springs and board a Hummer H2 or Adventure Van for transfer toward Joshua Tree National Park.",
+      },
+      {
+        title: "Joshua Tree scenic backroads loop",
+        description:
+          "Travel through signature desert terrain with multiple scenic pullouts, short walks, and guided interpretation.",
+      },
+      {
+        title: "Return to Palm Springs",
+        description:
+          "After the final scenic stops, return to the Palm Springs area with park orientation and photo opportunities covered.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where does the Joshua Tree Scenic Tour meet?",
+        answer:
+          "The listed meeting area is Palm Springs, California, USA, with operator pickup details confirmed after booking.",
+      },
+      {
+        question: "How long is the tour?",
+        answer:
+          "The experience is listed at approximately 5 hours, including drive time and scenic stops.",
+      },
+      {
+        question: "What makes this different from self-driving Joshua Tree?",
+        answer:
+          "The guided format combines backroads-oriented route planning, local context, and planned stop timing so guests can focus on scenery and photography rather than navigation.",
+      },
     ],
   },
 };
