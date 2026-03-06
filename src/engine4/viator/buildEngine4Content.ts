@@ -57,6 +57,10 @@ export const buildOverview = (input: {
     candidates[0] ??
     `${title} explores ${destination.city} with a guided format and local context.`;
 
+  if (base.length >= 500) {
+    return base;
+  }
+
   const supplement = dedupe([
     candidates[1],
     itinerarySummary

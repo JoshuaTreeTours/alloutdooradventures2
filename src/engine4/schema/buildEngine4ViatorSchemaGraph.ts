@@ -40,6 +40,22 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         }
       : undefined;
 
+  const faqNode =
+    tour.content.faqs.length > 0
+      ? {
+          "@type": "FAQPage",
+          "@id": `${canonicalUrl}#faq`,
+          mainEntity: tour.content.faqs.map(item => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : undefined;
+
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,6 +104,16 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
         itinerary,
         duration: tour.facts.duration,
         startTime: tour.facts.startTime,
+        touristType: "Adventure travelers",
+        ...(tour.facts.meetingPointFull
+          ? {
+              departureStation: {
+                "@type": "Place",
+                name: tour.facts.meetingPointShort ?? "Meeting point",
+                address: tour.facts.meetingPointFull,
+              },
+            }
+          : {}),
       },
       {
         "@type": "Product",
@@ -103,6 +129,7 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
       },
       offerNode,
       ...(aggregateRatingNode ? [aggregateRatingNode] : []),
+      ...(faqNode ? [faqNode] : []),
     ],
   };
 };

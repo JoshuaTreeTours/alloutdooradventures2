@@ -31,6 +31,13 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasMeetingPoint = hasText(tour.facts.meetingPointShort);
   const hasStartTime = hasText(tour.facts.startTime);
   const hasDuration = hasText(tour.facts.duration);
+  const hasCancellation = hasText(tour.facts.cancellationPolicy);
+  const inclusions = tour.content.inclusions;
+  const exclusions = tour.content.exclusions;
+  const hasInclusions = inclusions.length > 0;
+  const hasExclusions = exclusions.length > 0;
+  const hasAdditionalInfo = hasText(tour.content.additionalInfo);
+  const hasWhatToExpect = hasText(tour.content.whatToExpect);
   const destinationStatePath = `/destinations/${tour.destination.stateSlug}`;
   const destinationCityPath = `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}`;
   const moreTours = getEngine4ListingEntries(
@@ -105,35 +112,45 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
               {tour.title}
             </h1>
-            <div className="mt-6 grid gap-3 text-sm text-white/95 md:grid-cols-2">
-              <div className="space-y-3">
-                {hasPrice ? (
-                  <p>
-                    <strong>From:</strong> {tour.facts.priceFrom} per person
-                  </p>
-                ) : null}
-                {hasRatingRow ? (
-                  <RatingStars ratingValue={rating} reviewCount={reviewCount} />
-                ) : null}
+            <div className="mt-6 rounded-2xl border border-white/20 bg-white/10 p-4 backdrop-blur-sm">
+              <div className="grid gap-3 text-sm text-white/95 md:grid-cols-2">
+                <div className="space-y-3">
+                  {hasPrice ? (
+                    <p>
+                      <strong>From:</strong> {tour.facts.priceFrom} per person
+                    </p>
+                  ) : null}
+                  {hasRatingRow ? (
+                    <RatingStars
+                      ratingValue={rating}
+                      reviewCount={reviewCount}
+                    />
+                  ) : null}
+                </div>
+                <div className="space-y-3">
+                  {hasMeetingPoint ? (
+                    <p>
+                      <strong>Meeting point:</strong>{" "}
+                      {tour.facts.meetingPointShort}
+                    </p>
+                  ) : null}
+                  {hasStartTime ? (
+                    <p>
+                      <strong>Start time:</strong> {tour.facts.startTime}
+                    </p>
+                  ) : null}
+                  {hasDuration ? (
+                    <p>
+                      <strong>Duration:</strong> {tour.facts.duration}
+                    </p>
+                  ) : null}
+                </div>
               </div>
-              <div className="space-y-3">
-                {hasMeetingPoint ? (
-                  <p>
-                    <strong>Meeting point:</strong>{" "}
-                    {tour.facts.meetingPointShort}
-                  </p>
-                ) : null}
-                {hasStartTime ? (
-                  <p>
-                    <strong>Start time:</strong> {tour.facts.startTime}
-                  </p>
-                ) : null}
-                {hasDuration ? (
-                  <p>
-                    <strong>Duration:</strong> {tour.facts.duration}
-                  </p>
-                ) : null}
-              </div>
+              {hasCancellation ? (
+                <p className="mt-4 border-t border-white/20 pt-3 text-sm text-white/90">
+                  <strong>Cancellation:</strong> {tour.facts.cancellationPolicy}
+                </p>
+              ) : null}
             </div>
             <a
               href={tour.bookingUrl}
@@ -154,7 +171,7 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
 
       <section className="mx-auto max-w-6xl px-6 py-10">
         <h2 className="text-2xl font-semibold">Overview</h2>
-        <p className="mt-3 text-[#334433]">{overview}</p>
+        <p className="mt-3 leading-7 text-[#334433]">{overview}</p>
 
         {hasHighlights ? (
           <>
@@ -164,6 +181,70 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </>
+        ) : null}
+
+        {hasInclusions || hasExclusions ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">
+              What&apos;s Included
+            </h2>
+            <div className="mt-4 grid gap-6 md:grid-cols-2">
+              {hasInclusions ? (
+                <div className="rounded-xl bg-white/70 p-4">
+                  <h3 className="font-semibold">Included</h3>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-[#334433]">
+                    {inclusions.map(item => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {hasExclusions ? (
+                <div className="rounded-xl bg-white/70 p-4">
+                  <h3 className="font-semibold">Not Included</h3>
+                  <ul className="mt-2 list-disc space-y-2 pl-6 text-[#334433]">
+                    {exclusions.map(item => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </>
+        ) : null}
+
+        {hasAdditionalInfo || hasWhatToExpect ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">
+              Good to Know / Requirements
+            </h2>
+            {hasWhatToExpect ? (
+              <p className="mt-3 text-[#334433]">{tour.content.whatToExpect}</p>
+            ) : null}
+            {hasAdditionalInfo ? (
+              <p className="mt-3 text-[#334433]">
+                {tour.content.additionalInfo}
+              </p>
+            ) : null}
+          </>
+        ) : null}
+
+        {hasMeetingPoint ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">
+              Meeting &amp; Pickup
+            </h2>
+            <p className="mt-3 text-[#334433]">{tour.facts.meetingPointFull}</p>
+          </>
+        ) : null}
+
+        {hasCancellation ? (
+          <>
+            <h2 className="mt-8 text-2xl font-semibold">Cancellation Policy</h2>
+            <p className="mt-3 text-[#334433]">
+              {tour.facts.cancellationPolicy}
+            </p>
           </>
         ) : null}
 

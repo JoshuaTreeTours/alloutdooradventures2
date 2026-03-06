@@ -33,4 +33,23 @@ describe("buildEngine4Content", () => {
       true
     );
   });
+
+  it("keeps Moab canyoneering overview rich and includes commercial sections", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "91782P1"
+    );
+    const tour = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["91782P1"],
+    });
+
+    expect(tour.title).toBe("Moab Private Half-Day Canyoneering");
+    expect(tour.content.overview.length).toBeGreaterThanOrEqual(120);
+    expect(tour.content.overview).toContain("private");
+    expect(tour.content.overview.toLowerCase()).toContain("rappel");
+    expect(tour.content.inclusions.length).toBeGreaterThan(0);
+    expect(tour.content.additionalInfo?.length ?? 0).toBeGreaterThan(0);
+    expect(tour.facts.ratingValue).toBeGreaterThan(0);
+    expect(tour.facts.reviewCount).toBeGreaterThan(0);
+  });
 });
