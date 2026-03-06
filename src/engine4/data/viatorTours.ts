@@ -21,6 +21,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "147508P175",
+    bookingUrl:
+      "https://www.viator.com/tours/Aspen/Photographer-and-Professional-Photoshoot-in-Aspen/d26395-147508P175?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Colorado",
+      stateSlug: "colorado",
+      city: "Aspen",
+      citySlug: "aspen",
+    },
+    slug: "photographer-and-professional-photoshoot-in-aspen-147508p175",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "172188P151",
     bookingUrl:
       "https://www.viator.com/tours/Aspen/Private-Professional-photoshoot-in-Aspen/d26395-172188P151",
@@ -161,6 +178,27 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "147508P175": {
+    productCode: "147508P175",
+    title: "Photographer and Professional Photoshoot in Aspen",
+    sourceUrl:
+      "https://www.viator.com/tours/Aspen/Photographer-and-Professional-Photoshoot-in-Aspen/d26395-147508P175",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Capture Aspen memories with a private walking photoshoot led by a local professional photographer.",
+    descriptionLong:
+      "A professional photoshoot experience in Aspen pairs guests with a local photographer who guides posing, composition, and location choices while exploring scenic mountain-town backdrops. The session moves through picturesque streets and alpine viewpoints, capturing polished portraits and candid images against Aspen’s iconic landscape. Ideal for couples, families, or solo travelers, the relaxed walking session creates memorable photographs while showcasing the beauty of Aspen.",
+    overview:
+      "A professional photoshoot experience in Aspen pairs guests with a local photographer who guides posing, composition, and location choices while exploring scenic mountain-town backdrops. The session moves through picturesque streets and alpine viewpoints, capturing polished portraits and candid images against Aspen’s iconic landscape. Ideal for couples, families, or solo travelers, the relaxed walking session creates memorable photographs while showcasing the beauty of Aspen.",
+    highlights: [
+      "Private professional photoshoot in Aspen",
+      "Guidance on posing and composition",
+      "Scenic mountain-town photo locations",
+      "Ideal for couples, families, or solo travelers",
+      "Professionally edited photos delivered after the session",
+    ],
+  },
   "172188P151": {
     productCode: "172188P151",
     title: "Private Professional Photoshoot in Aspen",
