@@ -46,8 +46,8 @@ export const getEngine4ListingEntries = (
             city: record.destination.city,
             citySlug: record.destination.citySlug,
           },
-          heroImage: vm.heroImage ?? undefined,
-          primaryImageUrl: vm.heroImage ?? undefined,
+          heroImage: vm.primaryImage ?? vm.heroImage ?? undefined,
+          primaryImageUrl: vm.primaryImage ?? vm.heroImage ?? undefined,
           galleryImages: vm.galleryImages,
           badges: {
             rating: vm.facts.ratingValue,
