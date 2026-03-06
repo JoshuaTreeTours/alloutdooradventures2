@@ -1,6 +1,7 @@
 import type { City, StateDestination } from "./destinations";
 import { tours } from "./tours";
 import { getAllEngine2Tours } from "../engine2/data/loadEngine2";
+import { engine4ViatorTours } from "../engine4/data/viatorTours";
 import { slugify } from "../utils/slugify";
 
 const buildActivityTags = (slugs: string[]) =>
@@ -141,8 +142,11 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
       tour.seo.canonicalPath.startsWith(`/destinations/${stateSlug}/`) ||
       tour.seo.canonicalPath.startsWith(`/destinations/united-states/${stateSlug}/`)
   );
+  const engine4StateTours = engine4ViatorTours.filter(
+    tour => tour.destination.stateSlug === stateSlug
+  );
 
-  if (!stateTours.length && !engine2StateTours.length) {
+  if (!stateTours.length && !engine2StateTours.length && !engine4StateTours.length) {
     if (stateSlug === "mexico") {
       return buildFallbackState("Mexico", "mexico", []);
     }
@@ -155,6 +159,7 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
   );
   const stateName =
     stateTours[0]?.destination.state ??
+    engine4StateTours[0]?.destination.state ??
     engine2CountryMatch?.geo.country ??
     engine2StateTours[0]?.geo.region ??
     stateSlug;
@@ -162,6 +167,7 @@ export const getFallbackStateBySlug = (stateSlug: string) => {
     new Set([
       ...stateTours.map((tour) => tour.destination.citySlug),
       ...engine2StateTours.map(tour => tour.sourceCitySlug),
+      ...engine4StateTours.map(tour => tour.destination.citySlug),
     ]),
   );
   const cities = citySlugs
@@ -192,17 +198,31 @@ export const getFallbackCityBySlugs = (
       tour.seo.canonicalPath ===
         `/destinations/united-states/${stateSlug}/tours/${tour.slug}`
   );
+  const engine4CityTours = engine4ViatorTours.filter(
+    tour =>
+      tour.destination.stateSlug === stateSlug &&
+      tour.destination.citySlug === citySlug
+  );
 
-  if (!cityTours.length && !engine2CityTours.length) {
+  if (!cityTours.length && !engine2CityTours.length && !engine4CityTours.length) {
     return null;
   }
 
-  const stateName = cityTours[0]?.destination.state ?? engine2CityTours[0]?.geo.region ?? stateSlug;
-  const cityName = cityTours[0]?.destination.city ?? engine2CityTours[0]?.geo.city ?? citySlug;
+  const stateName =
+    cityTours[0]?.destination.state ??
+    engine4CityTours[0]?.destination.state ??
+    engine2CityTours[0]?.geo.region ??
+    stateSlug;
+  const cityName =
+    cityTours[0]?.destination.city ??
+    engine4CityTours[0]?.destination.city ??
+    engine2CityTours[0]?.geo.city ??
+    citySlug;
   const activityTags = buildActivityTags(
     [
       ...cityTours.flatMap((tour) => tour.activitySlugs),
       ...(engine2CityTours.length ? ["adventure"] : []),
+      ...(engine4CityTours.length ? ["hiking"] : []),
     ],
   );
   const lat = buildAverageCoordinate(

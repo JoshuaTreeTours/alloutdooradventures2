@@ -155,6 +155,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "5562969P33",
+    bookingUrl:
+      "https://www.viator.com/tours/Zurich/From-Zurich-Swiss-Alps-Lauterbrunnen-Beatus-Caves-Grindelwald/d577-5562969P33",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/32/e8/04/0b/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "Switzerland",
+      state: "Switzerland",
+      stateSlug: "switzerland",
+      city: "Zurich",
+      citySlug: "zurich",
+    },
+    slug: "swiss-alps-day-tour-from-zurich-lauterbrunnen-beatus-caves-and-grindelwald",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -522,6 +539,60 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Guide-led interpretation focused on geology, desert ecology, and local history",
       "A comfortable, time-efficient way to see multiple key areas in one outing",
       "Free cancellation up to 24 hours in advance (where offered on the listing)",
+    ],
+  },
+  "5562969P33": {
+    productCode: "5562969P33",
+    title:
+      "Swiss Alps Day Tour from Zurich: Lauterbrunnen, Beatus Caves & Grindelwald",
+    sourceUrl:
+      "https://www.viator.com/tours/Zurich/From-Zurich-Swiss-Alps-Lauterbrunnen-Beatus-Caves-Grindelwald/d577-5562969P33",
+    fromPrice: "$289.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 3,
+    duration: "Full day",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/32/e8/04/0b/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Leave Zurich for a full-day small-group Swiss Alps experience with stops at Lake Lungern, St. Beatus Caves, Grindelwald, and Lauterbrunnen.",
+    descriptionLong:
+      "Leave Zurich for a full-day journey into some of Switzerland’s most dramatic mountain scenery. This small-group Alps tour heads first toward Lake Lungern for panoramic views before continuing to the famed St. Beatus Caves above Lake Thun, where underground passages, waterfalls, and limestone chambers add a geological twist to the day. From there, the route continues into the Bernese Alps with time around Grindelwald, one of Switzerland’s classic mountain villages, and Lauterbrunnen, the steep-walled valley known for its waterfalls and postcard scenery. With hotel pickup and drop-off included, this tour gives Zurich visitors an efficient way to experience several major alpine highlights in one beautifully stacked day.",
+    overview:
+      "Leave Zurich for a full-day journey into some of Switzerland’s most dramatic mountain scenery. This small-group Alps tour heads first toward Lake Lungern for panoramic views before continuing to the famed St. Beatus Caves above Lake Thun, where underground passages, waterfalls, and limestone chambers add a geological twist to the day. From there, the route continues into the Bernese Alps with time around Grindelwald, one of Switzerland’s classic mountain villages, and Lauterbrunnen, the steep-walled valley known for its waterfalls and postcard scenery. With hotel pickup and drop-off included, this tour gives Zurich visitors an efficient way to experience several major alpine highlights in one beautifully stacked day.",
+    highlights: [
+      "Full-day Alps tour from Zurich with efficient routing across major scenic highlights",
+      "Small-group format with up to 8 travelers",
+      "Hotel pickup and drop-off included",
+      "Stops at Lake Lungern, St. Beatus Caves, Grindelwald, and Lauterbrunnen",
+      "Underground cave passages, waterfalls, and limestone chambers at St. Beatus Caves",
+    ],
+    itinerary: [
+      {
+        title: "Lake Lungern",
+        description:
+          "Pause for panoramic views over one of central Switzerland’s most scenic mountain lakes.",
+      },
+      {
+        title: "St. Beatus Caves",
+        description:
+          "Explore cave passages above Lake Thun with waterfalls and limestone formations.",
+      },
+      {
+        title: "Grindelwald",
+        description:
+          "Spend time in the classic Bernese Alps mountain village surrounded by dramatic peaks.",
+      },
+      {
+        title: "Lauterbrunnen",
+        description:
+          "Visit the steep-walled valley known for waterfalls and postcard Swiss alpine scenery.",
+      },
+    ],
+    inclusions: [
+      "Hotel pickup and drop-off",
+      "Small-group experience",
+      "Full-day guided transportation from Zurich",
     ],
   },
 };
