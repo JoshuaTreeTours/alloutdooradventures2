@@ -122,4 +122,22 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("6740P7");
   });
+
+  it("builds the 91782P1 route and exposes it in Moab listing", () => {
+    const entries = getEngine4ListingEntries("utah", "moab");
+    const target = entries.find(entry => entry.tour.productCode === "91782P1");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/utah/moab/tours/moab-private-half-day-canyoneering-91782p1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "utah",
+      "moab",
+      "moab-private-half-day-canyoneering-91782p1"
+    );
+
+    expect(routed?.id).toBe("91782P1");
+  });
 });

@@ -155,6 +155,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "91782P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/15/fe/d6/95/canyoneering-near-moab.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Utah",
+      stateSlug: "utah",
+      city: "Moab",
+      citySlug: "moab",
+    },
+    slug: "moab-private-half-day-canyoneering-91782p1",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -226,6 +243,39 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Bring water for warm days",
     ],
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+  },
+  "91782P1": {
+    productCode: "91782P1",
+    title: "Moab Private Half-Day Canyoneering",
+    sourceUrl:
+      "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1",
+    fromPrice: "See current pricing on Viator",
+    priceCurrency: "USD",
+    duration: "Half day",
+    startTime: "Morning meetup",
+    meetingPoint: "Moab, Utah",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/15/fe/d6/95/canyoneering-near-moab.jpg?w=1100&h=800&s=1",
+    description:
+      "Private half-day canyoneering in Moab with beginner-friendly instruction and provided gear.",
+    descriptionLong:
+      "Get a hands-on introduction to canyoneering in the red-rock terrain around Moab on this private half-day adventure. Designed to be approachable for beginners, the experience starts with a morning meetup and safety orientation before heading into canyon country with a guide. Gear and instruction are included, so travelers can focus on learning the basics while moving through dramatic sandstone scenery shaped by erosion and desert runoff. As a private outing, the pace can feel more personal and flexible than a standard group tour, making it a strong fit for travelers who want real adventure without committing to a full-day technical route. It is an efficient way to add a memorable desert experience to a Moab stay.",
+    overview:
+      "Get a hands-on introduction to canyoneering in the red-rock terrain around Moab on this private half-day adventure. Designed to be approachable for beginners, the experience starts with a morning meetup and safety orientation before heading into canyon country with a guide. Gear and instruction are included, so travelers can focus on learning the basics while moving through dramatic sandstone scenery shaped by erosion and desert runoff. As a private outing, the pace can feel more personal and flexible than a standard group tour, making it a strong fit for travelers who want real adventure without committing to a full-day technical route. It is an efficient way to add a memorable desert experience to a Moab stay.",
+    highlights: [
+      "Private half-day canyoneering tour in Moab",
+      "Beginner-friendly format suitable for first-timers",
+      "Morning meetup and safety briefing before canyon travel",
+      "Canyoneering gear and instruction included",
+      "Red-rock canyon terrain with guided support",
+    ],
+    inclusions: ["Canyoneering gear", "Guide instruction"],
+    additionalInfo: [
+      "Tour type: Private tour",
+      "Skill level: Beginner friendly",
+      "Pickup: Morning meetup / guide start",
+      "Location: Moab, Utah",
+    ],
   },
   "74828P5": {
     productCode: "74828P5",
