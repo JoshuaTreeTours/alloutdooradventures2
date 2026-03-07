@@ -133,7 +133,7 @@ describe("mapViatorToEngine4Tour", () => {
     });
 
     expect(vm.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1"
     );
     expect(vm.heroImage).not.toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"

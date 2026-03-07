@@ -145,7 +145,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13?pid=P00290915&mcid=42383&medium=link&currency=USD",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "California",
@@ -696,12 +696,12 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     meetingPoint: "Palm Springs, California",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     primaryImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     galleryImages: [
-      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     ],
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     description:
       "Guided rock scrambling adventure in Joshua Tree National Park with route coaching, scenic desert viewpoints, and logistics from the Palm Springs area.",
     overview:

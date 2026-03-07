@@ -20,7 +20,7 @@ const SB_ZIPLINE_HERO =
 const JOSHUA_TREE_HUMMER_HERO =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg";
 const JOSHUA_TREE_SCRAMBLING_HERO =
-  "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1";
+  "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1";
 const MOAB_CANYONEERING_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1";
 
