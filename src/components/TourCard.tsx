@@ -115,7 +115,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
   );
   const cardImage =
     tour.engine === "engine4"
-      ? tour.heroImage?.trim() || "/hero.jpg"
+      ? tour.heroImage?.trim() || ""
       : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
 
   return (
@@ -124,6 +124,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <Image
           src={cardImage}
           fallbackSrc={"/hero.jpg"}
+          disableFallback={tour.engine === "engine4"}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

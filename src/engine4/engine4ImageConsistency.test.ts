@@ -224,10 +224,19 @@ describe("Engine4 Viator image consistency", () => {
 
     expect(pageTour.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(pageTour.primaryImage).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(pageTour.heroImage).not.toContain("/hero.jpg");
     expect(listingTour?.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(listingTour?.primaryImageUrl).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(listingTour?.heroImage).not.toBe("/hero.jpg");
     expect(routeTour?.seo.ogImage).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(productNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(touristTripNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
+    expect(pageTour.facts.priceFrom).toBe("$225.00");
+    expect(pageTour.facts.ratingValue).toBe(5);
+    expect(pageTour.facts.reviewCount).toBe(20);
+    expect(pageTour.facts.startTime).toBe("8:00 AM");
+    expect(pageTour.facts.meetingPointFull).toContain(
+      "Joshua Tree National Park"
+    );
   });
 });

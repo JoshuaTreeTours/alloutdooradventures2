@@ -1,63 +1,6 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
-import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
-
-const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
-const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
-
-const isTrackerPixel = (url: string) =>
-  /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
-    url
-  );
-
-const hasAllowedImagePath = (pathname: string) =>
-  /\/(?:media\/photo-o|media\/attractions-splice-|media\/photo-l|media\/photo-s)\//i.test(
-    pathname
-  ) || /\.(?:jpg|jpeg|png|webp)$/i.test(pathname);
-
-const hasAllowedImageHost = (host: string) =>
-  ALLOWED_HOSTS.some(pattern => pattern.test(host));
-
-const isValidHeroCandidate = (value?: string): boolean => {
-  if (!value) {
-    return false;
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    return false;
-  }
-
-  if (
-    INVALID_SCHEMES.some(scheme => trimmed.toLowerCase().startsWith(scheme))
-  ) {
-    return false;
-  }
-
-  try {
-    const parsed = new URL(trimmed);
-    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
-      return false;
-    }
-
-    if (isTrackerPixel(trimmed)) {
-      return false;
-    }
-
-    return (
-      hasAllowedImageHost(parsed.hostname) &&
-      hasAllowedImagePath(parsed.pathname)
-    );
-  } catch {
-    return false;
-  }
-};
-
-const toInlinePlaceholder = () =>
-  "data:image/svg+xml;utf8," +
-  encodeURIComponent(
-    `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 675'><rect width='1200' height='675' fill='#e7eadf'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-size='42' fill='#2f4a2f'>Tour image unavailable</text></svg>`
-  );
+import { selectEngine4ViatorImage } from "./selectEngine4ViatorImage";
 
 export const resolveEngine4ViatorHero = (input: {
   productCode: string;
@@ -68,23 +11,24 @@ export const resolveEngine4ViatorHero = (input: {
     tour => tour.productCode.toUpperCase() === normalizedCode
   );
 
-  const canonicalApiImage = resolveViatorPrimaryImageFromApiTour(input.apiTour);
+  const selection = selectEngine4ViatorImage({
+    productCode: normalizedCode,
+    apiTour: input.apiTour,
+    recordHeroImage: tourRecord?.heroImage,
+  });
 
-  const candidates = [
-    canonicalApiImage,
-    input.apiTour?.primaryImageUrl,
-    input.apiTour?.galleryImages?.[0],
-    input.apiTour?.sourceDerivedImageUrl,
-    tourRecord?.heroImage,
-  ];
-
-  const selected = candidates.find(candidate =>
-    isValidHeroCandidate(candidate)
-  );
-
-  if (selected) {
-    return selected;
+  if (selection.selected) {
+    return selection.selected;
   }
 
-  return toInlinePlaceholder();
+  if (
+    process.env.NODE_ENV === "development" ||
+    process.env.NODE_ENV === "test"
+  ) {
+    throw new Error(
+      `Engine4 image selection failed for ${normalizedCode}: ${JSON.stringify(selection.rejected)}`
+    );
+  }
+
+  return "";
 };

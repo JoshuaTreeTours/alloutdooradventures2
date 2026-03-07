@@ -48,20 +48,20 @@ describe("resolveEngine4ViatorHero", () => {
     expect(hero).toContain("media.tacdn.com");
   });
 
-  it("rejects non-http or tracker pixel values", () => {
-    const hero = resolveEngine4ViatorHero({
-      productCode: "99999P2",
-      apiTour: {
+  it("fails loudly when no valid API candidate is available", () => {
+    expect(() =>
+      resolveEngine4ViatorHero({
         productCode: "99999P2",
-        title: "Other Tour",
-        sourceUrl: "https://www.viator.com/tours/Other/example/d123-99999P2",
-        primaryImageUrl: "javascript:alert(1)",
-        galleryImages: [
-          "https://media.tacdn.com/media/photo-o/1x1.jpg?w=1&h=1",
-        ],
-      },
-    });
-
-    expect(hero).toContain("data:image/svg+xml");
+        apiTour: {
+          productCode: "99999P2",
+          title: "Other Tour",
+          sourceUrl: "https://www.viator.com/tours/Other/example/d123-99999P2",
+          primaryImageUrl: "javascript:alert(1)",
+          galleryImages: [
+            "https://media.tacdn.com/media/photo-o/1x1.jpg?w=1&h=1",
+          ],
+        },
+      })
+    ).toThrow(/Engine4 image selection failed/);
   });
 });
