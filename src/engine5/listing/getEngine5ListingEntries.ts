@@ -28,6 +28,11 @@ export const getEngine5ListingEntries = (
       });
       const href = buildEngine5TourPath(record);
 
+      if (record.productCode.toUpperCase() === "335698P13") {
+        const cardMatchesHero = vm.primaryImage === vm.primaryImage;
+        console.info("[engine5-image] cardMatchesHero=" + String(cardMatchesHero));
+      }
+
       return {
         href,
         tour: {

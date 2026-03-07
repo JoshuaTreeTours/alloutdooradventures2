@@ -89,18 +89,18 @@ export const engine5ViatorApiFallbackByProductCode: Record<
     overview:
       "Trade a standard sightseeing loop for a hands-on desert adventure in Joshua Tree National Park. This guided rock scrambling tour is built for active travelers who want to move through the landscape instead of just photographing it from turnouts. You’ll navigate granite features, learn practical movement techniques, and get route guidance designed to build confidence on uneven terrain. The outing blends instructional pacing with real trail-and-rock effort, so you can expect a physical but approachable challenge for fit beginners and experienced hikers alike. Along the way, your guide shares context on Joshua Tree’s distinctive geology and outdoor culture, helping each section feel connected to the park’s character. With small-group support, steady coaching, and frequent time on the stone, this experience stands out as a more immersive way to explore the high desert.",
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2d/32/0c/df/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1",
     fallbackImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2d/32/0c/df/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1",
     primaryImageUrl:
       "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/api-gallery.jpg?w=1100&h=800&s=1",
     sourceCode: `
       <html>
         <head>
-          <meta property="og:image" content="https://dynamic-media.tacdn.com/media/photo-o/2d/32/0c/df/caption.jpg?w=1100&h=800&s=1" />
+          <meta property="og:image" content="https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1" />
         </head>
         <body>
-          <img src="https://dynamic-media.tacdn.com/media/photo-o/2d/32/0c/df/caption.jpg?w=1100&h=800&s=1" alt="Rock scrambling in Joshua Tree" />
+          <img src="https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1" alt="Rock scrambling in Joshua Tree" />
         </body>
       </html>
     `,

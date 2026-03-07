@@ -115,7 +115,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
   );
   const cardImage =
     tour.engine === "engine5"
-      ? tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg"
+      ? tour.primaryImageUrl?.trim() || "/hero.jpg"
       : tour.engine === "engine4"
         ? tour.heroImage?.trim() || "/hero.jpg"
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";

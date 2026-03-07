@@ -1,5 +1,10 @@
 import { buildEngine5TourPath } from "../buildEngine5TourPath";
-import type { Engine5TourViewModel, Engine5ViatorApiTour, Engine5ViatorTourRecord } from "../types";
+import {
+  ENGINE5_FORCED_SOURCE_IMAGE_BY_PRODUCT_CODE,
+  type Engine5TourViewModel,
+  type Engine5ViatorApiTour,
+  type Engine5ViatorTourRecord,
+} from "../types";
 import { assertEngine5PrimaryImage } from "../types";
 import { resolveSourceImage } from "./resolveSourceImage";
 
@@ -25,7 +30,18 @@ export const mapViatorToEngine5Tour = (input: {
     lastResortDestinationImage: input.lastResortDestinationImage,
   });
 
-  const primaryImage = image.primaryImage;
+  const normalizedProductCode = record.productCode.toUpperCase();
+  const forcedImage =
+    ENGINE5_FORCED_SOURCE_IMAGE_BY_PRODUCT_CODE[normalizedProductCode];
+
+  let primaryImage = image.primaryImage;
+
+  if (forcedImage && primaryImage !== forcedImage) {
+    console.info(`[engine5-image] product=${normalizedProductCode}`);
+    console.info("[engine5-image] attemptedOverwriteBlocked=true");
+    primaryImage = forcedImage;
+  }
+
   assertEngine5PrimaryImage(primaryImage);
 
   const fallbackFields: string[] = [];

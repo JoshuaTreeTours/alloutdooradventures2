@@ -41,6 +41,12 @@ export type Engine5ViatorApiTour = {
   primaryImageUrl?: string;
 };
 
+
+export const ENGINE5_FORCED_SOURCE_IMAGE_BY_PRODUCT_CODE: Record<string, string> = {
+  "335698P13":
+    "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1",
+};
+
 export type Engine5TourViewModel = {
   engine: "engine5";
   bookingProvider: "viator";

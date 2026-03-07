@@ -1,7 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { engine5ViatorApiFallbackByProductCode, engine5ViatorTours } from "../data/viatorTours";
+import {
+  engine5ViatorApiFallbackByProductCode,
+  engine5ViatorTours,
+} from "../data/viatorTours";
 import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
+
+const FORCED_JT_IMAGE =
+  "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1400&h=1000&s=1";
 
 describe("mapViatorToEngine5Tour", () => {
   const record = engine5ViatorTours[0]!;
@@ -17,14 +23,20 @@ describe("mapViatorToEngine5Tour", () => {
     expect(vm.content.highlights.length).toBeGreaterThan(0);
   });
 
-  it("prefers source-page/source-code TACDN image as primaryImage", () => {
-    const vm = mapViatorToEngine5Tour({ record, apiTour });
+  it("forces exact canonical image URL for 335698P13", () => {
+    const vm = mapViatorToEngine5Tour({
+      record,
+      apiTour: {
+        ...apiTour,
+        sourceDerivedImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/api-gallery.jpg?w=1100&h=800&s=1",
+      },
+    });
 
-    expect(vm.primaryImage).toBe(apiTour.sourceDerivedImageUrl);
-    expect(vm.imageSource).toBe("source-code");
+    expect(vm.primaryImage).toBe(FORCED_JT_IMAGE);
   });
 
-  it("does not allow API media image to override primaryImage", () => {
+  it("does not allow API media image to override forced primaryImage", () => {
     const vm = mapViatorToEngine5Tour({
       record,
       apiTour: {
@@ -34,11 +46,11 @@ describe("mapViatorToEngine5Tour", () => {
       },
     });
 
-    expect(vm.primaryImage).toBe(apiTour.sourceDerivedImageUrl);
+    expect(vm.primaryImage).toBe(FORCED_JT_IMAGE);
     expect(vm.primaryImage).not.toBe(apiTour.primaryImageUrl);
   });
 
-  it("blocks destination/home style fallback leakage when product image exists", () => {
+  it("blocks destination/home style fallback leakage when forced image exists", () => {
     const vm = mapViatorToEngine5Tour({
       record,
       apiTour,
@@ -46,7 +58,7 @@ describe("mapViatorToEngine5Tour", () => {
         "https://dynamic-media.tacdn.com/orion/images/globalNav/fallback-top-activities.webp",
     });
 
-    expect(vm.primaryImage).toBe(apiTour.sourceDerivedImageUrl);
-    expect(vm.imageSource).not.toBe("destination-home-last-resort");
+    expect(vm.primaryImage).toBe(FORCED_JT_IMAGE);
+    expect(vm.imageSource).toBe("source-code");
   });
 });
