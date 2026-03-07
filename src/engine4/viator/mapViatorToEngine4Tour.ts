@@ -13,8 +13,10 @@ import {
   normalizeItinerary,
 } from "./buildEngine4Content";
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
-import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
-import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
+import {
+  resolveViatorPrimaryImage,
+  resolveViatorPrimaryImageWithProvenance,
+} from "./resolveViatorPrimaryImage";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -62,13 +64,14 @@ const resolvePriceFrom = (input: { fromPrice?: string; currency?: string }) => {
   return rawPrice;
 };
 
-const logEngine4ImageDecision = (input: {
+const logAspenImageDecision = (input: {
   productCode: string;
-  title: string;
-  candidates: string[];
-  resolvedHeroImage?: string;
+  apiImageFound: boolean;
+  tacdnFound: boolean;
+  resolvedPrimaryImage?: string;
   fallbackUsed: boolean;
-  downstreamOverwriteBlocked: boolean;
+  fallbackReason?: string;
+  cardMatchesHero: boolean;
 }) => {
   if (
     process.env.NODE_ENV !== "development" &&
@@ -77,17 +80,18 @@ const logEngine4ImageDecision = (input: {
     return;
   }
 
-  console.info(`[engine4-image] product=${input.productCode}`);
-  console.info(`[engine4-image] title=${input.title}`);
+  console.info(`[aspen-image] product=${input.productCode}`);
+  console.info(`[aspen-image] apiImageFound=${String(input.apiImageFound)}`);
+  console.info(`[aspen-image] tacdnFound=${String(input.tacdnFound)}`);
   console.info(
-    `[engine4-image] candidates=${JSON.stringify(input.candidates)}`
+    `[aspen-image] resolvedPrimaryImage=${input.resolvedPrimaryImage ?? "<none>"}`
   );
+  console.info(`[aspen-image] fallbackUsed=${String(input.fallbackUsed)}`);
+  if (input.fallbackUsed && input.fallbackReason) {
+    console.info(`[aspen-image] fallbackReason=${input.fallbackReason}`);
+  }
   console.info(
-    `[engine4-image] resolvedHeroImage=${input.resolvedHeroImage ?? "<none>"}`
-  );
-  console.info(`[engine4-image] fallbackUsed=${String(input.fallbackUsed)}`);
-  console.info(
-    `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
+    `[aspen-image] cardMatchesHero=${String(input.cardMatchesHero)}`
   );
 };
 
@@ -163,9 +167,11 @@ const logEngine4ApiProvenance = (input: {
         : fallbackTour?.itinerary && fallbackTour.itinerary.length > 0
           ? "fallback"
           : "missing",
-    image: resolveViatorPrimaryImageFromApiTour(apiTour)
+    image: resolveViatorPrimaryImage(apiTour?.rawProductPayload ?? apiTour)
       ? "api"
-      : resolveViatorPrimaryImageFromApiTour(fallbackTour)
+      : resolveViatorPrimaryImage(
+            fallbackTour?.rawProductPayload ?? fallbackTour
+          )
         ? "fallback"
         : "missing",
   };
@@ -181,7 +187,9 @@ const logEngine4ApiProvenance = (input: {
   console.info(`[engine4-api] ratingSource=${sourceFor.rating}`);
   console.info(`[engine4-api] reviewCountSource=${sourceFor.reviewCount}`);
   console.info(`[engine4-api] durationSource=${sourceFor.duration}`);
-  console.info(`[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`);
+  console.info(
+    `[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`
+  );
 };
 
 export const mapViatorToEngine4Tour = (input: {
@@ -311,16 +319,19 @@ export const mapViatorToEngine4Tour = (input: {
     cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
   });
 
-  const canonicalImage =
-    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
-    cleanText(resolvedApiTour?.primaryImageUrl) ??
-    cleanText(resolvedApiTour?.galleryImages?.[0]) ??
-    cleanText(resolvedApiTour?.sourceDerivedImageUrl);
-
-  const resolvedHeroImage = resolveEngine4ViatorHero({
-    productCode: record.productCode,
-    apiTour: resolvedApiTour,
+  const imageResolution = resolveViatorPrimaryImageWithProvenance({
+    ...(resolvedApiTour?.rawProductPayload ?? {}),
+    images:
+      (resolvedApiTour?.rawProductPayload?.images as unknown[]) ??
+      resolvedApiTour?.rawProductPayload?.media?.images,
+    primaryImageUrl: resolvedApiTour?.primaryImageUrl,
+    sourceDerivedImageUrl: resolvedApiTour?.sourceDerivedImageUrl,
+    sourcePayload: resolvedApiTour?.rawProductPayload ?? resolvedApiTour,
+    fallbackImage: record.heroImage,
+    heroImage: record.heroImage,
   });
+
+  const primaryImage = imageResolution.primaryImage ?? null;
 
   const tour: Engine4TourViewModel = {
     tourId: `engine4-${record.productCode}`,
@@ -332,8 +343,8 @@ export const mapViatorToEngine4Tour = (input: {
     canonicalPath: buildEngine4TourPath(record),
     bookingUrl: buildViatorAffiliateUrl(record.productCode),
     destination: record.destination,
-    heroImage: resolvedHeroImage,
-    primaryImage: resolvedHeroImage,
+    heroImage: primaryImage,
+    primaryImage,
     galleryImages: Array.from(
       new Set((resolvedApiTour?.galleryImages ?? []).filter(Boolean))
     ),
@@ -359,25 +370,14 @@ export const mapViatorToEngine4Tour = (input: {
     },
   };
 
-  const candidates = Array.from(
-    new Set(
-      [
-        canonicalImage,
-        resolvedApiTour?.primaryImageUrl,
-        ...(resolvedApiTour?.galleryImages ?? []),
-        resolvedApiTour?.sourceDerivedImageUrl,
-        record.heroImage ?? undefined,
-      ].filter((value): value is string => Boolean(cleanText(value)))
-    )
-  );
-
-  logEngine4ImageDecision({
+  logAspenImageDecision({
     productCode: record.productCode,
-    title: tour.title,
-    candidates,
-    resolvedHeroImage: tour.heroImage ?? undefined,
-    fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
-    downstreamOverwriteBlocked: Boolean(tour.primaryImage),
+    apiImageFound: imageResolution.apiImageFound,
+    tacdnFound: imageResolution.tacdnFound,
+    resolvedPrimaryImage: tour.primaryImage ?? undefined,
+    fallbackUsed: imageResolution.fallbackUsed,
+    fallbackReason: imageResolution.fallbackReason,
+    cardMatchesHero: tour.primaryImage === tour.heroImage,
   });
 
   assertEngine4ViatorTour(tour);
