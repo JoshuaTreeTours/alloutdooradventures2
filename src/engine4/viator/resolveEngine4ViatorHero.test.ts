@@ -48,6 +48,24 @@ describe("resolveEngine4ViatorHero", () => {
     expect(hero).toContain("media.tacdn.com");
   });
 
+  it("locks 335698P13 to its canonical hero and blocks cross-tour API image leakage", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "335698P13",
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+      },
+    });
+
+    expect(hero).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1"
+    );
+  });
+
   it("rejects non-http or tracker pixel values", () => {
     const hero = resolveEngine4ViatorHero({
       productCode: "99999P2",
