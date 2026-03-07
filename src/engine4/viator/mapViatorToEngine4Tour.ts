@@ -91,99 +91,6 @@ const logEngine4ImageDecision = (input: {
   );
 };
 
-const hasApiText = (value?: string) => Boolean(cleanText(value));
-const hasApiNumber = (value?: number) =>
-  typeof value === "number" && Number.isFinite(value);
-
-const logEngine4ApiProvenance = (input: {
-  productCode: string;
-  apiTour?: Engine4ViatorApiTour;
-  fallbackTour?: Engine4ViatorApiTour;
-}) => {
-  if (
-    process.env.NODE_ENV !== "development" &&
-    process.env.NODE_ENV !== "test"
-  ) {
-    return;
-  }
-
-  const { apiTour, fallbackTour, productCode } = input;
-
-  const sourceFor = {
-    title: hasApiText(apiTour?.title)
-      ? "api"
-      : hasApiText(fallbackTour?.title)
-        ? "fallback"
-        : "missing",
-    price: hasApiText(apiTour?.fromPrice)
-      ? "api"
-      : hasApiText(fallbackTour?.fromPrice)
-        ? "fallback"
-        : "missing",
-    rating: hasApiNumber(apiTour?.rating)
-      ? "api"
-      : hasApiNumber(fallbackTour?.rating)
-        ? "fallback"
-        : "missing",
-    reviewCount: hasApiNumber(apiTour?.reviewCount)
-      ? "api"
-      : hasApiNumber(fallbackTour?.reviewCount)
-        ? "fallback"
-        : "missing",
-    duration: hasApiText(apiTour?.duration)
-      ? "api"
-      : hasApiText(fallbackTour?.duration)
-        ? "fallback"
-        : "missing",
-    meeting: hasApiText(apiTour?.meetingPoint)
-      ? "api"
-      : hasApiText(fallbackTour?.meetingPoint)
-        ? "fallback"
-        : "missing",
-    cancellation: hasApiText(apiTour?.cancellationPolicy)
-      ? "api"
-      : hasApiText(fallbackTour?.cancellationPolicy)
-        ? "fallback"
-        : "missing",
-    inclusions:
-      apiTour?.inclusions && apiTour.inclusions.length > 0
-        ? "api"
-        : fallbackTour?.inclusions && fallbackTour.inclusions.length > 0
-          ? "fallback"
-          : "missing",
-    exclusions:
-      apiTour?.exclusions && apiTour.exclusions.length > 0
-        ? "api"
-        : fallbackTour?.exclusions && fallbackTour.exclusions.length > 0
-          ? "fallback"
-          : "missing",
-    itinerary:
-      apiTour?.itinerary && apiTour.itinerary.length > 0
-        ? "api"
-        : fallbackTour?.itinerary && fallbackTour.itinerary.length > 0
-          ? "fallback"
-          : "missing",
-    image: resolveViatorPrimaryImageFromApiTour(apiTour)
-      ? "api"
-      : resolveViatorPrimaryImageFromApiTour(fallbackTour)
-        ? "fallback"
-        : "missing",
-  };
-
-  const fallbackFields = Object.entries(sourceFor)
-    .filter(([, source]) => source === "fallback")
-    .map(([field]) => field);
-
-  console.info(`[engine4-api] product=${productCode}`);
-  console.info(`[engine4-api] apiFetch=${String(Boolean(apiTour))}`);
-  console.info(`[engine4-api] primaryImageSource=${sourceFor.image}`);
-  console.info(`[engine4-api] priceSource=${sourceFor.price}`);
-  console.info(`[engine4-api] ratingSource=${sourceFor.rating}`);
-  console.info(`[engine4-api] reviewCountSource=${sourceFor.reviewCount}`);
-  console.info(`[engine4-api] durationSource=${sourceFor.duration}`);
-  console.info(`[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`);
-};
-
 export const mapViatorToEngine4Tour = (input: {
   record: Engine4ViatorTourRecord;
   apiTour?: Engine4ViatorApiTour;
@@ -191,12 +98,6 @@ export const mapViatorToEngine4Tour = (input: {
   const { record, apiTour } = input;
   const fallbackTour =
     engine4ViatorApiFallbackByProductCode[record.productCode];
-
-  logEngine4ApiProvenance({
-    productCode: record.productCode,
-    apiTour,
-    fallbackTour,
-  });
 
   const meetingPointFull = coalesceText(
     apiTour?.meetingPoint,

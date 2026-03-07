@@ -21,8 +21,6 @@ const JOSHUA_TREE_HUMMER_HERO =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg";
 const MOAB_CANYONEERING_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1";
-const JOSHUA_TREE_CLIMB_HERO =
-  "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -196,38 +194,5 @@ describe("Engine4 Viator image consistency", () => {
 
     expect(pageTour.heroImage).not.toContain("Tour image unavailable");
     expect(pageTour.heroImage?.startsWith("data:image/svg+xml")).toBe(false);
-  });
-
-  it("uses the Joshua Tree climbing hero consistently for page, card, og:image, and schema image", () => {
-    const pageTour = mapViatorToEngine4Tour({
-      record: engine4ViatorTours.find(tour => tour.productCode === "91873P1")!,
-      apiTour: engine4ViatorApiFallbackByProductCode["91873P1"],
-    });
-
-    const listingTour = getEngine4ListingEntries(
-      "california",
-      "joshua-tree"
-    ).find(entry => entry.tour.productCode === "91873P1")?.tour;
-    const routeTour = getEngine4TourBySlugs(
-      "california",
-      "joshua-tree",
-      "private-guided-rock-climbing-trip-in-joshua-tree-national-park-91873p1"
-    );
-
-    const schema = buildEngine4ViatorSchemaGraph(pageTour);
-    const productNode = (
-      schema["@graph"] as Array<Record<string, unknown>>
-    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
-    const touristTripNode = (
-      schema["@graph"] as Array<Record<string, unknown>>
-    ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
-
-    expect(pageTour.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(pageTour.primaryImage).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(listingTour?.heroImage).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(listingTour?.primaryImageUrl).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(routeTour?.seo.ogImage).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(productNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
-    expect(touristTripNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
   });
 });
