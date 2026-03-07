@@ -115,8 +115,24 @@ export default function TourCard({ tour, href }: TourCardProps) {
   );
   const cardImage =
     tour.engine === "engine4"
-      ? tour.heroImage?.trim() || "/hero.jpg"
+      ? tour.heroImage?.trim() || ""
       : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+
+  const cardImageFallbackCandidates =
+    tour.engine === "engine4"
+      ? tour.galleryImages.filter(
+          image => image?.trim() && image.trim() !== cardImage
+        )
+      : undefined;
+
+  if (
+    tour.engine === "engine4" &&
+    (import.meta.env.MODE === "development" || import.meta.env.MODE === "test")
+  ) {
+    console.info(
+      `[engine4-render] surface=card product=${tour.productCode ?? "unknown"} src=${cardImage} fallbacks=${JSON.stringify(cardImageFallbackCandidates ?? [])}`
+    );
+  }
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -124,6 +140,8 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <Image
           src={cardImage}
           fallbackSrc={"/hero.jpg"}
+          disableFallback={tour.engine === "engine4"}
+          fallbackCandidates={cardImageFallbackCandidates}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

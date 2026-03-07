@@ -15,6 +15,7 @@ import {
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
 import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
 import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
+import { selectEngine4ViatorImage } from "./selectEngine4ViatorImage";
 
 const cleanText = (value?: string | null) => {
   if (typeof value !== "string") {
@@ -65,9 +66,9 @@ const resolvePriceFrom = (input: { fromPrice?: string; currency?: string }) => {
 const logEngine4ImageDecision = (input: {
   productCode: string;
   title: string;
-  candidates: string[];
+  candidates: Array<{ source: string; url: string }>;
+  rejected: Array<{ source: string; url: string; reason: string }>;
   resolvedHeroImage?: string;
-  fallbackUsed: boolean;
   downstreamOverwriteBlocked: boolean;
 }) => {
   if (
@@ -82,10 +83,10 @@ const logEngine4ImageDecision = (input: {
   console.info(
     `[engine4-image] candidates=${JSON.stringify(input.candidates)}`
   );
+  console.info(`[engine4-image] rejected=${JSON.stringify(input.rejected)}`);
   console.info(
     `[engine4-image] resolvedHeroImage=${input.resolvedHeroImage ?? "<none>"}`
   );
-  console.info(`[engine4-image] fallbackUsed=${String(input.fallbackUsed)}`);
   console.info(
     `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
   );
@@ -181,7 +182,9 @@ const logEngine4ApiProvenance = (input: {
   console.info(`[engine4-api] ratingSource=${sourceFor.rating}`);
   console.info(`[engine4-api] reviewCountSource=${sourceFor.reviewCount}`);
   console.info(`[engine4-api] durationSource=${sourceFor.duration}`);
-  console.info(`[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`);
+  console.info(
+    `[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`
+  );
 };
 
 export const mapViatorToEngine4Tour = (input: {
@@ -311,16 +314,18 @@ export const mapViatorToEngine4Tour = (input: {
     cancellationPolicy: cleanText(resolvedApiTour?.cancellationPolicy),
   });
 
-  const canonicalImage =
-    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
-    cleanText(resolvedApiTour?.primaryImageUrl) ??
-    cleanText(resolvedApiTour?.galleryImages?.[0]) ??
-    cleanText(resolvedApiTour?.sourceDerivedImageUrl);
-
-  const resolvedHeroImage = resolveEngine4ViatorHero({
+  const imageSelection = selectEngine4ViatorImage({
     productCode: record.productCode,
     apiTour: resolvedApiTour,
+    recordHeroImage: record.heroImage,
   });
+
+  const resolvedHeroImage =
+    imageSelection.selected ??
+    resolveEngine4ViatorHero({
+      productCode: record.productCode,
+      apiTour: resolvedApiTour,
+    });
 
   const tour: Engine4TourViewModel = {
     tourId: `engine4-${record.productCode}`,
@@ -359,24 +364,14 @@ export const mapViatorToEngine4Tour = (input: {
     },
   };
 
-  const candidates = Array.from(
-    new Set(
-      [
-        canonicalImage,
-        resolvedApiTour?.primaryImageUrl,
-        ...(resolvedApiTour?.galleryImages ?? []),
-        resolvedApiTour?.sourceDerivedImageUrl,
-        record.heroImage ?? undefined,
-      ].filter((value): value is string => Boolean(cleanText(value)))
-    )
-  );
+  const candidates = imageSelection.candidates;
 
   logEngine4ImageDecision({
     productCode: record.productCode,
     title: tour.title,
     candidates,
+    rejected: imageSelection.rejected,
     resolvedHeroImage: tour.heroImage ?? undefined,
-    fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
     downstreamOverwriteBlocked: Boolean(tour.primaryImage),
   });
 

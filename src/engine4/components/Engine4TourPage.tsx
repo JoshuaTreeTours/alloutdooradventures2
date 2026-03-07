@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 
+import Image from "../../components/Image";
 import TourCard from "../../components/TourCard";
 import Seo from "../../components/Seo";
 import RatingStars from "./RatingStars";
@@ -18,6 +19,19 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const schema = buildEngine4ViatorSchemaGraph(tour);
   const heroImage = tour.primaryImage ?? tour.heroImage ?? "";
   const overview = tour.content.overview;
+  const heroImageFallbackCandidates = tour.galleryImages.filter(
+    image => image?.trim() && image.trim() !== heroImage
+  );
+
+  if (
+    import.meta.env.MODE === "development" ||
+    import.meta.env.MODE === "test"
+  ) {
+    console.info(
+      `[engine4-render] surface=hero product=${tour.productCode} src=${heroImage} fallbacks=${JSON.stringify(heroImageFallbackCandidates)}`
+    );
+  }
+
   const highlights = tour.content.highlights;
   const faqs = tour.content.faqs;
   const itinerary = tour.content.itinerary ?? [];
@@ -161,8 +175,10 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
               Book This Tour
             </a>
           </div>
-          <img
-            src={heroImage || undefined}
+          <Image
+            src={heroImage || ""}
+            fallbackCandidates={heroImageFallbackCandidates}
+            disableFallback
             alt={tour.title}
             className="h-80 w-full rounded-2xl object-cover"
           />

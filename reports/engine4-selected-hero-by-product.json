@@ -1,0 +1,163 @@
+{
+  "generatedAt": "2026-03-07T17:48:17.614Z",
+  "report": [
+    {
+      "productCode": "74828P3",
+      "slug": "glimpse-of-aspen-tour-74828p3",
+      "city": "Aspen",
+      "selectedImage": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/74/7c/8d.jpg"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "172188P151",
+      "slug": "private-professional-photoshoot-in-aspen-172188p151",
+      "city": "Aspen",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2e/d7/8f/5e/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "74828P5",
+      "slug": "aspen-east-end-light-hike",
+      "city": "Aspen",
+      "selectedImage": "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "74828P4",
+      "slug": "aspens-off-the-beaten-path-tour-74828p4",
+      "city": "Aspen",
+      "selectedImage": "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/7c/8f.jpg"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "63657P1",
+      "slug": "santa-barbara-vineyard-to-table-taste-tour-by-ebike-63657p1",
+      "city": "Santa Barbara",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "41410P10",
+      "slug": "small-group-tour-of-pikes-peak-and-the-garden-of-the-gods-from-denver-41410p10",
+      "city": "Colorado Springs",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "180019P2",
+      "slug": "garden-of-the-gods-tour-180019p2",
+      "city": "Colorado Springs",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/0c/fe/02/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "421920P2",
+      "slug": "epic-zipline-tour-over-the-santa-ynez-valley-421920p2",
+      "city": "Santa Barbara",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "6740P7",
+      "slug": "joshua-tree-scenic-tour-6740p7",
+      "city": "Joshua Tree",
+      "selectedImage": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "91873P1",
+      "slug": "private-guided-rock-climbing-trip-in-joshua-tree-national-park-91873p1",
+      "city": "Joshua Tree",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1"
+        },
+        {
+          "source": "api.galleryImages[1]",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/40/joshua-tree-climbing.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    },
+    {
+      "productCode": "91782P1",
+      "slug": "half-day-day-canyoneering-91782p1",
+      "city": "Moab",
+      "selectedImage": "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+      "candidates": [
+        {
+          "source": "api.resolveViatorPrimaryImage",
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1"
+        }
+      ],
+      "rejected": [],
+      "missingImage": false
+    }
+  ]
+}
