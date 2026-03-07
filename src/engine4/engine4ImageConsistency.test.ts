@@ -19,6 +19,8 @@ const SB_ZIPLINE_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1";
 const JOSHUA_TREE_HUMMER_HERO =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg";
+const JOSHUA_TREE_SCRAMBLING_HERO =
+  "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1";
 const MOAB_CANYONEERING_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1";
 
@@ -98,6 +100,40 @@ describe("Engine4 Viator image consistency", () => {
     expect(routeTour?.seo.ogImage).toBe(pageTour.heroImage);
     expect(productNode.image).toBe(pageTour.heroImage);
     expect(touristTripNode.image).toBe(pageTour.heroImage);
+  });
+
+
+  it("uses the Joshua Tree rock scrambling hero consistently for page, card, og:image, and schema image", () => {
+    const pageTour = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(tour => tour.productCode === "335698P13")!,
+      apiTour: engine4ViatorApiFallbackByProductCode["335698P13"],
+    });
+
+    const listingTour = getEngine4ListingEntries(
+      "california",
+      "joshua-tree"
+    ).find(entry => entry.tour.productCode === "335698P13")?.tour;
+    const routeTour = getEngine4TourBySlugs(
+      "california",
+      "joshua-tree",
+      "rock-scrambling-adventures-in-joshua-tree-national-park-335698p13"
+    );
+
+    const schema = buildEngine4ViatorSchemaGraph(pageTour);
+    const productNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
+    const touristTripNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
+
+    expect(pageTour.heroImage).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(pageTour.primaryImage).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(listingTour?.heroImage).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(listingTour?.primaryImageUrl).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(routeTour?.seo.ogImage).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(productNode.image).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
+    expect(touristTripNode.image).toBe(JOSHUA_TREE_SCRAMBLING_HERO);
   });
 
   it("uses the Joshua Tree Hummer hero consistently for page, card, og:image, and schema image", () => {

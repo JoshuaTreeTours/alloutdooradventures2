@@ -121,4 +121,38 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
   });
 
+  it("maps Joshua Tree rock scrambling with populated facts and TACDN hero", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "335698P13"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["335698P13"],
+    });
+
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.heroImage).not.toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.heroImage).not.toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg"
+    );
+    expect(vm.facts.priceFrom).toBe("$199.00");
+    expect(vm.facts.ratingValue).toBe(5);
+    expect(vm.facts.reviewCount).toBe(4);
+    expect(vm.facts.duration).toBe("5 hours");
+    expect(vm.facts.startTime).toBe("8:00 AM");
+    expect(vm.facts.meetingPointFull).toBe("Palm Springs, California");
+    expect(vm.content.overview.length).toBeGreaterThan(120);
+
+    const bookingUrl = new URL(vm.bookingUrl);
+    expect(bookingUrl.searchParams.get("pid")).toBe("P00290915");
+    expect(bookingUrl.searchParams.get("mcid")).toBe("42383");
+    expect(bookingUrl.searchParams.get("medium")).toBe("link");
+  });
+
 });

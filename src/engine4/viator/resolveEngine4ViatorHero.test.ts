@@ -48,6 +48,40 @@ describe("resolveEngine4ViatorHero", () => {
     expect(hero).toContain("media.tacdn.com");
   });
 
+  it("uses the vaccine image for 335698P13 when API media is missing", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "335698P13",
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+      },
+    });
+
+    expect(hero).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1"
+    );
+  });
+
+  it("keeps API-first behavior for 335698P13 when a valid API image is present", () => {
+    const hero = resolveEngine4ViatorHero({
+      productCode: "335698P13",
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/33/11/22/aa/caption.jpg?w=1100&h=800&s=1",
+      },
+    });
+
+    expect(hero).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/33/11/22/aa/caption.jpg?w=1100&h=800&s=1"
+    );
+  });
+
   it("rejects non-http or tracker pixel values", () => {
     const hero = resolveEngine4ViatorHero({
       productCode: "99999P2",

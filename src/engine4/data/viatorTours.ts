@@ -141,6 +141,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "335698P13",
+    bookingUrl:
+      "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Joshua Tree",
+      citySlug: "joshua-tree",
+    },
+    slug: "rock-scrambling-adventures-in-joshua-tree-national-park-335698p13",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "6740P7",
     bookingUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?pid=P00290915&mcid=42383&medium=link&currency=USD",
@@ -662,6 +679,55 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "What makes this different from self-driving Joshua Tree?",
         answer:
           "The guided format combines backroads-oriented route planning, local context, and planned stop timing so guests can focus on scenery and photography rather than navigation.",
+      },
+    ],
+  },
+  "335698P13": {
+    productCode: "335698P13",
+    title: "Rock Scrambling Adventures in Joshua Tree National Park",
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+    fromPrice: "$199.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 4,
+    duration: "5 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "Palm Springs, California",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Guided rock scrambling adventure in Joshua Tree National Park with route coaching, scenic desert viewpoints, and logistics from the Palm Springs area.",
+    overview:
+      "This guided Joshua Tree rock scrambling tour is designed for active travelers who want a hands-on way to experience the park's granite formations without committing to technical climbing. The outing focuses on movement over boulders and slabs with guide support on route choice, footing, and pacing. Along the way, guests stop at scenic viewpoints and signature desert terrain while learning practical context on Joshua Tree geology and ecology. The format balances challenge and accessibility with a small-group approach, making it a strong fit for adventurous beginners and intermediate hikers looking for something more dynamic than a standard sightseeing drive.",
+    highlights: [
+      "Guided rock scrambling route inside Joshua Tree National Park",
+      "Supportive coaching on movement and line selection",
+      "Scenic desert viewpoints and iconic granite landscapes",
+      "Active small-group format for adventurous travelers",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    faqs: [
+      {
+        question: "Is this a technical rock climbing tour?",
+        answer:
+          "No. The experience focuses on guided scrambling over natural rock terrain rather than technical climbing with ropes and harness systems.",
+      },
+      {
+        question: "Where does the tour meet?",
+        answer:
+          "The listing shows Palm Springs, California as the meeting area, with final logistics provided after booking.",
+      },
+      {
+        question: "How physically demanding is the experience?",
+        answer:
+          "Expect moderate physical activity with uneven terrain and repeated stepping and scrambling on rock surfaces.",
       },
     ],
   },

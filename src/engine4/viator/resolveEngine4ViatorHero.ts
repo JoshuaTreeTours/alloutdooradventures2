@@ -5,6 +5,11 @@ import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImag
 const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
 const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
 
+const ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE: Record<string, string> = {
+  "335698P13":
+    "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+};
+
 const isTrackerPixel = (url: string) =>
   /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
     url
@@ -64,26 +69,46 @@ export const resolveEngine4ViatorHero = (input: {
   apiTour?: Engine4ViatorApiTour;
 }) => {
   const normalizedCode = input.productCode.toUpperCase();
+  const isVaccineProduct = normalizedCode === "335698P13";
   const tourRecord = engine4ViatorTours.find(
     tour => tour.productCode.toUpperCase() === normalizedCode
   );
 
   const canonicalApiImage = resolveViatorPrimaryImageFromApiTour(input.apiTour);
+  const productLockedHero =
+    ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE[normalizedCode];
 
   const candidates = [
     canonicalApiImage,
     input.apiTour?.primaryImageUrl,
     input.apiTour?.galleryImages?.[0],
     input.apiTour?.sourceDerivedImageUrl,
-    tourRecord?.heroImage,
+    ...(isVaccineProduct ? [] : [tourRecord?.heroImage]),
+    productLockedHero,
   ];
 
   const selected = candidates.find(candidate =>
     isValidHeroCandidate(candidate)
   );
 
+  if (isVaccineProduct) {
+    const hasValidApiImage = isValidHeroCandidate(canonicalApiImage);
+    const usedVaccine =
+      !hasValidApiImage && selected === productLockedHero && Boolean(selected);
+
+    console.info(
+      `[engine4-image-vaccine] product=${normalizedCode} apiImagePresent=${hasValidApiImage} vaccineUsed=${usedVaccine} selected=${selected ?? "<none>"}`
+    );
+  }
+
   if (selected) {
     return selected;
+  }
+
+  if (isVaccineProduct) {
+    console.error(
+      `[engine4-image-vaccine] product=${normalizedCode} failed to resolve hero; no valid api image or vaccine candidate available`
+    );
   }
 
   return toInlinePlaceholder();

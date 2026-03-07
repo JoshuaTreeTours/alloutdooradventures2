@@ -105,6 +105,24 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("74828P3");
   });
+
+  it("builds the 335698P13 route and exposes it in Joshua Tree listing", () => {
+    const entries = getEngine4ListingEntries("california", "joshua-tree");
+    const target = entries.find(entry => entry.tour.productCode === "335698P13");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/joshua-tree/tours/rock-scrambling-adventures-in-joshua-tree-national-park-335698p13"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "joshua-tree",
+      "rock-scrambling-adventures-in-joshua-tree-national-park-335698p13"
+    );
+
+    expect(routed?.id).toBe("335698P13");
+  });
   it("builds the 6740P7 route and exposes it in Joshua Tree listing", () => {
     const entries = getEngine4ListingEntries("california", "joshua-tree");
     const target = entries.find(entry => entry.tour.productCode === "6740P7");
