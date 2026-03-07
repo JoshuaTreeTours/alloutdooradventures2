@@ -27,7 +27,7 @@ export type TourPricing = {
 
 export type Tour = {
   id: string;
-  engine?: "engine1" | "engine2" | "engine3" | "engine4";
+  engine?: "engine1" | "engine2" | "engine3" | "engine4" | "engine5";
   productCode?: string;
   slug: string;
   title: string;
