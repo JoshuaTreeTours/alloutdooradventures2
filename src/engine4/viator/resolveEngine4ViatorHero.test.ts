@@ -18,6 +18,19 @@ describe("Engine4 Viator hero governance resolver", () => {
           "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
         primaryImageUrl:
           "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "large",
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+                },
+              ],
+            },
+          ],
+        },
       },
     });
 
@@ -30,11 +43,24 @@ describe("Engine4 Viator hero governance resolver", () => {
           "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
         primaryImageUrl:
           "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "large",
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+                },
+              ],
+            },
+          ],
+        },
       },
     });
 
     expect(selectedHero).toContain("30/70/d3/6d/caption.jpg");
-    expect(diagnostics.selectionSource).toBe("api");
+    expect(diagnostics.selectionSource).toBe("api-images-payload");
     expect(diagnostics.overrideUsed).toBe(false);
     expect(diagnostics.resolutionStatus).toBe("ok");
   });
@@ -196,7 +222,7 @@ describe("Engine4 Viator hero governance resolver", () => {
     ]);
   });
 
-  it("reports strict provenance diagnostics for 237571P2 and falls back to override", () => {
+  it("reports diagnostics for 237571P2 and falls back to override when images[] is missing", () => {
     const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
       productCode: "237571P2",
       apiTour: {
@@ -223,19 +249,21 @@ describe("Engine4 Viator hero governance resolver", () => {
       resolutionStatus: "ok",
       rejectedCandidates: [
         {
-          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
-          source: "api.primaryImageUrl",
-          reason: "missing_raw_product_payload_provenance",
+          source: "api.images[]",
+          reason: "images_payload_missing",
         },
       ],
       acceptedCandidateReason:
-        "Accepted locked per-product override because API candidates were rejected or missing.",
+        "Accepted locked per-product override because no safe exact-product images[] candidate was available.",
+      apiImagesPayloadCandidates: [],
     });
   });
 
-  it("rejects 237571P2 bike-tour contamination candidates from API fields", () => {
+  it("rejects 237571P2 bike-tour contamination candidates from non-images fields", () => {
     const bikeTourImage =
       "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1";
+    const trustedImagesPayloadHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1";
 
     const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
       productCode: "237571P2",
@@ -246,18 +274,28 @@ describe("Engine4 Viator hero governance resolver", () => {
           "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
         primaryImageUrl: bikeTourImage,
         galleryImages: [bikeTourImage],
+        sourceDerivedImageUrl: bikeTourImage,
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "large",
+                  url: trustedImagesPayloadHero,
+                },
+              ],
+            },
+          ],
+        },
       },
     });
 
-    expect(
-      diagnostics.rejectedCandidates.filter(
-        candidate =>
-          candidate.reason === "missing_raw_product_payload_provenance"
-      ).length
-    ).toBeGreaterThanOrEqual(1);
-    expect(diagnostics.selectionSource).toBe("override");
-    expect(diagnostics.selectedHeroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
-    );
+    expect(diagnostics.selectionSource).toBe("api-images-payload");
+    expect(diagnostics.selectedHeroUrl).toBe(trustedImagesPayloadHero);
+    expect(diagnostics.apiImagesPayloadCandidates).toEqual([
+      trustedImagesPayloadHero,
+    ]);
+    expect(diagnostics.selectedHeroUrl).not.toBe(bikeTourImage);
   });
 });
