@@ -13,7 +13,10 @@ import {
   normalizeItinerary,
 } from "./buildEngine4Content";
 import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
-import { resolveEngine4ViatorHero } from "./resolveEngine4ViatorHero";
+import {
+  resolveEngine4ViatorHero,
+  resolveEngine4ViatorHeroWithDiagnostics,
+} from "./resolveEngine4ViatorHero";
 import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
 
 const cleanText = (value?: string | null) => {
@@ -67,8 +70,7 @@ const logEngine4ImageDecision = (input: {
   title: string;
   candidates: string[];
   resolvedHeroImage?: string;
-  fallbackUsed: boolean;
-  downstreamOverwriteBlocked: boolean;
+  diagnostics: Record<string, unknown>;
 }) => {
   if (
     process.env.NODE_ENV !== "development" &&
@@ -85,9 +87,8 @@ const logEngine4ImageDecision = (input: {
   console.info(
     `[engine4-image] resolvedHeroImage=${input.resolvedHeroImage ?? "<none>"}`
   );
-  console.info(`[engine4-image] fallbackUsed=${String(input.fallbackUsed)}`);
   console.info(
-    `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
+    `[engine4-image] diagnostics=${JSON.stringify(input.diagnostics)}`
   );
 };
 
@@ -222,6 +223,10 @@ export const mapViatorToEngine4Tour = (input: {
     productCode: record.productCode,
     apiTour: resolvedApiTour,
   });
+  const heroDiagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+    productCode: record.productCode,
+    apiTour: resolvedApiTour,
+  });
 
   const tour: Engine4TourViewModel = {
     tourId: `engine4-${record.productCode}`,
@@ -277,8 +282,7 @@ export const mapViatorToEngine4Tour = (input: {
     title: tour.title,
     candidates,
     resolvedHeroImage: tour.heroImage ?? undefined,
-    fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
-    downstreamOverwriteBlocked: Boolean(tour.primaryImage),
+    diagnostics: heroDiagnostics,
   });
 
   assertEngine4ViatorTour(tour);
