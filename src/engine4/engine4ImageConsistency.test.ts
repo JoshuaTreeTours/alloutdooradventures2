@@ -23,6 +23,8 @@ const MOAB_CANYONEERING_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1";
 const JOSHUA_TREE_CLIMB_HERO =
   "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1";
+const JOSHUA_TREE_SCRAMBLE_HERO =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/2d/caption.jpg?w=1100&h=800&s=1";
 
 describe("Engine4 Viator image consistency", () => {
   it("keeps heroes isolated by product and never leaks Palm Springs hero", () => {
@@ -229,5 +231,61 @@ describe("Engine4 Viator image consistency", () => {
     expect(routeTour?.seo.ogImage).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(productNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
     expect(touristTripNode.image).toBe(JOSHUA_TREE_CLIMB_HERO);
+  });
+
+  it("uses source-derived hero when 335698P13 API media is unrelated", () => {
+    const pageTour = mapViatorToEngine4Tour({
+      record: engine4ViatorTours.find(
+        tour => tour.productCode === "335698P13"
+      )!,
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        fromPrice: "209.00",
+        priceCurrency: "USD",
+        rating: 4.9,
+        reviewCount: 18,
+        duration: "4 hours",
+        startTime: "8:00 AM",
+        meetingPoint: "Joshua Tree National Park, California, USA",
+        cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+        sourceDerivedImageUrl: JOSHUA_TREE_SCRAMBLE_HERO,
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/99/traveler.jpg?w=1100&h=800&s=1",
+        galleryImages: [
+          "https://dynamic-media.tacdn.com/media/photo-l/2f/3a/6c/98/thumb.jpg?w=100&h=100",
+        ],
+      },
+    });
+
+    const listingTour = getEngine4ListingEntries(
+      "california",
+      "joshua-tree"
+    ).find(entry => entry.tour.productCode === "335698P13")?.tour;
+    const routeTour = getEngine4TourBySlugs(
+      "california",
+      "joshua-tree",
+      "rock-scrambling-adventures-in-joshua-tree-national-park-335698p13"
+    );
+
+    const schema = buildEngine4ViatorSchemaGraph(pageTour);
+    const productNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "Product") as Record<string, unknown>;
+    const touristTripNode = (
+      schema["@graph"] as Array<Record<string, unknown>>
+    ).find(node => node["@type"] === "TouristTrip") as Record<string, unknown>;
+
+    expect(pageTour.heroImage).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(pageTour.primaryImage).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(listingTour?.heroImage).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(listingTour?.primaryImageUrl).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(routeTour?.seo.ogImage).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(productNode.image).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(touristTripNode.image).toBe(JOSHUA_TREE_SCRAMBLE_HERO);
+    expect(pageTour.heroImage).not.toContain("traveler.jpg");
+    expect(pageTour.heroImage).not.toContain("Tour image unavailable");
   });
 });

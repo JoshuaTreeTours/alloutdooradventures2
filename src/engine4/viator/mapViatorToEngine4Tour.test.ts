@@ -61,7 +61,9 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours in advance."
     );
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
   });
 
   it("maps the Santa Barbara zipline tour with TACDN hero, populated facts, and affiliate booking URL", () => {
@@ -75,7 +77,9 @@ describe("mapViatorToEngine4Tour", () => {
       apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
     });
 
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
     expect(vm.facts.priceFrom).toBeTruthy();
     expect(vm.facts.ratingValue).toBeTruthy();
     expect(vm.facts.reviewCount).toBeTruthy();
@@ -121,7 +125,7 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
   });
 
-  it("keeps API values as source of truth for Joshua Tree climbing when fallback also exists", () => {
+  it("keeps API facts as source of truth and rejects unrelated API hero media", () => {
     const record = engine4ViatorTours.find(
       tour => tour.productCode === "91873P1"
     );
@@ -143,10 +147,27 @@ describe("mapViatorToEngine4Tour", () => {
         meetingPoint: "Joshua Tree Visitor Center, Joshua Tree, CA, USA",
         cancellationPolicy: "Free cancellation up to 24 hours before start.",
         primaryImageUrl:
-          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/41/api-primary.jpg?w=1100&h=800&s=1",
-        galleryImages: [
-          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/api-gallery.jpg?w=1100&h=800&s=1",
-        ],
+          "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/41/traveler-steering-wheel.jpg?w=1100&h=800&s=1",
+        rawProductPayload: {
+          images: [
+            {
+              imageType: "TravelerPhoto",
+              variants: {
+                large: {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/42/review-photo.jpg?w=1100&h=800&s=1",
+                },
+              },
+            },
+            {
+              imageType: "Product",
+              variants: {
+                large: {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/11/99/80/3f/private-guided-rock.jpg?w=1100&h=800&s=1",
+                },
+              },
+            },
+          ],
+        },
       },
     });
 
@@ -163,7 +184,51 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours before start."
     );
-    expect(vm.heroImage).toContain("api-primary.jpg");
+    expect(vm.heroImage).toContain("private-guided-rock.jpg");
+    expect(vm.heroImage).not.toContain("steering-wheel");
+    expect(vm.heroImage).not.toContain("review-photo");
   });
 
+  it("uses source-derived hero when API image candidates are invalid", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "335698P13"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        fromPrice: "209.00",
+        priceCurrency: "USD",
+        rating: 4.9,
+        reviewCount: 18,
+        duration: "4 hours",
+        startTime: "8:00 AM",
+        meetingPoint: "Joshua Tree National Park, California, USA",
+        cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+        sourceDerivedImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/2d/caption.jpg?w=1100&h=800&s=1",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/99/traveler.jpg?w=1100&h=800&s=1",
+        galleryImages: [
+          "https://dynamic-media.tacdn.com/media/photo-l/2f/3a/6c/98/thumb.jpg?w=100&h=100",
+        ],
+      },
+    });
+
+    expect(vm.facts.priceFrom).toBe("$209.00");
+    expect(vm.facts.ratingValue).toBe(4.9);
+    expect(vm.facts.reviewCount).toBe(18);
+    expect(vm.facts.duration).toBe("4 hours");
+    expect(vm.facts.startTime).toBe("8:00 AM");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/2d/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.primaryImage).toBe(vm.heroImage);
+    expect(vm.heroImage).not.toContain("traveler.jpg");
+  });
 });
