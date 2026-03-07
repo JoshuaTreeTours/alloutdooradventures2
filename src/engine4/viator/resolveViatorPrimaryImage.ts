@@ -1,15 +1,7 @@
 import type { Engine4ViatorApiTour } from "../types";
 
-const PRIORITY_VARIANTS = [
-  "large",
-  "hero",
-  "xxlarge",
-  "xlarge",
-  "original",
-  "url",
-];
-const TACDN_HOST_REGEX = /(?:^|\.)tacdn\.com$/i;
-const VIATOR_HOST_REGEX = /(?:^|\.)viator\.com$/i;
+const TACDN_SOURCE_REGEX =
+  /https:\/\/dynamic-media\.tacdn\.com\/media\/photo-o\/[^"'\s>]+/i;
 
 const asRecord = (value: unknown): Record<string, unknown> | undefined =>
   typeof value === "object" && value !== null
@@ -21,7 +13,7 @@ const asString = (value: unknown): string | undefined =>
     ? value.trim()
     : undefined;
 
-const asValidUrl = (value: unknown): string | undefined => {
+const asValidImageUrl = (value: unknown): string | undefined => {
   const candidate = asString(value);
   if (!candidate) {
     return undefined;
@@ -38,208 +30,154 @@ const asValidUrl = (value: unknown): string | undefined => {
   }
 };
 
-const getHost = (url: string): string => {
+const extractFromVariantObject = (
+  variants: Record<string, unknown> | undefined
+): string | undefined => {
+  if (!variants) {
+    return undefined;
+  }
+
+  return (
+    asValidImageUrl(asRecord(variants.large)?.url ?? variants.large) ??
+    asValidImageUrl(asRecord(variants.hero)?.url ?? variants.hero) ??
+    asValidImageUrl(asRecord(variants.medium)?.url ?? variants.medium)
+  );
+};
+
+const extractApiImage = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const firstImage = Array.isArray(product.images)
+    ? asRecord(product.images[0])
+    : undefined;
+
+  const variantsArray = Array.isArray(firstImage?.variants)
+    ? (firstImage?.variants as unknown[])
+    : [];
+  const preferredVariant =
+    variantsArray
+      .map(variant => asRecord(variant))
+      .find(variant => {
+        const name = asString(variant?.name)?.toLowerCase();
+        return name === "large" || name === "hero" || name === "medium";
+      }) ?? asRecord(variantsArray[0]);
+  const variantArrayUrl = asValidImageUrl(preferredVariant?.url);
+  if (variantArrayUrl) {
+    return variantArrayUrl;
+  }
+
+  const mappedVariant = extractFromVariantObject(
+    asRecord(firstImage?.variants)
+  );
+  if (mappedVariant) {
+    return mappedVariant;
+  }
+
+  return (
+    asValidImageUrl(firstImage?.url) ??
+    asValidImageUrl(product.primaryImageUrl) ??
+    asValidImageUrl(product.sourceDerivedImageUrl)
+  );
+};
+
+const normalizeSourceBlob = (source: unknown): string => {
+  if (typeof source === "string") {
+    return source;
+  }
+
+  if (source === undefined || source === null) {
+    return "";
+  }
+
   try {
-    return new URL(url).hostname;
+    return JSON.stringify(source);
   } catch {
     return "";
   }
 };
 
-const isTacdnUrl = (url: string): boolean =>
-  TACDN_HOST_REGEX.test(getHost(url));
-const isViatorUrl = (url: string): boolean =>
-  VIATOR_HOST_REGEX.test(getHost(url));
-const isCaptionOrHeroVariant = (url: string): boolean =>
-  /caption\.(?:jpg|jpeg|png|webp)(?:\?|$)/i.test(url) ||
-  /(?:\?|&)w=1100(?:&|$)/i.test(url);
+const extractTacdnFromSource = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const source =
+    normalizeSourceBlob(product.sourceHtml) ||
+    normalizeSourceBlob(product.sourcePayload) ||
+    normalizeSourceBlob(product.sourceCode) ||
+    normalizeSourceBlob(product.rawProductPayload);
 
-type Candidate = {
-  url: string;
-  score: number;
-  source: string;
+  if (!source) {
+    return undefined;
+  }
+
+  const match = source.match(TACDN_SOURCE_REGEX);
+  return asValidImageUrl(match?.[0]);
 };
 
-const addCandidate = (
-  bag: Candidate[],
-  value: unknown,
-  score: number,
-  source: string
-): void => {
-  const url = asValidUrl(value);
-  if (!url) {
-    return;
+const extractFallbackImage = (
+  product: Record<string, unknown>
+): string | undefined =>
+  asValidImageUrl(product.fallbackImage) ?? asValidImageUrl(product.heroImage);
+
+export const resolveViatorPrimaryImageWithProvenance = (product: unknown) => {
+  const productRecord = asRecord(product);
+  if (!productRecord) {
+    return {
+      primaryImage: undefined,
+      apiImageFound: false,
+      tacdnFound: false,
+      fallbackUsed: false,
+      fallbackReason: "invalid product payload",
+    };
   }
 
-  bag.push({ url, score, source });
-};
-
-const collectFromImageLikeObject = (
-  value: unknown,
-  bag: Candidate[],
-  source: string
-): void => {
-  const row = asRecord(value);
-  if (!row) {
-    return;
+  const apiImage = extractApiImage(productRecord);
+  if (apiImage) {
+    return {
+      primaryImage: apiImage,
+      apiImageFound: true,
+      tacdnFound: false,
+      fallbackUsed: false,
+      fallbackReason: undefined,
+    };
   }
 
-  addCandidate(bag, row.url, 40, `${source}.url`);
-  addCandidate(bag, row.imageUrl, 40, `${source}.imageUrl`);
-
-  const variants = row.variants;
-  if (Array.isArray(variants)) {
-    variants.forEach((variant, index) => {
-      const variantRecord = asRecord(variant);
-      if (!variantRecord) {
-        return;
-      }
-
-      const name = asString(variantRecord.name)?.toLowerCase();
-      const rank = name ? PRIORITY_VARIANTS.indexOf(name) : -1;
-      const baseScore = rank >= 0 ? 100 - rank * 10 : 55;
-      addCandidate(
-        bag,
-        variantRecord.url,
-        baseScore,
-        `${source}.variants[${index}]`
-      );
-    });
+  const tacdnImage = extractTacdnFromSource(productRecord);
+  if (tacdnImage) {
+    return {
+      primaryImage: tacdnImage,
+      apiImageFound: false,
+      tacdnFound: true,
+      fallbackUsed: false,
+      fallbackReason: undefined,
+    };
   }
 
-  const variantMap = asRecord(row.variant);
-  if (variantMap) {
-    PRIORITY_VARIANTS.forEach((key, index) => {
-      const entry = variantMap[key];
-      const entryRecord = asRecord(entry);
-      addCandidate(
-        bag,
-        entryRecord?.url ?? entry,
-        100 - index * 10,
-        `${source}.variant.${key}`
-      );
-    });
+  const fallbackImage = extractFallbackImage(productRecord);
+  if (fallbackImage) {
+    return {
+      primaryImage: fallbackImage,
+      apiImageFound: false,
+      tacdnFound: false,
+      fallbackUsed: true,
+      fallbackReason:
+        "no valid API image variant URL and no TACDN image extracted from source",
+    };
   }
 
-  PRIORITY_VARIANTS.forEach((key, index) => {
-    const valueForKey = row[key];
-    const keyRecord = asRecord(valueForKey);
-    addCandidate(
-      bag,
-      keyRecord?.url ?? valueForKey,
-      95 - index * 10,
-      `${source}.${key}`
-    );
-  });
-};
-
-const collectKnownContainers = (
-  product: Record<string, unknown>,
-  bag: Candidate[]
-): void => {
-  const knownContainers: Array<[string, unknown]> = [
-    ["images", product.images],
-    ["product.images", asRecord(product.product)?.images],
-    ["media.images", asRecord(product.media)?.images],
-    ["heroImages", product.heroImages],
-  ];
-
-  knownContainers.forEach(([path, value]) => {
-    if (Array.isArray(value)) {
-      value.forEach((entry, index) => {
-        collectFromImageLikeObject(entry, bag, `${path}[${index}]`);
-        addCandidate(bag, entry, 35, `${path}[${index}]`);
-      });
-      return;
-    }
-
-    const asObj = asRecord(value);
-    if (asObj) {
-      collectFromImageLikeObject(asObj, bag, path);
-      Object.entries(asObj).forEach(([key, item]) => {
-        collectFromImageLikeObject(item, bag, `${path}.${key}`);
-      });
-    }
-  });
-};
-
-const collectRecursiveUrls = (
-  value: unknown,
-  bag: Candidate[],
-  source: string,
-  depth = 0
-): void => {
-  if (depth > 4) {
-    return;
-  }
-
-  const directUrl = asValidUrl(value);
-  if (directUrl) {
-    addCandidate(bag, directUrl, 10, `${source}.url`);
-    return;
-  }
-
-  if (Array.isArray(value)) {
-    value.forEach((entry, index) =>
-      collectRecursiveUrls(entry, bag, `${source}[${index}]`, depth + 1)
-    );
-    return;
-  }
-
-  const record = asRecord(value);
-  if (!record) {
-    return;
-  }
-
-  Object.entries(record).forEach(([key, entry]) => {
-    collectRecursiveUrls(entry, bag, `${source}.${key}`, depth + 1);
-  });
+  return {
+    primaryImage: undefined,
+    apiImageFound: false,
+    tacdnFound: false,
+    fallbackUsed: false,
+    fallbackReason:
+      "no valid API image variant URL, no TACDN source image, and no approved fallback record image",
+  };
 };
 
 export const resolveViatorPrimaryImage = (
   product: unknown
-): string | undefined => {
-  const productRecord = asRecord(product);
-  if (!productRecord) {
-    return undefined;
-  }
-
-  const candidates: Candidate[] = [];
-  collectKnownContainers(productRecord, candidates);
-  collectRecursiveUrls(productRecord, candidates, "product");
-
-  const deDupe = new Map<string, Candidate>();
-  candidates.forEach(candidate => {
-    const current = deDupe.get(candidate.url);
-    if (!current || current.score < candidate.score) {
-      deDupe.set(candidate.url, candidate);
-    }
-  });
-
-  const sorted = Array.from(deDupe.values()).sort((a, b) => b.score - a.score);
-
-  const tacdnVariant = sorted.find(
-    item =>
-      isTacdnUrl(item.url) &&
-      item.score >= 60 &&
-      isCaptionOrHeroVariant(item.url)
-  );
-  if (tacdnVariant) {
-    return tacdnVariant.url;
-  }
-
-  const tacdnAny = sorted.find(item => isTacdnUrl(item.url));
-  if (tacdnAny) {
-    return tacdnAny.url;
-  }
-
-  const viatorAny = sorted.find(item => isViatorUrl(item.url));
-  if (viatorAny) {
-    return viatorAny.url;
-  }
-
-  return sorted[0]?.url;
-};
+): string | undefined =>
+  resolveViatorPrimaryImageWithProvenance(product).primaryImage;
 
 export const resolveViatorPrimaryImageFromApiTour = (
   apiTour: Engine4ViatorApiTour | undefined

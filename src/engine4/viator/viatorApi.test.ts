@@ -61,10 +61,37 @@ describe("getEngine4ViatorTourData", () => {
     expect(tour?.rating).toBe(4.8);
     expect(tour?.reviewCount).toBe(33);
     expect(tour?.duration).toBe("4 hours");
-    expect(tour?.meetingPoint).toBe("Joshua Tree National Park, California, USA");
+    expect(tour?.meetingPoint).toBe(
+      "Joshua Tree National Park, California, USA"
+    );
     expect(tour?.primaryImageUrl).toContain("api-jt-climb.jpg");
-    expect(tour?.inclusions).toEqual(["Professional guide", "Climbing equipment"]);
+    expect(tour?.inclusions).toEqual([
+      "Professional guide",
+      "Climbing equipment",
+    ]);
     expect(tour?.exclusions).toEqual(["Gratuities"]);
+  });
+
+  it("extracts TACDN image from sourceHtml when API images are absent", async () => {
+    mockedFetchViator.mockResolvedValue({
+      product: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        productUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        priceFrom: "219.00",
+        currencyCode: "USD",
+        sourceHtml:
+          '<img src="https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1" />',
+      },
+    } as never);
+
+    const tour = await getEngine4ViatorTourData("335698P13");
+
+    expect(tour?.primaryImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(tour?.fromPrice).toBe("219.00");
   });
 
   it("retains API values when fallback has different stale values", async () => {

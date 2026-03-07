@@ -175,6 +175,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "335698P13",
+    bookingUrl:
+      "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Joshua Tree",
+      citySlug: "joshua-tree",
+    },
+    slug: "rock-scrambling-adventures-in-joshua-tree-national-park-335698p13",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -682,6 +699,86 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     ],
   },
 
+  "335698P13": {
+    productCode: "335698P13",
+    title: "Rock Scrambling Adventures in Joshua Tree National Park",
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+    fromPrice: "$219.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 12,
+    duration: "4 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "Joshua Tree, California, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8b/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Guide-led desert rock scrambling adventure in Joshua Tree with route coaching and safety-focused pacing.",
+    descriptionLong:
+      "This guided rock scrambling experience in Joshua Tree National Park is built for travelers who want a more active desert outing than a standard scenic drive. Your guide leads you through granite boulder terrain and desert washes, selecting lines that match group ability while coaching movement, footing, and pacing along the way. You can expect a hands-on adventure format that balances challenge with support, making it a strong fit for adventurous beginners, active couples, and small groups looking for a physically engaging half-day session. Compared with ordinary sightseeing, the focus here is on participation: you are climbing, stepping, and route-finding in real park terrain while learning how to move confidently in a desert environment. The result is a guided Joshua Tree experience that combines scenery, skill-building, and a clear sense of accomplishment.",
+    whatToExpect:
+      "Expect guide-led route selection, movement coaching on granite features, and safety-focused pacing in a private or small-group desert setting.",
+    overview:
+      "This guided rock scrambling experience in Joshua Tree National Park is designed for travelers who want more than quick overlook stops. Instead of remaining in the vehicle, you will move through granite boulder fields and desert terrain on foot while your guide selects routes suited to your group’s comfort level and experience. The activity focuses on practical movement, footing, and confidence-building across uneven rock, with a pace that stays active but controlled. It is a strong fit for adventurous beginners, active couples, and small groups who want a hands-on challenge without committing to a full technical climbing day. Compared with ordinary sightseeing tours, this format delivers direct engagement with Joshua Tree’s landscape: you are not only seeing the terrain, you are navigating it. Expect a professionally guided outing that combines desert character, instruction, and a rewarding sense of progress by the end of the session.",
+    highlights: [
+      "Guide-led rock scrambling format in Joshua Tree National Park",
+      "Granite terrain navigation with coaching on movement and footing",
+      "Half-day pacing designed for active travelers and adventurous beginners",
+      "Small-group or private-style desert adventure with tailored route choice",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    inclusions: [
+      "Professional guide",
+      "Safety orientation and route coaching",
+      "Rock scrambling experience in Joshua Tree terrain",
+    ],
+    exclusions: ["Guide gratuities", "Hotel pickup and drop-off"],
+    additionalInfo: [
+      "Participants should be comfortable with moderate physical activity on uneven surfaces.",
+      "Wear closed-toe footwear suitable for desert rock and sun exposure.",
+    ],
+    itinerary: [
+      {
+        title: "Meet guide and activity briefing",
+        description:
+          "Meet your guide at the designated Joshua Tree area location for safety orientation and route planning.",
+      },
+      {
+        title: "Guided rock scrambling session",
+        description:
+          "Travel across selected granite features with coaching on movement, balance, and route choice.",
+      },
+      {
+        title: "Wrap-up and return",
+        description:
+          "Complete the session with a short debrief and return from the scrambling zone.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Who is this Joshua Tree scrambling tour best for?",
+        answer:
+          "It is well suited to active travelers and adventurous beginners who want guide support in natural desert terrain.",
+      },
+      {
+        question: "How long is the experience?",
+        answer: "The listing duration is approximately 4 hours.",
+      },
+      {
+        question: "Can I cancel if plans change?",
+        answer: "This tour lists free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
+
   "6740P7": {
     productCode: "6740P7",
     title: "Joshua Tree National Park Scenic Tour | Rated #1",
@@ -693,8 +790,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     reviewCount: 88,
     duration: "5 hours",
     startTime: "8:00 AM",
-    meetingPoint:
-      "The Palm Springs Art Museum at 8:30 am, returning 1:30 pm",
+    meetingPoint: "The Palm Springs Art Museum at 8:30 am, returning 1:30 pm",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     primaryImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",

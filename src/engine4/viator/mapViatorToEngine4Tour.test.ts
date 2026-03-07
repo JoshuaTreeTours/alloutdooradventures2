@@ -61,7 +61,9 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours in advance."
     );
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
   });
 
   it("maps the Santa Barbara zipline tour with TACDN hero, populated facts, and affiliate booking URL", () => {
@@ -75,7 +77,9 @@ describe("mapViatorToEngine4Tour", () => {
       apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
     });
 
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
     expect(vm.facts.priceFrom).toBeTruthy();
     expect(vm.facts.ratingValue).toBeTruthy();
     expect(vm.facts.reviewCount).toBeTruthy();
@@ -119,6 +123,37 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.startTime).toBe("8:00 AM");
     expect(vm.facts.meetingPointFull).toBe("Palm Springs, California, USA");
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
+  });
+
+  it("uses TACDN source extraction when API image fields are absent", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "335698P13"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        fromPrice: "219.00",
+        priceCurrency: "USD",
+        duration: "4 hours",
+        meetingPoint: "Joshua Tree, California, USA",
+        rawProductPayload: {
+          sourceHtml:
+            '<img src="https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1" />',
+        },
+      },
+    });
+
+    expect(vm.primaryImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/31/2b/44/8a/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.heroImage).toBe(vm.primaryImage);
+    expect(vm.facts.priceFrom).toBe("$219.00");
   });
 
   it("keeps API values as source of truth for Joshua Tree climbing when fallback also exists", () => {
@@ -165,5 +200,4 @@ describe("mapViatorToEngine4Tour", () => {
     );
     expect(vm.heroImage).toContain("api-primary.jpg");
   });
-
 });
