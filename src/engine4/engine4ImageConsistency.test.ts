@@ -49,6 +49,26 @@ describe("Engine4 Viator image consistency", () => {
     expect(diagnostics.finalSelectedHeroUrl).toBeDefined();
   });
 
+  it("keeps 237571P2 consistent across page/card/og/schema using API hero governance", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "237571P2",
+      stateSlug: "california",
+      citySlug: "joshua-tree",
+      tourSlug: "full-day-hike-in-joshua-tree-national-park-237571p2",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "237571P2",
+      expectedSource: "api",
+    });
+
+    expect(diagnostics.overridePresent).toBe(false);
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+  });
+
   it("keeps at least 3 unrelated tours stable and consistent", () => {
     assertHeroConsistencyForProduct({
       productCode: "63657P1",

@@ -195,4 +195,30 @@ describe("Engine4 Viator hero governance resolver", () => {
       },
     ]);
   });
+
+  it("reports full diagnostics for 237571P2 via API source", () => {
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "237571P2",
+      apiTour: {
+        productCode: "237571P2",
+        title: "Full-Day Hike in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+      },
+    });
+
+    expect(diagnostics).toEqual({
+      productCode: "237571P2",
+      apiImagePresent: true,
+      overridePresent: false,
+      overrideUsed: false,
+      finalSelectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+      selectionSource: "api",
+      contaminationBlocked: false,
+      resolutionStatus: "ok",
+    });
+  });
 });

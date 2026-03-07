@@ -155,4 +155,33 @@ describe("mapViatorToEngine4Tour", () => {
     expect(bookingUrl.searchParams.get("medium")).toBe("link");
   });
 
+  it("maps 237571P2 with API-derived hero and full-day facts", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "237571P2"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["237571P2"],
+    });
+
+    expect(vm.title).toBe("Full-Day Hike in Joshua Tree National Park");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.facts.priceFrom).toBe("$199.00");
+    expect(vm.facts.ratingValue).toBe(5);
+    expect(vm.facts.reviewCount).toBe(3);
+    expect(vm.facts.duration).toBe("6 hours");
+    expect(vm.facts.startTime).toBe("8:00 AM");
+    expect(vm.facts.meetingPointFull).toBe("Palm Springs, California, USA");
+    expect(vm.content.overview.length).toBeGreaterThan(120);
+
+    const bookingUrl = new URL(vm.bookingUrl);
+    expect(bookingUrl.searchParams.get("pid")).toBe("P00290915");
+    expect(bookingUrl.searchParams.get("mcid")).toBe("42383");
+    expect(bookingUrl.searchParams.get("medium")).toBe("link");
+  });
+
 });

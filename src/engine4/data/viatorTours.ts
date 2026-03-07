@@ -158,6 +158,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "237571P2",
+    bookingUrl:
+      "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Joshua Tree",
+      citySlug: "joshua-tree",
+    },
+    slug: "full-day-hike-in-joshua-tree-national-park-237571p2",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "6740P7",
     bookingUrl:
       "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7?pid=P00290915&mcid=42383&medium=link&currency=USD",
@@ -728,6 +745,72 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "How physically demanding is the experience?",
         answer:
           "Expect moderate physical activity with uneven terrain and repeated stepping and scrambling on rock surfaces.",
+      },
+    ],
+  },
+  "237571P2": {
+    productCode: "237571P2",
+    title: "Full-Day Hike in Joshua Tree National Park",
+    sourceUrl:
+      "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+    fromPrice: "$199.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 3,
+    duration: "6 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "Palm Springs, California, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Guided full-day Joshua Tree hiking experience with route planning, park insights, and desert viewpoints from the Palm Springs area.",
+    overview:
+      "This full-day Joshua Tree hiking tour is built for travelers who want to spend real trail time inside the park with a guide handling navigation and day structure. Rather than a quick scenic pass, the experience focuses on extended hiking segments through boulder fields, desert basins, and elevated viewpoints while your guide shares context on Joshua Tree geology, ecology, and route history. The pace is active but managed, with breaks for hydration, photos, and terrain coaching so guests can enjoy more of the park in one day without overcomplicating logistics. It is a strong fit for active visitors who want a hike-first Joshua Tree outing from the Palm Springs area.",
+    highlights: [
+      "Guided full-day hiking route inside Joshua Tree National Park",
+      "Longer trail focus compared with typical half-day scenic tours",
+      "Route support, pacing guidance, and desert safety context",
+      "Frequent viewpoints for photos and landscape interpretation",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    itinerary: [
+      {
+        title: "Palm Springs departure",
+        description:
+          "Meet in the Palm Springs area and transfer toward Joshua Tree for a guided full-day hiking plan.",
+      },
+      {
+        title: "Guided Joshua Tree trail segments",
+        description:
+          "Hike multiple terrain zones with guide-led navigation, pacing support, and interpretation of desert features.",
+      },
+      {
+        title: "Scenic viewpoints and return",
+        description:
+          "Pause at major overlooks and signature rock landscapes before returning to the Palm Springs area.",
+      },
+    ],
+    faqs: [
+      {
+        question: "How long is the Full-Day Hike in Joshua Tree National Park?",
+        answer:
+          "The listing is structured as a full-day outing and is mapped as approximately 6 hours.",
+      },
+      {
+        question: "Where does the tour meet?",
+        answer:
+          "The mapped meeting area is Palm Springs, California, USA, with final coordination provided after booking.",
+      },
+      {
+        question: "Is this a sightseeing drive or an active hike?",
+        answer:
+          "This product is positioned as a hike-first Joshua Tree experience with substantial trail time and guide-led route support.",
       },
     ],
   },
