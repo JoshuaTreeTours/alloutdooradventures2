@@ -68,6 +68,7 @@ const logEngine4ImageDecision = (input: {
   candidates: string[];
   resolvedHeroImage?: string;
   fallbackUsed: boolean;
+  apiImageIgnored: boolean;
   downstreamOverwriteBlocked: boolean;
 }) => {
   if (
@@ -85,6 +86,10 @@ const logEngine4ImageDecision = (input: {
   console.info(
     `[engine4-image] resolvedHeroImage=${input.resolvedHeroImage ?? "<none>"}`
   );
+  console.info(
+    `[engine4-image] apiImageIgnored=${String(input.apiImageIgnored)}`
+  );
+  console.info(`[engine4-image] homepageFallbackUsed=false`);
   console.info(`[engine4-image] fallbackUsed=${String(input.fallbackUsed)}`);
   console.info(
     `[engine4-image] downstreamOverwriteBlocked=${String(input.downstreamOverwriteBlocked)}`
@@ -163,9 +168,9 @@ const logEngine4ApiProvenance = (input: {
         : fallbackTour?.itinerary && fallbackTour.itinerary.length > 0
           ? "fallback"
           : "missing",
-    image: resolveViatorPrimaryImageFromApiTour(apiTour)
+    image: hasApiText(apiTour?.sourceDerivedImageUrl)
       ? "api"
-      : resolveViatorPrimaryImageFromApiTour(fallbackTour)
+      : hasApiText(fallbackTour?.sourceDerivedImageUrl)
         ? "fallback"
         : "missing",
   };
@@ -176,12 +181,17 @@ const logEngine4ApiProvenance = (input: {
 
   console.info(`[engine4-api] product=${productCode}`);
   console.info(`[engine4-api] apiFetch=${String(Boolean(apiTour))}`);
-  console.info(`[engine4-api] primaryImageSource=${sourceFor.image}`);
+  console.info(`[engine4-api] factSource=api-first`);
+  console.info(
+    `[engine4-image] imageSource=${sourceFor.image === "api" ? "source-code" : sourceFor.image}`
+  );
   console.info(`[engine4-api] priceSource=${sourceFor.price}`);
   console.info(`[engine4-api] ratingSource=${sourceFor.rating}`);
   console.info(`[engine4-api] reviewCountSource=${sourceFor.reviewCount}`);
   console.info(`[engine4-api] durationSource=${sourceFor.duration}`);
-  console.info(`[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`);
+  console.info(
+    `[engine4-api] fallbackFields=${JSON.stringify(fallbackFields)}`
+  );
 };
 
 export const mapViatorToEngine4Tour = (input: {
@@ -312,10 +322,11 @@ export const mapViatorToEngine4Tour = (input: {
   });
 
   const canonicalImage =
-    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
     cleanText(resolvedApiTour?.primaryImageUrl) ??
     cleanText(resolvedApiTour?.galleryImages?.[0]) ??
-    cleanText(resolvedApiTour?.sourceDerivedImageUrl);
+    resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
+    cleanText(resolvedApiTour?.sourceDerivedImageUrl) ??
+    cleanText(record.heroImage);
 
   const resolvedHeroImage = resolveEngine4ViatorHero({
     productCode: record.productCode,
@@ -359,6 +370,18 @@ export const mapViatorToEngine4Tour = (input: {
     },
   };
 
+  const sourceDerivedImage = cleanText(resolvedApiTour?.sourceDerivedImageUrl);
+  const apiMediaCandidateExists = Boolean(
+    cleanText(resolvedApiTour?.primaryImageUrl) ||
+    (resolvedApiTour?.galleryImages ?? []).some(image =>
+      Boolean(cleanText(image))
+    )
+  );
+  const apiImageIgnored = Boolean(
+    apiMediaCandidateExists &&
+    sourceDerivedImage &&
+    tour.heroImage === sourceDerivedImage
+  );
   const candidates = Array.from(
     new Set(
       [
@@ -377,6 +400,7 @@ export const mapViatorToEngine4Tour = (input: {
     candidates,
     resolvedHeroImage: tour.heroImage ?? undefined,
     fallbackUsed: tour.heroImage.startsWith("data:image/svg+xml"),
+    apiImageIgnored,
     downstreamOverwriteBlocked: Boolean(tour.primaryImage),
   });
 

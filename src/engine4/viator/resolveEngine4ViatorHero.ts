@@ -1,56 +1,178 @@
 import { engine4ViatorTours } from "../data/viatorTours";
 import type { Engine4ViatorApiTour } from "../types";
-import { resolveViatorPrimaryImageFromApiTour } from "./resolveViatorPrimaryImage";
 
-const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
+type UnknownRecord = Record<string, unknown>;
+
 const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
+const HERO_PATH_REGEX = /\/(?:media\/photo-o\/|media\/attractions-splice)/i;
+const UNRELATED_TEXT_REGEX =
+  /(traveler|review|avatar|profile|user-photo|homepage|home-hero|default-hero|placeholder)/i;
+const THUMBNAIL_ONLY_REGEX =
+  /(?:\/photo-s\/|\/photo-l\/|[?&](?:w|width)=(?:1\d\d|\d\d)(?:&|$)|[?&](?:h|height)=(?:1\d\d|\d\d)(?:&|$))/i;
 
-const isTrackerPixel = (url: string) =>
-  /(?:[?&](?:w|width)=1(?:&|$))|(?:[?&](?:h|height)=1(?:&|$))|\/1x1(?:\.|\/|$)/i.test(
-    url
-  );
+const asRecord = (value: unknown): UnknownRecord | undefined =>
+  typeof value === "object" && value !== null
+    ? (value as UnknownRecord)
+    : undefined;
 
-const hasAllowedImagePath = (pathname: string) =>
-  /\/(?:media\/photo-o|media\/attractions-splice-|media\/photo-l|media\/photo-s)\//i.test(
-    pathname
-  ) || /\.(?:jpg|jpeg|png|webp)$/i.test(pathname);
+const asNonEmptyString = (value: unknown): string | undefined =>
+  typeof value === "string" && value.trim().length > 0
+    ? value.trim()
+    : undefined;
 
-const hasAllowedImageHost = (host: string) =>
-  ALLOWED_HOSTS.some(pattern => pattern.test(host));
-
-const isValidHeroCandidate = (value?: string): boolean => {
-  if (!value) {
-    return false;
-  }
-
-  const trimmed = value.trim();
-  if (!trimmed) {
-    return false;
-  }
-
+const asValidHero = (value: unknown): string | undefined => {
+  const url = asNonEmptyString(value);
   if (
-    INVALID_SCHEMES.some(scheme => trimmed.toLowerCase().startsWith(scheme))
+    !url ||
+    UNRELATED_TEXT_REGEX.test(url) ||
+    THUMBNAIL_ONLY_REGEX.test(url)
   ) {
-    return false;
+    return undefined;
   }
 
   try {
-    const parsed = new URL(trimmed);
-    if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
-      return false;
+    const parsed = new URL(url);
+    if (parsed.protocol !== "https:") {
+      return undefined;
     }
 
-    if (isTrackerPixel(trimmed)) {
-      return false;
+    if (!ALLOWED_HOSTS.some(host => host.test(parsed.hostname))) {
+      return undefined;
     }
 
-    return (
-      hasAllowedImageHost(parsed.hostname) &&
-      hasAllowedImagePath(parsed.pathname)
-    );
+    if (!HERO_PATH_REGEX.test(parsed.pathname)) {
+      return undefined;
+    }
+
+    return url;
   } catch {
-    return false;
+    return undefined;
   }
+};
+
+const toImageUrlFromNode = (node: unknown): string | undefined => {
+  const row = asRecord(node);
+  if (!row) {
+    return asValidHero(node);
+  }
+
+  const direct =
+    asValidHero(row.url) ??
+    asValidHero(row.imageUrl) ??
+    asValidHero(asRecord(row.large)?.url) ??
+    asValidHero(asRecord(row.hero)?.url);
+  if (direct) {
+    return direct;
+  }
+
+  const variants = asRecord(row.variants);
+  if (variants) {
+    return (
+      asValidHero(asRecord(variants.xxlarge)?.url) ??
+      asValidHero(asRecord(variants.xlarge)?.url) ??
+      asValidHero(asRecord(variants.large)?.url) ??
+      asValidHero(asRecord(variants.original)?.url)
+    );
+  }
+
+  return undefined;
+};
+
+const isOfficialProductImage = (node: unknown): boolean => {
+  const row = asRecord(node);
+  if (!row) {
+    return true;
+  }
+
+  const classificationFields = [
+    row.type,
+    row.imageType,
+    row.category,
+    row.source,
+    row.kind,
+    row.caption,
+    row.altText,
+  ]
+    .map(asNonEmptyString)
+    .filter((value): value is string => Boolean(value))
+    .join(" ");
+
+  return !UNRELATED_TEXT_REGEX.test(classificationFields);
+};
+
+const collectPrimaryFieldCandidates = (
+  apiTour?: Engine4ViatorApiTour
+): string[] => {
+  const payload = asRecord(apiTour?.rawProductPayload);
+  const maybeProduct = asRecord(payload?.product);
+
+  const sources: unknown[] = [
+    apiTour?.primaryImageUrl,
+    payload?.primaryImageUrl,
+    payload?.coverImageUrl,
+    payload?.heroImageUrl,
+    maybeProduct?.primaryImageUrl,
+    maybeProduct?.coverImageUrl,
+    maybeProduct?.heroImageUrl,
+    payload?.primaryImage,
+    payload?.coverImage,
+    payload?.heroImage,
+    maybeProduct?.primaryImage,
+    maybeProduct?.coverImage,
+    maybeProduct?.heroImage,
+  ];
+
+  return sources
+    .map(toImageUrlFromNode)
+    .filter((value): value is string => Boolean(value));
+};
+
+const collectOfficialImageArrayCandidates = (
+  apiTour?: Engine4ViatorApiTour
+): string[] => {
+  const payload = asRecord(apiTour?.rawProductPayload);
+  const maybeProduct = asRecord(payload?.product);
+  const imageArrays = [
+    payload?.images,
+    payload?.media,
+    maybeProduct?.images,
+    maybeProduct?.media,
+    apiTour?.galleryImages,
+  ].filter(Boolean);
+
+  const candidates: string[] = [];
+
+  imageArrays.forEach(entry => {
+    if (Array.isArray(entry)) {
+      entry.forEach(image => {
+        if (!isOfficialProductImage(image)) {
+          return;
+        }
+        const candidate = toImageUrlFromNode(image);
+        if (candidate) {
+          candidates.push(candidate);
+        }
+      });
+      return;
+    }
+
+    const row = asRecord(entry);
+    if (!row) {
+      return;
+    }
+
+    Object.values(row).forEach(value => {
+      if (!isOfficialProductImage(value)) {
+        return;
+      }
+      const candidate = toImageUrlFromNode(value);
+      if (candidate) {
+        candidates.push(candidate);
+      }
+    });
+  });
+
+  return candidates;
 };
 
 const toInlinePlaceholder = () =>
@@ -68,23 +190,12 @@ export const resolveEngine4ViatorHero = (input: {
     tour => tour.productCode.toUpperCase() === normalizedCode
   );
 
-  const canonicalApiImage = resolveViatorPrimaryImageFromApiTour(input.apiTour);
-
   const candidates = [
-    canonicalApiImage,
-    input.apiTour?.primaryImageUrl,
-    input.apiTour?.galleryImages?.[0],
-    input.apiTour?.sourceDerivedImageUrl,
-    tourRecord?.heroImage,
-  ];
+    ...collectPrimaryFieldCandidates(input.apiTour),
+    ...collectOfficialImageArrayCandidates(input.apiTour),
+    asValidHero(input.apiTour?.sourceDerivedImageUrl),
+    asValidHero(tourRecord?.heroImage),
+  ].filter((value): value is string => Boolean(value));
 
-  const selected = candidates.find(candidate =>
-    isValidHeroCandidate(candidate)
-  );
-
-  if (selected) {
-    return selected;
-  }
-
-  return toInlinePlaceholder();
+  return candidates[0] ?? toInlinePlaceholder();
 };

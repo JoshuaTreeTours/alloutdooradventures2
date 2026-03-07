@@ -61,9 +61,14 @@ describe("getEngine4ViatorTourData", () => {
     expect(tour?.rating).toBe(4.8);
     expect(tour?.reviewCount).toBe(33);
     expect(tour?.duration).toBe("4 hours");
-    expect(tour?.meetingPoint).toBe("Joshua Tree National Park, California, USA");
+    expect(tour?.meetingPoint).toBe(
+      "Joshua Tree National Park, California, USA"
+    );
     expect(tour?.primaryImageUrl).toContain("api-jt-climb.jpg");
-    expect(tour?.inclusions).toEqual(["Professional guide", "Climbing equipment"]);
+    expect(tour?.inclusions).toEqual([
+      "Professional guide",
+      "Climbing equipment",
+    ]);
     expect(tour?.exclusions).toEqual(["Gratuities"]);
   });
 
@@ -87,5 +92,48 @@ describe("getEngine4ViatorTourData", () => {
     expect(tour?.fromPrice).toBe("255.00");
     expect(tour?.rating).toBe(4.7);
     expect(tour?.reviewCount).toBe(35);
+  });
+
+  it("hydrates 335698P13 facts from API while locking canonical source-derived image", async () => {
+    mockedFetchViator.mockResolvedValue({
+      product: {
+        productCode: "335698P13",
+        title: "Rock Scrambling Adventures in Joshua Tree National Park",
+        productUrl:
+          "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13",
+        priceFrom: "209.00",
+        currencyCode: "USD",
+        rating: 4.9,
+        reviewCount: 18,
+        duration: "4 hours",
+        startTime: "8:00 AM",
+        meetingPoint: "Joshua Tree National Park, California, USA",
+        cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+        images: [
+          {
+            variants: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/99/api-image.jpg?w=1100&h=800&s=1",
+                width: 1100,
+                height: 800,
+              },
+            ],
+          },
+        ],
+      },
+    } as never);
+
+    const tour = await getEngine4ViatorTourData("335698P13");
+
+    expect(tour?.productCode).toBe("335698P13");
+    expect(tour?.fromPrice).toBe("209.00");
+    expect(tour?.rating).toBe(4.9);
+    expect(tour?.reviewCount).toBe(18);
+    expect(tour?.duration).toBe("4 hours");
+    expect(tour?.startTime).toBe("8:00 AM");
+    expect(tour?.sourceDerivedImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/6c/2d/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(tour?.primaryImageUrl).toContain("api-image.jpg");
   });
 });
