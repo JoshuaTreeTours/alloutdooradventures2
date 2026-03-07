@@ -53,12 +53,19 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import { getEngine5TourBySlugs } from "../../../../engine5/routing";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
+import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
+import Engine5TourPage from "../../../../engine5/components/Engine5TourPage";
+import {
+  engine5ViatorApiFallbackByProductCode,
+  engine5ViatorTours,
+} from "../../../../engine5/data/viatorTours";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -98,9 +105,34 @@ export default function CityTourDetailRoute({
   const engine2Tour =
     getEngine2TourBySlug(params.stateSlug, params.citySlug, params.tourSlug) ??
     getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
+    getEngine5TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
     getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
 
   if (engine2Tour) {
+
+    if (
+      engine2Tour.engine === "engine5" &&
+      engine2Tour.bookingProvider === "viator"
+    ) {
+      const productCode = engine2Tour.id.toUpperCase();
+      const tourRecord = engine5ViatorTours.find(
+        entry => entry.productCode.toUpperCase() === productCode
+      );
+
+      if (!tourRecord) {
+        return null;
+      }
+
+      return (
+        <Engine5TourPage
+          tour={mapViatorToEngine5Tour({
+            record: tourRecord,
+            apiTour: engine5ViatorApiFallbackByProductCode[productCode],
+          })}
+        />
+      );
+    }
+
     if (
       engine2Tour.engine === "engine4" &&
       engine2Tour.bookingProvider === "viator"
