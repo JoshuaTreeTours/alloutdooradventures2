@@ -10,6 +10,13 @@ This is the reusable onboarding contract for adding new Engine4 Viator tours.
 
 Never use destination scenic fallbacks or cross-product image inheritance.
 
+## Provenance requirement (hardened)
+
+- API image candidates must be tied to the exact `productCode` being resolved.
+- For strict-provenance products, API candidates are rejected unless they can be traced to that product's raw payload image graph.
+- If candidate provenance is uncertain, reject the candidate and prefer override/missing over wrong.
+- Diagnostics must include rejected candidates and acceptance reason.
+
 ## Add New Tour workflow
 
 1. Add a product record to `engine4ViatorTours`.

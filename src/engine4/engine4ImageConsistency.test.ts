@@ -49,7 +49,7 @@ describe("Engine4 Viator image consistency", () => {
     expect(diagnostics.finalSelectedHeroUrl).toBeDefined();
   });
 
-  it("keeps 237571P2 consistent across page/card/og/schema using API hero governance", () => {
+  it("keeps 237571P2 consistent across page/card/og/schema with strict provenance governance", () => {
     assertHeroConsistencyForProduct({
       productCode: "237571P2",
       stateSlug: "california",
@@ -61,12 +61,13 @@ describe("Engine4 Viator image consistency", () => {
 
     const diagnostics = assertHeroSelectionSource({
       productCode: "237571P2",
-      expectedSource: "api",
+      expectedSource: "override",
     });
 
-    expect(diagnostics.overridePresent).toBe(false);
-    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.overridePresent).toBe(true);
+    expect(diagnostics.overrideUsed).toBe(true);
     expect(diagnostics.resolutionStatus).toBe("ok");
+    expect(diagnostics.rejectedCandidates.length).toBeGreaterThan(0);
   });
 
   it("keeps at least 3 unrelated tours stable and consistent", () => {

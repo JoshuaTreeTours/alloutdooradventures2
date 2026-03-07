@@ -196,7 +196,7 @@ describe("Engine4 Viator hero governance resolver", () => {
     ]);
   });
 
-  it("reports full diagnostics for 237571P2 via API source", () => {
+  it("reports strict provenance diagnostics for 237571P2 and falls back to override", () => {
     const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
       productCode: "237571P2",
       apiTour: {
@@ -211,14 +211,53 @@ describe("Engine4 Viator hero governance resolver", () => {
 
     expect(diagnostics).toEqual({
       productCode: "237571P2",
-      apiImagePresent: true,
-      overridePresent: false,
-      overrideUsed: false,
+      apiImagePresent: false,
+      overridePresent: true,
+      overrideUsed: true,
       finalSelectedHeroUrl:
         "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
-      selectionSource: "api",
+      selectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+      selectionSource: "override",
       contaminationBlocked: false,
       resolutionStatus: "ok",
+      rejectedCandidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+          source: "api.primaryImageUrl",
+          reason: "missing_raw_product_payload_provenance",
+        },
+      ],
+      acceptedCandidateReason:
+        "Accepted locked per-product override because API candidates were rejected or missing.",
     });
+  });
+
+  it("rejects 237571P2 bike-tour contamination candidates from API fields", () => {
+    const bikeTourImage =
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1";
+
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "237571P2",
+      apiTour: {
+        productCode: "237571P2",
+        title: "Full-Day Hike in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+        primaryImageUrl: bikeTourImage,
+        galleryImages: [bikeTourImage],
+      },
+    });
+
+    expect(
+      diagnostics.rejectedCandidates.filter(
+        candidate =>
+          candidate.reason === "missing_raw_product_payload_provenance"
+      ).length
+    ).toBeGreaterThanOrEqual(1);
+    expect(diagnostics.selectionSource).toBe("override");
+    expect(diagnostics.selectedHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
+    );
   });
 });
