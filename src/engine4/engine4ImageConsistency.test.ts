@@ -30,6 +30,28 @@ describe("Engine4 Viator image consistency", () => {
     expect(p5.heroImage).not.toBe(palmSpringsHero);
   });
 
+  it("keeps 36001P1 consistent across page/card/og/schema via API images[]", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "36001P1",
+      stateSlug: "california",
+      citySlug: "san-francisco",
+      tourSlug: "yosemite-in-a-day-tour-from-san-francisco-36001p1",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "36001P1",
+      expectedSource: "api-images-payload",
+    });
+
+    expect(diagnostics.apiImagesPayloadCandidates).toEqual([
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+    ]);
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+  });
+
   it("keeps 335698P13 locked and consistent across page/card/og/schema", () => {
     assertHeroConsistencyForProduct({
       productCode: "335698P13",
