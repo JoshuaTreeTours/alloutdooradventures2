@@ -192,6 +192,61 @@ const resolveViatorCoverVariant = (
   variantCount: number;
   selectedVariant?: PayloadVariant;
 } => {
+  const exactProductImages = apiTour?.exactProductImages;
+  if (exactProductImages && exactProductImages.length > 0) {
+    const parsed = exactProductImages
+      .map(
+        (image): PayloadImage => ({
+          isCover: Boolean(image.isCover === true),
+          variants: (image.variants ?? []).filter(variant =>
+            isValidEngine4ViatorHeroCandidate(variant.url)
+          ),
+        })
+      )
+      .filter(item => item.variants.length > 0);
+
+    const coverImagePresent = parsed.some(image => image.isCover);
+    const orderedImages = parsed.sort(
+      (a, b) => Number(b.isCover) - Number(a.isCover)
+    );
+    const selectedImage = orderedImages[0];
+    const variantCount = selectedImage?.variants.length ?? 0;
+    const selectedVariant = selectedImage
+      ? [...selectedImage.variants].sort((a, b) => {
+          const aLandscape = (a.width ?? 0) >= (a.height ?? 0);
+          const bLandscape = (b.width ?? 0) >= (b.height ?? 0);
+          const aPreferred = aLandscape && (a.width ?? 0) >= 1100;
+          const bPreferred = bLandscape && (b.width ?? 0) >= 1100;
+          if (aPreferred !== bPreferred) {
+            return Number(bPreferred) - Number(aPreferred);
+          }
+
+          const widthDelta = (b.width ?? 0) - (a.width ?? 0);
+          if (widthDelta !== 0) {
+            return widthDelta;
+          }
+
+          return rankVariant(b.url) - rankVariant(a.url);
+        })[0]
+      : undefined;
+
+    const candidates = selectedVariant ? [selectedVariant.url] : [];
+
+    if (candidates.length === 0) {
+      rejectedCandidates.push({
+        source: "api.images[]",
+        reason: "images_payload_no_valid_candidates",
+      });
+    }
+
+    return {
+      candidates: Array.from(new Set(candidates)),
+      coverImagePresent,
+      variantCount,
+      selectedVariant,
+    };
+  }
+
   const raw = asRecord(apiTour?.rawProductPayload);
   const images = Array.isArray(raw?.images) ? raw?.images : undefined;
 

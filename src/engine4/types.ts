@@ -41,6 +41,14 @@ export type Engine4TourContent = {
 };
 
 export type Engine4ViatorApiTour = {
+  exactProductImages?: Array<{
+    isCover: boolean;
+    variants: Array<{
+      url: string;
+      width?: number;
+      height?: number;
+    }>;
+  }>;
   description?: string;
   descriptionLong?: string;
   itinerary?: Array<{
