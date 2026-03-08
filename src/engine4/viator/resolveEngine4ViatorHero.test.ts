@@ -252,6 +252,11 @@ describe("Engine4 Viator hero governance resolver", () => {
           source: "api.images[]",
           reason: "images_payload_missing",
         },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+          source: "api.images[]",
+          reason: "not_from_images_payload",
+        },
       ],
       acceptedCandidateReason:
         "Accepted locked per-product override because no safe exact-product images[] candidate was available.",
@@ -303,6 +308,11 @@ describe("Engine4 Viator hero governance resolver", () => {
       trustedImagesPayloadHero,
     ]);
     expect(diagnostics.selectedHeroUrl).not.toBe(bikeTourImage);
+    expect(diagnostics.rejectedCandidates).toContainEqual({
+      url: bikeTourImage,
+      source: "api.images[]",
+      reason: "not_from_images_payload",
+    });
     expect(diagnostics.coverImagePresent).toBe(true);
     expect(diagnostics.variantCount).toBe(1);
     expect(diagnostics.selectedVariantUrl).toBe(trustedImagesPayloadHero);

@@ -276,6 +276,19 @@ const extractLegacyMappedCandidates = (
   );
 };
 
+const collectLegacyCandidatesForDiagnostics = (
+  apiTour: Engine4ViatorApiTour | undefined,
+  rejectedCandidates: Engine4ViatorRejectedCandidate[]
+) => {
+  extractLegacyMappedCandidates(apiTour).forEach(url => {
+    rejectedCandidates.push({
+      url,
+      source: "api.images[]",
+      reason: "not_from_images_payload",
+    });
+  });
+};
+
 export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
   productCode: string;
   apiTour?: Engine4ViatorApiTour;
@@ -311,6 +324,10 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
     trustedApiCandidate = imagesPayloadCandidates.find(url =>
       isValidEngine4ViatorHeroCandidate(url)
     );
+
+    if (strictImagesPayloadOnly) {
+      collectLegacyCandidatesForDiagnostics(input.apiTour, rejectedCandidates);
+    }
 
     if (!trustedApiCandidate && !strictImagesPayloadOnly) {
       trustedApiCandidate = extractLegacyMappedCandidates(input.apiTour)[0];
