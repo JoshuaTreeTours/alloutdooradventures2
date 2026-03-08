@@ -53,6 +53,13 @@ export type Engine4ViatorHeroDiagnostics = {
   variantCount?: number;
   selectedVariantUrl?: string;
   selectedVariantWidth?: number;
+  selectedImageIndex?: number;
+  legacySelectedVariantUrl?: string;
+  exactProductImagesInOrder: Array<{
+    imageIndex: number;
+    isCover: boolean;
+    variantUrls: string[];
+  }>;
 };
 
 const isTrackerPixel = (url: string) =>
@@ -123,9 +130,11 @@ type PayloadVariant = {
   url: string;
   width?: number;
   height?: number;
+  variantIndex: number;
 };
 
 type PayloadImage = {
+  imageIndex: number;
   isCover: boolean;
   variants: PayloadVariant[];
 };
@@ -183,6 +192,72 @@ const rankVariant = (url: string): number => {
   return 60;
 };
 
+const toCanonicalVariantScore = (variant: PayloadVariant): number => {
+  let score = 0;
+  const landscape = (variant.width ?? 0) >= (variant.height ?? 0);
+  if (landscape) {
+    score += 20;
+  }
+
+  if (/caption\.(?:jpg|jpeg|png|webp)(?:\?|$)/i.test(variant.url)) {
+    score += 30;
+  }
+
+  if (/(?:\?|&)w=1100(?:&|$)/i.test(variant.url)) {
+    score += 30;
+  }
+
+  if (variant.width && variant.height) {
+    const aspect = variant.width / variant.height;
+    score += Math.max(0, 20 - Math.abs(aspect - 1.375) * 100);
+    score += Math.max(0, 20 - Math.abs(variant.width - 1100) / 40);
+  }
+
+  return score;
+};
+
+const compareCanonicalVariants = (a: PayloadVariant, b: PayloadVariant): number => {
+  const scoreDelta = toCanonicalVariantScore(b) - toCanonicalVariantScore(a);
+  if (scoreDelta !== 0) {
+    return scoreDelta;
+  }
+
+  const widthTargetDelta =
+    Math.abs((a.width ?? 0) - 1100) - Math.abs((b.width ?? 0) - 1100);
+  if (widthTargetDelta !== 0) {
+    return widthTargetDelta;
+  }
+
+  const rankDelta = rankVariant(b.url) - rankVariant(a.url);
+  if (rankDelta !== 0) {
+    return rankDelta;
+  }
+
+  return a.variantIndex - b.variantIndex;
+};
+
+const selectPreferredImage = (images: PayloadImage[]): PayloadImage | undefined => {
+  if (images.length === 0) {
+    return undefined;
+  }
+
+  const coverImages = images.filter(image => image.isCover);
+  const candidates = coverImages.length > 0 ? coverImages : images;
+
+  return [...candidates].sort((a, b) => {
+    const aBest = [...a.variants].sort(compareCanonicalVariants)[0];
+    const bBest = [...b.variants].sort(compareCanonicalVariants)[0];
+
+    const qualityDelta =
+      toCanonicalVariantScore(bBest) - toCanonicalVariantScore(aBest);
+    if (qualityDelta !== 0) {
+      return qualityDelta;
+    }
+
+    return a.imageIndex - b.imageIndex;
+  })[0];
+};
+
 const resolveViatorCoverVariant = (
   apiTour: Engine4ViatorApiTour | undefined,
   rejectedCandidates: Engine4ViatorRejectedCandidate[]
@@ -191,46 +266,55 @@ const resolveViatorCoverVariant = (
   coverImagePresent: boolean;
   variantCount: number;
   selectedVariant?: PayloadVariant;
+  selectedImageIndex?: number;
+  legacySelectedVariantUrl?: string;
+  exactProductImagesInOrder: Array<{
+    imageIndex: number;
+    isCover: boolean;
+    variantUrls: string[];
+  }>;
 } => {
   const exactProductImages = apiTour?.exactProductImages;
   if (exactProductImages && exactProductImages.length > 0) {
     const parsed = exactProductImages
+      .map((image, imageIndex) => ({ image, imageIndex }))
       .map(
-        (image): PayloadImage => ({
+        ({ image, imageIndex }): PayloadImage => ({
+          imageIndex,
           isCover: Boolean(image.isCover === true),
-          variants: (image.variants ?? []).filter(variant =>
+          variants: (image.variants ?? [])
+            .map((variant, variantIndex) => ({ ...variant, variantIndex }))
+            .filter(variant =>
             isValidEngine4ViatorHeroCandidate(variant.url)
-          ),
+            ),
         })
       )
       .filter(item => item.variants.length > 0);
 
     const coverImagePresent = parsed.some(image => image.isCover);
-    const orderedImages = parsed.sort(
-      (a, b) => Number(b.isCover) - Number(a.isCover)
-    );
-    const selectedImage = orderedImages[0];
+    const selectedImage = selectPreferredImage(parsed);
     const variantCount = selectedImage?.variants.length ?? 0;
     const selectedVariant = selectedImage
+      ? [...selectedImage.variants].sort(compareCanonicalVariants)[0]
+      : undefined;
+    const legacySelectedVariantUrl = selectedImage
       ? [...selectedImage.variants].sort((a, b) => {
-          const aLandscape = (a.width ?? 0) >= (a.height ?? 0);
-          const bLandscape = (b.width ?? 0) >= (b.height ?? 0);
-          const aPreferred = aLandscape && (a.width ?? 0) >= 1100;
-          const bPreferred = bLandscape && (b.width ?? 0) >= 1100;
-          if (aPreferred !== bPreferred) {
-            return Number(bPreferred) - Number(aPreferred);
-          }
-
           const widthDelta = (b.width ?? 0) - (a.width ?? 0);
           if (widthDelta !== 0) {
             return widthDelta;
           }
-
           return rankVariant(b.url) - rankVariant(a.url);
-        })[0]
+        })[0]?.url
       : undefined;
 
     const candidates = selectedVariant ? [selectedVariant.url] : [];
+    const exactProductImagesInOrder = parsed
+      .sort((a, b) => a.imageIndex - b.imageIndex)
+      .map(image => ({
+        imageIndex: image.imageIndex,
+        isCover: image.isCover,
+        variantUrls: image.variants.map(variant => variant.url),
+      }));
 
     if (candidates.length === 0) {
       rejectedCandidates.push({
@@ -244,6 +328,9 @@ const resolveViatorCoverVariant = (
       coverImagePresent,
       variantCount,
       selectedVariant,
+      selectedImageIndex: selectedImage?.imageIndex,
+      legacySelectedVariantUrl,
+      exactProductImagesInOrder,
     };
   }
 
@@ -259,44 +346,56 @@ const resolveViatorCoverVariant = (
       candidates: [],
       coverImagePresent: false,
       variantCount: 0,
+      exactProductImagesInOrder: [],
     };
   }
 
   const parsed = images
-    .map(entry => asRecord(entry))
+    .map((entry, imageIndex) => ({ entry: asRecord(entry), imageIndex }))
+    .filter(
+      (row): row is { entry: Record<string, unknown>; imageIndex: number } =>
+        Boolean(row.entry)
+    )
+    .map(({ entry, imageIndex }) => ({
+      ...entry,
+      imageIndex,
+    }))
     .filter((entry): entry is Record<string, unknown> => Boolean(entry))
     .map((image): PayloadImage => ({
+      imageIndex: asNumber((image as Record<string, unknown>).imageIndex) ?? 0,
       isCover: Boolean(image.isCover === true),
-      variants: extractVariants(image).filter(variant =>
+      variants: extractVariants(image)
+        .map((variant, variantIndex) => ({ ...variant, variantIndex }))
+        .filter(variant =>
         isValidEngine4ViatorHeroCandidate(variant.url)
-      ),
+        ),
     }))
     .filter(item => item.variants.length > 0);
 
   const coverImagePresent = parsed.some(image => image.isCover);
-  const orderedImages = parsed.sort((a, b) => Number(b.isCover) - Number(a.isCover));
-  const selectedImage = orderedImages[0];
+  const selectedImage = selectPreferredImage(parsed);
   const variantCount = selectedImage?.variants.length ?? 0;
   const selectedVariant = selectedImage
+    ? [...selectedImage.variants].sort(compareCanonicalVariants)[0]
+    : undefined;
+  const legacySelectedVariantUrl = selectedImage
     ? [...selectedImage.variants].sort((a, b) => {
-        const aLandscape = (a.width ?? 0) >= (a.height ?? 0);
-        const bLandscape = (b.width ?? 0) >= (b.height ?? 0);
-        const aPreferred = aLandscape && (a.width ?? 0) >= 1100;
-        const bPreferred = bLandscape && (b.width ?? 0) >= 1100;
-        if (aPreferred !== bPreferred) {
-          return Number(bPreferred) - Number(aPreferred);
-        }
-
         const widthDelta = (b.width ?? 0) - (a.width ?? 0);
         if (widthDelta !== 0) {
           return widthDelta;
         }
-
         return rankVariant(b.url) - rankVariant(a.url);
-      })[0]
+      })[0]?.url
     : undefined;
 
   const candidates = selectedVariant ? [selectedVariant.url] : [];
+  const exactProductImagesInOrder = parsed
+    .sort((a, b) => a.imageIndex - b.imageIndex)
+    .map(image => ({
+      imageIndex: image.imageIndex,
+      isCover: image.isCover,
+      variantUrls: image.variants.map(variant => variant.url),
+    }));
 
   if (candidates.length === 0) {
     rejectedCandidates.push({
@@ -310,6 +409,9 @@ const resolveViatorCoverVariant = (
     coverImagePresent,
     variantCount,
     selectedVariant,
+    selectedImageIndex: selectedImage?.imageIndex,
+    legacySelectedVariantUrl,
+    exactProductImagesInOrder,
   };
 };
 
@@ -436,6 +538,9 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
     variantCount: payloadSelection.variantCount,
     selectedVariantUrl: payloadSelection.selectedVariant?.url,
     selectedVariantWidth: payloadSelection.selectedVariant?.width,
+    selectedImageIndex: payloadSelection.selectedImageIndex,
+    legacySelectedVariantUrl: payloadSelection.legacySelectedVariantUrl,
+    exactProductImagesInOrder: payloadSelection.exactProductImagesInOrder,
   };
 
   if (shouldLogDiagnostics) {
