@@ -121,6 +121,43 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.meetingPointShort).toBe("Palm Springs");
   });
 
+  it("prefers exact-product images[] variants for gallery + hero provenance", () => {
+    const record = engine4ViatorTours.find(tour => tour.productCode === "74828P5");
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "74828P5",
+        title: "Historic Aspen Walking Tour",
+        sourceUrl:
+          "https://www.viator.com/tours/Aspen/Historic-Aspen-Walking-Tour/d26395-74828P5",
+        exactProductImages: [
+          {
+            isCover: true,
+            variants: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
+                width: 1100,
+                height: 800,
+              },
+            ],
+          },
+        ],
+        galleryImages: [
+          "https://dynamic-media.tacdn.com/media/photo-o/00/00/00/00/caption.jpg?w=400&h=300&s=1",
+        ],
+      },
+    });
+
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.galleryImages[0]).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1"
+    );
+  });
+
   it("maps Joshua Tree rock scrambling with populated facts and TACDN hero", () => {
     const record = engine4ViatorTours.find(
       tour => tour.productCode === "335698P13"

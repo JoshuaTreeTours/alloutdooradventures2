@@ -90,6 +90,85 @@ const extractItinerary = (product: Record<string, unknown>) => {
   return itinerary.length > 0 ? itinerary : undefined;
 };
 
+type ExactProductVariant = { url: string; width?: number; height?: number };
+type ExactProductImage = { isCover: boolean; variants: ExactProductVariant[] };
+
+const asNumber = (value: unknown): number | undefined =>
+  typeof value === "number" && Number.isFinite(value) ? value : undefined;
+
+const extractImageVariants = (image: Record<string, unknown>) => {
+  const variants: ExactProductVariant[] = [];
+
+  const directUrl = asImage(image.url);
+  if (directUrl) {
+    variants.push({
+      url: directUrl,
+      width: asNumber(image.width),
+      height: asNumber(image.height),
+    });
+  }
+
+  const rawVariants = Array.isArray(image.variants) ? image.variants : [];
+  rawVariants.forEach(entry => {
+    const variant = asRecord(entry);
+    const url = asImage(variant?.url);
+    if (!url) {
+      return;
+    }
+    variants.push({
+      url,
+      width: asNumber(variant?.width),
+      height: asNumber(variant?.height),
+    });
+  });
+
+  return Array.from(new Map(variants.map(item => [item.url, item])).values());
+};
+
+const rankVariant = (variant: ExactProductVariant) => {
+  if (/caption\.(?:jpg|jpeg|png|webp)(?:\?|$)/i.test(variant.url)) {
+    return 100;
+  }
+  if (/(?:\?|&)w=1100(?:&|$)/i.test(variant.url)) {
+    return 95;
+  }
+  return 60;
+};
+
+const sortVariants = (variants: ExactProductVariant[]) =>
+  [...variants].sort((a, b) => {
+    const aLandscape = (a.width ?? 0) >= (a.height ?? 0);
+    const bLandscape = (b.width ?? 0) >= (b.height ?? 0);
+    const aPreferred = aLandscape && (a.width ?? 0) >= 1100;
+    const bPreferred = bLandscape && (b.width ?? 0) >= 1100;
+    if (aPreferred !== bPreferred) {
+      return Number(bPreferred) - Number(aPreferred);
+    }
+
+    const widthDelta = (b.width ?? 0) - (a.width ?? 0);
+    if (widthDelta !== 0) {
+      return widthDelta;
+    }
+
+    return rankVariant(b) - rankVariant(a);
+  });
+
+const extractExactProductImages = (
+  product: Record<string, unknown>
+): ExactProductImage[] => {
+  const images = Array.isArray(product.images) ? product.images : [];
+
+  return images
+    .map(entry => asRecord(entry))
+    .filter((entry): entry is Record<string, unknown> => Boolean(entry))
+    .map(image => ({
+      isCover: image.isCover === true,
+      variants: sortVariants(extractImageVariants(image)),
+    }))
+    .filter(image => image.variants.length > 0)
+    .sort((a, b) => Number(b.isCover) - Number(a.isCover));
+};
+
 const joinTextArray = (value: unknown): string | undefined => {
   const parts = toStringArray(value);
   return parts.length > 0 ? parts.join(" ") : undefined;
@@ -119,19 +198,24 @@ export const getEngine4ViatorTourData = async (
     const product =
       (payload.product as Record<string, unknown> | undefined) ?? payload;
 
-    const primaryImageUrl = asImage(resolveViatorPrimaryImage(product));
+    const exactProductImages = extractExactProductImages(product);
+    const exactProductImageUrls = exactProductImages
+      .map(image => image.variants[0]?.url)
+      .filter((url): url is string => Boolean(url));
 
-    const galleryImages = (
-      (product.images as Array<Record<string, unknown>> | undefined) ?? []
-    )
-      .map(image =>
-        asImage(
-          image.url ??
-            (image.variants as Array<Record<string, unknown>> | undefined)?.[0]
-              ?.url
+    const primaryImageUrl =
+      exactProductImageUrls[0] ?? asImage(resolveViatorPrimaryImage(product));
+
+    const galleryImages = Array.from(
+      new Set([
+        ...exactProductImageUrls,
+        ...(
+          (product.images as Array<Record<string, unknown>> | undefined) ?? []
         )
-      )
-      .filter((image): image is string => Boolean(image));
+          .map(image => asImage(image.url))
+          .filter((image): image is string => Boolean(image)),
+      ])
+    );
 
     const itinerary = extractItinerary(product);
     const description =
@@ -156,6 +240,7 @@ export const getEngine4ViatorTourData = async (
 
     return {
       productCode: normalizedCode,
+      exactProductImages,
       title: cleanText(product.title) ?? cleanText(product.productTitle) ?? "",
       sourceUrl:
         cleanText(product.productUrl) ??

@@ -29,6 +29,15 @@ const cleanText = (value?: string | null) => {
 
 const toSentence = (values: string[]) => values.join(" ").trim();
 
+const toCanonicalImageUrls = (images: Engine4ViatorApiTour["exactProductImages"]) =>
+  Array.from(
+    new Set(
+      (images ?? [])
+        .map(image => image.variants[0]?.url)
+        .filter((url): url is string => Boolean(cleanText(url)))
+    )
+  );
+
 const coalesceText = (...values: Array<string | undefined>) => {
   for (const value of values) {
     const cleaned = cleanText(value);
@@ -120,6 +129,10 @@ export const mapViatorToEngine4Tour = (input: {
             apiTour?.primaryImageUrl,
             fallbackTour?.primaryImageUrl
           ),
+          exactProductImages:
+            apiTour?.exactProductImages && apiTour.exactProductImages.length > 0
+              ? apiTour.exactProductImages
+              : fallbackTour?.exactProductImages,
           fromPrice: resolvePriceFrom({
             fromPrice: coalesceText(
               apiTour?.fromPrice,
@@ -161,6 +174,8 @@ export const mapViatorToEngine4Tour = (input: {
           ),
           galleryImages: Array.from(
             new Set([
+              ...toCanonicalImageUrls(apiTour?.exactProductImages),
+              ...toCanonicalImageUrls(fallbackTour?.exactProductImages),
               ...(apiTour?.galleryImages ?? []),
               ...(fallbackTour?.galleryImages ?? []),
             ])
@@ -219,6 +234,7 @@ export const mapViatorToEngine4Tour = (input: {
   });
 
   const canonicalImage =
+    toCanonicalImageUrls(resolvedApiTour?.exactProductImages)[0] ??
     resolveViatorPrimaryImageFromApiTour(resolvedApiTour) ??
     cleanText(resolvedApiTour?.primaryImageUrl) ??
     cleanText(resolvedApiTour?.galleryImages?.[0]) ??
@@ -246,7 +262,10 @@ export const mapViatorToEngine4Tour = (input: {
     heroImage: resolvedHeroImage,
     primaryImage: resolvedHeroImage,
     galleryImages: Array.from(
-      new Set((resolvedApiTour?.galleryImages ?? []).filter(Boolean))
+      new Set([
+        ...toCanonicalImageUrls(resolvedApiTour?.exactProductImages),
+        ...(resolvedApiTour?.galleryImages ?? []).filter(Boolean),
+      ])
     ),
     facts: {
       priceFrom: cleanText(resolvedApiTour?.fromPrice),
