@@ -12,7 +12,7 @@ describe("normalizeViatorTourContent fact overview fallback", () => {
       productData: {
         sourceUrl: "https://www.viator.com/tours/example",
         productCode: "EX-FACT",
-        title: "Joshua Tree Hummer Adventure from Palm Desert",
+        title: "Joshua Tree Backroads Hummer H2 Tour",
         duration: "3 hours",
         highlights: [
           "Travel in an open-air Hummer through Joshua Tree National Park terrain",
@@ -28,13 +28,15 @@ describe("normalizeViatorTourContent fact overview fallback", () => {
     expect(normalized.overview).toContain("Joshua Tree Hummer Adventure");
     expect(normalized.overview).toContain("3 hours");
     expect(normalized.overview).toContain("open-air Hummer");
-    expect(normalized.overview?.toLowerCase()).not.toContain("art museum pickup");
+    expect(normalized.overview?.toLowerCase()).not.toContain(
+      "art museum pickup"
+    );
     expect(normalized.overview?.toLowerCase()).not.toContain("8:30 am");
   });
 
-  it("keeps 6740JTREE overview above 100 words and grounded in normalized fields", () => {
+  it("keeps 6740P7 overview above 100 words and grounded in normalized fields", () => {
     const normalized = normalizeViatorTourContent({
-      productData: viatorProductCacheByCode["6740JTREE"],
+      productData: viatorProductCacheByCode["6740P7"],
     });
 
     expect(normalized.overview).toBeTruthy();
@@ -42,7 +44,9 @@ describe("normalizeViatorTourContent fact overview fallback", () => {
     expect(normalized.overview).toContain("Joshua Tree Hummer Adventure");
     expect(normalized.overview).toContain("3 hours");
     expect(normalized.overview).toContain("Professional guide");
-    expect(normalized.overview?.toLowerCase()).not.toContain("art museum pickup");
+    expect(normalized.overview?.toLowerCase()).not.toContain(
+      "art museum pickup"
+    );
     expect(normalized.overview?.toLowerCase()).not.toContain("8:30 am");
   });
 });

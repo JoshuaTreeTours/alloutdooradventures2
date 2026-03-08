@@ -50,6 +50,7 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
       const attributedUrl = buildViatorAffiliateUrl({
         baseUrl: tour.viator?.productUrl,
         fallbackUrl: rawUrl,
+        productCode: tour.tourId,
       });
 
       if (!attributedUrl) {
@@ -62,7 +63,12 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     }
 
     return rawUrl;
-  }, [tour.bookingProvider, tour.bookingUrl, tour.tourId, tour.viator?.productUrl]);
+  }, [
+    tour.bookingProvider,
+    tour.bookingUrl,
+    tour.tourId,
+    tour.viator?.productUrl,
+  ]);
 
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const overviewText = tour.overview ?? tour.description;
@@ -84,7 +90,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const pageDescription =
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
+  const viatorHeroImage =
+    tour.bookingProvider === "viator" ? tour.content?.images?.[0] : undefined;
   const heroUrl =
+    viatorHeroImage ||
     tour.primaryImageUrl ||
     tour.heroImageOverrideUrl ||
     DEFAULT_ENGINE3_HERO_IMAGE_URL;
@@ -146,11 +155,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               typeof window === "undefined"
                 ? canonicalUrl
                 : window.location.pathname,
-            isBookingRoute:
-              (typeof window === "undefined"
-                ? canonicalUrl
-                : window.location.pathname
-              ).endsWith("/book"),
+            isBookingRoute: (typeof window === "undefined"
+              ? canonicalUrl
+              : window.location.pathname
+            ).endsWith("/book"),
           },
           affiliateBookingUrl: safeBookingUrl ?? undefined,
           breadcrumbs: breadcrumbItems.map(item => ({
@@ -181,7 +189,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         id="structured-data-engine3-viator"
         key="structured-data-engine3-viator"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData ?? {}) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData ?? {}),
+        }}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">

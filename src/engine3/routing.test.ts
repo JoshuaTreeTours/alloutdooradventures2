@@ -10,14 +10,14 @@ describe("getEngine3TourBySlugs", () => {
     expect(typeof resolveEngine3Route).toBe("function");
   });
 
-  it("returns Engine3 6740JTREE with hero image equal to locked primary image", () => {
+  it("returns Engine3 6740P7 with hero image equal to locked primary image", () => {
     const tour = getEngine3TourBySlugs(
       "california",
       "palm-springs",
-      "joshua-tree-hummer-adventure-from-palm-desert-6740jtree"
+      "joshua-tree-backroads-hummer-h2-tour-6740p7"
     );
 
-    expect(tour?.id).toBe("6740JTREE");
+    expect(tour?.id).toBe("6740P7");
     expect(tour?.images.hero).toBe(LOCKED_HERO_URL);
     expect(tour?.seo.ogImage).toBe(LOCKED_HERO_URL);
     expect(tour?.bookingUrl).toContain("pid=P00290915");

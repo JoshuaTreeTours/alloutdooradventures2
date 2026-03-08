@@ -3,17 +3,17 @@ import { describe, expect, it } from "vitest";
 import type { Engine2Tour } from "../../engine2/data/loadEngine2";
 import { mapViatorToEngine3ViewModel } from "./mapViatorToEngine3ViewModel";
 
-const LOCKED_HERO_URL_6740 =
-  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1";
+const LARGEST_VIATOR_IMAGE =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&h=1200&s=1";
 
 const baseTour: Engine2Tour = {
-  id: "6740JTREE",
+  id: "6740P7",
   engine: "engine3",
   bookingProvider: "viator",
   bookingUrl: "https://www.viator.com/tours/example",
   sourceCitySlug: "palm-springs",
-  slug: "joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
-  name: "Joshua Tree Hummer Adventure from Palm Desert",
+  slug: "joshua-tree-backroads-hummer-h2-tour-6740p7",
+  name: "Joshua Tree Backroads Hummer H2 Tour",
   provider: {
     name: "Desert Adventures",
     shortName: "desert-adventures",
@@ -29,7 +29,7 @@ const baseTour: Engine2Tour = {
     title: "Joshua Tree Hummer Adventure",
     description: "",
     canonicalPath:
-      "/destinations/california/palm-springs/tours/joshua-tree-hummer-adventure-from-palm-desert-6740jtree",
+      "/destinations/california/palm-springs/tours/joshua-tree-backroads-hummer-h2-tour-6740p7",
     ogImage: "",
   },
   content: {
@@ -47,17 +47,18 @@ const baseTour: Engine2Tour = {
 };
 
 describe("mapViatorToEngine3ViewModel", () => {
-  it("locks 6740JTREE primary/hero image to the known-good override URL", () => {
+  it("uses the largest Viator image as the primary hero for 6740P7", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
-      productCode: "6740JTREE",
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      productCode: "6740P7",
+      title: "Joshua Tree Backroads Hummer H2 Tour",
       imageCandidates: [
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=800&h=600&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&h=1200&s=1",
         "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
-        "https://cache.vtrcdn.com/pictures/12345.jpg",
       ],
       supplierImage:
-        "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/38/e2/6e.jpg",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
       duration: "3 hours",
       highlights: [
         "Drive through desert washes",
@@ -67,8 +68,10 @@ describe("mapViatorToEngine3ViewModel", () => {
       included: ["Professional guide", "Bottled water"],
     });
 
-    expect(viewModel.primaryImageUrl).toBe(LOCKED_HERO_URL_6740);
-    expect(viewModel.heroImageUrl).toBe(LOCKED_HERO_URL_6740);
+    expect(viewModel.primaryImageUrl).toBe(LARGEST_VIATOR_IMAGE);
+    expect(viewModel.content?.images?.[0]).toBe(LARGEST_VIATOR_IMAGE);
+    expect(viewModel.heroImageUrl).toBe(LARGEST_VIATOR_IMAGE);
+    expect(viewModel.heroImage).toBe(LARGEST_VIATOR_IMAGE);
     expect(viewModel.bookingUrl).toContain("pid=P00290915");
     expect(viewModel.bookingUrl).toContain("mcid=42383");
     expect(viewModel.bookingUrl).toContain("medium=link");
@@ -149,11 +152,27 @@ describe("mapViatorToEngine3ViewModel", () => {
     expect(viewModel.faqs).toHaveLength(5);
   });
 
+  it("uses 6740P7 meeting/pickup override when API meeting fields are missing", () => {
+    const viewModel = mapViatorToEngine3ViewModel(baseTour, {
+      sourceUrl:
+        "https://www.viator.com/tours/Palm-Springs/Joshua-Tree-Backroads-Hummer-H2-Tour/d648-6740P7",
+      productCode: "6740P7",
+      title: "Joshua Tree Backroads Hummer H2 Tour",
+    });
+
+    expect(viewModel.meetingPointDescription).toBe(
+      "Palm Springs Art Museum (101 N Museum Dr) — daily at 8:30 a.m."
+    );
+    expect(viewModel.meetingPointName).toBe("Palm Springs Art Museum");
+    expect(viewModel.meetingPointAddress).toBe("101 N Museum Dr");
+    expect(viewModel.departureTimeLabel).toBe("daily at 8:30 a.m.");
+  });
+
   it("maps normalized overview/highlights/inclusions/exclusions from Viator content", () => {
     const viewModel = mapViatorToEngine3ViewModel(baseTour, {
       sourceUrl: "https://www.viator.com/tours/example",
-      productCode: "6740JTREE",
-      title: "Joshua Tree Hummer Adventure from Palm Desert",
+      productCode: "6740P7",
+      title: "Joshua Tree Backroads Hummer H2 Tour",
       description:
         "<p>You'll travel with a guide through desert terrain and geology-focused areas near Palm Springs.</p><p>The operator provides route context and scheduled stops during the experience.</p>",
       highlights: [
@@ -165,7 +184,9 @@ describe("mapViatorToEngine3ViewModel", () => {
       exclusions: ["Gratuities", "Gratuities"],
     });
 
-    expect(viewModel.overview).toContain("Joshua Tree Hummer Adventure from Palm Desert");
+    expect(viewModel.overview).toContain(
+      "Joshua Tree Backroads Hummer H2 Tour"
+    );
     expect(viewModel.overview?.split(/\s+/).length).toBeGreaterThanOrEqual(100);
     expect(viewModel.highlights).toEqual([
       "Drive through desert washes",

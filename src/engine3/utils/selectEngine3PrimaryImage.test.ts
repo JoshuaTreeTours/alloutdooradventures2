@@ -20,6 +20,21 @@ describe("selectEngine3PrimaryImage", () => {
     );
   });
 
+
+  it("prefers the largest Viator variant when multiple sizes are present", () => {
+    const image = selectEngine3PrimaryImage({
+      viatorImageCandidates: [
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=800&h=600&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&h=1200&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1100&h=800&s=1",
+      ],
+    });
+
+    expect(image).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&h=1200&s=1"
+    );
+  });
+
   it("rejects known placeholder and chrome-like image URLs", () => {
     expect(
       isRejectedCandidate(

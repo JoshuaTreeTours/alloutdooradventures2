@@ -8,11 +8,18 @@ export type Engine3OverviewFactsOverride = {
   included?: string[];
 };
 
+export type Engine3MeetingPickupOverride = {
+  meetingPointName: string;
+  meetingPointAddress: string;
+  departureTimeLabel: string;
+};
+
 export const ENGINE3_VIATOR_OVERRIDES: Record<
   string,
   {
     description?: string;
     overviewFactsOverride?: Engine3OverviewFactsOverride;
+    meetingPickup?: Engine3MeetingPickupOverride;
     faqs?: Array<{ question: string; answer: string }>;
   }
 > = {
@@ -99,6 +106,15 @@ export const ENGINE3_VIATOR_OVERRIDES: Record<
       signatureHighlight:
         "Guests ride in an open-air Hummer through Joshua Tree desert scenery and geologic viewpoints.",
       included: ["Professional guide", "Bottled water"],
+    },
+  },
+  "6740P7": {
+    description:
+      "Joshua Tree Backroads Hummer H2 Tour is a guided desert route from Palm Springs that focuses on backcountry terrain, geologic landmarks, and broad Coachella Valley views. Guests travel in an open-air Hummer H2 with a professional guide who provides interpretation on regional geology, desert ecology, and local history while the route transitions between city-edge desert and protected landscape zones. Published tour details identify a daily morning departure and a structured half-day format designed around scenic stops and field context rather than strenuous hiking. The experience is positioned for travelers who want an off-road style sightseeing itinerary with clear guide narration, defined departure logistics, and route pacing that supports photography at major viewpoints.",
+    meetingPickup: {
+      meetingPointName: "Palm Springs Art Museum",
+      meetingPointAddress: "101 N Museum Dr",
+      departureTimeLabel: "daily at 8:30 a.m.",
     },
   },
 };

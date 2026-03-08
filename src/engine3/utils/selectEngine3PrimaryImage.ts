@@ -79,6 +79,32 @@ const candidatePriority = (urlValue: string): number => {
   return 5;
 };
 
+const parseDimensionToken = (value: string): number | undefined => {
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined;
+};
+
+const getImageArea = (urlValue: string): number => {
+  const parsed = new URL(urlValue);
+  const searchWidth = parseDimensionToken(parsed.searchParams.get("w") ?? "");
+  const searchHeight = parseDimensionToken(parsed.searchParams.get("h") ?? "");
+
+  if (searchWidth && searchHeight) {
+    return searchWidth * searchHeight;
+  }
+
+  const pathMatch = parsed.pathname.match(/(\d{2,5})x(\d{2,5})/i);
+  if (pathMatch?.[1] && pathMatch?.[2]) {
+    const width = parseDimensionToken(pathMatch[1]);
+    const height = parseDimensionToken(pathMatch[2]);
+    if (width && height) {
+      return width * height;
+    }
+  }
+
+  return 0;
+};
+
 export const collectEngine3ImageCandidates = (input: {
   viatorImageCandidates?: string[];
 }): string[] => {
@@ -91,7 +117,14 @@ export const collectEngine3ImageCandidates = (input: {
   );
 
   const valid = deduped.filter(candidate => !isRejectedCandidate(candidate));
-  valid.sort((a, b) => candidatePriority(a) - candidatePriority(b));
+  valid.sort((a, b) => {
+    const areaDelta = getImageArea(b) - getImageArea(a);
+    if (areaDelta !== 0) {
+      return areaDelta;
+    }
+
+    return candidatePriority(a) - candidatePriority(b);
+  });
   return valid;
 };
 

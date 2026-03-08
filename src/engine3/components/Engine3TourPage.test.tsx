@@ -70,6 +70,27 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
+
+  it("uses the first Engine3 Viator content image as hero when available", () => {
+    const html = renderToStaticMarkup(
+      <Engine3TourPage
+        tour={{
+          ...posterChildTour,
+          primaryImageUrl: "https://example.com/older.jpg",
+          content: {
+            images: [
+              "https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&h=1200&s=1",
+            ],
+          },
+        }}
+      />
+    );
+
+    expect(html).toContain(
+      'src="https://dynamic-media.tacdn.com/media/photo-o/2f/38/a3/07/caption.jpg?w=1600&amp;h=1200&amp;s=1"'
+    );
+  });
+
   it("always renders hero image even when primaryImageUrl is missing", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage

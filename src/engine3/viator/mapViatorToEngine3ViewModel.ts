@@ -73,6 +73,7 @@ export const mapViatorToEngine3ViewModel = (
   const attributedBookingUrl = buildViatorAffiliateUrl({
     baseUrl: canonicalProductUrl,
     fallbackUrl: bookingUrl,
+    productCode: productData?.productCode ?? tour.id,
   });
 
   const title = cleanText(productData?.title) ?? tour.name;
@@ -125,11 +126,46 @@ export const mapViatorToEngine3ViewModel = (
     normalizeFaqs(productData?.faqs) ??
     normalizeFaqs(tour.content.faqs);
 
+  const overrideMeetingPickup = overrideEntry?.meetingPickup;
+  const apiMeetingPointName =
+    cleanText(productData?.meetingPointName) ??
+    cleanText(productData?.meetingLocation);
+  const apiMeetingPointAddress =
+    cleanText(productData?.meetingPointAddress) ??
+    cleanText(productData?.meetingPointText);
+  const apiDepartureTimeLabel = cleanText(productData?.departureTimeLabel);
+
+  const meetingPointName =
+    apiMeetingPointName ?? cleanText(overrideMeetingPickup?.meetingPointName);
+  const meetingPointAddress =
+    apiMeetingPointAddress ??
+    cleanText(overrideMeetingPickup?.meetingPointAddress);
+  const departureTimeLabel =
+    apiDepartureTimeLabel ??
+    cleanText(overrideMeetingPickup?.departureTimeLabel);
+
+  const meetingPointLine = [
+    meetingPointName,
+    meetingPointAddress ? `(${meetingPointAddress})` : undefined,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .trim();
+
+  const meetingPickupDescription =
+    [meetingPointLine || undefined, departureTimeLabel]
+      .filter(Boolean)
+      .join(" — ")
+      .trim() ||
+    cleanText(productData?.meetingPointDescription) ||
+    cleanText(tour.content.meetingPoint?.address) ||
+    cleanText(tour.content.meetingPoint?.instructions);
+
   const fallbackOneLiner = `${title} in ${
     cleanText(tour.geo.city) ?? cleanText(tour.geo.region) ?? "the destination"
   } (${cleanText(productData?.duration) ?? cleanText(tour.content.duration) ?? "duration varies"}).`;
 
-  const { primaryImageUrl, heroImageOverrideUrl } = resolveEngine3PrimaryImage({
+  const { primaryImageUrl, heroImageOverrideUrl, viatorImages } = resolveEngine3PrimaryImage({
     productCode: productData?.productCode ?? tour.id,
     imageCandidates: productData?.imageCandidates,
     fallbackImageUrl:
@@ -159,8 +195,12 @@ export const mapViatorToEngine3ViewModel = (
     duration:
       cleanText(productData?.duration) ?? cleanText(tour.content.duration),
     primaryImageUrl,
+    heroImage: viatorImages[0] ?? primaryImageUrl,
+    content: {
+      images: viatorImages,
+    },
     heroImageOverrideUrl,
-    heroImageUrl: primaryImageUrl,
+    heroImageUrl: viatorImages[0] ?? primaryImageUrl,
     priceFrom:
       cleanText(productData?.priceFrom) ?? cleanText(tour.pricing?.price),
     priceCurrency: cleanText(productData?.priceCurrency),
@@ -170,9 +210,9 @@ export const mapViatorToEngine3ViewModel = (
     meetingPointText: extractMeetingPointText({
       structuredLocation: undefined,
       fallbackText:
-        cleanText(productData?.meetingPointText) ??
-        cleanText(productData?.meetingPointDescription) ??
-        cleanText(tour.content.meetingPoint?.address) ??
+        meetingPointLine ||
+        cleanText(productData?.meetingPointDescription) ||
+        cleanText(tour.content.meetingPoint?.address) ||
         cleanText(tour.content.meetingPoint?.instructions),
     }),
     highlights,
@@ -180,10 +220,10 @@ export const mapViatorToEngine3ViewModel = (
     exclusions,
     included: inclusions,
     notIncluded: exclusions,
-    meetingPointDescription:
-      cleanText(productData?.meetingPointDescription) ??
-      cleanText(tour.content.meetingPoint?.address) ??
-      cleanText(tour.content.meetingPoint?.instructions),
+    meetingPointDescription: meetingPickupDescription,
+    meetingPointName,
+    meetingPointAddress,
+    departureTimeLabel,
     operatorName:
       cleanText(productData?.operatorName) ?? cleanText(tour.provider.name),
     availability: cleanText(productData?.availability),
