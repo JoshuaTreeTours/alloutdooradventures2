@@ -106,9 +106,29 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(routed?.id).toBe("74828P3");
   });
 
+  it("builds the 36001P1 route and exposes it in San Francisco listing", () => {
+    const entries = getEngine4ListingEntries("california", "san-francisco");
+    const target = entries.find(entry => entry.tour.productCode === "36001P1");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/san-francisco/tours/yosemite-in-a-day-tour-from-san-francisco-36001p1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "san-francisco",
+      "yosemite-in-a-day-tour-from-san-francisco-36001p1"
+    );
+
+    expect(routed?.id).toBe("36001P1");
+  });
+
   it("builds the 335698P13 route and exposes it in Joshua Tree listing", () => {
     const entries = getEngine4ListingEntries("california", "joshua-tree");
-    const target = entries.find(entry => entry.tour.productCode === "335698P13");
+    const target = entries.find(
+      entry => entry.tour.productCode === "335698P13"
+    );
 
     expect(target).toBeDefined();
     expect(target?.href).toBe(

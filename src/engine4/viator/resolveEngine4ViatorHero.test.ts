@@ -65,6 +65,45 @@ describe("Engine4 Viator hero governance resolver", () => {
     expect(diagnostics.resolutionStatus).toBe("ok");
   });
 
+  it("selects the 36001P1 cover variant from exactProductImages and avoids overrides", () => {
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "36001P1",
+      apiTour: {
+        productCode: "36001P1",
+        title: "Yosemite In A Day Tour from San Francisco",
+        sourceUrl:
+          "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+        exactProductImages: [
+          {
+            isCover: true,
+            variants: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+                width: 1100,
+                height: 800,
+              },
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+                width: 1600,
+                height: 900,
+              },
+            ],
+          },
+        ],
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/00/00/00/00/caption.jpg?w=1100&h=800&s=1",
+      },
+    });
+
+    expect(diagnostics.selectionSource).toBe("api-images-payload");
+    expect(diagnostics.selectedHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+    );
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.coverImagePresent).toBe(true);
+    expect(diagnostics.selectedVariantWidth).toBe(1600);
+  });
+
   it("uses exact product override when API image is missing", () => {
     const selectedHero = resolveEngine4ViatorHero({
       productCode: "335698P13",

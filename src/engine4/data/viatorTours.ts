@@ -141,6 +141,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "36001P1",
+    bookingUrl:
+      "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "San Francisco",
+      citySlug: "san-francisco",
+    },
+    slug: "yosemite-in-a-day-tour-from-san-francisco-36001p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "335698P13",
     bookingUrl:
       "https://www.viator.com/tours/Palm-Springs/Rock-Scrambling-Adventures-in-Joshua-Tree-National-Park/d648-335698P13?pid=P00290915&mcid=42383&medium=link&currency=USD",
@@ -616,6 +633,109 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
   },
+  "36001P1": {
+    productCode: "36001P1",
+    title: "Yosemite In A Day Tour from San Francisco",
+    sourceUrl:
+      "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+    fromPrice: "$209.00",
+    priceCurrency: "USD",
+    rating: 4.6,
+    reviewCount: 1209,
+    duration: "14 hours",
+    startTime: "6:00 AM",
+    meetingPoint:
+      "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+            width: 1600,
+            height: 900,
+          },
+        ],
+      },
+      {
+        isCover: false,
+        variants: [
+          {
+            url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/38/df/f6.jpg",
+            width: 674,
+            height: 446,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/2f/38/df/f6.jpg",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    rawProductPayload: {
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              name: "large",
+              width: 1100,
+              height: 800,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+            },
+            {
+              name: "xlarge",
+              width: 1600,
+              height: 900,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+            },
+          ],
+        },
+      ],
+    },
+    description:
+      "Full-day guided Yosemite excursion from San Francisco with major valley viewpoints, giant sequoias, and free exploration time.",
+    descriptionLong:
+      "This Yosemite In A Day tour from San Francisco is structured for travelers who want to reach Yosemite National Park without driving themselves and still cover marquee stops in one long day. After an early departure, the route crosses California's Central Valley before climbing into the Sierra Nevada for guided interpretation on park history, geology, and valley landmarks. Once inside Yosemite, the itinerary prioritizes iconic viewpoints and flexible time to walk, photograph, or relax near major valley locations. Depending on seasonal access, guests may also stop in giant sequoia groves, adding a second signature Yosemite landscape to the day. The format balances transport logistics, orientation, and independent moments so visitors can maximize a single-day Yosemite window from San Francisco.",
+    whatToExpect:
+      "Expect an early-morning departure from San Francisco, guided narration during transit, Yosemite Valley stops, and free time for self-guided exploring before evening return.",
+    overview:
+      "Yosemite In A Day from San Francisco provides a transportation-first, guide-supported way to experience Yosemite National Park without renting a car or planning mountain logistics. The full-day format focuses on efficient routing to major Yosemite Valley sights, including panoramic viewpoints and photo stops, with opportunities for independent time once inside the park. Seasonal conditions can influence exact stop order and whether giant sequoia grove access is available, but the trip is designed to deliver a broad Yosemite sampler in a single day. This tour is a practical fit for San Francisco visitors with limited time who still want classic Yosemite scenery, orientation from a guide, and a same-day return.",
+    highlights: [
+      "Round-trip Yosemite National Park day trip from San Francisco",
+      "Guided transport with narration on park geology and history",
+      "Stops at iconic Yosemite Valley viewpoints",
+      "Seasonal giant sequoia grove access when conditions permit",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    faqs: [
+      {
+        question: "Where does Yosemite In A Day meet in San Francisco?",
+        answer:
+          "The mapped pickup point is Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA.",
+      },
+      {
+        question: "How long is the Yosemite In A Day tour?",
+        answer:
+          "The mapped duration is approximately 14 hours including transit and Yosemite park time.",
+      },
+      {
+        question: "Is there free cancellation?",
+        answer:
+          "Yes. The mapped policy is free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
   "6740P7": {
     productCode: "6740P7",
     title: "Joshua Tree National Park Scenic Tour | Rated #1",
@@ -627,8 +747,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     reviewCount: 88,
     duration: "5 hours",
     startTime: "8:00 AM",
-    meetingPoint:
-      "The Palm Springs Art Museum at 8:30 am, returning 1:30 pm",
+    meetingPoint: "The Palm Springs Art Museum at 8:30 am, returning 1:30 pm",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     primaryImageUrl:
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",

@@ -61,7 +61,9 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.cancellationPolicy).toBe(
       "Free cancellation up to 24 hours in advance."
     );
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
   });
 
   it("maps the Santa Barbara zipline tour with TACDN hero, populated facts, and affiliate booking URL", () => {
@@ -75,7 +77,9 @@ describe("mapViatorToEngine4Tour", () => {
       apiTour: engine4ViatorApiFallbackByProductCode["421920P2"],
     });
 
-    expect(vm.heroImage).toMatch(/^https:\/\/(dynamic-media|media)\.tacdn\.com\//);
+    expect(vm.heroImage).toMatch(
+      /^https:\/\/(dynamic-media|media)\.tacdn\.com\//
+    );
     expect(vm.facts.priceFrom).toBeTruthy();
     expect(vm.facts.ratingValue).toBeTruthy();
     expect(vm.facts.reviewCount).toBeTruthy();
@@ -122,7 +126,9 @@ describe("mapViatorToEngine4Tour", () => {
   });
 
   it("prefers exact-product images[] variants for gallery + hero provenance", () => {
-    const record = engine4ViatorTours.find(tour => tour.productCode === "74828P5");
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "74828P5"
+    );
     expect(record).toBeDefined();
 
     const vm = mapViatorToEngine4Tour({
@@ -226,4 +232,34 @@ describe("mapViatorToEngine4Tour", () => {
     expect(bookingUrl.searchParams.get("medium")).toBe("link");
   });
 
+  it("maps 36001P1 with exact-product images payload and Yosemite facts", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "36001P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["36001P1"],
+    });
+
+    expect(vm.title).toBe("Yosemite In A Day Tour from San Francisco");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+    );
+    expect(vm.primaryImage).toBe(vm.heroImage);
+    expect(vm.galleryImages[0]).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.facts.priceFrom).toBe("$209.00");
+    expect(vm.facts.ratingValue).toBe(4.6);
+    expect(vm.facts.reviewCount).toBe(1209);
+    expect(vm.facts.duration).toBe("14 hours");
+    expect(vm.facts.startTime).toBe("6:00 AM");
+    expect(vm.facts.meetingPointFull).toContain(
+      "Hilton San Francisco Union Square"
+    );
+    expect(vm.content.highlights.length).toBeGreaterThan(2);
+    expect(vm.content.faqs.length).toBeGreaterThan(2);
+  });
 });
