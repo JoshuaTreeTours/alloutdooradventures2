@@ -56,7 +56,7 @@ describe("Engine4 Viator image consistency", () => {
       citySlug: "joshua-tree",
       tourSlug: "full-day-hike-in-joshua-tree-national-park-237571p2",
       expectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
     });
 
     const diagnostics = assertHeroSelectionSource({

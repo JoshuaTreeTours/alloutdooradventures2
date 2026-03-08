@@ -241,9 +241,9 @@ describe("Engine4 Viator hero governance resolver", () => {
       overridePresent: true,
       overrideUsed: true,
       finalSelectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
       selectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
       selectionSource: "override",
       contaminationBlocked: false,
       resolutionStatus: "ok",
@@ -270,9 +270,9 @@ describe("Engine4 Viator hero governance resolver", () => {
 
   it("rejects 237571P2 bike-tour contamination candidates from non-images fields", () => {
     const bikeTourImage =
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1";
-    const trustedImagesPayloadHero =
       "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1";
+    const trustedImagesPayloadHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1";
 
     const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
       productCode: "237571P2",
