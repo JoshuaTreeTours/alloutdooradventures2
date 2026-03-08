@@ -13,6 +13,7 @@ Never use destination scenic fallbacks or cross-product image inheritance.
 ## Provenance requirement (hardened)
 
 - API image candidates must be tied to the exact `productCode` being resolved and extracted from that product's `images[]` payload.
+- Resolver prefers `images[].isCover === true`, then selects the best landscape variant with width >= 1100, otherwise the largest available variant from that same product image payload.
 - For strict-provenance products, API candidates are rejected unless they can be traced to that product's raw payload image graph.
 - If candidate provenance is uncertain, reject the candidate and prefer override/missing over wrong.
 - Diagnostics must include rejected candidates and acceptance reason.

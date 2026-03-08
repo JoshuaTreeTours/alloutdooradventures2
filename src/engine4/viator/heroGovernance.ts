@@ -28,7 +28,7 @@ export const ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE: Record<
   "335698P13":
     "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
   "237571P2":
-    "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
 };
 
 export type Engine4ViatorHeroSelectionSource =
@@ -49,6 +49,10 @@ export type Engine4ViatorHeroDiagnostics = {
   rejectedCandidates: Engine4ViatorRejectedCandidate[];
   acceptedCandidateReason?: string;
   apiImagesPayloadCandidates: string[];
+  coverImagePresent?: boolean;
+  variantCount?: number;
+  selectedVariantUrl?: string;
+  selectedVariantWidth?: number;
 };
 
 const isTrackerPixel = (url: string) =>
@@ -112,20 +116,42 @@ const asString = (value: unknown): string | undefined =>
     ? value.trim()
     : undefined;
 
-const extractVariantUrls = (image: Record<string, unknown>): string[] => {
-  const urls: string[] = [];
+const asNumber = (value: unknown): number | undefined =>
+  typeof value === "number" && Number.isFinite(value) ? value : undefined;
+
+type PayloadVariant = {
+  url: string;
+  width?: number;
+  height?: number;
+};
+
+type PayloadImage = {
+  isCover: boolean;
+  variants: PayloadVariant[];
+};
+
+const extractVariants = (image: Record<string, unknown>): PayloadVariant[] => {
+  const variants: PayloadVariant[] = [];
 
   const direct = asString(image.url);
   if (direct) {
-    urls.push(direct);
+    variants.push({
+      url: direct,
+      width: asNumber(image.width),
+      height: asNumber(image.height),
+    });
   }
 
-  const variants = Array.isArray(image.variants) ? image.variants : [];
-  variants.forEach(variant => {
+  const imageVariants = Array.isArray(image.variants) ? image.variants : [];
+  imageVariants.forEach(variant => {
     const v = asRecord(variant);
     const vUrl = asString(v?.url);
     if (vUrl) {
-      urls.push(vUrl);
+      variants.push({
+        url: vUrl,
+        width: asNumber(v?.width),
+        height: asNumber(v?.height),
+      });
     }
   });
 
@@ -135,12 +161,16 @@ const extractVariantUrls = (image: Record<string, unknown>): string[] => {
       const row = asRecord(item);
       const url = asString(row?.url ?? item);
       if (url) {
-        urls.push(url);
+        variants.push({
+          url,
+          width: asNumber(row?.width),
+          height: asNumber(row?.height),
+        });
       }
     });
   }
 
-  return urls;
+  return variants;
 };
 
 const rankVariant = (url: string): number => {
@@ -153,10 +183,15 @@ const rankVariant = (url: string): number => {
   return 60;
 };
 
-const extractCandidatesFromImagesPayload = (
+const resolveViatorCoverVariant = (
   apiTour: Engine4ViatorApiTour | undefined,
   rejectedCandidates: Engine4ViatorRejectedCandidate[]
-): string[] => {
+): {
+  candidates: string[];
+  coverImagePresent: boolean;
+  variantCount: number;
+  selectedVariant?: PayloadVariant;
+} => {
   const raw = asRecord(apiTour?.rawProductPayload);
   const images = Array.isArray(raw?.images) ? raw?.images : undefined;
 
@@ -165,27 +200,48 @@ const extractCandidatesFromImagesPayload = (
       source: "api.images[]",
       reason: "images_payload_missing",
     });
-    return [];
+    return {
+      candidates: [],
+      coverImagePresent: false,
+      variantCount: 0,
+    };
   }
 
   const parsed = images
     .map(entry => asRecord(entry))
     .filter((entry): entry is Record<string, unknown> => Boolean(entry))
-    .map(image => {
-      const isCover = Boolean(image.isCover === true);
-      const urls = extractVariantUrls(image)
-        .filter(url => isValidEngine4ViatorHeroCandidate(url))
-        .sort((a, b) => rankVariant(b) - rankVariant(a));
+    .map((image): PayloadImage => ({
+      isCover: Boolean(image.isCover === true),
+      variants: extractVariants(image).filter(variant =>
+        isValidEngine4ViatorHeroCandidate(variant.url)
+      ),
+    }))
+    .filter(item => item.variants.length > 0);
 
-      return {
-        isCover,
-        urls,
-      };
-    })
-    .filter(item => item.urls.length > 0)
-    .sort((a, b) => Number(b.isCover) - Number(a.isCover));
+  const coverImagePresent = parsed.some(image => image.isCover);
+  const orderedImages = parsed.sort((a, b) => Number(b.isCover) - Number(a.isCover));
+  const selectedImage = orderedImages[0];
+  const variantCount = selectedImage?.variants.length ?? 0;
+  const selectedVariant = selectedImage
+    ? [...selectedImage.variants].sort((a, b) => {
+        const aLandscape = (a.width ?? 0) >= (a.height ?? 0);
+        const bLandscape = (b.width ?? 0) >= (b.height ?? 0);
+        const aPreferred = aLandscape && (a.width ?? 0) >= 1100;
+        const bPreferred = bLandscape && (b.width ?? 0) >= 1100;
+        if (aPreferred !== bPreferred) {
+          return Number(bPreferred) - Number(aPreferred);
+        }
 
-  const candidates = parsed.flatMap(item => item.urls);
+        const widthDelta = (b.width ?? 0) - (a.width ?? 0);
+        if (widthDelta !== 0) {
+          return widthDelta;
+        }
+
+        return rankVariant(b.url) - rankVariant(a.url);
+      })[0]
+    : undefined;
+
+  const candidates = selectedVariant ? [selectedVariant.url] : [];
 
   if (candidates.length === 0) {
     rejectedCandidates.push({
@@ -194,7 +250,12 @@ const extractCandidatesFromImagesPayload = (
     });
   }
 
-  return Array.from(new Set(candidates));
+  return {
+    candidates: Array.from(new Set(candidates)),
+    coverImagePresent,
+    variantCount,
+    selectedVariant,
+  };
 };
 
 const extractLegacyMappedCandidates = (
@@ -230,10 +291,11 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
   const strictImagesPayloadOnly =
     STRICT_IMAGES_PAYLOAD_ONLY_PRODUCT_CODES.has(normalizedCode);
 
-  const imagesPayloadCandidates = extractCandidatesFromImagesPayload(
+  const payloadSelection = resolveViatorCoverVariant(
     input.apiTour,
     rejectedCandidates
   );
+  const imagesPayloadCandidates = payloadSelection.candidates;
 
   let trustedApiCandidate: string | undefined;
 
@@ -298,6 +360,10 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
         ? "Accepted locked per-product override because no safe exact-product images[] candidate was available."
         : undefined,
     apiImagesPayloadCandidates: imagesPayloadCandidates,
+    coverImagePresent: payloadSelection.coverImagePresent,
+    variantCount: payloadSelection.variantCount,
+    selectedVariantUrl: payloadSelection.selectedVariant?.url,
+    selectedVariantWidth: payloadSelection.selectedVariant?.width,
   };
 
   if (shouldLogDiagnostics) {

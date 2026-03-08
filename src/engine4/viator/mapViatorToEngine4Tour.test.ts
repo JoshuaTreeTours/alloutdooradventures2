@@ -168,7 +168,7 @@ describe("mapViatorToEngine4Tour", () => {
 
     expect(vm.title).toBe("Full-Day Hike in Joshua Tree National Park");
     expect(vm.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1"
     );
     expect(vm.facts.priceFrom).toBe("$199.00");
     expect(vm.facts.ratingValue).toBe(5);

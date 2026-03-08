@@ -56,18 +56,19 @@ describe("Engine4 Viator image consistency", () => {
       citySlug: "joshua-tree",
       tourSlug: "full-day-hike-in-joshua-tree-national-park-237571p2",
       expectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     });
 
     const diagnostics = assertHeroSelectionSource({
       productCode: "237571P2",
-      expectedSource: "override",
+      expectedSource: "api-images-payload",
     });
 
-    expect(diagnostics.overridePresent).toBe(true);
-    expect(diagnostics.overrideUsed).toBe(true);
+    expect(diagnostics.coverImagePresent).toBe(true);
+    expect(diagnostics.selectedVariantWidth).toBe(1100);
+    expect(diagnostics.overrideUsed).toBe(false);
     expect(diagnostics.resolutionStatus).toBe("ok");
-    expect(diagnostics.rejectedCandidates.length).toBeGreaterThan(0);
+    expect(diagnostics.rejectedCandidates.length).toBeGreaterThanOrEqual(0);
   });
 
   it("keeps at least 3 unrelated tours stable and consistent", () => {

@@ -162,7 +162,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2?pid=P00290915&mcid=42383&medium=link&currency=USD",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "California",
@@ -761,13 +761,21 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     startTime: "8:00 AM",
     meetingPoint: "Palm Springs, California, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
-    primaryImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
-    galleryImages: [
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
-    ],
-    sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+    rawProductPayload: {
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              name: "large",
+              width: 1100,
+              height: 800,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
+            },
+          ],
+        },
+      ],
+    },
     description:
       "Guided full-day Joshua Tree hiking experience with route planning, park insights, and desert viewpoints from the Palm Springs area.",
     overview:

@@ -241,9 +241,9 @@ describe("Engine4 Viator hero governance resolver", () => {
       overridePresent: true,
       overrideUsed: true,
       finalSelectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
       selectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
       selectionSource: "override",
       contaminationBlocked: false,
       resolutionStatus: "ok",
@@ -256,6 +256,10 @@ describe("Engine4 Viator hero governance resolver", () => {
       acceptedCandidateReason:
         "Accepted locked per-product override because no safe exact-product images[] candidate was available.",
       apiImagesPayloadCandidates: [],
+      coverImagePresent: false,
+      variantCount: 0,
+      selectedVariantUrl: undefined,
+      selectedVariantWidth: undefined,
     });
   });
 
@@ -282,6 +286,8 @@ describe("Engine4 Viator hero governance resolver", () => {
               variants: [
                 {
                   name: "large",
+                  width: 1600,
+                  height: 900,
                   url: trustedImagesPayloadHero,
                 },
               ],
@@ -297,5 +303,84 @@ describe("Engine4 Viator hero governance resolver", () => {
       trustedImagesPayloadHero,
     ]);
     expect(diagnostics.selectedHeroUrl).not.toBe(bikeTourImage);
+    expect(diagnostics.coverImagePresent).toBe(true);
+    expect(diagnostics.variantCount).toBe(1);
+    expect(diagnostics.selectedVariantUrl).toBe(trustedImagesPayloadHero);
+    expect(diagnostics.selectedVariantWidth).toBe(1600);
+  });
+
+  it("prefers cover image variant width >=1100 from exact payload", () => {
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "237571P2",
+      apiTour: {
+        productCode: "237571P2",
+        title: "Full-Day Hike in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "small",
+                  width: 674,
+                  height: 446,
+                  url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/42/6d.jpg",
+                },
+                {
+                  name: "large",
+                  width: 1600,
+                  height: 900,
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/01/caption.jpg?w=1600&h=900&s=1",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+
+    expect(diagnostics.selectionSource).toBe("api-images-payload");
+    expect(diagnostics.selectedHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/01/caption.jpg?w=1600&h=900&s=1"
+    );
+    expect(diagnostics.selectedVariantWidth).toBe(1600);
+  });
+
+  it("rejects mapped candidates not present in exact images[] variants for strict product", () => {
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "237571P2",
+      apiTour: {
+        productCode: "237571P2",
+        title: "Full-Day Hike in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+        primaryImageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "large",
+                  width: 1200,
+                  height: 800,
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/02/caption.jpg?w=1200&h=800&s=1",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+
+    expect(diagnostics.selectedHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/02/caption.jpg?w=1200&h=800&s=1"
+    );
+    expect(diagnostics.selectedHeroUrl).not.toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
+    );
   });
 });
