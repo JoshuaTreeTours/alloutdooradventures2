@@ -140,4 +140,22 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("6740P7");
   });
+
+  it("builds the 237571P2 route and exposes it in Joshua Tree listing", () => {
+    const entries = getEngine4ListingEntries("california", "joshua-tree");
+    const target = entries.find(entry => entry.tour.productCode === "237571P2");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/joshua-tree/tours/full-day-hike-in-joshua-tree-national-park-237571p2"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "joshua-tree",
+      "full-day-hike-in-joshua-tree-national-park-237571p2"
+    );
+
+    expect(routed?.id).toBe("237571P2");
+  });
 });

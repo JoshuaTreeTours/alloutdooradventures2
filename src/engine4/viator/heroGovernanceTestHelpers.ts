@@ -58,7 +58,7 @@ export const assertHeroConsistencyForProduct = (input: {
 
 export const assertHeroSelectionSource = (input: {
   productCode: string;
-  expectedSource: "api" | "override" | "missing";
+  expectedSource: "api-images-payload" | "override" | "missing";
 }) => {
   const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
     productCode: input.productCode,

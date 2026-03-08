@@ -173,6 +173,11 @@ export const mapViatorToEngine4Tour = (input: {
             (apiTour?.faqs && apiTour.faqs.length > 0
               ? apiTour.faqs
               : fallbackTour?.faqs) ?? [],
+          rawProductPayload:
+            (apiTour?.rawProductPayload as Record<string, unknown> | undefined) ??
+            (fallbackTour?.rawProductPayload as
+              | Record<string, unknown>
+              | undefined),
           itinerary:
             (apiTour?.itinerary && apiTour.itinerary.length > 0
               ? apiTour.itinerary
