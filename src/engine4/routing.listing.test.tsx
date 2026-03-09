@@ -178,4 +178,27 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(routed?.id).toBe("237571P2");
   });
+
+  it("builds the 379799P1 route and exposes it in Los Angeles listing", () => {
+    const entries = getEngine4ListingEntries("california", "los-angeles");
+    const target = entries.find(entry => entry.tour.productCode === "379799P1");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/los-angeles/tours/mulholland-trail-horseback-tour-379799p1"
+    );
+    expect(target?.tour.title).toBe("Mulholland Trail Horseback Tour");
+    expect(target?.tour.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/7d/2f/f4/caption.jpg?w=1100&h=800&s=1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "los-angeles",
+      "mulholland-trail-horseback-tour-379799p1"
+    );
+
+    expect(routed?.id).toBe("379799P1");
+  });
+
 });
