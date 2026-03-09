@@ -1,19 +1,71 @@
+import type { Engine4TourViewModel } from "../../engine4/types";
 import type { Tour } from "../../data/tours.types";
 import { slugify } from "../../utils/slugify";
-import type { Engine4TourViewModel } from "../../engine4/types";
-import type { Engine5ProductRecord, Engine5ViatorApiTour } from "../types";
+import type {
+  Engine5NormalizedTour,
+  Engine5ProductRecord,
+  Engine5ViatorApiTour,
+} from "../types";
 
 export const mapViatorToEngine5Tour = (
   record: Engine5ProductRecord,
   apiTour: Engine5ViatorApiTour
-): { page: Engine4TourViewModel; listing: Tour } => {
+): {
+  normalized: Engine5NormalizedTour;
+  page: Engine4TourViewModel;
+  listing: Tour;
+} => {
   if (!apiTour.provenance.apiFetchSucceeded) {
     throw new Error(`Engine5 strict mode rejected ${record.productCode}`);
   }
 
   const slug = slugify(apiTour.title);
   const canonicalPath = `/engine5/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
-  const bookingUrl = apiTour.sourceUrl;
+  const bookingUrl = apiTour.bookingUrl;
+
+  if (!apiTour.canonicalHeroUrl) {
+    throw new Error(`Engine5 missing canonical hero for ${record.productCode}`);
+  }
+
+  const normalized: Engine5NormalizedTour = {
+    productCode: record.productCode,
+    slug,
+    destination: record.destination,
+    bookingUrl,
+    title: apiTour.title,
+    facts: {
+      priceFrom: apiTour.fromPrice,
+      ratingValue: apiTour.rating,
+      reviewCount: apiTour.reviewCount,
+      duration: apiTour.duration,
+      startTime: apiTour.startTime,
+      meetingPointFull: apiTour.meetingPoint,
+      meetingPointShort: apiTour.meetingPoint?.split(",")[0],
+      cancellationPolicy: apiTour.cancellationPolicy,
+    },
+    content: {
+      overview: apiTour.description,
+      highlights: apiTour.highlights,
+      faqs: apiTour.faqs,
+      itinerary: apiTour.itinerary,
+      inclusions: apiTour.inclusions,
+      exclusions: apiTour.exclusions,
+      additionalInfo: apiTour.additionalInfo.join(" "),
+    },
+    exactProductImages: apiTour.exactProductImages,
+    canonicalHeroUrl: apiTour.canonicalHeroUrl,
+    heroSelectionSource: apiTour.heroSelectionSource,
+    heroSelectionSize: apiTour.heroSelectionSize,
+    diagnostics: {
+      exactProductImageCandidateUrls: apiTour.heroSelectionDiagnostics.candidateUrls,
+      selectedCanonicalHeroUrl: apiTour.canonicalHeroUrl,
+      pageHeroUrl: apiTour.canonicalHeroUrl,
+      listingCardUrl: apiTour.canonicalHeroUrl,
+      ogImageUrl: apiTour.canonicalHeroUrl,
+      schemaImageUrl: apiTour.canonicalHeroUrl,
+      allImageSurfacesIdentical: true,
+    },
+  };
 
   const page: Engine4TourViewModel = {
     tourId: `engine5-${record.productCode}`,
@@ -25,27 +77,13 @@ export const mapViatorToEngine5Tour = (
     canonicalPath,
     bookingUrl,
     destination: record.destination,
-    heroImage: apiTour.primaryImageUrl,
-    primaryImage: apiTour.primaryImageUrl,
-    galleryImages: apiTour.galleryImages,
-    facts: {
-      priceFrom: apiTour.fromPrice,
-      ratingValue: apiTour.rating,
-      reviewCount: apiTour.reviewCount,
-      duration: apiTour.duration,
-      meetingPointFull: apiTour.meetingPoint,
-      meetingPointShort: apiTour.meetingPoint?.split(",")[0],
-      cancellationPolicy: apiTour.cancellationPolicy,
-    },
-    content: {
-      overview: apiTour.description,
-      highlights: [],
-      faqs: [],
-      itinerary: apiTour.itinerary,
-      inclusions: apiTour.inclusions,
-      exclusions: apiTour.exclusions,
-      additionalInfo: apiTour.additionalInfo.join(" "),
-    },
+    heroImage: normalized.canonicalHeroUrl,
+    primaryImage: normalized.canonicalHeroUrl,
+    galleryImages: normalized.exactProductImages
+      .flatMap(image => image.variants.map(variant => variant.url))
+      .filter((url, index, all) => all.indexOf(url) === index),
+    facts: normalized.facts,
+    content: normalized.content,
   };
 
   const listing: Tour = {
@@ -59,9 +97,9 @@ export const mapViatorToEngine5Tour = (
     categories: ["adventure"],
     primaryCategory: "adventure",
     destination: record.destination,
-    heroImage: apiTour.primaryImageUrl,
-    primaryImageUrl: apiTour.primaryImageUrl,
-    galleryImages: apiTour.galleryImages,
+    heroImage: normalized.canonicalHeroUrl,
+    primaryImageUrl: normalized.canonicalHeroUrl,
+    galleryImages: page.galleryImages,
     badges: {
       rating: apiTour.rating,
       reviewCount: apiTour.reviewCount,
@@ -74,9 +112,9 @@ export const mapViatorToEngine5Tour = (
     longDescription: apiTour.description,
     content: {
       overview: apiTour.description,
-      highlights: [],
+      highlights: apiTour.highlights,
     },
   };
 
-  return { page, listing };
+  return { normalized, page, listing };
 };

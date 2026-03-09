@@ -4,35 +4,93 @@ import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
 import { engine5ProofViatorRecord } from "./record";
 
 describe("mapViatorToEngine5Tour", () => {
-  it("uses title-derived slug and api media for page and listing", () => {
+  it("builds one normalized object and reuses canonical hero everywhere", () => {
     const mapped = mapViatorToEngine5Tour(engine5ProofViatorRecord, {
       productCode: "132218P209",
       title: "Yosemite and Kings Canyon 2-Day Tour from LA",
-      sourceUrl:
+      bookingUrl:
         "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
       description: "Two-day guided trip from Los Angeles.",
-      primaryImageUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg",
-      galleryImages: [
-        "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg",
-      ],
       itinerary: [],
+      highlights: ["Visit Yosemite Valley"],
+      faqs: [{ question: "Meals?", answer: "Not included" }],
       inclusions: [],
       exclusions: [],
       additionalInfo: [],
+      exactProductImages: [
+        {
+          isCover: true,
+          variants: [
+            {
+              url: "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg",
+              width: 1600,
+              height: 900,
+            },
+          ],
+        },
+      ],
+      canonicalHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg",
+      heroSelectionSource: "api-images-payload",
+      heroSelectionSize: {
+        width: 1600,
+        height: 900,
+      },
+      heroSelectionDiagnostics: {
+        candidateUrls: [
+          "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg",
+        ],
+      },
       provenance: {
         apiFetchAttempted: true,
         apiFetchSucceeded: true,
-        heroImageSource: "api",
-        listingImageSource: "api",
         descriptionSource: "api",
       },
     });
 
-    expect(mapped.page.slug).toBe(
+    expect(mapped.normalized.slug).toBe(
       "yosemite-and-kings-canyon-2-day-tour-from-la"
     );
-    expect(mapped.page.heroImage).toContain("dynamic-media.tacdn.com");
-    expect(mapped.listing.heroImage).toContain("dynamic-media.tacdn.com");
+    expect(mapped.page.canonicalPath).toBe(
+      "/engine5/california/los-angeles/tours/yosemite-and-kings-canyon-2-day-tour-from-la"
+    );
+    expect(mapped.page.engine).toBe("engine4");
+    expect(mapped.listing.engine).toBe("engine4");
+    expect(mapped.page.heroImage).toBe(mapped.normalized.canonicalHeroUrl);
+    expect(mapped.listing.heroImage).toBe(mapped.normalized.canonicalHeroUrl);
+    expect(mapped.normalized.diagnostics.ogImageUrl).toBe(
+      mapped.normalized.canonicalHeroUrl
+    );
+    expect(mapped.normalized.diagnostics.schemaImageUrl).toBe(
+      mapped.normalized.canonicalHeroUrl
+    );
+    expect(mapped.normalized.diagnostics.allImageSurfacesIdentical).toBe(true);
+  });
+
+  it("throws when canonical hero is missing to avoid cross-tour contamination", () => {
+    expect(() =>
+      mapViatorToEngine5Tour(engine5ProofViatorRecord, {
+        productCode: "132218P209",
+        title: "Yosemite and Kings Canyon 2-Day Tour from LA",
+        bookingUrl:
+          "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
+        description: "Two-day guided trip from Los Angeles.",
+        itinerary: [],
+        highlights: [],
+        faqs: [],
+        inclusions: [],
+        exclusions: [],
+        additionalInfo: [],
+        exactProductImages: [],
+        canonicalHeroUrl: undefined,
+        heroSelectionSource: "missing",
+        heroSelectionDiagnostics: { candidateUrls: [] },
+        provenance: {
+          apiFetchAttempted: true,
+          apiFetchSucceeded: true,
+          descriptionSource: "api",
+        },
+      })
+    ).toThrow("missing canonical hero");
   });
 });

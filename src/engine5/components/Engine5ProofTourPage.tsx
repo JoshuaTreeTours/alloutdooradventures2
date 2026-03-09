@@ -12,9 +12,13 @@ export default function Engine5ProofTourPage() {
 
   useEffect(() => {
     getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
-      .then(apiTour =>
-        setTour(mapViatorToEngine5Tour(engine5ProofViatorRecord, apiTour).page)
-      )
+      .then(apiTour => {
+        const mapped = mapViatorToEngine5Tour(engine5ProofViatorRecord, apiTour);
+        if (process.env.NODE_ENV !== "production") {
+          console.info("[engine5][132218P209] hero diagnostics", mapped.normalized.diagnostics);
+        }
+        setTour(mapped.page);
+      })
       .catch(err => setError(err instanceof Error ? err.message : String(err)));
   }, []);
 

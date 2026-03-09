@@ -1,4 +1,8 @@
-import type { Engine5ViatorApiTour } from "../types";
+import type {
+  Engine5ExactProductImage,
+  Engine5ImageVariant,
+  Engine5ViatorApiTour,
+} from "../types";
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") return undefined;
@@ -11,18 +15,21 @@ const asRecord = (value: unknown): Record<string, unknown> | undefined =>
     ? (value as Record<string, unknown>)
     : undefined;
 
-const asImage = (value: unknown): string | undefined => {
+const asImageUrl = (value: unknown): string | undefined => {
   const url = cleanText(value);
   if (!url) return undefined;
   try {
     const parsed = new URL(url);
     return parsed.protocol === "http:" || parsed.protocol === "https:"
-      ? url
+      ? parsed.toString()
       : undefined;
   } catch {
     return undefined;
   }
 };
+
+const asNumber = (value: unknown): number | undefined =>
+  typeof value === "number" && Number.isFinite(value) ? value : undefined;
 
 const toStringArray = (value: unknown): string[] =>
   Array.isArray(value)
@@ -30,6 +37,50 @@ const toStringArray = (value: unknown): string[] =>
         .map(item => cleanText(item))
         .filter((item): item is string => Boolean(item))
     : [];
+
+const extractHighlights = (product: Record<string, unknown>): string[] => {
+  const highlights =
+    toStringArray(product.highlights) ||
+    toStringArray(asRecord(product.additionalInfo)?.highlights);
+
+  if (highlights.length > 0) return highlights;
+
+  const raw = Array.isArray(product.bulletPoints)
+    ? product.bulletPoints
+    : Array.isArray(product.whyYouAreSeeingThis)
+      ? product.whyYouAreSeeingThis
+      : [];
+
+  return raw
+    .map(item => cleanText(item))
+    .filter((item): item is string => Boolean(item));
+};
+
+const extractFaqs = (
+  product: Record<string, unknown>
+): Array<{ question: string; answer: string }> => {
+  const raw =
+    (product.faqs as unknown[]) ??
+    (asRecord(product.additionalInfo)?.faqs as unknown[]) ??
+    [];
+
+  if (!Array.isArray(raw)) return [];
+
+  return raw
+    .map(item => {
+      const row = asRecord(item);
+      if (!row) return undefined;
+      const question =
+        cleanText(row.question) ?? cleanText(row.title) ?? cleanText(row.q);
+      const answer =
+        cleanText(row.answer) ??
+        cleanText(row.description) ??
+        cleanText(row.a);
+      if (!question || !answer) return undefined;
+      return { question, answer };
+    })
+    .filter((item): item is { question: string; answer: string } => Boolean(item));
+};
 
 const extractItinerary = (product: Record<string, unknown>) => {
   const raw =
@@ -58,20 +109,111 @@ const extractItinerary = (product: Record<string, unknown>) => {
     );
 };
 
-const extractGalleryImages = (product: Record<string, unknown>): string[] => {
-  const images = Array.isArray(product.images) ? product.images : [];
-  const urls = images.flatMap(image => {
-    const row = asRecord(image);
-    if (!row) return [] as string[];
-    const direct = asImage(row.url);
-    const variants = Array.isArray(row.variants) ? row.variants : [];
-    const variantUrls = variants
-      .map(variant => asImage(asRecord(variant)?.url))
-      .filter((url): url is string => Boolean(url));
-    return direct ? [direct, ...variantUrls] : variantUrls;
-  });
+const extractExactProductImages = (
+  product: Record<string, unknown>
+): Engine5ExactProductImage[] => {
+  const rawImages = Array.isArray(product.images) ? product.images : [];
 
-  return Array.from(new Set(urls));
+  return rawImages
+    .map(image => {
+      const row = asRecord(image);
+      if (!row) return undefined;
+
+      const variantsRaw = Array.isArray(row.variants) ? row.variants : [];
+      const variants: Engine5ImageVariant[] = variantsRaw
+        .map(variant => {
+          const variantRow = asRecord(variant);
+          if (!variantRow) return undefined;
+          const url = asImageUrl(variantRow.url);
+          if (!url) return undefined;
+          return {
+            url,
+            width: asNumber(variantRow.width),
+            height: asNumber(variantRow.height),
+          };
+        })
+        .filter((variant): variant is Engine5ImageVariant => Boolean(variant));
+
+      const directUrl = asImageUrl(row.url);
+      if (directUrl && !variants.some(variant => variant.url === directUrl)) {
+        variants.push({
+          url: directUrl,
+          width: asNumber(row.width),
+          height: asNumber(row.height),
+        });
+      }
+
+      if (!directUrl && variants.length === 0) return undefined;
+
+      return {
+        url: directUrl,
+        isCover: row.isCover === true,
+        variants,
+      };
+    })
+    .filter((image): image is Engine5ExactProductImage => Boolean(image));
+};
+
+const rankVariant = (variant: Engine5ImageVariant): number => {
+  const width = variant.width ?? 0;
+  const height = variant.height ?? 0;
+  const hasLandscapeShape = width > height;
+  const isPreferredLandscape = hasLandscapeShape && width >= 1100;
+  const area = width * height;
+
+  if (isPreferredLandscape) {
+    return 3_000_000_000 + area;
+  }
+
+  if (hasLandscapeShape) {
+    return 2_000_000_000 + area;
+  }
+
+  return 1_000_000_000 + area;
+};
+
+const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
+  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+  const coverImages = withVariants.filter(image => image.isCover);
+  const candidates = coverImages.length > 0 ? coverImages : withVariants;
+
+  const allCandidateUrls = Array.from(
+    new Set(
+      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+    )
+  );
+
+  if (candidates.length === 0) {
+    return {
+      canonicalHeroUrl: undefined,
+      heroSelectionSource: "missing" as const,
+      heroSelectionSize: undefined,
+      candidateUrls: allCandidateUrls,
+    };
+  }
+
+  const selectedVariant = candidates
+    .flatMap(image => image.variants)
+    .sort((a, b) => rankVariant(b) - rankVariant(a))[0];
+
+  if (!selectedVariant) {
+    return {
+      canonicalHeroUrl: undefined,
+      heroSelectionSource: "missing" as const,
+      heroSelectionSize: undefined,
+      candidateUrls: allCandidateUrls,
+    };
+  }
+
+  return {
+    canonicalHeroUrl: selectedVariant.url,
+    heroSelectionSource: "api-images-payload" as const,
+    heroSelectionSize: {
+      width: selectedVariant.width,
+      height: selectedVariant.height,
+    },
+    candidateUrls: allCandidateUrls,
+  };
 };
 
 export const getEngine5ViatorTourData = async (
@@ -103,11 +245,17 @@ export const getEngine5ViatorTourData = async (
     cleanText(product.summary) ??
     cleanText(asRecord(product.description)?.text) ??
     cleanText(product.description);
-  const sourceUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
-  const galleryImages = extractGalleryImages(product);
-  const primaryImageUrl = galleryImages[0];
+  const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
+  const exactProductImages = extractExactProductImages(product);
+  const heroSelection = selectCanonicalHero(exactProductImages);
 
-  if (!title || !description || !sourceUrl || !primaryImageUrl) {
+  if (
+    !title ||
+    !description ||
+    !bookingUrl ||
+    !heroSelection.canonicalHeroUrl ||
+    heroSelection.heroSelectionSource === "missing"
+  ) {
     throw new Error(
       `Engine5 Viator API payload incomplete for ${normalizedCode}: required fields missing`
     );
@@ -117,26 +265,32 @@ export const getEngine5ViatorTourData = async (
     productCode: normalizedCode,
     title,
     description,
-    sourceUrl,
+    bookingUrl,
     duration: cleanText(product.duration) ?? cleanText(product.durationText),
+    startTime:
+      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
     fromPrice: cleanText(product.priceFrom) ?? cleanText(product.fromPrice),
     priceCurrency: cleanText(product.currencyCode),
-    rating: typeof product.rating === "number" ? product.rating : undefined,
-    reviewCount:
-      typeof product.reviewCount === "number" ? product.reviewCount : undefined,
+    rating: asNumber(product.rating),
+    reviewCount: asNumber(product.reviewCount),
     meetingPoint: cleanText(product.meetingPoint),
     cancellationPolicy: cleanText(product.cancellationPolicy),
     itinerary: extractItinerary(product),
+    highlights: extractHighlights(product),
+    faqs: extractFaqs(product),
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
-    primaryImageUrl,
-    galleryImages,
+    exactProductImages,
+    canonicalHeroUrl: heroSelection.canonicalHeroUrl,
+    heroSelectionSource: heroSelection.heroSelectionSource,
+    heroSelectionSize: heroSelection.heroSelectionSize,
+    heroSelectionDiagnostics: {
+      candidateUrls: heroSelection.candidateUrls,
+    },
     provenance: {
       apiFetchAttempted: true,
       apiFetchSucceeded: true,
-      heroImageSource: "api",
-      listingImageSource: "api",
       descriptionSource: "api",
     },
   };

@@ -1,9 +1,27 @@
+export type Engine5ImageVariant = {
+  url: string;
+  width?: number;
+  height?: number;
+};
+
+export type Engine5ExactProductImage = {
+  url?: string;
+  isCover: boolean;
+  variants: Engine5ImageVariant[];
+};
+
+export type Engine5HeroSelectionSource =
+  | "api-images-payload"
+  | "override"
+  | "missing";
+
 export type Engine5ViatorApiTour = {
   productCode: string;
   title: string;
-  sourceUrl: string;
+  bookingUrl: string;
   description: string;
   duration?: string;
+  startTime?: string;
   fromPrice?: string;
   priceCurrency?: string;
   rating?: number;
@@ -11,17 +29,62 @@ export type Engine5ViatorApiTour = {
   meetingPoint?: string;
   cancellationPolicy?: string;
   itinerary: Array<{ title: string; description?: string; duration?: string }>;
+  highlights: string[];
+  faqs: Array<{ question: string; answer: string }>;
   inclusions: string[];
   exclusions: string[];
   additionalInfo: string[];
-  primaryImageUrl: string;
-  galleryImages: string[];
+  exactProductImages: Engine5ExactProductImage[];
+  canonicalHeroUrl?: string;
+  heroSelectionSource: Engine5HeroSelectionSource;
+  heroSelectionSize?: { width?: number; height?: number };
+  heroSelectionDiagnostics: {
+    candidateUrls: string[];
+  };
   provenance: {
     apiFetchAttempted: true;
     apiFetchSucceeded: boolean;
-    heroImageSource: "api";
-    listingImageSource: "api";
     descriptionSource: "api";
+  };
+};
+
+export type Engine5NormalizedTour = {
+  productCode: string;
+  slug: string;
+  destination: Engine5ProductRecord["destination"];
+  bookingUrl: string;
+  title: string;
+  facts: {
+    priceFrom?: string;
+    ratingValue?: number;
+    reviewCount?: number;
+    duration?: string;
+    startTime?: string;
+    meetingPointFull?: string;
+    meetingPointShort?: string;
+    cancellationPolicy?: string;
+  };
+  content: {
+    overview: string;
+    highlights: string[];
+    faqs: Array<{ question: string; answer: string }>;
+    itinerary: Array<{ title: string; description?: string; duration?: string }>;
+    inclusions: string[];
+    exclusions: string[];
+    additionalInfo?: string;
+  };
+  exactProductImages: Engine5ExactProductImage[];
+  canonicalHeroUrl?: string;
+  heroSelectionSource: Engine5HeroSelectionSource;
+  heroSelectionSize?: { width?: number; height?: number };
+  diagnostics: {
+    exactProductImageCandidateUrls: string[];
+    selectedCanonicalHeroUrl?: string;
+    pageHeroUrl?: string;
+    listingCardUrl?: string;
+    ogImageUrl?: string;
+    schemaImageUrl?: string;
+    allImageSurfacesIdentical: boolean;
   };
 };
 
