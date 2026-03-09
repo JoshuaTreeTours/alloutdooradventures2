@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
 import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
+import {
+  ENGINE5_PROOF_TOUR_PATH,
+  ENGINE5_PROOF_TOUR_SLUG,
+} from "../routes";
 import { engine5ProofViatorRecord } from "./record";
 
 describe("mapViatorToEngine5Tour", () => {
@@ -51,6 +55,10 @@ describe("mapViatorToEngine5Tour", () => {
     expect(mapped.normalized.slug).toBe(
       "yosemite-and-kings-canyon-2-day-tour-from-la"
     );
+    expect(mapped.page.title).toContain("Yosemite");
+    expect(mapped.page.facts.duration).toBeUndefined();
+    expect(mapped.page.content.overview).toContain("Two-day guided trip");
+    expect(mapped.page.bookingUrl).toContain("132218P209");
     expect(mapped.page.canonicalPath).toBe(
       "/engine5/california/los-angeles/tours/yosemite-and-kings-canyon-2-day-tour-from-la"
     );
@@ -92,5 +100,17 @@ describe("mapViatorToEngine5Tour", () => {
         },
       })
     ).toThrow("missing canonical hero");
+  });
+});
+
+
+describe("engine5 proof route constants", () => {
+  it("exposes a real route URL for reviewers", () => {
+    expect(ENGINE5_PROOF_TOUR_SLUG).toBe(
+      "best-yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la"
+    );
+    expect(ENGINE5_PROOF_TOUR_PATH).toBe(
+      "/engine5/california/los-angeles/tours/best-yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la"
+    );
   });
 });
