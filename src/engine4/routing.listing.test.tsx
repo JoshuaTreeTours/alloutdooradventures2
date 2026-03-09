@@ -188,7 +188,7 @@ describe("Engine4 Aspen routing/listing", () => {
       "/destinations/california/los-angeles/tours/mulholland-trail-horseback-tour-379799p1"
     );
     expect(target?.tour.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1"
     );
     expect(target?.tour.heroImage).not.toContain(
       "photo-o/2e/7d/2f/f4/caption.jpg"

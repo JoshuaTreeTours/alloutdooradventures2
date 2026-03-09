@@ -213,7 +213,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Los-Angeles/Mulholland-Trail-Horseback-Tour/d645-379799P1",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "California",
@@ -995,7 +995,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         isCover: true,
         variants: [
           {
-            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1",
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
             width: 1100,
             height: 800,
           },
@@ -1005,7 +1005,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         isCover: false,
         variants: [
           {
-            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/23/caption.jpg?w=1100&h=800&s=1",
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/35/caption.jpg?w=1100&h=800&s=1",
             width: 1100,
             height: 800,
           },
@@ -1013,13 +1013,28 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
     primaryImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
     galleryImages: [
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1",
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/23/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/35/caption.jpg?w=1100&h=800&s=1",
     ],
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+    rawProductPayload: {
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              name: "large",
+              width: 1100,
+              height: 800,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+            },
+          ],
+        },
+      ],
+    },
     overview:
       "Ride the Mulholland Trail above Los Angeles with a guide from Sunset Ranch Hollywood and enjoy open Hollywood Hills scenery on a beginner-friendly one-hour route. The experience keeps logistics simple with a clear Beachwood Drive meeting point, then heads onto a horse trail where city views and hillside terrain create a classic Los Angeles riding feel. It is a straightforward option for travelers who want a short horseback outing near Hollywood without committing to a longer trail day.",
     itinerary: [

@@ -269,15 +269,20 @@ describe("mapViatorToEngine4Tour", () => {
     );
     expect(record).toBeDefined();
 
+    const apiTour = engine4ViatorApiFallbackByProductCode["379799P1"];
+    expect(apiTour?.exactProductImages?.[0]?.variants?.[0]?.url).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1"
+    );
+
     const vm = mapViatorToEngine4Tour({
       record: record!,
-      apiTour: engine4ViatorApiFallbackByProductCode["379799P1"],
+      apiTour,
     });
 
     expect(vm.title).toBe("Mulholland Trail Horseback Tour");
     expect(vm.slug).toBe("mulholland-trail-horseback-tour-379799p1");
     expect(vm.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1"
     );
     expect(vm.heroImage).not.toContain("photo-o/2e/7d/2f/f4/caption.jpg");
     expect(vm.primaryImage).toBe(vm.heroImage);
