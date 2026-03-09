@@ -226,6 +226,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "132218P209",
+    bookingUrl:
+      "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    slug: "yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -246,6 +263,52 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "132218P209": {
+    productCode: "132218P209",
+    title:
+      "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
+    sourceUrl:
+      "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
+    duration: "2 days",
+    priceCurrency: "USD",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+    rawProductPayload: {
+      productCode: "132218P209",
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              name: "large",
+              width: 1100,
+              height: 800,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+            },
+          ],
+        },
+      ],
+    },
+    overview:
+      "Two-day guided tour from Los Angeles that covers Yosemite National Park and Kings Canyon National Park.",
+  },
   "91782P1": {
     productCode: "91782P1",
     title: "Moab Private Half-Day Canyoneering",
