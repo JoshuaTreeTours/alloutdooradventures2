@@ -174,6 +174,19 @@ const joinTextArray = (value: unknown): string | undefined => {
   return parts.length > 0 ? parts.join(" ") : undefined;
 };
 
+type DescriptionSource = NonNullable<
+  Engine4ViatorApiTour["provenance"]
+>["descriptionSource"];
+
+const logApiFetch = (message: string) => {
+  if (process.env.NODE_ENV === "development" || process.env.NODE_ENV === "test") {
+    console.info(message);
+  }
+};
+
+const shouldThrowOnApiFailure = () =>
+  process.env.ENGINE4_VIATOR_STRICT_API === "true";
+
 export const getEngine4ViatorTourData = async (
   productCode: string
 ): Promise<Engine4ViatorApiTour | undefined> => {
@@ -182,12 +195,30 @@ export const getEngine4ViatorTourData = async (
     return undefined;
   }
 
+  const fallbackTour = engine4ViatorApiFallbackByProductCode[normalizedCode];
   const apiKey = process.env.VIATOR_API_KEY;
   if (!apiKey) {
-    return engine4ViatorApiFallbackByProductCode[normalizedCode];
+    logApiFetch(
+      `[engine4-viator-api] product=${normalizedCode} attempted=false succeeded=false fallbackUsed=true reason=no_api_key`
+    );
+    return fallbackTour
+      ? {
+          ...fallbackTour,
+          provenance: {
+            apiFetchAttempted: false,
+            apiFetchSucceeded: false,
+            fallbackUsed: true,
+            heroImageSource: fallbackTour.primaryImageUrl ? "fallback" : "none",
+            descriptionSource: fallbackTour.description ? "fallback" : "none",
+          },
+        }
+      : undefined;
   }
 
   try {
+    logApiFetch(
+      `[engine4-viator-api] product=${normalizedCode} attempted=true status=starting`
+    );
     const payload = await fetchViator<Record<string, unknown>>(
       apiKey,
       `/products/${normalizedCode}`,
@@ -218,12 +249,14 @@ export const getEngine4ViatorTourData = async (
     );
 
     const itinerary = extractItinerary(product);
-    const description =
-      cleanText(product.shortDescription) ??
-      cleanText(product.summary) ??
-      cleanText(
-        (product.description as Record<string, unknown> | undefined)?.text
-      );
+
+    const shortDescription = cleanText(product.shortDescription);
+    const summaryDescription = cleanText(product.summary);
+    const descriptionText = cleanText(
+      (product.description as Record<string, unknown> | undefined)?.text
+    );
+    const description = shortDescription ?? summaryDescription ?? descriptionText;
+
     const descriptionLong =
       cleanText(product.description) ??
       cleanText(
@@ -238,6 +271,23 @@ export const getEngine4ViatorTourData = async (
       cleanText((product as Record<string, unknown>).whatToExpectText) ??
       joinTextArray((product as Record<string, unknown>).whatToExpectItems);
 
+    const descriptionSource: DescriptionSource =
+      shortDescription
+        ? "api.shortDescription"
+        : summaryDescription
+          ? "api.summary"
+          : descriptionText
+            ? "api.description.text"
+            : cleanText(product.description)
+              ? "api.description"
+              : fallbackTour?.description
+                ? "fallback"
+                : "none";
+
+    logApiFetch(
+      `[engine4-viator-api] product=${normalizedCode} attempted=true succeeded=true fallbackUsed=false heroImageSource=${primaryImageUrl ? "api" : "none"} descriptionSource=${descriptionSource}`
+    );
+
     return {
       productCode: normalizedCode,
       exactProductImages,
@@ -245,7 +295,7 @@ export const getEngine4ViatorTourData = async (
       sourceUrl:
         cleanText(product.productUrl) ??
         cleanText(product.seoUrl) ??
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.sourceUrl ??
+        fallbackTour?.sourceUrl ??
         "",
       description,
       descriptionLong,
@@ -273,21 +323,18 @@ export const getEngine4ViatorTourData = async (
           : undefined,
       primaryImageUrl,
       galleryImages,
-      sourceDerivedImageUrl:
-        engine4ViatorApiFallbackByProductCode[normalizedCode]
-          ?.sourceDerivedImageUrl,
+      sourceDerivedImageUrl: fallbackTour?.sourceDerivedImageUrl,
       meetingPoint:
         cleanText((product as Record<string, unknown>).meetingPoint) ??
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.meetingPoint,
+        fallbackTour?.meetingPoint,
       cancellationPolicy:
         cleanText((product as Record<string, unknown>).cancellationPolicy) ??
-        engine4ViatorApiFallbackByProductCode[normalizedCode]
-          ?.cancellationPolicy,
+        fallbackTour?.cancellationPolicy,
       inclusions:
         toStringArray((product as Record<string, unknown>).inclusions).length >
         0
           ? toStringArray((product as Record<string, unknown>).inclusions)
-          : engine4ViatorApiFallbackByProductCode[normalizedCode]?.inclusions,
+          : fallbackTour?.inclusions,
       exclusions: toStringArray(
         (product as Record<string, unknown>).exclusions
       ),
@@ -296,13 +343,40 @@ export const getEngine4ViatorTourData = async (
       ),
       overview:
         cleanText((product as Record<string, unknown>).description) ??
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.overview,
-      highlights:
-        engine4ViatorApiFallbackByProductCode[normalizedCode]?.highlights,
-      faqs: engine4ViatorApiFallbackByProductCode[normalizedCode]?.faqs,
+        fallbackTour?.overview,
+      highlights: fallbackTour?.highlights,
+      faqs: fallbackTour?.faqs,
       rawProductPayload: product,
+      provenance: {
+        apiFetchAttempted: true,
+        apiFetchSucceeded: true,
+        fallbackUsed: false,
+        heroImageSource: primaryImageUrl ? "api" : "none",
+        descriptionSource,
+      },
     };
-  } catch {
-    return engine4ViatorApiFallbackByProductCode[normalizedCode];
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error(
+      `[engine4-viator-api] product=${normalizedCode} attempted=true succeeded=false fallbackUsed=true error=${message}`
+    );
+    if (shouldThrowOnApiFailure()) {
+      throw new Error(
+        `Engine4 Viator API fetch failed for ${normalizedCode}: ${message}`
+      );
+    }
+
+    return fallbackTour
+      ? {
+          ...fallbackTour,
+          provenance: {
+            apiFetchAttempted: true,
+            apiFetchSucceeded: false,
+            fallbackUsed: true,
+            heroImageSource: fallbackTour.primaryImageUrl ? "fallback" : "none",
+            descriptionSource: fallbackTour.description ? "fallback" : "none",
+          },
+        }
+      : undefined;
   }
 };

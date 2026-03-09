@@ -108,6 +108,17 @@ export const mapViatorToEngine4Tour = (input: {
   const { record, apiTour } = input;
   const fallbackTour =
     engine4ViatorApiFallbackByProductCode[record.productCode];
+  const apiSucceeded = apiTour?.provenance?.apiFetchSucceeded === true;
+
+  if (
+    process.env.ENGINE4_VIATOR_STRICT_API === "true" &&
+    apiTour?.provenance?.apiFetchAttempted === true &&
+    apiSucceeded === false
+  ) {
+    throw new Error(
+      `Engine4 Viator strict API mode: refusing fallback mapping for ${record.productCode}`
+    );
+  }
 
   const meetingPointFull = coalesceText(
     apiTour?.meetingPoint,
@@ -116,7 +127,7 @@ export const mapViatorToEngine4Tour = (input: {
   const resolvedApiTour: Engine4ViatorApiTour | undefined =
     apiTour || fallbackTour
       ? {
-          ...(fallbackTour ?? {}),
+          ...((apiSucceeded ? fallbackTour : undefined) ?? {}),
           ...(apiTour ?? {}),
           title: coalesceText(apiTour?.title, fallbackTour?.title) ?? "",
           sourceUrl:
@@ -306,7 +317,14 @@ export const mapViatorToEngine4Tour = (input: {
     title: tour.title,
     candidates,
     resolvedHeroImage: tour.heroImage ?? undefined,
-    diagnostics: heroDiagnostics,
+    diagnostics: {
+      ...heroDiagnostics,
+      apiFetchAttempted: resolvedApiTour?.provenance?.apiFetchAttempted ?? false,
+      apiFetchSucceeded: resolvedApiTour?.provenance?.apiFetchSucceeded ?? false,
+      fallbackUsed: resolvedApiTour?.provenance?.fallbackUsed ?? false,
+      heroImageSource: resolvedApiTour?.provenance?.heroImageSource ?? "none",
+      descriptionSource: resolvedApiTour?.provenance?.descriptionSource ?? "none",
+    },
   });
 
   assertEngine4ViatorTour(tour);
