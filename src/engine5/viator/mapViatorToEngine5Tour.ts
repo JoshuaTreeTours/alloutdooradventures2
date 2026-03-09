@@ -12,7 +12,7 @@ export const mapViatorToEngine5Tour = (
   }
 
   const slug = slugify(apiTour.title);
-  const canonicalPath = `/engine5/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
+  const canonicalPath = `/destinations/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
   const bookingUrl = apiTour.sourceUrl;
 
   const page: Engine4TourViewModel = {
