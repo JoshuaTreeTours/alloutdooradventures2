@@ -226,6 +226,22 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "132218P209",
+    bookingUrl: "https://www.viator.com/tours/Los-Angeles/d645-132218P209",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    slug: "los-angeles-experience-132218p209",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
