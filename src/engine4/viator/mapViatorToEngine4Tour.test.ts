@@ -262,4 +262,38 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.content.highlights.length).toBeGreaterThan(2);
     expect(vm.content.faqs.length).toBeGreaterThan(2);
   });
+
+  it("maps 379799P1 with Mulholland horseback facts and canonical image", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "379799P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["379799P1"],
+    });
+
+    expect(vm.title).toBe("Mulholland Trail Horseback Tour");
+    expect(vm.slug).toBe("mulholland-trail-horseback-tour-379799p1");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/7e/1f/21/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.heroImage).not.toContain("photo-o/2e/7d/2f/f4/caption.jpg");
+    expect(vm.primaryImage).toBe(vm.heroImage);
+    expect(vm.galleryImages[0]).toBe(vm.heroImage);
+    expect(vm.facts.reviewCount).toBe(232);
+    expect(vm.facts.duration).toBe("1 hour");
+    expect(vm.facts.meetingPointFull).toBe(
+      "3204 Beachwood Dr, Los Angeles, CA 90068, USA"
+    );
+    expect(vm.facts.cancellationPolicy).toBe(
+      "This experience is non-refundable and cannot be changed for any reason."
+    );
+    expect(vm.content.itinerary?.[0]).toEqual({
+      title: "3204 Beachwood Dr",
+      duration: "1 hour",
+      description: "Admission Ticket Free",
+    });
+  });
 });
