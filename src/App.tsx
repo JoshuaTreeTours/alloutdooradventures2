@@ -59,6 +59,8 @@ import TourDetail from "./pages/tours/TourDetail";
 import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
+import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
+import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -275,6 +277,14 @@ export default function App() {
         <Route path="/tours/day/hiking" component={DayHikingTours} />
         <Route path="/tours/day/paddle" component={DayPaddleTours} />
         <Route path="/tours/multi-day" component={MultiDayLanding} />
+        <Route
+          path="/engine5/california/los-angeles/tours"
+          component={Engine5ProofListingRoute}
+        />
+        <Route
+          path="/engine5/california/los-angeles/tours/:tourSlug"
+          component={Engine5ProofTourPage}
+        />
         <Route path="/guides" component={GuidesIndex} />
         <Route path="/guides/us" component={UsGuidesIndex} />
         <Route
