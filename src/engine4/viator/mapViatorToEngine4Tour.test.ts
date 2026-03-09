@@ -232,6 +232,46 @@ describe("mapViatorToEngine4Tour", () => {
     expect(bookingUrl.searchParams.get("medium")).toBe("link");
   });
 
+
+  it("maps 379799P1 as Mulholland Trail Horseback Tour with source-backed facts", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "379799P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["379799P1"],
+    });
+
+    expect(vm.title).toBe("Mulholland Trail Horseback Tour");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/7d/2f/f4/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.primaryImage).toBe(vm.heroImage);
+    expect(vm.galleryImages[0]).toBe(vm.heroImage);
+    expect(vm.facts.ratingValue).toBe(4.7);
+    expect(vm.facts.reviewCount).toBe(232);
+    expect(vm.facts.duration).toBe("1 hour");
+    expect(vm.facts.meetingPointFull).toBe(
+      "3204 Beachwood Dr, Los Angeles, CA 90068, USA"
+    );
+    expect(vm.content.itinerary?.[0]).toEqual({
+      title: "3204 Beachwood Dr",
+      duration: "1 hour",
+      description: "Admission Ticket Free",
+    });
+    expect(vm.facts.cancellationPolicy).toBe(
+      "This experience is non-refundable and cannot be changed for any reason."
+    );
+    expect(vm.content.overview).toContain("Hollywood Hills");
+
+    const bookingUrl = new URL(vm.bookingUrl);
+    expect(bookingUrl.searchParams.get("pid")).toBe("P00290915");
+    expect(bookingUrl.searchParams.get("mcid")).toBe("42383");
+    expect(bookingUrl.searchParams.get("medium")).toBe("link");
+  });
+
   it("maps 36001P1 with exact-product images payload and Yosemite facts", () => {
     const record = engine4ViatorTours.find(
       tour => tour.productCode === "36001P1"
