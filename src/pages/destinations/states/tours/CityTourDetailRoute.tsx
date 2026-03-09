@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -71,6 +71,10 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
+import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
+import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
+import { engine5ProofViatorRecord } from "../../../../engine5/viator/record";
+import type { Engine4TourViewModel } from "../../../../engine4/types";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -83,6 +87,40 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [engine5Tour, setEngine5Tour] = useState<Engine4TourViewModel | null>(
+    null
+  );
+  const [engine5Error, setEngine5Error] = useState<string | null>(null);
+  const [engine5Resolved, setEngine5Resolved] = useState(false);
+
+  const isLosAngelesRoute =
+    params.stateSlug === "california" && params.citySlug === "los-angeles";
+
+  useEffect(() => {
+    if (!isLosAngelesRoute) {
+      return;
+    }
+
+    setEngine5Tour(null);
+    setEngine5Error(null);
+    setEngine5Resolved(false);
+    getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
+      .then(apiTour => {
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        ).page;
+        if (mapped.slug === params.tourSlug) {
+          setEngine5Tour(mapped);
+        }
+        setEngine5Resolved(true);
+      })
+      .catch(err => {
+        setEngine5Error(err instanceof Error ? err.message : String(err));
+        setEngine5Resolved(true);
+      });
+  }, [isLosAngelesRoute, params.tourSlug]);
+
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
@@ -144,6 +182,26 @@ export default function CityTourDetailRoute({
     }
     return (
       <Engine2TourPage tour={engine2Tour} isFHPilotEnabled={isFHPilotEnabled} />
+    );
+  }
+
+  if (engine5Tour) {
+    return <Engine4TourPage tour={engine5Tour} />;
+  }
+
+  if (isLosAngelesRoute && !engine5Resolved) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16">
+        Loading Engine5 API product…
+      </main>
+    );
+  }
+
+  if (isLosAngelesRoute && engine5Error) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16 text-[#9a3412]">
+        Engine5 failed loudly: {engine5Error}
+      </main>
     );
   }
 

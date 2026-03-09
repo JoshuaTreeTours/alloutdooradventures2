@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -10,7 +10,10 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
-import { getToursByCityUnified } from "../../../../data/tours";
+import {
+  getToursByCityUnified,
+  type UnifiedCityTour,
+} from "../../../../data/tours";
 import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
@@ -21,6 +24,9 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
+import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
+import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
+import { engine5ProofViatorRecord } from "../../../../engine5/viator/record";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -34,6 +40,33 @@ export default function CityToursIndexRoute({
   params,
   basePathOverride,
 }: CityToursIndexRouteProps) {
+  const [engine5Tour, setEngine5Tour] = useState<UnifiedCityTour | null>(null);
+  const [engine5Error, setEngine5Error] = useState<string | null>(null);
+
+  const isLosAngelesRoute =
+    params.stateSlug === "california" && params.citySlug === "los-angeles";
+
+  useEffect(() => {
+    if (!isLosAngelesRoute) {
+      return;
+    }
+
+    getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
+      .then(apiTour => {
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        ).listing;
+        setEngine5Tour({
+          tour: mapped,
+          href: `/destinations/${mapped.destination.stateSlug}/${mapped.destination.citySlug}/tours/${mapped.slug}`,
+        });
+      })
+      .catch(err =>
+        setEngine5Error(err instanceof Error ? err.message : String(err))
+      );
+  }, [isLosAngelesRoute]);
+
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -57,7 +90,16 @@ export default function CityToursIndexRoute({
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
-  const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
+  const inventoryTours =
+    isLosAngelesRoute && engine5Tour
+      ? [
+          ...tours.filter(entry => entry.tour.id !== engine5Tour.tour.id),
+          engine5Tour,
+        ]
+      : tours;
+  const toursWithImages = inventoryTours.filter(entry =>
+    hasValidTourImage(entry.tour)
+  );
   const filteredTours = activityFilter
     ? toursWithImages.filter(entry =>
         entry.tour.activitySlugs.includes(activityFilter)
@@ -177,6 +219,11 @@ export default function CityToursIndexRoute({
             New tours are on the way. Check back soon for {city.name} updates.
           </p>
         )}
+        {engine5Error ? (
+          <p className="mt-6 text-sm font-semibold text-[#9a3412]">
+            Engine5 failed loudly: {engine5Error}
+          </p>
+        ) : null}
       </section>
     </main>
   );

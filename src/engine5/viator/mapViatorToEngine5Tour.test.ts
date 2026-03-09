@@ -32,6 +32,9 @@ describe("mapViatorToEngine5Tour", () => {
     expect(mapped.page.slug).toBe(
       "yosemite-and-kings-canyon-2-day-tour-from-la"
     );
+    expect(mapped.page.canonicalPath).toBe(
+      "/destinations/california/los-angeles/tours/yosemite-and-kings-canyon-2-day-tour-from-la"
+    );
     expect(mapped.page.heroImage).toContain("dynamic-media.tacdn.com");
     expect(mapped.listing.heroImage).toContain("dynamic-media.tacdn.com");
   });
