@@ -209,6 +209,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "379799P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Los-Angeles/Mulholland-Trail-Horseback-Tour/d645-379799P1",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    slug: "mulholland-trail-horseback-tour-379799p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -959,5 +976,88 @@ export const engine4ViatorApiFallbackByProductCode: Record<
           "This product is positioned as a hike-first Joshua Tree experience with substantial trail time and guide-led route support.",
       },
     ],
+  },
+  "379799P1": {
+    productCode: "379799P1",
+    title: "Mulholland Trail Horseback Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Los-Angeles/Mulholland-Trail-Horseback-Tour/d645-379799P1",
+    fromPrice: "$75.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 232,
+    duration: "1 hour",
+    meetingPoint: "3204 Beachwood Dr, Los Angeles, CA 90068, USA",
+    cancellationPolicy:
+      "This experience is non-refundable and cannot be changed for any reason.",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+      {
+        isCover: false,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/35/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/35/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+    rawProductPayload: {
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              name: "large",
+              width: 1100,
+              height: 800,
+              url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c0/34/caption.jpg?w=1100&h=800&s=1",
+            },
+          ],
+        },
+      ],
+    },
+    overview:
+      "Ride the Mulholland Trail above Los Angeles with a guide from Sunset Ranch Hollywood and enjoy open Hollywood Hills scenery on a beginner-friendly one-hour route. The experience keeps logistics simple with a clear Beachwood Drive meeting point, then heads onto a horse trail where city views and hillside terrain create a classic Los Angeles riding feel. It is a straightforward option for travelers who want a short horseback outing near Hollywood without committing to a longer trail day.",
+    itinerary: [
+      {
+        title: "3204 Beachwood Dr",
+        duration: "1 hour",
+        description: "Admission Ticket Free",
+      },
+    ],
+    inclusions: ["Helmet"],
+    additionalInfo: [
+      "Not wheelchair accessible",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "Weight maximum 240 lbs",
+      "Maximum of 20 travelers",
+      "Please use the gate buzzer and allow extra time for parking near the ranch entrance",
+    ],
+    description:
+      "One-hour guided horseback trail ride in the Hollywood Hills and Mulholland area above Los Angeles.",
+    whatToExpect:
+      "Meet at 3204 Beachwood Dr, check in at Sunset Ranch Hollywood, and follow a guide on a one-hour Mulholland Trail ride with wide city-facing views.",
   },
 };
