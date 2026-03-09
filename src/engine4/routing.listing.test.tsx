@@ -211,4 +211,27 @@ describe("Engine4 Aspen routing/listing", () => {
       "This experience is non-refundable and cannot be changed for any reason."
     );
   });
+
+  it("builds the 132218P209 route for Los Angeles with API-backed canonical image", () => {
+    const entries = getEngine4ListingEntries("california", "los-angeles");
+    const target = entries.find(entry => entry.tour.productCode === "132218P209");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/los-angeles/tours/yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la-132218p209"
+    );
+    expect(target?.tour.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "los-angeles",
+      "yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la-132218p209"
+    );
+
+    expect(routed?.id).toBe("132218P209");
+    expect(routed?.images.hero).toBe(target?.tour.heroImage);
+    expect(routed?.content.duration).toBe("2 days");
+  });
 });
