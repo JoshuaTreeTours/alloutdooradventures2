@@ -41,6 +41,19 @@ export type Engine4TourContent = {
 };
 
 export type Engine4ViatorApiTour = {
+  provenance?: {
+    apiFetchAttempted: boolean;
+    apiFetchSucceeded: boolean;
+    fallbackUsed: boolean;
+    heroImageSource: "api" | "fallback" | "none";
+    descriptionSource:
+      | "api.shortDescription"
+      | "api.summary"
+      | "api.description.text"
+      | "api.description"
+      | "fallback"
+      | "none";
+  };
   exactProductImages?: Array<{
     isCover: boolean;
     variants: Array<{
