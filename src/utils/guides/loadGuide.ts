@@ -3,6 +3,11 @@ import { cleanLandmarkText } from "./cleanLandmarkText";
 import { getGuideRecord } from "./guideRegistry";
 import { isImageEmbedGuide } from "./isImageEmbedGuide";
 import { selectCityHeroFromTours } from "./selectCityHeroFromTours";
+import {
+  buildCityGuideDisplayTitle,
+  buildCityGuideH1,
+  buildCityGuideIntroParagraphs,
+} from "./cityGuideTitles";
 import type { GuidePageData } from "../loadGuide";
 
 const sanitizeWikiTitle = (value: string) =>
@@ -46,12 +51,14 @@ const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
         guide.tours.stateSlug,
         guide.tours.citySlug ?? "",
         guide.city,
-        guide.state,
+        guide.state
       )
     : null;
 
   const shouldSkipRewrite =
-    guide.tier !== "tier2" || isImageEmbedGuide(guide) || Boolean(heroSelection?.imageUrl);
+    guide.tier !== "tier2" ||
+    isImageEmbedGuide(guide) ||
+    Boolean(heroSelection?.imageUrl);
   const normalizedThings = guide.thingsToDo.map(item => {
     const wikiUrl = resolveWikiUrl(item);
     const description = shouldSkipRewrite
@@ -71,10 +78,19 @@ const withResolvedGuideData = (guide: GuidePageData): GuidePageData => {
 
   return {
     ...guide,
+    title: guide.city ? buildCityGuideDisplayTitle(guide.city) : guide.title,
+    overview:
+      guide.city && guide.overview.length
+        ? [
+            buildCityGuideIntroParagraphs(guide.city).primary,
+            ...guide.overview.slice(1),
+          ]
+        : guide.overview,
     hero: {
       ...guide.hero,
       image: heroSelection?.imageUrl ?? guide.hero.image,
       alt: heroSelection?.alt ?? guide.hero.alt,
+      headline: guide.city ? buildCityGuideH1(guide.city) : guide.hero.headline,
     },
     seoLinks: buildSeoLinks({
       city: guide.city ?? guide.state,

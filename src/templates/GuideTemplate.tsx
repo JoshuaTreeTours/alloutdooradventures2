@@ -13,6 +13,12 @@ import { getToursByCity } from "../data/tours";
 import { resolveHeroImageForRoute } from "../utils/hero";
 import { hasUsGuide } from "../utils/guides/guideIndex";
 import { buildMetaDescription } from "../utils/seo";
+import {
+  buildCityGuideDisplayTitle,
+  buildCityGuideH1,
+  buildCityGuideIntroParagraphs,
+  buildCityGuideMetaTitle,
+} from "../utils/guides/cityGuideTitles";
 
 type GuideTemplateProps = {
   guide: GuideContent;
@@ -114,12 +120,18 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
       })) ?? [];
 
   const guideImages = guide.type === "city" ? (guide.guideImages ?? []) : [];
+  const cityGuideDisplayTitle =
+    guide.type === "city" ? buildCityGuideDisplayTitle(guide.name) : null;
+  const cityGuideH1 =
+    guide.type === "city" ? buildCityGuideH1(guide.name) : null;
+  const cityGuideIntro =
+    guide.type === "city" ? buildCityGuideIntroParagraphs(guide.name) : null;
   const guideTitle =
-    guide.type === "city" && guide.parentName
-      ? `${guide.name}, ${guide.parentName} Outdoor Adventure Guide | Tours & Tips`
+    guide.type === "city"
+      ? buildCityGuideMetaTitle(guide.name)
       : `${guide.name} Outdoor Adventure Guide | Tours & Tips`;
   const guideDescription = buildMetaDescription(
-    guide.intro,
+    cityGuideIntro?.primary ?? guide.intro,
     `Plan your ${guide.name} adventure with curated tours, itineraries, and local guide highlights.`
   );
   const guideUrl =
@@ -179,20 +191,25 @@ export default function GuideTemplate({ guide }: GuideTemplateProps) {
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
               {guide.type === "city"
-                ? `${guide.name} guide`
+                ? cityGuideDisplayTitle
                 : `${guide.name} guide`}
             </p>
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
-              {guide.name} Outdoor Adventure Guide
+              {guide.type === "city" && cityGuideH1
+                ? cityGuideH1
+                : `${guide.name} Outdoor Adventure Guide`}
             </h1>
             {guide.activityFocus ? (
               <p className="mt-3 text-sm text-white/80 md:text-base">
                 Showing tours focused on {guide.activityFocus}.
               </p>
             ) : null}
-            <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-              {guide.intro}
-            </p>
+            <div className="mt-3 max-w-3xl space-y-3 text-sm text-white/90 md:text-base">
+              <p>{cityGuideIntro?.primary ?? guide.intro}</p>
+              {cityGuideIntro?.secondary ? (
+                <p>{cityGuideIntro.secondary}</p>
+              ) : null}
+            </div>
             <GuideInternalLinks guide={guide} variant="area" />
             <GuideInternalLinks guide={guide} variant="intro" />
           </div>

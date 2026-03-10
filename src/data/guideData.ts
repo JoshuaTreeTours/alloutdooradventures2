@@ -22,6 +22,7 @@ import {
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
 import { isGuideCityAllowedUS } from "../utils/guides/guideCityAllowlistUS";
+import { buildCityGuideIntroParagraphs } from "../utils/guides/cityGuideTitles";
 
 export type GuideCitySummary = {
   name: string;
@@ -1135,7 +1136,7 @@ export const buildCityGuide = ({
     parentName,
     parentSlug,
     regionType,
-    intro: `${cityName} is a base for ${toursToShow.length} tours in ${parentName}, featuring ${formatList(activityLabels)}.`,
+    intro: buildCityGuideIntroParagraphs(cityName).primary,
     breadcrumbs: [
       { label: "Guides", href: "/guides" },
       {

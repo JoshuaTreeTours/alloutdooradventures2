@@ -2,6 +2,13 @@ import { Link } from "wouter";
 
 import { getEngine2ParisTours } from "../../engine2/data/parisTours";
 import Image from "../../components/Image";
+import Seo from "../../components/Seo";
+import {
+  buildCityGuideDisplayTitle,
+  buildCityGuideH1,
+  buildCityGuideIntroParagraphs,
+  buildCityGuideMetaTitle,
+} from "../../utils/guides/cityGuideTitles";
 
 type ParisGeneratedGuide = {
   city: string;
@@ -54,7 +61,7 @@ const parisGuideModule = import.meta.glob(
   {
     eager: true,
     import: "default",
-  },
+  }
 );
 
 const rawParisGuide =
@@ -76,12 +83,28 @@ export default function ParisGuideRoute() {
     );
   }
 
+  const cityGuideDisplayTitle = buildCityGuideDisplayTitle(parisGuide.city);
+  const cityGuideMetaTitle = buildCityGuideMetaTitle(parisGuide.city);
+  const cityGuideH1 = buildCityGuideH1(parisGuide.city);
+  const cityGuideIntro = buildCityGuideIntroParagraphs(parisGuide.city);
+
   return (
     <main className="mx-auto max-w-6xl px-6 py-12 text-[#1f2a1f]">
+      <Seo
+        title={cityGuideMetaTitle}
+        description={cityGuideIntro.primary}
+        url="/guides/world/france/paris"
+        image={parisGuide.leadImageUrl ?? null}
+      />
       <header>
-        <p className="text-xs uppercase tracking-wide text-[#5f7a5f]">Guide</p>
-        <h1 className="mt-2 text-4xl font-bold">{parisGuide.seoTitle}</h1>
-        <p className="mt-4 text-lg text-[#334433]">{parisGuide.intro}</p>
+        <p className="text-xs uppercase tracking-wide text-[#5f7a5f]">
+          {cityGuideDisplayTitle}
+        </p>
+        <h1 className="mt-2 text-4xl font-bold">{cityGuideH1}</h1>
+        <div className="mt-4 space-y-3 text-lg text-[#334433]">
+          <p>{cityGuideIntro.primary}</p>
+          <p>{cityGuideIntro.secondary}</p>
+        </div>
         {parisGuide.leadImageUrl ? (
           <img
             src={parisGuide.leadImageUrl}
@@ -95,8 +118,11 @@ export default function ParisGuideRoute() {
       <section className="mt-10">
         <h2 className="text-2xl font-semibold">Top things to do</h2>
         <ul className="mt-4 space-y-4">
-          {parisGuide.topThings.map((item) => (
-            <li key={item.title} className="rounded-lg border border-[#dde7dd] p-4">
+          {parisGuide.topThings.map(item => (
+            <li
+              key={item.title}
+              className="rounded-lg border border-[#dde7dd] p-4"
+            >
               <h3 className="font-semibold">{item.title}</h3>
               <p className="mt-1 text-[#405040]">{item.description}</p>
             </li>
@@ -108,7 +134,7 @@ export default function ParisGuideRoute() {
         <section className="mt-10">
           <h2 className="text-2xl font-semibold">Neighborhoods to explore</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-[#405040]">
-            {parisGuide.neighborhoods.map((item) => (
+            {parisGuide.neighborhoods.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -119,7 +145,7 @@ export default function ParisGuideRoute() {
         <div>
           <h2 className="text-xl font-semibold">When to go</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-[#405040]">
-            {parisGuide.whenToGo.map((item) => (
+            {parisGuide.whenToGo.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -127,7 +153,7 @@ export default function ParisGuideRoute() {
         <div>
           <h2 className="text-xl font-semibold">Getting around</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-[#405040]">
-            {parisGuide.gettingAround.map((item) => (
+            {parisGuide.gettingAround.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -135,7 +161,7 @@ export default function ParisGuideRoute() {
         <div>
           <h2 className="text-xl font-semibold">Day trips</h2>
           <ul className="mt-3 list-disc space-y-2 pl-6 text-[#405040]">
-            {parisGuide.dayTrips.map((item) => (
+            {parisGuide.dayTrips.map(item => (
               <li key={item}>{item}</li>
             ))}
           </ul>
@@ -149,7 +175,7 @@ export default function ParisGuideRoute() {
             <p className="text-sm text-[#405040]">Swipe to browse 10 picks</p>
           </div>
           <div className="mt-4 flex gap-4 overflow-x-auto pb-3">
-            {topParisTours.map((tour) => {
+            {topParisTours.map(tour => {
               const image = tour.images.hero || tour.seo.ogImage || "/hero.jpg";
 
               return (

@@ -18,6 +18,12 @@ import type { GuidePageData } from "../utils/loadGuide";
 import { getGuidePlaceName, getValidSameAsLinks } from "../utils/loadGuide";
 import { buildBreadcrumbList } from "../utils/structuredData";
 import { buildCityFactsCard } from "../utils/guides/buildCityFactsCard";
+import {
+  buildCityGuideDisplayTitle,
+  buildCityGuideH1,
+  buildCityGuideIntroParagraphs,
+  buildCityGuideMetaTitle,
+} from "../utils/guides/cityGuideTitles";
 
 type GuidePageTemplateProps = {
   guide: GuidePageData;
@@ -44,6 +50,18 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
   const isTier2 = guide.tier === "tier2";
   const place = getGuidePlaceName(guide);
+  const cityGuideDisplayTitle = guide.city
+    ? buildCityGuideDisplayTitle(guide.city)
+    : guide.title;
+  const cityGuideMetaTitle = guide.city
+    ? buildCityGuideMetaTitle(guide.city)
+    : `${guide.title} | Outdoor Adventures`;
+  const cityGuideH1 = guide.city
+    ? buildCityGuideH1(guide.city)
+    : guide.hero.headline;
+  const cityGuideIntro = guide.city
+    ? buildCityGuideIntroParagraphs(guide.city)
+    : { primary: guide.hero.subheadline, secondary: "" };
   const urlPath = `/${guide.slug.replace(/^\/+/, "")}`;
   const sameAs = getValidSameAsLinks(guide);
   const tours = guide.tours.citySlug
@@ -151,7 +169,7 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
-        title={`${guide.title} | Outdoor Adventures`}
+        title={cityGuideMetaTitle}
         description={guide.overview[0]}
         url={urlPath}
         image={guide.hero.image}
@@ -170,14 +188,15 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
             ))}
           </div>
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-            {place} guide
+            {cityGuideDisplayTitle}
           </p>
-          <h1 className="text-3xl font-semibold md:text-5xl">
-            {guide.hero.headline}
-          </h1>
-          <p className="max-w-3xl text-sm text-white/90 md:text-base">
-            {guide.hero.subheadline}
-          </p>
+          <h1 className="text-3xl font-semibold md:text-5xl">{cityGuideH1}</h1>
+          <div className="max-w-3xl space-y-3 text-sm text-white/90 md:text-base">
+            <p>{cityGuideIntro.primary}</p>
+            {cityGuideIntro.secondary ? (
+              <p>{cityGuideIntro.secondary}</p>
+            ) : null}
+          </div>
         </div>
       </section>
 
