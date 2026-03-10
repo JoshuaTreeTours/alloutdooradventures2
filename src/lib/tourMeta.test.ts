@@ -25,4 +25,10 @@ describe("tour meta robots directives", () => {
     expect(meta.robots).toBe("index,follow,max-image-preview:large");
     expect(meta.googlebot).toBe("index,follow,max-image-preview:large");
   });
+
+  it("builds product seo title as product in city with outdoor adventures brand", () => {
+    const meta = buildTourMeta(sampleTour, "/destinations/arizona/sedona/tours/sunrise-jeep-tour");
+
+    expect(meta.title).toBe("Sunrise Jeep Tour in Sedona | Outdoor Adventures");
+  });
 });
