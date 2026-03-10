@@ -230,7 +230,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "California",
@@ -1096,7 +1096,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         isCover: true,
         variants: [
           {
-            url: "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
             width: 1600,
             height: 900,
           },
@@ -1114,13 +1114,13 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
     primaryImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
     galleryImages: [
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
       "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
     ],
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
     overview:
       "This two-day group tour from Los Angeles is designed for travelers who want to experience both Kings Canyon and Yosemite without handling the long Sierra drive on their own. Day one heads north to Kings Canyon National Park before an overnight stay in Fresno, then day two continues into Yosemite for a full day of iconic valley scenery and mountain viewpoints before returning to Los Angeles. The package includes one hotel night in Fresno, breakfast on day two, and park admission coverage for both national parks, making it a practical way to combine two headline California park experiences in a single guided trip.",
     itinerary: [

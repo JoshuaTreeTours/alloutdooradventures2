@@ -325,10 +325,10 @@ describe("mapViatorToEngine4Tour", () => {
     expect(vm.facts.reviewCount).toBe(8);
     expect(vm.facts.meetingPointFull).toContain("ends back at meeting point");
     expect(vm.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1"
     );
     expect(vm.galleryImages).toEqual([
-      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
       "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
     ]);
     expect(vm.content.inclusions).toContain("Breakfast");
