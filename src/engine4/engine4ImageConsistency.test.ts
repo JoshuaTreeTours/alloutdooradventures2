@@ -37,7 +37,7 @@ describe("Engine4 Viator image consistency", () => {
       citySlug: "san-francisco",
       tourSlug: "yosemite-in-a-day-tour-from-san-francisco-36001p1",
       expectedHeroUrl:
-        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
     });
 
     const diagnostics = assertHeroSelectionSource({
@@ -46,8 +46,12 @@ describe("Engine4 Viator image consistency", () => {
     });
 
     expect(diagnostics.apiImagesPayloadCandidates).toEqual([
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
     ]);
+    expect(diagnostics.legacySelectedVariantUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+    );
+    expect(diagnostics.exactProductImagesInOrder.length).toBeGreaterThan(0);
     expect(diagnostics.overrideUsed).toBe(false);
     expect(diagnostics.resolutionStatus).toBe("ok");
   });

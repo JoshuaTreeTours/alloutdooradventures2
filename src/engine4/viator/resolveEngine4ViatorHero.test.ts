@@ -65,7 +65,7 @@ describe("Engine4 Viator hero governance resolver", () => {
     expect(diagnostics.resolutionStatus).toBe("ok");
   });
 
-  it("selects the 36001P1 cover variant from exactProductImages and avoids overrides", () => {
+  it("selects the 36001P1 cover/gallery canonical variant from exactProductImages and avoids overrides", () => {
     const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
       productCode: "36001P1",
       apiTour: {
@@ -97,11 +97,25 @@ describe("Engine4 Viator hero governance resolver", () => {
 
     expect(diagnostics.selectionSource).toBe("api-images-payload");
     expect(diagnostics.selectedHeroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1"
     );
     expect(diagnostics.overrideUsed).toBe(false);
     expect(diagnostics.coverImagePresent).toBe(true);
-    expect(diagnostics.selectedVariantWidth).toBe(1600);
+    expect(diagnostics.selectedVariantWidth).toBe(1100);
+    expect(diagnostics.selectedImageIndex).toBe(0);
+    expect(diagnostics.legacySelectedVariantUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+    );
+    expect(diagnostics.exactProductImagesInOrder).toEqual([
+      {
+        imageIndex: 0,
+        isCover: true,
+        variantUrls: [
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1",
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1",
+        ],
+      },
+    ]);
   });
 
   it("uses exact product override when API image is missing", () => {
@@ -304,6 +318,9 @@ describe("Engine4 Viator hero governance resolver", () => {
       variantCount: 0,
       selectedVariantUrl: undefined,
       selectedVariantWidth: undefined,
+      selectedImageIndex: undefined,
+      legacySelectedVariantUrl: undefined,
+      exactProductImagesInOrder: [],
     });
   });
 

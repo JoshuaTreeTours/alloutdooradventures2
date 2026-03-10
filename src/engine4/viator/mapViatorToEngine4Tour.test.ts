@@ -245,7 +245,7 @@ describe("mapViatorToEngine4Tour", () => {
 
     expect(vm.title).toBe("Yosemite In A Day Tour from San Francisco");
     expect(vm.heroImage).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1600&h=900&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/df/f6/caption.jpg?w=1100&h=800&s=1"
     );
     expect(vm.primaryImage).toBe(vm.heroImage);
     expect(vm.galleryImages[0]).toBe(
