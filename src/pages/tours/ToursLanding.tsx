@@ -21,6 +21,7 @@ import {
 import { isUSStateName } from "../../constants/usStates";
 import { getStaticPageSeo } from "../../utils/seo";
 import { slugify } from "../../utils/slugify";
+import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import {
   buildInternationalCityOptions,
@@ -156,7 +157,7 @@ export default function ToursLanding() {
   );
 
   const europeCountrySlugSet = useMemo(
-    () => new Set(EUROPE_COUNTRIES.map((country) => slugify(country))),
+    () => new Set(EUROPE_COUNTRIES.map(country => slugify(country))),
     []
   );
 
@@ -300,6 +301,47 @@ export default function ToursLanding() {
     return match?.name ?? selectedInternationalCity;
   }, [internationalCities, selectedInternationalCity]);
 
+  const pageContent = useMemo(() => {
+    if (selectedCity) {
+      return {
+        title: `${selectedCity.name} Tours & Activities | All Outdoor Adventures`,
+        h1: `${selectedCity.name} Tours & Activities`,
+        intro: `Explore tours and outdoor adventures in ${selectedCity.name}, ${selectedState?.name ?? "United States"}. From San Andreas Fault jeep tours and desert hiking experiences to scenic excursions and small-group adventures, these tours make it easy to discover the landscapes and natural history of the region.`,
+      };
+    }
+
+    if (selectedState) {
+      return {
+        title: `${selectedState.name} Tours & Outdoor Adventures | All Outdoor Adventures`,
+        h1: `${selectedState.name} Tours & Outdoor Adventures`,
+        intro: `Browse tours and outdoor adventures across ${selectedState.name}, from local activities and guided experiences to scenic day trips and regional excursions.`,
+      };
+    }
+
+    if (selectedCountry) {
+      return {
+        title: `${selectedCountry} Tours & Activities | All Outdoor Adventures`,
+        h1: `${selectedCountry} Tours & Activities`,
+        intro: `Browse tours and activities across ${selectedCountry}, from city experiences and cultural outings to outdoor adventures and day trips.`,
+      };
+    }
+
+    return {
+      title: "Find Tours & Outdoor Adventures | All Outdoor Adventures",
+      h1: "Find Tours & Outdoor Adventures",
+      intro:
+        "Browse tours and outdoor adventures by state, city, or country to find experiences that fit your destination and travel style.",
+    };
+  }, [selectedCity, selectedCountry, selectedState]);
+
+  const cityGuideRecord = useMemo(() => {
+    if (!selectedState || !selectedCity) {
+      return null;
+    }
+
+    return getGuideRecord(selectedState.slug, selectedCity.slug);
+  }, [selectedCity, selectedState]);
+
   const updateUrl = (stateSlug: string, citySlug: string) => {
     const query = new URLSearchParams();
 
@@ -426,18 +468,33 @@ export default function ToursLanding() {
     <>
       {seo ? (
         <Seo
-          title={seo.title}
-          description={seo.description}
+          title={pageContent.title}
+          description={pageContent.intro}
           url={seo.url}
           image={seo.image}
         />
       ) : null}
       <main className="mx-auto max-w-6xl px-6 py-16 text-[#1f2a1f]">
         <header>
-          <h1 className="text-3xl font-semibold md:text-4xl">Tours</h1>
+          <h1 className="text-3xl font-semibold md:text-4xl">
+            {pageContent.h1}
+          </h1>
           <p className="mt-3 max-w-3xl text-sm text-[#405040] md:text-base">
-            Choose a state and city to browse local tours.
+            {pageContent.intro}
           </p>
+          {cityGuideRecord ? (
+            <p className="mt-2 text-sm text-[#5b6d5b]">
+              Looking for curated recommendations? See our guide to the best
+              tours in {selectedCity?.name}.{" "}
+              <a
+                href={`/guides/us/${selectedStateSlug}/${selectedCitySlug}`}
+                className="underline underline-offset-2"
+              >
+                View guide
+              </a>
+              .
+            </p>
+          ) : null}
         </header>
 
         <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
@@ -479,90 +536,92 @@ export default function ToursLanding() {
           </div>
         </section>
 
-        <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
-          <h2 className="mb-4 text-xl font-semibold text-[#1f2a1f]">
-            International Locations
-          </h2>
-          <div
-            className={`grid gap-4 ${
-              selectedCountry === CANADA_COUNTRY_NAME
-                ? "md:grid-cols-3"
-                : "md:grid-cols-2"
-            }`}
-          >
-            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
-              Country
-              <select
-                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
-                value={selectedCountry}
-                onChange={event => handleCountryChange(event.target.value)}
-              >
-                <option value="">Select a country</option>
-                {countryOptions.map(country => (
-                  <option key={country} value={country}>
-                    {country}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            {selectedCountry === CANADA_COUNTRY_NAME ? (
+        {!selectedCity ? (
+          <section className="mt-8 rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+            <h2 className="mb-4 text-xl font-semibold text-[#1f2a1f]">
+              International Locations
+            </h2>
+            <div
+              className={`grid gap-4 ${
+                selectedCountry === CANADA_COUNTRY_NAME
+                  ? "md:grid-cols-3"
+                  : "md:grid-cols-2"
+              }`}
+            >
               <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
-                Province
+                Country
                 <select
                   className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
-                  value={selectedInternationalProvinceSlug}
-                  onChange={event => handleProvinceChange(event.target.value)}
-                  disabled={!selectedCountry}
+                  value={selectedCountry}
+                  onChange={event => handleCountryChange(event.target.value)}
                 >
-                  <option value="">
-                    {selectedCountry
-                      ? "Select a province"
-                      : "Select a country first"}
-                  </option>
-                  {canadaProvinces.map(province => (
-                    <option
-                      key={province.provinceSlug}
-                      value={province.provinceSlug}
-                    >
-                      {province.provinceName}
+                  <option value="">Select a country</option>
+                  {countryOptions.map(country => (
+                    <option key={country} value={country}>
+                      {country}
                     </option>
                   ))}
                 </select>
               </label>
-            ) : null}
 
-            <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
-              City
-              <select
-                className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
-                value={selectedInternationalCity}
-                onChange={event =>
-                  handleInternationalCityChange(event.target.value)
-                }
-                disabled={
-                  !selectedCountry ||
-                  (selectedCountry === CANADA_COUNTRY_NAME &&
-                    !selectedInternationalProvinceSlug)
-                }
-              >
-                <option value="">
-                  {!selectedCountry
-                    ? "Select a country first"
-                    : selectedCountry === CANADA_COUNTRY_NAME &&
-                        !selectedInternationalProvinceSlug
-                      ? "Select a province first"
-                      : "Select a city"}
-                </option>
-                {internationalCities.map(city => (
-                  <option key={city.slug} value={city.slug}>
-                    {city.name}
+              {selectedCountry === CANADA_COUNTRY_NAME ? (
+                <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+                  Province
+                  <select
+                    className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                    value={selectedInternationalProvinceSlug}
+                    onChange={event => handleProvinceChange(event.target.value)}
+                    disabled={!selectedCountry}
+                  >
+                    <option value="">
+                      {selectedCountry
+                        ? "Select a province"
+                        : "Select a country first"}
+                    </option>
+                    {canadaProvinces.map(province => (
+                      <option
+                        key={province.provinceSlug}
+                        value={province.provinceSlug}
+                      >
+                        {province.provinceName}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              ) : null}
+
+              <label className="flex flex-col gap-2 text-sm font-medium text-[#2f4a2f]">
+                City
+                <select
+                  className="rounded-md border border-[#2f4a2f]/20 bg-white px-3 py-2 text-sm text-[#1f2a1f]"
+                  value={selectedInternationalCity}
+                  onChange={event =>
+                    handleInternationalCityChange(event.target.value)
+                  }
+                  disabled={
+                    !selectedCountry ||
+                    (selectedCountry === CANADA_COUNTRY_NAME &&
+                      !selectedInternationalProvinceSlug)
+                  }
+                >
+                  <option value="">
+                    {!selectedCountry
+                      ? "Select a country first"
+                      : selectedCountry === CANADA_COUNTRY_NAME &&
+                          !selectedInternationalProvinceSlug
+                        ? "Select a province first"
+                        : "Select a city"}
                   </option>
-                ))}
-              </select>
-            </label>
-          </div>
-        </section>
+                  {internationalCities.map(city => (
+                    <option key={city.slug} value={city.slug}>
+                      {city.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            </div>
+          </section>
+        ) : null}
 
         {filteredTours.length === 0 ? (
           <p className="mt-8 text-sm text-[#405040]">
@@ -571,10 +630,9 @@ export default function ToursLanding() {
         ) : (
           <section className="mt-10">
             <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
-              Tours in{" "}
               {selectedCountry && selectedInternationalCity
-                ? `${selectedInternationalCityLabel}, ${selectedCountry}`
-                : `${selectedCity?.name ?? ""}, ${selectedState?.name ?? ""}`}
+                ? `All Tours in ${selectedInternationalCityLabel}`
+                : `All Tours in ${selectedCity?.name ?? ""}`}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {filteredTours.map(({ tour, href }) => (

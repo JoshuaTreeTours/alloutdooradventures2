@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../components/Image";
+import Seo from "../components/Seo";
 import TourCard from "../components/TourCard";
 import { useStructuredData } from "../components/StructuredDataProvider";
 import type { StateDestination } from "../data/destinations";
@@ -21,26 +22,25 @@ export default function StateToursTemplate({
 }: {
   state: StateDestination;
 }) {
-  const heroImage = resolveHeroImageForRoute({
-    route: `/destinations/states/${state.slug}/tours`,
-    state,
-  }) ?? undefined;
+  const heroImage =
+    resolveHeroImageForRoute({
+      route: `/destinations/states/${state.slug}/tours`,
+      state,
+    }) ?? undefined;
   const stateTours = getToursByState(state.slug);
   const [activeFilter, setActiveFilter] = useState("all");
   const filteredTours = useMemo(() => {
     if (activeFilter === "all") {
       return stateTours;
     }
-    return stateTours.filter((tour) =>
-      tour.activitySlugs.includes(activeFilter)
-    );
+    return stateTours.filter(tour => tour.activitySlugs.includes(activeFilter));
   }, [activeFilter, stateTours]);
   const structuredDataNodes = useMemo(() => {
     const breadcrumbs = buildBreadcrumbList([
       { name: "Destinations", url: "/destinations" },
       { name: state.name, url: `/destinations/states/${state.slug}` },
     ]);
-    const itemListItems = filteredTours.map((tour) => ({
+    const itemListItems = filteredTours.map(tour => ({
       name: tour.title,
       url: getCityTourDetailPath(tour),
       image: tour.heroImage ? [tour.heroImage] : undefined,
@@ -56,6 +56,10 @@ export default function StateToursTemplate({
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={`${state.name} Tours & Outdoor Adventures | All Outdoor Adventures`}
+        description={`Browse tours and outdoor adventures across ${state.name}, from local activities and guided experiences to scenic day trips and regional excursions.`}
+      />
       <section className="relative overflow-hidden bg-[#2f4a2f]">
         {heroImage ? (
           <Image
@@ -81,11 +85,12 @@ export default function StateToursTemplate({
               State-wide tours
             </p>
             <h1 className="text-3xl font-semibold md:text-5xl">
-              {state.name} tours
+              {state.name} Tours & Outdoor Adventures
             </h1>
             <p className="max-w-2xl text-sm text-white/90 md:text-base">
-              Browse every tour in {state.name} and filter by activity to find
-              your pace.
+              Browse tours and outdoor adventures across {state.name}, from
+              local activities and guided experiences to scenic day trips and
+              regional excursions.
             </p>
           </div>
         </div>
@@ -102,7 +107,7 @@ export default function StateToursTemplate({
             </h2>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {FILTER_OPTIONS.map((filter) => {
+            {FILTER_OPTIONS.map(filter => {
               const isActive = activeFilter === filter.slug;
               return (
                 <button
@@ -124,12 +129,13 @@ export default function StateToursTemplate({
             {activeFilter === "all"
               ? `Showing all ${stateTours.length} tours`
               : `Showing ${filteredTours.length} ${
-                  FILTER_OPTIONS.find((filter) => filter.slug === activeFilter)
-                    ?.label.toLowerCase() ?? ""
+                  FILTER_OPTIONS.find(
+                    filter => filter.slug === activeFilter
+                  )?.label.toLowerCase() ?? ""
                 } tours`}
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {filteredTours.map((tour) => (
+            {filteredTours.map(tour => (
               <TourCard
                 key={tour.id}
                 tour={tour}

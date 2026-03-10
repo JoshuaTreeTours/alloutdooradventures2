@@ -2,9 +2,9 @@ import { useMemo } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
+import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
-import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
 import {
   getFallbackCityBySlugs,
@@ -16,6 +16,7 @@ import {
   getFlagstaffTourDetailPath,
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
+import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import {
   buildBreadcrumbList,
@@ -63,9 +64,6 @@ export default function CityToursIndexRoute({
         entry.tour.activitySlugs.includes(activityFilter)
       )
     : toursWithImages;
-  const activityLabel = activityFilter
-    ? getActivityLabelFromSlug(activityFilter)
-    : null;
   const stateHref =
     basePathOverride ??
     (state?.isFallback
@@ -121,8 +119,23 @@ export default function CityToursIndexRoute({
     );
   }
 
+  const isUsCityRoute =
+    !basePathOverride || basePathOverride.includes("/united-states");
+  const cityLabel = city.name;
+  const regionLabel = state.name;
+  const pageTitle = `${cityLabel} Tours & Activities | All Outdoor Adventures`;
+  const pageH1 = `${cityLabel} Tours & Activities`;
+  const pageIntro = isUsCityRoute
+    ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
+    : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
+  const guideRecord =
+    isUsCityRoute && !state.isFallback
+      ? getGuideRecord(state.slug, city.slug)
+      : undefined;
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo title={pageTitle} description={pageIntro} />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-12">
           <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
@@ -141,14 +154,23 @@ export default function CityToursIndexRoute({
             <span className="text-white">Tours</span>
           </div>
           <div>
-            <h1 className="text-3xl font-semibold md:text-5xl">
-              {activityLabel ? `${activityLabel} tours in ` : "Tours in "}
-              {city.name}
-            </h1>
+            <h1 className="text-3xl font-semibold md:text-5xl">{pageH1}</h1>
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
-              Browse guided experiences with live booking links and activity
-              filters.
+              {pageIntro}
             </p>
+            {guideRecord ? (
+              <p className="mt-2 text-xs text-white/80">
+                Looking for curated recommendations? See our guide to the best
+                tours in {city.name}.{" "}
+                <a
+                  href={`/guides/us/${state.slug}/${city.slug}`}
+                  className="underline underline-offset-2"
+                >
+                  View guide
+                </a>
+                .
+              </p>
+            ) : null}
           </div>
         </div>
       </section>
