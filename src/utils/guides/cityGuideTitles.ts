@@ -1,12 +1,13 @@
 export const buildCityGuideDisplayTitle = (city: string) =>
-  `Best Tours in ${city} – Outdoor Adventures & Experiences`;
+  `10 Best Things to Do in ${city} (2026 Guide) | Outdoor Adventures`;
 
 export const buildCityGuideMetaTitle = (city: string) =>
-  `Best Tours in ${city} | Top Outdoor Adventures`;
+  `10 Best Things to Do in ${city} (2026 Guide) | Outdoor Adventures`;
 
-export const buildCityGuideH1 = (city: string) => `Best Tours in ${city}`;
+export const buildCityGuideH1 = (city: string) =>
+  `10 Best Things to Do in ${city}`;
 
 export const buildCityGuideIntroParagraphs = (city: string) => ({
-  primary: `Discover the best tours in ${city}, from unforgettable outdoor adventures to unique local experiences. This guide highlights top-rated tours, activities, and excursions that help visitors explore the destination beyond the typical sightseeing stops.`,
-  secondary: `Whether you're looking for nature adventures, cultural experiences, or small-group guided outings, these curated tours make it easy to experience the best of ${city}.`,
+  primary: `Discover the 10 best things to do in ${city}, from outdoor adventures and guided tours to unique local experiences. Explore top activities and unforgettable excursions in this 2026 travel guide.`,
+  secondary: "",
 });
