@@ -301,4 +301,45 @@ describe("mapViatorToEngine4Tour", () => {
       description: "Admission Ticket Free",
     });
   });
+
+  it("maps 132218P209 as a Los Angeles 2-day Yosemite + Kings Canyon tour", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "132218P209"
+    );
+    expect(record).toBeDefined();
+
+    const apiTour = engine4ViatorApiFallbackByProductCode["132218P209"];
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour,
+    });
+
+    expect(vm.slug).toBe(
+      "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209"
+    );
+    expect(vm.title).toBe(
+      "Yosemite and Kings Canyon National Park 2 Day Tour from LA"
+    );
+    expect(vm.facts.duration).toBe("2 days");
+    expect(vm.facts.startTime).toBe("6:45 AM");
+    expect(vm.facts.reviewCount).toBe(8);
+    expect(vm.facts.meetingPointFull).toContain("ends back at meeting point");
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg"
+    );
+    expect(vm.galleryImages).toEqual([
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
+    ]);
+    expect(vm.content.inclusions).toContain("Breakfast");
+    expect(vm.content.inclusions).toContain(
+      "1 night hotel accommodation in Fresno (Best Western Colonial Inn or similar)"
+    );
+    expect(vm.content.itinerary?.[0]?.title).toContain("Day 1");
+    expect(vm.content.itinerary?.[1]?.title).toContain("Day 2");
+    expect(vm.canonicalPath).toBe(
+      "/destinations/california/los-angeles/tours/yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209"
+    );
+  });
+
 });

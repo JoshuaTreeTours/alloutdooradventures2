@@ -29,6 +29,8 @@ export const ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE: Record<
     "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
   "237571P2":
     "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
+  "132218P209":
+    "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
 };
 
 export type Engine4ViatorHeroSelectionSource =
