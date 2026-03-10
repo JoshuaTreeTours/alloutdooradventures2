@@ -21,7 +21,10 @@ import {
 } from "../engine2/data/loadEngine2";
 import type { Tour } from "./tours.types";
 import { EUROPE_COUNTRIES, US_STATES, slugify } from "./tourCatalog";
-import { isGuideCityAllowedUS } from "../utils/guides/guideCityAllowlistUS";
+import {
+  getGuidesByState,
+  getGuideStates as getGuideStateSlugsFromRegistry,
+} from "../utils/guides/guideRegistry";
 import { buildCityGuideIntroParagraphs } from "../utils/guides/cityGuideTitles";
 
 export type GuideCitySummary = {
@@ -689,35 +692,39 @@ export const getGuideTourDetailPath = (tour: Tour) => {
 };
 
 export const getGuideStates = (): GuidePlaceSummary[] => {
-  const states = new Map<string, GuidePlaceSummary>();
+  return getGuideStateSlugsFromRegistry()
+    .map(stateSlug => {
+      const stateGuides = getGuidesByState(stateSlug);
+      const stateTours = tours.filter(
+        tour => tour.destination.stateSlug === stateSlug && isUsStateTour(tour)
+      );
+      const tourCountByCitySlug = stateTours.reduce<Map<string, number>>(
+        (counts, tour) => {
+          const citySlug = tour.destination.citySlug;
+          if (!citySlug) {
+            return counts;
+          }
 
-  tours.forEach(tour => {
-    if (!isUsStateTour(tour)) {
-      return;
-    }
+          counts.set(citySlug, (counts.get(citySlug) ?? 0) + 1);
+          return counts;
+        },
+        new Map()
+      );
 
-    const key = tour.destination.stateSlug;
-    const existing = states.get(key);
-    if (existing) {
-      existing.tourCount += 1;
-      return;
-    }
-
-    states.set(key, {
-      name: tour.destination.state,
-      slug: key,
-      tourCount: 1,
-      cities: [],
-    });
-  });
-
-  return Array.from(states.values())
-    .map(state => ({
-      ...state,
-      cities: buildCitySummaries(
-        tours.filter(tour => tour.destination.stateSlug === state.slug)
-      ),
-    }))
+      return {
+        name:
+          stateGuides[0]?.dataImport.state ??
+          stateTours[0]?.destination.state ??
+          stateSlug,
+        slug: stateSlug,
+        tourCount: stateTours.length,
+        cities: stateGuides.map(record => ({
+          name: record.dataImport.city ?? record.citySlug,
+          slug: record.citySlug,
+          tourCount: tourCountByCitySlug.get(record.citySlug) ?? 0,
+        })),
+      };
+    })
     .sort((a, b) => a.name.localeCompare(b.name));
 };
 
@@ -830,15 +837,33 @@ export const buildStateGuide = (stateSlug: string): GuideContent | null => {
   const stateTours = tours.filter(
     tour => tour.destination.stateSlug === stateSlug && isUsStateTour(tour)
   );
+  const stateGuidePages = getGuidesByState(stateSlug);
 
-  if (!stateTours.length) {
+  if (!stateTours.length && !stateGuidePages.length) {
     return null;
   }
 
-  const stateName = stateTours[0].destination.state;
-  const cities = buildCitySummaries(stateTours).filter(city =>
-    isGuideCityAllowedUS(stateSlug, city.slug)
+  const stateName =
+    stateTours[0]?.destination.state ??
+    stateGuidePages[0]?.dataImport.state ??
+    stateSlug;
+  const tourCountByCitySlug = stateTours.reduce<Map<string, number>>(
+    (counts, tour) => {
+      const citySlug = tour.destination.citySlug;
+      if (!citySlug) {
+        return counts;
+      }
+
+      counts.set(citySlug, (counts.get(citySlug) ?? 0) + 1);
+      return counts;
+    },
+    new Map()
   );
+  const cities = stateGuidePages.map(record => ({
+    name: record.dataImport.city ?? record.citySlug,
+    slug: record.citySlug,
+    tourCount: tourCountByCitySlug.get(record.citySlug) ?? 0,
+  }));
   const highlightCities = [...cities]
     .sort((a, b) => b.tourCount - a.tourCount)
     .slice(0, 3);
