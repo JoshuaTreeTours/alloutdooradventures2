@@ -226,6 +226,24 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "132218P209",
+    bookingUrl:
+      "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "Los Angeles",
+      citySlug: "los-angeles",
+    },
+    slug:
+      "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -1059,5 +1077,83 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "One-hour guided horseback trail ride in the Hollywood Hills and Mulholland area above Los Angeles.",
     whatToExpect:
       "Meet at 3204 Beachwood Dr, check in at Sunset Ranch Hollywood, and follow a guide on a one-hour Mulholland Trail ride with wide city-facing views.",
+  },
+  "132218P209": {
+    productCode: "132218P209",
+    title: "Yosemite and Kings Canyon National Park 2 Day Tour from LA",
+    sourceUrl:
+      "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
+    fromPrice: "$269.00",
+    priceCurrency: "USD",
+    rating: 4.5,
+    reviewCount: 8,
+    duration: "2 days",
+    startTime: "6:45 AM",
+    meetingPoint: "Meeting point options available in Los Angeles; ends back at meeting point",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
+            width: 1600,
+            height: 900,
+          },
+        ],
+      },
+      {
+        isCover: false,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
+            width: 1400,
+            height: 900,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/cc/c6/54/caption.jpg?w=1100&h=800&s=1",
+    overview:
+      "This two-day group tour from Los Angeles is designed for travelers who want to experience both Kings Canyon and Yosemite without handling the long Sierra drive on their own. Day one heads north to Kings Canyon National Park before an overnight stay in Fresno, then day two continues into Yosemite for a full day of iconic valley scenery and mountain viewpoints before returning to Los Angeles. The package includes one hotel night in Fresno, breakfast on day two, and park admission coverage for both national parks, making it a practical way to combine two headline California park experiences in a single guided trip.",
+    itinerary: [
+      {
+        title: "Day 1: Los Angeles → Kings Canyon National Park → Fresno",
+        description:
+          "Depart Los Angeles in the morning, travel north into Kings Canyon National Park for guided sightseeing, then continue to Fresno for the included hotel night at Best Western Colonial Inn or similar.",
+      },
+      {
+        title: "Day 2: Fresno → Yosemite National Park → Los Angeles",
+        description:
+          "After included breakfast, continue to Yosemite National Park for major valley viewpoints and scenic stops before the evening return to Los Angeles.",
+      },
+    ],
+    inclusions: [
+      "Breakfast",
+      "1 night hotel accommodation in Fresno (Best Western Colonial Inn or similar)",
+      "Yosemite National Park admission ticket",
+      "Kings Canyon National Park admission ticket",
+      "Round-trip transportation from Los Angeles",
+      "Professional driver-guide",
+    ],
+    exclusions: [
+      "Lunch and dinner",
+      "Personal expenses",
+      "Guide gratuities",
+    ],
+    whatToExpect:
+      "Expect an early 6:45 AM start from Los Angeles, a guided two-day pace across two Sierra national parks, overnight lodging in Fresno, and a return to the original meeting-point area.",
+    additionalInfo: [
+      "Meeting-point selection is available during booking.",
+      "This tour ends back at the selected meeting point.",
+      "Hotel is Best Western Colonial Inn or a similar Fresno property.",
+    ],
   },
 };
