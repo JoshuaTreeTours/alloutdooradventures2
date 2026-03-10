@@ -1,0 +1,66 @@
+{
+  "productCode": "132218P209",
+  "title": "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
+  "shortDescription": "Two-day guided tour from Los Angeles to Yosemite National Park and Kings Canyon National Park.",
+  "productUrl": "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
+  "duration": "2 days",
+  "startTime": "6:00 AM",
+  "priceFrom": "$269.00",
+  "currencyCode": "USD",
+  "rating": 4.5,
+  "reviewCount": 18,
+  "meetingPoint": "Los Angeles, California",
+  "cancellationPolicy": "Free cancellation up to 24 hours before the experience starts (local time).",
+  "inclusions": [
+    "Professional guide",
+    "National park entrance fees",
+    "Transportation"
+  ],
+  "exclusions": [
+    "Food and drinks",
+    "Personal expenses"
+  ],
+  "additionalInfo": [
+    "Confirmation will be received at time of booking",
+    "Not wheelchair accessible"
+  ],
+  "itinerary": [
+    {
+      "title": "Day 1: Yosemite National Park",
+      "description": "Explore Yosemite Valley viewpoints and iconic granite cliffs.",
+      "duration": "1 day"
+    },
+    {
+      "title": "Day 2: Kings Canyon National Park",
+      "description": "Travel through giant sequoia groves and scenic canyon roads.",
+      "duration": "1 day"
+    }
+  ],
+  "images": [
+    {
+      "isCover": true,
+      "variants": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption.jpg",
+          "width": 1600,
+          "height": 900
+        },
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/15/7b/caption-small.jpg",
+          "width": 800,
+          "height": 600
+        }
+      ]
+    },
+    {
+      "isCover": false,
+      "variants": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2a/8f/16/21/caption.jpg",
+          "width": 1400,
+          "height": 900
+        }
+      ]
+    }
+  ]
+}
