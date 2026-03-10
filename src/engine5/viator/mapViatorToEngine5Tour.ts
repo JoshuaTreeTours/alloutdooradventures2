@@ -19,8 +19,8 @@ export const mapViatorToEngine5Tour = (
     throw new Error(`Engine5 strict mode rejected ${record.productCode}`);
   }
 
-  const slug = slugify(apiTour.title);
-  const canonicalPath = `/engine5/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
+  const slug = record.routeSlug || slugify(apiTour.title);
+  const canonicalPath = `/destinations/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
   const bookingUrl = apiTour.bookingUrl;
 
   if (!apiTour.canonicalHeroUrl) {

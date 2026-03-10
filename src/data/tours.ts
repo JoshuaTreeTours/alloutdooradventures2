@@ -20,6 +20,7 @@ import { slugify } from "../utils/slugify";
 import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
+import { getEngine5ListingEntries } from "../engine5/listing/getEngine5ListingEntries";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -382,6 +383,12 @@ export const getToursByCityUnified = (
       href: entry.href,
     })
   );
+  const engine5Tours = getEngine5ListingEntries(stateSlug, citySlug).map(
+    entry => ({
+      tour: entry.tour,
+      href: entry.href,
+    })
+  );
 
   if (stateSlug !== "california") {
     const engine2Tours = getEngine2ToursByStateSlug(stateSlug, citySlug).map(
@@ -391,6 +398,7 @@ export const getToursByCityUnified = (
       ...engine1Tours,
       ...engine2Tours,
       ...engine4Tours,
+      ...engine5Tours,
     ]);
   }
 
@@ -407,6 +415,7 @@ export const getToursByCityUnified = (
     ...engine2Tours,
     ...engine3Tours,
     ...engine4Tours,
+    ...engine5Tours,
   ]);
 };
 

@@ -53,14 +53,14 @@ describe("mapViatorToEngine5Tour", () => {
     });
 
     expect(mapped.normalized.slug).toBe(
-      "yosemite-and-kings-canyon-2-day-tour-from-la"
+      "best-yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la"
     );
     expect(mapped.page.title).toContain("Yosemite");
     expect(mapped.page.facts.duration).toBeUndefined();
     expect(mapped.page.content.overview).toContain("Two-day guided trip");
     expect(mapped.page.bookingUrl).toContain("132218P209");
     expect(mapped.page.canonicalPath).toBe(
-      "/engine5/california/los-angeles/tours/yosemite-and-kings-canyon-2-day-tour-from-la"
+      "/destinations/california/los-angeles/tours/best-yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la"
     );
     expect(mapped.page.engine).toBe("engine4");
     expect(mapped.listing.engine).toBe("engine4");
