@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-              {SITE_BRAND_NAME}, Inc. — Founded in 1999
+              Outdoor Adventures, Inc. — Founded in 1999
             </p>
           </div>
         </div>
