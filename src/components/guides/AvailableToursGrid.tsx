@@ -27,7 +27,7 @@ export default function AvailableToursGrid({
   return (
     <section className="mt-12 rounded-3xl border border-black/10 bg-white/70 p-6 shadow-sm md:p-10">
       <h2 className="text-xl font-semibold text-[#1f2a1f] md:text-2xl">
-        Available tours in {cityName}
+        Best Tours in {cityName}
       </h2>
 
       {visibleTours.length ? (
