@@ -6,6 +6,7 @@ import Seo from "../../../../components/Seo";
 import TourCard from "../../../../components/TourCard";
 import { useStructuredData } from "../../../../components/StructuredDataProvider";
 import { getCityBySlugs, getStateBySlug } from "../../../../data/destinations";
+import { getActivityLabelFromSlug } from "../../../../data/activityLabels";
 import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
@@ -17,6 +18,12 @@ import {
 } from "../../../../data/flagstaffTours";
 import { hasValidTourImage } from "../../../../lib/hasValidTourImage";
 import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
+import {
+  buildCategoryH1,
+  buildCategorySeoTitle,
+  buildToursH1,
+  buildToursSeoTitle,
+} from "../../../../lib/seo/titleBuilder";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import {
   buildBreadcrumbList,
@@ -123,8 +130,13 @@ export default function CityToursIndexRoute({
     !basePathOverride || basePathOverride.includes("/united-states");
   const cityLabel = city.name;
   const regionLabel = state.name;
-  const pageTitle = `${cityLabel} Tours & Activities | All Outdoor Adventures`;
-  const pageH1 = `${cityLabel} Tours & Activities`;
+  const activityLabel = getActivityLabelFromSlug(activityFilter ?? undefined);
+  const pageTitle = activityFilter
+    ? buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
+    : buildToursSeoTitle({ city: cityLabel });
+  const pageH1 = activityFilter
+    ? buildCategoryH1({ city: cityLabel, activity: activityLabel })
+    : buildToursH1({ city: cityLabel });
   const pageIntro = isUsCityRoute
     ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
     : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
