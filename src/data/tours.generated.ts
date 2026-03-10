@@ -32772,7 +32772,7 @@ export const toursGenerated: Tour[] = [
   {
     "id": "gone-whale-watching-664169",
     "slug": "6-passenger-capacity-signature-dolphin-and-whale-watching-trip-25hrs-approx-664169",
-    "title": "6-Passenger Capacity Signature Dolphin and Whale Watching Trip (2.5hrs approx.)",
+    "title": "Signature Dolphin & Whale Watching Trip in San Diego (Small Group – 2.5 Hours)",
     "operator": "Gone Whale Watching",
     "categories": [
       "detours"
@@ -32801,7 +32801,7 @@ export const toursGenerated: Tour[] = [
     "bookingProvider": "fareharbor",
     "bookingUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/664169/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
     "bookingWidgetUrl": "https://fareharbor.com/embeds/book/gonewhalewatching/items/664169/calendar/?asn=fhdn&asn-ref=alloutdooradventures&ref=alloutdooradventures&bookable-only=yes&full-items=yes&marketplace=yes&flow=no&branding=no",
-    "longDescription": "6-Passenger Capacity Signature Dolphin and Whale Watching Trip (2.5hrs approx.) is a guided outdoor experience based in San Diego, California that keeps the logistics simple and the scenery front and center. Expect a steady pace, local context, and a comfortable rhythm that lets you focus on the landscape."
+    "longDescription": "Hero Intro\nSet out on San Diego’s coastal waters aboard a small vessel designed for an intimate wildlife outing. With space for just six passengers, this dolphin and whale watching trip offers a quieter, more personal way to experience marine life in Southern California.\n\nOverview\nThis approximately 2.5-hour signature trip is built for travelers who want a comfortable, small-group experience on the water. Instead of a crowded deck, you’ll cruise with a limited number of guests, creating better sightlines and a more relaxed pace for scanning the coastline. The route explores productive marine habitat off San Diego, where conditions can support sightings of dolphins, whales, and other coastal wildlife depending on the season. It’s a strong fit for couples, families, and visitors who value space, clear views, and a calm atmosphere. The overall rhythm is easygoing: scenic cruising, wildlife searching, and time to take in the ocean setting with guidance from a professional crew.\n\nWhy Travelers Choose This Trip\n- Small vessel format with a 6-passenger capacity\n- More personal, quieter on-water experience\n- Better opportunities for clear wildlife viewing and photography\n- Great option for couples, families, and marine-life enthusiasts\n\nWhat to Expect\nYour trip focuses on coastal cruising in San Diego waters while the crew scans for marine activity. As you move through open-water areas, you’ll watch for dolphin pods and keep an eye out for whales based on seasonal patterns. Every departure is shaped by real ocean conditions, so no two outings are exactly the same. The experience remains relaxed and scenic, with the primary goal of respectful, up-close wildlife observation from a small-group boat.\n\nPractical Details\n- Duration: approximately 2.5 hours\n- Capacity: up to 6 passengers\n- Setting: outdoor marine environment off San Diego\n- Wildlife: sightings vary with season and natural conditions"
   },
   {
     "id": "pacifica-sailing-charters-681639",
