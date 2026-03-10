@@ -144,7 +144,7 @@ export default function Engine2TourBookingPage({
       <Seo
         title={`${seo.title} | Book`}
         description={`Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`}
-        url={`${seo.canonical}/book`}
+        url={seo.canonical}
         image={seo.og.image}
         robots="noindex,follow,max-image-preview:large"
         googlebot="noindex,follow,max-image-preview:large"

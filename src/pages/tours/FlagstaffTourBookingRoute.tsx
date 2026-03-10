@@ -269,7 +269,7 @@ export default function FlagstaffTourBookingRoute({
       <Seo
         title={seoTitle}
         description={metaDescription}
-        url={bookingUrl}
+        url={detailUrl}
         image={heroImage ?? null}
         robots="noindex,follow,max-image-preview:large"
         googlebot="noindex,follow,max-image-preview:large"
