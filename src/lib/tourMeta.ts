@@ -1,3 +1,4 @@
+import { buildProductSeoTitle } from "./seo/titleBuilder";
 import { SITE_URL } from "../utils/seo";
 
 type TourLike = {
@@ -23,6 +24,7 @@ const pickCity = (tour: TourLike) => clean(tour.destination?.city) || "Unknown";
 
 const pickState = (tour: TourLike) => clean(tour.destination?.state) || "Unknown";
 
+
 const pickId = (tour: TourLike) => clean(tour.id) || clean(tour.partnerId) || "Unknown";
 
 const getTourSlugFromPath = (pathname: string) => {
@@ -41,7 +43,7 @@ const normalizeCanonical = (canonicalUrl: string) => {
 };
 
 const buildTitle = (tour: TourLike) =>
-  `${pickTourName(tour)} | ${pickCity(tour)}, ${pickState(tour)} Outdoor Tour`;
+  buildProductSeoTitle({ city: pickCity(tour), productName: pickTourName(tour) });
 
 const buildDescription = (tour: TourLike) =>
   `Guided Tour — ${pickTourName(tour)} (${pickCity(tour)}, ${pickState(tour)}) · ID ${pickId(tour)}`;

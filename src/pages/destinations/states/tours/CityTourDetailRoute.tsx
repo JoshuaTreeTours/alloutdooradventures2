@@ -468,7 +468,7 @@ export default function CityTourDetailRoute({
               {tour.destination.city}, {tour.destination.state}
             </p>
             <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
-              {hardenedTemplate?.heroTitle ?? tour.title}
+              {tour.title}
             </h1>
             <div className="mt-4 flex flex-wrap gap-2 text-xs font-semibold text-white/90">
               {tour.badges.duration ? (

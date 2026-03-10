@@ -1,12 +1,15 @@
-export const buildCityGuideDisplayTitle = (city: string) =>
-  `Best Tours in ${city} – Outdoor Adventures & Experiences`;
+import {
+  buildGuideH1,
+  buildGuideSeoTitle,
+} from "../../lib/seo/titleBuilder";
 
-export const buildCityGuideMetaTitle = (city: string) =>
-  `Best Tours in ${city} | Top Outdoor Adventures`;
+export const buildCityGuideDisplayTitle = (city: string) => buildGuideH1({ city });
 
-export const buildCityGuideH1 = (city: string) => `Best Tours in ${city}`;
+export const buildCityGuideMetaTitle = (city: string) => buildGuideSeoTitle({ city });
+
+export const buildCityGuideH1 = (city: string) => buildGuideH1({ city });
 
 export const buildCityGuideIntroParagraphs = (city: string) => ({
-  primary: `Discover the best tours in ${city}, from unforgettable outdoor adventures to unique local experiences. This guide highlights top-rated tours, activities, and excursions that help visitors explore the destination beyond the typical sightseeing stops.`,
-  secondary: `Whether you're looking for nature adventures, cultural experiences, or small-group guided outings, these curated tours make it easy to experience the best of ${city}.`,
+  primary: `Planning a trip to ${city}? This 2026 guide covers the top 10 things to do, from iconic outdoor experiences to local attractions worth adding to your itinerary.`,
+  secondary: `Use this list to compare highlights, discover what makes ${city} unique, and find tours that match your travel style.`,
 });
