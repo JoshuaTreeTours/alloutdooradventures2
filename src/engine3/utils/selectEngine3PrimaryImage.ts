@@ -2,9 +2,10 @@ const ALLOWED_HOST_PATTERN =
   /(?:^|\.)media\.tacdn\.com$|(?:^|\.)dynamic-media\.tacdn\.com$|(?:^|\.)cache\.vtrcdn\.com$|(?:^|\.)cdn\.filestackcontent\.com$/i;
 
 const ALLOWED_EXTENSION_PATTERN = /\.(jpg|jpeg|png|webp|gif)(?:$|[?#])/i;
+const TRACKER_PATTERN = /tracker|tracking|analytics|collect|beacon|pixel/i;
 
 const REJECT_PATH_PATTERN =
-  /globalnav|orion\/images\/globalnav\/|globalnav\/fallback|fallback-|fallback-top-activities|logo|sprite|100x100|50x50|1x1|top-activities/i;
+  /globalnav|orion\/images\/globalnav\/|globalnav\/fallback|fallback-|fallback-top-activities|logo|sprite|100x100|50x50|1x1|top-activities|\.html?$|\.php$/i;
 
 const normalizeUrl = (value?: string): string | undefined => {
   if (typeof value !== "string") {
@@ -30,14 +31,28 @@ export const isRejectedCandidate = (urlValue: string): boolean => {
   }
 
   const parsed = new URL(normalized);
+  if (!/^https?:$/i.test(parsed.protocol)) {
+    return true;
+  }
+
   const host = parsed.hostname.toLowerCase();
   const pathAndQuery = `${parsed.pathname}${parsed.search}`;
+  const width = Number.parseInt(parsed.searchParams.get("w") ?? "", 10);
+  const height = Number.parseInt(parsed.searchParams.get("h") ?? "", 10);
 
   if (!ALLOWED_HOST_PATTERN.test(parsed.hostname)) {
     return true;
   }
 
+  if (TRACKER_PATTERN.test(host) || TRACKER_PATTERN.test(pathAndQuery)) {
+    return true;
+  }
+
   if (REJECT_PATH_PATTERN.test(pathAndQuery)) {
+    return true;
+  }
+
+  if ((width > 0 && width <= 1) || (height > 0 && height <= 1)) {
     return true;
   }
 
