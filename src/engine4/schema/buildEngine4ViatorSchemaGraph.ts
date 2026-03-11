@@ -31,7 +31,9 @@ export const buildEngine4ViatorSchemaGraph = (tour: Engine4TourViewModel) => {
 
   const aggregateRatingNode =
     typeof tour.facts.ratingValue === "number" &&
-    typeof tour.facts.reviewCount === "number"
+    tour.facts.ratingValue > 0 &&
+    typeof tour.facts.reviewCount === "number" &&
+    tour.facts.reviewCount > 0
       ? {
           "@type": "AggregateRating",
           "@id": `${canonicalUrl}#aggregate-rating`,
