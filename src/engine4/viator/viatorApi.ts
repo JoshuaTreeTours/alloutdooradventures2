@@ -342,18 +342,18 @@ export const getEngine4ViatorTourData = async (
         (product as Record<string, unknown>).currencyCode
       ),
       rating: pickFirstNumber(
-        product.rating,
-        product.ratingValue,
         aggregateRating?.ratingValue,
-        reviewsSummary?.averageRating,
-        stats?.averageRating
+        aggregateRating?.rating,
+        product.ratingValue,
+        product.rating,
+        reviewsSummary?.rating,
+        stats?.rating
       ),
       reviewCount: pickFirstNumber(
-        product.reviewCount,
-        product.totalReviews,
         aggregateRating?.reviewCount,
-        reviewsSummary?.totalReviews,
-        stats?.totalReviews
+        product.reviewCount,
+        reviewsSummary?.count,
+        stats?.reviewCount
       ),
       primaryImageUrl,
       galleryImages,

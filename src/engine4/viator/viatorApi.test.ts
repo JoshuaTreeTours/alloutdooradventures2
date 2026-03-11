@@ -117,17 +117,31 @@ describe("getEngine4ViatorTourData", () => {
     expect(tour?.provenance?.descriptionSource).toBe("api.summary");
   });
 
-  it("extracts rating and review count from number-like and aggregate API fields", async () => {
+  it("normalizes rating and review count using required fallback order", async () => {
     process.env.VIATOR_API_KEY = "test-key";
     mockedFetchViator.mockResolvedValue({
       product: {
         productCode: "132218P209",
         title: "Small-Group Yosemite Tour from San Francisco",
         shortDescription: "Small-group day trip to Yosemite.",
-        ratingValue: "4.5",
         aggregateRating: {
-          reviewCount: "117",
+          ratingValue: "4.8",
+          rating: "4.7",
+          reviewCount: "718",
         },
+        ratingValue: "4.6",
+        rating: "4.5",
+        reviews: {
+          summary: {
+            rating: "4.4",
+            count: "700",
+          },
+        },
+        statistics: {
+          rating: "4.3",
+          reviewCount: "690",
+        },
+        reviewCount: "680",
         images: [
           {
             isCover: true,
@@ -145,8 +159,8 @@ describe("getEngine4ViatorTourData", () => {
 
     const tour = await getEngine4ViatorTourData("132218P209");
 
-    expect(tour?.rating).toBe(4.5);
-    expect(tour?.reviewCount).toBe(117);
+    expect(tour?.rating).toBe(4.8);
+    expect(tour?.reviewCount).toBe(718);
   });
 
   it("uses fallback with explicit provenance when API fails", async () => {
