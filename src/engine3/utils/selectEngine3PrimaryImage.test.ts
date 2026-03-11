@@ -42,4 +42,27 @@ describe("selectEngine3PrimaryImage", () => {
 
     expect(image).toBe("https://cdn.filestackcontent.com/6OnyIE1yQwmb10T4bMJa");
   });
+
+  it("accepts valid dynamic-media caption URLs", () => {
+    expect(
+      isRejectedCandidate(
+        "https://dynamic-media.tacdn.com/media/photo-o/31/bd/72/79/caption.jpg"
+      )
+    ).toBe(false);
+  });
+
+  it("rejects malformed or non-image candidates", () => {
+    expect(isRejectedCandidate("not-a-url")).toBe(true);
+    expect(
+      isRejectedCandidate(
+        "https://dynamic-media.tacdn.com/media/photo-o/31/bd/72/79/index.html"
+      )
+    ).toBe(true);
+  });
+
+  it("rejects tracker and pixel-like URLs", () => {
+    expect(
+      isRejectedCandidate("https://media.tacdn.com/tracker/pixel.jpg?w=1&h=1")
+    ).toBe(true);
+  });
 });

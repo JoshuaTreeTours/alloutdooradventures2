@@ -6,6 +6,7 @@ import { DEFAULT_ENGINE3_HERO_IMAGE_URL } from "../constants";
 import { buildEngine3SchemaGraph } from "../schema/buildEngine3SchemaGraph";
 import { buildEngine3BreadcrumbItems } from "../utils/buildEngine3BreadcrumbItems";
 import { buildViatorAffiliateUrl } from "../utils/viatorLinks";
+import { resolveEngine3ViatorHero } from "../utils/resolveEngine3ViatorHero";
 import type { Engine3TourViewModel } from "../types";
 import { extractViatorProductCode } from "../../utils/viator/extractViatorProductCode";
 import { normalizeStructuredData } from "../../utils/structuredData";
@@ -62,7 +63,12 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
     }
 
     return rawUrl;
-  }, [tour.bookingProvider, tour.bookingUrl, tour.tourId, tour.viator?.productUrl]);
+  }, [
+    tour.bookingProvider,
+    tour.bookingUrl,
+    tour.tourId,
+    tour.viator?.productUrl,
+  ]);
 
   const hasMeetingPoint = Boolean(tour.meetingPointDescription);
   const overviewText = tour.overview ?? tour.description;
@@ -84,10 +90,13 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
   const pageDescription =
     overviewText ||
     (cityRegionLabel ? `${tour.title} in ${cityRegionLabel}` : undefined);
-  const heroUrl =
-    tour.primaryImageUrl ||
-    tour.heroImageOverrideUrl ||
-    DEFAULT_ENGINE3_HERO_IMAGE_URL;
+  const viatorHeroUrl = resolveEngine3ViatorHero({
+    bookingProvider: tour.bookingProvider,
+    tourId: tour.tourId,
+    primaryImageUrl: tour.primaryImageUrl,
+    heroImageOverrideUrl: tour.heroImageOverrideUrl,
+  });
+  const heroUrl = viatorHeroUrl ?? DEFAULT_ENGINE3_HERO_IMAGE_URL;
 
   const breadcrumbItems = buildEngine3BreadcrumbItems({
     title: tour.title,
@@ -146,11 +155,10 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
               typeof window === "undefined"
                 ? canonicalUrl
                 : window.location.pathname,
-            isBookingRoute:
-              (typeof window === "undefined"
-                ? canonicalUrl
-                : window.location.pathname
-              ).endsWith("/book"),
+            isBookingRoute: (typeof window === "undefined"
+              ? canonicalUrl
+              : window.location.pathname
+            ).endsWith("/book"),
           },
           affiliateBookingUrl: safeBookingUrl ?? undefined,
           breadcrumbs: breadcrumbItems.map(item => ({
@@ -181,7 +189,9 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         id="structured-data-engine3-viator"
         key="structured-data-engine3-viator"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData ?? {}) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData ?? {}),
+        }}
       />
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
@@ -243,14 +253,16 @@ export default function Engine3TourPage({ tour }: Engine3TourPageProps) {
         </div>
       </section>
       <section className="mx-auto max-w-5xl px-6 py-14">
-        <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
-          <img
-            src={heroUrl}
-            alt={tour.title}
-            loading="eager"
-            className="h-64 w-full object-cover md:h-80"
-          />
-        </div>
+        {viatorHeroUrl ? (
+          <div className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+            <img
+              src={viatorHeroUrl}
+              alt={tour.title}
+              loading="eager"
+              className="h-64 w-full object-cover md:h-80"
+            />
+          </div>
+        ) : null}
 
         {overviewText ? (
           <>

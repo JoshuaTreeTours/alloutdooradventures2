@@ -70,18 +70,18 @@ describe("Engine3TourPage", () => {
     expect(html).not.toContain(">Highlights<");
   });
 
-  it("always renders hero image even when primaryImageUrl is missing", () => {
+  it("hides the hero block when no valid Viator hero remains", () => {
     const html = renderToStaticMarkup(
       <Engine3TourPage
         tour={{
           ...posterChildTour,
           primaryImageUrl: undefined,
-          heroImageOverrideUrl: undefined,
+          heroImageOverrideUrl: "not-a-url",
         }}
       />
     );
 
-    expect(html).toContain('src="/hero.jpg"');
+    expect(html).not.toContain('class="h-64 w-full object-cover md:h-80"');
   });
 
   it("keeps rendering booking CTA when booking URL parsing fails", () => {
