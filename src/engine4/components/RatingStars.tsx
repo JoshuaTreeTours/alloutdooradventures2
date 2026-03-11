@@ -82,6 +82,10 @@ export default function RatingStars({
   className,
 }: RatingStarsProps) {
   const safeRating = clampRating(ratingValue);
+  const hasReviewCount = Number.isFinite(reviewCount);
+  const reviewLabel = hasReviewCount
+    ? `${Math.round(reviewCount!)} review${Math.round(reviewCount!) === 1 ? "" : "s"}`
+    : null;
 
   return (
     <span
@@ -102,9 +106,12 @@ export default function RatingStars({
           );
         })}
       </span>
-      {Number.isFinite(reviewCount) ? (
+      <span className="text-sm font-semibold text-white" data-testid="rating-value">
+        {safeRating.toFixed(1)}
+      </span>
+      {reviewLabel ? (
         <span className="text-sm text-white/95">
-          {Math.round(reviewCount!)} reviews
+          &middot; {reviewLabel}
         </span>
       ) : null}
     </span>
