@@ -3144,6 +3144,65 @@ const mississippiState: StateDestination = {
   ],
   cities: [
     {
+      name: "Bay Saint Louis",
+      slug: "bay-saint-louis",
+      stateSlug: "mississippi",
+      region: "Deep South",
+      lat: 30.315753,
+      lng: -89.325394,
+      shortDescription:
+        "Coastal boat tours and relaxed bay sightseeing in Bay Saint Louis.",
+      intro:
+        "Bay Saint Louis is a Gulf Coast launch point for guided boat tours and easy waterfront exploration.",
+      heroImages: [
+        "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+      ],
+      activityTags: ["boat-tour", "sightseeing", "coastal"],
+      whereItIs: [
+        "Bay Saint Louis sits on Mississippi's Gulf Coast, west of Gulfport and Biloxi, with direct access to bays and coastal waterways.",
+        "The city works well for short on-water itineraries that pair a guided boat tour with waterfront dining and walkable downtown stops.",
+      ],
+      experiences: {
+        mountains:
+          "Bay Saint Louis is coastal and low-elevation, with water-focused experiences instead of mountain terrain.",
+        lakesWater:
+          "Guided boat tours provide broad views of the bay, marinas, and nearby shoreline habitats.",
+        desertForest:
+          "The surrounding coast includes marsh and wetland ecosystems that support birdlife and calm-water sightseeing.",
+        cycling:
+          "Flat local roads and waterfront segments can be explored by bike before or after boat departures.",
+        scenicDrives:
+          "The Gulf Coast route offers easy scenic driving between Bay Saint Louis and nearby Mississippi beach towns.",
+        seasonalNotes:
+          "Spring and fall usually bring comfortable weather for combining water excursions with downtown walking.",
+      },
+      thingsToDo: [
+        "Join a Bay Saint Louis sightseeing boat tour for coastal views.",
+        "Explore the waterfront and marina areas before departure time.",
+        "Pair your on-water outing with local food and walkable Old Town streets.",
+      ],
+      toursCopy: [
+        "Book a guided bay cruise for a simple half-day outdoor plan.",
+        "Use Bay Saint Louis as a coastal base for relaxed sightseeing.",
+      ],
+      nearby: ["Gulfport", "Biloxi", "Pass Christian"],
+      bestFor: ["Boat sightseeing", "Coastal day trips", "Relaxed outdoor pacing"],
+      logistics: [
+        "Arrive early for parking and marina check-in.",
+        "Bring sun protection and light layers for wind on the water.",
+      ],
+      seasonalTips: [
+        "Morning departures often bring calmer water and softer light.",
+        "Warm-season afternoons can be humid; plan hydration.",
+      ],
+      faq: [
+        {
+          q: "What outdoor tours are common in Bay Saint Louis?",
+          a: "Guided sightseeing boat tours are a core outdoor option in Bay Saint Louis.",
+        },
+      ],
+    },
+    {
       name: "Natchez",
       slug: "natchez",
       stateSlug: "mississippi",

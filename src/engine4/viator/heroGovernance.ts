@@ -25,6 +25,8 @@ export const ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE: Record<
   string,
   string
 > = {
+  "380141P5":
+    "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
   "335698P13":
     "https://dynamic-media.tacdn.com/media/photo-o/32/28/7e/d5/caption.jpg?w=1100&h=800&s=1",
   "237571P2":

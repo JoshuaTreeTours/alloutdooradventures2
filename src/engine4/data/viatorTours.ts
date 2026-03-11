@@ -260,6 +260,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "380141P5",
+    bookingUrl:
+      "https://www.viator.com/tours/Mississippi/Bay-Saint-Louis-Discovery-Boat-Tour/d22220-380141P5?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Mississippi",
+      stateSlug: "mississippi",
+      city: "Bay Saint Louis",
+      citySlug: "bay-saint-louis",
+    },
+    slug: "bay-saint-louis-discovery-boat-tour-380141p5",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -329,6 +346,57 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       {
         question: "Where is the meeting point?",
         answer: "The listed meeting point is in Natchez, Mississippi, USA.",
+      },
+    ],
+  },
+  "380141P5": {
+    productCode: "380141P5",
+    title: "Bay Saint Louis Discovery Boat Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Mississippi/Bay-Saint-Louis-Discovery-Boat-Tour/d22220-380141P5",
+    fromPrice: "$79.00",
+    priceCurrency: "USD",
+    duration: "2 hours",
+    meetingPoint: "Bay St Louis, Mississippi, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+    exactProductImages: [
+      {
+        url: "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+        isCover: true,
+      },
+    ],
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Discover Bay Saint Louis by boat with a guided sightseeing cruise focused on shoreline views and local coastal context.",
+    overview:
+      "Bay Saint Louis Discovery Boat Tour is a guided coastal sightseeing experience in Bay Saint Louis, Mississippi. The tour is designed for travelers who want a straightforward on-water outing with local context, easy boarding logistics, and broad views of the surrounding bay and waterfront.",
+    highlights: [
+      "Guided boat tour in Bay Saint Louis",
+      "Water-level views of the bay and shoreline",
+      "Relaxed sightseeing format suitable for mixed groups",
+      "Convenient departure from Bay Saint Louis, Mississippi",
+    ],
+    faqs: [
+      {
+        question: "Where does this tour meet?",
+        answer: "The listed meeting point is Bay St Louis, Mississippi, USA.",
+      },
+      {
+        question: "Is free cancellation available?",
+        answer: "Yes. This tour lists free cancellation up to 24 hours in advance.",
       },
     ],
   },

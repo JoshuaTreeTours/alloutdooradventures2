@@ -143,6 +143,27 @@ describe("Engine4 Viator image consistency", () => {
     expect(diagnostics.resolutionStatus).toBe("ok");
   });
 
+
+
+  it("keeps 380141P5 locked and consistent across page/card/og/schema", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "380141P5",
+      stateSlug: "mississippi",
+      citySlug: "bay-saint-louis",
+      tourSlug: "bay-saint-louis-discovery-boat-tour-380141p5",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "380141P5",
+      expectedSource: "api-images-payload",
+    });
+
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+  });
+
   it("rejects contamination from an unrelated product image", () => {
     const diagnostics = assertContaminationRejected({
       productCode: "74828P5",

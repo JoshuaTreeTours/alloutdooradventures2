@@ -211,4 +211,30 @@ describe("Engine4 Aspen routing/listing", () => {
       "This experience is non-refundable and cannot be changed for any reason."
     );
   });
+
+  it("builds the 380141P5 route and exposes it in Bay Saint Louis listing", () => {
+    const entries = getEngine4ListingEntries("mississippi", "bay-saint-louis");
+    const target = entries.find(entry => entry.tour.productCode === "380141P5");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/mississippi/bay-saint-louis/tours/bay-saint-louis-discovery-boat-tour-380141p5"
+    );
+    expect(target?.tour.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/31/c2/9b/8f/caption.jpg?w=1100&h=800&s=1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "mississippi",
+      "bay-saint-louis",
+      "bay-saint-louis-discovery-boat-tour-380141p5"
+    );
+
+    expect(routed?.id).toBe("380141P5");
+    expect(routed?.images.hero).toBe(target?.tour.heroImage);
+    expect(routed?.content.meetingPoint.address).toBe(
+      "Bay St Louis, Mississippi, USA"
+    );
+  });
+
 });
