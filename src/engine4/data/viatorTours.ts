@@ -141,6 +141,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "3454_B0016",
+    bookingUrl:
+      "https://www.viator.com/tours/San-Francisco/Small-Group-Yosemite-Tour-from-San-Francisco/d651-3454_B0016?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "California",
+      stateSlug: "california",
+      city: "San Francisco",
+      citySlug: "san-francisco",
+    },
+    slug: "small-group-yosemite-tour-from-san-francisco",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "36001P1",
     bookingUrl:
       "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1?pid=P00290915&mcid=42383&medium=link&currency=USD",
@@ -904,6 +921,64 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "Is there free cancellation?",
         answer:
           "Yes. The mapped policy is free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
+  "3454_B0016": {
+    productCode: "3454_B0016",
+    title: "Small-Group Yosemite Tour from San Francisco",
+    sourceUrl:
+      "https://www.viator.com/tours/San-Francisco/Small-Group-Yosemite-Tour-from-San-Francisco/d651-3454_B0016",
+    fromPrice: "$209.00",
+    priceCurrency: "USD",
+    duration: "14 hours",
+    meetingPoint:
+      "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+    description:
+      "Small-group full-day Yosemite excursion from San Francisco with major valley viewpoints and guide-led park orientation.",
+    overview:
+      "Small-Group Yosemite Tour from San Francisco is a long-format day trip built for travelers who want Yosemite access without self-driving. The itinerary focuses on efficient round-trip transport, curated scenic stops, and guided context while preserving free time inside the park for photos and self-paced exploring. As a small-group format, it typically emphasizes a more personal pace than larger coach tours while still covering signature Yosemite scenery in one day.",
+    highlights: [
+      "Small-group Yosemite day trip departing from San Francisco",
+      "Guide-led orientation and park context throughout the day",
+      "Stops at iconic Yosemite Valley viewpoints",
+      "Round-trip transport included for a no-car Yosemite experience",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    faqs: [
+      {
+        question: "Where does this Yosemite tour meet in San Francisco?",
+        answer:
+          "The listed meeting point is Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA.",
+      },
+      {
+        question: "How long is the Small-Group Yosemite Tour from San Francisco?",
+        answer: "The listed duration is approximately 14 hours.",
+      },
+      {
+        question: "Can I cancel this tour if plans change?",
+        answer:
+          "Yes. This listing includes free cancellation up to 24 hours in advance.",
       },
     ],
   },

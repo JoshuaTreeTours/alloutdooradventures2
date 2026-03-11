@@ -106,6 +106,36 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(routed?.id).toBe("74828P3");
   });
 
+
+  it("builds the 3454_B0016 route and exposes it in San Francisco listing", () => {
+    const entries = getEngine4ListingEntries("california", "san-francisco");
+    const target = entries.find(entry => entry.tour.productCode === "3454_B0016");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/california/san-francisco/tours/small-group-yosemite-tour-from-san-francisco-3454_b0016"
+    );
+    expect(target?.tour.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "san-francisco",
+      "small-group-yosemite-tour-from-san-francisco-3454_b0016"
+    );
+
+    expect(routed?.id).toBe("3454_B0016");
+    expect(routed?.images.hero).toBe(target?.tour.heroImage);
+    expect(routed?.content.duration).toBe("14 hours");
+    expect(routed?.content.meetingPoint.address).toBe(
+      "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA"
+    );
+    expect(routed?.content.cancellationPolicy).toBe(
+      "Free cancellation up to 24 hours in advance."
+    );
+  });
+
   it("builds the 36001P1 route and exposes it in San Francisco listing", () => {
     const entries = getEngine4ListingEntries("california", "san-francisco");
     const target = entries.find(entry => entry.tour.productCode === "36001P1");

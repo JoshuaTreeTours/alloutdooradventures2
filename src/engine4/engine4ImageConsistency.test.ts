@@ -30,6 +30,26 @@ describe("Engine4 Viator image consistency", () => {
     expect(p5.heroImage).not.toBe(palmSpringsHero);
   });
 
+
+  it("keeps 3454_B0016 consistent across page/card/og/schema", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "3454_B0016",
+      stateSlug: "california",
+      citySlug: "san-francisco",
+      tourSlug: "small-group-yosemite-tour-from-san-francisco-3454_b0016",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2e/b5/09/65/caption.jpg?w=1100&h=800&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "3454_B0016",
+      expectedSource: "api-images-payload",
+    });
+
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+  });
+
   it("keeps 36001P1 consistent across page/card/og/schema via API images[]", () => {
     assertHeroConsistencyForProduct({
       productCode: "36001P1",
