@@ -129,7 +129,8 @@ describe("Engine4TourPage booking CTA", () => {
       <Engine4TourPage tour={withRating} />
     );
     expect(withRatingHtml).toContain('data-testid="rating-stars"');
-    expect(withRatingHtml).toContain("12 reviews");
+    expect(withRatingHtml).toContain(">4.9<");
+    expect(withRatingHtml).toContain("· 12 reviews");
     expect(
       withRatingHtml.match(/data-testid="rating-star"/g) ?? []
     ).toHaveLength(5);
@@ -148,8 +149,12 @@ describe("Engine4TourPage booking CTA", () => {
     const html = renderToStaticMarkup(<Engine4TourPage tour={withRating} />);
 
     expect(html).toContain('data-testid="rating-stars"');
-    expect(html).toContain("342 reviews");
+    expect(html).toContain(">4.7<");
+    expect(html).toContain("· 342 reviews");
     expect(html.match(/data-testid="rating-star"/g) ?? []).toHaveLength(5);
+    expect(html).toContain('"@type":"AggregateRating"');
+    expect(html).toContain('"ratingValue":4.7');
+    expect(html).toContain('"reviewCount":342');
     const fromIndex = html.indexOf("From:</strong>");
     const ratingIndex = html.indexOf('data-testid="rating-stars"');
     const meetingIndex = html.indexOf("Meeting point:</strong>");
