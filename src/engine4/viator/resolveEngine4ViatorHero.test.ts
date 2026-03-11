@@ -25,6 +25,8 @@ describe("Engine4 Viator hero governance resolver", () => {
               variants: [
                 {
                   name: "large",
+                  width: 1100,
+                  height: 800,
                   url: "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
                 },
               ],
@@ -50,6 +52,8 @@ describe("Engine4 Viator hero governance resolver", () => {
               variants: [
                 {
                   name: "large",
+                  width: 1100,
+                  height: 800,
                   url: "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1",
                 },
               ],
@@ -284,6 +288,8 @@ describe("Engine4 Viator hero governance resolver", () => {
       selectedHeroUrl:
         "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1",
       selectionSource: "override",
+      sourceDerivedPresent: false,
+      sourceDerivedUsed: false,
       contaminationBlocked: false,
       resolutionStatus: "ok",
       rejectedCandidates: [
@@ -433,7 +439,7 @@ describe("Engine4 Viator hero governance resolver", () => {
     );
   });
 
-  it("rejects low-quality payload candidates and falls back to source hero for non-strict tours", () => {
+  it("rejects low-quality payload candidates and falls back to source-derived hero for non-strict tours", () => {
     const sourceHero =
       "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1";
 
@@ -444,7 +450,7 @@ describe("Engine4 Viator hero governance resolver", () => {
         title: "Aspen East End Light Hike",
         sourceUrl:
           "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
-        primaryImageUrl: sourceHero,
+        sourceDerivedImageUrl: sourceHero,
         rawProductPayload: {
           images: [
             {
@@ -476,14 +482,14 @@ describe("Engine4 Viator hero governance resolver", () => {
     });
 
     expect(diagnostics.selectedHeroUrl).toBe(sourceHero);
-    expect(diagnostics.selectionSource).toBe("api-images-payload");
+    expect(diagnostics.selectionSource).toBe("source-derived");
     expect(diagnostics.apiImagesPayloadCandidates).toEqual([]);
     expect(diagnostics.rejectedCandidates).toContainEqual({
       source: "api.images[]",
       reason: "images_payload_quality_too_low",
     });
     expect(diagnostics.acceptedCandidateReason).toContain(
-      "mapped API fields"
+      "source-derived Viator CDN hero"
     );
   });
 

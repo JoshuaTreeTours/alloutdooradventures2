@@ -3,7 +3,7 @@ import type { Engine4ViatorApiTour, Engine4ViatorTourRecord } from "../types";
 const INVALID_SCHEMES = ["javascript:", "data:text", "data:html"];
 const ALLOWED_HOSTS = [/^media\.tacdn\.com$/i, /^dynamic-media\.tacdn\.com$/i];
 
-type CandidateSource = "api.images[]" | "override";
+type CandidateSource = "api.images[]" | "source-derived" | "override";
 
 type RejectedReason =
   | "invalid_url"
@@ -12,9 +12,8 @@ type RejectedReason =
   | "images_payload_no_valid_candidates"
   | "images_payload_quality_too_low"
   | "not_from_images_payload"
+  | "invalid_source_derived"
   | "invalid_override";
-
-const STRICT_IMAGES_PAYLOAD_ONLY_PRODUCT_CODES = new Set(["237571P2"]);
 
 export type Engine4ViatorRejectedCandidate = {
   url?: string;
@@ -36,13 +35,16 @@ export const ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE: Record<
 
 export type Engine4ViatorHeroSelectionSource =
   | "api-images-payload"
+  | "source-derived"
   | "override"
   | "missing";
 
 export type Engine4ViatorHeroDiagnostics = {
   productCode: string;
   apiImagePresent: boolean;
+  sourceDerivedPresent: boolean;
   overridePresent: boolean;
+  sourceDerivedUsed: boolean;
   overrideUsed: boolean;
   finalSelectedHeroUrl?: string;
   selectedHeroUrl?: string;
@@ -343,37 +345,6 @@ const resolveViatorCoverVariant = (
   };
 };
 
-const extractLegacyMappedCandidates = (
-  apiTour: Engine4ViatorApiTour | undefined
-): string[] => {
-  if (!apiTour) {
-    return [];
-  }
-
-  return Array.from(
-    new Set(
-      [
-        apiTour.primaryImageUrl,
-        ...(apiTour.galleryImages ?? []),
-        apiTour.sourceDerivedImageUrl,
-      ].filter((url): url is string => isValidEngine4ViatorHeroCandidate(url))
-    )
-  );
-};
-
-const collectLegacyCandidatesForDiagnostics = (
-  apiTour: Engine4ViatorApiTour | undefined,
-  rejectedCandidates: Engine4ViatorRejectedCandidate[]
-) => {
-  extractLegacyMappedCandidates(apiTour).forEach(url => {
-    rejectedCandidates.push({
-      url,
-      source: "api.images[]",
-      reason: "not_from_images_payload",
-    });
-  });
-};
-
 export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
   productCode: string;
   apiTour?: Engine4ViatorApiTour;
@@ -386,9 +357,6 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
     apiProductCode && apiProductCode !== normalizedCode
   );
 
-  const strictImagesPayloadOnly =
-    STRICT_IMAGES_PAYLOAD_ONLY_PRODUCT_CODES.has(normalizedCode);
-
   const payloadSelection = resolveViatorCoverVariant(
     input.apiTour,
     rejectedCandidates
@@ -396,6 +364,9 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
   const imagesPayloadCandidates = payloadSelection.candidates;
 
   let trustedApiCandidate: string | undefined;
+  let trustedSourceDerivedCandidate: string | undefined;
+
+  const sourceDerivedCandidate = input.apiTour?.sourceDerivedImageUrl?.trim();
 
   if (apiProductMismatch) {
     imagesPayloadCandidates.forEach(url => {
@@ -405,21 +376,55 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
         reason: "api_product_mismatch",
       });
     });
+    if (sourceDerivedCandidate) {
+      rejectedCandidates.push({
+        url: sourceDerivedCandidate,
+        source: "source-derived",
+        reason: "api_product_mismatch",
+      });
+    }
   } else {
     trustedApiCandidate = imagesPayloadCandidates.find(url =>
       isValidEngine4ViatorHeroCandidate(url)
     );
 
-    if (strictImagesPayloadOnly) {
-      collectLegacyCandidatesForDiagnostics(input.apiTour, rejectedCandidates);
+    if (!trustedApiCandidate && sourceDerivedCandidate) {
+      if (isValidEngine4ViatorHeroCandidate(sourceDerivedCandidate)) {
+        trustedSourceDerivedCandidate = sourceDerivedCandidate;
+      } else {
+        rejectedCandidates.push({
+          url: sourceDerivedCandidate,
+          source: "source-derived",
+          reason: "invalid_source_derived",
+        });
+      }
     }
 
-    if (!trustedApiCandidate && !strictImagesPayloadOnly) {
-      trustedApiCandidate = extractLegacyMappedCandidates(input.apiTour)[0];
+    [input.apiTour?.primaryImageUrl, ...(input.apiTour?.galleryImages ?? [])]
+      .filter((url): url is string => Boolean(url?.trim()))
+      .forEach(url => {
+        rejectedCandidates.push({
+          url,
+          source: "api.images[]",
+          reason: "not_from_images_payload",
+        });
+      });
+    if (
+      sourceDerivedCandidate &&
+      trustedSourceDerivedCandidate !== sourceDerivedCandidate
+    ) {
+      rejectedCandidates.push({
+        url: sourceDerivedCandidate,
+        source: "api.images[]",
+        reason: "not_from_images_payload",
+      });
     }
   }
 
   const hasValidApiImage = isValidEngine4ViatorHeroCandidate(trustedApiCandidate);
+  const hasValidSourceDerivedImage = isValidEngine4ViatorHeroCandidate(
+    trustedSourceDerivedCandidate
+  );
 
   const overrideUrl =
     ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE[normalizedCode];
@@ -435,6 +440,8 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
 
   const selectedHero = hasValidApiImage
     ? trustedApiCandidate
+    : hasValidSourceDerivedImage
+      ? trustedSourceDerivedCandidate
     : hasValidOverride
       ? overrideUrl
       : undefined;
@@ -442,12 +449,16 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
   const diagnostics: Engine4ViatorHeroDiagnostics = {
     productCode: normalizedCode,
     apiImagePresent: hasValidApiImage,
+    sourceDerivedPresent: hasValidSourceDerivedImage,
     overridePresent: hasValidOverride,
+    sourceDerivedUsed: !hasValidApiImage && hasValidSourceDerivedImage,
     overrideUsed: !hasValidApiImage && Boolean(selectedHero),
     finalSelectedHeroUrl: selectedHero,
     selectedHeroUrl: selectedHero,
     selectionSource: hasValidApiImage
       ? "api-images-payload"
+      : hasValidSourceDerivedImage
+        ? "source-derived"
       : hasValidOverride
         ? "override"
         : "missing",
@@ -457,7 +468,9 @@ export const resolveEngine4ViatorHeroWithDiagnostics = (input: {
     acceptedCandidateReason: hasValidApiImage
       ? imagesPayloadCandidates.includes(trustedApiCandidate ?? "")
         ? "Accepted API image because it comes from this product's images[] payload (preferring cover image variants)."
-        : "Accepted API image from exact-product mapped API fields while no images[] payload candidate was available."
+        : "Accepted API image because it is render-safe and exact-product approved."
+      : hasValidSourceDerivedImage
+        ? "Accepted exact-product source-derived Viator CDN hero because no safe images[] payload candidate was available."
       : hasValidOverride
         ? "Accepted locked per-product override because no safe exact-product images[] candidate was available."
         : undefined,

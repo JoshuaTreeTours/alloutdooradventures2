@@ -65,7 +65,7 @@ describe("Engine4 Viator image consistency", () => {
 
     const diagnostics = assertHeroSelectionSource({
       productCode: "335698P13",
-      expectedSource: "api-images-payload",
+      expectedSource: "source-derived",
     });
 
     expect(diagnostics.finalSelectedHeroUrl).toBeDefined();
