@@ -106,6 +106,24 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(routed?.id).toBe("74828P3");
   });
 
+  it("builds the 380141P3 route and exposes it in Mississippi listing", () => {
+    const entries = getEngine4ListingEntries("mississippi", "mississippi");
+    const target = entries.find(entry => entry.tour.productCode === "380141P3");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/mississippi/mississippi/tours/river-cruise-to-the-swamp-walk-tour-380141p3"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "mississippi",
+      "mississippi",
+      "river-cruise-to-the-swamp-walk-tour-380141p3"
+    );
+
+    expect(routed?.id).toBe("380141P3");
+  });
+
   it("builds the 36001P1 route and exposes it in San Francisco listing", () => {
     const entries = getEngine4ListingEntries("california", "san-francisco");
     const target = entries.find(entry => entry.tour.productCode === "36001P1");

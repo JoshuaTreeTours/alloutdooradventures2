@@ -72,6 +72,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "380141P3",
+    bookingUrl:
+      "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/57/88/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Mississippi",
+      stateSlug: "mississippi",
+      city: "Mississippi",
+      citySlug: "mississippi",
+    },
+    slug: "river-cruise-to-the-swamp-walk-tour-380141p3",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "63657P1",
     bookingUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
@@ -238,8 +255,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
       city: "Los Angeles",
       citySlug: "los-angeles",
     },
-    slug:
-      "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
+    slug: "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
   },
   {
     engine: "engine4",
@@ -320,6 +336,57 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "What will we do during the experience?",
         answer:
           "Your guide leads canyon travel that includes rappels, scrambling, and movement instruction across Moab sandstone terrain.",
+      },
+    ],
+  },
+  "380141P3": {
+    productCode: "380141P3",
+    title: "River Cruise to The Swamp Walk Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3",
+    fromPrice: "$89.00",
+    priceCurrency: "USD",
+    duration: "3 hours",
+    meetingPoint: "Moss Point, Mississippi, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/57/88/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/57/88/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/3a/57/88/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Pair a calm river cruise with a guided swamp walk focused on Gulf Coast wildlife and wetland ecology.",
+    descriptionLong:
+      "River Cruise to The Swamp Walk Tour combines a scenic boat ride with a guided on-foot section through Mississippi wetland terrain. The route is designed for travelers who want a flexible nature-focused outing without committing to a full-day itinerary. Expect a mix of river views, local ecosystem commentary, and a swamp walk segment that highlights regional flora, birdlife, and habitat conditions. This format gives guests both a relaxed cruising perspective and a closer look at the environment from ground level.",
+    overview:
+      "River Cruise to The Swamp Walk Tour combines a scenic boat ride with a guided on-foot section through Mississippi wetland terrain. The route is designed for travelers who want a flexible nature-focused outing without committing to a full-day itinerary. Expect a mix of river views, local ecosystem commentary, and a swamp walk segment that highlights regional flora, birdlife, and habitat conditions. This format gives guests both a relaxed cruising perspective and a closer look at the environment from ground level.",
+    highlights: [
+      "Combined river cruise and guided swamp walk format",
+      "Focus on Mississippi wetland wildlife and local ecology",
+      "Approximately 3-hour outing",
+      "From price listed at $89.00 per person",
+      "Free cancellation up to 24 hours in advance",
+    ],
+    additionalInfo: [
+      "Wear closed-toe shoes suitable for damp terrain on the swamp walk segment.",
+      "Bring sun protection and insect repellent for comfort in warm weather.",
+    ],
+    faqs: [
+      {
+        question: "What does the River Cruise to The Swamp Walk Tour include?",
+        answer:
+          "The experience combines a river cruise with an on-foot swamp walk led by a guide.",
+      },
+      {
+        question: "How long is this tour?",
+        answer: "The listed duration is approximately 3 hours.",
+      },
+      {
+        question: "Is free cancellation available?",
+        answer:
+          "Yes. The listing indicates free cancellation up to 24 hours in advance.",
       },
     ],
   },
@@ -1089,7 +1156,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     reviewCount: 8,
     duration: "2 days",
     startTime: "6:45 AM",
-    meetingPoint: "Meeting point options available in Los Angeles; ends back at meeting point",
+    meetingPoint:
+      "Meeting point options available in Los Angeles; ends back at meeting point",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     exactProductImages: [
       {
@@ -1143,11 +1211,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Round-trip transportation from Los Angeles",
       "Professional driver-guide",
     ],
-    exclusions: [
-      "Lunch and dinner",
-      "Personal expenses",
-      "Guide gratuities",
-    ],
+    exclusions: ["Lunch and dinner", "Personal expenses", "Guide gratuities"],
     whatToExpect:
       "Expect an early 6:45 AM start from Los Angeles, a guided two-day pace across two Sierra national parks, overnight lodging in Fresno, and a return to the original meeting-point area.",
     additionalInfo: [
