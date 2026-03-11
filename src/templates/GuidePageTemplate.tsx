@@ -361,16 +361,6 @@ export default function GuidePageTemplate({ guide }: GuidePageTemplateProps) {
                 {`Official ${place} tourism website`}
               </a>
             </li>
-            <li>
-              <a
-                href={guide.seoLinks.reference}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1f2a1f] underline"
-              >
-                {`${place} ${guide.state} history & overview`}
-              </a>
-            </li>
           </ul>
         </Section>
 
