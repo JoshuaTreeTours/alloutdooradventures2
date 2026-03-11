@@ -432,4 +432,95 @@ describe("Engine4 Viator hero governance resolver", () => {
       "https://dynamic-media.tacdn.com/media/photo-o/2f/38/d8/0b/caption.jpg?w=1100&h=800&s=1"
     );
   });
+
+  it("rejects low-quality payload candidates and falls back to source hero for non-strict tours", () => {
+    const sourceHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/30/70/d3/6d/caption.jpg?w=1100&h=800&s=1";
+
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "74828P5",
+      apiTour: {
+        productCode: "74828P5",
+        title: "Aspen East End Light Hike",
+        sourceUrl:
+          "https://www.viator.com/tours/Aspen/Aspen-East-End-Light-Hike/d26395-74828P5",
+        primaryImageUrl: sourceHero,
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "thumbnail",
+                  width: 360,
+                  height: 240,
+                  url: "https://media.tacdn.com/media/attractions-splice-spp-360x240/11/8a/ad/05.jpg",
+                },
+                {
+                  name: "portrait",
+                  width: 1200,
+                  height: 1600,
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/03/caption.jpg?w=1200&h=1600&s=1",
+                },
+                {
+                  name: "small-landscape",
+                  width: 999,
+                  height: 600,
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/33/00/00/04/caption.jpg?w=999&h=600&s=1",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+
+    expect(diagnostics.selectedHeroUrl).toBe(sourceHero);
+    expect(diagnostics.selectionSource).toBe("api-images-payload");
+    expect(diagnostics.apiImagesPayloadCandidates).toEqual([]);
+    expect(diagnostics.rejectedCandidates).toContainEqual({
+      source: "api.images[]",
+      reason: "images_payload_quality_too_low",
+    });
+    expect(diagnostics.acceptedCandidateReason).toContain(
+      "mapped API fields"
+    );
+  });
+
+  it("rejects tracking proxy payload candidates and keeps strict-product override fallback", () => {
+    const diagnostics = resolveEngine4ViatorHeroWithDiagnostics({
+      productCode: "237571P2",
+      apiTour: {
+        productCode: "237571P2",
+        title: "Full-Day Hike in Joshua Tree National Park",
+        sourceUrl:
+          "https://www.viator.com/tours/Palm-Springs/Full-Day-Hike-in-Joshua-Tree-National-Park/d648-237571P2",
+        rawProductPayload: {
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  name: "proxy",
+                  width: 1600,
+                  height: 900,
+                  url: "https://dynamic-media.tacdn.com/tracking-proxy/image.jpg?w=1600&h=900&s=1",
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+
+    expect(diagnostics.selectionSource).toBe("override");
+    expect(diagnostics.selectedHeroUrl).toBe(
+      ENGINE4_VIATOR_CANONICAL_HERO_BY_PRODUCT_CODE["237571P2"]
+    );
+    expect(diagnostics.rejectedCandidates).toContainEqual({
+      source: "api.images[]",
+      reason: "images_payload_quality_too_low",
+    });
+  });
+
 });

@@ -10,6 +10,7 @@ type RejectedReason =
   | "api_product_mismatch"
   | "images_payload_missing"
   | "images_payload_no_valid_candidates"
+  | "images_payload_quality_too_low"
   | "not_from_images_payload"
   | "invalid_override";
 
@@ -185,6 +186,33 @@ const rankVariant = (url: string): number => {
   return 60;
 };
 
+const isViatorThumbnail360x240 = (url: string): boolean =>
+  /(?:attractions-splice-[^/]*360x240)|(?:\b360x240\b)/i.test(url);
+
+const isTrackingProxyUrl = (url: string): boolean => {
+  try {
+    const parsed = new URL(url);
+    return /proxy|tracking/i.test(parsed.hostname + parsed.pathname);
+  } catch {
+    return true;
+  }
+};
+
+const hasMinimumHeroQuality = (variant: PayloadVariant): boolean => {
+  if (isViatorThumbnail360x240(variant.url) || isTrackingProxyUrl(variant.url)) {
+    return false;
+  }
+
+  const width = variant.width ?? 0;
+  const height = variant.height ?? 0;
+
+  if (width < 1000 || height <= 0) {
+    return false;
+  }
+
+  return width > height;
+};
+
 const resolveViatorCoverVariant = (
   apiTour: Engine4ViatorApiTour | undefined,
   rejectedCandidates: Engine4ViatorRejectedCandidate[]
@@ -200,9 +228,9 @@ const resolveViatorCoverVariant = (
       .map(
         (image): PayloadImage => ({
           isCover: Boolean(image.isCover === true),
-          variants: (image.variants ?? []).filter(variant =>
-            isValidEngine4ViatorHeroCandidate(variant.url)
-          ),
+          variants: (image.variants ?? [])
+            .filter(variant => isValidEngine4ViatorHeroCandidate(variant.url))
+            .filter(hasMinimumHeroQuality),
         })
       )
       .filter(item => item.variants.length > 0);
@@ -237,7 +265,7 @@ const resolveViatorCoverVariant = (
     if (candidates.length === 0) {
       rejectedCandidates.push({
         source: "api.images[]",
-        reason: "images_payload_no_valid_candidates",
+        reason: "images_payload_quality_too_low",
       });
     }
 
@@ -269,9 +297,9 @@ const resolveViatorCoverVariant = (
     .filter((entry): entry is Record<string, unknown> => Boolean(entry))
     .map((image): PayloadImage => ({
       isCover: Boolean(image.isCover === true),
-      variants: extractVariants(image).filter(variant =>
-        isValidEngine4ViatorHeroCandidate(variant.url)
-      ),
+      variants: extractVariants(image)
+        .filter(variant => isValidEngine4ViatorHeroCandidate(variant.url))
+        .filter(hasMinimumHeroQuality),
     }))
     .filter(item => item.variants.length > 0);
 
@@ -303,7 +331,7 @@ const resolveViatorCoverVariant = (
   if (candidates.length === 0) {
     rejectedCandidates.push({
       source: "api.images[]",
-      reason: "images_payload_no_valid_candidates",
+      reason: "images_payload_quality_too_low",
     });
   }
 
