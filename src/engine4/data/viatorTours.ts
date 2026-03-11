@@ -238,8 +238,24 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
       city: "Los Angeles",
       citySlug: "los-angeles",
     },
-    slug:
-      "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
+    slug: "yosemite-and-kings-canyon-national-park-2-day-tour-from-la-132218p209",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "380141P3",
+    bookingUrl:
+      "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Mississippi",
+      stateSlug: "mississippi",
+      city: "Natchez",
+      citySlug: "natchez",
+    },
+    slug: "river-cruise-to-the-swamp-walk-tour-380141p3",
   },
   {
     engine: "engine4",
@@ -264,6 +280,58 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "380141P3": {
+    productCode: "380141P3",
+    title: "River Cruise to The Swamp Walk Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3",
+    fromPrice: "$99.00",
+    priceCurrency: "USD",
+    duration: "3 hours",
+    meetingPoint: "Natchez, Mississippi, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+    exactProductImages: [
+      {
+        url: "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+        isCover: true,
+      },
+    ],
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Cruise the Mississippi River and continue with a guided swamp walk focused on regional ecology and local scenery.",
+    overview:
+      "River Cruise to The Swamp Walk Tour combines a Mississippi River cruise segment with a guided swamp walk in the Natchez area. The itinerary is designed for travelers who want a scenic water perspective paired with an on-foot nature component, with a single booking covering both parts of the experience.",
+    highlights: [
+      "Mississippi River cruise segment with scenic views",
+      "Guided swamp walk focused on local wetlands",
+      "Two-part itinerary that combines boat and walking experiences",
+      "Designed for travelers based in Natchez, Mississippi",
+    ],
+    faqs: [
+      {
+        question: "What does this tour include?",
+        answer:
+          "This listing combines a river cruise segment and a guided swamp walk as part of one experience.",
+      },
+      {
+        question: "Where is the meeting point?",
+        answer: "The listed meeting point is in Natchez, Mississippi, USA.",
+      },
+    ],
+  },
   "91782P1": {
     productCode: "91782P1",
     title: "Moab Private Half-Day Canyoneering",
@@ -1089,7 +1157,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     reviewCount: 8,
     duration: "2 days",
     startTime: "6:45 AM",
-    meetingPoint: "Meeting point options available in Los Angeles; ends back at meeting point",
+    meetingPoint:
+      "Meeting point options available in Los Angeles; ends back at meeting point",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     exactProductImages: [
       {
@@ -1143,11 +1212,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Round-trip transportation from Los Angeles",
       "Professional driver-guide",
     ],
-    exclusions: [
-      "Lunch and dinner",
-      "Personal expenses",
-      "Guide gratuities",
-    ],
+    exclusions: ["Lunch and dinner", "Personal expenses", "Guide gratuities"],
     whatToExpect:
       "Expect an early 6:45 AM start from Los Angeles, a guided two-day pace across two Sierra national parks, overnight lodging in Fresno, and a return to the original meeting-point area.",
     additionalInfo: [
