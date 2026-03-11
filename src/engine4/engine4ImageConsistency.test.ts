@@ -123,6 +123,26 @@ describe("Engine4 Viator image consistency", () => {
     });
   });
 
+  it("keeps 380141P3 consistent across page/card/og/schema for Mississippi", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "380141P3",
+      stateSlug: "mississippi",
+      citySlug: "natchez",
+      tourSlug: "river-cruise-to-the-swamp-walk-tour-380141p3",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "380141P3",
+      expectedSource: "api-images-payload",
+    });
+
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.sourceDerivedUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+  });
+
   it("rejects contamination from an unrelated product image", () => {
     const diagnostics = assertContaminationRejected({
       productCode: "74828P5",

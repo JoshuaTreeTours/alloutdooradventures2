@@ -3111,6 +3111,105 @@ export const tours: Tour[] = [
   },
 ];
 
+const mississippiState: StateDestination = {
+  slug: "mississippi",
+  name: "Mississippi",
+  description:
+    "Riverfront towns, wetlands, and outdoor adventures across Mississippi.",
+  featuredDescription:
+    "Plan scenic river cruises, wetlands walks, and city-based outdoor tours across Mississippi.",
+  heroImage:
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
+  region: "Deep South",
+  intro:
+    "Mississippi blends riverfront history with wetlands ecosystems, creating practical options for guided outdoor experiences.",
+  longDescription:
+    "Mississippi offers travelers a mix of big-river scenery, wetlands habitat, and walkable historic districts that work well for flexible itineraries. Use Natchez as a base for river-based sightseeing and guided swamp walks, then layer in local food stops and downtown exploration between departures.",
+  topRegions: [
+    {
+      title: "Riverfront experiences",
+      description:
+        "Cruise and sightseeing options along the Mississippi River corridor.",
+    },
+    {
+      title: "Wetlands and bayous",
+      description:
+        "Guided swamp and nature walks that highlight local ecosystems.",
+    },
+    {
+      title: "Historic city centers",
+      description:
+        "Compact downtown areas that pair easily with half-day tours.",
+    },
+  ],
+  cities: [
+    {
+      name: "Natchez",
+      slug: "natchez",
+      stateSlug: "mississippi",
+      region: "Deep South",
+      lat: 31.560444,
+      lng: -91.403171,
+      shortDescription:
+        "River cruises, swamp walks, and guided outdoor experiences around Natchez.",
+      intro:
+        "Natchez is a practical base for river and wetlands tours in southwest Mississippi.",
+      heroImages: [
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
+      ],
+      activityTags: ["river-cruise", "nature-walk", "sightseeing"],
+      whereItIs: [
+        "Natchez sits on bluffs above the Mississippi River in southwest Mississippi, close to wetlands and lowland habitats.",
+        "The city works well for short outdoor itineraries that combine water-based sightseeing and guided nature walks.",
+      ],
+      experiences: {
+        mountains:
+          "Natchez focuses on river overlooks and bluff viewpoints rather than mountain terrain.",
+        lakesWater:
+          "River cruise departures provide broad views and on-water sightseeing along the Mississippi.",
+        desertForest:
+          "Wetlands and swamp habitats near Natchez support nature walks with local ecological context.",
+        cycling:
+          "Downtown streets and nearby roads can be paired with casual cycling between tour departures.",
+        scenicDrives:
+          "The Great River Road offers easy scenic drive options near Natchez.",
+        seasonalNotes:
+          "Spring and fall often bring comfortable weather for combining cruises with walking segments.",
+      },
+      thingsToDo: [
+        "Join a Mississippi River cruise for city and river views.",
+        "Take a guided swamp walk to learn about regional wetlands.",
+        "Explore Natchez riverfront overlooks and historic streets.",
+      ],
+      toursCopy: [
+        "Book a half-day river-and-swamp itinerary for a compact outdoor experience.",
+      ],
+      weekendItinerary: {
+        dayOne: [
+          "Morning: riverfront walk and local breakfast.",
+          "Afternoon: Mississippi River cruise departure.",
+          "Evening: downtown Natchez dining.",
+        ],
+        dayTwo: [
+          "Morning: guided swamp walk.",
+          "Afternoon: explore historic Natchez neighborhoods.",
+          "Evening: sunset river overlook.",
+        ],
+      },
+      gettingThere: [
+        "Natchez is typically reached by car from regional airports in Louisiana and Mississippi.",
+      ],
+      faq: [
+        {
+          question: "Can I combine river and swamp experiences in one trip?",
+          answer:
+            "Yes. Natchez itineraries are commonly structured around a river cruise plus a wetlands walking segment.",
+        },
+      ],
+    },
+  ],
+};
+
 const minnesotaState: StateDestination = {
   slug: "minnesota",
   name: "Minnesota",
@@ -3360,6 +3459,7 @@ export const states: StateDestination[] = [
   ...westStates,
   ...northeastStates,
   ...deepSouthStates,
+  mississippiState,
   minnesotaState,
   wyomingState,
 ];
