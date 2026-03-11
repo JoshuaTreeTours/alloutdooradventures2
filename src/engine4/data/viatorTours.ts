@@ -247,7 +247,7 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     bookingUrl:
       "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3?pid=P00290915&mcid=42383&medium=link",
     heroImage:
-      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
     destination: {
       country: "United States",
       state: "Mississippi",
@@ -291,15 +291,15 @@ export const engine4ViatorApiFallbackByProductCode: Record<
     meetingPoint: "Natchez, Mississippi, USA",
     cancellationPolicy: "Free cancellation up to 24 hours in advance.",
     sourceDerivedImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
     primaryImageUrl:
-      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
     exactProductImages: [
       {
-        url: "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+        url: "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
         variants: [
           {
-            url: "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
             width: 1100,
             height: 800,
           },
@@ -308,7 +308,7 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
     ],
     galleryImages: [
-      "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
     ],
     description:
       "Cruise the Mississippi River and continue with a guided swamp walk focused on regional ecology and local scenery.",

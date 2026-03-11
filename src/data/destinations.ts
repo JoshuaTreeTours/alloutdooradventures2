@@ -3119,7 +3119,7 @@ const mississippiState: StateDestination = {
   featuredDescription:
     "Plan scenic river cruises, wetlands walks, and city-based outdoor tours across Mississippi.",
   heroImage:
-    "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+    "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
   region: "Deep South",
   intro:
     "Mississippi blends riverfront history with wetlands ecosystems, creating practical options for guided outdoor experiences.",
@@ -3155,7 +3155,7 @@ const mississippiState: StateDestination = {
       intro:
         "Natchez is a practical base for river and wetlands tours in southwest Mississippi.",
       heroImages: [
-        "https://dynamic-media.tacdn.com/media/photo-o/31/7c/9f/42/caption.jpg?w=1100&h=800&s=1",
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/b4/2c/9b/caption.jpg?w=1100&h=800&s=1",
       ],
       activityTags: ["river-cruise", "nature-walk", "sightseeing"],
       whereItIs: [
