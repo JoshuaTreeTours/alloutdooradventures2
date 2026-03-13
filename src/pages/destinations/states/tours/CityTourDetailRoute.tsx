@@ -53,6 +53,7 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import { getEngine5TourBySlugs } from "../../../../engine5/routing";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -95,10 +96,22 @@ export default function CityTourDetailRoute({
     );
   }
 
+  const engine5Tour = getEngine5TourBySlugs(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
   const engine2Tour =
     getEngine2TourBySlug(params.stateSlug, params.citySlug, params.tourSlug) ??
     getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
-    getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
+    getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
+    engine5Tour;
+
+  if (typeof window === "undefined" && engine5Tour?.id === "132218P209") {
+    console.info(
+      `[engine5][132218P209] matched route resolver path: normal destination route`
+    );
+  }
 
   if (engine2Tour) {
     if (

@@ -36,4 +36,18 @@ describe("getToursByCityUnified Palm Springs dedupe", () => {
       ).toBeGreaterThan(0);
     }
   });
+
+  it("includes promoted Engine5 tours in Los Angeles listings", () => {
+    const tours = getToursByCityUnified("california", "los-angeles");
+    const engine5Entry = tours.find(
+      entry => entry.tour.productCode === "132218P209"
+    );
+
+    expect(engine5Entry?.href).toBe(
+      "/destinations/california/los-angeles/tours/best-yosemite-national-park-and-kings-canyon-national-park-2-day-tour-from-la"
+    );
+    expect(engine5Entry?.tour.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/11/22/caption.jpg"
+    );
+  });
 });

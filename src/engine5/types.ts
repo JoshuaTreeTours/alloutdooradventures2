@@ -90,6 +90,7 @@ export type Engine5NormalizedTour = {
 
 export type Engine5ProductRecord = {
   productCode: "132218P209";
+  routeSlug: string;
   destination: {
     country: string;
     state: string;
