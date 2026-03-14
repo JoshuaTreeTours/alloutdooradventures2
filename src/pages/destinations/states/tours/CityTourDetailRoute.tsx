@@ -53,6 +53,7 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import type { Engine4TourViewModel } from "../../../../engine4/types";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -71,9 +72,8 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
-import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
-import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
 import { isEngine5CanonicalTourSlug } from "../../../../engine5/viator/liveTours";
+import { resolveEngine5Tour } from "../../../../engine5/viator/resolveEngine5Tour";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -86,9 +86,9 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const [engine5Tour, setEngine5Tour] = useState<
-    ReturnType<typeof mapViatorToEngine5Tour>["page"] | null
-  >(null);
+  const [engine5Tour, setEngine5Tour] = useState<Engine4TourViewModel | null>(
+    null
+  );
   const [engine5Error, setEngine5Error] = useState<string | null>(null);
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
@@ -118,11 +118,10 @@ export default function CityTourDetailRoute({
 
     let isActive = true;
 
-    getEngine5ViatorTourData(matchedEngine5Record.productCode)
-      .then(apiTour => {
+    resolveEngine5Tour(matchedEngine5Record)
+      .then(resolved => {
         if (!isActive) return;
-        const mapped = mapViatorToEngine5Tour(matchedEngine5Record, apiTour);
-        setEngine5Tour(mapped.page);
+        setEngine5Tour(resolved.page);
         setEngine5Error(null);
       })
       .catch(error => {

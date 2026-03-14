@@ -1,7 +1,6 @@
 import type { Tour } from "../../data/tours.types";
-import { getEngine5ViatorTourData } from "./getEngine5ViatorTourData";
-import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
 import { engine5ViatorRecords } from "./records";
+import { resolveEngine5Tour } from "./resolveEngine5Tour";
 
 export const getEngine5RecordsByCity = (stateSlug: string, citySlug: string) =>
   engine5ViatorRecords.filter(
@@ -28,11 +27,10 @@ export const getEngine5LiveListingsByCity = async (
 
   const mapped = await Promise.all(
     records.map(async record => {
-      const apiTour = await getEngine5ViatorTourData(record.productCode);
-      const normalized = mapViatorToEngine5Tour(record, apiTour);
+      const resolved = await resolveEngine5Tour(record);
       return {
-        tour: normalized.listing,
-        href: normalized.page.canonicalPath,
+        tour: resolved.listing,
+        href: resolved.page.canonicalPath,
       };
     })
   );
