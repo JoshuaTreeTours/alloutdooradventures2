@@ -342,4 +342,34 @@ describe("mapViatorToEngine4Tour", () => {
     );
   });
 
+  it("maps 11069P1 with Hawaii Volcanoes facts, ratings, and exact-product hero", () => {
+    const record = engine4ViatorTours.find(
+      tour => tour.productCode === "11069P1"
+    );
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: engine4ViatorApiFallbackByProductCode["11069P1"],
+    });
+
+    expect(vm.title).toBe("Private Tour: Hawaii Volcanoes National Park Eco Tour");
+    expect(vm.canonicalPath).toBe(
+      "/destinations/hawaii/hilo/tours/private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
+    );
+    expect(vm.heroImage).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1"
+    );
+    expect(vm.primaryImage).toBe(vm.heroImage);
+    expect(vm.galleryImages[0]).toBe(vm.heroImage);
+    expect(vm.facts.priceFrom).toBe("$255.00");
+    expect(vm.facts.ratingValue).toBe(4.8);
+    expect(vm.facts.reviewCount).toBe(718);
+    expect(vm.facts.duration).toBe("11 hours");
+    expect(vm.facts.meetingPointFull).toBe("Hilo, Hawaii, USA");
+    expect(vm.facts.cancellationPolicy).toBe(
+      "Free cancellation up to 24 hours in advance."
+    );
+  });
+
 });

@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -53,7 +53,12 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
+import {
+  peekEngine4ViatorApiTour,
+  requestEngine4ViatorApiTour,
+} from "../../../../engine4/viator/viatorApiCache";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
   engine4ViatorApiFallbackByProductCode,
@@ -100,6 +105,39 @@ export default function CityTourDetailRoute({
     getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
     getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
 
+  useEffect(() => {
+    if (
+      engine2Tour?.engine !== "engine4" ||
+      engine2Tour.bookingProvider !== "viator"
+    ) {
+      return;
+    }
+
+    const productCode = engine2Tour.id.toUpperCase();
+    let isCancelled = false;
+
+    void requestEngine4ViatorApiTour(productCode).then(apiTour => {
+      if (isCancelled || !apiTour) {
+        return;
+      }
+
+      setEngine4ApiTourByProductCode(prev => {
+        if (prev[productCode] === apiTour) {
+          return prev;
+        }
+        return { ...prev, [productCode]: apiTour };
+      });
+    });
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [engine2Tour]);
+
+  const [engine4ApiTourByProductCode, setEngine4ApiTourByProductCode] = useState<
+    Record<string, Engine4ViatorApiTour | undefined>
+  >({});
+
   if (engine2Tour) {
     if (
       engine2Tour.engine === "engine4" &&
@@ -114,11 +152,20 @@ export default function CityTourDetailRoute({
         return null;
       }
 
+      const apiTour =
+        engine4ApiTourByProductCode[productCode] ??
+        peekEngine4ViatorApiTour(productCode) ??
+        engine4ViatorApiFallbackByProductCode[productCode];
+
+      if (typeof window === "undefined") {
+        void requestEngine4ViatorApiTour(productCode);
+      }
+
       return (
         <Engine4TourPage
           tour={mapViatorToEngine4Tour({
             record: tourRecord,
-            apiTour: engine4ViatorApiFallbackByProductCode[productCode],
+            apiTour,
           })}
         />
       );

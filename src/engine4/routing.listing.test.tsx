@@ -1,13 +1,22 @@
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
 import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
 import { getEngine4TourBySlugs } from "./routing";
+import {
+  resetEngine4ViatorApiTourCacheForTest,
+  setEngine4ViatorApiTourForTest,
+} from "./viator/viatorApiCache";
 
 (globalThis as { location?: { pathname: string } }).location = {
   pathname: "/",
 };
+
+
+afterEach(() => {
+  resetEngine4ViatorApiTourCacheForTest();
+});
 
 describe("Engine4 Aspen routing/listing", () => {
   it("renders Engine4 cards with the mapped hero image URL", () => {
@@ -22,6 +31,47 @@ describe("Engine4 Aspen routing/listing", () => {
 
     expect(html).toContain(target!.tour.heroImage!);
     expect(html).not.toContain("default-tour.jpg");
+  });
+
+  it("prefers API-cached hero image for listing cards and routed OG image", () => {
+    const apiHero =
+      "https://dynamic-media.tacdn.com/media/photo-o/44/55/66/77/caption.jpg?w=1100&h=800&s=1";
+
+    setEngine4ViatorApiTourForTest("11069P1", {
+      productCode: "11069P1",
+      title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+      sourceUrl:
+        "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Tour-Hawaii-Volcanoes-National-Park-Eco-Tour/d669-11069P1",
+      exactProductImages: [
+        {
+          isCover: true,
+          variants: [{ url: apiHero, width: 1100, height: 800 }],
+        },
+      ],
+      primaryImageUrl: apiHero,
+      galleryImages: [apiHero],
+      provenance: {
+        apiFetchAttempted: true,
+        apiFetchSucceeded: true,
+        fallbackUsed: false,
+        heroImageSource: "api",
+        descriptionSource: "none",
+      },
+    });
+
+    const entries = getEngine4ListingEntries("hawaii", "hilo");
+    const target = entries.find(entry => entry.tour.productCode === "11069P1");
+
+    expect(target?.tour.heroImage).toBe(apiHero);
+
+    const routed = getEngine4TourBySlugs(
+      "hawaii",
+      "hilo",
+      "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
+    );
+
+    expect(routed?.images.hero).toBe(apiHero);
+    expect(routed?.seo.ogImage).toBe(apiHero);
   });
 
   it("uses overview snippet for zipline card subtext instead of stop labels", () => {
@@ -152,6 +202,28 @@ describe("Engine4 Aspen routing/listing", () => {
     );
 
     expect(routed?.id).toBe("36001P1");
+  });
+
+  it("builds the 11069P1 route and exposes it in Hilo listing", () => {
+    const entries = getEngine4ListingEntries("hawaii", "hilo");
+    const target = entries.find(entry => entry.tour.productCode === "11069P1");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/hawaii/hilo/tours/private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
+    );
+    expect(target?.tour.badges.rating).toBe(4.8);
+    expect(target?.tour.badges.reviewCount).toBe(718);
+
+    const routed = getEngine4TourBySlugs(
+      "hawaii",
+      "hilo",
+      "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
+    );
+
+    expect(routed?.id).toBe("11069P1");
+    expect(routed?.content.duration).toBe("11 hours");
+    expect(routed?.content.meetingPoint.address).toBe("Hilo, Hawaii, USA");
   });
 
   it("builds the 335698P13 route and exposes it in Joshua Tree listing", () => {
