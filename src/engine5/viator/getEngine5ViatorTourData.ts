@@ -71,6 +71,9 @@ const getTextArrayFromMixedValues = (value: unknown): string[] =>
 
 const toStringArray = getTextArrayFromMixedValues;
 
+const asArray = (value: unknown): unknown[] =>
+  Array.isArray(value) ? value : [];
+
 const extractHighlights = (product: Record<string, unknown>): string[] => {
   const highlightsFromArray = toStringArray(product.highlights);
 
@@ -110,12 +113,15 @@ const extractHighlights = (product: Record<string, unknown>): string[] => {
 const extractFaqs = (
   product: Record<string, unknown>
 ): Array<{ question: string; answer: string }> => {
-  const raw =
-    (product.faqs as unknown[]) ??
-    (product.faq as unknown[]) ??
-    (product.questionsAndAnswers as unknown[]) ??
-    (asRecord(product.additionalInfo)?.faqs as unknown[]) ??
-    [];
+  const raw = [
+    ...asArray(product.faqs),
+    ...asArray(product.faq),
+    ...asArray(product.questionsAndAnswers),
+    ...asArray(getFromNested(product, ["faq", "items"])),
+    ...asArray(getFromNested(product, ["faq", "questions"])),
+    ...asArray(getFromNested(product, ["faqs", "items"])),
+    ...asArray(asRecord(product.additionalInfo)?.faqs),
+  ];
 
   if (!Array.isArray(raw)) return [];
 
@@ -136,11 +142,13 @@ const extractFaqs = (
 };
 
 const extractItinerary = (product: Record<string, unknown>) => {
-  const raw =
-    (product.itineraryItems as unknown[]) ??
-    (product.itinerary as unknown[]) ??
-    (asRecord(product.description)?.sections as unknown[]) ??
-    [];
+  const raw = [
+    ...asArray(product.itineraryItems),
+    ...asArray(product.itinerary),
+    ...asArray(getFromNested(product, ["itinerary", "items"])),
+    ...asArray(getFromNested(product, ["whatToExpect", "items"])),
+    ...asArray(asRecord(product.description)?.sections),
+  ];
 
   if (!Array.isArray(raw)) return [];
 
@@ -151,7 +159,12 @@ const extractItinerary = (product: Record<string, unknown>) => {
       const title =
         cleanText(row.title) ?? cleanText(row.name) ?? cleanText(row.label);
       const description = cleanText(row.description) ?? cleanText(row.summary);
-      const duration = cleanText(row.duration) ?? cleanText(row.durationText);
+      const duration =
+        cleanText(row.duration) ??
+        cleanText(row.durationText) ??
+        (typeof row.durationMinutes === "number"
+          ? `${row.durationMinutes} minutes`
+          : undefined);
       if (!title) return undefined;
       return { title, description, duration };
     })
@@ -211,14 +224,49 @@ const getCancellationText = (
 };
 
 const getFromPriceText = (
-  product: Record<string, unknown>
+  product: Record<string, unknown>,
+  currencyCode?: string
 ): string | undefined => {
-  return (
+  const textPrice =
     cleanText(product.priceFrom) ??
     cleanText(product.fromPrice) ??
     cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
     cleanText(getFromNested(product, ["pricing", "fromPrice"])) ??
-    cleanText(getFromNested(product, ["pricing", "fromPriceFormatted"]))
+    cleanText(getFromNested(product, ["pricing", "fromPriceFormatted"]));
+
+  if (textPrice) return textPrice;
+
+  const numericPrice =
+    asNumberLike(product.priceFrom) ??
+    asNumberLike(product.fromPrice) ??
+    asNumberLike(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricing", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricing", "summary", "amount"])) ??
+    asNumberLike(getFromNested(product, ["pricing", "amount"]));
+
+  if (typeof numericPrice !== "number") return undefined;
+
+  if (currencyCode) {
+    try {
+      const formatted = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: currencyCode,
+        maximumFractionDigits: 2,
+      }).format(numericPrice);
+      if (formatted) return formatted;
+    } catch {
+      // noop; fallback below
+    }
+  }
+
+  return `$${numericPrice.toFixed(2)}`;
+};
+
+const getPriceCurrencyCode = (product: Record<string, unknown>) => {
+  return (
+    cleanText(product.currencyCode) ??
+    cleanText(getFromNested(product, ["pricing", "summary", "currencyCode"])) ??
+    cleanText(getFromNested(product, ["pricing", "currencyCode"]))
   );
 };
 
@@ -393,6 +441,8 @@ export const getEngine5ViatorTourData = async (
     );
   }
 
+  const priceCurrency = getPriceCurrencyCode(product);
+
   return {
     productCode: normalizedCode,
     title,
@@ -402,13 +452,8 @@ export const getEngine5ViatorTourData = async (
     startTime:
       cleanText(product.startTime) ??
       cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: getFromPriceText(product),
-    priceCurrency:
-      cleanText(product.currencyCode) ??
-      cleanText(
-        getFromNested(product, ["pricing", "summary", "currencyCode"])
-      ) ??
-      cleanText(getFromNested(product, ["pricing", "currencyCode"])),
+    fromPrice: getFromPriceText(product, priceCurrency),
+    priceCurrency,
     rating:
       asNumberLike(product.rating) ??
       asNumberLike(

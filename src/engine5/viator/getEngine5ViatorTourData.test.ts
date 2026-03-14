@@ -123,7 +123,7 @@ describe("getEngine5ViatorTourData", () => {
             "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
           pricing: {
             summary: {
-              fromPrice: "$299.00",
+              fromPrice: 200,
               currencyCode: "USD",
             },
           },
@@ -142,18 +142,23 @@ describe("getEngine5ViatorTourData", () => {
           exclusions: [{ description: "Lunch" }],
           additionalInfo: [{ text: "Bring comfortable shoes" }],
           importantInformation: [{ value: "Moderate walking required" }],
-          questionsAndAnswers: [
-            {
-              question: "Is pickup available?",
-              answer: "Yes, for Hilo accommodations.",
-            },
-          ],
-          itineraryItems: [
-            {
-              name: "Hawaii Volcanoes National Park",
-              summary: "Visit lava tubes and crater overlooks",
-            },
-          ],
+          faq: {
+            items: [
+              {
+                question: "Is pickup available?",
+                answer: "Yes, for Hilo accommodations.",
+              },
+            ],
+          },
+          itinerary: {
+            items: [
+              {
+                name: "Hawaii Volcanoes National Park",
+                summary: "Visit lava tubes and crater overlooks",
+                durationMinutes: 90,
+              },
+            ],
+          },
           highlights: [
             { title: "Explore Hawaii Volcanoes National Park" },
             { text: "Learn from a local naturalist guide" },
@@ -176,7 +181,7 @@ describe("getEngine5ViatorTourData", () => {
 
     const result = await getEngine5ViatorTourData("11069P1");
 
-    expect(result.fromPrice).toBe("$299.00");
+    expect(result.fromPrice).toBe("$200.00");
     expect(result.priceCurrency).toBe("USD");
     expect(result.rating).toBe(4.9);
     expect(result.reviewCount).toBe(44);
@@ -189,5 +194,6 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.additionalInfo).toContain("Moderate walking required");
     expect(result.faqs.length).toBeGreaterThan(0);
     expect(result.itinerary.length).toBeGreaterThan(0);
+    expect(result.itinerary[0]?.duration).toContain("minutes");
   });
 });
