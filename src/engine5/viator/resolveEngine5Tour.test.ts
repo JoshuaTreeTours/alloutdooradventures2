@@ -51,13 +51,16 @@ vi.mock("./getEngine5ViatorTourData", () => ({
 }));
 
 describe("resolveEngine5Tour", () => {
-  it("returns Engine4 page model and listing from one Engine5 resolution", async () => {
+  it("returns Engine4 tour contract fields from one Engine5 resolution", async () => {
     const resolved = await resolveEngine5Tour(engine5ProofViatorRecord);
 
-    expect(resolved.page.tourId).toBe("engine5-11069P1");
-    expect(resolved.page.canonicalPath).toContain(
+    expect(resolved.tour.tourId).toBe("engine5-11069P1");
+    expect(resolved.tour.canonicalPath).toContain(
       "/destinations/hawaii/hilo/tours/"
     );
+    expect(resolved.tour.facts.priceFrom).toBe("$299");
+    expect(resolved.tour.content.itinerary).toEqual([]);
+    expect(resolved.tour.content.faqs.length).toBe(1);
     expect(resolved.listing.productCode).toBe("11069P1");
     expect(resolved.normalized.diagnostics.allImageSurfacesIdentical).toBe(
       true

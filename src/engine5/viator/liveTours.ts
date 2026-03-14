@@ -30,7 +30,7 @@ export const getEngine5LiveListingsByCity = async (
       const resolved = await resolveEngine5Tour(record);
       return {
         tour: resolved.listing,
-        href: resolved.page.canonicalPath,
+        href: resolved.tour.canonicalPath,
       };
     })
   );

@@ -18,7 +18,7 @@ export default function Engine5ProofTourPage() {
             resolved.normalized.diagnostics
           );
         }
-        setTour(resolved.page);
+        setTour(resolved.tour);
       })
       .catch(err => setError(err instanceof Error ? err.message : String(err)));
   }, []);

@@ -7,14 +7,30 @@ import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
 export const resolveEngine5Tour = async (
   record: Engine5ProductRecord
 ): Promise<{
+  tour: Engine4TourViewModel;
   page: Engine4TourViewModel;
   normalized: Engine5NormalizedTour;
   listing: Tour;
 }> => {
   const apiTour = await getEngine5ViatorTourData(record.productCode);
   const mapped = mapViatorToEngine5Tour(record, apiTour);
+
+  const tour: Engine4TourViewModel = {
+    ...mapped.page,
+    facts: {
+      ...mapped.page.facts,
+      priceFrom: apiTour.fromPrice,
+    },
+    content: {
+      ...mapped.page.content,
+      itinerary: apiTour.itinerary,
+      faqs: apiTour.faqs,
+    },
+  };
+
   return {
-    page: mapped.page,
+    tour,
+    page: tour,
     normalized: mapped.normalized,
     listing: mapped.listing,
   };
