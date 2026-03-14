@@ -14,7 +14,7 @@ describe("getEngine5ViatorTourData", () => {
       text: async () => "VIATOR_API_KEY is not configured",
     } as Response);
 
-    await expect(getEngine5ViatorTourData("132218P209")).rejects.toThrow(
+    await expect(getEngine5ViatorTourData("11069P1")).rejects.toThrow(
       "Engine5 Viator API unavailable"
     );
   });
@@ -24,16 +24,17 @@ describe("getEngine5ViatorTourData", () => {
       ok: true,
       json: async () => ({
         product: {
-          productCode: "132218P209",
-          title: "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
-          shortDescription: "Two-day guided trip from Los Angeles.",
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription:
+            "Explore Volcanoes National Park with a naturalist guide.",
           productUrl:
-            "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
-          duration: "2 days",
-          startTime: "6:00 AM",
-          rating: 4.7,
-          reviewCount: 40,
-          meetingPoint: "Los Angeles pickup points",
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Tour-Hawaii-Volcanoes-National-Park-Eco-Tour/d669-11069P1",
+          duration: "10 hours",
+          startTime: "7:00 AM",
+          rating: 5,
+          reviewCount: 44,
+          meetingPoint: "Hilo hotel pickup",
           cancellationPolicy: "Free cancellation up to 24 hours before start",
           inclusions: ["Transport"],
           exclusions: ["Meals"],
@@ -72,12 +73,12 @@ describe("getEngine5ViatorTourData", () => {
       }),
     } as Response);
 
-    const result = await getEngine5ViatorTourData("132218P209");
+    const result = await getEngine5ViatorTourData("11069P1");
     expect(fetchSpy).toHaveBeenCalledWith(
-      "/api/engine5/viator-product?productCode=132218P209"
+      "/api/engine5/viator-product?productCode=11069P1"
     );
-    expect(result.title).toContain("Yosemite");
-    expect(result.bookingUrl).toContain("132218P209");
+    expect(result.title).toContain("Hawaii Volcanoes");
+    expect(result.bookingUrl).toContain("11069P1");
     expect(result.canonicalHeroUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg"
     );
@@ -86,6 +87,7 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.heroSelectionDiagnostics.candidateUrls).toContain(
       "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg"
     );
+    expect(result.heroSelectionDiagnostics.overrideUsed).toBe(false);
     expect(result.provenance.descriptionSource).toBe("api");
   });
 
@@ -94,17 +96,170 @@ describe("getEngine5ViatorTourData", () => {
       ok: true,
       json: async () => ({
         product: {
-          productCode: "132218P209",
-          title: "Yosemite and Kings Canyon 2-Day Tour from LA",
-          shortDescription: "Two-day guided trip",
-          productUrl: "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription: "Volcanoes eco tour",
+          productUrl:
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
           images: [],
         },
       }),
     } as Response);
 
-    await expect(getEngine5ViatorTourData("132218P209")).rejects.toThrow(
+    await expect(getEngine5ViatorTourData("11069P1")).rejects.toThrow(
       "payload incomplete"
     );
+  });
+
+  it("extracts facts from nested review and pricing payloads", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription: "Volcanoes eco tour",
+          productUrl:
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
+          pricing: {
+            summary: {
+              fromPrice: 200,
+              currencyCode: "USD",
+            },
+          },
+          reviewSummary: {
+            combinedAverageRating: "4.9/5",
+            totalReviews: "44",
+          },
+          meetingPoint: {
+            location: { name: "Hilo Harbor" },
+            address: "Hawaii",
+          },
+          cancellation: {
+            summary: "Free cancellation up to 24 hours before tour start",
+          },
+          inclusions: [{ title: "Professional local guide" }],
+          exclusions: [{ description: "Lunch" }],
+          additionalInfo: [{ text: "Bring comfortable shoes" }],
+          importantInformation: [{ value: "Moderate walking required" }],
+          faq: {
+            items: [
+              {
+                question: "Is pickup available?",
+                answer: "Yes, for Hilo accommodations.",
+              },
+            ],
+          },
+          itinerary: {
+            items: [
+              {
+                name: "Hawaii Volcanoes National Park",
+                summary: "Visit lava tubes and crater overlooks",
+                durationMinutes: 90,
+              },
+            ],
+          },
+          highlights: [
+            { title: "Explore Hawaii Volcanoes National Park" },
+            { text: "Learn from a local naturalist guide" },
+          ],
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg",
+                  width: 1600,
+                  height: 900,
+                },
+              ],
+            },
+          ],
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("11069P1");
+
+    expect(result.fromPrice).toBe("$200.00");
+    expect(result.priceCurrency).toBe("USD");
+    expect(result.rating).toBe(4.9);
+    expect(result.reviewCount).toBe(44);
+    expect(result.meetingPoint).toContain("Hilo Harbor");
+    expect(result.cancellationPolicy).toContain("Free cancellation");
+    expect(result.highlights.length).toBeGreaterThan(0);
+    expect(result.inclusions).toContain("Professional local guide");
+    expect(result.exclusions).toContain("Lunch");
+    expect(result.additionalInfo).toContain("Bring comfortable shoes");
+    expect(result.additionalInfo).toContain("Moderate walking required");
+    expect(result.faqs.length).toBeGreaterThan(0);
+    expect(result.itinerary.length).toBeGreaterThan(0);
+    expect(result.itinerary[0]?.duration).toContain("minutes");
+  });
+
+  it("extracts price, meeting point, and duration from deployed-like nested fields", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription: "Volcanoes eco tour",
+          productUrl:
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
+          pricingSummary: {
+            fromPrice: 200,
+            currencyCode: "USD",
+          },
+          meetingPoints: [
+            {
+              name: "Hilo Harbor",
+              address: { formattedAddress: "Hilo, Hawaii" },
+            },
+          ],
+          duration: {
+            fixedDurationInMinutes: 600,
+          },
+          rating: "5/5",
+          reviewCount: "44",
+          faq: {
+            questions: [
+              {
+                questionText: "Do you provide pickup?",
+                answerText: "Yes, within Hilo area.",
+              },
+            ],
+          },
+          itinerary: {
+            stops: [
+              {
+                title: "Volcanoes National Park",
+                description: "Walk crater viewpoints",
+              },
+            ],
+          },
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg",
+                  width: 1600,
+                  height: 900,
+                },
+              ],
+            },
+          ],
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("11069P1");
+
+    expect(result.fromPrice).toBe("$200.00");
+    expect(result.meetingPoint).toContain("Hilo Harbor");
+    expect(result.duration).toBe("10 hours");
+    expect(result.faqs.length).toBeGreaterThan(0);
+    expect(result.itinerary.length).toBeGreaterThan(0);
   });
 });

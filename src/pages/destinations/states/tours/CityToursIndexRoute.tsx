@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -12,6 +12,7 @@ import {
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
 import { getToursByCityUnified } from "../../../../data/tours";
+import type { Tour } from "../../../../data/tours.types";
 import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
@@ -28,6 +29,7 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
+import { getEngine5LiveListingsByCity } from "../../../../engine5/viator/liveTours";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -41,6 +43,9 @@ export default function CityToursIndexRoute({
   params,
   basePathOverride,
 }: CityToursIndexRouteProps) {
+  const [engine5Tours, setEngine5Tours] = useState<
+    Array<{ tour: Tour; href: string }>
+  >([]);
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -51,7 +56,7 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours =
+  const baseTours =
     state && city
       ? isFlagstaff
         ? flagstaffTours.map(tour => ({
@@ -60,6 +65,34 @@ export default function CityToursIndexRoute({
           }))
         : getToursByCityUnified(state.slug, city.slug)
       : [];
+
+  useEffect(() => {
+    if (!state?.slug || !city?.slug) {
+      setEngine5Tours([]);
+      return;
+    }
+
+    let isActive = true;
+
+    getEngine5LiveListingsByCity(state.slug, city.slug)
+      .then(liveListings => {
+        if (!isActive) return;
+        setEngine5Tours(liveListings);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setEngine5Tours([]);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [city?.slug, state?.slug]);
+
+  const tours = [...engine5Tours, ...baseTours].filter(
+    (entry, index, list) =>
+      list.findIndex(candidate => candidate.tour.id === entry.tour.id) === index
+  );
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")

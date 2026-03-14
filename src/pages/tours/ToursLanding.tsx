@@ -31,6 +31,7 @@ import {
   getMexicoCityKey,
   MEXICO_COUNTRY_NAME,
 } from "./internationalSelectorData";
+import { getEngine5LiveListingsByCity } from "../../engine5/viator/liveTours";
 
 const resolveState = (stateSlug: string | null) => {
   if (!stateSlug) {
@@ -298,6 +299,44 @@ export default function ToursLanding() {
     internationalEngine2Tours,
   ]);
 
+  const [engine5CityTours, setEngine5CityTours] = useState<
+    Array<{ tour: Tour; href: string }>
+  >([]);
+
+  useEffect(() => {
+    if (!selectedStateSlug || !selectedCitySlug || selectedCountry) {
+      setEngine5CityTours([]);
+      return;
+    }
+
+    let isActive = true;
+
+    getEngine5LiveListingsByCity(selectedStateSlug, selectedCitySlug)
+      .then(entries => {
+        if (!isActive) return;
+        setEngine5CityTours(entries);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setEngine5CityTours([]);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [selectedCitySlug, selectedCountry, selectedStateSlug]);
+
+  const filteredToursWithEngine5 = useMemo(() => {
+    if (!engine5CityTours.length) return filteredTours;
+
+    const merged = [...engine5CityTours, ...filteredTours];
+    return merged.filter(
+      (entry, index, list) =>
+        list.findIndex(candidate => candidate.tour.id === entry.tour.id) ===
+        index
+    );
+  }, [engine5CityTours, filteredTours]);
+
   const selectedInternationalCityLabel = useMemo(() => {
     const match = internationalCities.find(
       city => city.slug === selectedInternationalCity
@@ -307,8 +346,8 @@ export default function ToursLanding() {
 
   const displayedTours =
     inventoryType === "rentals"
-      ? filteredTours.filter(entry => isRentalTour(entry.tour))
-      : filteredTours.filter(entry => !isRentalTour(entry.tour));
+      ? filteredToursWithEngine5.filter(entry => isRentalTour(entry.tour))
+      : filteredToursWithEngine5.filter(entry => !isRentalTour(entry.tour));
   const selectedPlaceLabel =
     selectedCountry && selectedInternationalCity
       ? selectedInternationalCityLabel
