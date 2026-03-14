@@ -23,6 +23,7 @@ import { getStaticPageSeo } from "../../utils/seo";
 import { slugify } from "../../utils/slugify";
 import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
+import { isRentalTour } from "../../utils/isRentalTour";
 import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
@@ -300,6 +301,22 @@ export default function ToursLanding() {
     );
     return match?.name ?? selectedInternationalCity;
   }, [internationalCities, selectedInternationalCity]);
+
+  const rentalCount = filteredTours.filter(entry =>
+    isRentalTour(entry.tour)
+  ).length;
+  const hasTours = filteredTours.some(entry => !isRentalTour(entry.tour));
+  const allRentals =
+    filteredTours.length > 0 && rentalCount === filteredTours.length;
+  const selectedPlaceLabel =
+    selectedCountry && selectedInternationalCity
+      ? selectedInternationalCityLabel
+      : (selectedCity?.name ?? "");
+  const inventoryHeading = allRentals
+    ? `Rentals in ${selectedPlaceLabel}`
+    : rentalCount > 0 && hasTours
+      ? `Tours & Rentals in ${selectedPlaceLabel}`
+      : `All Tours in ${selectedPlaceLabel}`;
 
   const pageContent = useMemo(() => {
     if (selectedCity) {
@@ -630,9 +647,7 @@ export default function ToursLanding() {
         ) : (
           <section className="mt-10">
             <h2 className="text-2xl font-semibold text-[#1f2a1f] md:text-3xl">
-              {selectedCountry && selectedInternationalCity
-                ? `All Tours in ${selectedInternationalCityLabel}`
-                : `All Tours in ${selectedCity?.name ?? ""}`}
+              {inventoryHeading}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {filteredTours.map(({ tour, href }) => (

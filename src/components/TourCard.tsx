@@ -4,6 +4,8 @@ import type { Tour } from "../data/tours.types";
 import { getActivityLabelFromSlug } from "../data/activityLabels";
 import { getTourDetailPath } from "../data/tours";
 import { formatStartingPrice } from "../lib/pricing";
+import { buildRentalDescription } from "../templates/rentalDescription";
+import { isRentalTour } from "../utils/isRentalTour";
 import Image from "./Image";
 
 type TourCardProps = {
@@ -60,6 +62,14 @@ function pickNonTrivialHighlight(highlights?: string[]): string {
 }
 
 function getCardBlurb(tour: Tour): string {
+  if (isRentalTour(tour)) {
+    return buildRentalDescription({
+      equipment: tour.title,
+      city: tour.destination.city,
+      location: tour.destination.state || tour.destination.country || "",
+    });
+  }
+
   if (tour.engine === "engine4") {
     const content = (tour as TourCardBlurbSource).content;
     const overview = content?.overview?.trim() ?? "";
@@ -101,6 +111,7 @@ function getCardBlurb(tour: Tour): string {
 
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
+  const isRental = isRentalTour(tour);
   const blurb = getCardBlurb(tour);
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
@@ -173,7 +184,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         <div className="mt-auto">
           <Link href={detailHref}>
             <a className="inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]">
-              View Tour
+              {isRental ? "View Rental" : "View Tour"}
             </a>
           </Link>
         </div>

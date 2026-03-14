@@ -24,6 +24,7 @@ import {
   buildToursH1,
   buildToursSeoTitle,
 } from "../../../../lib/seo/titleBuilder";
+import { isRentalTour } from "../../../../utils/isRentalTour";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
 import {
   buildBreadcrumbList,
@@ -132,14 +133,31 @@ export default function CityToursIndexRoute({
   const regionLabel = state.name;
   const activityLabel = getActivityLabelFromSlug(activityFilter ?? undefined);
   const pageTitle = activityFilter
-    ? buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
+    ? activityFilter === "rentals"
+      ? `Rentals in ${cityLabel} | Outdoor Adventures`
+      : buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
     : buildToursSeoTitle({ city: cityLabel });
+  const rentalCount = filteredTours.filter(entry =>
+    isRentalTour(entry.tour)
+  ).length;
+  const hasTours = filteredTours.some(entry => !isRentalTour(entry.tour));
+  const allRentals =
+    filteredTours.length > 0 && rentalCount === filteredTours.length;
   const pageH1 = activityFilter
-    ? buildCategoryH1({ city: cityLabel, activity: activityLabel })
-    : buildToursH1({ city: cityLabel });
-  const pageIntro = isUsCityRoute
-    ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
-    : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
+    ? activityFilter === "rentals"
+      ? `Rentals in ${cityLabel}`
+      : buildCategoryH1({ city: cityLabel, activity: activityLabel })
+    : allRentals
+      ? `Rentals in ${cityLabel}`
+      : rentalCount > 0 && hasTours
+        ? `Tours & Rentals in ${cityLabel}`
+        : buildToursH1({ city: cityLabel });
+  const pageIntro =
+    activityFilter === "rentals" || allRentals
+      ? `Explore self-guided equipment rentals in ${cityLabel}, ${regionLabel}. Compare pickup locations, flexible duration options, and rental details to choose the right gear for your trip.`
+      : isUsCityRoute
+        ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
+        : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
   const guideRecord =
     isUsCityRoute && !state.isFallback
       ? getGuideRecord(state.slug, city.slug)
