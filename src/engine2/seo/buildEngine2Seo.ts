@@ -15,7 +15,8 @@ export type Engine2Seo = {
   };
 };
 
-const normalizeWhitespace = (value: string) => value.replace(/\s+/g, " ").trim();
+const normalizeWhitespace = (value: string) =>
+  value.replace(/\s+/g, " ").trim();
 
 const sanitizeTourLabel = (value: string) =>
   value.replace(/\bFood\s+Tour\b/gi, "Guided Tour");
@@ -41,24 +42,31 @@ const clampDescription = (value: string, max = 170) => {
 
 const buildDescription = (tour: Engine2Tour) => {
   const base =
-    typeof tour.seo.description === "string" && tour.seo.description.trim().length > 0
+    typeof tour.seo.description === "string" &&
+    tour.seo.description.trim().length > 0
       ? tour.seo.description
       : `${tour.name} in ${tour.geo.city}, ${tour.geo.region} with ${tour.provider.name}.`;
 
   const withoutForbidden = stripForbiddenSeoTokens(base);
   const withoutNameSlug = stripForbiddenSeoTokens(
-    withoutForbidden.replace(new RegExp(tour.slug, "gi"), " "),
+    withoutForbidden.replace(new RegExp(tour.slug, "gi"), " ")
   );
 
   return clampDescription(withoutNameSlug);
 };
 
 export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
+  const isRental = tour.type === "rental";
   const isAmsterdamTour =
-    tour.sourceCountrySlug === "netherlands" && tour.sourceCitySlug === "amsterdam";
+    tour.sourceCountrySlug === "netherlands" &&
+    tour.sourceCitySlug === "amsterdam";
   if (isAmsterdamTour) {
-    const amsterdamTitle = `${sanitizeTourLabel(tour.name)} | Amsterdam Tour`;
-    const amsterdamDescription = `Book ${tour.name} in Amsterdam, Netherlands. Guided tours and curated experiences with local operators.`;
+    const amsterdamTitle = `${sanitizeTourLabel(tour.name)} | Amsterdam ${
+      isRental ? "Equipment Rental" : "Tour"
+    }`;
+    const amsterdamDescription = isRental
+      ? `Book ${tour.name} rental in Amsterdam, Netherlands. Self-guided equipment options with flexible duration.`
+      : `Book ${tour.name} in Amsterdam, Netherlands. Guided tours and curated experiences with local operators.`;
     const amsterdamCanonical = buildCanonicalUrl(tour.seo.canonicalPath);
     const amsterdamImage = buildImageUrl(tour.images.hero || tour.seo.ogImage);
 
@@ -85,7 +93,9 @@ export const buildEngine2Seo = (tour: Engine2Tour): Engine2Seo => {
   const title =
     typeof tour.seo.title === "string" && tour.seo.title.trim().length > 0
       ? normalizeWhitespace(tour.seo.title)
-      : `${sanitizeTourLabel(tour.name)} | ${location} Outdoor Tour`;
+      : `${sanitizeTourLabel(tour.name)} | ${location} ${
+          isRental ? "Equipment Rental" : "Outdoor Tour"
+        }`;
   const description = buildDescription(tour);
   const canonical = buildCanonicalUrl(tour.seo.canonicalPath);
   const image = buildImageUrl(tour.images.hero || tour.seo.ogImage);

@@ -1,6 +1,8 @@
 import type { Tour } from "./tours.types";
 import { getActivityLabels, getActivityLabelFromSlug } from "./activityLabels";
 import { stripReviewMentions } from "../utils/text";
+import { isRentalTour } from "../utils/isRentalTour";
+import { buildRentalDescription } from "../templates/rentalDescription";
 
 const ACTIVITY_LABELS = getActivityLabels();
 
@@ -14,7 +16,7 @@ const SKILL_LEVELS: Record<string, string> = {
 };
 
 const getPrimaryActivitySlug = (tour: Tour) =>
-  tour.activitySlugs.find((slug) => ACTIVITY_LABELS[slug]) ??
+  tour.activitySlugs.find(slug => ACTIVITY_LABELS[slug]) ??
   tour.activitySlugs[0] ??
   "adventure";
 
@@ -29,9 +31,19 @@ export const getSkillLevelLabel = (tour: Tour) => {
 };
 
 export const getExpandedTourDescription = (tour: Tour) => {
+  if (isRentalTour(tour)) {
+    return [
+      buildRentalDescription({
+        equipment: tour.title,
+        city: tour.destination.city,
+        location: tour.destination.state || tour.destination.country || "",
+      }),
+    ];
+  }
+
   const baseParagraphs = tour.longDescription
     .split("\n\n")
-    .map((paragraph) => paragraph.trim())
+    .map(paragraph => paragraph.trim())
     .filter(Boolean);
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
@@ -46,11 +58,20 @@ export const getExpandedTourDescription = (tour: Tour) => {
 
   return [...baseParagraphs, ...expandedParagraphs]
     .map(stripReviewMentions)
-    .map((paragraph) => paragraph.trim())
+    .map(paragraph => paragraph.trim())
     .filter(Boolean);
 };
 
 export const getTourHighlights = (tour: Tour) => {
+  if (isRentalTour(tour)) {
+    const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
+    return [
+      `Equipment rental in ${destinationLabel}.`,
+      "Self-guided format with flexible duration options.",
+      "Clear pickup location and return details before checkout.",
+    ];
+  }
+
   const activityLabel = getActivityLabel(tour);
   const skillLevel = getSkillLevelLabel(tour);
   const destinationLabel = `${tour.destination.city}, ${tour.destination.state}`;
@@ -64,6 +85,6 @@ export const getTourHighlights = (tour: Tour) => {
     highlightSource,
   ]
     .map(stripReviewMentions)
-    .map((highlight) => highlight.trim())
+    .map(highlight => highlight.trim())
     .filter(Boolean);
 };

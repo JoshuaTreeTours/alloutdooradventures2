@@ -15,13 +15,21 @@ import { getTourDetailPath } from "../../../data/tours";
 import { resolveHeroImage } from "../../../utils/hero";
 import { SITE_BRAND_NAME } from "../../../utils/site";
 import { buildMetaDescription } from "../../../utils/seo";
-import { buildBreadcrumbList, buildItemList } from "../../../utils/structuredData";
+import {
+  buildBreadcrumbList,
+  buildItemList,
+} from "../../../utils/structuredData";
 
 const FILTER_OPTIONS = [
   { label: "All tours", routeSlug: "all" },
   { label: "Cycling", routeSlug: "cycling" },
   { label: "Hiking", routeSlug: "hiking" },
-  { label: "Paddle Sports", routeSlug: "paddle-sports", activitySlug: "canoeing" },
+  {
+    label: "Paddle Sports",
+    routeSlug: "paddle-sports",
+    activitySlug: "canoeing",
+  },
+  { label: "Rentals", routeSlug: "rentals" },
 ];
 
 type WorldCountryRouteProps = {
@@ -31,17 +39,15 @@ type WorldCountryRouteProps = {
   };
 };
 
-export default function WorldCountryRoute({
-  params,
-}: WorldCountryRouteProps) {
+export default function WorldCountryRoute({ params }: WorldCountryRouteProps) {
   const [, setLocation] = useLocation();
   const country = worldCountriesWithTours.find(
-    (entry) => entry.slug === params.countrySlug,
+    entry => entry.slug === params.countrySlug
   );
   const countryTours = worldToursByCountry[params.countrySlug] ?? [];
   const categorySlug = params.categorySlug;
   const activeFilter =
-    categorySlug === "canoeing" ? "paddle-sports" : categorySlug ?? "all";
+    categorySlug === "canoeing" ? "paddle-sports" : (categorySlug ?? "all");
   const filterActivitySlug =
     categorySlug === "paddle-sports" ? "canoeing" : categorySlug;
   const categoryLabel = getActivityLabelFromSlug(filterActivitySlug);
@@ -54,10 +60,10 @@ export default function WorldCountryRoute({
   });
   const filteredTours = filterActivitySlug
     ? countryTours.filter(
-        (tour) =>
+        tour =>
           tour.activitySlugs.includes(filterActivitySlug) ||
           tour.categories?.includes(filterActivitySlug) ||
-          tour.primaryCategory === filterActivitySlug,
+          tour.primaryCategory === filterActivitySlug
       )
     : countryTours;
   const structuredDataNodes = useMemo(() => {
@@ -68,7 +74,7 @@ export default function WorldCountryRoute({
       { name: "Destinations", url: "/destinations" },
       { name: country.name, url: `/destinations/world/${country.slug}` },
     ]);
-    const itemListItems = filteredTours.map((tour) => ({
+    const itemListItems = filteredTours.map(tour => ({
       name: tour.title,
       url: getTourDetailPath(tour),
       image: tour.heroImage ? [tour.heroImage] : undefined,
@@ -100,7 +106,7 @@ export default function WorldCountryRoute({
     filterActivitySlug
       ? `Discover ${categoryLabel ?? "outdoor"} tours in ${country.name}, with guided experiences that highlight local landscapes and culture.`
       : `Explore ${countryTours.length} curated tours across ${country.name}, from adventure highlights to relaxed outdoor escapes.`,
-    `Plan your ${country.name} adventure with curated tours, regional highlights, and trusted local operators.`,
+    `Plan your ${country.name} adventure with curated tours, regional highlights, and trusted local operators.`
   );
 
   return (
@@ -137,7 +143,8 @@ export default function WorldCountryRoute({
             </p>
             {categorySlug ? (
               <p className="text-sm text-white/80">
-                Filtered by <span className="font-semibold">{categoryLabel}</span>.
+                Filtered by{" "}
+                <span className="font-semibold">{categoryLabel}</span>.
               </p>
             ) : null}
           </div>
@@ -154,7 +161,8 @@ export default function WorldCountryRoute({
               Explore {country.name} guides
             </h2>
             <p className="mt-3 text-sm text-[#405040] md:text-base">
-              Start with the country guide or dive into city-level planning tips.
+              Start with the country guide or dive into city-level planning
+              tips.
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-sm text-[#2f4a2f]">
               <Link href={`/guides/world/${country.slug}`}>
@@ -162,7 +170,7 @@ export default function WorldCountryRoute({
                   {country.name} guide
                 </a>
               </Link>
-              {guideCities.map((city) => (
+              {guideCities.map(city => (
                 <Link
                   key={city.slug}
                   href={`/guides/world/${country.slug}/${city.slug}`}
@@ -197,7 +205,7 @@ export default function WorldCountryRoute({
             </h2>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {FILTER_OPTIONS.map((filter) => {
+            {FILTER_OPTIONS.map(filter => {
               const isActive = activeFilter === filter.routeSlug;
               const href =
                 filter.routeSlug === "all"
@@ -224,13 +232,13 @@ export default function WorldCountryRoute({
               ? `Showing all ${countryTours.length} tours`
               : `Showing ${filteredTours.length} ${
                   FILTER_OPTIONS.find(
-                    (filter) => filter.routeSlug === activeFilter,
+                    filter => filter.routeSlug === activeFilter
                   )?.label.toLowerCase() ?? ""
                 } tours`}
           </div>
           {filteredTours.length ? (
             <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {filteredTours.map((tour) => (
+              {filteredTours.map(tour => (
                 <TourCard key={tour.id} tour={tour} />
               ))}
             </div>

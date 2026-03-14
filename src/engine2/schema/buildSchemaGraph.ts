@@ -44,7 +44,10 @@ const buildViatorItinerary = (tour: Engine2Tour) => {
 
   const itemListElement = tour.content.itinerary
     .map((step, index) => {
-      const nameParts = [step.title, step.duration ? `(${step.duration})` : null]
+      const nameParts = [
+        step.title,
+        step.duration ? `(${step.duration})` : null,
+      ]
         .filter(Boolean)
         .join(" ");
       const description =
@@ -104,6 +107,7 @@ export const buildSchemaGraph = (
   overrideEnabled = false,
   rewriteV3Content?: TourRewriteV3_1
 ): StructuredDataNode[] => {
+  const isRental = tour.type === "rental";
   const productId = `${seo.canonical}#product`;
   const tripId = `${seo.canonical}#trip`;
   const imageGallery = normalizeStringArray(tour.images.gallery);
@@ -192,7 +196,9 @@ export const buildSchemaGraph = (
               pilotContent?.whatYoullExperience ??
               seo.description)
             : seo.description,
-          category: rewriteV3Content?.category?.primary,
+          category: isRental
+            ? "EquipmentRental"
+            : rewriteV3Content?.category?.primary,
         },
         trip: {
           id: tripId,
@@ -282,6 +288,14 @@ export const buildSchemaGraph = (
         if (aggregateRating) {
           node.aggregateRating = aggregateRating;
         }
+      }
+    }
+  }
+
+  if (isRental) {
+    for (let index = tourNodes.length - 1; index >= 0; index -= 1) {
+      if (tourNodes[index]["@type"] === "TouristTrip") {
+        tourNodes.splice(index, 1);
       }
     }
   }

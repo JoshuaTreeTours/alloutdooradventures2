@@ -5,6 +5,7 @@ const ACTIVITY_LABELS: Record<string, string> = {
   detours: "Scenic touring",
   "day-adventures": "Day adventure",
   "multi-day": "Multi-day adventure",
+  rentals: "Rentals",
 };
 
 export const getActivityLabelFromSlug = (slug?: string) => {
@@ -16,7 +17,7 @@ export const getActivityLabelFromSlug = (slug?: string) => {
     ACTIVITY_LABELS[slug] ??
     slug
       .split("-")
-      .map((word) => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
+      .map(word => `${word.charAt(0).toUpperCase()}${word.slice(1)}`)
       .join(" ")
   );
 };
