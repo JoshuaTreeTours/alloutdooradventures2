@@ -220,6 +220,44 @@ const getMeetingPointText = (
     if (addressText) return addressText;
   }
 
+  const meetingPoints = asArray(product.meetingPoints)
+    .map(item => asRecord(item))
+    .filter((item): item is Record<string, unknown> => Boolean(item));
+
+  const firstMeetingPoint = meetingPoints[0];
+  if (firstMeetingPoint) {
+    const fromMeetingPoints = [
+      cleanText(firstMeetingPoint.description),
+      cleanText(firstMeetingPoint.name),
+      cleanText(asRecord(firstMeetingPoint.location)?.name),
+      cleanText(asRecord(firstMeetingPoint.location)?.address),
+      cleanText(asRecord(firstMeetingPoint.address)?.street),
+      cleanText(asRecord(firstMeetingPoint.address)?.formattedAddress),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (fromMeetingPoints) return fromMeetingPoints;
+  }
+
+  const logisticsPoint =
+    asRecord(getFromNested(product, ["logistics", "startPoint"])) ??
+    asRecord(getFromNested(product, ["logistics", "meetingPoint"]));
+
+  if (logisticsPoint) {
+    const fromLogistics = [
+      cleanText(logisticsPoint.name),
+      cleanText(logisticsPoint.description),
+      cleanText(asRecord(logisticsPoint.location)?.name),
+      cleanText(asRecord(logisticsPoint.location)?.address),
+      cleanText(asRecord(logisticsPoint.address)?.formattedAddress),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (fromLogistics) return fromLogistics;
+  }
+
   return cleanText(getFromNested(product, ["logistics", "meetingPoint"]));
 };
 
@@ -254,6 +292,10 @@ const getFromPriceText = (
     cleanText(product.fromPrice) ??
     cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
     cleanText(getFromNested(product, ["pricing", "fromPrice"])) ??
+    cleanText(getFromNested(product, ["pricingSummary", "fromPrice"])) ??
+    cleanText(
+      getFromNested(product, ["pricingSummary", "fromPriceFormatted"])
+    ) ??
     cleanText(getFromNested(product, ["pricing", "fromPriceFormatted"]));
 
   if (textPrice) return textPrice;
@@ -263,6 +305,8 @@ const getFromPriceText = (
     asNumberLike(product.fromPrice) ??
     asNumberLike(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
     asNumberLike(getFromNested(product, ["pricing", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricingSummary", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricingSummary", "amount"])) ??
     asNumberLike(fromPriceRecord?.amount) ??
     asNumberLike(fromPriceRecord?.price) ??
     asNumberLike(getFromNested(product, ["pricing", "summary", "amount"])) ??
@@ -290,8 +334,44 @@ const getPriceCurrencyCode = (product: Record<string, unknown>) => {
   return (
     cleanText(product.currencyCode) ??
     cleanText(getFromNested(product, ["pricing", "summary", "currencyCode"])) ??
-    cleanText(getFromNested(product, ["pricing", "currencyCode"]))
+    cleanText(getFromNested(product, ["pricing", "currencyCode"])) ??
+    cleanText(getFromNested(product, ["pricingSummary", "currencyCode"]))
   );
+};
+
+const getDurationText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const explicitDuration =
+    cleanText(product.duration) ??
+    cleanText(product.durationText) ??
+    cleanText(getFromNested(product, ["duration", "text"])) ??
+    cleanText(getFromNested(product, ["duration", "description"])) ??
+    cleanText(getFromNested(product, ["durationSummary", "text"])) ??
+    cleanText(getFromNested(product, ["logistics", "duration"]));
+
+  if (explicitDuration) return explicitDuration;
+
+  const minutes =
+    asNumberLike(
+      getFromNested(product, ["duration", "fixedDurationInMinutes"])
+    ) ??
+    asNumberLike(getFromNested(product, ["duration", "durationInMinutes"])) ??
+    asNumberLike(
+      getFromNested(product, ["duration", "maxDurationInMinutes"])
+    ) ??
+    asNumberLike(
+      getFromNested(product, ["duration", "minDurationInMinutes"])
+    ) ??
+    asNumberLike(getFromNested(product, ["logistics", "durationInMinutes"]));
+
+  if (typeof minutes !== "number") return undefined;
+  if (minutes >= 60 && minutes % 60 === 0) {
+    const hours = minutes / 60;
+    return `${hours} hour${hours === 1 ? "" : "s"}`;
+  }
+
+  return `${minutes} minutes`;
 };
 
 const extractExactProductImages = (
@@ -472,7 +552,7 @@ export const getEngine5ViatorTourData = async (
     title,
     description,
     bookingUrl,
-    duration: cleanText(product.duration) ?? cleanText(product.durationText),
+    duration: getDurationText(product),
     startTime:
       cleanText(product.startTime) ??
       cleanText(asRecord(product.schedule)?.startTime),

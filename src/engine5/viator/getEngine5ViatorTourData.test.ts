@@ -196,4 +196,70 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.itinerary.length).toBeGreaterThan(0);
     expect(result.itinerary[0]?.duration).toContain("minutes");
   });
+
+  it("extracts price, meeting point, and duration from deployed-like nested fields", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription: "Volcanoes eco tour",
+          productUrl:
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
+          pricingSummary: {
+            fromPrice: 200,
+            currencyCode: "USD",
+          },
+          meetingPoints: [
+            {
+              name: "Hilo Harbor",
+              address: { formattedAddress: "Hilo, Hawaii" },
+            },
+          ],
+          duration: {
+            fixedDurationInMinutes: 600,
+          },
+          rating: "5/5",
+          reviewCount: "44",
+          faq: {
+            questions: [
+              {
+                questionText: "Do you provide pickup?",
+                answerText: "Yes, within Hilo area.",
+              },
+            ],
+          },
+          itinerary: {
+            stops: [
+              {
+                title: "Volcanoes National Park",
+                description: "Walk crater viewpoints",
+              },
+            ],
+          },
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg",
+                  width: 1600,
+                  height: 900,
+                },
+              ],
+            },
+          ],
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("11069P1");
+
+    expect(result.fromPrice).toBe("$200.00");
+    expect(result.meetingPoint).toContain("Hilo Harbor");
+    expect(result.duration).toBe("10 hours");
+    expect(result.faqs.length).toBeGreaterThan(0);
+    expect(result.itinerary.length).toBeGreaterThan(0);
+  });
 });
