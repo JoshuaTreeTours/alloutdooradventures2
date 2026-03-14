@@ -8,7 +8,6 @@ export const resolveEngine5Tour = async (
   record: Engine5ProductRecord
 ): Promise<{
   tour: Engine4TourViewModel;
-  page: Engine4TourViewModel;
   normalized: Engine5NormalizedTour;
   listing: Tour;
 }> => {
@@ -33,7 +32,6 @@ export const resolveEngine5Tour = async (
 
   return {
     tour,
-    page: tour,
     normalized: mapped.normalized,
     listing: mapped.listing,
   };

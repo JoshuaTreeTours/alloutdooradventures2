@@ -137,7 +137,7 @@ export default function CityTourDetailRoute({
     resolveEngine5Tour(matchedEngine5Record)
       .then(resolved => {
         if (!isActive) return;
-        setEngine5Tour(resolved.page);
+        setEngine5Tour(resolved.tour);
         setEngine5Error(null);
       })
       .catch(error => {
