@@ -22,6 +22,15 @@ const baseTour: Tour = {
 };
 
 describe("isRentalTour", () => {
+  it("returns true when type is rental", () => {
+    expect(
+      isRentalTour({
+        ...baseTour,
+        type: "rental",
+      })
+    ).toBe(true);
+  });
+
   it("returns true for rental category/activity", () => {
     expect(
       isRentalTour({

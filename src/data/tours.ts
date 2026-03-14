@@ -278,6 +278,7 @@ const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
 
   return {
     id: `engine2-${tour.id}`,
+    type: isRental ? "rental" : "tour",
     engine: tour.engine ?? "engine2",
     productCode: tour.bookingProvider === "viator" ? tour.id : undefined,
     slug: tour.slug,

@@ -140,8 +140,17 @@ export default function TourCard({ tour, href }: TourCardProps) {
           className="h-full w-full object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
-        {tour.badges.likelyToSellOut && (
+        {isRental ? (
           <div className="absolute left-3 top-3 flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center rounded-full bg-[#ecfdf3] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#166534]">
+              Rental
+            </span>
+          </div>
+        ) : null}
+        {tour.badges.likelyToSellOut && (
+          <div
+            className={`absolute ${isRental ? "right-3" : "left-3"} top-3 flex flex-wrap items-center gap-2`}
+          >
             <span className="inline-flex items-center rounded-full bg-[#ffedd5] px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#9a3412]">
               Likely to sell out
             </span>

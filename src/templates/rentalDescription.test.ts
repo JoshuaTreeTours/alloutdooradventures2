@@ -13,7 +13,8 @@ describe("buildRentalDescription", () => {
     expect(description.toLowerCase()).toContain("self-guided");
     expect(description.toLowerCase()).toContain("equipment rental");
     expect(description.toLowerCase()).toContain("flexible duration");
-    expect(description.toLowerCase()).toContain("pickup location");
+    expect(description.toLowerCase()).toContain("pickup details");
+    expect(description.toLowerCase()).toContain("rental terms");
   });
 
   it("never uses guided outdoor experience wording", () => {

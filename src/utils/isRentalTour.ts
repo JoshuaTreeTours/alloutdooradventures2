@@ -2,8 +2,15 @@ import type { Tour } from "../data/tours.types";
 import { detectRental } from "./detectRental";
 
 export const isRentalTour = (
-  tour: Pick<Tour, "title" | "primaryCategory" | "categories" | "activitySlugs">
+  tour: Pick<
+    Tour,
+    "type" | "title" | "primaryCategory" | "categories" | "activitySlugs"
+  >
 ) => {
+  if (tour.type === "rental") {
+    return true;
+  }
+
   if (tour.primaryCategory === "rentals") {
     return true;
   }
