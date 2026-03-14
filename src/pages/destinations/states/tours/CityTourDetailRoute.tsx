@@ -83,6 +83,22 @@ type CityTourDetailRouteProps = {
   };
 };
 
+type Engine5ResolvedTourPageProps = {
+  tour: Engine4TourViewModel;
+};
+
+function Engine5ResolvedTourPage({ tour }: Engine5ResolvedTourPageProps) {
+  useStructuredData([
+    buildWebPageStructuredData({
+      url: resolveCanonicalProductUrl(tour.canonicalPath),
+      name: tour.title,
+      description: tour.content.overview,
+    }),
+  ]);
+
+  return <Engine4TourPage tour={tour} />;
+}
+
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
@@ -152,7 +168,7 @@ export default function CityTourDetailRoute({
       );
     }
 
-    return <Engine4TourPage tour={engine5Tour} />;
+    return <Engine5ResolvedTourPage tour={engine5Tour} />;
   }
 
   const engine2Tour =
