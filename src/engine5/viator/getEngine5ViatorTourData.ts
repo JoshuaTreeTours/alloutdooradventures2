@@ -120,6 +120,8 @@ const extractFaqs = (
     ...asArray(getFromNested(product, ["faq", "items"])),
     ...asArray(getFromNested(product, ["faq", "questions"])),
     ...asArray(getFromNested(product, ["faqs", "items"])),
+    ...asArray(getFromNested(product, ["faqs", "questions"])),
+    ...asArray(getFromNested(product, ["productFaqs", "items"])),
     ...asArray(asRecord(product.additionalInfo)?.faqs),
   ];
 
@@ -130,9 +132,15 @@ const extractFaqs = (
       const row = asRecord(item);
       if (!row) return undefined;
       const question =
-        cleanText(row.question) ?? cleanText(row.title) ?? cleanText(row.q);
+        cleanText(row.question) ??
+        cleanText(row.questionText) ??
+        cleanText(row.title) ??
+        cleanText(row.q);
       const answer =
-        cleanText(row.answer) ?? cleanText(row.description) ?? cleanText(row.a);
+        cleanText(row.answer) ??
+        cleanText(row.answerText) ??
+        cleanText(row.description) ??
+        cleanText(row.a);
       if (!question || !answer) return undefined;
       return { question, answer };
     })
@@ -146,7 +154,10 @@ const extractItinerary = (product: Record<string, unknown>) => {
     ...asArray(product.itineraryItems),
     ...asArray(product.itinerary),
     ...asArray(getFromNested(product, ["itinerary", "items"])),
+    ...asArray(getFromNested(product, ["itinerary", "itineraryItems"])),
+    ...asArray(getFromNested(product, ["itinerary", "stops"])),
     ...asArray(getFromNested(product, ["whatToExpect", "items"])),
+    ...asArray(getFromNested(product, ["whatToExpect", "stops"])),
     ...asArray(asRecord(product.description)?.sections),
   ];
 
@@ -227,6 +238,17 @@ const getFromPriceText = (
   product: Record<string, unknown>,
   currencyCode?: string
 ): string | undefined => {
+  const fromPriceRecord =
+    asRecord(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    asRecord(getFromNested(product, ["pricing", "fromPrice"]));
+
+  const fromPriceRecordText =
+    cleanText(fromPriceRecord?.formatted) ??
+    cleanText(fromPriceRecord?.display) ??
+    cleanText(fromPriceRecord?.text);
+
+  if (fromPriceRecordText) return fromPriceRecordText;
+
   const textPrice =
     cleanText(product.priceFrom) ??
     cleanText(product.fromPrice) ??
@@ -241,6 +263,8 @@ const getFromPriceText = (
     asNumberLike(product.fromPrice) ??
     asNumberLike(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
     asNumberLike(getFromNested(product, ["pricing", "fromPrice"])) ??
+    asNumberLike(fromPriceRecord?.amount) ??
+    asNumberLike(fromPriceRecord?.price) ??
     asNumberLike(getFromNested(product, ["pricing", "summary", "amount"])) ??
     asNumberLike(getFromNested(product, ["pricing", "amount"]));
 
