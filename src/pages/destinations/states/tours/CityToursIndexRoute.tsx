@@ -29,9 +29,7 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
-import { engine5ProofViatorRecord } from "../../../../engine5/viator/record";
-import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
-import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
+import { getEngine5LiveListingsByCity } from "../../../../engine5/viator/liveTours";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -69,30 +67,17 @@ export default function CityToursIndexRoute({
       : [];
 
   useEffect(() => {
-    const isEngine5HiloTarget =
-      state?.slug === engine5ProofViatorRecord.destination.stateSlug &&
-      city?.slug === engine5ProofViatorRecord.destination.citySlug;
-
-    if (!isEngine5HiloTarget) {
+    if (!state?.slug || !city?.slug) {
       setEngine5Tours([]);
       return;
     }
 
     let isActive = true;
 
-    getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
-      .then(apiTour => {
+    getEngine5LiveListingsByCity(state.slug, city.slug)
+      .then(liveListings => {
         if (!isActive) return;
-        const mapped = mapViatorToEngine5Tour(
-          engine5ProofViatorRecord,
-          apiTour
-        );
-        setEngine5Tours([
-          {
-            tour: mapped.listing,
-            href: mapped.page.canonicalPath,
-          },
-        ]);
+        setEngine5Tours(liveListings);
       })
       .catch(() => {
         if (!isActive) return;

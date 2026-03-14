@@ -110,4 +110,61 @@ describe("getEngine5ViatorTourData", () => {
       "payload incomplete"
     );
   });
+
+  it("extracts facts from nested review and pricing payloads", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "11069P1",
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          shortDescription: "Volcanoes eco tour",
+          productUrl:
+            "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
+          pricing: {
+            summary: {
+              fromPrice: "$299.00",
+              currencyCode: "USD",
+            },
+          },
+          reviewSummary: {
+            combinedAverageRating: "4.9",
+            totalReviews: "44",
+          },
+          meetingPoint: {
+            address: "Hilo Harbor, Hawaii",
+          },
+          cancellation: {
+            summary: "Free cancellation up to 24 hours before tour start",
+          },
+          highlights: [
+            { title: "Explore Hawaii Volcanoes National Park" },
+            { text: "Learn from a local naturalist guide" },
+          ],
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg",
+                  width: 1600,
+                  height: 900,
+                },
+              ],
+            },
+          ],
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("11069P1");
+
+    expect(result.fromPrice).toBe("$299.00");
+    expect(result.priceCurrency).toBe("USD");
+    expect(result.rating).toBe(4.9);
+    expect(result.reviewCount).toBe(44);
+    expect(result.meetingPoint).toContain("Hilo Harbor");
+    expect(result.cancellationPolicy).toContain("Free cancellation");
+    expect(result.highlights.length).toBeGreaterThan(0);
+  });
 });

@@ -32,6 +32,17 @@ const asImageUrl = (value: unknown): string | undefined => {
 const asNumber = (value: unknown): number | undefined =>
   typeof value === "number" && Number.isFinite(value) ? value : undefined;
 
+const asNumberLike = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value !== "string") return undefined;
+
+  const normalized = value.replace(/,/g, "").trim();
+  if (!normalized) return undefined;
+
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
+
 const toStringArray = (value: unknown): string[] =>
   Array.isArray(value)
     ? value
@@ -40,9 +51,27 @@ const toStringArray = (value: unknown): string[] =>
     : [];
 
 const extractHighlights = (product: Record<string, unknown>): string[] => {
-  const highlights =
-    toStringArray(product.highlights) ||
-    toStringArray(asRecord(product.additionalInfo)?.highlights);
+  const highlightsFromArray = toStringArray(product.highlights);
+
+  const highlightsFromObjects = Array.isArray(product.highlights)
+    ? product.highlights
+        .map(item => {
+          const row = asRecord(item);
+          if (!row) return undefined;
+          return (
+            cleanText(row.text) ??
+            cleanText(row.title) ??
+            cleanText(row.description)
+          );
+        })
+        .filter((item): item is string => Boolean(item))
+    : [];
+
+  const highlights = [
+    ...highlightsFromArray,
+    ...highlightsFromObjects,
+    ...toStringArray(asRecord(product.additionalInfo)?.highlights),
+  ];
 
   if (highlights.length > 0) return highlights;
 
@@ -108,6 +137,19 @@ const extractItinerary = (product: Record<string, unknown>) => {
       ): item is { title: string; description?: string; duration?: string } =>
         Boolean(item)
     );
+};
+
+const getFromNested = (
+  product: Record<string, unknown>,
+  path: string[]
+): unknown => {
+  let current: unknown = product;
+  for (const segment of path) {
+    const row = asRecord(current);
+    if (!row) return undefined;
+    current = row[segment];
+  }
+  return current;
 };
 
 const extractExactProductImages = (
@@ -290,12 +332,37 @@ export const getEngine5ViatorTourData = async (
     startTime:
       cleanText(product.startTime) ??
       cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: cleanText(product.priceFrom) ?? cleanText(product.fromPrice),
-    priceCurrency: cleanText(product.currencyCode),
-    rating: asNumber(product.rating),
-    reviewCount: asNumber(product.reviewCount),
-    meetingPoint: cleanText(product.meetingPoint),
-    cancellationPolicy: cleanText(product.cancellationPolicy),
+    fromPrice:
+      cleanText(product.priceFrom) ??
+      cleanText(product.fromPrice) ??
+      cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+      cleanText(getFromNested(product, ["pricing", "fromPrice"])),
+    priceCurrency:
+      cleanText(product.currencyCode) ??
+      cleanText(
+        getFromNested(product, ["pricing", "summary", "currencyCode"])
+      ) ??
+      cleanText(getFromNested(product, ["pricing", "currencyCode"])),
+    rating:
+      asNumberLike(product.rating) ??
+      asNumberLike(
+        getFromNested(product, ["reviewSummary", "combinedAverageRating"])
+      ) ??
+      asNumberLike(
+        getFromNested(product, ["reviews", "combinedAverageRating"])
+      ),
+    reviewCount:
+      asNumberLike(product.reviewCount) ??
+      asNumberLike(getFromNested(product, ["reviewSummary", "totalReviews"])) ??
+      asNumberLike(getFromNested(product, ["reviews", "totalReviews"])),
+    meetingPoint:
+      cleanText(product.meetingPoint) ??
+      cleanText(getFromNested(product, ["meetingPoint", "address"])) ??
+      cleanText(getFromNested(product, ["logistics", "meetingPoint"])),
+    cancellationPolicy:
+      cleanText(product.cancellationPolicy) ??
+      cleanText(getFromNested(product, ["cancellation", "summary"])) ??
+      cleanText(getFromNested(product, ["cancellationPolicy", "description"])),
     itinerary: extractItinerary(product),
     highlights: extractHighlights(product),
     faqs: extractFaqs(product),

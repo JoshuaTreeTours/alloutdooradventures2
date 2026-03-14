@@ -71,9 +71,9 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
-import { engine5ProofViatorRecord } from "../../../../engine5/viator/record";
 import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
 import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
+import { isEngine5CanonicalTourSlug } from "../../../../engine5/viator/liveTours";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -102,12 +102,12 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const shouldResolveEngine5Tour =
-    params.stateSlug === engine5ProofViatorRecord.destination.stateSlug &&
-    params.citySlug === engine5ProofViatorRecord.destination.citySlug &&
-    params.tourSlug.endsWith(
-      `-${engine5ProofViatorRecord.productCode.toLowerCase()}`
-    );
+  const matchedEngine5Record = isEngine5CanonicalTourSlug(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+  const shouldResolveEngine5Tour = Boolean(matchedEngine5Record);
 
   useEffect(() => {
     if (!shouldResolveEngine5Tour) {
@@ -118,13 +118,10 @@ export default function CityTourDetailRoute({
 
     let isActive = true;
 
-    getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
+    getEngine5ViatorTourData(matchedEngine5Record.productCode)
       .then(apiTour => {
         if (!isActive) return;
-        const mapped = mapViatorToEngine5Tour(
-          engine5ProofViatorRecord,
-          apiTour
-        );
+        const mapped = mapViatorToEngine5Tour(matchedEngine5Record, apiTour);
         setEngine5Tour(mapped.page);
         setEngine5Error(null);
       })
@@ -137,7 +134,7 @@ export default function CityTourDetailRoute({
     return () => {
       isActive = false;
     };
-  }, [shouldResolveEngine5Tour]);
+  }, [matchedEngine5Record, shouldResolveEngine5Tour]);
 
   if (shouldResolveEngine5Tour) {
     if (engine5Error) {
