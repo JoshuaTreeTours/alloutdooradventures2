@@ -20,6 +20,9 @@ export const resolveEngine5Tour = async (
     facts: {
       ...mapped.page.facts,
       priceFrom: apiTour.fromPrice,
+      meetingPointFull: apiTour.meetingPoint,
+      meetingPointShort: apiTour.meetingPoint?.split(",")[0],
+      duration: apiTour.duration,
     },
     content: {
       ...mapped.page.content,

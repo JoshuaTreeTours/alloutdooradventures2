@@ -11,6 +11,7 @@ vi.mock("./getEngine5ViatorTourData", () => ({
       "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
     description: "Volcanoes eco tour",
     fromPrice: "$299",
+    duration: "10 hours",
     rating: 5,
     reviewCount: 44,
     meetingPoint: "Hilo Harbor, Hawaii",
@@ -59,6 +60,8 @@ describe("resolveEngine5Tour", () => {
       "/destinations/hawaii/hilo/tours/"
     );
     expect(resolved.tour.facts.priceFrom).toBe("$299");
+    expect(resolved.tour.facts.meetingPointShort).toBe("Hilo Harbor");
+    expect(resolved.tour.facts.duration).toBe("10 hours");
     expect(resolved.tour.content.itinerary).toEqual([]);
     expect(resolved.tour.content.faqs.length).toBe(1);
     expect(resolved.listing.productCode).toBe("11069P1");
