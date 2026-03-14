@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -53,6 +53,7 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import type { Engine4TourViewModel } from "../../../../engine4/types";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -71,6 +72,8 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
+import { isEngine5CanonicalTourSlug } from "../../../../engine5/viator/liveTours";
+import { resolveEngine5Tour } from "../../../../engine5/viator/resolveEngine5Tour";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -83,6 +86,10 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [engine5Tour, setEngine5Tour] = useState<Engine4TourViewModel | null>(
+    null
+  );
+  const [engine5Error, setEngine5Error] = useState<string | null>(null);
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
@@ -93,6 +100,59 @@ export default function CityTourDetailRoute({
         cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
       />
     );
+  }
+
+  const matchedEngine5Record = isEngine5CanonicalTourSlug(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+  const shouldResolveEngine5Tour = Boolean(matchedEngine5Record);
+
+  useEffect(() => {
+    if (!shouldResolveEngine5Tour) {
+      setEngine5Tour(null);
+      setEngine5Error(null);
+      return;
+    }
+
+    let isActive = true;
+
+    resolveEngine5Tour(matchedEngine5Record)
+      .then(resolved => {
+        if (!isActive) return;
+        setEngine5Tour(resolved.page);
+        setEngine5Error(null);
+      })
+      .catch(error => {
+        if (!isActive) return;
+        setEngine5Tour(null);
+        setEngine5Error(error instanceof Error ? error.message : String(error));
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [matchedEngine5Record, shouldResolveEngine5Tour]);
+
+  if (shouldResolveEngine5Tour) {
+    if (engine5Error) {
+      return (
+        <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+          Engine5 failed loudly: {engine5Error}
+        </main>
+      );
+    }
+
+    if (!engine5Tour) {
+      return (
+        <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
+          Loading Engine5 API product…
+        </main>
+      );
+    }
+
+    return <Engine4TourPage tour={engine5Tour} />;
   }
 
   const engine2Tour =

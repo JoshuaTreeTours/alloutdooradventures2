@@ -31,21 +31,8 @@ describe("/api/engine5/viator-product", () => {
     delete process.env.VIATOR_BASE_URL;
   });
 
-  it("returns bundled exact payload for 132218P209 when key is missing", async () => {
-    const req = { method: "GET", query: { productCode: "132218P209" } };
-    const res = createRes();
-
-    await handler(req, res);
-
-    expect(res.statusCode).toBe(200);
-    expect(res.headers["X-Engine5-Source"]).toBe(
-      "bundled-exact-product-payload"
-    );
-    expect((res.body as any).product.productCode).toBe("132218P209");
-  });
-
-  it("returns 500 when key is missing for non-bundled products", async () => {
-    const req = { method: "GET", query: { productCode: "999999P001" } };
+  it("returns 500 when key is missing", async () => {
+    const req = { method: "GET", query: { productCode: "11069P1" } };
     const res = createRes();
 
     await handler(req, res);
@@ -60,21 +47,21 @@ describe("/api/engine5/viator-product", () => {
 
     const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
-      json: async () => ({ product: { productCode: "132218P209" } }),
+      json: async () => ({ product: { productCode: "11069P1" } }),
     } as Response);
 
-    const req = { method: "GET", query: { productCode: "132218P209" } };
+    const req = { method: "GET", query: { productCode: "11069P1" } };
     const res = createRes();
 
     await handler(req, res);
 
     expect(fetchSpy).toHaveBeenCalledWith(
-      "https://api.viator.test/partner/products/132218P209",
+      "https://api.viator.test/partner/products/11069P1",
       expect.objectContaining({
         headers: expect.objectContaining({ "exp-api-key": "server-key" }),
       })
     );
     expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual({ product: { productCode: "132218P209" } });
+    expect(res.body).toEqual({ product: { productCode: "11069P1" } });
   });
 });
