@@ -15,5 +15,5 @@ export const buildRentalDescription = ({
 }) => {
   const cleanedEquipment = getEquipmentName(equipment) || "equipment";
 
-  return `Book ${cleanedEquipment} rental in ${city}, ${location}. This self-guided equipment rental includes flexible duration options, easy pickup logistics, and time to explore at your own pace.`;
+  return `${cleanedEquipment} is a self-guided equipment rental in ${city}, ${location}. This equipment rental includes flexible duration options, a clear pickup location, and time to explore at your own pace.`;
 };
