@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -12,6 +12,7 @@ import {
   getFallbackStateBySlug,
 } from "../../../../data/tourFallbacks";
 import { getToursByCityUnified } from "../../../../data/tours";
+import type { Tour } from "../../../../data/tours.types";
 import {
   flagstaffTours,
   getFlagstaffTourDetailPath,
@@ -28,6 +29,9 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
+import { engine5ProofViatorRecord } from "../../../../engine5/viator/record";
+import { getEngine5ViatorTourData } from "../../../../engine5/viator/getEngine5ViatorTourData";
+import { mapViatorToEngine5Tour } from "../../../../engine5/viator/mapViatorToEngine5Tour";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -41,6 +45,9 @@ export default function CityToursIndexRoute({
   params,
   basePathOverride,
 }: CityToursIndexRouteProps) {
+  const [engine5Tours, setEngine5Tours] = useState<
+    Array<{ tour: Tour; href: string }>
+  >([]);
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -51,7 +58,7 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
-  const tours =
+  const baseTours =
     state && city
       ? isFlagstaff
         ? flagstaffTours.map(tour => ({
@@ -60,6 +67,47 @@ export default function CityToursIndexRoute({
           }))
         : getToursByCityUnified(state.slug, city.slug)
       : [];
+
+  useEffect(() => {
+    const isEngine5HiloTarget =
+      state?.slug === engine5ProofViatorRecord.destination.stateSlug &&
+      city?.slug === engine5ProofViatorRecord.destination.citySlug;
+
+    if (!isEngine5HiloTarget) {
+      setEngine5Tours([]);
+      return;
+    }
+
+    let isActive = true;
+
+    getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
+      .then(apiTour => {
+        if (!isActive) return;
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        );
+        setEngine5Tours([
+          {
+            tour: mapped.listing,
+            href: mapped.page.canonicalPath,
+          },
+        ]);
+      })
+      .catch(() => {
+        if (!isActive) return;
+        setEngine5Tours([]);
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [city?.slug, state?.slug]);
+
+  const tours = [...engine5Tours, ...baseTours].filter(
+    (entry, index, list) =>
+      list.findIndex(candidate => candidate.tour.id === entry.tour.id) === index
+  );
   const activityFilter =
     typeof window !== "undefined"
       ? new URLSearchParams(window.location.search).get("activity")
