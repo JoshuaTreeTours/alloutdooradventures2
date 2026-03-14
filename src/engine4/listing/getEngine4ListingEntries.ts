@@ -5,6 +5,10 @@ import {
   engine4ViatorTours,
 } from "../data/viatorTours";
 import { mapViatorToEngine4Tour } from "../viator/mapViatorToEngine4Tour";
+import {
+  peekEngine4ViatorApiTour,
+  requestEngine4ViatorApiTour,
+} from "../viator/viatorApiCache";
 
 type Engine4ListingEntry = {
   tour: Tour;
@@ -22,9 +26,18 @@ export const getEngine4ListingEntries = (
         tour.destination.citySlug === citySlug
     )
     .map(record => {
+      const productCode = record.productCode;
+      const apiTour =
+        peekEngine4ViatorApiTour(productCode) ??
+        engine4ViatorApiFallbackByProductCode[productCode];
+
+      if (typeof window !== "undefined") {
+        void requestEngine4ViatorApiTour(productCode);
+      }
+
       const vm = mapViatorToEngine4Tour({
         record,
-        apiTour: engine4ViatorApiFallbackByProductCode[record.productCode],
+        apiTour,
       });
       const href = buildEngine4TourPath(record);
 

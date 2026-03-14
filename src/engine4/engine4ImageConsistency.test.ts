@@ -184,6 +184,26 @@ describe("Engine4 Viator image consistency", () => {
     expect(diagnostics.resolutionStatus).toBe("ok");
   });
 
+  it("keeps 11069P1 consistent across page/card/og/schema for Hilo", () => {
+    assertHeroConsistencyForProduct({
+      productCode: "11069P1",
+      stateSlug: "hawaii",
+      citySlug: "hilo",
+      tourSlug: "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1",
+      expectedHeroUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+    });
+
+    const diagnostics = assertHeroSelectionSource({
+      productCode: "11069P1",
+      expectedSource: "api-images-payload",
+    });
+
+    expect(diagnostics.overrideUsed).toBe(false);
+    expect(diagnostics.resolutionStatus).toBe("ok");
+    expect(diagnostics.selectedVariantWidth).toBe(1100);
+  });
+
   it("rejects contamination from an unrelated product image", () => {
     const diagnostics = assertContaminationRejected({
       productCode: "74828P5",

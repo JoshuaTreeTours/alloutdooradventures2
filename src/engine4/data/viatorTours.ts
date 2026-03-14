@@ -260,6 +260,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "11069P1",
+    bookingUrl:
+      "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Tour-Hawaii-Volcanoes-National-Park-Eco-Tour/d669-11069P1?pid=P00290915&mcid=42383&medium=link&currency=USD",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Hawaii",
+      stateSlug: "hawaii",
+      city: "Hilo",
+      citySlug: "hilo",
+    },
+    slug: "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "380141P3",
     bookingUrl:
       "https://www.viator.com/tours/Mississippi/River-Cruise-to-The-Swamp-Walk-Tour/d22220-380141P3?pid=P00290915&mcid=42383&medium=link",
@@ -314,6 +331,64 @@ export const engine4ViatorApiFallbackByProductCode: Record<
   string,
   Engine4ViatorApiTour
 > = {
+  "11069P1": {
+    productCode: "11069P1",
+    title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Big-Island-of-Hawaii/Private-Tour-Hawaii-Volcanoes-National-Park-Eco-Tour/d669-11069P1",
+    fromPrice: "$255.00",
+    priceCurrency: "USD",
+    rating: 4.8,
+    reviewCount: 718,
+    duration: "11 hours",
+    meetingPoint: "Hilo, Hawaii, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/61/f7/4c/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Private eco-focused day tour to Hawaii Volcanoes National Park from the Big Island with guided interpretation and scenic stops.",
+    overview:
+      "This private Hawaii Volcanoes National Park eco tour is built for travelers who want a full-day Big Island experience centered on volcanic landscapes, rainforest scenery, and local interpretation from a guide. The route is typically structured as a long-format day with transport logistics handled for you, so guests can focus on park viewpoints and the island's geologic context rather than planning a self-drive itinerary. Current listing details show this product as an approximately 11-hour experience from Hilo with free cancellation up to 24 hours in advance.",
+    highlights: [
+      "Private guided format focused on Hawaii Volcanoes National Park",
+      "Full-day duration of approximately 11 hours",
+      "Listed meeting point in Hilo on the Big Island",
+      "Current listing rating of 4.8 based on 718 reviews",
+      "Free cancellation up to 24 hours before departure",
+    ],
+    faqs: [
+      {
+        question: "How long is the Hawaii Volcanoes National Park Eco Tour?",
+        answer:
+          "The listing duration is approximately 11 hours for this private eco tour.",
+      },
+      {
+        question: "Where is the meeting point for this tour?",
+        answer: "The listed meeting point is Hilo, Hawaii, USA.",
+      },
+      {
+        question: "What cancellation policy is listed?",
+        answer: "This experience offers free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
   "380141P3": {
     productCode: "380141P3",
     title: "River Cruise to The Swamp Walk Tour",
