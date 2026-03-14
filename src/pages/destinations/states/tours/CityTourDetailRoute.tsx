@@ -72,7 +72,10 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
-import { isEngine5CanonicalTourSlug } from "../../../../engine5/viator/liveTours";
+import {
+  getEngine5RecordByCanonicalSlug,
+  isEngine5CanonicalTourSlug,
+} from "../../../../engine5/viator/liveTours";
 import { resolveEngine5Tour } from "../../../../engine5/viator/resolveEngine5Tour";
 
 type CityTourDetailRouteProps = {
@@ -118,11 +121,12 @@ export default function CityTourDetailRoute({
     );
   }
 
-  const matchedEngine5Record = isEngine5CanonicalTourSlug(
-    params.stateSlug,
-    params.citySlug,
-    params.tourSlug
-  );
+  const matchedEngine5Record =
+    isEngine5CanonicalTourSlug(
+      params.stateSlug,
+      params.citySlug,
+      params.tourSlug
+    ) ?? getEngine5RecordByCanonicalSlug(params.tourSlug);
   const shouldResolveEngine5Tour = Boolean(matchedEngine5Record);
 
   useEffect(() => {

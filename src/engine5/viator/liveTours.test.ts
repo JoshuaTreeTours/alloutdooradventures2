@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 import {
   getEngine5LiveListingsByCity,
+  getEngine5RecordByCanonicalSlug,
   isEngine5CanonicalTourSlug,
 } from "./liveTours";
 
@@ -61,6 +62,14 @@ describe("engine5 live tours", () => {
       isEngine5CanonicalTourSlug(
         "hawaii",
         "hilo",
+        "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
+      )?.productCode
+    ).toBe("11069P1");
+  });
+
+  it("falls back to canonical engine5 slug detection without state/city match", () => {
+    expect(
+      getEngine5RecordByCanonicalSlug(
         "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
       )?.productCode
     ).toBe("11069P1");

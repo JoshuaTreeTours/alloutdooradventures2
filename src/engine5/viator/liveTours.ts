@@ -18,6 +18,11 @@ export const isEngine5CanonicalTourSlug = (
     tourSlug.endsWith(`-${record.productCode.toLowerCase()}`)
   );
 
+export const getEngine5RecordByCanonicalSlug = (tourSlug: string) =>
+  engine5ViatorRecords.find(record =>
+    tourSlug.endsWith(`-${record.productCode.toLowerCase()}`)
+  );
+
 export const getEngine5LiveListingsByCity = async (
   stateSlug: string,
   citySlug: string
