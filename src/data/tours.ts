@@ -273,34 +273,38 @@ const getEngine2StateSlug = (tour: Engine2Tour) => {
   return parts[1] || slugify(tour.geo.region || "california");
 };
 
-const toEngine2ListingTour = (tour: Engine2Tour): Tour => ({
-  id: `engine2-${tour.id}`,
-  engine: tour.engine ?? "engine2",
-  productCode: tour.bookingProvider === "viator" ? tour.id : undefined,
-  slug: tour.slug,
-  title: tour.name,
-  shortDescription: tour.content.highlights[0],
-  operator: tour.provider.name,
-  categories: ["adventure"],
-  primaryCategory: "adventure",
-  destination: {
-    country: tour.geo.country || "United States",
-    state: tour.geo.region,
-    stateSlug: getEngine2StateSlug(tour),
-    city: tour.geo.city,
-    citySlug: tour.sourceCitySlug,
-    lat: tour.geo.lat ?? undefined,
-    lng: tour.geo.lng ?? undefined,
-  },
-  heroImage: tour.images.hero ?? "",
-  primaryImageUrl: tour.images.hero ?? undefined,
-  galleryImages: tour.images.gallery,
-  badges: {},
-  activitySlugs: ["adventure"],
-  bookingProvider: tour.bookingProvider ?? "fareharbor",
-  bookingUrl: tour.booking.bookingUrl,
-  longDescription: tour.content.experienceText,
-});
+const toEngine2ListingTour = (tour: Engine2Tour): Tour => {
+  const isRental = tour.type === "rental";
+
+  return {
+    id: `engine2-${tour.id}`,
+    engine: tour.engine ?? "engine2",
+    productCode: tour.bookingProvider === "viator" ? tour.id : undefined,
+    slug: tour.slug,
+    title: tour.name,
+    shortDescription: tour.content.highlights[0],
+    operator: tour.provider.name,
+    categories: isRental ? ["adventure", "rentals"] : ["adventure"],
+    primaryCategory: isRental ? "rentals" : "adventure",
+    destination: {
+      country: tour.geo.country || "United States",
+      state: tour.geo.region,
+      stateSlug: getEngine2StateSlug(tour),
+      city: tour.geo.city,
+      citySlug: tour.sourceCitySlug,
+      lat: tour.geo.lat ?? undefined,
+      lng: tour.geo.lng ?? undefined,
+    },
+    heroImage: tour.images.hero ?? "",
+    primaryImageUrl: tour.images.hero ?? undefined,
+    galleryImages: tour.images.gallery,
+    badges: {},
+    activitySlugs: isRental ? ["adventure", "rentals"] : ["adventure"],
+    bookingProvider: tour.bookingProvider ?? "fareharbor",
+    bookingUrl: tour.booking.bookingUrl,
+    longDescription: tour.content.experienceText,
+  };
+};
 
 const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
   tour: toEngine2ListingTour(tour),

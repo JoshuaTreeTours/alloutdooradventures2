@@ -248,8 +248,6 @@ describe("buildSchemaGraph", () => {
     });
   });
 
-
-
   it("uses 3-5 list-item itinerary steps for tour 34849 rollout", () => {
     const graph = buildSchemaGraph(
       { ...baseTour, id: "34849", geo: { ...baseTour.geo, city: "Indio" } },
@@ -372,5 +370,33 @@ describe("buildSchemaGraph", () => {
     expect(trip.departureLocation?.address.streetAddress).toBe(
       "38635 Monroe St"
     );
+  });
+
+  it("uses Product schema only for rentals", () => {
+    const rentalTour: Engine2Tour = {
+      ...baseTour,
+      id: "eng2-rental",
+      type: "rental",
+      name: "E-Bike Rental",
+      seo: {
+        ...baseTour.seo,
+        canonicalPath:
+          "/destinations/united-states/hawaii/hilo/tours/e-bike-rental",
+      },
+    };
+    const rentalSeo = {
+      ...seo,
+      canonical:
+        "https://www.alloutdooradventures.com/destinations/united-states/hawaii/hilo/tours/e-bike-rental",
+    };
+
+    const graph = buildSchemaGraph(rentalTour, rentalSeo as never);
+    const product = graph.find(node => node["@type"] === "Product") as {
+      category?: string;
+    };
+    const touristTrip = graph.find(node => node["@type"] === "TouristTrip");
+
+    expect(product.category).toBe("EquipmentRental");
+    expect(touristTrip).toBeUndefined();
   });
 });

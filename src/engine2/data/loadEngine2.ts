@@ -24,9 +24,12 @@ import { getEngine2AmsterdamTours } from "./amsterdamTours";
 import { getEngine2SpainTours as loadEngine2SpainTours } from "./spainTours";
 import { getEngine2ParisTours } from "./parisTours";
 import { isTourRemoved } from "../../utils/tours/isTourRemoved";
+import { detectRental } from "../../utils/detectRental";
+import { buildRentalDescription } from "../../templates/rentalDescription";
 
 export type Engine2Tour = {
   id: string;
+  type?: "tour" | "rental";
   engine?: "engine2" | "engine3" | "engine4";
   bookingProvider?: "fareharbor" | "viator";
   bookingUrl?: string;
@@ -170,19 +173,41 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours
         operatorShortName: tour.provider.shortName,
       })
   )
-  .map(tour => ({
-    ...tour,
-    bookingProvider: tour.bookingProvider ?? "fareharbor",
-    engine:
-      (tour.bookingProvider ?? "fareharbor") === "viator"
-        ? "engine3"
-        : "engine2",
-    images: {
-      ...tour.images,
-      hero: getBestFareHarborImage(tour),
-    },
-    booking: {
-      ...tour.booking,
+  .map(tour => {
+    const tourType = tour.type ?? detectRental(tour.name);
+    const isRental = tourType === "rental";
+    const rentalDescription = isRental
+      ? buildRentalDescription({
+          equipment: tour.name,
+          city: tour.geo.city,
+          location: tour.geo.region,
+        })
+      : null;
+
+    return {
+      ...tour,
+      type: tourType,
+      bookingProvider: tour.bookingProvider ?? "fareharbor",
+      engine:
+        (tour.bookingProvider ?? "fareharbor") === "viator"
+          ? "engine3"
+          : "engine2",
+      images: {
+        ...tour.images,
+        hero: getBestFareHarborImage(tour),
+      },
+      booking: {
+        ...tour.booking,
+        bookingUrl:
+          (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
+          tour.booking.fareharbor
+            ? buildFareHarborUrl({
+                company: tour.booking.fareharbor.shortname,
+                itemId: tour.booking.fareharbor.itemId,
+                calendarPath: tour.booking.bookingUrl,
+              })
+            : normalizeFareHarborUrl(tour.booking.bookingUrl),
+      },
       bookingUrl:
         (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
         tour.booking.fareharbor
@@ -192,17 +217,26 @@ const engine2Tours: Engine2Tour[] = allGeneratedTours
               calendarPath: tour.booking.bookingUrl,
             })
           : normalizeFareHarborUrl(tour.booking.bookingUrl),
-    },
-    bookingUrl:
-      (tour.bookingProvider ?? "fareharbor") === "fareharbor" &&
-      tour.booking.fareharbor
-        ? buildFareHarborUrl({
-            company: tour.booking.fareharbor.shortname,
-            itemId: tour.booking.fareharbor.itemId,
-            calendarPath: tour.booking.bookingUrl,
-          })
-        : normalizeFareHarborUrl(tour.booking.bookingUrl),
-  }));
+      seo: {
+        ...tour.seo,
+        description: rentalDescription ?? tour.seo.description,
+      },
+      content: {
+        ...tour.content,
+        experienceText: rentalDescription ?? tour.content.experienceText,
+        highlights: isRental
+          ? [
+              `Equipment rental in ${tour.geo.city}`,
+              "Self-guided format with flexible duration options",
+              `Managed by ${tour.provider.name}`,
+            ]
+          : tour.content.highlights,
+        duration: isRental
+          ? (tour.content.duration ?? "Flexible rental duration")
+          : tour.content.duration,
+      },
+    };
+  });
 
 const byPath = new Map(
   engine2Tours.map(tour => [tour.seo.canonicalPath, tour])

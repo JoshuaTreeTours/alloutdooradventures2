@@ -28,6 +28,7 @@ const ACTIVITY_LINKS = [
   { activitySlug: "cycling", routeSlug: "cycling" },
   { activitySlug: "hiking", routeSlug: "hiking" },
   { activitySlug: "canoeing", routeSlug: "paddle-sports" },
+  { activitySlug: "rentals", routeSlug: "rentals" },
 ];
 
 const STATE_ABBREVIATIONS: Record<string, string> = {

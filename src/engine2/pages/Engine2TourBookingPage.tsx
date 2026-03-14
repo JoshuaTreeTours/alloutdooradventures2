@@ -85,6 +85,7 @@ const getDestinationBreadcrumbs = (tour: Engine2Tour) => {
 export default function Engine2TourBookingPage({
   tour,
 }: Engine2TourBookingPageProps) {
+  const isRental = tour.type === "rental";
   const seo = useMemo(() => buildEngine2Seo(tour), [tour]);
   const bookingArgs = tour.booking.fareharbor;
   const fareharborOperatorSlug = bookingArgs?.shortname ?? null;
@@ -123,7 +124,10 @@ export default function Engine2TourBookingPage({
         "@type": "Product",
         "@id": `${seo.canonical}/book#product`,
         name: `${tour.name} booking`,
-        description: `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
+        description: isRental
+          ? `Reserve ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
+          : `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`,
+        ...(isRental ? { category: "EquipmentRental" } : {}),
         image: [seo.og.image],
         offers: {
           "@type": "Offer",
@@ -134,7 +138,7 @@ export default function Engine2TourBookingPage({
         },
       },
     ],
-    [seo.canonical, seo.og.image, tour]
+    [isRental, seo.canonical, seo.og.image, tour]
   );
 
   useStructuredData(structuredDataNodes);
@@ -143,7 +147,11 @@ export default function Engine2TourBookingPage({
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
         title={`${seo.title} | Book`}
-        description={`Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`}
+        description={
+          isRental
+            ? `Reserve ${tour.name} rental in ${tour.geo.city}, ${tour.geo.region}.`
+            : `Book ${tour.name} in ${tour.geo.city}, ${tour.geo.region}.`
+        }
         url={`${seo.canonical}/book`}
         image={seo.og.image}
         robots="noindex,follow,max-image-preview:large"
@@ -153,7 +161,7 @@ export default function Engine2TourBookingPage({
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto max-w-6xl px-6 py-12">
           <p className="text-xs uppercase tracking-[0.3em] text-white/70">
-            Booking
+            {isRental ? "Equipment Rental" : "Booking"}
           </p>
           <h1 className="mt-3 text-3xl font-semibold md:text-5xl">
             {tour.name}
@@ -162,6 +170,19 @@ export default function Engine2TourBookingPage({
       </section>
 
       <section className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-12">
+        {isRental ? (
+          <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-[#1f2a1f]">
+              Equipment Rental
+            </h2>
+            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm text-[#405040]">
+              <li>Self-guided experience — explore at your own pace.</li>
+              <li>Flexible duration options are available at checkout.</li>
+              <li>Pickup details and rental terms are shown before payment.</li>
+            </ul>
+          </div>
+        ) : null}
+
         {isBlockedFareharborEmbed ? (
           <div className="rounded-2xl border border-black/10 bg-white p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-[#1f2a1f]">
