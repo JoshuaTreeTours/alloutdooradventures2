@@ -12,12 +12,23 @@ describe("mapViatorToEngine5Tour", () => {
       bookingUrl:
         "https://www.viator.com/tours/Big-Island-of-Hawaii/example/d669-11069P1",
       description: "Explore Hawaii Volcanoes National Park with a guide.",
-      itinerary: [],
-      highlights: ["Visit Yosemite Valley"],
-      faqs: [{ question: "Meals?", answer: "Not included" }],
-      inclusions: [],
-      exclusions: [],
-      additionalInfo: [],
+      duration: "10 hours",
+      fromPrice: "$299",
+      rating: 4.9,
+      reviewCount: 44,
+      meetingPoint: "Hilo Harbor, Hawaii",
+      cancellationPolicy: "Free cancellation up to 24 hours before start",
+      itinerary: [
+        {
+          title: "Hawaii Volcanoes National Park",
+          description: "Explore volcanic landscapes",
+        },
+      ],
+      highlights: ["Walk through lava tubes"],
+      faqs: [{ question: "Meals?", answer: "Lunch not included" }],
+      inclusions: ["Expert guide"],
+      exclusions: ["Lunch"],
+      additionalInfo: ["Wear sturdy shoes"],
       exactProductImages: [
         {
           isCover: true,
@@ -54,10 +65,21 @@ describe("mapViatorToEngine5Tour", () => {
       "private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"
     );
     expect(mapped.page.title).toContain("Hawaii Volcanoes");
-    expect(mapped.page.facts.duration).toBeUndefined();
     expect(mapped.page.content.overview).toContain(
       "Hawaii Volcanoes National Park"
     );
+    expect(mapped.page.facts.priceFrom).toBe("$299");
+    expect(mapped.page.facts.ratingValue).toBe(4.9);
+    expect(mapped.page.facts.reviewCount).toBe(44);
+    expect(mapped.page.facts.meetingPointShort).toBe("Hilo Harbor");
+    expect(mapped.page.facts.duration).toBe("10 hours");
+    expect(mapped.page.facts.cancellationPolicy).toContain("Free cancellation");
+    expect(mapped.page.content.highlights).toContain("Walk through lava tubes");
+    expect(mapped.page.content.faqs.length).toBeGreaterThan(0);
+    expect(mapped.page.content.itinerary.length).toBeGreaterThan(0);
+    expect(mapped.page.content.inclusions).toContain("Expert guide");
+    expect(mapped.page.content.exclusions).toContain("Lunch");
+    expect(mapped.page.content.additionalInfo).toContain("Wear sturdy shoes");
     expect(mapped.page.bookingUrl).toContain("11069P1");
     expect(mapped.page.canonicalPath).toBe(
       "/destinations/hawaii/hilo/tours/private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1"

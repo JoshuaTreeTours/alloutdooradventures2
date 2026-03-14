@@ -36,19 +36,40 @@ const asNumberLike = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value)) return value;
   if (typeof value !== "string") return undefined;
 
-  const normalized = value.replace(/,/g, "").trim();
+  const normalized = value.replace(/,/g, "").replace(/\/5$/, "").trim();
   if (!normalized) return undefined;
 
-  const parsed = Number(normalized);
+  const matched = normalized.match(/\d+(?:\.\d+)?/);
+  const parsed = Number(matched?.[0] ?? normalized);
   return Number.isFinite(parsed) ? parsed : undefined;
 };
 
-const toStringArray = (value: unknown): string[] =>
+const getTextFromMixedValue = (value: unknown): string | undefined => {
+  const asString = cleanText(value);
+  if (asString) return asString;
+
+  const row = asRecord(value);
+  if (!row) return undefined;
+
+  return (
+    cleanText(row.text) ??
+    cleanText(row.value) ??
+    cleanText(row.title) ??
+    cleanText(row.label) ??
+    cleanText(row.description) ??
+    cleanText(row.summary) ??
+    cleanText(row.name)
+  );
+};
+
+const getTextArrayFromMixedValues = (value: unknown): string[] =>
   Array.isArray(value)
     ? value
-        .map(item => cleanText(item))
+        .map(item => getTextFromMixedValue(item))
         .filter((item): item is string => Boolean(item))
     : [];
+
+const toStringArray = getTextArrayFromMixedValues;
 
 const extractHighlights = (product: Record<string, unknown>): string[] => {
   const highlightsFromArray = toStringArray(product.highlights);
@@ -91,6 +112,8 @@ const extractFaqs = (
 ): Array<{ question: string; answer: string }> => {
   const raw =
     (product.faqs as unknown[]) ??
+    (product.faq as unknown[]) ??
+    (product.questionsAndAnswers as unknown[]) ??
     (asRecord(product.additionalInfo)?.faqs as unknown[]) ??
     [];
 
@@ -116,6 +139,7 @@ const extractItinerary = (product: Record<string, unknown>) => {
   const raw =
     (product.itineraryItems as unknown[]) ??
     (product.itinerary as unknown[]) ??
+    (asRecord(product.description)?.sections as unknown[]) ??
     [];
 
   if (!Array.isArray(raw)) return [];
@@ -150,6 +174,52 @@ const getFromNested = (
     current = row[segment];
   }
   return current;
+};
+
+const getMeetingPointText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const direct = cleanText(product.meetingPoint);
+  if (direct) return direct;
+
+  const meetingPoint = asRecord(product.meetingPoint);
+  if (meetingPoint) {
+    const addressText = [
+      cleanText(meetingPoint.address),
+      cleanText(meetingPoint.description),
+      cleanText(asRecord(meetingPoint.location)?.name),
+      cleanText(asRecord(meetingPoint.location)?.address),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (addressText) return addressText;
+  }
+
+  return cleanText(getFromNested(product, ["logistics", "meetingPoint"]));
+};
+
+const getCancellationText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  return (
+    cleanText(product.cancellationPolicy) ??
+    cleanText(getFromNested(product, ["cancellation", "summary"])) ??
+    cleanText(getFromNested(product, ["cancellationPolicy", "description"])) ??
+    cleanText(getFromNested(product, ["cancellationPolicy", "text"]))
+  );
+};
+
+const getFromPriceText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  return (
+    cleanText(product.priceFrom) ??
+    cleanText(product.fromPrice) ??
+    cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    cleanText(getFromNested(product, ["pricing", "fromPrice"])) ??
+    cleanText(getFromNested(product, ["pricing", "fromPriceFormatted"]))
+  );
 };
 
 const extractExactProductImages = (
@@ -332,11 +402,7 @@ export const getEngine5ViatorTourData = async (
     startTime:
       cleanText(product.startTime) ??
       cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice:
-      cleanText(product.priceFrom) ??
-      cleanText(product.fromPrice) ??
-      cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
-      cleanText(getFromNested(product, ["pricing", "fromPrice"])),
+    fromPrice: getFromPriceText(product),
     priceCurrency:
       cleanText(product.currencyCode) ??
       cleanText(
@@ -355,20 +421,24 @@ export const getEngine5ViatorTourData = async (
       asNumberLike(product.reviewCount) ??
       asNumberLike(getFromNested(product, ["reviewSummary", "totalReviews"])) ??
       asNumberLike(getFromNested(product, ["reviews", "totalReviews"])),
-    meetingPoint:
-      cleanText(product.meetingPoint) ??
-      cleanText(getFromNested(product, ["meetingPoint", "address"])) ??
-      cleanText(getFromNested(product, ["logistics", "meetingPoint"])),
-    cancellationPolicy:
-      cleanText(product.cancellationPolicy) ??
-      cleanText(getFromNested(product, ["cancellation", "summary"])) ??
-      cleanText(getFromNested(product, ["cancellationPolicy", "description"])),
+    meetingPoint: getMeetingPointText(product),
+    cancellationPolicy: getCancellationText(product),
     itinerary: extractItinerary(product),
     highlights: extractHighlights(product),
     faqs: extractFaqs(product),
-    inclusions: toStringArray(product.inclusions),
-    exclusions: toStringArray(product.exclusions),
-    additionalInfo: toStringArray(product.additionalInfo),
+    inclusions: [
+      ...toStringArray(product.inclusions),
+      ...toStringArray(getFromNested(product, ["included"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
+    exclusions: [
+      ...toStringArray(product.exclusions),
+      ...toStringArray(getFromNested(product, ["excluded"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
+    additionalInfo: [
+      ...toStringArray(product.additionalInfo),
+      ...toStringArray(getFromNested(product, ["importantInformation"])),
+      ...toStringArray(getFromNested(product, ["travelerInformation"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
     exactProductImages,
     canonicalHeroUrl: heroSelection.canonicalHeroUrl,
     heroSelectionSource: heroSelection.heroSelectionSource,

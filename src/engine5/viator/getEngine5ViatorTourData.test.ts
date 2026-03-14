@@ -128,15 +128,32 @@ describe("getEngine5ViatorTourData", () => {
             },
           },
           reviewSummary: {
-            combinedAverageRating: "4.9",
+            combinedAverageRating: "4.9/5",
             totalReviews: "44",
           },
           meetingPoint: {
-            address: "Hilo Harbor, Hawaii",
+            location: { name: "Hilo Harbor" },
+            address: "Hawaii",
           },
           cancellation: {
             summary: "Free cancellation up to 24 hours before tour start",
           },
+          inclusions: [{ title: "Professional local guide" }],
+          exclusions: [{ description: "Lunch" }],
+          additionalInfo: [{ text: "Bring comfortable shoes" }],
+          importantInformation: [{ value: "Moderate walking required" }],
+          questionsAndAnswers: [
+            {
+              question: "Is pickup available?",
+              answer: "Yes, for Hilo accommodations.",
+            },
+          ],
+          itineraryItems: [
+            {
+              name: "Hawaii Volcanoes National Park",
+              summary: "Visit lava tubes and crater overlooks",
+            },
+          ],
           highlights: [
             { title: "Explore Hawaii Volcanoes National Park" },
             { text: "Learn from a local naturalist guide" },
@@ -166,5 +183,11 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.meetingPoint).toContain("Hilo Harbor");
     expect(result.cancellationPolicy).toContain("Free cancellation");
     expect(result.highlights.length).toBeGreaterThan(0);
+    expect(result.inclusions).toContain("Professional local guide");
+    expect(result.exclusions).toContain("Lunch");
+    expect(result.additionalInfo).toContain("Bring comfortable shoes");
+    expect(result.additionalInfo).toContain("Moderate walking required");
+    expect(result.faqs.length).toBeGreaterThan(0);
+    expect(result.itinerary.length).toBeGreaterThan(0);
   });
 });
