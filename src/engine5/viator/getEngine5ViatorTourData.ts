@@ -3,6 +3,7 @@ import type {
   Engine5ImageVariant,
   Engine5ViatorApiTour,
 } from "../types";
+import { getEngine5ExactProductHeroOverride } from "./imageOverrides";
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") return undefined;
@@ -73,13 +74,13 @@ const extractFaqs = (
       const question =
         cleanText(row.question) ?? cleanText(row.title) ?? cleanText(row.q);
       const answer =
-        cleanText(row.answer) ??
-        cleanText(row.description) ??
-        cleanText(row.a);
+        cleanText(row.answer) ?? cleanText(row.description) ?? cleanText(row.a);
       if (!question || !answer) return undefined;
       return { question, answer };
     })
-    .filter((item): item is { question: string; answer: string } => Boolean(item));
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item)
+    );
 };
 
 const extractItinerary = (product: Record<string, unknown>) => {
@@ -172,14 +173,20 @@ const rankVariant = (variant: Engine5ImageVariant): number => {
   return 1_000_000_000 + area;
 };
 
-const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
-  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+const selectCanonicalHero = (
+  exactProductImages: Engine5ExactProductImage[]
+) => {
+  const withVariants = exactProductImages.filter(
+    image => image.variants.length > 0
+  );
   const coverImages = withVariants.filter(image => image.isCover);
   const candidates = coverImages.length > 0 ? coverImages : withVariants;
 
   const allCandidateUrls = Array.from(
     new Set(
-      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+      exactProductImages.flatMap(image =>
+        image.variants.map(variant => variant.url)
+      )
     )
   );
 
@@ -247,7 +254,20 @@ export const getEngine5ViatorTourData = async (
     cleanText(product.description);
   const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
   const exactProductImages = extractExactProductImages(product);
-  const heroSelection = selectCanonicalHero(exactProductImages);
+  const heroSelectionFromApi = selectCanonicalHero(exactProductImages);
+  const overrideHeroUrl = getEngine5ExactProductHeroOverride(normalizedCode);
+  const shouldUseOverride =
+    heroSelectionFromApi.heroSelectionSource === "missing" &&
+    Boolean(overrideHeroUrl);
+
+  const heroSelection = shouldUseOverride
+    ? {
+        canonicalHeroUrl: overrideHeroUrl,
+        heroSelectionSource: "exact-product-override" as const,
+        heroSelectionSize: undefined,
+        candidateUrls: heroSelectionFromApi.candidateUrls,
+      }
+    : heroSelectionFromApi;
 
   if (
     !title ||
@@ -268,7 +288,8 @@ export const getEngine5ViatorTourData = async (
     bookingUrl,
     duration: cleanText(product.duration) ?? cleanText(product.durationText),
     startTime:
-      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
+      cleanText(product.startTime) ??
+      cleanText(asRecord(product.schedule)?.startTime),
     fromPrice: cleanText(product.priceFrom) ?? cleanText(product.fromPrice),
     priceCurrency: cleanText(product.currencyCode),
     rating: asNumber(product.rating),
@@ -287,6 +308,7 @@ export const getEngine5ViatorTourData = async (
     heroSelectionSize: heroSelection.heroSelectionSize,
     heroSelectionDiagnostics: {
       candidateUrls: heroSelection.candidateUrls,
+      overrideUsed: shouldUseOverride,
     },
     provenance: {
       apiFetchAttempted: true,

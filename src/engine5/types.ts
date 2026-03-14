@@ -12,6 +12,7 @@ export type Engine5ExactProductImage = {
 
 export type Engine5HeroSelectionSource =
   | "api-images-payload"
+  | "exact-product-override"
   | "override"
   | "missing";
 
@@ -40,6 +41,7 @@ export type Engine5ViatorApiTour = {
   heroSelectionSize?: { width?: number; height?: number };
   heroSelectionDiagnostics: {
     candidateUrls: string[];
+    overrideUsed: boolean;
   };
   provenance: {
     apiFetchAttempted: true;
@@ -68,7 +70,11 @@ export type Engine5NormalizedTour = {
     overview: string;
     highlights: string[];
     faqs: Array<{ question: string; answer: string }>;
-    itinerary: Array<{ title: string; description?: string; duration?: string }>;
+    itinerary: Array<{
+      title: string;
+      description?: string;
+      duration?: string;
+    }>;
     inclusions: string[];
     exclusions: string[];
     additionalInfo?: string;
@@ -85,11 +91,14 @@ export type Engine5NormalizedTour = {
     ogImageUrl?: string;
     schemaImageUrl?: string;
     allImageSurfacesIdentical: boolean;
+    heroSelectionSource: Engine5HeroSelectionSource;
+    ratingReviewSource: "api" | "missing";
+    overrideUsed: boolean;
   };
 };
 
 export type Engine5ProductRecord = {
-  productCode: "132218P209";
+  productCode: string;
   destination: {
     country: string;
     state: string;

@@ -5,10 +5,7 @@ import TourCard from "../../components/TourCard";
 import type { Tour } from "../../data/tours.types";
 import { getEngine5ViatorTourData } from "../../engine5/viator/getEngine5ViatorTourData";
 import { mapViatorToEngine5Tour } from "../../engine5/viator/mapViatorToEngine5Tour";
-import {
-  ENGINE5_PROOF_LISTING_PATH,
-  ENGINE5_PROOF_TOUR_PATH,
-} from "../../engine5/routes";
+import { ENGINE5_PROOF_TOUR_PATH } from "../../engine5/routes";
 import { engine5ProofViatorRecord } from "../../engine5/viator/record";
 
 export default function Engine5ProofListingRoute() {
@@ -18,9 +15,15 @@ export default function Engine5ProofListingRoute() {
   useEffect(() => {
     getEngine5ViatorTourData(engine5ProofViatorRecord.productCode)
       .then(apiTour => {
-        const mapped = mapViatorToEngine5Tour(engine5ProofViatorRecord, apiTour);
+        const mapped = mapViatorToEngine5Tour(
+          engine5ProofViatorRecord,
+          apiTour
+        );
         if (process.env.NODE_ENV !== "production") {
-          console.info("[engine5][132218P209] listing diagnostics", mapped.normalized.diagnostics);
+          console.info(
+            `[engine5][${engine5ProofViatorRecord.productCode}] listing diagnostics`,
+            mapped.normalized.diagnostics
+          );
         }
         setTour(mapped.listing);
       })
@@ -29,21 +32,18 @@ export default function Engine5ProofListingRoute() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
-      <h1 className="text-3xl font-semibold">Engine5 Los Angeles proof tours</h1>
+      <h1 className="text-3xl font-semibold">
+        Engine5 Hawaii / Hilo proof tours
+      </h1>
       {error ? <p className="mt-4">Engine5 failed loudly: {error}</p> : null}
       {tour ? (
         <div className="mt-8 grid gap-6 md:grid-cols-2">
-          <TourCard
-            tour={tour}
-            href={tour.slug ? `${ENGINE5_PROOF_LISTING_PATH}/${tour.slug}` : ENGINE5_PROOF_TOUR_PATH}
-          />
+          <TourCard tour={tour} href={ENGINE5_PROOF_TOUR_PATH} />
         </div>
       ) : (
         <p className="mt-4">Loading API-only listing…</p>
       )}
-      <Link href="/destinations/california/los-angeles/tours">
-        Back to normal tours
-      </Link>
+      <Link href="/destinations/hawaii/hilo/tours">Back to normal tours</Link>
     </main>
   );
 }

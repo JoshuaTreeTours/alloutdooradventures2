@@ -19,8 +19,8 @@ export const mapViatorToEngine5Tour = (
     throw new Error(`Engine5 strict mode rejected ${record.productCode}`);
   }
 
-  const slug = slugify(apiTour.title);
-  const canonicalPath = `/engine5/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
+  const slug = `${slugify(apiTour.title)}-${record.productCode.toLowerCase()}`;
+  const canonicalPath = `/destinations/${record.destination.stateSlug}/${record.destination.citySlug}/tours/${slug}`;
   const bookingUrl = apiTour.bookingUrl;
 
   if (!apiTour.canonicalHeroUrl) {
@@ -57,13 +57,21 @@ export const mapViatorToEngine5Tour = (
     heroSelectionSource: apiTour.heroSelectionSource,
     heroSelectionSize: apiTour.heroSelectionSize,
     diagnostics: {
-      exactProductImageCandidateUrls: apiTour.heroSelectionDiagnostics.candidateUrls,
+      exactProductImageCandidateUrls:
+        apiTour.heroSelectionDiagnostics.candidateUrls,
       selectedCanonicalHeroUrl: apiTour.canonicalHeroUrl,
       pageHeroUrl: apiTour.canonicalHeroUrl,
       listingCardUrl: apiTour.canonicalHeroUrl,
       ogImageUrl: apiTour.canonicalHeroUrl,
       schemaImageUrl: apiTour.canonicalHeroUrl,
       allImageSurfacesIdentical: true,
+      heroSelectionSource: apiTour.heroSelectionSource,
+      ratingReviewSource:
+        typeof apiTour.rating === "number" &&
+        typeof apiTour.reviewCount === "number"
+          ? "api"
+          : "missing",
+      overrideUsed: apiTour.heroSelectionDiagnostics.overrideUsed,
     },
   };
 

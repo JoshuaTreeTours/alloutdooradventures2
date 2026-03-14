@@ -1,12 +1,12 @@
 import type { Engine5ProductRecord } from "../types";
 
 export const engine5ProofViatorRecord: Engine5ProductRecord = {
-  productCode: "132218P209",
+  productCode: "11069P1",
   destination: {
     country: "United States",
-    state: "California",
-    stateSlug: "california",
-    city: "Los Angeles",
-    citySlug: "los-angeles",
+    state: "Hawaii",
+    stateSlug: "hawaii",
+    city: "Hilo",
+    citySlug: "hilo",
   },
 };
