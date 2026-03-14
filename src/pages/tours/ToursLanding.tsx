@@ -102,6 +102,9 @@ export default function ToursLanding() {
   ] = useState("");
   const [selectedInternationalCity, setSelectedInternationalCity] =
     useState("");
+  const [inventoryType, setInventoryType] = useState<"tours" | "rentals">(
+    "tours"
+  );
 
   const canadaProvinces = useMemo(
     () =>
@@ -302,23 +305,28 @@ export default function ToursLanding() {
     return match?.name ?? selectedInternationalCity;
   }, [internationalCities, selectedInternationalCity]);
 
-  const rentalCount = filteredTours.filter(entry =>
-    isRentalTour(entry.tour)
-  ).length;
-  const hasTours = filteredTours.some(entry => !isRentalTour(entry.tour));
-  const allRentals =
-    filteredTours.length > 0 && rentalCount === filteredTours.length;
+  const displayedTours =
+    inventoryType === "rentals"
+      ? filteredTours.filter(entry => isRentalTour(entry.tour))
+      : filteredTours.filter(entry => !isRentalTour(entry.tour));
   const selectedPlaceLabel =
     selectedCountry && selectedInternationalCity
       ? selectedInternationalCityLabel
       : (selectedCity?.name ?? "");
-  const inventoryHeading = allRentals
-    ? `Rentals in ${selectedPlaceLabel}`
-    : rentalCount > 0 && hasTours
-      ? `Tours & Rentals in ${selectedPlaceLabel}`
+  const inventoryHeading =
+    inventoryType === "rentals"
+      ? `Equipment Rentals in ${selectedPlaceLabel}`
       : `All Tours in ${selectedPlaceLabel}`;
 
   const pageContent = useMemo(() => {
+    if (inventoryType === "rentals" && selectedCity) {
+      return {
+        title: `Equipment Rentals in ${selectedCity.name} | Outdoor Adventures`,
+        h1: `Equipment Rentals in ${selectedCity.name}`,
+        intro: `Explore self-guided equipment rentals in ${selectedCity.name}, ${selectedState?.name ?? "United States"}. Compare flexible duration options, pickup details, and rental terms to choose the right gear.`,
+      };
+    }
+
     if (selectedCity) {
       return {
         title: `Best Tours in ${selectedCity.name} | Outdoor Adventures`,
@@ -349,7 +357,7 @@ export default function ToursLanding() {
       intro:
         "Browse tours and outdoor adventures by state, city, or country to find experiences that fit your destination and travel style.",
     };
-  }, [selectedCity, selectedCountry, selectedState]);
+  }, [inventoryType, selectedCity, selectedCountry, selectedState]);
 
   const cityGuideRecord = useMemo(() => {
     if (!selectedState || !selectedCity) {
@@ -359,7 +367,11 @@ export default function ToursLanding() {
     return getGuideRecord(selectedState.slug, selectedCity.slug);
   }, [selectedCity, selectedState]);
 
-  const updateUrl = (stateSlug: string, citySlug: string) => {
+  const updateUrl = (
+    stateSlug: string,
+    citySlug: string,
+    type: "tours" | "rentals" = inventoryType
+  ) => {
     const query = new URLSearchParams();
 
     if (stateSlug) {
@@ -368,6 +380,10 @@ export default function ToursLanding() {
 
     if (citySlug) {
       query.set("city", citySlug);
+    }
+
+    if (type !== "tours") {
+      query.set("type", type);
     }
 
     const queryString = query.toString();
@@ -383,6 +399,11 @@ export default function ToursLanding() {
     const params = new URLSearchParams(window.location.search);
     const urlStateSlug = params.get("state");
     const urlCitySlug = params.get("city");
+    const urlType = params.get("type");
+
+    if (urlType === "rentals") {
+      setInventoryType("rentals");
+    }
 
     if (!urlStateSlug || !urlCitySlug) {
       didInitRef.current = true;
@@ -412,7 +433,7 @@ export default function ToursLanding() {
     setSelectedCountry("");
     setSelectedInternationalProvinceSlug("");
     setSelectedInternationalCity("");
-    updateUrl(nextStateSlug, "");
+    updateUrl(nextStateSlug, "", inventoryType);
   };
 
   const handleCityChange = (nextCitySlug: string) => {
@@ -420,7 +441,7 @@ export default function ToursLanding() {
     setSelectedCountry("");
     setSelectedInternationalProvinceSlug("");
     setSelectedInternationalCity("");
-    updateUrl(selectedStateSlug, nextCitySlug);
+    updateUrl(selectedStateSlug, nextCitySlug, inventoryType);
   };
 
   const handleCountryChange = (nextCountry: string) => {
@@ -429,7 +450,8 @@ export default function ToursLanding() {
     setSelectedInternationalCity("");
     setSelectedStateSlug("");
     setSelectedCitySlug("");
-    updateUrl("", "");
+    setInventoryType("tours");
+    updateUrl("", "", "tours");
 
     if (nextCountry === CANADA_COUNTRY_NAME) {
       window.location.assign("/destinations/world/canada");
@@ -442,7 +464,8 @@ export default function ToursLanding() {
     setSelectedInternationalCity("");
     setSelectedStateSlug("");
     setSelectedCitySlug("");
-    updateUrl("", "");
+    setInventoryType("tours");
+    updateUrl("", "", "tours");
 
     if (nextProvinceSlug) {
       window.location.assign(`/destinations/world/canada/${nextProvinceSlug}`);
@@ -453,7 +476,8 @@ export default function ToursLanding() {
     setSelectedInternationalCity(nextCity);
     setSelectedStateSlug("");
     setSelectedCitySlug("");
-    updateUrl("", "");
+    setInventoryType("tours");
+    updateUrl("", "", "tours");
 
     if (
       selectedCountry === CANADA_COUNTRY_NAME &&
@@ -479,6 +503,11 @@ export default function ToursLanding() {
 
       window.location.assign(`${basePath}/cities/${nextCity}`);
     }
+  };
+
+  const handleInventoryTypeChange = (type: "tours" | "rentals") => {
+    setInventoryType(type);
+    updateUrl(selectedStateSlug, selectedCitySlug, type);
   };
 
   return (
@@ -550,6 +579,31 @@ export default function ToursLanding() {
                 ))}
               </select>
             </label>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => handleInventoryTypeChange("tours")}
+              className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition ${
+                inventoryType === "tours"
+                  ? "border-[#2f8a3d] bg-[#2f8a3d] text-white"
+                  : "border-[#2f4a2f]/20 bg-white text-[#2f4a2f] hover:bg-[#f0f4ee]"
+              }`}
+            >
+              Tours
+            </button>
+            <button
+              type="button"
+              onClick={() => handleInventoryTypeChange("rentals")}
+              className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] transition ${
+                inventoryType === "rentals"
+                  ? "border-[#2f8a3d] bg-[#2f8a3d] text-white"
+                  : "border-[#2f4a2f]/20 bg-white text-[#2f4a2f] hover:bg-[#f0f4ee]"
+              }`}
+            >
+              Rentals
+            </button>
           </div>
         </section>
 
@@ -640,9 +694,11 @@ export default function ToursLanding() {
           </section>
         ) : null}
 
-        {filteredTours.length === 0 ? (
+        {displayedTours.length === 0 ? (
           <p className="mt-8 text-sm text-[#405040]">
-            Please select a location to view tours.
+            {inventoryType === "rentals"
+              ? "Please select a location to view rentals."
+              : "Please select a location to view tours."}
           </p>
         ) : (
           <section className="mt-10">
@@ -650,7 +706,7 @@ export default function ToursLanding() {
               {inventoryHeading}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {filteredTours.map(({ tour, href }) => (
+              {displayedTours.map(({ tour, href }) => (
                 <TourCard key={tour.id} tour={tour} href={href} />
               ))}
             </div>

@@ -21,8 +21,6 @@ import { getGuideRecord } from "../../../../utils/guides/guideRegistry";
 import {
   buildCategoryH1,
   buildCategorySeoTitle,
-  buildToursH1,
-  buildToursSeoTitle,
 } from "../../../../lib/seo/titleBuilder";
 import { isRentalTour } from "../../../../utils/isRentalTour";
 import { resolveHeroImageForRoute } from "../../../../utils/hero";
@@ -67,11 +65,14 @@ export default function CityToursIndexRoute({
       ? new URLSearchParams(window.location.search).get("activity")
       : null;
   const toursWithImages = tours.filter(entry => hasValidTourImage(entry.tour));
+  const toursOnlyWithImages = toursWithImages.filter(
+    entry => !isRentalTour(entry.tour)
+  );
   const filteredTours = activityFilter
-    ? toursWithImages.filter(entry =>
+    ? toursOnlyWithImages.filter(entry =>
         entry.tour.activitySlugs.includes(activityFilter)
       )
-    : toursWithImages;
+    : toursOnlyWithImages;
   const stateHref =
     basePathOverride ??
     (state?.isFallback
@@ -133,31 +134,14 @@ export default function CityToursIndexRoute({
   const regionLabel = state.name;
   const activityLabel = getActivityLabelFromSlug(activityFilter ?? undefined);
   const pageTitle = activityFilter
-    ? activityFilter === "rentals"
-      ? `Rentals in ${cityLabel} | Outdoor Adventures`
-      : buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
-    : buildToursSeoTitle({ city: cityLabel });
-  const rentalCount = filteredTours.filter(entry =>
-    isRentalTour(entry.tour)
-  ).length;
-  const hasTours = filteredTours.some(entry => !isRentalTour(entry.tour));
-  const allRentals =
-    filteredTours.length > 0 && rentalCount === filteredTours.length;
+    ? buildCategorySeoTitle({ city: cityLabel, activity: activityLabel })
+    : `All Tours in ${cityLabel} | Outdoor Adventures`;
   const pageH1 = activityFilter
-    ? activityFilter === "rentals"
-      ? `Rentals in ${cityLabel}`
-      : buildCategoryH1({ city: cityLabel, activity: activityLabel })
-    : allRentals
-      ? `Rentals in ${cityLabel}`
-      : rentalCount > 0 && hasTours
-        ? `Tours & Rentals in ${cityLabel}`
-        : buildToursH1({ city: cityLabel });
-  const pageIntro =
-    activityFilter === "rentals" || allRentals
-      ? `Explore self-guided equipment rentals in ${cityLabel}, ${regionLabel}. Compare pickup locations, flexible duration options, and rental details to choose the right gear for your trip.`
-      : isUsCityRoute
-        ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
-        : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
+    ? buildCategoryH1({ city: cityLabel, activity: activityLabel })
+    : `All Tours in ${cityLabel}`;
+  const pageIntro = isUsCityRoute
+    ? `Explore tours and outdoor adventures in ${cityLabel}, ${regionLabel}. From guided local experiences and scenic outings to small-group activities and destination highlights, these tours make it easy to discover the area.`
+    : `Explore tours and activities in ${cityLabel}, ${regionLabel}. From guided city experiences and cultural outings to day trips and outdoor adventures, these tours help travelers discover the destination with ease.`;
   const guideRecord =
     isUsCityRoute && !state.isFallback
       ? getGuideRecord(state.slug, city.slug)
@@ -188,6 +172,13 @@ export default function CityToursIndexRoute({
             <p className="mt-3 max-w-3xl text-sm text-white/90 md:text-base">
               {pageIntro}
             </p>
+            <Link
+              href={`/tours?state=${state.slug}&city=${city.slug}&type=rentals`}
+            >
+              <a className="mt-4 inline-flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white transition hover:bg-white/20">
+                Rentals in {city.name}
+              </a>
+            </Link>
             {guideRecord ? (
               <p className="mt-2 text-xs text-white/80">
                 Looking for curated recommendations? See our guide to the best
