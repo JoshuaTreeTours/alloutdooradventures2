@@ -1,16 +1,23 @@
 import type { Engine4TourViewModel } from "../../engine4/types";
 import type { Tour } from "../../data/tours.types";
-import type { Engine5NormalizedTour, Engine5ProductRecord } from "../types";
+import type {
+  Engine5NormalizedTour,
+  Engine5ProductRecord,
+  Engine5ViatorApiTour,
+} from "../types";
 import { getEngine5ViatorTourData } from "./getEngine5ViatorTourData";
 import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
 
-export const resolveEngine5Tour = async (
-  record: Engine5ProductRecord
-): Promise<{
+export type Engine5ResolvedTour = {
   tour: Engine4TourViewModel;
   normalized: Engine5NormalizedTour;
   listing: Tour;
-}> => {
+  apiTour: Engine5ViatorApiTour;
+};
+
+export const resolveEngine5Tour = async (
+  record: Engine5ProductRecord
+): Promise<Engine5ResolvedTour> => {
   const apiTour = await getEngine5ViatorTourData(record.productCode);
   const mapped = mapViatorToEngine5Tour(record, apiTour);
 
@@ -34,5 +41,6 @@ export const resolveEngine5Tour = async (
     tour,
     normalized: mapped.normalized,
     listing: mapped.listing,
+    apiTour,
   };
 };

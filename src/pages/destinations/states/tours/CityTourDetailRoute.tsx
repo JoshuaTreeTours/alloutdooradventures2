@@ -54,6 +54,7 @@ import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProduct
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import type { Engine4TourViewModel } from "../../../../engine4/types";
+import Engine5DirectApiTourPage from "../../../../engine5/components/Engine5DirectApiTourPage";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -76,7 +77,10 @@ import {
   getEngine5RecordByCanonicalSlug,
   isEngine5CanonicalTourSlug,
 } from "../../../../engine5/viator/liveTours";
-import { resolveEngine5Tour } from "../../../../engine5/viator/resolveEngine5Tour";
+import {
+  resolveEngine5Tour,
+  type Engine5ResolvedTour,
+} from "../../../../engine5/viator/resolveEngine5Tour";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -89,6 +93,8 @@ type CityTourDetailRouteProps = {
 type Engine5ResolvedTourPageProps = {
   tour: Engine4TourViewModel;
 };
+
+const ENGINE5_DIRECT_API_PILOT_PRODUCT_CODE = "11069P1";
 
 function Engine5ResolvedTourPage({ tour }: Engine5ResolvedTourPageProps) {
   useStructuredData([
@@ -105,9 +111,8 @@ function Engine5ResolvedTourPage({ tour }: Engine5ResolvedTourPageProps) {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
-  const [engine5Tour, setEngine5Tour] = useState<Engine4TourViewModel | null>(
-    null
-  );
+  const [engine5Resolved, setEngine5Resolved] =
+    useState<Engine5ResolvedTour | null>(null);
   const [engine5Error, setEngine5Error] = useState<string | null>(null);
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
@@ -131,7 +136,7 @@ export default function CityTourDetailRoute({
 
   useEffect(() => {
     if (!shouldResolveEngine5Tour) {
-      setEngine5Tour(null);
+      setEngine5Resolved(null);
       setEngine5Error(null);
       return;
     }
@@ -141,12 +146,12 @@ export default function CityTourDetailRoute({
     resolveEngine5Tour(matchedEngine5Record)
       .then(resolved => {
         if (!isActive) return;
-        setEngine5Tour(resolved.tour);
+        setEngine5Resolved(resolved);
         setEngine5Error(null);
       })
       .catch(error => {
         if (!isActive) return;
-        setEngine5Tour(null);
+        setEngine5Resolved(null);
         setEngine5Error(error instanceof Error ? error.message : String(error));
       });
 
@@ -164,7 +169,7 @@ export default function CityTourDetailRoute({
       );
     }
 
-    if (!engine5Tour) {
+    if (!engine5Resolved) {
       return (
         <main className="mx-auto max-w-4xl px-6 py-16 text-[#1f2a1f]">
           Loading Engine5 API product…
@@ -172,7 +177,14 @@ export default function CityTourDetailRoute({
       );
     }
 
-    return <Engine5ResolvedTourPage tour={engine5Tour} />;
+    if (
+      matchedEngine5Record?.productCode.toUpperCase() ===
+      ENGINE5_DIRECT_API_PILOT_PRODUCT_CODE
+    ) {
+      return <Engine5DirectApiTourPage resolved={engine5Resolved} />;
+    }
+
+    return <Engine5ResolvedTourPage tour={engine5Resolved.tour} />;
   }
 
   const engine2Tour =

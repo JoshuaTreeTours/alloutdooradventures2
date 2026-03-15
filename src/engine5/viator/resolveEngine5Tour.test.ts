@@ -64,6 +64,7 @@ describe("resolveEngine5Tour", () => {
     expect(resolved.tour.facts.duration).toBe("10 hours");
     expect(resolved.tour.content.itinerary).toEqual([]);
     expect(resolved.tour.content.faqs.length).toBe(1);
+    expect(resolved.apiTour.fromPrice).toBe("$299");
     expect(resolved.listing.productCode).toBe("11069P1");
     expect(resolved.normalized.diagnostics.allImageSurfacesIdentical).toBe(
       true
