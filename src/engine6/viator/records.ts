@@ -1,4 +1,4 @@
-import type { Engine6ProductRecord } from "../types";
+import type { Engine6ListingItem, Engine6ProductRecord } from "../types";
 
 export const engine6HiloVolcanoRecord: Engine6ProductRecord = {
   productCode: "11069P1",
@@ -18,3 +18,11 @@ export const ENGINE6_PRODUCT_RECORDS = [engine6HiloVolcanoRecord] as const;
 
 export const getEngine6RecordBySlug = (slug: string) =>
   ENGINE6_PRODUCT_RECORDS.find(record => record.slug === slug);
+
+export const getEngine6PilotFallbackListingItem = (): Engine6ListingItem => ({
+  id: `engine6-${engine6HiloVolcanoRecord.productCode}`,
+  title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+  shortDescription:
+    "Private full-day exploration of Hawaii Volcanoes National Park from Hilo with an eco-focused itinerary.",
+  href: engine6HiloVolcanoRecord.canonicalPath,
+});

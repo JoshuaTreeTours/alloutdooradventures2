@@ -33,7 +33,10 @@ import {
   mapEngine6PageToListingItem,
   getEngine6ViatorTourData,
 } from "../../../../engine6/viator/getEngine6ViatorTourData";
-import { engine6HiloVolcanoRecord } from "../../../../engine6/viator/records";
+import {
+  engine6HiloVolcanoRecord,
+  getEngine6PilotFallbackListingItem,
+} from "../../../../engine6/viator/records";
 import type { Engine6ListingItem } from "../../../../engine6/types";
 
 type CityToursIndexRouteProps = {
@@ -64,12 +67,15 @@ export default function CityToursIndexRoute({
 
   useEffect(() => {
     if (!state || !city || state.slug !== "hawaii" || city.slug !== "hilo") {
+      setEngine6ListingItem(null);
       return;
     }
 
+    setEngine6ListingItem(getEngine6PilotFallbackListingItem());
+
     getEngine6ViatorTourData(engine6HiloVolcanoRecord)
       .then(page => setEngine6ListingItem(mapEngine6PageToListingItem(page)))
-      .catch(() => setEngine6ListingItem(null));
+      .catch(() => setEngine6ListingItem(getEngine6PilotFallbackListingItem()));
   }, [state, city]);
   const tours =
     state && city
