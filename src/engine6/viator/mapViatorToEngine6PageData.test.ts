@@ -92,6 +92,29 @@ describe("mapViatorToEngine6PageData", () => {
     expect(page.fromPriceText).toBeUndefined();
   });
 
+
+  it("falls back to pricingInfo paths when pricingSummary amount is missing", () => {
+    const page = mapViatorToEngine6PageData({
+      record: engine6HiloVolcanoRecord,
+      payload: {
+        product: {
+          title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+          pricingInfo: {
+            currencyCode: "USD",
+            summary: {
+              fromPrice: 225,
+            },
+          },
+        },
+      },
+    });
+
+    expect(page.fromPrice).toBe(225);
+    expect(page.priceDebug?.resolvedPath).toBe(
+      "product.pricingInfo.summary.fromPrice"
+    );
+  });
+
   it("derives FAQs when raw faqs array is missing", () => {
     const page = mapViatorToEngine6PageData({
       record: engine6HiloVolcanoRecord,

@@ -22,8 +22,8 @@ export default function Engine6FactsCard({
   const factsPrice = formatFactsPrice(page);
 
   return (
-    <aside className="rounded-2xl border border-[#d6d1c7] bg-white p-5 text-[#1f2a1f] shadow-sm">
-      <p className="text-xs uppercase tracking-[0.2em] text-[#6a7b68]">From</p>
+    <aside className="rounded-2xl border border-white/20 bg-black/35 p-5 text-white shadow-sm backdrop-blur">
+      <p className="text-xs uppercase tracking-[0.2em] text-white/75">From</p>
       <p className="mt-1 text-2xl font-semibold">
         {factsPrice ? `${factsPrice} per person` : "Check live pricing"}
       </p>
@@ -32,14 +32,14 @@ export default function Engine6FactsCard({
           <RatingStars
             ratingValue={page.ratingValue}
             reviewCount={page.reviewCount}
-            className="text-[#1f6b2b]"
+            className="text-[#9effa8]"
           />
         </div>
       ) : null}
-      <dl className="mt-4 space-y-3 text-sm text-[#344434]">
+      <dl className="mt-4 space-y-3 text-sm text-white/95">
         {page.meetingPointShort ? (
           <div>
-            <dt className="text-xs uppercase tracking-[0.16em] text-[#6a7b68]">
+            <dt className="text-xs uppercase tracking-[0.16em] text-white/75">
               Meeting point
             </dt>
             <dd>{page.meetingPointShort}</dd>
@@ -47,7 +47,7 @@ export default function Engine6FactsCard({
         ) : null}
         {page.durationText ? (
           <div>
-            <dt className="text-xs uppercase tracking-[0.16em] text-[#6a7b68]">
+            <dt className="text-xs uppercase tracking-[0.16em] text-white/75">
               Duration
             </dt>
             <dd>{page.durationText}</dd>
@@ -55,7 +55,7 @@ export default function Engine6FactsCard({
         ) : null}
         {page.cancellationText ? (
           <div>
-            <dt className="text-xs uppercase tracking-[0.16em] text-[#6a7b68]">
+            <dt className="text-xs uppercase tracking-[0.16em] text-white/75">
               Cancellation
             </dt>
             <dd>{page.cancellationText}</dd>

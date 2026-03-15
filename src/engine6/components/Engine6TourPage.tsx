@@ -98,18 +98,18 @@ export default function Engine6TourPage({
         url={page.seo.canonicalUrl}
         image={page.seo.ogImage}
       />
-      <section className="bg-[#f3eee5]">
+      <section className="bg-[#152c17] text-white">
         <div className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-10">
           <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_520px] lg:items-start">
             <div>
-              <p className="text-xs uppercase tracking-[0.2em] text-[#5c6d5b]">
+              <p className="text-xs uppercase tracking-[0.2em] text-white/75">
                 {page.destinationLabel}
               </p>
               <h1 className="mt-2 text-3xl font-semibold leading-tight md:text-5xl">
                 {page.title}
               </h1>
               {fromPriceLabel ? (
-                <p className="mt-4 text-2xl font-semibold text-[#1f6b2b]">
+                <p className="mt-4 text-2xl font-semibold text-[#9effa8]">
                   {fromPriceLabel}
                 </p>
               ) : null}
@@ -119,7 +119,7 @@ export default function Engine6TourPage({
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-black/10 bg-black/10 shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-white/15 bg-black/25 shadow-sm">
               {page.heroImage ? (
                 <Image
                   src={page.heroImage}

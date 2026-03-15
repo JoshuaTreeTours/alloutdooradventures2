@@ -49,6 +49,17 @@ export default function Engine6HiloTourRoute({
           });
         }
 
+        if (!(typeof resolvedPage.fromPrice === "number" && resolvedPage.fromPrice > 0)) {
+          const attempts = resolvedPage.priceDebug?.attemptedPaths?.join(", ") ??
+            "product.pricingSummary.fromPrice.amount, product.pricingInfo.summary.fromPrice, product.pricingInfo.fromPrice, product.ticketTypes[].pricingInfo.summary.fromPrice";
+          const resolvedPath = resolvedPage.priceDebug?.resolvedPath ?? "none";
+
+          setError(
+            `Engine6 pilot missing non-zero price for ${record.productCode}. Attempted paths: ${attempts}. Resolved path: ${resolvedPath}.`
+          );
+          return;
+        }
+
         setPage(resolvedPage);
       })
       .catch(err => setError(err instanceof Error ? err.message : String(err)));

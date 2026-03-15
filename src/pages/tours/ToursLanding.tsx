@@ -700,12 +700,6 @@ export default function ToursLanding() {
           </section>
         ) : null}
 
-        {showEngine6HiloDiscovery ? (
-          <div className="mt-8">
-            <Engine6HiloPilotListingSection heading="ENGINE6 PILOT • Hilo discovery" />
-          </div>
-        ) : null}
-
         {displayedTours.length === 0 ? (
           <p className="mt-8 text-sm text-[#405040]">
             {inventoryType === "rentals"
@@ -718,6 +712,9 @@ export default function ToursLanding() {
               {inventoryHeading}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {showEngine6HiloDiscovery ? (
+                <Engine6HiloPilotListingSection embedded />
+              ) : null}
               {displayedTours.map(({ tour, href }) => (
                 <TourCard key={tour.id} tour={tour} href={href} />
               ))}

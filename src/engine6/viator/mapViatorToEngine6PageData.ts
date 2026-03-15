@@ -136,29 +136,83 @@ const formatMinutesToDuration = (minutes: number | undefined) => {
 };
 
 const extractPrice = (product: Record<string, unknown>) => {
+  const attempts: string[] = [
+    "product.pricingSummary.fromPrice.amount",
+    "product.pricingInfo.summary.fromPrice",
+    "product.pricingInfo.fromPrice",
+    "product.ticketTypes[].pricingInfo.summary.fromPrice",
+  ];
+
   const pricingSummary = asRecord(product.pricingSummary);
   const summaryFromPrice = asRecord(pricingSummary?.fromPrice);
 
-  const fromPrice = extractNumericPrice(summaryFromPrice?.amount);
+  const pricingInfo = asRecord(product.pricingInfo);
+  const pricingInfoSummary = asRecord(pricingInfo?.summary);
+
+  const ticketTypeRows = asArray(product.ticketTypes)
+    .map(item => asRecord(item))
+    .filter((row): row is Record<string, unknown> => Boolean(row));
+
+  const ticketTypePrices = ticketTypeRows
+    .map(row => {
+      const rowPricing = asRecord(row.pricingInfo);
+      const rowSummary = asRecord(rowPricing?.summary);
+      return (
+        extractNumericPrice(rowSummary?.fromPrice) ??
+        extractNumericPrice(rowPricing?.fromPrice)
+      );
+    })
+    .filter((value): value is number => typeof value === "number");
+
+  const candidates: Array<{ path: string; value: number | undefined }> = [
+    {
+      path: "product.pricingSummary.fromPrice.amount",
+      value: extractNumericPrice(summaryFromPrice?.amount),
+    },
+    {
+      path: "product.pricingInfo.summary.fromPrice",
+      value: extractNumericPrice(pricingInfoSummary?.fromPrice),
+    },
+    {
+      path: "product.pricingInfo.fromPrice",
+      value: extractNumericPrice(pricingInfo?.fromPrice),
+    },
+    {
+      path: "product.ticketTypes[].pricingInfo.summary.fromPrice",
+      value: ticketTypePrices.length ? Math.min(...ticketTypePrices) : undefined,
+    },
+  ];
+
+  const resolved = candidates.find(candidate => isValidCommercialPrice(candidate.value));
+
+  const fromPrice = resolved?.value;
+  const resolvedPath = resolved?.path;
+
   const currency =
     cleanText(summaryFromPrice?.currency) ??
     cleanText(pricingSummary?.currency) ??
+    cleanText(asRecord(pricingInfoSummary?.fromPrice)?.currencyCode) ??
+    cleanText(pricingInfo?.currencyCode) ??
     cleanText(product.currencyCode);
 
   const fromPriceText =
     sanitizePriceText(
       cleanText(summaryFromPrice?.formatted) ??
         cleanText(summaryFromPrice?.display) ??
-        cleanText(summaryFromPrice?.text)
+        cleanText(summaryFromPrice?.text) ??
+        extractPriceText(pricingInfoSummary?.fromPrice) ??
+        extractPriceText(pricingInfo?.fromPrice)
     ) ??
     (typeof fromPrice === "number" && fromPrice > 0
       ? `${currency ?? "USD"} ${fromPrice.toFixed(2)}`
       : undefined);
 
   return {
-    fromPrice: isValidCommercialPrice(fromPrice) ? fromPrice : undefined,
+    fromPrice,
     currency,
     fromPriceText,
+    attemptedPaths: attempts,
+    resolvedPath,
   };
 };
 
@@ -494,7 +548,8 @@ export const mapViatorToEngine6PageData = ({
     cleanText(product.webURL) ??
     record.canonicalPath;
 
-  const { fromPrice, currency, fromPriceText } = extractPrice(product);
+  const { fromPrice, currency, fromPriceText, attemptedPaths, resolvedPath } =
+    extractPrice(product);
   const { heroImage, galleryImages } = extractImages(product);
 
   const itinerary = extractItinerary(product);
@@ -525,9 +580,19 @@ export const mapViatorToEngine6PageData = ({
   const canonicalUrl = buildCanonicalUrl(record.canonicalPath);
   const seoDescription = (overview || title).slice(0, 158);
 
+  const reviewSummary = asRecord(product.reviewSummary);
+  const reviews = asRecord(product.reviews);
   const ratingValue =
-    asNumber(product.rating) ?? asNumber(product.averageRating);
-  const reviewCount = asNumber(product.reviewCount);
+    asNumber(product.rating) ??
+    asNumber(product.averageRating) ??
+    asNumber(reviewSummary?.averageRating) ??
+    asNumber(reviews?.combinedAverageRating) ??
+    asNumber(reviews?.averageRating);
+  const reviewCount =
+    asNumber(product.reviewCount) ??
+    asNumber(reviewSummary?.totalReviews) ??
+    asNumber(reviews?.totalReviews) ??
+    asNumber(reviews?.count);
 
   return {
     productCode: record.productCode,
@@ -542,6 +607,10 @@ export const mapViatorToEngine6PageData = ({
     fromPrice,
     fromPriceText,
     currency,
+    priceDebug: {
+      attemptedPaths,
+      resolvedPath,
+    },
     ratingValue,
     reviewCount,
     meetingPointFull,

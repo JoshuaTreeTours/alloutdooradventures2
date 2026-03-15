@@ -35,6 +35,10 @@ export type Engine6ResolvedTourPageData = {
   fromPrice?: number;
   fromPriceText?: string;
   currency?: string;
+  priceDebug?: {
+    attemptedPaths: string[];
+    resolvedPath?: string;
+  };
   ratingValue?: number;
   reviewCount?: number;
   meetingPointFull?: string;

@@ -13,8 +13,10 @@ import Engine6ListingCard from "./Engine6ListingCard";
 
 export default function Engine6HiloPilotListingSection({
   heading = "Engine6 API-first pilot",
+  embedded = false,
 }: {
   heading?: string;
+  embedded?: boolean;
 }) {
   const [item, setItem] = useState<Engine6ListingItem>(
     getEngine6PilotFallbackListingItem()
@@ -37,6 +39,10 @@ export default function Engine6HiloPilotListingSection({
       isActive = false;
     };
   }, []);
+
+  if (embedded) {
+    return <Engine6ListingCard item={item} />;
+  }
 
   return (
     <section className="mx-auto mt-8 max-w-6xl px-6">

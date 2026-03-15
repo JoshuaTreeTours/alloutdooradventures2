@@ -10,10 +10,10 @@ export default function Engine6ListingCard({
 }) {
   return (
     <article
-      className="overflow-hidden rounded-2xl border-2 border-[#2f8a3d]/40 bg-white shadow-sm"
+      className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm"
       data-testid="engine6-pilot-card"
     >
-      <div className="relative h-48 w-full bg-black/5">
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <div className="absolute left-3 top-3 z-10 rounded-full bg-[#2f8a3d] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
           ENGINE6 PILOT
         </div>
@@ -45,7 +45,7 @@ export default function Engine6ListingCard({
         <Link href={item.href}>
           <a
             data-testid="engine6-pilot-link"
-            className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white"
+            className="mt-4 inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#287a35]"
           >
             View Engine6 Tour
           </a>
