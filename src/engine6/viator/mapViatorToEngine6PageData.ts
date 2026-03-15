@@ -20,7 +20,8 @@ const asNumber = (value: unknown): number | undefined => {
     return value;
   }
   if (typeof value === "string") {
-    const parsed = Number.parseFloat(value);
+    const normalized = value.replace(/[^\d.-]/g, "");
+    const parsed = Number.parseFloat(normalized);
     return Number.isFinite(parsed) ? parsed : undefined;
   }
   return undefined;
@@ -129,6 +130,85 @@ const imageUrlListFromPath = (payload: Record<string, unknown>, path: string) =>
     .filter(item => item.startsWith("http"));
 };
 
+const resolvePriceFromPricingInfo = (payload: Record<string, unknown>) => {
+  const explicit = firstNonZeroNumber(payload, [
+    "pricingInfo.summary.fromPrice",
+    "pricingInfo.fromPrice",
+    "pricingInfo.priceFrom",
+  ]);
+  if (explicit) {
+    return explicit;
+  }
+
+  const pricingInfo = asRecord(payload.pricingInfo);
+  if (!pricingInfo) {
+    return null;
+  }
+
+  const queue: Array<{ value: unknown; path: string[] }> = [
+    { value: pricingInfo, path: ["pricingInfo"] },
+  ];
+
+  const commercialMatches: Array<{ value: number; path: string; rank: number }> = [];
+
+  while (queue.length) {
+    const current = queue.shift();
+    if (!current) {
+      break;
+    }
+
+    const record = asRecord(current.value);
+    if (record) {
+      Object.entries(record).forEach(([key, value]) => {
+        queue.push({ value, path: [...current.path, key] });
+      });
+      continue;
+    }
+
+    if (Array.isArray(current.value)) {
+      current.value.forEach((value, index) => {
+        queue.push({ value, path: [...current.path, String(index)] });
+      });
+      continue;
+    }
+
+    const leafKey = current.path[current.path.length - 1] ?? "";
+    const amount = asNumber(current.value);
+    if (!amount || amount <= 0) {
+      continue;
+    }
+
+    const joinedPath = current.path.join(".");
+    if (/partnerNetPrice/i.test(joinedPath)) {
+      continue;
+    }
+
+    if (/recommendedRetailPrice|displayPrice|retailPrice|fromPrice/i.test(leafKey)) {
+      const rank = /recommendedRetailPrice/i.test(leafKey)
+        ? 1
+        : /displayPrice/i.test(leafKey)
+          ? 2
+          : /retailPrice/i.test(leafKey)
+            ? 3
+            : 4;
+      commercialMatches.push({ value: amount, path: joinedPath, rank });
+    }
+  }
+
+  if (!commercialMatches.length) {
+    return null;
+  }
+
+  commercialMatches.sort((a, b) => {
+    if (a.rank !== b.rank) {
+      return a.rank - b.rank;
+    }
+    return a.value - b.value;
+  });
+
+  return { value: commercialMatches[0].value, path: commercialMatches[0].path };
+};
+
 const itineraryFromPayload = (payload: Record<string, unknown>) => {
   const itineraryCandidates = [
     "itinerary.itineraryItems",
@@ -217,18 +297,12 @@ export const mapViatorToEngine6PageData = (
   const heroImage =
     firstString(payload, ["images.0.variants.0.url", "images.0.url"])?.value || "";
   const galleryImages = Array.from(
-    new Set([
-      heroImage,
-      ...imageUrlListFromPath(payload, "images"),
-    ])
+    new Set([heroImage, ...imageUrlListFromPath(payload, "images")])
   ).filter(Boolean);
 
-  const priceCandidate = firstNonZeroNumber(payload, [
-    "pricing.summary.fromPrice",
-    "pricing.fromPrice",
-    "price.fromPrice",
-    "fromPrice",
-  ]);
+  const priceCandidate =
+    resolvePriceFromPricingInfo(payload) ??
+    firstNonZeroNumber(payload, ["pricing.summary.fromPrice", "pricing.fromPrice", "price.fromPrice", "fromPrice"]);
 
   if (!priceCandidate) {
     throw new Error(
@@ -240,11 +314,13 @@ export const mapViatorToEngine6PageData = (
     "reviews.combinedAverageRating",
     "reviews.averageRating",
     "rating",
+    "reviews.stats.averageRating",
   ]);
   const reviewCountCandidate = firstNumber(payload, [
     "reviews.totalReviews",
     "reviews.reviewCount",
     "reviewCount",
+    "reviews.stats.totalReviews",
   ]);
 
   const itinerary = itineraryFromPayload(payload);
@@ -310,8 +386,13 @@ export const mapViatorToEngine6PageData = (
     galleryImages,
     fromPrice: priceCandidate.value,
     currency:
-      firstString(payload, ["pricing.summary.currency", "currencyCode", "currency"])?.value ||
-      "USD",
+      firstString(payload, [
+        "pricingInfo.currencyCode",
+        "pricingInfo.summary.currencyCode",
+        "pricing.summary.currency",
+        "currencyCode",
+        "currency",
+      ])?.value || "USD",
     ratingValue: ratingCandidate?.value,
     reviewCount: reviewCountCandidate?.value,
     meetingPointFull,
