@@ -41,7 +41,20 @@ export default function Engine6HiloTourRoute({
 
     setResolverReached(true);
     getEngine6ViatorTourData(record)
-      .then(setPage)
+      .then(resolvedPage => {
+        if (record.productCode === "11069P1") {
+          console.info("[engine6][11069P1] resolved page fields", {
+            title: resolvedPage.title,
+            heroImage: resolvedPage.heroImage,
+            fromPrice: resolvedPage.fromPrice,
+            galleryImagesLength: resolvedPage.galleryImages.length,
+            itineraryLength: resolvedPage.itinerary.length,
+            faqsLength: resolvedPage.faqs.length,
+          });
+        }
+
+        setPage(resolvedPage);
+      })
       .catch(err => setError(err instanceof Error ? err.message : String(err)));
   }, [params.tourSlug]);
 

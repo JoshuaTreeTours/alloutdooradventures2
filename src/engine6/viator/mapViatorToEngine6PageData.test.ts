@@ -69,4 +69,91 @@ describe("mapViatorToEngine6PageData", () => {
     expect(page.faqs).toHaveLength(1);
     expect(page.heroImage).toBe("https://images.example.com/cover.jpg");
   });
+
+  it("extracts from Viator partner payload shape with pricingInfo and ticketTypes", () => {
+    const page = mapViatorToEngine6PageData({
+      record: engine6HiloVolcanoRecord,
+      payload: {
+        productCode: "11069P1",
+        title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+        description:
+          "Explore Volcanoes National Park with a private local guide and scenic stops.",
+        pricingInfo: {
+          currencyCode: "USD",
+          summary: {
+            fromPrice: 229,
+          },
+        },
+        ticketInfo: {
+          ticketDescription:
+            "Duration: 8 hours. Meeting point: Hilo Hotel pickup available.",
+        },
+        ticketTypes: [
+          {
+            pricingInfo: {
+              summary: {
+                fromPrice: 249,
+              },
+            },
+          },
+        ],
+        images: [
+          {
+            variants: [
+              {
+                url: "https://images.example.com/small.jpg",
+                width: 640,
+                height: 480,
+              },
+              {
+                url: "https://images.example.com/large.jpg",
+                width: 1920,
+                height: 1080,
+              },
+            ],
+          },
+          {
+            variants: [
+              {
+                url: "https://images.example.com/second-large.jpg",
+                width: 1600,
+                height: 1200,
+              },
+            ],
+          },
+        ],
+      },
+    });
+
+    expect(page.title).toContain("Hawaii Volcanoes");
+    expect(page.fromPrice).toBe(229);
+    expect(page.currency).toBe("USD");
+    expect(page.heroImage).toBe("https://images.example.com/large.jpg");
+    expect(page.galleryImages).toEqual([
+      "https://images.example.com/large.jpg",
+      "https://images.example.com/second-large.jpg",
+    ]);
+    expect(page.durationText).toBe("8 hours");
+    expect(page.meetingPointFull).toContain("Hilo Hotel pickup available");
+  });
+
+  it("is tolerant when optional fields are missing", () => {
+    const page = mapViatorToEngine6PageData({
+      record: engine6HiloVolcanoRecord,
+      payload: {
+        productCode: "11069P1",
+        title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+        images: [],
+      },
+    });
+
+    expect(page.title).toBe(
+      "Private Tour: Hawaii Volcanoes National Park Eco Tour"
+    );
+    expect(page.ratingValue).toBeUndefined();
+    expect(page.reviewCount).toBeUndefined();
+    expect(page.meetingPointShort).toBeUndefined();
+    expect(page.durationText).toBeUndefined();
+    expect(page.galleryImages).toEqual([]);
+  });
 });
