@@ -73,13 +73,13 @@ const extractFaqs = (
       const question =
         cleanText(row.question) ?? cleanText(row.title) ?? cleanText(row.q);
       const answer =
-        cleanText(row.answer) ??
-        cleanText(row.description) ??
-        cleanText(row.a);
+        cleanText(row.answer) ?? cleanText(row.description) ?? cleanText(row.a);
       if (!question || !answer) return undefined;
       return { question, answer };
     })
-    .filter((item): item is { question: string; answer: string } => Boolean(item));
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item)
+    );
 };
 
 const extractItinerary = (product: Record<string, unknown>) => {
@@ -172,14 +172,20 @@ const rankVariant = (variant: Engine5ImageVariant): number => {
   return 1_000_000_000 + area;
 };
 
-const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
-  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+const selectCanonicalHero = (
+  exactProductImages: Engine5ExactProductImage[]
+) => {
+  const withVariants = exactProductImages.filter(
+    image => image.variants.length > 0
+  );
   const coverImages = withVariants.filter(image => image.isCover);
   const candidates = coverImages.length > 0 ? coverImages : withVariants;
 
   const allCandidateUrls = Array.from(
     new Set(
-      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+      exactProductImages.flatMap(image =>
+        image.variants.map(variant => variant.url)
+      )
     )
   );
 
@@ -216,6 +222,44 @@ const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => 
   };
 };
 
+const readPath = (root: Record<string, unknown>, path: string): unknown => {
+  const segments = path.split(".");
+  let current: unknown = root;
+
+  for (const segment of segments) {
+    const row = asRecord(current);
+    if (!row || !(segment in row)) {
+      return undefined;
+    }
+    current = row[segment];
+  }
+
+  return current;
+};
+
+const extractFromPrice = (product: Record<string, unknown>) => {
+  const pathsTried = [
+    "priceFrom",
+    "fromPrice",
+    "pricing.summary.fromPrice",
+    "pricing.fromPrice",
+    "pricing.price.from",
+    "pricing.priceFrom",
+    "pricing.amount",
+    "price.amount",
+    "offers.fromPrice",
+    "offer.fromPrice",
+  ];
+
+  for (const path of pathsTried) {
+    const candidate = cleanText(readPath(product, path));
+    if (candidate) {
+      return { fromPrice: candidate, pathsTried };
+    }
+  }
+
+  return { fromPrice: undefined, pathsTried };
+};
 export const getEngine5ViatorTourData = async (
   productCode: string
 ): Promise<Engine5ViatorApiTour> => {
@@ -248,6 +292,7 @@ export const getEngine5ViatorTourData = async (
   const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
   const exactProductImages = extractExactProductImages(product);
   const heroSelection = selectCanonicalHero(exactProductImages);
+  const fromPrice = extractFromPrice(product);
 
   if (
     !title ||
@@ -268,8 +313,9 @@ export const getEngine5ViatorTourData = async (
     bookingUrl,
     duration: cleanText(product.duration) ?? cleanText(product.durationText),
     startTime:
-      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: cleanText(product.priceFrom) ?? cleanText(product.fromPrice),
+      cleanText(product.startTime) ??
+      cleanText(asRecord(product.schedule)?.startTime),
+    fromPrice: fromPrice.fromPrice,
     priceCurrency: cleanText(product.currencyCode),
     rating: asNumber(product.rating),
     reviewCount: asNumber(product.reviewCount),
@@ -292,6 +338,9 @@ export const getEngine5ViatorTourData = async (
       apiFetchAttempted: true,
       apiFetchSucceeded: true,
       descriptionSource: "api",
+    },
+    priceDiagnostics: {
+      pathsTried: fromPrice.pathsTried,
     },
   };
 };

@@ -46,6 +46,9 @@ export type Engine5ViatorApiTour = {
     apiFetchSucceeded: boolean;
     descriptionSource: "api";
   };
+  priceDiagnostics: {
+    pathsTried: string[];
+  };
 };
 
 export type Engine5NormalizedTour = {
@@ -68,7 +71,11 @@ export type Engine5NormalizedTour = {
     overview: string;
     highlights: string[];
     faqs: Array<{ question: string; answer: string }>;
-    itinerary: Array<{ title: string; description?: string; duration?: string }>;
+    itinerary: Array<{
+      title: string;
+      description?: string;
+      duration?: string;
+    }>;
     inclusions: string[];
     exclusions: string[];
     additionalInfo?: string;
@@ -89,7 +96,7 @@ export type Engine5NormalizedTour = {
 };
 
 export type Engine5ProductRecord = {
-  productCode: "132218P209";
+  productCode: string;
   destination: {
     country: string;
     state: string;
