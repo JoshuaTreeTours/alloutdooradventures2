@@ -3,6 +3,7 @@ import type {
   Engine5ImageVariant,
   Engine5ViatorApiTour,
 } from "../types";
+import { getEngine5ExactProductHeroOverride } from "./imageOverrides";
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") return undefined;
@@ -31,17 +32,70 @@ const asImageUrl = (value: unknown): string | undefined => {
 const asNumber = (value: unknown): number | undefined =>
   typeof value === "number" && Number.isFinite(value) ? value : undefined;
 
-const toStringArray = (value: unknown): string[] =>
+const asNumberLike = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value)) return value;
+  if (typeof value !== "string") return undefined;
+
+  const normalized = value.replace(/,/g, "").replace(/\/5$/, "").trim();
+  if (!normalized) return undefined;
+
+  const matched = normalized.match(/\d+(?:\.\d+)?/);
+  const parsed = Number(matched?.[0] ?? normalized);
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
+
+const getTextFromMixedValue = (value: unknown): string | undefined => {
+  const asString = cleanText(value);
+  if (asString) return asString;
+
+  const row = asRecord(value);
+  if (!row) return undefined;
+
+  return (
+    cleanText(row.text) ??
+    cleanText(row.value) ??
+    cleanText(row.title) ??
+    cleanText(row.label) ??
+    cleanText(row.description) ??
+    cleanText(row.summary) ??
+    cleanText(row.name)
+  );
+};
+
+const getTextArrayFromMixedValues = (value: unknown): string[] =>
   Array.isArray(value)
     ? value
-        .map(item => cleanText(item))
+        .map(item => getTextFromMixedValue(item))
         .filter((item): item is string => Boolean(item))
     : [];
 
+const toStringArray = getTextArrayFromMixedValues;
+
+const asArray = (value: unknown): unknown[] =>
+  Array.isArray(value) ? value : [];
+
 const extractHighlights = (product: Record<string, unknown>): string[] => {
-  const highlights =
-    toStringArray(product.highlights) ||
-    toStringArray(asRecord(product.additionalInfo)?.highlights);
+  const highlightsFromArray = toStringArray(product.highlights);
+
+  const highlightsFromObjects = Array.isArray(product.highlights)
+    ? product.highlights
+        .map(item => {
+          const row = asRecord(item);
+          if (!row) return undefined;
+          return (
+            cleanText(row.text) ??
+            cleanText(row.title) ??
+            cleanText(row.description)
+          );
+        })
+        .filter((item): item is string => Boolean(item))
+    : [];
+
+  const highlights = [
+    ...highlightsFromArray,
+    ...highlightsFromObjects,
+    ...toStringArray(asRecord(product.additionalInfo)?.highlights),
+  ];
 
   if (highlights.length > 0) return highlights;
 
@@ -59,10 +113,17 @@ const extractHighlights = (product: Record<string, unknown>): string[] => {
 const extractFaqs = (
   product: Record<string, unknown>
 ): Array<{ question: string; answer: string }> => {
-  const raw =
-    (product.faqs as unknown[]) ??
-    (asRecord(product.additionalInfo)?.faqs as unknown[]) ??
-    [];
+  const raw = [
+    ...asArray(product.faqs),
+    ...asArray(product.faq),
+    ...asArray(product.questionsAndAnswers),
+    ...asArray(getFromNested(product, ["faq", "items"])),
+    ...asArray(getFromNested(product, ["faq", "questions"])),
+    ...asArray(getFromNested(product, ["faqs", "items"])),
+    ...asArray(getFromNested(product, ["faqs", "questions"])),
+    ...asArray(getFromNested(product, ["productFaqs", "items"])),
+    ...asArray(asRecord(product.additionalInfo)?.faqs),
+  ];
 
   if (!Array.isArray(raw)) return [];
 
@@ -71,22 +132,34 @@ const extractFaqs = (
       const row = asRecord(item);
       if (!row) return undefined;
       const question =
-        cleanText(row.question) ?? cleanText(row.title) ?? cleanText(row.q);
+        cleanText(row.question) ??
+        cleanText(row.questionText) ??
+        cleanText(row.title) ??
+        cleanText(row.q);
       const answer =
         cleanText(row.answer) ??
+        cleanText(row.answerText) ??
         cleanText(row.description) ??
         cleanText(row.a);
       if (!question || !answer) return undefined;
       return { question, answer };
     })
-    .filter((item): item is { question: string; answer: string } => Boolean(item));
+    .filter((item): item is { question: string; answer: string } =>
+      Boolean(item)
+    );
 };
 
 const extractItinerary = (product: Record<string, unknown>) => {
-  const raw =
-    (product.itineraryItems as unknown[]) ??
-    (product.itinerary as unknown[]) ??
-    [];
+  const raw = [
+    ...asArray(product.itineraryItems),
+    ...asArray(product.itinerary),
+    ...asArray(getFromNested(product, ["itinerary", "items"])),
+    ...asArray(getFromNested(product, ["itinerary", "itineraryItems"])),
+    ...asArray(getFromNested(product, ["itinerary", "stops"])),
+    ...asArray(getFromNested(product, ["whatToExpect", "items"])),
+    ...asArray(getFromNested(product, ["whatToExpect", "stops"])),
+    ...asArray(asRecord(product.description)?.sections),
+  ];
 
   if (!Array.isArray(raw)) return [];
 
@@ -97,7 +170,12 @@ const extractItinerary = (product: Record<string, unknown>) => {
       const title =
         cleanText(row.title) ?? cleanText(row.name) ?? cleanText(row.label);
       const description = cleanText(row.description) ?? cleanText(row.summary);
-      const duration = cleanText(row.duration) ?? cleanText(row.durationText);
+      const duration =
+        cleanText(row.duration) ??
+        cleanText(row.durationText) ??
+        (typeof row.durationMinutes === "number"
+          ? `${row.durationMinutes} minutes`
+          : undefined);
       if (!title) return undefined;
       return { title, description, duration };
     })
@@ -107,6 +185,193 @@ const extractItinerary = (product: Record<string, unknown>) => {
       ): item is { title: string; description?: string; duration?: string } =>
         Boolean(item)
     );
+};
+
+const getFromNested = (
+  product: Record<string, unknown>,
+  path: string[]
+): unknown => {
+  let current: unknown = product;
+  for (const segment of path) {
+    const row = asRecord(current);
+    if (!row) return undefined;
+    current = row[segment];
+  }
+  return current;
+};
+
+const getMeetingPointText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const direct = cleanText(product.meetingPoint);
+  if (direct) return direct;
+
+  const meetingPoint = asRecord(product.meetingPoint);
+  if (meetingPoint) {
+    const addressText = [
+      cleanText(meetingPoint.address),
+      cleanText(meetingPoint.description),
+      cleanText(asRecord(meetingPoint.location)?.name),
+      cleanText(asRecord(meetingPoint.location)?.address),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (addressText) return addressText;
+  }
+
+  const meetingPoints = asArray(product.meetingPoints)
+    .map(item => asRecord(item))
+    .filter((item): item is Record<string, unknown> => Boolean(item));
+
+  const firstMeetingPoint = meetingPoints[0];
+  if (firstMeetingPoint) {
+    const fromMeetingPoints = [
+      cleanText(firstMeetingPoint.description),
+      cleanText(firstMeetingPoint.name),
+      cleanText(asRecord(firstMeetingPoint.location)?.name),
+      cleanText(asRecord(firstMeetingPoint.location)?.address),
+      cleanText(asRecord(firstMeetingPoint.address)?.street),
+      cleanText(asRecord(firstMeetingPoint.address)?.formattedAddress),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (fromMeetingPoints) return fromMeetingPoints;
+  }
+
+  const logisticsPoint =
+    asRecord(getFromNested(product, ["logistics", "startPoint"])) ??
+    asRecord(getFromNested(product, ["logistics", "meetingPoint"]));
+
+  if (logisticsPoint) {
+    const fromLogistics = [
+      cleanText(logisticsPoint.name),
+      cleanText(logisticsPoint.description),
+      cleanText(asRecord(logisticsPoint.location)?.name),
+      cleanText(asRecord(logisticsPoint.location)?.address),
+      cleanText(asRecord(logisticsPoint.address)?.formattedAddress),
+    ]
+      .filter((item): item is string => Boolean(item))
+      .join(", ");
+
+    if (fromLogistics) return fromLogistics;
+  }
+
+  return cleanText(getFromNested(product, ["logistics", "meetingPoint"]));
+};
+
+const getCancellationText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  return (
+    cleanText(product.cancellationPolicy) ??
+    cleanText(getFromNested(product, ["cancellation", "summary"])) ??
+    cleanText(getFromNested(product, ["cancellationPolicy", "description"])) ??
+    cleanText(getFromNested(product, ["cancellationPolicy", "text"]))
+  );
+};
+
+const getFromPriceText = (
+  product: Record<string, unknown>,
+  currencyCode?: string
+): string | undefined => {
+  const fromPriceRecord =
+    asRecord(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    asRecord(getFromNested(product, ["pricing", "fromPrice"]));
+
+  const fromPriceRecordText =
+    cleanText(fromPriceRecord?.formatted) ??
+    cleanText(fromPriceRecord?.display) ??
+    cleanText(fromPriceRecord?.text);
+
+  if (fromPriceRecordText) return fromPriceRecordText;
+
+  const textPrice =
+    cleanText(product.priceFrom) ??
+    cleanText(product.fromPrice) ??
+    cleanText(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    cleanText(getFromNested(product, ["pricing", "fromPrice"])) ??
+    cleanText(getFromNested(product, ["pricingSummary", "fromPrice"])) ??
+    cleanText(
+      getFromNested(product, ["pricingSummary", "fromPriceFormatted"])
+    ) ??
+    cleanText(getFromNested(product, ["pricing", "fromPriceFormatted"]));
+
+  if (textPrice) return textPrice;
+
+  const numericPrice =
+    asNumberLike(product.priceFrom) ??
+    asNumberLike(product.fromPrice) ??
+    asNumberLike(getFromNested(product, ["pricing", "summary", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricing", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricingSummary", "fromPrice"])) ??
+    asNumberLike(getFromNested(product, ["pricingSummary", "amount"])) ??
+    asNumberLike(fromPriceRecord?.amount) ??
+    asNumberLike(fromPriceRecord?.price) ??
+    asNumberLike(getFromNested(product, ["pricing", "summary", "amount"])) ??
+    asNumberLike(getFromNested(product, ["pricing", "amount"]));
+
+  if (typeof numericPrice !== "number") return undefined;
+
+  if (currencyCode) {
+    try {
+      const formatted = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: currencyCode,
+        maximumFractionDigits: 2,
+      }).format(numericPrice);
+      if (formatted) return formatted;
+    } catch {
+      // noop; fallback below
+    }
+  }
+
+  return `$${numericPrice.toFixed(2)}`;
+};
+
+const getPriceCurrencyCode = (product: Record<string, unknown>) => {
+  return (
+    cleanText(product.currencyCode) ??
+    cleanText(getFromNested(product, ["pricing", "summary", "currencyCode"])) ??
+    cleanText(getFromNested(product, ["pricing", "currencyCode"])) ??
+    cleanText(getFromNested(product, ["pricingSummary", "currencyCode"]))
+  );
+};
+
+const getDurationText = (
+  product: Record<string, unknown>
+): string | undefined => {
+  const explicitDuration =
+    cleanText(product.duration) ??
+    cleanText(product.durationText) ??
+    cleanText(getFromNested(product, ["duration", "text"])) ??
+    cleanText(getFromNested(product, ["duration", "description"])) ??
+    cleanText(getFromNested(product, ["durationSummary", "text"])) ??
+    cleanText(getFromNested(product, ["logistics", "duration"]));
+
+  if (explicitDuration) return explicitDuration;
+
+  const minutes =
+    asNumberLike(
+      getFromNested(product, ["duration", "fixedDurationInMinutes"])
+    ) ??
+    asNumberLike(getFromNested(product, ["duration", "durationInMinutes"])) ??
+    asNumberLike(
+      getFromNested(product, ["duration", "maxDurationInMinutes"])
+    ) ??
+    asNumberLike(
+      getFromNested(product, ["duration", "minDurationInMinutes"])
+    ) ??
+    asNumberLike(getFromNested(product, ["logistics", "durationInMinutes"]));
+
+  if (typeof minutes !== "number") return undefined;
+  if (minutes >= 60 && minutes % 60 === 0) {
+    const hours = minutes / 60;
+    return `${hours} hour${hours === 1 ? "" : "s"}`;
+  }
+
+  return `${minutes} minutes`;
 };
 
 const extractExactProductImages = (
@@ -172,14 +437,20 @@ const rankVariant = (variant: Engine5ImageVariant): number => {
   return 1_000_000_000 + area;
 };
 
-const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
-  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+const selectCanonicalHero = (
+  exactProductImages: Engine5ExactProductImage[]
+) => {
+  const withVariants = exactProductImages.filter(
+    image => image.variants.length > 0
+  );
   const coverImages = withVariants.filter(image => image.isCover);
   const candidates = coverImages.length > 0 ? coverImages : withVariants;
 
   const allCandidateUrls = Array.from(
     new Set(
-      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+      exactProductImages.flatMap(image =>
+        image.variants.map(variant => variant.url)
+      )
     )
   );
 
@@ -247,7 +518,20 @@ export const getEngine5ViatorTourData = async (
     cleanText(product.description);
   const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
   const exactProductImages = extractExactProductImages(product);
-  const heroSelection = selectCanonicalHero(exactProductImages);
+  const heroSelectionFromApi = selectCanonicalHero(exactProductImages);
+  const overrideHeroUrl = getEngine5ExactProductHeroOverride(normalizedCode);
+  const shouldUseOverride =
+    heroSelectionFromApi.heroSelectionSource === "missing" &&
+    Boolean(overrideHeroUrl);
+
+  const heroSelection = shouldUseOverride
+    ? {
+        canonicalHeroUrl: overrideHeroUrl,
+        heroSelectionSource: "exact-product-override" as const,
+        heroSelectionSize: undefined,
+        candidateUrls: heroSelectionFromApi.candidateUrls,
+      }
+    : heroSelectionFromApi;
 
   if (
     !title ||
@@ -261,32 +545,56 @@ export const getEngine5ViatorTourData = async (
     );
   }
 
+  const priceCurrency = getPriceCurrencyCode(product);
+
   return {
     productCode: normalizedCode,
     title,
     description,
     bookingUrl,
-    duration: cleanText(product.duration) ?? cleanText(product.durationText),
+    duration: getDurationText(product),
     startTime:
-      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: cleanText(product.priceFrom) ?? cleanText(product.fromPrice),
-    priceCurrency: cleanText(product.currencyCode),
-    rating: asNumber(product.rating),
-    reviewCount: asNumber(product.reviewCount),
-    meetingPoint: cleanText(product.meetingPoint),
-    cancellationPolicy: cleanText(product.cancellationPolicy),
+      cleanText(product.startTime) ??
+      cleanText(asRecord(product.schedule)?.startTime),
+    fromPrice: getFromPriceText(product, priceCurrency),
+    priceCurrency,
+    rating:
+      asNumberLike(product.rating) ??
+      asNumberLike(
+        getFromNested(product, ["reviewSummary", "combinedAverageRating"])
+      ) ??
+      asNumberLike(
+        getFromNested(product, ["reviews", "combinedAverageRating"])
+      ),
+    reviewCount:
+      asNumberLike(product.reviewCount) ??
+      asNumberLike(getFromNested(product, ["reviewSummary", "totalReviews"])) ??
+      asNumberLike(getFromNested(product, ["reviews", "totalReviews"])),
+    meetingPoint: getMeetingPointText(product),
+    cancellationPolicy: getCancellationText(product),
     itinerary: extractItinerary(product),
     highlights: extractHighlights(product),
     faqs: extractFaqs(product),
-    inclusions: toStringArray(product.inclusions),
-    exclusions: toStringArray(product.exclusions),
-    additionalInfo: toStringArray(product.additionalInfo),
+    inclusions: [
+      ...toStringArray(product.inclusions),
+      ...toStringArray(getFromNested(product, ["included"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
+    exclusions: [
+      ...toStringArray(product.exclusions),
+      ...toStringArray(getFromNested(product, ["excluded"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
+    additionalInfo: [
+      ...toStringArray(product.additionalInfo),
+      ...toStringArray(getFromNested(product, ["importantInformation"])),
+      ...toStringArray(getFromNested(product, ["travelerInformation"])),
+    ].filter((item, index, all) => all.indexOf(item) === index),
     exactProductImages,
     canonicalHeroUrl: heroSelection.canonicalHeroUrl,
     heroSelectionSource: heroSelection.heroSelectionSource,
     heroSelectionSize: heroSelection.heroSelectionSize,
     heroSelectionDiagnostics: {
       candidateUrls: heroSelection.candidateUrls,
+      overrideUsed: shouldUseOverride,
     },
     provenance: {
       apiFetchAttempted: true,

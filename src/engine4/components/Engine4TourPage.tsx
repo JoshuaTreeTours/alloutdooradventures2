@@ -38,6 +38,15 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
   const hasExclusions = exclusions.length > 0;
   const hasAdditionalInfo = hasText(tour.content.additionalInfo);
   const hasWhatToExpect = hasText(tour.content.whatToExpect);
+  const shouldRenderHiloEngine5Debug =
+    tour.canonicalPath ===
+    "/destinations/hawaii/hilo/tours/private-tour-hawaii-volcanoes-national-park-eco-tour-11069p1";
+  const itineraryCount = Array.isArray(tour.content.itinerary)
+    ? tour.content.itinerary.length
+    : 0;
+  const faqCount = Array.isArray(tour.content.faqs)
+    ? tour.content.faqs.length
+    : 0;
   const destinationStatePath = `/destinations/${tour.destination.stateSlug}`;
   const destinationCityPath = `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}`;
   const moreTours = getEngine4ListingEntries(
@@ -170,6 +179,34 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-10">
+        {shouldRenderHiloEngine5Debug ? (
+          <div className="mb-6 rounded-xl border border-[#c8d5c8] bg-white/80 p-4 text-sm text-[#1f2a1f]">
+            <p className="font-semibold">
+              Engine5 Hilo debug (rendered tour object)
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>
+                <strong>facts.priceFrom:</strong>{" "}
+                {tour.facts.priceFrom || "<empty>"}
+              </li>
+              <li>
+                <strong>facts.meetingPointShort:</strong>{" "}
+                {tour.facts.meetingPointShort || "<empty>"}
+              </li>
+              <li>
+                <strong>facts.duration:</strong>{" "}
+                {tour.facts.duration || "<empty>"}
+              </li>
+              <li>
+                <strong>content.itinerary.length:</strong>{" "}
+                {String(itineraryCount)}
+              </li>
+              <li>
+                <strong>content.faqs.length:</strong> {String(faqCount)}
+              </li>
+            </ul>
+          </div>
+        ) : null}
         <h2 className="text-2xl font-semibold">Overview</h2>
         <p className="mt-3 leading-7 text-[#334433]">{overview}</p>
 

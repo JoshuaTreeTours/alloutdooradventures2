@@ -60,11 +60,7 @@ import ActivityStateTours from "./pages/tours/ActivityStateTours";
 import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
-import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
-import {
-  ENGINE5_PROOF_LISTING_PATH,
-  ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
-} from "./engine5/routes";
+import { ENGINE5_PROOF_LISTING_PATH } from "./engine5/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -284,10 +280,6 @@ export default function App() {
         <Route
           path={ENGINE5_PROOF_LISTING_PATH}
           component={Engine5ProofListingRoute}
-        />
-        <Route
-          path={ENGINE5_PROOF_TOUR_ROUTE_PATTERN}
-          component={Engine5ProofTourPage}
         />
         <Route path="/guides" component={GuidesIndex} />
         <Route path="/guides/us" component={UsGuidesIndex} />
