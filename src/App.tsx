@@ -70,6 +70,7 @@ import {
   ENGINE6_HILO_PREVIEW_ROUTE_PATTERN,
   ENGINE6_HILO_TOUR_ROUTE_PATTERN,
 } from "./engine6/routes";
+import { engine6HiloVolcanoRecord } from "./engine6/viator/records";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -114,6 +115,25 @@ const MexicoCityBookSlugRedirect = ({
     to={`/destinations/mexico/ciudad-de-mexico/tours/${params.tourSlug}/book`}
   />
 );
+
+type HiloTourParams = {
+  params: {
+    tourSlug: string;
+  };
+};
+
+const HiloTourRouteBridge = ({ params }: HiloTourParams) =>
+  params.tourSlug === engine6HiloVolcanoRecord.slug ? (
+    <Engine6HiloTourRoute params={params} />
+  ) : (
+    <CityTourDetailRoute
+      params={{
+        stateSlug: "hawaii",
+        citySlug: "hilo",
+        tourSlug: params.tourSlug,
+      }}
+    />
+  );
 
 export default function App() {
   return (
@@ -259,7 +279,7 @@ export default function App() {
         />
         <Route
           path={ENGINE6_HILO_TOUR_ROUTE_PATTERN}
-          component={Engine6HiloTourRoute}
+          component={HiloTourRouteBridge}
         />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
