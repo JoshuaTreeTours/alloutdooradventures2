@@ -31,7 +31,7 @@ export default function StateLandingRoute({ params }: StateLandingRouteProps) {
 
   return (
     <>
-      {state.slug === "hawaii" ? (
+      {params.stateSlug === "hawaii" ? (
         <Engine6HiloPilotListingSection heading="Featured Engine6 Hawaii tour" />
       ) : null}
       <DestinationLandingTemplate state={state} tours={tours} />

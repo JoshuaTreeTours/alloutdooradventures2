@@ -42,7 +42,8 @@ export default function CityRoute({ params }: CityRouteProps) {
         ? getToursByCityUnified(state.slug, city.slug).map(entry => entry.tour)
         : undefined;
 
-  const isHiloHawaii = state.slug === "hawaii" && city.slug === "hilo";
+  const isHiloHawaii =
+    params.stateSlug === "hawaii" && params.citySlug === "hilo";
 
   return (
     <>

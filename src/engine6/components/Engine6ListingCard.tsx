@@ -9,8 +9,14 @@ export default function Engine6ListingCard({
   item: Engine6ListingItem;
 }) {
   return (
-    <article className="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-sm">
+    <article
+      className="overflow-hidden rounded-2xl border-2 border-[#2f8a3d]/40 bg-white shadow-sm"
+      data-testid="engine6-pilot-card"
+    >
       <div className="relative h-48 w-full bg-black/5">
+        <div className="absolute left-3 top-3 z-10 rounded-full bg-[#2f8a3d] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white">
+          ENGINE6 PILOT
+        </div>
         {item.heroImage ? (
           <Image
             src={item.heroImage}
@@ -35,7 +41,10 @@ export default function Engine6ListingCard({
           ) : null}
         </div>
         <Link href={item.href}>
-          <a className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white">
+          <a
+            data-testid="engine6-pilot-link"
+            className="mt-4 inline-flex rounded-full bg-[#2f8a3d] px-4 py-2 text-sm font-semibold text-white"
+          >
             View Engine6 Tour
           </a>
         </Link>

@@ -66,7 +66,10 @@ export default function CityToursIndexRoute({
   );
 
   useEffect(() => {
-    if (!state || !city || state.slug !== "hawaii" || city.slug !== "hilo") {
+    const isHiloRoute =
+      params.stateSlug === "hawaii" && params.citySlug === "hilo";
+
+    if (!state || !city || !isHiloRoute) {
       setEngine6ListingItem(null);
       return;
     }
@@ -76,7 +79,7 @@ export default function CityToursIndexRoute({
     getEngine6ViatorTourData(engine6HiloVolcanoRecord)
       .then(page => setEngine6ListingItem(mapEngine6PageToListingItem(page)))
       .catch(() => setEngine6ListingItem(getEngine6PilotFallbackListingItem()));
-  }, [state, city]);
+  }, [city, params.citySlug, params.stateSlug, state]);
   const tours =
     state && city
       ? isFlagstaff
