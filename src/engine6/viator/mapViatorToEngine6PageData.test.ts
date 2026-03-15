@@ -75,6 +75,46 @@ describe("mapViatorToEngine6PageData", () => {
     );
   });
 
+
+
+  it("reads amount-style nested commercial price objects under pricingInfo", () => {
+    const page = mapViatorToEngine6PageData({
+      pricingInfo: {
+        summary: {
+          fromPrice: 0,
+        },
+        pricingDetails: [
+          {
+            pricingPackage: {
+              ageBandPrices: [
+                {
+                  ageBand: "ADULT",
+                  price: {
+                    recommendedRetailPrice: {
+                      amount: "311.04",
+                      currencyCode: "USD",
+                    },
+                    partnerNetPrice: {
+                      amount: "255.00",
+                      currencyCode: "USD",
+                    },
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+      description: "Overview",
+    });
+
+    expect(page.fromPrice).toBe(311.04);
+    expect(page.currency).toBe("USD");
+    expect(page.fieldPathAudit.pricePath).toBe(
+      "pricingInfo.pricingDetails.0.pricingPackage.ageBandPrices.0.price.recommendedRetailPrice.amount"
+    );
+  });
+
   it("throws when only zero-priced fields are present", () => {
     expect(() =>
       mapViatorToEngine6PageData({
