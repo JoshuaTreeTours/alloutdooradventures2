@@ -3,14 +3,14 @@ import { describe, expect, it } from "vitest";
 import { mapViatorToEngine6PageData } from "./mapViatorToEngine6PageData";
 
 describe("mapViatorToEngine6PageData", () => {
-  it("maps hero/title/price from payload and tracks price paths", () => {
+  it("extracts price from deployed payload path pricing.summary.fromPriceFormatted", () => {
     const mapped = mapViatorToEngine6PageData({
       title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
       shortDescription: "Overview",
       productUrl: "https://www.viator.com/tours/Hilo/example/d669-11069P1",
       pricing: {
         summary: {
-          fromPrice: "$255.00",
+          fromPriceFormatted: "$255.00",
         },
       },
       rating: 4.8,
@@ -33,8 +33,8 @@ describe("mapViatorToEngine6PageData", () => {
     expect(mapped.page.heroImage).toContain("dynamic-media.tacdn.com");
     expect(mapped.page.facts.priceFrom).toBe("$255.00");
     expect(mapped.page.facts.reviewCount).toBe(12);
-    expect(mapped.priceDiagnostics.pathsTried).toContain(
-      "pricing.summary.fromPrice"
+    expect(mapped.priceDiagnostics.selectedPath).toBe(
+      "pricing.summary.fromPriceFormatted"
     );
   });
 });

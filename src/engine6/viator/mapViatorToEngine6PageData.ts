@@ -2,6 +2,7 @@ import type { Engine4TourViewModel } from "../../engine4/types";
 import {
   ENGINE6_HILO_PILOT_CITY_SLUG,
   ENGINE6_HILO_PILOT_PRODUCT_CODE,
+  ENGINE6_HILO_PRICE_PATHS,
   ENGINE6_HILO_PILOT_STATE_SLUG,
   ENGINE6_HILO_PILOT_TOUR_SLUG,
 } from "../hiloPilot";
@@ -11,6 +12,7 @@ type Engine6MappedPageData = {
   priceDiagnostics: {
     pathsTried: string[];
     selectedPath?: string;
+    rawValue?: unknown;
   };
 };
 
@@ -37,35 +39,82 @@ const toStringArray = (value: unknown): string[] =>
         .filter((item): item is string => Boolean(item))
     : [];
 
+const asPathSegment = (segment: string): string | number => {
+  if (/^\d+$/.test(segment)) {
+    return Number(segment);
+  }
+  return segment;
+};
+
 const readPath = (root: Record<string, unknown>, path: string): unknown => {
   let current: unknown = root;
-  for (const key of path.split(".")) {
+  for (const rawSegment of path.split(".")) {
+    const segment = asPathSegment(rawSegment);
+
+    if (typeof segment === "number") {
+      if (!Array.isArray(current) || segment >= current.length) {
+        return undefined;
+      }
+      current = current[segment];
+      continue;
+    }
+
     const row = asRecord(current);
-    if (!row || !(key in row)) {
+    if (!row || !(segment in row)) {
       return undefined;
     }
-    current = row[key];
+
+    current = row[segment];
   }
+
   return current;
 };
 
-const resolvePrice = (product: Record<string, unknown>) => {
-  const pathsTried = [
-    "fromPrice",
-    "priceFrom",
-    "pricing.summary.fromPrice",
-    "pricing.fromPrice",
-    "price.amount",
-  ];
+const toPriceText = (value: unknown): string | undefined => {
+  if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    return `$${value.toFixed(2)}`;
+  }
 
-  for (const path of pathsTried) {
-    const value = cleanText(readPath(product, path));
-    if (value) {
-      return { value, pathsTried, selectedPath: path };
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return undefined;
+    const numeric = Number(trimmed.replace(/[^\d.]/g, ""));
+    if (Number.isFinite(numeric) && numeric > 0) {
+      if (trimmed.startsWith("$")) {
+        return trimmed;
+      }
+      return `$${numeric.toFixed(2)}`;
     }
   }
 
-  return { value: undefined, pathsTried, selectedPath: undefined };
+  const row = asRecord(value);
+  if (!row) return undefined;
+
+  return (
+    toPriceText(row.formattedValue) ??
+    toPriceText(row.formatted) ??
+    toPriceText(row.amount) ??
+    toPriceText(row.value)
+  );
+};
+
+const resolvePrice = (product: Record<string, unknown>) => {
+  const pathsTried = [...ENGINE6_HILO_PRICE_PATHS];
+
+  for (const path of pathsTried) {
+    const rawValue = readPath(product, path);
+    const value = toPriceText(rawValue);
+    if (value) {
+      return { value, pathsTried, selectedPath: path, rawValue };
+    }
+  }
+
+  return {
+    value: undefined,
+    pathsTried,
+    selectedPath: undefined,
+    rawValue: undefined,
+  };
 };
 
 const pickHeroAndGallery = (product: Record<string, unknown>) => {
@@ -192,6 +241,7 @@ export const mapViatorToEngine6PageData = (
     priceDiagnostics: {
       pathsTried: price.pathsTried,
       selectedPath: price.selectedPath,
+      rawValue: price.rawValue,
     },
   };
 };
