@@ -236,16 +236,16 @@ export default function CityToursIndexRoute({
           )}
         </div>
 
-        {engine6ListingItem ? (
-          <div className="mt-10">
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
-              Engine6 API-first pilot
-            </p>
-            <Engine6ListingCard item={engine6ListingItem} />
-          </div>
-        ) : null}
-        {filteredTours.length ? (
+        {engine6ListingItem || filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {engine6ListingItem ? (
+              <div>
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+                  Engine6 API-first pilot
+                </p>
+                <Engine6ListingCard item={engine6ListingItem} />
+              </div>
+            ) : null}
             {filteredTours.map(({ tour, href }) => (
               <TourCard key={tour.id} tour={tour} href={href} />
             ))}

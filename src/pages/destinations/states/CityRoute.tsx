@@ -6,6 +6,7 @@ import {
 } from "../../../data/tourFallbacks";
 import { flagstaffTours } from "../../../data/flagstaffTours";
 import { getToursByCityUnified } from "../../../data/tours";
+import Engine6HiloPilotListingSection from "../../../engine6/components/Engine6HiloPilotListingSection";
 
 type CityRouteProps = {
   params: {
@@ -41,5 +42,14 @@ export default function CityRoute({ params }: CityRouteProps) {
         ? getToursByCityUnified(state.slug, city.slug).map(entry => entry.tour)
         : undefined;
 
-  return <CityTemplate state={state} city={city} toursOverride={toursOverride} />;
+  const isHiloHawaii = state.slug === "hawaii" && city.slug === "hilo";
+
+  return (
+    <>
+      {isHiloHawaii ? (
+        <Engine6HiloPilotListingSection heading="Featured Engine6 Hilo tour" />
+      ) : null}
+      <CityTemplate state={state} city={city} toursOverride={toursOverride} />
+    </>
+  );
 }

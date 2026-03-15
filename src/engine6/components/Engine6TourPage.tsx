@@ -3,9 +3,9 @@ import { useMemo } from "react";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
+import RatingStars from "../../engine4/components/RatingStars";
 import { buildBreadcrumbList } from "../../utils/structuredData";
 import type { Engine6ResolvedTourPageData } from "../types";
-import Engine6FactsCard from "./Engine6FactsCard";
 import Engine6FaqSection from "./Engine6FaqSection";
 import Engine6IncludedSection from "./Engine6IncludedSection";
 import Engine6ItinerarySection from "./Engine6ItinerarySection";
@@ -61,7 +61,7 @@ export default function Engine6TourPage({
         image={page.seo.ogImage}
       />
       <section className="bg-[#152c17] text-white">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:px-6 md:py-10 lg:grid-cols-[2fr,1fr]">
+        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:px-6 md:py-10 lg:grid-cols-2 lg:items-start">
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-white/75">
               {page.destinationLabel}
@@ -69,21 +69,64 @@ export default function Engine6TourPage({
             <h1 className="mt-3 text-3xl font-semibold leading-tight md:text-5xl">
               {page.title}
             </h1>
-            <div className="mt-5 overflow-hidden rounded-2xl bg-black/20">
-              {page.heroImage ? (
-                <Image
-                  src={page.heroImage}
-                  fallbackSrc={page.heroImage}
-                  alt={page.title}
-                  className="h-64 w-full object-cover md:h-[420px]"
+            <p className="mt-4 text-2xl font-semibold text-[#9effa8]">
+              {page.fromPriceText
+                ? `From ${page.fromPriceText}`
+                : "From live pricing"}
+            </p>
+            <dl className="mt-4 grid gap-3 text-sm text-white/90 sm:grid-cols-2">
+              {page.durationText ? (
+                <div>
+                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
+                    Duration
+                  </dt>
+                  <dd>{page.durationText}</dd>
+                </div>
+              ) : null}
+              {page.meetingPointShort ? (
+                <div>
+                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
+                    Meeting point
+                  </dt>
+                  <dd>{page.meetingPointShort}</dd>
+                </div>
+              ) : null}
+              {page.cancellationText ? (
+                <div className="sm:col-span-2">
+                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
+                    Cancellation
+                  </dt>
+                  <dd>{page.cancellationText}</dd>
+                </div>
+              ) : null}
+            </dl>
+            {typeof page.ratingValue === "number" ? (
+              <div className="mt-4">
+                <RatingStars
+                  ratingValue={page.ratingValue}
+                  reviewCount={page.reviewCount}
+                  className="text-[#9effa8]"
                 />
-              ) : (
-                <div className="h-64 w-full bg-white/10 md:h-[420px]" />
-              )}
-            </div>
+              </div>
+            ) : null}
+            <a
+              href={page.bookingUrl}
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 font-semibold text-white transition hover:bg-[#287a35]"
+            >
+              Reserve this tour
+            </a>
           </div>
-          <div className="self-start lg:sticky lg:top-6">
-            <Engine6FactsCard page={page} />
+          <div className="overflow-hidden rounded-2xl bg-black/20">
+            {page.heroImage ? (
+              <Image
+                src={page.heroImage}
+                fallbackSrc={page.heroImage}
+                alt={page.title}
+                className="h-64 w-full object-cover md:h-[420px]"
+              />
+            ) : (
+              <div className="h-64 w-full bg-white/10 md:h-[420px]" />
+            )}
           </div>
         </div>
       </section>
