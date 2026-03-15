@@ -5,6 +5,26 @@ import type {
 } from "../types";
 import { mapViatorToEngine6PageData } from "./mapViatorToEngine6PageData";
 
+const toSnippet = (text: string, maxChars = 150): string => {
+  const normalized = text.trim().replace(/\s+/g, " ");
+  if (!normalized) return "";
+
+  const firstSentence =
+    normalized.match(/^.*?[.!?](?=\s|$)/)?.[0] ?? normalized;
+  if (firstSentence.length <= maxChars) {
+    return firstSentence;
+  }
+
+  const clipped = firstSentence.slice(0, maxChars);
+  const lastWordBoundary = clipped.lastIndexOf(" ");
+  const snippet =
+    lastWordBoundary > maxChars * 0.6
+      ? clipped.slice(0, lastWordBoundary)
+      : clipped;
+
+  return `${snippet.trim()}…`;
+};
+
 export const getEngine6ViatorTourData = async (
   record: Engine6ProductRecord
 ): Promise<Engine6ResolvedTourPageData> => {
@@ -28,13 +48,19 @@ export const mapEngine6PageToListingItem = (
 ): Engine6ListingItem => ({
   id: `engine6-${page.productCode}`,
   title: page.title,
-  shortDescription: page.overview.slice(0, 180),
+  shortDescription: toSnippet(page.overview, 150),
   heroImage: page.heroImage,
   fromPriceText:
     typeof page.fromPrice === "number" && page.fromPrice > 0
       ? `$${Math.round(page.fromPrice)}`
       : page.fromPriceText,
-  ratingValue: page.ratingValue,
-  reviewCount: page.reviewCount,
+  ratingValue:
+    typeof page.ratingValue === "number" && page.ratingValue > 0
+      ? page.ratingValue
+      : undefined,
+  reviewCount:
+    typeof page.reviewCount === "number" && page.reviewCount > 0
+      ? page.reviewCount
+      : undefined,
   href: page.canonicalPath,
 });

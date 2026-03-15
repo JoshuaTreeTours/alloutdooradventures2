@@ -28,14 +28,14 @@ export default function Engine6ListingCard({
       </div>
       <div className="p-5">
         <h3 className="text-lg font-semibold text-[#1f2a1f]">{item.title}</h3>
-        <p className="mt-2 text-sm text-[#405040] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]">
+        <p className="mt-2 text-sm text-[#405040] [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">
           {item.shortDescription}
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-sm text-[#2f4a2f]">
           {item.fromPriceText && !/\b0(?:\.0+)?\b/.test(item.fromPriceText) ? (
             <span>From {item.fromPriceText}</span>
           ) : null}
-          {typeof item.ratingValue === "number" ? (
+          {typeof item.ratingValue === "number" && typeof item.reviewCount === "number" ? (
             <span>
               {item.ratingValue.toFixed(1)} ({Math.round(item.reviewCount ?? 0)}{" "}
               reviews)
