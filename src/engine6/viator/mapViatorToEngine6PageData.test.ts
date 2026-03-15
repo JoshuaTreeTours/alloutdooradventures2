@@ -137,6 +137,77 @@ describe("mapViatorToEngine6PageData", () => {
     expect(page.meetingPointFull).toContain("Hilo Hotel pickup available");
   });
 
+  it("does not emit invalid zero pricing when commercial price is unavailable", () => {
+    const page = mapViatorToEngine6PageData({
+      record: engine6HiloVolcanoRecord,
+      payload: {
+        title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+        pricingInfo: {
+          currencyCode: "USD",
+          summary: {
+            fromPrice: 0,
+          },
+        },
+        ticketTypes: [
+          {
+            pricingInfo: {
+              summary: {
+                fromPrice: "0.00",
+              },
+            },
+          },
+        ],
+      },
+    });
+
+    expect(page.fromPrice).toBeUndefined();
+    expect(page.fromPriceText).toBeUndefined();
+  });
+
+  it("extracts itinerary from nested variant data and derives FAQs when raw FAQ array is missing", () => {
+    const page = mapViatorToEngine6PageData({
+      record: engine6HiloVolcanoRecord,
+      payload: {
+        title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+        pricingInfo: {
+          currencyCode: "USD",
+          summary: { fromPrice: 200 },
+        },
+        meetingPoints: [{ fullAddress: "Pier 1, Hilo, HI" }],
+        duration: { formatted: "6 hours" },
+        cancellationPolicy: "Free cancellation up to 24 hours before start",
+        inclusions: ["Guide", "Private transportation"],
+        exclusions: ["Lunch"],
+        additionalInfo: ["Not wheelchair accessible"],
+        variants: [
+          {
+            itinerary: {
+              dayPlans: [
+                {
+                  stopName: "Volcanoes National Park",
+                  description: "Visit crater rim and steam vents",
+                  durationText: "2 hours",
+                },
+                {
+                  stopName: "Rainbow Falls",
+                  description: "Scenic stop for photos",
+                  durationText: "45 minutes",
+                },
+              ],
+            },
+          },
+        ],
+      },
+    });
+
+    expect(page.itinerary).toHaveLength(2);
+    expect(page.itinerary[0]?.title).toBe("Volcanoes National Park");
+    expect(page.faqs.length).toBeGreaterThanOrEqual(4);
+    expect(page.faqs.map(item => item.question)).toContain(
+      "What is the cancellation policy?"
+    );
+  });
+
   it("is tolerant when optional fields are missing", () => {
     const page = mapViatorToEngine6PageData({
       record: engine6HiloVolcanoRecord,

@@ -32,7 +32,9 @@ export default function Engine6ListingCard({
           {item.shortDescription}
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-sm text-[#2f4a2f]">
-          {item.fromPriceText ? <span>From {item.fromPriceText}</span> : null}
+          {item.fromPriceText && !/\b0(?:\.0+)?\b/.test(item.fromPriceText) ? (
+            <span>From {item.fromPriceText}</span>
+          ) : null}
           {typeof item.ratingValue === "number" ? (
             <span>
               {item.ratingValue.toFixed(1)} ({Math.round(item.reviewCount ?? 0)}{" "}

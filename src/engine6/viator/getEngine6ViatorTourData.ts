@@ -28,9 +28,12 @@ export const mapEngine6PageToListingItem = (
 ): Engine6ListingItem => ({
   id: `engine6-${page.productCode}`,
   title: page.title,
-  shortDescription: page.overview,
+  shortDescription: page.overview.slice(0, 180),
   heroImage: page.heroImage,
-  fromPriceText: page.fromPriceText,
+  fromPriceText:
+    typeof page.fromPrice === "number" && page.fromPrice > 0
+      ? `$${Math.round(page.fromPrice)}`
+      : page.fromPriceText,
   ratingValue: page.ratingValue,
   reviewCount: page.reviewCount,
   href: page.canonicalPath,

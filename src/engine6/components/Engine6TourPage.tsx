@@ -3,12 +3,15 @@ import { useMemo } from "react";
 import Image from "../../components/Image";
 import Seo from "../../components/Seo";
 import { useStructuredData } from "../../components/StructuredDataProvider";
-import RatingStars from "../../engine4/components/RatingStars";
 import { buildBreadcrumbList } from "../../utils/structuredData";
 import type { Engine6ResolvedTourPageData } from "../types";
+import Engine6FactsCard from "./Engine6FactsCard";
+import Engine6FaqSection from "./Engine6FaqSection";
+import Engine6IncludedSection from "./Engine6IncludedSection";
+import Engine6ItinerarySection from "./Engine6ItinerarySection";
 
 const formatFromPriceLabel = (page: Engine6ResolvedTourPageData) => {
-  if (typeof page.fromPrice === "number") {
+  if (typeof page.fromPrice === "number" && page.fromPrice > 0) {
     try {
       const formatted = new Intl.NumberFormat("en-US", {
         style: "currency",
@@ -25,7 +28,7 @@ const formatFromPriceLabel = (page: Engine6ResolvedTourPageData) => {
     const normalized = page.fromPriceText.trim();
     const parsed = Number.parseFloat(normalized.replace(/[^0-9.]/g, ""));
 
-    if (Number.isFinite(parsed)) {
+    if (Number.isFinite(parsed) && parsed > 0) {
       const wantsUsdSymbol =
         normalized.toUpperCase().includes("USD") ||
         normalized.includes("$") ||
@@ -35,16 +38,13 @@ const formatFromPriceLabel = (page: Engine6ResolvedTourPageData) => {
       if (wantsUsdSymbol) {
         return `From $${Math.round(parsed)} per person`;
       }
-    }
 
-    return `From ${normalized} per person`;
+      return `From ${normalized} per person`;
+    }
   }
 
-  return "From live pricing";
+  return undefined;
 };
-import Engine6FaqSection from "./Engine6FaqSection";
-import Engine6IncludedSection from "./Engine6IncludedSection";
-import Engine6ItinerarySection from "./Engine6ItinerarySection";
 
 export default function Engine6TourPage({
   page,
@@ -88,6 +88,8 @@ export default function Engine6TourPage({
 
   useStructuredData(structuredDataNodes);
 
+  const fromPriceLabel = formatFromPriceLabel(page);
+
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
       <Seo
@@ -96,71 +98,39 @@ export default function Engine6TourPage({
         url={page.seo.canonicalUrl}
         image={page.seo.ogImage}
       />
-      <section className="bg-[#152c17] text-white">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 md:px-6 md:py-10 lg:grid-cols-2 lg:items-start">
-          <div>
-            <p className="text-xs uppercase tracking-[0.2em] text-white/75">
-              {page.destinationLabel}
-            </p>
-            <h1 className="mt-3 text-3xl font-semibold leading-tight md:text-5xl">
-              {page.title}
-            </h1>
-            <p className="mt-4 text-2xl font-semibold text-[#9effa8]">
-              {formatFromPriceLabel(page)}
-            </p>
-            <dl className="mt-4 grid gap-3 text-sm text-white/90 sm:grid-cols-2">
-              {page.durationText ? (
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
-                    Duration
-                  </dt>
-                  <dd>{page.durationText}</dd>
-                </div>
+      <section className="bg-[#f3eee5]">
+        <div className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-10">
+          <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_520px] lg:items-start">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-[#5c6d5b]">
+                {page.destinationLabel}
+              </p>
+              <h1 className="mt-2 text-3xl font-semibold leading-tight md:text-5xl">
+                {page.title}
+              </h1>
+              {fromPriceLabel ? (
+                <p className="mt-4 text-2xl font-semibold text-[#1f6b2b]">
+                  {fromPriceLabel}
+                </p>
               ) : null}
-              {page.meetingPointShort ? (
-                <div>
-                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
-                    Meeting point
-                  </dt>
-                  <dd>{page.meetingPointShort}</dd>
-                </div>
-              ) : null}
-              {page.cancellationText ? (
-                <div className="sm:col-span-2">
-                  <dt className="text-xs uppercase tracking-[0.16em] text-white/70">
-                    Cancellation
-                  </dt>
-                  <dd>{page.cancellationText}</dd>
-                </div>
-              ) : null}
-            </dl>
-            {typeof page.ratingValue === "number" ? (
-              <div className="mt-4">
-                <RatingStars
-                  ratingValue={page.ratingValue}
-                  reviewCount={page.reviewCount}
-                  className="text-[#9effa8]"
-                />
+
+              <div className="mt-5 max-w-xl">
+                <Engine6FactsCard page={page} />
               </div>
-            ) : null}
-            <a
-              href={page.bookingUrl}
-              className="mt-6 inline-flex items-center justify-center rounded-full bg-[#2f8a3d] px-6 py-3 font-semibold text-white transition hover:bg-[#287a35]"
-            >
-              Reserve this tour
-            </a>
-          </div>
-          <div className="overflow-hidden rounded-2xl bg-black/20">
-            {page.heroImage ? (
-              <Image
-                src={page.heroImage}
-                fallbackSrc={page.heroImage}
-                alt={page.title}
-                className="h-64 w-full object-cover md:h-[420px]"
-              />
-            ) : (
-              <div className="h-64 w-full bg-white/10 md:h-[420px]" />
-            )}
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-black/10 bg-black/10 shadow-sm">
+              {page.heroImage ? (
+                <Image
+                  src={page.heroImage}
+                  fallbackSrc={page.heroImage}
+                  alt={page.title}
+                  className="h-64 w-full object-cover md:h-[360px]"
+                />
+              ) : (
+                <div className="h-64 w-full bg-white/10 md:h-[360px]" />
+              )}
+            </div>
           </div>
         </div>
       </section>
@@ -221,19 +191,6 @@ export default function Engine6TourPage({
           >
             Reserve this Hilo tour
           </a>
-        </section>
-
-        <section className="rounded-xl border border-dashed border-[#2f8a3d] bg-[#f4fff6] p-4 text-xs text-[#2f4a2f]">
-          <h3 className="font-semibold uppercase tracking-[0.16em]">
-            Engine6 Pilot Debug
-          </h3>
-          <ul className="mt-2 space-y-1">
-            <li>fromPrice: {page.fromPriceText ?? "n/a"}</li>
-            <li>meetingPointShort: {page.meetingPointShort ?? "n/a"}</li>
-            <li>durationText: {page.durationText ?? "n/a"}</li>
-            <li>itinerary length: {page.itinerary.length}</li>
-            <li>faqs length: {page.faqs.length}</li>
-          </ul>
         </section>
       </section>
     </main>

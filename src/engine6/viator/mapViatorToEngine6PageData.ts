@@ -171,17 +171,50 @@ const findFirstNumericPrice = (value: unknown): number | undefined => {
   return candidates.length ? Math.min(...candidates) : undefined;
 };
 
+const isValidCommercialPrice = (value: number | undefined) =>
+  typeof value === "number" && Number.isFinite(value) && value > 0;
+
+const isFreeProduct = (product: Record<string, unknown>) => {
+  const candidateText = [
+    cleanText(product.title),
+    cleanText(product.description),
+    cleanText(asRecord(product.ticketInfo)?.ticketDescription),
+  ]
+    .filter((entry): entry is string => Boolean(entry))
+    .join(" ")
+    .toLowerCase();
+
+  return /\bfree\b/.test(candidateText);
+};
+
+const sanitizePriceText = (value: string | undefined) => {
+  if (!value) return undefined;
+  const numeric = Number.parseFloat(value.replace(/[^0-9.]/g, ""));
+  if (Number.isFinite(numeric) && numeric <= 0) return undefined;
+  return value;
+};
+
 const extractPrice = (product: Record<string, unknown>) => {
   const pricingInfo = asRecord(product.pricingInfo);
   const pricingSummary = asRecord(pricingInfo?.summary);
   const legacyPricingSummary = asRecord(product.pricingSummary);
-  const legacyFromPriceObj = asRecord(
-    legacyPricingSummary?.fromPrice ?? legacyPricingSummary?.price
-  );
+  const ticketInfo = asRecord(product.ticketInfo);
 
   const ticketTypeRows = asArray(product.ticketTypes)
     .map(item => asRecord(item))
     .filter((row): row is Record<string, unknown> => Boolean(row));
+
+  const prioritizedNumericCandidates: Array<number | undefined> = [
+    extractNumericPrice(pricingSummary?.fromPrice),
+    extractNumericPrice(pricingInfo?.fromPrice),
+    extractNumericPrice(pricingSummary?.price),
+    extractNumericPrice(pricingInfo?.price),
+    extractNumericPrice(pricingSummary?.adult),
+    extractNumericPrice(pricingSummary?.traveler),
+    extractNumericPrice(ticketInfo?.price),
+    extractNumericPrice(legacyPricingSummary?.fromPrice),
+    extractNumericPrice(legacyPricingSummary?.price),
+  ];
 
   const ticketTypePrices = ticketTypeRows
     .map(row => {
@@ -198,38 +231,49 @@ const extractPrice = (product: Record<string, unknown>) => {
     })
     .filter((value): value is number => typeof value === "number");
 
-  const fromPrice =
-    extractNumericPrice(pricingSummary?.fromPrice) ??
-    extractNumericPrice(pricingInfo?.fromPrice) ??
-    extractNumericPrice(pricingSummary?.price) ??
-    extractNumericPrice(pricingInfo?.price) ??
-    extractNumericPrice(pricingInfo?.summary) ??
-    extractNumericPrice(legacyFromPriceObj?.amount) ??
-    extractNumericPrice(legacyPricingSummary?.fromPrice) ??
-    extractNumericPrice(legacyPricingSummary?.price) ??
-    (ticketTypePrices.length ? Math.min(...ticketTypePrices) : undefined) ??
+  const scannedNumericPrice =
     findFirstNumericPrice(product.pricingInfo) ??
-    findFirstNumericPrice(product.ticketTypes);
+    findFirstNumericPrice(product.ticketTypes) ??
+    findFirstNumericPrice(ticketInfo?.price);
+
+  const firstValidPriority = prioritizedNumericCandidates.find(isValidCommercialPrice);
+  const fallbackTicketTypePrice = ticketTypePrices.find(isValidCommercialPrice);
+  const fallbackScannedPrice = isValidCommercialPrice(scannedNumericPrice)
+    ? scannedNumericPrice
+    : undefined;
+
+  const freeProduct = isFreeProduct(product);
+  const fromPrice =
+    firstValidPriority ??
+    fallbackTicketTypePrice ??
+    fallbackScannedPrice ??
+    (freeProduct
+      ? prioritizedNumericCandidates.find(num => typeof num === "number")
+      : undefined);
 
   const currency =
     cleanText(pricingInfo?.currencyCode) ??
     cleanText(pricingSummary?.currencyCode) ??
-    cleanText(legacyFromPriceObj?.currency) ??
     cleanText(legacyPricingSummary?.currency) ??
+    cleanText(asRecord(pricingSummary?.fromPrice)?.currencyCode) ??
+    cleanText(asRecord(pricingSummary?.fromPrice)?.currency) ??
     cleanText(product.currencyCode);
 
-  const fromPriceText =
+  const rawTextPrice =
     extractPriceText(pricingSummary?.fromPrice) ??
     extractPriceText(pricingInfo?.fromPrice) ??
     extractPriceText(pricingSummary?.price) ??
     extractPriceText(pricingInfo?.price) ??
     findFirstPriceText(product.pricingInfo) ??
-    findFirstPriceText(product.ticketTypes) ??
-    (typeof fromPrice === "number"
-      ? `${currency ?? "USD"} ${fromPrice.toFixed(2)}`
-      : undefined);
+    findFirstPriceText(product.ticketTypes);
 
-  return { fromPrice, currency, fromPriceText };
+  const fromPriceText = sanitizePriceText(rawTextPrice);
+
+  return {
+    fromPrice: isValidCommercialPrice(fromPrice) || freeProduct ? fromPrice : undefined,
+    currency,
+    fromPriceText,
+  };
 };
 
 type ImageVariant = {
@@ -274,7 +318,6 @@ const extractImages = (product: Record<string, unknown>) => {
     return {
       isCover: row.isCover === true,
       largest: largest?.url,
-      variants: mergedVariants,
     };
   });
 
@@ -318,57 +361,122 @@ const extractMeetingPoint = (product: Record<string, unknown>) => {
   return { meetingPointFull: full, meetingPointShort: short };
 };
 
+const collectItineraryArrays = (value: unknown, depth = 0): unknown[][] => {
+  if (depth > 5) return [];
+
+  if (Array.isArray(value)) {
+    if (
+      value.some(item => {
+        const row = asRecord(item);
+        return Boolean(
+          row &&
+            (row.title || row.name || row.description || row.stopName || row.pointOfInterest)
+        );
+      })
+    ) {
+      return [value];
+    }
+
+    return value.flatMap(item => collectItineraryArrays(item, depth + 1));
+  }
+
+  const row = asRecord(value);
+  if (!row) return [];
+
+  return Object.values(row).flatMap(entry => collectItineraryArrays(entry, depth + 1));
+};
+
+const normalizeItineraryStop = (item: unknown): Engine6ItineraryItem | undefined => {
+  const row = asRecord(item);
+  if (!row) return undefined;
+
+  const poi = asRecord(row.pointOfInterest);
+  const location = asRecord(row.location);
+
+  const title =
+    cleanText(row.title) ??
+    cleanText(row.name) ??
+    cleanText(row.stopName) ??
+    cleanText(poi?.title) ??
+    cleanText(poi?.name) ??
+    cleanText(location?.name) ??
+    cleanText(row.label);
+
+  const description =
+    cleanText(row.description) ??
+    cleanText(row.summary) ??
+    cleanText(row.details) ??
+    cleanText(row.commentary) ??
+    cleanText(poi?.description) ??
+    cleanText(location?.description);
+
+  if (!title && !description) return undefined;
+
+  return {
+    title: title ?? "Tour stop",
+    description,
+    duration:
+      cleanText(row.duration) ??
+      cleanText(row.durationText) ??
+      cleanText(row.length) ??
+      cleanText(asRecord(row.timeAtLocation)?.formatted),
+  };
+};
+
 const extractItinerary = (
   product: Record<string, unknown>
 ): Engine6ItineraryItem[] => {
-  const itineraryObj = asRecord(product.itinerary);
   const ticketInfo = asRecord(product.ticketInfo);
+  const variants = asArray(product.variants)
+    .map(item => asRecord(item))
+    .filter((item): item is Record<string, unknown> => Boolean(item));
 
-  const candidates = [
-    ...asArray(product.itineraryItems),
-    ...asArray(product.itinerary),
-    ...asArray(itineraryObj?.items),
-    ...asArray(itineraryObj?.itineraryItems),
-    ...asArray(product.stops),
-    ...asArray(ticketInfo?.itinerary),
-    ...asArray(ticketInfo?.items),
+  const directCandidates: unknown[] = [
+    product.itinerary,
+    product.itineraryItems,
+    product.stops,
+    asRecord(product.itinerary)?.items,
+    asRecord(product.itinerary)?.itineraryItems,
+    asRecord(product.itinerary)?.stopPoints,
+    ticketInfo?.itinerary,
+    ticketInfo?.items,
+    ticketInfo?.stops,
+    ...variants.map(item => item.itinerary),
   ];
 
-  const extracted = candidates
-    .map(item => {
-      const row = asRecord(item);
-      if (!row) return undefined;
-      const title =
-        cleanText(row.title) ?? cleanText(row.name) ?? cleanText(row.label);
-      if (!title) return undefined;
-      return {
-        title,
-        description: cleanText(row.description) ?? cleanText(row.summary),
-        duration: cleanText(row.duration) ?? cleanText(row.durationText),
-      };
-    })
-    .filter((row): row is Engine6ItineraryItem => Boolean(row));
+  const allArrays = directCandidates.flatMap(candidate => collectItineraryArrays(candidate));
 
-  if (extracted.length > 0) {
-    return extracted;
+  const normalized = allArrays
+    .flatMap(items => items.map(normalizeItineraryStop))
+    .filter((item): item is Engine6ItineraryItem => Boolean(item));
+
+  const deduped = normalized.filter(
+    (item, index, list) =>
+      list.findIndex(existing => existing.title === item.title) === index
+  );
+
+  if (deduped.length > 0) {
+    return deduped;
   }
 
-  const ticketDescription = extractTicketDescription(product);
-  if (!ticketDescription) {
+  const fallbackNarrative =
+    extractTicketDescription(product) ??
+    cleanText(asRecord(product.description)?.text) ??
+    cleanText(product.description);
+
+  if (!fallbackNarrative) {
     return [];
   }
 
-  const sentenceStops = ticketDescription
+  return fallbackNarrative
     .split(/\.(?:\s+|$)/)
     .map(item => cleanText(item))
     .filter((item): item is string => Boolean(item))
-    .slice(0, 3)
+    .slice(0, 4)
     .map((item, index) => ({
       title: `Tour segment ${index + 1}`,
       description: item,
     }));
-
-  return sentenceStops;
 };
 
 const extractDurationText = (
@@ -396,7 +504,7 @@ const extractDurationText = (
   );
 };
 
-const extractFaqs = (product: Record<string, unknown>): Engine6FaqItem[] => {
+const extractRawFaqs = (product: Record<string, unknown>): Engine6FaqItem[] => {
   const ticketInfo = asRecord(product.ticketInfo);
   const candidates = [
     ...asArray(product.faqs),
@@ -416,6 +524,68 @@ const extractFaqs = (product: Record<string, unknown>): Engine6FaqItem[] => {
       return { question, answer };
     })
     .filter((row): row is Engine6FaqItem => Boolean(row));
+};
+
+const deriveFallbackFaqs = ({
+  meetingPoint,
+  durationText,
+  cancellationText,
+  inclusions,
+  exclusions,
+  additionalInfo,
+}: {
+  meetingPoint?: string;
+  durationText?: string;
+  cancellationText?: string;
+  inclusions: string[];
+  exclusions: string[];
+  additionalInfo: string[];
+}): Engine6FaqItem[] => {
+  const faqs: Engine6FaqItem[] = [];
+
+  if (meetingPoint) {
+    faqs.push({
+      question: "Where is the meeting point for this tour?",
+      answer: meetingPoint,
+    });
+  }
+
+  if (durationText) {
+    faqs.push({
+      question: "How long does this tour take?",
+      answer: durationText,
+    });
+  }
+
+  if (cancellationText) {
+    faqs.push({
+      question: "What is the cancellation policy?",
+      answer: cancellationText,
+    });
+  }
+
+  if (inclusions.length > 0) {
+    faqs.push({
+      question: "What is included in the tour price?",
+      answer: inclusions.slice(0, 4).join("; "),
+    });
+  }
+
+  if (exclusions.length > 0) {
+    faqs.push({
+      question: "What is not included in the tour price?",
+      answer: exclusions.slice(0, 4).join("; "),
+    });
+  }
+
+  if (additionalInfo.length > 0) {
+    faqs.push({
+      question: "Is there anything else I should know before booking?",
+      answer: additionalInfo.slice(0, 4).join("; "),
+    });
+  }
+
+  return faqs;
 };
 
 const extractHighlights = (product: Record<string, unknown>) => {
@@ -522,7 +692,6 @@ export const mapViatorToEngine6PageData = ({
   const { heroImage, galleryImages } = extractImages(product);
 
   const itinerary = extractItinerary(product);
-  const faqs = extractFaqs(product);
   const { meetingPointFull, meetingPointShort } = extractMeetingPoint(product);
   const durationText = extractDurationText(product, itinerary);
 
@@ -534,6 +703,19 @@ export const mapViatorToEngine6PageData = ({
   const inclusions = extractInclusions(product);
   const exclusions = extractExclusions(product);
   const additionalInfo = extractAdditionalInfo(product);
+
+  const rawFaqs = extractRawFaqs(product);
+  const faqs =
+    rawFaqs.length > 0
+      ? rawFaqs
+      : deriveFallbackFaqs({
+          meetingPoint: meetingPointFull ?? meetingPointShort,
+          durationText,
+          cancellationText,
+          inclusions,
+          exclusions,
+          additionalInfo,
+        });
 
   const canonicalUrl = buildCanonicalUrl(record.canonicalPath);
   const seoDescription = (overview || title).slice(0, 158);
