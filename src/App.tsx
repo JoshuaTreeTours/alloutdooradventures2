@@ -66,7 +66,10 @@ import {
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
 import Engine6HiloTourRoute from "./pages/engine6/Engine6HiloTourRoute";
-import { ENGINE6_HILO_TOUR_ROUTE_PATTERN } from "./engine6/routes";
+import {
+  ENGINE6_HILO_PREVIEW_ROUTE,
+  ENGINE6_HILO_TOUR_ROUTE_PATTERN,
+} from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -250,6 +253,10 @@ export default function App() {
           component={MexicoCityBookSlugRedirect}
         />
 
+        <Route
+          path={ENGINE6_HILO_PREVIEW_ROUTE}
+          component={Engine6HiloTourRoute}
+        />
         <Route
           path={ENGINE6_HILO_TOUR_ROUTE_PATTERN}
           component={Engine6HiloTourRoute}
