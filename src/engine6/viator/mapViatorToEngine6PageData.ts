@@ -74,6 +74,103 @@ const extractTicketDescription = (product: Record<string, unknown>) => {
   );
 };
 
+const extractNumericPrice = (value: unknown): number | undefined => {
+  const direct = asNumber(value);
+  if (typeof direct === "number") {
+    return direct;
+  }
+
+  const row = asRecord(value);
+  if (!row) {
+    return undefined;
+  }
+
+  return (
+    asNumber(row.amount) ??
+    asNumber(row.value) ??
+    asNumber(row.price) ??
+    asNumber(row.fromPrice) ??
+    asNumber(row.recommendedRetailPrice)
+  );
+};
+
+const extractPriceText = (value: unknown): string | undefined => {
+  const row = asRecord(value);
+  if (!row) {
+    return undefined;
+  }
+
+  return (
+    cleanText(row.formatted) ??
+    cleanText(row.display) ??
+    cleanText(row.text) ??
+    cleanText(row.priceText)
+  );
+};
+
+const findFirstPriceText = (value: unknown): string | undefined => {
+  if (typeof value === "string") {
+    const normalized = cleanText(value);
+    if (!normalized) return undefined;
+    if (/\$\s*\d|from\s+\$\s*\d/i.test(normalized)) {
+      return normalized;
+    }
+    return undefined;
+  }
+
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const next = findFirstPriceText(item);
+      if (next) return next;
+    }
+    return undefined;
+  }
+
+  const row = asRecord(value);
+  if (!row) return undefined;
+
+  const direct =
+    extractPriceText(row.fromPrice) ??
+    extractPriceText(row.price) ??
+    extractPriceText(row.amount) ??
+    extractPriceText(row.summary);
+  if (direct && /\$\s*\d|from\s+\$\s*\d/i.test(direct)) {
+    return direct;
+  }
+
+  for (const entry of Object.values(row)) {
+    const nested = findFirstPriceText(entry);
+    if (nested) return nested;
+  }
+
+  return undefined;
+};
+
+const findFirstNumericPrice = (value: unknown): number | undefined => {
+  const direct = extractNumericPrice(value);
+  if (typeof direct === "number") {
+    return direct;
+  }
+
+  if (Array.isArray(value)) {
+    const candidates = value
+      .map(item => findFirstNumericPrice(item))
+      .filter((num): num is number => typeof num === "number");
+    return candidates.length ? Math.min(...candidates) : undefined;
+  }
+
+  const row = asRecord(value);
+  if (!row) {
+    return undefined;
+  }
+
+  const candidates = Object.values(row)
+    .map(entry => findFirstNumericPrice(entry))
+    .filter((num): num is number => typeof num === "number");
+
+  return candidates.length ? Math.min(...candidates) : undefined;
+};
+
 const extractPrice = (product: Record<string, unknown>) => {
   const pricingInfo = asRecord(product.pricingInfo);
   const pricingSummary = asRecord(pricingInfo?.summary);
@@ -92,23 +189,27 @@ const extractPrice = (product: Record<string, unknown>) => {
       const rowSummary = asRecord(rowPricing?.summary);
 
       return (
-        asNumber(rowSummary?.fromPrice) ??
-        asNumber(rowPricing?.fromPrice) ??
-        asNumber(rowSummary?.price) ??
-        asNumber(rowPricing?.price)
+        extractNumericPrice(rowSummary?.fromPrice) ??
+        extractNumericPrice(rowPricing?.fromPrice) ??
+        extractNumericPrice(rowSummary?.price) ??
+        extractNumericPrice(rowPricing?.price) ??
+        extractNumericPrice(row.pricing)
       );
     })
     .filter((value): value is number => typeof value === "number");
 
   const fromPrice =
-    asNumber(pricingSummary?.fromPrice) ??
-    asNumber(pricingInfo?.fromPrice) ??
-    asNumber(pricingSummary?.price) ??
-    asNumber(pricingInfo?.price) ??
-    asNumber(legacyFromPriceObj?.amount) ??
-    asNumber(legacyPricingSummary?.fromPrice) ??
-    asNumber(legacyPricingSummary?.price) ??
-    (ticketTypePrices.length ? Math.min(...ticketTypePrices) : undefined);
+    extractNumericPrice(pricingSummary?.fromPrice) ??
+    extractNumericPrice(pricingInfo?.fromPrice) ??
+    extractNumericPrice(pricingSummary?.price) ??
+    extractNumericPrice(pricingInfo?.price) ??
+    extractNumericPrice(pricingInfo?.summary) ??
+    extractNumericPrice(legacyFromPriceObj?.amount) ??
+    extractNumericPrice(legacyPricingSummary?.fromPrice) ??
+    extractNumericPrice(legacyPricingSummary?.price) ??
+    (ticketTypePrices.length ? Math.min(...ticketTypePrices) : undefined) ??
+    findFirstNumericPrice(product.pricingInfo) ??
+    findFirstNumericPrice(product.ticketTypes);
 
   const currency =
     cleanText(pricingInfo?.currencyCode) ??
@@ -118,9 +219,15 @@ const extractPrice = (product: Record<string, unknown>) => {
     cleanText(product.currencyCode);
 
   const fromPriceText =
-    typeof fromPrice === "number"
+    extractPriceText(pricingSummary?.fromPrice) ??
+    extractPriceText(pricingInfo?.fromPrice) ??
+    extractPriceText(pricingSummary?.price) ??
+    extractPriceText(pricingInfo?.price) ??
+    findFirstPriceText(product.pricingInfo) ??
+    findFirstPriceText(product.ticketTypes) ??
+    (typeof fromPrice === "number"
       ? `${currency ?? "USD"} ${fromPrice.toFixed(2)}`
-      : undefined;
+      : undefined);
 
   return { fromPrice, currency, fromPriceText };
 };

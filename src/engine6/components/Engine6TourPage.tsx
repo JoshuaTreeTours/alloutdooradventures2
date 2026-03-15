@@ -6,6 +6,42 @@ import { useStructuredData } from "../../components/StructuredDataProvider";
 import RatingStars from "../../engine4/components/RatingStars";
 import { buildBreadcrumbList } from "../../utils/structuredData";
 import type { Engine6ResolvedTourPageData } from "../types";
+
+const formatFromPriceLabel = (page: Engine6ResolvedTourPageData) => {
+  if (typeof page.fromPrice === "number") {
+    try {
+      const formatted = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: page.currency ?? "USD",
+        maximumFractionDigits: 0,
+      }).format(page.fromPrice);
+      return `From ${formatted} per person`;
+    } catch {
+      return `From $${Math.round(page.fromPrice)} per person`;
+    }
+  }
+
+  if (page.fromPriceText?.trim()) {
+    const normalized = page.fromPriceText.trim();
+    const parsed = Number.parseFloat(normalized.replace(/[^0-9.]/g, ""));
+
+    if (Number.isFinite(parsed)) {
+      const wantsUsdSymbol =
+        normalized.toUpperCase().includes("USD") ||
+        normalized.includes("$") ||
+        !page.currency ||
+        page.currency === "USD";
+
+      if (wantsUsdSymbol) {
+        return `From $${Math.round(parsed)} per person`;
+      }
+    }
+
+    return `From ${normalized} per person`;
+  }
+
+  return "From live pricing";
+};
 import Engine6FaqSection from "./Engine6FaqSection";
 import Engine6IncludedSection from "./Engine6IncludedSection";
 import Engine6ItinerarySection from "./Engine6ItinerarySection";
@@ -70,9 +106,7 @@ export default function Engine6TourPage({
               {page.title}
             </h1>
             <p className="mt-4 text-2xl font-semibold text-[#9effa8]">
-              {page.fromPriceText
-                ? `From ${page.fromPriceText}`
-                : "From live pricing"}
+              {formatFromPriceLabel(page)}
             </p>
             <dl className="mt-4 grid gap-3 text-sm text-white/90 sm:grid-cols-2">
               {page.durationText ? (

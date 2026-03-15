@@ -1,5 +1,6 @@
 import GuidePageTemplate from "../../templates/GuidePageTemplate";
 import { loadUsCityGuide } from "../../utils/loadGuide";
+import Engine6HiloPilotListingSection from "../../engine6/components/Engine6HiloPilotListingSection";
 
 type CityGuideUsRouteProps = {
   params: {
@@ -23,5 +24,15 @@ export default function CityGuideUsRoute({ params }: CityGuideUsRouteProps) {
     );
   }
 
-  return <GuidePageTemplate guide={guide} />;
+  const isHiloGuide =
+    params.stateSlug === "hawaii" && params.citySlug === "hilo";
+
+  return (
+    <>
+      {isHiloGuide ? (
+        <Engine6HiloPilotListingSection heading="ENGINE6 PILOT • Hilo guide" />
+      ) : null}
+      <GuidePageTemplate guide={guide} />
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import GuideTemplate from "../../templates/GuideTemplate";
 import { buildStateGuide } from "../../data/guideData";
+import Engine6HiloPilotListingSection from "../../engine6/components/Engine6HiloPilotListingSection";
 
 type StateGuideRouteProps = {
   params: {
@@ -22,5 +23,12 @@ export default function StateGuideRoute({ params }: StateGuideRouteProps) {
     );
   }
 
-  return <GuideTemplate guide={guide} />;
+  return (
+    <>
+      {params.stateSlug === "hawaii" ? (
+        <Engine6HiloPilotListingSection heading="ENGINE6 PILOT • Hawaii guide" />
+      ) : null}
+      <GuideTemplate guide={guide} />
+    </>
+  );
 }
