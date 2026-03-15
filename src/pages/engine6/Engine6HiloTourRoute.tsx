@@ -15,8 +15,6 @@ export default function Engine6HiloTourRoute({
 }) {
   const [page, setPage] = useState<Engine6ResolvedTourPageData | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [resolverReached, setResolverReached] = useState(false);
-
   const routeDiagnostics = useMemo(() => {
     const expectedSlug = engine6HiloVolcanoRecord.slug;
     const requestedSlug = params.tourSlug ?? "";
@@ -27,19 +25,17 @@ export default function Engine6HiloTourRoute({
       requestedSlug,
       expectedSlug,
       productCode: engine6HiloVolcanoRecord.productCode,
-      resolverReached,
+      resolverReached: routeMatched,
     };
-  }, [params.tourSlug, resolverReached]);
+  }, [params.tourSlug]);
 
   useEffect(() => {
     const record = getEngine6RecordBySlug(params.tourSlug);
     if (!record || record.slug !== engine6HiloVolcanoRecord.slug) {
       setError(`Engine6 pilot route mismatch for slug: ${params.tourSlug}`);
-      setResolverReached(false);
       return;
     }
 
-    setResolverReached(true);
     getEngine6ViatorTourData(record)
       .then(resolvedPage => {
         if (record.productCode === "11069P1") {
