@@ -108,84 +108,8 @@ const extractPriceText = (value: unknown): string | undefined => {
   );
 };
 
-const findFirstPriceText = (value: unknown): string | undefined => {
-  if (typeof value === "string") {
-    const normalized = cleanText(value);
-    if (!normalized) return undefined;
-    if (/\$\s*\d|from\s+\$\s*\d/i.test(normalized)) {
-      return normalized;
-    }
-    return undefined;
-  }
-
-  if (Array.isArray(value)) {
-    for (const item of value) {
-      const next = findFirstPriceText(item);
-      if (next) return next;
-    }
-    return undefined;
-  }
-
-  const row = asRecord(value);
-  if (!row) return undefined;
-
-  const direct =
-    extractPriceText(row.fromPrice) ??
-    extractPriceText(row.price) ??
-    extractPriceText(row.amount) ??
-    extractPriceText(row.summary);
-  if (direct && /\$\s*\d|from\s+\$\s*\d/i.test(direct)) {
-    return direct;
-  }
-
-  for (const entry of Object.values(row)) {
-    const nested = findFirstPriceText(entry);
-    if (nested) return nested;
-  }
-
-  return undefined;
-};
-
-const findFirstNumericPrice = (value: unknown): number | undefined => {
-  const direct = extractNumericPrice(value);
-  if (typeof direct === "number") {
-    return direct;
-  }
-
-  if (Array.isArray(value)) {
-    const candidates = value
-      .map(item => findFirstNumericPrice(item))
-      .filter((num): num is number => typeof num === "number");
-    return candidates.length ? Math.min(...candidates) : undefined;
-  }
-
-  const row = asRecord(value);
-  if (!row) {
-    return undefined;
-  }
-
-  const candidates = Object.values(row)
-    .map(entry => findFirstNumericPrice(entry))
-    .filter((num): num is number => typeof num === "number");
-
-  return candidates.length ? Math.min(...candidates) : undefined;
-};
-
 const isValidCommercialPrice = (value: number | undefined) =>
   typeof value === "number" && Number.isFinite(value) && value > 0;
-
-const isFreeProduct = (product: Record<string, unknown>) => {
-  const candidateText = [
-    cleanText(product.title),
-    cleanText(product.description),
-    cleanText(asRecord(product.ticketInfo)?.ticketDescription),
-  ]
-    .filter((entry): entry is string => Boolean(entry))
-    .join(" ")
-    .toLowerCase();
-
-  return /\bfree\b/.test(candidateText);
-};
 
 const sanitizePriceText = (value: string | undefined) => {
   if (!value) return undefined;
@@ -194,83 +118,45 @@ const sanitizePriceText = (value: string | undefined) => {
   return value;
 };
 
+const formatMinutesToDuration = (minutes: number | undefined) => {
+  if (typeof minutes !== "number" || !Number.isFinite(minutes) || minutes <= 0) {
+    return undefined;
+  }
+
+  if (minutes < 60) {
+    return `${Math.round(minutes)} minutes`;
+  }
+
+  const hours = minutes / 60;
+  if (Number.isInteger(hours)) {
+    return `${hours} ${hours === 1 ? "hour" : "hours"}`;
+  }
+
+  return `${hours.toFixed(1).replace(/\.0$/, "")} hours`;
+};
+
 const extractPrice = (product: Record<string, unknown>) => {
-  const pricingInfo = asRecord(product.pricingInfo);
-  const pricingSummary = asRecord(pricingInfo?.summary);
-  const legacyPricingSummary = asRecord(product.pricingSummary);
-  const ticketInfo = asRecord(product.ticketInfo);
+  const pricingSummary = asRecord(product.pricingSummary);
+  const summaryFromPrice = asRecord(pricingSummary?.fromPrice);
 
-  const ticketTypeRows = asArray(product.ticketTypes)
-    .map(item => asRecord(item))
-    .filter((row): row is Record<string, unknown> => Boolean(row));
-
-  const prioritizedNumericCandidates: Array<number | undefined> = [
-    extractNumericPrice(pricingSummary?.fromPrice),
-    extractNumericPrice(pricingInfo?.fromPrice),
-    extractNumericPrice(pricingSummary?.price),
-    extractNumericPrice(pricingInfo?.price),
-    extractNumericPrice(pricingSummary?.adult),
-    extractNumericPrice(pricingSummary?.traveler),
-    extractNumericPrice(ticketInfo?.price),
-    extractNumericPrice(legacyPricingSummary?.fromPrice),
-    extractNumericPrice(legacyPricingSummary?.price),
-  ];
-
-  const ticketTypePrices = ticketTypeRows
-    .map(row => {
-      const rowPricing = asRecord(row.pricingInfo);
-      const rowSummary = asRecord(rowPricing?.summary);
-
-      return (
-        extractNumericPrice(rowSummary?.fromPrice) ??
-        extractNumericPrice(rowPricing?.fromPrice) ??
-        extractNumericPrice(rowSummary?.price) ??
-        extractNumericPrice(rowPricing?.price) ??
-        extractNumericPrice(row.pricing)
-      );
-    })
-    .filter((value): value is number => typeof value === "number");
-
-  const scannedNumericPrice =
-    findFirstNumericPrice(product.pricingInfo) ??
-    findFirstNumericPrice(product.ticketTypes) ??
-    findFirstNumericPrice(ticketInfo?.price);
-
-  const firstValidPriority = prioritizedNumericCandidates.find(isValidCommercialPrice);
-  const fallbackTicketTypePrice = ticketTypePrices.find(isValidCommercialPrice);
-  const fallbackScannedPrice = isValidCommercialPrice(scannedNumericPrice)
-    ? scannedNumericPrice
-    : undefined;
-
-  const freeProduct = isFreeProduct(product);
-  const fromPrice =
-    firstValidPriority ??
-    fallbackTicketTypePrice ??
-    fallbackScannedPrice ??
-    (freeProduct
-      ? prioritizedNumericCandidates.find(num => typeof num === "number")
-      : undefined);
-
+  const fromPrice = extractNumericPrice(summaryFromPrice?.amount);
   const currency =
-    cleanText(pricingInfo?.currencyCode) ??
-    cleanText(pricingSummary?.currencyCode) ??
-    cleanText(legacyPricingSummary?.currency) ??
-    cleanText(asRecord(pricingSummary?.fromPrice)?.currencyCode) ??
-    cleanText(asRecord(pricingSummary?.fromPrice)?.currency) ??
+    cleanText(summaryFromPrice?.currency) ??
+    cleanText(pricingSummary?.currency) ??
     cleanText(product.currencyCode);
 
-  const rawTextPrice =
-    extractPriceText(pricingSummary?.fromPrice) ??
-    extractPriceText(pricingInfo?.fromPrice) ??
-    extractPriceText(pricingSummary?.price) ??
-    extractPriceText(pricingInfo?.price) ??
-    findFirstPriceText(product.pricingInfo) ??
-    findFirstPriceText(product.ticketTypes);
-
-  const fromPriceText = sanitizePriceText(rawTextPrice);
+  const fromPriceText =
+    sanitizePriceText(
+      cleanText(summaryFromPrice?.formatted) ??
+        cleanText(summaryFromPrice?.display) ??
+        cleanText(summaryFromPrice?.text)
+    ) ??
+    (typeof fromPrice === "number" && fromPrice > 0
+      ? `${currency ?? "USD"} ${fromPrice.toFixed(2)}`
+      : undefined);
 
   return {
-    fromPrice: isValidCommercialPrice(fromPrice) || freeProduct ? fromPrice : undefined,
+    fromPrice: isValidCommercialPrice(fromPrice) ? fromPrice : undefined,
     currency,
     fromPriceText,
   };
@@ -338,52 +224,21 @@ const extractImages = (product: Record<string, unknown>) => {
 };
 
 const extractMeetingPoint = (product: Record<string, unknown>) => {
-  const meetingPoints = asArray(product.meetingPoints)
-    .map(item => asRecord(item))
-    .filter((item): item is Record<string, unknown> => Boolean(item));
-
-  const ticketDescription = extractTicketDescription(product);
+  const logistics = asRecord(product.logistics);
+  const startLocation = asRecord(logistics?.startLocation);
+  const address = asRecord(startLocation?.address);
 
   const full =
-    cleanText(meetingPoints[0]?.fullAddress) ??
-    cleanText(meetingPoints[0]?.address) ??
-    cleanText(meetingPoints[0]?.description) ??
-    (ticketDescription
-      ?.match(
-        /(?:meeting|pickup)\s*(?:point|location)?\s*[:\-]\s*([^\.]+)/i
-      )?.[1]
-      ?.trim() ||
-      undefined);
+    cleanText(startLocation?.fullAddress) ??
+    cleanText(startLocation?.description) ??
+    cleanText(startLocation?.name) ??
+    cleanText(address?.fullAddress) ??
+    cleanText(address?.streetAddress) ??
+    cleanText(address?.addressLine1);
 
-  const short =
-    cleanText(meetingPoints[0]?.name) ?? full?.split(",")[0]?.trim();
+  const short = cleanText(startLocation?.name) ?? full?.split(",")[0]?.trim();
 
   return { meetingPointFull: full, meetingPointShort: short };
-};
-
-const collectItineraryArrays = (value: unknown, depth = 0): unknown[][] => {
-  if (depth > 5) return [];
-
-  if (Array.isArray(value)) {
-    if (
-      value.some(item => {
-        const row = asRecord(item);
-        return Boolean(
-          row &&
-            (row.title || row.name || row.description || row.stopName || row.pointOfInterest)
-        );
-      })
-    ) {
-      return [value];
-    }
-
-    return value.flatMap(item => collectItineraryArrays(item, depth + 1));
-  }
-
-  const row = asRecord(value);
-  if (!row) return [];
-
-  return Object.values(row).flatMap(entry => collectItineraryArrays(entry, depth + 1));
 };
 
 const normalizeItineraryStop = (item: unknown): Engine6ItineraryItem | undefined => {
@@ -426,57 +281,18 @@ const normalizeItineraryStop = (item: unknown): Engine6ItineraryItem | undefined
 const extractItinerary = (
   product: Record<string, unknown>
 ): Engine6ItineraryItem[] => {
-  const ticketInfo = asRecord(product.ticketInfo);
-  const variants = asArray(product.variants)
-    .map(item => asRecord(item))
-    .filter((item): item is Record<string, unknown> => Boolean(item));
+  const itinerary = asRecord(product.itinerary);
+  const itineraryItems = asArray(itinerary?.items);
 
-  const directCandidates: unknown[] = [
-    product.itinerary,
-    product.itineraryItems,
-    product.stops,
-    asRecord(product.itinerary)?.items,
-    asRecord(product.itinerary)?.itineraryItems,
-    asRecord(product.itinerary)?.stopPoints,
-    ticketInfo?.itinerary,
-    ticketInfo?.items,
-    ticketInfo?.stops,
-    ...variants.map(item => item.itinerary),
-  ];
-
-  const allArrays = directCandidates.flatMap(candidate => collectItineraryArrays(candidate));
-
-  const normalized = allArrays
-    .flatMap(items => items.map(normalizeItineraryStop))
+  const mapped = itineraryItems
+    .map(normalizeItineraryStop)
     .filter((item): item is Engine6ItineraryItem => Boolean(item));
 
-  const deduped = normalized.filter(
-    (item, index, list) =>
-      list.findIndex(existing => existing.title === item.title) === index
-  );
-
-  if (deduped.length > 0) {
-    return deduped;
+  if (mapped.length > 0) {
+    return mapped;
   }
 
-  const fallbackNarrative =
-    extractTicketDescription(product) ??
-    cleanText(asRecord(product.description)?.text) ??
-    cleanText(product.description);
-
-  if (!fallbackNarrative) {
-    return [];
-  }
-
-  return fallbackNarrative
-    .split(/\.(?:\s+|$)/)
-    .map(item => cleanText(item))
-    .filter((item): item is string => Boolean(item))
-    .slice(0, 4)
-    .map((item, index) => ({
-      title: `Tour segment ${index + 1}`,
-      description: item,
-    }));
+  return [];
 };
 
 const extractDurationText = (
@@ -484,24 +300,14 @@ const extractDurationText = (
   itinerary: Engine6ItineraryItem[]
 ) => {
   const duration = asRecord(product.duration);
+  const durationMinutes = asNumber(duration?.fixedDurationInMinutes);
+  const fromMinutes = formatMinutesToDuration(durationMinutes);
 
   const itineraryDuration = itinerary
     .map(item => item.duration)
     .find((item): item is string => Boolean(item));
 
-  const ticketDescription = extractTicketDescription(product);
-  const ticketDurationMatch = ticketDescription?.match(
-    /(\d+\s*(?:hours?|hrs?|minutes?|mins?|days?))/i
-  );
-
-  return (
-    cleanText(duration?.formatted) ??
-    cleanText(duration?.text) ??
-    cleanText(duration?.description) ??
-    cleanText(product.duration) ??
-    itineraryDuration ??
-    ticketDurationMatch?.[1]
-  );
+  return fromMinutes ?? itineraryDuration;
 };
 
 const extractRawFaqs = (product: Record<string, unknown>): Engine6FaqItem[] => {
@@ -696,9 +502,8 @@ export const mapViatorToEngine6PageData = ({
   const durationText = extractDurationText(product, itinerary);
 
   const cancellationText =
-    cleanText(asRecord(product.cancellationPolicy)?.description) ??
     cleanText(product.cancellationPolicy) ??
-    cleanText(asRecord(product.ticketInfo)?.cancellationPolicy);
+    cleanText(asRecord(product.cancellationPolicy)?.description);
 
   const inclusions = extractInclusions(product);
   const exclusions = extractExclusions(product);
