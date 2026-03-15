@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -28,6 +28,13 @@ import {
   buildBreadcrumbList,
   buildItemList,
 } from "../../../../utils/structuredData";
+import Engine6ListingCard from "../../../../engine6/components/Engine6ListingCard";
+import {
+  mapEngine6PageToListingItem,
+  getEngine6ViatorTourData,
+} from "../../../../engine6/viator/getEngine6ViatorTourData";
+import { engine6HiloVolcanoRecord } from "../../../../engine6/viator/records";
+import type { Engine6ListingItem } from "../../../../engine6/types";
 
 type CityToursIndexRouteProps = {
   params: {
@@ -41,6 +48,9 @@ export default function CityToursIndexRoute({
   params,
   basePathOverride,
 }: CityToursIndexRouteProps) {
+  const [engine6ListingItem, setEngine6ListingItem] =
+    useState<Engine6ListingItem | null>(null);
+
   const state =
     getStateBySlug(params.stateSlug) ??
     getFallbackStateBySlug(params.stateSlug);
@@ -51,6 +61,16 @@ export default function CityToursIndexRoute({
   const isFlagstaff = Boolean(
     state && city && state.slug === "arizona" && city.slug === "flagstaff"
   );
+
+  useEffect(() => {
+    if (!state || !city || state.slug !== "hawaii" || city.slug !== "hilo") {
+      return;
+    }
+
+    getEngine6ViatorTourData(engine6HiloVolcanoRecord)
+      .then(page => setEngine6ListingItem(mapEngine6PageToListingItem(page)))
+      .catch(() => setEngine6ListingItem(null));
+  }, [state, city]);
   const tours =
     state && city
       ? isFlagstaff
@@ -209,6 +229,15 @@ export default function CityToursIndexRoute({
             <div className="h-64 w-full bg-[#2f4a2f]/10 md:h-80" />
           )}
         </div>
+
+        {engine6ListingItem ? (
+          <div className="mt-10">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#2f4a2f]">
+              Engine6 API-first pilot
+            </p>
+            <Engine6ListingCard item={engine6ListingItem} />
+          </div>
+        ) : null}
         {filteredTours.length ? (
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {filteredTours.map(({ tour, href }) => (
