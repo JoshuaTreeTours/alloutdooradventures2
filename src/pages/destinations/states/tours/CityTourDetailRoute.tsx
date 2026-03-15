@@ -71,6 +71,8 @@ import {
   getViatorFromPrice,
   peekViatorFromPriceCache,
 } from "../../../../server/viator/getViatorFromPrice";
+import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
+import { isEngine6PilotTourRoute } from "../../../../engine6/routes";
 
 type CityTourDetailRouteProps = {
   params: {
@@ -83,6 +85,16 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  if (
+    isEngine6PilotTourRoute(
+      params.stateSlug,
+      params.citySlug,
+      params.tourSlug
+    )
+  ) {
+    return <Engine6TourPage />;
+  }
+
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
