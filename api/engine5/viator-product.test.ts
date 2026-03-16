@@ -44,6 +44,27 @@ describe("/api/engine5/viator-product", () => {
     expect((res.body as any).product.productCode).toBe("132218P209");
   });
 
+
+  it("includes temporary structured diagnostics when fallback occurs before live fetch", async () => {
+    const req = { method: "GET", query: { productCode: "421920P2" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        reason: "missing-api-key",
+        hasViatorApiKey: false,
+        attemptedLiveFetch: false,
+        upstreamStatus: null,
+        upstreamContentType: null,
+        upstreamOk: null,
+        usedBundledFallbackBecause: "missing-api-key",
+      })
+    );
+  });
   it("returns 500 when key is missing for non-bundled products", async () => {
     const req = { method: "GET", query: { productCode: "999999P001" } };
     const res = createRes();
@@ -60,6 +81,8 @@ describe("/api/engine5/viator-product", () => {
 
     const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
       text: async () => JSON.stringify({ product: { productCode: "132218P209" } }),
     } as Response);
 
@@ -85,6 +108,7 @@ describe("/api/engine5/viator-product", () => {
       ok: false,
       status: 502,
       statusText: "Bad Gateway",
+      headers: new Headers({ "content-type": "application/json" }),
       text: async () => "upstream error",
     } as Response);
 
@@ -103,6 +127,11 @@ describe("/api/engine5/viator-product", () => {
         source: "bundled-fallback",
         reason: "upstream-not-ok",
         status: 502,
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus: 502,
+        upstreamOk: false,
+        usedBundledFallbackBecause: "upstream-not-ok",
       })
     );
   });
@@ -112,6 +141,8 @@ describe("/api/engine5/viator-product", () => {
 
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "text/html" }),
       text: async () => "<html>not-json</html>",
     } as Response);
 
@@ -133,6 +164,8 @@ describe("/api/engine5/viator-product", () => {
 
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
       text: async () =>
         JSON.stringify({
           product: {
@@ -159,4 +192,36 @@ describe("/api/engine5/viator-product", () => {
     expect(res.headers["X-Engine5-Source"]).toBeUndefined();
     expect((res.body as any).product.pricing.summary.fromPrice).toBe(139);
   });
+
+  it("reports diagnostics when live fetch succeeds but price extraction fails", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () => JSON.stringify({ product: { productCode: "421920P2" } }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "421920P2" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        reason: "live-price-missing-or-zero",
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus: 200,
+        upstreamContentType: "application/json",
+        upstreamOk: true,
+        livePayloadPrice: null,
+        livePriceFieldPath: null,
+        usedBundledFallbackBecause: "live-price-missing-or-zero",
+      })
+    );
+  });
+
 });

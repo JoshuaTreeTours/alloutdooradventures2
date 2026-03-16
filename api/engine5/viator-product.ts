@@ -5,6 +5,15 @@ const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
 const ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
 
+type BridgeDiagnostics = {
+  hasViatorApiKey: boolean;
+  attemptedLiveFetch: boolean;
+  upstreamStatus: number | null;
+  upstreamContentType: string | null;
+  upstreamOk: boolean | null;
+  usedBundledFallbackBecause: string;
+};
+
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
   Accept: "application/json;version=2.0",
@@ -35,7 +44,6 @@ const getBundledExactProductPayload = async (productCode: string) => {
     return null;
   }
 };
-
 
 const parsePriceAmount = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value)) {
@@ -86,6 +94,15 @@ const readCommercialPrice = (
   return { amount: undefined, fieldPath: undefined };
 };
 
+const buildInitialBridgeDiagnostics = (hasViatorApiKey: boolean): BridgeDiagnostics => ({
+  hasViatorApiKey,
+  attemptedLiveFetch: false,
+  upstreamStatus: null,
+  upstreamContentType: null,
+  upstreamOk: null,
+  usedBundledFallbackBecause: "",
+});
+
 const respondWithBundledPayload = (
   res: any,
   bundledPayload: Record<string, unknown>,
@@ -121,10 +138,14 @@ export default async function handler(req: any, res: any) {
   const isBridgeProduct = productCode === ENGINE5_BRIDGE_PRODUCT_CODE;
 
   const key = process.env.VIATOR_API_KEY;
+  const bridgeDiagnostics = buildInitialBridgeDiagnostics(Boolean(key));
+
   if (!key && bundledPayload) {
+    bridgeDiagnostics.usedBundledFallbackBecause = "missing-api-key";
     respondWithBundledPayload(res, bundledPayload, {
       source: "bundled-fallback",
       reason: "missing-api-key",
+      ...bridgeDiagnostics,
     });
     return;
   }
@@ -137,18 +158,25 @@ export default async function handler(req: any, res: any) {
   const baseUrl = process.env.VIATOR_BASE_URL ?? DEFAULT_VIATOR_BASE_URL;
 
   try {
+    bridgeDiagnostics.attemptedLiveFetch = true;
     const response = await fetch(`${baseUrl}/products/${productCode}`, {
       method: "GET",
       headers: buildHeaders(key),
     });
 
+    bridgeDiagnostics.upstreamStatus = response.status;
+    bridgeDiagnostics.upstreamOk = response.ok;
+    bridgeDiagnostics.upstreamContentType = response.headers.get("content-type");
+
     if (!response.ok) {
       if (bundledPayload && isBridgeProduct) {
+        bridgeDiagnostics.usedBundledFallbackBecause = "upstream-not-ok";
         respondWithBundledPayload(res, bundledPayload, {
           source: "bundled-fallback",
           reason: "upstream-not-ok",
           status: response.status,
           statusText: response.statusText,
+          ...bridgeDiagnostics,
         });
         return;
       }
@@ -168,10 +196,12 @@ export default async function handler(req: any, res: any) {
       payload = JSON.parse(rawBody) as Record<string, unknown>;
     } catch {
       if (bundledPayload && isBridgeProduct) {
+        bridgeDiagnostics.usedBundledFallbackBecause = "upstream-non-json";
         respondWithBundledPayload(res, bundledPayload, {
           source: "bundled-fallback",
           reason: "upstream-non-json",
           upstreamBody: rawBody.slice(0, 500),
+          ...bridgeDiagnostics,
         });
         return;
       }
@@ -184,12 +214,18 @@ export default async function handler(req: any, res: any) {
     }
 
     const livePrice = readCommercialPrice(payload);
-    if (bundledPayload && isBridgeProduct && !(typeof livePrice.amount === "number" && livePrice.amount > 0)) {
+    if (
+      bundledPayload &&
+      isBridgeProduct &&
+      !(typeof livePrice.amount === "number" && livePrice.amount > 0)
+    ) {
+      bridgeDiagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
       respondWithBundledPayload(res, bundledPayload, {
         source: "bundled-fallback",
         reason: "live-price-missing-or-zero",
         livePayloadPrice: livePrice.amount ?? null,
         livePriceFieldPath: livePrice.fieldPath ?? null,
+        ...bridgeDiagnostics,
       });
       return;
     }
@@ -201,10 +237,12 @@ export default async function handler(req: any, res: any) {
     res.status(200).json(payload);
   } catch (error: any) {
     if (bundledPayload && isBridgeProduct) {
+      bridgeDiagnostics.usedBundledFallbackBecause = "request-failed";
       respondWithBundledPayload(res, bundledPayload, {
         source: "bundled-fallback",
         reason: "request-failed",
         error: error?.message ?? "unknown-error",
+        ...bridgeDiagnostics,
       });
       return;
     }
