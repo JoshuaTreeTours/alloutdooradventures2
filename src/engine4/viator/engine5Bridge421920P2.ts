@@ -10,6 +10,11 @@ import {
 } from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2 = "9640P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES = [
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
+] as const;
 
 export type Engine4BridgeRuntimeSource =
   | "live-api"
@@ -35,6 +40,67 @@ const toStringArray = (value: unknown): string[] =>
         .map(item => cleanText(item))
         .filter((item): item is string => Boolean(item))
     : [];
+
+const toExactProductImages = (
+  value: unknown
+): Engine4ViatorApiTour["exactProductImages"] => {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  return value
+    .map(image => {
+      const imageRecord = asRecord(image);
+      const variants = Array.isArray(imageRecord?.variants)
+        ? imageRecord.variants
+            .map(variant => {
+              const variantRecord = asRecord(variant);
+              const url = cleanText(variantRecord?.url);
+              if (!url) {
+                return null;
+              }
+
+              return {
+                url,
+                width:
+                  typeof variantRecord?.width === "number"
+                    ? variantRecord.width
+                    : undefined,
+                height:
+                  typeof variantRecord?.height === "number"
+                    ? variantRecord.height
+                    : undefined,
+              };
+            })
+            .filter(
+              (
+                variant
+              ): variant is {
+                url: string;
+                width?: number;
+                height?: number;
+              } => Boolean(variant)
+            )
+        : [];
+
+      if (variants.length === 0) {
+        return null;
+      }
+
+      return {
+        variants,
+        isCover: Boolean(imageRecord?.isCover),
+      };
+    })
+    .filter(
+      (
+        image
+      ): image is {
+        variants: { url: string; width?: number; height?: number }[];
+        isCover: boolean;
+      } => Boolean(image)
+    );
+};
 
 export const hasViatorNonZeroPrice = (value?: string): boolean => {
   if (!value) return false;
@@ -66,6 +132,7 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   const meetingPoint = extractViatorMeetingPoint(product);
   const itinerary = extractViatorItinerary(product);
   const faqs = extractViatorFaqs(product);
+  const exactProductImages = toExactProductImages(product.images);
 
   return {
     productCode: normalizedCode,
@@ -94,6 +161,10 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
+    exactProductImages,
+    galleryImages: exactProductImages
+      .map(image => image.variants[0]?.url)
+      .filter((url): url is string => Boolean(url)),
     rawProductPayload: {
       ...product,
       _engine5BridgeDiagnostics: {
@@ -106,15 +177,18 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   };
 };
 
-export const resolve421920P2BridgeApiTour = (input: {
+export const resolveStrictEngine5BridgeApiTour = (input: {
   productCode: string;
   runtimeApiTour?: Engine4ViatorApiTour;
   runtimeSource?: "live-api" | "bundled-fallback";
   cachedFallbackApiTour?: Engine4ViatorApiTour;
 }) => {
   const normalizedCode = input.productCode.trim().toUpperCase();
-  const isStrictProduct =
-    normalizedCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE;
+  const isStrictProduct = ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+    normalizedCode as
+      | typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      | typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2
+  );
 
   if (!isStrictProduct) {
     return {
@@ -150,3 +224,5 @@ export const resolve421920P2BridgeApiTour = (input: {
     isStrictProduct,
   };
 };
+
+export const resolve421920P2BridgeApiTour = resolveStrictEngine5BridgeApiTour;

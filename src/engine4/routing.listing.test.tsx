@@ -267,4 +267,37 @@ describe("Engine4 Aspen routing/listing", () => {
     );
   });
 
+
+  it("builds the 9640P2 route and exposes it in Flagstaff listing", () => {
+    const entries = getEngine4ListingEntries("arizona", "flagstaff");
+    const target = entries.find(entry => entry.tour.productCode === "9640P2");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/arizona/flagstaff/tours/antelope-canyon-and-horseshoe-bend-day-tour-9640p2"
+    );
+    expect(target?.tour.bookingUrl).toContain(
+      "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "arizona",
+      "flagstaff",
+      "antelope-canyon-and-horseshoe-bend-day-tour-9640p2"
+    );
+
+    expect(routed?.id).toBe("9640P2");
+    expect(routed?.bookingUrl).toContain("9640P2");
+  });
+
+
+  it("keeps 421920P2 route unchanged", () => {
+    const entries = getEngine4ListingEntries("california", "santa-barbara");
+    const target = entries.find(entry => entry.tour.productCode === "421920P2");
+
+    expect(target?.href).toBe(
+      "/destinations/california/santa-barbara/tours/epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
+    );
+  });
+
 });

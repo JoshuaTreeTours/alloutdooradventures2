@@ -2,13 +2,14 @@ import { describe, expect, it } from "vitest";
 
 import {
   ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
   hasViatorNonZeroPrice,
   mapEngine5ProductPayloadToEngine4ApiTour,
   resolve421920P2BridgeApiTour,
 } from "./engine5Bridge421920P2";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
 
-describe("engine5 bridge for 421920P2", () => {
+describe("engine5 bridge strict products", () => {
   it("prefers live payload for 421920P2 when available", () => {
     const cached =
       engine4ViatorApiFallbackByProductCode[
@@ -146,6 +147,62 @@ describe("engine5 bridge for 421920P2", () => {
     expect(diagnostics?.ratingFieldPath).toBe("product.reviews.combinedAverageRating");
     expect(diagnostics?.reviewCountFieldPath).toBe("product.reviews.totalReviews");
     expect(diagnostics?.itineraryFieldPath).toBe("product.itinerary.itineraryItems");
+  });
+
+  it("supports strict live-first behavior for 9640P2", () => {
+    const cached =
+      engine4ViatorApiFallbackByProductCode[
+        ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2
+      ];
+
+    const runtime = {
+      ...cached,
+      fromPrice: "$355.00",
+      title: "Live Antelope Canyon and Horseshoe Bend Day Tour",
+    };
+
+    const resolved = resolve421920P2BridgeApiTour({
+      productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
+      runtimeApiTour: runtime,
+      runtimeSource: "live-api",
+      cachedFallbackApiTour: cached,
+    });
+
+    expect(resolved.runtimeSource).toBe("live-api");
+    expect(resolved.apiTour?.title).toContain("Live Antelope");
+  });
+
+
+  it("maps live image variants for 9640P2 so hero can come from live API", () => {
+    const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
+      payload: {
+        product: {
+          title: "Antelope Canyon and Horseshoe Bend Day Tour",
+          productUrl:
+            "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2",
+          priceFrom: "$299.00",
+          images: [
+            {
+              isCover: true,
+              variants: [
+                {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/live/hero.jpg?w=1100&h=800&s=1",
+                  width: 1100,
+                  height: 800,
+                },
+              ],
+            },
+          ],
+        },
+      },
+    });
+
+    expect(mapped?.productCode).toBe("9640P2");
+    expect(mapped?.fromPrice).toBe("$299.00");
+    expect(mapped?.exactProductImages?.[0]?.variants?.[0]?.url).toContain(
+      "/live/hero.jpg"
+    );
   });
 
 });

@@ -141,6 +141,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "9640P2",
+    bookingUrl:
+      "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Arizona",
+      stateSlug: "arizona",
+      city: "Flagstaff",
+      citySlug: "flagstaff",
+    },
+    slug: "antelope-canyon-and-horseshoe-bend-day-tour-9640p2",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "3454_B0016",
     bookingUrl:
       "https://www.viator.com/tours/San-Francisco/Small-Group-Yosemite-Tour-from-San-Francisco/d651-3454_B0016?pid=P00290915&mcid=42383&medium=link&currency=USD",
@@ -818,6 +835,80 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "Can I cancel if my plans change?",
         answer:
           "This listing shows free cancellation up to 24 hours in advance.",
+      },
+    ],
+  },
+  "9640P2": {
+    productCode: "9640P2",
+    title: "Antelope Canyon and Horseshoe Bend Day Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2",
+    fromPrice: "$299.00",
+    priceCurrency: "USD",
+    rating: 4.9,
+    reviewCount: 2700,
+    duration: "11 hours",
+    meetingPoint: "400 S Malpais Ln, Flagstaff, AZ 86001, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Visit Lower Antelope Canyon and Horseshoe Bend on a full-day guided trip with transportation from Flagstaff.",
+    overview:
+      "This full-day outing from Flagstaff combines two of northern Arizona's iconic sights in one itinerary: Lower Antelope Canyon and Horseshoe Bend. Travel with a guide by coach, stop for views over the Colorado River at Horseshoe Bend, and enter Lower Antelope Canyon with a Navajo guide for a timed walking tour through the slot canyon.",
+    highlights: [
+      "Guided day trip from Flagstaff to Lower Antelope Canyon and Horseshoe Bend",
+      "Timed Lower Antelope Canyon walking tour with a Navajo guide",
+      "Photo stop overlooking Horseshoe Bend and the Colorado River",
+      "Round-trip transportation included from Flagstaff",
+    ],
+    itinerary: [
+      {
+        title: "Depart Flagstaff",
+        description:
+          "Meet in Flagstaff and travel by coach toward Page, Arizona, with narration during the drive.",
+      },
+      {
+        title: "Horseshoe Bend",
+        description:
+          "Walk to the overlook for views of Horseshoe Bend and free time for photos.",
+      },
+      {
+        title: "Lower Antelope Canyon",
+        description:
+          "Join a Navajo guide for a slot-canyon walking tour through Lower Antelope Canyon.",
+      },
+    ],
+    inclusions: ["Professional guide", "Round-trip transportation"],
+    exclusions: ["Guide gratuities", "Personal expenses"],
+    additionalInfo: [
+      "Closed-toe shoes are recommended for uneven walking surfaces.",
+    ],
+    faqs: [
+      {
+        question: "Where does this tour meet?",
+        answer: "The listed meeting point is 400 S Malpais Ln, Flagstaff, AZ 86001, USA.",
+      },
+      {
+        question: "Is cancellation available?",
+        answer: "This listing shows free cancellation up to 24 hours in advance.",
       },
     ],
   },

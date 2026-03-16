@@ -65,6 +65,20 @@ describe("/api/engine5/viator-product", () => {
       })
     );
   });
+
+
+  it("returns bundled fallback payload for 9640P2 when key is missing", async () => {
+    const req = { method: "GET", query: { productCode: "9640P2" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers["X-Engine5-Source"]).toBe(
+      "bundled-exact-product-payload"
+    );
+    expect((res.body as any).product.productCode).toBe("9640P2");
+  });
   it("returns 500 when key is missing for non-bundled products", async () => {
     const req = { method: "GET", query: { productCode: "999999P001" } };
     const res = createRes();
