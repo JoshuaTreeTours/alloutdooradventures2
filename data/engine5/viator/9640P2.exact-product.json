@@ -1,0 +1,57 @@
+{
+  "productCode": "9640P2",
+  "title": "Antelope Canyon and Horseshoe Bend Day Tour",
+  "shortDescription": "Explore Lower Antelope Canyon and Horseshoe Bend on a full-day guided tour departing from Flagstaff.",
+  "productUrl": "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2",
+  "duration": "11 hours",
+  "priceFrom": "$299.00",
+  "currencyCode": "USD",
+  "rating": 4.9,
+  "reviewCount": 2700,
+  "meetingPoint": "400 S Malpais Ln, Flagstaff, AZ 86001, USA",
+  "cancellationPolicy": "Free cancellation up to 24 hours in advance.",
+  "highlights": [
+    "Full-day guided trip from Flagstaff",
+    "Lower Antelope Canyon walking tour with Navajo guide",
+    "Horseshoe Bend overlook stop",
+    "Round-trip transportation included"
+  ],
+  "itinerary": [
+    {
+      "title": "Depart Flagstaff",
+      "description": "Meet your guide in Flagstaff and travel toward Page, Arizona."
+    },
+    {
+      "title": "Horseshoe Bend",
+      "description": "Visit the overlook for panoramic Colorado River views and photos."
+    },
+    {
+      "title": "Lower Antelope Canyon",
+      "description": "Walk through Lower Antelope Canyon with a Navajo guide."
+    }
+  ],
+  "inclusions": ["Professional guide", "Round-trip transportation"],
+  "exclusions": ["Guide gratuities", "Personal expenses"],
+  "additionalInfo": [
+    "Closed-toe shoes are recommended for uneven surfaces.",
+    "Tour timing may vary with canyon permit windows and weather conditions."
+  ],
+  "faqs": [
+    {
+      "question": "Where does the tour depart from?",
+      "answer": "The listed meeting point is 400 S Malpais Ln, Flagstaff, AZ 86001, USA."
+    }
+  ],
+  "images": [
+    {
+      "isCover": true,
+      "variants": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2a/f6/f5/7f/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800
+        }
+      ]
+    }
+  ]
+}

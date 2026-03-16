@@ -3,6 +3,9 @@ import { describe, expect, it } from "vitest";
 
 import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
+import { engine4ViatorApiFallbackByProductCode } from "./data/viatorTours";
+import bundled9640P2ExactPayload from "../../data/engine5/viator/9640P2.exact-product.json";
+import { mapEngine5ProductPayloadToEngine4ApiTour } from "./viator/engine5Bridge421920P2";
 import { getEngine4TourBySlugs } from "./routing";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -265,6 +268,61 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(routed?.content.meetingPoint.address).toBe(
       "Bay St Louis, Mississippi, USA"
     );
+  });
+
+
+  it("builds the 9640P2 route and exposes it in Flagstaff listing", () => {
+    const entries = getEngine4ListingEntries("arizona", "flagstaff");
+    const target = entries.find(entry => entry.tour.productCode === "9640P2");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/arizona/flagstaff/tours/antelope-canyon-and-horseshoe-bend-day-tour-9640p2"
+    );
+    expect(target?.tour.bookingUrl).toContain(
+      "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "arizona",
+      "flagstaff",
+      "antelope-canyon-and-horseshoe-bend-day-tour-9640p2"
+    );
+
+    expect(routed?.id).toBe("9640P2");
+    expect(routed?.bookingUrl).toContain("9640P2");
+  });
+
+
+  it("keeps 421920P2 route unchanged", () => {
+    const entries = getEngine4ListingEntries("california", "santa-barbara");
+    const target = entries.find(entry => entry.tour.productCode === "421920P2");
+
+    expect(target?.href).toBe(
+      "/destinations/california/santa-barbara/tours/epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
+    );
+  });
+
+
+  it("uses bundled exact 9640P2 source for listing hero and social proof", () => {
+    const entries = getEngine4ListingEntries("arizona", "flagstaff");
+    const target = entries.find(entry => entry.tour.productCode === "9640P2");
+    const fallback = engine4ViatorApiFallbackByProductCode["9640P2"];
+    const bundledMapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: "9640P2",
+      payload: { product: bundled9640P2ExactPayload },
+    });
+
+    expect(target).toBeDefined();
+    expect(target?.tour.heroImage).toBe(
+      bundledMapped?.exactProductImages?.[0]?.variants?.[0]?.url
+    );
+    expect(target?.tour.badges.rating).toBe(bundledMapped?.rating);
+    expect(target?.tour.badges.reviewCount).toBe(bundledMapped?.reviewCount);
+    expect(target?.tour.heroImage).not.toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/wrong/living-room.jpg?w=1100&h=800&s=1"
+    );
+    expect(target?.tour.badges.reviewCount).toBe(fallback.reviewCount);
   });
 
 });

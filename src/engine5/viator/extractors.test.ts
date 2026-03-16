@@ -61,11 +61,21 @@ describe("engine5 viator shared extractors", () => {
   });
 
   it("covers rating and review count path variants", () => {
-    const rating = extractViatorRating({ product: { reviews: { combinedAverageRating: 4.8 } } });
-    const reviewCount = extractViatorReviewCount({ product: { reviewSummary: { totalReviews: 321 } } });
+    const rating = extractViatorRating({
+      product: { reviewSummary: { averageRating: "4.9 out of 5" } },
+    });
+    const reviewCount = extractViatorReviewCount({
+      product: { reviews: { totalReviews: "2,345" } },
+    });
 
-    expect(rating).toEqual({ value: 4.8, fieldPath: "product.reviews.combinedAverageRating" });
-    expect(reviewCount).toEqual({ value: 321, fieldPath: "product.reviewSummary.totalReviews" });
+    expect(rating).toEqual({
+      value: 4.9,
+      fieldPath: "product.reviewSummary.averageRating",
+    });
+    expect(reviewCount).toEqual({
+      value: 2345,
+      fieldPath: "product.reviews.totalReviews",
+    });
   });
 
   it("normalizes itinerary from whatToExpect shape", () => {
@@ -83,26 +93,71 @@ describe("engine5 viator shared extractors", () => {
     ]);
   });
 
-  it("normalizes images and prefers cover ordering", () => {
+  it("extracts hero from media.images variant path priority", () => {
     const images = extractViatorImages({
       product: {
-        images: [
-          { url: "https://example.com/2.jpg", isCover: false },
-          {
-            url: "https://example.com/1.jpg",
-            isCover: true,
-            variants: [{ url: "https://example.com/1-large.jpg", width: 1200, height: 800 }],
-          },
-        ],
+        media: {
+          images: [
+            {
+              variants: {
+                LARGE: { url: "https://example.com/large.jpg", width: 1100, height: 800 },
+                FULL: { url: "https://example.com/full.jpg", width: 1600, height: 1100 },
+              },
+              url: "https://example.com/direct.jpg",
+            },
+          ],
+        },
       },
     });
 
-    expect(images?.value[0]?.isCover).toBe(true);
-    expect(images?.value[0]?.variants[0]?.url).toBe("https://example.com/1-large.jpg");
+    expect(images?.fieldPath).toBe("product.media.images[0].variants.FULL.url");
+    expect(images?.value[0]?.variants[0]?.url).toBe("https://example.com/full.jpg");
+    expect(images?.value[0]?.variants[0]?.width).toBe(1600);
+    expect(images?.value[0]?.variants[0]?.height).toBe(1100);
+    expect(images?.value[0]?.variants[1]?.url).toBe("https://example.com/large.jpg");
+  });
+
+  it("falls back to product.images[0].url when media variants are absent", () => {
+    const images = extractViatorImages({
+      product: {
+        images: [{ url: "https://example.com/fallback.jpg" }],
+      },
+    });
+
+    expect(images?.fieldPath).toBe("product.images[0].url");
+    expect(images?.value[0]?.variants[0]?.url).toBe(
+      "https://example.com/fallback.jpg"
+    );
   });
 
   it("normalizes faqs from qAndA shape", () => {
     const faqs = extractViatorFaqs({ product: { qAndA: { items: [{ q: "Q?", a: "A." }] } } });
     expect(faqs?.value).toEqual([{ question: "Q?", answer: "A." }]);
   });
+
+  it("prefers cover image over first media image for hero extraction", () => {
+    const images = extractViatorImages({
+      product: {
+        media: {
+          images: [
+            {
+              variants: {
+                FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/wrong/living-room.jpg" },
+              },
+            },
+            {
+              isCover: true,
+              variants: {
+                FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/right/antelope-canyon.jpg" },
+              },
+            },
+          ],
+        },
+      },
+    });
+
+    expect(images?.fieldPath).toBe("product.media.images[1].variants.FULL.url");
+    expect(images?.value[0]?.variants[0]?.url).toContain("/right/antelope-canyon.jpg");
+  });
+
 });

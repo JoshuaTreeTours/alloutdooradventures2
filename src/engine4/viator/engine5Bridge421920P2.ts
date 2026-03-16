@@ -4,12 +4,18 @@ import {
   extractViatorFaqs,
   extractViatorItinerary,
   extractViatorMeetingPoint,
+  extractViatorImages,
   extractViatorPrice,
   extractViatorRating,
   extractViatorReviewCount,
 } from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2 = "9640P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES = [
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
+] as const;
 
 export type Engine4BridgeRuntimeSource =
   | "live-api"
@@ -66,6 +72,7 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   const meetingPoint = extractViatorMeetingPoint(product);
   const itinerary = extractViatorItinerary(product);
   const faqs = extractViatorFaqs(product);
+  const exactProductImages = extractViatorImages(product)?.value ?? [];
 
   return {
     productCode: normalizedCode,
@@ -94,6 +101,10 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
+    exactProductImages,
+    galleryImages: exactProductImages
+      .map(image => image.variants[0]?.url)
+      .filter((url): url is string => Boolean(url)),
     rawProductPayload: {
       ...product,
       _engine5BridgeDiagnostics: {
@@ -106,15 +117,18 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   };
 };
 
-export const resolve421920P2BridgeApiTour = (input: {
+export const resolveStrictEngine5BridgeApiTour = (input: {
   productCode: string;
   runtimeApiTour?: Engine4ViatorApiTour;
   runtimeSource?: "live-api" | "bundled-fallback";
   cachedFallbackApiTour?: Engine4ViatorApiTour;
 }) => {
   const normalizedCode = input.productCode.trim().toUpperCase();
-  const isStrictProduct =
-    normalizedCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE;
+  const isStrictProduct = ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+    normalizedCode as
+      | typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      | typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2
+  );
 
   if (!isStrictProduct) {
     return {
@@ -150,3 +164,5 @@ export const resolve421920P2BridgeApiTour = (input: {
     isStrictProduct,
   };
 };
+
+export const resolve421920P2BridgeApiTour = resolveStrictEngine5BridgeApiTour;

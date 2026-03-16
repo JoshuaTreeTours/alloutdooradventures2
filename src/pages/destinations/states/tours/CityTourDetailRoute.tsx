@@ -60,10 +60,11 @@ import {
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
 import {
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES,
   ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
   hasViatorNonZeroPrice,
   mapEngine5ProductPayloadToEngine4ApiTour,
-  resolve421920P2BridgeApiTour,
+  resolveStrictEngine5BridgeApiTour,
   type Engine4BridgeRuntimeSource,
 } from "../../../../engine4/viator/engine5Bridge421920P2";
 import type { Engine4ViatorApiTour } from "../../../../engine4/types";
@@ -109,7 +110,10 @@ export default function CityTourDetailRoute({
     if (
       !engine4RouteTour ||
       engine4RouteTour.bookingProvider !== "viator" ||
-      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      !ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+        engine4RouteTour.id.toUpperCase() as
+          | (typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+      )
     ) {
       return;
     }
@@ -199,7 +203,7 @@ export default function CityTourDetailRoute({
         (() => {
           const cachedFallback =
             engine4ViatorApiFallbackByProductCode[productCode];
-          const resolvedBridge = resolve421920P2BridgeApiTour({
+          const resolvedBridge = resolveStrictEngine5BridgeApiTour({
             productCode,
             runtimeApiTour: strictBridgeApiTour,
             runtimeSource: strictBridgeSource,
@@ -211,7 +215,10 @@ export default function CityTourDetailRoute({
           );
 
           if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+              productCode as
+                | (typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+            ) &&
             !hasPrice
           ) {
             return (
@@ -233,7 +240,10 @@ export default function CityTourDetailRoute({
           });
 
           if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+              productCode as
+                | (typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+            ) &&
             !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
           ) {
             return (

@@ -9,7 +9,7 @@ import {
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
-const ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+const ENGINE5_BRIDGE_PRODUCT_CODES = ["421920P2", "9640P2"] as const;
 
 type BridgeDiagnostics = {
   hasViatorApiKey: boolean;
@@ -30,7 +30,9 @@ const buildHeaders = (apiKey: string) => ({
 const getBundledExactProductPayload = async (productCode: string) => {
   if (
     productCode !== ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE &&
-    productCode !== ENGINE5_BRIDGE_PRODUCT_CODE
+    !ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+      productCode as (typeof ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+    )
   ) {
     return null;
   }
@@ -92,7 +94,9 @@ export default async function handler(req: any, res: any) {
   }
 
   const bundledPayload = await getBundledExactProductPayload(productCode);
-  const isBridgeProduct = productCode === ENGINE5_BRIDGE_PRODUCT_CODE;
+  const isBridgeProduct = ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+    productCode as (typeof ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+  );
 
   const key = process.env.VIATOR_API_KEY;
   const bridgeDiagnostics = buildInitialBridgeDiagnostics(Boolean(key));

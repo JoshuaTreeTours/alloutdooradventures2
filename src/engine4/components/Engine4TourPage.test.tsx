@@ -248,4 +248,19 @@ describe("Engine4TourPage booking CTA", () => {
 
     expect(html).not.toContain("Ready to book?");
   });
+
+  it("does not render raw diagnostics/debug payload in visible markup", () => {
+    const withDebugLikeData: Engine4TourViewModel = {
+      ...engine4Tour,
+      content: {
+        ...engine4Tour.content,
+        overview: "Sample overview",
+      },
+    };
+
+    const html = renderToStaticMarkup(<Engine4TourPage tour={withDebugLikeData} />);
+    expect(html).not.toContain("_engine5BridgeDiagnostics");
+    expect(html).not.toContain("rawProductPayload");
+  });
+
 });
