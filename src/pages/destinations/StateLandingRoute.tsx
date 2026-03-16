@@ -2,6 +2,7 @@ import DestinationLandingTemplate from "../../templates/DestinationLandingTempla
 import { getStateBySlug } from "../../data/destinations";
 import { getFallbackStateBySlug } from "../../data/tourFallbacks";
 import { getToursByState } from "../../data/tours";
+import Engine6HiloPilotListingSection from "../../engine6/components/Engine6HiloPilotListingSection";
 
 type StateLandingRouteProps = {
   params: {
@@ -10,7 +11,9 @@ type StateLandingRouteProps = {
 };
 
 export default function StateLandingRoute({ params }: StateLandingRouteProps) {
-  const state = getStateBySlug(params.stateSlug) ?? getFallbackStateBySlug(params.stateSlug);
+  const state =
+    getStateBySlug(params.stateSlug) ??
+    getFallbackStateBySlug(params.stateSlug);
 
   if (!state) {
     return (
@@ -26,5 +29,12 @@ export default function StateLandingRoute({ params }: StateLandingRouteProps) {
 
   const tours = getToursByState(state.slug);
 
-  return <DestinationLandingTemplate state={state} tours={tours} />;
+  return (
+    <>
+      {params.stateSlug === "hawaii" ? (
+        <Engine6HiloPilotListingSection heading="Featured Engine6 Hawaii tour" />
+      ) : null}
+      <DestinationLandingTemplate state={state} tours={tours} />
+    </>
+  );
 }

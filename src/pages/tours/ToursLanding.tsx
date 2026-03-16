@@ -24,6 +24,7 @@ import { slugify } from "../../utils/slugify";
 import { getGuideRecord } from "../../utils/guides/guideRegistry";
 import { EUROPE_COUNTRIES } from "../../data/tourCatalog";
 import { isRentalTour } from "../../utils/isRentalTour";
+import Engine6HiloPilotListingSection from "../../engine6/components/Engine6HiloPilotListingSection";
 import {
   buildInternationalCityOptions,
   buildInternationalCountryOptions,
@@ -317,6 +318,11 @@ export default function ToursLanding() {
     inventoryType === "rentals"
       ? `Equipment Rentals in ${selectedPlaceLabel}`
       : `All Tours in ${selectedPlaceLabel}`;
+
+  const showEngine6HiloDiscovery =
+    inventoryType === "tours" &&
+    selectedStateSlug === "hawaii" &&
+    selectedCitySlug === "hilo";
 
   const pageContent = useMemo(() => {
     if (inventoryType === "rentals" && selectedCity) {
@@ -706,6 +712,9 @@ export default function ToursLanding() {
               {inventoryHeading}
             </h2>
             <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {showEngine6HiloDiscovery ? (
+                <Engine6HiloPilotListingSection embedded />
+              ) : null}
               {displayedTours.map(({ tour, href }) => (
                 <TourCard key={tour.id} tour={tour} href={href} />
               ))}
