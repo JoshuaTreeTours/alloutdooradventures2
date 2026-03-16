@@ -1,10 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { mapViatorToEngine5Tour } from "./mapViatorToEngine5Tour";
-import {
-  ENGINE5_PROOF_TOUR_PATH,
-  ENGINE5_PROOF_TOUR_SLUG,
-} from "../routes";
+import { ENGINE5_PROOF_TOUR_PATH, ENGINE5_PROOF_TOUR_SLUG } from "../routes";
 import { engine5ProofViatorRecord } from "./record";
 
 describe("mapViatorToEngine5Tour", () => {
@@ -49,6 +46,9 @@ describe("mapViatorToEngine5Tour", () => {
         apiFetchAttempted: true,
         apiFetchSucceeded: true,
         descriptionSource: "api",
+      },
+      priceDiagnostics: {
+        pathsTried: ["priceFrom"],
       },
     });
 
@@ -98,11 +98,13 @@ describe("mapViatorToEngine5Tour", () => {
           apiFetchSucceeded: true,
           descriptionSource: "api",
         },
+        priceDiagnostics: {
+          pathsTried: ["priceFrom"],
+        },
       })
     ).toThrow("missing canonical hero");
   });
 });
-
 
 describe("engine5 proof route constants", () => {
   it("exposes a real route URL for reviewers", () => {

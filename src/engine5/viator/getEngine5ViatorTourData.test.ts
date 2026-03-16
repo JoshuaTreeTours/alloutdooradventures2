@@ -25,12 +25,18 @@ describe("getEngine5ViatorTourData", () => {
       json: async () => ({
         product: {
           productCode: "132218P209",
-          title: "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
+          title:
+            "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
           shortDescription: "Two-day guided trip from Los Angeles.",
           productUrl:
             "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
           duration: "2 days",
           startTime: "6:00 AM",
+          pricing: {
+            summary: {
+              fromPrice: "$199.00",
+            },
+          },
           rating: 4.7,
           reviewCount: 40,
           meetingPoint: "Los Angeles pickup points",
@@ -87,6 +93,10 @@ describe("getEngine5ViatorTourData", () => {
       "https://dynamic-media.tacdn.com/media/photo-o/cover-wide.jpg"
     );
     expect(result.provenance.descriptionSource).toBe("api");
+    expect(result.fromPrice).toBe("$199.00");
+    expect(result.priceDiagnostics.pathsTried).toContain(
+      "pricing.summary.fromPrice"
+    );
   });
 
   it("rejects incomplete API payload instead of using generic fallback image", async () => {
@@ -97,7 +107,8 @@ describe("getEngine5ViatorTourData", () => {
           productCode: "132218P209",
           title: "Yosemite and Kings Canyon 2-Day Tour from LA",
           shortDescription: "Two-day guided trip",
-          productUrl: "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
+          productUrl:
+            "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
           images: [],
         },
       }),

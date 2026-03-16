@@ -53,6 +53,8 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import Engine6HiloPilotTourPage from "../../../../engine6/components/Engine6HiloPilotTourPage";
+import { isEngine6HiloPilotRoute } from "../../../../engine6/hiloPilot";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -174,6 +176,12 @@ export default function CityTourDetailRoute({
         cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
       />
     );
+  }
+
+  if (
+    isEngine6HiloPilotRoute(params.stateSlug, params.citySlug, params.tourSlug)
+  ) {
+    return <Engine6HiloPilotTourPage />;
   }
 
   const engine2Tour =
