@@ -107,4 +107,47 @@ describe("getEngine5ViatorTourData", () => {
       "payload incomplete"
     );
   });
+
+  it("keeps zipline progenitor hero/rating/review behavior via shared extractors", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "421920P2",
+          title: "Epic Zipline Tour Over The Santa Ynez Valley",
+          shortDescription: "Guided zipline aerial adventure over Santa Ynez.",
+          productUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2",
+          reviews: {
+            averageRating: "4.9 out of 5",
+            count: "2,710",
+          },
+          media: {
+            images: [
+              {
+                isCover: true,
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/zipline-full.jpg",
+                    width: 1600,
+                    height: 900,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("421920P2");
+
+    expect(result.canonicalHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/zipline-full.jpg"
+    );
+    expect(result.heroSelectionSize).toEqual({ width: 1600, height: 900 });
+    expect(result.rating).toBe(4.9);
+    expect(result.reviewCount).toBe(2710);
+  });
+
 });
