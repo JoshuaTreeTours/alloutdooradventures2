@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import {
+  extractViatorHeroImage,
   extractViatorPrice,
   extractViatorRating,
   extractViatorReviewCount,
@@ -170,6 +171,7 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
+    const liveHeroImage = extractViatorHeroImage(payload);
     const livePrice = extractViatorPrice(payload);
     const liveRating = extractViatorRating(payload);
     const liveReviewCount = extractViatorReviewCount(payload);
@@ -186,6 +188,7 @@ export default async function handler(req: any, res: any) {
         livePayloadPrice: livePrice?.amount ?? null,
         livePriceFormatted: livePrice?.formattedPrice ?? null,
         livePriceFieldPath: livePrice?.fieldPath ?? null,
+        heroImageFieldPath: liveHeroImage?.fieldPath ?? null,
         ratingFieldPath: liveRating?.fieldPath ?? null,
         reviewCountFieldPath: liveReviewCount?.fieldPath ?? null,
         itineraryFieldPath: liveItinerary?.fieldPath ?? null,

@@ -127,6 +127,11 @@ describe("engine5 bridge for 421920P2", () => {
           bookingOptions: [{ price: { amount: 166 } }],
           reviews: { combinedAverageRating: 4.9, totalReviews: 250 },
           itinerary: { itineraryItems: [{ name: "Launch", summary: "Safety", durationText: "20 min" }] },
+          media: {
+            images: [
+              { isCover: true, variants: { FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/zipline-cover.jpg" } } },
+            ],
+          },
         },
       },
     });
@@ -134,18 +139,21 @@ describe("engine5 bridge for 421920P2", () => {
     expect(mapped?.fromPrice).toBe("166");
     expect(mapped?.rating).toBe(4.9);
     expect(mapped?.reviewCount).toBe(250);
+    expect(mapped?.primaryImageUrl).toBe("https://dynamic-media.tacdn.com/media/photo-o/zipline-cover.jpg");
     const diagnostics = mapped?.rawProductPayload?._engine5BridgeDiagnostics as
       | {
           commercialPriceFieldPath?: string;
           ratingFieldPath?: string;
           reviewCountFieldPath?: string;
           itineraryFieldPath?: string;
+          heroImageFieldPath?: string;
         }
       | undefined;
     expect(diagnostics?.commercialPriceFieldPath).toBe("product.bookingOptions[0].price.amount");
     expect(diagnostics?.ratingFieldPath).toBe("product.reviews.combinedAverageRating");
     expect(diagnostics?.reviewCountFieldPath).toBe("product.reviews.totalReviews");
     expect(diagnostics?.itineraryFieldPath).toBe("product.itinerary.itineraryItems");
+    expect(diagnostics?.heroImageFieldPath).toBe("product.media.images[0].variants.FULL.url");
   });
 
 });

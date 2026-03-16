@@ -9,6 +9,13 @@ type ExtractedValue<T> = {
   fieldPath: string;
 };
 
+export type ViatorExtractedHeroImage = {
+  url: string;
+  fieldPath: string;
+  width?: number;
+  height?: number;
+};
+
 export type ViatorExtractedPrice = {
   amount: number;
   formattedPrice?: string;
@@ -35,6 +42,29 @@ const cleanText = (value: unknown): string | undefined => {
 
 const asNumber = (value: unknown): number | undefined =>
   typeof value === "number" && Number.isFinite(value) ? value : undefined;
+
+const parseLooseNumber = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return value;
+  }
+
+  const raw = cleanText(value);
+  if (!raw) {
+    return undefined;
+  }
+
+  const normalized = raw
+    .replace(/,/g, "")
+    .replace(/out of\s*5/giu, "")
+    .replace(/[^\d.-]/g, "");
+
+  if (!normalized) {
+    return undefined;
+  }
+
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
 
 const asImageUrl = (value: unknown): string | undefined => {
   const url = cleanText(value);
@@ -206,8 +236,7 @@ export const extractViatorRating = (input: unknown): ExtractedValue<number> | nu
 
   for (const path of paths) {
     const raw = readPath(product, path);
-    const value =
-      asNumber(raw) ?? (typeof raw === "string" ? Number(raw) : undefined);
+    const value = parseLooseNumber(raw);
     if (typeof value === "number" && Number.isFinite(value) && value > 0) {
       return { value, fieldPath: formatFieldPath(path) };
     }
@@ -233,10 +262,9 @@ export const extractViatorReviewCount = (
 
   for (const path of paths) {
     const raw = readPath(product, path);
-    const value =
-      asNumber(raw) ?? (typeof raw === "string" ? Number(raw) : undefined);
-    if (typeof value === "number" && Number.isFinite(value) && value > 0) {
-      return { value, fieldPath: formatFieldPath(path) };
+    const value = parseLooseNumber(raw);
+    if (typeof value === "number" && Number.isFinite(value) && value >= 0) {
+      return { value: Math.trunc(value), fieldPath: formatFieldPath(path) };
     }
   }
 
@@ -503,6 +531,91 @@ export const extractViatorImages = (
     value: normalized,
     fieldPath: imageCollections.length > 0 ? "product.images" : "product.images",
   };
+};
+
+export const extractViatorHeroImage = (
+  input: unknown
+): ViatorExtractedHeroImage | null => {
+  const product = pickProduct(input);
+  if (!product) {
+    return null;
+  }
+
+  const mediaImages = readPath(product, ["media", "images"]);
+  const rootImages = readPath(product, ["images"]);
+
+  const prioritizedMediaImages = Array.isArray(mediaImages)
+    ? [...mediaImages].sort((a, b) => {
+        const aCover = asRecord(a)?.isCover === true || asRecord(a)?.cover === true;
+        const bCover = asRecord(b)?.isCover === true || asRecord(b)?.cover === true;
+        return Number(bCover) - Number(aCover);
+      })
+    : [];
+
+  const imageEntries: Array<{ image: unknown; basePath: PathSegment[] }> = [];
+
+  if (Array.isArray(prioritizedMediaImages)) {
+    prioritizedMediaImages.forEach(image => {
+      const originalIndex = (mediaImages as unknown[]).indexOf(image);
+      imageEntries.push({ image, basePath: ["media", "images", originalIndex] });
+    });
+  }
+
+  if (Array.isArray(rootImages) && rootImages.length > 0) {
+    imageEntries.push({ image: rootImages[0], basePath: ["images", 0] });
+  }
+
+  const resolveVariantUrl = (
+    image: RecordLike,
+    variantName: string,
+    variantPath: PathSegment[]
+  ): ViatorExtractedHeroImage | null => {
+    const variants = asRecord(image.variants);
+    const variant = asRecord(variants?.[variantName]);
+    const url = asImageUrl(variant?.url);
+    if (!url) {
+      return null;
+    }
+
+    return {
+      url,
+      fieldPath: formatFieldPath(variantPath),
+      width: asNumber(variant?.width),
+      height: asNumber(variant?.height),
+    };
+  };
+
+  for (const entry of imageEntries) {
+    const image = asRecord(entry.image);
+    if (!image) {
+      continue;
+    }
+
+    const variantsByPriority = ["FULL", "HIGH_RESOLUTION", "LARGE"];
+    for (const variantKey of variantsByPriority) {
+      const resolved = resolveVariantUrl(image, variantKey, [
+        ...entry.basePath,
+        "variants",
+        variantKey,
+        "url",
+      ]);
+      if (resolved) {
+        return resolved;
+      }
+    }
+
+    const directUrl = asImageUrl(image.url);
+    if (directUrl) {
+      return {
+        url: directUrl,
+        fieldPath: formatFieldPath([...entry.basePath, "url"]),
+        width: asNumber(image.width),
+        height: asNumber(image.height),
+      };
+    }
+  }
+
+  return null;
 };
 
 export const extractViatorHighlights = (input: unknown): string[] => {

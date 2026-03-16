@@ -200,7 +200,7 @@ describe("/api/engine5/viator-product", () => {
       ok: true,
       status: 200,
       headers: new Headers({ "content-type": "application/json" }),
-      text: async () => JSON.stringify({ product: { productCode: "421920P2" } }),
+      text: async () => JSON.stringify({ product: { productCode: "421920P2", media: { images: [{ isCover: true, variants: { FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/zipline-cover.jpg" } } }] } } }),
     } as Response);
 
     const req = { method: "GET", query: { productCode: "421920P2" } };
@@ -219,6 +219,7 @@ describe("/api/engine5/viator-product", () => {
         upstreamOk: true,
         livePayloadPrice: null,
         livePriceFieldPath: null,
+        heroImageFieldPath: "product.media.images[0].variants.FULL.url",
         usedBundledFallbackBecause: "live-price-missing-or-zero",
       })
     );

@@ -2,6 +2,8 @@ import type { Engine4ViatorApiTour } from "../types";
 import {
   extractViatorDuration,
   extractViatorFaqs,
+  extractViatorHeroImage,
+  extractViatorImages,
   extractViatorItinerary,
   extractViatorMeetingPoint,
   extractViatorPrice,
@@ -66,6 +68,8 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   const meetingPoint = extractViatorMeetingPoint(product);
   const itinerary = extractViatorItinerary(product);
   const faqs = extractViatorFaqs(product);
+  const heroImage = extractViatorHeroImage(product);
+  const exactProductImages = extractViatorImages(product);
 
   return {
     productCode: normalizedCode,
@@ -94,12 +98,16 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
+    primaryImageUrl: heroImage?.url,
+    sourceDerivedImageUrl: heroImage?.url,
+    exactProductImages: exactProductImages?.value,
     rawProductPayload: {
       ...product,
       _engine5BridgeDiagnostics: {
         commercialPriceFieldPath: commercialPrice?.fieldPath,
         ratingFieldPath: rating?.fieldPath,
         reviewCountFieldPath: reviewCount?.fieldPath,
+        heroImageFieldPath: heroImage?.fieldPath,
         itineraryFieldPath: itinerary?.fieldPath,
       },
     },

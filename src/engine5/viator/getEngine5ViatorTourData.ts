@@ -6,6 +6,7 @@ import type {
 import {
   extractViatorDuration,
   extractViatorFaqs,
+  extractViatorHeroImage,
   extractViatorHighlights,
   extractViatorImages,
   extractViatorItinerary,
@@ -126,7 +127,24 @@ export const getEngine5ViatorTourData = async (
     cleanText(product.description);
   const bookingUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
   const exactProductImages = extractViatorImages(product)?.value ?? [];
-  const heroSelection = selectCanonicalHero(exactProductImages);
+  const extractedHero = extractViatorHeroImage(product);
+  const heroSelection =
+    extractedHero && extractedHero.url
+      ? {
+          canonicalHeroUrl: extractedHero.url,
+          heroSelectionSource: "api-images-payload" as const,
+          heroSelectionSize: {
+            width: extractedHero.width,
+            height: extractedHero.height,
+          },
+          candidateUrls: Array.from(
+            new Set([
+              extractedHero.url,
+              ...exactProductImages.flatMap(image => image.variants.map(variant => variant.url)),
+            ])
+          ),
+        }
+      : selectCanonicalHero(exactProductImages);
 
   if (
     !title ||
