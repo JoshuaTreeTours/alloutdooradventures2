@@ -100,8 +100,8 @@ describe("engine5 viator shared extractors", () => {
           images: [
             {
               variants: {
-                LARGE: { url: "https://example.com/large.jpg" },
-                FULL: { url: "https://example.com/full.jpg" },
+                LARGE: { url: "https://example.com/large.jpg", width: 1100, height: 800 },
+                FULL: { url: "https://example.com/full.jpg", width: 1600, height: 1100 },
               },
               url: "https://example.com/direct.jpg",
             },
@@ -112,6 +112,8 @@ describe("engine5 viator shared extractors", () => {
 
     expect(images?.fieldPath).toBe("product.media.images[0].variants.FULL.url");
     expect(images?.value[0]?.variants[0]?.url).toBe("https://example.com/full.jpg");
+    expect(images?.value[0]?.variants[0]?.width).toBe(1600);
+    expect(images?.value[0]?.variants[0]?.height).toBe(1100);
     expect(images?.value[0]?.variants[1]?.url).toBe("https://example.com/large.jpg");
   });
 
@@ -132,4 +134,30 @@ describe("engine5 viator shared extractors", () => {
     const faqs = extractViatorFaqs({ product: { qAndA: { items: [{ q: "Q?", a: "A." }] } } });
     expect(faqs?.value).toEqual([{ question: "Q?", answer: "A." }]);
   });
+
+  it("prefers cover image over first media image for hero extraction", () => {
+    const images = extractViatorImages({
+      product: {
+        media: {
+          images: [
+            {
+              variants: {
+                FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/wrong/living-room.jpg" },
+              },
+            },
+            {
+              isCover: true,
+              variants: {
+                FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/right/antelope-canyon.jpg" },
+              },
+            },
+          ],
+        },
+      },
+    });
+
+    expect(images?.fieldPath).toBe("product.media.images[1].variants.FULL.url");
+    expect(images?.value[0]?.variants[0]?.url).toContain("/right/antelope-canyon.jpg");
+  });
+
 });

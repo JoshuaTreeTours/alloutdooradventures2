@@ -7,7 +7,8 @@ import {
   mapEngine5ProductPayloadToEngine4ApiTour,
   resolve421920P2BridgeApiTour,
 } from "./engine5Bridge421920P2";
-import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
+import { engine4ViatorApiFallbackByProductCode, engine4ViatorTours } from "../data/viatorTours";
+import { mapViatorToEngine4Tour } from "./mapViatorToEngine4Tour";
 
 describe("engine5 bridge strict products", () => {
   it("prefers live payload for 421920P2 when available", () => {
@@ -229,6 +230,58 @@ describe("engine5 bridge strict products", () => {
     });
 
     expect(mapped?.exactProductImages).toEqual([]);
+  });
+
+
+  it("uses live normalized 9640P2 media/rating/reviews as final winning source", () => {
+    const record = engine4ViatorTours.find(tour => tour.productCode === "9640P2");
+    const mappedLive = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE_9640P2,
+      payload: {
+        product: {
+          title: "Antelope Canyon and Horseshoe Bend Day Tour",
+          productUrl:
+            "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2",
+          priceFrom: "$299.00",
+          media: {
+            images: [
+              {
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/wrong/living-room.jpg?w=1100&h=800&s=1",
+                    width: 1100,
+                    height: 800,
+                  },
+                },
+              },
+              {
+                isCover: true,
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/right/antelope-canyon.jpg?w=1100&h=800&s=1",
+                    width: 1100,
+                    height: 800,
+                  },
+                },
+              },
+            ],
+          },
+          reviewSummary: {
+            averageRating: 4.95,
+            totalReviews: 3141,
+          },
+        },
+      },
+    });
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: mappedLive,
+    });
+
+    expect(vm.heroImage).toContain("/right/antelope-canyon.jpg");
+    expect(vm.facts.ratingValue).toBe(4.95);
+    expect(vm.facts.reviewCount).toBe(3141);
   });
 
 });

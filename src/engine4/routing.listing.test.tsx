@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 
 import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
+import { engine4ViatorApiFallbackByProductCode } from "./data/viatorTours";
 import { getEngine4TourBySlugs } from "./routing";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -298,6 +299,18 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(target?.href).toBe(
       "/destinations/california/santa-barbara/tours/epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
     );
+  });
+
+
+  it("uses normalized Engine4 fallback source for 9640P2 listing hero and social proof", () => {
+    const entries = getEngine4ListingEntries("arizona", "flagstaff");
+    const target = entries.find(entry => entry.tour.productCode === "9640P2");
+    const fallback = engine4ViatorApiFallbackByProductCode["9640P2"];
+
+    expect(target).toBeDefined();
+    expect(target?.tour.heroImage).toBe(fallback.primaryImageUrl);
+    expect(target?.tour.badges.rating).toBe(fallback.rating);
+    expect(target?.tour.badges.reviewCount).toBe(fallback.reviewCount);
   });
 
 });

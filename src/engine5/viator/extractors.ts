@@ -463,7 +463,7 @@ export const extractViatorImages = (
   const variantCandidatesInOrder = (
     image: RecordLike,
     basePath: PathSegment[]
-  ): Array<{ url: string; fieldPath: string }> => {
+  ): Array<{ url: string; fieldPath: string; width?: number; height?: number }> => {
     const variants = toVariantObject(image.variants);
     const orderedVariantKeys = ["FULL", "HIGH_RESOLUTION", "LARGE"] as const;
 
@@ -477,6 +477,8 @@ export const extractViatorImages = (
 
         return {
           url,
+          width: asNumber(candidate?.width),
+          height: asNumber(candidate?.height),
           fieldPath: formatFieldPath([...basePath, "variants", key, "url"]),
         };
       })
@@ -486,6 +488,8 @@ export const extractViatorImages = (
     if (directUrl) {
       ordered.push({
         url: directUrl,
+        width: asNumber(image.width),
+        height: asNumber(image.height),
         fieldPath: formatFieldPath([...basePath, "url"]),
       });
     }
@@ -504,12 +508,19 @@ export const extractViatorImages = (
       continue;
     }
 
-    const imageRecord = asRecord(collection[0]);
+    const selectedImage =
+      collection.find(
+        image =>
+          asRecord(image)?.isCover === true || asRecord(image)?.cover === true
+      ) ?? collection[0];
+
+    const selectedIndex = Math.max(collection.indexOf(selectedImage), 0);
+    const imageRecord = asRecord(selectedImage);
     if (!imageRecord) {
       continue;
     }
 
-    const basePath = [...candidate.path, 0];
+    const basePath = [...candidate.path, selectedIndex];
     const prioritizedUrls = variantCandidatesInOrder(imageRecord, basePath);
     if (prioritizedUrls.length === 0) {
       continue;
@@ -517,6 +528,8 @@ export const extractViatorImages = (
 
     const variants: Engine5ImageVariant[] = prioritizedUrls.map(item => ({
       url: item.url,
+      width: item.width,
+      height: item.height,
     }));
 
     return {
