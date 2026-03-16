@@ -87,6 +87,7 @@ export default function CityTourDetailRoute({
   const [engine4ApiTour, setEngine4ApiTour] =
     useState<Engine4ViatorApiTour | null>(null);
   const [engine4ApiError, setEngine4ApiError] = useState<string | null>(null);
+  const [engine4ApiLoading, setEngine4ApiLoading] = useState(false);
 
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
@@ -117,27 +118,43 @@ export default function CityTourDetailRoute({
     if (!isStrictLiveProduct || !strictEngine4ProductCode) {
       setEngine4ApiTour(null);
       setEngine4ApiError(null);
+      setEngine4ApiLoading(false);
       return;
     }
 
     let isActive = true;
 
     const loadEngine4ApiTour = async () => {
+      setEngine4ApiLoading(true);
       try {
         const response = await fetch(
           `/api/engine4/viator-product?productCode=${encodeURIComponent(strictEngine4ProductCode)}`
         );
-        const payload = (await response.json()) as {
-          error?: string;
-          details?: unknown;
-          tour?: Engine4ViatorApiTour;
-        };
 
-        if (!response.ok || !payload.tour) {
+        const contentType = response.headers.get("content-type") ?? "";
+        const payload = contentType.includes("application/json")
+          ? ((await response.json()) as {
+              error?: string;
+              details?: unknown;
+              runtimePath?: string;
+              tour?: Engine4ViatorApiTour;
+            })
+          : null;
+        const rawText = payload ? "" : await response.text();
+
+        if (!response.ok || !payload?.tour) {
           const detailsText =
-            typeof payload.details === "string" ? ` (${payload.details})` : "";
+            typeof payload?.details === "string"
+              ? payload.details
+              : rawText || JSON.stringify(payload?.details ?? "");
           throw new Error(
-            `${payload.error ?? "Viator runtime product fetch failed"}${detailsText}`
+            [
+              payload?.error ??
+                `Viator runtime product fetch failed (${response.status})`,
+              detailsText,
+            ]
+              .filter(Boolean)
+              .join(" :: ")
           );
         }
 
@@ -156,6 +173,11 @@ export default function CityTourDetailRoute({
             ? error.message
             : "Viator runtime product fetch failed"
         );
+        setEngine4ApiTour(null);
+      } finally {
+        if (isActive) {
+          setEngine4ApiLoading(false);
+        }
       }
     };
 
@@ -179,6 +201,22 @@ export default function CityTourDetailRoute({
         return null;
       }
 
+      if (isStrictLiveProduct && engine4ApiLoading && !engine4ApiTour) {
+        return (
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h1 className="text-2xl font-semibold text-emerald-900">
+              Loading live product data
+            </h1>
+            <p className="mt-3 text-sm text-zinc-700">
+              Fetching production API/runtime data for product {productCode}.
+            </p>
+            <p className="mt-2 text-xs text-zinc-500">
+              Runtime path: /api/engine4/viator-product
+            </p>
+          </div>
+        );
+      }
+
       if (isStrictLiveProduct && engine4ApiError) {
         return (
           <div className="mx-auto max-w-4xl px-4 py-12">
@@ -196,13 +234,30 @@ export default function CityTourDetailRoute({
         );
       }
 
+      if (isStrictLiveProduct && !engine4ApiLoading && !engine4ApiTour) {
+        return (
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h1 className="text-2xl font-semibold text-emerald-900">
+              Live product data unavailable
+            </h1>
+            <p className="mt-3 text-sm text-zinc-700">
+              The production API/runtime path did not return product payload for{" "}
+              {productCode}.
+            </p>
+            <p className="mt-2 text-xs text-zinc-500">
+              Runtime path: /api/engine4/viator-product
+            </p>
+          </div>
+        );
+      }
+
       return (
         <Engine4TourPage
           tour={mapViatorToEngine4Tour({
             record: tourRecord,
-            apiTour:
-              engine4ApiTour ??
-              engine4ViatorApiFallbackByProductCode[productCode],
+            apiTour: isStrictLiveProduct
+              ? engine4ApiTour
+              : engine4ViatorApiFallbackByProductCode[productCode],
           })}
         />
       );
