@@ -1,5 +1,11 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import {
+  extractViatorPrice,
+  extractViatorRating,
+  extractViatorReviewCount,
+  extractViatorItinerary,
+} from "../../src/engine5/viator/extractors";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
@@ -43,55 +49,6 @@ const getBundledExactProductPayload = async (productCode: string) => {
   } catch {
     return null;
   }
-};
-
-const parsePriceAmount = (value: unknown): number | undefined => {
-  if (typeof value === "number" && Number.isFinite(value)) {
-    return value;
-  }
-
-  if (typeof value !== "string") {
-    return undefined;
-  }
-
-  const parsed = Number(value.replace(/[^\d.]/g, ""));
-  return Number.isFinite(parsed) ? parsed : undefined;
-};
-
-const readNested = (root: unknown, path: string[]): unknown => {
-  let cursor = root;
-  for (const key of path) {
-    if (typeof cursor !== "object" || cursor === null) {
-      return undefined;
-    }
-    cursor = (cursor as Record<string, unknown>)[key];
-  }
-  return cursor;
-};
-
-const readCommercialPrice = (
-  payload: Record<string, unknown>
-): { amount?: number; fieldPath?: string } => {
-  const product =
-    (payload.product as Record<string, unknown> | undefined) ?? payload;
-
-  const candidatePaths = [
-    ["priceFrom"],
-    ["fromPrice"],
-    ["pricing", "summary", "fromPrice"],
-    ["pricing", "summary", "fromPriceBeforeDiscount"],
-    ["pricing", "fromPrice"],
-    ["pricing", "fromPriceBeforeDiscount"],
-  ];
-
-  for (const path of candidatePaths) {
-    const amount = parsePriceAmount(readNested(product, path));
-    if (typeof amount === "number") {
-      return { amount, fieldPath: `product.${path.join(".")}` };
-    }
-  }
-
-  return { amount: undefined, fieldPath: undefined };
 };
 
 const buildInitialBridgeDiagnostics = (hasViatorApiKey: boolean): BridgeDiagnostics => ({
@@ -213,18 +170,25 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
-    const livePrice = readCommercialPrice(payload);
+    const livePrice = extractViatorPrice(payload);
+    const liveRating = extractViatorRating(payload);
+    const liveReviewCount = extractViatorReviewCount(payload);
+    const liveItinerary = extractViatorItinerary(payload);
     if (
       bundledPayload &&
       isBridgeProduct &&
-      !(typeof livePrice.amount === "number" && livePrice.amount > 0)
+      !(typeof livePrice?.amount === "number" && livePrice.amount > 0)
     ) {
       bridgeDiagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
       respondWithBundledPayload(res, bundledPayload, {
         source: "bundled-fallback",
         reason: "live-price-missing-or-zero",
-        livePayloadPrice: livePrice.amount ?? null,
-        livePriceFieldPath: livePrice.fieldPath ?? null,
+        livePayloadPrice: livePrice?.amount ?? null,
+        livePriceFormatted: livePrice?.formattedPrice ?? null,
+        livePriceFieldPath: livePrice?.fieldPath ?? null,
+        ratingFieldPath: liveRating?.fieldPath ?? null,
+        reviewCountFieldPath: liveReviewCount?.fieldPath ?? null,
+        itineraryFieldPath: liveItinerary?.fieldPath ?? null,
         ...bridgeDiagnostics,
       });
       return;

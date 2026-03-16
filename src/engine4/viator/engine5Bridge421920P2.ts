@@ -1,4 +1,13 @@
 import type { Engine4ViatorApiTour } from "../types";
+import {
+  extractViatorDuration,
+  extractViatorFaqs,
+  extractViatorItinerary,
+  extractViatorMeetingPoint,
+  extractViatorPrice,
+  extractViatorRating,
+  extractViatorReviewCount,
+} from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
 
@@ -27,109 +36,10 @@ const toStringArray = (value: unknown): string[] =>
         .filter((item): item is string => Boolean(item))
     : [];
 
-const toFaqArray = (
-  value: unknown
-): Array<{ question: string; answer: string }> => {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  return value
-    .map(item => {
-      const row = asRecord(item);
-      const question = cleanText(row?.question);
-      const answer = cleanText(row?.answer);
-      if (!question || !answer) {
-        return undefined;
-      }
-      return { question, answer };
-    })
-    .filter((item): item is { question: string; answer: string } => Boolean(item));
-};
-
-const toItinerary = (value: unknown) => {
-  if (!Array.isArray(value)) {
-    return [] as Array<{ title: string; description?: string; duration?: string }>;
-  }
-
-  return value
-    .map(item => {
-      const row = asRecord(item);
-      const title = cleanText(row?.title);
-      if (!title) {
-        return undefined;
-      }
-      return {
-        title,
-        description: cleanText(row?.description),
-        duration: cleanText(row?.duration),
-      };
-    })
-    .filter(
-      (
-        item
-      ): item is { title: string; description?: string; duration?: string } =>
-        Boolean(item)
-    );
-};
-
-const parsePriceAmount = (value: unknown): number | undefined => {
-  if (typeof value === "number" && Number.isFinite(value)) {
-    return value;
-  }
-
-  const raw = cleanText(value);
-  if (!raw) {
-    return undefined;
-  }
-
-  const numeric = Number(raw.replace(/[^\d.]/g, ""));
-  return Number.isFinite(numeric) ? numeric : undefined;
-};
-
-const readNested = (root: unknown, path: string[]): unknown => {
-  let cursor = root;
-  for (const key of path) {
-    if (typeof cursor !== "object" || cursor === null) {
-      return undefined;
-    }
-    cursor = (cursor as Record<string, unknown>)[key];
-  }
-  return cursor;
-};
-
-const extractCommercialPrice = (product: Record<string, unknown>) => {
-  const candidatePaths = [
-    ["priceFrom"],
-    ["fromPrice"],
-    ["pricing", "summary", "fromPrice"],
-    ["pricing", "summary", "fromPriceBeforeDiscount"],
-    ["pricing", "fromPrice"],
-    ["pricing", "fromPriceBeforeDiscount"],
-  ];
-
-  for (const path of candidatePaths) {
-    const raw = readNested(product, path);
-    const amount = parsePriceAmount(raw);
-    if (typeof amount === "number") {
-      return {
-        amount,
-        textValue: typeof raw === "string" ? raw : String(amount),
-        fieldPath: `product.${path.join(".")}`,
-      };
-    }
-  }
-
-  return {
-    amount: undefined,
-    textValue: undefined,
-    fieldPath: undefined,
-  };
-};
-
 export const hasViatorNonZeroPrice = (value?: string): boolean => {
-  const amount = parsePriceAmount(value);
-  return typeof amount === "number" && amount > 0;
+  if (!value) return false;
+  const extracted = extractViatorPrice({ product: { priceFrom: value } });
+  return Boolean(extracted && extracted.amount > 0);
 };
 
 export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
@@ -149,21 +59,27 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     return undefined;
   }
 
-  const commercialPrice = extractCommercialPrice(product);
+  const commercialPrice = extractViatorPrice(product);
+  const rating = extractViatorRating(product);
+  const reviewCount = extractViatorReviewCount(product);
+  const duration = extractViatorDuration(product);
+  const meetingPoint = extractViatorMeetingPoint(product);
+  const itinerary = extractViatorItinerary(product);
+  const faqs = extractViatorFaqs(product);
 
   return {
     productCode: normalizedCode,
     title,
     sourceUrl,
-    fromPrice: commercialPrice.textValue,
+    fromPrice: commercialPrice?.formattedPrice ?? (typeof commercialPrice?.amount === "number" ? String(commercialPrice.amount) : undefined),
     priceCurrency:
       cleanText(product.currencyCode) ??
       cleanText(product.priceCurrency) ??
-      cleanText(readNested(product, ["pricing", "currency"])) ??
-      cleanText(readNested(product, ["pricing", "summary", "currency"])),
-    duration: cleanText(product.duration) ?? cleanText(product.durationText),
+      cleanText(asRecord(product.pricing)?.currency) ??
+      cleanText(asRecord(asRecord(product.pricing)?.summary)?.currency),
+    duration: duration?.value,
     startTime: cleanText(product.startTime),
-    meetingPoint: cleanText(product.meetingPoint),
+    meetingPoint: meetingPoint?.value,
     cancellationPolicy: cleanText(product.cancellationPolicy),
     description:
       cleanText(product.shortDescription) ??
@@ -171,15 +87,20 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
       cleanText(asRecord(product.description)?.text) ??
       cleanText(product.description),
     highlights: toStringArray(product.highlights),
-    faqs: toFaqArray(product.faqs),
-    itinerary: toItinerary(product.itineraryItems ?? product.itinerary),
+    rating: rating?.value,
+    reviewCount: reviewCount?.value,
+    faqs: faqs?.value ?? [],
+    itinerary: itinerary?.value ?? [],
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
     rawProductPayload: {
       ...product,
       _engine5BridgeDiagnostics: {
-        commercialPriceFieldPath: commercialPrice.fieldPath,
+        commercialPriceFieldPath: commercialPrice?.fieldPath,
+        ratingFieldPath: rating?.fieldPath,
+        reviewCountFieldPath: reviewCount?.fieldPath,
+        itineraryFieldPath: itinerary?.fieldPath,
       },
     },
   };
