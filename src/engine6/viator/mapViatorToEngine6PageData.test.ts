@@ -73,4 +73,42 @@ describe("mapViatorToEngine6PageData", () => {
     expect(mapped.priceDiagnostics.price).toBe(249);
     expect(mapped.priceDiagnostics.priceFormatted).toBe("$249");
   });
+
+  it("extracts price from bookingOptions[0].pricingOptions[0].price.formatted", () => {
+    const mapped = mapViatorToEngine6PageData({
+      title: "Private Tour: Hawaii Volcanoes National Park Eco Tour",
+      shortDescription: "Overview",
+      productUrl: "https://www.viator.com/tours/Hilo/example/d669-11069P1",
+      bookingOptions: [
+        {
+          pricingOptions: [
+            {
+              price: {
+                formatted: "$249.00",
+              },
+            },
+          ],
+        },
+      ],
+      images: [
+        {
+          isCover: true,
+          variants: [
+            {
+              url: "https://dynamic-media.tacdn.com/media/photo-o/xx/yy.jpg",
+              width: 1600,
+              height: 900,
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(mapped.page.facts.priceFrom).toBe("$249");
+    expect(mapped.priceDiagnostics.selectedPath).toBe(
+      "bookingOptions[0].pricingOptions[0].price"
+    );
+    expect(mapped.priceDiagnostics.price).toBe(249);
+    expect(mapped.priceDiagnostics.priceFormatted).toBe("$249");
+  });
 });
