@@ -60,7 +60,7 @@ describe("/api/engine5/viator-product", () => {
 
     const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
       ok: true,
-      json: async () => ({ product: { productCode: "132218P209" } }),
+      text: async () => JSON.stringify({ product: { productCode: "132218P209" } }),
     } as Response);
 
     const req = { method: "GET", query: { productCode: "132218P209" } };
@@ -76,5 +76,55 @@ describe("/api/engine5/viator-product", () => {
     );
     expect(res.statusCode).toBe(200);
     expect(res.body).toEqual({ product: { productCode: "132218P209" } });
+  });
+
+  it("returns structured JSON success for 421920P2 via bundled fallback on upstream failure", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: false,
+      status: 502,
+      statusText: "Bad Gateway",
+      text: async () => "upstream error",
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "421920P2" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers["X-Engine5-Source"]).toBe(
+      "bundled-exact-product-payload"
+    );
+    expect((res.body as any).product.productCode).toBe("421920P2");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        reason: "upstream-not-ok",
+        status: 502,
+      })
+    );
+  });
+
+  it("returns structured JSON failure when upstream is non-JSON for non-fallback product", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      text: async () => "<html>not-json</html>",
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "999999P001" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(502);
+    expect(res.body).toEqual(
+      expect.objectContaining({
+        error: "Viator API returned non-JSON payload",
+      })
+    );
   });
 });

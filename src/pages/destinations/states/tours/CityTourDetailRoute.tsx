@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -59,6 +59,14 @@ import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
+import {
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  hasViatorNonZeroPrice,
+  mapEngine5ProductPayloadToEngine4ApiTour,
+  resolve421920P2BridgeApiTour,
+  type Engine4BridgeRuntimeSource,
+} from "../../../../engine4/viator/engine5Bridge421920P2";
+import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -83,6 +91,90 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [strictBridgeApiTour, setStrictBridgeApiTour] =
+    useState<Engine4ViatorApiTour>();
+  const [strictBridgeSource, setStrictBridgeSource] =
+    useState<Engine4BridgeRuntimeSource>();
+  const [strictBridgeError, setStrictBridgeError] = useState<string>();
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const engine4RouteTour = getEngine4TourBySlugs(
+      params.stateSlug,
+      params.citySlug,
+      params.tourSlug
+    );
+    if (
+      !engine4RouteTour ||
+      engine4RouteTour.bookingProvider !== "viator" ||
+      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+    ) {
+      return;
+    }
+
+    let isDisposed = false;
+    const productCode = engine4RouteTour.id.toUpperCase();
+
+    (async () => {
+      try {
+        const response = await fetch(
+          `/api/engine5/viator-product?productCode=${encodeURIComponent(productCode)}`
+        );
+        const payload = (await response.json()) as Record<string, unknown>;
+
+        if (!response.ok) {
+          if (!isDisposed) {
+            setStrictBridgeError(
+              `Engine5 API fetch failed: ${response.status} ${JSON.stringify(payload)}`
+            );
+            setStrictBridgeSource("cached-engine4-fallback");
+          }
+          return;
+        }
+
+        const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+          productCode,
+          payload,
+        });
+        const runtimeSource = response.headers
+          .get("X-Engine5-Source")
+          ?.includes("bundled")
+          ? "bundled-fallback"
+          : "live-api";
+
+        if (!mapped) {
+          if (!isDisposed) {
+            setStrictBridgeError(
+              `Engine5 API parse failed for ${productCode}: ${JSON.stringify(payload).slice(0, 500)}`
+            );
+            setStrictBridgeSource("cached-engine4-fallback");
+          }
+          return;
+        }
+
+        if (!isDisposed) {
+          setStrictBridgeApiTour(mapped);
+          setStrictBridgeSource(runtimeSource);
+          setStrictBridgeError(undefined);
+        }
+      } catch (error: any) {
+        if (!isDisposed) {
+          setStrictBridgeError(
+            `Engine5 API request exception for ${productCode}: ${error?.message ?? "unknown"}`
+          );
+          setStrictBridgeSource("cached-engine4-fallback");
+        }
+      }
+    })();
+
+    return () => {
+      isDisposed = true;
+    };
+  }, [params.citySlug, params.stateSlug, params.tourSlug]);
+
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
@@ -115,12 +207,101 @@ export default function CityTourDetailRoute({
       }
 
       return (
-        <Engine4TourPage
-          tour={mapViatorToEngine4Tour({
+        (() => {
+          const cachedFallback =
+            engine4ViatorApiFallbackByProductCode[productCode];
+          const resolvedBridge = resolve421920P2BridgeApiTour({
+            productCode,
+            runtimeApiTour: strictBridgeApiTour,
+            runtimeSource: strictBridgeSource,
+            cachedFallbackApiTour: cachedFallback,
+          });
+
+          const hasPrice = hasViatorNonZeroPrice(
+            resolvedBridge.apiTour?.fromPrice
+          );
+
+          if (
+            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            !hasPrice
+          ) {
+            return (
+              <main className="mx-auto max-w-4xl px-6 py-16">
+                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                  Pricing temporarily unavailable
+                </h1>
+                <p className="mt-4 text-[#334433]">
+                  We couldn&apos;t load valid pricing for this tour right now. Please
+                  try again shortly.
+                </p>
+                <pre className="mt-6 overflow-x-auto rounded bg-white/60 p-4 text-xs text-[#334433]">
+                  {JSON.stringify(
+                    {
+                      productCode,
+                      runtimeSource: resolvedBridge.runtimeSource,
+                      liveError: strictBridgeError ?? null,
+                    },
+                    null,
+                    2
+                  )}
+                </pre>
+              </main>
+            );
+          }
+
+          const mappedTour = mapViatorToEngine4Tour({
             record: tourRecord,
-            apiTour: engine4ViatorApiFallbackByProductCode[productCode],
-          })}
-        />
+            apiTour: resolvedBridge.apiTour,
+          });
+
+          if (
+            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
+          ) {
+            return (
+              <main className="mx-auto max-w-4xl px-6 py-16">
+                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                  Pricing temporarily unavailable
+                </h1>
+                <p className="mt-4 text-[#334433]">
+                  Tour details loaded, but a valid non-zero price is not
+                  currently available.
+                </p>
+                <pre className="mt-6 overflow-x-auto rounded bg-white/60 p-4 text-xs text-[#334433]">
+                  {JSON.stringify(
+                    {
+                      productCode,
+                      runtimeSource: resolvedBridge.runtimeSource,
+                      mappedPrice: mappedTour.facts.priceFrom ?? null,
+                      liveError: strictBridgeError ?? null,
+                    },
+                    null,
+                    2
+                  )}
+                </pre>
+              </main>
+            );
+          }
+
+          return (
+            <>
+              {productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE ? (
+                <pre className="mx-auto mt-2 max-w-6xl overflow-x-auto rounded bg-white/60 p-2 text-[10px] text-[#334433]">
+                  {JSON.stringify(
+                    {
+                      productCode,
+                      runtimeSource: resolvedBridge.runtimeSource,
+                      liveError: strictBridgeError ?? null,
+                    },
+                    null,
+                    2
+                  )}
+                </pre>
+              ) : null}
+              <Engine4TourPage tour={mappedTour} />
+            </>
+          );
+        })()
       );
     }
 

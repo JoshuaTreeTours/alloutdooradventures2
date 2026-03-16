@@ -3,6 +3,7 @@ import path from "node:path";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
+const ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -12,7 +13,10 @@ const buildHeaders = (apiKey: string) => ({
 });
 
 const getBundledExactProductPayload = async (productCode: string) => {
-  if (productCode !== ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE) {
+  if (
+    productCode !== ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE &&
+    productCode !== ENGINE5_BRIDGE_PRODUCT_CODE
+  ) {
     return null;
   }
 
@@ -32,6 +36,39 @@ const getBundledExactProductPayload = async (productCode: string) => {
   }
 };
 
+const parsePriceAmount = (value: unknown): number | undefined => {
+  if (typeof value !== "string") {
+    return undefined;
+  }
+  const parsed = Number(value.replace(/[^\d.]/g, ""));
+  return Number.isFinite(parsed) ? parsed : undefined;
+};
+
+const hasNonZeroPrice = (payload: Record<string, unknown>): boolean => {
+  const product =
+    (payload.product as Record<string, unknown> | undefined) ?? payload;
+  const amount =
+    parsePriceAmount(product.priceFrom) ?? parsePriceAmount(product.fromPrice);
+  return typeof amount === "number" && amount > 0;
+};
+
+const respondWithBundledPayload = (
+  res: any,
+  bundledPayload: Record<string, unknown>,
+  diagnostics?: Record<string, unknown>
+) => {
+  res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=300, stale-while-revalidate=1800"
+  );
+  res.setHeader("X-Engine5-Source", "bundled-exact-product-payload");
+  res.status(200).json(
+    diagnostics
+      ? { product: bundledPayload, diagnostics }
+      : { product: bundledPayload }
+  );
+};
+
 export default async function handler(req: any, res: any) {
   if (req.method !== "GET") {
     res.status(405).json({ error: "Method not allowed" });
@@ -47,15 +84,14 @@ export default async function handler(req: any, res: any) {
   }
 
   const bundledPayload = await getBundledExactProductPayload(productCode);
+  const isBridgeProduct = productCode === ENGINE5_BRIDGE_PRODUCT_CODE;
 
   const key = process.env.VIATOR_API_KEY;
   if (!key && bundledPayload) {
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=300, stale-while-revalidate=1800"
-    );
-    res.setHeader("X-Engine5-Source", "bundled-exact-product-payload");
-    res.status(200).json({ product: bundledPayload });
+    respondWithBundledPayload(res, bundledPayload, {
+      source: "bundled-fallback",
+      reason: "missing-api-key",
+    });
     return;
   }
 
@@ -73,13 +109,13 @@ export default async function handler(req: any, res: any) {
     });
 
     if (!response.ok) {
-      if (bundledPayload) {
-        res.setHeader(
-          "Cache-Control",
-          "public, s-maxage=300, stale-while-revalidate=1800"
-        );
-        res.setHeader("X-Engine5-Source", "bundled-exact-product-payload");
-        res.status(200).json({ product: bundledPayload });
+      if (bundledPayload && isBridgeProduct) {
+        respondWithBundledPayload(res, bundledPayload, {
+          source: "bundled-fallback",
+          reason: "upstream-not-ok",
+          status: response.status,
+          statusText: response.statusText,
+        });
         return;
       }
 
@@ -91,20 +127,54 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
-    const payload = await response.json();
+    const rawBody = await response.text();
+    let payload: Record<string, unknown>;
+
+    try {
+      payload = JSON.parse(rawBody) as Record<string, unknown>;
+    } catch {
+      if (bundledPayload && isBridgeProduct) {
+        respondWithBundledPayload(res, bundledPayload, {
+          source: "bundled-fallback",
+          reason: "upstream-non-json",
+          upstreamBody: rawBody.slice(0, 500),
+        });
+        return;
+      }
+
+      res.status(502).json({
+        error: "Viator API returned non-JSON payload",
+        details: rawBody.slice(0, 500),
+      });
+      return;
+    }
+
+    if (bundledPayload && isBridgeProduct && !hasNonZeroPrice(payload)) {
+      respondWithBundledPayload(res, bundledPayload, {
+        source: "bundled-fallback",
+        reason: "live-price-missing-or-zero",
+        livePayloadPrice:
+          (payload.product as Record<string, unknown> | undefined)?.priceFrom ??
+          (payload.product as Record<string, unknown> | undefined)?.fromPrice ??
+          payload.priceFrom ??
+          payload.fromPrice ??
+          null,
+      });
+      return;
+    }
+
     res.setHeader(
       "Cache-Control",
       "public, s-maxage=300, stale-while-revalidate=1800"
     );
     res.status(200).json(payload);
   } catch (error: any) {
-    if (bundledPayload) {
-      res.setHeader(
-        "Cache-Control",
-        "public, s-maxage=300, stale-while-revalidate=1800"
-      );
-      res.setHeader("X-Engine5-Source", "bundled-exact-product-payload");
-      res.status(200).json({ product: bundledPayload });
+    if (bundledPayload && isBridgeProduct) {
+      respondWithBundledPayload(res, bundledPayload, {
+        source: "bundled-fallback",
+        reason: "request-failed",
+        error: error?.message ?? "unknown-error",
+      });
       return;
     }
 
