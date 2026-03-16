@@ -190,6 +190,34 @@ export const extractViatorPrice = (input: unknown): ViatorExtractedPrice | null 
   return null;
 };
 
+const parsePositiveNumber = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    return value;
+  }
+
+  if (typeof value !== "string") {
+    return undefined;
+  }
+
+  const normalized = value.trim().replace(/,/g, "");
+  if (!normalized) {
+    return undefined;
+  }
+
+  const direct = Number(normalized);
+  if (Number.isFinite(direct) && direct > 0) {
+    return direct;
+  }
+
+  const fallbackMatch = normalized.match(/\d+(?:\.\d+)?/);
+  if (!fallbackMatch) {
+    return undefined;
+  }
+
+  const fallback = Number(fallbackMatch[0]);
+  return Number.isFinite(fallback) && fallback > 0 ? fallback : undefined;
+};
+
 export const extractViatorRating = (input: unknown): ExtractedValue<number> | null => {
   const product = pickProduct(input);
   if (!product) {
@@ -205,10 +233,8 @@ export const extractViatorRating = (input: unknown): ExtractedValue<number> | nu
   ];
 
   for (const path of paths) {
-    const raw = readPath(product, path);
-    const value =
-      asNumber(raw) ?? (typeof raw === "string" ? Number(raw) : undefined);
-    if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    const value = parsePositiveNumber(readPath(product, path));
+    if (typeof value === "number") {
       return { value, fieldPath: formatFieldPath(path) };
     }
   }
@@ -232,10 +258,8 @@ export const extractViatorReviewCount = (
   ];
 
   for (const path of paths) {
-    const raw = readPath(product, path);
-    const value =
-      asNumber(raw) ?? (typeof raw === "string" ? Number(raw) : undefined);
-    if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    const value = parsePositiveNumber(readPath(product, path));
+    if (typeof value === "number") {
       return { value, fieldPath: formatFieldPath(path) };
     }
   }
@@ -431,6 +455,80 @@ export const extractViatorImages = (
   const product = pickProduct(input);
   if (!product) {
     return null;
+  }
+
+  const toVariantObject = (value: unknown): Record<string, unknown> | undefined =>
+    asRecord(value);
+
+  const variantCandidatesInOrder = (
+    image: RecordLike,
+    basePath: PathSegment[]
+  ): Array<{ url: string; fieldPath: string }> => {
+    const variants = toVariantObject(image.variants);
+    const orderedVariantKeys = ["FULL", "HIGH_RESOLUTION", "LARGE"] as const;
+
+    const ordered = orderedVariantKeys
+      .map(key => {
+        const candidate = asRecord(variants?.[key]);
+        const url = asImageUrl(candidate?.url ?? variants?.[key]);
+        if (!url) {
+          return undefined;
+        }
+
+        return {
+          url,
+          fieldPath: formatFieldPath([...basePath, "variants", key, "url"]),
+        };
+      })
+      .filter((item): item is { url: string; fieldPath: string } => Boolean(item));
+
+    const directUrl = asImageUrl(image.url);
+    if (directUrl) {
+      ordered.push({
+        url: directUrl,
+        fieldPath: formatFieldPath([...basePath, "url"]),
+      });
+    }
+
+    return ordered;
+  };
+
+  const livePathCandidates: Array<{ path: PathSegment[]; fallbackFieldPath: string }> = [
+    { path: ["media", "images"], fallbackFieldPath: "product.media.images[0].url" },
+    { path: ["images"], fallbackFieldPath: "product.images[0].url" },
+  ];
+
+  for (const candidate of livePathCandidates) {
+    const collection = readPath(product, candidate.path);
+    if (!Array.isArray(collection) || collection.length === 0) {
+      continue;
+    }
+
+    const imageRecord = asRecord(collection[0]);
+    if (!imageRecord) {
+      continue;
+    }
+
+    const basePath = [...candidate.path, 0];
+    const prioritizedUrls = variantCandidatesInOrder(imageRecord, basePath);
+    if (prioritizedUrls.length === 0) {
+      continue;
+    }
+
+    const variants: Engine5ImageVariant[] = prioritizedUrls.map(item => ({
+      url: item.url,
+    }));
+
+    return {
+      value: [
+        {
+          isCover: true,
+          url: prioritizedUrls[0]?.url,
+          variants,
+        },
+      ],
+      fieldPath: prioritizedUrls[0]?.fieldPath ?? candidate.fallbackFieldPath,
+    };
   }
 
   const imageCollections = [

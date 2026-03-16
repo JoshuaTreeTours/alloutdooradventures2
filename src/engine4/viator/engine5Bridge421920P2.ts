@@ -4,6 +4,7 @@ import {
   extractViatorFaqs,
   extractViatorItinerary,
   extractViatorMeetingPoint,
+  extractViatorImages,
   extractViatorPrice,
   extractViatorRating,
   extractViatorReviewCount,
@@ -41,67 +42,6 @@ const toStringArray = (value: unknown): string[] =>
         .filter((item): item is string => Boolean(item))
     : [];
 
-const toExactProductImages = (
-  value: unknown
-): Engine4ViatorApiTour["exactProductImages"] => {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  return value
-    .map(image => {
-      const imageRecord = asRecord(image);
-      const variants = Array.isArray(imageRecord?.variants)
-        ? imageRecord.variants
-            .map(variant => {
-              const variantRecord = asRecord(variant);
-              const url = cleanText(variantRecord?.url);
-              if (!url) {
-                return null;
-              }
-
-              return {
-                url,
-                width:
-                  typeof variantRecord?.width === "number"
-                    ? variantRecord.width
-                    : undefined,
-                height:
-                  typeof variantRecord?.height === "number"
-                    ? variantRecord.height
-                    : undefined,
-              };
-            })
-            .filter(
-              (
-                variant
-              ): variant is {
-                url: string;
-                width?: number;
-                height?: number;
-              } => Boolean(variant)
-            )
-        : [];
-
-      if (variants.length === 0) {
-        return null;
-      }
-
-      return {
-        variants,
-        isCover: Boolean(imageRecord?.isCover),
-      };
-    })
-    .filter(
-      (
-        image
-      ): image is {
-        variants: { url: string; width?: number; height?: number }[];
-        isCover: boolean;
-      } => Boolean(image)
-    );
-};
-
 export const hasViatorNonZeroPrice = (value?: string): boolean => {
   if (!value) return false;
   const extracted = extractViatorPrice({ product: { priceFrom: value } });
@@ -132,7 +72,7 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
   const meetingPoint = extractViatorMeetingPoint(product);
   const itinerary = extractViatorItinerary(product);
   const faqs = extractViatorFaqs(product);
-  const exactProductImages = toExactProductImages(product.images);
+  const exactProductImages = extractViatorImages(product)?.value ?? [];
 
   return {
     productCode: normalizedCode,

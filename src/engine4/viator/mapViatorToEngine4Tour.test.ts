@@ -342,4 +342,39 @@ describe("mapViatorToEngine4Tour", () => {
     );
   });
 
+
+  it("prefers live 9640P2 hero/rating/review values over fallback", () => {
+    const record = engine4ViatorTours.find(tour => tour.productCode === "9640P2");
+    expect(record).toBeDefined();
+
+    const vm = mapViatorToEngine4Tour({
+      record: record!,
+      apiTour: {
+        productCode: "9640P2",
+        title: "Antelope Canyon and Horseshoe Bend Day Tour",
+        sourceUrl:
+          "https://www.viator.com/tours/Flagstaff/Antelope-Canyon-and-Horseshoe-Bend-Day-Tour/d21450-9640P2",
+        fromPrice: "$299.00",
+        rating: 4.95,
+        reviewCount: 2710,
+        exactProductImages: [
+          {
+            isCover: true,
+            variants: [
+              {
+                url: "https://dynamic-media.tacdn.com/media/photo-o/live/antelope-hero.jpg?w=1100&h=800&s=1",
+                width: 1100,
+                height: 800,
+              },
+            ],
+          },
+        ],
+      },
+    });
+
+    expect(vm.heroImage).toContain("/live/antelope-hero.jpg");
+    expect(vm.facts.ratingValue).toBe(4.95);
+    expect(vm.facts.reviewCount).toBe(2710);
+  });
+
 });
