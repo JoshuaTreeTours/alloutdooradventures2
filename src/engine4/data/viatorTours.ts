@@ -308,6 +308,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
     },
     slug: "half-day-day-canyoneering-91782p1",
   },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
+    productCode: "163873P4",
+    bookingUrl:
+      "https://www.viator.com/tours/Utah/HALF-DAY-CANYONEERING-TOUR/d785-163873P4?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Utah",
+      stateSlug: "utah",
+      city: "Moab",
+      citySlug: "moab",
+    },
+    slug: "half-day-canyoneering-tour-163873p4",
+  },
 ];
 
 export const engine4ViatorApiFallbackByProductCode: Record<
@@ -413,7 +430,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       },
       {
         question: "Is free cancellation available?",
-        answer: "Yes. This tour lists free cancellation up to 24 hours in advance.",
+        answer:
+          "Yes. This tour lists free cancellation up to 24 hours in advance.",
       },
     ],
   },
@@ -473,6 +491,53 @@ export const engine4ViatorApiFallbackByProductCode: Record<
         question: "What will we do during the experience?",
         answer:
           "Your guide leads canyon travel that includes rappels, scrambling, and movement instruction across Moab sandstone terrain.",
+      },
+    ],
+  },
+  "163873P4": {
+    productCode: "163873P4",
+    title: "HALF-DAY CANYONEERING TOUR",
+    sourceUrl:
+      "https://www.viator.com/tours/Utah/HALF-DAY-CANYONEERING-TOUR/d785-163873P4",
+    fromPrice: "$145.00",
+    priceCurrency: "USD",
+    rating: 5,
+    reviewCount: 412,
+    duration: "4 hours",
+    startTime: "8:00 AM",
+    meetingPoint: "225 S Main St, Moab, UT 84532, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Half-day canyoneering near Moab with guided rappels and sandstone scrambling.",
+    overview:
+      "This half-day canyoneering experience near Moab focuses on guided movement through Utah's sandstone terrain with a blend of rappels, scrambling, and route coaching. The format is designed for active travelers seeking technical desert adventure in a manageable half-day outing.",
+    highlights: [
+      "Half-day guided canyoneering in Utah sandstone terrain",
+      "Learn rappelling and movement techniques from expert guides",
+      "Route paced for mixed experience levels",
+      "Small-group adventure near Moab",
+    ],
+    inclusions: [
+      "Professional canyoneering guide",
+      "Technical gear and safety orientation",
+    ],
+    exclusions: ["Guide gratuities", "Hotel pickup and drop-off"],
+    additionalInfo: [
+      "Wear closed-toe shoes suitable for scrambling.",
+      "Guests should be comfortable with heights and moderate activity.",
+    ],
+    faqs: [
+      {
+        question: "Is prior canyoneering experience required?",
+        answer:
+          "No. Guides provide instruction and adapt the pace for adventurous beginners and experienced participants.",
       },
     ],
   },
@@ -972,7 +1037,8 @@ export const engine4ViatorApiFallbackByProductCode: Record<
           "The listed meeting point is Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA.",
       },
       {
-        question: "How long is the Small-Group Yosemite Tour from San Francisco?",
+        question:
+          "How long is the Small-Group Yosemite Tour from San Francisco?",
         answer: "The listed duration is approximately 14 hours.",
       },
       {
