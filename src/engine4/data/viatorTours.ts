@@ -124,6 +124,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "74236P5",
+    bookingUrl:
+      "https://www.viator.com/tours/Page/Antelope-Canyon-Tour/d57418-74236P5?pid=P00290915&mcid=42383&medium=link",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/5d/b1/81/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Arizona",
+      stateSlug: "arizona",
+      city: "Page",
+      citySlug: "page",
+    },
+    slug: "antelope-canyon",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "421920P2",
     bookingUrl:
       "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2?pid=P00290915&mcid=42383&medium=link",
@@ -758,6 +775,69 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "Transportation included for tasting logistics",
       "Electric-assist bicycle and helmet included",
       "Local guide throughout the experience",
+    ],
+  },
+  "74236P5": {
+    productCode: "74236P5",
+    title: "Lower Antelope Canyon Hiking Tour",
+    sourceUrl:
+      "https://www.viator.com/tours/Page/Antelope-Canyon-Tour/d57418-74236P5",
+    fromPrice: "$89.00",
+    priceCurrency: "USD",
+    rating: 4.8,
+    reviewCount: 214,
+    duration: "1 hour 30 minutes",
+    meetingPoint: "Indian Rte 222, Page, AZ 86040, USA",
+    cancellationPolicy: "Free cancellation up to 24 hours in advance.",
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/5d/b1/81/caption.jpg?w=1100&h=800&s=1",
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/5d/b1/81/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/5d/b1/81/caption.jpg?w=1100&h=800&s=1",
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/5d/b1/7f/caption.jpg?w=1100&h=800&s=1",
+    ],
+    description:
+      "Walk through Lower Antelope Canyon with a Navajo guide and capture the canyon's sculpted sandstone passageways.",
+    overview:
+      "This Lower Antelope Canyon tour in Page, Arizona focuses on the canyon's narrow corridors, wave-shaped walls, and changing light patterns. Guests meet near the canyon entrance, check in, and then descend into the slot canyon with a guide who manages pacing and safety in the tighter sections.",
+    highlights: [
+      "Guided walk through Lower Antelope Canyon",
+      "Navajo guide shares canyon context and photo tips",
+      "Narrow sandstone passages and flowing rock formations",
+      "Convenient departure in Page, Arizona",
+    ],
+    itinerary: [
+      {
+        title: "Check-in near canyon entrance",
+        description:
+          "Arrive at the meeting point, complete check-in, and receive guidance before entering the canyon area.",
+      },
+      {
+        title: "Descend into Lower Antelope Canyon",
+        description:
+          "Follow your guide through the canyon's stairways and passageways while learning about local geology and safety expectations.",
+      },
+      {
+        title: "Photo stops and return",
+        description:
+          "Pause at key formations for photos and then return to the entrance area with your group.",
+      },
+    ],
+    faqs: [
+      {
+        question: "Where does this tour meet?",
+        answer: "The listed meeting point is Indian Rte 222, Page, AZ 86040, USA.",
+      },
+      {
+        question: "How long is the tour?",
+        answer: "The listed duration is approximately 1 hour 30 minutes.",
+      },
+    ],
+    inclusions: ["Guided Lower Antelope Canyon entry", "Local guide"],
+    exclusions: ["Guide gratuities"],
+    additionalInfo: [
+      "This tour includes stairs and uneven terrain in a narrow canyon setting.",
     ],
   },
   "421920P2": {

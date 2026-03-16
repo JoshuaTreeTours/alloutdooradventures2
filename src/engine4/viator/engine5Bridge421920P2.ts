@@ -10,6 +10,19 @@ import {
 } from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES = [
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  "74236P5",
+] as const;
+
+export const isEngine4StrictEngine5BridgeProductCode = (
+  productCode: string
+): boolean => {
+  const normalizedCode = productCode.trim().toUpperCase();
+  return ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.includes(
+    normalizedCode as (typeof ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES)[number]
+  );
+};
 
 export type Engine4BridgeRuntimeSource =
   | "live-api"
@@ -113,8 +126,7 @@ export const resolve421920P2BridgeApiTour = (input: {
   cachedFallbackApiTour?: Engine4ViatorApiTour;
 }) => {
   const normalizedCode = input.productCode.trim().toUpperCase();
-  const isStrictProduct =
-    normalizedCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE;
+  const isStrictProduct = isEngine4StrictEngine5BridgeProductCode(normalizedCode);
 
   if (!isStrictProduct) {
     return {
