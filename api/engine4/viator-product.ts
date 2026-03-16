@@ -2,6 +2,49 @@ import { getEngine4ViatorTourData } from "../../src/engine4/viator/viatorApi";
 
 const STRICT_PRODUCT_CODE = "421920P2";
 
+const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
+
+const buildHeaders = (apiKey: string) => ({
+  "Content-Type": "application/json;version=2.0",
+  Accept: "application/json;version=2.0",
+  "Accept-Language": "en-US",
+  "exp-api-key": apiKey,
+});
+
+const logRawViatorProductResponse = async (productCode: string) => {
+  const key = process.env.VIATOR_API_KEY;
+  if (!key) {
+    return;
+  }
+
+  const baseUrl = process.env.VIATOR_BASE_URL ?? DEFAULT_VIATOR_BASE_URL;
+  const url = `${baseUrl}/products/${encodeURIComponent(productCode)}`;
+  const options = {
+    method: "GET",
+    headers: buildHeaders(key),
+  } as const;
+
+  const response = await fetch(url, options);
+  const text = await response.text();
+
+  console.log("VIATOR RESPONSE STATUS:", response.status);
+  console.log(
+    "VIATOR RESPONSE HEADERS:",
+    Object.fromEntries(response.headers.entries())
+  );
+  console.log("VIATOR RAW RESPONSE:");
+  console.log(text);
+
+  try {
+    const json = JSON.parse(text);
+    return json as Record<string, unknown>;
+  } catch (err) {
+    console.error("VIATOR JSON PARSE FAILED");
+    console.error(text);
+    throw err;
+  }
+};
+
 const toPositivePrice = (value: string | undefined): number | null => {
   if (!value) {
     return null;
@@ -31,6 +74,8 @@ export default async function handler(req: any, res: any) {
   }
 
   try {
+    await logRawViatorProductResponse(productCode);
+
     const tour = await getEngine4ViatorTourData(productCode);
 
     if (!tour) {
