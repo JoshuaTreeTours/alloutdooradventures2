@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -59,6 +59,7 @@ import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
+import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -83,6 +84,11 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [engine4ApiTour, setEngine4ApiTour] =
+    useState<Engine4ViatorApiTour | null>(null);
+  const [engine4ApiError, setEngine4ApiError] = useState<string | null>(null);
+  const [engine4ApiLoading, setEngine4ApiLoading] = useState(false);
+
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
@@ -100,6 +106,88 @@ export default function CityTourDetailRoute({
     getEngine3TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug) ??
     getEngine4TourBySlugs(params.stateSlug, params.citySlug, params.tourSlug);
 
+  const strictEngine4ProductCode =
+    engine2Tour &&
+    engine2Tour.engine === "engine4" &&
+    engine2Tour.bookingProvider === "viator"
+      ? engine2Tour.id.toUpperCase()
+      : null;
+  const isStrictLiveProduct = strictEngine4ProductCode === "421920P2";
+
+  useEffect(() => {
+    if (!isStrictLiveProduct || !strictEngine4ProductCode) {
+      setEngine4ApiTour(null);
+      setEngine4ApiError(null);
+      setEngine4ApiLoading(false);
+      return;
+    }
+
+    let isActive = true;
+
+    const loadEngine4ApiTour = async () => {
+      setEngine4ApiLoading(true);
+      try {
+        const response = await fetch(
+          `/api/engine4/viator-product?productCode=${encodeURIComponent(strictEngine4ProductCode)}`
+        );
+
+        const contentType = response.headers.get("content-type") ?? "";
+        const payload = contentType.includes("application/json")
+          ? ((await response.json()) as {
+              error?: string;
+              details?: unknown;
+              runtimePath?: string;
+              tour?: Engine4ViatorApiTour;
+            })
+          : null;
+        const rawText = payload ? "" : await response.text();
+
+        if (!response.ok || !payload?.tour) {
+          const detailsText =
+            typeof payload?.details === "string"
+              ? payload.details
+              : rawText || JSON.stringify(payload?.details ?? "");
+          throw new Error(
+            [
+              payload?.error ??
+                `Viator runtime product fetch failed (${response.status})`,
+              detailsText,
+            ]
+              .filter(Boolean)
+              .join(" :: ")
+          );
+        }
+
+        if (!isActive) {
+          return;
+        }
+
+        setEngine4ApiTour(payload.tour);
+        setEngine4ApiError(null);
+      } catch (error) {
+        if (!isActive) {
+          return;
+        }
+        setEngine4ApiError(
+          error instanceof Error
+            ? error.message
+            : "Viator runtime product fetch failed"
+        );
+        setEngine4ApiTour(null);
+      } finally {
+        if (isActive) {
+          setEngine4ApiLoading(false);
+        }
+      }
+    };
+
+    void loadEngine4ApiTour();
+
+    return () => {
+      isActive = false;
+    };
+  }, [isStrictLiveProduct, strictEngine4ProductCode]);
+
   if (engine2Tour) {
     if (
       engine2Tour.engine === "engine4" &&
@@ -109,16 +197,67 @@ export default function CityTourDetailRoute({
       const tourRecord = engine4ViatorTours.find(
         entry => entry.productCode.toUpperCase() === productCode
       );
-
       if (!tourRecord) {
         return null;
+      }
+
+      if (isStrictLiveProduct && engine4ApiLoading && !engine4ApiTour) {
+        return (
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h1 className="text-2xl font-semibold text-emerald-900">
+              Loading live product data
+            </h1>
+            <p className="mt-3 text-sm text-zinc-700">
+              Fetching production API/runtime data for product {productCode}.
+            </p>
+            <p className="mt-2 text-xs text-zinc-500">
+              Runtime path: /api/engine4/viator-product
+            </p>
+          </div>
+        );
+      }
+
+      if (isStrictLiveProduct && engine4ApiError) {
+        return (
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h1 className="text-2xl font-semibold text-emerald-900">
+              Live product data unavailable
+            </h1>
+            <p className="mt-3 text-sm text-zinc-700">
+              The production API/runtime path failed for product {productCode}.{" "}
+              {engine4ApiError}
+            </p>
+            <p className="mt-2 text-xs text-zinc-500">
+              Runtime path: /api/engine4/viator-product
+            </p>
+          </div>
+        );
+      }
+
+      if (isStrictLiveProduct && !engine4ApiLoading && !engine4ApiTour) {
+        return (
+          <div className="mx-auto max-w-4xl px-4 py-12">
+            <h1 className="text-2xl font-semibold text-emerald-900">
+              Live product data unavailable
+            </h1>
+            <p className="mt-3 text-sm text-zinc-700">
+              The production API/runtime path did not return product payload for{" "}
+              {productCode}.
+            </p>
+            <p className="mt-2 text-xs text-zinc-500">
+              Runtime path: /api/engine4/viator-product
+            </p>
+          </div>
+        );
       }
 
       return (
         <Engine4TourPage
           tour={mapViatorToEngine4Tour({
             record: tourRecord,
-            apiTour: engine4ViatorApiFallbackByProductCode[productCode],
+            apiTour: isStrictLiveProduct
+              ? engine4ApiTour
+              : engine4ViatorApiFallbackByProductCode[productCode],
           })}
         />
       );
