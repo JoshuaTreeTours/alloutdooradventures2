@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "wouter";
 
 import Image from "../../../../components/Image";
@@ -59,6 +59,14 @@ import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
+import {
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  hasViatorNonZeroPrice,
+  mapEngine5ProductPayloadToEngine4ApiTour,
+  resolve421920P2BridgeApiTour,
+  type Engine4BridgeRuntimeSource,
+} from "../../../../engine4/viator/engine5Bridge421920P2";
+import type { Engine4ViatorApiTour } from "../../../../engine4/types";
 import { isPalmSpringsTour } from "../../../../utils/fh/palmSpringsPilotContent";
 import { isRemovedTourSlug } from "../../../../utils/tours/isTourRemoved";
 import { applyEngine1Template } from "../../../../utils/tours/applyEngine1HardenedTemplate";
@@ -83,6 +91,79 @@ type CityTourDetailRouteProps = {
 export default function CityTourDetailRoute({
   params,
 }: CityTourDetailRouteProps) {
+  const [strictBridgeApiTour, setStrictBridgeApiTour] =
+    useState<Engine4ViatorApiTour>();
+  const [strictBridgeSource, setStrictBridgeSource] =
+    useState<Engine4BridgeRuntimeSource>();
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const engine4RouteTour = getEngine4TourBySlugs(
+      params.stateSlug,
+      params.citySlug,
+      params.tourSlug
+    );
+    if (
+      !engine4RouteTour ||
+      engine4RouteTour.bookingProvider !== "viator" ||
+      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+    ) {
+      return;
+    }
+
+    let isDisposed = false;
+    const productCode = engine4RouteTour.id.toUpperCase();
+
+    (async () => {
+      try {
+        const response = await fetch(
+          `/api/engine5/viator-product?productCode=${encodeURIComponent(productCode)}`
+        );
+        const payload = (await response.json()) as Record<string, unknown>;
+
+        if (!response.ok) {
+          if (!isDisposed) {
+            setStrictBridgeSource("cached-engine4-fallback");
+          }
+          return;
+        }
+
+        const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+          productCode,
+          payload,
+        });
+        const runtimeSource = response.headers
+          .get("X-Engine5-Source")
+          ?.includes("bundled")
+          ? "bundled-fallback"
+          : "live-api";
+
+        if (!mapped) {
+          if (!isDisposed) {
+            setStrictBridgeSource("cached-engine4-fallback");
+          }
+          return;
+        }
+
+        if (!isDisposed) {
+          setStrictBridgeApiTour(mapped);
+          setStrictBridgeSource(runtimeSource);
+        }
+      } catch (error: any) {
+        if (!isDisposed) {
+          setStrictBridgeSource("cached-engine4-fallback");
+        }
+      }
+    })();
+
+    return () => {
+      isDisposed = true;
+    };
+  }, [params.citySlug, params.stateSlug, params.tourSlug]);
+
   const isFHPilotEnabled =
     typeof process !== "undefined" &&
     process.env.ENABLE_FH_CONTENT_PILOT_PALM_SPRINGS === "true";
@@ -115,12 +196,61 @@ export default function CityTourDetailRoute({
       }
 
       return (
-        <Engine4TourPage
-          tour={mapViatorToEngine4Tour({
+        (() => {
+          const cachedFallback =
+            engine4ViatorApiFallbackByProductCode[productCode];
+          const resolvedBridge = resolve421920P2BridgeApiTour({
+            productCode,
+            runtimeApiTour: strictBridgeApiTour,
+            runtimeSource: strictBridgeSource,
+            cachedFallbackApiTour: cachedFallback,
+          });
+
+          const hasPrice = hasViatorNonZeroPrice(
+            resolvedBridge.apiTour?.fromPrice
+          );
+
+          if (
+            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            !hasPrice
+          ) {
+            return (
+              <main className="mx-auto max-w-4xl px-6 py-16">
+                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                  Pricing temporarily unavailable
+                </h1>
+                <p className="mt-4 text-[#334433]">
+                  We couldn&apos;t load valid pricing for this tour right now. Please
+                  try again shortly.
+                </p>
+              </main>
+            );
+          }
+
+          const mappedTour = mapViatorToEngine4Tour({
             record: tourRecord,
-            apiTour: engine4ViatorApiFallbackByProductCode[productCode],
-          })}
-        />
+            apiTour: resolvedBridge.apiTour,
+          });
+
+          if (
+            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
+          ) {
+            return (
+              <main className="mx-auto max-w-4xl px-6 py-16">
+                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                  Pricing temporarily unavailable
+                </h1>
+                <p className="mt-4 text-[#334433]">
+                  Tour details loaded, but a valid non-zero price is not
+                  currently available.
+                </p>
+              </main>
+            );
+          }
+
+          return <Engine4TourPage tour={mappedTour} />;
+        })()
       );
     }
 
