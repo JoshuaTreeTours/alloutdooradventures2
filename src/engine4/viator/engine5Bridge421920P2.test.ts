@@ -88,4 +88,32 @@ describe("engine5 bridge for 421920P2", () => {
     expect(mapped?.productCode).toBe(ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE);
     expect(mapped?.fromPrice).toBe("$139.00");
   });
+
+  it("maps nested commercial pricing field into fromPrice so live source can win", () => {
+    const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+      payload: {
+        product: {
+          title: "Epic Zipline Tour Over The Santa Ynez Valley",
+          productUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2",
+          pricing: {
+            summary: {
+              fromPrice: 139,
+            },
+            currency: "USD",
+          },
+        },
+      },
+    });
+
+    expect(mapped?.fromPrice).toBe("139");
+    expect(mapped?.priceCurrency).toBe("USD");
+    const diagnostics = mapped?.rawProductPayload?._engine5BridgeDiagnostics as
+      | { commercialPriceFieldPath?: string }
+      | undefined;
+    expect(diagnostics?.commercialPriceFieldPath).toBe(
+      "product.pricing.summary.fromPrice"
+    );
+  });
 });

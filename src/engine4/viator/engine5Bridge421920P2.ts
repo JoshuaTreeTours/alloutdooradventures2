@@ -73,7 +73,11 @@ const toItinerary = (value: unknown) => {
     );
 };
 
-const parsePriceAmount = (value?: string): number | undefined => {
+const parsePriceAmount = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return value;
+  }
+
   const raw = cleanText(value);
   if (!raw) {
     return undefined;
@@ -81,6 +85,46 @@ const parsePriceAmount = (value?: string): number | undefined => {
 
   const numeric = Number(raw.replace(/[^\d.]/g, ""));
   return Number.isFinite(numeric) ? numeric : undefined;
+};
+
+const readNested = (root: unknown, path: string[]): unknown => {
+  let cursor = root;
+  for (const key of path) {
+    if (typeof cursor !== "object" || cursor === null) {
+      return undefined;
+    }
+    cursor = (cursor as Record<string, unknown>)[key];
+  }
+  return cursor;
+};
+
+const extractCommercialPrice = (product: Record<string, unknown>) => {
+  const candidatePaths = [
+    ["priceFrom"],
+    ["fromPrice"],
+    ["pricing", "summary", "fromPrice"],
+    ["pricing", "summary", "fromPriceBeforeDiscount"],
+    ["pricing", "fromPrice"],
+    ["pricing", "fromPriceBeforeDiscount"],
+  ];
+
+  for (const path of candidatePaths) {
+    const raw = readNested(product, path);
+    const amount = parsePriceAmount(raw);
+    if (typeof amount === "number") {
+      return {
+        amount,
+        textValue: typeof raw === "string" ? raw : String(amount),
+        fieldPath: `product.${path.join(".")}`,
+      };
+    }
+  }
+
+  return {
+    amount: undefined,
+    textValue: undefined,
+    fieldPath: undefined,
+  };
 };
 
 export const hasViatorNonZeroPrice = (value?: string): boolean => {
@@ -105,14 +149,18 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     return undefined;
   }
 
-  const fromPrice = cleanText(product.priceFrom) ?? cleanText(product.fromPrice);
+  const commercialPrice = extractCommercialPrice(product);
 
   return {
     productCode: normalizedCode,
     title,
     sourceUrl,
-    fromPrice,
-    priceCurrency: cleanText(product.currencyCode) ?? cleanText(product.priceCurrency),
+    fromPrice: commercialPrice.textValue,
+    priceCurrency:
+      cleanText(product.currencyCode) ??
+      cleanText(product.priceCurrency) ??
+      cleanText(readNested(product, ["pricing", "currency"])) ??
+      cleanText(readNested(product, ["pricing", "summary", "currency"])),
     duration: cleanText(product.duration) ?? cleanText(product.durationText),
     startTime: cleanText(product.startTime),
     meetingPoint: cleanText(product.meetingPoint),
@@ -128,7 +176,12 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     inclusions: toStringArray(product.inclusions),
     exclusions: toStringArray(product.exclusions),
     additionalInfo: toStringArray(product.additionalInfo),
-    rawProductPayload: product,
+    rawProductPayload: {
+      ...product,
+      _engine5BridgeDiagnostics: {
+        commercialPriceFieldPath: commercialPrice.fieldPath,
+      },
+    },
   };
 };
 

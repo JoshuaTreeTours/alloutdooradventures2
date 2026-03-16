@@ -36,20 +36,54 @@ const getBundledExactProductPayload = async (productCode: string) => {
   }
 };
 
+
 const parsePriceAmount = (value: unknown): number | undefined => {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return value;
+  }
+
   if (typeof value !== "string") {
     return undefined;
   }
+
   const parsed = Number(value.replace(/[^\d.]/g, ""));
   return Number.isFinite(parsed) ? parsed : undefined;
 };
 
-const hasNonZeroPrice = (payload: Record<string, unknown>): boolean => {
+const readNested = (root: unknown, path: string[]): unknown => {
+  let cursor = root;
+  for (const key of path) {
+    if (typeof cursor !== "object" || cursor === null) {
+      return undefined;
+    }
+    cursor = (cursor as Record<string, unknown>)[key];
+  }
+  return cursor;
+};
+
+const readCommercialPrice = (
+  payload: Record<string, unknown>
+): { amount?: number; fieldPath?: string } => {
   const product =
     (payload.product as Record<string, unknown> | undefined) ?? payload;
-  const amount =
-    parsePriceAmount(product.priceFrom) ?? parsePriceAmount(product.fromPrice);
-  return typeof amount === "number" && amount > 0;
+
+  const candidatePaths = [
+    ["priceFrom"],
+    ["fromPrice"],
+    ["pricing", "summary", "fromPrice"],
+    ["pricing", "summary", "fromPriceBeforeDiscount"],
+    ["pricing", "fromPrice"],
+    ["pricing", "fromPriceBeforeDiscount"],
+  ];
+
+  for (const path of candidatePaths) {
+    const amount = parsePriceAmount(readNested(product, path));
+    if (typeof amount === "number") {
+      return { amount, fieldPath: `product.${path.join(".")}` };
+    }
+  }
+
+  return { amount: undefined, fieldPath: undefined };
 };
 
 const respondWithBundledPayload = (
@@ -149,16 +183,13 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
-    if (bundledPayload && isBridgeProduct && !hasNonZeroPrice(payload)) {
+    const livePrice = readCommercialPrice(payload);
+    if (bundledPayload && isBridgeProduct && !(typeof livePrice.amount === "number" && livePrice.amount > 0)) {
       respondWithBundledPayload(res, bundledPayload, {
         source: "bundled-fallback",
         reason: "live-price-missing-or-zero",
-        livePayloadPrice:
-          (payload.product as Record<string, unknown> | undefined)?.priceFrom ??
-          (payload.product as Record<string, unknown> | undefined)?.fromPrice ??
-          payload.priceFrom ??
-          payload.fromPrice ??
-          null,
+        livePayloadPrice: livePrice.amount ?? null,
+        livePriceFieldPath: livePrice.fieldPath ?? null,
       });
       return;
     }
