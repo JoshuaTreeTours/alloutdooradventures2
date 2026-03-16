@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import TourCard from "../components/TourCard";
 import { getEngine4ListingEntries } from "./listing/getEngine4ListingEntries";
 import { engine4ViatorApiFallbackByProductCode } from "./data/viatorTours";
+import bundled9640P2ExactPayload from "../../data/engine5/viator/9640P2.exact-product.json";
+import { mapEngine5ProductPayloadToEngine4ApiTour } from "./viator/engine5Bridge421920P2";
 import { getEngine4TourBySlugs } from "./routing";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -302,14 +304,24 @@ describe("Engine4 Aspen routing/listing", () => {
   });
 
 
-  it("uses normalized Engine4 fallback source for 9640P2 listing hero and social proof", () => {
+  it("uses bundled exact 9640P2 source for listing hero and social proof", () => {
     const entries = getEngine4ListingEntries("arizona", "flagstaff");
     const target = entries.find(entry => entry.tour.productCode === "9640P2");
     const fallback = engine4ViatorApiFallbackByProductCode["9640P2"];
+    const bundledMapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: "9640P2",
+      payload: { product: bundled9640P2ExactPayload },
+    });
 
     expect(target).toBeDefined();
-    expect(target?.tour.heroImage).toBe(fallback.primaryImageUrl);
-    expect(target?.tour.badges.rating).toBe(fallback.rating);
+    expect(target?.tour.heroImage).toBe(
+      bundledMapped?.exactProductImages?.[0]?.variants?.[0]?.url
+    );
+    expect(target?.tour.badges.rating).toBe(bundledMapped?.rating);
+    expect(target?.tour.badges.reviewCount).toBe(bundledMapped?.reviewCount);
+    expect(target?.tour.heroImage).not.toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/wrong/living-room.jpg?w=1100&h=800&s=1"
+    );
     expect(target?.tour.badges.reviewCount).toBe(fallback.reviewCount);
   });
 

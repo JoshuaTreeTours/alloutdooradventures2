@@ -4,6 +4,8 @@ import {
   engine4ViatorApiFallbackByProductCode,
   engine4ViatorTours,
 } from "../data/viatorTours";
+import bundled9640P2ExactPayload from "../../../data/engine5/viator/9640P2.exact-product.json";
+import { mapEngine5ProductPayloadToEngine4ApiTour } from "../viator/engine5Bridge421920P2";
 import { mapViatorToEngine4Tour } from "../viator/mapViatorToEngine4Tour";
 
 type Engine4ListingEntry = {
@@ -22,9 +24,19 @@ export const getEngine4ListingEntries = (
         tour.destination.citySlug === citySlug
     )
     .map(record => {
+      const mappedBundled9640P2ApiTour =
+        record.productCode === "9640P2"
+          ? mapEngine5ProductPayloadToEngine4ApiTour({
+              productCode: "9640P2",
+              payload: { product: bundled9640P2ExactPayload },
+            })
+          : undefined;
+
       const vm = mapViatorToEngine4Tour({
         record,
-        apiTour: engine4ViatorApiFallbackByProductCode[record.productCode],
+        apiTour:
+          mappedBundled9640P2ApiTour ??
+          engine4ViatorApiFallbackByProductCode[record.productCode],
       });
       const href = buildEngine4TourPath(record);
 
