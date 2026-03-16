@@ -13,6 +13,8 @@ type Engine6MappedPageData = {
     pathsTried: string[];
     selectedPath?: string;
     rawValue?: unknown;
+    price?: number;
+    priceFormatted?: string;
   };
 };
 
@@ -46,9 +48,11 @@ const asPathSegment = (segment: string): string | number => {
   return segment;
 };
 
+const normalizePath = (path: string) => path.replace(/\[(\d+)\]/g, ".$1");
+
 const readPath = (root: Record<string, unknown>, path: string): unknown => {
   let current: unknown = root;
-  for (const rawSegment of path.split(".")) {
+  for (const rawSegment of normalizePath(path).split(".")) {
     const segment = asPathSegment(rawSegment);
 
     if (typeof segment === "number") {
@@ -70,9 +74,9 @@ const readPath = (root: Record<string, unknown>, path: string): unknown => {
   return current;
 };
 
-const toPriceText = (value: unknown): string | undefined => {
+const toPriceNumber = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value) && value > 0) {
-    return `$${value.toFixed(2)}`;
+    return value;
   }
 
   if (typeof value === "string") {
@@ -80,10 +84,7 @@ const toPriceText = (value: unknown): string | undefined => {
     if (!trimmed) return undefined;
     const numeric = Number(trimmed.replace(/[^\d.]/g, ""));
     if (Number.isFinite(numeric) && numeric > 0) {
-      if (trimmed.startsWith("$")) {
-        return trimmed;
-      }
-      return `$${numeric.toFixed(2)}`;
+      return numeric;
     }
   }
 
@@ -91,26 +92,39 @@ const toPriceText = (value: unknown): string | undefined => {
   if (!row) return undefined;
 
   return (
-    toPriceText(row.formattedValue) ??
-    toPriceText(row.formatted) ??
-    toPriceText(row.amount) ??
-    toPriceText(row.value)
+    toPriceNumber(row.formattedValue) ??
+    toPriceNumber(row.formatted) ??
+    toPriceNumber(row.amount) ??
+    toPriceNumber(row.value) ??
+    toPriceNumber(row.fromPrice) ??
+    toPriceNumber(row.fromPriceFormatted)
   );
 };
+
+const toPriceFormatted = (price: number) =>
+  `$${price.toLocaleString("en-US", { maximumFractionDigits: 2 })}`;
 
 const resolvePrice = (product: Record<string, unknown>) => {
   const pathsTried = [...ENGINE6_HILO_PRICE_PATHS];
 
   for (const path of pathsTried) {
     const rawValue = readPath(product, path);
-    const value = toPriceText(rawValue);
-    if (value) {
-      return { value, pathsTried, selectedPath: path, rawValue };
+    const price = toPriceNumber(rawValue);
+
+    if (typeof price === "number" && Number.isFinite(price) && price > 0) {
+      return {
+        price,
+        priceFormatted: toPriceFormatted(price),
+        pathsTried,
+        selectedPath: path,
+        rawValue,
+      };
     }
   }
 
   return {
-    value: undefined,
+    price: undefined,
+    priceFormatted: undefined,
     pathsTried,
     selectedPath: undefined,
     rawValue: undefined,
@@ -210,7 +224,7 @@ export const mapViatorToEngine6PageData = (
     primaryImage: hero,
     galleryImages: gallery,
     facts: {
-      priceFrom: price.value,
+      priceFrom: price.priceFormatted,
       ratingValue:
         typeof product.rating === "number" && Number.isFinite(product.rating)
           ? product.rating
@@ -242,6 +256,8 @@ export const mapViatorToEngine6PageData = (
       pathsTried: price.pathsTried,
       selectedPath: price.selectedPath,
       rawValue: price.rawValue,
+      price: price.price,
+      priceFormatted: price.priceFormatted,
     },
   };
 };
