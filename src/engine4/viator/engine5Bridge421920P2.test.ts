@@ -116,4 +116,36 @@ describe("engine5 bridge for 421920P2", () => {
       "product.pricing.summary.fromPrice"
     );
   });
+  it("maps bookingOptions price and shared extractor diagnostics", () => {
+    const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+      payload: {
+        product: {
+          title: "Epic Zipline Tour Over The Santa Ynez Valley",
+          productUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Epic-Zipline-Tour-Over-The-Santa-Ynez-Valley/d4372-421920P2",
+          bookingOptions: [{ price: { amount: 166 } }],
+          reviews: { combinedAverageRating: 4.9, totalReviews: 250 },
+          itinerary: { itineraryItems: [{ name: "Launch", summary: "Safety", durationText: "20 min" }] },
+        },
+      },
+    });
+
+    expect(mapped?.fromPrice).toBe("166");
+    expect(mapped?.rating).toBe(4.9);
+    expect(mapped?.reviewCount).toBe(250);
+    const diagnostics = mapped?.rawProductPayload?._engine5BridgeDiagnostics as
+      | {
+          commercialPriceFieldPath?: string;
+          ratingFieldPath?: string;
+          reviewCountFieldPath?: string;
+          itineraryFieldPath?: string;
+        }
+      | undefined;
+    expect(diagnostics?.commercialPriceFieldPath).toBe("product.bookingOptions[0].price.amount");
+    expect(diagnostics?.ratingFieldPath).toBe("product.reviews.combinedAverageRating");
+    expect(diagnostics?.reviewCountFieldPath).toBe("product.reviews.totalReviews");
+    expect(diagnostics?.itineraryFieldPath).toBe("product.itinerary.itineraryItems");
+  });
+
 });
