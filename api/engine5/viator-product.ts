@@ -119,7 +119,10 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const baseUrl = process.env.VIATOR_BASE_URL ?? DEFAULT_VIATOR_BASE_URL;
+  const baseUrl =
+    process.env.VIATOR_API_BASE_URL ??
+    process.env.VIATOR_BASE_URL ??
+    DEFAULT_VIATOR_BASE_URL;
 
   try {
     bridgeDiagnostics.attemptedLiveFetch = true;

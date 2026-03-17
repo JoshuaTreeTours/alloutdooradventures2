@@ -29,6 +29,7 @@ describe("/api/engine5/viator-product", () => {
     vi.restoreAllMocks();
     delete process.env.VIATOR_API_KEY;
     delete process.env.VIATOR_BASE_URL;
+    delete process.env.VIATOR_API_BASE_URL;
   });
 
   it("returns bundled exact payload for 132218P209 when key is missing", async () => {
@@ -72,6 +73,32 @@ describe("/api/engine5/viator-product", () => {
 
     expect(res.statusCode).toBe(500);
     expect(res.body).toEqual({ error: "VIATOR_API_KEY is not configured" });
+  });
+
+  it("prefers VIATOR_API_BASE_URL over VIATOR_BASE_URL", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+    process.env.VIATOR_API_BASE_URL = "https://api-base.viator.test/partner";
+    process.env.VIATOR_BASE_URL = "https://legacy-base.viator.test/partner";
+
+    const fetchSpy = vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({ product: { productCode: "163873P16" } }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "163873P16" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(fetchSpy).toHaveBeenCalledWith(
+      "https://api-base.viator.test/partner/products/163873P16",
+      expect.any(Object)
+    );
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).product.productCode).toBe("163873P16");
   });
 
   it("proxies product request using env base url and api key header", async () => {

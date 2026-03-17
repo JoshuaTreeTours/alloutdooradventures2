@@ -39,6 +39,7 @@ const cleanText = (value: unknown): string | undefined => {
   return trimmed ? trimmed : undefined;
 };
 
+const isDefined = <T>(value: T | undefined): value is T => value !== undefined;
 const parseLooseNumber = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value)) {
     return value;
@@ -306,14 +307,15 @@ export const extractViatorHeroImage = (
 
   for (const group of imageGroups) {
     const images = group.images;
-    const coverRows = images
-      .map((image, index) => ({ row: asRecord(image), index }))
-      .filter(item => item.row)
-      .filter(item => item.row?.isCover === true);
+    const indexedRows = images
+      .map((image, index) => {
+        const row = asRecord(image);
+        return row ? { row, index } : undefined;
+      })
+      .filter(isDefined);
 
-    const allRows = images
-      .map((image, index) => ({ row: asRecord(image), index }))
-      .filter(item => item.row);
+    const coverRows = indexedRows.filter(item => item.row.isCover === true);
+    const allRows = indexedRows;
 
     const candidateRows = coverRows.length > 0 ? coverRows : allRows;
 
@@ -383,7 +385,7 @@ export const extractViatorItinerary = (
     }
 
     return value
-      .map(item => {
+      .map((item): ViatorItineraryItem | undefined => {
         const row = asRecord(item);
         if (!row) {
           return undefined;
@@ -401,7 +403,7 @@ export const extractViatorItinerary = (
           duration: cleanText(row.duration) ?? cleanText(row.durationText),
         };
       })
-      .filter((item): item is ViatorItineraryItem => Boolean(item));
+      .filter(isDefined);
   };
 
   const paths: PathSegment[][] = [
