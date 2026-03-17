@@ -12,6 +12,11 @@ import {
 } from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+export const ENGINE5_CLEAN_SPECIMEN_PRODUCT_CODE = "6896MOABCPARK";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES = new Set([
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  ENGINE5_CLEAN_SPECIMEN_PRODUCT_CODE,
+]);
 
 export type Engine4BridgeRuntimeSource =
   | "live-api"
@@ -55,8 +60,18 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     return undefined;
   }
 
-  const title = cleanText(product.title);
+  const title = cleanText(product.title) ?? cleanText(product.productTitle);
+  const titleFieldPath = cleanText(product.title)
+    ? "product.title"
+    : cleanText(product.productTitle)
+      ? "product.productTitle"
+      : undefined;
   const sourceUrl = cleanText(product.productUrl) ?? cleanText(product.seoUrl);
+  const sourceUrlFieldPath = cleanText(product.productUrl)
+    ? "product.productUrl"
+    : cleanText(product.seoUrl)
+      ? "product.seoUrl"
+      : undefined;
   if (!title || !sourceUrl) {
     return undefined;
   }
@@ -105,8 +120,11 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
       ...product,
       _engine5BridgeDiagnostics: {
         commercialPriceFieldPath: commercialPrice?.fieldPath,
+        titleFieldPath,
+        sourceUrlFieldPath,
         ratingFieldPath: rating?.fieldPath,
         reviewCountFieldPath: reviewCount?.fieldPath,
+        meetingPointFieldPath: meetingPoint?.fieldPath,
         heroImageFieldPath: heroImage?.fieldPath,
         itineraryFieldPath: itinerary?.fieldPath,
       },
@@ -121,8 +139,9 @@ export const resolve421920P2BridgeApiTour = (input: {
   cachedFallbackApiTour?: Engine4ViatorApiTour;
 }) => {
   const normalizedCode = input.productCode.trim().toUpperCase();
-  const isStrictProduct =
-    normalizedCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE;
+  const isStrictProduct = ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.has(
+    normalizedCode
+  );
 
   if (!isStrictProduct) {
     return {

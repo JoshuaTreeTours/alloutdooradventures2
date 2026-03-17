@@ -150,4 +150,63 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.reviewCount).toBe(2710);
   });
 
+  it("extracts canonical 6896MOABCPARK fields from live-shaped payload", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "6896MOABCPARK",
+          title: "Canyonlands National Park Half-Day Tour from Moab",
+          shortDescription: "Half-day guided Canyonlands tour from Moab.",
+          productUrl:
+            "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+          pricing: { summary: { fromPrice: 189 } },
+          reviews: { combinedAverageRating: 4.8, totalReviews: 512 },
+          meetingAndPickup: {
+            meetingPoint: {
+              name: "Moab Tourism Center",
+              address: "606 S Main St",
+              city: "Moab",
+              state: "UT",
+              country: "USA",
+            },
+          },
+          itinerary: {
+            itineraryItems: [
+              { name: "Island in the Sky", summary: "Mesa arch overlooks" },
+            ],
+          },
+          media: {
+            images: [
+              {
+                isCover: true,
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/moab-cover.jpg",
+                    width: 1600,
+                    height: 900,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("6896MOABCPARK");
+
+    expect(result.title).toBe("Canyonlands National Park Half-Day Tour from Moab");
+    expect(result.fromPrice).toBe("189");
+    expect(result.rating).toBe(4.8);
+    expect(result.reviewCount).toBe(512);
+    expect(result.meetingPoint).toBe(
+      "Moab Tourism Center, 606 S Main St, Moab, UT, USA"
+    );
+    expect(result.itinerary[0]?.title).toBe("Island in the Sky");
+    expect(result.canonicalHeroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/moab-cover.jpg"
+    );
+  });
+
 });

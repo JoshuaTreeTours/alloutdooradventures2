@@ -75,6 +75,17 @@ describe("/api/engine5/viator-product", () => {
     expect(res.body).toEqual({ error: "VIATOR_API_KEY is not configured" });
   });
 
+  it("does not use bundled fallback for 6896MOABCPARK when key is missing", async () => {
+    const req = { method: "GET", query: { productCode: "6896MOABCPARK" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(res.headers["X-Engine5-Source"]).toBeUndefined();
+    expect(res.body).toEqual({ error: "VIATOR_API_KEY is not configured" });
+  });
+
   it("proxies product request using env base url and api key header", async () => {
     process.env.VIATOR_API_KEY = "server-key";
     process.env.VIATOR_BASE_URL = "https://api.viator.test/partner";
