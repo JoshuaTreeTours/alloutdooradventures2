@@ -22,6 +22,12 @@ export type ViatorExtractedPrice = {
   fieldPath: string;
 };
 
+export type ViatorExtractedAggregateRating = {
+  rating?: ExtractedValue<number>;
+  reviewCount?: ExtractedValue<number>;
+  sourceFamily: "public-product" | "review-summary" | "reviews" | "fallback";
+};
+
 export type ViatorItineraryItem = {
   title: string;
   description?: string;
@@ -29,7 +35,9 @@ export type ViatorItineraryItem = {
 };
 
 const asRecord = (value: unknown): RecordLike | undefined =>
-  typeof value === "object" && value !== null ? (value as RecordLike) : undefined;
+  typeof value === "object" && value !== null
+    ? (value as RecordLike)
+    : undefined;
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") {
@@ -111,9 +119,10 @@ const readPath = (root: unknown, path: PathSegment[]): unknown => {
 
 const formatFieldPath = (path: PathSegment[]) =>
   `product${path
-    .map(segment => (typeof segment === "number" ? `[${segment}]` : `.${segment}`))
+    .map(segment =>
+      typeof segment === "number" ? `[${segment}]` : `.${segment}`
+    )
     .join("")}`;
-
 
 const parsePriceAmount = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value) && value > 0) {
@@ -146,24 +155,76 @@ const pickProduct = (input: unknown): RecordLike | undefined => {
   return asRecord(root.product) ?? root;
 };
 
-export const extractViatorPrice = (input: unknown): ViatorExtractedPrice | null => {
+export const extractViatorPrice = (
+  input: unknown
+): ViatorExtractedPrice | null => {
   const product = pickProduct(input);
   if (!product) {
     return null;
   }
 
-  const amountPaths: PathSegment[][] = [
+  const headlineDisplayPaths: PathSegment[][] = [
     ["pricing", "summary", "fromPrice"],
+    ["pricing", "summary", "fromPriceFormatted"],
     ["pricingSummary", "fromPrice"],
+    ["pricingSummary", "fromPriceFormatted"],
     ["pricing", "fromPrice"],
     ["price", "fromPrice"],
-    ["fromPrice"],
-    ["priceFrom"],
+  ];
+
+  const advertisedFromPaths: PathSegment[][] = [["fromPrice"], ["priceFrom"]];
+
+  const extractFromPath = (
+    path: PathSegment[]
+  ): ViatorExtractedPrice | null => {
+    const raw = readPath(product, path);
+    const amount = parsePriceAmount(raw);
+    if (typeof amount !== "number") {
+      return null;
+    }
+
+    return {
+      amount,
+      formattedPrice: typeof raw === "string" ? raw : undefined,
+      fieldPath: formatFieldPath(path),
+    };
+  };
+
+  for (const path of [...headlineDisplayPaths, ...advertisedFromPaths]) {
+    const extracted = extractFromPath(path);
+    if (extracted) {
+      return extracted;
+    }
+  }
+
+  const bookingOptions = readPath(product, ["bookingOptions"]);
+  if (Array.isArray(bookingOptions) && bookingOptions.length > 0) {
+    const defaultIndex = bookingOptions.findIndex(option => {
+      const row = asRecord(option);
+      return row?.isDefault === true || row?.default === true;
+    });
+    const candidateIndex =
+      defaultIndex >= 0 ? defaultIndex : bookingOptions.length === 1 ? 0 : -1;
+
+    if (candidateIndex >= 0) {
+      const bookingOptionPaths: PathSegment[][] = [
+        ["bookingOptions", candidateIndex, "price", "fromPrice"],
+        ["bookingOptions", candidateIndex, "price", "amount"],
+      ];
+
+      for (const path of bookingOptionPaths) {
+        const extracted = extractFromPath(path);
+        if (extracted) {
+          return extracted;
+        }
+      }
+    }
+  }
+
+  const fallbackPaths: PathSegment[][] = [
     ["bookableItems", 0, "pricingSummary", "fromPrice"],
     ["bookableItems", 0, "pricing", "summary", "fromPrice"],
     ["bookableItems", 0, "price", "fromPrice"],
-    ["bookingOptions", 0, "price", "fromPrice"],
-    ["bookingOptions", 0, "price", "amount"],
     [
       "bookableItems",
       0,
@@ -187,91 +248,114 @@ export const extractViatorPrice = (input: unknown): ViatorExtractedPrice | null 
     ],
   ];
 
-  const formattedPaths: PathSegment[][] = [
-    ["pricing", "summary", "fromPriceFormatted"],
-    ["pricingSummary", "fromPriceFormatted"],
-  ];
-
-  for (const path of amountPaths) {
-    const raw = readPath(product, path);
-    const amount = parsePriceAmount(raw);
-    if (typeof amount === "number") {
-      return {
-        amount,
-        formattedPrice: typeof raw === "string" ? raw : undefined,
-        fieldPath: formatFieldPath(path),
-      };
-    }
-  }
-
-  for (const path of formattedPaths) {
-    const raw = readPath(product, path);
-    const amount = parsePriceAmount(raw);
-    if (typeof amount === "number") {
-      const formatted = cleanText(raw);
-      return {
-        amount,
-        formattedPrice: formatted,
-        fieldPath: formatFieldPath(path),
-      };
+  for (const path of fallbackPaths) {
+    const extracted = extractFromPath(path);
+    if (extracted) {
+      return extracted;
     }
   }
 
   return null;
 };
 
-export const extractViatorRating = (input: unknown): ExtractedValue<number> | null => {
+export const extractViatorRatingAndReviewCount = (
+  input: unknown
+): ViatorExtractedAggregateRating | null => {
   const product = pickProduct(input);
   if (!product) {
     return null;
   }
 
-  const paths: PathSegment[][] = [
-    ["rating"],
-    ["averageRating"],
-    ["reviewSummary", "averageRating"],
-    ["reviews", "combinedAverageRating"],
-    ["reviews", "averageRating"],
+  const extractFirst = (
+    paths: PathSegment[][]
+  ): ExtractedValue<number> | undefined => {
+    for (const path of paths) {
+      const raw = readPath(product, path);
+      const value = parseLooseNumber(raw);
+      if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+        return { value, fieldPath: formatFieldPath(path) };
+      }
+    }
+    return undefined;
+  };
+
+  const extractFirstCount = (
+    paths: PathSegment[][]
+  ): ExtractedValue<number> | undefined => {
+    for (const path of paths) {
+      const raw = readPath(product, path);
+      const value = parseLooseNumber(raw);
+      if (typeof value === "number" && Number.isFinite(value) && value >= 0) {
+        return { value: Math.trunc(value), fieldPath: formatFieldPath(path) };
+      }
+    }
+    return undefined;
+  };
+
+  const families: Array<{
+    sourceFamily: ViatorExtractedAggregateRating["sourceFamily"];
+    ratingPaths: PathSegment[][];
+    reviewCountPaths: PathSegment[][];
+  }> = [
+    {
+      sourceFamily: "public-product",
+      ratingPaths: [["rating"], ["averageRating"]],
+      reviewCountPaths: [["reviewCount"]],
+    },
+    {
+      sourceFamily: "review-summary",
+      ratingPaths: [["reviewSummary", "averageRating"]],
+      reviewCountPaths: [["reviewSummary", "totalReviews"]],
+    },
+    {
+      sourceFamily: "reviews",
+      ratingPaths: [
+        ["reviews", "combinedAverageRating"],
+        ["reviews", "averageRating"],
+      ],
+      reviewCountPaths: [
+        ["reviews", "totalReviews"],
+        ["reviews", "count"],
+      ],
+    },
   ];
 
-  for (const path of paths) {
-    const raw = readPath(product, path);
-    const value = parseLooseNumber(raw);
-    if (typeof value === "number" && Number.isFinite(value) && value > 0) {
-      return { value, fieldPath: formatFieldPath(path) };
+  for (const family of families) {
+    const rating = extractFirst(family.ratingPaths);
+    const reviewCount = extractFirstCount(family.reviewCountPaths);
+    if (rating || reviewCount) {
+      return {
+        rating,
+        reviewCount,
+        sourceFamily: family.sourceFamily,
+      };
     }
   }
 
-  return null;
+  return {
+    sourceFamily: "fallback",
+    rating: undefined,
+    reviewCount: undefined,
+  };
+};
+
+export const extractViatorRating = (
+  input: unknown
+): ExtractedValue<number> | null => {
+  const resolved = extractViatorRatingAndReviewCount(input);
+  return resolved?.rating ?? null;
 };
 
 export const extractViatorReviewCount = (
   input: unknown
 ): ExtractedValue<number> | null => {
-  const product = pickProduct(input);
-  if (!product) {
-    return null;
-  }
-
-  const paths: PathSegment[][] = [
-    ["reviewCount"],
-    ["reviewSummary", "totalReviews"],
-    ["reviews", "totalReviews"],
-    ["reviews", "count"],
-  ];
-
-  for (const path of paths) {
-    const raw = readPath(product, path);
-    const value = parseLooseNumber(raw);
-    if (typeof value === "number" && Number.isFinite(value) && value >= 0) {
-      return { value: Math.trunc(value), fieldPath: formatFieldPath(path) };
-    }
-  }
-
-  return null;
+  const resolved = extractViatorRatingAndReviewCount(input);
+  return resolved?.reviewCount ?? null;
 };
 
-export const extractViatorDuration = (input: unknown): ExtractedValue<string> | null => {
+export const extractViatorDuration = (
+  input: unknown
+): ExtractedValue<string> | null => {
   const product = pickProduct(input);
   if (!product) {
     return null;
@@ -319,19 +403,33 @@ export const extractViatorMeetingPoint = (
     return parts.length > 0 ? parts.join(", ") : undefined;
   };
 
-  const paths: Array<{ path: PathSegment[]; transform?: (value: unknown) => string | undefined }> = [
-    { path: ["meetingPoint"], transform: value => cleanText(value) ?? fromLocationObject(value) },
+  const paths: Array<{
+    path: PathSegment[];
+    transform?: (value: unknown) => string | undefined;
+  }> = [
+    {
+      path: ["meetingPoint"],
+      transform: value => cleanText(value) ?? fromLocationObject(value),
+    },
     {
       path: ["meetingAndPickup", "meetingPoint"],
       transform: value => cleanText(value) ?? fromLocationObject(value),
     },
-    { path: ["startLocation"], transform: value => cleanText(value) ?? fromLocationObject(value) },
-    { path: ["locations", 0], transform: value => cleanText(value) ?? fromLocationObject(value) },
+    {
+      path: ["startLocation"],
+      transform: value => cleanText(value) ?? fromLocationObject(value),
+    },
+    {
+      path: ["locations", 0],
+      transform: value => cleanText(value) ?? fromLocationObject(value),
+    },
   ];
 
   for (const candidate of paths) {
     const raw = readPath(product, candidate.path);
-    const value = candidate.transform ? candidate.transform(raw) : cleanText(raw);
+    const value = candidate.transform
+      ? candidate.transform(raw)
+      : cleanText(raw);
     if (value) {
       return { value, fieldPath: formatFieldPath(candidate.path) };
     }
@@ -433,7 +531,9 @@ export const extractViatorFaqs = (
 
         return { question, answer };
       })
-      .filter((item): item is { question: string; answer: string } => Boolean(item));
+      .filter((item): item is { question: string; answer: string } =>
+        Boolean(item)
+      );
   };
 
   const paths: PathSegment[][] = [
@@ -468,7 +568,9 @@ export const extractViatorImages = (
   ].filter(value => Array.isArray(value));
 
   const rawImages =
-    (imageCollections.find(collection => Array.isArray(collection)) as unknown[]) ?? [];
+    (imageCollections.find(collection =>
+      Array.isArray(collection)
+    ) as unknown[]) ?? [];
 
   const normalized = rawImages
     .map(item => {
@@ -490,7 +592,9 @@ export const extractViatorImages = (
           }
 
           const url =
-            asImageUrl(variantRow.url) ?? asImageUrl(variantRow.src) ?? asImageUrl(variantRow.imageUrl);
+            asImageUrl(variantRow.url) ??
+            asImageUrl(variantRow.src) ??
+            asImageUrl(variantRow.imageUrl);
           if (!url) {
             return undefined;
           }
@@ -529,7 +633,8 @@ export const extractViatorImages = (
 
   return {
     value: normalized,
-    fieldPath: imageCollections.length > 0 ? "product.images" : "product.images",
+    fieldPath:
+      imageCollections.length > 0 ? "product.images" : "product.images",
   };
 };
 
@@ -546,8 +651,10 @@ export const extractViatorHeroImage = (
 
   const prioritizedMediaImages = Array.isArray(mediaImages)
     ? [...mediaImages].sort((a, b) => {
-        const aCover = asRecord(a)?.isCover === true || asRecord(a)?.cover === true;
-        const bCover = asRecord(b)?.isCover === true || asRecord(b)?.cover === true;
+        const aCover =
+          asRecord(a)?.isCover === true || asRecord(a)?.cover === true;
+        const bCover =
+          asRecord(b)?.isCover === true || asRecord(b)?.cover === true;
         return Number(bCover) - Number(aCover);
       })
     : [];
@@ -557,7 +664,10 @@ export const extractViatorHeroImage = (
   if (Array.isArray(prioritizedMediaImages)) {
     prioritizedMediaImages.forEach(image => {
       const originalIndex = (mediaImages as unknown[]).indexOf(image);
-      imageEntries.push({ image, basePath: ["media", "images", originalIndex] });
+      imageEntries.push({
+        image,
+        basePath: ["media", "images", originalIndex],
+      });
     });
   }
 

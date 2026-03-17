@@ -45,6 +45,27 @@ export type Engine5ViatorApiTour = {
     apiFetchAttempted: true;
     apiFetchSucceeded: boolean;
     descriptionSource: "api";
+    resolverDiagnostics?: {
+      price: { value?: string; fieldPath?: string };
+      rating: {
+        value?: number;
+        fieldPath?: string;
+        sourceFamily?:
+          | "public-product"
+          | "review-summary"
+          | "reviews"
+          | "fallback";
+      };
+      reviewCount: {
+        value?: number;
+        fieldPath?: string;
+        sourceFamily?:
+          | "public-product"
+          | "review-summary"
+          | "reviews"
+          | "fallback";
+      };
+    };
   };
 };
 
@@ -68,7 +89,11 @@ export type Engine5NormalizedTour = {
     overview: string;
     highlights: string[];
     faqs: Array<{ question: string; answer: string }>;
-    itinerary: Array<{ title: string; description?: string; duration?: string }>;
+    itinerary: Array<{
+      title: string;
+      description?: string;
+      duration?: string;
+    }>;
     inclusions: string[];
     exclusions: string[];
     additionalInfo?: string;

@@ -12,8 +12,7 @@ import {
   extractViatorItinerary,
   extractViatorMeetingPoint,
   extractViatorPrice,
-  extractViatorRating,
-  extractViatorReviewCount,
+  extractViatorRatingAndReviewCount,
 } from "./extractors";
 
 const cleanText = (value: unknown): string | undefined => {
@@ -26,7 +25,6 @@ const asRecord = (value: unknown): Record<string, unknown> | undefined =>
   typeof value === "object" && value !== null
     ? (value as Record<string, unknown>)
     : undefined;
-
 
 const toStringArray = (value: unknown): string[] =>
   Array.isArray(value)
@@ -52,14 +50,20 @@ const rankVariant = (variant: Engine5ImageVariant): number => {
   return 1_000_000_000 + area;
 };
 
-const selectCanonicalHero = (exactProductImages: Engine5ExactProductImage[]) => {
-  const withVariants = exactProductImages.filter(image => image.variants.length > 0);
+const selectCanonicalHero = (
+  exactProductImages: Engine5ExactProductImage[]
+) => {
+  const withVariants = exactProductImages.filter(
+    image => image.variants.length > 0
+  );
   const coverImages = withVariants.filter(image => image.isCover);
   const candidates = coverImages.length > 0 ? coverImages : withVariants;
 
   const allCandidateUrls = Array.from(
     new Set(
-      exactProductImages.flatMap(image => image.variants.map(variant => variant.url))
+      exactProductImages.flatMap(image =>
+        image.variants.map(variant => variant.url)
+      )
     )
   );
 
@@ -140,7 +144,9 @@ export const getEngine5ViatorTourData = async (
           candidateUrls: Array.from(
             new Set([
               extractedHero.url,
-              ...exactProductImages.flatMap(image => image.variants.map(variant => variant.url)),
+              ...exactProductImages.flatMap(image =>
+                image.variants.map(variant => variant.url)
+              ),
             ])
           ),
         }
@@ -159,12 +165,34 @@ export const getEngine5ViatorTourData = async (
   }
 
   const price = extractViatorPrice(product);
-  const rating = extractViatorRating(product);
-  const reviewCount = extractViatorReviewCount(product);
+  const ratingSummary = extractViatorRatingAndReviewCount(product);
   const duration = extractViatorDuration(product);
   const meetingPoint = extractViatorMeetingPoint(product);
   const itinerary = extractViatorItinerary(product);
   const faqs = extractViatorFaqs(product);
+
+  if (typeof process !== "undefined" && process.env.NODE_ENV !== "production") {
+    console.info(`[engine5][${normalizedCode}] resolver diagnostics`, {
+      price: {
+        value:
+          price?.formattedPrice ??
+          (typeof price?.amount === "number"
+            ? String(price.amount)
+            : undefined),
+        fieldPath: price?.fieldPath,
+      },
+      rating: {
+        value: ratingSummary?.rating?.value,
+        fieldPath: ratingSummary?.rating?.fieldPath,
+        sourceFamily: ratingSummary?.sourceFamily,
+      },
+      reviewCount: {
+        value: ratingSummary?.reviewCount?.value,
+        fieldPath: ratingSummary?.reviewCount?.fieldPath,
+        sourceFamily: ratingSummary?.sourceFamily,
+      },
+    });
+  }
 
   return {
     productCode: normalizedCode,
@@ -173,11 +201,14 @@ export const getEngine5ViatorTourData = async (
     bookingUrl,
     duration: duration?.value,
     startTime:
-      cleanText(product.startTime) ?? cleanText(asRecord(product.schedule)?.startTime),
-    fromPrice: price?.formattedPrice ?? (typeof price?.amount === "number" ? String(price.amount) : undefined),
+      cleanText(product.startTime) ??
+      cleanText(asRecord(product.schedule)?.startTime),
+    fromPrice:
+      price?.formattedPrice ??
+      (typeof price?.amount === "number" ? String(price.amount) : undefined),
     priceCurrency: cleanText(product.currencyCode),
-    rating: rating?.value,
-    reviewCount: reviewCount?.value,
+    rating: ratingSummary?.rating?.value,
+    reviewCount: ratingSummary?.reviewCount?.value,
     meetingPoint: meetingPoint?.value,
     cancellationPolicy: cleanText(product.cancellationPolicy),
     itinerary: itinerary?.value ?? [],
@@ -197,6 +228,26 @@ export const getEngine5ViatorTourData = async (
       apiFetchAttempted: true,
       apiFetchSucceeded: true,
       descriptionSource: "api",
+      resolverDiagnostics: {
+        price: {
+          value:
+            price?.formattedPrice ??
+            (typeof price?.amount === "number"
+              ? String(price.amount)
+              : undefined),
+          fieldPath: price?.fieldPath,
+        },
+        rating: {
+          value: ratingSummary?.rating?.value,
+          fieldPath: ratingSummary?.rating?.fieldPath,
+          sourceFamily: ratingSummary?.sourceFamily,
+        },
+        reviewCount: {
+          value: ratingSummary?.reviewCount?.value,
+          fieldPath: ratingSummary?.reviewCount?.fieldPath,
+          sourceFamily: ratingSummary?.sourceFamily,
+        },
+      },
     },
   };
 };
