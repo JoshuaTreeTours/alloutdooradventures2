@@ -252,4 +252,37 @@ describe("engine5 bridge for 421920P2", () => {
     );
   });
 
+  it("resolves 6896MOABCPARK price from bookingOptions fallback path", () => {
+    const mapped = mapEngine5ProductPayloadToEngine4ApiTour({
+      productCode: ENGINE5_CLEAN_SPECIMEN_PRODUCT_CODE,
+      payload: {
+        product: {
+          title: "Canyonlands National Park Half-Day Tour from Moab",
+          productUrl:
+            "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+          bookingOptions: [{ price: { amount: 0 } }, { price: 189 }],
+        },
+      },
+    });
+
+    expect(mapped?.fromPrice).toBe("189");
+
+    const diagnostics = mapped?.rawProductPayload?._engine5BridgeDiagnostics as
+      | { commercialPriceFieldPath?: string }
+      | undefined;
+    expect(diagnostics?.commercialPriceFieldPath).toBe(
+      "product.bookingOptions[1].price"
+    );
+
+    const resolved = resolve421920P2BridgeApiTour({
+      productCode: ENGINE5_CLEAN_SPECIMEN_PRODUCT_CODE,
+      runtimeApiTour: mapped,
+      runtimeSource: "live-api",
+      cachedFallbackApiTour: undefined,
+    });
+
+    expect(resolved.runtimeSource).toBe("live-api");
+    expect(resolved.apiTour?.fromPrice).toBe("189");
+  });
+
 });

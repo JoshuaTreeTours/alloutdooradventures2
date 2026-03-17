@@ -31,6 +31,28 @@ describe("engine5 viator shared extractors", () => {
     expect(result?.fieldPath).toBe("product.bookingOptions[0].price.amount");
   });
 
+  it("extracts bookingOptions fallback price from non-zero subsequent option", () => {
+    const result = extractViatorPrice({
+      product: {
+        bookingOptions: [{ price: { amount: 0 } }, { price: 189 }],
+      },
+    });
+
+    expect(result?.amount).toBe(189);
+    expect(result?.fieldPath).toBe("product.bookingOptions[1].price");
+  });
+
+  it("extracts bookableItems fallback price from non-zero subsequent item", () => {
+    const result = extractViatorPrice({
+      product: {
+        bookableItems: [{ pricingSummary: { fromPrice: 0 } }, { pricingSummary: { fromPrice: 205 } }],
+      },
+    });
+
+    expect(result?.amount).toBe(205);
+    expect(result?.fieldPath).toBe("product.bookableItems[1].pricingSummary.fromPrice");
+  });
+
   it("extracts seasonal pricing path", () => {
     const result = extractViatorPrice({
       product: {

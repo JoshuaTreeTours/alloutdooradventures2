@@ -209,4 +209,37 @@ describe("getEngine5ViatorTourData", () => {
     );
   });
 
+  it("extracts 6896MOABCPARK price from bookingOptions fallback path", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "6896MOABCPARK",
+          title: "Canyonlands National Park Half-Day Tour from Moab",
+          shortDescription: "Half-day guided Canyonlands tour from Moab.",
+          productUrl:
+            "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+          bookingOptions: [{ price: { amount: 0 } }, { price: 189 }],
+          media: {
+            images: [
+              {
+                isCover: true,
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/moab-cover.jpg",
+                    width: 1600,
+                    height: 900,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("6896MOABCPARK");
+    expect(result.fromPrice).toBe("189");
+  });
+
 });
