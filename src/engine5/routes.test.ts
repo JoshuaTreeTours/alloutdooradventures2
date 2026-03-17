@@ -8,11 +8,9 @@ import {
 
 describe("engine5 proof routes", () => {
   it("defines listing and detail routes for preview", () => {
-    expect(ENGINE5_PROOF_LISTING_PATH).toBe(
-      "/engine5/california/los-angeles/tours"
-    );
+    expect(ENGINE5_PROOF_LISTING_PATH).toBe("/engine5/utah/springdale/tours");
     expect(ENGINE5_PROOF_TOUR_ROUTE_PATTERN).toBe(
-      "/engine5/california/los-angeles/tours/:tourSlug"
+      "/engine5/utah/springdale/tours/:tourSlug"
     );
     expect(ENGINE5_PROOF_TOUR_PATH.startsWith(ENGINE5_PROOF_LISTING_PATH)).toBe(
       true

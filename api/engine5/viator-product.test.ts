@@ -44,7 +44,6 @@ describe("/api/engine5/viator-product", () => {
     expect((res.body as any).product.productCode).toBe("132218P209");
   });
 
-
   it("includes temporary structured diagnostics when fallback occurs before live fetch", async () => {
     const req = { method: "GET", query: { productCode: "421920P2" } };
     const res = createRes();
@@ -83,7 +82,8 @@ describe("/api/engine5/viator-product", () => {
       ok: true,
       status: 200,
       headers: new Headers({ "content-type": "application/json" }),
-      text: async () => JSON.stringify({ product: { productCode: "132218P209" } }),
+      text: async () =>
+        JSON.stringify({ product: { productCode: "132218P209" } }),
     } as Response);
 
     const req = { method: "GET", query: { productCode: "132218P209" } };
@@ -98,7 +98,18 @@ describe("/api/engine5/viator-product", () => {
       })
     );
     expect(res.statusCode).toBe(200);
-    expect(res.body).toEqual({ product: { productCode: "132218P209" } });
+    expect(res.body).toEqual(
+      expect.objectContaining({
+        product: { productCode: "132218P209" },
+        diagnostics: expect.objectContaining({
+          source: "live-api",
+          hasViatorApiKey: true,
+          attemptedLiveFetch: true,
+          upstreamStatus: 200,
+          upstreamOk: true,
+        }),
+      })
+    );
   });
 
   it("returns structured JSON success for 421920P2 via bundled fallback on upstream failure", async () => {
@@ -191,6 +202,42 @@ describe("/api/engine5/viator-product", () => {
     expect(res.statusCode).toBe(200);
     expect(res.headers["X-Engine5-Source"]).toBeUndefined();
     expect((res.body as any).product.pricing.summary.fromPrice).toBe(139);
+    expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
+      "product.pricing.summary.fromPrice"
+    );
+  });
+
+  it("captures non-primary booking option price for 163873P16 live payload", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "163873P16",
+            bookingOptions: [
+              { price: { amount: 0 } },
+              { price: { amount: 175 } },
+            ],
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "163873P16" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "live-api",
+        commercialPriceFieldPath: "product.bookingOptions[1].price.amount",
+      })
+    );
   });
 
   it("reports diagnostics when live fetch succeeds but price extraction fails", async () => {
@@ -200,7 +247,24 @@ describe("/api/engine5/viator-product", () => {
       ok: true,
       status: 200,
       headers: new Headers({ "content-type": "application/json" }),
-      text: async () => JSON.stringify({ product: { productCode: "421920P2", media: { images: [{ isCover: true, variants: { FULL: { url: "https://dynamic-media.tacdn.com/media/photo-o/zipline-cover.jpg" } } }] } } }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "421920P2",
+            media: {
+              images: [
+                {
+                  isCover: true,
+                  variants: {
+                    FULL: {
+                      url: "https://dynamic-media.tacdn.com/media/photo-o/zipline-cover.jpg",
+                    },
+                  },
+                },
+              ],
+            },
+          },
+        }),
     } as Response);
 
     const req = { method: "GET", query: { productCode: "421920P2" } };
@@ -224,5 +288,4 @@ describe("/api/engine5/viator-product", () => {
       })
     );
   });
-
 });
