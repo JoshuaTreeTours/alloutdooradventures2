@@ -6,7 +6,7 @@ import {
   extractViatorRating,
   extractViatorReviewCount,
   extractViatorItinerary,
-} from "../../src/engine5/viator/extractors";
+} from "./viatorExtractors";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 const ENGINE5_EXACT_PAYLOAD_PRODUCT_CODE = "132218P209";
