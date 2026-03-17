@@ -43,6 +43,8 @@ const cleanText = (value: unknown): string | undefined => {
 const asNumber = (value: unknown): number | undefined =>
   typeof value === "number" && Number.isFinite(value) ? value : undefined;
 
+const isDefined = <T>(value: T | undefined): value is T => value !== undefined;
+
 const parseLooseNumber = (value: unknown): number | undefined => {
   if (typeof value === "number" && Number.isFinite(value)) {
     return value;
@@ -55,7 +57,7 @@ const parseLooseNumber = (value: unknown): number | undefined => {
 
   const normalized = raw
     .replace(/,/g, "")
-    .replace(/out of\s*5/giu, "")
+    .replace(/out of\s*5/gi, "")
     .replace(/[^\d.-]/g, "");
 
   if (!normalized) {
@@ -125,7 +127,7 @@ const parsePriceAmount = (value: unknown): number | undefined => {
     return undefined;
   }
 
-  if (/^\$?0(?:\.0+)?$/u.test(raw.replace(/,/g, ""))) {
+  if (/^\$?0(?:\.0+)?$/.test(raw.replace(/,/g, ""))) {
     return undefined;
   }
 
@@ -378,7 +380,7 @@ export const extractViatorItinerary = (
           duration: cleanText(row.duration) ?? cleanText(row.durationText),
         };
       })
-      .filter((item): item is ViatorItineraryItem => Boolean(item));
+      .filter(isDefined);
   };
 
   const paths: PathSegment[][] = [
@@ -501,7 +503,7 @@ export const extractViatorImages = (
             height: asNumber(variantRow.height),
           };
         })
-        .filter((variant): variant is Engine5ImageVariant => Boolean(variant));
+        .filter(isDefined);
 
       const directUrl =
         asImageUrl(row.url) ?? asImageUrl(row.src) ?? asImageUrl(row.imageUrl);
@@ -524,7 +526,7 @@ export const extractViatorImages = (
         variants,
       };
     })
-    .filter((image): image is Engine5ExactProductImage => Boolean(image))
+    .filter(isDefined)
     .sort((a, b) => Number(b.isCover) - Number(a.isCover));
 
   return {
