@@ -14,6 +14,7 @@ export const mapViatorToEngine6Tour = (
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const faqs = payload.extracted.faqs ?? [];
+  const requirements = payload.extracted.requirements ?? [];
   const categories = payload.extracted.categories ?? [];
   const primaryCategory = payload.extracted.primaryCategory ?? categories[0] ?? null;
 
@@ -39,6 +40,7 @@ export const mapViatorToEngine6Tour = (
     highlights,
     itinerary,
     faqs,
+    requirements,
     primaryCategory,
     categories,
     bookingUrl: `https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-${payload.rawProductCode}`,
@@ -53,6 +55,7 @@ export const mapViatorToEngine6Tour = (
       meetingPointFieldPath: payload.diagnostics.meetingPointFieldPath,
       itineraryFieldPath: payload.diagnostics.itineraryFieldPath,
       faqsFieldPath: payload.diagnostics.faqsFieldPath,
+      requirementsFieldPath: payload.diagnostics.requirementsFieldPath,
       classificationFieldPath: payload.diagnostics.classificationFieldPath,
     },
   };

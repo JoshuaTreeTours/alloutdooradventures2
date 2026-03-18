@@ -18,6 +18,7 @@ export type Engine6SpecimenDebug = {
   highlightsFieldPath: string | null;
   itineraryFieldPath: string | null;
   faqsFieldPath: string | null;
+  requirementsFieldPath: string | null;
   classificationFieldPath: string | null;
   primaryCategory: string | null;
   failureReason: string | null;
@@ -52,6 +53,7 @@ export const buildInitialEngine6SpecimenDebug = (
   highlightsFieldPath: null,
   itineraryFieldPath: null,
   faqsFieldPath: null,
+  requirementsFieldPath: null,
   classificationFieldPath: null,
   primaryCategory: null,
   failureReason: null,
@@ -127,6 +129,14 @@ export const resolveEngine6SpecimenResponse = ({
         "string"
         ? ((payload.diagnostics as Record<string, unknown>)
             .faqsFieldPath as string)
+        : null,
+    requirementsFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .requirementsFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .requirementsFieldPath as string)
         : null,
     classificationFieldPath:
       typeof payload.diagnostics === "object" &&
@@ -244,6 +254,10 @@ const Engine6SpecimenDiagnostics = ({
           <div>
             <dt className="font-medium text-slate-900">FAQs path</dt>
             <dd>{debug.faqsFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Requirements path</dt>
+            <dd>{debug.requirementsFieldPath ?? "missing upstream"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Classification path</dt>

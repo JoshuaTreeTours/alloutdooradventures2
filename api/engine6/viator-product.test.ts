@@ -75,7 +75,7 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
   });
 
-  it("returns JSON body for specimen code", async () => {
+  it("returns the enforced 163873P16 section sources and paths", async () => {
     process.env.VIATOR_API_KEY = "k";
 
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
@@ -87,15 +87,43 @@ describe("/api/engine6/viator-product", () => {
           product: {
             productCode: "163873P16",
             title: "East Zion Top of the World Jeep Tour",
-            description: { text: "<p>Climb high above East Zion.</p>" },
-            highlights: ["Ride to elevated viewpoints by Jeep"],
+            description: {
+              text: "<p>Grab bird’s-eye views of Zion National Park on this Jeep tour.</p>",
+            },
+            highlights: [
+              "Easy meetup at at Zion Ponderosa Ranch Resort",
+              "See Zion National Park and its environs from above",
+            ],
+            additionalInfo: [
+              "Confirmation will be received at time of booking",
+              "Not wheelchair accessible",
+            ],
             itineraryItems: [
-              { title: "Top of the World", description: "Scenic overlook" },
+              {
+                title: "Zion National Park",
+                description: "Admission Ticket Free",
+                duration: "30 minutes",
+              },
             ],
             qAndA: {
               items: [{ q: "What should I bring?", a: "Bring water." }],
             },
-            pricing: { summary: { fromPrice: 129 } },
+            priceFrom: "$105.09",
+            pricing: { summary: { fromPrice: 999 } },
+            images: [
+              {
+                isCover: true,
+                variants: [{ url: "https://img.test/specimen-root-hero.jpg" }],
+              },
+            ],
+            media: {
+              images: [
+                {
+                  isCover: true,
+                  variants: { XXLARGE: { url: "https://img.test/wrong-media.jpg" } },
+                },
+              ],
+            },
           },
         }),
     } as Response);
@@ -107,9 +135,21 @@ describe("/api/engine6/viator-product", () => {
 
     expect(res.statusCode).toBe(200);
     expect((res.body as any).rawProductCode).toBe("163873P16");
-    expect((res.body as any).extracted.priceAmount).toBe(129);
-    expect((res.body as any).extracted.overviewText).toContain(
-      "Climb high above East Zion"
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://img.test/specimen-root-hero.jpg"
+    );
+    expect((res.body as any).extracted.priceAmount).toBe(105.09);
+    expect((res.body as any).extracted.highlights).not.toContain(
+      "Not wheelchair accessible"
+    );
+    expect((res.body as any).extracted.requirements).toContain(
+      "Not wheelchair accessible"
+    );
+    expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
+      "product.images[0].variants[0].url"
+    );
+    expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
+      "product.priceFrom"
     );
     expect((res.body as any).diagnostics.overviewFieldPath).toBe(
       "product.description.text"
@@ -122,6 +162,9 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).diagnostics.faqsFieldPath).toBe(
       "product.qAndA.items"
+    );
+    expect((res.body as any).diagnostics.requirementsFieldPath).toBe(
+      "product.additionalInfo"
     );
   });
 });

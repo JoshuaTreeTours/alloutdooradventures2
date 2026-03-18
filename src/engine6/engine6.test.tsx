@@ -13,63 +13,62 @@ import {
   resolveEngine6SpecimenResponse,
 } from "../pages/engine6/Engine6SpecimenRoute";
 
-const liveShapedProduct = {
+const specimenProductPayload = {
   product: {
     productCode: "163873P16",
     title: "East Zion Top of the World Jeep Tour",
     description: {
-      text: "<p>Climb high above East Zion in an off-road Jeep with a guide who shares local canyon context.</p><p>Expect sweeping overlooks and a smoother way to cover rugged terrain.</p>",
+      text: "<p>Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond. With reasonably groomed trails, this trek is perfect for families with small kids, and anyone looking for easy, effortless adventure with plenty of reward.</p>",
     },
+    shortDescription: "Short fallback that should not win for the specimen.",
     highlights: [
-      "Ride to elevated East Zion viewpoints by Jeep",
-      "See broad desert and canyon panoramas",
-      "Travel with a local guide who handles the rugged road",
+      "Easy meetup at at Zion Ponderosa Ranch Resort",
+      "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
+      "See Zion National Park and its environs from above",
+      "Limited to 8 travelers, you'll get an intimate East Zion experience",
+    ],
+    additionalInfo: [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 8 travelers",
     ],
     location: { city: "Springdale", state: "Utah" },
-    bookingOptions: [
-      { pricing: { summary: { fromPrice: 0 } } },
+    priceFrom: "$105.09",
+    pricing: { summary: { fromPrice: 999 } },
+    images: [
       {
-        seasonalPricingRecords: [
-          {
-            pricingDetails: [
-              {
-                price: {
-                  original: { recommendedRetailPrice: 149 },
-                },
-              },
-            ],
-          },
+        isCover: true,
+        variants: [
+          { url: "https://img.test/specimen-root-hero.jpg", width: 1600, height: 900 },
         ],
       },
     ],
     media: {
       images: [
-        { variants: { LARGE: { url: "https://img.test/non-cover.jpg" } } },
         {
           isCover: true,
-          variants: { XXLARGE: { url: "https://img.test/hero.jpg" } },
+          variants: { XXLARGE: { url: "https://img.test/incorrect-media-hero.jpg" } },
         },
       ],
     },
-    reviews: { combinedAverageRating: 5, totalReviews: 274 },
-    logistics: { start: { description: "Meet at East Zion Adventures" } },
+    reviews: { combinedAverageRating: 5, totalReviews: 154 },
+    logistics: { start: { description: "Meet us at Zion Mountain Ranch!" } },
     itineraryItems: [
       {
-        title: "Top of the World",
-        description:
-          "Reach a high overlook with wide desert and Zion-area views.",
+        title: "Zion National Park",
+        description: "Admission Ticket Free",
         duration: "30 minutes",
-      },
-      {
-        title: "Backcountry trail",
-        summary: "Ride rugged sections with your guide handling route choices.",
       },
     ],
     qAndA: {
       items: [
         {
-          q: "Is this tour suitable for first-time visitors?",
-          a: "Yes. It is a good way to get elevated views without hiking long distances.",
+          q: "Is this tour good for families?",
+          a: "Yes. The reasonably groomed trails make it approachable for families with small kids.",
         },
       ],
     },
@@ -77,41 +76,73 @@ const liveShapedProduct = {
 };
 
 describe("engine6 extractor", () => {
-  it("resolves pricing, hero image, overview, highlights, itinerary, and faqs", () => {
-    const extracted = extractEngine6Product(liveShapedProduct);
+  it("hard-enforces the exact 163873P16 hero, price, and content section sources", () => {
+    const extracted = extractEngine6Product(specimenProductPayload);
 
-    expect(extracted.extracted.priceAmount).toBe(149);
-    expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
-      "product.bookingOptions[1].seasonalPricingRecords[0].pricingDetails[0].price.original.recommendedRetailPrice"
+    expect(extracted.extracted.heroImageUrl).toBe(
+      "https://img.test/specimen-root-hero.jpg"
     );
-    expect(extracted.extracted.heroImageUrl).toBe("https://img.test/hero.jpg");
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[1].variants.XXLARGE.url"
+      "product.images[0].variants[0].url"
     );
+
+    expect(extracted.extracted.priceAmount).toBe(105.09);
+    expect(extracted.extracted.priceFormatted).toBe("From $105");
+    expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
+      "product.priceFrom"
+    );
+
     expect(extracted.extracted.overviewText).toContain(
-      "Climb high above East Zion"
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour"
     );
     expect(extracted.diagnostics.overviewFieldPath).toBe(
       "product.description.text"
     );
-    expect(extracted.extracted.highlights).toHaveLength(3);
+
+    expect(extracted.extracted.highlights).toEqual([
+      "Easy meetup at at Zion Ponderosa Ranch Resort",
+      "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
+      "See Zion National Park and its environs from above",
+      "Limited to 8 travelers, you'll get an intimate East Zion experience",
+    ]);
     expect(extracted.diagnostics.highlightsFieldPath).toBe(
       "product.highlights"
     );
-    expect(extracted.extracted.itinerary[0].duration).toBe("30 minutes");
+    expect(extracted.extracted.highlights).not.toContain(
+      "Not wheelchair accessible"
+    );
+
+    expect(extracted.extracted.itinerary).toEqual([
+      {
+        title: "Zion National Park",
+        description: "Admission Ticket Free",
+        duration: "30 minutes",
+      },
+    ]);
     expect(extracted.diagnostics.itineraryFieldPath).toBe(
       "product.itineraryItems"
     );
-    expect(extracted.extracted.faqs[0]).toEqual({
-      question: "Is this tour suitable for first-time visitors?",
-      answer:
-        "Yes. It is a good way to get elevated views without hiking long distances.",
-    });
+
+    expect(extracted.extracted.faqs).toEqual([
+      {
+        question: "Is this tour good for families?",
+        answer:
+          "Yes. The reasonably groomed trails make it approachable for families with small kids.",
+      },
+    ]);
     expect(extracted.diagnostics.faqsFieldPath).toBe("product.qAndA.items");
-    expect(extracted.extracted.primaryCategory).toBe("off-road-tour");
-    expect(extracted.extracted.categories).toContain("off-road-tour");
-    expect(extracted.diagnostics.classificationFieldPath).toBe(
-      "inferred:title+overview+highlights"
+
+    expect(extracted.extracted.requirements).toEqual([
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 8 travelers",
+    ]);
+    expect(extracted.diagnostics.requirementsFieldPath).toBe(
+      "product.additionalInfo"
     );
   });
 });
@@ -126,8 +157,8 @@ const specimenApiPayload = {
     upstreamContentType: "application/json",
     upstreamOk: true,
     usedBundledFallbackBecause: "",
-    commercialPriceFieldPath: "product.pricing.summary.fromPrice",
-    heroImageFieldPath: "product.media.images[0].variants.LARGE.url",
+    commercialPriceFieldPath: "product.priceFrom",
+    heroImageFieldPath: "product.images[0].variants[0].url",
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
     overviewFieldPath: "product.description.text",
@@ -135,6 +166,7 @@ const specimenApiPayload = {
     itineraryFieldPath: "product.itineraryItems",
     meetingPointFieldPath: "product.logistics.start.description",
     faqsFieldPath: "product.qAndA.items",
+    requirementsFieldPath: "product.additionalInfo",
     classificationFieldPath: "inferred:title+overview+highlights",
   },
   rawProductCode: "163873P16",
@@ -144,36 +176,41 @@ const specimenApiPayload = {
   extracted: {
     title: "East Zion Top of the World Jeep Tour",
     seoTitle: "East Zion Top of the World Jeep Tour in Springdale",
-    seoDescription: "Best tour in Springdale. Rated 4.9/5. 274 reviews.",
+    seoDescription: "Best tour in Springdale. Rated 5/5. 154 reviews.",
     city: "Springdale",
     state: "Utah",
-    heroImageUrl: "https://img.test/hero.jpg",
-    cardImageUrl: "https://img.test/hero.jpg",
-    priceAmount: 129,
-    priceFormatted: "From $129",
-    aggregateRating: 4.9,
-    reviewCount: 274,
-    meetingPointText: "Meet at East Zion Adventures",
+    heroImageUrl: "https://img.test/specimen-root-hero.jpg",
+    cardImageUrl: "https://img.test/specimen-root-hero.jpg",
+    priceAmount: 105.09,
+    priceFormatted: "From $105",
+    aggregateRating: 5,
+    reviewCount: 154,
+    meetingPointText: "Meet us at Zion Mountain Ranch!",
     overviewText:
-      "Climb high above East Zion in an off-road Jeep with a guide who shares local canyon context.",
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond.",
     highlights: [
-      "Ride to elevated East Zion viewpoints by Jeep",
-      "See broad desert and canyon panoramas",
+      "Easy meetup at at Zion Ponderosa Ranch Resort",
+      "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
+      "See Zion National Park and its environs from above",
+      "Limited to 8 travelers, you'll get an intimate East Zion experience",
     ],
     itinerary: [
       {
-        title: "Top of the World",
-        description:
-          "Reach a high overlook with wide desert and Zion-area views.",
+        title: "Zion National Park",
+        description: "Admission Ticket Free",
         duration: "30 minutes",
       },
     ],
     faqs: [
       {
-        question: "Is this tour suitable for first-time visitors?",
+        question: "Is this tour good for families?",
         answer:
-          "Yes. It is a good way to get elevated views without hiking long distances.",
+          "Yes. The reasonably groomed trails make it approachable for families with small kids.",
       },
+    ],
+    requirements: [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
     ],
     primaryCategory: "off-road-tour",
     categories: ["off-road-tour"],
@@ -181,7 +218,7 @@ const specimenApiPayload = {
 };
 
 describe("engine6 mapping/cards/page", () => {
-  it("maps normalized tour object stably", () => {
+  it("renders the enforced 163873P16 sections instead of fallback content", () => {
     const tour = mapViatorToEngine6Tour(specimenApiPayload);
 
     const card = toEngine6Card(tour);
@@ -189,20 +226,22 @@ describe("engine6 mapping/cards/page", () => {
     const html = renderToString(<Engine6TourPage tour={tour} />);
 
     expect(tour.productCode).toBe("163873P16");
+    expect(tour.priceFormatted).toBe("From $105");
     expect(card.title).toContain("East Zion");
-    expect(surfaces.city[0].priceLabel).toBe("From $129");
+    expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
     expect(html).toContain("Off Road Tour");
-    expect(html).toContain("Overview");
-    expect(html).toContain("Highlights");
-    expect(html).toContain("Itinerary");
+    expect(html).toContain("Important info");
+    expect(html).toContain("Not wheelchair accessible");
     expect(html).toContain("FAQs");
+    expect(html).toContain("Is this tour good for families?");
+    expect(html).not.toContain("Check latest price");
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
     );
   });
 
-  it("keeps the specimen renderable from the live Engine6 API envelope", () => {
+  it("surfaces the exact enforced field paths in specimen diagnostics", () => {
     const apiUrl = buildEngine6SpecimenApiUrl("163873P16");
     const resolved = resolveEngine6SpecimenResponse({
       payload: specimenApiPayload,
@@ -212,19 +251,17 @@ describe("engine6 mapping/cards/page", () => {
     });
 
     expect(resolved.error).toBeNull();
-    expect(resolved.tour?.title).toBe("East Zion Top of the World Jeep Tour");
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
     expect(resolved.debug.overviewFieldPath).toBe("product.description.text");
     expect(resolved.debug.highlightsFieldPath).toBe("product.highlights");
+    expect(resolved.debug.itineraryFieldPath).toBe("product.itineraryItems");
     expect(resolved.debug.faqsFieldPath).toBe("product.qAndA.items");
-    expect(resolved.debug.classificationFieldPath).toBe(
-      "inferred:title+overview+highlights"
-    );
+    expect(resolved.debug.requirementsFieldPath).toBe("product.additionalInfo");
     expect(resolved.debug.primaryCategory).toBe("off-road-tour");
     expect(resolved.debug.failureReason).toBeNull();
   });
 
-  it("still renders cleanly when overview, highlights, itinerary, and faqs are missing", () => {
+  it("still renders cleanly when optional sections beyond the enforced core are missing", () => {
     const resolved = resolveEngine6SpecimenResponse({
       payload: {
         ...specimenApiPayload,
@@ -236,6 +273,7 @@ describe("engine6 mapping/cards/page", () => {
           highlights: [],
           itinerary: [],
           faqs: [],
+          requirements: [],
         },
       },
       httpStatus: 200,
@@ -248,7 +286,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("Utah Off-Road Adventure");
     expect(resolved.tour?.heroImageUrl).toContain("unsplash.com");
-    expect(html).not.toContain("Overview");
+    expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
   });
 });
