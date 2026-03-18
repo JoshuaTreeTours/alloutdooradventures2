@@ -1,4 +1,4 @@
-import { extractEngine6Product } from "./viatorExtractors";
+import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
 
