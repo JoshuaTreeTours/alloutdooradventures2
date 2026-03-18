@@ -43,8 +43,16 @@ const specimenProductPayload = {
       {
         isCover: true,
         variants: [
-          { url: "https://img.test/specimen-root-hero-small.jpg", width: 360, height: 240 },
-          { url: "https://img.test/specimen-root-hero-large.jpg", width: 674, height: 446 },
+          {
+            url: "https://img.test/specimen-root-hero-small.jpg",
+            width: 360,
+            height: 240,
+          },
+          {
+            url: "https://img.test/specimen-root-hero-large.jpg",
+            width: 674,
+            height: 446,
+          },
         ],
       },
     ],
@@ -52,7 +60,9 @@ const specimenProductPayload = {
       images: [
         {
           isCover: true,
-          variants: { XXLARGE: { url: "https://img.test/incorrect-media-hero.jpg" } },
+          variants: {
+            XXLARGE: { url: "https://img.test/incorrect-media-hero.jpg" },
+          },
         },
       ],
     },
@@ -259,6 +269,10 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(tour.productCode).toBe("163873P16");
     expect(tour.priceFormatted).toBe("From $105");
+    expect(tour.bookingUrl).toContain("163873P16");
+    expect(tour.bookingUrl).toContain("pid=P00290915");
+    expect(tour.bookingUrl).toContain("mcid=42383");
+    expect(tour.bookingUrl).toContain("medium=link");
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");

@@ -1,3 +1,4 @@
+import { buildViatorAffiliateUrlFromUrl } from "../engine4/viator/buildViatorAffiliateUrl";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const FALLBACK_HERO =
@@ -16,7 +17,9 @@ export const mapViatorToEngine6Tour = (
   const faqs = payload.extracted.faqs ?? [];
   const requirements = payload.extracted.requirements ?? [];
   const categories = payload.extracted.categories ?? [];
-  const primaryCategory = payload.extracted.primaryCategory ?? categories[0] ?? null;
+  const primaryCategory =
+    payload.extracted.primaryCategory ?? categories[0] ?? null;
+  const baseBookingUrl = `https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-${payload.rawProductCode}`;
 
   return {
     productCode: payload.rawProductCode,
@@ -43,7 +46,7 @@ export const mapViatorToEngine6Tour = (
     requirements,
     primaryCategory,
     categories,
-    bookingUrl: `https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-${payload.rawProductCode}`,
+    bookingUrl: buildViatorAffiliateUrlFromUrl(baseBookingUrl),
     diagnostics: {
       source: payload.source,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,
@@ -67,7 +70,8 @@ export const mapViatorToEngine6Tour = (
       faqCount: payload.diagnostics.faqCount,
       faqSourceUsed: payload.diagnostics.faqSourceUsed,
       requirementsFieldPath: payload.diagnostics.requirementsFieldPath,
-      highlightClassificationReason: payload.diagnostics.highlightClassificationReason,
+      highlightClassificationReason:
+        payload.diagnostics.highlightClassificationReason,
       classificationFieldPath: payload.diagnostics.classificationFieldPath,
     },
   };

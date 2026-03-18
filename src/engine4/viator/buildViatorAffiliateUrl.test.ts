@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { buildViatorAffiliateUrl } from "./buildViatorAffiliateUrl";
+import {
+  buildViatorAffiliateUrl,
+  buildViatorAffiliateUrlFromUrl,
+} from "./buildViatorAffiliateUrl";
 
 describe("buildViatorAffiliateUrl", () => {
   it("adds required affiliate attribution params", () => {
@@ -18,5 +21,18 @@ describe("buildViatorAffiliateUrl", () => {
     expect(url.searchParams.get("pid")).toBe("P00290915");
     expect(url.searchParams.get("mcid")).toBe("42383");
     expect(url.searchParams.get("medium")).toBe("link");
+  });
+
+  it("can apply affiliate params to an arbitrary viator URL", () => {
+    const url = new URL(
+      buildViatorAffiliateUrlFromUrl(
+        "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16"
+      )
+    );
+
+    expect(url.searchParams.get("pid")).toBe("P00290915");
+    expect(url.searchParams.get("mcid")).toBe("42383");
+    expect(url.searchParams.get("medium")).toBe("link");
+    expect(url.pathname).toContain("163873P16");
   });
 });
