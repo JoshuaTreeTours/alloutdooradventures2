@@ -113,7 +113,10 @@ describe("/api/engine6/viator-product", () => {
             images: [
               {
                 isCover: true,
-                variants: [{ url: "https://img.test/specimen-root-hero.jpg" }],
+                variants: [
+                  { url: "https://img.test/specimen-root-hero-small.jpg", width: 360, height: 240 },
+                  { url: "https://img.test/specimen-root-hero-large.jpg", width: 674, height: 446 },
+                ],
               },
             ],
             media: {
@@ -136,7 +139,7 @@ describe("/api/engine6/viator-product", () => {
     expect(res.statusCode).toBe(200);
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero.jpg"
+      "https://img.test/specimen-root-hero-large.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.highlights).not.toContain(
@@ -146,21 +149,47 @@ describe("/api/engine6/viator-product", () => {
       "Not wheelchair accessible"
     );
     expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
-      "product.images[0].variants[0].url"
+      "product.images[0].variants[1].url"
+    );
+    expect((res.body as any).diagnostics.heroVariantFieldPath).toBe(
+      "product.images[0].variants[1]"
+    );
+    expect((res.body as any).diagnostics.selectedHeroWidth).toBe(674);
+    expect((res.body as any).diagnostics.selectedHeroHeight).toBe(446);
+    expect((res.body as any).diagnostics.imageSourceUsed).toBe(
+      "live-product-image"
     );
     expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
     );
+    expect((res.body as any).diagnostics.commercialPriceRawValue).toBe(
+      "$105.09"
+    );
+    expect((res.body as any).diagnostics.priceSourceUsed).toBe("live-price");
     expect((res.body as any).diagnostics.overviewFieldPath).toBe(
       "product.description.text"
     );
     expect((res.body as any).diagnostics.highlightsFieldPath).toBe(
       "product.highlights"
     );
+    expect((res.body as any).diagnostics.highlightClassificationReason).toContain(
+      "product.highlights kept as selling-point bullets"
+    );
     expect((res.body as any).diagnostics.itineraryFieldPath).toBe(
       "product.itineraryItems"
     );
+    expect((res.body as any).diagnostics.itineraryItemCount).toBe(1);
+    expect((res.body as any).diagnostics.itinerarySourceUsed).toBe(
+      "product.itineraryItems"
+    );
     expect((res.body as any).diagnostics.faqsFieldPath).toBe(
+      "product.qAndA.items"
+    );
+    expect((res.body as any).diagnostics.faqFieldPath).toBe(
+      "product.qAndA.items"
+    );
+    expect((res.body as any).diagnostics.faqCount).toBe(1);
+    expect((res.body as any).diagnostics.faqSourceUsed).toBe(
       "product.qAndA.items"
     );
     expect((res.body as any).diagnostics.requirementsFieldPath).toBe(

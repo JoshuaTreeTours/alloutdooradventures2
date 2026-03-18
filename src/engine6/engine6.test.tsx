@@ -43,7 +43,8 @@ const specimenProductPayload = {
       {
         isCover: true,
         variants: [
-          { url: "https://img.test/specimen-root-hero.jpg", width: 1600, height: 900 },
+          { url: "https://img.test/specimen-root-hero-small.jpg", width: 360, height: 240 },
+          { url: "https://img.test/specimen-root-hero-large.jpg", width: 674, height: 446 },
         ],
       },
     ],
@@ -80,17 +81,25 @@ describe("engine6 extractor", () => {
     const extracted = extractEngine6Product(specimenProductPayload);
 
     expect(extracted.extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero.jpg"
+      "https://img.test/specimen-root-hero-large.jpg"
     );
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.images[0].variants[0].url"
+      "product.images[0].variants[1].url"
     );
+    expect(extracted.diagnostics.heroVariantFieldPath).toBe(
+      "product.images[0].variants[1]"
+    );
+    expect(extracted.diagnostics.selectedHeroWidth).toBe(674);
+    expect(extracted.diagnostics.selectedHeroHeight).toBe(446);
+    expect(extracted.diagnostics.imageSourceUsed).toBe("live-product-image");
 
     expect(extracted.extracted.priceAmount).toBe(105.09);
     expect(extracted.extracted.priceFormatted).toBe("From $105");
     expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
     );
+    expect(extracted.diagnostics.commercialPriceRawValue).toBe("$105.09");
+    expect(extracted.diagnostics.priceSourceUsed).toBe("live-price");
 
     expect(extracted.extracted.overviewText).toContain(
       "Grab bird’s-eye views of Zion National Park on this Jeep tour"
@@ -108,6 +117,9 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.highlightsFieldPath).toBe(
       "product.highlights"
     );
+    expect(extracted.diagnostics.highlightClassificationReason).toContain(
+      "product.highlights kept as selling-point bullets"
+    );
     expect(extracted.extracted.highlights).not.toContain(
       "Not wheelchair accessible"
     );
@@ -122,6 +134,10 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.itineraryFieldPath).toBe(
       "product.itineraryItems"
     );
+    expect(extracted.diagnostics.itineraryItemCount).toBe(1);
+    expect(extracted.diagnostics.itinerarySourceUsed).toBe(
+      "product.itineraryItems"
+    );
 
     expect(extracted.extracted.faqs).toEqual([
       {
@@ -131,6 +147,9 @@ describe("engine6 extractor", () => {
       },
     ]);
     expect(extracted.diagnostics.faqsFieldPath).toBe("product.qAndA.items");
+    expect(extracted.diagnostics.faqFieldPath).toBe("product.qAndA.items");
+    expect(extracted.diagnostics.faqCount).toBe(1);
+    expect(extracted.diagnostics.faqSourceUsed).toBe("product.qAndA.items");
 
     expect(extracted.extracted.requirements).toEqual([
       "Confirmation will be received at time of booking",
@@ -158,14 +177,27 @@ const specimenApiPayload = {
     upstreamOk: true,
     usedBundledFallbackBecause: "",
     commercialPriceFieldPath: "product.priceFrom",
-    heroImageFieldPath: "product.images[0].variants[0].url",
+    commercialPriceRawValue: "$105.09",
+    priceSourceUsed: "live-price" as const,
+    heroImageFieldPath: "product.images[0].variants[1].url",
+    heroVariantFieldPath: "product.images[0].variants[1]",
+    selectedHeroWidth: 674,
+    selectedHeroHeight: 446,
+    imageSourceUsed: "live-product-image" as const,
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
     overviewFieldPath: "product.description.text",
     highlightsFieldPath: "product.highlights",
+    highlightClassificationReason:
+      "product.highlights kept as selling-point bullets; product.additionalInfo routed to requirements",
     itineraryFieldPath: "product.itineraryItems",
+    itineraryItemCount: 1,
+    itinerarySourceUsed: "product.itineraryItems",
     meetingPointFieldPath: "product.logistics.start.description",
     faqsFieldPath: "product.qAndA.items",
+    faqFieldPath: "product.qAndA.items",
+    faqCount: 1,
+    faqSourceUsed: "product.qAndA.items",
     requirementsFieldPath: "product.additionalInfo",
     classificationFieldPath: "inferred:title+overview+highlights",
   },
@@ -179,8 +211,8 @@ const specimenApiPayload = {
     seoDescription: "Best tour in Springdale. Rated 5/5. 154 reviews.",
     city: "Springdale",
     state: "Utah",
-    heroImageUrl: "https://img.test/specimen-root-hero.jpg",
-    cardImageUrl: "https://img.test/specimen-root-hero.jpg",
+    heroImageUrl: "https://img.test/specimen-root-hero-large.jpg",
+    cardImageUrl: "https://img.test/specimen-root-hero-large.jpg",
     priceAmount: 105.09,
     priceFormatted: "From $105",
     aggregateRating: 5,
@@ -252,11 +284,23 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
+    expect(resolved.debug.selectedHeroWidth).toBe(674);
+    expect(resolved.debug.selectedHeroHeight).toBe(446);
+    expect(resolved.debug.imageSourceUsed).toBe("live-product-image");
+    expect(resolved.debug.commercialPriceRawValue).toBe("$105.09");
+    expect(resolved.debug.priceSourceUsed).toBe("live-price");
     expect(resolved.debug.overviewFieldPath).toBe("product.description.text");
     expect(resolved.debug.highlightsFieldPath).toBe("product.highlights");
     expect(resolved.debug.itineraryFieldPath).toBe("product.itineraryItems");
+    expect(resolved.debug.itineraryItemCount).toBe(1);
+    expect(resolved.debug.itinerarySourceUsed).toBe("product.itineraryItems");
     expect(resolved.debug.faqsFieldPath).toBe("product.qAndA.items");
+    expect(resolved.debug.faqCount).toBe(1);
+    expect(resolved.debug.faqSourceUsed).toBe("product.qAndA.items");
     expect(resolved.debug.requirementsFieldPath).toBe("product.additionalInfo");
+    expect(resolved.debug.highlightClassificationReason).toContain(
+      "product.highlights kept as selling-point bullets"
+    );
     expect(resolved.debug.primaryCategory).toBe("off-road-tour");
     expect(resolved.debug.failureReason).toBeNull();
   });

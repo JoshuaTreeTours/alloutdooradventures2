@@ -12,15 +12,27 @@ export type Engine6FaqItem = {
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
   commercialPriceFieldPath: string | null;
+  commercialPriceRawValue: string | number | null;
+  priceSourceUsed: "live-price" | "fallback";
   heroImageFieldPath: string | null;
+  heroVariantFieldPath: string | null;
+  selectedHeroWidth: number | null;
+  selectedHeroHeight: number | null;
+  imageSourceUsed: "live-product-image" | "fallback";
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
   overviewFieldPath: string | null;
   highlightsFieldPath: string | null;
   meetingPointFieldPath: string | null;
   itineraryFieldPath: string | null;
+  itineraryItemCount: number;
+  itinerarySourceUsed: string | null;
   faqsFieldPath: string | null;
+  faqFieldPath: string | null;
+  faqCount: number;
+  faqSourceUsed: string | null;
   requirementsFieldPath: string | null;
+  highlightClassificationReason: string | null;
   classificationFieldPath: string | null;
 };
 

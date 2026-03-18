@@ -17,8 +17,19 @@ export type Engine6SpecimenDebug = {
   overviewFieldPath: string | null;
   highlightsFieldPath: string | null;
   itineraryFieldPath: string | null;
+  itineraryItemCount: number | null;
+  itinerarySourceUsed: string | null;
   faqsFieldPath: string | null;
+  faqCount: number | null;
+  faqSourceUsed: string | null;
   requirementsFieldPath: string | null;
+  heroVariantFieldPath: string | null;
+  selectedHeroWidth: number | null;
+  selectedHeroHeight: number | null;
+  imageSourceUsed: string | null;
+  commercialPriceRawValue: string | number | null;
+  priceSourceUsed: string | null;
+  highlightClassificationReason: string | null;
   classificationFieldPath: string | null;
   primaryCategory: string | null;
   failureReason: string | null;
@@ -52,8 +63,19 @@ export const buildInitialEngine6SpecimenDebug = (
   overviewFieldPath: null,
   highlightsFieldPath: null,
   itineraryFieldPath: null,
+  itineraryItemCount: null,
+  itinerarySourceUsed: null,
   faqsFieldPath: null,
+  faqCount: null,
+  faqSourceUsed: null,
   requirementsFieldPath: null,
+  heroVariantFieldPath: null,
+  selectedHeroWidth: null,
+  selectedHeroHeight: null,
+  imageSourceUsed: null,
+  commercialPriceRawValue: null,
+  priceSourceUsed: null,
+  highlightClassificationReason: null,
   classificationFieldPath: null,
   primaryCategory: null,
   failureReason: null,
@@ -122,6 +144,22 @@ export const resolveEngine6SpecimenResponse = ({
         ? ((payload.diagnostics as Record<string, unknown>)
             .itineraryFieldPath as string)
         : null,
+    itineraryItemCount:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .itineraryItemCount === "number"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .itineraryItemCount as number)
+        : null,
+    itinerarySourceUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .itinerarySourceUsed === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .itinerarySourceUsed as string)
+        : null,
     faqsFieldPath:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -130,6 +168,21 @@ export const resolveEngine6SpecimenResponse = ({
         ? ((payload.diagnostics as Record<string, unknown>)
             .faqsFieldPath as string)
         : null,
+    faqCount:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>).faqCount ===
+        "number"
+        ? ((payload.diagnostics as Record<string, unknown>).faqCount as number)
+        : null,
+    faqSourceUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>).faqSourceUsed ===
+        "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .faqSourceUsed as string)
+        : null,
     requirementsFieldPath:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -137,6 +190,64 @@ export const resolveEngine6SpecimenResponse = ({
         .requirementsFieldPath === "string"
         ? ((payload.diagnostics as Record<string, unknown>)
             .requirementsFieldPath as string)
+        : null,
+    heroVariantFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .heroVariantFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .heroVariantFieldPath as string)
+        : null,
+    selectedHeroWidth:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .selectedHeroWidth === "number"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .selectedHeroWidth as number)
+        : null,
+    selectedHeroHeight:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .selectedHeroHeight === "number"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .selectedHeroHeight as number)
+        : null,
+    imageSourceUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .imageSourceUsed === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .imageSourceUsed as string)
+        : null,
+    commercialPriceRawValue:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      (typeof (payload.diagnostics as Record<string, unknown>)
+        .commercialPriceRawValue === "string" ||
+        typeof (payload.diagnostics as Record<string, unknown>)
+          .commercialPriceRawValue === "number")
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .commercialPriceRawValue as string | number)
+        : null,
+    priceSourceUsed:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .priceSourceUsed === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .priceSourceUsed as string)
+        : null,
+    highlightClassificationReason:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .highlightClassificationReason === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .highlightClassificationReason as string)
         : null,
     classificationFieldPath:
       typeof payload.diagnostics === "object" &&
@@ -240,6 +351,30 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.source ?? "unknown"}</dd>
           </div>
           <div>
+            <dt className="font-medium text-slate-900">Image source</dt>
+            <dd>{debug.imageSourceUsed ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Hero variant path</dt>
+            <dd>{debug.heroVariantFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Hero size</dt>
+            <dd>
+              {debug.selectedHeroWidth && debug.selectedHeroHeight
+                ? `${debug.selectedHeroWidth}×${debug.selectedHeroHeight}`
+                : "unknown"}
+            </dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Price source</dt>
+            <dd>{debug.priceSourceUsed ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Price raw value</dt>
+            <dd>{debug.commercialPriceRawValue ?? "missing upstream"}</dd>
+          </div>
+          <div>
             <dt className="font-medium text-slate-900">Overview path</dt>
             <dd>{debug.overviewFieldPath ?? "missing upstream"}</dd>
           </div>
@@ -252,12 +387,32 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.itineraryFieldPath ?? "missing upstream"}</dd>
           </div>
           <div>
+            <dt className="font-medium text-slate-900">Itinerary source</dt>
+            <dd>{debug.itinerarySourceUsed ?? "none"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Itinerary count</dt>
+            <dd>{debug.itineraryItemCount ?? 0}</dd>
+          </div>
+          <div>
             <dt className="font-medium text-slate-900">FAQs path</dt>
             <dd>{debug.faqsFieldPath ?? "missing upstream"}</dd>
           </div>
           <div>
+            <dt className="font-medium text-slate-900">FAQ source</dt>
+            <dd>{debug.faqSourceUsed ?? "none"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">FAQ count</dt>
+            <dd>{debug.faqCount ?? 0}</dd>
+          </div>
+          <div>
             <dt className="font-medium text-slate-900">Requirements path</dt>
             <dd>{debug.requirementsFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Highlight classification</dt>
+            <dd>{debug.highlightClassificationReason ?? "none"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Classification path</dt>

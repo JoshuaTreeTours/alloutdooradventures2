@@ -1,14 +1,26 @@
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
+  commercialPriceRawValue: string | number | null;
+  priceSourceUsed: "live-price" | "fallback";
   heroImageFieldPath: string | null;
+  heroVariantFieldPath: string | null;
+  selectedHeroWidth: number | null;
+  selectedHeroHeight: number | null;
+  imageSourceUsed: "live-product-image" | "fallback";
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
   overviewFieldPath: string | null;
   highlightsFieldPath: string | null;
+  requirementsFieldPath: string | null;
+  highlightClassificationReason: string | null;
   itineraryFieldPath: string | null;
+  itineraryItemCount: number;
+  itinerarySourceUsed: string | null;
   meetingPointFieldPath: string | null;
   faqsFieldPath: string | null;
-  requirementsFieldPath: string | null;
+  faqFieldPath: string | null;
+  faqCount: number;
+  faqSourceUsed: string | null;
   classificationFieldPath: string | null;
 };
 
@@ -47,6 +59,15 @@ export type Engine6Extracted = {
 
 type RecordLike = Record<string, unknown>;
 type PathSegment = string | number;
+
+type ResolvedHeroImage = {
+  value: string;
+  path: string;
+  variantPath: string;
+  width: number | null;
+  height: number | null;
+  sourceUsed: "live-product-image" | "fallback";
+};
 
 const asRecord = (value: unknown): RecordLike | null =>
   value && typeof value === "object" && !Array.isArray(value)
@@ -152,23 +173,56 @@ const ENGINE6_163873P16_REQUIREMENTS = [
   "This tour/activity will have a maximum of 8 travelers",
 ];
 
-const resolveRootImage = (product: RecordLike) => {
+const resolveRootImage = (product: RecordLike): ResolvedHeroImage | null => {
   const rootImages = Array.isArray(product.images) ? product.images : [];
+  const prioritizedImages = rootImages
+    .map((value, index) => ({ value, index }))
+    .sort((a, b) => {
+      const aImage = asRecord(a.value);
+      const bImage = asRecord(b.value);
+      const aCover = aImage?.isCover === true || aImage?.cover === true;
+      const bCover = bImage?.isCover === true || bImage?.cover === true;
+      return Number(bCover) - Number(aCover);
+    });
 
-  for (let imageIndex = 0; imageIndex < rootImages.length; imageIndex += 1) {
-    const image = asRecord(rootImages[imageIndex]);
+  for (const imageEntry of prioritizedImages) {
+    const image = asRecord(imageEntry.value);
     if (!image) continue;
     const variants = Array.isArray(image.variants) ? image.variants : [];
+    const rankedVariants = variants
+      .map((value, index) => ({ value, index }))
+      .map(entry => {
+        const variant = asRecord(entry.value);
+        const url = asNonEmptyString(variant?.url);
+        if (!url) return null;
+        const width = asPositiveNumber(variant?.width);
+        const height = asPositiveNumber(variant?.height);
+        const area = (width ?? 0) * (height ?? 0);
+        return {
+          url,
+          width,
+          height,
+          area,
+          index: entry.index,
+        };
+      })
+      .filter((entry): entry is { url: string; width: number | null; height: number | null; area: number; index: number } => Boolean(entry))
+      .sort((a, b) => {
+        if (b.area !== a.area) return b.area - a.area;
+        return (b.width ?? 0) - (a.width ?? 0);
+      });
 
-    for (let variantIndex = 0; variantIndex < variants.length; variantIndex += 1) {
-      const variant = asRecord(variants[variantIndex]);
-      const url = asNonEmptyString(variant?.url);
-      if (!url) continue;
-      return {
-        value: url,
-        path: `product.images[${imageIndex}].variants[${variantIndex}].url`,
-      };
-    }
+    const selected = rankedVariants[0];
+    if (!selected) continue;
+
+    return {
+      value: selected.url,
+      path: `product.images[${imageEntry.index}].variants[${selected.index}].url`,
+      variantPath: `product.images[${imageEntry.index}].variants[${selected.index}]`,
+      width: selected.width,
+      height: selected.height,
+      sourceUsed: "live-product-image",
+    };
   }
 
   return null;
@@ -220,7 +274,7 @@ const resolveHeroImage = (product: RecordLike) => {
 
     for (const candidate of candidates) {
       const hit = asNonEmptyString(candidate.value);
-      if (hit) return { value: hit, path: candidate.path };
+      if (hit) return { value: hit, path: candidate.path, variantPath: candidate.path.replace(/\.url$/, ""), width: null, height: null, sourceUsed: "fallback" };
     }
   }
 
@@ -232,7 +286,7 @@ const resolveHeroImage = (product: RecordLike) => {
 
   for (const fallback of fallbacks) {
     const hit = asNonEmptyString(fallback.value);
-    if (hit) return { value: hit, path: fallback.path };
+    if (hit) return { value: hit, path: fallback.path, variantPath: fallback.path, width: null, height: null, sourceUsed: "fallback" };
   }
 
   return null;
@@ -622,15 +676,27 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const diagnostics: Engine6DiagnosticsPaths = {
     commercialPriceFieldPath: null,
+    commercialPriceRawValue: null,
+    priceSourceUsed: "fallback",
     heroImageFieldPath: null,
+    heroVariantFieldPath: null,
+    selectedHeroWidth: null,
+    selectedHeroHeight: null,
+    imageSourceUsed: "fallback",
     ratingFieldPath: null,
     reviewCountFieldPath: null,
     overviewFieldPath: null,
     highlightsFieldPath: null,
+    requirementsFieldPath: null,
+    highlightClassificationReason: null,
     itineraryFieldPath: null,
+    itineraryItemCount: 0,
+    itinerarySourceUsed: null,
     meetingPointFieldPath: null,
     faqsFieldPath: null,
-    requirementsFieldPath: null,
+    faqFieldPath: null,
+    faqCount: 0,
+    faqSourceUsed: null,
     classificationFieldPath: null,
   };
 
@@ -650,6 +716,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const heroImage = resolveHeroImage(product);
   diagnostics.heroImageFieldPath = heroImage?.path ?? null;
+  diagnostics.heroVariantFieldPath = heroImage?.variantPath ?? null;
+  diagnostics.selectedHeroWidth = heroImage?.width ?? null;
+  diagnostics.selectedHeroHeight = heroImage?.height ?? null;
+  diagnostics.imageSourceUsed = heroImage?.sourceUsed ?? "fallback";
 
   const price = isTruthProduct
     ? (() => {
@@ -661,6 +731,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       })()
     : resolvePrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
+  diagnostics.commercialPriceRawValue =
+    isTruthProduct && price.path === "product.priceFrom"
+      ? (typeof product.priceFrom === "string" || typeof product.priceFrom === "number"
+          ? product.priceFrom
+          : null)
+      : price.amount;
+  diagnostics.priceSourceUsed = price.amount ? "live-price" : "fallback";
 
   const ratingCandidates = [
     { value: product.rating, path: "product.rating" },
@@ -754,6 +831,11 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     };
   }
   diagnostics.highlightsFieldPath = highlights.path;
+  diagnostics.highlightClassificationReason = isTruthProduct
+    ? "product.highlights kept as selling-point bullets; product.additionalInfo routed to requirements"
+    : highlights.path
+      ? `selected ${highlights.path} as highlight content`
+      : null;
 
   let itinerary = extractItinerary(product);
   if (isTruthProduct && itinerary.value.length > 0) {
@@ -763,6 +845,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     };
   }
   diagnostics.itineraryFieldPath = itinerary.path;
+  diagnostics.itineraryItemCount = itinerary.value.length;
+  diagnostics.itinerarySourceUsed = itinerary.value.length > 0 ? (itinerary.path ?? "derived") : null;
 
   let faqs = extractFaqs(product);
   if (isTruthProduct && faqs.value.length > 0) {
@@ -772,6 +856,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     };
   }
   diagnostics.faqsFieldPath = faqs.path;
+  diagnostics.faqFieldPath = faqs.path;
+  diagnostics.faqCount = faqs.value.length;
+  diagnostics.faqSourceUsed = faqs.value.length > 0 ? (faqs.path ?? "derived") : "none";
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
