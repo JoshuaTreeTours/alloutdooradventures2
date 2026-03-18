@@ -269,10 +269,9 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(tour.productCode).toBe("163873P16");
     expect(tour.priceFormatted).toBe("From $105");
-    expect(tour.bookingUrl).toContain("163873P16");
-    expect(tour.bookingUrl).toContain("pid=P00290915");
-    expect(tour.bookingUrl).toContain("mcid=42383");
-    expect(tour.bookingUrl).toContain("medium=link");
+    expect(tour.bookingUrl).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link"
+    );
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
