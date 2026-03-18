@@ -20,6 +20,10 @@ const buildCardDescription = (tour: Engine6Tour) => {
     return tour.highlights[0];
   }
 
+  if (tour.primaryCategory) {
+    return `Best ${tour.primaryCategory.replace(/-/g, " ")} in ${tour.city}.`;
+  }
+
   return `Best tour in ${tour.city} for jeep and off-road views around Zion.`;
 };
 

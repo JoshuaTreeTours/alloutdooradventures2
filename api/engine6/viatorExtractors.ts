@@ -8,6 +8,7 @@ export type Engine6DiagnosticsPaths = {
   itineraryFieldPath: string | null;
   meetingPointFieldPath: string | null;
   faqsFieldPath: string | null;
+  classificationFieldPath: string | null;
 };
 
 export type Engine6ExtractedFaq = {
@@ -38,6 +39,8 @@ export type Engine6Extracted = {
   highlights: string[];
   itinerary: Engine6ExtractedItineraryItem[];
   faqs: Engine6ExtractedFaq[];
+  primaryCategory: string | null;
+  categories: string[];
 };
 
 type RecordLike = Record<string, unknown>;
@@ -127,10 +130,20 @@ const firstParagraph = (value: string | null) =>
 
 const resolveHeroImage = (product: RecordLike) => {
   const media = asRecord(product.media);
-  const images = Array.isArray(media?.images) ? media.images : [];
+  const rawImages = Array.isArray(media?.images) ? media.images : [];
+  const images = rawImages
+    .map((value, index) => ({ value, index }))
+    .sort((a, b) => {
+      const aRow = asRecord(a.value);
+      const bRow = asRecord(b.value);
+      const aCover = aRow?.isCover === true || aRow?.cover === true;
+      const bCover = bRow?.isCover === true || bRow?.cover === true;
+      return Number(bCover) - Number(aCover);
+    });
 
-  for (let i = 0; i < images.length; i += 1) {
-    const image = asRecord(images[i]);
+  for (const entry of images) {
+    const image = asRecord(entry.value);
+    const i = entry.index;
     if (!image) continue;
     const variants = asRecord(image.variants);
 
@@ -181,13 +194,19 @@ const resolvePrice = (product: RecordLike) => {
       path: "product.pricing.summary.fromPrice",
     },
     {
+      value: asRecord(product.pricingSummary)?.fromPrice,
+      path: "product.pricingSummary.fromPrice",
+    },
+    {
       value: asRecord(product.pricing)?.fromPrice,
       path: "product.pricing.fromPrice",
     },
     {
-      value: asRecord(product.pricingSummary)?.fromPrice,
-      path: "product.pricingSummary.fromPrice",
+      value: asRecord(product.price)?.fromPrice,
+      path: "product.price.fromPrice",
     },
+    { value: product.fromPrice, path: "product.fromPrice" },
+    { value: product.priceFrom, path: "product.priceFrom" },
   ];
 
   for (const candidate of direct) {
@@ -207,22 +226,57 @@ const resolvePrice = (product: RecordLike) => {
       const item = asRecord(arrayCandidate.value[i]);
       if (!item) continue;
 
-      const summaryAmount = asPositiveNumber(
-        asRecord(asRecord(item.pricing)?.summary)?.fromPrice
-      );
-      if (summaryAmount) {
-        return {
-          amount: summaryAmount,
+      const amountCandidates = [
+        {
+          value: asRecord(item.pricingSummary)?.fromPrice,
+          path: `${arrayCandidate.path}[${i}].pricingSummary.fromPrice`,
+        },
+        {
+          value: asRecord(asRecord(item.pricing)?.summary)?.fromPrice,
           path: `${arrayCandidate.path}[${i}].pricing.summary.fromPrice`,
-        };
-      }
-
-      const plainAmount = asPositiveNumber(asRecord(item.pricing)?.fromPrice);
-      if (plainAmount) {
-        return {
-          amount: plainAmount,
+        },
+        {
+          value: asRecord(item.pricing)?.fromPrice,
           path: `${arrayCandidate.path}[${i}].pricing.fromPrice`,
-        };
+        },
+        {
+          value: asRecord(item.price)?.fromPrice,
+          path: `${arrayCandidate.path}[${i}].price.fromPrice`,
+        },
+        {
+          value: asRecord(item.price)?.amount,
+          path: `${arrayCandidate.path}[${i}].price.amount`,
+        },
+        {
+          value: readPath(item, [
+            "seasonalPricingRecords",
+            0,
+            "pricingDetails",
+            0,
+            "price",
+            "original",
+            "recommendedRetailPrice",
+          ]),
+          path: `${arrayCandidate.path}[${i}].seasonalPricingRecords[0].pricingDetails[0].price.original.recommendedRetailPrice`,
+        },
+        {
+          value: readPath(item, [
+            "seasonalPricingRecords",
+            0,
+            "pricingDetails",
+            0,
+            "price",
+            "partnerNetPrice",
+          ]),
+          path: `${arrayCandidate.path}[${i}].seasonalPricingRecords[0].pricingDetails[0].price.partnerNetPrice`,
+        },
+      ];
+
+      for (const candidate of amountCandidates) {
+        const amount = asPositiveNumber(candidate.value);
+        if (amount) {
+          return { amount, path: candidate.path };
+        }
       }
     }
   }
@@ -310,18 +364,21 @@ const extractItinerary = (product: RecordLike) => {
 
         if (!title) return null;
 
+        const description =
+          asNonEmptyString(row.description) ??
+          asNonEmptyString(row.summary) ??
+          asNonEmptyString(asRecord(row.pointOfInterest)?.description) ??
+          undefined;
+        const duration =
+          asNonEmptyString(row.duration) ??
+          asNonEmptyString(row.durationText) ??
+          asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
+          undefined;
+
         return {
           title,
-          description:
-            asNonEmptyString(row.description) ??
-            asNonEmptyString(row.summary) ??
-            asNonEmptyString(asRecord(row.pointOfInterest)?.description) ??
-            undefined,
-          duration:
-            asNonEmptyString(row.duration) ??
-            asNonEmptyString(row.durationText) ??
-            asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
-            undefined,
+          ...(description ? { description } : {}),
+          ...(duration ? { duration } : {}),
         } satisfies Engine6ExtractedItineraryItem;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
@@ -343,6 +400,92 @@ const extractItinerary = (product: RecordLike) => {
   }
 
   return { value: [], path: null as string | null };
+};
+
+const CATEGORY_ALIASES: Array<{
+  slug: string;
+  label: string;
+  keywords: RegExp;
+}> = [
+  { slug: "off-road-tour", label: "Off-road tour", keywords: /\b(jeep|off[- ]road|4x4|atv|utv|dune buggy|backcountry safari)\b/i },
+  { slug: "hiking-tour", label: "Hiking tour", keywords: /\b(hike|hiking|trail walk|trek|walking tour|guided walk)\b/i },
+  { slug: "bike-tour", label: "Bike tour", keywords: /\b(bike|biking|cycling|bicycle|e-bike|ebike|mtb|mountain bike)\b/i },
+  { slug: "boat-tour", label: "Boat tour", keywords: /\b(boat|cruise|sail|sailing|catamaran|yacht|ferry)\b/i },
+  { slug: "paddle-tour", label: "Paddle tour", keywords: /\b(kayak|canoe|sup|paddleboard|rafting|raft)\b/i },
+  { slug: "wildlife-tour", label: "Wildlife tour", keywords: /\b(wildlife|whale|dolphin|birdwatch|animal encounter)\b/i },
+  { slug: "snorkeling-tour", label: "Snorkeling tour", keywords: /\b(snorkel|scuba|dive|diving)\b/i },
+  { slug: "food-and-drink-tour", label: "Food & drink tour", keywords: /\b(food|drink|wine|beer|brewery|cocktail|tasting)\b/i },
+  { slug: "air-tour", label: "Air tour", keywords: /\b(helicopter|airplane|flight|seaplane|air tour)\b/i },
+];
+
+const toCategorySlug = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+
+const normalizeCategoryArray = (value: unknown): string[] =>
+  Array.isArray(value)
+    ? dedupeStrings(
+        value.map(item => {
+          if (typeof item === "string") return item;
+          const row = asRecord(item);
+          return (
+            asNonEmptyString(row?.label) ??
+            asNonEmptyString(row?.title) ??
+            asNonEmptyString(row?.name) ??
+            asNonEmptyString(row?.description)
+          );
+        })
+      ).map(toCategorySlug)
+    : [];
+
+const extractClassification = (product: RecordLike) => {
+  const explicitPaths: PathSegment[][] = [
+    ["categories"],
+    ["tags"],
+    ["productCategories"],
+    ["activityCategories"],
+  ];
+
+  for (const path of explicitPaths) {
+    const categories = normalizeCategoryArray(readPath(product, path));
+    if (categories.length > 0) {
+      return {
+        primaryCategory: categories[0] ?? null,
+        categories,
+        path: formatFieldPath(path),
+      };
+    }
+  }
+
+  const classifierText = [
+    asNonEmptyString(product.title),
+    extractOverview(product).value,
+    ...extractHighlights(product).value,
+  ]
+    .filter((value): value is string => Boolean(value))
+    .join(" ");
+
+  const inferred = CATEGORY_ALIASES.filter(entry => entry.keywords.test(classifierText)).map(
+    entry => entry.slug
+  );
+
+  if (inferred.length > 0) {
+    return {
+      primaryCategory: inferred[0] ?? null,
+      categories: dedupeStrings(inferred),
+      path: "inferred:title+overview+highlights",
+    };
+  }
+
+  return {
+    primaryCategory: null,
+    categories: [],
+    path: null as string | null,
+  };
 };
 
 const extractFaqs = (product: RecordLike) => {
@@ -400,6 +543,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     itineraryFieldPath: null,
     meetingPointFieldPath: null,
     faqsFieldPath: null,
+    classificationFieldPath: null,
   };
 
   if (!product) {
@@ -498,6 +642,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const faqs = extractFaqs(product);
   diagnostics.faqsFieldPath = faqs.path;
 
+  const classification = extractClassification(product);
+  diagnostics.classificationFieldPath = classification.path;
+
   const seoTitle = title && city ? `${title} in ${city}` : title;
   const seoDescription =
     title && city
@@ -528,6 +675,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       highlights: highlights.value,
       itinerary: itinerary.value,
       faqs: faqs.value,
+      primaryCategory: classification.primaryCategory,
+      categories: classification.categories,
     } satisfies Engine6Extracted,
     diagnostics,
     product,
@@ -551,4 +700,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   highlights: [],
   itinerary: [],
   faqs: [],
+  primaryCategory: null,
+  categories: [],
 });

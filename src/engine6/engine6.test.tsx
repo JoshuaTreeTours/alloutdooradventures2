@@ -28,10 +28,28 @@ const liveShapedProduct = {
     location: { city: "Springdale", state: "Utah" },
     bookingOptions: [
       { pricing: { summary: { fromPrice: 0 } } },
-      { pricing: { summary: { fromPrice: 149 } } },
+      {
+        seasonalPricingRecords: [
+          {
+            pricingDetails: [
+              {
+                price: {
+                  original: { recommendedRetailPrice: 149 },
+                },
+              },
+            ],
+          },
+        ],
+      },
     ],
     media: {
-      images: [{ variants: { LARGE: { url: "https://img.test/hero.jpg" } } }],
+      images: [
+        { variants: { LARGE: { url: "https://img.test/non-cover.jpg" } } },
+        {
+          isCover: true,
+          variants: { XXLARGE: { url: "https://img.test/hero.jpg" } },
+        },
+      ],
     },
     reviews: { combinedAverageRating: 5, totalReviews: 274 },
     logistics: { start: { description: "Meet at East Zion Adventures" } },
@@ -64,11 +82,11 @@ describe("engine6 extractor", () => {
 
     expect(extracted.extracted.priceAmount).toBe(149);
     expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
-      "product.bookingOptions[1].pricing.summary.fromPrice"
+      "product.bookingOptions[1].seasonalPricingRecords[0].pricingDetails[0].price.original.recommendedRetailPrice"
     );
     expect(extracted.extracted.heroImageUrl).toBe("https://img.test/hero.jpg");
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[0].variants.LARGE.url"
+      "product.media.images[1].variants.XXLARGE.url"
     );
     expect(extracted.extracted.overviewText).toContain(
       "Climb high above East Zion"
@@ -90,12 +108,18 @@ describe("engine6 extractor", () => {
         "Yes. It is a good way to get elevated views without hiking long distances.",
     });
     expect(extracted.diagnostics.faqsFieldPath).toBe("product.qAndA.items");
+    expect(extracted.extracted.primaryCategory).toBe("off-road-tour");
+    expect(extracted.extracted.categories).toContain("off-road-tour");
+    expect(extracted.diagnostics.classificationFieldPath).toBe(
+      "inferred:title+overview+highlights"
+    );
   });
 });
 
 const specimenApiPayload = {
   source: "live-api" as const,
   diagnostics: {
+    source: "live-api" as const,
     hasViatorApiKey: true,
     attemptedLiveFetch: true,
     upstreamStatus: 200,
@@ -111,6 +135,7 @@ const specimenApiPayload = {
     itineraryFieldPath: "product.itineraryItems",
     meetingPointFieldPath: "product.logistics.start.description",
     faqsFieldPath: "product.qAndA.items",
+    classificationFieldPath: "inferred:title+overview+highlights",
   },
   rawProductCode: "163873P16",
   rawProduct: {
@@ -150,6 +175,8 @@ const specimenApiPayload = {
           "Yes. It is a good way to get elevated views without hiking long distances.",
       },
     ],
+    primaryCategory: "off-road-tour",
+    categories: ["off-road-tour"],
   },
 };
 
@@ -164,6 +191,8 @@ describe("engine6 mapping/cards/page", () => {
     expect(tour.productCode).toBe("163873P16");
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $129");
+    expect(tour.primaryCategory).toBe("off-road-tour");
+    expect(html).toContain("Off Road Tour");
     expect(html).toContain("Overview");
     expect(html).toContain("Highlights");
     expect(html).toContain("Itinerary");
@@ -188,6 +217,10 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.overviewFieldPath).toBe("product.description.text");
     expect(resolved.debug.highlightsFieldPath).toBe("product.highlights");
     expect(resolved.debug.faqsFieldPath).toBe("product.qAndA.items");
+    expect(resolved.debug.classificationFieldPath).toBe(
+      "inferred:title+overview+highlights"
+    );
+    expect(resolved.debug.primaryCategory).toBe("off-road-tour");
     expect(resolved.debug.failureReason).toBeNull();
   });
 

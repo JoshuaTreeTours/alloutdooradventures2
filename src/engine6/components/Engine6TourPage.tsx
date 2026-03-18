@@ -14,7 +14,17 @@ const ContentSection = ({
   </section>
 );
 
+const formatCategoryLabel = (value: string | null) =>
+  value
+    ? value
+        .split("-")
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" ")
+    : null;
+
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
+  const categoryLabel = formatCategoryLabel(tour.primaryCategory);
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
       <section className="grid gap-6 md:grid-cols-5">
@@ -24,7 +34,12 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           className="h-[420px] w-full rounded-2xl object-cover md:col-span-3"
         />
         <div className="rounded-2xl bg-green-700 p-6 text-white md:col-span-2">
-          <h1 className="text-3xl font-bold leading-tight">{tour.title}</h1>
+          {categoryLabel ? (
+            <p className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-green-50">
+              {categoryLabel}
+            </p>
+          ) : null}
+          <h1 className="mt-3 text-3xl font-bold leading-tight">{tour.title}</h1>
           <p className="mt-2 text-green-100">
             {tour.city}, {tour.state}
           </p>

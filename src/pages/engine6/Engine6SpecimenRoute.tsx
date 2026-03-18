@@ -18,6 +18,8 @@ export type Engine6SpecimenDebug = {
   highlightsFieldPath: string | null;
   itineraryFieldPath: string | null;
   faqsFieldPath: string | null;
+  classificationFieldPath: string | null;
+  primaryCategory: string | null;
   failureReason: string | null;
 };
 
@@ -50,6 +52,8 @@ export const buildInitialEngine6SpecimenDebug = (
   highlightsFieldPath: null,
   itineraryFieldPath: null,
   faqsFieldPath: null,
+  classificationFieldPath: null,
+  primaryCategory: null,
   failureReason: null,
 });
 
@@ -123,6 +127,18 @@ export const resolveEngine6SpecimenResponse = ({
         "string"
         ? ((payload.diagnostics as Record<string, unknown>)
             .faqsFieldPath as string)
+        : null,
+    classificationFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .classificationFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .classificationFieldPath as string)
+        : null,
+    primaryCategory:
+      typeof extracted?.primaryCategory === "string"
+        ? extracted.primaryCategory
         : null,
     failureReason: null,
   };
@@ -228,6 +244,14 @@ const Engine6SpecimenDiagnostics = ({
           <div>
             <dt className="font-medium text-slate-900">FAQs path</dt>
             <dd>{debug.faqsFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Classification path</dt>
+            <dd>{debug.classificationFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Primary category</dt>
+            <dd>{debug.primaryCategory ?? "unclassified"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Failure reason</dt>

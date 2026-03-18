@@ -20,6 +20,7 @@ export type Engine6TourDiagnostics = {
   meetingPointFieldPath: string | null;
   itineraryFieldPath: string | null;
   faqsFieldPath: string | null;
+  classificationFieldPath: string | null;
 };
 
 export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
@@ -49,6 +50,8 @@ export type Engine6Tour = {
   highlights: string[];
   itinerary: Engine6ItineraryItem[];
   faqs: Engine6FaqItem[];
+  primaryCategory: string | null;
+  categories: string[];
   bookingUrl: string;
   diagnostics: Engine6TourDiagnostics;
 };
@@ -75,5 +78,7 @@ export type Engine6ApiResponse = {
     highlights: string[];
     itinerary: Engine6ItineraryItem[];
     faqs: Engine6FaqItem[];
+    primaryCategory: string | null;
+    categories: string[];
   };
 };

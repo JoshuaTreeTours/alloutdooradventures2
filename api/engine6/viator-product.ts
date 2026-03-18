@@ -25,6 +25,7 @@ const buildDiagnostics = (hasViatorApiKey: boolean) => ({
   itineraryFieldPath: null as string | null,
   meetingPointFieldPath: null as string | null,
   faqsFieldPath: null as string | null,
+  classificationFieldPath: null as string | null,
 });
 
 export default async function handler(req: any, res: any) {
