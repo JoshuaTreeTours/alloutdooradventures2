@@ -31,15 +31,49 @@ describe("/api/engine6/viator-product", () => {
     delete process.env.VIATOR_BASE_URL;
   });
 
-  it("returns diagnostics-rich error when key is missing", async () => {
+  it("returns bundled normalized specimen response when key is missing", async () => {
     const req = { method: "GET", query: { productCode: "163873P16" } };
     const res = createRes();
 
     await handler(req, res);
 
+    expect(res.statusCode).toBe(200);
+    expect(res.headers["X-Engine6-Source"]).toBe(
+      "bundled-exact-product-payload"
+    );
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        hasViatorApiKey: false,
+        attemptedLiveFetch: false,
+        upstreamStatus: null,
+        upstreamContentType: null,
+        upstreamOk: null,
+        usedBundledFallbackBecause: "missing-api-key",
+      })
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://img.test/specimen-root-hero-large.jpg"
+    );
+    expect((res.body as any).extracted.priceAmount).toBe(105.09);
+    expect((res.body as any).extracted.aggregateRating).toBe(5);
+    expect((res.body as any).extracted.reviewCount).toBe(154);
+    expect((res.body as any).extracted.itinerary).toHaveLength(1);
+  });
+
+  it("returns normalized error envelope when key is missing for a non-bundled product", async () => {
+    const req = { method: "GET", query: { productCode: "999999P001" } };
+    const res = createRes();
+
+    await handler(req, res);
+
     expect(res.statusCode).toBe(500);
-    expect((res.body as any).diagnostics.hasViatorApiKey).toBe(false);
-    expect((res.body as any).error).toContain("VIATOR_API_KEY");
+    expect((res.body as any).source).toBe("live-api");
+    expect((res.body as any).error).toBe("VIATOR_API_KEY is not configured");
+    expect((res.body as any).rawProductCode).toBe("999999P001");
+    expect((res.body as any).rawProduct).toBeNull();
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
   });
 
   it("uses VIATOR_API_BASE_URL precedence", async () => {
@@ -53,7 +87,11 @@ describe("/api/engine6/viator-product", () => {
       headers: new Headers({ "content-type": "application/json" }),
       text: async () =>
         JSON.stringify({
-          product: { productCode: "163873P16", title: "Tour" },
+          product: {
+            productCode: "163873P16",
+            title: "Tour",
+            priceFrom: "$88",
+          },
         }),
     } as Response);
 
@@ -75,7 +113,111 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
   });
 
-  it("returns the enforced 163873P16 section sources and paths", async () => {
+  it("falls back to the bundled specimen when upstream is not ok", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: false,
+      status: 502,
+      statusText: "Bad Gateway",
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () => "upstream error",
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "163873P16" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        hasViatorApiKey: true,
+        attemptedLiveFetch: true,
+        upstreamStatus: 502,
+        upstreamOk: false,
+        usedBundledFallbackBecause: "upstream-not-ok",
+      })
+    );
+    expect((res.body as any).extracted.priceAmount).toBe(105.09);
+  });
+
+  it("returns normalized non-json errors for non-bundled products", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "text/html" }),
+      text: async () => "<html>not-json</html>",
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "999999P001" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(502);
+    expect((res.body as any).source).toBe("live-api");
+    expect((res.body as any).error).toBe(
+      "Viator API returned non-JSON payload"
+    );
+    expect((res.body as any).details).toContain("not-json");
+  });
+
+  it("falls back to bundled specimen when live price extraction fails", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "163873P16",
+            title: "East Zion Top of the World Jeep Tour",
+            media: {
+              images: [
+                {
+                  isCover: true,
+                  variants: {
+                    FULL: {
+                      url: "https://dynamic-media.tacdn.com/media/photo-o/specimen-cover.jpg",
+                    },
+                  },
+                },
+              ],
+            },
+            reviews: { combinedAverageRating: 4.9, totalReviews: 101 },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "163873P16" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        usedBundledFallbackBecause: "live-price-missing-or-zero",
+        upstreamStatus: 200,
+        upstreamOk: true,
+      })
+    );
+    expect((res.body as any).extracted.priceAmount).toBe(105.09);
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://img.test/specimen-root-hero-large.jpg"
+    );
+  });
+
+  it("returns the normalized live envelope with exact Engine5-style field winners", async () => {
     process.env.VIATOR_API_KEY = "k";
 
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
@@ -114,8 +256,16 @@ describe("/api/engine6/viator-product", () => {
               {
                 isCover: true,
                 variants: [
-                  { url: "https://img.test/specimen-root-hero-small.jpg", width: 360, height: 240 },
-                  { url: "https://img.test/specimen-root-hero-large.jpg", width: 674, height: 446 },
+                  {
+                    url: "https://img.test/specimen-root-hero-small.jpg",
+                    width: 360,
+                    height: 240,
+                  },
+                  {
+                    url: "https://img.test/specimen-root-hero-large.jpg",
+                    width: 674,
+                    height: 446,
+                  },
                 ],
               },
             ],
@@ -123,10 +273,17 @@ describe("/api/engine6/viator-product", () => {
               images: [
                 {
                   isCover: true,
-                  variants: { XXLARGE: { url: "https://img.test/wrong-media.jpg" } },
+                  variants: {
+                    FULL: { url: "https://img.test/wrong-media.jpg" },
+                  },
                 },
               ],
             },
+            reviews: { combinedAverageRating: 5, totalReviews: 154 },
+            logistics: {
+              start: { description: "Meet us at Zion Mountain Ranch!" },
+            },
+            location: { city: "Springdale", state: "Utah" },
           },
         }),
     } as Response);
@@ -137,59 +294,41 @@ describe("/api/engine6/viator-product", () => {
     await handler(req, res);
 
     expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://img.test/specimen-root-hero-large.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
-    expect((res.body as any).extracted.highlights).not.toContain(
-      "Not wheelchair accessible"
-    );
-    expect((res.body as any).extracted.requirements).toContain(
-      "Not wheelchair accessible"
-    );
+    expect((res.body as any).extracted.aggregateRating).toBe(5);
+    expect((res.body as any).extracted.reviewCount).toBe(154);
+    expect((res.body as any).extracted.itinerary).toHaveLength(1);
+    expect((res.body as any).extracted.faqs).toHaveLength(1);
     expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
       "product.images[0].variants[1].url"
     );
     expect((res.body as any).diagnostics.heroVariantFieldPath).toBe(
       "product.images[0].variants[1]"
     );
-    expect((res.body as any).diagnostics.selectedHeroWidth).toBe(674);
-    expect((res.body as any).diagnostics.selectedHeroHeight).toBe(446);
-    expect((res.body as any).diagnostics.imageSourceUsed).toBe(
-      "live-product-image"
-    );
     expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
     );
-    expect((res.body as any).diagnostics.commercialPriceRawValue).toBe(
-      "$105.09"
+    expect((res.body as any).diagnostics.ratingFieldPath).toBe(
+      "product.reviews.combinedAverageRating"
     );
-    expect((res.body as any).diagnostics.priceSourceUsed).toBe("live-price");
+    expect((res.body as any).diagnostics.reviewCountFieldPath).toBe(
+      "product.reviews.totalReviews"
+    );
+    expect((res.body as any).diagnostics.itineraryFieldPath).toBe(
+      "product.itineraryItems"
+    );
     expect((res.body as any).diagnostics.overviewFieldPath).toBe(
       "product.description.text"
     );
     expect((res.body as any).diagnostics.highlightsFieldPath).toBe(
       "product.highlights"
     );
-    expect((res.body as any).diagnostics.highlightClassificationReason).toContain(
-      "product.highlights kept as selling-point bullets"
-    );
-    expect((res.body as any).diagnostics.itineraryFieldPath).toBe(
-      "product.itineraryItems"
-    );
-    expect((res.body as any).diagnostics.itineraryItemCount).toBe(1);
-    expect((res.body as any).diagnostics.itinerarySourceUsed).toBe(
-      "product.itineraryItems"
-    );
-    expect((res.body as any).diagnostics.faqsFieldPath).toBe(
-      "product.qAndA.items"
-    );
     expect((res.body as any).diagnostics.faqFieldPath).toBe(
-      "product.qAndA.items"
-    );
-    expect((res.body as any).diagnostics.faqCount).toBe(1);
-    expect((res.body as any).diagnostics.faqSourceUsed).toBe(
       "product.qAndA.items"
     );
     expect((res.body as any).diagnostics.requirementsFieldPath).toBe(

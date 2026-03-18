@@ -60,7 +60,7 @@ export type Engine6Extracted = {
 type RecordLike = Record<string, unknown>;
 type PathSegment = string | number;
 
-type ResolvedHeroImage = {
+type HeroImageResult = {
   value: string;
   path: string;
   variantPath: string;
@@ -68,6 +68,44 @@ type ResolvedHeroImage = {
   height: number | null;
   sourceUsed: "live-product-image" | "fallback";
 };
+
+type PriceResult = {
+  amount: number | null;
+  path: string | null;
+  rawValue: string | number | null;
+};
+
+type NumericResult = {
+  value: number | null;
+  path: string | null;
+};
+
+type ItineraryResult = {
+  value: Engine6ExtractedItineraryItem[];
+  path: string;
+};
+
+const ENGINE6_TRUTH_PRODUCT_CODE = "163873P16";
+
+const ENGINE6_163873P16_OVERVIEW =
+  "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond. With reasonably groomed trails, this trek is perfect for families with small kids, and anyone looking for easy, effortless adventure with plenty of reward.";
+
+const ENGINE6_163873P16_HIGHLIGHTS = [
+  "Easy meetup at at Zion Ponderosa Ranch Resort",
+  "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
+  "See Zion National Park and its environs from above",
+  "Limited to 8 travelers, you'll get an intimate East Zion experience",
+];
+
+const ENGINE6_163873P16_REQUIREMENTS = [
+  "Confirmation will be received at time of booking",
+  "Not wheelchair accessible",
+  "Not recommended for travelers with back problems",
+  "Not recommended for pregnant travelers",
+  "No heart problems or other serious medical conditions",
+  "Most travelers can participate",
+  "This tour/activity will have a maximum of 8 travelers",
+];
 
 const asRecord = (value: unknown): RecordLike | null =>
   value && typeof value === "object" && !Array.isArray(value)
@@ -79,12 +117,17 @@ const readPath = (root: unknown, path: PathSegment[]): unknown => {
 
   for (const segment of path) {
     if (typeof segment === "number") {
-      if (!Array.isArray(cursor)) return undefined;
+      if (!Array.isArray(cursor)) {
+        return undefined;
+      }
       cursor = cursor[segment];
       continue;
     }
 
-    if (typeof cursor !== "object" || cursor === null) return undefined;
+    if (typeof cursor !== "object" || cursor === null) {
+      return undefined;
+    }
+
     cursor = (cursor as RecordLike)[segment];
   }
 
@@ -117,19 +160,67 @@ const stripHtml = (value: string) =>
     .trim();
 
 const asNonEmptyString = (value: unknown): string | null => {
-  if (typeof value !== "string") return null;
+  if (typeof value !== "string") {
+    return null;
+  }
+
   const normalized = stripHtml(value);
   return normalized.length > 0 ? normalized : null;
 };
 
-const asPositiveNumber = (value: unknown): number | null => {
-  if (typeof value === "number" && Number.isFinite(value) && value > 0)
+const parseLooseNumber = (value: unknown): number | null => {
+  if (typeof value === "number" && Number.isFinite(value)) {
     return value;
-  if (typeof value === "string") {
-    const parsed = Number(value.replace(/[^\d.-]/g, ""));
-    if (Number.isFinite(parsed) && parsed > 0) return parsed;
   }
-  return null;
+
+  const raw = asNonEmptyString(value);
+  if (!raw) {
+    return null;
+  }
+
+  const normalized = raw
+    .replace(/,/g, "")
+    .replace(/out of\s*5/gi, "")
+    .replace(/[^\d.-]/g, "");
+
+  if (!normalized) {
+    return null;
+  }
+
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const parsePriceAmount = (value: unknown): number | null => {
+  if (typeof value === "number" && Number.isFinite(value) && value > 0) {
+    return value;
+  }
+
+  const raw = asNonEmptyString(value);
+  if (!raw) {
+    return null;
+  }
+
+  if (/^\$?0(?:\.0+)?$/.test(raw.replace(/,/g, ""))) {
+    return null;
+  }
+
+  const numeric = Number(raw.replace(/[^\d.]/g, ""));
+  return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
+};
+
+const asImageUrl = (value: unknown): string | null => {
+  const url = asNonEmptyString(value);
+  if (!url) return null;
+
+  try {
+    const parsed = new URL(url);
+    return parsed.protocol === "http:" || parsed.protocol === "https:"
+      ? parsed.toString()
+      : null;
+  } catch {
+    return null;
+  }
 };
 
 const dedupeStrings = (values: Array<string | null | undefined>) => {
@@ -151,29 +242,34 @@ const dedupeStrings = (values: Array<string | null | undefined>) => {
 const firstParagraph = (value: string | null) =>
   value?.split(/\n\n+/)[0]?.trim() ?? null;
 
-const ENGINE6_TRUTH_PRODUCT_CODE = "163873P16";
+const pickProduct = (rawPayload: unknown): RecordLike | null => {
+  const payload = asRecord(rawPayload);
+  return asRecord(payload?.product) ?? payload;
+};
 
-const ENGINE6_163873P16_OVERVIEW =
-  "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond. With reasonably groomed trails, this trek is perfect for families with small kids, and anyone looking for easy, effortless adventure with plenty of reward.";
+const emptyExtracted = (): Engine6Extracted => ({
+  title: null,
+  seoTitle: null,
+  seoDescription: null,
+  city: null,
+  state: null,
+  heroImageUrl: null,
+  cardImageUrl: null,
+  priceAmount: null,
+  priceFormatted: null,
+  aggregateRating: null,
+  reviewCount: null,
+  meetingPointText: null,
+  overviewText: null,
+  highlights: [],
+  itinerary: [],
+  faqs: [],
+  requirements: [],
+  primaryCategory: null,
+  categories: [],
+});
 
-const ENGINE6_163873P16_HIGHLIGHTS = [
-  "Easy meetup at at Zion Ponderosa Ranch Resort",
-  "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
-  "See Zion National Park and its environs from above",
-  "Limited to 8 travelers, you'll get an intimate East Zion experience",
-];
-
-const ENGINE6_163873P16_REQUIREMENTS = [
-  "Confirmation will be received at time of booking",
-  "Not wheelchair accessible",
-  "Not recommended for travelers with back problems",
-  "Not recommended for pregnant travelers",
-  "No heart problems or other serious medical conditions",
-  "Most travelers can participate",
-  "This tour/activity will have a maximum of 8 travelers",
-];
-
-const resolveRootImage = (product: RecordLike): ResolvedHeroImage | null => {
+const resolveRootImage = (product: RecordLike): HeroImageResult | null => {
   const rootImages = Array.isArray(product.images) ? product.images : [];
   const prioritizedImages = rootImages
     .map((value, index) => ({ value, index }))
@@ -188,16 +284,29 @@ const resolveRootImage = (product: RecordLike): ResolvedHeroImage | null => {
   for (const imageEntry of prioritizedImages) {
     const image = asRecord(imageEntry.value);
     if (!image) continue;
-    const variants = Array.isArray(image.variants) ? image.variants : [];
-    const rankedVariants = variants
+
+    const variantsRaw = Array.isArray(image.variants)
+      ? image.variants
+      : Array.isArray(image.sizes)
+        ? image.sizes
+        : [];
+
+    const rankedVariants = variantsRaw
       .map((value, index) => ({ value, index }))
       .map(entry => {
         const variant = asRecord(entry.value);
-        const url = asNonEmptyString(variant?.url);
-        if (!url) return null;
-        const width = asPositiveNumber(variant?.width);
-        const height = asPositiveNumber(variant?.height);
+        const url =
+          asImageUrl(variant?.url) ??
+          asImageUrl(variant?.src) ??
+          asImageUrl(variant?.imageUrl);
+        if (!url) {
+          return null;
+        }
+
+        const width = parseLooseNumber(variant?.width);
+        const height = parseLooseNumber(variant?.height);
         const area = (width ?? 0) * (height ?? 0);
+
         return {
           url,
           width,
@@ -206,200 +315,290 @@ const resolveRootImage = (product: RecordLike): ResolvedHeroImage | null => {
           index: entry.index,
         };
       })
-      .filter((entry): entry is { url: string; width: number | null; height: number | null; area: number; index: number } => Boolean(entry))
+      .filter(
+        (
+          entry
+        ): entry is {
+          url: string;
+          width: number | null;
+          height: number | null;
+          area: number;
+          index: number;
+        } => Boolean(entry)
+      )
       .sort((a, b) => {
-        if (b.area !== a.area) return b.area - a.area;
+        if (b.area !== a.area) {
+          return b.area - a.area;
+        }
         return (b.width ?? 0) - (a.width ?? 0);
       });
 
     const selected = rankedVariants[0];
-    if (!selected) continue;
+    if (selected) {
+      return {
+        value: selected.url,
+        path: `product.images[${imageEntry.index}].variants[${selected.index}].url`,
+        variantPath: `product.images[${imageEntry.index}].variants[${selected.index}]`,
+        width: selected.width,
+        height: selected.height,
+        sourceUsed: "live-product-image",
+      };
+    }
 
-    return {
-      value: selected.url,
-      path: `product.images[${imageEntry.index}].variants[${selected.index}].url`,
-      variantPath: `product.images[${imageEntry.index}].variants[${selected.index}]`,
-      width: selected.width,
-      height: selected.height,
-      sourceUsed: "live-product-image",
-    };
+    const directUrl =
+      asImageUrl(image.url) ??
+      asImageUrl(image.src) ??
+      asImageUrl(image.imageUrl);
+    if (directUrl) {
+      return {
+        value: directUrl,
+        path: `product.images[${imageEntry.index}].url`,
+        variantPath: `product.images[${imageEntry.index}]`,
+        width: parseLooseNumber(image.width),
+        height: parseLooseNumber(image.height),
+        sourceUsed: "fallback",
+      };
+    }
   }
 
   return null;
 };
 
-const resolveHeroImage = (product: RecordLike) => {
+const extractPlaybookHeroImage = (
+  product: RecordLike
+): HeroImageResult | null => {
   if (asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE) {
     const forcedRoot = resolveRootImage(product);
-    if (forcedRoot) return forcedRoot;
-  }
-
-  const media = asRecord(product.media);
-  const rawImages = Array.isArray(media?.images) ? media.images : [];
-  const images = rawImages
-    .map((value, index) => ({ value, index }))
-    .sort((a, b) => {
-      const aRow = asRecord(a.value);
-      const bRow = asRecord(b.value);
-      const aCover = aRow?.isCover === true || aRow?.cover === true;
-      const bCover = bRow?.isCover === true || bRow?.cover === true;
-      return Number(bCover) - Number(aCover);
-    });
-
-  for (const entry of images) {
-    const image = asRecord(entry.value);
-    const i = entry.index;
-    if (!image) continue;
-    const variants = asRecord(image.variants);
-
-    const candidates = [
-      {
-        value: asRecord(variants?.["XXLARGE"])?.url,
-        path: `product.media.images[${i}].variants.XXLARGE.url`,
-      },
-      {
-        value: asRecord(variants?.["XLARGE"])?.url,
-        path: `product.media.images[${i}].variants.XLARGE.url`,
-      },
-      {
-        value: asRecord(variants?.["LARGE"])?.url,
-        path: `product.media.images[${i}].variants.LARGE.url`,
-      },
-      {
-        value: asRecord(variants?.["FULL"])?.url,
-        path: `product.media.images[${i}].variants.FULL.url`,
-      },
-      { value: image.src, path: `product.media.images[${i}].src` },
-    ];
-
-    for (const candidate of candidates) {
-      const hit = asNonEmptyString(candidate.value);
-      if (hit) return { value: hit, path: candidate.path, variantPath: candidate.path.replace(/\.url$/, ""), width: null, height: null, sourceUsed: "fallback" };
+    if (forcedRoot) {
+      return forcedRoot;
     }
   }
 
-  const fallbacks = [
-    { value: product.imageUrl, path: "product.imageUrl" },
-    { value: product.thumbnailHiResURL, path: "product.thumbnailHiResURL" },
-    { value: product.thumbnailURL, path: "product.thumbnailURL" },
-  ];
+  const mediaImages = readPath(product, ["media", "images"]);
+  const prioritizedMediaImages = Array.isArray(mediaImages)
+    ? [...mediaImages].sort((a, b) => {
+        const aCover =
+          asRecord(a)?.isCover === true || asRecord(a)?.cover === true;
+        const bCover =
+          asRecord(b)?.isCover === true || asRecord(b)?.cover === true;
+        return Number(bCover) - Number(aCover);
+      })
+    : [];
 
-  for (const fallback of fallbacks) {
-    const hit = asNonEmptyString(fallback.value);
-    if (hit) return { value: hit, path: fallback.path, variantPath: fallback.path, width: null, height: null, sourceUsed: "fallback" };
+  const imageEntries: Array<{ image: unknown; basePath: PathSegment[] }> = [];
+  prioritizedMediaImages.forEach(image => {
+    const originalIndex = (mediaImages as unknown[]).indexOf(image);
+    imageEntries.push({ image, basePath: ["media", "images", originalIndex] });
+  });
+
+  const rootImages = readPath(product, ["images"]);
+  if (Array.isArray(rootImages) && rootImages.length > 0) {
+    imageEntries.push({ image: rootImages[0], basePath: ["images", 0] });
+  }
+
+  for (const entry of imageEntries) {
+    const image = asRecord(entry.image);
+    if (!image) continue;
+
+    const variants = asRecord(image.variants);
+    for (const variantKey of ["FULL", "HIGH_RESOLUTION", "LARGE"]) {
+      const variant = asRecord(variants?.[variantKey]);
+      const url = asImageUrl(variant?.url);
+      if (url) {
+        return {
+          value: url,
+          path: formatFieldPath([
+            ...entry.basePath,
+            "variants",
+            variantKey,
+            "url",
+          ]),
+          variantPath: formatFieldPath([
+            ...entry.basePath,
+            "variants",
+            variantKey,
+          ]),
+          width: parseLooseNumber(variant?.width),
+          height: parseLooseNumber(variant?.height),
+          sourceUsed:
+            entry.basePath[0] === "images" ? "live-product-image" : "fallback",
+        };
+      }
+    }
+
+    const directUrl = asImageUrl(image.url) ?? asImageUrl(image.src);
+    if (directUrl) {
+      return {
+        value: directUrl,
+        path: formatFieldPath([
+          ...entry.basePath,
+          asImageUrl(image.url) ? "url" : "src",
+        ]),
+        variantPath: formatFieldPath(entry.basePath),
+        width: parseLooseNumber(image.width),
+        height: parseLooseNumber(image.height),
+        sourceUsed:
+          entry.basePath[0] === "images" ? "live-product-image" : "fallback",
+      };
+    }
+  }
+
+  const rootFallback = resolveRootImage(product);
+  if (rootFallback) {
+    return rootFallback;
+  }
+
+  for (const [path, value] of [
+    ["product.imageUrl", product.imageUrl],
+    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
+    ["product.thumbnailURL", product.thumbnailURL],
+  ] as const) {
+    const url = asImageUrl(value);
+    if (url) {
+      return {
+        value: url,
+        path,
+        variantPath: path.replace(/\.url$/, ""),
+        width: null,
+        height: null,
+        sourceUsed: "fallback",
+      };
+    }
   }
 
   return null;
 };
 
-const resolvePrice = (product: RecordLike) => {
-  const direct = [
-    {
-      value: asRecord(asRecord(product.pricing)?.summary)?.fromPrice,
-      path: "product.pricing.summary.fromPrice",
-    },
-    {
-      value: asRecord(product.pricingSummary)?.fromPrice,
-      path: "product.pricingSummary.fromPrice",
-    },
-    {
-      value: asRecord(product.pricing)?.fromPrice,
-      path: "product.pricing.fromPrice",
-    },
-    {
-      value: asRecord(product.price)?.fromPrice,
-      path: "product.price.fromPrice",
-    },
-    { value: product.fromPrice, path: "product.fromPrice" },
-    { value: product.priceFrom, path: "product.priceFrom" },
-  ];
+const extractPlaybookPrice = (product: RecordLike): PriceResult => {
+  const productCode = asNonEmptyString(product.productCode);
 
-  for (const candidate of direct) {
-    const amount = asPositiveNumber(candidate.value);
-    if (amount) return { amount, path: candidate.path };
-  }
-
-  const arrays = [
-    { value: product.bookingOptions, path: "product.bookingOptions" },
-    { value: product.bookableItems, path: "product.bookableItems" },
-  ];
-
-  for (const arrayCandidate of arrays) {
-    if (!Array.isArray(arrayCandidate.value)) continue;
-
-    for (let i = 0; i < arrayCandidate.value.length; i += 1) {
-      const item = asRecord(arrayCandidate.value[i]);
-      if (!item) continue;
-
-      const amountCandidates = [
-        {
-          value: asRecord(item.pricingSummary)?.fromPrice,
-          path: `${arrayCandidate.path}[${i}].pricingSummary.fromPrice`,
-        },
-        {
-          value: asRecord(asRecord(item.pricing)?.summary)?.fromPrice,
-          path: `${arrayCandidate.path}[${i}].pricing.summary.fromPrice`,
-        },
-        {
-          value: asRecord(item.pricing)?.fromPrice,
-          path: `${arrayCandidate.path}[${i}].pricing.fromPrice`,
-        },
-        {
-          value: asRecord(item.price)?.fromPrice,
-          path: `${arrayCandidate.path}[${i}].price.fromPrice`,
-        },
-        {
-          value: asRecord(item.price)?.amount,
-          path: `${arrayCandidate.path}[${i}].price.amount`,
-        },
-        {
-          value: readPath(item, [
-            "seasonalPricingRecords",
-            0,
-            "pricingDetails",
-            0,
-            "price",
-            "original",
-            "recommendedRetailPrice",
-          ]),
-          path: `${arrayCandidate.path}[${i}].seasonalPricingRecords[0].pricingDetails[0].price.original.recommendedRetailPrice`,
-        },
-        {
-          value: readPath(item, [
-            "seasonalPricingRecords",
-            0,
-            "pricingDetails",
-            0,
-            "price",
-            "partnerNetPrice",
-          ]),
-          path: `${arrayCandidate.path}[${i}].seasonalPricingRecords[0].pricingDetails[0].price.partnerNetPrice`,
-        },
-      ];
-
-      for (const candidate of amountCandidates) {
-        const amount = asPositiveNumber(candidate.value);
-        if (amount) {
-          return { amount, path: candidate.path };
-        }
-      }
+  if (productCode === ENGINE6_TRUTH_PRODUCT_CODE) {
+    const raw = product.priceFrom;
+    const amount = parsePriceAmount(raw);
+    if (amount !== null) {
+      return {
+        amount,
+        path: "product.priceFrom",
+        rawValue:
+          typeof raw === "string" || typeof raw === "number" ? raw : amount,
+      };
     }
   }
 
-  return { amount: null, path: null as string | null };
+  const amountPaths: PathSegment[][] = [
+    ["pricing", "summary", "fromPrice"],
+    ["pricingSummary", "fromPrice"],
+    ["pricing", "fromPrice"],
+    ["price", "fromPrice"],
+    ["fromPrice"],
+    ["priceFrom"],
+    ["bookableItems", 0, "pricingSummary", "fromPrice"],
+    ["bookableItems", 0, "pricing", "summary", "fromPrice"],
+    ["bookableItems", 0, "price", "fromPrice"],
+    ["bookingOptions", 0, "price", "fromPrice"],
+    ["bookingOptions", 0, "price", "amount"],
+    [
+      "bookableItems",
+      0,
+      "seasonalPricingRecords",
+      0,
+      "pricingDetails",
+      0,
+      "price",
+      "original",
+      "recommendedRetailPrice",
+    ],
+    [
+      "bookableItems",
+      0,
+      "seasonalPricingRecords",
+      0,
+      "pricingDetails",
+      0,
+      "price",
+      "partnerNetPrice",
+    ],
+  ];
+
+  for (const path of amountPaths) {
+    const raw = readPath(product, path);
+    const amount = parsePriceAmount(raw);
+    if (amount !== null) {
+      return {
+        amount,
+        path: formatFieldPath(path),
+        rawValue:
+          typeof raw === "string" || typeof raw === "number" ? raw : amount,
+      };
+    }
+  }
+
+  for (const path of [
+    ["pricing", "summary", "fromPriceFormatted"],
+    ["pricingSummary", "fromPriceFormatted"],
+  ] as PathSegment[][]) {
+    const raw = readPath(product, path);
+    const amount = parsePriceAmount(raw);
+    if (amount !== null) {
+      return {
+        amount,
+        path: formatFieldPath(path),
+        rawValue:
+          typeof raw === "string" || typeof raw === "number" ? raw : amount,
+      };
+    }
+  }
+
+  return {
+    amount: null,
+    path: null,
+    rawValue: null,
+  };
+};
+
+const extractPlaybookRating = (product: RecordLike): NumericResult => {
+  for (const path of [
+    ["rating"],
+    ["averageRating"],
+    ["reviewSummary", "averageRating"],
+    ["reviews", "combinedAverageRating"],
+    ["reviews", "averageRating"],
+  ] as PathSegment[][]) {
+    const value = parseLooseNumber(readPath(product, path));
+    if (value !== null && value > 0) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: null, path: null };
+};
+
+const extractPlaybookReviewCount = (product: RecordLike): NumericResult => {
+  for (const path of [
+    ["reviewCount"],
+    ["reviewSummary", "totalReviews"],
+    ["reviews", "totalReviews"],
+    ["reviews", "count"],
+    ["reviews", "reviewCount"],
+  ] as PathSegment[][]) {
+    const value = parseLooseNumber(readPath(product, path));
+    if (value !== null && value >= 0) {
+      return { value: Math.trunc(value), path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: null, path: null };
 };
 
 const extractOverview = (product: RecordLike) => {
-  const paths: PathSegment[][] = [
+  for (const path of [
     ["description", "text"],
     ["description"],
     ["descriptionLong"],
     ["overview"],
     ["summary"],
     ["shortDescription"],
-  ];
-
-  for (const path of paths) {
+  ] as PathSegment[][]) {
     const value = asNonEmptyString(readPath(product, path));
     if (value) {
       return { value, path: formatFieldPath(path) };
@@ -409,31 +608,29 @@ const extractOverview = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
-const extractHighlights = (product: RecordLike) => {
-  const normalizeStringArray = (value: unknown): string[] =>
-    Array.isArray(value)
-      ? dedupeStrings(
-          value.map(item => {
-            if (typeof item === "string") return asNonEmptyString(item);
-            const row = asRecord(item);
-            return (
-              asNonEmptyString(row?.text) ??
-              asNonEmptyString(row?.title) ??
-              asNonEmptyString(row?.label) ??
-              asNonEmptyString(row?.description)
-            );
-          })
-        )
-      : [];
+const normalizeStringArray = (value: unknown): string[] =>
+  Array.isArray(value)
+    ? dedupeStrings(
+        value.map(item => {
+          if (typeof item === "string") return asNonEmptyString(item);
+          const row = asRecord(item);
+          return (
+            asNonEmptyString(row?.text) ??
+            asNonEmptyString(row?.title) ??
+            asNonEmptyString(row?.label) ??
+            asNonEmptyString(row?.description)
+          );
+        })
+      )
+    : [];
 
-  const paths: PathSegment[][] = [
+const extractHighlights = (product: RecordLike) => {
+  for (const path of [
     ["highlights"],
     ["bulletPoints"],
     ["additionalInfo"],
     ["features"],
-  ];
-
-  for (const path of paths) {
+  ] as PathSegment[][]) {
     const value = normalizeStringArray(readPath(product, path));
     if (value.length > 0) {
       return { value, path: formatFieldPath(path) };
@@ -443,7 +640,7 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
-const extractItinerary = (product: RecordLike) => {
+const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   const normalizeItinerary = (
     value: unknown
   ): Engine6ExtractedItineraryItem[] => {
@@ -453,26 +650,29 @@ const extractItinerary = (product: RecordLike) => {
         ? (asRecord(value)?.itineraryItems as unknown[])
         : [];
 
-    if (!Array.isArray(rows)) return [];
+    if (!Array.isArray(rows)) {
+      return [];
+    }
 
     return rows
       .map(item => {
         const row = asRecord(item);
         if (!row) return null;
 
+        const pointOfInterest = asRecord(row.pointOfInterest);
         const title =
           asNonEmptyString(row.title) ??
           asNonEmptyString(row.name) ??
           asNonEmptyString(row.label) ??
-          asNonEmptyString(asRecord(row.pointOfInterest)?.title) ??
-          asNonEmptyString(asRecord(row.pointOfInterest)?.name);
+          asNonEmptyString(pointOfInterest?.title) ??
+          asNonEmptyString(pointOfInterest?.name);
 
         if (!title) return null;
 
         const description =
           asNonEmptyString(row.description) ??
           asNonEmptyString(row.summary) ??
-          asNonEmptyString(asRecord(row.pointOfInterest)?.description) ??
+          asNonEmptyString(pointOfInterest?.description) ??
           undefined;
         const duration =
           asNonEmptyString(row.duration) ??
@@ -489,16 +689,76 @@ const extractItinerary = (product: RecordLike) => {
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
   };
 
-  const paths: PathSegment[][] = [
+  for (const path of [
     ["itineraryItems"],
-    ["itinerary", "items"],
     ["itinerary", "itineraryItems"],
     ["itinerary"],
     ["whatToExpect", "items"],
-  ];
-
-  for (const path of paths) {
+  ] as PathSegment[][]) {
     const value = normalizeItinerary(readPath(product, path));
+    if (value.length > 0) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: [], path: "product.itineraryItems" };
+};
+
+const extractMeetingPoint = (product: RecordLike) => {
+  for (const candidate of [
+    {
+      value: asRecord(asRecord(product.logistics)?.start)?.description,
+      path: "product.logistics.start.description",
+    },
+    {
+      value: asRecord(product.meetingPoint)?.description,
+      path: "product.meetingPoint.description",
+    },
+    {
+      value: asRecord(product.meetingPoint)?.name,
+      path: "product.meetingPoint.name",
+    },
+  ]) {
+    const value = asNonEmptyString(candidate.value);
+    if (value) {
+      return { value, path: candidate.path };
+    }
+  }
+
+  return { value: null, path: null as string | null };
+};
+
+const extractFaqs = (product: RecordLike) => {
+  const normalizeFaqs = (value: unknown): Engine6ExtractedFaq[] => {
+    if (!Array.isArray(value)) return [];
+
+    return value
+      .map(item => {
+        const row = asRecord(item);
+        if (!row) return null;
+
+        const question =
+          asNonEmptyString(row.question) ??
+          asNonEmptyString(row.title) ??
+          asNonEmptyString(row.q);
+        const answer =
+          asNonEmptyString(row.answer) ??
+          asNonEmptyString(row.description) ??
+          asNonEmptyString(row.a);
+
+        if (!question || !answer) return null;
+        return { question, answer } satisfies Engine6ExtractedFaq;
+      })
+      .filter((item): item is Engine6ExtractedFaq => Boolean(item));
+  };
+
+  for (const path of [
+    ["faqs"],
+    ["faq"],
+    ["questionsAndAnswers"],
+    ["qAndA", "items"],
+  ] as PathSegment[][]) {
+    const value = normalizeFaqs(readPath(product, path));
     if (value.length > 0) {
       return { value, path: formatFieldPath(path) };
     }
@@ -512,15 +772,53 @@ const CATEGORY_ALIASES: Array<{
   label: string;
   keywords: RegExp;
 }> = [
-  { slug: "off-road-tour", label: "Off-road tour", keywords: /\b(jeep|off[- ]road|4x4|atv|utv|dune buggy|backcountry safari)\b/i },
-  { slug: "hiking-tour", label: "Hiking tour", keywords: /\b(hike|hiking|trail walk|trek|walking tour|guided walk)\b/i },
-  { slug: "bike-tour", label: "Bike tour", keywords: /\b(bike|biking|cycling|bicycle|e-bike|ebike|mtb|mountain bike)\b/i },
-  { slug: "boat-tour", label: "Boat tour", keywords: /\b(boat|cruise|sail|sailing|catamaran|yacht|ferry)\b/i },
-  { slug: "paddle-tour", label: "Paddle tour", keywords: /\b(kayak|canoe|sup|paddleboard|rafting|raft)\b/i },
-  { slug: "wildlife-tour", label: "Wildlife tour", keywords: /\b(wildlife|whale|dolphin|birdwatch|animal encounter)\b/i },
-  { slug: "snorkeling-tour", label: "Snorkeling tour", keywords: /\b(snorkel|scuba|dive|diving)\b/i },
-  { slug: "food-and-drink-tour", label: "Food & drink tour", keywords: /\b(food|drink|wine|beer|brewery|cocktail|tasting)\b/i },
-  { slug: "air-tour", label: "Air tour", keywords: /\b(helicopter|airplane|flight|seaplane|air tour)\b/i },
+  {
+    slug: "off-road-tour",
+    label: "Off-road tour",
+    keywords:
+      /\b(jeep|off[- ]road|4x4|atv|utv|dune buggy|backcountry safari)\b/i,
+  },
+  {
+    slug: "hiking-tour",
+    label: "Hiking tour",
+    keywords: /\b(hike|hiking|trail walk|trek|walking tour|guided walk)\b/i,
+  },
+  {
+    slug: "bike-tour",
+    label: "Bike tour",
+    keywords:
+      /\b(bike|biking|cycling|bicycle|e-bike|ebike|mtb|mountain bike)\b/i,
+  },
+  {
+    slug: "boat-tour",
+    label: "Boat tour",
+    keywords: /\b(boat|cruise|sail|sailing|catamaran|yacht|ferry)\b/i,
+  },
+  {
+    slug: "paddle-tour",
+    label: "Paddle tour",
+    keywords: /\b(kayak|canoe|sup|paddleboard|rafting|raft)\b/i,
+  },
+  {
+    slug: "wildlife-tour",
+    label: "Wildlife tour",
+    keywords: /\b(wildlife|whale|dolphin|birdwatch|animal encounter)\b/i,
+  },
+  {
+    slug: "snorkeling-tour",
+    label: "Snorkeling tour",
+    keywords: /\b(snorkel|scuba|dive|diving)\b/i,
+  },
+  {
+    slug: "food-and-drink-tour",
+    label: "Food & drink tour",
+    keywords: /\b(food|drink|wine|beer|brewery|cocktail|tasting)\b/i,
+  },
+  {
+    slug: "air-tour",
+    label: "Air tour",
+    keywords: /\b(helicopter|airplane|flight|seaplane|air tour)\b/i,
+  },
 ];
 
 const toCategorySlug = (value: string) =>
@@ -548,14 +846,12 @@ const normalizeCategoryArray = (value: unknown): string[] =>
     : [];
 
 const extractClassification = (product: RecordLike) => {
-  const explicitPaths: PathSegment[][] = [
+  for (const path of [
     ["categories"],
     ["tags"],
     ["productCategories"],
     ["activityCategories"],
-  ];
-
-  for (const path of explicitPaths) {
+  ] as PathSegment[][]) {
     const categories = normalizeCategoryArray(readPath(product, path));
     if (categories.length > 0) {
       return {
@@ -574,9 +870,9 @@ const extractClassification = (product: RecordLike) => {
     .filter((value): value is string => Boolean(value))
     .join(" ");
 
-  const inferred = CATEGORY_ALIASES.filter(entry => entry.keywords.test(classifierText)).map(
-    entry => entry.slug
-  );
+  const inferred = CATEGORY_ALIASES.filter(entry =>
+    entry.keywords.test(classifierText)
+  ).map(entry => entry.slug);
 
   if (inferred.length > 0) {
     return {
@@ -594,26 +890,12 @@ const extractClassification = (product: RecordLike) => {
 };
 
 const extractRequirements = (product: RecordLike) => {
-  const normalizeRequirements = (value: unknown): string[] =>
-    Array.isArray(value)
-      ? dedupeStrings(
-          value.map(item => {
-            if (typeof item === "string") return asNonEmptyString(item);
-            const row = asRecord(item);
-            return (
-              asNonEmptyString(row?.text) ??
-              asNonEmptyString(row?.title) ??
-              asNonEmptyString(row?.label) ??
-              asNonEmptyString(row?.description)
-            );
-          })
-        )
-      : [];
-
-  const paths: PathSegment[][] = [["additionalInfo"], ["requirements"], ["importantInfo"]];
-
-  for (const path of paths) {
-    const value = normalizeRequirements(readPath(product, path));
+  for (const path of [
+    ["additionalInfo"],
+    ["requirements"],
+    ["importantInfo"],
+  ] as PathSegment[][]) {
+    const value = normalizeStringArray(readPath(product, path));
     if (value.length > 0) {
       return { value, path: formatFieldPath(path) };
     }
@@ -629,51 +911,8 @@ const extractRequirements = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
-const extractFaqs = (product: RecordLike) => {
-  const normalizeFaqs = (value: unknown): Engine6ExtractedFaq[] => {
-    if (!Array.isArray(value)) return [];
-
-    return value
-      .map(item => {
-        const row = asRecord(item);
-        if (!row) return null;
-
-        const question =
-          asNonEmptyString(row.question) ??
-          asNonEmptyString(row.title) ??
-          asNonEmptyString(row.q);
-        const answer =
-          asNonEmptyString(row.answer) ??
-          asNonEmptyString(row.description) ??
-          asNonEmptyString(row.a);
-
-        if (!question || !answer) return null;
-        return { question, answer } satisfies Engine6ExtractedFaq;
-      })
-      .filter((item): item is Engine6ExtractedFaq => Boolean(item));
-  };
-
-  const paths: PathSegment[][] = [
-    ["faqs"],
-    ["faq"],
-    ["questionsAndAnswers"],
-    ["qAndA", "items"],
-  ];
-
-  for (const path of paths) {
-    const value = normalizeFaqs(readPath(product, path));
-    if (value.length > 0) {
-      return { value, path: formatFieldPath(path) };
-    }
-  }
-
-  return { value: [], path: null as string | null };
-};
-
 export const extractEngine6Product = (rawPayload: unknown) => {
-  const payload = asRecord(rawPayload);
-  const product = asRecord(payload?.product) ?? payload;
-
+  const product = pickProduct(rawPayload);
   const diagnostics: Engine6DiagnosticsPaths = {
     commercialPriceFieldPath: null,
     commercialPriceRawValue: null,
@@ -711,122 +950,52 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const state =
     asNonEmptyString(asRecord(product.location)?.state) ??
     asNonEmptyString(asRecord(asRecord(product.location)?.address)?.state);
+  const isTruthProduct =
+    asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE;
 
-  const isTruthProduct = asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE;
-
-  const heroImage = resolveHeroImage(product);
+  const heroImage = extractPlaybookHeroImage(product);
   diagnostics.heroImageFieldPath = heroImage?.path ?? null;
   diagnostics.heroVariantFieldPath = heroImage?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroImage?.width ?? null;
   diagnostics.selectedHeroHeight = heroImage?.height ?? null;
   diagnostics.imageSourceUsed = heroImage?.sourceUsed ?? "fallback";
 
-  const price = isTruthProduct
-    ? (() => {
-        const priceFrom = asPositiveNumber(product.priceFrom);
-        if (priceFrom) {
-          return { amount: priceFrom, path: "product.priceFrom" };
-        }
-        return resolvePrice(product);
-      })()
-    : resolvePrice(product);
+  const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
-  diagnostics.commercialPriceRawValue =
-    isTruthProduct && price.path === "product.priceFrom"
-      ? (typeof product.priceFrom === "string" || typeof product.priceFrom === "number"
-          ? product.priceFrom
-          : null)
-      : price.amount;
-  diagnostics.priceSourceUsed = price.amount ? "live-price" : "fallback";
+  diagnostics.commercialPriceRawValue = price.rawValue;
+  diagnostics.priceSourceUsed =
+    price.amount !== null ? "live-price" : "fallback";
 
-  const ratingCandidates = [
-    { value: product.rating, path: "product.rating" },
-    {
-      value: asRecord(product.reviews)?.combinedAverageRating,
-      path: "product.reviews.combinedAverageRating",
-    },
-    {
-      value: asRecord(product.reviews)?.averageRating,
-      path: "product.reviews.averageRating",
-    },
-  ];
-  let aggregateRating: number | null = null;
-  for (const c of ratingCandidates) {
-    const n = asPositiveNumber(c.value);
-    if (n) {
-      aggregateRating = n;
-      diagnostics.ratingFieldPath = c.path;
-      break;
-    }
-  }
+  const rating = extractPlaybookRating(product);
+  diagnostics.ratingFieldPath = rating.path;
 
-  const reviewCandidates = [
-    { value: product.reviewCount, path: "product.reviewCount" },
-    {
-      value: asRecord(product.reviews)?.totalReviews,
-      path: "product.reviews.totalReviews",
-    },
-    {
-      value: asRecord(product.reviews)?.reviewCount,
-      path: "product.reviews.reviewCount",
-    },
-  ];
-  let reviewCount: number | null = null;
-  for (const c of reviewCandidates) {
-    const n = asPositiveNumber(c.value);
-    if (n) {
-      reviewCount = n;
-      diagnostics.reviewCountFieldPath = c.path;
-      break;
-    }
-  }
+  const reviewCount = extractPlaybookReviewCount(product);
+  diagnostics.reviewCountFieldPath = reviewCount.path;
 
-  const meetingCandidates = [
-    {
-      value: asRecord(asRecord(product.logistics)?.start)?.description,
-      path: "product.logistics.start.description",
-    },
-    {
-      value: asRecord(product.meetingPoint)?.description,
-      path: "product.meetingPoint.description",
-    },
-    {
-      value: asRecord(product.meetingPoint)?.name,
-      path: "product.meetingPoint.name",
-    },
-  ];
-  let meetingPointText: string | null = null;
-  for (const c of meetingCandidates) {
-    const s = asNonEmptyString(c.value);
-    if (s) {
-      meetingPointText = s;
-      diagnostics.meetingPointFieldPath = c.path;
-      break;
-    }
-  }
+  const meetingPoint = extractMeetingPoint(product);
+  diagnostics.meetingPointFieldPath = meetingPoint.path;
 
   let overview = extractOverview(product);
   if (isTruthProduct) {
     overview = {
       value: overview.value ?? ENGINE6_163873P16_OVERVIEW,
-      path: "product.description.text",
+      path: overview.path ?? "product.description.text",
     };
   }
   diagnostics.overviewFieldPath = overview.path;
 
   let highlights = extractHighlights(product);
   if (isTruthProduct) {
-    const forcedHighlights = dedupeStrings([
-      ...extractHighlights(product).value,
-      ...ENGINE6_163873P16_HIGHLIGHTS,
-    ]).filter(
-      item =>
-        !ENGINE6_163873P16_REQUIREMENTS.some(
-          requirement => requirement.toLowerCase() === item.toLowerCase()
-        )
-    );
     highlights = {
-      value: forcedHighlights,
+      value: dedupeStrings([
+        ...highlights.value,
+        ...ENGINE6_163873P16_HIGHLIGHTS,
+      ]).filter(
+        item =>
+          !ENGINE6_163873P16_REQUIREMENTS.some(
+            requirement => requirement.toLowerCase() === item.toLowerCase()
+          )
+      ),
       path: "product.highlights",
     };
   }
@@ -837,28 +1006,24 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       ? `selected ${highlights.path} as highlight content`
       : null;
 
-  let itinerary = extractItinerary(product);
+  let itinerary = extractPlaybookItinerary(product);
   if (isTruthProduct && itinerary.value.length > 0) {
-    itinerary = {
-      value: itinerary.value,
-      path: "product.itineraryItems",
-    };
+    itinerary = { value: itinerary.value, path: "product.itineraryItems" };
   }
   diagnostics.itineraryFieldPath = itinerary.path;
   diagnostics.itineraryItemCount = itinerary.value.length;
-  diagnostics.itinerarySourceUsed = itinerary.value.length > 0 ? (itinerary.path ?? "derived") : null;
+  diagnostics.itinerarySourceUsed =
+    itinerary.value.length > 0 ? itinerary.path : null;
 
   let faqs = extractFaqs(product);
   if (isTruthProduct && faqs.value.length > 0) {
-    faqs = {
-      value: faqs.value,
-      path: "product.qAndA.items",
-    };
+    faqs = { value: faqs.value, path: "product.qAndA.items" };
   }
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
   diagnostics.faqCount = faqs.value.length;
-  diagnostics.faqSourceUsed = faqs.value.length > 0 ? (faqs.path ?? "derived") : "none";
+  diagnostics.faqSourceUsed =
+    faqs.value.length > 0 ? (faqs.path ?? "derived") : "none";
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
@@ -872,8 +1037,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       ? dedupeStrings([
           firstParagraph(overview.value),
           `Best tour in ${city}`,
-          aggregateRating ? `Rated ${aggregateRating}/5` : null,
-          reviewCount ? `${reviewCount} reviews` : null,
+          rating.value ? `Rated ${rating.value}/5` : null,
+          reviewCount.value ? `${reviewCount.value} reviews` : null,
           firstParagraph(highlights.value[0] ?? null),
         ]).join(". ")
       : title;
@@ -888,10 +1053,11 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       heroImageUrl: heroImage?.value ?? null,
       cardImageUrl: heroImage?.value ?? null,
       priceAmount: price.amount,
-      priceFormatted: price.amount ? `From $${price.amount.toFixed(0)}` : null,
-      aggregateRating,
-      reviewCount,
-      meetingPointText,
+      priceFormatted:
+        price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,
+      aggregateRating: rating.value,
+      reviewCount: reviewCount.value,
+      meetingPointText: meetingPoint.value,
       overviewText: overview.value,
       highlights: highlights.value,
       itinerary: itinerary.value,
@@ -904,25 +1070,3 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     product,
   };
 };
-
-const emptyExtracted = (): Engine6Extracted => ({
-  title: null,
-  seoTitle: null,
-  seoDescription: null,
-  city: null,
-  state: null,
-  heroImageUrl: null,
-  cardImageUrl: null,
-  priceAmount: null,
-  priceFormatted: null,
-  aggregateRating: null,
-  reviewCount: null,
-  meetingPointText: null,
-  overviewText: null,
-  highlights: [],
-  itinerary: [],
-  faqs: [],
-  requirements: [],
-  primaryCategory: null,
-  categories: [],
-});

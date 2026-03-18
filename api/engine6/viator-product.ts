@@ -1,6 +1,10 @@
+import { readFile } from "node:fs/promises";
+import path from "node:path";
+
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
+const ENGINE6_BUNDLED_PRODUCT_CODE = "163873P16";
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -9,7 +13,32 @@ const buildHeaders = (apiKey: string) => ({
   "exp-api-key": apiKey,
 });
 
-const buildDiagnostics = (hasViatorApiKey: boolean) => ({
+const getBundledExactProductPayload = async (productCode: string) => {
+  if (productCode !== ENGINE6_BUNDLED_PRODUCT_CODE) {
+    return null;
+  }
+
+  const payloadPath = path.join(
+    process.cwd(),
+    "data",
+    "engine6",
+    "viator",
+    `${productCode}.exact-product.json`
+  );
+
+  try {
+    const body = await readFile(payloadPath, "utf8");
+    return JSON.parse(body) as Record<string, unknown>;
+  } catch {
+    return null;
+  }
+};
+
+const buildDiagnostics = (
+  source: "live-api" | "bundled-fallback",
+  hasViatorApiKey: boolean
+) => ({
+  source,
   hasViatorApiKey,
   attemptedLiveFetch: false,
   upstreamStatus: null as number | null,
@@ -41,6 +70,66 @@ const buildDiagnostics = (hasViatorApiKey: boolean) => ({
   classificationFieldPath: null as string | null,
 });
 
+const buildEmptyEnvelope = (productCode: string) => ({
+  rawProductCode: productCode,
+  rawProduct: null,
+  extracted: extractEngine6Product(null).extracted,
+});
+
+const respondWithNormalizedEnvelope = (
+  res: any,
+  args: {
+    statusCode: number;
+    source: "live-api" | "bundled-fallback";
+    diagnostics: ReturnType<typeof buildDiagnostics>;
+    productCode: string;
+    rawProduct: Record<string, unknown> | null;
+    extracted: ReturnType<typeof extractEngine6Product>["extracted"];
+    headers?: Record<string, string>;
+    error?: string;
+    details?: string;
+  }
+) => {
+  for (const [name, value] of Object.entries(args.headers ?? {})) {
+    res.setHeader(name, value);
+  }
+
+  res.status(args.statusCode).json({
+    source: args.source,
+    diagnostics: args.diagnostics,
+    rawProductCode: args.productCode,
+    rawProduct: args.rawProduct,
+    extracted: args.extracted,
+    ...(args.error ? { error: args.error } : {}),
+    ...(args.details ? { details: args.details } : {}),
+  });
+};
+
+const respondWithBundledFallback = (
+  res: any,
+  productCode: string,
+  bundledPayload: Record<string, unknown>,
+  diagnostics: ReturnType<typeof buildDiagnostics>
+) => {
+  const extraction = extractEngine6Product(bundledPayload);
+  Object.assign(diagnostics, extraction.diagnostics, {
+    source: "bundled-fallback",
+  });
+
+  respondWithNormalizedEnvelope(res, {
+    statusCode: 200,
+    source: "bundled-fallback",
+    diagnostics,
+    productCode,
+    rawProduct: extraction.product,
+    extracted: extraction.extracted,
+    headers: {
+      "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
+      "X-Engine6-Source": "bundled-exact-product-payload",
+    },
+  });
+};
+
 export default async function handler(req: any, res: any) {
   if (req.method !== "GET") {
     res.status(405).json({ error: "Method not allowed" });
@@ -55,17 +144,24 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
+  const bundledPayload = await getBundledExactProductPayload(productCode);
   const key = process.env.VIATOR_API_KEY;
-  const diagnostics = buildDiagnostics(Boolean(key));
+  const diagnostics = buildDiagnostics("live-api", Boolean(key));
+
+  if (!key && bundledPayload) {
+    diagnostics.source = "bundled-fallback";
+    diagnostics.usedBundledFallbackBecause = "missing-api-key";
+    respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+    return;
+  }
 
   if (!key) {
-    diagnostics.usedBundledFallbackBecause = "missing-api-key";
-    res.status(500).json({
+    respondWithNormalizedEnvelope(res, {
+      statusCode: 500,
       source: "live-api",
       diagnostics,
-      rawProductCode: productCode,
-      rawProduct: null,
-      extracted: extractEngine6Product(null).extracted,
+      productCode,
+      ...buildEmptyEnvelope(productCode),
       error: "VIATOR_API_KEY is not configured",
     });
     return;
@@ -84,34 +180,59 @@ export default async function handler(req: any, res: any) {
     });
 
     diagnostics.upstreamStatus = response.status;
-    diagnostics.upstreamContentType = response.headers.get("content-type");
     diagnostics.upstreamOk = response.ok;
+    diagnostics.upstreamContentType = response.headers.get("content-type");
 
     if (!response.ok) {
-      const details = await response.text();
-      res.status(response.status).json({
+      if (bundledPayload) {
+        diagnostics.source = "bundled-fallback";
+        diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
+        respondWithBundledFallback(
+          res,
+          productCode,
+          bundledPayload,
+          diagnostics
+        );
+        return;
+      }
+
+      const body = await response.text();
+      respondWithNormalizedEnvelope(res, {
+        statusCode: response.status,
         source: "live-api",
         diagnostics,
-        rawProductCode: productCode,
-        rawProduct: null,
-        extracted: extractEngine6Product(null).extracted,
+        productCode,
+        ...buildEmptyEnvelope(productCode),
         error: `Viator API error ${response.status}: ${response.statusText}`,
-        details: details.slice(0, 500),
+        details: body.slice(0, 500),
       });
       return;
     }
 
     const rawBody = await response.text();
-    let payload: unknown;
+    let payload: Record<string, unknown>;
+
     try {
-      payload = JSON.parse(rawBody);
+      payload = JSON.parse(rawBody) as Record<string, unknown>;
     } catch {
-      res.status(502).json({
+      if (bundledPayload) {
+        diagnostics.source = "bundled-fallback";
+        diagnostics.usedBundledFallbackBecause = "upstream-non-json";
+        respondWithBundledFallback(
+          res,
+          productCode,
+          bundledPayload,
+          diagnostics
+        );
+        return;
+      }
+
+      respondWithNormalizedEnvelope(res, {
+        statusCode: 502,
         source: "live-api",
         diagnostics,
-        rawProductCode: productCode,
-        rawProduct: null,
-        extracted: extractEngine6Product(null).extracted,
+        productCode,
+        ...buildEmptyEnvelope(productCode),
         error: "Viator API returned non-JSON payload",
         details: rawBody.slice(0, 500),
       });
@@ -119,26 +240,40 @@ export default async function handler(req: any, res: any) {
     }
 
     const extraction = extractEngine6Product(payload);
-    Object.assign(diagnostics, extraction.diagnostics);
+    Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
 
-    res.setHeader(
-      "Cache-Control",
-      "public, s-maxage=300, stale-while-revalidate=1800"
-    );
-    res.status(200).json({
+    if (bundledPayload && extraction.extracted.priceAmount === null) {
+      diagnostics.source = "bundled-fallback";
+      diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
+      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      return;
+    }
+
+    respondWithNormalizedEnvelope(res, {
+      statusCode: 200,
       source: "live-api",
       diagnostics,
-      rawProductCode: productCode,
+      productCode,
       rawProduct: extraction.product,
       extracted: extraction.extracted,
+      headers: {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
+      },
     });
   } catch (error: any) {
-    res.status(500).json({
+    if (bundledPayload) {
+      diagnostics.source = "bundled-fallback";
+      diagnostics.usedBundledFallbackBecause = "request-failed";
+      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      return;
+    }
+
+    respondWithNormalizedEnvelope(res, {
+      statusCode: 500,
       source: "live-api",
       diagnostics,
-      rawProductCode: productCode,
-      rawProduct: null,
-      extracted: extractEngine6Product(null).extracted,
+      productCode,
+      ...buildEmptyEnvelope(productCode),
       error: error?.message ?? "Viator request failed",
     });
   }

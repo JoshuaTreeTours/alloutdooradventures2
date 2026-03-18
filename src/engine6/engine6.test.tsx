@@ -87,6 +87,69 @@ const specimenProductPayload = {
 };
 
 describe("engine6 extractor", () => {
+  it("follows the Engine5-style precedence for generic hero, price, rating, review, and itinerary extraction", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "GENERIC1",
+        title: "Generic Jeep Tour",
+        pricing: { summary: { fromPrice: 139 } },
+        reviewSummary: { averageRating: "4.7 out of 5", totalReviews: "203" },
+        media: {
+          images: [
+            {
+              isCover: true,
+              variants: {
+                FULL: {
+                  url: "https://img.test/generic-media-full.jpg",
+                  width: 1200,
+                  height: 800,
+                },
+              },
+            },
+          ],
+        },
+        itinerary: {
+          itineraryItems: [
+            {
+              title: "Trailhead",
+              summary: "Start here",
+              durationText: "15 minutes",
+            },
+          ],
+        },
+      },
+    });
+
+    expect(extracted.extracted.heroImageUrl).toBe(
+      "https://img.test/generic-media-full.jpg"
+    );
+    expect(extracted.extracted.priceAmount).toBe(139);
+    expect(extracted.extracted.aggregateRating).toBe(4.7);
+    expect(extracted.extracted.reviewCount).toBe(203);
+    expect(extracted.extracted.itinerary).toEqual([
+      {
+        title: "Trailhead",
+        description: "Start here",
+        duration: "15 minutes",
+      },
+    ]);
+    expect(extracted.diagnostics.heroImageFieldPath).toBe(
+      "product.media.images[0].variants.FULL.url"
+    );
+    expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
+      "product.pricing.summary.fromPrice"
+    );
+    expect(extracted.diagnostics.ratingFieldPath).toBe(
+      "product.reviewSummary.averageRating"
+    );
+    expect(extracted.diagnostics.reviewCountFieldPath).toBe(
+      "product.reviewSummary.totalReviews"
+    );
+    expect(extracted.diagnostics.itineraryFieldPath).toBe(
+      "product.itinerary.itineraryItems"
+    );
+  });
+
   it("hard-enforces the exact 163873P16 hero, price, and content section sources", () => {
     const extracted = extractEngine6Product(specimenProductPayload);
 
