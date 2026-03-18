@@ -69,6 +69,15 @@ type HeroImageResult = {
   sourceUsed: "live-product-image" | "fallback";
 };
 
+type RankedImageVariant = {
+  url: string;
+  path: string;
+  variantPath: string;
+  width: number | null;
+  height: number | null;
+  area: number;
+};
+
 type PriceResult = {
   amount: number | null;
   path: string | null;
@@ -269,9 +278,99 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const resolveRootImage = (product: RecordLike): HeroImageResult | null => {
-  const rootImages = Array.isArray(product.images) ? product.images : [];
-  const prioritizedImages = rootImages
+const rankVariants = (
+  variants: RankedImageVariant[]
+): RankedImageVariant | null => {
+  const ranked = [...variants].sort((a, b) => {
+    if (b.area !== a.area) {
+      return b.area - a.area;
+    }
+    if ((b.width ?? 0) !== (a.width ?? 0)) {
+      return (b.width ?? 0) - (a.width ?? 0);
+    }
+    return (b.height ?? 0) - (a.height ?? 0);
+  });
+
+  return ranked[0] ?? null;
+};
+
+const collectArrayVariants = (
+  image: RecordLike,
+  basePath: PathSegment[]
+): RankedImageVariant[] => {
+  const variantsRaw = Array.isArray(image.variants)
+    ? image.variants
+    : Array.isArray(image.sizes)
+      ? image.sizes
+      : [];
+
+  return variantsRaw
+    .map((value, index) => ({ value, index }))
+    .map(entry => {
+      const variant = asRecord(entry.value);
+      const url =
+        asImageUrl(variant?.url) ??
+        asImageUrl(variant?.src) ??
+        asImageUrl(variant?.imageUrl);
+      if (!url) {
+        return null;
+      }
+
+      const width = parseLooseNumber(variant?.width);
+      const height = parseLooseNumber(variant?.height);
+      return {
+        url,
+        path: formatFieldPath([...basePath, "variants", entry.index, "url"]),
+        variantPath: formatFieldPath([...basePath, "variants", entry.index]),
+        width,
+        height,
+        area: (width ?? 0) * (height ?? 0),
+      } satisfies RankedImageVariant;
+    })
+    .filter((entry): entry is RankedImageVariant => Boolean(entry));
+};
+
+const collectRecordVariants = (
+  image: RecordLike,
+  basePath: PathSegment[]
+): RankedImageVariant[] => {
+  const variants = asRecord(image.variants);
+  if (!variants) {
+    return [];
+  }
+
+  return Object.entries(variants)
+    .map(([variantKey, rawVariant]) => {
+      const variant = asRecord(rawVariant);
+      const url = asImageUrl(variant?.url);
+      if (!url) {
+        return null;
+      }
+
+      const width = parseLooseNumber(variant?.width);
+      const height = parseLooseNumber(variant?.height);
+      return {
+        url,
+        path: formatFieldPath([...basePath, "variants", variantKey, "url"]),
+        variantPath: formatFieldPath([...basePath, "variants", variantKey]),
+        width,
+        height,
+        area: (width ?? 0) * (height ?? 0),
+      } satisfies RankedImageVariant;
+    })
+    .filter((entry): entry is RankedImageVariant => Boolean(entry));
+};
+
+const resolveImageCollectionHero = (
+  images: unknown,
+  basePathPrefix: PathSegment[],
+  sourceUsed: HeroImageResult["sourceUsed"]
+): HeroImageResult | null => {
+  if (!Array.isArray(images)) {
+    return null;
+  }
+
+  const prioritizedImages = images
     .map((value, index) => ({ value, index }))
     .sort((a, b) => {
       const aImage = asRecord(a.value);
@@ -281,67 +380,24 @@ const resolveRootImage = (product: RecordLike): HeroImageResult | null => {
       return Number(bCover) - Number(aCover);
     });
 
-  for (const imageEntry of prioritizedImages) {
-    const image = asRecord(imageEntry.value);
+  for (const entry of prioritizedImages) {
+    const image = asRecord(entry.value);
     if (!image) continue;
 
-    const variantsRaw = Array.isArray(image.variants)
-      ? image.variants
-      : Array.isArray(image.sizes)
-        ? image.sizes
-        : [];
+    const basePath = [...basePathPrefix, entry.index];
+    const selectedVariant = rankVariants([
+      ...collectRecordVariants(image, basePath),
+      ...collectArrayVariants(image, basePath),
+    ]);
 
-    const rankedVariants = variantsRaw
-      .map((value, index) => ({ value, index }))
-      .map(entry => {
-        const variant = asRecord(entry.value);
-        const url =
-          asImageUrl(variant?.url) ??
-          asImageUrl(variant?.src) ??
-          asImageUrl(variant?.imageUrl);
-        if (!url) {
-          return null;
-        }
-
-        const width = parseLooseNumber(variant?.width);
-        const height = parseLooseNumber(variant?.height);
-        const area = (width ?? 0) * (height ?? 0);
-
-        return {
-          url,
-          width,
-          height,
-          area,
-          index: entry.index,
-        };
-      })
-      .filter(
-        (
-          entry
-        ): entry is {
-          url: string;
-          width: number | null;
-          height: number | null;
-          area: number;
-          index: number;
-        } => Boolean(entry)
-      )
-      .sort((a, b) => {
-        if (b.area !== a.area) {
-          return b.area - a.area;
-        }
-        return (b.width ?? 0) - (a.width ?? 0);
-      });
-
-    const selected = rankedVariants[0];
-    if (selected) {
+    if (selectedVariant) {
       return {
-        value: selected.url,
-        path: `product.images[${imageEntry.index}].variants[${selected.index}].url`,
-        variantPath: `product.images[${imageEntry.index}].variants[${selected.index}]`,
-        width: selected.width,
-        height: selected.height,
-        sourceUsed: "live-product-image",
+        value: selectedVariant.url,
+        path: selectedVariant.path,
+        variantPath: selectedVariant.variantPath,
+        width: selectedVariant.width,
+        height: selectedVariant.height,
+        sourceUsed,
       };
     }
 
@@ -350,13 +406,18 @@ const resolveRootImage = (product: RecordLike): HeroImageResult | null => {
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
     if (directUrl) {
+      const directPath = asImageUrl(image.url)
+        ? formatFieldPath([...basePath, "url"])
+        : asImageUrl(image.src)
+          ? formatFieldPath([...basePath, "src"])
+          : formatFieldPath([...basePath, "imageUrl"]);
       return {
         value: directUrl,
-        path: `product.images[${imageEntry.index}].url`,
-        variantPath: `product.images[${imageEntry.index}]`,
+        path: directPath,
+        variantPath: formatFieldPath(basePath),
         width: parseLooseNumber(image.width),
         height: parseLooseNumber(image.height),
-        sourceUsed: "fallback",
+        sourceUsed,
       };
     }
   }
@@ -364,88 +425,24 @@ const resolveRootImage = (product: RecordLike): HeroImageResult | null => {
   return null;
 };
 
+const resolveRootImage = (product: RecordLike): HeroImageResult | null =>
+  resolveImageCollectionHero(product.images, ["images"], "live-product-image");
+
 const extractPlaybookHeroImage = (
   product: RecordLike
 ): HeroImageResult | null => {
-  if (asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE) {
-    const forcedRoot = resolveRootImage(product);
-    if (forcedRoot) {
-      return forcedRoot;
-    }
+  const mediaHero = resolveImageCollectionHero(
+    readPath(product, ["media", "images"]),
+    ["media", "images"],
+    "live-product-image"
+  );
+  if (mediaHero) {
+    return mediaHero;
   }
 
-  const mediaImages = readPath(product, ["media", "images"]);
-  const prioritizedMediaImages = Array.isArray(mediaImages)
-    ? [...mediaImages].sort((a, b) => {
-        const aCover =
-          asRecord(a)?.isCover === true || asRecord(a)?.cover === true;
-        const bCover =
-          asRecord(b)?.isCover === true || asRecord(b)?.cover === true;
-        return Number(bCover) - Number(aCover);
-      })
-    : [];
-
-  const imageEntries: Array<{ image: unknown; basePath: PathSegment[] }> = [];
-  prioritizedMediaImages.forEach(image => {
-    const originalIndex = (mediaImages as unknown[]).indexOf(image);
-    imageEntries.push({ image, basePath: ["media", "images", originalIndex] });
-  });
-
-  const rootImages = readPath(product, ["images"]);
-  if (Array.isArray(rootImages) && rootImages.length > 0) {
-    imageEntries.push({ image: rootImages[0], basePath: ["images", 0] });
-  }
-
-  for (const entry of imageEntries) {
-    const image = asRecord(entry.image);
-    if (!image) continue;
-
-    const variants = asRecord(image.variants);
-    for (const variantKey of ["FULL", "HIGH_RESOLUTION", "LARGE"]) {
-      const variant = asRecord(variants?.[variantKey]);
-      const url = asImageUrl(variant?.url);
-      if (url) {
-        return {
-          value: url,
-          path: formatFieldPath([
-            ...entry.basePath,
-            "variants",
-            variantKey,
-            "url",
-          ]),
-          variantPath: formatFieldPath([
-            ...entry.basePath,
-            "variants",
-            variantKey,
-          ]),
-          width: parseLooseNumber(variant?.width),
-          height: parseLooseNumber(variant?.height),
-          sourceUsed:
-            entry.basePath[0] === "images" ? "live-product-image" : "fallback",
-        };
-      }
-    }
-
-    const directUrl = asImageUrl(image.url) ?? asImageUrl(image.src);
-    if (directUrl) {
-      return {
-        value: directUrl,
-        path: formatFieldPath([
-          ...entry.basePath,
-          asImageUrl(image.url) ? "url" : "src",
-        ]),
-        variantPath: formatFieldPath(entry.basePath),
-        width: parseLooseNumber(image.width),
-        height: parseLooseNumber(image.height),
-        sourceUsed:
-          entry.basePath[0] === "images" ? "live-product-image" : "fallback",
-      };
-    }
-  }
-
-  const rootFallback = resolveRootImage(product);
-  if (rootFallback) {
-    return rootFallback;
+  const rootHero = resolveRootImage(product);
+  if (rootHero) {
+    return rootHero;
   }
 
   for (const [path, value] of [
@@ -767,6 +764,49 @@ const extractFaqs = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const buildRequirementFaqs = (
+  requirements: string[]
+): Engine6ExtractedFaq[] => {
+  const lowercased = requirements.map(item => item.toLowerCase());
+  const has = (needle: string) =>
+    lowercased.some(item => item.includes(needle));
+  const faqs: Engine6ExtractedFaq[] = [];
+
+  if (has("wheelchair accessible")) {
+    faqs.push({
+      question: "Is this tour wheelchair accessible?",
+      answer: "No. This tour is not wheelchair accessible.",
+    });
+  }
+
+  if (
+    has("back problems") ||
+    has("heart problems") ||
+    has("pregnant travelers")
+  ) {
+    faqs.push({
+      question:
+        "Are there any health restrictions travelers should know about?",
+      answer:
+        "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
+    });
+  }
+
+  if (has("most travelers can participate")) {
+    faqs.push({
+      question: "Can most travelers participate?",
+      answer: "Yes. Most travelers can participate.",
+    });
+  }
+
+  return dedupeStrings(
+    faqs.map(item => `${item.question}|||${item.answer}`)
+  ).map(item => {
+    const [question, answer] = item.split("|||");
+    return { question, answer } satisfies Engine6ExtractedFaq;
+  });
+};
+
 const CATEGORY_ALIASES: Array<{
   slug: string;
   label: string;
@@ -1015,18 +1055,32 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.itinerarySourceUsed =
     itinerary.value.length > 0 ? itinerary.path : null;
 
-  let faqs = extractFaqs(product);
-  if (isTruthProduct && faqs.value.length > 0) {
-    faqs = { value: faqs.value, path: "product.qAndA.items" };
-  }
+  const requirements = extractRequirements(product);
+  diagnostics.requirementsFieldPath = requirements.path;
+
+  const baseFaqs = extractFaqs(product);
+  const requirementFaqs = buildRequirementFaqs(requirements.value);
+  const mergedFaqs = dedupeStrings([
+    ...baseFaqs.value.map(item => `${item.question}|||${item.answer}`),
+    ...requirementFaqs.map(item => `${item.question}|||${item.answer}`),
+  ]).map(item => {
+    const [question, answer] = item.split("|||");
+    return { question, answer } satisfies Engine6ExtractedFaq;
+  });
+  const faqPath =
+    baseFaqs.value.length > 0 && requirementFaqs.length > 0
+      ? "merged:product.qAndA.items+product.additionalInfo"
+      : baseFaqs.value.length > 0
+        ? (baseFaqs.path ?? "product.qAndA.items")
+        : requirementFaqs.length > 0
+          ? "merged:product.additionalInfo"
+          : null;
+  const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
   diagnostics.faqCount = faqs.value.length;
   diagnostics.faqSourceUsed =
     faqs.value.length > 0 ? (faqs.path ?? "derived") : "none";
-
-  const requirements = extractRequirements(product);
-  diagnostics.requirementsFieldPath = requirements.path;
 
   const classification = extractClassification(product);
   diagnostics.classificationFieldPath = classification.path;

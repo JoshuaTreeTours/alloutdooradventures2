@@ -39,7 +39,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               {categoryLabel}
             </p>
           ) : null}
-          <h1 className="mt-3 text-3xl font-bold leading-tight">{tour.title}</h1>
+          <h1 className="mt-3 text-3xl font-bold leading-tight">
+            {tour.title}
+          </h1>
           <p className="mt-2 text-green-100">
             {tour.city}, {tour.state}
           </p>
@@ -111,21 +113,6 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                     {item.description}
                   </p>
                 ) : null}
-              </li>
-            ))}
-          </ul>
-        </ContentSection>
-      ) : null}
-
-      {tour.requirements.length > 0 ? (
-        <ContentSection title="Important info">
-          <ul className="space-y-3">
-            {tour.requirements.map((requirement, index) => (
-              <li
-                key={`${requirement.slice(0, 32)}-${index}`}
-                className="rounded-xl border border-amber-100 bg-amber-50/80 p-4 text-sm leading-6 text-amber-950"
-              >
-                {requirement}
               </li>
             ))}
           </ul>

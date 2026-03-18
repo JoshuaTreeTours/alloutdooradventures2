@@ -61,7 +61,11 @@ const specimenProductPayload = {
         {
           isCover: true,
           variants: {
-            XXLARGE: { url: "https://img.test/incorrect-media-hero.jpg" },
+            XXLARGE: {
+              url: "https://img.test/specimen-media-hero-xxlarge.jpg",
+              width: 1600,
+              height: 1067,
+            },
           },
         },
       ],
@@ -154,16 +158,16 @@ describe("engine6 extractor", () => {
     const extracted = extractEngine6Product(specimenProductPayload);
 
     expect(extracted.extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero-large.jpg"
+      "https://img.test/specimen-media-hero-xxlarge.jpg"
     );
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.images[0].variants[1].url"
+      "product.media.images[0].variants.XXLARGE.url"
     );
     expect(extracted.diagnostics.heroVariantFieldPath).toBe(
-      "product.images[0].variants[1]"
+      "product.media.images[0].variants.XXLARGE"
     );
-    expect(extracted.diagnostics.selectedHeroWidth).toBe(674);
-    expect(extracted.diagnostics.selectedHeroHeight).toBe(446);
+    expect(extracted.diagnostics.selectedHeroWidth).toBe(1600);
+    expect(extracted.diagnostics.selectedHeroHeight).toBe(1067);
     expect(extracted.diagnostics.imageSourceUsed).toBe("live-product-image");
 
     expect(extracted.extracted.priceAmount).toBe(105.09);
@@ -218,11 +222,31 @@ describe("engine6 extractor", () => {
         answer:
           "Yes. The reasonably groomed trails make it approachable for families with small kids.",
       },
+      {
+        question: "Is this tour wheelchair accessible?",
+        answer: "No. This tour is not wheelchair accessible.",
+      },
+      {
+        question:
+          "Are there any health restrictions travelers should know about?",
+        answer:
+          "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
+      },
+      {
+        question: "Can most travelers participate?",
+        answer: "Yes. Most travelers can participate.",
+      },
     ]);
-    expect(extracted.diagnostics.faqsFieldPath).toBe("product.qAndA.items");
-    expect(extracted.diagnostics.faqFieldPath).toBe("product.qAndA.items");
-    expect(extracted.diagnostics.faqCount).toBe(1);
-    expect(extracted.diagnostics.faqSourceUsed).toBe("product.qAndA.items");
+    expect(extracted.diagnostics.faqsFieldPath).toBe(
+      "merged:product.qAndA.items+product.additionalInfo"
+    );
+    expect(extracted.diagnostics.faqFieldPath).toBe(
+      "merged:product.qAndA.items+product.additionalInfo"
+    );
+    expect(extracted.diagnostics.faqCount).toBe(4);
+    expect(extracted.diagnostics.faqSourceUsed).toBe(
+      "merged:product.qAndA.items+product.additionalInfo"
+    );
 
     expect(extracted.extracted.requirements).toEqual([
       "Confirmation will be received at time of booking",
@@ -252,10 +276,10 @@ const specimenApiPayload = {
     commercialPriceFieldPath: "product.priceFrom",
     commercialPriceRawValue: "$105.09",
     priceSourceUsed: "live-price" as const,
-    heroImageFieldPath: "product.images[0].variants[1].url",
-    heroVariantFieldPath: "product.images[0].variants[1]",
-    selectedHeroWidth: 674,
-    selectedHeroHeight: 446,
+    heroImageFieldPath: "product.media.images[0].variants.XXLARGE.url",
+    heroVariantFieldPath: "product.media.images[0].variants.XXLARGE",
+    selectedHeroWidth: 1600,
+    selectedHeroHeight: 1067,
     imageSourceUsed: "live-product-image" as const,
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
@@ -267,10 +291,10 @@ const specimenApiPayload = {
     itineraryItemCount: 1,
     itinerarySourceUsed: "product.itineraryItems",
     meetingPointFieldPath: "product.logistics.start.description",
-    faqsFieldPath: "product.qAndA.items",
-    faqFieldPath: "product.qAndA.items",
-    faqCount: 1,
-    faqSourceUsed: "product.qAndA.items",
+    faqsFieldPath: "merged:product.qAndA.items+product.additionalInfo",
+    faqFieldPath: "merged:product.qAndA.items+product.additionalInfo",
+    faqCount: 4,
+    faqSourceUsed: "merged:product.qAndA.items+product.additionalInfo",
     requirementsFieldPath: "product.additionalInfo",
     classificationFieldPath: "inferred:title+overview+highlights",
   },
@@ -284,8 +308,8 @@ const specimenApiPayload = {
     seoDescription: "Best tour in Springdale. Rated 5/5. 154 reviews.",
     city: "Springdale",
     state: "Utah",
-    heroImageUrl: "https://img.test/specimen-root-hero-large.jpg",
-    cardImageUrl: "https://img.test/specimen-root-hero-large.jpg",
+    heroImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
+    cardImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
     priceAmount: 105.09,
     priceFormatted: "From $105",
     aggregateRating: 5,
@@ -311,6 +335,20 @@ const specimenApiPayload = {
         question: "Is this tour good for families?",
         answer:
           "Yes. The reasonably groomed trails make it approachable for families with small kids.",
+      },
+      {
+        question: "Is this tour wheelchair accessible?",
+        answer: "No. This tour is not wheelchair accessible.",
+      },
+      {
+        question:
+          "Are there any health restrictions travelers should know about?",
+        answer:
+          "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
+      },
+      {
+        question: "Can most travelers participate?",
+        answer: "Yes. Most travelers can participate.",
       },
     ],
     requirements: [
@@ -339,8 +377,9 @@ describe("engine6 mapping/cards/page", () => {
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
     expect(html).toContain("Off Road Tour");
-    expect(html).toContain("Important info");
-    expect(html).toContain("Not wheelchair accessible");
+    expect(html).not.toContain("Important info");
+    expect(html).toContain("not wheelchair accessible");
+    expect(html).toContain("Is this tour wheelchair accessible?");
     expect(html).toContain("FAQs");
     expect(html).toContain("Is this tour good for families?");
     expect(html).not.toContain("Check latest price");
@@ -360,8 +399,8 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
-    expect(resolved.debug.selectedHeroWidth).toBe(674);
-    expect(resolved.debug.selectedHeroHeight).toBe(446);
+    expect(resolved.debug.selectedHeroWidth).toBe(1600);
+    expect(resolved.debug.selectedHeroHeight).toBe(1067);
     expect(resolved.debug.imageSourceUsed).toBe("live-product-image");
     expect(resolved.debug.commercialPriceRawValue).toBe("$105.09");
     expect(resolved.debug.priceSourceUsed).toBe("live-price");
@@ -370,9 +409,13 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.itineraryFieldPath).toBe("product.itineraryItems");
     expect(resolved.debug.itineraryItemCount).toBe(1);
     expect(resolved.debug.itinerarySourceUsed).toBe("product.itineraryItems");
-    expect(resolved.debug.faqsFieldPath).toBe("product.qAndA.items");
-    expect(resolved.debug.faqCount).toBe(1);
-    expect(resolved.debug.faqSourceUsed).toBe("product.qAndA.items");
+    expect(resolved.debug.faqsFieldPath).toBe(
+      "merged:product.qAndA.items+product.additionalInfo"
+    );
+    expect(resolved.debug.faqCount).toBe(4);
+    expect(resolved.debug.faqSourceUsed).toBe(
+      "merged:product.qAndA.items+product.additionalInfo"
+    );
     expect(resolved.debug.requirementsFieldPath).toBe("product.additionalInfo");
     expect(resolved.debug.highlightClassificationReason).toContain(
       "product.highlights kept as selling-point bullets"
@@ -408,6 +451,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.tour?.heroImageUrl).toContain("unsplash.com");
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
+    expect(html).not.toContain("Important info");
   });
 });
 

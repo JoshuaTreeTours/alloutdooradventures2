@@ -54,7 +54,9 @@
           "isCover": true,
           "variants": {
             "XXLARGE": {
-              "url": "https://img.test/incorrect-media-hero.jpg"
+              "url": "https://img.test/specimen-media-hero-xxlarge.jpg",
+              "width": 1600,
+              "height": 1067
             }
           }
         }

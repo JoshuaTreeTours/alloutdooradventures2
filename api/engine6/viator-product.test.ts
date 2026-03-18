@@ -54,7 +54,7 @@ describe("/api/engine6/viator-product", () => {
       })
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero-large.jpg"
+      "https://img.test/specimen-media-hero-xxlarge.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.aggregateRating).toBe(5);
@@ -213,7 +213,7 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero-large.jpg"
+      "https://img.test/specimen-media-hero-xxlarge.jpg"
     );
   });
 
@@ -274,7 +274,11 @@ describe("/api/engine6/viator-product", () => {
                 {
                   isCover: true,
                   variants: {
-                    FULL: { url: "https://img.test/wrong-media.jpg" },
+                    XXLARGE: {
+                      url: "https://img.test/specimen-media-hero-xxlarge.jpg",
+                      width: 1600,
+                      height: 1067,
+                    },
                   },
                 },
               ],
@@ -297,18 +301,18 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-root-hero-large.jpg"
+      "https://img.test/specimen-media-hero-xxlarge.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.aggregateRating).toBe(5);
     expect((res.body as any).extracted.reviewCount).toBe(154);
     expect((res.body as any).extracted.itinerary).toHaveLength(1);
-    expect((res.body as any).extracted.faqs).toHaveLength(1);
+    expect((res.body as any).extracted.faqs).toHaveLength(2);
     expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
-      "product.images[0].variants[1].url"
+      "product.media.images[0].variants.XXLARGE.url"
     );
     expect((res.body as any).diagnostics.heroVariantFieldPath).toBe(
-      "product.images[0].variants[1]"
+      "product.media.images[0].variants.XXLARGE"
     );
     expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
@@ -329,7 +333,7 @@ describe("/api/engine6/viator-product", () => {
       "product.highlights"
     );
     expect((res.body as any).diagnostics.faqFieldPath).toBe(
-      "product.qAndA.items"
+      "merged:product.qAndA.items+product.additionalInfo"
     );
     expect((res.body as any).diagnostics.requirementsFieldPath).toBe(
       "product.additionalInfo"
