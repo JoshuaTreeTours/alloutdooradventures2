@@ -20,8 +20,11 @@ const buildDiagnostics = (hasViatorApiKey: boolean) => ({
   heroImageFieldPath: null as string | null,
   ratingFieldPath: null as string | null,
   reviewCountFieldPath: null as string | null,
+  overviewFieldPath: null as string | null,
+  highlightsFieldPath: null as string | null,
   itineraryFieldPath: null as string | null,
   meetingPointFieldPath: null as string | null,
+  faqsFieldPath: null as string | null,
 });
 
 export default async function handler(req: any, res: any) {
@@ -30,7 +33,9 @@ export default async function handler(req: any, res: any) {
     return;
   }
 
-  const productCode = String(req.query?.productCode ?? "").trim().toUpperCase();
+  const productCode = String(req.query?.productCode ?? "")
+    .trim()
+    .toUpperCase();
   if (!productCode) {
     res.status(400).json({ error: "productCode query param is required" });
     return;
@@ -102,7 +107,10 @@ export default async function handler(req: any, res: any) {
     const extraction = extractEngine6Product(payload);
     Object.assign(diagnostics, extraction.diagnostics);
 
-    res.setHeader("Cache-Control", "public, s-maxage=300, stale-while-revalidate=1800");
+    res.setHeader(
+      "Cache-Control",
+      "public, s-maxage=300, stale-while-revalidate=1800"
+    );
     res.status(200).json({
       source: "live-api",
       diagnostics,

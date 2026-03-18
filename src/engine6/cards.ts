@@ -10,6 +10,19 @@ export type Engine6Card = {
   href: string;
 };
 
+const buildCardDescription = (tour: Engine6Tour) => {
+  const overviewSentence = tour.overviewText?.split(/\n\n+/)[0]?.trim();
+  if (overviewSentence) {
+    return overviewSentence;
+  }
+
+  if (tour.highlights.length > 0) {
+    return tour.highlights[0];
+  }
+
+  return `Best tour in ${tour.city} for jeep and off-road views around Zion.`;
+};
+
 export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
   imageUrl: tour.cardImageUrl,
   title: tour.title,
@@ -19,7 +32,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
       ? `${tour.aggregateRating.toFixed(1)} (${tour.reviewCount})`
       : "No ratings yet",
   priceLabel: tour.priceFormatted,
-  description: `Best tour in ${tour.city} for jeep and off-road views around Zion.`,
+  description: buildCardDescription(tour),
   href: `/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour`,
 });
 

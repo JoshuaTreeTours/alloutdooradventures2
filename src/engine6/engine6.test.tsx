@@ -13,24 +13,54 @@ import {
   resolveEngine6SpecimenResponse,
 } from "../pages/engine6/Engine6SpecimenRoute";
 
-describe("engine6 extractor", () => {
-  it("resolves non-primary booking option pricing and hero", () => {
-    const extracted = extractEngine6Product({
-      product: {
-        title: "East Zion Top of the World Jeep Tour",
-        location: { city: "Springdale", state: "Utah" },
-        bookingOptions: [
-          { pricing: { summary: { fromPrice: 0 } } },
-          { pricing: { summary: { fromPrice: 149 } } },
-        ],
-        media: {
-          images: [{ variants: { LARGE: { url: "https://img.test/hero.jpg" } } }],
-        },
-        reviews: { combinedAverageRating: 5, totalReviews: 274 },
-        logistics: { start: { description: "Meet at East Zion Adventures" } },
-        itineraryItems: [{ title: "Top of the World", description: "Views" }],
+const liveShapedProduct = {
+  product: {
+    productCode: "163873P16",
+    title: "East Zion Top of the World Jeep Tour",
+    description: {
+      text: "<p>Climb high above East Zion in an off-road Jeep with a guide who shares local canyon context.</p><p>Expect sweeping overlooks and a smoother way to cover rugged terrain.</p>",
+    },
+    highlights: [
+      "Ride to elevated East Zion viewpoints by Jeep",
+      "See broad desert and canyon panoramas",
+      "Travel with a local guide who handles the rugged road",
+    ],
+    location: { city: "Springdale", state: "Utah" },
+    bookingOptions: [
+      { pricing: { summary: { fromPrice: 0 } } },
+      { pricing: { summary: { fromPrice: 149 } } },
+    ],
+    media: {
+      images: [{ variants: { LARGE: { url: "https://img.test/hero.jpg" } } }],
+    },
+    reviews: { combinedAverageRating: 5, totalReviews: 274 },
+    logistics: { start: { description: "Meet at East Zion Adventures" } },
+    itineraryItems: [
+      {
+        title: "Top of the World",
+        description:
+          "Reach a high overlook with wide desert and Zion-area views.",
+        duration: "30 minutes",
       },
-    });
+      {
+        title: "Backcountry trail",
+        summary: "Ride rugged sections with your guide handling route choices.",
+      },
+    ],
+    qAndA: {
+      items: [
+        {
+          q: "Is this tour suitable for first-time visitors?",
+          a: "Yes. It is a good way to get elevated views without hiking long distances.",
+        },
+      ],
+    },
+  },
+};
+
+describe("engine6 extractor", () => {
+  it("resolves pricing, hero image, overview, highlights, itinerary, and faqs", () => {
+    const extracted = extractEngine6Product(liveShapedProduct);
 
     expect(extracted.extracted.priceAmount).toBe(149);
     expect(extracted.diagnostics.commercialPriceFieldPath).toBe(
@@ -40,6 +70,26 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
       "product.media.images[0].variants.LARGE.url"
     );
+    expect(extracted.extracted.overviewText).toContain(
+      "Climb high above East Zion"
+    );
+    expect(extracted.diagnostics.overviewFieldPath).toBe(
+      "product.description.text"
+    );
+    expect(extracted.extracted.highlights).toHaveLength(3);
+    expect(extracted.diagnostics.highlightsFieldPath).toBe(
+      "product.highlights"
+    );
+    expect(extracted.extracted.itinerary[0].duration).toBe("30 minutes");
+    expect(extracted.diagnostics.itineraryFieldPath).toBe(
+      "product.itineraryItems"
+    );
+    expect(extracted.extracted.faqs[0]).toEqual({
+      question: "Is this tour suitable for first-time visitors?",
+      answer:
+        "Yes. It is a good way to get elevated views without hiking long distances.",
+    });
+    expect(extracted.diagnostics.faqsFieldPath).toBe("product.qAndA.items");
   });
 });
 
@@ -56,8 +106,11 @@ const specimenApiPayload = {
     heroImageFieldPath: "product.media.images[0].variants.LARGE.url",
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
+    overviewFieldPath: "product.description.text",
+    highlightsFieldPath: "product.highlights",
     itineraryFieldPath: "product.itineraryItems",
     meetingPointFieldPath: "product.logistics.start.description",
+    faqsFieldPath: "product.qAndA.items",
   },
   rawProductCode: "163873P16",
   rawProduct: {
@@ -66,7 +119,7 @@ const specimenApiPayload = {
   extracted: {
     title: "East Zion Top of the World Jeep Tour",
     seoTitle: "East Zion Top of the World Jeep Tour in Springdale",
-    seoDescription: "Best tour in Springdale with off-road views.",
+    seoDescription: "Best tour in Springdale. Rated 4.9/5. 274 reviews.",
     city: "Springdale",
     state: "Utah",
     heroImageUrl: "https://img.test/hero.jpg",
@@ -76,7 +129,27 @@ const specimenApiPayload = {
     aggregateRating: 4.9,
     reviewCount: 274,
     meetingPointText: "Meet at East Zion Adventures",
-    itinerary: [{ title: "Stop 1" }],
+    overviewText:
+      "Climb high above East Zion in an off-road Jeep with a guide who shares local canyon context.",
+    highlights: [
+      "Ride to elevated East Zion viewpoints by Jeep",
+      "See broad desert and canyon panoramas",
+    ],
+    itinerary: [
+      {
+        title: "Top of the World",
+        description:
+          "Reach a high overlook with wide desert and Zion-area views.",
+        duration: "30 minutes",
+      },
+    ],
+    faqs: [
+      {
+        question: "Is this tour suitable for first-time visitors?",
+        answer:
+          "Yes. It is a good way to get elevated views without hiking long distances.",
+      },
+    ],
   },
 };
 
@@ -91,7 +164,10 @@ describe("engine6 mapping/cards/page", () => {
     expect(tour.productCode).toBe("163873P16");
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $129");
-    expect(html).toContain("Tour itinerary");
+    expect(html).toContain("Overview");
+    expect(html).toContain("Highlights");
+    expect(html).toContain("Itinerary");
+    expect(html).toContain("FAQs");
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
     );
@@ -109,11 +185,13 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("East Zion Top of the World Jeep Tour");
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
-    expect(resolved.debug.hasExtractedTitle).toBe(true);
+    expect(resolved.debug.overviewFieldPath).toBe("product.description.text");
+    expect(resolved.debug.highlightsFieldPath).toBe("product.highlights");
+    expect(resolved.debug.faqsFieldPath).toBe("product.qAndA.items");
     expect(resolved.debug.failureReason).toBeNull();
   });
 
-  it("still renders a partial specimen instead of collapsing to not-found", () => {
+  it("still renders cleanly when overview, highlights, itinerary, and faqs are missing", () => {
     const resolved = resolveEngine6SpecimenResponse({
       payload: {
         ...specimenApiPayload,
@@ -121,7 +199,10 @@ describe("engine6 mapping/cards/page", () => {
           ...specimenApiPayload.extracted,
           title: null,
           heroImageUrl: null,
-          priceFormatted: null,
+          overviewText: null,
+          highlights: [],
+          itinerary: [],
+          faqs: [],
         },
       },
       httpStatus: 200,
@@ -129,17 +210,25 @@ describe("engine6 mapping/cards/page", () => {
       apiUrl: buildEngine6SpecimenApiUrl("163873P16"),
     });
 
+    const html = renderToString(<Engine6TourPage tour={resolved.tour!} />);
+
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("Utah Off-Road Adventure");
     expect(resolved.tour?.heroImageUrl).toContain("unsplash.com");
+    expect(html).not.toContain("Overview");
+    expect(html).not.toContain("FAQs");
   });
 });
 
 describe("engine6 route wiring", () => {
   it("registers the specimen route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
-    const engine6RouteIndex = source.indexOf('<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />');
-    const genericRouteIndex = source.indexOf('path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"');
+    const engine6RouteIndex = source.indexOf(
+      "<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
 
     expect(engine6RouteIndex).toBeGreaterThan(-1);
     expect(genericRouteIndex).toBeGreaterThan(-1);

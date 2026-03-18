@@ -51,7 +51,10 @@ describe("/api/engine6/viator-product", () => {
       ok: true,
       status: 200,
       headers: new Headers({ "content-type": "application/json" }),
-      text: async () => JSON.stringify({ product: { productCode: "163873P16", title: "Tour" } }),
+      text: async () =>
+        JSON.stringify({
+          product: { productCode: "163873P16", title: "Tour" },
+        }),
     } as Response);
 
     const req = { method: "GET", query: { productCode: "163873P16" } };
@@ -84,6 +87,14 @@ describe("/api/engine6/viator-product", () => {
           product: {
             productCode: "163873P16",
             title: "East Zion Top of the World Jeep Tour",
+            description: { text: "<p>Climb high above East Zion.</p>" },
+            highlights: ["Ride to elevated viewpoints by Jeep"],
+            itineraryItems: [
+              { title: "Top of the World", description: "Scenic overlook" },
+            ],
+            qAndA: {
+              items: [{ q: "What should I bring?", a: "Bring water." }],
+            },
             pricing: { summary: { fromPrice: 129 } },
           },
         }),
@@ -97,5 +108,20 @@ describe("/api/engine6/viator-product", () => {
     expect(res.statusCode).toBe(200);
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.priceAmount).toBe(129);
+    expect((res.body as any).extracted.overviewText).toContain(
+      "Climb high above East Zion"
+    );
+    expect((res.body as any).diagnostics.overviewFieldPath).toBe(
+      "product.description.text"
+    );
+    expect((res.body as any).diagnostics.highlightsFieldPath).toBe(
+      "product.highlights"
+    );
+    expect((res.body as any).diagnostics.itineraryFieldPath).toBe(
+      "product.itineraryItems"
+    );
+    expect((res.body as any).diagnostics.faqsFieldPath).toBe(
+      "product.qAndA.items"
+    );
   });
 });

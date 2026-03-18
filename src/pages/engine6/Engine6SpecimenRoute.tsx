@@ -14,6 +14,10 @@ export type Engine6SpecimenDebug = {
   hasRawProductTitle: boolean;
   source: string | null;
   diagnosticsReturned: boolean;
+  overviewFieldPath: string | null;
+  highlightsFieldPath: string | null;
+  itineraryFieldPath: string | null;
+  faqsFieldPath: string | null;
   failureReason: string | null;
 };
 
@@ -42,6 +46,10 @@ export const buildInitialEngine6SpecimenDebug = (
   hasRawProductTitle: false,
   source: null,
   diagnosticsReturned: false,
+  overviewFieldPath: null,
+  highlightsFieldPath: null,
+  itineraryFieldPath: null,
+  faqsFieldPath: null,
   failureReason: null,
 });
 
@@ -77,20 +85,57 @@ export const resolveEngine6SpecimenResponse = ({
     ...fallbackDebug,
     httpStatus,
     parsedJsonKeys: Object.keys(payload),
-    hasExtractedTitle: typeof extracted?.title === "string" && extracted.title.trim().length > 0,
-    hasRawProductTitle: typeof rawProduct?.title === "string" && rawProduct.title.trim().length > 0,
+    hasExtractedTitle:
+      typeof extracted?.title === "string" && extracted.title.trim().length > 0,
+    hasRawProductTitle:
+      typeof rawProduct?.title === "string" &&
+      rawProduct.title.trim().length > 0,
     source: typeof payload.source === "string" ? payload.source : null,
     diagnosticsReturned: isRecord(payload.diagnostics),
+    overviewFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .overviewFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .overviewFieldPath as string)
+        : null,
+    highlightsFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .highlightsFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .highlightsFieldPath as string)
+        : null,
+    itineraryFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .itineraryFieldPath === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .itineraryFieldPath as string)
+        : null,
+    faqsFieldPath:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>).faqsFieldPath ===
+        "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .faqsFieldPath as string)
+        : null,
     failureReason: null,
   };
 
   if (!extracted) {
     return {
       tour: null,
-      error: payloadError ?? "Engine6 API response did not include extracted data",
+      error:
+        payloadError ?? "Engine6 API response did not include extracted data",
       debug: {
         ...debug,
-        failureReason: httpStatus >= 400 ? "api-error-response" : "missing-extracted-data",
+        failureReason:
+          httpStatus >= 400 ? "api-error-response" : "missing-extracted-data",
       },
     };
   }
@@ -98,7 +143,7 @@ export const resolveEngine6SpecimenResponse = ({
   try {
     return {
       tour: mapViatorToEngine6Tour(payload as Engine6ApiResponse),
-      error: httpStatus >= 400 ? payloadError ?? "Engine6 API failed" : null,
+      error: httpStatus >= 400 ? (payloadError ?? "Engine6 API failed") : null,
       debug: {
         ...debug,
         failureReason: httpStatus >= 400 ? "api-error-response" : null,
@@ -108,7 +153,9 @@ export const resolveEngine6SpecimenResponse = ({
     return {
       tour: null,
       error:
-        error instanceof Error ? error.message : "Engine6 mapping failed for the specimen response",
+        error instanceof Error
+          ? error.message
+          : "Engine6 mapping failed for the specimen response",
       debug: {
         ...debug,
         failureReason: "mapping-failed",
@@ -117,16 +164,25 @@ export const resolveEngine6SpecimenResponse = ({
   }
 };
 
-const Engine6SpecimenDiagnostics = ({ debug }: { debug: Engine6SpecimenDebug }) => {
-  const jsonKeysLabel = debug.parsedJsonKeys.length > 0 ? debug.parsedJsonKeys.join(", ") : "none";
+const Engine6SpecimenDiagnostics = ({
+  debug,
+}: {
+  debug: Engine6SpecimenDebug;
+}) => {
+  const jsonKeysLabel =
+    debug.parsedJsonKeys.length > 0 ? debug.parsedJsonKeys.join(", ") : "none";
 
   return (
     <section className="mx-auto mt-6 max-w-6xl px-4 pb-12">
       <details className="rounded-xl border border-green-200 bg-white/80 p-4 text-sm text-slate-700 shadow-sm">
-        <summary className="cursor-pointer font-semibold text-green-900">Engine6 specimen diagnostics</summary>
+        <summary className="cursor-pointer font-semibold text-green-900">
+          Engine6 specimen diagnostics
+        </summary>
         <dl className="mt-3 grid gap-2 sm:grid-cols-2">
           <div>
-            <dt className="font-medium text-slate-900">Requested product code</dt>
+            <dt className="font-medium text-slate-900">
+              Requested product code
+            </dt>
             <dd>{debug.requestedProductCode}</dd>
           </div>
           <div>
@@ -142,16 +198,36 @@ const Engine6SpecimenDiagnostics = ({ debug }: { debug: Engine6SpecimenDebug }) 
             <dd>{jsonKeysLabel}</dd>
           </div>
           <div>
-            <dt className="font-medium text-slate-900">Extracted title present</dt>
+            <dt className="font-medium text-slate-900">
+              Extracted title present
+            </dt>
             <dd>{debug.hasExtractedTitle ? "yes" : "no"}</dd>
           </div>
           <div>
-            <dt className="font-medium text-slate-900">Raw product title present</dt>
+            <dt className="font-medium text-slate-900">
+              Raw product title present
+            </dt>
             <dd>{debug.hasRawProductTitle ? "yes" : "no"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Source</dt>
             <dd>{debug.source ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Overview path</dt>
+            <dd>{debug.overviewFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Highlights path</dt>
+            <dd>{debug.highlightsFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Itinerary path</dt>
+            <dd>{debug.itineraryFieldPath ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">FAQs path</dt>
+            <dd>{debug.faqsFieldPath ?? "missing upstream"}</dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Failure reason</dt>
@@ -193,7 +269,10 @@ export default function Engine6SpecimenRoute() {
               tour: null,
               error: "Engine6 API returned invalid JSON",
               debug: {
-                ...buildInitialEngine6SpecimenDebug(requestedProductCode, apiUrl),
+                ...buildInitialEngine6SpecimenDebug(
+                  requestedProductCode,
+                  apiUrl
+                ),
                 httpStatus: response.status,
                 failureReason: "invalid-json",
               },
@@ -220,7 +299,10 @@ export default function Engine6SpecimenRoute() {
         if (!isDisposed) {
           setState({
             tour: null,
-            error: error instanceof Error ? error.message : "Engine6 specimen fetch failed",
+            error:
+              error instanceof Error
+                ? error.message
+                : "Engine6 specimen fetch failed",
             debug: {
               ...buildInitialEngine6SpecimenDebug(requestedProductCode, apiUrl),
               failureReason: "request-failed",
@@ -237,7 +319,11 @@ export default function Engine6SpecimenRoute() {
   }, [apiUrl, requestedProductCode]);
 
   if (state.isLoading) {
-    return <main className="mx-auto max-w-4xl px-6 py-16">Loading Engine6 tour…</main>;
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16">
+        Loading Engine6 tour…
+      </main>
+    );
   }
 
   if (state.error && !state.tour) {
@@ -245,7 +331,9 @@ export default function Engine6SpecimenRoute() {
       <>
         <main className="mx-auto max-w-4xl px-6 py-16">
           <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-red-950">
-            <h1 className="text-2xl font-semibold">Engine6 specimen unavailable</h1>
+            <h1 className="text-2xl font-semibold">
+              Engine6 specimen unavailable
+            </h1>
             <p className="mt-3 text-sm leading-6">{state.error}</p>
           </div>
         </main>
@@ -259,9 +347,12 @@ export default function Engine6SpecimenRoute() {
       <>
         <main className="mx-auto max-w-4xl px-6 py-16">
           <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 text-amber-950">
-            <h1 className="text-2xl font-semibold">Engine6 specimen did not map to a tour</h1>
+            <h1 className="text-2xl font-semibold">
+              Engine6 specimen did not map to a tour
+            </h1>
             <p className="mt-3 text-sm leading-6">
-              The Engine6 API responded, but the specimen page could not build a renderable tour model.
+              The Engine6 API responded, but the specimen page could not build a
+              renderable tour model.
             </p>
           </div>
         </main>

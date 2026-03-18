@@ -4,6 +4,33 @@ export type Engine6ItineraryItem = {
   duration?: string;
 };
 
+export type Engine6FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type Engine6TourDiagnostics = {
+  source: "live-api" | "bundled-fallback";
+  commercialPriceFieldPath: string | null;
+  heroImageFieldPath: string | null;
+  ratingFieldPath: string | null;
+  reviewCountFieldPath: string | null;
+  overviewFieldPath: string | null;
+  highlightsFieldPath: string | null;
+  meetingPointFieldPath: string | null;
+  itineraryFieldPath: string | null;
+  faqsFieldPath: string | null;
+};
+
+export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
+  hasViatorApiKey: boolean;
+  attemptedLiveFetch: boolean;
+  upstreamStatus: number | null;
+  upstreamContentType: string | null;
+  upstreamOk: boolean | null;
+  usedBundledFallbackBecause: string;
+};
+
 export type Engine6Tour = {
   productCode: string;
   title: string;
@@ -18,35 +45,17 @@ export type Engine6Tour = {
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string;
+  overviewText: string | null;
+  highlights: string[];
   itinerary: Engine6ItineraryItem[];
+  faqs: Engine6FaqItem[];
   bookingUrl: string;
-  diagnostics: {
-    source: "live-api" | "bundled-fallback";
-    commercialPriceFieldPath: string | null;
-    heroImageFieldPath: string | null;
-    ratingFieldPath: string | null;
-    reviewCountFieldPath: string | null;
-    meetingPointFieldPath: string | null;
-    itineraryFieldPath: string | null;
-  };
+  diagnostics: Engine6TourDiagnostics;
 };
 
 export type Engine6ApiResponse = {
   source: "live-api" | "bundled-fallback";
-  diagnostics: {
-    hasViatorApiKey: boolean;
-    attemptedLiveFetch: boolean;
-    upstreamStatus: number | null;
-    upstreamContentType: string | null;
-    upstreamOk: boolean | null;
-    usedBundledFallbackBecause: string;
-    commercialPriceFieldPath: string | null;
-    heroImageFieldPath: string | null;
-    ratingFieldPath: string | null;
-    reviewCountFieldPath: string | null;
-    itineraryFieldPath: string | null;
-    meetingPointFieldPath: string | null;
-  };
+  diagnostics: Engine6ApiDiagnostics;
   rawProductCode: string;
   rawProduct: Record<string, unknown> | null;
   extracted: {
@@ -62,6 +71,9 @@ export type Engine6ApiResponse = {
     aggregateRating: number | null;
     reviewCount: number | null;
     meetingPointText: string | null;
+    overviewText: string | null;
+    highlights: string[];
     itinerary: Engine6ItineraryItem[];
+    faqs: Engine6FaqItem[];
   };
 };
