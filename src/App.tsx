@@ -250,6 +250,7 @@ export default function App() {
           component={MexicoCityBookSlugRedirect}
         />
 
+        <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
@@ -291,7 +292,6 @@ export default function App() {
           path={ENGINE5_PROOF_TOUR_ROUTE_PATTERN}
           component={Engine5ProofTourPage}
         />
-        <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
         <Route path="/guides" component={GuidesIndex} />
         <Route path="/guides/us" component={UsGuidesIndex} />
         <Route
