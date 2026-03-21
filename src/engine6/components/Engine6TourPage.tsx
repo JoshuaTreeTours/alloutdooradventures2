@@ -22,6 +22,40 @@ const formatCategoryLabel = (value: string | null) =>
         .join(" ")
     : null;
 
+const RatingSummary = ({
+  aggregateRating,
+  reviewCount,
+}: {
+  aggregateRating: number | null;
+  reviewCount: number | null;
+}) => {
+  const ratingLabel =
+    typeof aggregateRating === "number" ? aggregateRating.toFixed(1) : "N/A";
+  const totalReviews = reviewCount ?? 0;
+
+  return (
+    <div className="mt-4">
+      <div
+        className="flex items-center gap-1"
+        aria-label={`Rated ${ratingLabel} out of 5 stars`}
+      >
+        {Array.from({ length: 5 }, (_, index) => (
+          <span
+            key={index}
+            aria-hidden="true"
+            className="text-lg leading-none text-amber-300"
+          >
+            ★
+          </span>
+        ))}
+      </div>
+      <p className="mt-2 text-sm font-semibold text-white">
+        {ratingLabel} rating • {totalReviews} reviews
+      </p>
+    </div>
+  );
+};
+
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const categoryLabel = formatCategoryLabel(tour.primaryCategory);
 
@@ -45,9 +79,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           <p className="mt-2 text-green-100">
             {tour.city}, {tour.state}
           </p>
-          <p className="mt-4">
-            ⭐ {tour.aggregateRating ?? "N/A"} ({tour.reviewCount ?? 0} reviews)
-          </p>
+          <RatingSummary
+            aggregateRating={tour.aggregateRating}
+            reviewCount={tour.reviewCount}
+          />
           <p className="mt-2 font-semibold">
             Starting price: {tour.priceFormatted}
           </p>
@@ -138,6 +173,27 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </div>
         </ContentSection>
       ) : null}
+
+      <section className="mt-8 rounded-3xl bg-green-900 px-6 py-8 text-center text-white shadow-lg">
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-200">
+          Ready to reserve?
+        </p>
+        <h2 className="mt-3 text-3xl font-bold">
+          Lock in your Engine6 adventure today.
+        </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-green-100">
+          Secure your spot, confirm the latest availability, and review final
+          departure details on the booking page before checkout.
+        </p>
+        <a
+          href={tour.bookingUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="mt-6 inline-block rounded-lg bg-white px-5 py-3 font-semibold text-green-800"
+        >
+          Book now
+        </a>
+      </section>
     </main>
   );
 }

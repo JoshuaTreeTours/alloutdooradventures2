@@ -377,12 +377,19 @@ describe("engine6 mapping/cards/page", () => {
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
     expect(html).toContain("Off Road Tour");
+    expect(html).toContain("Rated 5.0 out of 5 stars");
+    expect(html.match(/★/g) ?? []).toHaveLength(5);
+    expect(html).toContain("5.0");
+    expect(html).toContain("154");
+    expect(html).toContain("rating •");
     expect(html).not.toContain("Important info");
     expect(html).toContain("not wheelchair accessible");
     expect(html).toContain("Is this tour wheelchair accessible?");
     expect(html).toContain("FAQs");
     expect(html).toContain("Is this tour good for families?");
     expect(html).not.toContain("Check latest price");
+    expect(html).toContain("Lock in your Engine6 adventure today.");
+    expect(html.match(/>Book now</g) ?? []).toHaveLength(2);
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
     );
