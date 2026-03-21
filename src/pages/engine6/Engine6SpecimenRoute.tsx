@@ -42,6 +42,14 @@ type Engine6SpecimenViewState = {
   isLoading: boolean;
 };
 
+export const shouldShowEngine6Diagnostics = (search: string, isDev = false) => {
+  if (isDev) {
+    return true;
+  }
+
+  return new URLSearchParams(search).get("engine6Debug") === "1";
+};
+
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === "object" && !Array.isArray(value);
 
@@ -411,7 +419,9 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.requirementsFieldPath ?? "missing upstream"}</dd>
           </div>
           <div>
-            <dt className="font-medium text-slate-900">Highlight classification</dt>
+            <dt className="font-medium text-slate-900">
+              Highlight classification
+            </dt>
             <dd>{debug.highlightClassificationReason ?? "none"}</dd>
           </div>
           <div>
@@ -444,6 +454,16 @@ export default function Engine6SpecimenRoute() {
     debug: buildInitialEngine6SpecimenDebug(requestedProductCode, apiUrl),
     isLoading: true,
   }));
+  const showDiagnostics = useMemo(() => {
+    if (typeof window === "undefined") {
+      return false;
+    }
+
+    return shouldShowEngine6Diagnostics(
+      window.location.search,
+      typeof process !== "undefined" && process.env.NODE_ENV === "development"
+    );
+  }, []);
 
   useEffect(() => {
     let isDisposed = false;
@@ -530,7 +550,9 @@ export default function Engine6SpecimenRoute() {
             <p className="mt-3 text-sm leading-6">{state.error}</p>
           </div>
         </main>
-        <Engine6SpecimenDiagnostics debug={state.debug} />
+        {showDiagnostics ? (
+          <Engine6SpecimenDiagnostics debug={state.debug} />
+        ) : null}
       </>
     );
   }
@@ -549,7 +571,9 @@ export default function Engine6SpecimenRoute() {
             </p>
           </div>
         </main>
-        <Engine6SpecimenDiagnostics debug={state.debug} />
+        {showDiagnostics ? (
+          <Engine6SpecimenDiagnostics debug={state.debug} />
+        ) : null}
       </>
     );
   }
@@ -557,7 +581,9 @@ export default function Engine6SpecimenRoute() {
   return (
     <>
       <Engine6TourPage tour={state.tour} />
-      <Engine6SpecimenDiagnostics debug={state.debug} />
+      {showDiagnostics ? (
+        <Engine6SpecimenDiagnostics debug={state.debug} />
+      ) : null}
     </>
   );
 }

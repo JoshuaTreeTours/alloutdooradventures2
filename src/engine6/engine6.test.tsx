@@ -4,14 +4,30 @@ import { describe, expect, it } from "vitest";
 import { renderToString } from "react-dom/server";
 
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
+import TourCard from "../components/TourCard";
+import {
+  getCityTourDetailPath,
+  getToursByCity,
+  getToursByState,
+} from "../data/tours";
+import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
+import {
+  ENGINE6_163873P16_CARD_IMAGE_URL,
+  engine6SpecimenTour,
+} from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { ENGINE6_SPECIMEN_ROUTE } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
   resolveEngine6SpecimenResponse,
+  shouldShowEngine6Diagnostics,
 } from "../pages/engine6/Engine6SpecimenRoute";
+
+(globalThis as { location?: { pathname: string } }).location = {
+  pathname: "/",
+};
 
 const specimenProductPayload = {
   product: {
@@ -483,6 +499,80 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
+  });
+});
+
+describe("engine6 diagnostics visibility", () => {
+  it("keeps diagnostics hidden by default and allows an explicit debug query", () => {
+    expect(shouldShowEngine6Diagnostics("")).toBe(false);
+    expect(shouldShowEngine6Diagnostics("?engine6Debug=1")).toBe(true);
+    expect(shouldShowEngine6Diagnostics("", true)).toBe(true);
+  });
+});
+
+describe("engine6 listing surfaces", () => {
+  it("adds 163873P16 to Utah and Springdale listing sources", () => {
+    const utahTours = getToursByState("utah");
+    const springdaleTours = getToursByCity("utah", "springdale");
+    const springdaleTopTours = getTopToursForPlace(
+      {
+        type: "city",
+        slug: "springdale",
+        name: "Springdale",
+        parentSlug: "utah",
+        parentName: "Utah",
+        regionType: "state",
+      },
+      { min: 3, max: 12 }
+    );
+
+    expect(utahTours.some(tour => tour.productCode === "163873P16")).toBe(true);
+    expect(springdaleTours.some(tour => tour.productCode === "163873P16")).toBe(
+      true
+    );
+    expect(
+      springdaleTopTours.some(tour => tour.productCode === "163873P16")
+    ).toBe(true);
+  });
+
+  it("renders the listing card with the resolved Engine6 image and normalized content", () => {
+    const listingTour = getToursByCity("utah", "springdale").find(
+      tour => tour.productCode === "163873P16"
+    );
+
+    expect(listingTour).toBeDefined();
+    expect(listingTour?.primaryImageUrl).toBe(ENGINE6_163873P16_CARD_IMAGE_URL);
+    expect(listingTour?.heroImage).toBe(ENGINE6_163873P16_CARD_IMAGE_URL);
+
+    const html = renderToString(
+      <TourCard
+        tour={listingTour!}
+        href={getCityTourDetailPath(listingTour!)}
+      />
+    );
+
+    expect(html).toContain(`src="${ENGINE6_163873P16_CARD_IMAGE_URL}"`);
+    expect(html).toContain("Springdale, Utah");
+    expect(html).toContain("East Zion Top of the World Jeep Tour");
+    expect(html).toContain("★");
+    expect(html).toContain("5.0");
+    expect(html).toContain("154");
+    expect(html).toContain("reviews");
+    expect(html).toContain("From");
+    expect(html).toContain("$105");
+    expect(html).toContain("Grab bird’s-eye views of Zion National Park");
+    expect(html).toContain(
+      'href="/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"'
+    );
+  });
+
+  it("keeps the Engine6 specimen card helper aligned with the resolved hero image", () => {
+    const card = toEngine6Card(engine6SpecimenTour);
+
+    expect(card.imageUrl).toBe(ENGINE6_163873P16_CARD_IMAGE_URL);
+    expect(card.locationLabel).toBe("Springdale, Utah");
+    expect(card.priceLabel).toBe("From $105");
+    expect(card.ratingLabel).toBe("5.0 (154)");
   });
 });
 
