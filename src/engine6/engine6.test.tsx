@@ -376,13 +376,29 @@ describe("engine6 mapping/cards/page", () => {
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
+    expect(html).toContain('data-testid="engine6-hero-banner"');
+    expect(html).toContain('data-testid="engine6-commercial-facts"');
+    expect(html).toContain(
+      'src="https://img.test/specimen-media-hero-xxlarge.jpg"'
+    );
+    expect(html).toContain("From:</strong>");
+    expect(html).toContain("From $105");
+    expect(html).toContain("per person");
+    expect(html).toContain("Meeting point:</strong>");
+    expect(html).toContain("Meet us at Zion Mountain Ranch!");
     expect(html).toContain("Off Road Tour");
+    expect(html).toContain("East Zion Top of the World Jeep Tour");
     expect(html).toContain("Rated 5.0 out of 5 stars");
-    expect(html.match(/★/g) ?? []).toHaveLength(5);
+    expect(
+      html.match(/data-testid=\"engine6-rating-star\"/g) ?? []
+    ).toHaveLength(5);
     expect(html).toContain("5.0");
     expect(html).toContain("154");
     expect(html).toContain("rating •");
     expect(html).not.toContain("Important info");
+    expect(html).toContain("Overview");
+    expect(html).toContain("Highlights");
+    expect(html).toContain("Itinerary");
     expect(html).toContain("not wheelchair accessible");
     expect(html).toContain("Is this tour wheelchair accessible?");
     expect(html).toContain("FAQs");
