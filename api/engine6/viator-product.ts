@@ -105,14 +105,49 @@ const respondWithNormalizedEnvelope = (
   });
 };
 
+const applyResolvedHero = (args: {
+  baseExtraction: ReturnType<typeof extractEngine6Product>;
+  preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
+  fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
+}) => {
+  const heroSource = args.preferredHeroExtraction?.extracted.heroImageUrl
+    ? args.preferredHeroExtraction
+    : args.fallbackHeroExtraction?.extracted.heroImageUrl
+      ? args.fallbackHeroExtraction
+      : args.baseExtraction;
+
+  return {
+    extracted: {
+      ...args.baseExtraction.extracted,
+      heroImageUrl: heroSource.extracted.heroImageUrl,
+      cardImageUrl:
+        heroSource.extracted.cardImageUrl ?? heroSource.extracted.heroImageUrl,
+    },
+    diagnostics: {
+      ...args.baseExtraction.diagnostics,
+      heroImageFieldPath: heroSource.diagnostics.heroImageFieldPath,
+      heroVariantFieldPath: heroSource.diagnostics.heroVariantFieldPath,
+      selectedHeroWidth: heroSource.diagnostics.selectedHeroWidth,
+      selectedHeroHeight: heroSource.diagnostics.selectedHeroHeight,
+      imageSourceUsed: heroSource.diagnostics.imageSourceUsed,
+    },
+  };
+};
+
 const respondWithBundledFallback = (
   res: any,
   productCode: string,
   bundledPayload: Record<string, unknown>,
-  diagnostics: ReturnType<typeof buildDiagnostics>
+  diagnostics: ReturnType<typeof buildDiagnostics>,
+  liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
-  const extraction = extractEngine6Product(bundledPayload);
-  Object.assign(diagnostics, extraction.diagnostics, {
+  const bundledExtraction = extractEngine6Product(bundledPayload);
+  const merged = applyResolvedHero({
+    baseExtraction: bundledExtraction,
+    preferredHeroExtraction: liveExtraction,
+    fallbackHeroExtraction: bundledExtraction,
+  });
+  Object.assign(diagnostics, merged.diagnostics, {
     source: "bundled-fallback",
   });
 
@@ -121,8 +156,8 @@ const respondWithBundledFallback = (
     source: "bundled-fallback",
     diagnostics,
     productCode,
-    rawProduct: extraction.product,
-    extracted: extraction.extracted,
+    rawProduct: bundledExtraction.product,
+    extracted: merged.extracted,
     headers: {
       "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
       "X-Engine6-Source": "bundled-exact-product-payload",
@@ -245,7 +280,13 @@ export default async function handler(req: any, res: any) {
     if (bundledPayload && extraction.extracted.priceAmount === null) {
       diagnostics.source = "bundled-fallback";
       diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
-      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      respondWithBundledFallback(
+        res,
+        productCode,
+        bundledPayload,
+        diagnostics,
+        extraction
+      );
       return;
     }
 

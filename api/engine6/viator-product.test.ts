@@ -53,9 +53,7 @@ describe("/api/engine6/viator-product", () => {
         usedBundledFallbackBecause: "missing-api-key",
       })
     );
-    expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
-    );
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.aggregateRating).toBe(5);
     expect((res.body as any).extracted.reviewCount).toBe(154);
@@ -209,11 +207,14 @@ describe("/api/engine6/viator-product", () => {
         usedBundledFallbackBecause: "live-price-missing-or-zero",
         upstreamStatus: 200,
         upstreamOk: true,
+        heroImageFieldPath: "product.media.images[0].variants.FULL.url",
+        heroVariantFieldPath: "product.media.images[0].variants.FULL",
+        imageSourceUsed: "live-product-image",
       })
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/specimen-cover.jpg"
     );
   });
 

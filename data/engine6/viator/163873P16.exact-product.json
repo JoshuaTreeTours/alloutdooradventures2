@@ -36,12 +36,12 @@
         "isCover": true,
         "variants": [
           {
-            "url": "https://img.test/specimen-root-hero-small.jpg",
+            "url": null,
             "width": 360,
             "height": 240
           },
           {
-            "url": "https://img.test/specimen-root-hero-large.jpg",
+            "url": null,
             "width": 674,
             "height": 446
           }
@@ -54,7 +54,7 @@
           "isCover": true,
           "variants": {
             "XXLARGE": {
-              "url": "https://img.test/specimen-media-hero-xxlarge.jpg",
+              "url": null,
               "width": 1600,
               "height": 1067
             }
