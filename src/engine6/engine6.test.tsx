@@ -404,8 +404,16 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain("FAQs");
     expect(html).toContain("Is this tour good for families?");
     expect(html).not.toContain("Check latest price");
-    expect(html).toContain("Lock in your Engine6 adventure today.");
+    expect(html).toContain('data-testid="engine6-bottom-cta"');
+    expect(html).toContain("READY TO BOOK?");
+    expect(html).toContain("Lock in your East Zion adventure today.");
+    expect(html).toContain(
+      "Secure your spot, confirm the latest availability, and review final departure details before checkout."
+    );
     expect(html.match(/>Book now</g) ?? []).toHaveLength(2);
+    expect(html).toContain(
+      'href="https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&amp;mcid=42383&amp;medium=link"'
+    );
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
     );

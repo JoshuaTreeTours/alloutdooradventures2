@@ -210,22 +210,25 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        <section className="mt-8 rounded-3xl bg-green-900 px-6 py-8 text-center text-white shadow-lg">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-green-200">
-            Ready to reserve?
+        <section
+          className="mt-8 rounded-[2rem] bg-[#1f4d36] px-6 py-12 text-center text-white shadow-xl"
+          data-testid="engine6-bottom-cta"
+        >
+          <p className="text-xs font-semibold uppercase tracking-[0.32em] text-green-200">
+            READY TO BOOK?
           </p>
           <h2 className="mt-3 text-3xl font-bold">
-            Lock in your Engine6 adventure today.
+            Lock in your East Zion adventure today.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-green-100">
             Secure your spot, confirm the latest availability, and review final
-            departure details on the booking page before checkout.
+            departure details before checkout.
           </p>
           <a
             href={tour.bookingUrl}
             target="_blank"
             rel="noreferrer"
-            className={`mt-6 ${BOOK_CTA_CLASSES}`}
+            className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
           >
             Book now
           </a>
