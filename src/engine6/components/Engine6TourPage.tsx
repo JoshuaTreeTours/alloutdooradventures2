@@ -1,6 +1,7 @@
 import React, { type ReactNode } from "react";
 
 import Seo from "../../components/Seo";
+import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
@@ -28,8 +29,7 @@ const RatingSummary = ({
   aggregateRating: number | null;
   reviewCount: number | null;
 }) => {
-  const ratingLabel =
-    typeof aggregateRating === "number" ? aggregateRating.toFixed(1) : "N/A";
+  const ratingLabel = formatEngine6AggregateRating(aggregateRating) ?? "N/A";
   const totalReviews = reviewCount ?? 0;
 
   return (

@@ -1,4 +1,5 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import { normalizeEngine6AggregateRating } from "./rating";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -45,6 +46,9 @@ export const mapViatorToEngine6Tour = (
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
+  const aggregateRating = normalizeEngine6AggregateRating(
+    payload.extracted.aggregateRating
+  );
   const bookingUrl = buildEngine6ViatorBookingUrl(
     payload.rawProductCode,
     payload.extracted.productUrl
@@ -75,7 +79,7 @@ export const mapViatorToEngine6Tour = (
     cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
-    aggregateRating: payload.extracted.aggregateRating,
+    aggregateRating,
     reviewCount: payload.extracted.reviewCount,
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",

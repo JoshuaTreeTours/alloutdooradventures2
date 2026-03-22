@@ -1,3 +1,5 @@
+import { normalizeEngine6AggregateRating } from "../../src/engine6/rating";
+
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
@@ -1126,13 +1128,18 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const classification = extractClassification(product);
   diagnostics.classificationFieldPath = classification.path;
 
+  const normalizedAggregateRating = normalizeEngine6AggregateRating(
+    rating.value
+  );
   const seoTitle = title && city ? `${title} in ${city}` : title;
   const seoDescription =
     title && city
       ? dedupeStrings([
           firstParagraph(overview.value),
           `Best tour in ${city}`,
-          rating.value ? `Rated ${rating.value}/5` : null,
+          normalizedAggregateRating !== null
+            ? `Rated ${normalizedAggregateRating}/5`
+            : null,
           reviewCount.value ? `${reviewCount.value} reviews` : null,
           firstParagraph(highlights.value[0] ?? null),
         ]).join(". ")
@@ -1151,7 +1158,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       priceAmount: price.amount,
       priceFormatted:
         price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,
-      aggregateRating: rating.value,
+      aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
       meetingPointText: meetingPoint.value,
       overviewText: overview.value,

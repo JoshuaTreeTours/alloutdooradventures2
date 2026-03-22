@@ -5,6 +5,7 @@ import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import Engine6TourPage from "./components/Engine6TourPage";
 import { toEngine6Card } from "./cards";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import { formatEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6ApiResponse } from "./types";
 import type { Engine6ValidationFixture } from "./validationFixtures";
@@ -113,7 +114,7 @@ export const buildEngine6ValidationReport = (
     cardRenderSucceeded,
     heroResult: `${tour.heroImageUrl} (${tour.diagnostics.heroImageFieldPath ?? "no-field-path"})`,
     priceResult: `${tour.priceFormatted} via ${tour.diagnostics.commercialPriceFieldPath ?? "no-price-field"}`,
-    ratingReviewResult: `${tour.aggregateRating ?? "n/a"} / ${tour.reviewCount ?? "n/a"}`,
+    ratingReviewResult: `${formatEngine6AggregateRating(tour.aggregateRating) ?? "n/a"} / ${tour.reviewCount ?? "n/a"}`,
     seoTitleResult: tour.seoTitle,
     metaDescriptionResult: tour.metaDescription,
     jsonLdEntityCoverage: entityCoverage,

@@ -1,3 +1,4 @@
+import { formatEngine6AggregateRating } from "./rating";
 import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
@@ -37,7 +38,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
   locationLabel: `${tour.city}, ${tour.state}`,
   ratingLabel:
     tour.aggregateRating && tour.reviewCount
-      ? `${tour.aggregateRating.toFixed(1)} (${tour.reviewCount})`
+      ? `${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
       : "No ratings yet",
   priceLabel: tour.priceFormatted,
   description: buildCardDescription(tour),

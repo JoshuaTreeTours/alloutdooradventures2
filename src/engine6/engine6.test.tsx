@@ -561,6 +561,9 @@ describe("engine6 seo/schema", () => {
     const faq = graph.find(node => node["@type"] === "FAQPage");
     const webpage = graph.find(node => node["@type"] === "WebPage");
     const offer = graph.find(node => node["@type"] === "Offer");
+    const aggregateRating = graph.find(
+      node => node["@type"] === "AggregateRating"
+    );
 
     expect(schema["@context"]).toBe("https://schema.org");
     expect(breadcrumb).toBeDefined();
@@ -582,6 +585,10 @@ describe("engine6 seo/schema", () => {
     });
     expect(offer).toMatchObject({
       url: tour.bookingUrl,
+    });
+    expect(aggregateRating).toMatchObject({
+      ratingValue: 5,
+      reviewCount: 154,
     });
     expect(faq).toBeDefined();
   });
