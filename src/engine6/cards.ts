@@ -1,3 +1,4 @@
+import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
 export type Engine6Card = {
@@ -20,11 +21,14 @@ const buildCardDescription = (tour: Engine6Tour) => {
     return tour.highlights[0];
   }
 
-  if (tour.primaryCategory) {
-    return `Best ${tour.primaryCategory.replace(/-/g, " ")} in ${tour.city}.`;
+  const categoryLabel =
+    tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
+
+  if (categoryLabel) {
+    return `Discover ${tour.city} on a guided ${categoryLabel.toLowerCase()} with standout local highlights.`;
   }
 
-  return `Best tour in ${tour.city} for jeep and off-road views around Zion.`;
+  return `Discover top outdoor highlights around ${tour.city} with a locally guided experience.`;
 };
 
 export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
@@ -37,7 +41,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
       : "No ratings yet",
   priceLabel: tour.priceFormatted,
   description: buildCardDescription(tour),
-  href: `/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour`,
+  href: tour.pagePath,
 });
 
 export const buildEngine6CardSurfaces = (tour: Engine6Tour) => {

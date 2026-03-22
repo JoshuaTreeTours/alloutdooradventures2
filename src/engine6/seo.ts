@@ -6,6 +6,16 @@ const ENGINE6_META_DESCRIPTION_MAX_LENGTH = 160;
 
 export const ENGINE6_CATEGORY_LABELS: Record<Engine6CategorySlug, string> = {
   "off-road-tour": "Jeep Tour",
+  "hiking-tour": "Hiking Tour",
+  "bike-tour": "Bike Tour",
+  "boat-tour": "Boat Tour",
+  "paddle-tour": "Paddle Tour",
+  "wildlife-tour": "Wildlife Tour",
+  "snorkeling-tour": "Snorkeling Tour",
+  "food-and-drink-tour": "Food & Drink Tour",
+  "air-tour": "Air Tour",
+  "sightseeing-tour": "Sightseeing Tour",
+  "adventure-tour": "Adventure Tour",
   adventure: "Adventure Tour",
   hiking: "Hiking Tour",
   sightseeing: "Sightseeing Tour",
@@ -62,6 +72,31 @@ export const clampEngine6MetaDescription = (
 
 export const buildEngine6MetaDescription = (description: string) =>
   clampEngine6MetaDescription(cleanEngine6Description(description));
+
+export const buildEngine6SeoTitle = ({
+  title,
+  city,
+  state,
+}: {
+  title: string;
+  city: string;
+  state: string;
+}) => {
+  const normalizedTitle = title.trim();
+  const locationLabel = [city, state].filter(Boolean).join(", ");
+
+  if (!locationLabel) {
+    return normalizedTitle;
+  }
+
+  const titleIncludesLocation = normalizedTitle
+    .toLowerCase()
+    .includes(city.trim().toLowerCase());
+
+  return titleIncludesLocation
+    ? normalizedTitle
+    : `${normalizedTitle} - ${locationLabel}`;
+};
 
 export const buildEngine6CanonicalPath = ({
   state,

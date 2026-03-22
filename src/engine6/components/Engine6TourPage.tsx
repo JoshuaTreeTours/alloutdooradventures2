@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 
 import Seo from "../../components/Seo";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
@@ -137,11 +137,13 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </a>
           </div>
 
-          <img
-            src={tour.heroImageUrl}
-            alt={tour.title}
-            className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
-          />
+          {tour.heroImageUrl ? (
+            <img
+              src={tour.heroImageUrl}
+              alt={tour.title}
+              className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
+            />
+          ) : null}
         </div>
       </section>
 
@@ -228,7 +230,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             READY TO BOOK?
           </p>
           <h2 className="mt-3 text-3xl font-bold">
-            Lock in your East Zion adventure today.
+            Lock in your {tour.city} adventure today.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-green-100">
             Secure your spot, confirm the latest availability, and review final

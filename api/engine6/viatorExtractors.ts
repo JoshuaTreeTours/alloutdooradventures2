@@ -7,6 +7,7 @@ export type Engine6DiagnosticsPaths = {
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
   imageSourceUsed: "live-product-image" | "fallback";
+  productUrlFieldPath: string | null;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
   overviewFieldPath: string | null;
@@ -43,6 +44,7 @@ export type Engine6Extracted = {
   state: string | null;
   heroImageUrl: string | null;
   cardImageUrl: string | null;
+  productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
   aggregateRating: number | null;
@@ -218,7 +220,7 @@ const parsePriceAmount = (value: unknown): number | null => {
   return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
 };
 
-const asImageUrl = (value: unknown): string | null => {
+const asHttpUrl = (value: unknown): string | null => {
   const url = asNonEmptyString(value);
   if (!url) return null;
 
@@ -227,6 +229,22 @@ const asImageUrl = (value: unknown): string | null => {
     return parsed.protocol === "http:" || parsed.protocol === "https:"
       ? parsed.toString()
       : null;
+  } catch {
+    return null;
+  }
+};
+
+const asImageUrl = (value: unknown): string | null => asHttpUrl(value);
+
+const asViatorProductUrl = (value: unknown): string | null => {
+  const url = asHttpUrl(value);
+  if (!url) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname.endsWith("viator.com") ? parsed.toString() : null;
   } catch {
     return null;
   }
@@ -264,6 +282,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   state: null,
   heroImageUrl: null,
   cardImageUrl: null,
+  productUrl: null,
   priceAmount: null,
   priceFormatted: null,
   aggregateRating: null,
@@ -464,6 +483,24 @@ const extractPlaybookHeroImage = (
   }
 
   return null;
+};
+
+const extractProductUrl = (product: RecordLike) => {
+  for (const path of [
+    ["productUrl"],
+    ["productURL"],
+    ["webUrl"],
+    ["webURL"],
+    ["canonicalUrl"],
+    ["url"],
+  ] as PathSegment[][]) {
+    const value = asViatorProductUrl(readPath(product, path));
+    if (value) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: null, path: null as string | null };
 };
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
@@ -962,6 +999,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     selectedHeroWidth: null,
     selectedHeroHeight: null,
     imageSourceUsed: "fallback",
+    productUrlFieldPath: null,
     ratingFieldPath: null,
     reviewCountFieldPath: null,
     overviewFieldPath: null,
@@ -999,6 +1037,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.selectedHeroWidth = heroImage?.width ?? null;
   diagnostics.selectedHeroHeight = heroImage?.height ?? null;
   diagnostics.imageSourceUsed = heroImage?.sourceUsed ?? "fallback";
+
+  const productUrl = extractProductUrl(product);
+  diagnostics.productUrlFieldPath = productUrl.path;
 
   const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
@@ -1106,6 +1147,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       state: state ?? null,
       heroImageUrl: heroImage?.value ?? null,
       cardImageUrl: heroImage?.value ?? null,
+      productUrl: productUrl.value,
       priceAmount: price.amount,
       priceFormatted:
         price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,

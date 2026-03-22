@@ -299,6 +299,8 @@ const specimenApiPayload = {
     selectedHeroWidth: 1600,
     selectedHeroHeight: 1067,
     imageSourceUsed: "live-product-image" as const,
+    productUrlFieldPath: "product.productUrl",
+    bookingUrlSource: "product.productUrl",
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
     overviewFieldPath: "product.description.text",
@@ -315,6 +317,8 @@ const specimenApiPayload = {
     faqSourceUsed: "merged:product.qAndA.items+product.additionalInfo",
     requirementsFieldPath: "product.additionalInfo",
     classificationFieldPath: "inferred:title+overview+highlights",
+    fieldLevelFallbackUsed: false,
+    fallbackFieldNames: [],
   },
   rawProductCode: "163873P16",
   rawProduct: {
@@ -329,6 +333,8 @@ const specimenApiPayload = {
     state: "Utah",
     heroImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
     cardImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
+    productUrl:
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16",
     priceAmount: 105.09,
     priceFormatted: "From $105",
     aggregateRating: 5,
@@ -460,7 +466,9 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).not.toContain("Check latest price");
     expect(html).toContain('data-testid="engine6-bottom-cta"');
     expect(html).toContain("READY TO BOOK?");
-    expect(html).toContain("Lock in your East Zion adventure today.");
+    expect(html).toContain("Lock in your");
+    expect(html).toContain(tour.city);
+    expect(html).toContain("adventure today.");
     expect(html).toContain(
       "Secure your spot, confirm the latest availability, and review final departure details before checkout."
     );

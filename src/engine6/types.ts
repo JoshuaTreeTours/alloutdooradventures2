@@ -19,6 +19,8 @@ export type Engine6TourDiagnostics = {
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
   imageSourceUsed: "live-product-image" | "fallback";
+  productUrlFieldPath: string | null;
+  bookingUrlSource: string;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
   overviewFieldPath: string | null;
@@ -34,6 +36,8 @@ export type Engine6TourDiagnostics = {
   requirementsFieldPath: string | null;
   highlightClassificationReason: string | null;
   classificationFieldPath: string | null;
+  fieldLevelFallbackUsed: boolean;
+  fallbackFieldNames: string[];
 };
 
 export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
@@ -47,6 +51,16 @@ export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
 
 export type Engine6CategorySlug =
   | "off-road-tour"
+  | "hiking-tour"
+  | "bike-tour"
+  | "boat-tour"
+  | "paddle-tour"
+  | "wildlife-tour"
+  | "snorkeling-tour"
+  | "food-and-drink-tour"
+  | "air-tour"
+  | "sightseeing-tour"
+  | "adventure-tour"
   | "adventure"
   | "hiking"
   | "sightseeing"
@@ -96,6 +110,7 @@ export type Engine6ApiResponse = {
     state: string | null;
     heroImageUrl: string | null;
     cardImageUrl: string | null;
+    productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
     aggregateRating: number | null;

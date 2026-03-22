@@ -2,6 +2,7 @@ import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
+  buildEngine6SeoTitle,
   cleanEngine6Description,
   formatEngine6CategoryLabel,
 } from "./seo";
@@ -13,9 +14,13 @@ const FALLBACK_HERO =
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
-  const title = payload.extracted.title ?? "Utah Off-Road Adventure";
-  const city = payload.extracted.city ?? "Springdale";
-  const state = payload.extracted.state ?? "Utah";
+  const title =
+    payload.extracted.title ??
+    (payload.rawProductCode === "163873P16"
+      ? "Utah Off-Road Adventure"
+      : `Outdoor Adventure ${payload.rawProductCode}`);
+  const city = payload.extracted.city ?? "Destination";
+  const state = payload.extracted.state ?? "USA";
   const heroImageUrl =
     payload.extracted.heroImageUrl ??
     payload.extracted.cardImageUrl ??
@@ -30,6 +35,7 @@ export const mapViatorToEngine6Tour = (
   const categories = payload.extracted.categories ?? [];
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
+  const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
   const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
   const rawDescription =
     payload.extracted.overviewText ??
@@ -39,18 +45,34 @@ export const mapViatorToEngine6Tour = (
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
+  const bookingUrl = buildEngine6ViatorBookingUrl(
+    payload.rawProductCode,
+    payload.extracted.productUrl
+  );
+  const fallbackFieldNames = [
+    !payload.extracted.title ? "title" : null,
+    !payload.extracted.city ? "city" : null,
+    !payload.extracted.state ? "state" : null,
+    !payload.extracted.heroImageUrl && !payload.extracted.cardImageUrl
+      ? "heroImageUrl"
+      : null,
+    !payload.extracted.priceFormatted ? "priceFormatted" : null,
+    !payload.extracted.meetingPointText ? "meetingPointText" : null,
+  ].filter((value): value is string => Boolean(value));
 
   return {
     productCode: payload.rawProductCode,
     title,
-    seoTitle: payload.extracted.seoTitle ?? `${title} in ${city}`,
+    seoTitle:
+      payload.extracted.seoTitle ??
+      buildEngine6SeoTitle({ title, city, state }),
     seoDescription: metaDescription,
     description,
     metaDescription,
     city,
     state,
     heroImageUrl,
-    cardImageUrl: heroImageUrl,
+    cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating: payload.extracted.aggregateRating,
@@ -64,10 +86,10 @@ export const mapViatorToEngine6Tour = (
     requirements,
     primaryCategory,
     categories,
-    categoryLabel: formatEngine6CategoryLabel(primaryCategory),
+    categoryLabel,
     pagePath: canonicalPath,
     canonicalPath,
-    bookingUrl: buildEngine6ViatorBookingUrl(payload.rawProductCode),
+    bookingUrl,
     diagnostics: {
       source: payload.source,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,
@@ -78,6 +100,10 @@ export const mapViatorToEngine6Tour = (
       selectedHeroWidth: payload.diagnostics.selectedHeroWidth,
       selectedHeroHeight: payload.diagnostics.selectedHeroHeight,
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
+      productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
+      bookingUrlSource:
+        payload.diagnostics.productUrlFieldPath ??
+        "generated:viator-search-product-code",
       ratingFieldPath: payload.diagnostics.ratingFieldPath,
       reviewCountFieldPath: payload.diagnostics.reviewCountFieldPath,
       overviewFieldPath: payload.diagnostics.overviewFieldPath,
@@ -94,6 +120,8 @@ export const mapViatorToEngine6Tour = (
       highlightClassificationReason:
         payload.diagnostics.highlightClassificationReason,
       classificationFieldPath: payload.diagnostics.classificationFieldPath,
+      fieldLevelFallbackUsed: fallbackFieldNames.length > 0,
+      fallbackFieldNames,
     },
   };
 };

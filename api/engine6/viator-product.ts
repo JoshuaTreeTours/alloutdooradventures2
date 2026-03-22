@@ -53,6 +53,8 @@ const buildDiagnostics = (
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
   imageSourceUsed: "fallback" as const,
+  productUrlFieldPath: null as string | null,
+  bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
   reviewCountFieldPath: null as string | null,
   overviewFieldPath: null as string | null,
@@ -68,6 +70,8 @@ const buildDiagnostics = (
   requirementsFieldPath: null as string | null,
   highlightClassificationReason: null as string | null,
   classificationFieldPath: null as string | null,
+  fieldLevelFallbackUsed: false,
+  fallbackFieldNames: [] as string[],
 });
 
 const buildEmptyEnvelope = (productCode: string) => ({

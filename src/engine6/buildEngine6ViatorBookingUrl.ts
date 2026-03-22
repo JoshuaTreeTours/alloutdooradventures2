@@ -4,11 +4,35 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   medium: "link",
 } as const;
 
-const ENGINE6_VIATOR_PATH_PREFIX =
-  "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-";
+const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
 
-export const buildEngine6ViatorBookingUrl = (productCode: string): string => {
-  const url = new URL(`${ENGINE6_VIATOR_PATH_PREFIX}${productCode}`);
+const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
+  if (!preferredUrl) {
+    return null;
+  }
+
+  try {
+    const parsed = new URL(preferredUrl);
+    if (!parsed.hostname.endsWith("viator.com")) {
+      return null;
+    }
+
+    return parsed;
+  } catch {
+    return null;
+  }
+};
+
+export const buildEngine6ViatorBookingUrl = (
+  productCode: string,
+  preferredUrl: string | null = null
+): string => {
+  const url =
+    normalizePreferredViatorUrl(preferredUrl) ??
+    new URL(
+      `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
+    );
+
   url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
   url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
   url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);

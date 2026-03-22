@@ -29,6 +29,8 @@ const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
     selectedHeroWidth: 360,
     selectedHeroHeight: 240,
     imageSourceUsed: "live-product-image",
+    productUrlFieldPath: "product.productUrl",
+    bookingUrlSource: "product.productUrl",
     ratingFieldPath: "product.reviews.combinedAverageRating",
     reviewCountFieldPath: "product.reviews.totalReviews",
     overviewFieldPath: "product.description.text",
@@ -45,6 +47,8 @@ const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
     highlightClassificationReason:
       "product.highlights kept as selling-point bullets",
     classificationFieldPath: "inferred:title+overview+highlights",
+    fieldLevelFallbackUsed: false,
+    fallbackFieldNames: [],
   },
   extracted: {
     title: "East Zion Top of the World Jeep Tour",
@@ -55,6 +59,8 @@ const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
     state: "Utah",
     heroImageUrl: ENGINE6_163873P16_CARD_IMAGE_URL,
     cardImageUrl: ENGINE6_163873P16_CARD_IMAGE_URL,
+    productUrl:
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16",
     priceAmount: 105,
     priceFormatted: "From $105",
     aggregateRating: 5,
