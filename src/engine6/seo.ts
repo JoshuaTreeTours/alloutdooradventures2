@@ -3,12 +3,12 @@ import { slugify } from "../utils/slugify";
 import type { Engine6CategorySlug, Engine6Tour } from "./types";
 
 export const ENGINE6_CATEGORY_LABELS: Record<Engine6CategorySlug, string> = {
-  "off-road-tour": "Off Road Tour",
-  adventure: "Adventure",
-  hiking: "Hiking",
-  sightseeing: "Sightseeing",
-  wildlife: "Wildlife",
-  water: "Water Adventure",
+  "off-road-tour": "Jeep Tour",
+  adventure: "Adventure Tour",
+  hiking: "Hiking Tour",
+  sightseeing: "Sightseeing Tour",
+  wildlife: "Wildlife Tour",
+  water: "Boat Tour",
 };
 
 export const formatEngine6CategoryLabel = (
@@ -23,11 +23,25 @@ export const formatEngine6CategoryLabel = (
     return knownLabel;
   }
 
-  return value
-    .split("-")
-    .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-    .join(" ");
+  return value.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
 };
+
+export const cleanEngine6Description = (text: string): string => {
+  if (!text) {
+    return "";
+  }
+
+  return text
+    .replace(/\.\./g, ".")
+    .replace(/Best tour.*?reviews\./gi, "")
+    .replace(/Rated\s*\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?[^.]*\./gi, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s+([,.;!?])/g, "$1")
+    .trim();
+};
+
+export const buildEngine6MetaDescription = (description: string) =>
+  cleanEngine6Description(description).slice(0, 155).trim();
 
 export const buildEngine6CanonicalPath = ({
   state,
@@ -40,24 +54,9 @@ export const buildEngine6CanonicalPath = ({
 }) =>
   `/destinations/${slugify(state)}/${slugify(city)}/tours/${slugify(title)}`;
 
-export const buildEngine6Seo = (tour: Engine6Tour) => {
-  const categoryLabel =
-    tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
-  const fallbackDescription = [
-    categoryLabel ? `${categoryLabel} in ${tour.city}, ${tour.state}.` : null,
-    tour.priceFormatted ? `${tour.priceFormatted} per person.` : null,
-    typeof tour.aggregateRating === "number" &&
-    typeof tour.reviewCount === "number"
-      ? `Rated ${tour.aggregateRating.toFixed(1)}/5 from ${tour.reviewCount} reviews.`
-      : null,
-  ]
-    .filter(Boolean)
-    .join(" ");
-
-  return {
-    title: tour.seoTitle,
-    description: tour.seoDescription || fallbackDescription || tour.title,
-    url: tour.canonicalPath,
-    image: tour.heroImageUrl,
-  };
-};
+export const buildEngine6Seo = (tour: Engine6Tour) => ({
+  title: tour.seoTitle,
+  description: tour.metaDescription,
+  url: tour.canonicalPath,
+  image: tour.heroImageUrl,
+});

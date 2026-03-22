@@ -58,6 +58,8 @@ export type Engine6Tour = {
   title: string;
   seoTitle: string;
   seoDescription: string;
+  description: string;
+  metaDescription: string;
   city: string;
   state: string;
   heroImageUrl: string;

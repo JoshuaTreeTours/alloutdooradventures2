@@ -1,5 +1,10 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
-import { buildEngine6CanonicalPath, formatEngine6CategoryLabel } from "./seo";
+import {
+  buildEngine6CanonicalPath,
+  buildEngine6MetaDescription,
+  cleanEngine6Description,
+  formatEngine6CategoryLabel,
+} from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const FALLBACK_HERO =
@@ -11,8 +16,13 @@ export const mapViatorToEngine6Tour = (
   const title = payload.extracted.title ?? "Utah Off-Road Adventure";
   const city = payload.extracted.city ?? "Springdale";
   const state = payload.extracted.state ?? "Utah";
-  const heroImageUrl = payload.extracted.heroImageUrl ?? FALLBACK_HERO;
-  const overviewText = payload.extracted.overviewText ?? null;
+  const heroImageUrl =
+    payload.extracted.heroImageUrl ??
+    payload.extracted.cardImageUrl ??
+    FALLBACK_HERO;
+  const overviewText = cleanEngine6Description(
+    payload.extracted.overviewText ?? ""
+  );
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const faqs = payload.extracted.faqs ?? [];
@@ -21,26 +31,33 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
+  const rawDescription =
+    payload.extracted.overviewText ??
+    payload.extracted.seoDescription ??
+    `Explore ${title} with local guides in ${city}, ${state}.`;
+  const description = cleanEngine6Description(rawDescription);
+  const metaDescription = buildEngine6MetaDescription(
+    payload.extracted.seoDescription ?? description
+  );
 
   return {
     productCode: payload.rawProductCode,
     title,
     seoTitle: payload.extracted.seoTitle ?? `${title} in ${city}`,
-    seoDescription:
-      payload.extracted.seoDescription ??
-      overviewText ??
-      `Best tour in ${city} with scenic off-road viewpoints and local guides.`,
+    seoDescription: metaDescription,
+    description,
+    metaDescription,
     city,
     state,
     heroImageUrl,
-    cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
+    cardImageUrl: heroImageUrl,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating: payload.extracted.aggregateRating,
     reviewCount: payload.extracted.reviewCount,
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",
-    overviewText,
+    overviewText: overviewText || null,
     highlights,
     itinerary,
     faqs,

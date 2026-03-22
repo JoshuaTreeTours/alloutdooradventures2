@@ -137,7 +137,9 @@ export const engine6ListingTours: Tour[] = [
     },
     startingPrice: engine6SpecimenTour.priceAmount ?? undefined,
     currency: "USD",
-    tagPills: ["Engine6"],
+    tagPills: engine6SpecimenTour.categoryLabel
+      ? [engine6SpecimenTour.categoryLabel]
+      : undefined,
     activitySlugs: ["detours"],
     bookingProvider: "viator",
     bookingUrl: engine6SpecimenTour.bookingUrl,

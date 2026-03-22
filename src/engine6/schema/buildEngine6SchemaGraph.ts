@@ -4,7 +4,9 @@ import type { Engine6Tour } from "../types";
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
+  const affiliateUrl = tour.bookingUrl;
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
+  const description = tour.description || tour.metaDescription || tour.title;
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
   const citySlug = pathSegments[2] ?? "";
@@ -28,7 +30,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const offerNode = {
     "@type": "Offer",
     "@id": `${canonicalUrl}#offer`,
-    url: tour.bookingUrl,
+    url: affiliateUrl,
     priceCurrency: "USD",
     ...(typeof tour.priceAmount === "number"
       ? { price: tour.priceAmount }
@@ -62,6 +64,15 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           })),
         }
       : undefined;
+
+  const webpageNode = {
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: tour.title,
+    description: tour.metaDescription,
+    mainEntity: { "@id": `${canonicalUrl}#trip` },
+  };
 
   return {
     "@context": "https://schema.org",
@@ -98,11 +109,12 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           },
         ],
       },
+      webpageNode,
       {
         "@type": "TouristTrip",
         "@id": `${canonicalUrl}#trip`,
         name: tour.title,
-        description: tour.seoDescription || tour.overviewText || tour.title,
+        description,
         image: tour.heroImageUrl,
         url: canonicalUrl,
         offers: { "@id": offerNode["@id"] },
@@ -123,9 +135,9 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@id": `${canonicalUrl}#product`,
         name: tour.title,
         image: tour.heroImageUrl,
-        description: tour.seoDescription || tour.overviewText || tour.title,
+        description,
         category: categoryLabel ?? undefined,
-        url: tour.bookingUrl,
+        url: canonicalUrl,
         offers: { "@id": offerNode["@id"] },
         ...(aggregateRatingNode
           ? { aggregateRating: { "@id": aggregateRatingNode["@id"] } }

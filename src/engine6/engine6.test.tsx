@@ -322,7 +322,8 @@ const specimenApiPayload = {
   extracted: {
     title: "East Zion Top of the World Jeep Tour",
     seoTitle: "East Zion Top of the World Jeep Tour in Springdale",
-    seoDescription: "Best tour in Springdale. Rated 5/5. 154 reviews.",
+    seoDescription:
+      "Best tour in Springdale.. Rated 5/5. 154 reviews. Grab bird’s-eye views of Zion National Park on this Jeep tour.",
     city: "Springdale",
     state: "Utah",
     heroImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
@@ -393,7 +394,13 @@ describe("engine6 mapping/cards/page", () => {
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
-    expect(tour.categoryLabel).toBe("Off Road Tour");
+    expect(tour.categoryLabel).toBe("Jeep Tour");
+    expect(tour.description).toContain(
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour"
+    );
+    expect(tour.description).not.toContain("Best tour");
+    expect(tour.metaDescription).not.toContain("Rated 5/5");
+    expect(tour.metaDescription.length).toBeLessThanOrEqual(155);
     expect(tour.canonicalPath).toBe(ENGINE6_SPECIMEN_ROUTE);
     expect(html).toContain('id="structured-data-engine6-viator"');
     expect(html).toContain('data-testid="engine6-hero-banner"');
@@ -406,8 +413,10 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain("per person");
     expect(html).toContain("Meeting point:</strong>");
     expect(html).toContain("Meet us at Zion Mountain Ranch!");
-    expect(html).toContain("Off Road Tour");
+    expect(html).toContain("Jeep Tour");
     expect(html).toContain("East Zion Top of the World Jeep Tour");
+    expect(html).toContain("Jeep Tour");
+    expect(html).not.toContain(">ENGINE6<");
     expect(html).toContain("Rated 5.0 out of 5 stars");
     expect(
       html.match(/data-testid=\"engine6-rating-star\"/g) ?? []
@@ -499,7 +508,9 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("Utah Off-Road Adventure");
-    expect(resolved.tour?.heroImageUrl).toContain("unsplash.com");
+    expect(resolved.tour?.heroImageUrl).toBe(
+      "https://img.test/specimen-media-hero-xxlarge.jpg"
+    );
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
@@ -515,18 +526,28 @@ describe("engine6 seo/schema", () => {
     const trip = graph.find(node => node["@type"] === "TouristTrip");
     const product = graph.find(node => node["@type"] === "Product");
     const faq = graph.find(node => node["@type"] === "FAQPage");
+    const webpage = graph.find(node => node["@type"] === "WebPage");
+    const offer = graph.find(node => node["@type"] === "Offer");
 
     expect(schema["@context"]).toBe("https://schema.org");
     expect(breadcrumb).toBeDefined();
     expect(trip).toMatchObject({
       "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#trip`,
       image: "https://img.test/specimen-media-hero-xxlarge.jpg",
-      touristType: "Off Road Tour",
+      touristType: "Jeep Tour",
       url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
     });
     expect(product).toMatchObject({
-      category: "Off Road Tour",
+      category: "Jeep Tour",
       image: "https://img.test/specimen-media-hero-xxlarge.jpg",
+      url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
+    });
+    expect(webpage).toMatchObject({
+      "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#webpage`,
+      description: tour.metaDescription,
+      url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
+    });
+    expect(offer).toMatchObject({
       url: tour.bookingUrl,
     });
     expect(faq).toBeDefined();
@@ -585,6 +606,8 @@ describe("engine6 listing surfaces", () => {
     expect(html).toContain(`src="${ENGINE6_163873P16_CARD_IMAGE_URL}"`);
     expect(html).toContain("Springdale, Utah");
     expect(html).toContain("East Zion Top of the World Jeep Tour");
+    expect(html).toContain("Jeep Tour");
+    expect(html).not.toContain(">ENGINE6<");
     expect(html).toContain("★");
     expect(html).toContain("5.0");
     expect(html).toContain("154");
