@@ -45,6 +45,14 @@ export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
   usedBundledFallbackBecause: string;
 };
 
+export type Engine6CategorySlug =
+  | "off-road-tour"
+  | "adventure"
+  | "hiking"
+  | "sightseeing"
+  | "wildlife"
+  | "water";
+
 export type Engine6Tour = {
   productCode: string;
   title: string;
@@ -64,8 +72,11 @@ export type Engine6Tour = {
   itinerary: Engine6ItineraryItem[];
   faqs: Engine6FaqItem[];
   requirements: string[];
-  primaryCategory: string | null;
-  categories: string[];
+  primaryCategory: Engine6CategorySlug | string | null;
+  categories: Array<Engine6CategorySlug | string>;
+  categoryLabel: string | null;
+  pagePath: string;
+  canonicalPath: string;
   bookingUrl: string;
   diagnostics: Engine6TourDiagnostics;
 };
@@ -93,7 +104,7 @@ export type Engine6ApiResponse = {
     itinerary: Engine6ItineraryItem[];
     faqs: Engine6FaqItem[];
     requirements: string[];
-    primaryCategory: string | null;
-    categories: string[];
+    primaryCategory: Engine6CategorySlug | string | null;
+    categories: Array<Engine6CategorySlug | string>;
   };
 };

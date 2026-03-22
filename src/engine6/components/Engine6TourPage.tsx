@@ -1,4 +1,8 @@
 import type { ReactNode } from "react";
+
+import Seo from "../../components/Seo";
+import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
+import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 
 const BOOK_CTA_CLASSES =
@@ -16,14 +20,6 @@ const ContentSection = ({
     <div className="mt-4">{children}</div>
   </section>
 );
-
-const formatCategoryLabel = (value: string | null) =>
-  value
-    ? value
-        .split("-")
-        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(" ")
-    : null;
 
 const RatingSummary = ({
   aggregateRating,
@@ -61,7 +57,10 @@ const RatingSummary = ({
 };
 
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
-  const categoryLabel = formatCategoryLabel(tour.primaryCategory);
+  const categoryLabel =
+    tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
+  const seo = buildEngine6Seo(tour);
+  const schema = buildEngine6SchemaGraph(tour);
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&
@@ -70,6 +69,17 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
+      <Seo
+        title={seo.title}
+        description={seo.description}
+        url={seo.url}
+        image={seo.image}
+      />
+      <script
+        id="structured-data-engine6-viator"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
       <section
         className="bg-[#2f4a2f] text-white"
         data-testid="engine6-hero-banner"

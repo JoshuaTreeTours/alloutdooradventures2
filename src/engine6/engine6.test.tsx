@@ -12,6 +12,7 @@ import {
 } from "../data/tours";
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
+import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
 import {
   ENGINE6_163873P16_CARD_IMAGE_URL,
@@ -392,6 +393,9 @@ describe("engine6 mapping/cards/page", () => {
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
+    expect(tour.categoryLabel).toBe("Off Road Tour");
+    expect(tour.canonicalPath).toBe(ENGINE6_SPECIMEN_ROUTE);
+    expect(html).toContain('id="structured-data-engine6-viator"');
     expect(html).toContain('data-testid="engine6-hero-banner"');
     expect(html).toContain('data-testid="engine6-commercial-facts"');
     expect(html).toContain(
@@ -499,6 +503,33 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
+  });
+});
+
+describe("engine6 seo/schema", () => {
+  it("builds a schema graph anchored to the specimen canonical path", () => {
+    const tour = mapViatorToEngine6Tour(specimenApiPayload);
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList");
+    const trip = graph.find(node => node["@type"] === "TouristTrip");
+    const product = graph.find(node => node["@type"] === "Product");
+    const faq = graph.find(node => node["@type"] === "FAQPage");
+
+    expect(schema["@context"]).toBe("https://schema.org");
+    expect(breadcrumb).toBeDefined();
+    expect(trip).toMatchObject({
+      "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#trip`,
+      image: "https://img.test/specimen-media-hero-xxlarge.jpg",
+      touristType: "Off Road Tour",
+      url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
+    });
+    expect(product).toMatchObject({
+      category: "Off Road Tour",
+      image: "https://img.test/specimen-media-hero-xxlarge.jpg",
+      url: tour.bookingUrl,
+    });
+    expect(faq).toBeDefined();
   });
 });
 

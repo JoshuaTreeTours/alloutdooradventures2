@@ -1,4 +1,5 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import { buildEngine6CanonicalPath, formatEngine6CategoryLabel } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const FALLBACK_HERO =
@@ -19,6 +20,7 @@ export const mapViatorToEngine6Tour = (
   const categories = payload.extracted.categories ?? [];
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
+  const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
 
   return {
     productCode: payload.rawProductCode,
@@ -45,6 +47,9 @@ export const mapViatorToEngine6Tour = (
     requirements,
     primaryCategory,
     categories,
+    categoryLabel: formatEngine6CategoryLabel(primaryCategory),
+    pagePath: canonicalPath,
+    canonicalPath,
     bookingUrl: buildEngine6ViatorBookingUrl(payload.rawProductCode),
     diagnostics: {
       source: payload.source,
