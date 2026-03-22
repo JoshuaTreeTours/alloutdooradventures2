@@ -13,6 +13,7 @@ import {
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
+import { buildEngine6MetaDescription } from "./seo";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
 import {
   ENGINE6_163873P16_CARD_IMAGE_URL,
@@ -377,6 +378,30 @@ const specimenApiPayload = {
     categories: ["off-road-tour"],
   },
 };
+
+describe("engine6 meta descriptions", () => {
+  it("clamps long descriptions at a word boundary with an ellipsis", () => {
+    const metaDescription = buildEngine6MetaDescription(
+      "Best tour in Springdale.. Rated 5/5. 154 reviews. Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, geology context, and wide-open desert ridgelines for adventurous travelers."
+    );
+
+    expect(metaDescription).toBe(
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, geology context, and wide-open desert ridgelines…"
+    );
+    expect(metaDescription.endsWith("mo")).toBe(false);
+    expect(metaDescription.endsWith("…")).toBe(true);
+  });
+
+  it("returns shorter cleaned descriptions unchanged", () => {
+    const metaDescription = buildEngine6MetaDescription(
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, and guide-led geology context."
+    );
+
+    expect(metaDescription).toBe(
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, and guide-led geology context."
+    );
+  });
+});
 
 describe("engine6 mapping/cards/page", () => {
   it("renders the enforced 163873P16 sections instead of fallback content", () => {

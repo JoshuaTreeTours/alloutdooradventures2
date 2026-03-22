@@ -2,6 +2,8 @@ import { slugify } from "../utils/slugify";
 
 import type { Engine6CategorySlug, Engine6Tour } from "./types";
 
+const ENGINE6_META_DESCRIPTION_MAX_LENGTH = 160;
+
 export const ENGINE6_CATEGORY_LABELS: Record<Engine6CategorySlug, string> = {
   "off-road-tour": "Jeep Tour",
   adventure: "Adventure Tour",
@@ -40,8 +42,26 @@ export const cleanEngine6Description = (text: string): string => {
     .trim();
 };
 
+export const clampEngine6MetaDescription = (
+  text: string,
+  maxLength = ENGINE6_META_DESCRIPTION_MAX_LENGTH
+) => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+
+  const clipped = text.slice(0, maxLength - 1).trim();
+  const lastWordBoundary = clipped.lastIndexOf(" ");
+  const safeClipped =
+    lastWordBoundary > maxLength * 0.6
+      ? clipped.slice(0, lastWordBoundary)
+      : clipped;
+
+  return `${safeClipped.trim()}…`;
+};
+
 export const buildEngine6MetaDescription = (description: string) =>
-  cleanEngine6Description(description).slice(0, 155).trim();
+  clampEngine6MetaDescription(cleanEngine6Description(description));
 
 export const buildEngine6CanonicalPath = ({
   state,
