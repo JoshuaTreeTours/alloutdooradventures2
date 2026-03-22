@@ -340,4 +340,37 @@ describe("/api/engine6/viator-product", () => {
       "product.additionalInfo"
     );
   });
+
+  it("returns valid JSON when upstream rating fields are missing or invalid", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "777777P7",
+            title: "Ratingless Tour",
+            description: { text: "Tour without a usable rating." },
+            reviews: {
+              combinedAverageRating: "not-a-number",
+              totalReviews: 12,
+            },
+            priceFrom: "$49.00",
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "777777P7" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(() => JSON.stringify(res.body)).not.toThrow();
+    expect((res.body as any).extracted.aggregateRating).toBeNull();
+    expect((res.body as any).extracted.reviewCount).toBe(12);
+  });
 });

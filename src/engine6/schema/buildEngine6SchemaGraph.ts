@@ -40,7 +40,9 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
 
   const aggregateRatingNode =
     typeof tour.aggregateRating === "number" &&
-    typeof tour.reviewCount === "number"
+    Number.isFinite(tour.aggregateRating) &&
+    typeof tour.reviewCount === "number" &&
+    Number.isFinite(tour.reviewCount)
       ? {
           "@type": "AggregateRating",
           "@id": `${canonicalUrl}#aggregate-rating`,

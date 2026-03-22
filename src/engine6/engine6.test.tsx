@@ -12,6 +12,7 @@ import {
 } from "../data/tours";
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
+import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6MetaDescription } from "./seo";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
@@ -406,6 +407,16 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription).toBe(
       "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, and guide-led geology context."
     );
+  });
+});
+
+describe("engine6 aggregate rating normalization", () => {
+  it("rounds valid ratings to one decimal place and safely ignores invalid inputs", () => {
+    expect(normalizeEngine6AggregateRating(5)).toBe(5);
+    expect(normalizeEngine6AggregateRating(4.666)).toBe(4.7);
+    expect(normalizeEngine6AggregateRating(null)).toBeNull();
+    expect(normalizeEngine6AggregateRating(undefined)).toBeNull();
+    expect(normalizeEngine6AggregateRating(Number.NaN)).toBeNull();
   });
 });
 
