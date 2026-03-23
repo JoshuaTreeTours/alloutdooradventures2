@@ -683,6 +683,20 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain('data-product-code="132218P75"');
     expect(html).toContain('data-hero-scoped-product-code="132218P75"');
     expect(html).toContain('data-hero-scope-confirmed="true"');
+    expect(html).toContain('data-testid="engine6-preview-debug"');
+    expect(html).toContain(
+      'data-render-template="App&gt;Engine6ProductRoute&gt;Engine6TourPage"'
+    );
+    expect(html).toContain(
+      'data-render-route="/destinations/nevada/las-vegas/tours/grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas"'
+    );
+    expect(html).toContain(
+      'data-render-data-source="bundledProducts:getBundledEngine6Tour"'
+    );
+    expect(html).toContain('data-render-product-code="132218P75"');
+    expect(html).toContain(
+      'data-render-source-product-url="https://www.viator.com/tours/Las-Vegas/Grand-Canyon-Skywalk-Hoover-Dam-Day-Trip-W-Lunch-from-Las-Vegas/d684-132218P75"'
+    );
     expect(html).toContain('data-testid="engine6-hero-debug"');
     expect(html).toContain(
       'data-hero-debug-product-code="132218P75"'

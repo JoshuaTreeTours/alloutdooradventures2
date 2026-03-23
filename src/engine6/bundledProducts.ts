@@ -305,6 +305,7 @@ export const buildBundledEngine6Payload = (
       source: "bundled-fallback",
       resolvedProductUrl: null,
       resolvedHeroImageUrl: null,
+      sourceProductUrl: extraction.extracted.productUrl,
       hasViatorApiKey: false,
       attemptedLiveFetch: false,
       upstreamStatus: null,

@@ -35,6 +35,7 @@ const buildDiagnostics = (
   source,
   resolvedProductUrl: null as string | null,
   resolvedHeroImageUrl: null as string | null,
+  sourceProductUrl: null as string | null,
   hasViatorApiKey,
   attemptedLiveFetch: false,
   upstreamStatus: null as number | null,
@@ -310,6 +311,10 @@ export const resolveScopedEngine6Hero = (args: {
         winnerIdentity.productUrl ??
         args.baseExtraction.extracted.productUrl ??
         null,
+      sourceProductUrl:
+        winnerIdentity.productUrl ??
+        args.baseExtraction.extracted.productUrl ??
+        null,
       heroScopeConfirmed: winnerIdentity.productCode === expectedProductCode,
       rejectedForeignHeroCandidates,
     },
@@ -385,8 +390,6 @@ export default async function handler(req: any, res: any) {
     respondWithNormalizedEnvelope(res, {
       statusCode: 500,
       source: "live-api",
-      resolvedProductUrl: null,
-      resolvedHeroImageUrl: null,
       diagnostics,
       productCode,
       ...buildEmptyEnvelope(productCode),
@@ -470,6 +473,7 @@ export default async function handler(req: any, res: any) {
     const extraction = safeExtractEngine6Product(payload);
     Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
     Object.assign(diagnostics, {
+      sourceProductUrl: extraction.extracted.productUrl,
       heroScopedProductCode: productCode,
       heroScopedProductUrl: extraction.extracted.productUrl,
       heroScopeConfirmed:

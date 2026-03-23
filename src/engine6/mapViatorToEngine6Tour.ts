@@ -116,6 +116,7 @@ export const mapViatorToEngine6Tour = (
       source: payload.source,
       resolvedProductUrl: bookingUrl,
       resolvedHeroImageUrl: heroImageUrl,
+      sourceProductUrl: payload.extracted.productUrl,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,
       commercialPriceRawValue: payload.diagnostics.commercialPriceRawValue,
       priceSourceUsed: payload.diagnostics.priceSourceUsed,

@@ -37,6 +37,7 @@ export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
   resolvedProductUrl: string | null;
   resolvedHeroImageUrl: string | null;
+  sourceProductUrl?: string | null;
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";

@@ -10,6 +10,7 @@ import { getEngine6RouteSpecByProductCode } from "../routes";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
+import { ENGINE6_DEPLOYMENT_INFO } from "../deploymentInfo";
 import type { Engine6Tour } from "../types";
 
 const BOOK_CTA_CLASSES =
@@ -233,6 +234,26 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
+        <div
+          hidden
+          data-testid="engine6-preview-debug"
+          data-render-template="App>Engine6ProductRoute>Engine6TourPage"
+          data-render-route={routeSpec?.route ?? tour.pagePath}
+          data-render-data-source="bundledProducts:getBundledEngine6Tour"
+          data-render-product-code={tour.productCode}
+          data-render-source-product-url={
+            tour.diagnostics.sourceProductUrl ?? "none"
+          }
+          data-render-commit-sha={
+            ENGINE6_DEPLOYMENT_INFO.gitCommitSha ?? "unknown"
+          }
+          data-render-git-branch={ENGINE6_DEPLOYMENT_INFO.gitBranch ?? "unknown"}
+          data-render-vercel-env={ENGINE6_DEPLOYMENT_INFO.vercelEnv ?? "unknown"}
+          data-render-preview-url={
+            ENGINE6_DEPLOYMENT_INFO.previewUrl ?? "unknown"
+          }
+        />
+
         <div
           hidden
           data-testid="engine6-hero-debug"
