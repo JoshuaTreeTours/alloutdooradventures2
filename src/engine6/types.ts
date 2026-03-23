@@ -56,6 +56,9 @@ export type Engine6TourDiagnostics = {
   heroScopedProductUrl?: string | null;
   heroScopeConfirmed?: boolean;
   rejectedForeignHeroCandidates?: Engine6RejectedHeroCandidate[];
+  renderHeroSrc?: string | null;
+  renderHeroFallbackTriggered?: boolean;
+  renderHeroFallbackReason?: string | null;
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;

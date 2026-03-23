@@ -10,8 +10,7 @@ import {
 } from "./seo";
 import { getEngine6RouteSpecByProductCode } from "./routes";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
-
-const FALLBACK_HERO = "/hero.jpg";
+import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
@@ -23,7 +22,17 @@ export const mapViatorToEngine6Tour = (
       : `Outdoor Adventure ${payload.rawProductCode}`);
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
-  const heroImageUrl = payload.extracted.heroImageUrl ?? FALLBACK_HERO;
+  const fallbackGalleryHero = payload.extracted.galleryImageUrls[0] ?? null;
+  const heroImageUrl =
+    payload.extracted.heroImageUrl ??
+    fallbackGalleryHero ??
+    TOUR_FALLBACK_HERO_IMAGE;
+  const renderHeroFallbackTriggered = !payload.extracted.heroImageUrl;
+  const renderHeroFallbackReason = payload.extracted.heroImageUrl
+    ? null
+    : fallbackGalleryHero
+      ? "same-product-gallery"
+      : "global-tour-placeholder";
   const cardImageUrl =
     payload.extracted.cardImageUrl ??
     payload.extracted.galleryImageUrls[0] ??
@@ -127,8 +136,7 @@ export const mapViatorToEngine6Tour = (
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
       heroResolverName: payload.diagnostics.heroResolverName,
       apiPrimaryImageCandidate: payload.diagnostics.apiPrimaryImageCandidate,
-      apiGalleryImageCandidates:
-        payload.diagnostics.apiGalleryImageCandidates,
+      apiGalleryImageCandidates: payload.diagnostics.apiGalleryImageCandidates,
       scrapedImageCandidates: payload.diagnostics.scrapedImageCandidates,
       fallbackImageCandidates: payload.diagnostics.fallbackImageCandidates,
       finalSelectedHero: payload.diagnostics.finalSelectedHero,
@@ -137,6 +145,9 @@ export const mapViatorToEngine6Tour = (
       heroScopeConfirmed: payload.diagnostics.heroScopeConfirmed,
       rejectedForeignHeroCandidates:
         payload.diagnostics.rejectedForeignHeroCandidates ?? [],
+      renderHeroSrc: heroImageUrl,
+      renderHeroFallbackTriggered,
+      renderHeroFallbackReason,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??

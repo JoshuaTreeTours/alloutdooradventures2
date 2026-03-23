@@ -678,7 +678,9 @@ describe("engine6 mapping/cards/page", () => {
     );
     expect(tour?.heroImageUrl).not.toBe(redRockTour?.heroImageUrl);
     expect(html).toContain("Other Tours in Las Vegas");
-    expect(html).toContain('class="related-tours-slider mt-6 flex gap-5 overflow-x-auto pb-4"');
+    expect(html).toContain(
+      'class="related-tours-slider mt-6 flex gap-5 overflow-x-auto pb-4"'
+    );
     expect(html).toContain('aria-label="Other Tours in Las Vegas"');
     expect(html).toContain('data-product-code="132218P75"');
     expect(html).toContain('data-hero-scoped-product-code="132218P75"');
@@ -698,9 +700,7 @@ describe("engine6 mapping/cards/page", () => {
       'data-render-source-product-url="https://www.viator.com/tours/Las-Vegas/Grand-Canyon-Skywalk-Hoover-Dam-Day-Trip-W-Lunch-from-Las-Vegas/d684-132218P75"'
     );
     expect(html).toContain('data-testid="engine6-hero-debug"');
-    expect(html).toContain(
-      'data-hero-debug-product-code="132218P75"'
-    );
+    expect(html).toContain('data-hero-debug-product-code="132218P75"');
     expect(html).toContain(
       'data-hero-debug-api-primary="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"'
     );
@@ -708,12 +708,19 @@ describe("engine6 mapping/cards/page", () => {
       'data-hero-debug-final-url="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"'
     );
     expect(html).toContain('data-hero-debug-final-source="viator-api-primary"');
+    expect(html).toContain(
+      'data-hero-debug-render-src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"'
+    );
+    expect(html).toContain('data-hero-debug-fallback-triggered="false"');
+    expect(html).toContain('data-hero-debug-fallback-reason="none"');
     expect(html).toContain('data-testid="engine6-related-tours-debug"');
     expect(html).toContain(
       'data-engine6-template="Engine6ProductRoute&gt;Engine6TourPage"'
     );
     expect(html).toContain('data-related-source="engine6ListingTours"');
-    expect(html).toContain('data-related-current-slug="grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas"');
+    expect(html).toContain(
+      'data-related-current-slug="grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas"'
+    );
     expect(html).toContain('data-related-city-slug="las-vegas"');
     expect(html).toContain('data-related-state-slug="nevada"');
     expect(html).toContain('data-related-same-city-candidates="2"');
@@ -722,8 +729,12 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain('data-related-final-cards="73781P4"');
     expect(html).toContain('data-related-current-product-code="132218P75"');
     expect(html).toContain("Red Rock Canyon and Seven Magic Mountains Tour");
-    expect(html).toContain('class="tour-card min-w-[280px] max-w-[320px] flex-[0_0_280px] overflow-hidden rounded-3xl border border-green-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:min-w-[320px] md:flex-[0_0_320px]"');
-    expect(html).toContain('src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"');
+    expect(html).toContain(
+      'class="tour-card min-w-[280px] max-w-[320px] flex-[0_0_280px] overflow-hidden rounded-3xl border border-green-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:min-w-[320px] md:flex-[0_0_320px]"'
+    );
+    expect(html).toContain(
+      'src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"'
+    );
     expect(html).toContain(
       'href="/destinations/nevada/las-vegas/tours/red-rock-canyon-and-seven-magic-mountains-tour"'
     );
@@ -799,7 +810,11 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("Utah Off-Road Adventure");
-    expect(resolved.tour?.heroImageUrl).toBe("/hero.jpg");
+    expect(resolved.tour?.heroImageUrl).toBe("/images/hiking-hero.jpg");
+    expect(resolved.tour?.diagnostics.renderHeroFallbackTriggered).toBe(true);
+    expect(resolved.tour?.diagnostics.renderHeroFallbackReason).toBe(
+      "global-tour-placeholder"
+    );
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
@@ -847,14 +862,13 @@ describe("engine6 related tours", () => {
     expect(grandCanyonRelated.map(tour => tour.productCode)).toEqual([
       "73781P4",
     ]);
-    expect(redRockRelated.map(tour => tour.productCode)).toEqual([
-      "132218P75",
-    ]);
+    expect(redRockRelated.map(tour => tour.productCode)).toEqual(["132218P75"]);
     expect(specimenRelated).toEqual([]);
     expect(grandCanyonDebug.debug).toEqual({
       templatePath: "Engine6ProductRoute>Engine6TourPage",
       sourceCollection: "engine6ListingTours",
-      currentTourSlug: "grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas",
+      currentTourSlug:
+        "grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas",
       currentCitySlug: "las-vegas",
       currentStateSlug: "nevada",
       siblingCandidateCountBeforeFiltering: 2,
@@ -982,12 +996,10 @@ describe("engine6 listing surfaces", () => {
     expect(nevadaTours.some(tour => tour.productCode === "132218P75")).toBe(
       true
     );
-    expect(nevadaTours.some(tour => tour.productCode === "73781P4")).toBe(
-      true
-    );
-    expect(lasVegasTours.filter(tour => tour.engine === "engine6")).toHaveLength(
-      2
-    );
+    expect(nevadaTours.some(tour => tour.productCode === "73781P4")).toBe(true);
+    expect(
+      lasVegasTours.filter(tour => tour.engine === "engine6")
+    ).toHaveLength(2);
   });
 
   it("renders the listing card with the resolved Engine6 image and normalized content", () => {
@@ -1040,7 +1052,9 @@ describe("engine6 route wiring", () => {
     const engine6RouteIndex = source.indexOf(
       "<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />"
     );
-    const productionRoutesIndex = source.indexOf("ENGINE6_PRODUCTION_ROUTE_SPECS.map");
+    const productionRoutesIndex = source.indexOf(
+      "ENGINE6_PRODUCTION_ROUTE_SPECS.map"
+    );
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
     );

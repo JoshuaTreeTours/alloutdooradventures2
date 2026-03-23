@@ -154,7 +154,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         }
         data-hero-rejected-foreign-candidates={
           tour.diagnostics.rejectedForeignHeroCandidates
-            ?.map(candidate => candidate.productCode ?? candidate.productUrl ?? "unknown")
+            ?.map(
+              candidate =>
+                candidate.productCode ?? candidate.productUrl ?? "unknown"
+            )
             .join(",") ?? ""
         }
       >
@@ -247,8 +250,12 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           data-render-commit-sha={
             ENGINE6_DEPLOYMENT_INFO.gitCommitSha ?? "unknown"
           }
-          data-render-git-branch={ENGINE6_DEPLOYMENT_INFO.gitBranch ?? "unknown"}
-          data-render-vercel-env={ENGINE6_DEPLOYMENT_INFO.vercelEnv ?? "unknown"}
+          data-render-git-branch={
+            ENGINE6_DEPLOYMENT_INFO.gitBranch ?? "unknown"
+          }
+          data-render-vercel-env={
+            ENGINE6_DEPLOYMENT_INFO.vercelEnv ?? "unknown"
+          }
           data-render-preview-url={
             ENGINE6_DEPLOYMENT_INFO.previewUrl ?? "unknown"
           }
@@ -269,10 +276,20 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           data-hero-debug-final-url={
             tour.diagnostics.finalSelectedHero?.url ?? tour.heroImageUrl
           }
+          data-hero-debug-render-src={tour.heroImageUrl}
           data-hero-debug-final-source={tour.diagnostics.imageSourceUsed}
+          data-hero-debug-fallback-triggered={
+            tour.diagnostics.renderHeroFallbackTriggered ? "true" : "false"
+          }
+          data-hero-debug-fallback-reason={
+            tour.diagnostics.renderHeroFallbackReason ?? "none"
+          }
           data-hero-debug-rejected-foreign={
             tour.diagnostics.rejectedForeignHeroCandidates
-              ?.map(candidate => candidate.productCode ?? candidate.productUrl ?? "unknown")
+              ?.map(
+                candidate =>
+                  candidate.productCode ?? candidate.productUrl ?? "unknown"
+              )
               .join(",") ?? ""
           }
         />
@@ -439,9 +456,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             relatedToursResult.debug.siblingCountAfterExcludingCurrent
           }
           data-related-final-count={relatedToursResult.debug.finalCardCount}
-          data-related-final-cards={
-            relatedToursResult.debug.finalCardProductCodes.join(",")
-          }
+          data-related-final-cards={relatedToursResult.debug.finalCardProductCodes.join(
+            ","
+          )}
           data-related-current-product-code={tour.productCode}
           data-related-hero-scoped-product-code={
             tour.diagnostics.heroScopedProductCode ?? "none"
@@ -480,7 +497,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                     ) : null}
                     <div className="p-5">
                       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#7a8a6b]">
-                        {relatedTour.destination.city}, {relatedTour.destination.state}
+                        {relatedTour.destination.city},{" "}
+                        {relatedTour.destination.state}
                       </p>
                       <h3 className="mt-3 text-lg font-semibold leading-6 text-green-950">
                         {relatedTour.title}
