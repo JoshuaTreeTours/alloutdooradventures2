@@ -501,6 +501,12 @@ describe("engine6 mapping/cards/page", () => {
       "Secure your spot, confirm the latest availability, and review final departure details before checkout."
     );
     expect(html.match(/>Book now</g) ?? []).toHaveLength(2);
+    expect(html.match(/data-engine6-affiliate-cta="true"/g) ?? []).toHaveLength(
+      2
+    );
+    expect(
+      html.match(/rel="nofollow sponsored noopener noreferrer"/g) ?? []
+    ).toHaveLength(2);
     expect(html).toContain(
       'href="https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&amp;mcid=42383&amp;medium=link"'
     );
