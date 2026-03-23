@@ -89,9 +89,11 @@ export const buildEngine6ValidationReport = (
     ...(graph.some(node => node["@type"] === "FAQPage") ? ["FAQPage"] : []),
   ];
 
+  const bookingUrl = tour.bookingUrl;
   const pageRenderSucceeded =
     html.includes(tour.title) &&
-    html.includes(tour.bookingUrl) &&
+    Boolean(bookingUrl) &&
+    html.includes(bookingUrl ?? "") &&
     !html.includes("img.test") &&
     !html.includes("viator.test") &&
     !html.includes(">ENGINE6<");
@@ -101,10 +103,11 @@ export const buildEngine6ValidationReport = (
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
   const bookingAttributionIsValid =
-    tour.bookingUrl.startsWith(fixture.publicUrl) &&
-    tour.bookingUrl.includes("pid=P00290915") &&
-    tour.bookingUrl.includes("mcid=42383") &&
-    tour.bookingUrl.includes("medium=link");
+    Boolean(bookingUrl) &&
+    (bookingUrl?.startsWith(fixture.publicUrl) ?? false) &&
+    (bookingUrl?.includes("pid=P00290915") ?? false) &&
+    (bookingUrl?.includes("mcid=42383") ?? false) &&
+    (bookingUrl?.includes("medium=link") ?? false);
 
   return {
     productCode: fixture.productCode,
@@ -118,9 +121,10 @@ export const buildEngine6ValidationReport = (
     seoTitleResult: tour.seoTitle,
     metaDescriptionResult: tour.metaDescription,
     jsonLdEntityCoverage: entityCoverage,
-    bookingAttributionResult: bookingAttributionIsValid
-      ? tour.bookingUrl
-      : `INVALID: ${tour.bookingUrl}`,
+    bookingAttributionResult:
+      bookingAttributionIsValid && bookingUrl
+        ? bookingUrl
+        : `INVALID: ${bookingUrl ?? "<missing>"}`,
     diagnostics: {
       source: payload.source,
       heroSource: tour.diagnostics.imageSourceUsed,

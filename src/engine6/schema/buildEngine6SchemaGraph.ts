@@ -5,8 +5,10 @@ import type { Engine6Tour } from "../types";
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
-  const affiliateUrl = tour.bookingUrl;
-  const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
+  const offerUrl = resolveEngine6OfferUrl({
+    provider: tour.bookingProvider,
+    url: tour.referenceBookingUrl,
+  });
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
   const description = tour.description || tour.metaDescription || tour.title;
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);

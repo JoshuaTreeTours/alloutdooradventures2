@@ -494,6 +494,8 @@ const extractProductUrl = (product: RecordLike) => {
     ["webUrl"],
     ["webURL"],
     ["canonicalUrl"],
+    ["seoUrl"],
+    ["seoURL"],
     ["url"],
   ] as PathSegment[][]) {
     const value = asViatorProductUrl(readPath(product, path));

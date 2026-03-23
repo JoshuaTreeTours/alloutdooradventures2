@@ -63,10 +63,12 @@ describe("engine6 multi-tour validation harness", () => {
       expect(tour.seoTitle).toContain(tour.title);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toContain("Best tour");
+      expect(tour.referenceBookingUrl).toBe(fixture.publicUrl);
+      expect(tour.bookingUrl).not.toBeNull();
       expect(tour.bookingUrl).toContain("pid=P00290915");
       expect(tour.bookingUrl).toContain("mcid=42383");
       expect(tour.bookingUrl).toContain("medium=link");
-      expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
+      expect(tour.bookingUrl?.startsWith(fixture.publicUrl)).toBe(true);
       expect(tour.bookingUrl).not.toContain(
         "East-Zion-Top-of-the-World-Jeep-Tour"
       );
@@ -77,7 +79,7 @@ describe("engine6 multi-tour validation harness", () => {
       expect(html).toContain(tour.title);
       expect(html).toContain(`src="${tour.heroImageUrl}"`);
       expect(html).toContain(tour.priceFormatted);
-      expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
+      expect(html).toContain((tour.bookingUrl ?? "").replace(/&/g, "&amp;"));
       expect(html).not.toContain(">ENGINE6<");
       expect(html).not.toContain("img.test");
       expect(html).not.toContain("viator.test");

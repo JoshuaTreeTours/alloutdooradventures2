@@ -148,7 +148,7 @@ export const engine6ListingTours: Tour[] = [
       : undefined,
     activitySlugs: ["detours"],
     bookingProvider: "viator",
-    bookingUrl: engine6SpecimenTour.bookingUrl,
+    bookingUrl: engine6SpecimenTour.bookingUrl ?? "",
     longDescription:
       engine6SpecimenTour.overviewText ?? engine6SpecimenCard.description,
   },
