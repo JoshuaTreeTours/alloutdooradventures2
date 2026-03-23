@@ -68,8 +68,7 @@ import {
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
 import {
-  ENGINE6_GRAND_CANYON_ROUTE,
-  ENGINE6_GRAND_CANYON_PRODUCT_CODE,
+  ENGINE6_PRODUCTION_ROUTE_SPECS,
   ENGINE6_SPECIMEN_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
@@ -90,10 +89,6 @@ const DestinationStateGuideRedirect = ({ params }: StateSlugParams) => {
 
   return <RouteRedirect to={`${stateGuidePath}${queryString}`} />;
 };
-
-const Engine6GrandCanyonRoute = () => (
-  <Engine6ProductRoute productCode={ENGINE6_GRAND_CANYON_PRODUCT_CODE} />
-);
 
 const MexicoCitySlugRedirect = () => (
   <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />
@@ -260,10 +255,13 @@ export default function App() {
         />
 
         <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
-        <Route
-          path={ENGINE6_GRAND_CANYON_ROUTE}
-          component={Engine6GrandCanyonRoute}
-        />
+        {ENGINE6_PRODUCTION_ROUTE_SPECS.map(spec => (
+          <Route
+            key={spec.productCode}
+            path={spec.route}
+            component={() => <Engine6ProductRoute productCode={spec.productCode} />}
+          />
+        ))}
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

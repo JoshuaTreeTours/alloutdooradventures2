@@ -17,11 +17,13 @@ import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6MetaDescription, buildMetaDescription } from "./seo";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
+import { getBundledEngine6Tour } from "./bundledProducts";
 import {
   ENGINE6_163873P16_CARD_IMAGE_URL,
   engine6SpecimenTour,
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import { getEngine6RelatedTours } from "./relatedTours";
 import { ENGINE6_SPECIMEN_ROUTE } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -655,6 +657,35 @@ describe("engine6 mapping/cards/page", () => {
     );
   });
 
+  it("renders a related-city slider below the final CTA for the Grand Canyon Vegas page", () => {
+    const tour = getBundledEngine6Tour("132218P75");
+
+    expect(tour).toBeDefined();
+
+    const html = renderToString(<Engine6TourPage tour={tour!} />);
+    const ctaIndex = html.indexOf('data-testid="engine6-bottom-cta"');
+    const relatedIndex = html.indexOf('data-testid="engine6-related-tours"');
+
+    expect(ctaIndex).toBeGreaterThan(-1);
+    expect(relatedIndex).toBeGreaterThan(ctaIndex);
+    expect(html).toContain("Other Tours in <!-- -->Las Vegas");
+    expect(html).toContain('aria-label="Other tours in Las Vegas"');
+    expect(html).toContain("Red Rock Canyon and Seven Magic Mountains Tour");
+    expect(html).toContain(
+      'href="/destinations/nevada/las-vegas/tours/red-rock-canyon-and-seven-magic-mountains-tour"'
+    );
+    expect(html).not.toContain(
+      'href="/destinations/nevada/las-vegas/tours/grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas"></a>'
+    );
+  });
+
+  it("suppresses the related-city slider when no Engine6 siblings exist in the city", () => {
+    const html = renderToString(<Engine6TourPage tour={engine6SpecimenTour} />);
+
+    expect(html).not.toContain('data-testid="engine6-related-tours"');
+    expect(html).not.toContain("Other Tours in Springdale");
+  });
+
   it("surfaces the exact enforced field paths in specimen diagnostics", () => {
     const apiUrl = buildEngine6SpecimenApiUrl("163873P16");
     const resolved = resolveEngine6SpecimenResponse({
@@ -744,6 +775,28 @@ describe("engine6 mapping/cards/page", () => {
       "application/json; charset=utf-8"
     );
     expect(resolved.debug.failureReason).toBe("api-error-response");
+  });
+});
+
+describe("engine6 related tours", () => {
+  it("returns same-city Engine6 siblings only, excluding the current tour", () => {
+    const grandCanyonTour = getBundledEngine6Tour("132218P75");
+    const redRockTour = getBundledEngine6Tour("73781P4");
+
+    expect(grandCanyonTour).toBeDefined();
+    expect(redRockTour).toBeDefined();
+
+    const grandCanyonRelated = getEngine6RelatedTours(grandCanyonTour!);
+    const redRockRelated = getEngine6RelatedTours(redRockTour!);
+    const specimenRelated = getEngine6RelatedTours(engine6SpecimenTour);
+
+    expect(grandCanyonRelated.map(tour => tour.productCode)).toEqual([
+      "73781P4",
+    ]);
+    expect(redRockRelated.map(tour => tour.productCode)).toEqual([
+      "132218P75",
+    ]);
+    expect(specimenRelated).toEqual([]);
   });
 });
 
@@ -838,6 +891,21 @@ describe("engine6 listing surfaces", () => {
     ).toBe(true);
   });
 
+  it("adds both Engine6 Vegas tours to Nevada and Las Vegas listing sources", () => {
+    const nevadaTours = getToursByState("nevada");
+    const lasVegasTours = getToursByCity("nevada", "las-vegas");
+
+    expect(nevadaTours.some(tour => tour.productCode === "132218P75")).toBe(
+      true
+    );
+    expect(nevadaTours.some(tour => tour.productCode === "73781P4")).toBe(
+      true
+    );
+    expect(lasVegasTours.filter(tour => tour.engine === "engine6")).toHaveLength(
+      2
+    );
+  });
+
   it("renders the listing card with the resolved Engine6 image and normalized content", () => {
     const listingTour = getToursByCity("utah", "springdale").find(
       tour => tour.productCode === "163873P16"
@@ -883,17 +951,20 @@ describe("engine6 listing surfaces", () => {
 });
 
 describe("engine6 route wiring", () => {
-  it("registers the specimen route before the generic city tour detail route", () => {
+  it("registers Engine6 routes before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
       "<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />"
     );
+    const productionRoutesIndex = source.indexOf("ENGINE6_PRODUCTION_ROUTE_SPECS.map");
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
     );
 
     expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(productionRoutesIndex).toBeGreaterThan(-1);
     expect(genericRouteIndex).toBeGreaterThan(-1);
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+    expect(productionRoutesIndex).toBeLessThan(genericRouteIndex);
   });
 });
