@@ -1,6 +1,6 @@
 import type { Tour } from "../data/tours.types";
 
-import { toEngine6Card } from "./cards";
+import { resolveEngine6CardImageUrl, toEngine6Card } from "./cards";
 import {
   ENGINE6_BUNDLED_RAW_PRODUCTS,
   getBundledEngine6Tour,
@@ -23,7 +23,7 @@ const buildEngine6ListingTour = (productCode: string): Tour | null => {
   const listingImage =
     productCode === "163873P16"
       ? ENGINE6_163873P16_CARD_IMAGE_URL
-      : tour.cardImageUrl;
+      : resolveEngine6CardImageUrl(tour);
 
   return {
     id: routeSpec.listingId,

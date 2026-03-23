@@ -662,8 +662,10 @@ describe("engine6 mapping/cards/page", () => {
 
   it("renders a related-city slider below the final CTA for the Grand Canyon Vegas page", () => {
     const tour = getBundledEngine6Tour("132218P75");
+    const redRockTour = getBundledEngine6Tour("73781P4");
 
     expect(tour).toBeDefined();
+    expect(redRockTour).toBeDefined();
 
     const html = renderToString(<Engine6TourPage tour={tour!} />);
     const ctaIndex = html.indexOf('data-testid="engine6-bottom-cta"');
@@ -671,9 +673,27 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(ctaIndex).toBeGreaterThan(-1);
     expect(relatedIndex).toBeGreaterThan(ctaIndex);
+    expect(tour?.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
+    );
+    expect(tour?.heroImageUrl).not.toBe(redRockTour?.heroImageUrl);
     expect(html).toContain("Other Tours in Las Vegas");
     expect(html).toContain('class="related-tours-slider mt-6 flex gap-5 overflow-x-auto pb-4"');
     expect(html).toContain('aria-label="Other Tours in Las Vegas"');
+    expect(html).toContain('data-product-code="132218P75"');
+    expect(html).toContain('data-hero-scoped-product-code="132218P75"');
+    expect(html).toContain('data-hero-scope-confirmed="true"');
+    expect(html).toContain('data-testid="engine6-hero-debug"');
+    expect(html).toContain(
+      'data-hero-debug-product-code="132218P75"'
+    );
+    expect(html).toContain(
+      'data-hero-debug-api-primary="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"'
+    );
+    expect(html).toContain(
+      'data-hero-debug-final-url="https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"'
+    );
+    expect(html).toContain('data-hero-debug-final-source="viator-api-primary"');
     expect(html).toContain('data-testid="engine6-related-tours-debug"');
     expect(html).toContain(
       'data-engine6-template="Engine6ProductRoute&gt;Engine6TourPage"'
@@ -686,6 +706,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain('data-related-siblings-after-current-excluded="1"');
     expect(html).toContain('data-related-final-count="1"');
     expect(html).toContain('data-related-final-cards="73781P4"');
+    expect(html).toContain('data-related-current-product-code="132218P75"');
     expect(html).toContain("Red Rock Canyon and Seven Magic Mountains Tour");
     expect(html).toContain('class="tour-card min-w-[280px] max-w-[320px] flex-[0_0_280px] overflow-hidden rounded-3xl border border-green-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:min-w-[320px] md:flex-[0_0_320px]"');
     expect(html).toContain('src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"');
@@ -828,6 +849,24 @@ describe("engine6 related tours", () => {
       finalCardProductCodes: ["73781P4"],
       finalCardCount: 1,
     });
+  });
+
+  it("keeps the Grand Canyon hero isolated from the Red Rock related card image", () => {
+    const grandCanyonTour = getBundledEngine6Tour("132218P75");
+    const redRockTour = getBundledEngine6Tour("73781P4");
+
+    expect(grandCanyonTour).toBeDefined();
+    expect(redRockTour).toBeDefined();
+    expect(grandCanyonTour?.diagnostics.heroScopedProductCode).toBe(
+      "132218P75"
+    );
+    expect(grandCanyonTour?.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
+    );
+    expect(redRockTour?.cardImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"
+    );
+    expect(redRockTour?.cardImageUrl).not.toBe(grandCanyonTour?.heroImageUrl);
   });
 });
 

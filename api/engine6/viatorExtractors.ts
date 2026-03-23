@@ -940,7 +940,11 @@ const extractMeetingPoint = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
-const extractGalleryImages = () => [] as string[];
+const extractGalleryImages = (product: RecordLike) => {
+  const { apiGalleryImageCandidates } = collectRootImageCandidates(product);
+
+  return dedupeStrings(apiGalleryImageCandidates.map(candidate => candidate.url));
+};
 
 const extractDurationText = (product: RecordLike) =>
   dedupeStrings([
@@ -1401,7 +1405,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       city: city ?? null,
       state: state ?? null,
       heroImageUrl: heroImage.heroImage?.value ?? null,
-      cardImageUrl: heroImage.heroImage?.value ?? null,
+      cardImageUrl:
+        heroImage.heroImage?.value ?? galleryImageUrls[0] ?? null,
       galleryImageUrls,
       productUrl: productUrl.value,
       priceAmount: price.amount,

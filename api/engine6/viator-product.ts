@@ -72,6 +72,16 @@ const buildDiagnostics = (
   requirementsFieldPath: null as string | null,
   highlightClassificationReason: null as string | null,
   classificationFieldPath: null as string | null,
+  heroScopedProductCode: null as string | null,
+  heroScopedProductUrl: null as string | null,
+  heroScopeConfirmed: false,
+  rejectedForeignHeroCandidates: [] as Array<{
+    productCode: string | null;
+    productUrl: string | null;
+    heroImageUrl: string | null;
+    imageSourceUsed: string | null;
+    reason: string;
+  }>,
   fieldLevelFallbackUsed: false,
   fallbackFieldNames: [] as string[],
 });
@@ -183,7 +193,32 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
-const applyResolvedHero = (args: {
+const normalizeProductCode = (value: unknown) =>
+  typeof value === "string" && value.trim().length > 0
+    ? value.trim().toUpperCase()
+    : null;
+
+const readScopedHeroIdentity = (
+  extraction?: ReturnType<typeof extractEngine6Product> | null
+) => {
+  const product = extraction?.product;
+  const productRecord =
+    product && typeof product === "object" && !Array.isArray(product)
+      ? (product as Record<string, unknown>)
+      : null;
+
+  return {
+    productCode:
+      normalizeProductCode(productRecord?.productCode) ??
+      normalizeProductCode(extraction?.extracted.productUrl?.match(/-([A-Z0-9]+)$/i)?.[1]),
+    productUrl: extraction?.extracted.productUrl ?? null,
+    heroImageUrl: extraction?.extracted.heroImageUrl ?? null,
+    imageSourceUsed: extraction?.diagnostics.imageSourceUsed ?? null,
+  };
+};
+
+export const resolveScopedEngine6Hero = (args: {
+  productCode: string;
   baseExtraction: ReturnType<typeof extractEngine6Product>;
   preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
   fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
@@ -205,28 +240,49 @@ const applyResolvedHero = (args: {
   const getArea = (extraction?: ReturnType<typeof extractEngine6Product> | null) =>
     (extraction?.diagnostics.selectedHeroWidth ?? 0) *
     (extraction?.diagnostics.selectedHeroHeight ?? 0);
-  const heroSource =
-    [
-      args.preferredHeroExtraction,
-      args.fallbackHeroExtraction,
-      args.baseExtraction,
-    ]
-      .filter(
-        (
-          extraction
-        ): extraction is ReturnType<typeof extractEngine6Product> =>
-          Boolean(extraction?.extracted.heroImageUrl)
-      )
-      .sort((left, right) => {
-        const bySource =
-          getPriority(right.diagnostics.imageSourceUsed) -
-          getPriority(left.diagnostics.imageSourceUsed);
-        if (bySource !== 0) {
-          return bySource;
-        }
+  const expectedProductCode = normalizeProductCode(args.productCode);
+  const rejectedForeignHeroCandidates: Array<{
+    productCode: string | null;
+    productUrl: string | null;
+    heroImageUrl: string | null;
+    imageSourceUsed: string | null;
+    reason: string;
+  }> = [];
+  const eligibleExtractions = [
+    args.preferredHeroExtraction,
+    args.fallbackHeroExtraction,
+    args.baseExtraction,
+  ].filter(
+    (
+      extraction
+    ): extraction is ReturnType<typeof extractEngine6Product> =>
+      Boolean(extraction?.extracted.heroImageUrl)
+  );
+  const scopedExtractions = eligibleExtractions.filter(extraction => {
+    const identity = readScopedHeroIdentity(extraction);
 
-        return getArea(right) - getArea(left);
-      })[0] ?? args.baseExtraction;
+    if (!identity.productCode || identity.productCode === expectedProductCode) {
+      return true;
+    }
+
+    rejectedForeignHeroCandidates.push({
+      ...identity,
+      reason: `hero candidate product ${identity.productCode} does not match requested product ${expectedProductCode}`,
+    });
+    return false;
+  });
+  const heroSource =
+    scopedExtractions.sort((left, right) => {
+      const bySource =
+        getPriority(right.diagnostics.imageSourceUsed) -
+        getPriority(left.diagnostics.imageSourceUsed);
+      if (bySource !== 0) {
+        return bySource;
+      }
+
+      return getArea(right) - getArea(left);
+    })[0] ?? args.baseExtraction;
+  const winnerIdentity = readScopedHeroIdentity(heroSource);
 
   return {
     extracted: {
@@ -249,6 +305,13 @@ const applyResolvedHero = (args: {
       scrapedImageCandidates: heroSource.diagnostics.scrapedImageCandidates,
       fallbackImageCandidates: heroSource.diagnostics.fallbackImageCandidates,
       finalSelectedHero: heroSource.diagnostics.finalSelectedHero,
+      heroScopedProductCode: expectedProductCode,
+      heroScopedProductUrl:
+        winnerIdentity.productUrl ??
+        args.baseExtraction.extracted.productUrl ??
+        null,
+      heroScopeConfirmed: winnerIdentity.productCode === expectedProductCode,
+      rejectedForeignHeroCandidates,
     },
   };
 };
@@ -261,7 +324,8 @@ const respondWithBundledFallback = (
   liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
-  const merged = applyResolvedHero({
+  const merged = resolveScopedEngine6Hero({
+    productCode,
     baseExtraction: bundledExtraction,
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
@@ -405,6 +469,13 @@ export default async function handler(req: any, res: any) {
 
     const extraction = safeExtractEngine6Product(payload);
     Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
+    Object.assign(diagnostics, {
+      heroScopedProductCode: productCode,
+      heroScopedProductUrl: extraction.extracted.productUrl,
+      heroScopeConfirmed:
+        readScopedHeroIdentity(extraction).productCode === productCode,
+      rejectedForeignHeroCandidates: [],
+    });
 
     if (bundledPayload && extraction.extracted.priceAmount === null) {
       diagnostics.source = "bundled-fallback";

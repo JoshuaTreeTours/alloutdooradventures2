@@ -25,6 +25,14 @@ export type Engine6HeroCandidate = {
   resolver: string;
 };
 
+export type Engine6RejectedHeroCandidate = {
+  productCode: string | null;
+  productUrl: string | null;
+  heroImageUrl: string | null;
+  imageSourceUsed: string | null;
+  reason: string;
+};
+
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
   resolvedProductUrl: string | null;
@@ -43,6 +51,10 @@ export type Engine6TourDiagnostics = {
   scrapedImageCandidates: Engine6HeroCandidate[];
   fallbackImageCandidates: Engine6HeroCandidate[];
   finalSelectedHero: Engine6HeroCandidate | null;
+  heroScopedProductCode?: string | null;
+  heroScopedProductUrl?: string | null;
+  heroScopeConfirmed?: boolean;
+  rejectedForeignHeroCandidates?: Engine6RejectedHeroCandidate[];
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;

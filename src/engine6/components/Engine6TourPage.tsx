@@ -3,6 +3,7 @@ import React, { type ReactNode } from "react";
 import DestinationBreadcrumb from "../../components/DestinationBreadcrumb";
 import Seo from "../../components/Seo";
 import { getCityTourDetailPath } from "../../data/tours";
+import type { Tour } from "../../data/tours.types";
 import { slugify } from "../../utils/slugify";
 import { getEngine6RelatedToursResult } from "../relatedTours";
 import { getEngine6RouteSpecByProductCode } from "../routes";
@@ -83,6 +84,20 @@ const BulletList = ({ items }: { items: string[] }) => (
   </ul>
 );
 
+const resolveRelatedTourCardImageUrl = (tour: Tour) => {
+  const normalizedPrimary = tour.primaryImageUrl?.trim();
+  if (normalizedPrimary) {
+    return normalizedPrimary;
+  }
+
+  const normalizedHero = tour.heroImage?.trim();
+  if (normalizedHero) {
+    return normalizedHero;
+  }
+
+  return "/hero.jpg";
+};
+
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const routeSpec = getEngine6RouteSpecByProductCode(tour.productCode);
   const categoryLabel =
@@ -123,9 +138,24 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       <section
         className="bg-[#2f4a2f] text-white"
         data-testid="engine6-hero-banner"
+        data-product-code={tour.productCode}
         data-hero-source={tour.diagnostics.imageSourceUsed}
         data-hero-resolver={tour.diagnostics.heroResolverName ?? "none"}
         data-hero-path={tour.diagnostics.heroImageFieldPath ?? "none"}
+        data-hero-scoped-product-code={
+          tour.diagnostics.heroScopedProductCode ?? "none"
+        }
+        data-hero-scoped-product-url={
+          tour.diagnostics.heroScopedProductUrl ?? "none"
+        }
+        data-hero-scope-confirmed={
+          tour.diagnostics.heroScopeConfirmed ? "true" : "false"
+        }
+        data-hero-rejected-foreign-candidates={
+          tour.diagnostics.rejectedForeignHeroCandidates
+            ?.map(candidate => candidate.productCode ?? candidate.productUrl ?? "unknown")
+            .join(",") ?? ""
+        }
       >
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
@@ -203,6 +233,29 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
+        <div
+          hidden
+          data-testid="engine6-hero-debug"
+          data-hero-debug-product-code={tour.productCode}
+          data-hero-debug-api-primary={
+            tour.diagnostics.apiPrimaryImageCandidate?.url ?? "none"
+          }
+          data-hero-debug-api-gallery={
+            tour.diagnostics.apiGalleryImageCandidates
+              .map(candidate => candidate.url)
+              .join(",") || "none"
+          }
+          data-hero-debug-final-url={
+            tour.diagnostics.finalSelectedHero?.url ?? tour.heroImageUrl
+          }
+          data-hero-debug-final-source={tour.diagnostics.imageSourceUsed}
+          data-hero-debug-rejected-foreign={
+            tour.diagnostics.rejectedForeignHeroCandidates
+              ?.map(candidate => candidate.productCode ?? candidate.productUrl ?? "unknown")
+              .join(",") ?? ""
+          }
+        />
+
         {snapshotItems.length > 0 ? (
           <ContentSection title="Tour snapshot">
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
@@ -368,6 +421,10 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           data-related-final-cards={
             relatedToursResult.debug.finalCardProductCodes.join(",")
           }
+          data-related-current-product-code={tour.productCode}
+          data-related-hero-scoped-product-code={
+            tour.diagnostics.heroScopedProductCode ?? "none"
+          }
         />
 
         {relatedTours.length > 0 ? (
@@ -384,9 +441,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               aria-label={relatedToursHeading}
             >
               {relatedTours.map(relatedTour => {
-                const imageUrl =
-                  relatedTour.primaryImageUrl?.trim() ||
-                  relatedTour.heroImage?.trim();
+                const imageUrl = resolveRelatedTourCardImageUrl(relatedTour);
 
                 return (
                   <a

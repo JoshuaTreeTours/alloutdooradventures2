@@ -24,6 +24,10 @@ export const mapViatorToEngine6Tour = (
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
   const heroImageUrl = payload.extracted.heroImageUrl ?? FALLBACK_HERO;
+  const cardImageUrl =
+    payload.extracted.cardImageUrl ??
+    payload.extracted.galleryImageUrls[0] ??
+    heroImageUrl;
   const overviewText = rewriteEngine6Overview({
     title,
     city,
@@ -81,8 +85,8 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     heroImageUrl,
-    cardImageUrl: heroImageUrl,
-    galleryImageUrls: [],
+    cardImageUrl,
+    galleryImageUrls: payload.extracted.galleryImageUrls,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating,
@@ -127,6 +131,11 @@ export const mapViatorToEngine6Tour = (
       scrapedImageCandidates: payload.diagnostics.scrapedImageCandidates,
       fallbackImageCandidates: payload.diagnostics.fallbackImageCandidates,
       finalSelectedHero: payload.diagnostics.finalSelectedHero,
+      heroScopedProductCode: payload.diagnostics.heroScopedProductCode,
+      heroScopedProductUrl: payload.diagnostics.heroScopedProductUrl,
+      heroScopeConfirmed: payload.diagnostics.heroScopeConfirmed,
+      rejectedForeignHeroCandidates:
+        payload.diagnostics.rejectedForeignHeroCandidates ?? [],
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??

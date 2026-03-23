@@ -34,6 +34,10 @@ const toPayload = (
       upstreamOk: null,
       usedBundledFallbackBecause: "validation-fixture-from-public-page",
       ...extraction.diagnostics,
+      heroScopedProductCode: fixture.productCode,
+      heroScopedProductUrl: extraction.extracted.productUrl,
+      heroScopeConfirmed: true,
+      rejectedForeignHeroCandidates: [],
       bookingUrlSource:
         extraction.diagnostics.productUrlFieldPath ??
         "generated:viator-search-product-code",
@@ -59,6 +63,8 @@ describe("engine6 multi-tour validation harness", () => {
       expect(tour.productCode).toBe(fixture.productCode);
       expect(tour.heroImageUrl).toContain("media.tacdn.com");
       expect(tour.cardImageUrl).toBe(tour.heroImageUrl);
+      expect(tour.diagnostics.heroScopedProductCode).toBe(fixture.productCode);
+      expect(tour.diagnostics.heroScopeConfirmed).toBe(true);
       expect(tour.priceFormatted).toMatch(/^From \$/);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(100);

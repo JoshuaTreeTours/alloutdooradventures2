@@ -272,6 +272,66 @@ describe("/api/engine6/viator-product", () => {
     );
   });
 
+  it("rejects a foreign-tour live hero when falling back to the bundled Grand Canyon product", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "73781P4",
+            productUrl:
+              "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-and-Seven-Magic-Mountains-Tour/d684-73781P4",
+            title: "Red Rock Canyon and Seven Magic Mountains Tour",
+            images: [
+              {
+                isCover: true,
+                url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg",
+                width: 674,
+                height: 446,
+              },
+            ],
+            reviews: { combinedAverageRating: 5, totalReviews: 3025 },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "132218P75" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        heroScopedProductCode: "132218P75",
+        heroScopeConfirmed: true,
+      })
+    );
+    expect(
+      (res.body as any).diagnostics.rejectedForeignHeroCandidates
+    ).toEqual([
+      expect.objectContaining({
+        productCode: "73781P4",
+        productUrl:
+          "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-and-Seven-Magic-Mountains-Tour/d684-73781P4",
+        heroImageUrl:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg",
+        imageSourceUsed: "viator-api-primary",
+      }),
+    ]);
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
+    );
+    expect((res.body as any).extracted.heroImageUrl).not.toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"
+    );
+  });
+
   it("returns the normalized live envelope with exact Engine5-style field winners", async () => {
     process.env.VIATOR_API_KEY = "k";
 

@@ -312,6 +312,10 @@ export const buildBundledEngine6Payload = (
       upstreamOk: null,
       usedBundledFallbackBecause: "bundled-product-registry",
       ...extraction.diagnostics,
+      heroScopedProductCode: productCode,
+      heroScopedProductUrl: extraction.extracted.productUrl,
+      heroScopeConfirmed: true,
+      rejectedForeignHeroCandidates: [],
       bookingUrlSource:
         extraction.diagnostics.productUrlFieldPath ??
         "generated:viator-search-product-code",
