@@ -1,11 +1,12 @@
 import { buildCanonicalUrl } from "../../utils/seo";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
+import { resolveEngine6CtaUrl } from "../resolveEngine6CtaUrl";
 import { formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
-  const affiliateUrl = tour.bookingUrl;
+  const affiliateUrl = resolveEngine6CtaUrl(tour);
   const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
   const description = tour.description || tour.metaDescription || tour.title;

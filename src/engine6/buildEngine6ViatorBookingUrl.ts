@@ -23,6 +23,11 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
   }
 };
 
+const buildEngine6ViatorSearchUrl = (productCode: string): URL =>
+  new URL(
+    `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
+  );
+
 export const resolveEngine6OfferUrl = (
   bookingUrl: string | null | undefined
 ): string | undefined => {
@@ -31,7 +36,7 @@ export const resolveEngine6OfferUrl = (
   }
 
   const parsed = normalizePreferredViatorUrl(bookingUrl);
-  if (!parsed || parsed.pathname.includes("/search/")) {
+  if (!parsed) {
     return undefined;
   }
 
@@ -40,14 +45,9 @@ export const resolveEngine6OfferUrl = (
 
 export const buildEngine6ViatorBookingUrl = (
   productCode: string,
-  preferredUrl: string | null = null
+  _preferredUrl: string | null = null
 ): string => {
-  const url =
-    normalizePreferredViatorUrl(preferredUrl) ??
-    new URL(
-      `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
-    );
-
+  const url = buildEngine6ViatorSearchUrl(productCode);
   url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
   url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
   url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);

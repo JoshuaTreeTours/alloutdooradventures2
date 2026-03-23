@@ -2,6 +2,7 @@ import React, { type ReactNode } from "react";
 
 import Seo from "../../components/Seo";
 import { formatEngine6AggregateRating } from "../rating";
+import { resolveEngine6CtaUrl } from "../resolveEngine6CtaUrl";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
@@ -61,6 +62,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
+  const ctaUrl = resolveEngine6CtaUrl(tour);
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&
@@ -128,7 +130,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
 
             <a
-              href={tour.bookingUrl}
+              href={ctaUrl}
               target="_blank"
               rel="noreferrer"
               className={`mt-6 ${BOOK_CTA_CLASSES}`}
@@ -237,7 +239,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             departure details before checkout.
           </p>
           <a
-            href={tour.bookingUrl}
+            href={ctaUrl}
             target="_blank"
             rel="noreferrer"
             className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"

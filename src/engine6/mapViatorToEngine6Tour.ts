@@ -93,6 +93,7 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     pagePath: canonicalPath,
     canonicalPath,
+    bookingProvider: "viator",
     bookingUrl,
     diagnostics: {
       source: payload.source,

@@ -101,7 +101,8 @@ export const buildEngine6ValidationReport = (
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
   const bookingAttributionIsValid =
-    tour.bookingUrl.startsWith(fixture.publicUrl) &&
+    tour.bookingUrl ===
+      `https://www.viator.com/search/${fixture.productCode}?pid=P00290915&mcid=42383&medium=link` &&
     tour.bookingUrl.includes("pid=P00290915") &&
     tour.bookingUrl.includes("mcid=42383") &&
     tour.bookingUrl.includes("medium=link");
