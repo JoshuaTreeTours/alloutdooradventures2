@@ -11,20 +11,32 @@ const hasUsableHeroImage = (tour: Tour) =>
 export const getEngine6RelatedTours = (
   currentTour: Engine6Tour,
   options?: { maxCount?: number }
-): Tour[] => {
+): Tour[] => getEngine6RelatedToursResult(currentTour, options).tours;
+
+export const getEngine6RelatedToursResult = (
+  currentTour: Engine6Tour,
+  options?: { maxCount?: number }
+) => {
   const routeSpec = getEngine6RouteSpecByProductCode(currentTour.productCode);
   const citySlug = routeSpec?.citySlug ?? slugify(currentTour.city);
   const stateSlug = routeSpec?.stateSlug ?? slugify(currentTour.state);
   const maxCount = options?.maxCount ?? 8;
 
-  return engine6ListingTours
-    .filter(
-      tour =>
-        tour.engine === "engine6" &&
-        tour.productCode !== currentTour.productCode &&
-        tour.destination.citySlug === citySlug &&
-        tour.destination.stateSlug === stateSlug
-    )
+  const engine6Candidates = engine6ListingTours.filter(
+    tour => tour.engine === "engine6"
+  );
+  const sameCityCandidates = engine6Candidates.filter(
+    tour =>
+      tour.destination.citySlug === citySlug &&
+      tour.destination.stateSlug === stateSlug
+  );
+  const sameStateCandidates = engine6Candidates.filter(
+    tour => tour.destination.stateSlug === stateSlug
+  );
+  const sameCitySiblings = sameCityCandidates.filter(
+    tour => tour.productCode !== currentTour.productCode
+  );
+  const finalTours = sameCitySiblings
     .sort((left, right) => {
       const leftHeroScore = hasUsableHeroImage(left) ? 1 : 0;
       const rightHeroScore = hasUsableHeroImage(right) ? 1 : 0;
@@ -47,4 +59,21 @@ export const getEngine6RelatedTours = (
       return left.title.localeCompare(right.title);
     })
     .slice(0, maxCount);
+
+  return {
+    tours: finalTours,
+    debug: {
+      templatePath: "Engine6ProductRoute>Engine6TourPage",
+      sourceCollection: "engine6ListingTours",
+      currentTourSlug:
+        currentTour.pagePath.split("/").filter(Boolean).pop() ?? currentTour.pagePath,
+      currentCitySlug: citySlug,
+      currentStateSlug: stateSlug,
+      siblingCandidateCountBeforeFiltering: sameCityCandidates.length,
+      sameStateCandidateCount: sameStateCandidates.length,
+      siblingCountAfterExcludingCurrent: sameCitySiblings.length,
+      finalCardProductCodes: finalTours.map(tour => tour.productCode ?? tour.id),
+      finalCardCount: finalTours.length,
+    },
+  };
 };

@@ -23,7 +23,10 @@ import {
   engine6SpecimenTour,
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
-import { getEngine6RelatedTours } from "./relatedTours";
+import {
+  getEngine6RelatedTours,
+  getEngine6RelatedToursResult,
+} from "./relatedTours";
 import { ENGINE6_SPECIMEN_ROUTE } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -670,6 +673,18 @@ describe("engine6 mapping/cards/page", () => {
     expect(relatedIndex).toBeGreaterThan(ctaIndex);
     expect(html).toContain("Other Tours in <!-- -->Las Vegas");
     expect(html).toContain('aria-label="Other tours in Las Vegas"');
+    expect(html).toContain('data-testid="engine6-related-tours-debug"');
+    expect(html).toContain(
+      'data-engine6-template="Engine6ProductRoute&gt;Engine6TourPage"'
+    );
+    expect(html).toContain('data-related-source="engine6ListingTours"');
+    expect(html).toContain('data-related-current-slug="grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas"');
+    expect(html).toContain('data-related-city-slug="las-vegas"');
+    expect(html).toContain('data-related-state-slug="nevada"');
+    expect(html).toContain('data-related-same-city-candidates="2"');
+    expect(html).toContain('data-related-siblings-after-current-excluded="1"');
+    expect(html).toContain('data-related-final-count="1"');
+    expect(html).toContain('data-related-final-cards="73781P4"');
     expect(html).toContain("Red Rock Canyon and Seven Magic Mountains Tour");
     expect(html).toContain(
       'href="/destinations/nevada/las-vegas/tours/red-rock-canyon-and-seven-magic-mountains-tour"'
@@ -789,6 +804,7 @@ describe("engine6 related tours", () => {
     const grandCanyonRelated = getEngine6RelatedTours(grandCanyonTour!);
     const redRockRelated = getEngine6RelatedTours(redRockTour!);
     const specimenRelated = getEngine6RelatedTours(engine6SpecimenTour);
+    const grandCanyonDebug = getEngine6RelatedToursResult(grandCanyonTour!);
 
     expect(grandCanyonRelated.map(tour => tour.productCode)).toEqual([
       "73781P4",
@@ -797,6 +813,18 @@ describe("engine6 related tours", () => {
       "132218P75",
     ]);
     expect(specimenRelated).toEqual([]);
+    expect(grandCanyonDebug.debug).toEqual({
+      templatePath: "Engine6ProductRoute>Engine6TourPage",
+      sourceCollection: "engine6ListingTours",
+      currentTourSlug: "grand-canyon-skywalk-hoover-dam-day-trip-from-las-vegas",
+      currentCitySlug: "las-vegas",
+      currentStateSlug: "nevada",
+      siblingCandidateCountBeforeFiltering: 2,
+      sameStateCandidateCount: 2,
+      siblingCountAfterExcludingCurrent: 1,
+      finalCardProductCodes: ["73781P4"],
+      finalCardCount: 1,
+    });
   });
 });
 

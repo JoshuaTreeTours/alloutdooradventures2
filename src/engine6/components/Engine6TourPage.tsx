@@ -3,8 +3,8 @@ import React, { type ReactNode } from "react";
 import DestinationBreadcrumb from "../../components/DestinationBreadcrumb";
 import Seo from "../../components/Seo";
 import { slugify } from "../../utils/slugify";
+import { getEngine6RelatedToursResult } from "../relatedTours";
 import { getEngine6RouteSpecByProductCode } from "../routes";
-import { getEngine6RelatedTours } from "../relatedTours";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
@@ -91,7 +91,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const schema = buildEngine6SchemaGraph(tour);
   const destinationStatePath = `/destinations/${routeSpec?.stateSlug ?? slugify(tour.state)}`;
   const destinationCityPath = `${destinationStatePath}/${routeSpec?.citySlug ?? slugify(tour.city)}`;
-  const relatedTours = getEngine6RelatedTours(tour);
+  const relatedToursResult = getEngine6RelatedToursResult(tour);
+  const relatedTours = relatedToursResult.tours;
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&
@@ -344,6 +345,29 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             Book now
           </a>
         </section>
+
+        <div
+          hidden
+          data-testid="engine6-related-tours-debug"
+          data-engine6-template={relatedToursResult.debug.templatePath}
+          data-related-source={relatedToursResult.debug.sourceCollection}
+          data-related-current-slug={relatedToursResult.debug.currentTourSlug}
+          data-related-city-slug={relatedToursResult.debug.currentCitySlug}
+          data-related-state-slug={relatedToursResult.debug.currentStateSlug}
+          data-related-same-city-candidates={
+            relatedToursResult.debug.siblingCandidateCountBeforeFiltering
+          }
+          data-related-same-state-candidates={
+            relatedToursResult.debug.sameStateCandidateCount
+          }
+          data-related-siblings-after-current-excluded={
+            relatedToursResult.debug.siblingCountAfterExcludingCurrent
+          }
+          data-related-final-count={relatedToursResult.debug.finalCardCount}
+          data-related-final-cards={
+            relatedToursResult.debug.finalCardProductCodes.join(",")
+          }
+        />
 
         <Engine6RelatedToursSection city={tour.city} tours={relatedTours} />
       </div>
