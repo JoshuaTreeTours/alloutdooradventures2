@@ -50,11 +50,33 @@ const RatingSummary = ({
         ))}
       </div>
       <p className="text-sm font-semibold text-white">
-        {ratingLabel} rating • {totalReviews} reviews
+        {ratingLabel} rating • {totalReviews.toLocaleString()} reviews
       </p>
     </div>
   );
 };
+
+const SnapshotItem = ({ label, value }: { label: string; value: string }) => (
+  <div className="rounded-xl border border-green-100 bg-green-50 p-4">
+    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-green-700">
+      {label}
+    </p>
+    <p className="mt-2 text-sm leading-6 text-slate-700">{value}</p>
+  </div>
+);
+
+const BulletList = ({ items }: { items: string[] }) => (
+  <ul className="grid gap-3 md:grid-cols-2">
+    {items.map((item, index) => (
+      <li
+        key={`${item.slice(0, 32)}-${index}`}
+        className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"
+      >
+        {item}
+      </li>
+    ))}
+  </ul>
+);
 
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
   const categoryLabel =
@@ -66,6 +88,13 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.aggregateRating === "number" &&
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
+  const snapshotItems = [
+    tour.durationText ? { label: "Duration", value: tour.durationText } : null,
+    tour.pickupOffered ? { label: "Pickup", value: "Pickup offered" } : null,
+    tour.mobileTicket ? { label: "Ticket", value: "Mobile ticket" } : null,
+    tour.language ? { label: "Language", value: tour.language } : null,
+    tour.operatorName ? { label: "Operator", value: tour.operatorName } : null,
+  ].filter((item): item is { label: string; value: string } => Boolean(item));
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -123,6 +152,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                       <strong>Meeting point:</strong> {tour.meetingPointText}
                     </p>
                   ) : null}
+                  {tour.cancellationSummary ? (
+                    <p>
+                      <strong>Cancellation:</strong> {tour.cancellationSummary}
+                    </p>
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -148,6 +182,20 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       </section>
 
       <div className="mx-auto max-w-6xl px-6 py-10">
+        {snapshotItems.length > 0 ? (
+          <ContentSection title="Tour snapshot">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {snapshotItems.map(item => (
+                <SnapshotItem
+                  key={item.label}
+                  label={item.label}
+                  value={item.value}
+                />
+              ))}
+            </div>
+          </ContentSection>
+        ) : null}
+
         {tour.overviewText ? (
           <ContentSection title="Overview">
             <div className="space-y-4 text-base leading-7 text-slate-700">
@@ -158,18 +206,24 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
+        {tour.galleryImageUrls.length > 1 ? (
+          <ContentSection title="Gallery">
+            <div className="grid gap-4 md:grid-cols-3">
+              {tour.galleryImageUrls.slice(0, 6).map((imageUrl, index) => (
+                <img
+                  key={`${imageUrl}-${index}`}
+                  src={imageUrl}
+                  alt={`${tour.title} gallery image ${index + 1}`}
+                  className="h-48 w-full rounded-2xl object-cover"
+                />
+              ))}
+            </div>
+          </ContentSection>
+        ) : null}
+
         {tour.highlights.length > 0 ? (
           <ContentSection title="Highlights">
-            <ul className="grid gap-3 md:grid-cols-2">
-              {tour.highlights.map((highlight, index) => (
-                <li
-                  key={`${highlight.slice(0, 32)}-${index}`}
-                  className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"
-                >
-                  {highlight}
-                </li>
-              ))}
-            </ul>
+            <BulletList items={tour.highlights} />
           </ContentSection>
         ) : null}
 
@@ -199,6 +253,47 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </li>
               ))}
             </ul>
+          </ContentSection>
+        ) : null}
+
+        {tour.inclusionItems.length > 0 || tour.exclusionItems.length > 0 ? (
+          <ContentSection title="What’s included">
+            <div className="grid gap-6 md:grid-cols-2">
+              {tour.inclusionItems.length > 0 ? (
+                <div>
+                  <h3 className="text-lg font-semibold text-green-900">
+                    Included
+                  </h3>
+                  <div className="mt-3">
+                    <BulletList items={tour.inclusionItems} />
+                  </div>
+                </div>
+              ) : null}
+              {tour.exclusionItems.length > 0 ? (
+                <div>
+                  <h3 className="text-lg font-semibold text-green-900">
+                    Not included
+                  </h3>
+                  <div className="mt-3">
+                    <BulletList items={tour.exclusionItems} />
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </ContentSection>
+        ) : null}
+
+        {tour.requirements.length > 0 ? (
+          <ContentSection title="Important details">
+            <BulletList items={tour.requirements} />
+          </ContentSection>
+        ) : null}
+
+        {tour.cancellationSummary ? (
+          <ContentSection title="Cancellation">
+            <p className="text-sm leading-6 text-slate-700">
+              {tour.cancellationSummary}
+            </p>
           </ContentSection>
         ) : null}
 

@@ -4,8 +4,6 @@ import path from "node:path";
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
-const ENGINE6_BUNDLED_PRODUCT_CODE = "163873P16";
-
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
   Accept: "application/json;version=2.0",
@@ -14,10 +12,6 @@ const buildHeaders = (apiKey: string) => ({
 });
 
 const getBundledExactProductPayload = async (productCode: string) => {
-  if (productCode !== ENGINE6_BUNDLED_PRODUCT_CODE) {
-    return null;
-  }
-
   const payloadPath = path.join(
     process.cwd(),
     "data",
@@ -39,6 +33,8 @@ const buildDiagnostics = (
   hasViatorApiKey: boolean
 ) => ({
   source,
+  resolvedProductUrl: null as string | null,
+  resolvedHeroImageUrl: null as string | null,
   hasViatorApiKey,
   attemptedLiveFetch: false,
   upstreamStatus: null as number | null,
@@ -82,11 +78,20 @@ const EMPTY_EXTRACTED_PRODUCT = {
   state: null,
   heroImageUrl: null,
   cardImageUrl: null,
+  galleryImageUrls: [] as string[],
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
   aggregateRating: null,
   reviewCount: null,
+  durationText: null,
+  pickupOffered: false,
+  mobileTicket: false,
+  language: null,
+  operatorName: null,
+  cancellationSummary: null,
+  inclusionItems: [] as string[],
+  exclusionItems: [] as string[],
   meetingPointText: null,
   overviewText: null,
   highlights: [] as string[],
@@ -269,6 +274,8 @@ export default async function handler(req: any, res: any) {
     respondWithNormalizedEnvelope(res, {
       statusCode: 500,
       source: "live-api",
+      resolvedProductUrl: null,
+      resolvedHeroImageUrl: null,
       diagnostics,
       productCode,
       ...buildEmptyEnvelope(productCode),

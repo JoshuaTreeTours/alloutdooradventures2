@@ -46,11 +46,20 @@ export type Engine6Extracted = {
   state: string | null;
   heroImageUrl: string | null;
   cardImageUrl: string | null;
+  galleryImageUrls: string[];
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
+  durationText: string | null;
+  pickupOffered: boolean;
+  mobileTicket: boolean;
+  language: string | null;
+  operatorName: string | null;
+  cancellationSummary: string | null;
+  inclusionItems: string[];
+  exclusionItems: string[];
   meetingPointText: string | null;
   overviewText: string | null;
   highlights: string[];
@@ -284,11 +293,20 @@ const emptyExtracted = (): Engine6Extracted => ({
   state: null,
   heroImageUrl: null,
   cardImageUrl: null,
+  galleryImageUrls: [],
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
   aggregateRating: null,
   reviewCount: null,
+  durationText: null,
+  pickupOffered: false,
+  mobileTicket: false,
+  language: null,
+  operatorName: null,
+  cancellationSummary: null,
+  inclusionItems: [],
+  exclusionItems: [],
   meetingPointText: null,
   overviewText: null,
   highlights: [],
@@ -764,6 +782,79 @@ const extractMeetingPoint = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
+const extractGalleryImages = (product: RecordLike) => {
+  const images = [
+    ...(Array.isArray(asRecord(product.media)?.images)
+      ? (asRecord(product.media)?.images as unknown[])
+      : []),
+    ...(Array.isArray(product.images) ? (product.images as unknown[]) : []),
+  ];
+
+  const urls = dedupeStrings(
+    images
+      .map(item => {
+        const row = asRecord(item);
+        if (!row) return null;
+        return (
+          rankVariants([
+            ...collectRecordVariants(row, ["media", "images", 0]),
+            ...collectArrayVariants(row, ["images", 0]),
+          ])?.url ?? asImageUrl(row.url)
+        );
+      })
+      .filter((value): value is string => Boolean(value))
+  );
+
+  return urls;
+};
+
+const extractDurationText = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(product.durationText),
+    asNonEmptyString(asRecord(product.duration)?.text),
+    asNonEmptyString(asRecord(product.duration)?.durationText),
+    asNonEmptyString(product.duration),
+  ])[0] ?? null;
+
+const extractLanguage = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(product.language),
+    asNonEmptyString(asRecord(product.languages)?.primary),
+    ...(Array.isArray(product.languages)
+      ? (product.languages as unknown[]).map(item =>
+          typeof item === "string"
+            ? asNonEmptyString(item)
+            : asNonEmptyString(asRecord(item)?.name)
+        )
+      : []),
+  ])[0] ?? null;
+
+const extractSupplierName = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(asRecord(product.supplier)?.name),
+    asNonEmptyString(product.supplierName),
+    asNonEmptyString(product.operatorName),
+  ])[0] ?? null;
+
+const extractCancellationSummary = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(asRecord(product.cancellationPolicy)?.description),
+    asNonEmptyString(asRecord(product.cancellationPolicy)?.summary),
+    ...normalizeStringArray(product.additionalInfo).filter(item =>
+      /cancel|refund/i.test(item)
+    ),
+  ])[0] ?? null;
+
+const extractInclusionItems = (product: RecordLike) =>
+  normalizeStringArray(product.inclusions).length > 0
+    ? normalizeStringArray(product.inclusions)
+    : normalizeStringArray(asRecord(product.whatsIncluded)?.included);
+
+const extractExclusionItems = (product: RecordLike) =>
+  normalizeStringArray(product.exclusions).length > 0
+    ? normalizeStringArray(product.exclusions)
+    : normalizeStringArray(asRecord(product.whatsIncluded)?.excluded);
+
 const extractFaqs = (product: RecordLike) => {
   const normalizeFaqs = (value: unknown): Engine6ExtractedFaq[] => {
     if (!Array.isArray(value)) return [];
@@ -1034,6 +1125,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE;
 
   const heroImage = extractPlaybookHeroImage(product);
+  const galleryImageUrls = extractGalleryImages(product);
   diagnostics.heroImageFieldPath = heroImage?.path ?? null;
   diagnostics.heroVariantFieldPath = heroImage?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroImage?.width ?? null;
@@ -1154,12 +1246,23 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       state: state ?? null,
       heroImageUrl: heroImage?.value ?? null,
       cardImageUrl: heroImage?.value ?? null,
+      galleryImageUrls,
       productUrl: productUrl.value,
       priceAmount: price.amount,
       priceFormatted:
         price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
+      durationText: extractDurationText(product),
+      pickupOffered:
+        /pickup offered/i.test(asNonEmptyString(product.pickup) ?? "") ||
+        Boolean(product.pickupOffered),
+      mobileTicket: Boolean(product.mobileTicket),
+      language: extractLanguage(product),
+      operatorName: extractSupplierName(product),
+      cancellationSummary: extractCancellationSummary(product),
+      inclusionItems: extractInclusionItems(product),
+      exclusionItems: extractExclusionItems(product),
       meetingPointText: meetingPoint.value,
       overviewText: overview.value,
       highlights: highlights.value,

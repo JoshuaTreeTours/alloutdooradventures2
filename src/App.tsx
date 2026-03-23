@@ -62,11 +62,16 @@ import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
 import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
 import Engine6SpecimenRoute from "./pages/engine6/Engine6SpecimenRoute";
+import Engine6ProductRoute from "./pages/engine6/Engine6ProductRoute";
 import {
   ENGINE5_PROOF_LISTING_PATH,
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
-import { ENGINE6_SPECIMEN_ROUTE } from "./engine6/routes";
+import {
+  ENGINE6_GRAND_CANYON_ROUTE,
+  ENGINE6_GRAND_CANYON_PRODUCT_CODE,
+  ENGINE6_SPECIMEN_ROUTE,
+} from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -85,6 +90,10 @@ const DestinationStateGuideRedirect = ({ params }: StateSlugParams) => {
 
   return <RouteRedirect to={`${stateGuidePath}${queryString}`} />;
 };
+
+const Engine6GrandCanyonRoute = () => (
+  <Engine6ProductRoute productCode={ENGINE6_GRAND_CANYON_PRODUCT_CODE} />
+);
 
 const MexicoCitySlugRedirect = () => (
   <RouteRedirect to="/destinations/mexico/ciudad-de-mexico" />
@@ -251,6 +260,10 @@ export default function App() {
         />
 
         <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
+        <Route
+          path={ENGINE6_GRAND_CANYON_ROUTE}
+          component={Engine6GrandCanyonRoute}
+        />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

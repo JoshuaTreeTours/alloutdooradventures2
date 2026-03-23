@@ -56,6 +56,8 @@ export const buildEngine6ValidationReport = (
     rawProduct: extraction.product,
     diagnostics: {
       source: "live-api",
+      resolvedProductUrl: null,
+      resolvedHeroImageUrl: null,
       hasViatorApiKey: false,
       attemptedLiveFetch: false,
       upstreamStatus: null,

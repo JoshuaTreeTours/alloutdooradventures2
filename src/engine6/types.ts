@@ -11,6 +11,8 @@ export type Engine6FaqItem = {
 
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
+  resolvedProductUrl: string | null;
+  resolvedHeroImageUrl: string | null;
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";
@@ -78,10 +80,19 @@ export type Engine6Tour = {
   state: string;
   heroImageUrl: string;
   cardImageUrl: string;
+  galleryImageUrls: string[];
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
   reviewCount: number | null;
+  durationText: string | null;
+  pickupOffered: boolean;
+  mobileTicket: boolean;
+  language: string | null;
+  operatorName: string | null;
+  cancellationSummary: string | null;
+  inclusionItems: string[];
+  exclusionItems: string[];
   meetingPointText: string;
   overviewText: string | null;
   highlights: string[];
@@ -110,11 +121,20 @@ export type Engine6ApiResponse = {
     state: string | null;
     heroImageUrl: string | null;
     cardImageUrl: string | null;
+    galleryImageUrls: string[];
     productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
     aggregateRating: number | null;
     reviewCount: number | null;
+    durationText: string | null;
+    pickupOffered: boolean;
+    mobileTicket: boolean;
+    language: string | null;
+    operatorName: string | null;
+    cancellationSummary: string | null;
+    inclusionItems: string[];
+    exclusionItems: string[];
     meetingPointText: string | null;
     overviewText: string | null;
     highlights: string[];

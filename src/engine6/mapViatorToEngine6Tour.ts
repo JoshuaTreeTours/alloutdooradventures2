@@ -7,6 +7,7 @@ import {
   cleanEngine6Description,
   formatEngine6CategoryLabel,
 } from "./seo";
+import { getEngine6RouteSpecByProductCode } from "./routes";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const FALLBACK_HERO =
@@ -26,6 +27,10 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.heroImageUrl ??
     payload.extracted.cardImageUrl ??
     FALLBACK_HERO;
+  const galleryImageUrls = [
+    heroImageUrl,
+    ...(payload.extracted.galleryImageUrls ?? []),
+  ].filter((value, index, array) => array.indexOf(value) === index);
   const overviewText = cleanEngine6Description(
     payload.extracted.overviewText ?? ""
   );
@@ -37,7 +42,9 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
+  const routeSpec = getEngine6RouteSpecByProductCode(payload.rawProductCode);
+  const canonicalPath =
+    routeSpec?.route ?? buildEngine6CanonicalPath({ state, city, title });
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -77,10 +84,19 @@ export const mapViatorToEngine6Tour = (
     state,
     heroImageUrl,
     cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
+    galleryImageUrls,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
+    durationText: payload.extracted.durationText,
+    pickupOffered: payload.extracted.pickupOffered,
+    mobileTicket: payload.extracted.mobileTicket,
+    language: payload.extracted.language,
+    operatorName: payload.extracted.operatorName,
+    cancellationSummary: payload.extracted.cancellationSummary,
+    inclusionItems: payload.extracted.inclusionItems ?? [],
+    exclusionItems: payload.extracted.exclusionItems ?? [],
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",
     overviewText: overviewText || null,
@@ -96,6 +112,8 @@ export const mapViatorToEngine6Tour = (
     bookingUrl,
     diagnostics: {
       source: payload.source,
+      resolvedProductUrl: bookingUrl,
+      resolvedHeroImageUrl: heroImageUrl,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,
       commercialPriceRawValue: payload.diagnostics.commercialPriceRawValue,
       priceSourceUsed: payload.diagnostics.priceSourceUsed,

@@ -287,6 +287,8 @@ const specimenApiPayload = {
   source: "live-api" as const,
   diagnostics: {
     source: "live-api" as const,
+    resolvedProductUrl: null,
+    resolvedHeroImageUrl: null,
     hasViatorApiKey: true,
     attemptedLiveFetch: true,
     upstreamStatus: 200,
