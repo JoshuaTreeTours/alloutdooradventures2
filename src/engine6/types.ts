@@ -94,8 +94,8 @@ export type Engine6Tour = {
   pagePath: string;
   canonicalPath: string;
   bookingProvider: "viator";
-  referenceBookingUrl: string;
-  bookingUrl: string;
+  referenceBookingUrl: string | null;
+  bookingUrl: string | null;
   diagnostics: Engine6TourDiagnostics;
 };
 

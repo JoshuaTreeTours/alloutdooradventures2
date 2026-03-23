@@ -116,7 +116,7 @@ export const mapViatorToEngine6Tour = (
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??
-        "generated:viator-search-product-code",
+        "missing:canonical-viator-product-url",
       ratingFieldPath: payload.diagnostics.ratingFieldPath,
       reviewCountFieldPath: payload.diagnostics.reviewCountFieldPath,
       overviewFieldPath: payload.diagnostics.overviewFieldPath,

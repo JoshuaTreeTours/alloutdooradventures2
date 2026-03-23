@@ -649,7 +649,7 @@ describe("engine6 seo/schema", () => {
     expect(faq).toBeDefined();
   });
 
-  it("omits Offer.url when the booking link falls back to a Viator search URL", () => {
+  it("omits Offer.url when no canonical Viator product URL is available", () => {
     const tour = {
       ...mapViatorToEngine6Tour(specimenApiPayload),
       referenceBookingUrl: buildEngine6ViatorReferenceUrl("MISSING1"),
@@ -659,10 +659,24 @@ describe("engine6 seo/schema", () => {
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const offer = graph.find(node => node["@type"] === "Offer");
 
-    expect(tour.bookingUrl).toContain("/search/MISSING1");
+    expect(tour.referenceBookingUrl).toBeNull();
+    expect(tour.bookingUrl).toBeNull();
     expect(offer).toBeDefined();
     expect(offer).not.toHaveProperty("url");
   });
+});
+
+it("does not render booking CTAs when a canonical Viator product URL is unavailable", () => {
+  const tour = {
+    ...mapViatorToEngine6Tour(specimenApiPayload),
+    referenceBookingUrl: null,
+    bookingUrl: null,
+  };
+
+  const html = renderToString(<Engine6TourPage tour={tour} />);
+
+  expect(html).not.toContain('href="https://www.viator.com/search/');
+  expect(html.match(/>Book now</g) ?? []).toHaveLength(0);
 });
 
 describe("engine6 viator outbound resolver", () => {
@@ -681,6 +695,11 @@ describe("engine6 viator outbound resolver", () => {
     ).toBe(
       "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link&foo=bar"
     );
+  });
+
+  it("returns null when a canonical Viator product URL is unavailable", () => {
+    expect(buildEngine6ViatorReferenceUrl("MISSING1", null)).toBeNull();
+    expect(buildEngine6ViatorBookingUrl("MISSING1", null)).toBeNull();
   });
 
   it("leaves non-viator providers unchanged", () => {

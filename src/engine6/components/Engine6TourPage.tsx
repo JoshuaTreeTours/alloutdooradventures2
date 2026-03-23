@@ -71,7 +71,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     resolveEngine6FinalOutboundUrl({
       provider: tour.bookingProvider,
       url: tour.referenceBookingUrl,
-    }) ?? tour.bookingUrl;
+    }) ??
+    tour.bookingUrl ??
+    undefined;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -133,14 +135,16 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               </div>
             </div>
 
-            <a
-              href={ctaHref}
-              target="_blank"
-              rel="noreferrer"
-              className={`mt-6 ${BOOK_CTA_CLASSES}`}
-            >
-              Book now
-            </a>
+            {ctaHref ? (
+              <a
+                href={ctaHref}
+                target="_blank"
+                rel="noreferrer"
+                className={`mt-6 ${BOOK_CTA_CLASSES}`}
+              >
+                Book now
+              </a>
+            ) : null}
           </div>
 
           {tour.heroImageUrl ? (
@@ -242,14 +246,16 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             Secure your spot, confirm the latest availability, and review final
             departure details before checkout.
           </p>
-          <a
-            href={ctaHref}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
-          >
-            Book now
-          </a>
+          {ctaHref ? (
+            <a
+              href={ctaHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
+            >
+              Book now
+            </a>
+          ) : null}
         </section>
       </div>
     </main>

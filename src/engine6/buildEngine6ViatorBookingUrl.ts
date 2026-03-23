@@ -4,12 +4,15 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   medium: "link",
 } as const;
 
-const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
-
 export const isEngine6ViatorUrl = (url: URL) =>
   url.hostname === "viator.com" ||
   url.hostname.endsWith(".viator.com") ||
   url.hostname === "travelagents.viator.com";
+
+const isCanonicalViatorProductUrl = (url: URL) =>
+  isEngine6ViatorUrl(url) &&
+  url.pathname.startsWith("/tours/") &&
+  !url.pathname.includes("/search/");
 
 const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
   if (!preferredUrl) {
@@ -18,7 +21,7 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
 
   try {
     const parsed = new URL(preferredUrl);
-    if (!isEngine6ViatorUrl(parsed)) {
+    if (!isCanonicalViatorProductUrl(parsed)) {
       return null;
     }
 
@@ -31,12 +34,12 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
 export const buildEngine6ViatorReferenceUrl = (
   productCode: string,
   preferredUrl: string | null = null
-): string => {
-  const url =
-    normalizePreferredViatorUrl(preferredUrl) ??
-    new URL(
-      `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
-    );
+): string | null => {
+  void productCode;
+  const url = normalizePreferredViatorUrl(preferredUrl);
+  if (!url) {
+    return null;
+  }
 
   url.searchParams.delete("pid");
   url.searchParams.delete("mcid");
@@ -48,11 +51,22 @@ export const buildEngine6ViatorReferenceUrl = (
 export const buildEngine6ViatorBookingUrl = (
   productCode: string,
   preferredUrl: string | null = null
-): string =>
-  resolveEngine6FinalOutboundUrl({
-    provider: "viator",
-    url: buildEngine6ViatorReferenceUrl(productCode, preferredUrl),
-  }) ?? buildEngine6ViatorReferenceUrl(productCode, preferredUrl);
+): string | null => {
+  const referenceUrl = buildEngine6ViatorReferenceUrl(
+    productCode,
+    preferredUrl
+  );
+  if (!referenceUrl) {
+    return null;
+  }
+
+  return (
+    resolveEngine6FinalOutboundUrl({
+      provider: "viator",
+      url: referenceUrl,
+    }) ?? null
+  );
+};
 
 export const resolveEngine6FinalOutboundUrl = ({
   provider,
@@ -87,20 +101,4 @@ export const resolveEngine6OfferUrl = ({
 }: {
   provider: string | null | undefined;
   url: string | null | undefined;
-}): string | undefined => {
-  const outboundUrl = resolveEngine6FinalOutboundUrl({ provider, url });
-  if (!outboundUrl) {
-    return undefined;
-  }
-
-  if (provider !== "viator") {
-    return outboundUrl;
-  }
-
-  const parsed = normalizePreferredViatorUrl(outboundUrl);
-  if (!parsed || parsed.pathname.includes("/search/")) {
-    return undefined;
-  }
-
-  return outboundUrl;
-};
+}): string | undefined => resolveEngine6FinalOutboundUrl({ provider, url });
