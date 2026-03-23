@@ -7,7 +7,9 @@ const VIATOR_AFFILIATE_PARAMS = {
 } as const;
 
 export const buildViatorAffiliateUrl = (productCode: string): string => {
-  const record = engine4ViatorTours.find(tour => tour.productCode === productCode);
+  const record = engine4ViatorTours.find(
+    tour => tour.productCode === productCode
+  );
   if (!record?.bookingUrl) {
     throw new Error(
       `Unable to build Viator affiliate URL: unknown product code ${productCode}`

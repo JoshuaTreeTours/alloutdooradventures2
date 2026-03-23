@@ -61,10 +61,12 @@ import FlagstaffTourDetailRoute from "./pages/tours/FlagstaffTourDetailRoute";
 import FlagstaffTourBookingRoute from "./pages/tours/FlagstaffTourBookingRoute";
 import Engine5ProofListingRoute from "./pages/engine5/Engine5ProofListingRoute";
 import Engine5ProofTourPage from "./engine5/components/Engine5ProofTourPage";
+import Engine6SpecimenRoute from "./pages/engine6/Engine6SpecimenRoute";
 import {
   ENGINE5_PROOF_LISTING_PATH,
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
+import { ENGINE6_SPECIMEN_ROUTE } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -248,6 +250,7 @@ export default function App() {
           component={MexicoCityBookSlugRedirect}
         />
 
+        <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

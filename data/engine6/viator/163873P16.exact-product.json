@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "163873P16",
+    "title": "East Zion Top of the World Jeep Tour",
+    "description": {
+      "text": "<p>Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond. With reasonably groomed trails, this trek is perfect for families with small kids, and anyone looking for easy, effortless adventure with plenty of reward.</p>"
+    },
+    "shortDescription": "Short fallback that should not win for the specimen.",
+    "highlights": [
+      "Easy meetup at at Zion Ponderosa Ranch Resort",
+      "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
+      "See Zion National Park and its environs from above",
+      "Limited to 8 travelers, you'll get an intimate East Zion experience"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Not recommended for travelers with back problems",
+      "Not recommended for pregnant travelers",
+      "No heart problems or other serious medical conditions",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 8 travelers"
+    ],
+    "location": {
+      "city": "Springdale",
+      "state": "Utah"
+    },
+    "priceFrom": "$105.09",
+    "pricing": {
+      "summary": {
+        "fromPrice": 999
+      }
+    },
+    "images": [
+      {
+        "isCover": true,
+        "variants": [
+          {
+            "url": null,
+            "width": 360,
+            "height": 240
+          },
+          {
+            "url": null,
+            "width": 674,
+            "height": 446
+          }
+        ]
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "XXLARGE": {
+              "url": null,
+              "width": 1600,
+              "height": 1067
+            }
+          }
+        }
+      ]
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 154
+    },
+    "logistics": {
+      "start": {
+        "description": "Meet us at Zion Mountain Ranch!"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Zion National Park",
+        "description": "Admission Ticket Free",
+        "duration": "30 minutes"
+      }
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "q": "Is this tour good for families?",
+          "a": "Yes. The reasonably groomed trails make it approachable for families with small kids."
+        }
+      ]
+    }
+  }
+}

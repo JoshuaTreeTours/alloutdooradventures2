@@ -61,6 +61,18 @@ function pickNonTrivialHighlight(highlights?: string[]): string {
   );
 }
 
+function formatCategoryLabel(slug?: string): string {
+  if (!slug) {
+    return "Tour";
+  }
+
+  if (slug === "off-road-tour") {
+    return "Jeep Tour";
+  }
+
+  return slug.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
+}
+
 function getCardBlurb(tour: Tour): string {
   if (isRentalTour(tour)) {
     return buildRentalDescription({
@@ -115,7 +127,10 @@ export default function TourCard({ tour, href }: TourCardProps) {
   const blurb = getCardBlurb(tour);
   const categorySource =
     tour.primaryCategory ?? tour.categories?.[0] ?? tour.activitySlugs?.[0];
-  const categoryLabel = getActivityLabelFromSlug(categorySource);
+  const categoryLabel =
+    tour.engine === "engine6"
+      ? formatCategoryLabel(categorySource)
+      : getActivityLabelFromSlug(categorySource);
   const regionLabel = tour.destination.state || tour.destination.country || "";
   const locationLabel = regionLabel
     ? `${tour.destination.city}, ${regionLabel}`
@@ -124,10 +139,20 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency
   );
+  const hasRating =
+    !tour.suppressReviews &&
+    typeof tour.badges.rating === "number" &&
+    typeof tour.badges.reviewCount === "number";
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+  const renderedTagPills =
+    tour.tagPills?.map(tag =>
+      tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
+        ? formatCategoryLabel(categorySource)
+        : tag
+    ) ?? [];
 
   return (
     <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
@@ -156,9 +181,9 @@ export default function TourCard({ tour, href }: TourCardProps) {
             </span>
           </div>
         )}
-        {tour.tagPills?.length ? (
+        {renderedTagPills.length ? (
           <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-2">
-            {tour.tagPills.map(tag => (
+            {renderedTagPills.map(tag => (
               <span
                 key={tag}
                 className="rounded-full bg-white/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#2f4a2f]"
@@ -183,6 +208,12 @@ export default function TourCard({ tour, href }: TourCardProps) {
             </p>
           ) : categoryLabel ? (
             <p className="mt-2 text-sm text-[#405040]">{categoryLabel}</p>
+          ) : null}
+          {hasRating ? (
+            <p className="mt-3 text-sm font-medium text-[#2f4a2f]">
+              ★ {tour.badges.rating.toFixed(1)} ({tour.badges.reviewCount}{" "}
+              reviews)
+            </p>
           ) : null}
           {startingPriceLabel ? (
             <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
