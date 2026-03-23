@@ -423,6 +423,14 @@ describe("engine6 meta descriptions", () => {
   });
 });
 
+describe("engine6 Viator booking URLs", () => {
+  it("uses the canonical East Zion Viator detail URL when no preferred product URL is available", () => {
+    expect(buildEngine6ViatorBookingUrl("163873P16")).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
+});
+
 describe("engine6 aggregate rating normalization", () => {
   it("rounds valid ratings to one decimal place and safely ignores invalid inputs", () => {
     expect(normalizeEngine6AggregateRating(5)).toBe(5);
