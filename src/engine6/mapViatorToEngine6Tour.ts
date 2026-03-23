@@ -1,5 +1,6 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
+import { rewriteEngine6Overview } from "./rewriteOverview";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -7,10 +8,9 @@ import {
   cleanEngine6Description,
   formatEngine6CategoryLabel,
 } from "./seo";
+import { getEngine6RouteSpecByProductCode } from "./routes";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
-
-const FALLBACK_HERO =
-  "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1600&q=80";
+import { TOUR_FALLBACK_HERO_IMAGE } from "../utils/hero";
 
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
@@ -22,13 +22,30 @@ export const mapViatorToEngine6Tour = (
       : `Outdoor Adventure ${payload.rawProductCode}`);
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
+  const fallbackGalleryHero = payload.extracted.galleryImageUrls[0] ?? null;
   const heroImageUrl =
     payload.extracted.heroImageUrl ??
+    fallbackGalleryHero ??
+    TOUR_FALLBACK_HERO_IMAGE;
+  const renderHeroFallbackTriggered = !payload.extracted.heroImageUrl;
+  const renderHeroFallbackReason = payload.extracted.heroImageUrl
+    ? null
+    : fallbackGalleryHero
+      ? "same-product-gallery"
+      : "global-tour-placeholder";
+  const cardImageUrl =
     payload.extracted.cardImageUrl ??
-    FALLBACK_HERO;
-  const overviewText = cleanEngine6Description(
-    payload.extracted.overviewText ?? ""
-  );
+    payload.extracted.galleryImageUrls[0] ??
+    heroImageUrl;
+  const overviewText = rewriteEngine6Overview({
+    title,
+    city,
+    state,
+    originalOverview: payload.extracted.overviewText,
+    durationText: payload.extracted.durationText,
+    highlights: payload.extracted.highlights ?? [],
+    itinerary: payload.extracted.itinerary ?? [],
+  });
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const faqs = payload.extracted.faqs ?? [];
@@ -37,12 +54,14 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
-  const rawDescription =
-    payload.extracted.overviewText ??
-    payload.extracted.seoDescription ??
-    `Explore ${title} with local guides in ${city}, ${state}.`;
-  const description = cleanEngine6Description(rawDescription);
+  const routeSpec = getEngine6RouteSpecByProductCode(payload.rawProductCode);
+  const canonicalPath =
+    routeSpec?.route ?? buildEngine6CanonicalPath({ state, city, title });
+  const description = cleanEngine6Description(
+    overviewText ||
+      payload.extracted.seoDescription ||
+      `Explore ${title} with local guides in ${city}, ${state}.`
+  );
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
@@ -57,11 +76,10 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,
     !payload.extracted.state ? "state" : null,
-    !payload.extracted.heroImageUrl && !payload.extracted.cardImageUrl
-      ? "heroImageUrl"
-      : null,
+    !payload.extracted.heroImageUrl ? "heroImageUrl" : null,
     !payload.extracted.priceFormatted ? "priceFormatted" : null,
     !payload.extracted.meetingPointText ? "meetingPointText" : null,
+    !payload.extracted.overviewText ? "overviewText" : null,
   ].filter((value): value is string => Boolean(value));
 
   return {
@@ -76,11 +94,20 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     heroImageUrl,
-    cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
+    cardImageUrl,
+    galleryImageUrls: payload.extracted.galleryImageUrls,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
+    durationText: payload.extracted.durationText,
+    pickupOffered: payload.extracted.pickupOffered,
+    mobileTicket: payload.extracted.mobileTicket,
+    language: payload.extracted.language,
+    operatorName: payload.extracted.operatorName,
+    cancellationSummary: payload.extracted.cancellationSummary,
+    inclusionItems: payload.extracted.inclusionItems ?? [],
+    exclusionItems: payload.extracted.exclusionItems ?? [],
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",
     overviewText: overviewText || null,
@@ -96,6 +123,9 @@ export const mapViatorToEngine6Tour = (
     bookingUrl,
     diagnostics: {
       source: payload.source,
+      resolvedProductUrl: bookingUrl,
+      resolvedHeroImageUrl: heroImageUrl,
+      sourceProductUrl: payload.extracted.productUrl,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,
       commercialPriceRawValue: payload.diagnostics.commercialPriceRawValue,
       priceSourceUsed: payload.diagnostics.priceSourceUsed,
@@ -104,6 +134,20 @@ export const mapViatorToEngine6Tour = (
       selectedHeroWidth: payload.diagnostics.selectedHeroWidth,
       selectedHeroHeight: payload.diagnostics.selectedHeroHeight,
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
+      heroResolverName: payload.diagnostics.heroResolverName,
+      apiPrimaryImageCandidate: payload.diagnostics.apiPrimaryImageCandidate,
+      apiGalleryImageCandidates: payload.diagnostics.apiGalleryImageCandidates,
+      scrapedImageCandidates: payload.diagnostics.scrapedImageCandidates,
+      fallbackImageCandidates: payload.diagnostics.fallbackImageCandidates,
+      finalSelectedHero: payload.diagnostics.finalSelectedHero,
+      heroScopedProductCode: payload.diagnostics.heroScopedProductCode,
+      heroScopedProductUrl: payload.diagnostics.heroScopedProductUrl,
+      heroScopeConfirmed: payload.diagnostics.heroScopeConfirmed,
+      rejectedForeignHeroCandidates:
+        payload.diagnostics.rejectedForeignHeroCandidates ?? [],
+      renderHeroSrc: heroImageUrl,
+      renderHeroFallbackTriggered,
+      renderHeroFallbackReason,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??

@@ -1,0 +1,128 @@
+{
+  "product": {
+    "productCode": "132218P75",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Grand-Canyon-Skywalk-Hoover-Dam-Day-Trip-W-Lunch-from-Las-Vegas/d684-132218P75",
+    "title": "Grand Canyon West, Hoover Dam Stop and Optional Lunch and Skywalk",
+    "description": {
+      "text": "Enjoy more time exploring the Grand Canyon and less time waiting around on this exclusive West Rim group day trip from Las Vegas. Relax in an air-conditioned vehicle and avoid waiting in long lines with a Grand Canyon Ambassador who scans your tickets right on board. Get direct access to Eagle Point and Guano Point and spend your time admiring the awe-inspiring views. For an even more unforgettable experience, customize your tour by adding lunch, a Grand Canyon Skywalk ticket, or a helicopter and boat ride, and lunch."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$109.00",
+    "durationText": "11 to 12 hours",
+    "pickup": "Pickup offered",
+    "pickupOffered": true,
+    "mobileTicket": true,
+    "language": "English",
+    "supplier": {
+      "name": "Jupiter Legend Corporation"
+    },
+    "cancellationPolicy": {
+      "description": "You can cancel up to 24 hours in advance of the experience for a full refund."
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 20734
+    },
+    "images": [
+      {
+        "isCover": true,
+        "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg",
+        "width": 674,
+        "height": 446
+      }
+    ],
+    "highlights": [
+      "Skip the long lines at Grand Canyon West with VIP bus access",
+      "Tour includes pickup and drop-off from select Las Vegas hotels",
+      "Access great photo opportunities—including the Hoover Dam",
+      "Option to include lunch, helicopter/pontoon boat ride, or Skywalk"
+    ],
+    "inclusions": [
+      "Grand Canyon West Rim Bus Tour",
+      "Exclusive Bus Access at Grand Canyon West Rim",
+      "Hot Lunch (if option selected): Hearty portions at your choice of three restaurants",
+      "Helicopter Ride and 25-minute Pontoon Ride Down Colorado River (if option selected)",
+      "Skywalk Ticket (if option selected)",
+      "West Rim Airplane ride with aerial views of Grand Canyon West and Colorado River (if option selected)",
+      "Pick-up and drop off at select hotels",
+      "Bottled water",
+      "Snacks",
+      "Air-conditioned vehicle",
+      "Professional Guide"
+    ],
+    "exclusions": [
+      "Gratuities (10%-20% recommended)",
+      "Skywalk Ticket (if option not selected)",
+      "Helicopter Ride and 25-minute Pontoon Ride Down Colorado River (if option not selected)",
+      "West Rim Airplane ride with views of Grand Canyon West and Colorado River (if option not selected)",
+      "Lunch (if option not selected)",
+      "Additional National Park Entrance Fee for non-U.S. residents"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup offered from select Las Vegas hotels. Arrive 5–10 minutes early and confirm the exact pickup point after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Las Vegas Strip",
+        "description": "Early morning departure after hotel pickup.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Arizona's Joshua Tree Forest",
+        "description": "Pass-by desert scenery on the drive toward Grand Canyon West."
+      },
+      {
+        "title": "Grand Canyon West",
+        "description": "Main West Rim stop with time to explore the viewpoints.",
+        "duration": "3 hours 30 minutes"
+      },
+      {
+        "title": "Grand Canyon Skywalk",
+        "description": "Optional upgrade stop with glass bridge access."
+      },
+      {
+        "title": "Eagle Point",
+        "description": "Included stop for dramatic canyon rim views."
+      },
+      {
+        "title": "Guano Point",
+        "description": "Included stop with panoramic West Rim overlooks."
+      },
+      {
+        "title": "Mike O'Callaghan–Pat Tillman Memorial Bridge",
+        "description": "Hoover Dam area photo stop with views over Black Canyon and Lake Mead.",
+        "duration": "30 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking, unless booked within 1 day of travel.",
+      "Not wheelchair accessible",
+      "Stroller accessible",
+      "Near public transportation",
+      "Infants must sit on laps",
+      "Most travelers can participate",
+      "Luggage and large bags are not permitted on this tour due to security restrictions at the Hoover Dam",
+      "Hotel pickup is available for this tour/activity. Exact pickup details will be provided upon reconfirmation with the local tour operator.",
+      "This tour/activity will have a maximum of 57 travelers",
+      "You can cancel up to 24 hours in advance of the experience for a full refund."
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "q": "Is hotel pickup included?",
+          "a": "Yes. Pickup and drop-off are offered from select Las Vegas hotels, with exact details confirmed after booking."
+        },
+        {
+          "q": "Can I add the Skywalk or lunch?",
+          "a": "Yes. Travelers can choose options that add lunch, the Grand Canyon Skywalk, or other West Rim upgrades when booking."
+        }
+      ]
+    },
+    "categories": ["sightseeing-tour", "adventure-tour"]
+  }
+}

@@ -1,5 +1,21 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
 
+export type Engine6HeroSource =
+  | "viator-api-primary"
+  | "viator-api-gallery"
+  | "trusted-scraped-page-hero"
+  | "fallback-image";
+
+export type Engine6HeroCandidate = {
+  url: string;
+  path: string;
+  variantPath: string;
+  width: number | null;
+  height: number | null;
+  source: Engine6HeroSource;
+  resolver: string;
+};
+
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
@@ -8,7 +24,13 @@ export type Engine6DiagnosticsPaths = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSource;
+  heroResolverName: string | null;
+  apiPrimaryImageCandidate: Engine6HeroCandidate | null;
+  apiGalleryImageCandidates: Engine6HeroCandidate[];
+  scrapedImageCandidates: Engine6HeroCandidate[];
+  fallbackImageCandidates: Engine6HeroCandidate[];
+  finalSelectedHero: Engine6HeroCandidate | null;
   productUrlFieldPath: string | null;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
@@ -46,11 +68,20 @@ export type Engine6Extracted = {
   state: string | null;
   heroImageUrl: string | null;
   cardImageUrl: string | null;
+  galleryImageUrls: string[];
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
   aggregateRating: number | null;
   reviewCount: number | null;
+  durationText: string | null;
+  pickupOffered: boolean;
+  mobileTicket: boolean;
+  language: string | null;
+  operatorName: string | null;
+  cancellationSummary: string | null;
+  inclusionItems: string[];
+  exclusionItems: string[];
   meetingPointText: string | null;
   overviewText: string | null;
   highlights: string[];
@@ -70,7 +101,8 @@ type HeroImageResult = {
   variantPath: string;
   width: number | null;
   height: number | null;
-  sourceUsed: "live-product-image" | "fallback";
+  sourceUsed: Engine6HeroSource;
+  resolver: string;
 };
 
 type RankedImageVariant = {
@@ -284,11 +316,20 @@ const emptyExtracted = (): Engine6Extracted => ({
   state: null,
   heroImageUrl: null,
   cardImageUrl: null,
+  galleryImageUrls: [],
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
   aggregateRating: null,
   reviewCount: null,
+  durationText: null,
+  pickupOffered: false,
+  mobileTicket: false,
+  language: null,
+  operatorName: null,
+  cancellationSummary: null,
+  inclusionItems: [],
+  exclusionItems: [],
   meetingPointText: null,
   overviewText: null,
   highlights: [],
@@ -313,6 +354,33 @@ const rankVariants = (
   });
 
   return ranked[0] ?? null;
+};
+
+const toHeroCandidate = (
+  selectedVariant: RankedImageVariant,
+  source: Engine6HeroSource,
+  resolver: string
+): Engine6HeroCandidate => ({
+  url: selectedVariant.url,
+  path: selectedVariant.path,
+  variantPath: selectedVariant.variantPath,
+  width: selectedVariant.width,
+  height: selectedVariant.height,
+  source,
+  resolver,
+});
+
+const getHeroSourcePriority = (source: Engine6HeroSource) => {
+  switch (source) {
+    case "viator-api-primary":
+      return 4;
+    case "viator-api-gallery":
+      return 3;
+    case "trusted-scraped-page-hero":
+      return 2;
+    case "fallback-image":
+      return 1;
+  }
 };
 
 const collectArrayVariants = (
@@ -382,109 +450,217 @@ const collectRecordVariants = (
     .filter((entry): entry is RankedImageVariant => Boolean(entry));
 };
 
-const resolveImageCollectionHero = (
+const resolveImageCollectionCandidates = (
   images: unknown,
   basePathPrefix: PathSegment[],
-  sourceUsed: HeroImageResult["sourceUsed"]
-): HeroImageResult | null => {
+  sourceUsed: HeroImageResult["sourceUsed"],
+  resolver: string,
+  options?: {
+    include?: (image: RecordLike, index: number, images: unknown[]) => boolean;
+  }
+): Engine6HeroCandidate[] => {
   if (!Array.isArray(images)) {
-    return null;
+    return [];
   }
 
-  const prioritizedImages = images
+  return images
     .map((value, index) => ({ value, index }))
+    .filter(entry => {
+      const image = asRecord(entry.value);
+      return image
+        ? (options?.include?.(image, entry.index, images) ?? true)
+        : false;
+    })
     .sort((a, b) => {
       const aImage = asRecord(a.value);
       const bImage = asRecord(b.value);
       const aCover = aImage?.isCover === true || aImage?.cover === true;
       const bCover = bImage?.isCover === true || bImage?.cover === true;
       return Number(bCover) - Number(aCover);
-    });
+    })
+    .map(entry => {
+      const image = asRecord(entry.value);
+      if (!image) {
+        return null;
+      }
 
-  for (const entry of prioritizedImages) {
-    const image = asRecord(entry.value);
-    if (!image) continue;
+      const basePath = [...basePathPrefix, entry.index];
+      const selectedVariant = rankVariants([
+        ...collectRecordVariants(image, basePath),
+        ...collectArrayVariants(image, basePath),
+      ]);
 
-    const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
-      ...collectRecordVariants(image, basePath),
-      ...collectArrayVariants(image, basePath),
-    ]);
+      if (selectedVariant) {
+        return toHeroCandidate(selectedVariant, sourceUsed, resolver);
+      }
 
-    if (selectedVariant) {
-      return {
-        value: selectedVariant.url,
-        path: selectedVariant.path,
-        variantPath: selectedVariant.variantPath,
-        width: selectedVariant.width,
-        height: selectedVariant.height,
-        sourceUsed,
-      };
-    }
+      const directUrl =
+        asImageUrl(image.url) ??
+        asImageUrl(image.src) ??
+        asImageUrl(image.imageUrl);
+      if (!directUrl) {
+        return null;
+      }
 
-    const directUrl =
-      asImageUrl(image.url) ??
-      asImageUrl(image.src) ??
-      asImageUrl(image.imageUrl);
-    if (directUrl) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
           ? formatFieldPath([...basePath, "src"])
           : formatFieldPath([...basePath, "imageUrl"]);
       return {
-        value: directUrl,
+        url: directUrl,
         path: directPath,
         variantPath: formatFieldPath(basePath),
         width: parseLooseNumber(image.width),
         height: parseLooseNumber(image.height),
-        sourceUsed,
-      };
-    }
-  }
-
-  return null;
+        source: sourceUsed,
+        resolver,
+      } satisfies Engine6HeroCandidate;
+    })
+    .filter((candidate): candidate is Engine6HeroCandidate => Boolean(candidate));
 };
 
-const resolveRootImage = (product: RecordLike): HeroImageResult | null =>
-  resolveImageCollectionHero(product.images, ["images"], "live-product-image");
+const getPrimaryImageIndex = (images: unknown) => {
+  if (!Array.isArray(images) || images.length === 0) {
+    return -1;
+  }
+
+  const coverIndex = images.findIndex(value => {
+    const image = asRecord(value);
+    return image?.isCover === true || image?.cover === true;
+  });
+
+  return coverIndex >= 0 ? coverIndex : 0;
+};
+
+const collectRootImageCandidates = (product: RecordLike) => {
+  const primaryIndex = getPrimaryImageIndex(product.images);
+
+  return {
+    apiPrimaryImageCandidate:
+      primaryIndex >= 0
+        ? resolveImageCollectionCandidates(
+            product.images,
+            ["images"],
+            "viator-api-primary",
+            "product.images.cover",
+            {
+              include: (_image, index) => index === primaryIndex,
+            }
+          )[0] ?? null
+        : null,
+    apiGalleryImageCandidates:
+      primaryIndex >= 0
+        ? resolveImageCollectionCandidates(
+            product.images,
+            ["images"],
+            "viator-api-gallery",
+            "product.images.gallery",
+            {
+              include: (_image, index) => index !== primaryIndex,
+            }
+          )
+        : [],
+  };
+};
+
+const pickHeroCandidate = (
+  candidates: Array<Engine6HeroCandidate | null | undefined>
+): HeroImageResult | null => {
+  const winner =
+    candidates
+      .filter((candidate): candidate is Engine6HeroCandidate =>
+        Boolean(candidate)
+      )
+      .sort((left, right) => {
+        const bySource =
+          getHeroSourcePriority(right.source) -
+          getHeroSourcePriority(left.source);
+        if (bySource !== 0) {
+          return bySource;
+        }
+
+        const byArea =
+          (right.width ?? 0) * (right.height ?? 0) -
+          (left.width ?? 0) * (left.height ?? 0);
+        if (byArea !== 0) {
+          return byArea;
+        }
+
+        return 0;
+      })[0] ?? null;
+
+  return winner
+    ? {
+        value: winner.url,
+        path: winner.path,
+        variantPath: winner.variantPath,
+        width: winner.width,
+        height: winner.height,
+        sourceUsed: winner.source,
+        resolver: winner.resolver,
+      }
+    : null;
+};
 
 const extractPlaybookHeroImage = (
   product: RecordLike
-): HeroImageResult | null => {
-  const mediaHero = resolveImageCollectionHero(
+): {
+  heroImage: HeroImageResult | null;
+  apiPrimaryImageCandidate: Engine6HeroCandidate | null;
+  apiGalleryImageCandidates: Engine6HeroCandidate[];
+  scrapedImageCandidates: Engine6HeroCandidate[];
+  fallbackImageCandidates: Engine6HeroCandidate[];
+} => {
+  const { apiPrimaryImageCandidate, apiGalleryImageCandidates } =
+    collectRootImageCandidates(product);
+  const scrapedImageCandidates = resolveImageCollectionCandidates(
     readPath(product, ["media", "images"]),
     ["media", "images"],
-    "live-product-image"
+    "trusted-scraped-page-hero",
+    "product.media.images"
   );
-  if (mediaHero) {
-    return mediaHero;
-  }
+  const fallbackImageCandidates = (
+    [
+      ["product.imageUrl", product.imageUrl, "product.imageUrl"],
+      [
+        "product.thumbnailHiResURL",
+        product.thumbnailHiResURL,
+        "product.thumbnailHiResURL",
+      ],
+      ["product.thumbnailURL", product.thumbnailURL, "product.thumbnailURL"],
+    ] as const
+  )
+    .map(([path, value, resolver]) => {
+      const url = asImageUrl(value);
+      if (!url) {
+        return null;
+      }
 
-  const rootHero = resolveRootImage(product);
-  if (rootHero) {
-    return rootHero;
-  }
-
-  for (const [path, value] of [
-    ["product.imageUrl", product.imageUrl],
-    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
-    ["product.thumbnailURL", product.thumbnailURL],
-  ] as const) {
-    const url = asImageUrl(value);
-    if (url) {
       return {
-        value: url,
+        url,
         path,
         variantPath: path.replace(/\.url$/, ""),
         width: null,
         height: null,
-        sourceUsed: "fallback",
-      };
-    }
-  }
+        source: "fallback-image",
+        resolver,
+      } satisfies Engine6HeroCandidate;
+    })
+    .filter((candidate): candidate is Engine6HeroCandidate => Boolean(candidate));
 
-  return null;
+  return {
+    heroImage: pickHeroCandidate([
+      apiPrimaryImageCandidate,
+      apiGalleryImageCandidates[0],
+      scrapedImageCandidates[0],
+      fallbackImageCandidates[0],
+    ]),
+    apiPrimaryImageCandidate,
+    apiGalleryImageCandidates,
+    scrapedImageCandidates,
+    fallbackImageCandidates,
+  };
 };
 
 const extractProductUrl = (product: RecordLike) => {
@@ -764,6 +940,59 @@ const extractMeetingPoint = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
+const extractGalleryImages = (product: RecordLike) => {
+  const { apiGalleryImageCandidates } = collectRootImageCandidates(product);
+
+  return dedupeStrings(apiGalleryImageCandidates.map(candidate => candidate.url));
+};
+
+const extractDurationText = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(product.durationText),
+    asNonEmptyString(asRecord(product.duration)?.text),
+    asNonEmptyString(asRecord(product.duration)?.durationText),
+    asNonEmptyString(product.duration),
+  ])[0] ?? null;
+
+const extractLanguage = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(product.language),
+    asNonEmptyString(asRecord(product.languages)?.primary),
+    ...(Array.isArray(product.languages)
+      ? (product.languages as unknown[]).map(item =>
+          typeof item === "string"
+            ? asNonEmptyString(item)
+            : asNonEmptyString(asRecord(item)?.name)
+        )
+      : []),
+  ])[0] ?? null;
+
+const extractSupplierName = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(asRecord(product.supplier)?.name),
+    asNonEmptyString(product.supplierName),
+    asNonEmptyString(product.operatorName),
+  ])[0] ?? null;
+
+const extractCancellationSummary = (product: RecordLike) =>
+  dedupeStrings([
+    asNonEmptyString(asRecord(product.cancellationPolicy)?.description),
+    asNonEmptyString(asRecord(product.cancellationPolicy)?.summary),
+    ...normalizeStringArray(product.additionalInfo).filter(item =>
+      /cancel|refund/i.test(item)
+    ),
+  ])[0] ?? null;
+
+const extractInclusionItems = (product: RecordLike) =>
+  normalizeStringArray(product.inclusions).length > 0
+    ? normalizeStringArray(product.inclusions)
+    : normalizeStringArray(asRecord(product.whatsIncluded)?.included);
+
+const extractExclusionItems = (product: RecordLike) =>
+  normalizeStringArray(product.exclusions).length > 0
+    ? normalizeStringArray(product.exclusions)
+    : normalizeStringArray(asRecord(product.whatsIncluded)?.excluded);
+
 const extractFaqs = (product: RecordLike) => {
   const normalizeFaqs = (value: unknown): Engine6ExtractedFaq[] => {
     if (!Array.isArray(value)) return [];
@@ -1000,7 +1229,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
-    imageSourceUsed: "fallback",
+    imageSourceUsed: "fallback-image",
+    heroResolverName: null,
+    apiPrimaryImageCandidate: null,
+    apiGalleryImageCandidates: [],
+    scrapedImageCandidates: [],
+    fallbackImageCandidates: [],
+    finalSelectedHero: null,
     productUrlFieldPath: null,
     ratingFieldPath: null,
     reviewCountFieldPath: null,
@@ -1034,11 +1269,28 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE;
 
   const heroImage = extractPlaybookHeroImage(product);
-  diagnostics.heroImageFieldPath = heroImage?.path ?? null;
-  diagnostics.heroVariantFieldPath = heroImage?.variantPath ?? null;
-  diagnostics.selectedHeroWidth = heroImage?.width ?? null;
-  diagnostics.selectedHeroHeight = heroImage?.height ?? null;
-  diagnostics.imageSourceUsed = heroImage?.sourceUsed ?? "fallback";
+  const galleryImageUrls = extractGalleryImages(product);
+  diagnostics.heroImageFieldPath = heroImage.heroImage?.path ?? null;
+  diagnostics.heroVariantFieldPath = heroImage.heroImage?.variantPath ?? null;
+  diagnostics.selectedHeroWidth = heroImage.heroImage?.width ?? null;
+  diagnostics.selectedHeroHeight = heroImage.heroImage?.height ?? null;
+  diagnostics.imageSourceUsed = heroImage.heroImage?.sourceUsed ?? "fallback-image";
+  diagnostics.heroResolverName = heroImage.heroImage?.resolver ?? null;
+  diagnostics.apiPrimaryImageCandidate = heroImage.apiPrimaryImageCandidate;
+  diagnostics.apiGalleryImageCandidates = heroImage.apiGalleryImageCandidates;
+  diagnostics.scrapedImageCandidates = heroImage.scrapedImageCandidates;
+  diagnostics.fallbackImageCandidates = heroImage.fallbackImageCandidates;
+  diagnostics.finalSelectedHero = heroImage.heroImage
+    ? {
+        url: heroImage.heroImage.value,
+        path: heroImage.heroImage.path,
+        variantPath: heroImage.heroImage.variantPath,
+        width: heroImage.heroImage.width,
+        height: heroImage.heroImage.height,
+        source: heroImage.heroImage.sourceUsed,
+        resolver: heroImage.heroImage.resolver,
+      }
+    : null;
 
   const productUrl = extractProductUrl(product);
   diagnostics.productUrlFieldPath = productUrl.path;
@@ -1152,14 +1404,26 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       seoDescription: seoDescription ? `${seoDescription}.` : null,
       city: city ?? null,
       state: state ?? null,
-      heroImageUrl: heroImage?.value ?? null,
-      cardImageUrl: heroImage?.value ?? null,
+      heroImageUrl: heroImage.heroImage?.value ?? null,
+      cardImageUrl:
+        heroImage.heroImage?.value ?? galleryImageUrls[0] ?? null,
+      galleryImageUrls,
       productUrl: productUrl.value,
       priceAmount: price.amount,
       priceFormatted:
         price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
+      durationText: extractDurationText(product),
+      pickupOffered:
+        /pickup offered/i.test(asNonEmptyString(product.pickup) ?? "") ||
+        Boolean(product.pickupOffered),
+      mobileTicket: Boolean(product.mobileTicket),
+      language: extractLanguage(product),
+      operatorName: extractSupplierName(product),
+      cancellationSummary: extractCancellationSummary(product),
+      inclusionItems: extractInclusionItems(product),
+      exclusionItems: extractExclusionItems(product),
       meetingPointText: meetingPoint.value,
       overviewText: overview.value,
       highlights: highlights.value,

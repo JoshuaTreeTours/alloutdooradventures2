@@ -2,6 +2,17 @@ import { formatEngine6AggregateRating } from "./rating";
 import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
+const normalizeCardImage = (value: string | null | undefined) => {
+  const normalized = value?.trim();
+  if (!normalized) {
+    return null;
+  }
+
+  return /^https?:\/\//i.test(normalized) || normalized.startsWith("/")
+    ? normalized
+    : null;
+};
+
 export type Engine6Card = {
   imageUrl: string;
   title: string;
@@ -32,8 +43,14 @@ const buildCardDescription = (tour: Engine6Tour) => {
   return `Discover top outdoor highlights around ${tour.city} with a locally guided experience.`;
 };
 
+export const resolveEngine6CardImageUrl = (tour: Engine6Tour) =>
+  normalizeCardImage(tour.cardImageUrl) ??
+  normalizeCardImage(tour.galleryImageUrls[0]) ??
+  normalizeCardImage(tour.heroImageUrl) ??
+  "/hero.jpg";
+
 export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
-  imageUrl: tour.cardImageUrl,
+  imageUrl: resolveEngine6CardImageUrl(tour),
   title: tour.title,
   locationLabel: `${tour.city}, ${tour.state}`,
   ratingLabel:

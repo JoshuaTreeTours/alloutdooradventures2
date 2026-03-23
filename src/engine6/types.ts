@@ -9,8 +9,35 @@ export type Engine6FaqItem = {
   answer: string;
 };
 
+export type Engine6HeroSource =
+  | "viator-api-primary"
+  | "viator-api-gallery"
+  | "trusted-scraped-page-hero"
+  | "fallback-image";
+
+export type Engine6HeroCandidate = {
+  url: string;
+  path: string;
+  variantPath: string;
+  width: number | null;
+  height: number | null;
+  source: Engine6HeroSource;
+  resolver: string;
+};
+
+export type Engine6RejectedHeroCandidate = {
+  productCode: string | null;
+  productUrl: string | null;
+  heroImageUrl: string | null;
+  imageSourceUsed: string | null;
+  reason: string;
+};
+
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
+  resolvedProductUrl: string | null;
+  resolvedHeroImageUrl: string | null;
+  sourceProductUrl?: string | null;
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";
@@ -18,7 +45,20 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSource;
+  heroResolverName: string | null;
+  apiPrimaryImageCandidate: Engine6HeroCandidate | null;
+  apiGalleryImageCandidates: Engine6HeroCandidate[];
+  scrapedImageCandidates: Engine6HeroCandidate[];
+  fallbackImageCandidates: Engine6HeroCandidate[];
+  finalSelectedHero: Engine6HeroCandidate | null;
+  heroScopedProductCode?: string | null;
+  heroScopedProductUrl?: string | null;
+  heroScopeConfirmed?: boolean;
+  rejectedForeignHeroCandidates?: Engine6RejectedHeroCandidate[];
+  renderHeroSrc?: string | null;
+  renderHeroFallbackTriggered?: boolean;
+  renderHeroFallbackReason?: string | null;
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;
@@ -78,10 +118,19 @@ export type Engine6Tour = {
   state: string;
   heroImageUrl: string;
   cardImageUrl: string;
+  galleryImageUrls: string[];
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
   reviewCount: number | null;
+  durationText: string | null;
+  pickupOffered: boolean;
+  mobileTicket: boolean;
+  language: string | null;
+  operatorName: string | null;
+  cancellationSummary: string | null;
+  inclusionItems: string[];
+  exclusionItems: string[];
   meetingPointText: string;
   overviewText: string | null;
   highlights: string[];
@@ -110,11 +159,20 @@ export type Engine6ApiResponse = {
     state: string | null;
     heroImageUrl: string | null;
     cardImageUrl: string | null;
+    galleryImageUrls: string[];
     productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
     aggregateRating: number | null;
     reviewCount: number | null;
+    durationText: string | null;
+    pickupOffered: boolean;
+    mobileTicket: boolean;
+    language: string | null;
+    operatorName: string | null;
+    cancellationSummary: string | null;
+    inclusionItems: string[];
+    exclusionItems: string[];
     meetingPointText: string | null;
     overviewText: string | null;
     highlights: string[];

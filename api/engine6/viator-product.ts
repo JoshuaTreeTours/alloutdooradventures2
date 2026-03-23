@@ -1,11 +1,10 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+import { resolveScopedEngine6Hero } from "./resolveScopedEngine6Hero.js";
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
-const ENGINE6_BUNDLED_PRODUCT_CODE = "163873P16";
-
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
   Accept: "application/json;version=2.0",
@@ -14,10 +13,6 @@ const buildHeaders = (apiKey: string) => ({
 });
 
 const getBundledExactProductPayload = async (productCode: string) => {
-  if (productCode !== ENGINE6_BUNDLED_PRODUCT_CODE) {
-    return null;
-  }
-
   const payloadPath = path.join(
     process.cwd(),
     "data",
@@ -39,6 +34,9 @@ const buildDiagnostics = (
   hasViatorApiKey: boolean
 ) => ({
   source,
+  resolvedProductUrl: null as string | null,
+  resolvedHeroImageUrl: null as string | null,
+  sourceProductUrl: null as string | null,
   hasViatorApiKey,
   attemptedLiveFetch: false,
   upstreamStatus: null as number | null,
@@ -52,7 +50,13 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "fallback" as const,
+  imageSourceUsed: "fallback-image" as const,
+  heroResolverName: null as string | null,
+  apiPrimaryImageCandidate: null as any,
+  apiGalleryImageCandidates: [] as any[],
+  scrapedImageCandidates: [] as any[],
+  fallbackImageCandidates: [] as any[],
+  finalSelectedHero: null as any,
   productUrlFieldPath: null as string | null,
   bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
@@ -70,6 +74,16 @@ const buildDiagnostics = (
   requirementsFieldPath: null as string | null,
   highlightClassificationReason: null as string | null,
   classificationFieldPath: null as string | null,
+  heroScopedProductCode: null as string | null,
+  heroScopedProductUrl: null as string | null,
+  heroScopeConfirmed: false,
+  rejectedForeignHeroCandidates: [] as Array<{
+    productCode: string | null;
+    productUrl: string | null;
+    heroImageUrl: string | null;
+    imageSourceUsed: string | null;
+    reason: string;
+  }>,
   fieldLevelFallbackUsed: false,
   fallbackFieldNames: [] as string[],
 });
@@ -82,11 +96,20 @@ const EMPTY_EXTRACTED_PRODUCT = {
   state: null,
   heroImageUrl: null,
   cardImageUrl: null,
+  galleryImageUrls: [] as string[],
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
   aggregateRating: null,
   reviewCount: null,
+  durationText: null,
+  pickupOffered: false,
+  mobileTicket: false,
+  language: null,
+  operatorName: null,
+  cancellationSummary: null,
+  inclusionItems: [] as string[],
+  exclusionItems: [] as string[],
   meetingPointText: null,
   overviewText: null,
   highlights: [] as string[],
@@ -172,35 +195,6 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
-const applyResolvedHero = (args: {
-  baseExtraction: ReturnType<typeof extractEngine6Product>;
-  preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
-  fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
-}) => {
-  const heroSource = args.preferredHeroExtraction?.extracted.heroImageUrl
-    ? args.preferredHeroExtraction
-    : args.fallbackHeroExtraction?.extracted.heroImageUrl
-      ? args.fallbackHeroExtraction
-      : args.baseExtraction;
-
-  return {
-    extracted: {
-      ...args.baseExtraction.extracted,
-      heroImageUrl: heroSource.extracted.heroImageUrl,
-      cardImageUrl:
-        heroSource.extracted.cardImageUrl ?? heroSource.extracted.heroImageUrl,
-    },
-    diagnostics: {
-      ...args.baseExtraction.diagnostics,
-      heroImageFieldPath: heroSource.diagnostics.heroImageFieldPath,
-      heroVariantFieldPath: heroSource.diagnostics.heroVariantFieldPath,
-      selectedHeroWidth: heroSource.diagnostics.selectedHeroWidth,
-      selectedHeroHeight: heroSource.diagnostics.selectedHeroHeight,
-      imageSourceUsed: heroSource.diagnostics.imageSourceUsed,
-    },
-  };
-};
-
 const respondWithBundledFallback = (
   res: any,
   productCode: string,
@@ -209,7 +203,8 @@ const respondWithBundledFallback = (
   liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
-  const merged = applyResolvedHero({
+  const merged = resolveScopedEngine6Hero({
+    productCode,
     baseExtraction: bundledExtraction,
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
@@ -351,6 +346,14 @@ export default async function handler(req: any, res: any) {
 
     const extraction = safeExtractEngine6Product(payload);
     Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
+    Object.assign(diagnostics, {
+      sourceProductUrl: extraction.extracted.productUrl,
+      heroScopedProductCode: productCode,
+      heroScopedProductUrl: extraction.extracted.productUrl,
+      heroScopeConfirmed:
+        readScopedHeroIdentity(extraction).productCode === productCode,
+      rejectedForeignHeroCandidates: [],
+    });
 
     if (bundledPayload && extraction.extracted.priceAmount === null) {
       diagnostics.source = "bundled-fallback";

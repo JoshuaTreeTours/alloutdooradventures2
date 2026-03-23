@@ -1,0 +1,93 @@
+{
+  "product": {
+    "productCode": "73781P4",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-and-Seven-Magic-Mountains-Tour/d684-73781P4",
+    "title": "Red Rock Canyon and Seven Magic Mountains Tour",
+    "description": {
+      "text": "Explore two of the most photogenic desert sights near Las Vegas on a guided small-group outing that pairs Red Rock Canyon scenery with a stop at Seven Magic Mountains. Travel with a guide, keep logistics simple, and spend more time at the viewpoints instead of planning your own route across the Mojave."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$189.99",
+    "durationText": "7 hours",
+    "pickup": "Pickup offered",
+    "pickupOffered": true,
+    "mobileTicket": true,
+    "language": "English",
+    "supplier": {
+      "name": "MaxTour"
+    },
+    "cancellationPolicy": {
+      "description": "Free cancellation up to 24 hours before the experience starts (local time)."
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3025
+    },
+    "images": [
+      {
+        "isCover": true,
+        "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg",
+        "width": 674,
+        "height": 446
+      }
+    ],
+    "highlights": [
+      "Visit Red Rock Canyon and Seven Magic Mountains in one guided day trip",
+      "Small-group format keeps the experience efficient and less crowded",
+      "Round-trip Las Vegas pickup helps simplify desert logistics",
+      "Great fit for travelers who want photogenic desert stops without self-driving"
+    ],
+    "inclusions": [
+      "Hotel pickup and drop-off",
+      "Bottled water",
+      "Snacks",
+      "Small-group transportation",
+      "Professional guide",
+      "Park entry fees"
+    ],
+    "exclusions": ["Lunch", "Gratuities"],
+    "logistics": {
+      "start": {
+        "description": "Pickup offered in Las Vegas."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Welcome to Fabulous Las Vegas Sign",
+        "description": "Quick early photo stop before heading into the desert.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Seven Magic Mountains",
+        "description": "See the colorful large-scale art installation south of the city.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Red Rock Canyon National Conservation Area",
+        "description": "Main scenic stop with time for overlooks, desert views, and short walks.",
+        "duration": "2 hours"
+      }
+    ],
+    "additionalInfo": [
+      "Free cancellation up to 24 hours before the experience starts (local time)",
+      "Reserve Now and Pay Later available",
+      "Most travelers can participate"
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "q": "Is pickup included?",
+          "a": "Yes. Round-trip pickup is available from Las Vegas."
+        },
+        {
+          "q": "How long is the tour?",
+          "a": "Plan on roughly 7 hours including travel time and scenic stops."
+        }
+      ]
+    },
+    "categories": ["sightseeing-tour", "adventure-tour"]
+  }
+}

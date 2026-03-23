@@ -210,12 +210,125 @@ describe("/api/engine6/viator-product", () => {
         upstreamOk: true,
         heroImageFieldPath: "product.media.images[0].variants.FULL.url",
         heroVariantFieldPath: "product.media.images[0].variants.FULL",
-        imageSourceUsed: "live-product-image",
+        imageSourceUsed: "trusted-scraped-page-hero",
+        heroResolverName: "product.media.images",
       })
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/specimen-cover.jpg"
+    );
+  });
+
+  it("keeps a bundled API primary hero ahead of a weaker live scraped hero", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "132218P75",
+            title: "Grand Canyon West, Hoover Dam Stop and Optional Lunch and Skywalk",
+            media: {
+              images: [
+                {
+                  variants: {
+                    FULL: {
+                      url: "https://dynamic-media.tacdn.com/media/photo-o/live-scraped-hero.jpg",
+                      width: 1600,
+                      height: 900,
+                    },
+                  },
+                },
+              ],
+            },
+            reviews: { combinedAverageRating: 4.9, totalReviews: 20734 },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "132218P75" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        usedBundledFallbackBecause: "live-price-missing-or-zero",
+        heroImageFieldPath: "product.images[0].url",
+        heroVariantFieldPath: "product.images[0]",
+        imageSourceUsed: "viator-api-primary",
+        heroResolverName: "product.images.cover",
+      })
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
+    );
+  });
+
+  it("rejects a foreign-tour live hero when falling back to the bundled Grand Canyon product", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "73781P4",
+            productUrl:
+              "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-and-Seven-Magic-Mountains-Tour/d684-73781P4",
+            title: "Red Rock Canyon and Seven Magic Mountains Tour",
+            images: [
+              {
+                isCover: true,
+                url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg",
+                width: 674,
+                height: 446,
+              },
+            ],
+            reviews: { combinedAverageRating: 5, totalReviews: 3025 },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "132218P75" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        heroScopedProductCode: "132218P75",
+        heroScopeConfirmed: true,
+      })
+    );
+    expect(
+      (res.body as any).diagnostics.rejectedForeignHeroCandidates
+    ).toEqual([
+      expect.objectContaining({
+        productCode: "73781P4",
+        productUrl:
+          "https://www.viator.com/tours/Las-Vegas/Red-Rock-Canyon-and-Seven-Magic-Mountains-Tour/d684-73781P4",
+        heroImageUrl:
+          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg",
+        imageSourceUsed: "viator-api-primary",
+      }),
+    ]);
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
+    );
+    expect((res.body as any).extracted.heroImageUrl).not.toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"
     );
   });
 
@@ -257,34 +370,16 @@ describe("/api/engine6/viator-product", () => {
             images: [
               {
                 isCover: true,
-                variants: [
-                  {
-                    url: "https://img.test/specimen-root-hero-small.jpg",
-                    width: 360,
-                    height: 240,
-                  },
-                  {
-                    url: "https://img.test/specimen-root-hero-large.jpg",
-                    width: 674,
-                    height: 446,
-                  },
-                ],
+                url: "https://img.test/specimen-root-hero-large.jpg",
+                width: 674,
+                height: 446,
+              },
+              {
+                url: "https://img.test/specimen-root-hero-small.jpg",
+                width: 360,
+                height: 240,
               },
             ],
-            media: {
-              images: [
-                {
-                  isCover: true,
-                  variants: {
-                    XXLARGE: {
-                      url: "https://img.test/specimen-media-hero-xxlarge.jpg",
-                      width: 1600,
-                      height: 1067,
-                    },
-                  },
-                },
-              ],
-            },
             reviews: { combinedAverageRating: 5, totalReviews: 154 },
             logistics: {
               start: { description: "Meet us at Zion Mountain Ranch!" },
@@ -303,7 +398,7 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
+      "https://img.test/specimen-root-hero-large.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.aggregateRating).toBe(5);
@@ -311,10 +406,10 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.itinerary).toHaveLength(1);
     expect((res.body as any).extracted.faqs).toHaveLength(2);
     expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE.url"
+      "product.images[0].url"
     );
     expect((res.body as any).diagnostics.heroVariantFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE"
+      "product.images[0]"
     );
     expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
