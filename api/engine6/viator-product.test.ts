@@ -1,6 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import handler from "./viator-product";
+import * as viatorExtractors from "./viatorExtractors";
 
 const createRes = () => {
   const res: any = {
@@ -372,5 +373,38 @@ describe("/api/engine6/viator-product", () => {
     expect(() => JSON.stringify(res.body)).not.toThrow();
     expect((res.body as any).extracted.aggregateRating).toBeNull();
     expect((res.body as any).extracted.reviewCount).toBe(12);
+  });
+
+  it("still returns a JSON error envelope when extraction throws unexpectedly", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "888888P8",
+            title: "Exploding Tour",
+          },
+        }),
+    } as Response);
+
+    vi.spyOn(viatorExtractors, "extractEngine6Product").mockImplementation(
+      () => {
+        throw new Error("forced extraction failure");
+      }
+    );
+
+    const req = { method: "GET", query: { productCode: "888888P8" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(() => JSON.stringify(res.body)).not.toThrow();
+    expect((res.body as any).extracted).toBeDefined();
+    expect((res.body as any).extracted.aggregateRating).toBeNull();
   });
 });

@@ -74,11 +74,50 @@ const buildDiagnostics = (
   fallbackFieldNames: [] as string[],
 });
 
+const EMPTY_EXTRACTED_PRODUCT = {
+  title: null,
+  seoTitle: null,
+  seoDescription: null,
+  city: null,
+  state: null,
+  heroImageUrl: null,
+  cardImageUrl: null,
+  productUrl: null,
+  priceAmount: null,
+  priceFormatted: null,
+  aggregateRating: null,
+  reviewCount: null,
+  meetingPointText: null,
+  overviewText: null,
+  highlights: [] as string[],
+  itinerary: [] as Array<{
+    title: string;
+    description?: string;
+    duration?: string;
+  }>,
+  faqs: [] as Array<{ question: string; answer: string }>,
+  requirements: [] as string[],
+  primaryCategory: null,
+  categories: [] as string[],
+};
+
 const buildEmptyEnvelope = (productCode: string) => ({
   rawProductCode: productCode,
   rawProduct: null,
-  extracted: extractEngine6Product(null).extracted,
+  extracted: EMPTY_EXTRACTED_PRODUCT,
 });
+
+const safeExtractEngine6Product = (payload: unknown) => {
+  try {
+    return extractEngine6Product(payload);
+  } catch {
+    return {
+      extracted: EMPTY_EXTRACTED_PRODUCT,
+      diagnostics: buildDiagnostics("live-api", false),
+      product: null,
+    };
+  }
+};
 
 const respondWithNormalizedEnvelope = (
   res: any,
@@ -98,6 +137,8 @@ const respondWithNormalizedEnvelope = (
     res.setHeader(name, value);
   }
 
+  res.setHeader("Content-Type", "application/json; charset=utf-8");
+
   res.status(args.statusCode).json({
     source: args.source,
     diagnostics: args.diagnostics,
@@ -108,6 +149,28 @@ const respondWithNormalizedEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 };
+
+const respondWithErrorEnvelope = (
+  res: any,
+  args: {
+    statusCode: number;
+    productCode: string;
+    error: string;
+    source?: "live-api" | "bundled-fallback";
+    diagnostics?: ReturnType<typeof buildDiagnostics>;
+    details?: string;
+  }
+) =>
+  respondWithNormalizedEnvelope(res, {
+    statusCode: args.statusCode,
+    source: args.source ?? "live-api",
+    diagnostics:
+      args.diagnostics ?? buildDiagnostics(args.source ?? "live-api", false),
+    productCode: args.productCode,
+    ...buildEmptyEnvelope(args.productCode),
+    error: args.error,
+    ...(args.details ? { details: args.details } : {}),
+  });
 
 const applyResolvedHero = (args: {
   baseExtraction: ReturnType<typeof extractEngine6Product>;
@@ -145,7 +208,7 @@ const respondWithBundledFallback = (
   diagnostics: ReturnType<typeof buildDiagnostics>,
   liveExtraction?: ReturnType<typeof extractEngine6Product> | null
 ) => {
-  const bundledExtraction = extractEngine6Product(bundledPayload);
+  const bundledExtraction = safeExtractEngine6Product(bundledPayload);
   const merged = applyResolvedHero({
     baseExtraction: bundledExtraction,
     preferredHeroExtraction: liveExtraction,
@@ -171,7 +234,11 @@ const respondWithBundledFallback = (
 
 export default async function handler(req: any, res: any) {
   if (req.method !== "GET") {
-    res.status(405).json({ error: "Method not allowed" });
+    respondWithErrorEnvelope(res, {
+      statusCode: 405,
+      productCode: "UNKNOWN",
+      error: "Method not allowed",
+    });
     return;
   }
 
@@ -179,7 +246,11 @@ export default async function handler(req: any, res: any) {
     .trim()
     .toUpperCase();
   if (!productCode) {
-    res.status(400).json({ error: "productCode query param is required" });
+    respondWithErrorEnvelope(res, {
+      statusCode: 400,
+      productCode: "UNKNOWN",
+      error: "productCode query param is required",
+    });
     return;
   }
 
@@ -278,7 +349,7 @@ export default async function handler(req: any, res: any) {
       return;
     }
 
-    const extraction = extractEngine6Product(payload);
+    const extraction = safeExtractEngine6Product(payload);
     Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
 
     if (bundledPayload && extraction.extracted.priceAmount === null) {

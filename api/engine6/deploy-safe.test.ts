@@ -19,11 +19,17 @@ const transpile = (filePath: string) => {
 describe("engine6 api import strategy", () => {
   it("uses deploy-safe relative imports without src runtime paths", () => {
     const source = readFileSync(new URL("./viator-product.ts", import.meta.url), "utf8");
+    const extractorSource = readFileSync(
+      new URL("./viatorExtractors.ts", import.meta.url),
+      "utf8"
+    );
 
     expect(source.includes("../../src/")).toBe(false);
     expect(source.includes("@/api/engine6/")).toBe(false);
     expect(source.includes("api/engine6/")).toBe(false);
     expect(source.includes('from "./viatorExtractors.js"')).toBe(true);
+    expect(extractorSource.includes("../../src/")).toBe(false);
+    expect(extractorSource.includes('from "./rating.js"')).toBe(true);
   });
 
   it("stays importable after transpilation to node esm", async () => {
@@ -37,6 +43,10 @@ describe("engine6 api import strategy", () => {
       writeFileSync(
         path.join(fixtureDir, "viatorExtractors.js"),
         transpile(path.resolve("api/engine6/viatorExtractors.ts"))
+      );
+      writeFileSync(
+        path.join(fixtureDir, "rating.js"),
+        transpile(path.resolve("api/engine6/rating.ts"))
       );
       writeFileSync(path.join(fixtureDir, "package.json"), '{"type":"module"}');
 

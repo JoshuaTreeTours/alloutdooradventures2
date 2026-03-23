@@ -9,6 +9,8 @@ export type Engine6SpecimenDebug = {
   requestedProductCode: string;
   requestedApiUrl: string;
   httpStatus: number | null;
+  responseContentType: string | null;
+  responseBodyPreview: string | null;
   parsedJsonKeys: string[];
   hasExtractedTitle: boolean;
   hasRawProductTitle: boolean;
@@ -63,6 +65,8 @@ export const buildInitialEngine6SpecimenDebug = (
   requestedProductCode: productCode,
   requestedApiUrl: apiUrl,
   httpStatus: null,
+  responseContentType: null,
+  responseBodyPreview: null,
   parsedJsonKeys: [],
   hasExtractedTitle: false,
   hasRawProductTitle: false,
@@ -94,11 +98,15 @@ export const resolveEngine6SpecimenResponse = ({
   httpStatus,
   productCode,
   apiUrl,
+  responseContentType,
+  responseBodyPreview,
 }: {
   payload: unknown;
   httpStatus: number;
   productCode: string;
   apiUrl: string;
+  responseContentType?: string | null;
+  responseBodyPreview?: string | null;
 }): Pick<Engine6SpecimenViewState, "tour" | "error" | "debug"> => {
   const fallbackDebug = buildInitialEngine6SpecimenDebug(productCode, apiUrl);
 
@@ -109,6 +117,8 @@ export const resolveEngine6SpecimenResponse = ({
       debug: {
         ...fallbackDebug,
         httpStatus,
+        responseContentType: responseContentType ?? null,
+        responseBodyPreview: responseBodyPreview ?? null,
         failureReason: "non-object-json",
       },
     };
@@ -120,6 +130,8 @@ export const resolveEngine6SpecimenResponse = ({
   const debug: Engine6SpecimenDebug = {
     ...fallbackDebug,
     httpStatus,
+    responseContentType: responseContentType ?? null,
+    responseBodyPreview: responseBodyPreview ?? null,
     parsedJsonKeys: Object.keys(payload),
     hasExtractedTitle:
       typeof extracted?.title === "string" && extracted.title.trim().length > 0,
@@ -339,6 +351,16 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.httpStatus ?? "pending"}</dd>
           </div>
           <div>
+            <dt className="font-medium text-slate-900">Response content type</dt>
+            <dd>{debug.responseContentType ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Response preview</dt>
+            <dd className="break-all">
+              {debug.responseBodyPreview ?? "none"}
+            </dd>
+          </div>
+          <div>
             <dt className="font-medium text-slate-900">Parsed JSON keys</dt>
             <dd>{jsonKeysLabel}</dd>
           </div>
@@ -472,22 +494,35 @@ export default function Engine6SpecimenRoute() {
       try {
         const response = await fetch(apiUrl);
         const rawBody = await response.text();
+        const responseContentType = response.headers.get("content-type");
+        const responseBodyPreview = rawBody.slice(0, 200) || null;
         let payload: unknown;
 
         try {
           payload = JSON.parse(rawBody);
         } catch {
+          const failureReason =
+            response.ok || responseContentType?.includes("json")
+              ? "invalid-json"
+              : "non-json-error-response";
+          const errorMessage =
+            failureReason === "non-json-error-response"
+              ? `Engine6 API returned a non-JSON error response (HTTP ${response.status})`
+              : "Engine6 API returned invalid JSON";
+
           if (!isDisposed) {
             setState({
               tour: null,
-              error: "Engine6 API returned invalid JSON",
+              error: errorMessage,
               debug: {
                 ...buildInitialEngine6SpecimenDebug(
                   requestedProductCode,
                   apiUrl
                 ),
                 httpStatus: response.status,
-                failureReason: "invalid-json",
+                responseContentType,
+                responseBodyPreview,
+                failureReason,
               },
               isLoading: false,
             });
@@ -500,6 +535,8 @@ export default function Engine6SpecimenRoute() {
           httpStatus: response.status,
           productCode: requestedProductCode,
           apiUrl,
+          responseContentType,
+          responseBodyPreview,
         });
 
         if (!isDisposed) {

@@ -559,6 +559,31 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
   });
+
+  it("handles non-200 JSON error envelopes from the specimen API gracefully", () => {
+    const apiUrl = buildEngine6SpecimenApiUrl("163873P16");
+    const resolved = resolveEngine6SpecimenResponse({
+      payload: {
+        error: "Viator API returned non-JSON payload",
+        diagnostics: {
+          overviewFieldPath: null,
+        },
+      },
+      httpStatus: 502,
+      productCode: "163873P16",
+      apiUrl,
+      responseContentType: "application/json; charset=utf-8",
+      responseBodyPreview: '{"error":"Viator API returned non-JSON payload"}',
+    });
+
+    expect(resolved.tour).toBeNull();
+    expect(resolved.error).toBe("Viator API returned non-JSON payload");
+    expect(resolved.debug.httpStatus).toBe(502);
+    expect(resolved.debug.responseContentType).toBe(
+      "application/json; charset=utf-8"
+    );
+    expect(resolved.debug.failureReason).toBe("api-error-response");
+  });
 });
 
 describe("engine6 seo/schema", () => {

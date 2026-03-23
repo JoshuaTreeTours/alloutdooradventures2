@@ -1,4 +1,4 @@
-import { normalizeEngine6AggregateRating } from "../../src/engine6/rating";
+import { normalizeEngine6AggregateRating } from "./rating.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
