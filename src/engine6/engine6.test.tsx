@@ -444,8 +444,11 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(tour.productCode).toBe("163873P16");
     expect(tour.priceFormatted).toBe("From $105");
+    expect(tour.referenceBookingUrl).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16"
+    );
     expect(tour.bookingUrl).toBe(
-      "https://www.viator.com/search/163873P16?pid=P00290915&mcid=42383&medium=link"
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link"
     );
     expect(card.title).toContain("East Zion");
     expect(surfaces.city[0].priceLabel).toBe("From $105");
@@ -499,7 +502,7 @@ describe("engine6 mapping/cards/page", () => {
     );
     expect(html.match(/>Book now</g) ?? []).toHaveLength(2);
     expect(html).toContain(
-      'href="https://www.viator.com/search/163873P16?pid=P00290915&amp;mcid=42383&amp;medium=link"'
+      'href="https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&amp;mcid=42383&amp;medium=link"'
     );
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
@@ -510,8 +513,8 @@ describe("engine6 mapping/cards/page", () => {
     expect(
       resolveEngine6CtaUrl({
         bookingProvider: "fareharbor",
+        referenceBookingUrl: null,
         bookingUrl: "https://fareharbor.com/example",
-        productCode: "FH-1",
       })
     ).toBe("https://fareharbor.com/example");
   });
@@ -653,21 +656,19 @@ describe("engine6 seo/schema", () => {
     expect(faq).toBeDefined();
   });
 
-  it("keeps Offer.url aligned with the affiliate-enforced Viator search URL", () => {
+  it("omits Offer.url when a Viator productUrl is unavailable", () => {
     const tour = {
       ...mapViatorToEngine6Tour(specimenApiPayload),
-      productCode: "MISSING1",
-      bookingUrl: buildEngine6ViatorBookingUrl("MISSING1"),
+      referenceBookingUrl: null,
+      bookingUrl: "",
     };
     const schema = buildEngine6SchemaGraph(tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const offer = graph.find(node => node["@type"] === "Offer");
 
-    expect(tour.bookingUrl).toContain("/search/MISSING1");
+    expect(buildEngine6ViatorBookingUrl(null)).toBeUndefined();
     expect(offer).toBeDefined();
-    expect(offer).toMatchObject({
-      url: "https://www.viator.com/search/MISSING1?pid=P00290915&mcid=42383&medium=link",
-    });
+    expect(offer).not.toHaveProperty("url");
   });
 });
 

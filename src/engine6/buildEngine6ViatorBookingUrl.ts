@@ -4,29 +4,25 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   medium: "link",
 } as const;
 
-const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
+const hasCanonicalViatorProductPath = (url: URL): boolean =>
+  url.hostname.endsWith("viator.com") &&
+  url.pathname.startsWith("/tours/") &&
+  /\/d\d+-/i.test(url.pathname);
 
-const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
+export const normalizeEngine6ViatorProductUrl = (
+  preferredUrl: string | null | undefined
+): URL | null => {
   if (!preferredUrl) {
     return null;
   }
 
   try {
     const parsed = new URL(preferredUrl);
-    if (!parsed.hostname.endsWith("viator.com")) {
-      return null;
-    }
-
-    return parsed;
+    return hasCanonicalViatorProductPath(parsed) ? parsed : null;
   } catch {
     return null;
   }
 };
-
-const buildEngine6ViatorSearchUrl = (productCode: string): URL =>
-  new URL(
-    `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
-  );
 
 export const resolveEngine6OfferUrl = (
   bookingUrl: string | null | undefined
@@ -35,19 +31,22 @@ export const resolveEngine6OfferUrl = (
     return undefined;
   }
 
-  const parsed = normalizePreferredViatorUrl(bookingUrl);
-  if (!parsed) {
+  try {
+    const parsed = new URL(bookingUrl);
+    return parsed.toString();
+  } catch {
     return undefined;
   }
-
-  return parsed.toString();
 };
 
 export const buildEngine6ViatorBookingUrl = (
-  productCode: string,
-  _preferredUrl: string | null = null
-): string => {
-  const url = buildEngine6ViatorSearchUrl(productCode);
+  preferredUrl: string | null | undefined
+): string | undefined => {
+  const url = normalizeEngine6ViatorProductUrl(preferredUrl);
+  if (!url) {
+    return undefined;
+  }
+
   url.searchParams.set("pid", ENGINE6_VIATOR_AFFILIATE_PARAMS.pid);
   url.searchParams.set("mcid", ENGINE6_VIATOR_AFFILIATE_PARAMS.mcid);
   url.searchParams.set("medium", ENGINE6_VIATOR_AFFILIATE_PARAMS.medium);

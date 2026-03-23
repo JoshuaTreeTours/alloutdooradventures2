@@ -65,7 +65,7 @@ export const buildEngine6ValidationReport = (
       ...extraction.diagnostics,
       bookingUrlSource:
         extraction.diagnostics.productUrlFieldPath ??
-        "generated:viator-search-product-code",
+        "missing:viator-product-url",
       fieldLevelFallbackUsed: false,
       fallbackFieldNames: [],
     },
@@ -101,8 +101,7 @@ export const buildEngine6ValidationReport = (
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
   const bookingAttributionIsValid =
-    tour.bookingUrl ===
-      `https://www.viator.com/search/${fixture.productCode}?pid=P00290915&mcid=42383&medium=link` &&
+    tour.bookingUrl.startsWith(fixture.publicUrl) &&
     tour.bookingUrl.includes("pid=P00290915") &&
     tour.bookingUrl.includes("mcid=42383") &&
     tour.bookingUrl.includes("medium=link");

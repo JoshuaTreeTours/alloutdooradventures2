@@ -34,7 +34,7 @@ const toPayload = (
       ...extraction.diagnostics,
       bookingUrlSource:
         extraction.diagnostics.productUrlFieldPath ??
-        "generated:viator-search-product-code",
+        "missing:viator-product-url",
       fieldLevelFallbackUsed: false,
       fallbackFieldNames: [],
     },
@@ -66,12 +66,8 @@ describe("engine6 multi-tour validation harness", () => {
       expect(tour.bookingUrl).toContain("pid=P00290915");
       expect(tour.bookingUrl).toContain("mcid=42383");
       expect(tour.bookingUrl).toContain("medium=link");
-      expect(tour.bookingUrl).toBe(
-        `https://www.viator.com/search/${fixture.productCode}?pid=P00290915&mcid=42383&medium=link`
-      );
-      expect(tour.bookingUrl).not.toContain(
-        "East-Zion-Top-of-the-World-Jeep-Tour"
-      );
+      expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
+      expect(tour.referenceBookingUrl).toBe(fixture.publicUrl);
       expect(card.href).toBe(tour.pagePath);
       expect(card.href).not.toContain("east-zion-top-of-the-world-jeep-tour");
       expect(card.imageUrl).toBe(tour.cardImageUrl);
@@ -115,7 +111,7 @@ describe("engine6 multi-tour validation harness", () => {
     expect(
       reports.every(report =>
         report.bookingAttributionResult.startsWith(
-          "https://www.viator.com/search/"
+          "https://www.viator.com/tours/"
         )
       )
     ).toBe(true);
