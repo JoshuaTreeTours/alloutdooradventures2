@@ -470,18 +470,18 @@ const resolveRootImage = (product: RecordLike): HeroImageResult | null =>
 const extractPlaybookHeroImage = (
   product: RecordLike
 ): HeroImageResult | null => {
-  const mediaHero = resolveImageCollectionHero(
-    readPath(product, ["media", "images"]),
-    ["media", "images"],
-    "live-product-image"
-  );
-  if (mediaHero) {
-    return mediaHero;
-  }
-
   const rootHero = resolveRootImage(product);
   if (rootHero) {
     return rootHero;
+  }
+
+  const mediaHero = resolveImageCollectionHero(
+    readPath(product, ["media", "images"]),
+    ["media", "images"],
+    "fallback"
+  );
+  if (mediaHero) {
+    return mediaHero;
   }
 
   for (const [path, value] of [
@@ -782,31 +782,7 @@ const extractMeetingPoint = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
-const extractGalleryImages = (product: RecordLike) => {
-  const images = [
-    ...(Array.isArray(asRecord(product.media)?.images)
-      ? (asRecord(product.media)?.images as unknown[])
-      : []),
-    ...(Array.isArray(product.images) ? (product.images as unknown[]) : []),
-  ];
-
-  const urls = dedupeStrings(
-    images
-      .map(item => {
-        const row = asRecord(item);
-        if (!row) return null;
-        return (
-          rankVariants([
-            ...collectRecordVariants(row, ["media", "images", 0]),
-            ...collectArrayVariants(row, ["images", 0]),
-          ])?.url ?? asImageUrl(row.url)
-        );
-      })
-      .filter((value): value is string => Boolean(value))
-  );
-
-  return urls;
-};
+const extractGalleryImages = () => [] as string[];
 
 const extractDurationText = (product: RecordLike) =>
   dedupeStrings([

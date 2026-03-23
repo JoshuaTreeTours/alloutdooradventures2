@@ -206,21 +206,6 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.galleryImageUrls.length > 1 ? (
-          <ContentSection title="Gallery">
-            <div className="grid gap-4 md:grid-cols-3">
-              {tour.galleryImageUrls.slice(0, 6).map((imageUrl, index) => (
-                <img
-                  key={`${imageUrl}-${index}`}
-                  src={imageUrl}
-                  alt={`${tour.title} gallery image ${index + 1}`}
-                  className="h-48 w-full rounded-2xl object-cover"
-                />
-              ))}
-            </div>
-          </ContentSection>
-        ) : null}
-
         {tour.highlights.length > 0 ? (
           <ContentSection title="Highlights">
             <BulletList items={tour.highlights} />

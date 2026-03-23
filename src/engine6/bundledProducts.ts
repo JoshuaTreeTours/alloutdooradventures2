@@ -38,34 +38,16 @@ export const ENGINE6_BUNDLED_RAW_PRODUCTS: Record<
       images: [
         {
           isCover: true,
-          variants: [
-            {
-              url: "https://media.tacdn.com/media/attractions-splice-spp-360x240/12/26/61/64.jpg",
-              width: 360,
-              height: 240,
-            },
-            {
-              url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/26/61/64.jpg",
-              width: 674,
-              height: 446,
-            },
-          ],
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/26/61/64.jpg",
+          width: 674,
+          height: 446,
+        },
+        {
+          url: "https://media.tacdn.com/media/attractions-splice-spp-360x240/12/26/61/64.jpg",
+          width: 360,
+          height: 240,
         },
       ],
-      media: {
-        images: [
-          {
-            isCover: true,
-            variants: {
-              XXLARGE: {
-                url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/26/61/64.jpg",
-                width: 1600,
-                height: 1067,
-              },
-            },
-          },
-        ],
-      },
       reviews: { combinedAverageRating: 5, totalReviews: 154 },
       logistics: { start: { description: "Meet us at Zion Mountain Ranch!" } },
       itineraryItems: [
@@ -110,38 +92,14 @@ export const ENGINE6_BUNDLED_RAW_PRODUCTS: Record<
           "You can cancel up to 24 hours in advance of the experience for a full refund.",
       },
       reviews: { combinedAverageRating: 4.9, totalReviews: 20734 },
-      media: {
-        images: [
-          {
-            isCover: true,
-            variants: {
-              FULL: {
-                url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg",
-                width: 674,
-                height: 446,
-              },
-            },
-          },
-          {
-            variants: {
-              FULL: {
-                url: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
-                width: 1200,
-                height: 800,
-              },
-            },
-          },
-          {
-            variants: {
-              FULL: {
-                url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-                width: 1200,
-                height: 800,
-              },
-            },
-          },
-        ],
-      },
+      images: [
+        {
+          isCover: true,
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg",
+          width: 674,
+          height: 446,
+        },
+      ],
       highlights: [
         "Skip the long lines at Grand Canyon West with VIP bus access",
         "Tour includes pickup and drop-off from select Las Vegas hotels",

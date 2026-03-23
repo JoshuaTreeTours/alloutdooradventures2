@@ -26,42 +26,18 @@
       "combinedAverageRating": 4.9,
       "totalReviews": 20734
     },
-    "media": {
-      "images": [
-        {
-          "isCover": true,
-          "variants": {
-            "FULL": {
-              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg",
-              "width": 674,
-              "height": 446
-            }
-          }
-        },
-        {
-          "variants": {
-            "FULL": {
-              "url": "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80",
-              "width": 1200,
-              "height": 800
-            }
-          }
-        },
-        {
-          "variants": {
-            "FULL": {
-              "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-              "width": 1200,
-              "height": 800
-            }
-          }
-        }
-      ]
-    },
+    "images": [
+      {
+        "isCover": true,
+        "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg",
+        "width": 674,
+        "height": 446
+      }
+    ],
     "highlights": [
       "Skip the long lines at Grand Canyon West with VIP bus access",
       "Tour includes pickup and drop-off from select Las Vegas hotels",
-      "Access great photo opportunities\u2014including the Hoover Dam",
+      "Access great photo opportunities—including the Hoover Dam",
       "Option to include lunch, helicopter/pontoon boat ride, or Skywalk"
     ],
     "inclusions": [
@@ -87,7 +63,7 @@
     ],
     "logistics": {
       "start": {
-        "description": "Pickup offered from select Las Vegas hotels. Arrive 5\u201310 minutes early and confirm the exact pickup point after booking."
+        "description": "Pickup offered from select Las Vegas hotels. Arrive 5–10 minutes early and confirm the exact pickup point after booking."
       }
     },
     "itineraryItems": [
@@ -118,7 +94,7 @@
         "description": "Included stop with panoramic West Rim overlooks."
       },
       {
-        "title": "Mike O'Callaghan\u2013Pat Tillman Memorial Bridge",
+        "title": "Mike O'Callaghan–Pat Tillman Memorial Bridge",
         "description": "Hoover Dam area photo stop with views over Black Canyon and Lake Mead.",
         "duration": "30 minutes"
       }

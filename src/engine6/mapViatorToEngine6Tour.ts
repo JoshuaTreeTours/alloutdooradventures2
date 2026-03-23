@@ -1,5 +1,6 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
+import { rewriteEngine6Overview } from "./rewriteOverview";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -10,8 +11,7 @@ import {
 import { getEngine6RouteSpecByProductCode } from "./routes";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
-const FALLBACK_HERO =
-  "https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=1600&q=80";
+const FALLBACK_HERO = "/hero.jpg";
 
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
@@ -23,17 +23,16 @@ export const mapViatorToEngine6Tour = (
       : `Outdoor Adventure ${payload.rawProductCode}`);
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
-  const heroImageUrl =
-    payload.extracted.heroImageUrl ??
-    payload.extracted.cardImageUrl ??
-    FALLBACK_HERO;
-  const galleryImageUrls = [
-    heroImageUrl,
-    ...(payload.extracted.galleryImageUrls ?? []),
-  ].filter((value, index, array) => array.indexOf(value) === index);
-  const overviewText = cleanEngine6Description(
-    payload.extracted.overviewText ?? ""
-  );
+  const heroImageUrl = payload.extracted.heroImageUrl ?? FALLBACK_HERO;
+  const overviewText = rewriteEngine6Overview({
+    title,
+    city,
+    state,
+    originalOverview: payload.extracted.overviewText,
+    durationText: payload.extracted.durationText,
+    highlights: payload.extracted.highlights ?? [],
+    itinerary: payload.extracted.itinerary ?? [],
+  });
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const faqs = payload.extracted.faqs ?? [];
@@ -45,11 +44,11 @@ export const mapViatorToEngine6Tour = (
   const routeSpec = getEngine6RouteSpecByProductCode(payload.rawProductCode);
   const canonicalPath =
     routeSpec?.route ?? buildEngine6CanonicalPath({ state, city, title });
-  const rawDescription =
-    payload.extracted.overviewText ??
-    payload.extracted.seoDescription ??
-    `Explore ${title} with local guides in ${city}, ${state}.`;
-  const description = cleanEngine6Description(rawDescription);
+  const description = cleanEngine6Description(
+    overviewText ||
+      payload.extracted.seoDescription ||
+      `Explore ${title} with local guides in ${city}, ${state}.`
+  );
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
@@ -64,11 +63,10 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,
     !payload.extracted.state ? "state" : null,
-    !payload.extracted.heroImageUrl && !payload.extracted.cardImageUrl
-      ? "heroImageUrl"
-      : null,
+    !payload.extracted.heroImageUrl ? "heroImageUrl" : null,
     !payload.extracted.priceFormatted ? "priceFormatted" : null,
     !payload.extracted.meetingPointText ? "meetingPointText" : null,
+    !payload.extracted.overviewText ? "overviewText" : null,
   ].filter((value): value is string => Boolean(value));
 
   return {
@@ -83,8 +81,8 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     heroImageUrl,
-    cardImageUrl: payload.extracted.cardImageUrl ?? heroImageUrl,
-    galleryImageUrls,
+    cardImageUrl: heroImageUrl,
+    galleryImageUrls: [],
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
     aggregateRating,

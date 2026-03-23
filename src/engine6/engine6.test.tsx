@@ -62,34 +62,16 @@ const specimenProductPayload = {
     images: [
       {
         isCover: true,
-        variants: [
-          {
-            url: "https://img.test/specimen-root-hero-small.jpg",
-            width: 360,
-            height: 240,
-          },
-          {
-            url: "https://img.test/specimen-root-hero-large.jpg",
-            width: 674,
-            height: 446,
-          },
-        ],
+        url: "https://img.test/specimen-root-hero-large.jpg",
+        width: 674,
+        height: 446,
+      },
+      {
+        url: "https://img.test/specimen-root-hero-small.jpg",
+        width: 360,
+        height: 240,
       },
     ],
-    media: {
-      images: [
-        {
-          isCover: true,
-          variants: {
-            XXLARGE: {
-              url: "https://img.test/specimen-media-hero-xxlarge.jpg",
-              width: 1600,
-              height: 1067,
-            },
-          },
-        },
-      ],
-    },
     reviews: { combinedAverageRating: 5, totalReviews: 154 },
     logistics: { start: { description: "Meet us at Zion Mountain Ranch!" } },
     itineraryItems: [
@@ -178,16 +160,16 @@ describe("engine6 extractor", () => {
     const extracted = extractEngine6Product(specimenProductPayload);
 
     expect(extracted.extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
+      "https://img.test/specimen-root-hero-large.jpg"
     );
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE.url"
+      "product.images[0].url"
     );
     expect(extracted.diagnostics.heroVariantFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE"
+      "product.images[0]"
     );
-    expect(extracted.diagnostics.selectedHeroWidth).toBe(1600);
-    expect(extracted.diagnostics.selectedHeroHeight).toBe(1067);
+    expect(extracted.diagnostics.selectedHeroWidth).toBe(674);
+    expect(extracted.diagnostics.selectedHeroHeight).toBe(446);
     expect(extracted.diagnostics.imageSourceUsed).toBe("live-product-image");
 
     expect(extracted.extracted.priceAmount).toBe(105.09);
@@ -298,10 +280,10 @@ const specimenApiPayload = {
     commercialPriceFieldPath: "product.priceFrom",
     commercialPriceRawValue: "$105.09",
     priceSourceUsed: "live-price" as const,
-    heroImageFieldPath: "product.media.images[0].variants.XXLARGE.url",
-    heroVariantFieldPath: "product.media.images[0].variants.XXLARGE",
-    selectedHeroWidth: 1600,
-    selectedHeroHeight: 1067,
+    heroImageFieldPath: "product.images[0].url",
+    heroVariantFieldPath: "product.images[0]",
+    selectedHeroWidth: 674,
+    selectedHeroHeight: 446,
     imageSourceUsed: "live-product-image" as const,
     productUrlFieldPath: "product.productUrl",
     bookingUrlSource: "product.productUrl",
@@ -335,14 +317,22 @@ const specimenApiPayload = {
       "Best tour in Springdale.. Rated 5/5. 154 reviews. Grab bird’s-eye views of Zion National Park on this Jeep tour.",
     city: "Springdale",
     state: "Utah",
-    heroImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
-    cardImageUrl: "https://img.test/specimen-media-hero-xxlarge.jpg",
+    heroImageUrl: "https://img.test/specimen-root-hero-large.jpg",
+    cardImageUrl: "https://img.test/specimen-root-hero-large.jpg",
     productUrl:
       "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16",
     priceAmount: 105.09,
     priceFormatted: "From $105",
     aggregateRating: 5,
     reviewCount: 154,
+    durationText: "1 hour 30 minutes",
+    pickupOffered: false,
+    mobileTicket: false,
+    language: "English",
+    operatorName: null,
+    cancellationSummary: null,
+    inclusionItems: [],
+    exclusionItems: [],
     meetingPointText: "Meet us at Zion Mountain Ranch!",
     overviewText:
       "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond.",
@@ -460,7 +450,9 @@ describe("engine6 mapping/cards/page", () => {
     expect(surfaces.city[0].priceLabel).toBe("From $105");
     expect(tour.primaryCategory).toBe("off-road-tour");
     expect(tour.categoryLabel).toBe("Jeep Tour");
-    expect(tour.description).toContain(
+    expect(tour.description).toContain("Springdale, Utah");
+    expect(tour.description).toContain("Zion National Park");
+    expect(tour.description).not.toContain(
       "Grab bird’s-eye views of Zion National Park on this Jeep tour"
     );
     expect(tour.description).not.toContain("Best tour");
@@ -471,7 +463,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain('data-testid="engine6-hero-banner"');
     expect(html).toContain('data-testid="engine6-commercial-facts"');
     expect(html).toContain(
-      'src="https://img.test/specimen-media-hero-xxlarge.jpg"'
+      'src="https://img.test/specimen-root-hero-large.jpg"'
     );
     expect(html).toContain("From:</strong>");
     expect(html).toContain("From $105");
@@ -493,6 +485,8 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain("Overview");
     expect(html).toContain("Highlights");
     expect(html).toContain("Itinerary");
+    expect(html).not.toContain("Gallery");
+    expect(html).not.toContain("gallery image");
     expect(html).toContain("not wheelchair accessible");
     expect(html).toContain("Is this tour wheelchair accessible?");
     expect(html).toContain("FAQs");
@@ -526,8 +520,8 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
-    expect(resolved.debug.selectedHeroWidth).toBe(1600);
-    expect(resolved.debug.selectedHeroHeight).toBe(1067);
+    expect(resolved.debug.selectedHeroWidth).toBe(674);
+    expect(resolved.debug.selectedHeroHeight).toBe(446);
     expect(resolved.debug.imageSourceUsed).toBe("live-product-image");
     expect(resolved.debug.commercialPriceRawValue).toBe("$105.09");
     expect(resolved.debug.priceSourceUsed).toBe("live-price");
@@ -575,9 +569,7 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(resolved.error).toBeNull();
     expect(resolved.tour?.title).toBe("Utah Off-Road Adventure");
-    expect(resolved.tour?.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
-    );
+    expect(resolved.tour?.heroImageUrl).toBe("/hero.jpg");
     expect(html).not.toContain("Important info");
     expect(html).not.toContain("FAQs");
     expect(html).not.toContain("Important info");
@@ -628,13 +620,13 @@ describe("engine6 seo/schema", () => {
     expect(breadcrumb).toBeDefined();
     expect(trip).toMatchObject({
       "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#trip`,
-      image: "https://img.test/specimen-media-hero-xxlarge.jpg",
+      image: "https://img.test/specimen-root-hero-large.jpg",
       touristType: "Jeep Tour",
       url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
     });
     expect(product).toMatchObject({
       category: "Jeep Tour",
-      image: "https://img.test/specimen-media-hero-xxlarge.jpg",
+      image: "https://img.test/specimen-root-hero-large.jpg",
       url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
     });
     expect(webpage).toMatchObject({
@@ -727,7 +719,8 @@ describe("engine6 listing surfaces", () => {
     expect(html).toContain("reviews");
     expect(html).toContain("From");
     expect(html).toContain("$105");
-    expect(html).toContain("Grab bird’s-eye views of Zion National Park");
+    expect(html).toContain("Springdale, Utah");
+    expect(html).toContain("Zion National Park");
     expect(html).toContain(
       'href="/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"'
     );

@@ -43,7 +43,6 @@ const buildEngine6ListingTour = (productCode: string): Tour | null => {
     },
     heroImage: listingImage,
     primaryImageUrl: listingImage,
-    galleryImages: tour.galleryImageUrls,
     badges: {
       rating: tour.aggregateRating ?? undefined,
       reviewCount: tour.reviewCount ?? undefined,
@@ -63,12 +62,7 @@ const buildEngine6ListingTour = (productCode: string): Tour | null => {
 export const engine6SpecimenTour = {
   ...getBundledEngine6Tour("163873P16")!,
   cardImageUrl: ENGINE6_163873P16_CARD_IMAGE_URL,
-  galleryImageUrls: [
-    ENGINE6_163873P16_CARD_IMAGE_URL,
-    ...getBundledEngine6Tour("163873P16")!.galleryImageUrls.filter(
-      imageUrl => imageUrl !== ENGINE6_163873P16_CARD_IMAGE_URL
-    ),
-  ],
+  galleryImageUrls: [],
 };
 
 export const engine6ListingTours: Tour[] = Object.keys(

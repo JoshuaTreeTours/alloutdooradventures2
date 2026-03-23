@@ -210,7 +210,7 @@ describe("/api/engine6/viator-product", () => {
         upstreamOk: true,
         heroImageFieldPath: "product.media.images[0].variants.FULL.url",
         heroVariantFieldPath: "product.media.images[0].variants.FULL",
-        imageSourceUsed: "live-product-image",
+        imageSourceUsed: "fallback",
       })
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
@@ -257,34 +257,16 @@ describe("/api/engine6/viator-product", () => {
             images: [
               {
                 isCover: true,
-                variants: [
-                  {
-                    url: "https://img.test/specimen-root-hero-small.jpg",
-                    width: 360,
-                    height: 240,
-                  },
-                  {
-                    url: "https://img.test/specimen-root-hero-large.jpg",
-                    width: 674,
-                    height: 446,
-                  },
-                ],
+                url: "https://img.test/specimen-root-hero-large.jpg",
+                width: 674,
+                height: 446,
+              },
+              {
+                url: "https://img.test/specimen-root-hero-small.jpg",
+                width: 360,
+                height: 240,
               },
             ],
-            media: {
-              images: [
-                {
-                  isCover: true,
-                  variants: {
-                    XXLARGE: {
-                      url: "https://img.test/specimen-media-hero-xxlarge.jpg",
-                      width: 1600,
-                      height: 1067,
-                    },
-                  },
-                },
-              ],
-            },
             reviews: { combinedAverageRating: 5, totalReviews: 154 },
             logistics: {
               start: { description: "Meet us at Zion Mountain Ranch!" },
@@ -303,7 +285,7 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).rawProductCode).toBe("163873P16");
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://img.test/specimen-media-hero-xxlarge.jpg"
+      "https://img.test/specimen-root-hero-large.jpg"
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.aggregateRating).toBe(5);
@@ -311,10 +293,10 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.itinerary).toHaveLength(1);
     expect((res.body as any).extracted.faqs).toHaveLength(2);
     expect((res.body as any).diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE.url"
+      "product.images[0].url"
     );
     expect((res.body as any).diagnostics.heroVariantFieldPath).toBe(
-      "product.media.images[0].variants.XXLARGE"
+      "product.images[0]"
     );
     expect((res.body as any).diagnostics.commercialPriceFieldPath).toBe(
       "product.priceFrom"
