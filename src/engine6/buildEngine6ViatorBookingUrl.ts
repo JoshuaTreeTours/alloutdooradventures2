@@ -6,6 +6,8 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
 
 const VIATOR_WWW_HOST = "www.viator.com";
 const LOCALE_PREFIX_PATTERN = /^\/[a-z]{2}(?:-[A-Z]{2})?(?=\/)/;
+const CANONICAL_VIATOR_PRODUCT_PATH_PATTERN =
+  /^\/tours\/[^/]+\/[^/]+\/d\d+-([A-Z0-9]+)$/i;
 
 export const isEngine6ViatorUrl = (url: URL) =>
   url.hostname === "viator.com" ||
@@ -15,10 +17,13 @@ export const isEngine6ViatorUrl = (url: URL) =>
 const normalizeViatorPathname = (pathname: string) =>
   pathname.replace(LOCALE_PREFIX_PATTERN, "") || "/";
 
-const isCanonicalViatorProductPathname = (pathname: string) =>
-  /^\/tours\/[^?#]+/i.test(pathname) || /^\/tours\/[A-Z0-9]+$/i.test(pathname);
+const extractCanonicalViatorProductCode = (pathname: string) =>
+  CANONICAL_VIATOR_PRODUCT_PATH_PATTERN.exec(pathname)?.[1] ?? null;
 
-const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
+const normalizePreferredViatorUrl = (
+  preferredUrl: string | null,
+  productCode: string | null = null
+) => {
   if (!preferredUrl) {
     return null;
   }
@@ -32,7 +37,19 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
     parsed.hostname = VIATOR_WWW_HOST;
     parsed.pathname = normalizeViatorPathname(parsed.pathname);
 
-    if (!isCanonicalViatorProductPathname(parsed.pathname)) {
+    const canonicalProductCode = extractCanonicalViatorProductCode(
+      parsed.pathname
+    );
+    if (!canonicalProductCode) {
+      return null;
+    }
+
+    const normalizedRequestedProductCode = productCode?.trim();
+    if (
+      normalizedRequestedProductCode &&
+      canonicalProductCode.toUpperCase() !==
+        normalizedRequestedProductCode.toUpperCase()
+    ) {
       return null;
     }
 
@@ -40,17 +57,6 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
   } catch {
     return null;
   }
-};
-
-const buildFallbackViatorProductUrl = (productCode: string) => {
-  const normalizedProductCode = productCode.trim();
-  if (!normalizedProductCode) {
-    return null;
-  }
-
-  return new URL(
-    `https://${VIATOR_WWW_HOST}/tours/${encodeURIComponent(normalizedProductCode)}`
-  );
 };
 
 const logResolvedEngine6ViatorUrls = ({
@@ -79,9 +85,7 @@ export const buildEngine6ViatorReferenceUrl = (
   productCode: string,
   preferredUrl: string | null = null
 ): string | null => {
-  const url =
-    normalizePreferredViatorUrl(preferredUrl) ??
-    buildFallbackViatorProductUrl(productCode);
+  const url = normalizePreferredViatorUrl(preferredUrl, productCode);
   if (!url) {
     return null;
   }

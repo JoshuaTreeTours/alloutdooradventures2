@@ -649,7 +649,7 @@ describe("engine6 seo/schema", () => {
     expect(faq).toBeDefined();
   });
 
-  it("uses the direct product-code fallback URL when a richer canonical Viator URL is unavailable", () => {
+  it("omits Offer.url when no canonical Viator product URL is available", () => {
     const tour = {
       ...mapViatorToEngine6Tour(specimenApiPayload),
       referenceBookingUrl: buildEngine6ViatorReferenceUrl("MISSING1"),
@@ -659,29 +659,27 @@ describe("engine6 seo/schema", () => {
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const offer = graph.find(node => node["@type"] === "Offer");
 
-    expect(tour.referenceBookingUrl).toBe(
-      "https://www.viator.com/tours/MISSING1"
-    );
-    expect(tour.bookingUrl).toBe(
-      "https://www.viator.com/tours/MISSING1?pid=P00290915&mcid=42383&medium=link"
-    );
-    expect(offer).toMatchObject({
-      url: "https://www.viator.com/tours/MISSING1?pid=P00290915&mcid=42383&medium=link",
-    });
+    expect(tour.referenceBookingUrl).toBeNull();
+    expect(tour.bookingUrl).toBeNull();
+    expect(offer).toBeDefined();
+    expect(offer).not.toHaveProperty("url");
   });
 });
 
-it("does not render booking CTAs when the tour is truly missing any usable Viator identifier", () => {
+it("does not render booking CTAs when no canonical Viator product URL is available", () => {
   const tour = {
     ...mapViatorToEngine6Tour(specimenApiPayload),
-    productCode: "",
-    referenceBookingUrl: null,
-    bookingUrl: null,
+    productCode: "MISSING1",
+    referenceBookingUrl: buildEngine6ViatorReferenceUrl("MISSING1"),
+    bookingUrl: buildEngine6ViatorBookingUrl("MISSING1"),
   };
 
   const html = renderToString(<Engine6TourPage tour={tour} />);
 
+  expect(tour.referenceBookingUrl).toBeNull();
+  expect(tour.bookingUrl).toBeNull();
   expect(html).not.toContain('href="https://www.viator.com/search/');
+  expect(html).not.toContain('href="https://www.viator.com/tours/MISSING1');
   expect(html.match(/>Book now</g) ?? []).toHaveLength(0);
 });
 
@@ -703,13 +701,9 @@ describe("engine6 viator outbound resolver", () => {
     );
   });
 
-  it("falls back to a direct product-code Viator URL when only the product code is available", () => {
-    expect(buildEngine6ViatorReferenceUrl("MISSING1", null)).toBe(
-      "https://www.viator.com/tours/MISSING1"
-    );
-    expect(buildEngine6ViatorBookingUrl("MISSING1", null)).toBe(
-      "https://www.viator.com/tours/MISSING1?pid=P00290915&mcid=42383&medium=link"
-    );
+  it("returns null when no canonical Viator product URL is available", () => {
+    expect(buildEngine6ViatorReferenceUrl("MISSING1", null)).toBeNull();
+    expect(buildEngine6ViatorBookingUrl("MISSING1", null)).toBeNull();
   });
 
   it("normalizes localized Viator product URLs back to the canonical product path", () => {
@@ -721,6 +715,21 @@ describe("engine6 viator outbound resolver", () => {
     ).toBe(
       "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?foo=bar"
     );
+  });
+
+  it("rejects product-code-only and search Viator URLs", () => {
+    expect(
+      buildEngine6ViatorReferenceUrl(
+        "163873P16",
+        "https://www.viator.com/tours/163873P16"
+      )
+    ).toBeNull();
+    expect(
+      resolveEngine6FinalOutboundUrl({
+        provider: "viator",
+        url: "https://www.viator.com/search/163873P16",
+      })
+    ).toBeUndefined();
   });
 
   it("leaves non-viator providers unchanged", () => {
