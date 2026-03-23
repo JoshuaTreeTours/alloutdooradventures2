@@ -671,8 +671,9 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(ctaIndex).toBeGreaterThan(-1);
     expect(relatedIndex).toBeGreaterThan(ctaIndex);
-    expect(html).toContain("Other Tours in <!-- -->Las Vegas");
-    expect(html).toContain('aria-label="Other tours in Las Vegas"');
+    expect(html).toContain("Other Tours in Las Vegas");
+    expect(html).toContain('class="related-tours-slider mt-6 flex gap-5 overflow-x-auto pb-4"');
+    expect(html).toContain('aria-label="Other Tours in Las Vegas"');
     expect(html).toContain('data-testid="engine6-related-tours-debug"');
     expect(html).toContain(
       'data-engine6-template="Engine6ProductRoute&gt;Engine6TourPage"'
@@ -686,6 +687,8 @@ describe("engine6 mapping/cards/page", () => {
     expect(html).toContain('data-related-final-count="1"');
     expect(html).toContain('data-related-final-cards="73781P4"');
     expect(html).toContain("Red Rock Canyon and Seven Magic Mountains Tour");
+    expect(html).toContain('class="tour-card min-w-[280px] max-w-[320px] flex-[0_0_280px] overflow-hidden rounded-3xl border border-green-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:min-w-[320px] md:flex-[0_0_320px]"');
+    expect(html).toContain('src="https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/9c/4d/7b.jpg"');
     expect(html).toContain(
       'href="/destinations/nevada/las-vegas/tours/red-rock-canyon-and-seven-magic-mountains-tour"'
     );

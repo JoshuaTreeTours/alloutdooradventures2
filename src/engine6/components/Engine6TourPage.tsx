@@ -2,6 +2,7 @@ import React, { type ReactNode } from "react";
 
 import DestinationBreadcrumb from "../../components/DestinationBreadcrumb";
 import Seo from "../../components/Seo";
+import { getCityTourDetailPath } from "../../data/tours";
 import { slugify } from "../../utils/slugify";
 import { getEngine6RelatedToursResult } from "../relatedTours";
 import { getEngine6RouteSpecByProductCode } from "../routes";
@@ -9,7 +10,6 @@ import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
-import Engine6RelatedToursSection from "./Engine6RelatedToursSection";
 
 const BOOK_CTA_CLASSES =
   "inline-flex rounded-full bg-[#2f8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#287a35]";
@@ -105,6 +105,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     tour.language ? { label: "Language", value: tour.language } : null,
     tour.operatorName ? { label: "Operator", value: tour.operatorName } : null,
   ].filter((item): item is { label: string; value: string } => Boolean(item));
+  const relatedToursHeading = `Other Tours in ${tour.city}`;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -369,7 +370,57 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           }
         />
 
-        <Engine6RelatedToursSection city={tour.city} tours={relatedTours} />
+        {relatedTours.length > 0 ? (
+          <section
+            className="related-tours mt-10"
+            data-testid="engine6-related-tours"
+          >
+            <h2 className="text-2xl font-semibold text-green-900 md:text-3xl">
+              {relatedToursHeading}
+            </h2>
+            <div
+              className="related-tours-slider mt-6 flex gap-5 overflow-x-auto pb-4"
+              role="region"
+              aria-label={relatedToursHeading}
+            >
+              {relatedTours.map(relatedTour => {
+                const imageUrl =
+                  relatedTour.primaryImageUrl?.trim() ||
+                  relatedTour.heroImage?.trim();
+
+                return (
+                  <a
+                    key={relatedTour.id}
+                    href={getCityTourDetailPath(relatedTour)}
+                    className="tour-card min-w-[280px] max-w-[320px] flex-[0_0_280px] overflow-hidden rounded-3xl border border-green-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg md:min-w-[320px] md:flex-[0_0_320px]"
+                  >
+                    {imageUrl ? (
+                      <img
+                        src={imageUrl}
+                        alt={relatedTour.title}
+                        className="h-48 w-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : null}
+                    <div className="p-5">
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#7a8a6b]">
+                        {relatedTour.destination.city}, {relatedTour.destination.state}
+                      </p>
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-green-950">
+                        {relatedTour.title}
+                      </h3>
+                      {relatedTour.badges.priceFrom ? (
+                        <p className="mt-3 text-sm font-medium text-slate-600">
+                          {relatedTour.badges.priceFrom}
+                        </p>
+                      ) : null}
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
+        ) : null}
       </div>
     </main>
   );
