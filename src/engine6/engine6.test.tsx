@@ -12,9 +12,10 @@ import {
 } from "../data/tours";
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
+import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
-import { buildEngine6MetaDescription } from "./seo";
+import { buildEngine6MetaDescription, buildMetaDescription } from "./seo";
 import { toEngine6Card, buildEngine6CardSurfaces } from "./cards";
 import {
   ENGINE6_163873P16_CARD_IMAGE_URL,
@@ -393,10 +394,10 @@ describe("engine6 meta descriptions", () => {
     );
 
     expect(metaDescription).toBe(
-      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, geology context, and wide-open desert ridgelines…"
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, geology context, and wide-open desert..."
     );
     expect(metaDescription.endsWith("mo")).toBe(false);
-    expect(metaDescription.endsWith("…")).toBe(true);
+    expect(metaDescription.endsWith("...")).toBe(true);
   });
 
   it("returns shorter cleaned descriptions unchanged", () => {
@@ -407,6 +408,18 @@ describe("engine6 meta descriptions", () => {
     expect(metaDescription).toBe(
       "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, and guide-led geology context."
     );
+  });
+
+  it("strips HTML before safely truncating at a word boundary", () => {
+    const metaDescription = buildMetaDescription(
+      "<p>Grab bird’s-eye views of Zion National Park on this Jeep tour with scenic climbs and incredible desert vistas plus guide-led geology context for adventurous families and first-time visitors.</p>"
+    );
+
+    expect(metaDescription).toBe(
+      "Grab bird’s-eye views of Zion National Park on this Jeep tour with scenic climbs and incredible desert vistas plus guide-led geology context for..."
+    );
+    expect(metaDescription).not.toContain("<p>");
+    expect(metaDescription.length).toBeLessThanOrEqual(160);
   });
 });
 
@@ -442,7 +455,7 @@ describe("engine6 mapping/cards/page", () => {
     );
     expect(tour.description).not.toContain("Best tour");
     expect(tour.metaDescription).not.toContain("Rated 5/5");
-    expect(tour.metaDescription.length).toBeLessThanOrEqual(155);
+    expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
     expect(tour.canonicalPath).toBe(ENGINE6_SPECIMEN_ROUTE);
     expect(html).toContain('id="structured-data-engine6-viator"');
     expect(html).toContain('data-testid="engine6-hero-banner"');
@@ -627,6 +640,20 @@ describe("engine6 seo/schema", () => {
       reviewCount: 154,
     });
     expect(faq).toBeDefined();
+  });
+
+  it("omits Offer.url when the booking link falls back to a Viator search URL", () => {
+    const tour = {
+      ...mapViatorToEngine6Tour(specimenApiPayload),
+      bookingUrl: buildEngine6ViatorBookingUrl("MISSING1"),
+    };
+    const schema = buildEngine6SchemaGraph(tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const offer = graph.find(node => node["@type"] === "Offer");
+
+    expect(tour.bookingUrl).toContain("/search/MISSING1");
+    expect(offer).toBeDefined();
+    expect(offer).not.toHaveProperty("url");
   });
 });
 

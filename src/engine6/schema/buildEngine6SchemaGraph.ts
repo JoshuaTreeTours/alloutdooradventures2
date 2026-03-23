@@ -1,10 +1,12 @@
 import { buildCanonicalUrl } from "../../utils/seo";
+import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
 import { formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
+  const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
   const description = tour.description || tour.metaDescription || tour.title;
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
@@ -30,7 +32,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const offerNode = {
     "@type": "Offer",
     "@id": `${canonicalUrl}#offer`,
-    url: affiliateUrl,
+    ...(offerUrl ? { url: offerUrl } : {}),
     priceCurrency: "USD",
     ...(typeof tour.priceAmount === "number"
       ? { price: tour.priceAmount }

@@ -2,7 +2,7 @@ import { slugify } from "../utils/slugify";
 
 import type { Engine6CategorySlug, Engine6Tour } from "./types";
 
-const ENGINE6_META_DESCRIPTION_MAX_LENGTH = 160;
+const ENGINE6_META_DESCRIPTION_CLAMP_AT = 155;
 
 export const ENGINE6_CATEGORY_LABELS: Record<Engine6CategorySlug, string> = {
   "off-road-tour": "Jeep Tour",
@@ -54,24 +54,40 @@ export const cleanEngine6Description = (text: string): string => {
 
 export const clampEngine6MetaDescription = (
   text: string,
-  maxLength = ENGINE6_META_DESCRIPTION_MAX_LENGTH
+  maxLength = ENGINE6_META_DESCRIPTION_CLAMP_AT
 ) => {
   if (text.length <= maxLength) {
     return text;
   }
 
-  const clipped = text.slice(0, maxLength - 1).trim();
+  const clipped = text.slice(0, maxLength).trim();
   const lastWordBoundary = clipped.lastIndexOf(" ");
   const safeClipped =
-    lastWordBoundary > maxLength * 0.6
+    lastWordBoundary > 100
       ? clipped.slice(0, lastWordBoundary)
       : clipped;
 
-  return `${safeClipped.trim()}…`;
+  return `${safeClipped.trim()}...`;
+};
+
+export const buildMetaDescription = (input: string | undefined | null) => {
+  if (!input) {
+    return "";
+  }
+
+  const clean = cleanEngine6Description(
+    input.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim()
+  );
+
+  if (clean.length <= ENGINE6_META_DESCRIPTION_CLAMP_AT) {
+    return clean;
+  }
+
+  return clampEngine6MetaDescription(clean);
 };
 
 export const buildEngine6MetaDescription = (description: string) =>
-  clampEngine6MetaDescription(cleanEngine6Description(description));
+  buildMetaDescription(description);
 
 export const buildEngine6SeoTitle = ({
   title,

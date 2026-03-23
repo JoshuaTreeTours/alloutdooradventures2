@@ -23,6 +23,21 @@ const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
   }
 };
 
+export const resolveEngine6OfferUrl = (
+  bookingUrl: string | null | undefined
+): string | undefined => {
+  if (!bookingUrl) {
+    return undefined;
+  }
+
+  const parsed = normalizePreferredViatorUrl(bookingUrl);
+  if (!parsed || parsed.pathname.includes("/search/")) {
+    return undefined;
+  }
+
+  return parsed.toString();
+};
+
 export const buildEngine6ViatorBookingUrl = (
   productCode: string,
   preferredUrl: string | null = null
