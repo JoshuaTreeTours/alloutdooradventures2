@@ -12,7 +12,11 @@ const normalizeDeploymentUrl = (value: string | null | undefined) => {
 };
 
 const readImportMetaEnv = (key: string) => {
-  const env = import.meta.env as Record<string, string | undefined>;
+  const env = ((
+    import.meta as ImportMeta & {
+      env?: Record<string, string | undefined>;
+    }
+  ).env ?? {}) as Record<string, string | undefined>;
   return env[key]?.trim() || null;
 };
 

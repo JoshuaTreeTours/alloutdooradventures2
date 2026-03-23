@@ -1,7 +1,18 @@
+import { resolveScopedEngine6Hero } from "../../api/engine6/resolveScopedEngine6Hero";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
+import grandCanyonExactProduct from "../../data/engine6/viator/132218P75.exact-product.json";
+import redRockExactProduct from "../../data/engine6/viator/73781P4.exact-product.json";
 
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import type { Engine6ApiResponse } from "./types";
+
+const ENGINE6_BUNDLED_EXACT_PRODUCTS: Record<
+  string,
+  Record<string, unknown>
+> = {
+  "132218P75": grandCanyonExactProduct as Record<string, unknown>,
+  "73781P4": redRockExactProduct as Record<string, unknown>,
+};
 
 export const ENGINE6_BUNDLED_RAW_PRODUCTS: Record<
   string,
@@ -239,10 +250,7 @@ export const ENGINE6_BUNDLED_RAW_PRODUCTS: Record<
         "Small-group transportation",
         "Professional guide",
       ],
-      exclusions: [
-        "Lunch",
-        "Gratuities",
-      ],
+      exclusions: ["Lunch", "Gratuities"],
       logistics: {
         start: { description: "Pickup offered in Las Vegas." },
       },
@@ -290,12 +298,26 @@ export const ENGINE6_BUNDLED_RAW_PRODUCTS: Record<
 export const buildBundledEngine6Payload = (
   productCode: string
 ): Engine6ApiResponse | null => {
-  const rawPayload = ENGINE6_BUNDLED_RAW_PRODUCTS[productCode];
+  const rawPayload =
+    ENGINE6_BUNDLED_EXACT_PRODUCTS[productCode] ??
+    ENGINE6_BUNDLED_RAW_PRODUCTS[productCode];
   if (!rawPayload) {
     return null;
   }
 
   const extraction = extractEngine6Product(rawPayload);
+  const siblingRawPayload = Object.entries(ENGINE6_BUNDLED_EXACT_PRODUCTS).find(
+    ([candidateCode]) => candidateCode !== productCode
+  )?.[1];
+  const siblingExtraction = siblingRawPayload
+    ? extractEngine6Product(siblingRawPayload)
+    : null;
+  const scoped = resolveScopedEngine6Hero({
+    productCode,
+    baseExtraction: extraction,
+    preferredHeroExtraction: extraction,
+    fallbackHeroExtraction: siblingExtraction,
+  });
 
   return {
     source: "bundled-fallback",
@@ -305,25 +327,26 @@ export const buildBundledEngine6Payload = (
       source: "bundled-fallback",
       resolvedProductUrl: null,
       resolvedHeroImageUrl: null,
-      sourceProductUrl: extraction.extracted.productUrl,
+      sourceProductUrl: scoped.extracted.productUrl,
       hasViatorApiKey: false,
       attemptedLiveFetch: false,
       upstreamStatus: null,
       upstreamContentType: null,
       upstreamOk: null,
-      usedBundledFallbackBecause: "bundled-product-registry",
-      ...extraction.diagnostics,
+      usedBundledFallbackBecause:
+        productCode in ENGINE6_BUNDLED_EXACT_PRODUCTS
+          ? "bundled-exact-product-snapshot"
+          : "bundled-product-registry",
+      ...scoped.diagnostics,
       heroScopedProductCode: productCode,
-      heroScopedProductUrl: extraction.extracted.productUrl,
-      heroScopeConfirmed: true,
-      rejectedForeignHeroCandidates: [],
+      heroScopedProductUrl: scoped.extracted.productUrl,
       bookingUrlSource:
-        extraction.diagnostics.productUrlFieldPath ??
+        scoped.diagnostics.productUrlFieldPath ??
         "generated:viator-search-product-code",
       fieldLevelFallbackUsed: false,
       fallbackFieldNames: [],
     },
-    extracted: extraction.extracted,
+    extracted: scoped.extracted,
   };
 };
 
