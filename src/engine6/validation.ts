@@ -30,7 +30,13 @@ export type Engine6ValidationReport = {
   diagnostics: {
     source: string;
     heroSource: string;
+    heroResolverName: string | null;
     heroImageFieldPath: string | null;
+    apiPrimaryImageCandidateUrl: string | null;
+    apiGalleryImageCandidateUrls: string[];
+    scrapedImageCandidateUrls: string[];
+    fallbackImageCandidateUrls: string[];
+    finalSelectedHeroUrl: string | null;
     priceSource: string;
     commercialPriceFieldPath: string | null;
     ratingFieldPath: string | null;
@@ -126,7 +132,17 @@ export const buildEngine6ValidationReport = (
     diagnostics: {
       source: payload.source,
       heroSource: tour.diagnostics.imageSourceUsed,
+      heroResolverName: tour.diagnostics.heroResolverName,
       heroImageFieldPath: tour.diagnostics.heroImageFieldPath,
+      apiPrimaryImageCandidateUrl:
+        tour.diagnostics.apiPrimaryImageCandidate?.url ?? null,
+      apiGalleryImageCandidateUrls:
+        tour.diagnostics.apiGalleryImageCandidates.map(candidate => candidate.url),
+      scrapedImageCandidateUrls:
+        tour.diagnostics.scrapedImageCandidates.map(candidate => candidate.url),
+      fallbackImageCandidateUrls:
+        tour.diagnostics.fallbackImageCandidates.map(candidate => candidate.url),
+      finalSelectedHeroUrl: tour.diagnostics.finalSelectedHero?.url ?? null,
       priceSource: tour.diagnostics.priceSourceUsed,
       commercialPriceFieldPath: tour.diagnostics.commercialPriceFieldPath,
       ratingFieldPath: tour.diagnostics.ratingFieldPath,

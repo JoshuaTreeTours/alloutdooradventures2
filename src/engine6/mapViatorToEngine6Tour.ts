@@ -120,6 +120,13 @@ export const mapViatorToEngine6Tour = (
       selectedHeroWidth: payload.diagnostics.selectedHeroWidth,
       selectedHeroHeight: payload.diagnostics.selectedHeroHeight,
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
+      heroResolverName: payload.diagnostics.heroResolverName,
+      apiPrimaryImageCandidate: payload.diagnostics.apiPrimaryImageCandidate,
+      apiGalleryImageCandidates:
+        payload.diagnostics.apiGalleryImageCandidates,
+      scrapedImageCandidates: payload.diagnostics.scrapedImageCandidates,
+      fallbackImageCandidates: payload.diagnostics.fallbackImageCandidates,
+      finalSelectedHero: payload.diagnostics.finalSelectedHero,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
         payload.diagnostics.productUrlFieldPath ??

@@ -9,6 +9,22 @@ export type Engine6FaqItem = {
   answer: string;
 };
 
+export type Engine6HeroSource =
+  | "viator-api-primary"
+  | "viator-api-gallery"
+  | "trusted-scraped-page-hero"
+  | "fallback-image";
+
+export type Engine6HeroCandidate = {
+  url: string;
+  path: string;
+  variantPath: string;
+  width: number | null;
+  height: number | null;
+  source: Engine6HeroSource;
+  resolver: string;
+};
+
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
   resolvedProductUrl: string | null;
@@ -20,7 +36,13 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSource;
+  heroResolverName: string | null;
+  apiPrimaryImageCandidate: Engine6HeroCandidate | null;
+  apiGalleryImageCandidates: Engine6HeroCandidate[];
+  scrapedImageCandidates: Engine6HeroCandidate[];
+  fallbackImageCandidates: Engine6HeroCandidate[];
+  finalSelectedHero: Engine6HeroCandidate | null;
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;

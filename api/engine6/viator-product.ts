@@ -48,7 +48,13 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "fallback" as const,
+  imageSourceUsed: "fallback-image" as const,
+  heroResolverName: null as string | null,
+  apiPrimaryImageCandidate: null as any,
+  apiGalleryImageCandidates: [] as any[],
+  scrapedImageCandidates: [] as any[],
+  fallbackImageCandidates: [] as any[],
+  finalSelectedHero: null as any,
   productUrlFieldPath: null as string | null,
   bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
@@ -182,11 +188,45 @@ const applyResolvedHero = (args: {
   preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
   fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
 }) => {
-  const heroSource = args.preferredHeroExtraction?.extracted.heroImageUrl
-    ? args.preferredHeroExtraction
-    : args.fallbackHeroExtraction?.extracted.heroImageUrl
-      ? args.fallbackHeroExtraction
-      : args.baseExtraction;
+  const getPriority = (source: string | null | undefined) => {
+    switch (source) {
+      case "viator-api-primary":
+        return 4;
+      case "viator-api-gallery":
+        return 3;
+      case "trusted-scraped-page-hero":
+        return 2;
+      case "fallback-image":
+        return 1;
+      default:
+        return 0;
+    }
+  };
+  const getArea = (extraction?: ReturnType<typeof extractEngine6Product> | null) =>
+    (extraction?.diagnostics.selectedHeroWidth ?? 0) *
+    (extraction?.diagnostics.selectedHeroHeight ?? 0);
+  const heroSource =
+    [
+      args.preferredHeroExtraction,
+      args.fallbackHeroExtraction,
+      args.baseExtraction,
+    ]
+      .filter(
+        (
+          extraction
+        ): extraction is ReturnType<typeof extractEngine6Product> =>
+          Boolean(extraction?.extracted.heroImageUrl)
+      )
+      .sort((left, right) => {
+        const bySource =
+          getPriority(right.diagnostics.imageSourceUsed) -
+          getPriority(left.diagnostics.imageSourceUsed);
+        if (bySource !== 0) {
+          return bySource;
+        }
+
+        return getArea(right) - getArea(left);
+      })[0] ?? args.baseExtraction;
 
   return {
     extracted: {
@@ -202,6 +242,13 @@ const applyResolvedHero = (args: {
       selectedHeroWidth: heroSource.diagnostics.selectedHeroWidth,
       selectedHeroHeight: heroSource.diagnostics.selectedHeroHeight,
       imageSourceUsed: heroSource.diagnostics.imageSourceUsed,
+      heroResolverName: heroSource.diagnostics.heroResolverName,
+      apiPrimaryImageCandidate: heroSource.diagnostics.apiPrimaryImageCandidate,
+      apiGalleryImageCandidates:
+        heroSource.diagnostics.apiGalleryImageCandidates,
+      scrapedImageCandidates: heroSource.diagnostics.scrapedImageCandidates,
+      fallbackImageCandidates: heroSource.diagnostics.fallbackImageCandidates,
+      finalSelectedHero: heroSource.diagnostics.finalSelectedHero,
     },
   };
 };

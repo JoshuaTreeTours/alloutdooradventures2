@@ -1,5 +1,4 @@
-import { Link } from "wouter";
-
+import DestinationBreadcrumb from "../../components/DestinationBreadcrumb";
 import TourCard from "../../components/TourCard";
 import Seo from "../../components/Seo";
 import RatingStars from "./RatingStars";
@@ -84,28 +83,12 @@ export default function Engine4TourPage({ tour }: Engine4TourPageProps) {
       <section className="bg-[#2f4a2f] text-white">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
           <div>
-            <nav
-              aria-label="Destination breadcrumb"
-              className="text-xs text-white/80"
-            >
-              <Link href="/destinations">
-                <a className="underline-offset-4 hover:underline">
-                  Destinations
-                </a>
-              </Link>{" "}
-              /{" "}
-              <Link href={destinationStatePath}>
-                <a className="underline-offset-4 hover:underline">
-                  {tour.destination.state}
-                </a>
-              </Link>{" "}
-              /{" "}
-              <Link href={destinationCityPath}>
-                <a className="underline-offset-4 hover:underline">
-                  {tour.destination.city}
-                </a>
-              </Link>
-            </nav>
+            <DestinationBreadcrumb
+              state={tour.destination.state}
+              city={tour.destination.city}
+              statePath={destinationStatePath}
+              cityPath={destinationCityPath}
+            />
             <p className="text-xs uppercase tracking-[0.3em] text-white/75">
               {tour.destination.city}, {tour.destination.state}
             </p>

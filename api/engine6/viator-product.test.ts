@@ -210,12 +210,65 @@ describe("/api/engine6/viator-product", () => {
         upstreamOk: true,
         heroImageFieldPath: "product.media.images[0].variants.FULL.url",
         heroVariantFieldPath: "product.media.images[0].variants.FULL",
-        imageSourceUsed: "fallback",
+        imageSourceUsed: "trusted-scraped-page-hero",
+        heroResolverName: "product.media.images",
       })
     );
     expect((res.body as any).extracted.priceAmount).toBe(105.09);
     expect((res.body as any).extracted.heroImageUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/specimen-cover.jpg"
+    );
+  });
+
+  it("keeps a bundled API primary hero ahead of a weaker live scraped hero", async () => {
+    process.env.VIATOR_API_KEY = "server-key";
+
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      status: 200,
+      headers: new Headers({ "content-type": "application/json" }),
+      text: async () =>
+        JSON.stringify({
+          product: {
+            productCode: "132218P75",
+            title: "Grand Canyon West, Hoover Dam Stop and Optional Lunch and Skywalk",
+            media: {
+              images: [
+                {
+                  variants: {
+                    FULL: {
+                      url: "https://dynamic-media.tacdn.com/media/photo-o/live-scraped-hero.jpg",
+                      width: 1600,
+                      height: 900,
+                    },
+                  },
+                },
+              ],
+            },
+            reviews: { combinedAverageRating: 4.9, totalReviews: 20734 },
+          },
+        }),
+    } as Response);
+
+    const req = { method: "GET", query: { productCode: "132218P75" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        source: "bundled-fallback",
+        usedBundledFallbackBecause: "live-price-missing-or-zero",
+        heroImageFieldPath: "product.images[0].url",
+        heroVariantFieldPath: "product.images[0]",
+        imageSourceUsed: "viator-api-primary",
+        heroResolverName: "product.images.cover",
+      })
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/74/c1/71.jpg"
     );
   });
 

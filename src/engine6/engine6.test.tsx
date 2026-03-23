@@ -170,7 +170,39 @@ describe("engine6 extractor", () => {
     );
     expect(extracted.diagnostics.selectedHeroWidth).toBe(674);
     expect(extracted.diagnostics.selectedHeroHeight).toBe(446);
-    expect(extracted.diagnostics.imageSourceUsed).toBe("live-product-image");
+    expect(extracted.diagnostics.imageSourceUsed).toBe("viator-api-primary");
+    expect(extracted.diagnostics.heroResolverName).toBe("product.images.cover");
+    expect(extracted.diagnostics.apiPrimaryImageCandidate).toEqual({
+      url: "https://img.test/specimen-root-hero-large.jpg",
+      path: "product.images[0].url",
+      variantPath: "product.images[0]",
+      width: 674,
+      height: 446,
+      source: "viator-api-primary",
+      resolver: "product.images.cover",
+    });
+    expect(extracted.diagnostics.apiGalleryImageCandidates).toEqual([
+      {
+        url: "https://img.test/specimen-root-hero-small.jpg",
+        path: "product.images[1].url",
+        variantPath: "product.images[1]",
+        width: 360,
+        height: 240,
+        source: "viator-api-gallery",
+        resolver: "product.images.gallery",
+      },
+    ]);
+    expect(extracted.diagnostics.scrapedImageCandidates).toEqual([]);
+    expect(extracted.diagnostics.fallbackImageCandidates).toEqual([]);
+    expect(extracted.diagnostics.finalSelectedHero).toEqual({
+      url: "https://img.test/specimen-root-hero-large.jpg",
+      path: "product.images[0].url",
+      variantPath: "product.images[0]",
+      width: 674,
+      height: 446,
+      source: "viator-api-primary",
+      resolver: "product.images.cover",
+    });
 
     expect(extracted.extracted.priceAmount).toBe(105.09);
     expect(extracted.extracted.priceFormatted).toBe("From $105");
@@ -263,6 +295,81 @@ describe("engine6 extractor", () => {
       "product.additionalInfo"
     );
   });
+
+  it("keeps the API primary hero ahead of gallery, scraped, and fallback candidates", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "PRIORITY1",
+        title: "Priority Tour",
+        images: [
+          {
+            isCover: true,
+            url: "https://img.test/api-primary-cover.jpg",
+            width: 674,
+            height: 446,
+          },
+          {
+            url: "https://img.test/api-gallery.jpg",
+            width: 900,
+            height: 600,
+          },
+        ],
+        media: {
+          images: [
+            {
+              variants: {
+                FULL: {
+                  url: "https://img.test/scraped-hero.jpg",
+                  width: 1600,
+                  height: 900,
+                },
+              },
+            },
+          ],
+        },
+        imageUrl: "https://img.test/fallback-direct.jpg",
+      },
+    });
+
+    expect(extracted.extracted.heroImageUrl).toBe(
+      "https://img.test/api-primary-cover.jpg"
+    );
+    expect(extracted.diagnostics.imageSourceUsed).toBe("viator-api-primary");
+    expect(extracted.diagnostics.heroResolverName).toBe("product.images.cover");
+    expect(extracted.diagnostics.apiGalleryImageCandidates).toEqual([
+      {
+        url: "https://img.test/api-gallery.jpg",
+        path: "product.images[1].url",
+        variantPath: "product.images[1]",
+        width: 900,
+        height: 600,
+        source: "viator-api-gallery",
+        resolver: "product.images.gallery",
+      },
+    ]);
+    expect(extracted.diagnostics.scrapedImageCandidates).toEqual([
+      {
+        url: "https://img.test/scraped-hero.jpg",
+        path: "product.media.images[0].variants.FULL.url",
+        variantPath: "product.media.images[0].variants.FULL",
+        width: 1600,
+        height: 900,
+        source: "trusted-scraped-page-hero",
+        resolver: "product.media.images",
+      },
+    ]);
+    expect(extracted.diagnostics.fallbackImageCandidates).toEqual([
+      {
+        url: "https://img.test/fallback-direct.jpg",
+        path: "product.imageUrl",
+        variantPath: "product.imageUrl",
+        width: null,
+        height: null,
+        source: "fallback-image",
+        resolver: "product.imageUrl",
+      },
+    ]);
+  });
 });
 
 const specimenApiPayload = {
@@ -284,7 +391,39 @@ const specimenApiPayload = {
     heroVariantFieldPath: "product.images[0]",
     selectedHeroWidth: 674,
     selectedHeroHeight: 446,
-    imageSourceUsed: "live-product-image" as const,
+    imageSourceUsed: "viator-api-primary" as const,
+    heroResolverName: "product.images.cover",
+    apiPrimaryImageCandidate: {
+      url: "https://img.test/specimen-root-hero-large.jpg",
+      path: "product.images[0].url",
+      variantPath: "product.images[0]",
+      width: 674,
+      height: 446,
+      source: "viator-api-primary" as const,
+      resolver: "product.images.cover",
+    },
+    apiGalleryImageCandidates: [
+      {
+        url: "https://img.test/specimen-root-hero-small.jpg",
+        path: "product.images[1].url",
+        variantPath: "product.images[1]",
+        width: 360,
+        height: 240,
+        source: "viator-api-gallery" as const,
+        resolver: "product.images.gallery",
+      },
+    ],
+    scrapedImageCandidates: [],
+    fallbackImageCandidates: [],
+    finalSelectedHero: {
+      url: "https://img.test/specimen-root-hero-large.jpg",
+      path: "product.images[0].url",
+      variantPath: "product.images[0]",
+      width: 674,
+      height: 446,
+      source: "viator-api-primary" as const,
+      resolver: "product.images.cover",
+    },
     productUrlFieldPath: "product.productUrl",
     bookingUrlSource: "product.productUrl",
     ratingFieldPath: "product.reviews.combinedAverageRating",
@@ -461,6 +600,13 @@ describe("engine6 mapping/cards/page", () => {
     expect(tour.canonicalPath).toBe(ENGINE6_SPECIMEN_ROUTE);
     expect(html).toContain('id="structured-data-engine6-viator"');
     expect(html).toContain('data-testid="engine6-hero-banner"');
+    expect(html).toContain('aria-label="Destination breadcrumb"');
+    expect(html).toContain('href="/destinations"');
+    expect(html).toContain('href="/destinations/utah"');
+    expect(html).toContain('href="/destinations/utah/springdale"');
+    expect(html).toContain('aria-current="page"');
+    expect(html).toContain('data-hero-source="viator-api-primary"');
+    expect(html).toContain('data-hero-resolver="product.images.cover"');
     expect(html).toContain('data-testid="engine6-commercial-facts"');
     expect(html).toContain(
       'src="https://img.test/specimen-root-hero-large.jpg"'
@@ -522,7 +668,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.requestedApiUrl).toBe(apiUrl);
     expect(resolved.debug.selectedHeroWidth).toBe(674);
     expect(resolved.debug.selectedHeroHeight).toBe(446);
-    expect(resolved.debug.imageSourceUsed).toBe("live-product-image");
+    expect(resolved.debug.imageSourceUsed).toBe("viator-api-primary");
     expect(resolved.debug.commercialPriceRawValue).toBe("$105.09");
     expect(resolved.debug.priceSourceUsed).toBe("live-price");
     expect(resolved.debug.overviewFieldPath).toBe("product.description.text");

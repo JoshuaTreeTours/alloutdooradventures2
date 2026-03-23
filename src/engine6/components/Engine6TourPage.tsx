@@ -1,6 +1,9 @@
 import React, { type ReactNode } from "react";
 
+import DestinationBreadcrumb from "../../components/DestinationBreadcrumb";
 import Seo from "../../components/Seo";
+import { slugify } from "../../utils/slugify";
+import { getEngine6RouteSpecByProductCode } from "../routes";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
@@ -79,10 +82,13 @@ const BulletList = ({ items }: { items: string[] }) => (
 );
 
 export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
+  const routeSpec = getEngine6RouteSpecByProductCode(tour.productCode);
   const categoryLabel =
     tour.categoryLabel ?? formatEngine6CategoryLabel(tour.primaryCategory);
   const seo = buildEngine6Seo(tour);
   const schema = buildEngine6SchemaGraph(tour);
+  const destinationStatePath = `/destinations/${routeSpec?.stateSlug ?? slugify(tour.state)}`;
+  const destinationCityPath = `${destinationStatePath}/${routeSpec?.citySlug ?? slugify(tour.city)}`;
   const hasPrice = Boolean(tour.priceFormatted);
   const hasRating =
     typeof tour.aggregateRating === "number" &&
@@ -112,9 +118,19 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       <section
         className="bg-[#2f4a2f] text-white"
         data-testid="engine6-hero-banner"
+        data-hero-source={tour.diagnostics.imageSourceUsed}
+        data-hero-resolver={tour.diagnostics.heroResolverName ?? "none"}
+        data-hero-path={tour.diagnostics.heroImageFieldPath ?? "none"}
       >
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
+            <DestinationBreadcrumb
+              state={tour.state}
+              city={tour.city}
+              title={tour.title}
+              statePath={destinationStatePath}
+              cityPath={destinationCityPath}
+            />
             <p className="text-xs uppercase tracking-[0.3em] text-white/75">
               {tour.city}, {tour.state}
             </p>
