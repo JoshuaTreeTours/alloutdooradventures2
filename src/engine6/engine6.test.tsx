@@ -12,7 +12,11 @@ import {
 } from "../data/tours";
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
-import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import {
+  buildEngine6ViatorBookingUrl,
+  buildEngine6ViatorReferenceUrl,
+  resolveEngine6FinalOutboundUrl,
+} from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6MetaDescription, buildMetaDescription } from "./seo";
@@ -443,6 +447,9 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(tour.productCode).toBe("163873P16");
     expect(tour.priceFormatted).toBe("From $105");
+    expect(tour.referenceBookingUrl).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16"
+    );
     expect(tour.bookingUrl).toBe(
       "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link"
     );
@@ -645,6 +652,7 @@ describe("engine6 seo/schema", () => {
   it("omits Offer.url when the booking link falls back to a Viator search URL", () => {
     const tour = {
       ...mapViatorToEngine6Tour(specimenApiPayload),
+      referenceBookingUrl: buildEngine6ViatorReferenceUrl("MISSING1"),
       bookingUrl: buildEngine6ViatorBookingUrl("MISSING1"),
     };
     const schema = buildEngine6SchemaGraph(tour);
@@ -654,6 +662,34 @@ describe("engine6 seo/schema", () => {
     expect(tour.bookingUrl).toContain("/search/MISSING1");
     expect(offer).toBeDefined();
     expect(offer).not.toHaveProperty("url");
+  });
+});
+
+describe("engine6 viator outbound resolver", () => {
+  it("normalizes existing viator affiliate params instead of duplicating them", () => {
+    const referenceUrl =
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=OLDPID&mcid=11111&medium=banner&foo=bar";
+
+    expect(buildEngine6ViatorReferenceUrl("163873P16", referenceUrl)).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?foo=bar"
+    );
+    expect(
+      resolveEngine6FinalOutboundUrl({
+        provider: "viator",
+        url: referenceUrl,
+      })
+    ).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link&foo=bar"
+    );
+  });
+
+  it("leaves non-viator providers unchanged", () => {
+    expect(
+      resolveEngine6FinalOutboundUrl({
+        provider: "fareharbor",
+        url: "https://fareharbor.com/example?ref=aoa",
+      })
+    ).toBe("https://fareharbor.com/example?ref=aoa");
   });
 });
 

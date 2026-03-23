@@ -63,6 +63,7 @@ describe("engine6 multi-tour validation harness", () => {
       expect(tour.seoTitle).toContain(tour.title);
       expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
       expect(tour.metaDescription).not.toContain("Best tour");
+      expect(tour.referenceBookingUrl).toBe(fixture.publicUrl);
       expect(tour.bookingUrl).toContain("pid=P00290915");
       expect(tour.bookingUrl).toContain("mcid=42383");
       expect(tour.bookingUrl).toContain("medium=link");

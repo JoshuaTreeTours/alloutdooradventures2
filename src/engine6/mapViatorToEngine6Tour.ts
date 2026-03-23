@@ -1,4 +1,7 @@
-import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import {
+  buildEngine6ViatorBookingUrl,
+  buildEngine6ViatorReferenceUrl,
+} from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import {
   buildEngine6CanonicalPath,
@@ -49,6 +52,10 @@ export const mapViatorToEngine6Tour = (
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
+  const referenceBookingUrl = buildEngine6ViatorReferenceUrl(
+    payload.rawProductCode,
+    payload.extracted.productUrl
+  );
   const bookingUrl = buildEngine6ViatorBookingUrl(
     payload.rawProductCode,
     payload.extracted.productUrl
@@ -93,6 +100,8 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     pagePath: canonicalPath,
     canonicalPath,
+    bookingProvider: "viator",
+    referenceBookingUrl,
     bookingUrl,
     diagnostics: {
       source: payload.source,
