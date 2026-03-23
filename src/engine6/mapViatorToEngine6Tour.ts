@@ -49,10 +49,11 @@ export const mapViatorToEngine6Tour = (
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
-  const bookingUrl = buildEngine6ViatorBookingUrl(
-    payload.rawProductCode,
-    payload.extracted.productUrl
-  );
+  const referenceBookingUrl = payload.extracted.productUrl ?? null;
+  const bookingUrl =
+    buildEngine6ViatorBookingUrl(referenceBookingUrl) ??
+    referenceBookingUrl ??
+    "";
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,
@@ -93,6 +94,8 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     pagePath: canonicalPath,
     canonicalPath,
+    bookingProvider: "viator",
+    referenceBookingUrl,
     bookingUrl,
     diagnostics: {
       source: payload.source,
@@ -106,8 +109,7 @@ export const mapViatorToEngine6Tour = (
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,
       bookingUrlSource:
-        payload.diagnostics.productUrlFieldPath ??
-        "generated:viator-search-product-code",
+        payload.diagnostics.productUrlFieldPath ?? "missing:viator-product-url",
       ratingFieldPath: payload.diagnostics.ratingFieldPath,
       reviewCountFieldPath: payload.diagnostics.reviewCountFieldPath,
       overviewFieldPath: payload.diagnostics.overviewFieldPath,

@@ -54,7 +54,7 @@ const buildDiagnostics = (
   selectedHeroHeight: null as number | null,
   imageSourceUsed: "fallback" as const,
   productUrlFieldPath: null as string | null,
-  bookingUrlSource: "generated:viator-search-product-code" as const,
+  bookingUrlSource: "missing:viator-product-url" as const,
   ratingFieldPath: null as string | null,
   reviewCountFieldPath: null as string | null,
   overviewFieldPath: null as string | null,

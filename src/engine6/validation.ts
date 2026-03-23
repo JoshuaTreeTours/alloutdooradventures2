@@ -65,7 +65,7 @@ export const buildEngine6ValidationReport = (
       ...extraction.diagnostics,
       bookingUrlSource:
         extraction.diagnostics.productUrlFieldPath ??
-        "generated:viator-search-product-code",
+        "missing:viator-product-url",
       fieldLevelFallbackUsed: false,
       fallbackFieldNames: [],
     },

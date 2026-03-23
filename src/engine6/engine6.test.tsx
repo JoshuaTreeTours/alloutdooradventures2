@@ -13,6 +13,7 @@ import {
 import { getTopToursForPlace } from "../data/tourIndex";
 import Engine6TourPage from "./components/Engine6TourPage";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
+import { resolveEngine6CtaUrl } from "./resolveEngine6CtaUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6MetaDescription, buildMetaDescription } from "./seo";
@@ -443,6 +444,9 @@ describe("engine6 mapping/cards/page", () => {
 
     expect(tour.productCode).toBe("163873P16");
     expect(tour.priceFormatted).toBe("From $105");
+    expect(tour.referenceBookingUrl).toBe(
+      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16"
+    );
     expect(tour.bookingUrl).toBe(
       "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&mcid=42383&medium=link"
     );
@@ -497,12 +501,28 @@ describe("engine6 mapping/cards/page", () => {
       "Secure your spot, confirm the latest availability, and review final departure details before checkout."
     );
     expect(html.match(/>Book now</g) ?? []).toHaveLength(2);
+    expect(html.match(/data-engine6-affiliate-cta="true"/g) ?? []).toHaveLength(
+      2
+    );
+    expect(
+      html.match(/rel="nofollow sponsored noopener noreferrer"/g) ?? []
+    ).toHaveLength(2);
     expect(html).toContain(
       'href="https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16?pid=P00290915&amp;mcid=42383&amp;medium=link"'
     );
     expect(ENGINE6_SPECIMEN_ROUTE).toBe(
       "/destinations/utah/springdale/tours/east-zion-top-of-the-world-jeep-tour"
     );
+  });
+
+  it("keeps non-Viator CTA links unchanged at the final render layer", () => {
+    expect(
+      resolveEngine6CtaUrl({
+        bookingProvider: "fareharbor",
+        referenceBookingUrl: null,
+        bookingUrl: "https://fareharbor.com/example",
+      })
+    ).toBe("https://fareharbor.com/example");
   });
 
   it("surfaces the exact enforced field paths in specimen diagnostics", () => {
@@ -642,16 +662,17 @@ describe("engine6 seo/schema", () => {
     expect(faq).toBeDefined();
   });
 
-  it("omits Offer.url when the booking link falls back to a Viator search URL", () => {
+  it("omits Offer.url when a Viator productUrl is unavailable", () => {
     const tour = {
       ...mapViatorToEngine6Tour(specimenApiPayload),
-      bookingUrl: buildEngine6ViatorBookingUrl("MISSING1"),
+      referenceBookingUrl: null,
+      bookingUrl: "",
     };
     const schema = buildEngine6SchemaGraph(tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const offer = graph.find(node => node["@type"] === "Offer");
 
-    expect(tour.bookingUrl).toContain("/search/MISSING1");
+    expect(buildEngine6ViatorBookingUrl(null)).toBeUndefined();
     expect(offer).toBeDefined();
     expect(offer).not.toHaveProperty("url");
   });
