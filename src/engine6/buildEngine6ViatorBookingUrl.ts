@@ -4,6 +4,11 @@ const ENGINE6_VIATOR_AFFILIATE_PARAMS = {
   medium: "link",
 } as const;
 
+const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
+  "163873P16":
+    "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16",
+};
+
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";
 
 const normalizePreferredViatorUrl = (preferredUrl: string | null) => {
@@ -42,8 +47,10 @@ export const buildEngine6ViatorBookingUrl = (
   productCode: string,
   preferredUrl: string | null = null
 ): string => {
+  const canonicalUrl = ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE[productCode];
   const url =
     normalizePreferredViatorUrl(preferredUrl) ??
+    (canonicalUrl ? new URL(canonicalUrl) : null) ??
     new URL(
       `${FALLBACK_ENGINE6_VIATOR_SEARCH_URL}/${encodeURIComponent(productCode)}`
     );
