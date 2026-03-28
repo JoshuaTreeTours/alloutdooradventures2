@@ -102,6 +102,9 @@ const specimenProductPayload = {
   },
 };
 
+const ENGINE6_60136P1_EXPECTED_HERO_URL =
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/eb/d1/48.jpg";
+
 const specimenApiPayload = {
   source: "live-api" as const,
   diagnostics: {
@@ -744,6 +747,7 @@ describe("engine6 listing surfaces", () => {
       tour => tour.productCode === "60136P1"
     );
     expect(antelopeTour).toBeDefined();
+    expect(antelopeTour?.heroImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
 
     const detailHtml = renderToString(<Engine6TourPage tour={antelopeTour!} />);
     const escapedHero = antelopeTour!.heroImageUrl.replace(/&/g, "&amp;");
@@ -754,8 +758,8 @@ describe("engine6 listing surfaces", () => {
     const entry = unified.find(tour => tour.tour.productCode === "60136P1");
     expect(entry).toBeDefined();
     expect(entry?.href).toBe(ENGINE6_ANTELOPE_ROUTE);
-    expect(entry?.tour.heroImage).toBe(antelopeTour!.heroImageUrl);
-    expect(entry?.tour.primaryImageUrl).toBe(antelopeTour!.heroImageUrl);
+    expect(entry?.tour.heroImage).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+    expect(entry?.tour.primaryImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
 
     const cardHtml = renderToString(<TourCard tour={entry!.tour} href={entry!.href} />);
     expect(cardHtml).toContain(`data-card-image-src="${escapedHero}"`);
@@ -783,6 +787,7 @@ describe("engine6 listing surfaces", () => {
     const filteredHtml = renderToString(<ToursLanding />);
     expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
     expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+    expect(filteredHtml).toContain(ENGINE6_60136P1_EXPECTED_HERO_URL.replace(/&/g, "&amp;"));
     expect(filteredHtml).not.toContain("/images/hiking-hero.jpg");
 
     (globalThis as { window?: Window }).window = previousWindow;
