@@ -5,7 +5,7 @@ const RENTAL_KEYWORDS = [
   "rental",
   "hire",
   "equipment",
-  "e-bike",
+  "e-bike rental",
   "sup",
 ];
 

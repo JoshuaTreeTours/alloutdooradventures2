@@ -13,6 +13,7 @@ import {
   getToursByState,
 } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
+import ToursLanding from "../pages/tours/ToursLanding";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
@@ -23,6 +24,7 @@ import {
   engine6SpecimenTour,
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
+import { engine6ResolvedTours } from "./registry";
 import { ENGINE6_SPECIMEN_ROUTE } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -526,6 +528,91 @@ describe("engine6 listing surfaces", () => {
     expect(html).toContain("Bike Tour");
     expect(html).not.toContain("/hero.jpg");
   });
+
+
+  it("trace: specimen slug survives to the rendered card arrays and DOM for both listing pages", () => {
+    const specimenSlug = "santa-barbara-vineyard-to-table-taste-tour-by-e-bike";
+    const specimenTitle = "Santa Barbara Vineyard to Table Taste Tour by E-Bike";
+    const slugFromPath = (path: string) => path.split("/").filter(Boolean).pop();
+
+    const registryIndex = engine6ResolvedTours.findIndex(
+      tour => slugFromPath(tour.pagePath) === specimenSlug
+    );
+    // temporary trace output requested by review
+    console.info("[engine6-trace] registry", {
+      present: registryIndex > -1,
+      index: registryIndex,
+      total: engine6ResolvedTours.length,
+      slug: registryIndex > -1 ? slugFromPath(engine6ResolvedTours[registryIndex]!.pagePath) : null,
+    });
+    expect(registryIndex).toBeGreaterThan(-1);
+
+    const unifiedTours = getToursByCityUnified("california", "santa-barbara");
+    const unifiedIndex = unifiedTours.findIndex(
+      entry => entry.tour.slug === specimenSlug
+    );
+    console.info("[engine6-trace] unified datasource", {
+      present: unifiedIndex > -1,
+      index: unifiedIndex,
+      total: unifiedTours.length,
+      href: unifiedIndex > -1 ? unifiedTours[unifiedIndex]!.href : null,
+    });
+    expect(unifiedIndex).toBeGreaterThan(-1);
+
+    const cityListingHtml = renderToString(
+      <TourCard
+        tour={unifiedTours[unifiedIndex]!.tour}
+        href={unifiedTours[unifiedIndex]!.href}
+      />
+    );
+    console.info("[engine6-trace] city listing card DOM", {
+      present: cityListingHtml.includes(specimenTitle),
+      hrefPresent: cityListingHtml.includes(ENGINE6_SPECIMEN_ROUTE),
+      totalCards: unifiedTours.length,
+      index: unifiedIndex,
+    });
+    expect(cityListingHtml).toContain(specimenTitle);
+    expect(cityListingHtml).toContain(ENGINE6_SPECIMEN_ROUTE);
+
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as {
+      location?: { pathname: string; search?: string };
+    }).location;
+    (globalThis as {
+      window?: {
+        location: { pathname: string; search: string };
+        history: { pushState: () => void };
+      };
+    }).window = {
+      location: {
+        pathname: "/tours",
+        search: "?state=california&city=santa-barbara",
+      },
+      history: { pushState: () => {} },
+    };
+    (globalThis as { location?: { pathname: string; search: string } }).location = {
+      pathname: "/tours",
+      search: "?state=california&city=santa-barbara",
+    };
+
+    const filteredHtml = renderToString(<ToursLanding />);
+    const filteredCardCount = (filteredHtml.match(/<article /g) ?? []).length;
+    const filteredSlugIndex = filteredHtml.indexOf(ENGINE6_SPECIMEN_ROUTE);
+    console.info("[engine6-trace] /tours filtered DOM", {
+      present: filteredHtml.includes(specimenTitle),
+      hrefPresent: filteredSlugIndex > -1,
+      index: filteredSlugIndex,
+      totalCards: filteredCardCount,
+    });
+
+    expect(filteredHtml).toContain(specimenTitle);
+    expect(filteredHtml).toContain(ENGINE6_SPECIMEN_ROUTE);
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: { pathname: string; search?: string } }).location =
+      previousLocation;
+  });
+
 
   it("keeps the Engine6 specimen card helper aligned with the resolved hero image", () => {
     const card = toEngine6Card(engine6SpecimenTour);

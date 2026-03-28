@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 
 import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
@@ -51,9 +51,44 @@ const resolveCity = (stateSlug: string, citySlug: string | null) => {
   );
 };
 
+
+export const resolveToursLandingInitialSelection = (search: string) => {
+  const params = new URLSearchParams(search);
+  const stateSlug = params.get("state") ?? "";
+  const citySlug = params.get("city") ?? "";
+  const type = params.get("type") === "rentals" ? "rentals" : "tours";
+
+  if (!stateSlug || !citySlug) {
+    return { stateSlug: "", citySlug: "", type } as const;
+  }
+
+  const resolvedState = resolveState(stateSlug);
+  const resolvedCity = resolvedState ? resolveCity(stateSlug, citySlug) : null;
+  const isValidCity = Boolean(
+    resolvedCity &&
+      resolvedState?.cities.some(city => city.slug === resolvedCity.slug)
+  );
+
+  if (!resolvedState || !resolvedCity || !isValidCity) {
+    return { stateSlug: "", citySlug: "", type } as const;
+  }
+
+  return {
+    stateSlug: resolvedState.slug,
+    citySlug: resolvedCity.slug,
+    type,
+  } as const;
+};
+
 export default function ToursLanding() {
   const seo = getStaticPageSeo("/tours");
-  const didInitRef = useRef(false);
+  const initialSelection = useMemo(
+    () =>
+      resolveToursLandingInitialSelection(
+        typeof window === "undefined" ? "" : window.location.search
+      ),
+    []
+  );
   const sortedStates = useMemo(() => {
     const bySlug = new Map(states.map(state => [state.slug, state]));
 
@@ -93,8 +128,8 @@ export default function ToursLanding() {
 
     return [...bySlug.values()].sort((a, b) => a.name.localeCompare(b.name));
   }, []);
-  const [selectedStateSlug, setSelectedStateSlug] = useState("");
-  const [selectedCitySlug, setSelectedCitySlug] = useState("");
+  const [selectedStateSlug, setSelectedStateSlug] = useState(initialSelection.stateSlug);
+  const [selectedCitySlug, setSelectedCitySlug] = useState(initialSelection.citySlug);
   const [selectedCountry, setSelectedCountry] = useState("");
   const [
     selectedInternationalProvinceSlug,
@@ -103,7 +138,7 @@ export default function ToursLanding() {
   const [selectedInternationalCity, setSelectedInternationalCity] =
     useState("");
   const [inventoryType, setInventoryType] = useState<"tours" | "rentals">(
-    "tours"
+    initialSelection.type
   );
 
   const canadaProvinces = useMemo(
@@ -390,42 +425,6 @@ export default function ToursLanding() {
     const nextUrl = `${window.location.pathname}${queryString ? `?${queryString}` : ""}`;
     window.history.pushState({}, "", nextUrl);
   };
-
-  useEffect(() => {
-    if (didInitRef.current) {
-      return;
-    }
-
-    const params = new URLSearchParams(window.location.search);
-    const urlStateSlug = params.get("state");
-    const urlCitySlug = params.get("city");
-    const urlType = params.get("type");
-
-    if (urlType === "rentals") {
-      setInventoryType("rentals");
-    }
-
-    if (!urlStateSlug || !urlCitySlug) {
-      didInitRef.current = true;
-      return;
-    }
-
-    const resolvedState = resolveState(urlStateSlug);
-    const resolvedCity = resolvedState
-      ? resolveCity(urlStateSlug, urlCitySlug)
-      : null;
-    const isValidCity = Boolean(
-      resolvedCity &&
-      resolvedState?.cities.some(city => city.slug === resolvedCity.slug)
-    );
-
-    if (resolvedState && resolvedCity && isValidCity) {
-      setSelectedStateSlug(resolvedState.slug);
-      setSelectedCitySlug(resolvedCity.slug);
-    }
-
-    didInitRef.current = true;
-  }, []);
 
   const handleStateChange = (nextStateSlug: string) => {
     setSelectedStateSlug(nextStateSlug);
