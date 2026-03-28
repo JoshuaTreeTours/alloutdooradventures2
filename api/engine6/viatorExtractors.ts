@@ -53,6 +53,7 @@ export type Engine6ExtractedItineraryItem = {
   title: string;
   description?: string;
   duration?: string;
+  admissionNote?: string;
 };
 
 export type Engine6Extracted = {
@@ -721,16 +722,37 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
           asNonEmptyString(row.summary) ??
           asNonEmptyString(pointOfInterest?.description) ??
           undefined;
+        const admissionNoteFromFields =
+          asNonEmptyString(row.admissionNote) ??
+          asNonEmptyString(row.admissionTicket) ??
+          asNonEmptyString(row.admission) ??
+          asNonEmptyString(row.ticketNote) ??
+          asNonEmptyString(row.ticketInfo) ??
+          asNonEmptyString(row.inclusion) ??
+          asNonEmptyString(row.inclusions);
+        const admissionNoteFromDescription =
+          description && /admission ticket/i.test(description)
+            ? description
+            : undefined;
+        const admissionNote =
+          admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
         const duration =
           asNonEmptyString(row.duration) ??
           asNonEmptyString(row.durationText) ??
           asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
           undefined;
+        const descriptionWithoutAdmission =
+          admissionNoteFromDescription && description === admissionNoteFromDescription
+            ? undefined
+            : description;
 
         return {
           title,
-          ...(description ? { description } : {}),
+          ...(descriptionWithoutAdmission
+            ? { description: descriptionWithoutAdmission }
+            : {}),
           ...(duration ? { duration } : {}),
+          ...(admissionNote ? { admissionNote } : {}),
         } satisfies Engine6ExtractedItineraryItem;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
@@ -812,49 +834,6 @@ const extractFaqs = (product: RecordLike) => {
   }
 
   return { value: [], path: null as string | null };
-};
-
-const buildRequirementFaqs = (
-  requirements: string[]
-): Engine6ExtractedFaq[] => {
-  const lowercased = requirements.map(item => item.toLowerCase());
-  const has = (needle: string) =>
-    lowercased.some(item => item.includes(needle));
-  const faqs: Engine6ExtractedFaq[] = [];
-
-  if (has("wheelchair accessible")) {
-    faqs.push({
-      question: "Is this tour wheelchair accessible?",
-      answer: "No. This tour is not wheelchair accessible.",
-    });
-  }
-
-  if (
-    has("back problems") ||
-    has("heart problems") ||
-    has("pregnant travelers")
-  ) {
-    faqs.push({
-      question:
-        "Are there any health restrictions travelers should know about?",
-      answer:
-        "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
-    });
-  }
-
-  if (has("most travelers can participate")) {
-    faqs.push({
-      question: "Can most travelers participate?",
-      answer: "Yes. Most travelers can participate.",
-    });
-  }
-
-  return dedupeStrings(
-    faqs.map(item => `${item.question}|||${item.answer}`)
-  ).map(item => {
-    const [question, answer] = item.split("|||");
-    return { question, answer } satisfies Engine6ExtractedFaq;
-  });
 };
 
 const CATEGORY_ALIASES: Array<{
@@ -1096,22 +1075,15 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.requirementsFieldPath = requirements.path;
 
   const baseFaqs = extractFaqs(product);
-  const requirementFaqs = buildRequirementFaqs(requirements.value);
-  const mergedFaqs = dedupeStrings([
-    ...baseFaqs.value.map(item => `${item.question}|||${item.answer}`),
-    ...requirementFaqs.map(item => `${item.question}|||${item.answer}`),
-  ]).map(item => {
+  const mergedFaqs = dedupeStrings(
+    baseFaqs.value.map(item => `${item.question}|||${item.answer}`)
+  ).map(item => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath =
-    baseFaqs.value.length > 0 && requirementFaqs.length > 0
-      ? "merged:product.qAndA.items+product.additionalInfo"
-      : baseFaqs.value.length > 0
-        ? (baseFaqs.path ?? "product.qAndA.items")
-        : requirementFaqs.length > 0
-          ? "merged:product.additionalInfo"
-          : null;
+  const faqPath = baseFaqs.value.length > 0
+    ? (baseFaqs.path ?? "product.qAndA.items")
+    : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;

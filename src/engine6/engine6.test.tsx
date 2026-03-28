@@ -485,6 +485,26 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+  it("extracts and renders itinerary + faq content generically for the Las Vegas Engine6 tour", () => {
+    const vegasTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5119P13"
+    );
+    expect(vegasTour).toBeDefined();
+    expect(vegasTour?.itinerary.length).toBe(4);
+    expect(vegasTour?.faqs.length).toBe(2);
+
+    const html = renderToString(<Engine6TourPage tour={vegasTour!} />);
+    expect(html).toContain(">Itinerary<");
+    expect(html).toContain(">FAQs<");
+    expect(html).toContain("Admission included");
+  });
+
+  it("hides FAQ section gracefully when upstream FAQ data is absent", () => {
+    expect(engine6SpecimenTour.faqs.length).toBe(0);
+    const html = renderToString(<Engine6TourPage tour={engine6SpecimenTour} />);
+    expect(html).not.toContain(">FAQs<");
+  });
+
   it("automatically includes the Engine6 route in the city unified tours listing", () => {
     const unifiedTours = getToursByCityUnified("california", "santa-barbara");
     const engine6Entry = unifiedTours.find(

@@ -143,6 +143,21 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
             duration: "4 hours",
           },
         ],
+        qAndA: {
+          items: [
+            {
+              question:
+                "Is helicopter landing included in the standard tour option?",
+              answer:
+                "The helicopter landing component is included only when you book the package option that lists the helicopter upgrade.",
+            },
+            {
+              question: "How long is the overall day from Las Vegas?",
+              answer:
+                "Most departures run roughly 10 to 11 hours including hotel transfers and Grand Canyon West stops.",
+            },
+          ],
+        },
         additionalInfo: [
           "Confirmation will be received within 48 hours of booking, subject to availability",
           "Not wheelchair accessible",

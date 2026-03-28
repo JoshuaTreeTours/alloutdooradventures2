@@ -244,6 +244,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                       {item.description}
                     </p>
                   ) : null}
+                  {item.admissionNote ? (
+                    <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
+                      {item.admissionNote}
+                    </p>
+                  ) : null}
                 </li>
               ))}
             </ul>

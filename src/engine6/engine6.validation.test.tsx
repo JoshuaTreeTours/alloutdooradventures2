@@ -92,7 +92,9 @@ describe("engine6 single-tour validation harness", () => {
       expect(graph.some(node => node["@type"] === "AggregateRating")).toBe(
         true
       );
-      expect(graph.some(node => node["@type"] === "FAQPage")).toBe(true);
+      expect(graph.some(node => node["@type"] === "FAQPage")).toBe(
+        tour.faqs.length > 0
+      );
       expect(offer?.url).toBe(tour.bookingUrl);
       expect(tour.diagnostics.bookingUrlSource).toBe("product.productUrl");
       expect(tour.diagnostics.fieldLevelFallbackUsed).toBe(false);

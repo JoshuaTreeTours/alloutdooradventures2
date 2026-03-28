@@ -23,7 +23,13 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
             item: {
               "@type": "TouristAttraction",
               name: item.title,
-              ...(item.description ? { description: item.description } : {}),
+              ...((item.description || item.admissionNote)
+                ? {
+                    description: [item.description, item.admissionNote]
+                      .filter(Boolean)
+                      .join(" — "),
+                  }
+                : {}),
             },
           })),
         }

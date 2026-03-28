@@ -2,6 +2,7 @@ export type Engine6ItineraryItem = {
   title: string;
   description?: string;
   duration?: string;
+  admissionNote?: string;
 };
 
 export type Engine6FaqItem = {
