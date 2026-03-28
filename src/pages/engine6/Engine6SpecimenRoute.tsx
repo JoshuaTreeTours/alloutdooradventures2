@@ -56,13 +56,8 @@ type Engine6SpecimenViewState = {
   isLoading: boolean;
 };
 
-export const shouldShowEngine6Diagnostics = (search: string, isDev = false) => {
-  if (isDev) {
-    return true;
-  }
-
-  return new URLSearchParams(search).get("engine6Debug") === "1";
-};
+export const shouldShowEngine6Diagnostics = (search: string) =>
+  new URLSearchParams(search).get("engine6Debug") === "1";
 
 const isRecord = (value: unknown): value is Record<string, unknown> =>
   Boolean(value) && typeof value === "object" && !Array.isArray(value);
@@ -570,6 +565,47 @@ const Engine6SpecimenDiagnostics = ({
   );
 };
 
+const Engine6SpecimenLoadingShell = () => (
+  <main
+    className="bg-[#f6f1e8] text-[#1f2a1f]"
+    aria-busy="true"
+    aria-live="polite"
+    aria-label="Loading tour details"
+  >
+    <section className="bg-[#2f4a2f] text-white">
+      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
+        <div className="space-y-4">
+          <div className="h-3 w-48 animate-pulse rounded bg-white/20" />
+          <div className="h-3 w-32 animate-pulse rounded bg-white/20" />
+          <div className="h-10 w-full max-w-2xl animate-pulse rounded bg-white/20" />
+          <div className="h-28 w-full max-w-xl animate-pulse rounded-2xl bg-white/15" />
+          <div className="h-11 w-32 animate-pulse rounded-full bg-white/25" />
+        </div>
+        <div
+          className="h-80 w-full animate-pulse rounded-3xl bg-white/15 md:h-[440px]"
+          aria-hidden="true"
+        />
+      </div>
+    </section>
+
+    <div className="mx-auto max-w-6xl space-y-8 px-6 py-10">
+      {Array.from({ length: 3 }, (_, sectionIndex) => (
+        <section
+          key={sectionIndex}
+          className="rounded-2xl border border-green-200 bg-white p-6 shadow-sm"
+        >
+          <div className="h-8 w-40 animate-pulse rounded bg-slate-200" />
+          <div className="mt-4 space-y-3">
+            <div className="h-4 w-full animate-pulse rounded bg-slate-100" />
+            <div className="h-4 w-[94%] animate-pulse rounded bg-slate-100" />
+            <div className="h-4 w-[86%] animate-pulse rounded bg-slate-100" />
+          </div>
+        </section>
+      ))}
+    </div>
+  </main>
+);
+
 export default function Engine6SpecimenRoute() {
   const requestedProductCode = useMemo(() => {
     if (typeof window === "undefined") {
@@ -594,8 +630,7 @@ export default function Engine6SpecimenRoute() {
     }
 
     return shouldShowEngine6Diagnostics(
-      window.location.search,
-      typeof process !== "undefined" && process.env.NODE_ENV === "development"
+      window.location.search
     );
   }, []);
 
@@ -681,11 +716,7 @@ export default function Engine6SpecimenRoute() {
   }, [apiUrl, requestedProductCode]);
 
   if (state.isLoading) {
-    return (
-      <main className="mx-auto max-w-4xl px-6 py-16">
-        Loading Engine6 tour…
-      </main>
-    );
+    return <Engine6SpecimenLoadingShell />;
   }
 
   if (state.error && !state.tour) {
