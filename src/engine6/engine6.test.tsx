@@ -491,6 +491,20 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+
+  it("exposes Engine6 entries to the /tours?state=...&city=... filtered datasource", () => {
+    const unifiedTours = getToursByCityUnified("california", "santa-barbara");
+    const engine6Entry = unifiedTours.find(
+      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "63657P1"
+    );
+
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SPECIMEN_ROUTE);
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $199");
+    expect(engine6Entry?.tour.badges?.rating).toBe(4.9);
+    expect(engine6Entry?.tour.badges?.reviewCount).toBe(177);
+  });
+
   it("renders the listing card with the resolved Engine6 image", () => {
     const listingTour = getToursByCity("california", "santa-barbara").find(
       tour => tour.productCode === "63657P1"
