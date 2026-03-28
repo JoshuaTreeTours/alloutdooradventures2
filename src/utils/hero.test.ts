@@ -67,6 +67,31 @@ describe("resolveCityHeroImage", () => {
     expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
   });
 
+
+
+  it("rejects malformed city hero URLs and falls back to the neutral brand image", () => {
+    const image = resolveCityHeroImage({
+      citySlug: "las-vegas",
+      stateSlug: "nevada",
+      countryCode: "US",
+      cityTours: [
+        {
+          id: "bad-image",
+          title: "Broken Hero Tour",
+          heroImage: "undefined",
+          destination: {
+            citySlug: "las-vegas",
+            stateSlug: "nevada",
+            countryCode: "US",
+          },
+          badges: { reviewCount: 999, rating: 5 },
+        },
+      ],
+    });
+
+    expect(image).toBe(buildImageUrl(CITY_NEUTRAL_BRAND_IMAGE));
+  });
+
   it("never falls back to activity default images like canoe-hero", () => {
     const image = resolveCityHeroImage({
       citySlug: "joshua-tree",

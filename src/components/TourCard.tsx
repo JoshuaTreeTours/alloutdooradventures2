@@ -151,7 +151,9 @@ export default function TourCard({ tour, href }: TourCardProps) {
         ? tour.heroImage?.trim() || ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
-    tour.engine === "engine6" ? ENGINE6_GLOBAL_PLACEHOLDER_IMAGE : "/hero.jpg";
+    tour.engine === "engine6"
+      ? tour.heroImage?.trim() || ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
+      : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
       tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"

@@ -201,7 +201,7 @@ export default function CityToursIndexRoute({
           {heroImage ? (
             <Image
               src={heroImage}
-              fallbackSrc={heroImage}
+              fallbackSrc="/hero.jpg"
               alt={`${city.name} hero`}
               className="h-64 w-full object-cover md:h-80"
             />
