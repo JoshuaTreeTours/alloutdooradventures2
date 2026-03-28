@@ -25,7 +25,7 @@ import {
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { engine6ResolvedTours } from "./registry";
-import { ENGINE6_SPECIMEN_ROUTE } from "./routes";
+import { ENGINE6_PARAGON_ROUTE, ENGINE6_SPECIMEN_ROUTE } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
   resolveEngine6SpecimenResponse,
@@ -476,6 +476,15 @@ describe("engine6 listing surfaces", () => {
     ).toBe(true);
   });
 
+  it("adds 5119P13 to Nevada and Las Vegas listing sources", () => {
+    const nevadaTours = getToursByState("nevada");
+    const lasVegasTours = getToursByCity("nevada", "las-vegas");
+    expect(nevadaTours.some(tour => tour.productCode === "5119P13")).toBe(true);
+    expect(lasVegasTours.some(tour => tour.productCode === "5119P13")).toBe(
+      true
+    );
+  });
+
   it("automatically includes the Engine6 route in the city unified tours listing", () => {
     const unifiedTours = getToursByCityUnified("california", "santa-barbara");
     const engine6Entry = unifiedTours.find(
@@ -527,6 +536,20 @@ describe("engine6 listing surfaces", () => {
     expect(html).toContain("Santa Barbara Vineyard to Table Taste Tour by E-Bike");
     expect(html).toContain("Bike Tour");
     expect(html).not.toContain("/hero.jpg");
+  });
+
+  it("routes and renders the 5119P13 listing card with detail-page hero parity", () => {
+    const unifiedTours = getToursByCityUnified("nevada", "las-vegas");
+    const engine6Entry = unifiedTours.find(
+      entry => entry.tour.productCode === "5119P13"
+    );
+
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_PARAGON_ROUTE);
+    expect(engine6Entry?.tour.heroImage).toBe(engine6Entry?.tour.primaryImageUrl);
+    expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^From \$/);
+    expect(engine6Entry?.tour.badges?.rating).toBeGreaterThan(4);
+    expect(engine6Entry?.tour.badges?.reviewCount).toBeGreaterThan(100);
   });
 
 
@@ -629,6 +652,20 @@ describe("engine6 route wiring", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
       "<Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("registers the paragon route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "<Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />"
     );
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'

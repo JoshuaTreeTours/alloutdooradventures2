@@ -66,7 +66,7 @@ import {
   ENGINE5_PROOF_LISTING_PATH,
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
-import { ENGINE6_SPECIMEN_ROUTE } from "./engine6/routes";
+import { ENGINE6_PARAGON_ROUTE, ENGINE6_SPECIMEN_ROUTE } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
 const EnglandRedirect = () => <RouteRedirect to="/united-kingdom" />;
@@ -251,6 +251,7 @@ export default function App() {
         />
 
         <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
+        <Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

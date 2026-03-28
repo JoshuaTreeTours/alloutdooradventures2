@@ -53,11 +53,11 @@ describe("engine6 single-tour validation harness", () => {
       const schema = buildEngine6SchemaGraph(tour);
       const graph = schema["@graph"] as Array<Record<string, unknown>>;
       const offer = graph.find(node => node["@type"] === "Offer");
+      const expectedHero = ((fixture.rawPayload.product as any)?.media?.images?.[0]
+        ?.variants?.FULL?.url ?? null) as string | null;
 
       expect(tour.productCode).toBe(fixture.productCode);
-      expect(tour.heroImageUrl).toBe(
-        "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
-      );
+      expect(tour.heroImageUrl).toBe(expectedHero);
       expect(tour.heroImageUrl).not.toContain("/hero.jpg");
       expect(tour.cardImageUrl).toBe(tour.heroImageUrl);
       expect(tour.diagnostics.heroSourceType).toBe("api-primary");
@@ -75,9 +75,9 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
       expect(card.href).toBe(tour.pagePath);
       expect(card.imageUrl).toBe(tour.cardImageUrl);
-      expect(card.description).toContain("Santa Ynez Valley");
+      expect(card.description.length).toBeGreaterThan(40);
       expect(html).toContain(tour.title);
-      expect(html).toContain(`src="${tour.heroImageUrl}"`);
+      expect(html).toContain(`src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`);
       expect(html).toContain(tour.priceFormatted);
       expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
       expect(html).not.toContain(">ENGINE6<");
@@ -100,12 +100,12 @@ describe("engine6 single-tour validation harness", () => {
     }
   );
 
-  it("emits a compact validation report for the single Engine6 tour", () => {
+  it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(
       buildEngine6ValidationReport
     );
 
-    expect(reports).toHaveLength(1);
+    expect(reports).toHaveLength(ENGINE6_VALIDATION_FIXTURES.length);
     expect(reports.every(report => report.cardRenderSucceeded)).toBe(true);
     expect(reports.every(report => report.pageRenderSucceeded)).toBe(true);
     expect(

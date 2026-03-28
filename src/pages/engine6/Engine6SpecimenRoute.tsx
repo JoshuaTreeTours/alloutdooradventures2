@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import Engine6TourPage from "../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "../../engine6/mapViatorToEngine6Tour";
-import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "../../engine6/routes";
+import { resolveEngine6ProductCodeForPath } from "../../engine6/routes";
 import type { Engine6ApiResponse, Engine6Tour } from "../../engine6/types";
 
 export type Engine6SpecimenDebug = {
@@ -571,7 +571,13 @@ const Engine6SpecimenDiagnostics = ({
 };
 
 export default function Engine6SpecimenRoute() {
-  const requestedProductCode = ENGINE6_SPECIMEN_PRODUCT_CODE;
+  const requestedProductCode = useMemo(() => {
+    if (typeof window === "undefined") {
+      return resolveEngine6ProductCodeForPath("");
+    }
+
+    return resolveEngine6ProductCodeForPath(window.location.pathname);
+  }, []);
   const apiUrl = useMemo(
     () => buildEngine6SpecimenApiUrl(requestedProductCode),
     [requestedProductCode]
