@@ -497,6 +497,15 @@ describe("engine6 listing surfaces", () => {
     expect(html).toContain(">Itinerary<");
     expect(html).toContain(">FAQs<");
     expect(html).toContain("Admission included");
+    expect(html).toContain("Hoover Dam");
+    expect(html).toContain("Grand Canyon West");
+    expect(html).toContain("Eagle Point and Guano Point");
+    expect(html).toContain("Colorado River Helicopter Landing");
+    expect(html).toContain(
+      "Is helicopter landing included in the standard tour option?"
+    );
+    expect(html).toContain("How long is the overall day from Las Vegas?");
+    expect((html.match(/<details /g) ?? []).length).toBe(2);
   });
 
   it("hides FAQ section gracefully when upstream FAQ data is absent", () => {
