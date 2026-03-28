@@ -3,15 +3,15 @@ import { toEngine6Card } from "./cards";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import type { Engine6ApiResponse } from "./types";
 
-export const ENGINE6_163873P16_CARD_IMAGE_URL =
-  "https://media.tacdn.com/media/attractions-splice-spp-360x240/12/26/61/64.jpg";
+export const ENGINE6_63657P1_CARD_IMAGE_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg";
 
-const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
+const ENGINE6_63657P1_LISTING_PAYLOAD: Engine6ApiResponse = {
   source: "bundled-fallback",
-  rawProductCode: "163873P16",
+  rawProductCode: "63657P1",
   rawProduct: {
-    productCode: "163873P16",
-    title: "East Zion Top of the World Jeep Tour",
+    productCode: "63657P1",
+    title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
   },
   diagnostics: {
     source: "bundled-fallback",
@@ -22,13 +22,17 @@ const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
     upstreamOk: null,
     usedBundledFallbackBecause: "listing-specimen",
     commercialPriceFieldPath: "product.priceFrom",
-    commercialPriceRawValue: "$105.09",
+    commercialPriceRawValue: "$199.00",
     priceSourceUsed: "live-price",
-    heroImageFieldPath: "product.images[0].url",
-    heroVariantFieldPath: "product.images[0].url",
-    selectedHeroWidth: 360,
-    selectedHeroHeight: 240,
-    imageSourceUsed: "live-product-image",
+    heroImageFieldPath: "product.media.images[0].variants.FULL.url",
+    heroVariantFieldPath: "product.media.images[0].variants.FULL",
+    selectedHeroWidth: 674,
+    selectedHeroHeight: 446,
+    imageSourceUsed: "api-primary",
+    heroSourceType: "api-primary",
+    finalHeroUrl: ENGINE6_63657P1_CARD_IMAGE_URL,
+    heroFallbackTriggered: false,
+    rejectedForeignHeroCandidates: [],
     productUrlFieldPath: "product.productUrl",
     bookingUrlSource: "product.productUrl",
     ratingFieldPath: "product.reviews.combinedAverageRating",
@@ -37,92 +41,105 @@ const ENGINE6_163873P16_LISTING_PAYLOAD: Engine6ApiResponse = {
     highlightsFieldPath: "product.highlights",
     meetingPointFieldPath: "product.logistics.start.description",
     itineraryFieldPath: "product.itineraryItems",
-    itineraryItemCount: 1,
+    itineraryItemCount: 4,
     itinerarySourceUsed: "product.itineraryItems",
-    faqsFieldPath: "merged:product.qAndA.items+product.additionalInfo",
-    faqFieldPath: "merged:product.qAndA.items+product.additionalInfo",
-    faqCount: 4,
-    faqSourceUsed: "merged:product.qAndA.items+product.additionalInfo",
+    faqsFieldPath: "merged:product.additionalInfo",
+    faqFieldPath: "merged:product.additionalInfo",
+    faqCount: 3,
+    faqSourceUsed: "merged:product.additionalInfo",
     requirementsFieldPath: "product.additionalInfo",
     highlightClassificationReason:
-      "product.highlights kept as selling-point bullets",
+      "selected product.highlights as highlight content",
     classificationFieldPath: "inferred:title+overview+highlights",
     fieldLevelFallbackUsed: false,
     fallbackFieldNames: [],
   },
   extracted: {
-    title: "East Zion Top of the World Jeep Tour",
-    seoTitle: "East Zion Top of the World Jeep Tour in Springdale",
+    title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+    seoTitle: "Santa Barbara Vineyard to Table Taste Tour by E-Bike in Santa Barbara",
     seoDescription:
-      "Grab bird’s-eye views of Zion National Park on this Jeep tour with easy off-road access, scenic overlooks, and guide-led geology context.",
-    city: "Springdale",
-    state: "Utah",
-    heroImageUrl: ENGINE6_163873P16_CARD_IMAGE_URL,
-    cardImageUrl: ENGINE6_163873P16_CARD_IMAGE_URL,
+      "Ride through the towns and vineyards of the Santa Ynez Valley wine region on this e-bike tour with transport from Santa Barbara.",
+    city: "Santa Barbara",
+    state: "California",
+    heroImageUrl: ENGINE6_63657P1_CARD_IMAGE_URL,
+    cardImageUrl: ENGINE6_63657P1_CARD_IMAGE_URL,
     productUrl:
-      "https://www.viator.com/tours/Utah/East-Zion-Top-of-the-World-Jeep-Tour/d785-163873P16",
-    priceAmount: 105,
-    priceFormatted: "From $105",
-    aggregateRating: 5,
-    reviewCount: 154,
-    meetingPointText: "Meet us at Zion Mountain Ranch!",
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    priceAmount: 199,
+    priceFormatted: "From $199",
+    aggregateRating: 4.9,
+    reviewCount: 177,
+    meetingPointText:
+      "3850 State St, Santa Barbara, CA 93105, USA. Peppertree Inn with free parking.",
     overviewText:
-      "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond.",
+      "Ride through the towns and vineyards of the Santa Ynez Valley wine region on this e-bike tour with transport from Santa Barbara. With a guide, you'll pedal a Rad Power E-bike to wineries, a lavendar farm, the town of Solvang, and other spots for wine and olive-oil tastings and lunch.",
     highlights: [
-      "Easy meetup at at Zion Ponderosa Ranch Resort",
-      "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
-      "See Zion National Park and its environs from above",
-      "Limited to 8 travelers, you'll get an intimate East Zion experience",
+      "Bike and helmet provided for this tour through the Santa Ynez Valley wine region",
+      "Stop for wine and olive-oil tastings and learn about lavendar oil production",
+      "Enjoy a picnic lunch at a winery without packing food",
+      "Hotel pickup and drop-off for transport to the riding location",
     ],
     itinerary: [
       {
-        title: "Zion National Park",
+        title: "I Bike Santa Barbara Wine Tours",
+        description: "Admission Ticket Included",
+        duration: "40 minutes",
+      },
+      {
+        title: "Solvang",
         description: "Admission Ticket Free",
-        duration: "30 minutes",
+        duration: "20 minutes",
+      },
+      {
+        title: "Rideau Vineyard",
+        description: "Admission Ticket Included",
+        duration: "1 hour",
+      },
+      {
+        title: "Rancho Olivos",
+        description: "Admission Ticket Free",
+        duration: "1 hour",
       },
     ],
     faqs: [
-      {
-        question: "Is this tour good for families?",
-        answer:
-          "Yes. The reasonably groomed trails make it approachable for families with small kids.",
-      },
       {
         question: "Is this tour wheelchair accessible?",
         answer: "No. This tour is not wheelchair accessible.",
       },
       {
-        question:
-          "Are there any health restrictions travelers should know about?",
-        answer:
-          "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
+        question: "Do I need a minimum group size?",
+        answer: "Yes. A minimum of 2 people per booking is required.",
       },
       {
-        question: "Can most travelers participate?",
-        answer: "Yes. Most travelers can participate.",
+        question: "What fitness level should travelers expect?",
+        answer:
+          "Travelers should have a moderate physical fitness level, and the tour will have a maximum of 8 travelers.",
       },
     ],
     requirements: [
       "Confirmation will be received at time of booking",
       "Not wheelchair accessible",
+      "A minimum of 2 people per booking is required",
+      "Travelers should have a moderate physical fitness level",
+      "This tour/activity will have a maximum of 8 travelers",
     ],
-    primaryCategory: "off-road-tour",
-    categories: ["off-road-tour"],
+    primaryCategory: "bike-tour",
+    categories: ["bike-tour"],
   },
 };
 
 export const engine6SpecimenTour = mapViatorToEngine6Tour(
-  ENGINE6_163873P16_LISTING_PAYLOAD
+  ENGINE6_63657P1_LISTING_PAYLOAD
 );
 
 const engine6SpecimenCard = toEngine6Card(engine6SpecimenTour);
 
 export const engine6ListingTours: Tour[] = [
   {
-    id: "engine6-163873P16",
+    id: "engine6-63657P1",
     engine: "engine6",
     productCode: engine6SpecimenTour.productCode,
-    slug: "east-zion-top-of-the-world-jeep-tour",
+    slug: "santa-barbara-vineyard-to-table-taste-tour-by-e-bike",
     title: engine6SpecimenTour.title,
     shortDescription: engine6SpecimenCard.description,
     categories: engine6SpecimenTour.categories,
@@ -130,9 +147,9 @@ export const engine6ListingTours: Tour[] = [
     destination: {
       country: "United States",
       state: engine6SpecimenTour.state,
-      stateSlug: "utah",
+      stateSlug: "california",
       city: engine6SpecimenTour.city,
-      citySlug: "springdale",
+      citySlug: "santa-barbara",
     },
     heroImage: engine6SpecimenTour.cardImageUrl,
     primaryImageUrl: engine6SpecimenTour.cardImageUrl,
@@ -146,7 +163,7 @@ export const engine6ListingTours: Tour[] = [
     tagPills: engine6SpecimenTour.categoryLabel
       ? [engine6SpecimenTour.categoryLabel]
       : undefined,
-    activitySlugs: ["detours"],
+    activitySlugs: ["bike-tours"],
     bookingProvider: "viator",
     bookingUrl: engine6SpecimenTour.bookingUrl,
     longDescription:

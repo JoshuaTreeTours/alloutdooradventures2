@@ -1,0 +1,73 @@
+{
+  "product": {
+    "productCode": "63657P1",
+    "productUrl": "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+    "title": "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+    "description": {
+      "text": "Ride through the towns and vineyards of the Santa Ynez Valley wine region on this e-bike tour with transport from Santa Barbara. With a guide, you'll pedal a Rad Power E-bike to wineries, a lavendar farm, the town of Solvang, and other spots for wine and olive-oil tastings and lunch. A bike tour allows you to enjoy better views of the scenery than from inside a car."
+    },
+    "location": {
+      "city": "Santa Barbara",
+      "state": "California"
+    },
+    "priceFrom": "$199.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 177
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Bike and helmet provided for this tour through the Santa Ynez Valley wine region",
+      "Stop for wine and olive-oil tastings and learn about lavendar oil production",
+      "Enjoy a picnic lunch at a winery without packing food",
+      "Hotel pickup and drop-off for transport to the riding location"
+    ],
+    "logistics": {
+      "start": {
+        "description": "3850 State St, Santa Barbara, CA 93105, USA. Peppertree Inn with free parking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "I Bike Santa Barbara Wine Tours",
+        "description": "Admission Ticket Included",
+        "duration": "40 minutes"
+      },
+      {
+        "title": "Solvang",
+        "description": "Admission Ticket Free",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Rideau Vineyard",
+        "description": "Admission Ticket Included",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Rancho Olivos",
+        "description": "Admission Ticket Free",
+        "duration": "1 hour"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "A minimum of 2 people per booking is required",
+      "Travelers should have a moderate physical fitness level",
+      "This tour/activity will have a maximum of 8 travelers"
+    ]
+  }
+}

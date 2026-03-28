@@ -45,6 +45,10 @@ describe("engine6 api import strategy", () => {
         transpile(path.resolve("api/engine6/viatorExtractors.ts"))
       );
       writeFileSync(
+        path.join(fixtureDir, "heroResolver.js"),
+        transpile(path.resolve("api/engine6/heroResolver.ts"))
+      );
+      writeFileSync(
         path.join(fixtureDir, "rating.js"),
         transpile(path.resolve("api/engine6/rating.ts"))
       );

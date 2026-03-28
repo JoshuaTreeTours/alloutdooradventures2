@@ -1,10 +1,14 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
+import {
+  resolveProductScopedHero,
+  type Engine6HeroCandidate,
+} from "./heroResolver.js";
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
-const ENGINE6_BUNDLED_PRODUCT_CODE = "163873P16";
+const ENGINE6_BUNDLED_PRODUCT_CODE = "63657P1";
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -52,7 +56,18 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "fallback" as const,
+  imageSourceUsed: "approved-placeholder" as const,
+  heroSourceType: "approved-placeholder" as const,
+  finalHeroUrl: null as string | null,
+  heroFallbackTriggered: false,
+  rejectedForeignHeroCandidates: [] as Array<{
+    url: string;
+    sourceType: "api-primary" | "api-gallery" | "approved-placeholder";
+    reason: string;
+    candidateProductCode: string | null;
+    candidateSourceProductUrl: string | null;
+    fieldPath: string | null;
+  }>,
   productUrlFieldPath: null as string | null,
   bookingUrlSource: "generated:viator-search-product-code" as const,
   ratingFieldPath: null as string | null,
@@ -172,31 +187,92 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
+const toHeroCandidate = (args: {
+  extraction: ReturnType<typeof extractEngine6Product>;
+  productCode: string;
+}): Engine6HeroCandidate | null => {
+  const heroUrl = args.extraction.extracted.heroImageUrl;
+  if (!heroUrl) {
+    return null;
+  }
+
+  return {
+    url: heroUrl,
+    sourceType: args.extraction.diagnostics.heroSourceType,
+    candidateProductCode:
+      typeof args.extraction.product?.productCode === "string"
+        ? args.extraction.product.productCode
+        : args.extraction.extracted.productUrl
+          ? args.productCode
+          : null,
+    candidateSourceProductUrl: args.extraction.extracted.productUrl,
+    fieldPath: args.extraction.diagnostics.heroImageFieldPath,
+    variantPath: args.extraction.diagnostics.heroVariantFieldPath,
+    width: args.extraction.diagnostics.selectedHeroWidth,
+    height: args.extraction.diagnostics.selectedHeroHeight,
+  };
+};
+
 const applyResolvedHero = (args: {
+  productCode: string;
   baseExtraction: ReturnType<typeof extractEngine6Product>;
   preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
   fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
 }) => {
-  const heroSource = args.preferredHeroExtraction?.extracted.heroImageUrl
-    ? args.preferredHeroExtraction
-    : args.fallbackHeroExtraction?.extracted.heroImageUrl
-      ? args.fallbackHeroExtraction
-      : args.baseExtraction;
+  const preferredCandidate = args.preferredHeroExtraction
+    ? toHeroCandidate({
+        extraction: args.preferredHeroExtraction,
+        productCode: args.productCode,
+      })
+    : null;
+  const fallbackCandidate = args.fallbackHeroExtraction
+    ? toHeroCandidate({
+        extraction: args.fallbackHeroExtraction,
+        productCode: args.productCode,
+      })
+    : null;
+
+  const heroDecision = resolveProductScopedHero({
+    currentProductCode: args.productCode,
+    currentSourceProductUrl:
+      args.baseExtraction.extracted.productUrl ??
+      args.fallbackHeroExtraction?.extracted.productUrl ??
+      args.preferredHeroExtraction?.extracted.productUrl,
+    candidates: [
+      ...(preferredCandidate &&
+      preferredCandidate.sourceType !== "approved-placeholder"
+        ? [preferredCandidate]
+        : []),
+      ...(fallbackCandidate && fallbackCandidate.sourceType !== "approved-placeholder"
+        ? [fallbackCandidate]
+        : []),
+      ...(preferredCandidate &&
+      preferredCandidate.sourceType === "approved-placeholder"
+        ? [preferredCandidate]
+        : []),
+      ...(fallbackCandidate && fallbackCandidate.sourceType === "approved-placeholder"
+        ? [fallbackCandidate]
+        : []),
+    ],
+  });
 
   return {
     extracted: {
       ...args.baseExtraction.extracted,
-      heroImageUrl: heroSource.extracted.heroImageUrl,
-      cardImageUrl:
-        heroSource.extracted.cardImageUrl ?? heroSource.extracted.heroImageUrl,
+      heroImageUrl: heroDecision.heroUrl,
+      cardImageUrl: heroDecision.heroUrl,
     },
     diagnostics: {
       ...args.baseExtraction.diagnostics,
-      heroImageFieldPath: heroSource.diagnostics.heroImageFieldPath,
-      heroVariantFieldPath: heroSource.diagnostics.heroVariantFieldPath,
-      selectedHeroWidth: heroSource.diagnostics.selectedHeroWidth,
-      selectedHeroHeight: heroSource.diagnostics.selectedHeroHeight,
-      imageSourceUsed: heroSource.diagnostics.imageSourceUsed,
+      heroImageFieldPath: heroDecision.finalCandidate.fieldPath ?? null,
+      heroVariantFieldPath: heroDecision.finalCandidate.variantPath ?? null,
+      selectedHeroWidth: heroDecision.finalCandidate.width ?? null,
+      selectedHeroHeight: heroDecision.finalCandidate.height ?? null,
+      imageSourceUsed: heroDecision.heroSourceType,
+      heroSourceType: heroDecision.heroSourceType,
+      finalHeroUrl: heroDecision.heroUrl,
+      heroFallbackTriggered: heroDecision.fallbackTriggered,
+      rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
     },
   };
 };
@@ -210,6 +286,7 @@ const respondWithBundledFallback = (
 ) => {
   const bundledExtraction = safeExtractEngine6Product(bundledPayload);
   const merged = applyResolvedHero({
+    productCode,
     baseExtraction: bundledExtraction,
     preferredHeroExtraction: liveExtraction,
     fallbackHeroExtraction: bundledExtraction,
@@ -258,139 +335,183 @@ export default async function handler(req: any, res: any) {
   const key = process.env.VIATOR_API_KEY;
   const diagnostics = buildDiagnostics("live-api", Boolean(key));
 
-  if (!key && bundledPayload) {
-    diagnostics.source = "bundled-fallback";
-    diagnostics.usedBundledFallbackBecause = "missing-api-key";
-    respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
-    return;
-  }
-
   if (!key) {
-    respondWithNormalizedEnvelope(res, {
+    if (bundledPayload) {
+      diagnostics.usedBundledFallbackBecause = "missing-api-key";
+      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      return;
+    }
+
+    respondWithErrorEnvelope(res, {
       statusCode: 500,
-      source: "live-api",
-      diagnostics,
       productCode,
-      ...buildEmptyEnvelope(productCode),
       error: "VIATOR_API_KEY is not configured",
+      diagnostics,
     });
     return;
   }
 
   const baseUrl =
-    process.env.VIATOR_API_BASE_URL ??
-    process.env.VIATOR_BASE_URL ??
+    process.env.VIATOR_API_BASE_URL ||
+    process.env.VIATOR_BASE_URL ||
     DEFAULT_VIATOR_BASE_URL;
+  const requestUrl = `${baseUrl.replace(/\/$/, "")}/products/${encodeURIComponent(productCode)}`;
 
+  diagnostics.attemptedLiveFetch = true;
+
+  let upstreamResponse: Response;
   try {
-    diagnostics.attemptedLiveFetch = true;
-    const response = await fetch(`${baseUrl}/products/${productCode}`, {
+    upstreamResponse = await fetch(requestUrl, {
       method: "GET",
       headers: buildHeaders(key),
     });
-
-    diagnostics.upstreamStatus = response.status;
-    diagnostics.upstreamOk = response.ok;
-    diagnostics.upstreamContentType = response.headers.get("content-type");
-
-    if (!response.ok) {
-      if (bundledPayload) {
-        diagnostics.source = "bundled-fallback";
-        diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
-        respondWithBundledFallback(
-          res,
-          productCode,
-          bundledPayload,
-          diagnostics
-        );
-        return;
-      }
-
-      const body = await response.text();
-      respondWithNormalizedEnvelope(res, {
-        statusCode: response.status,
-        source: "live-api",
-        diagnostics,
-        productCode,
-        ...buildEmptyEnvelope(productCode),
-        error: `Viator API error ${response.status}: ${response.statusText}`,
-        details: body.slice(0, 500),
-      });
+  } catch (error) {
+    if (bundledPayload) {
+      diagnostics.usedBundledFallbackBecause = "live-fetch-threw";
+      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
-    const rawBody = await response.text();
-    let payload: Record<string, unknown>;
+    respondWithErrorEnvelope(res, {
+      statusCode: 502,
+      productCode,
+      error: "Failed to reach Viator API",
+      diagnostics,
+      details: error instanceof Error ? error.message : String(error),
+    });
+    return;
+  }
 
-    try {
-      payload = JSON.parse(rawBody) as Record<string, unknown>;
-    } catch {
-      if (bundledPayload) {
-        diagnostics.source = "bundled-fallback";
-        diagnostics.usedBundledFallbackBecause = "upstream-non-json";
-        respondWithBundledFallback(
-          res,
-          productCode,
-          bundledPayload,
-          diagnostics
-        );
-        return;
-      }
+  diagnostics.upstreamStatus = upstreamResponse.status;
+  diagnostics.upstreamContentType = upstreamResponse.headers.get("content-type");
+  diagnostics.upstreamOk = upstreamResponse.ok;
 
-      respondWithNormalizedEnvelope(res, {
-        statusCode: 502,
-        source: "live-api",
-        diagnostics,
-        productCode,
-        ...buildEmptyEnvelope(productCode),
-        error: "Viator API returned non-JSON payload",
-        details: rawBody.slice(0, 500),
+  const rawText = await upstreamResponse.text();
+
+  if (!upstreamResponse.ok) {
+    if (bundledPayload) {
+      diagnostics.usedBundledFallbackBecause = "upstream-not-ok";
+      const liveExtraction = safeExtractEngine6Product({
+        product: { productCode, productUrl: null },
       });
-      return;
-    }
-
-    const extraction = safeExtractEngine6Product(payload);
-    Object.assign(diagnostics, extraction.diagnostics, { source: "live-api" });
-
-    if (bundledPayload && extraction.extracted.priceAmount === null) {
-      diagnostics.source = "bundled-fallback";
-      diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
       respondWithBundledFallback(
         res,
         productCode,
         bundledPayload,
         diagnostics,
-        extraction
+        liveExtraction
       );
       return;
     }
 
-    respondWithNormalizedEnvelope(res, {
-      statusCode: 200,
-      source: "live-api",
-      diagnostics,
+    respondWithErrorEnvelope(res, {
+      statusCode: 502,
       productCode,
-      rawProduct: extraction.product,
-      extracted: extraction.extracted,
-      headers: {
-        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
-      },
+      error: "Viator API returned an error response",
+      diagnostics,
+      details: rawText.slice(0, 500),
     });
-  } catch (error: any) {
+    return;
+  }
+
+  if (!diagnostics.upstreamContentType?.includes("json")) {
     if (bundledPayload) {
-      diagnostics.source = "bundled-fallback";
-      diagnostics.usedBundledFallbackBecause = "request-failed";
+      diagnostics.usedBundledFallbackBecause = "upstream-non-json";
       respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
       return;
     }
 
-    respondWithNormalizedEnvelope(res, {
-      statusCode: 500,
-      source: "live-api",
-      diagnostics,
+    respondWithErrorEnvelope(res, {
+      statusCode: 502,
       productCode,
-      ...buildEmptyEnvelope(productCode),
-      error: error?.message ?? "Viator request failed",
+      error: "Viator API returned non-JSON payload",
+      diagnostics,
+      details: rawText.slice(0, 500),
     });
+    return;
   }
+
+  let payload: unknown;
+  try {
+    payload = JSON.parse(rawText);
+  } catch {
+    if (bundledPayload) {
+      diagnostics.usedBundledFallbackBecause = "upstream-invalid-json";
+      respondWithBundledFallback(res, productCode, bundledPayload, diagnostics);
+      return;
+    }
+
+    respondWithErrorEnvelope(res, {
+      statusCode: 502,
+      productCode,
+      error: "Viator API returned invalid JSON",
+      diagnostics,
+      details: rawText.slice(0, 500),
+    });
+    return;
+  }
+
+  const extracted = safeExtractEngine6Product(payload);
+
+  const extractedProductCode =
+    typeof extracted.product?.productCode === "string"
+      ? extracted.product.productCode.trim().toUpperCase()
+      : null;
+
+  if (
+    bundledPayload &&
+    extractedProductCode &&
+    extractedProductCode !== productCode
+  ) {
+    diagnostics.usedBundledFallbackBecause = "live-product-code-mismatch";
+    respondWithBundledFallback(
+      res,
+      productCode,
+      bundledPayload,
+      diagnostics,
+      extracted
+    );
+    return;
+  }
+
+  if (bundledPayload && extracted.extracted.priceAmount === null) {
+    diagnostics.usedBundledFallbackBecause = "live-price-missing-or-zero";
+    respondWithBundledFallback(
+      res,
+      productCode,
+      bundledPayload,
+      diagnostics,
+      extracted
+    );
+    return;
+  }
+
+  if (bundledPayload && extracted.diagnostics.heroFallbackTriggered) {
+    diagnostics.usedBundledFallbackBecause = "live-hero-missing-or-foreign";
+    respondWithBundledFallback(
+      res,
+      productCode,
+      bundledPayload,
+      diagnostics,
+      extracted
+    );
+    return;
+  }
+
+  Object.assign(diagnostics, extracted.diagnostics, {
+    source: "live-api",
+  });
+
+  respondWithNormalizedEnvelope(res, {
+    statusCode: 200,
+    source: "live-api",
+    diagnostics,
+    productCode,
+    rawProduct: extracted.product,
+    extracted: extracted.extracted,
+    headers: {
+      "Cache-Control": "public, s-maxage=300, stale-while-revalidate=1800",
+      "X-Engine6-Source": "live-api",
+    },
+  });
 }

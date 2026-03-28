@@ -9,6 +9,20 @@ export type Engine6FaqItem = {
   answer: string;
 };
 
+export type Engine6HeroSourceType =
+  | "api-primary"
+  | "api-gallery"
+  | "approved-placeholder";
+
+export type Engine6RejectedHeroCandidate = {
+  url: string;
+  sourceType: Engine6HeroSourceType;
+  reason: string;
+  candidateProductCode: string | null;
+  candidateSourceProductUrl: string | null;
+  fieldPath: string | null;
+};
+
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback";
   commercialPriceFieldPath: string | null;
@@ -18,7 +32,11 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSourceType;
+  heroSourceType: Engine6HeroSourceType;
+  finalHeroUrl: string | null;
+  heroFallbackTriggered: boolean;
+  rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;
