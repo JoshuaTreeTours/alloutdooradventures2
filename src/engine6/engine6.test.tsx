@@ -622,6 +622,13 @@ describe("engine6 listing surfaces", () => {
     expect(filteredHtml).toContain(
       `src="${expectedHero?.replace(/&/g, "&amp;")}"`
     );
+    expect(filteredHtml).toContain(
+      `data-card-image-src="${expectedHero?.replace(/&/g, "&amp;")}"`
+    );
+    expect(filteredHtml).toContain(
+      `data-hero-image-src="${expectedHero?.replace(/&/g, "&amp;")}"`
+    );
+    expect(filteredHtml.toLowerCase()).not.toContain("octopus");
 
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: { pathname: string; search?: string } }).location =

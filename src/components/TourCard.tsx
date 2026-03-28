@@ -155,7 +155,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     ) ?? [];
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+    <article
+      className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm"
+      data-card-image-src={cardImage}
+      data-hero-image-src={tour.heroImage?.trim() || ""}
+    >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={cardImage}
