@@ -1,4 +1,10 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
+import {
+  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+  type Engine6HeroCandidate,
+  type Engine6HeroSourceType,
+  resolveProductScopedHero,
+} from "./heroResolver.js";
 
 export type Engine6DiagnosticsPaths = {
   commercialPriceFieldPath: string | null;
@@ -8,7 +14,18 @@ export type Engine6DiagnosticsPaths = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSourceType;
+  heroSourceType: Engine6HeroSourceType;
+  finalHeroUrl: string | null;
+  heroFallbackTriggered: boolean;
+  rejectedForeignHeroCandidates: Array<{
+    url: string;
+    sourceType: Engine6HeroSourceType;
+    reason: string;
+    candidateProductCode: string | null;
+    candidateSourceProductUrl: string | null;
+    fieldPath: string | null;
+  }>;
   productUrlFieldPath: string | null;
   ratingFieldPath: string | null;
   reviewCountFieldPath: string | null;
@@ -36,6 +53,7 @@ export type Engine6ExtractedItineraryItem = {
   title: string;
   description?: string;
   duration?: string;
+  admissionNote?: string;
 };
 
 export type Engine6Extracted = {
@@ -45,7 +63,6 @@ export type Engine6Extracted = {
   city: string | null;
   state: string | null;
   heroImageUrl: string | null;
-  cardImageUrl: string | null;
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
@@ -56,6 +73,7 @@ export type Engine6Extracted = {
   highlights: string[];
   itinerary: Engine6ExtractedItineraryItem[];
   faqs: Engine6ExtractedFaq[];
+  included: string[];
   requirements: string[];
   primaryCategory: string | null;
   categories: string[];
@@ -64,13 +82,10 @@ export type Engine6Extracted = {
 type RecordLike = Record<string, unknown>;
 type PathSegment = string | number;
 
-type HeroImageResult = {
-  value: string;
+type HeroImageResult = Omit<Engine6HeroCandidate, "fieldPath"> & {
+  url: string;
   path: string;
   variantPath: string;
-  width: number | null;
-  height: number | null;
-  sourceUsed: "live-product-image" | "fallback";
 };
 
 type RankedImageVariant = {
@@ -97,28 +112,6 @@ type ItineraryResult = {
   value: Engine6ExtractedItineraryItem[];
   path: string;
 };
-
-const ENGINE6_TRUTH_PRODUCT_CODE = "163873P16";
-
-const ENGINE6_163873P16_OVERVIEW =
-  "Grab bird’s-eye views of Zion National Park on this Jeep tour. After meeting up with your guide, you’ll spend the next 1.5 hours climbing up, up, up the mountains—all on private land—to incredible views of the Coral Pink Sand Dunes, Cedar Mountain, and beyond. With reasonably groomed trails, this trek is perfect for families with small kids, and anyone looking for easy, effortless adventure with plenty of reward.";
-
-const ENGINE6_163873P16_HIGHLIGHTS = [
-  "Easy meetup at at Zion Ponderosa Ranch Resort",
-  "Your local guide adds valuable insight on the area's geology, flora, fauna, and more",
-  "See Zion National Park and its environs from above",
-  "Limited to 8 travelers, you'll get an intimate East Zion experience",
-];
-
-const ENGINE6_163873P16_REQUIREMENTS = [
-  "Confirmation will be received at time of booking",
-  "Not wheelchair accessible",
-  "Not recommended for travelers with back problems",
-  "Not recommended for pregnant travelers",
-  "No heart problems or other serious medical conditions",
-  "Most travelers can participate",
-  "This tour/activity will have a maximum of 8 travelers",
-];
 
 const asRecord = (value: unknown): RecordLike | null =>
   value && typeof value === "object" && !Array.isArray(value)
@@ -283,7 +276,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   city: null,
   state: null,
   heroImageUrl: null,
-  cardImageUrl: null,
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
@@ -294,6 +286,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   highlights: [],
   itinerary: [],
   faqs: [],
+  included: [],
   requirements: [],
   primaryCategory: null,
   categories: [],
@@ -385,7 +378,7 @@ const collectRecordVariants = (
 const resolveImageCollectionHero = (
   images: unknown,
   basePathPrefix: PathSegment[],
-  sourceUsed: HeroImageResult["sourceUsed"]
+  sourceType: Exclude<Engine6HeroSourceType, "approved-placeholder">
 ): HeroImageResult | null => {
   if (!Array.isArray(images)) {
     return null;
@@ -413,12 +406,12 @@ const resolveImageCollectionHero = (
 
     if (selectedVariant) {
       return {
-        value: selectedVariant.url,
+        url: selectedVariant.url,
         path: selectedVariant.path,
         variantPath: selectedVariant.variantPath,
         width: selectedVariant.width,
         height: selectedVariant.height,
-        sourceUsed,
+        sourceType,
       };
     }
 
@@ -433,12 +426,12 @@ const resolveImageCollectionHero = (
           ? formatFieldPath([...basePath, "src"])
           : formatFieldPath([...basePath, "imageUrl"]);
       return {
-        value: directUrl,
+        url: directUrl,
         path: directPath,
         variantPath: formatFieldPath(basePath),
         width: parseLooseNumber(image.width),
         height: parseLooseNumber(image.height),
-        sourceUsed,
+        sourceType,
       };
     }
   }
@@ -447,23 +440,42 @@ const resolveImageCollectionHero = (
 };
 
 const resolveRootImage = (product: RecordLike): HeroImageResult | null =>
-  resolveImageCollectionHero(product.images, ["images"], "live-product-image");
+  resolveImageCollectionHero(product.images, ["images"], "api-gallery");
 
-const extractPlaybookHeroImage = (
-  product: RecordLike
-): HeroImageResult | null => {
+const withHeroScope = (
+  hero: HeroImageResult,
+  productCode: string | null,
+  sourceProductUrl: string | null
+): Engine6HeroCandidate => ({
+  ...hero,
+  fieldPath: hero.path,
+  candidateProductCode: productCode,
+  candidateSourceProductUrl: sourceProductUrl,
+});
+
+const extractPlaybookHeroCandidates = ({
+  product,
+  productCode,
+  sourceProductUrl,
+}: {
+  product: RecordLike;
+  productCode: string | null;
+  sourceProductUrl: string | null;
+}): Engine6HeroCandidate[] => {
+  const candidates: Engine6HeroCandidate[] = [];
+
   const mediaHero = resolveImageCollectionHero(
     readPath(product, ["media", "images"]),
     ["media", "images"],
-    "live-product-image"
+    "api-primary"
   );
   if (mediaHero) {
-    return mediaHero;
+    candidates.push(withHeroScope(mediaHero, productCode, sourceProductUrl));
   }
 
   const rootHero = resolveRootImage(product);
   if (rootHero) {
-    return rootHero;
+    candidates.push(withHeroScope(rootHero, productCode, sourceProductUrl));
   }
 
   for (const [path, value] of [
@@ -472,19 +484,34 @@ const extractPlaybookHeroImage = (
     ["product.thumbnailURL", product.thumbnailURL],
   ] as const) {
     const url = asImageUrl(value);
-    if (url) {
-      return {
-        value: url,
-        path,
-        variantPath: path.replace(/\.url$/, ""),
-        width: null,
-        height: null,
-        sourceUsed: "fallback",
-      };
+    if (!url) {
+      continue;
     }
+
+    candidates.push({
+      url,
+      sourceType: "api-gallery",
+      candidateProductCode: productCode,
+      candidateSourceProductUrl: sourceProductUrl,
+      fieldPath: path,
+      variantPath: path.replace(/\.url$/, ""),
+      width: null,
+      height: null,
+    });
   }
 
-  return null;
+  candidates.push({
+    url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+    sourceType: "approved-placeholder",
+    candidateProductCode: productCode,
+    candidateSourceProductUrl: sourceProductUrl,
+    fieldPath: "engine6.approved-placeholder",
+    variantPath: "engine6.approved-placeholder",
+    width: null,
+    height: null,
+  });
+
+  return candidates;
 };
 
 const extractProductUrl = (product: RecordLike) => {
@@ -506,21 +533,6 @@ const extractProductUrl = (product: RecordLike) => {
 };
 
 const extractPlaybookPrice = (product: RecordLike): PriceResult => {
-  const productCode = asNonEmptyString(product.productCode);
-
-  if (productCode === ENGINE6_TRUTH_PRODUCT_CODE) {
-    const raw = product.priceFrom;
-    const amount = parsePriceAmount(raw);
-    if (amount !== null) {
-      return {
-        amount,
-        path: "product.priceFrom",
-        rawValue:
-          typeof raw === "string" || typeof raw === "number" ? raw : amount,
-      };
-    }
-  }
-
   const amountPaths: PathSegment[][] = [
     ["pricing", "summary", "fromPrice"],
     ["pricingSummary", "fromPrice"],
@@ -710,16 +722,37 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
           asNonEmptyString(row.summary) ??
           asNonEmptyString(pointOfInterest?.description) ??
           undefined;
+        const admissionNoteFromFields =
+          asNonEmptyString(row.admissionNote) ??
+          asNonEmptyString(row.admissionTicket) ??
+          asNonEmptyString(row.admission) ??
+          asNonEmptyString(row.ticketNote) ??
+          asNonEmptyString(row.ticketInfo) ??
+          asNonEmptyString(row.inclusion) ??
+          asNonEmptyString(row.inclusions);
+        const admissionNoteFromDescription =
+          description && /admission ticket/i.test(description)
+            ? description
+            : undefined;
+        const admissionNote =
+          admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
         const duration =
           asNonEmptyString(row.duration) ??
           asNonEmptyString(row.durationText) ??
           asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
           undefined;
+        const descriptionWithoutAdmission =
+          admissionNoteFromDescription && description === admissionNoteFromDescription
+            ? undefined
+            : description;
 
         return {
           title,
-          ...(description ? { description } : {}),
+          ...(descriptionWithoutAdmission
+            ? { description: descriptionWithoutAdmission }
+            : {}),
           ...(duration ? { duration } : {}),
+          ...(admissionNote ? { admissionNote } : {}),
         } satisfies Engine6ExtractedItineraryItem;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
@@ -801,49 +834,6 @@ const extractFaqs = (product: RecordLike) => {
   }
 
   return { value: [], path: null as string | null };
-};
-
-const buildRequirementFaqs = (
-  requirements: string[]
-): Engine6ExtractedFaq[] => {
-  const lowercased = requirements.map(item => item.toLowerCase());
-  const has = (needle: string) =>
-    lowercased.some(item => item.includes(needle));
-  const faqs: Engine6ExtractedFaq[] = [];
-
-  if (has("wheelchair accessible")) {
-    faqs.push({
-      question: "Is this tour wheelchair accessible?",
-      answer: "No. This tour is not wheelchair accessible.",
-    });
-  }
-
-  if (
-    has("back problems") ||
-    has("heart problems") ||
-    has("pregnant travelers")
-  ) {
-    faqs.push({
-      question:
-        "Are there any health restrictions travelers should know about?",
-      answer:
-        "Yes. This tour is not recommended for travelers with back problems, pregnant travelers, or travelers with serious heart or medical conditions.",
-    });
-  }
-
-  if (has("most travelers can participate")) {
-    faqs.push({
-      question: "Can most travelers participate?",
-      answer: "Yes. Most travelers can participate.",
-    });
-  }
-
-  return dedupeStrings(
-    faqs.map(item => `${item.question}|||${item.answer}`)
-  ).map(item => {
-    const [question, answer] = item.split("|||");
-    return { question, answer } satisfies Engine6ExtractedFaq;
-  });
 };
 
 const CATEGORY_ALIASES: Array<{
@@ -980,11 +970,21 @@ const extractRequirements = (product: RecordLike) => {
     }
   }
 
-  if (asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE) {
-    return {
-      value: ENGINE6_163873P16_REQUIREMENTS,
-      path: "product.additionalInfo",
-    };
+  return { value: [], path: null as string | null };
+};
+
+const extractIncluded = (product: RecordLike) => {
+  for (const path of [
+    ["inclusions"],
+    ["included"],
+    ["whatsIncluded"],
+    ["whatIsIncluded"],
+    ["includedItems"],
+  ] as PathSegment[][]) {
+    const value = normalizeStringArray(readPath(product, path));
+    if (value.length > 0) {
+      return { value, path: formatFieldPath(path) };
+    }
   }
 
   return { value: [], path: null as string | null };
@@ -1000,7 +1000,11 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
-    imageSourceUsed: "fallback",
+    imageSourceUsed: "approved-placeholder",
+    heroSourceType: "approved-placeholder",
+    finalHeroUrl: null,
+    heroFallbackTriggered: false,
+    rejectedForeignHeroCandidates: [],
     productUrlFieldPath: null,
     ratingFieldPath: null,
     reviewCountFieldPath: null,
@@ -1023,6 +1027,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     return { extracted: emptyExtracted(), diagnostics, product: null };
   }
 
+  const productCode = asNonEmptyString(product.productCode);
   const title = asNonEmptyString(product.title);
   const city =
     asNonEmptyString(asRecord(product.location)?.city) ??
@@ -1030,18 +1035,28 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const state =
     asNonEmptyString(asRecord(product.location)?.state) ??
     asNonEmptyString(asRecord(asRecord(product.location)?.address)?.state);
-  const isTruthProduct =
-    asNonEmptyString(product.productCode) === ENGINE6_TRUTH_PRODUCT_CODE;
-
-  const heroImage = extractPlaybookHeroImage(product);
-  diagnostics.heroImageFieldPath = heroImage?.path ?? null;
-  diagnostics.heroVariantFieldPath = heroImage?.variantPath ?? null;
-  diagnostics.selectedHeroWidth = heroImage?.width ?? null;
-  diagnostics.selectedHeroHeight = heroImage?.height ?? null;
-  diagnostics.imageSourceUsed = heroImage?.sourceUsed ?? "fallback";
 
   const productUrl = extractProductUrl(product);
   diagnostics.productUrlFieldPath = productUrl.path;
+
+  const heroDecision = resolveProductScopedHero({
+    currentProductCode: productCode,
+    currentSourceProductUrl: productUrl.value,
+    candidates: extractPlaybookHeroCandidates({
+      product,
+      productCode,
+      sourceProductUrl: productUrl.value,
+    }),
+  });
+  diagnostics.heroImageFieldPath = heroDecision.finalCandidate.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate.variantPath ?? null;
+  diagnostics.selectedHeroWidth = heroDecision.finalCandidate.width ?? null;
+  diagnostics.selectedHeroHeight = heroDecision.finalCandidate.height ?? null;
+  diagnostics.imageSourceUsed = heroDecision.heroSourceType;
+  diagnostics.heroSourceType = heroDecision.heroSourceType;
+  diagnostics.finalHeroUrl = heroDecision.heroUrl;
+  diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
+  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
 
   const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
@@ -1058,41 +1073,16 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const meetingPoint = extractMeetingPoint(product);
   diagnostics.meetingPointFieldPath = meetingPoint.path;
 
-  let overview = extractOverview(product);
-  if (isTruthProduct) {
-    overview = {
-      value: overview.value ?? ENGINE6_163873P16_OVERVIEW,
-      path: overview.path ?? "product.description.text",
-    };
-  }
+  const overview = extractOverview(product);
   diagnostics.overviewFieldPath = overview.path;
 
-  let highlights = extractHighlights(product);
-  if (isTruthProduct) {
-    highlights = {
-      value: dedupeStrings([
-        ...highlights.value,
-        ...ENGINE6_163873P16_HIGHLIGHTS,
-      ]).filter(
-        item =>
-          !ENGINE6_163873P16_REQUIREMENTS.some(
-            requirement => requirement.toLowerCase() === item.toLowerCase()
-          )
-      ),
-      path: "product.highlights",
-    };
-  }
+  const highlights = extractHighlights(product);
   diagnostics.highlightsFieldPath = highlights.path;
-  diagnostics.highlightClassificationReason = isTruthProduct
-    ? "product.highlights kept as selling-point bullets; product.additionalInfo routed to requirements"
-    : highlights.path
-      ? `selected ${highlights.path} as highlight content`
-      : null;
+  diagnostics.highlightClassificationReason = highlights.path
+    ? `selected ${highlights.path} as highlight content`
+    : null;
 
-  let itinerary = extractPlaybookItinerary(product);
-  if (isTruthProduct && itinerary.value.length > 0) {
-    itinerary = { value: itinerary.value, path: "product.itineraryItems" };
-  }
+  const itinerary = extractPlaybookItinerary(product);
   diagnostics.itineraryFieldPath = itinerary.path;
   diagnostics.itineraryItemCount = itinerary.value.length;
   diagnostics.itinerarySourceUsed =
@@ -1100,24 +1090,18 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
+  const included = extractIncluded(product);
 
   const baseFaqs = extractFaqs(product);
-  const requirementFaqs = buildRequirementFaqs(requirements.value);
-  const mergedFaqs = dedupeStrings([
-    ...baseFaqs.value.map(item => `${item.question}|||${item.answer}`),
-    ...requirementFaqs.map(item => `${item.question}|||${item.answer}`),
-  ]).map(item => {
+  const mergedFaqs = dedupeStrings(
+    baseFaqs.value.map(item => `${item.question}|||${item.answer}`)
+  ).map(item => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath =
-    baseFaqs.value.length > 0 && requirementFaqs.length > 0
-      ? "merged:product.qAndA.items+product.additionalInfo"
-      : baseFaqs.value.length > 0
-        ? (baseFaqs.path ?? "product.qAndA.items")
-        : requirementFaqs.length > 0
-          ? "merged:product.additionalInfo"
-          : null;
+  const faqPath = baseFaqs.value.length > 0
+    ? (baseFaqs.path ?? "product.qAndA.items")
+    : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
@@ -1152,8 +1136,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       seoDescription: seoDescription ? `${seoDescription}.` : null,
       city: city ?? null,
       state: state ?? null,
-      heroImageUrl: heroImage?.value ?? null,
-      cardImageUrl: heroImage?.value ?? null,
+      heroImageUrl: heroDecision.heroUrl ?? null,
       productUrl: productUrl.value,
       priceAmount: price.amount,
       priceFormatted:
@@ -1165,6 +1148,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       highlights: highlights.value,
       itinerary: itinerary.value,
       faqs: faqs.value,
+      included: included.value,
       requirements: requirements.value,
       primaryCategory: classification.primaryCategory,
       categories: classification.categories,

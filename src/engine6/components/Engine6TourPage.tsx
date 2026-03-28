@@ -22,6 +22,21 @@ const ContentSection = ({
   </section>
 );
 
+const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
+  const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
+  const stateSlug = pathSegments[1] ?? "";
+  const citySlug = pathSegments[2] ?? "";
+
+  return [
+    { label: "Destinations", href: "/destinations" },
+    { label: tour.state, href: `/destinations/${stateSlug}` },
+    {
+      label: tour.city,
+      href: `/destinations/${stateSlug}/${citySlug}/tours`,
+    },
+  ];
+};
+
 const RatingSummary = ({
   aggregateRating,
   reviewCount,
@@ -66,6 +81,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.aggregateRating === "number" &&
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
+  const breadcrumbs = buildEngine6Breadcrumbs(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -86,7 +102,39 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
       >
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-white/75">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-4 text-xs text-green-100/80"
+              data-testid="engine6-breadcrumbs"
+            >
+              <ol className="flex flex-wrap items-center gap-2">
+                {breadcrumbs.map((crumb, index) => (
+                  <li key={crumb.href} className="inline-flex items-center gap-2">
+                    <a
+                      href={crumb.href}
+                      aria-label={index === 2 ? `${crumb.label} Tours & Activities` : crumb.label}
+                      className="transition hover:text-white hover:underline"
+                    >
+                      {crumb.label}
+                    </a>
+                    <span aria-hidden="true" className="text-white/40">
+                      /
+                    </span>
+                  </li>
+                ))}
+                <li aria-current="page" className="font-medium text-white/90">
+                  {tour.title}
+                </li>
+              </ol>
+            </nav>
+
+            <p
+              className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-100/70"
+              data-testid="engine6-tours-activities-label"
+            >
+              {tour.city} Tours & Activities
+            </p>
+            <p className="mt-2 text-xs uppercase tracking-[0.3em] text-white/75">
               {tour.city}, {tour.state}
             </p>
             {categoryLabel ? (
@@ -173,6 +221,21 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
+        {tour.included.length > 0 ? (
+          <ContentSection title="What’s included">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {tour.included.map((item, index) => (
+                <li
+                  key={`${item.slice(0, 32)}-${index}`}
+                  className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ContentSection>
+        ) : null}
+
         {tour.itinerary.length > 0 ? (
           <ContentSection title="Itinerary">
             <ul className="space-y-4">
@@ -194,6 +257,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                   {item.description ? (
                     <p className="mt-3 text-sm leading-6 text-slate-700">
                       {item.description}
+                    </p>
+                  ) : null}
+                  {item.admissionNote ? (
+                    <p className="mt-3 inline-flex rounded-full bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-800">
+                      {item.admissionNote}
                     </p>
                   ) : null}
                 </li>
@@ -219,6 +287,21 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </details>
               ))}
             </div>
+          </ContentSection>
+        ) : null}
+
+        {tour.requirements.length > 0 ? (
+          <ContentSection title="Additional info">
+            <ul className="space-y-3">
+              {tour.requirements.map((item, index) => (
+                <li
+                  key={`${item.slice(0, 32)}-${index}`}
+                  className="rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm leading-6 text-slate-700"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </ContentSection>
         ) : null}
 

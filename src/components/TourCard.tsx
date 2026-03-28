@@ -15,6 +15,7 @@ type TourCardProps = {
 
 const CARD_BLURB_MAX_CHARS = 150;
 const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
+const ENGINE6_GLOBAL_PLACEHOLDER_IMAGE = "/images/hiking-hero.jpg";
 const NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX =
   /(check-?in|safety briefing|meet(ing)? point|pickup|drop-?off)/i;
 
@@ -146,7 +147,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
-      : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+      : tour.engine === "engine6"
+        ? tour.heroImage?.trim() || ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
+        : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
+  const fallbackImage =
+    tour.engine === "engine6" ? ENGINE6_GLOBAL_PLACEHOLDER_IMAGE : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
       tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
@@ -155,11 +160,15 @@ export default function TourCard({ tour, href }: TourCardProps) {
     ) ?? [];
 
   return (
-    <article className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+    <article
+      className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm"
+      data-card-image-src={cardImage}
+      data-hero-image-src={tour.heroImage?.trim() || ""}
+    >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image
           src={cardImage}
-          fallbackSrc={"/hero.jpg"}
+          fallbackSrc={fallbackImage}
           alt={tour.title}
           loading="lazy"
           className="h-full w-full object-cover"

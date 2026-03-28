@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import Engine6TourPage from "../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "../../engine6/mapViatorToEngine6Tour";
-import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "../../engine6/routes";
+import { resolveEngine6ProductCodeForPath } from "../../engine6/routes";
 import type { Engine6ApiResponse, Engine6Tour } from "../../engine6/types";
 
 export type Engine6SpecimenDebug = {
@@ -25,10 +25,22 @@ export type Engine6SpecimenDebug = {
   faqCount: number | null;
   faqSourceUsed: string | null;
   requirementsFieldPath: string | null;
+  sourceProductUrl: string | null;
+  finalHeroUrl: string | null;
+  heroSourceType: string | null;
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
   imageSourceUsed: string | null;
+  fallbackTriggered: boolean | null;
+  rejectedForeignHeroCandidates: Array<{
+    url: string;
+    sourceType: string;
+    reason: string;
+    candidateProductCode: string | null;
+    candidateSourceProductUrl: string | null;
+    fieldPath: string | null;
+  }>;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: string | null;
   highlightClassificationReason: string | null;
@@ -81,10 +93,15 @@ export const buildInitialEngine6SpecimenDebug = (
   faqCount: null,
   faqSourceUsed: null,
   requirementsFieldPath: null,
+  sourceProductUrl: null,
+  finalHeroUrl: null,
+  heroSourceType: null,
   heroVariantFieldPath: null,
   selectedHeroWidth: null,
   selectedHeroHeight: null,
   imageSourceUsed: null,
+  fallbackTriggered: null,
+  rejectedForeignHeroCandidates: [],
   commercialPriceRawValue: null,
   priceSourceUsed: null,
   highlightClassificationReason: null,
@@ -140,6 +157,10 @@ export const resolveEngine6SpecimenResponse = ({
       rawProduct.title.trim().length > 0,
     source: typeof payload.source === "string" ? payload.source : null,
     diagnosticsReturned: isRecord(payload.diagnostics),
+    sourceProductUrl:
+      typeof extracted?.productUrl === "string" ? extracted.productUrl : null,
+    finalHeroUrl:
+      typeof extracted?.heroImageUrl === "string" ? extracted.heroImageUrl : null,
     overviewFieldPath:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -235,6 +256,14 @@ export const resolveEngine6SpecimenResponse = ({
         ? ((payload.diagnostics as Record<string, unknown>)
             .selectedHeroHeight as number)
         : null,
+    heroSourceType:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .heroSourceType === "string"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .heroSourceType as string)
+        : null,
     imageSourceUsed:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -243,6 +272,48 @@ export const resolveEngine6SpecimenResponse = ({
         ? ((payload.diagnostics as Record<string, unknown>)
             .imageSourceUsed as string)
         : null,
+    fallbackTriggered:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      typeof (payload.diagnostics as Record<string, unknown>)
+        .heroFallbackTriggered === "boolean"
+        ? ((payload.diagnostics as Record<string, unknown>)
+            .heroFallbackTriggered as boolean)
+        : null,
+    rejectedForeignHeroCandidates:
+      typeof payload.diagnostics === "object" &&
+      payload.diagnostics &&
+      Array.isArray(
+        (payload.diagnostics as Record<string, unknown>)
+          .rejectedForeignHeroCandidates
+      )
+        ? (((payload.diagnostics as Record<string, unknown>)
+            .rejectedForeignHeroCandidates as Array<Record<string, unknown>>)
+            .filter(candidate => typeof candidate.url === "string")
+            .map(candidate => ({
+              url: candidate.url as string,
+              sourceType:
+                typeof candidate.sourceType === "string"
+                  ? (candidate.sourceType as string)
+                  : "unknown",
+              reason:
+                typeof candidate.reason === "string"
+                  ? (candidate.reason as string)
+                  : "unknown",
+              candidateProductCode:
+                typeof candidate.candidateProductCode === "string"
+                  ? (candidate.candidateProductCode as string)
+                  : null,
+              candidateSourceProductUrl:
+                typeof candidate.candidateSourceProductUrl === "string"
+                  ? (candidate.candidateSourceProductUrl as string)
+                  : null,
+              fieldPath:
+                typeof candidate.fieldPath === "string"
+                  ? (candidate.fieldPath as string)
+                  : null,
+            })))
+        : [],
     commercialPriceRawValue:
       typeof payload.diagnostics === "object" &&
       payload.diagnostics &&
@@ -381,8 +452,26 @@ const Engine6SpecimenDiagnostics = ({
             <dd>{debug.source ?? "unknown"}</dd>
           </div>
           <div>
-            <dt className="font-medium text-slate-900">Image source</dt>
-            <dd>{debug.imageSourceUsed ?? "unknown"}</dd>
+            <dt className="font-medium text-slate-900">Source product URL</dt>
+            <dd className="break-all">{debug.sourceProductUrl ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Final hero URL</dt>
+            <dd className="break-all">{debug.finalHeroUrl ?? "missing upstream"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Hero source type</dt>
+            <dd>{debug.heroSourceType ?? debug.imageSourceUsed ?? "unknown"}</dd>
+          </div>
+          <div>
+            <dt className="font-medium text-slate-900">Fallback triggered</dt>
+            <dd>
+              {debug.fallbackTriggered === null
+                ? "unknown"
+                : debug.fallbackTriggered
+                  ? "true"
+                  : "false"}
+            </dd>
           </div>
           <div>
             <dt className="font-medium text-slate-900">Hero variant path</dt>
@@ -394,6 +483,23 @@ const Engine6SpecimenDiagnostics = ({
               {debug.selectedHeroWidth && debug.selectedHeroHeight
                 ? `${debug.selectedHeroWidth}×${debug.selectedHeroHeight}`
                 : "unknown"}
+            </dd>
+          </div>
+          <div className="sm:col-span-2">
+            <dt className="font-medium text-slate-900">Rejected foreign hero candidates</dt>
+            <dd className="space-y-1 break-all">
+              {debug.rejectedForeignHeroCandidates.length > 0 ? (
+                debug.rejectedForeignHeroCandidates.map(candidate => (
+                  <div key={`${candidate.url}-${candidate.reason}`}>
+                    {candidate.reason}: {candidate.url}
+                    {candidate.candidateProductCode
+                      ? ` [${candidate.candidateProductCode}]`
+                      : ""}
+                  </div>
+                ))
+              ) : (
+                <span>none</span>
+              )}
             </dd>
           </div>
           <div>
@@ -465,7 +571,13 @@ const Engine6SpecimenDiagnostics = ({
 };
 
 export default function Engine6SpecimenRoute() {
-  const requestedProductCode = ENGINE6_SPECIMEN_PRODUCT_CODE;
+  const requestedProductCode = useMemo(() => {
+    if (typeof window === "undefined") {
+      return resolveEngine6ProductCodeForPath("");
+    }
+
+    return resolveEngine6ProductCodeForPath(window.location.pathname);
+  }, []);
   const apiUrl = useMemo(
     () => buildEngine6SpecimenApiUrl(requestedProductCode),
     [requestedProductCode]

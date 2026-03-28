@@ -2,11 +2,26 @@ export type Engine6ItineraryItem = {
   title: string;
   description?: string;
   duration?: string;
+  admissionNote?: string;
 };
 
 export type Engine6FaqItem = {
   question: string;
   answer: string;
+};
+
+export type Engine6HeroSourceType =
+  | "api-primary"
+  | "api-gallery"
+  | "approved-placeholder";
+
+export type Engine6RejectedHeroCandidate = {
+  url: string;
+  sourceType: Engine6HeroSourceType;
+  reason: string;
+  candidateProductCode: string | null;
+  candidateSourceProductUrl: string | null;
+  fieldPath: string | null;
 };
 
 export type Engine6TourDiagnostics = {
@@ -18,7 +33,11 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: "live-product-image" | "fallback";
+  imageSourceUsed: Engine6HeroSourceType;
+  heroSourceType: Engine6HeroSourceType;
+  finalHeroUrl: string | null;
+  heroFallbackTriggered: boolean;
+  rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
   productUrlFieldPath: string | null;
   bookingUrlSource: string;
   ratingFieldPath: string | null;
@@ -77,7 +96,6 @@ export type Engine6Tour = {
   city: string;
   state: string;
   heroImageUrl: string;
-  cardImageUrl: string;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
@@ -87,6 +105,7 @@ export type Engine6Tour = {
   highlights: string[];
   itinerary: Engine6ItineraryItem[];
   faqs: Engine6FaqItem[];
+  included: string[];
   requirements: string[];
   primaryCategory: Engine6CategorySlug | string | null;
   categories: Array<Engine6CategorySlug | string>;
@@ -109,7 +128,6 @@ export type Engine6ApiResponse = {
     city: string | null;
     state: string | null;
     heroImageUrl: string | null;
-    cardImageUrl: string | null;
     productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
@@ -120,6 +138,7 @@ export type Engine6ApiResponse = {
     highlights: string[];
     itinerary: Engine6ItineraryItem[];
     faqs: Engine6FaqItem[];
+    included: string[];
     requirements: string[];
     primaryCategory: Engine6CategorySlug | string | null;
     categories: Array<Engine6CategorySlug | string>;

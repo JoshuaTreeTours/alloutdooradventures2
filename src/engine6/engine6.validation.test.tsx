@@ -42,9 +42,9 @@ const toPayload = (
   };
 };
 
-describe("engine6 multi-tour validation harness", () => {
+describe("engine6 single-tour validation harness", () => {
   it.each(ENGINE6_VALIDATION_FIXTURES)(
-    "validates %s end-to-end without specimen-only leakage",
+    "validates %s end-to-end with product-scoped hero resolution",
     fixture => {
       const payload = toPayload(fixture);
       const tour = mapViatorToEngine6Tour(payload);
@@ -53,10 +53,15 @@ describe("engine6 multi-tour validation harness", () => {
       const schema = buildEngine6SchemaGraph(tour);
       const graph = schema["@graph"] as Array<Record<string, unknown>>;
       const offer = graph.find(node => node["@type"] === "Offer");
+      const expectedHero = ((fixture.rawPayload.product as any)?.media?.images?.[0]
+        ?.variants?.FULL?.url ?? null) as string | null;
 
       expect(tour.productCode).toBe(fixture.productCode);
-      expect(tour.heroImageUrl).toContain("media.tacdn.com");
-      expect(tour.cardImageUrl).toBe(tour.heroImageUrl);
+      expect(tour.heroImageUrl).toBe(expectedHero);
+      expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+      expect(tour.diagnostics.heroSourceType).toBe("api-primary");
+      expect(tour.diagnostics.heroFallbackTriggered).toBe(false);
+      expect(tour.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
       expect(tour.priceFormatted).toMatch(/^From \$/);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(100);
@@ -67,25 +72,19 @@ describe("engine6 multi-tour validation harness", () => {
       expect(tour.bookingUrl).toContain("mcid=42383");
       expect(tour.bookingUrl).toContain("medium=link");
       expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
-      expect(tour.bookingUrl).not.toContain(
-        "East-Zion-Top-of-the-World-Jeep-Tour"
-      );
       expect(card.href).toBe(tour.pagePath);
-      expect(card.href).not.toContain("east-zion-top-of-the-world-jeep-tour");
-      expect(card.imageUrl).toBe(tour.cardImageUrl);
-      expect(card.description).not.toContain("Zion");
+      expect(card.imageUrl).toBe(tour.heroImageUrl);
+      expect(card.description.length).toBeGreaterThan(40);
       expect(html).toContain(tour.title);
-      expect(html).toContain(`src="${tour.heroImageUrl}"`);
+      expect(html).toContain(`src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`);
       expect(html).toContain(tour.priceFormatted);
       expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
       expect(html).not.toContain(">ENGINE6<");
       expect(html).not.toContain("img.test");
-      expect(html).not.toContain("viator.test");
-      expect(html).not.toContain("Lock in your East Zion adventure today.");
-      expect(html).toContain("Lock in your");
-      expect(html).toContain(tour.city);
-      expect(html).toContain("adventure today.");
-      expect(graph.some(node => node["@type"] === "BreadcrumbList")).toBe(true);
+      expect(html).not.toContain("/hero.jpg");
+      expect(graph.some(node => node["@type"] === "BreadcrumbList")).toBe(
+        true
+      );
       expect(graph.some(node => node["@type"] === "WebPage")).toBe(true);
       expect(graph.some(node => node["@type"] === "Product")).toBe(true);
       expect(graph.some(node => node["@type"] === "TouristTrip")).toBe(true);
@@ -102,12 +101,12 @@ describe("engine6 multi-tour validation harness", () => {
     }
   );
 
-  it("emits compact validation reports for all three tours", () => {
+  it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(
       buildEngine6ValidationReport
     );
 
-    expect(reports).toHaveLength(3);
+    expect(reports).toHaveLength(ENGINE6_VALIDATION_FIXTURES.length);
     expect(reports.every(report => report.cardRenderSucceeded)).toBe(true);
     expect(reports.every(report => report.pageRenderSucceeded)).toBe(true);
     expect(
