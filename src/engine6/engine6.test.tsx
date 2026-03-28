@@ -339,12 +339,12 @@ describe("engine6 mapping/cards/page", () => {
     const html = renderToString(<Engine6TourPage tour={tour} />);
 
     expect(tour.productCode).toBe("63657P1");
-    expect(tour.priceFormatted).toBe("From $199");
+    expect(tour.priceFormatted).toBe("Starting at $199");
     expect(tour.bookingUrl).toBe(
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
     );
     expect(card.title).toContain("Santa Barbara Vineyard");
-    expect(surfaces.city[0].priceLabel).toBe("From $199");
+    expect(surfaces.city[0].priceLabel).toBe("Starting at $199");
     expect(tour.primaryCategory).toBe("bike-tour");
     expect(tour.categoryLabel).toBe("Bike Tour");
     expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
@@ -419,19 +419,24 @@ describe("engine6 mapping/cards/page", () => {
 });
 
 describe("engine6 seo/schema", () => {
-  it("builds a schema graph anchored to the specimen canonical path", () => {
+  it("builds a schema graph anchored to the specimen canonical path with local/merchant constraints", () => {
     const tour = mapViatorToEngine6Tour(specimenApiPayload);
     const schema = buildEngine6SchemaGraph(tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
     const trip = graph.find(node => node["@type"] === "TouristTrip");
     const product = graph.find(node => node["@type"] === "Product");
     const offer = graph.find(node => node["@type"] === "Offer");
+    const webpage = graph.find(node => node["@type"] === "WebPage");
 
     const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList");
 
     expect(trip).toMatchObject({
+      name: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
       image: ENGINE6_63657P1_CARD_IMAGE_URL,
       url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
+      touristDestination: {
+        "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#destination`,
+      },
     });
     expect(breadcrumb).toMatchObject({
       itemListElement: [
@@ -458,10 +463,24 @@ describe("engine6 seo/schema", () => {
       ],
     });
     expect(product).toMatchObject({
+      name: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
       image: ENGINE6_63657P1_CARD_IMAGE_URL,
       category: "Bike Tour",
+      url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
     });
-    expect(offer).toMatchObject({ url: tour.bookingUrl });
+    expect(webpage).toMatchObject({
+      name: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+      mainEntity: { "@id": `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}#trip` },
+    });
+    expect(offer).toMatchObject({
+      url: tour.bookingUrl,
+      price: 199,
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    });
+    expect(String((offer as { priceValidUntil?: string }).priceValidUntil)).toMatch(
+      /^\d{4}-\d{2}-\d{2}$/
+    );
   });
 });
 
@@ -607,7 +626,7 @@ describe("engine6 listing surfaces", () => {
 
     expect(engine6Entry).toBeDefined();
     expect(engine6Entry?.href).toBe(ENGINE6_SPECIMEN_ROUTE);
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $199");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $199");
     expect(engine6Entry?.tour.badges?.rating).toBe(4.9);
     expect(engine6Entry?.tour.badges?.reviewCount).toBe(177);
   });
@@ -643,7 +662,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry).toBeDefined();
     expect(engine6Entry?.href).toBe(ENGINE6_PARAGON_ROUTE);
     expect(engine6Entry?.tour.heroImage).toBe(engine6Entry?.tour.primaryImageUrl);
-    expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^From \$/);
+    expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^Starting at \$/);
     expect(engine6Entry?.tour.badges?.rating).toBeGreaterThan(4);
     expect(engine6Entry?.tour.badges?.reviewCount).toBeGreaterThan(100);
   });
@@ -659,7 +678,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.destination.city).toBe("Avalon");
     expect(engine6Entry?.tour.destination.state).toBe("California");
     expect(engine6Entry?.tour.heroImage).toBe(engine6Entry?.tour.primaryImageUrl);
-    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $53");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $53");
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
@@ -821,7 +840,7 @@ describe("engine6 listing surfaces", () => {
     expect(entry?.href).toBe(ENGINE6_EMERALD_CAVE_ROUTE);
     expect(entry?.tour.heroImage).toBe(emeraldTour?.heroImageUrl);
     expect(entry?.tour.primaryImageUrl).toBe(emeraldTour?.heroImageUrl);
-    expect(entry?.tour.badges?.priceFrom).toBe("From $109");
+    expect(entry?.tour.badges?.priceFrom).toBe("Starting at $109");
     expect(entry?.tour.badges?.rating).toBe(4.9);
     expect(entry?.tour.badges?.reviewCount).toBe(5060);
   });
@@ -953,7 +972,7 @@ describe("engine6 listing surfaces", () => {
 
     expect(card.imageUrl).toBe(ENGINE6_63657P1_CARD_IMAGE_URL);
     expect(card.locationLabel).toBe("Santa Barbara, California");
-    expect(card.priceLabel).toBe("From $199");
+    expect(card.priceLabel).toBe("Starting at $199");
     expect(card.ratingLabel).toBe("4.9 (177)");
   });
 });
@@ -966,6 +985,12 @@ describe("engine6 multi-tour contract", () => {
       const schema = buildEngine6SchemaGraph(tour);
       const graph = schema["@graph"] as Array<Record<string, unknown>>;
       const faqNode = graph.find(node => node["@type"] === "FAQPage");
+      const offerNode = graph.find(node => node["@type"] === "Offer") as
+        | Record<string, unknown>
+        | undefined;
+      const productNode = graph.find(node => node["@type"] === "Product") as
+        | Record<string, unknown>
+        | undefined;
       const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
         | Record<string, unknown>
         | undefined;
@@ -1003,6 +1028,24 @@ describe("engine6 multi-tour contract", () => {
       }
 
       expect(Boolean(faqNode)).toBe(tour.faqs.length > 0);
+      expect(productNode?.url).toBe(
+        `https://www.alloutdooradventures.com${tour.canonicalPath}`
+      );
+      expect(offerNode?.url).toBe(tour.bookingUrl);
+      expect(offerNode?.priceCurrency).toBe("USD");
+      expect(offerNode?.price).toBe(tour.priceAmount ?? undefined);
+      expect(productNode?.image).toBe(tour.heroImageUrl);
+      expect(tripNode?.image).toBe(tour.heroImageUrl);
+      if (tour.faqs.length > 0 && faqNode) {
+        const mainEntity = (faqNode.mainEntity ?? []) as Array<{
+          name?: string;
+          acceptedAnswer?: { text?: string };
+        }>;
+        expect(mainEntity).toHaveLength(tour.faqs.length);
+        expect(mainEntity.map(item => item.name)).toEqual(
+          tour.faqs.map(item => item.question)
+        );
+      }
     }
   );
 });

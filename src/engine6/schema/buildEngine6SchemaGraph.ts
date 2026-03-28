@@ -1,7 +1,37 @@
 import { buildCanonicalUrl } from "../../utils/seo";
+import {
+  SITE_BRAND_ID,
+  SITE_ORGANIZATION_ID,
+  SITE_WEBSITE_ID,
+  getPriceValidUntil,
+} from "../../utils/structuredData";
+import { SITE_BRAND_NAME } from "../../utils/site";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
 import { formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
+
+const ORGANIZATION_NAME = "Outdoor Adventures, Inc.";
+
+const includesTerm = (source: string, term: string) =>
+  source.toLowerCase().includes(term.trim().toLowerCase());
+
+const buildCityAwareSchemaName = ({
+  title,
+  city,
+}: {
+  title: string;
+  city: string;
+}) => {
+  const normalizedTitle = title.trim();
+  const normalizedCity = city.trim();
+  if (!normalizedTitle || !normalizedCity) {
+    return normalizedTitle || normalizedCity;
+  }
+
+  return includesTerm(normalizedTitle, normalizedCity)
+    ? normalizedTitle
+    : `${normalizedTitle} in ${normalizedCity}`;
+};
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
@@ -9,9 +39,12 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
   const description = tour.description || tour.metaDescription || tour.title;
+  const schemaName = buildCityAwareSchemaName({ title: tour.title, city: tour.city });
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
   const citySlug = pathSegments[2] ?? "";
+  const destinationPlaceId = `${canonicalUrl}#destination`;
+  const departurePlaceId = `${canonicalUrl}#departure`;
 
   const itinerary =
     tour.itinerary.length > 0
@@ -44,6 +77,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
       ? { price: tour.priceAmount }
       : {}),
     availability: "https://schema.org/InStock",
+    priceValidUntil: getPriceValidUntil(),
   };
 
   const aggregateRatingNode =
@@ -79,8 +113,21 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     "@type": "WebPage",
     "@id": `${canonicalUrl}#webpage`,
     url: canonicalUrl,
-    name: tour.title,
-    description: tour.metaDescription,
+    name: schemaName,
+    description,
+    isPartOf: { "@id": SITE_WEBSITE_ID },
+    publisher: { "@id": SITE_ORGANIZATION_ID },
+    ...(tour.heroImageUrl
+      ? {
+          primaryImageOfPage: {
+            "@type": "ImageObject",
+            "@id": `${canonicalUrl}#primaryimage`,
+            url: tour.heroImageUrl,
+          },
+          image: tour.heroImageUrl,
+        }
+      : {}),
+    about: { "@id": `${canonicalUrl}#product` },
     mainEntity: { "@id": `${canonicalUrl}#trip` },
   };
 
@@ -119,14 +166,46 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           },
         ],
       },
+      {
+        "@type": "Organization",
+        "@id": SITE_ORGANIZATION_ID,
+        name: ORGANIZATION_NAME,
+        url: buildCanonicalUrl("/"),
+      },
+      {
+        "@type": "Brand",
+        "@id": SITE_BRAND_ID,
+        name: SITE_BRAND_NAME,
+      },
+      {
+        "@type": "WebSite",
+        "@id": SITE_WEBSITE_ID,
+        url: buildCanonicalUrl("/"),
+        name: SITE_BRAND_NAME,
+        publisher: { "@id": SITE_ORGANIZATION_ID },
+      },
       webpageNode,
+      {
+        "@type": "Place",
+        "@id": destinationPlaceId,
+        name: tour.city,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: tour.city,
+          addressRegion: tour.state,
+          addressCountry: "US",
+        },
+      },
       {
         "@type": "TouristTrip",
         "@id": `${canonicalUrl}#trip`,
-        name: tour.title,
+        name: schemaName,
         description,
         image: tour.heroImageUrl,
         url: canonicalUrl,
+        provider: { "@id": SITE_ORGANIZATION_ID },
+        touristDestination: { "@id": destinationPlaceId },
+        areaServed: { "@id": destinationPlaceId },
         offers: { "@id": offerNode["@id"] },
         itinerary,
         ...(categoryLabel ? { touristType: categoryLabel } : {}),
@@ -134,6 +213,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
           ? {
               departureStation: {
                 "@type": "Place",
+                "@id": departurePlaceId,
                 name: "Meeting point",
                 address: tour.meetingPointText,
               },
@@ -143,11 +223,15 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
       {
         "@type": "Product",
         "@id": `${canonicalUrl}#product`,
-        name: tour.title,
+        name: schemaName,
         image: tour.heroImageUrl,
         description,
         category: categoryLabel ?? undefined,
         url: canonicalUrl,
+        brand: { "@id": SITE_BRAND_ID },
+        provider: { "@id": SITE_ORGANIZATION_ID },
+        seller: { "@id": SITE_ORGANIZATION_ID },
+        areaServed: { "@id": destinationPlaceId },
         offers: { "@id": offerNode["@id"] },
         ...(aggregateRatingNode
           ? { aggregateRating: { "@id": aggregateRatingNode["@id"] } }
