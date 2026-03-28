@@ -1,18 +1,19 @@
 const RENTAL_KEYWORDS = [
+  "rental",
+  "rentals",
   "bike rental",
   "kayak rental",
-  "scooter rental",
-  "rental",
-  "hire",
-  "equipment",
-  "e-bike rental",
-  "sup",
+  "equipment rental",
 ];
+
+const TOUR_SIGNAL_KEYWORDS = ["tour", "guided"];
 
 export const detectRental = (title: string): "tour" | "rental" => {
   const normalized = title.toLowerCase();
+  const isRental = RENTAL_KEYWORDS.some(keyword => normalized.includes(keyword));
+  const isClearlyTour = TOUR_SIGNAL_KEYWORDS.some(keyword =>
+    normalized.includes(keyword)
+  );
 
-  return RENTAL_KEYWORDS.some(keyword => normalized.includes(keyword))
-    ? "rental"
-    : "tour";
+  return isRental && !isClearlyTour ? "rental" : "tour";
 };

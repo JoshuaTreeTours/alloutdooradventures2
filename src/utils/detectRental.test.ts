@@ -12,4 +12,8 @@ describe("detectRental", () => {
     expect(detectRental("Guided Desert Jeep Tour")).toBe("tour");
     expect(detectRental("City E-Bike Adventure")).toBe("tour");
   });
+
+  it("keeps guided rental-titled tours classified as tours", () => {
+    expect(detectRental("Guided E-Bike Rental Tour")).toBe("tour");
+  });
 });
