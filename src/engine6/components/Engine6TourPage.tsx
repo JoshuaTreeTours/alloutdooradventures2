@@ -96,34 +96,45 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <section className="border-b border-[#d7d0c4] bg-[#f1ebdf]" data-testid="engine6-breadcrumbs">
-        <nav
-          aria-label="Breadcrumb"
-          className="mx-auto max-w-6xl px-6 py-3 text-sm text-slate-700"
-        >
-          <ol className="flex flex-wrap items-center gap-2">
-            {breadcrumbs.map(crumb => (
-              <li key={crumb.href} className="inline-flex items-center gap-2">
-                <a href={crumb.href} className="hover:text-green-900 hover:underline">
-                  {crumb.label}
-                </a>
-                <span aria-hidden="true">/</span>
-              </li>
-            ))}
-            <li aria-current="page" className="font-semibold text-slate-900">
-              {tour.title}
-            </li>
-          </ol>
-        </nav>
-      </section>
-
       <section
         className="bg-[#2f4a2f] text-white"
         data-testid="engine6-hero-banner"
       >
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-[1.05fr_0.95fr] md:items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-white/75">
+            <nav
+              aria-label="Breadcrumb"
+              className="mb-4 text-xs text-green-100/80"
+              data-testid="engine6-breadcrumbs"
+            >
+              <ol className="flex flex-wrap items-center gap-2">
+                {breadcrumbs.map((crumb, index) => (
+                  <li key={crumb.href} className="inline-flex items-center gap-2">
+                    <a
+                      href={crumb.href}
+                      aria-label={index === 2 ? `${crumb.label} Tours & Activities` : crumb.label}
+                      className="transition hover:text-white hover:underline"
+                    >
+                      {crumb.label}
+                    </a>
+                    <span aria-hidden="true" className="text-white/40">
+                      /
+                    </span>
+                  </li>
+                ))}
+                <li aria-current="page" className="font-medium text-white/90">
+                  {tour.title}
+                </li>
+              </ol>
+            </nav>
+
+            <p
+              className="text-[11px] font-medium uppercase tracking-[0.2em] text-green-100/70"
+              data-testid="engine6-tours-activities-label"
+            >
+              {tour.city} Tours & Activities
+            </p>
+            <p className="mt-2 text-xs uppercase tracking-[0.3em] text-white/75">
               {tour.city}, {tour.state}
             </p>
             {categoryLabel ? (
