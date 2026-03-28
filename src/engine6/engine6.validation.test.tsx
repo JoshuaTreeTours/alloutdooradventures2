@@ -53,6 +53,15 @@ describe("engine6 single-tour validation harness", () => {
       const schema = buildEngine6SchemaGraph(tour);
       const graph = schema["@graph"] as Array<Record<string, unknown>>;
       const offer = graph.find(node => node["@type"] === "Offer");
+      const product = graph.find(node => node["@type"] === "Product") as
+        | Record<string, unknown>
+        | undefined;
+      const trip = graph.find(node => node["@type"] === "TouristTrip") as
+        | Record<string, unknown>
+        | undefined;
+      const webPage = graph.find(node => node["@type"] === "WebPage") as
+        | Record<string, unknown>
+        | undefined;
       const expectedHero = ((fixture.rawPayload.product as any)?.media?.images?.[0]
         ?.variants?.FULL?.url ?? null) as string | null;
 
@@ -62,7 +71,7 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.diagnostics.heroSourceType).toBe("api-primary");
       expect(tour.diagnostics.heroFallbackTriggered).toBe(false);
       expect(tour.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
-      expect(tour.priceFormatted).toMatch(/^From \$/);
+      expect(tour.priceFormatted).toMatch(/^Starting at \$/);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(100);
       expect(tour.seoTitle).toContain(tour.title);
@@ -95,6 +104,18 @@ describe("engine6 single-tour validation harness", () => {
         tour.faqs.length > 0
       );
       expect(offer?.url).toBe(tour.bookingUrl);
+      expect(offer?.price).toBe(tour.priceAmount ?? undefined);
+      expect(String((offer as { priceValidUntil?: string }).priceValidUntil)).toMatch(
+        /^\d{4}-\d{2}-\d{2}$/
+      );
+      expect(product?.image).toBe(tour.heroImageUrl);
+      expect(trip?.image).toBe(tour.heroImageUrl);
+      expect(product?.name).toBe(trip?.name);
+      expect(webPage?.name).toBe(product?.name);
+      expect(String(product?.description ?? "").length).toBeGreaterThan(40);
+      expect(product?.url).toBe(
+        `https://www.alloutdooradventures.com${tour.canonicalPath}`
+      );
       expect(tour.diagnostics.bookingUrlSource).toBe("product.productUrl");
       expect(tour.diagnostics.fieldLevelFallbackUsed).toBe(false);
       expect(tour.diagnostics.fallbackFieldNames).toEqual([]);

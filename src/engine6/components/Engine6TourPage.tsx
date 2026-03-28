@@ -177,7 +177,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 <div className="space-y-4">
                   {hasPrice ? (
                     <p>
-                      <strong>From:</strong> {tour.priceFormatted} per person
+                      <strong>Price:</strong> {tour.priceFormatted} per person
                     </p>
                   ) : null}
                   {hasRating ? (

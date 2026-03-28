@@ -57,6 +57,11 @@ export const mapViatorToEngine6Tour = (
     !payload.extracted.meetingPointText ? "meetingPointText" : null,
   ].filter((value): value is string => Boolean(value));
 
+  const formattedStartingPrice =
+    typeof payload.extracted.priceAmount === "number"
+      ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
+      : payload.extracted.priceFormatted?.replace(/^From\s+/i, "Starting at ");
+
   return {
     productCode: payload.rawProductCode,
     title,
@@ -70,7 +75,7 @@ export const mapViatorToEngine6Tour = (
     state,
     heroImageUrl,
     priceAmount: payload.extracted.priceAmount,
-    priceFormatted: payload.extracted.priceFormatted ?? "Check latest price",
+    priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,
     reviewCount: payload.extracted.reviewCount,
     meetingPointText:
