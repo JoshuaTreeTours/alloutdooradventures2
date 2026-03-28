@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "26719P8",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Emerald-Cave-Kayaking-Tour/d684-26719P8",
+    "title": "Emerald Cave Kayaking Tour",
+    "description": {
+      "text": "Leave the Strip behind for a guided paddle through one of the Colorado River’s calmest and most scenic stretches. After an optional hotel pickup in Las Vegas, you’ll launch at Willow Beach Marina, review safety basics, and kayak in a small group toward Emerald Cave. The route is beginner-friendly, with time to pause for photos, wildlife spotting, and a snack break on the shoreline. Your guide shares local context while keeping the pace comfortable for mixed experience levels. Choose hotel transport or self-drive, then return after a half-day on the water with memorable canyon views and cave reflections."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$109.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 5060
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg",
+              "width": 360,
+              "height": 240
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Paddle a gentle Colorado River section with a guide and small group dynamics.",
+      "Visit Emerald Cave with time for photos in the cave’s bright green glow.",
+      "Use included kayak gear, safety equipment, snacks, and bottled water.",
+      "Select optional Las Vegas hotel pickup or meet directly at Willow Beach Marina."
+    ],
+    "inclusions": [
+      "Kayak tour in single (1 person) or tandem (2 person) kayaks",
+      "All safety equipment",
+      "Snacks",
+      "Bottled water",
+      "Pick-up and drop off from select hotels (if option selected)",
+      "National Park entrance fees (hotel pickup option)"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking.",
+      "Not wheelchair accessible.",
+      "Service animals allowed.",
+      "Not recommended for travelers with back problems.",
+      "No heart problems or other serious medical conditions.",
+      "Most travelers can participate.",
+      "Please be advised hotel pick-ups commence 60-90 minutes before the posted departure time.",
+      "National Park entry fee is only included with hotel pickups, not self-drive.",
+      "Weight limit is 260 lbs.",
+      "This tour/activity will have a maximum of 13 travelers."
+    ],
+    "meetingPoint": {
+      "name": "Willow Beach Marina, 25804 N Willow Beach, Willow Beach, AZ 86445, USA",
+      "description": "Self-drive guests meet at Willow Beach Marina about one hour from the Las Vegas Strip. Launch times shift seasonally, and the operator confirms the exact meet time 24–48 hours before departure."
+    },
+    "itineraryItems": [
+      {
+        "title": "Willow Beach Marina",
+        "description": "Meet your guide, get fitted with gear, and review paddling and safety instructions before launching on the Colorado River.",
+        "duration": "4 hours",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Emerald Cave",
+        "description": "Paddle to the cave with stops for photos, snacks, and short breaks along the shoreline.",
+        "duration": "30 minutes",
+        "admissionNote": "Admission ticket included"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How early before departure does Las Vegas pickup begin?",
+        "answer": "Pickup commonly begins around 60 to 90 minutes before your selected launch time, and the operator confirms your exact pickup window before the tour."
+      },
+      {
+        "question": "Is this suitable for first-time kayakers?",
+        "answer": "Yes. The route follows a calmer stretch of the Colorado River, and guides provide a safety briefing and pacing support for mixed experience levels."
+      },
+      {
+        "question": "What is included if I choose the self-drive option?",
+        "answer": "Your kayak, paddle, safety gear, snacks, and bottled water are included. National Park entrance fees are included only with the hotel pickup option."
+      }
+    ],
+    "categories": [
+      "paddle-tour"
+    ]
+  }
+}

@@ -11,6 +11,9 @@ export const ENGINE6_CATALINA_PRODUCT_CODE = "32779P2";
 export const ENGINE6_ANTELOPE_PRODUCT_CODE = "60136P1";
 export const ENGINE6_ANTELOPE_ROUTE =
   "/destinations/nevada/las-vegas/tours/antelope-canyon-horseshoe-bend-day-tour-from-las-vegas";
+export const ENGINE6_EMERALD_CAVE_PRODUCT_CODE = "26719P8";
+export const ENGINE6_EMERALD_CAVE_ROUTE =
+  "/destinations/nevada/las-vegas/tours/emerald-cave-kayaking-tour";
 export const ENGINE6_CATALINA_ROUTE =
   "/destinations/california/avalon/tours/yellow-semi-submarine-tour-of-catalina-island-from-avalon";
 
@@ -19,6 +22,7 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_PARAGON_ROUTE]: ENGINE6_PARAGON_PRODUCT_CODE,
   [ENGINE6_CATALINA_ROUTE]: ENGINE6_CATALINA_PRODUCT_CODE,
   [ENGINE6_ANTELOPE_ROUTE]: ENGINE6_ANTELOPE_PRODUCT_CODE,
+  [ENGINE6_EMERALD_CAVE_ROUTE]: ENGINE6_EMERALD_CAVE_PRODUCT_CODE,
 };
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>

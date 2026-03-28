@@ -69,6 +69,7 @@ import {
 import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
+  ENGINE6_EMERALD_CAVE_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
 } from "./engine6/routes";
@@ -259,6 +260,7 @@ export default function App() {
         <Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_CATALINA_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_ANTELOPE_ROUTE} component={Engine6SpecimenRoute} />
+        <Route path={ENGINE6_EMERALD_CAVE_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

@@ -29,6 +29,7 @@ import { engine6ResolvedTours } from "./registry";
 import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
+  ENGINE6_EMERALD_CAVE_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
 } from "./routes";
@@ -793,6 +794,37 @@ describe("engine6 listing surfaces", () => {
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: { pathname: string; search?: string } }).location =
       previousLocation;
+  });
+
+  it("routes and renders 26719P8 in Las Vegas with itinerary, FAQs, and affiliate booking URL", () => {
+    const emeraldTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "26719P8"
+    );
+    expect(emeraldTour).toBeDefined();
+    expect(emeraldTour?.pagePath).toBe(ENGINE6_EMERALD_CAVE_ROUTE);
+    expect(emeraldTour?.itinerary.length).toBeGreaterThan(0);
+    expect(emeraldTour?.faqs.length).toBeGreaterThan(0);
+    expect(emeraldTour?.included.length).toBeGreaterThan(0);
+    expect(emeraldTour?.requirements.length).toBeGreaterThan(0);
+    expect(emeraldTour?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Las-Vegas/Emerald-Cave-Kayaking-Tour/d684-26719P8?pid=P00290915&mcid=42383&medium=link"
+    );
+
+    const detailHtml = renderToString(<Engine6TourPage tour={emeraldTour!} />);
+    const escapedHero = emeraldTour!.heroImageUrl.replace(/&/g, "&amp;");
+    expect(detailHtml).toContain(">Itinerary<");
+    expect(detailHtml).toContain(">FAQs<");
+    expect(detailHtml).toContain(`src="${escapedHero}"`);
+
+    const unified = getToursByCityUnified("nevada", "las-vegas");
+    const entry = unified.find(item => item.tour.productCode === "26719P8");
+    expect(entry).toBeDefined();
+    expect(entry?.href).toBe(ENGINE6_EMERALD_CAVE_ROUTE);
+    expect(entry?.tour.heroImage).toBe(emeraldTour?.heroImageUrl);
+    expect(entry?.tour.primaryImageUrl).toBe(emeraldTour?.heroImageUrl);
+    expect(entry?.tour.badges?.priceFrom).toBe("From $109");
+    expect(entry?.tour.badges?.rating).toBe(4.9);
+    expect(entry?.tour.badges?.reviewCount).toBe(5060);
   });
 
   it("renders a non-empty Las Vegas city tours hero src (no alt-only fallback block)", () => {
