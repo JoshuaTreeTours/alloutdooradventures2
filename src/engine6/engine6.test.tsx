@@ -585,6 +585,49 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.badges?.reviewCount).toBeGreaterThan(100);
   });
 
+  it("uses the exact same resolved hero for Vegas detail page, city listing card, and filtered tours card", () => {
+    const vegasTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5119P13"
+    );
+    const expectedHero = vegasTour?.heroImageUrl;
+    expect(expectedHero).toContain("https://");
+
+    const cityUnified = getToursByCityUnified("nevada", "las-vegas");
+    const cityEntry = cityUnified.find(entry => entry.tour.productCode === "5119P13");
+    expect(cityEntry?.tour.heroImage).toBe(expectedHero);
+    expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero);
+
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as {
+      location?: { pathname: string; search?: string };
+    }).location;
+    (globalThis as {
+      window?: {
+        location: { pathname: string; search: string };
+        history: { pushState: () => void };
+      };
+    }).window = {
+      location: {
+        pathname: "/tours",
+        search: "?state=nevada&city=las-vegas",
+      },
+      history: { pushState: () => {} },
+    };
+    (globalThis as { location?: { pathname: string; search: string } }).location = {
+      pathname: "/tours",
+      search: "?state=nevada&city=las-vegas",
+    };
+
+    const filteredHtml = renderToString(<ToursLanding />);
+    expect(filteredHtml).toContain(
+      `src="${expectedHero?.replace(/&/g, "&amp;")}"`
+    );
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: { pathname: string; search?: string } }).location =
+      previousLocation;
+  });
+
 
   it("trace: specimen slug survives to the rendered card arrays and DOM for both listing pages", () => {
     const specimenSlug = "santa-barbara-vineyard-to-table-taste-tour-by-e-bike";
