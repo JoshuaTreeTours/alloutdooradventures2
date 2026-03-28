@@ -680,6 +680,79 @@ describe("engine6 listing surfaces", () => {
   });
 });
 
+describe("engine6 multi-tour contract", () => {
+  it.each(engine6ResolvedTours)(
+    "renders supported sections conditionally for %s",
+    tour => {
+      const html = renderToString(<Engine6TourPage tour={tour} />);
+      const schema = buildEngine6SchemaGraph(tour);
+      const graph = schema["@graph"] as Array<Record<string, unknown>>;
+      const faqNode = graph.find(node => node["@type"] === "FAQPage");
+      const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+        | Record<string, unknown>
+        | undefined;
+
+      expect(tour.heroImageUrl).toContain("http");
+      expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+      expect(html).toContain(
+        `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
+      );
+      expect(tour.bookingUrl).toContain("pid=P00290915");
+      expect(tour.bookingUrl).toContain("mcid=42383");
+      expect(html).toContain(tour.bookingUrl.replace(/&/g, "&amp;"));
+
+      if (tour.overviewText) {
+        expect(html).toContain(">Overview<");
+      }
+      if (tour.highlights.length > 0) {
+        expect(html).toContain(">Highlights<");
+      }
+      if (tour.meetingPointText) {
+        expect(html).toContain("Meeting point:");
+      }
+      if (tour.included.length > 0) {
+        expect(html).toContain(">What’s included<");
+      }
+      if (tour.itinerary.length > 0) {
+        expect(html).toContain(">Itinerary<");
+        expect(tripNode?.itinerary).toBeTruthy();
+      }
+      if (tour.requirements.length > 0) {
+        expect(html).toContain(">Additional info<");
+      }
+      if (tour.faqs.length > 0) {
+        expect(html).toContain(">FAQs<");
+      }
+
+      expect(Boolean(faqNode)).toBe(tour.faqs.length > 0);
+    }
+  );
+});
+
+describe("engine6 specimen-specific coverage", () => {
+  it("renders the Las Vegas paragon specimen with rich sections", () => {
+    const vegasTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5119P13"
+    );
+    expect(vegasTour).toBeDefined();
+
+    const html = renderToString(<Engine6TourPage tour={vegasTour!} />);
+    expect(html).toContain(">Overview<");
+    expect(html).toContain(">Highlights<");
+    expect(html).toContain("Meeting point:");
+    expect(html).toContain(">What’s included<");
+    expect(html).toContain(">Itinerary<");
+    expect(html).toContain(">Additional info<");
+    expect(html).toContain(">FAQs<");
+    expect(html).toContain("Hoover Dam");
+    expect(html).toContain("Grand Canyon West");
+    expect(html).toContain(
+      "Is helicopter landing included in the standard tour option?"
+    );
+    expect((html.match(/<details /g) ?? []).length).toBe(2);
+  });
+});
+
 describe("engine6 route wiring", () => {
   it("registers the specimen route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
