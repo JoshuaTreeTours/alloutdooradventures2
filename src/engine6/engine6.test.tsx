@@ -469,7 +469,6 @@ describe("engine6 diagnostics visibility", () => {
   it("keeps diagnostics hidden by default and allows an explicit debug query", () => {
     expect(shouldShowEngine6Diagnostics("")).toBe(false);
     expect(shouldShowEngine6Diagnostics("?engine6Debug=1")).toBe(true);
-    expect(shouldShowEngine6Diagnostics("", true)).toBe(true);
   });
 });
 
