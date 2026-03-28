@@ -12,11 +12,22 @@ import {
 } from "../../engine5/viator/extractors";
 
 export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE = "421920P2";
+export const ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES = new Set([
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+  "163873P4",
+]);
 
 export type Engine4BridgeRuntimeSource =
   | "live-api"
   | "bundled-fallback"
   | "cached-engine4-fallback";
+
+export const isEngine4StrictEngine5BridgeProductCode = (
+  productCode: string
+): boolean =>
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.has(
+    productCode.trim().toUpperCase()
+  );
 
 const cleanText = (value: unknown): string | undefined => {
   if (typeof value !== "string") {
@@ -75,7 +86,11 @@ export const mapEngine5ProductPayloadToEngine4ApiTour = (input: {
     productCode: normalizedCode,
     title,
     sourceUrl,
-    fromPrice: commercialPrice?.formattedPrice ?? (typeof commercialPrice?.amount === "number" ? String(commercialPrice.amount) : undefined),
+    fromPrice:
+      commercialPrice?.formattedPrice ??
+      (typeof commercialPrice?.amount === "number"
+        ? String(commercialPrice.amount)
+        : undefined),
     priceCurrency:
       cleanText(product.currencyCode) ??
       cleanText(product.priceCurrency) ??
@@ -122,7 +137,7 @@ export const resolve421920P2BridgeApiTour = (input: {
 }) => {
   const normalizedCode = input.productCode.trim().toUpperCase();
   const isStrictProduct =
-    normalizedCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE;
+    isEngine4StrictEngine5BridgeProductCode(normalizedCode);
 
   if (!isStrictProduct) {
     return {
@@ -132,7 +147,10 @@ export const resolve421920P2BridgeApiTour = (input: {
     };
   }
 
-  if (input.runtimeApiTour && hasViatorNonZeroPrice(input.runtimeApiTour.fromPrice)) {
+  if (
+    input.runtimeApiTour &&
+    hasViatorNonZeroPrice(input.runtimeApiTour.fromPrice)
+  ) {
     return {
       apiTour: input.runtimeApiTour,
       runtimeSource:

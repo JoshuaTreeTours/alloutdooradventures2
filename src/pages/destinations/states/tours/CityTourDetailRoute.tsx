@@ -60,8 +60,8 @@ import {
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
 import {
-  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
   hasViatorNonZeroPrice,
+  isEngine4StrictEngine5BridgeProductCode,
   mapEngine5ProductPayloadToEngine4ApiTour,
   resolve421920P2BridgeApiTour,
   type Engine4BridgeRuntimeSource,
@@ -109,7 +109,7 @@ export default function CityTourDetailRoute({
     if (
       !engine4RouteTour ||
       engine4RouteTour.bookingProvider !== "viator" ||
-      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      !isEngine4StrictEngine5BridgeProductCode(engine4RouteTour.id)
     ) {
       return;
     }
@@ -195,63 +195,58 @@ export default function CityTourDetailRoute({
         return null;
       }
 
-      return (
-        (() => {
-          const cachedFallback =
-            engine4ViatorApiFallbackByProductCode[productCode];
-          const resolvedBridge = resolve421920P2BridgeApiTour({
-            productCode,
-            runtimeApiTour: strictBridgeApiTour,
-            runtimeSource: strictBridgeSource,
-            cachedFallbackApiTour: cachedFallback,
-          });
+      return (() => {
+        const cachedFallback =
+          engine4ViatorApiFallbackByProductCode[productCode];
+        const resolvedBridge = resolve421920P2BridgeApiTour({
+          productCode,
+          runtimeApiTour: strictBridgeApiTour,
+          runtimeSource: strictBridgeSource,
+          cachedFallbackApiTour: cachedFallback,
+        });
 
-          const hasPrice = hasViatorNonZeroPrice(
-            resolvedBridge.apiTour?.fromPrice
+        const hasPrice = hasViatorNonZeroPrice(
+          resolvedBridge.apiTour?.fromPrice
+        );
+
+        if (resolvedBridge.isStrictProduct && !hasPrice) {
+          return (
+            <main className="mx-auto max-w-4xl px-6 py-16">
+              <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                Pricing temporarily unavailable
+              </h1>
+              <p className="mt-4 text-[#334433]">
+                We couldn&apos;t load valid pricing for this tour right now.
+                Please try again shortly.
+              </p>
+            </main>
           );
+        }
 
-          if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
-            !hasPrice
-          ) {
-            return (
-              <main className="mx-auto max-w-4xl px-6 py-16">
-                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
-                  Pricing temporarily unavailable
-                </h1>
-                <p className="mt-4 text-[#334433]">
-                  We couldn&apos;t load valid pricing for this tour right now. Please
-                  try again shortly.
-                </p>
-              </main>
-            );
-          }
+        const mappedTour = mapViatorToEngine4Tour({
+          record: tourRecord,
+          apiTour: resolvedBridge.apiTour,
+        });
 
-          const mappedTour = mapViatorToEngine4Tour({
-            record: tourRecord,
-            apiTour: resolvedBridge.apiTour,
-          });
+        if (
+          resolvedBridge.isStrictProduct &&
+          !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
+        ) {
+          return (
+            <main className="mx-auto max-w-4xl px-6 py-16">
+              <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                Pricing temporarily unavailable
+              </h1>
+              <p className="mt-4 text-[#334433]">
+                Tour details loaded, but a valid non-zero price is not currently
+                available.
+              </p>
+            </main>
+          );
+        }
 
-          if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
-            !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
-          ) {
-            return (
-              <main className="mx-auto max-w-4xl px-6 py-16">
-                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
-                  Pricing temporarily unavailable
-                </h1>
-                <p className="mt-4 text-[#334433]">
-                  Tour details loaded, but a valid non-zero price is not
-                  currently available.
-                </p>
-              </main>
-            );
-          }
-
-          return <Engine4TourPage tour={mappedTour} />;
-        })()
-      );
+        return <Engine4TourPage tour={mappedTour} />;
+      })();
     }
 
     if (

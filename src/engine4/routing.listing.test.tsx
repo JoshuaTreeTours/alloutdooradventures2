@@ -106,10 +106,11 @@ describe("Engine4 Aspen routing/listing", () => {
     expect(routed?.id).toBe("74828P3");
   });
 
-
   it("builds the 3454_B0016 route and exposes it in San Francisco listing", () => {
     const entries = getEngine4ListingEntries("california", "san-francisco");
-    const target = entries.find(entry => entry.tour.productCode === "3454_B0016");
+    const target = entries.find(
+      entry => entry.tour.productCode === "3454_B0016"
+    );
 
     expect(target).toBeDefined();
     expect(target?.href).toBe(
@@ -267,4 +268,41 @@ describe("Engine4 Aspen routing/listing", () => {
     );
   });
 
+  it("builds the 163873P4 route and exposes it in Moab listing", () => {
+    const entries = getEngine4ListingEntries("utah", "moab");
+    const target = entries.find(entry => entry.tour.productCode === "163873P4");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/utah/moab/tours/half-day-canyoneering-tour-163873p4"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "utah",
+      "moab",
+      "half-day-canyoneering-tour-163873p4"
+    );
+
+    expect(routed?.id).toBe("163873P4");
+  });
+
+  it("keeps 421920P2 route unchanged", () => {
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "santa-barbara",
+      "epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
+    );
+
+    expect(routed?.id).toBe("421920P2");
+  });
+
+  it("keeps unrelated 36001P1 route unchanged", () => {
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "san-francisco",
+      "yosemite-in-a-day-tour-from-san-francisco-36001p1"
+    );
+
+    expect(routed?.id).toBe("36001P1");
+  });
 });

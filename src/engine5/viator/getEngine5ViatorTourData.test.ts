@@ -25,7 +25,8 @@ describe("getEngine5ViatorTourData", () => {
       json: async () => ({
         product: {
           productCode: "132218P209",
-          title: "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
+          title:
+            "BEST Yosemite National Park and Kings Canyon National Park 2-Day Tour from LA",
           shortDescription: "Two-day guided trip from Los Angeles.",
           productUrl:
             "https://www.viator.com/tours/Los-Angeles/BEST-Yosemite-National-Park-and-Kings-Canyon-National-Park-2-Day-Tour-from-LA/d645-132218P209",
@@ -97,7 +98,8 @@ describe("getEngine5ViatorTourData", () => {
           productCode: "132218P209",
           title: "Yosemite and Kings Canyon 2-Day Tour from LA",
           shortDescription: "Two-day guided trip",
-          productUrl: "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
+          productUrl:
+            "https://www.viator.com/tours/Los-Angeles/example/d645-132218P209",
           images: [],
         },
       }),
@@ -148,6 +150,65 @@ describe("getEngine5ViatorTourData", () => {
     expect(result.heroSelectionSize).toEqual({ width: 1600, height: 900 });
     expect(result.rating).toBe(4.9);
     expect(result.reviewCount).toBe(2710);
+    expect(result.provenance.resolverDiagnostics?.rating.fieldPath).toBe(
+      "product.reviews.averageRating"
+    );
+    expect(result.provenance.resolverDiagnostics?.reviewCount.fieldPath).toBe(
+      "product.reviews.count"
+    );
   });
 
+  it("emits resolver diagnostics and keeps rating/review family paired", async () => {
+    vi.spyOn(globalThis, "fetch").mockResolvedValue({
+      ok: true,
+      json: async () => ({
+        product: {
+          productCode: "ZION123",
+          title: "Zion Mountaineering Adventure",
+          shortDescription: "Technical route with guides.",
+          productUrl:
+            "https://www.viator.com/tours/Utah/Zion-Mountaineering-Adventure/d785-ZION123",
+          pricing: { summary: { fromPriceFormatted: "$189.00" } },
+          reviewSummary: { averageRating: 4.8, totalReviews: 240 },
+          reviews: { combinedAverageRating: 4.9, totalReviews: 260 },
+          media: {
+            images: [
+              {
+                isCover: true,
+                variants: {
+                  FULL: {
+                    url: "https://dynamic-media.tacdn.com/media/photo-o/zion-full.jpg",
+                    width: 1600,
+                    height: 900,
+                  },
+                },
+              },
+            ],
+          },
+        },
+      }),
+    } as Response);
+
+    const result = await getEngine5ViatorTourData("ZION123");
+
+    expect(result.fromPrice).toBe("$189.00");
+    expect(result.rating).toBe(4.8);
+    expect(result.reviewCount).toBe(240);
+    expect(result.provenance.resolverDiagnostics).toEqual({
+      price: {
+        value: "$189.00",
+        fieldPath: "product.pricing.summary.fromPriceFormatted",
+      },
+      rating: {
+        value: 4.8,
+        fieldPath: "product.reviewSummary.averageRating",
+        sourceFamily: "review-summary",
+      },
+      reviewCount: {
+        value: 240,
+        fieldPath: "product.reviewSummary.totalReviews",
+        sourceFamily: "review-summary",
+      },
+    });
+  });
 });
