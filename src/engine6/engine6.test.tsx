@@ -1000,6 +1000,146 @@ describe("engine6 specimen-specific coverage", () => {
   });
 });
 
+
+
+describe("engine6 image parity guardrails", () => {
+  const parseStateCityFromCanonicalPath = (path: string) => {
+    const [, stateSlug = "", citySlug = ""] =
+      /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(path) ?? [];
+    return { stateSlug, citySlug };
+  };
+
+  it.each(["63657P1", "5119P13", "32779P2", "60136P1"])(
+    "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
+    productCode => {
+      const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+      expect(tour).toBeDefined();
+      const expectedHero = tour!.heroImageUrl;
+      expect(expectedHero).toContain("https://");
+
+      const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+      const escapedHero = expectedHero.replace(/&/g, "&amp;");
+      expect(detailHtml).toContain(`src="${escapedHero}"`);
+      expect(detailHtml).not.toContain("/images/hiking-hero.jpg");
+
+      const { stateSlug, citySlug } = parseStateCityFromCanonicalPath(tour!.canonicalPath);
+      const unified = getToursByCityUnified(stateSlug, citySlug);
+      const cityEntry = unified.find(entry => entry.tour.productCode === productCode);
+      expect(cityEntry).toBeDefined();
+      expect(cityEntry?.tour.heroImage).toBe(expectedHero);
+      expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero);
+
+      const cityCardHtml = renderToString(
+        <TourCard tour={cityEntry!.tour} href={cityEntry!.href} />
+      );
+      expect(cityCardHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(cityCardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+      expect(cityCardHtml).not.toContain("/images/hiking-hero.jpg");
+
+      const previousWindow = (globalThis as { window?: Window }).window;
+      const previousLocation = (globalThis as {
+        location?: { pathname: string; search?: string };
+      }).location;
+      (globalThis as {
+        window?: {
+          location: { pathname: string; search: string };
+          history: { pushState: () => void };
+        };
+      }).window = {
+        location: { pathname: "/tours", search: `?state=${stateSlug}&city=${citySlug}` },
+        history: { pushState: () => {} },
+      };
+      (globalThis as { location?: { pathname: string; search: string } }).location = {
+        pathname: "/tours",
+        search: `?state=${stateSlug}&city=${citySlug}`,
+      };
+
+      const filteredHtml = renderToString(<ToursLanding />);
+      expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+
+      (globalThis as { window?: Window }).window = previousWindow;
+      (globalThis as { location?: { pathname: string; search?: string } }).location =
+        previousLocation;
+
+      const relatedEngine6Entries = unified.filter(
+        entry =>
+          entry.tour.engine === "engine6" &&
+          entry.tour.productCode !== productCode &&
+          entry.tour.slug !== cityEntry?.tour.slug
+      );
+
+      if (relatedEngine6Entries.length > 0) {
+        for (const related of relatedEngine6Entries) {
+          const escapedRelatedHero = related.tour.heroImage.replace(/&/g, "&amp;");
+          expect(detailHtml).toContain(`data-card-image-src="${escapedRelatedHero}"`);
+          expect(detailHtml).toContain(`data-hero-image-src="${escapedRelatedHero}"`);
+        }
+      }
+    }
+  );
+
+  it("blocks legacy/alternate image fields from overriding Engine6 heroImage", () => {
+    const tour = {
+      id: "engine6-legacy-test",
+      engine: "engine6",
+      productCode: "LEGACY",
+      slug: "legacy-image-override-test",
+      title: "Legacy Override Test",
+      destination: {
+        country: "United States",
+        state: "Nevada",
+        stateSlug: "nevada",
+        city: "Las Vegas",
+        citySlug: "las-vegas",
+      },
+      heroImage: "https://cdn.example.com/hero-canonical.jpg",
+      primaryImageUrl: "https://cdn.example.com/legacy-primary.jpg",
+      galleryImages: ["https://cdn.example.com/gallery-first.jpg"],
+      badges: {},
+      activitySlugs: ["hiking"],
+      bookingProvider: "viator",
+      bookingUrl: "https://www.viator.com/search/LEGACY",
+      longDescription: "Legacy override guardrail test",
+    } as const;
+
+    const html = renderToString(<TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/legacy-image-override-test" />);
+    expect(html).toContain('data-card-image-src="https://cdn.example.com/hero-canonical.jpg"');
+    expect(html).toContain('data-hero-image-src="https://cdn.example.com/hero-canonical.jpg"');
+    expect(html).not.toContain("legacy-primary.jpg");
+    expect(html).not.toContain("gallery-first.jpg");
+    expect(html).not.toContain("/images/hiking-hero.jpg");
+  });
+
+  it("uses placeholder for Engine6 cards only when heroImage is absent", () => {
+    const tour = {
+      id: "engine6-placeholder-test",
+      engine: "engine6",
+      productCode: "NOPIC",
+      slug: "engine6-placeholder-test",
+      title: "Placeholder Fallback Test",
+      destination: {
+        country: "United States",
+        state: "Nevada",
+        stateSlug: "nevada",
+        city: "Las Vegas",
+        citySlug: "las-vegas",
+      },
+      heroImage: "",
+      badges: {},
+      activitySlugs: ["hiking"],
+      bookingProvider: "viator",
+      bookingUrl: "https://www.viator.com/search/NOPIC",
+      longDescription: "Placeholder-only fallback test",
+    } as const;
+
+    const html = renderToString(
+      <TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test" />
+    );
+    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
+  });
+});
+
 describe("engine6 route wiring", () => {
   it("registers the specimen route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");

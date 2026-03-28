@@ -74,6 +74,14 @@ function formatCategoryLabel(slug?: string): string {
   return slug.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
 }
 
+
+const resolveEngine6CardImage = (tour: Tour) => {
+  const resolvedHero = tour.heroImage?.trim();
+  return resolvedHero && resolvedHero.length > 0
+    ? resolvedHero
+    : ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
+};
+
 function getCardBlurb(tour: Tour): string {
   if (isRentalTour(tour)) {
     return buildRentalDescription({
@@ -148,11 +156,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? tour.heroImage?.trim() || ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
+        ? resolveEngine6CardImage(tour)
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? tour.heroImage?.trim() || ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
+      ? resolveEngine6CardImage(tour)
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
