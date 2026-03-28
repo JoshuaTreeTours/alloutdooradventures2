@@ -267,4 +267,33 @@ describe("Engine4 Aspen routing/listing", () => {
     );
   });
 
+  it("builds the 74236P5 route and exposes it in Page listing", () => {
+    const entries = getEngine4ListingEntries("arizona", "page");
+    const target = entries.find(entry => entry.tour.productCode === "74236P5");
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/arizona/page/tours/antelope-canyon-74236p5"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "arizona",
+      "page",
+      "antelope-canyon-74236p5"
+    );
+
+    expect(routed?.id).toBe("74236P5");
+  });
+
+  it("keeps 421920P2 zipline route unchanged", () => {
+    const routed = getEngine4TourBySlugs(
+      "california",
+      "santa-barbara",
+      "epic-zipline-tour-over-the-santa-ynez-valley-421920p2"
+    );
+
+    expect(routed?.id).toBe("421920P2");
+  });
+
+
 });

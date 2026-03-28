@@ -4,11 +4,19 @@ import {
   ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
   hasViatorNonZeroPrice,
   mapEngine5ProductPayloadToEngine4ApiTour,
+  isEngine4StrictEngine5BridgeProductCode,
   resolve421920P2BridgeApiTour,
 } from "./engine5Bridge421920P2";
 import { engine4ViatorApiFallbackByProductCode } from "../data/viatorTours";
 
-describe("engine5 bridge for 421920P2", () => {
+describe("engine5 bridge strict products", () => {
+
+  it("treats 74236P5 as a strict engine5 bridge product", () => {
+    expect(isEngine4StrictEngine5BridgeProductCode("74236P5")).toBe(true);
+    expect(isEngine4StrictEngine5BridgeProductCode("421920P2")).toBe(true);
+    expect(isEngine4StrictEngine5BridgeProductCode("36001P1")).toBe(false);
+  });
+
   it("prefers live payload for 421920P2 when available", () => {
     const cached =
       engine4ViatorApiFallbackByProductCode[
@@ -40,6 +48,44 @@ describe("engine5 bridge for 421920P2", () => {
 
     const resolved = resolve421920P2BridgeApiTour({
       productCode: ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
+      runtimeApiTour: {
+        ...cached,
+        fromPrice: "$0",
+      },
+      runtimeSource: "live-api",
+      cachedFallbackApiTour: cached,
+    });
+
+    expect(resolved.runtimeSource).toBe("cached-engine4-fallback");
+    expect(resolved.apiTour?.fromPrice).toBe(cached.fromPrice);
+  });
+
+
+  it("prefers live payload for 74236P5 when available", () => {
+    const cached = engine4ViatorApiFallbackByProductCode["74236P5"];
+
+    const runtime = {
+      ...cached,
+      fromPrice: "$111.00",
+      title: "Live Antelope Canyon title",
+    };
+
+    const resolved = resolve421920P2BridgeApiTour({
+      productCode: "74236P5",
+      runtimeApiTour: runtime,
+      runtimeSource: "live-api",
+      cachedFallbackApiTour: cached,
+    });
+
+    expect(resolved.runtimeSource).toBe("live-api");
+    expect(resolved.apiTour?.title).toBe("Live Antelope Canyon title");
+  });
+
+  it("falls back safely for 74236P5 when runtime has zero price", () => {
+    const cached = engine4ViatorApiFallbackByProductCode["74236P5"];
+
+    const resolved = resolve421920P2BridgeApiTour({
+      productCode: "74236P5",
       runtimeApiTour: {
         ...cached,
         fromPrice: "$0",
