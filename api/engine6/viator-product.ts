@@ -91,7 +91,6 @@ const EMPTY_EXTRACTED_PRODUCT = {
   city: null,
   state: null,
   heroImageUrl: null,
-  cardImageUrl: null,
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
@@ -257,7 +256,6 @@ const applyResolvedHero = (args: {
     extracted: {
       ...args.baseExtraction.extracted,
       heroImageUrl: heroDecision.heroUrl,
-      cardImageUrl: heroDecision.heroUrl,
     },
     diagnostics: {
       ...args.baseExtraction.diagnostics,

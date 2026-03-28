@@ -152,7 +152,6 @@ const specimenApiPayload = {
     city: "Santa Barbara",
     state: "California",
     heroImageUrl: ENGINE6_63657P1_CARD_IMAGE_URL,
-    cardImageUrl: ENGINE6_63657P1_CARD_IMAGE_URL,
     productUrl:
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
     priceAmount: 199,
@@ -633,6 +632,32 @@ describe("engine6 listing surfaces", () => {
     (globalThis as { window?: Window }).window = previousWindow;
     (globalThis as { location?: { pathname: string; search?: string } }).location =
       previousLocation;
+  });
+
+  it("regression: every Engine6 listing card image stays identical to its detail hero", () => {
+    for (const tour of engine6ResolvedTours) {
+      const card = toEngine6Card(tour);
+      expect(card.imageUrl).toBe(tour.heroImageUrl);
+
+      const [, stateSlug = "", citySlug = ""] =
+        /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/.exec(tour.pagePath) ?? [];
+      const unified = getToursByCityUnified(stateSlug, citySlug);
+      const listingEntry = unified.find(
+        entry => entry.tour.engine === "engine6" && entry.tour.productCode === tour.productCode
+      );
+
+      expect(listingEntry).toBeDefined();
+      expect(listingEntry?.tour.heroImage).toBe(tour.heroImageUrl);
+      expect(listingEntry?.tour.primaryImageUrl).toBe(tour.heroImageUrl);
+
+      const listingHtml = renderToString(
+        <TourCard tour={listingEntry!.tour} href={listingEntry!.href} />
+      );
+      const escapedHero = tour.heroImageUrl.replace(/&/g, "&amp;");
+      expect(listingHtml).toContain(`src="${escapedHero}"`);
+      expect(listingHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(listingHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+    }
   });
 
 

@@ -59,7 +59,6 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.productCode).toBe(fixture.productCode);
       expect(tour.heroImageUrl).toBe(expectedHero);
       expect(tour.heroImageUrl).not.toContain("/hero.jpg");
-      expect(tour.cardImageUrl).toBe(tour.heroImageUrl);
       expect(tour.diagnostics.heroSourceType).toBe("api-primary");
       expect(tour.diagnostics.heroFallbackTriggered).toBe(false);
       expect(tour.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
@@ -74,7 +73,7 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.bookingUrl).toContain("medium=link");
       expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
       expect(card.href).toBe(tour.pagePath);
-      expect(card.imageUrl).toBe(tour.cardImageUrl);
+      expect(card.imageUrl).toBe(tour.heroImageUrl);
       expect(card.description.length).toBeGreaterThan(40);
       expect(html).toContain(tour.title);
       expect(html).toContain(`src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`);

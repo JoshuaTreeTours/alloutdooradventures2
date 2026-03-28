@@ -63,7 +63,6 @@ export type Engine6Extracted = {
   city: string | null;
   state: string | null;
   heroImageUrl: string | null;
-  cardImageUrl: string | null;
   productUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string | null;
@@ -277,7 +276,6 @@ const emptyExtracted = (): Engine6Extracted => ({
   city: null,
   state: null,
   heroImageUrl: null,
-  cardImageUrl: null,
   productUrl: null,
   priceAmount: null,
   priceFormatted: null,
@@ -1139,7 +1137,6 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       city: city ?? null,
       state: state ?? null,
       heroImageUrl: heroDecision.heroUrl ?? null,
-      cardImageUrl: heroDecision.heroUrl ?? null,
       productUrl: productUrl.value,
       priceAmount: price.amount,
       priceFormatted:

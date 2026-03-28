@@ -97,7 +97,7 @@ export const buildEngine6ValidationReport = (
     !html.includes(">ENGINE6<");
   const cardRenderSucceeded =
     card.href === tour.pagePath &&
-    card.imageUrl === tour.cardImageUrl &&
+    card.imageUrl === tour.heroImageUrl &&
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
   const bookingAttributionIsValid =

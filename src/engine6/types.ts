@@ -96,7 +96,6 @@ export type Engine6Tour = {
   city: string;
   state: string;
   heroImageUrl: string;
-  cardImageUrl: string;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;
@@ -129,7 +128,6 @@ export type Engine6ApiResponse = {
     city: string | null;
     state: string | null;
     heroImageUrl: string | null;
-    cardImageUrl: string | null;
     productUrl: string | null;
     priceAmount: number | null;
     priceFormatted: string | null;
