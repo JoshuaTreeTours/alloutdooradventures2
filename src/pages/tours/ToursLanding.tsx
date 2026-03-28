@@ -11,6 +11,7 @@ import {
   getFallbackCityBySlugs,
   getFallbackStateBySlug,
 } from "../../data/tourFallbacks";
+import { getStateCityOptions } from "../../data/stateCityOptions";
 import { getToursByCityUnified, tours } from "../../data/tours";
 import type { Tour } from "../../data/tours.types";
 import {
@@ -64,9 +65,13 @@ export const resolveToursLandingInitialSelection = (search: string) => {
 
   const resolvedState = resolveState(stateSlug);
   const resolvedCity = resolvedState ? resolveCity(stateSlug, citySlug) : null;
+  const cityOptions = stateSlug ? getStateCityOptions(stateSlug) : [];
   const isValidCity = Boolean(
-    resolvedCity &&
-      resolvedState?.cities.some(city => city.slug === resolvedCity.slug)
+    cityOptions.some(
+      city =>
+        city.slug === citySlug ||
+        (resolvedCity ? city.slug === resolvedCity.slug : false)
+    )
   );
 
   if (!resolvedState || !resolvedCity || !isValidCity) {
@@ -159,9 +164,7 @@ export default function ToursLanding() {
       return [];
     }
 
-    return [...selectedState.cities].sort((a, b) =>
-      a.name.localeCompare(b.name)
-    );
+    return getStateCityOptions(selectedState.slug);
   }, [selectedState]);
 
   const selectedCity = useMemo(() => {
@@ -170,11 +173,11 @@ export default function ToursLanding() {
     }
 
     const city = resolveCity(selectedStateSlug, selectedCitySlug);
-    if (!city) {
-      return null;
+    if (cityOptions.some(option => option.slug === city?.slug)) {
+      return city;
     }
 
-    return cityOptions.some(option => option.slug === city.slug) ? city : null;
+    return cityOptions.find(option => option.slug === selectedCitySlug) ?? null;
   }, [cityOptions, selectedCitySlug, selectedStateSlug]);
 
   const internationalTours = useMemo(

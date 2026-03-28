@@ -4,6 +4,7 @@ import { Link } from "wouter";
 import RegionDropdownButton from "../components/RegionDropdownButton";
 import Seo from "../components/Seo";
 import { states } from "../data/destinations";
+import { getStateCityOptions } from "../data/stateCityOptions";
 import { EUROPE_COUNTRIES, WORLD_DESTINATIONS, slugify } from "../data/tourCatalog";
 import { getStaticPageSeo } from "../utils/seo";
 
@@ -47,12 +48,7 @@ export default function ToursIndex() {
     if (!selectedState) {
       return [];
     }
-    return selectedState.cities
-      .map((city) => ({
-        name: city.name,
-        slug: city.slug,
-      }))
-      .sort((a, b) => a.name.localeCompare(b.name));
+    return getStateCityOptions(selectedState.slug);
   }, [selectedState]);
 
   useEffect(() => {
