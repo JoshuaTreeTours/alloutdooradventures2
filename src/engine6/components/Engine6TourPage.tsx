@@ -22,6 +22,21 @@ const ContentSection = ({
   </section>
 );
 
+const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
+  const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
+  const stateSlug = pathSegments[1] ?? "";
+  const citySlug = pathSegments[2] ?? "";
+
+  return [
+    { label: "Destinations", href: "/destinations" },
+    { label: tour.state, href: `/destinations/${stateSlug}` },
+    {
+      label: tour.city,
+      href: `/destinations/${stateSlug}/${citySlug}/tours`,
+    },
+  ];
+};
+
 const RatingSummary = ({
   aggregateRating,
   reviewCount,
@@ -66,6 +81,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.aggregateRating === "number" &&
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
+  const breadcrumbs = buildEngine6Breadcrumbs(tour);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -80,6 +96,27 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <section className="border-b border-[#d7d0c4] bg-[#f1ebdf]" data-testid="engine6-breadcrumbs">
+        <nav
+          aria-label="Breadcrumb"
+          className="mx-auto max-w-6xl px-6 py-3 text-sm text-slate-700"
+        >
+          <ol className="flex flex-wrap items-center gap-2">
+            {breadcrumbs.map(crumb => (
+              <li key={crumb.href} className="inline-flex items-center gap-2">
+                <a href={crumb.href} className="hover:text-green-900 hover:underline">
+                  {crumb.label}
+                </a>
+                <span aria-hidden="true">/</span>
+              </li>
+            ))}
+            <li aria-current="page" className="font-semibold text-slate-900">
+              {tour.title}
+            </li>
+          </ol>
+        </nav>
+      </section>
+
       <section
         className="bg-[#2f4a2f] text-white"
         data-testid="engine6-hero-banner"

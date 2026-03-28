@@ -338,6 +338,10 @@ describe("engine6 mapping/cards/page", () => {
     expect(tour.metaDescription.length).toBeLessThanOrEqual(160);
     expect(tour.canonicalPath).toBe(ENGINE6_SPECIMEN_ROUTE);
     expect(html).toContain(`src="${ENGINE6_63657P1_CARD_IMAGE_URL}"`);
+    expect(html).toContain('data-testid="engine6-breadcrumbs"');
+    expect(html).toContain('href="/destinations"');
+    expect(html).toContain('href="/destinations/california"');
+    expect(html).toContain('href="/destinations/california/santa-barbara/tours"');
     expect(html).not.toContain("/hero.jpg");
     expect(html).toContain("Santa Barbara Vineyard to Table Taste Tour by E-Bike");
     expect(html).toContain("Bike Tour");
@@ -401,9 +405,35 @@ describe("engine6 seo/schema", () => {
     const product = graph.find(node => node["@type"] === "Product");
     const offer = graph.find(node => node["@type"] === "Offer");
 
+    const breadcrumb = graph.find(node => node["@type"] === "BreadcrumbList");
+
     expect(trip).toMatchObject({
       image: ENGINE6_63657P1_CARD_IMAGE_URL,
       url: `https://www.alloutdooradventures.com${ENGINE6_SPECIMEN_ROUTE}`,
+    });
+    expect(breadcrumb).toMatchObject({
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Destinations",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "California",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Santa Barbara",
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
+        },
+      ],
     });
     expect(product).toMatchObject({
       image: ENGINE6_63657P1_CARD_IMAGE_URL,
