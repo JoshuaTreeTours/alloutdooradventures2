@@ -9,6 +9,7 @@ import TourCard from "../components/TourCard";
 import {
   getCityTourDetailPath,
   getToursByCity,
+  getToursByCityUnified,
   getToursByState,
 } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
@@ -471,6 +472,23 @@ describe("engine6 listing surfaces", () => {
     expect(
       santaBarbaraTours.some(tour => tour.productCode === "63657P1")
     ).toBe(true);
+  });
+
+  it("automatically includes the Engine6 route in the city unified tours listing", () => {
+    const unifiedTours = getToursByCityUnified("california", "santa-barbara");
+    const engine6Entry = unifiedTours.find(
+      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "63657P1"
+    );
+
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SPECIMEN_ROUTE);
+    expect(engine6Entry?.tour.heroImage).toBe(ENGINE6_63657P1_CARD_IMAGE_URL);
+    expect(engine6Entry?.tour.primaryImageUrl).toBe(
+      ENGINE6_63657P1_CARD_IMAGE_URL
+    );
+    expect(engine6Entry?.tour.bookingUrl).toBe(
+      "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
+    );
   });
 
   it("renders the listing card with the resolved Engine6 image", () => {

@@ -1,7 +1,7 @@
 import type { Tour } from "../data/tours.types";
 import { toEngine6Card } from "./cards";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
-import type { Engine6ApiResponse } from "./types";
+import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 export const ENGINE6_63657P1_CARD_IMAGE_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg";
@@ -56,7 +56,8 @@ const ENGINE6_63657P1_LISTING_PAYLOAD: Engine6ApiResponse = {
   },
   extracted: {
     title: "Santa Barbara Vineyard to Table Taste Tour by E-Bike",
-    seoTitle: "Santa Barbara Vineyard to Table Taste Tour by E-Bike in Santa Barbara",
+    seoTitle:
+      "Santa Barbara Vineyard to Table Taste Tour by E-Bike in Santa Barbara",
     seoDescription:
       "Ride through the towns and vineyards of the Santa Ynez Valley wine region on this e-bike tour with transport from Santa Barbara.",
     city: "Santa Barbara",
@@ -128,45 +129,52 @@ const ENGINE6_63657P1_LISTING_PAYLOAD: Engine6ApiResponse = {
   },
 };
 
-export const engine6SpecimenTour = mapViatorToEngine6Tour(
-  ENGINE6_63657P1_LISTING_PAYLOAD
-);
+const ENGINE6_LISTING_PAYLOADS: Engine6ApiResponse[] = [
+  ENGINE6_63657P1_LISTING_PAYLOAD,
+];
 
-const engine6SpecimenCard = toEngine6Card(engine6SpecimenTour);
+const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
+  const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
+  const stateSlug = pathSegments[1] ?? "";
+  const citySlug = pathSegments[2] ?? "";
+  const slug = pathSegments[4] ?? "";
+  const card = toEngine6Card(tour);
 
-export const engine6ListingTours: Tour[] = [
-  {
-    id: "engine6-63657P1",
+  return {
+    id: `engine6-${tour.productCode}`,
     engine: "engine6",
-    productCode: engine6SpecimenTour.productCode,
-    slug: "santa-barbara-vineyard-to-table-taste-tour-by-e-bike",
-    title: engine6SpecimenTour.title,
-    shortDescription: engine6SpecimenCard.description,
-    categories: engine6SpecimenTour.categories,
-    primaryCategory: engine6SpecimenTour.primaryCategory ?? undefined,
+    productCode: tour.productCode,
+    slug,
+    title: tour.title,
+    shortDescription: card.description,
+    categories: tour.categories,
+    primaryCategory: tour.primaryCategory ?? undefined,
     destination: {
       country: "United States",
-      state: engine6SpecimenTour.state,
-      stateSlug: "california",
-      city: engine6SpecimenTour.city,
-      citySlug: "santa-barbara",
+      state: tour.state,
+      stateSlug,
+      city: tour.city,
+      citySlug,
     },
-    heroImage: engine6SpecimenTour.cardImageUrl,
-    primaryImageUrl: engine6SpecimenTour.cardImageUrl,
+    heroImage: tour.heroImageUrl,
+    primaryImageUrl: tour.heroImageUrl,
     badges: {
-      rating: engine6SpecimenTour.aggregateRating ?? undefined,
-      reviewCount: engine6SpecimenTour.reviewCount ?? undefined,
-      priceFrom: engine6SpecimenTour.priceFormatted,
+      rating: tour.aggregateRating ?? undefined,
+      reviewCount: tour.reviewCount ?? undefined,
+      priceFrom: tour.priceFormatted,
     },
-    startingPrice: engine6SpecimenTour.priceAmount ?? undefined,
+    startingPrice: tour.priceAmount ?? undefined,
     currency: "USD",
-    tagPills: engine6SpecimenTour.categoryLabel
-      ? [engine6SpecimenTour.categoryLabel]
-      : undefined,
+    tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
     activitySlugs: ["bike-tours"],
     bookingProvider: "viator",
-    bookingUrl: engine6SpecimenTour.bookingUrl,
-    longDescription:
-      engine6SpecimenTour.overviewText ?? engine6SpecimenCard.description,
-  },
-];
+    bookingUrl: tour.bookingUrl,
+    longDescription: tour.overviewText ?? card.description,
+  };
+};
+
+const engine6Tours = ENGINE6_LISTING_PAYLOADS.map(mapViatorToEngine6Tour);
+
+export const engine6SpecimenTour = engine6Tours[0]!;
+
+export const engine6ListingTours: Tour[] = engine6Tours.map(toEngine6ListingTour);
