@@ -1,0 +1,87 @@
+{
+  "product": {
+    "productCode": "60136P1",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
+    "title": "Antelope Canyon Horseshoe Bend Day Tour from Las Vegas",
+    "description": {
+      "text": "Leave Las Vegas before sunrise for a full-day desert loop that pairs two signature Southwest sights in one guided outing. After a scenic drive toward Page, stretch your legs on the hike to Horseshoe Bend, then continue to Antelope Canyon for a Navajo-led walk through sculpted sandstone corridors with dedicated photo stops. Round-trip transport, canyon admission, and lunch are handled so you can focus on the landscapes instead of logistics."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$149.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1922
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/eb/d1/48.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Horseshoe Bend and Antelope Canyon in one long day from Las Vegas.",
+      "Travel by air-conditioned coach with onboard Wi-Fi and bottled water.",
+      "Join a Navajo guide in Antelope Canyon for photo-forward canyon access.",
+      "Lunch and core admission fees are included in the day-trip package."
+    ],
+    "inclusions": [
+      "Admission Fees",
+      "Lunch",
+      "Bottled water",
+      "Pick-up and drop off from Treasure Island Las Vegas",
+      "Air-conditioned vehicle",
+      "WiFi on board"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking.",
+      "Not wheelchair accessible.",
+      "Infants must sit on laps.",
+      "Most travelers can participate.",
+      "Voucher and valid photo ID are required for check-in.",
+      "All children 17 years of age or under must be accompanied by an adult.",
+      "Guests must be able to walk unassisted on uneven surfaces and steep inclines.",
+      "Antelope Canyon does not allow hiking sticks, canes, walkers, or wheelchairs.",
+      "Pets and service animals are not allowed.",
+      "This tour/activity will have a maximum of 55 travelers."
+    ],
+    "meetingPoint": {
+      "description": "Treasure Island Tour Bus pick-up area is on Mystere Dreams Ave, west of Valet and Starbucks, at the yellow-curbed sidewalk. Additional pickup locations are available by request.",
+      "name": "Treasure Island Las Vegas - TI Hotel & Casino, 3300 Las Vegas Blvd S, Las Vegas, NV 89109"
+    },
+    "itineraryItems": [
+      {
+        "title": "Horseshoe Bend",
+        "description": "Walk the round-trip trail to the overlook above the Colorado River bend and take in panoramic canyon views.",
+        "duration": "1 hour 30 minutes",
+        "admissionNote": "Admission ticket included"
+      },
+      {
+        "title": "Antelope Canyon",
+        "description": "Follow a Navajo guide through your assigned canyon section (Upper, Lower, or X) with time for photos.",
+        "duration": "1 hour",
+        "admissionNote": "Admission ticket included"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I arrange hotel pickup for the Antelope Canyon & Horseshoe Bend tour?",
+        "answer": "Pickup is available from multiple Las Vegas Strip, Fremont Street, and off-Strip locations. Select your preferred pickup point when booking and confirm final details at least 24 hours before departure."
+      }
+    ],
+    "categories": [
+      "day-trip",
+      "hiking-tour"
+    ]
+  }
+}

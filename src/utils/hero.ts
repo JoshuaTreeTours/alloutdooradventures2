@@ -91,6 +91,9 @@ const isHomeHeroImage = (image?: string) => {
   return normalized === HOME_HERO_IMAGE || normalized.endsWith("/hero.jpg");
 };
 
+const isHttpImageUrl = (value?: string) =>
+  typeof value === "string" && /^https?:\/\//i.test(value.trim());
+
 const isActivityDefaultImage = (image?: string) => {
   const normalized = normalizeHeroImage(image);
   if (!normalized) {
@@ -141,6 +144,10 @@ export const isImageInCityTour = (
   cityCtx: CityRouteContext,
 ) => {
   if (!image?.src || image.isActivityDefault) {
+    return false;
+  }
+
+  if (!isHttpImageUrl(image.src)) {
     return false;
   }
 

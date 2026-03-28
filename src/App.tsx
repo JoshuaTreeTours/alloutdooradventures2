@@ -67,6 +67,7 @@ import {
   ENGINE5_PROOF_TOUR_ROUTE_PATTERN,
 } from "./engine5/routes";
 import {
+  ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
@@ -257,6 +258,7 @@ export default function App() {
         <Route path={ENGINE6_SPECIMEN_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_CATALINA_ROUTE} component={Engine6SpecimenRoute} />
+        <Route path={ENGINE6_ANTELOPE_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

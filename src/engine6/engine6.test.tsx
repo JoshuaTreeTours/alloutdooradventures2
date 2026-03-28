@@ -14,6 +14,7 @@ import {
 } from "../data/tours";
 import Engine6TourPage from "./components/Engine6TourPage";
 import ToursLanding from "../pages/tours/ToursLanding";
+import CityToursIndexRoute from "../pages/destinations/states/tours/CityToursIndexRoute";
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
@@ -26,6 +27,7 @@ import {
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { engine6ResolvedTours } from "./registry";
 import {
+  ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
@@ -99,6 +101,9 @@ const specimenProductPayload = {
     ],
   },
 };
+
+const ENGINE6_60136P1_EXPECTED_HERO_URL =
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/eb/d1/48.jpg";
 
 const specimenApiPayload = {
   source: "live-api" as const,
@@ -736,6 +741,71 @@ describe("engine6 listing surfaces", () => {
       previousLocation;
   });
 
+
+  it("keeps Antelope hero parity across detail, city listing, and filtered tours without placeholder override", () => {
+    const antelopeTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "60136P1"
+    );
+    expect(antelopeTour).toBeDefined();
+    expect(antelopeTour?.heroImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+
+    const detailHtml = renderToString(<Engine6TourPage tour={antelopeTour!} />);
+    const escapedHero = antelopeTour!.heroImageUrl.replace(/&/g, "&amp;");
+    expect(detailHtml).toContain(`src="${escapedHero}"`);
+    expect(antelopeTour!.heroImageUrl).not.toContain("/images/hiking-hero.jpg");
+
+    const unified = getToursByCityUnified("nevada", "las-vegas");
+    const entry = unified.find(tour => tour.tour.productCode === "60136P1");
+    expect(entry).toBeDefined();
+    expect(entry?.href).toBe(ENGINE6_ANTELOPE_ROUTE);
+    expect(entry?.tour.heroImage).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+    expect(entry?.tour.primaryImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+
+    const cardHtml = renderToString(<TourCard tour={entry!.tour} href={entry!.href} />);
+    expect(cardHtml).toContain(`data-card-image-src="${escapedHero}"`);
+    expect(cardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+    expect(cardHtml).not.toContain("/images/hiking-hero.jpg");
+
+    const previousWindow = (globalThis as { window?: Window }).window;
+    const previousLocation = (globalThis as {
+      location?: { pathname: string; search?: string };
+    }).location;
+    (globalThis as {
+      window?: {
+        location: { pathname: string; search: string };
+        history: { pushState: () => void };
+      };
+    }).window = {
+      location: { pathname: "/tours", search: "?state=nevada&city=las-vegas" },
+      history: { pushState: () => {} },
+    };
+    (globalThis as { location?: { pathname: string; search: string } }).location = {
+      pathname: "/tours",
+      search: "?state=nevada&city=las-vegas",
+    };
+
+    const filteredHtml = renderToString(<ToursLanding />);
+    expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
+    expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+    expect(filteredHtml).toContain(ENGINE6_60136P1_EXPECTED_HERO_URL.replace(/&/g, "&amp;"));
+    expect(filteredHtml).not.toContain("/images/hiking-hero.jpg");
+
+    (globalThis as { window?: Window }).window = previousWindow;
+    (globalThis as { location?: { pathname: string; search?: string } }).location =
+      previousLocation;
+  });
+
+  it("renders a non-empty Las Vegas city tours hero src (no alt-only fallback block)", () => {
+    const html = renderToString(
+      <CityToursIndexRoute params={{ stateSlug: "nevada", citySlug: "las-vegas" }} />
+    );
+
+    expect(html).toContain('alt="Las Vegas hero"');
+    expect(html).toMatch(/<img[^>]+src="[^"]+"[^>]+alt="Las Vegas hero"/);
+    expect(html).not.toContain('alt="Las Vegas hero" src=""');
+    expect(html).not.toContain('src="undefined"');
+  });
+
   it("regression: every Engine6 listing card image stays identical to its detail hero", () => {
     for (const tour of engine6ResolvedTours) {
       const card = toEngine6Card(tour);
@@ -927,6 +997,146 @@ describe("engine6 specimen-specific coverage", () => {
       "Is helicopter landing included in the standard tour option?"
     );
     expect((html.match(/<details /g) ?? []).length).toBe(2);
+  });
+});
+
+
+
+describe("engine6 image parity guardrails", () => {
+  const parseStateCityFromCanonicalPath = (path: string) => {
+    const [, stateSlug = "", citySlug = ""] =
+      /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(path) ?? [];
+    return { stateSlug, citySlug };
+  };
+
+  it.each(["63657P1", "5119P13", "32779P2", "60136P1"])(
+    "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
+    productCode => {
+      const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+      expect(tour).toBeDefined();
+      const expectedHero = tour!.heroImageUrl;
+      expect(expectedHero).toContain("https://");
+
+      const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+      const escapedHero = expectedHero.replace(/&/g, "&amp;");
+      expect(detailHtml).toContain(`src="${escapedHero}"`);
+      expect(detailHtml).not.toContain("/images/hiking-hero.jpg");
+
+      const { stateSlug, citySlug } = parseStateCityFromCanonicalPath(tour!.canonicalPath);
+      const unified = getToursByCityUnified(stateSlug, citySlug);
+      const cityEntry = unified.find(entry => entry.tour.productCode === productCode);
+      expect(cityEntry).toBeDefined();
+      expect(cityEntry?.tour.heroImage).toBe(expectedHero);
+      expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero);
+
+      const cityCardHtml = renderToString(
+        <TourCard tour={cityEntry!.tour} href={cityEntry!.href} />
+      );
+      expect(cityCardHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(cityCardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+      expect(cityCardHtml).not.toContain("/images/hiking-hero.jpg");
+
+      const previousWindow = (globalThis as { window?: Window }).window;
+      const previousLocation = (globalThis as {
+        location?: { pathname: string; search?: string };
+      }).location;
+      (globalThis as {
+        window?: {
+          location: { pathname: string; search: string };
+          history: { pushState: () => void };
+        };
+      }).window = {
+        location: { pathname: "/tours", search: `?state=${stateSlug}&city=${citySlug}` },
+        history: { pushState: () => {} },
+      };
+      (globalThis as { location?: { pathname: string; search: string } }).location = {
+        pathname: "/tours",
+        search: `?state=${stateSlug}&city=${citySlug}`,
+      };
+
+      const filteredHtml = renderToString(<ToursLanding />);
+      expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+
+      (globalThis as { window?: Window }).window = previousWindow;
+      (globalThis as { location?: { pathname: string; search?: string } }).location =
+        previousLocation;
+
+      const relatedEngine6Entries = unified.filter(
+        entry =>
+          entry.tour.engine === "engine6" &&
+          entry.tour.productCode !== productCode &&
+          entry.tour.slug !== cityEntry?.tour.slug
+      );
+
+      if (relatedEngine6Entries.length > 0) {
+        for (const related of relatedEngine6Entries) {
+          const escapedRelatedHero = related.tour.heroImage.replace(/&/g, "&amp;");
+          expect(detailHtml).toContain(`data-card-image-src="${escapedRelatedHero}"`);
+          expect(detailHtml).toContain(`data-hero-image-src="${escapedRelatedHero}"`);
+        }
+      }
+    }
+  );
+
+  it("blocks legacy/alternate image fields from overriding Engine6 heroImage", () => {
+    const tour = {
+      id: "engine6-legacy-test",
+      engine: "engine6",
+      productCode: "LEGACY",
+      slug: "legacy-image-override-test",
+      title: "Legacy Override Test",
+      destination: {
+        country: "United States",
+        state: "Nevada",
+        stateSlug: "nevada",
+        city: "Las Vegas",
+        citySlug: "las-vegas",
+      },
+      heroImage: "https://cdn.example.com/hero-canonical.jpg",
+      primaryImageUrl: "https://cdn.example.com/legacy-primary.jpg",
+      galleryImages: ["https://cdn.example.com/gallery-first.jpg"],
+      badges: {},
+      activitySlugs: ["hiking"],
+      bookingProvider: "viator",
+      bookingUrl: "https://www.viator.com/search/LEGACY",
+      longDescription: "Legacy override guardrail test",
+    } as const;
+
+    const html = renderToString(<TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/legacy-image-override-test" />);
+    expect(html).toContain('data-card-image-src="https://cdn.example.com/hero-canonical.jpg"');
+    expect(html).toContain('data-hero-image-src="https://cdn.example.com/hero-canonical.jpg"');
+    expect(html).not.toContain("legacy-primary.jpg");
+    expect(html).not.toContain("gallery-first.jpg");
+    expect(html).not.toContain("/images/hiking-hero.jpg");
+  });
+
+  it("uses placeholder for Engine6 cards only when heroImage is absent", () => {
+    const tour = {
+      id: "engine6-placeholder-test",
+      engine: "engine6",
+      productCode: "NOPIC",
+      slug: "engine6-placeholder-test",
+      title: "Placeholder Fallback Test",
+      destination: {
+        country: "United States",
+        state: "Nevada",
+        stateSlug: "nevada",
+        city: "Las Vegas",
+        citySlug: "las-vegas",
+      },
+      heroImage: "",
+      badges: {},
+      activitySlugs: ["hiking"],
+      bookingProvider: "viator",
+      bookingUrl: "https://www.viator.com/search/NOPIC",
+      longDescription: "Placeholder-only fallback test",
+    } as const;
+
+    const html = renderToString(
+      <TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test" />
+    );
+    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
   });
 });
 
