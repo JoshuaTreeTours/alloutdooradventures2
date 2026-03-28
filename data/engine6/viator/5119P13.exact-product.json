@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "5119P13",
+    "productUrl": "https://www.viator.com/tours/Las-Vegas/Grand-Canyon-West-6-in-1-Tour-with-Helicopter-and-Landing/d684-5119P13",
+    "title": "Grand Canyon West 6-in-1 Tour with Helicopter and Landing",
+    "description": {
+      "text": "Depart Las Vegas for a full-day West Rim adventure with a small-group guide, scenic desert drive, and timed stops at Hoover Dam and a Joshua tree forest. At Grand Canyon West you can take in Eagle Point and Guano Point viewpoints, then elevate the day with an optional helicopter descent and landing near the Colorado River before returning to Las Vegas."
+    },
+    "location": {
+      "city": "Las Vegas",
+      "state": "Nevada"
+    },
+    "priceFrom": "$399.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 163
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2d/77/69/23/caption.jpg?w=1400&h=1000&s=1",
+              "width": 1400,
+              "height": 1000
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "West Rim access with time at Eagle Point and Guano Point",
+      "Optional helicopter flight descending to the canyon floor",
+      "Round-trip Las Vegas hotel pickup and drop-off included",
+      "Breakfast snacks, lunch, and bottled water provided"
+    ],
+    "inclusions": [
+      "Round-trip Las Vegas hotel pickup and drop-off",
+      "Grand Canyon West admission",
+      "Light breakfast and lunch",
+      "Bottled water throughout the day"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup is available from many Las Vegas Strip and Downtown hotels. Exact pickup details are confirmed after booking."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Hoover Dam",
+        "description": "Photo stop and guide commentary",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Grand Canyon West",
+        "description": "Admission included",
+        "duration": "4 hours"
+      },
+      {
+        "title": "Eagle Point and Guano Point",
+        "description": "Viewpoint exploration",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Colorado River Helicopter Landing",
+        "description": "Optional helicopter upgrade experience",
+        "duration": "4 hours"
+      }
+    ],
+    "qAndA": {
+      "items": [
+        {
+          "question": "Is helicopter landing included in the standard tour option?",
+          "answer": "The helicopter landing component is included only when you book the package option that lists the helicopter upgrade."
+        },
+        {
+          "question": "How long is the overall day from Las Vegas?",
+          "answer": "Most departures run roughly 10 to 11 hours including hotel transfers and Grand Canyon West stops."
+        }
+      ]
+    },
+    "additionalInfo": [
+      "Confirmation will be received within 48 hours of booking, subject to availability",
+      "Not wheelchair accessible",
+      "Travelers should have a moderate physical fitness level",
+      "Tour/activity has a maximum of 14 travelers"
+    ]
+  }
+}

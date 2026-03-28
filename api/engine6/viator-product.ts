@@ -8,7 +8,6 @@ import {
 import { extractEngine6Product } from "./viatorExtractors.js";
 
 const DEFAULT_VIATOR_BASE_URL = "https://api.viator.com/partner";
-const ENGINE6_BUNDLED_PRODUCT_CODE = "63657P1";
 
 const buildHeaders = (apiKey: string) => ({
   "Content-Type": "application/json;version=2.0",
@@ -18,10 +17,6 @@ const buildHeaders = (apiKey: string) => ({
 });
 
 const getBundledExactProductPayload = async (productCode: string) => {
-  if (productCode !== ENGINE6_BUNDLED_PRODUCT_CODE) {
-    return null;
-  }
-
   const payloadPath = path.join(
     process.cwd(),
     "data",
@@ -109,8 +104,10 @@ const EMPTY_EXTRACTED_PRODUCT = {
     title: string;
     description?: string;
     duration?: string;
+    admissionNote?: string;
   }>,
   faqs: [] as Array<{ question: string; answer: string }>,
+  included: [] as string[],
   requirements: [] as string[],
   primaryCategory: null,
   categories: [] as string[],
