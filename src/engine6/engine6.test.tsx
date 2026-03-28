@@ -468,6 +468,29 @@ describe("engine6 diagnostics visibility", () => {
 });
 
 describe("engine6 listing surfaces", () => {
+  const getRelatedToursForSpecimen = (productCode: string) => {
+    const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+    expect(tour).toBeDefined();
+
+    const [, stateSlug = "", citySlug = "", currentSlug = ""] =
+      /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
+        tour!.canonicalPath
+      ) ?? [];
+    const relatedTours = getToursByCityUnified(stateSlug, citySlug).filter(entry => {
+      const matchesProductCode =
+        Boolean(tour!.productCode) &&
+        Boolean(entry.tour.productCode) &&
+        entry.tour.productCode?.toUpperCase() === tour!.productCode.toUpperCase();
+      const matchesSlug = entry.tour.slug === currentSlug;
+      return !matchesProductCode && !matchesSlug;
+    });
+
+    return {
+      tour: tour!,
+      relatedTours,
+    };
+  };
+
   it("adds 63657P1 to California and Santa Barbara listing sources", () => {
     const californiaTours = getToursByState("california");
     const santaBarbaraTours = getToursByCity("california", "santa-barbara");
@@ -632,6 +655,35 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.destination.state).toBe("California");
     expect(engine6Entry?.tour.heroImage).toBe(engine6Entry?.tour.primaryImageUrl);
     expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $53");
+  });
+
+  it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
+    for (const productCode of ["63657P1", "5119P13", "32779P2"]) {
+      const { tour, relatedTours } = getRelatedToursForSpecimen(productCode);
+      expect(
+        relatedTours.some(
+          entry =>
+            entry.tour.productCode?.toUpperCase() === productCode ||
+            entry.tour.slug === tour.slug
+        )
+      ).toBe(false);
+
+      const html = renderToString(<Engine6TourPage tour={tour} />);
+      expect(html).toContain("data-testid=\"engine6-bottom-cta\"");
+      if (relatedTours.length >= 2) {
+        expect(html).toContain(`Other Tours in ${tour.city}`);
+        expect(html).toContain("data-testid=\"engine6-related-tours\"");
+        expect(
+          html.indexOf("data-testid=\"engine6-related-tours\"")
+        ).toBeGreaterThan(html.indexOf("data-testid=\"engine6-bottom-cta\""));
+
+        for (const related of relatedTours) {
+          expect(html).toContain(related.href);
+        }
+      } else {
+        expect(html).not.toContain("data-testid=\"engine6-related-tours\"");
+      }
+    }
   });
 
   it("uses the exact same resolved hero for Vegas detail page, city listing card, and filtered tours card", () => {

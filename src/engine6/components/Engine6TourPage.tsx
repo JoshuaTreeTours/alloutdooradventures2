@@ -1,6 +1,8 @@
-import React, { type ReactNode } from "react";
+import React, { type ReactNode, useMemo } from "react";
 
 import Seo from "../../components/Seo";
+import TourCard from "../../components/TourCard";
+import { getToursByCityUnified } from "../../data/tours";
 import { formatEngine6AggregateRating } from "../rating";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
@@ -82,6 +84,27 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
+  const relatedTours = useMemo(() => {
+    const [, stateSlug = "", citySlug = "", currentSlug = ""] =
+      /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
+        tour.canonicalPath
+      ) ?? [];
+
+    if (!stateSlug || !citySlug) {
+      return [];
+    }
+
+    return getToursByCityUnified(stateSlug, citySlug).filter(entry => {
+      const matchesProductCode =
+        Boolean(tour.productCode) &&
+        Boolean(entry.tour.productCode) &&
+        entry.tour.productCode?.toUpperCase() === tour.productCode.toUpperCase();
+      const matchesSlug = entry.tour.slug === currentSlug;
+
+      return !matchesProductCode && !matchesSlug;
+    });
+  }, [tour.canonicalPath, tour.productCode]);
+  const showRelatedTours = relatedTours.length >= 2;
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -328,6 +351,28 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             Book now
           </a>
         </section>
+
+        {showRelatedTours ? (
+          <section
+            className="mt-8"
+            data-testid="engine6-related-tours"
+            aria-label={`Other Tours in ${tour.city}`}
+          >
+            <h2 className="text-2xl font-semibold text-green-900">
+              Other Tours in {tour.city}
+            </h2>
+            <div className="mt-4 -mx-1 flex snap-x snap-mandatory gap-5 overflow-x-auto px-1 pb-4">
+              {relatedTours.map(entry => (
+                <div
+                  key={`${entry.href}-${entry.tour.id}`}
+                  className="w-[82vw] max-w-sm shrink-0 snap-start md:w-[360px]"
+                >
+                  <TourCard tour={entry.tour} href={entry.href} />
+                </div>
+              ))}
+            </div>
+          </section>
+        ) : null}
       </div>
     </main>
   );
