@@ -115,6 +115,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
           "Round-trip Las Vegas hotel pickup and drop-off included",
           "Breakfast snacks, lunch, and bottled water provided",
         ],
+        inclusions: [
+          "Round-trip Las Vegas hotel pickup and drop-off",
+          "Grand Canyon West admission",
+          "Light breakfast and lunch",
+          "Bottled water throughout the day",
+        ],
         logistics: {
           start: {
             description:

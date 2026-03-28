@@ -106,6 +106,7 @@ export type Engine6Tour = {
   highlights: string[];
   itinerary: Engine6ItineraryItem[];
   faqs: Engine6FaqItem[];
+  included: string[];
   requirements: string[];
   primaryCategory: Engine6CategorySlug | string | null;
   categories: Array<Engine6CategorySlug | string>;
@@ -139,6 +140,7 @@ export type Engine6ApiResponse = {
     highlights: string[];
     itinerary: Engine6ItineraryItem[];
     faqs: Engine6FaqItem[];
+    included: string[];
     requirements: string[];
     primaryCategory: Engine6CategorySlug | string | null;
     categories: Array<Engine6CategorySlug | string>;

@@ -26,6 +26,7 @@ export const mapViatorToEngine6Tour = (
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
   const faqs = payload.extracted.faqs ?? [];
+  const included = payload.extracted.included ?? [];
   const requirements = payload.extracted.requirements ?? [];
   const categories = payload.extracted.categories ?? [];
   const primaryCategory =
@@ -79,6 +80,7 @@ export const mapViatorToEngine6Tour = (
     highlights,
     itinerary,
     faqs,
+    included,
     requirements,
     primaryCategory,
     categories,

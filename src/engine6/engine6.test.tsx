@@ -492,10 +492,14 @@ describe("engine6 listing surfaces", () => {
     expect(vegasTour).toBeDefined();
     expect(vegasTour?.itinerary.length).toBe(4);
     expect(vegasTour?.faqs.length).toBe(2);
+    expect(vegasTour?.included.length).toBe(4);
+    expect(vegasTour?.requirements.length).toBe(4);
 
     const html = renderToString(<Engine6TourPage tour={vegasTour!} />);
     expect(html).toContain(">Itinerary<");
     expect(html).toContain(">FAQs<");
+    expect(html).toContain(">What’s included<");
+    expect(html).toContain(">Additional info<");
     expect(html).toContain("Admission included");
     expect(html).toContain("Hoover Dam");
     expect(html).toContain("Grand Canyon West");

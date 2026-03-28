@@ -74,6 +74,7 @@ export type Engine6Extracted = {
   highlights: string[];
   itinerary: Engine6ExtractedItineraryItem[];
   faqs: Engine6ExtractedFaq[];
+  included: string[];
   requirements: string[];
   primaryCategory: string | null;
   categories: string[];
@@ -287,6 +288,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   highlights: [],
   itinerary: [],
   faqs: [],
+  included: [],
   requirements: [],
   primaryCategory: null,
   categories: [],
@@ -973,6 +975,23 @@ const extractRequirements = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const extractIncluded = (product: RecordLike) => {
+  for (const path of [
+    ["inclusions"],
+    ["included"],
+    ["whatsIncluded"],
+    ["whatIsIncluded"],
+    ["includedItems"],
+  ] as PathSegment[][]) {
+    const value = normalizeStringArray(readPath(product, path));
+    if (value.length > 0) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: [], path: null as string | null };
+};
+
 export const extractEngine6Product = (rawPayload: unknown) => {
   const product = pickProduct(rawPayload);
   const diagnostics: Engine6DiagnosticsPaths = {
@@ -1073,6 +1092,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
+  const included = extractIncluded(product);
 
   const baseFaqs = extractFaqs(product);
   const mergedFaqs = dedupeStrings(
@@ -1131,6 +1151,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       highlights: highlights.value,
       itinerary: itinerary.value,
       faqs: faqs.value,
+      included: included.value,
       requirements: requirements.value,
       primaryCategory: classification.primaryCategory,
       categories: classification.categories,

@@ -221,6 +221,21 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
+        {tour.included.length > 0 ? (
+          <ContentSection title="What’s included">
+            <ul className="grid gap-3 md:grid-cols-2">
+              {tour.included.map((item, index) => (
+                <li
+                  key={`${item.slice(0, 32)}-${index}`}
+                  className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ContentSection>
+        ) : null}
+
         {tour.itinerary.length > 0 ? (
           <ContentSection title="Itinerary">
             <ul className="space-y-4">
@@ -272,6 +287,21 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </details>
               ))}
             </div>
+          </ContentSection>
+        ) : null}
+
+        {tour.requirements.length > 0 ? (
+          <ContentSection title="Additional info">
+            <ul className="space-y-3">
+              {tour.requirements.map((item, index) => (
+                <li
+                  key={`${item.slice(0, 32)}-${index}`}
+                  className="rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm leading-6 text-slate-700"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
           </ContentSection>
         ) : null}
 
