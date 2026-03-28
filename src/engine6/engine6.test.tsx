@@ -25,7 +25,11 @@ import {
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { engine6ResolvedTours } from "./registry";
-import { ENGINE6_PARAGON_ROUTE, ENGINE6_SPECIMEN_ROUTE } from "./routes";
+import {
+  ENGINE6_CATALINA_ROUTE,
+  ENGINE6_PARAGON_ROUTE,
+  ENGINE6_SPECIMEN_ROUTE,
+} from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
   resolveEngine6SpecimenResponse,
@@ -484,6 +488,17 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+  it("adds 32779P2 to California and Avalon listing sources (not Los Angeles listing)", () => {
+    const californiaTours = getToursByState("california");
+    const avalonTours = getToursByCity("california", "avalon");
+    const losAngelesTours = getToursByCity("california", "los-angeles");
+    expect(californiaTours.some(tour => tour.productCode === "32779P2")).toBe(true);
+    expect(avalonTours.some(tour => tour.productCode === "32779P2")).toBe(true);
+    expect(losAngelesTours.some(tour => tour.productCode === "32779P2")).toBe(
+      false
+    );
+  });
+
   it("extracts and renders itinerary + faq content generically for the Las Vegas Engine6 tour", () => {
     const vegasTour = engine6ResolvedTours.find(
       tour => tour.productCode === "5119P13"
@@ -509,6 +524,27 @@ describe("engine6 listing surfaces", () => {
     );
     expect(html).toContain("How long is the overall day from Las Vegas?");
     expect((html.match(/<details /g) ?? []).length).toBe(2);
+  });
+
+  it("renders itinerary, meeting point, included/additional info, and omits FAQs for 32779P2 when absent", () => {
+    const catalinaTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "32779P2"
+    );
+    expect(catalinaTour).toBeDefined();
+    expect(catalinaTour?.city).toBe("Avalon");
+    expect(catalinaTour?.state).toBe("California");
+    expect(catalinaTour?.itinerary.length).toBeGreaterThan(0);
+    expect(catalinaTour?.included.length).toBeGreaterThan(0);
+    expect(catalinaTour?.requirements.length).toBeGreaterThan(0);
+    expect(catalinaTour?.meetingPointText).toContain("Green Pleasure Pier");
+    expect(catalinaTour?.faqs.length).toBe(0);
+
+    const html = renderToString(<Engine6TourPage tour={catalinaTour!} />);
+    expect(html).toContain(">Itinerary<");
+    expect(html).toContain(">What’s included<");
+    expect(html).toContain(">Additional info<");
+    expect(html).toContain("Meeting point:");
+    expect(html).not.toContain(">FAQs<");
   });
 
   it("hides FAQ section gracefully when upstream FAQ data is absent", () => {
@@ -582,6 +618,20 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.badges?.priceFrom).toMatch(/^From \$/);
     expect(engine6Entry?.tour.badges?.rating).toBeGreaterThan(4);
     expect(engine6Entry?.tour.badges?.reviewCount).toBeGreaterThan(100);
+  });
+
+  it("routes and renders 32779P2 in Avalon with detail-page hero parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "avalon");
+    const engine6Entry = unifiedTours.find(
+      entry => entry.tour.productCode === "32779P2"
+    );
+
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_CATALINA_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("Avalon");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(engine6Entry?.tour.primaryImageUrl);
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("From $53");
   });
 
   it("uses the exact same resolved hero for Vegas detail page, city listing card, and filtered tours card", () => {

@@ -1,0 +1,61 @@
+{
+  "product": {
+    "productCode": "32779P2",
+    "productUrl": "https://www.viator.com/tours/Los-Angeles/Catalina-Island-Semi-Submarine-Undersea-Tour/d645-32779P2",
+    "title": "Yellow Semi-Submarine Tour of Catalina Island From Avalon",
+    "description": {
+      "text": "Board a semi-submersible in Avalon for a short undersea cruise through Lovers' Cove where you can watch fish schools and reef habitat through large viewing ports while staying dry. The return leg surfaces for open-air island views, making this an easy marine-life outing for families and first-time visitors to Catalina."
+    },
+    "location": {
+      "city": "Avalon",
+      "state": "California"
+    },
+    "priceFrom": "$53.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 539
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/13/70/80/fa.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "45-minute semi-submarine tour in Avalon Bay",
+      "See marine life around Lovers' Cove without getting wet",
+      "Frequent departure times make same-day planning easy",
+      "Family-friendly activity on Catalina Island"
+    ],
+    "inclusions": [
+      "English guide",
+      "Semi-submarine ride in Avalon Bay"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Green Pleasure Pier, Avalon, CA 90704, USA. Check in at the booth at the end of the pier."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Avalon Bay and Lovers' Cove",
+        "description": "Semi-submersible sightseeing route",
+        "duration": "45 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Travel to Catalina Island is not included in the ticket price",
+      "Not wheelchair accessible",
+      "Bring cash if you want to purchase fish food during the tour"
+    ]
+  }
+}
