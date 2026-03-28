@@ -119,8 +119,24 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.diagnostics.bookingUrlSource).toBe("product.productUrl");
       expect(tour.diagnostics.fieldLevelFallbackUsed).toBe(false);
       expect(tour.diagnostics.fallbackFieldNames).toEqual([]);
+
+      const openingSentence = tour.description.split(".")[0] ?? "";
+      expect(openingSentence).toContain(tour.city);
+      expect(
+        /^(Join|Discover|Experience|Explore)\b/.test(openingSentence.trim())
+      ).toBe(true);
     }
   );
+
+  it("rotates standardized SEO openings across multiple tours", () => {
+    const tours = ENGINE6_VALIDATION_FIXTURES.map(fixture =>
+      mapViatorToEngine6Tour(toPayload(fixture))
+    );
+    const openings = tours.map(tour => (tour.description.split(".")[0] ?? "").trim());
+    const uniqueOpenings = new Set(openings);
+
+    expect(uniqueOpenings.size).toBeGreaterThanOrEqual(3);
+  });
 
   it("emits a compact validation report for each Engine6 tour fixture", () => {
     const reports = ENGINE6_VALIDATION_FIXTURES.map(

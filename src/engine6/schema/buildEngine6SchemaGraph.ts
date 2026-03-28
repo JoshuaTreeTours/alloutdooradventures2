@@ -33,28 +33,12 @@ const buildCityAwareSchemaName = ({
     : `${normalizedTitle} in ${normalizedCity}`;
 };
 
-const buildActivityAwareSchemaDescription = (tour: Engine6Tour) => {
-  const activityLabel =
-    formatEngine6CategoryLabel(tour.primaryCategory) ?? "guided tour";
-  const baseNarrative = tour.description || tour.metaDescription || "";
-  const locationLabel = [tour.city, tour.state].filter(Boolean).join(", ");
-  const normalizedNarrative = baseNarrative.trim().replace(/\s+/g, " ");
-  const narrativeWithoutTrailingPeriod = normalizedNarrative.replace(/\.*$/, "");
-  const snippets = [
-    `Book ${activityLabel.toLowerCase()} experiences in ${locationLabel} with Outdoor Adventures.`,
-    `This ${activityLabel.toLowerCase()} highlights top things to do in ${tour.city}.`,
-    narrativeWithoutTrailingPeriod,
-  ].filter(Boolean);
-
-  return snippets.join(" ");
-};
-
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
   const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
-  const description = buildActivityAwareSchemaDescription(tour);
+  const description = tour.description || tour.metaDescription || tour.title;
   const schemaName = buildCityAwareSchemaName({ title: tour.title, city: tour.city });
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";

@@ -11,6 +11,53 @@ import {
 } from "./seo";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
+const ENGINE6_OPENING_PATTERNS = [
+  "Join one of the best experiences in %CITY% with this %TOUR_TYPE%.",
+  "Discover one of the top-rated experiences in %CITY% on this %TOUR_TYPE%.",
+  "Experience one of the most popular things to do in %CITY% with this %TOUR_TYPE%.",
+  "Explore one of the best outdoor adventures in %CITY% on this %TOUR_TYPE%.",
+] as const;
+
+const pickOpeningPatternIndex = (seed: string) => {
+  if (!seed) {
+    return 0;
+  }
+
+  const value = seed
+    .split("")
+    .reduce((sum, char, index) => sum + char.charCodeAt(0) * (index + 1), 0);
+
+  return value % ENGINE6_OPENING_PATTERNS.length;
+};
+
+const buildEngine6OpeningSentence = ({
+  city,
+  title,
+  categoryLabel,
+  productCode,
+}: {
+  city: string;
+  title: string;
+  categoryLabel: string | null;
+  productCode: string;
+}) => {
+  const normalizedCity = city.trim() || "this destination";
+  const titleIncludesCity = title
+    .toLowerCase()
+    .includes(normalizedCity.toLowerCase());
+  const tourType =
+    categoryLabel?.toLowerCase() ??
+    (titleIncludesCity ? "tour" : title.toLowerCase());
+  const safeTourType = tourType.includes("tour") ? tourType : `${tourType} tour`;
+  const pattern =
+    ENGINE6_OPENING_PATTERNS[pickOpeningPatternIndex(productCode)] ??
+    ENGINE6_OPENING_PATTERNS[0];
+
+  return pattern
+    .replace("%CITY%", normalizedCity)
+    .replace("%TOUR_TYPE%", safeTourType);
+};
+
 export const mapViatorToEngine6Tour = (
   payload: Engine6ApiResponse
 ): Engine6Tour => {
@@ -37,7 +84,17 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
     `Explore ${title} with local guides in ${city}, ${state}.`;
-  const description = cleanEngine6Description(rawDescription);
+  const cleanedDescription = cleanEngine6Description(rawDescription);
+  const openingSentence = buildEngine6OpeningSentence({
+    city,
+    title,
+    categoryLabel,
+    productCode: payload.rawProductCode,
+  });
+  const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
+  const description = [openingSentence, descriptionBody]
+    .filter(Boolean)
+    .join(" ");
   const metaDescription = buildEngine6MetaDescription(
     payload.extracted.seoDescription ?? description
   );
