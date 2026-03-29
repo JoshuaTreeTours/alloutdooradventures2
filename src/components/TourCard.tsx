@@ -77,9 +77,26 @@ function formatCategoryLabel(slug?: string): string {
 
 const resolveEngine6CardImage = (tour: Tour) => {
   const resolvedHero = tour.heroImage?.trim();
-  return resolvedHero && resolvedHero.length > 0
-    ? resolvedHero
-    : ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
+  if (!resolvedHero) {
+    return ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
+  }
+
+  const normalizedHero = resolvedHero.toLowerCase();
+  const hasKnownBrokenToken = [
+    "undefined",
+    "null",
+    "about:blank",
+    "javascript:",
+    "data:",
+  ].some(token => normalizedHero.includes(token));
+  const hasProtocolOrAbsolutePath =
+    /^https?:\/\//i.test(resolvedHero) || resolvedHero.startsWith("/");
+
+  if (hasKnownBrokenToken || !hasProtocolOrAbsolutePath) {
+    return ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
+  }
+
+  return resolvedHero;
 };
 
 function getCardBlurb(tour: Tour): string {

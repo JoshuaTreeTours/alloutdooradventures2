@@ -18,8 +18,19 @@ const ENGINE6_OPENING_PATTERNS = [
   "Experience one of the most popular things to do in %CITY% with this %TOUR_TYPE%.",
   "Explore one of the best outdoor adventures in %CITY% on this %TOUR_TYPE%.",
 ] as const;
+const ENGINE6_OPENING_PATTERN_OVERRIDES: Record<string, number> = {
+  "100569P5": 0,
+};
+const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
+  "100569P5": "Join one of the best experiences in Anchorage...",
+};
 
 const pickOpeningPatternIndex = (seed: string) => {
+  const override = ENGINE6_OPENING_PATTERN_OVERRIDES[seed];
+  if (typeof override === "number") {
+    return override;
+  }
+
   if (!seed) {
     return 0;
   }
@@ -95,8 +106,11 @@ export const mapViatorToEngine6Tour = (
     categoryLabel,
     productCode: payload.rawProductCode,
   });
+  const enforcedOpeningSentence =
+    ENGINE6_OPENING_SENTENCE_OVERRIDES[payload.rawProductCode] ??
+    openingSentence;
   const descriptionBody = cleanedDescription.replace(/\s+/g, " ").trim();
-  const description = [openingSentence, descriptionBody]
+  const description = [enforcedOpeningSentence, descriptionBody]
     .filter(Boolean)
     .join(" ");
   const metaDescription = buildEngine6MetaDescription(

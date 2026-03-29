@@ -1,0 +1,75 @@
+{
+  "product": {
+    "productCode": "100569P5",
+    "productUrl": "https://www.viator.com/tours/Anchorage/SUNSET-Wilderness-Wildlife-Glacier-and-Nature-Free-Photo-Lessons-May-Sept/d4152-100569P5",
+    "title": "Glacier Hike on Matanuska Glacier - Best Vacation Value",
+    "description": "Explore the wilderness outside Anchorage with a local guide who knows where to spot wildlife and gain the best views throughout the year. Enter the Chugach National Forest to search for moose, bear, and other native wildlife. You will also visit Glacier Valley, home to several hanging glaciers and a lake of pure glacier water.",
+    "location": {
+      "city": "Anchorage",
+      "state": "Alaska"
+    },
+    "priceFrom": "$349.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 474
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/12/44/9f/67.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Evening tour of Anchorage wilderness",
+      "Senior and family friendly",
+      "Local guide",
+      "Small groups with a maximum of 12 guests"
+    ],
+    "logistics": {
+      "start": {
+        "description": "600 W 7th Ave, Anchorage, AK 99501, USA"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Matanuska Glacier State Recreational Site",
+        "description": "See dramatic glacier views and learn about the region with your guide.",
+        "duration": "2 hours"
+      },
+      {
+        "title": "Palmer",
+        "description": "Drive through Palmer Valley with narrated local context and photo stops.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Eagle River",
+        "description": "Watch for wildlife along the route and enjoy scenic viewpoints near Eagle River.",
+        "duration": "30 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ],
+    "faq": [
+      {
+        "question": "Is this tour suitable for families?",
+        "answer": "Yes, this Anchorage tour is family friendly and paced for a wide range of travelers."
+      },
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meet at 600 W 7th Ave in Anchorage before departure."
+      }
+    ]
+  }
+}
