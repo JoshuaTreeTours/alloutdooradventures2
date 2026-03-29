@@ -11,6 +11,10 @@ import {
 import ToursLanding from "../pages/tours/ToursLanding";
 import { toEngine6Card } from "./cards";
 import Engine6TourPage from "./components/Engine6TourPage";
+import {
+  buildEngine6ParentCityToursPath,
+  validateEngine6CanonicalRouteIntegrity,
+} from "./routeIntegrity";
 import { resolveEngine6PathForProductCode } from "./routes";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import type { Engine6Tour } from "./types";
@@ -93,6 +97,8 @@ export const validateEngine6CreationContract = ({
 }) => {
   const violations: string[] = [];
   const { stateSlug, citySlug, slug } = parseStateCitySlug(tour.canonicalPath);
+  const { violations: canonicalRouteViolations, parentCityToursPath } =
+    validateEngine6CanonicalRouteIntegrity(tour);
   const pageHtml = renderToString(<Engine6TourPage tour={tour} />);
   const filteredToursHtml = withFilteredToursHtml(stateSlug, citySlug);
   const schema = buildEngine6SchemaGraph(tour);
@@ -142,6 +148,8 @@ export const validateEngine6CreationContract = ({
     resolvedPrimaryHero.startsWith("http") &&
     !resolvedPrimaryHero.includes("/hero.jpg");
 
+  violations.push(...canonicalRouteViolations);
+
   if (hasValidResolvedHero && tour.heroImageUrl !== resolvedPrimaryHero) {
     violations.push("resolved Engine6 hero is not used as winning hero");
   }
@@ -163,9 +171,23 @@ export const validateEngine6CreationContract = ({
     violations.push("route ownership drifted from product-code contract");
   }
 
+  const expectedParentCityToursPath = buildEngine6ParentCityToursPath(
+    tour.canonicalPath
+  );
+  if (!expectedParentCityToursPath) {
+    violations.push(
+      "parent city tours route could not be derived from canonical path"
+    );
+  }
+  if (!parentCityToursPath) {
+    violations.push("parent city tours route is missing");
+  }
+
+  const hasInternalBookingPath = tour.bookingUrl.startsWith("/destinations/");
   if (
-    !tour.bookingUrl.includes("pid=P00290915") ||
-    !tour.bookingUrl.includes("mcid=42383")
+    !hasInternalBookingPath &&
+    (!tour.bookingUrl.includes("pid=P00290915") ||
+      !tour.bookingUrl.includes("mcid=42383"))
   ) {
     violations.push("booking CTA lost required Viator monetization parameters");
   }
@@ -201,6 +223,9 @@ export const validateEngine6CreationContract = ({
   if (!cityOptions.some(option => option.slug === citySlug)) {
     violations.push("city selector omitted city with valid Engine6 inventory");
   }
+  if (!stateSlug || !citySlug || !cityOptions.length) {
+    violations.push("parent city tours route is broken or missing");
+  }
 
   if (listingEntry) {
     if (!listingEntry.tour.heroImage?.trim()) {
@@ -220,6 +245,48 @@ export const validateEngine6CreationContract = ({
     }
     if (filteredToursHtml.includes('data-card-image-src=""')) {
       violations.push("/tours filtered surface emitted blank card image src");
+    }
+  }
+
+  if (parentCityToursPath) {
+    const parentRouteHref = `href=\"${parentCityToursPath}\"`;
+    if (!pageHtml.includes('data-testid="engine6-breadcrumbs"')) {
+      violations.push("breadcrumb route surface missing");
+    }
+    if (!pageHtml.includes(parentRouteHref)) {
+      violations.push(
+        "breadcrumb city link does not resolve to parent city tours route"
+      );
+    }
+    if (
+      !pageHtml.includes('data-testid="engine6-back-to-tours"') ||
+      !pageHtml.includes(parentRouteHref)
+    ) {
+      violations.push(
+        "back-to-tours link does not resolve to parent city tours route"
+      );
+    }
+    if (parentCityToursPath.includes("/united-states/")) {
+      violations.push(
+        "parent city tours route leaked to non-canonical state-level path"
+      );
+    }
+  }
+
+  const breadcrumbList = graph.find(node => node["@type"] === "BreadcrumbList") as
+    | {
+        itemListElement?: Array<{ position?: number; item?: string }>;
+      }
+    | undefined;
+  const schemaParentCityItem = breadcrumbList?.itemListElement?.find(
+    entry => entry.position === 3
+  )?.item;
+  if (parentCityToursPath && schemaParentCityItem) {
+    const expectedSchemaParentUrl = `https://www.alloutdooradventures.com${parentCityToursPath}`;
+    if (schemaParentCityItem !== expectedSchemaParentUrl) {
+      violations.push(
+        "schema breadcrumb city item drifted from parent city tours route"
+      );
     }
   }
 

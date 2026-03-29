@@ -7,6 +7,7 @@ import {
 } from "../../utils/structuredData";
 import { SITE_BRAND_NAME } from "../../utils/site";
 import { resolveEngine6OfferUrl } from "../buildEngine6ViatorBookingUrl";
+import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
 
@@ -47,7 +48,9 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   });
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
-  const citySlug = pathSegments[2] ?? "";
+  const parentCityToursPath =
+    buildEngine6ParentCityToursPath(tour.canonicalPath) ??
+    `/destinations/${stateSlug}/${pathSegments[2] ?? ""}/tours`;
   const destinationPlaceId = `${canonicalUrl}#destination`;
   const departurePlaceId = `${canonicalUrl}#departure`;
 
@@ -159,9 +162,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
             "@type": "ListItem",
             position: 3,
             name: tour.city,
-            item: buildCanonicalUrl(
-              `/destinations/${stateSlug}/${citySlug}/tours`
-            ),
+            item: buildCanonicalUrl(parentCityToursPath),
           },
           {
             "@type": "ListItem",

@@ -8,6 +8,7 @@ import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6ValidationReport } from "./validation";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
+import { buildEngine6ParentCityToursPath } from "./routeIntegrity";
 import type { Engine6ApiResponse } from "./types";
 
 (globalThis as { location?: { pathname: string } }).location = {
@@ -78,6 +79,9 @@ describe("engine6 single-tour validation harness", () => {
         | Record<string, unknown>
         | undefined;
       const rawPayload = fixture.rawPayload as any;
+      const parentCityToursPath = buildEngine6ParentCityToursPath(
+        tour.canonicalPath
+      );
       const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
         ?.FULL?.url ??
         rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
@@ -110,6 +114,7 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.bookingUrl.startsWith(fixture.publicUrl)).toBe(true);
       }
       expect(card.href).toBe(tour.pagePath);
+      expect(card.href).toBe(tour.canonicalPath);
       expect(card.imageUrl).toBe(tour.heroImageUrl);
       expect(card.description.length).toBeGreaterThan(40);
       expect(html).toContain(tour.title);
@@ -121,6 +126,11 @@ describe("engine6 single-tour validation harness", () => {
       expect(html).not.toContain(">ENGINE6<");
       expect(html).not.toContain("img.test");
       expect(html).not.toContain("/hero.jpg");
+      expect(tour.canonicalPath.includes("/united-states/")).toBe(false);
+      expect(parentCityToursPath).toBeTruthy();
+      expect(html).toContain('data-testid="engine6-breadcrumbs"');
+      expect(html).toContain('data-testid="engine6-back-to-tours"');
+      expect(html).toContain(`href="${parentCityToursPath}"`);
       expect(graph.some(node => node["@type"] === "BreadcrumbList")).toBe(true);
       expect(graph.some(node => node["@type"] === "WebPage")).toBe(true);
       expect(graph.some(node => node["@type"] === "Product")).toBe(true);
@@ -143,6 +153,17 @@ describe("engine6 single-tour validation harness", () => {
       expect(String(product?.description ?? "").length).toBeGreaterThan(40);
       expect(product?.url).toBe(
         `https://www.alloutdooradventures.com${tour.canonicalPath}`
+      );
+      const breadcrumbList = graph.find(node => node["@type"] === "BreadcrumbList") as
+        | {
+            itemListElement?: Array<{ position?: number; item?: string }>;
+          }
+        | undefined;
+      const schemaParentCityItem = breadcrumbList?.itemListElement?.find(
+        entry => entry.position === 3
+      )?.item;
+      expect(schemaParentCityItem).toBe(
+        `https://www.alloutdooradventures.com${parentCityToursPath}`
       );
       expect(tour.diagnostics.bookingUrlSource).toBe("product.productUrl");
       expect(tour.diagnostics.fieldLevelFallbackUsed).toBe(false);
