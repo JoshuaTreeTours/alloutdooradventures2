@@ -3,7 +3,7 @@
     "productCode": "411138P3",
     "productUrl": "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
     "title": "Glacier View & Wildlife Anchorage Adventure Tour",
-    "description": "This full-day small-group outing starts in Anchorage and heads into the surrounding mountains for glacier views, wildlife watching, and guided local context. You’ll travel in a comfortable van, stop for an easy walk near Byron Glacier, and visit the Alaska Wildlife Conservation Center to see native animals such as bears, moose, and wolves. The format is designed for travelers who want a broad, low-stress Alaska introduction in one day with pickup and logistics handled for them.",
+    "description": "This full-day small-group outing starts in Anchorage and heads into the surrounding mountains for glacier views, wildlife watching, and guided local context. You\u2019ll travel in a comfortable van, stop for an easy walk near Byron Glacier, and visit the Alaska Wildlife Conservation Center to see native animals such as bears, moose, and wolves. The format is designed for travelers who want a broad, low-stress Alaska introduction in one day with pickup and logistics handled for them.",
     "location": {
       "city": "Anchorage",
       "state": "Alaska"
@@ -43,6 +43,38 @@
       "Not wheelchair accessible",
       "Most travelers can participate",
       "This tour/activity will have a maximum of 11 travelers"
+    ],
+    "itineraryItems": [
+      {
+        "title": "Anchorage",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Earthquake Park",
+        "duration": "30 minutes",
+        "admissionTicket": "Admission Ticket Included"
+      },
+      {
+        "title": "Beluga Point",
+        "duration": "30 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Alaska Wildlife Conservation Center",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Included"
+      },
+      {
+        "title": "Girdwood",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Turnagain Arm Drive",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      }
     ]
   }
 }

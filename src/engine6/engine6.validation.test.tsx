@@ -42,6 +42,21 @@ const toPayload = (
   };
 };
 
+const countStructuredSourceStops = (rawPayload: Record<string, unknown>) => {
+  const product = ((rawPayload as any).product ?? rawPayload) as any;
+  const rows = Array.isArray(product.itineraryItems)
+    ? product.itineraryItems
+    : Array.isArray(product.itinerary?.itineraryItems)
+      ? product.itinerary.itineraryItems
+      : [];
+
+  return rows.filter((item: unknown) => {
+    if (!item || typeof item !== "object") return false;
+    const row = item as Record<string, unknown>;
+    return typeof row.title === "string" || typeof row.name === "string";
+  }).length;
+};
+
 describe("engine6 single-tour validation harness", () => {
   it.each(ENGINE6_VALIDATION_FIXTURES)(
     "validates %s end-to-end with product-scoped hero resolution",
@@ -74,6 +89,11 @@ describe("engine6 single-tour validation harness", () => {
       expect(tour.diagnostics.heroSourceType).toBe("api-primary");
       expect(tour.diagnostics.heroFallbackTriggered).toBe(false);
       expect(tour.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
+      const structuredStops = countStructuredSourceStops(fixture.rawPayload);
+      if (structuredStops >= 2) {
+        expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
+        expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+      }
       expect(tour.priceFormatted).toMatch(/^Starting at \$/);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(100);

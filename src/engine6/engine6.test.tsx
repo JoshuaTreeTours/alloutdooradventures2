@@ -1367,7 +1367,7 @@ describe("engine6 itinerary contract", () => {
     expect(html).toContain("Bridalveil Fall");
   });
 
-  it.each(["5119P13", "36001P1", "60136P1", "26719P8"])(
+  it.each(["5119P13", "36001P1", "60136P1", "26719P8", "411138P3"])(
     "does not degrade structured itinerary rendering for %s when source has multiple stops",
     productCode => {
       const fixture = ENGINE6_VALIDATION_FIXTURES.find(
@@ -1388,6 +1388,43 @@ describe("engine6 itinerary contract", () => {
       }
     }
   );
+
+  it("renders Anchorage 411138P3 itinerary stops in source order with duration/admission details", () => {
+    const anchorage = engine6ResolvedTours.find(tour => tour.productCode === "411138P3");
+    expect(anchorage).toBeDefined();
+    expect(anchorage?.itinerary.map(item => item.title)).toEqual([
+      "Anchorage",
+      "Earthquake Park",
+      "Beluga Point",
+      "Alaska Wildlife Conservation Center",
+      "Girdwood",
+      "Turnagain Arm Drive",
+    ]);
+
+    const html = renderToString(<Engine6TourPage tour={anchorage!} />);
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).toContain("1 hour");
+    expect(html).toContain("30 minutes");
+    expect(html).toContain("Admission Ticket Included");
+    expect(html).toContain("Admission Ticket Free");
+
+    const schema = buildEngine6SchemaGraph(anchorage!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as
+      | { itinerary?: { itemListElement?: Array<{ item?: { name?: string } }> } }
+      | undefined;
+    const names = (trip?.itinerary?.itemListElement ?? []).map(
+      item => item.item?.name
+    );
+    expect(names).toEqual([
+      "Anchorage",
+      "Earthquake Park",
+      "Beluga Point",
+      "Alaska Wildlife Conservation Center",
+      "Girdwood",
+      "Turnagain Arm Drive",
+    ]);
+  });
 
   it("renders summary-only itinerary style when structured stops are absent", () => {
     const tour = {
