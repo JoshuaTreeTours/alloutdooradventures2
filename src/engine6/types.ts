@@ -48,6 +48,7 @@ export type Engine6TourDiagnostics = {
   itineraryFieldPath: string | null;
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
+  itinerarySummaryFieldPath?: string | null;
   faqsFieldPath: string | null;
   faqFieldPath: string | null;
   faqCount: number;
@@ -104,6 +105,7 @@ export type Engine6Tour = {
   overviewText: string | null;
   highlights: string[];
   itinerary: Engine6ItineraryItem[];
+  itinerarySummaryText?: string | null;
   faqs: Engine6FaqItem[];
   included: string[];
   requirements: string[];
@@ -137,6 +139,7 @@ export type Engine6ApiResponse = {
     overviewText: string | null;
     highlights: string[];
     itinerary: Engine6ItineraryItem[];
+    itinerarySummaryText?: string | null;
     faqs: Engine6FaqItem[];
     included: string[];
     requirements: string[];

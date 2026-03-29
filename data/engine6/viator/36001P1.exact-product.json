@@ -45,5 +45,43 @@
     "city": "San Francisco",
     "state": "California"
   },
-  "meetingPoint": "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA"
+  "meetingPoint": "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA",
+  "itineraryItems": [
+    {
+      "title": "Tunnel View",
+      "description": "Panoramic first look across Yosemite Valley with El Capitan, Half Dome, and Bridalveil Fall.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Yosemite Valley",
+      "description": "Guided orientation and free time in the valley floor for photos and short walks.",
+      "duration": "60 minutes"
+    },
+    {
+      "title": "Half Dome",
+      "description": "Stop focused on Half Dome geology and major viewpoints from the valley route.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Yosemite Falls",
+      "description": "Visit Yosemite Falls area with time for viewpoints and river-side access.",
+      "duration": "30 minutes"
+    },
+    {
+      "title": "El Capitan",
+      "description": "Photo stop at El Capitan meadow and commentary on climbing history.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Tuolumne Grove",
+      "description": "Seasonal walk among giant sequoias when road and trail conditions allow.",
+      "duration": "45 minutes"
+    },
+    {
+      "title": "Bridalveil Fall",
+      "description": "Short stop at Bridalveil Fall viewpoint before return departure.",
+      "duration": "20 minutes"
+    }
+  ],
+  "itinerarySummary": "Full-day Yosemite circuit from San Francisco with guided stops at major valley landmarks and a seasonal giant sequoia grove."
 }

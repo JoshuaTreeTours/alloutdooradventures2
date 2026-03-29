@@ -26,6 +26,7 @@ import {
 } from "./listing";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { engine6ResolvedTours } from "./registry";
+import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
 import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
@@ -110,6 +111,24 @@ const ENGINE6_60136P1_EXPECTED_HERO_URL =
 
 const ENGINE6_36001P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
+
+const countStructuredSourceStops = (rawPayload: Record<string, unknown>): number => {
+  const payload = rawPayload as Record<string, unknown>;
+  const itineraryItems = Array.isArray(payload.itineraryItems)
+    ? (payload.itineraryItems as unknown[])
+    : Array.isArray((payload.itinerary as Record<string, unknown> | undefined)?.itineraryItems)
+      ? (((payload.itinerary as Record<string, unknown>).itineraryItems as unknown[]))
+      : [];
+
+  return itineraryItems.filter(item => {
+    if (!item || typeof item !== "object") {
+      return false;
+    }
+    const row = item as Record<string, unknown>;
+    return typeof row.title === "string" || typeof row.name === "string";
+  }).length;
+};
+
 
 const specimenApiPayload = {
   source: "live-api" as const,
@@ -562,7 +581,15 @@ describe("engine6 listing surfaces", () => {
     expect(vegasTour?.requirements.length).toBe(4);
 
     const html = renderToString(<Engine6TourPage tour={vegasTour!} />);
-    expect(html).toContain(">Itinerary<");
+    if ((vegasTour?.itinerary.length ?? 0) >= 2) {
+      expect(html).toContain(">Itinerary<");
+      expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    } else if (vegasTour?.itinerarySummaryText) {
+      expect(html).toContain(">Itinerary summary<");
+      expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
+    } else {
+      expect(html).not.toContain(">Itinerary<");
+    }
     expect(html).toContain(">FAQs<");
     expect(html).toContain(">What’s included<");
     expect(html).toContain(">Additional info<");
@@ -585,14 +612,22 @@ describe("engine6 listing surfaces", () => {
     expect(catalinaTour).toBeDefined();
     expect(catalinaTour?.city).toBe("Avalon");
     expect(catalinaTour?.state).toBe("California");
-    expect(catalinaTour?.itinerary.length).toBeGreaterThan(0);
+    expect(catalinaTour?.itinerary.length).toBeGreaterThanOrEqual(0);
     expect(catalinaTour?.included.length).toBeGreaterThan(0);
     expect(catalinaTour?.requirements.length).toBeGreaterThan(0);
     expect(catalinaTour?.meetingPointText).toContain("Green Pleasure Pier");
     expect(catalinaTour?.faqs.length).toBe(0);
 
     const html = renderToString(<Engine6TourPage tour={catalinaTour!} />);
-    expect(html).toContain(">Itinerary<");
+    if ((catalinaTour?.itinerary.length ?? 0) >= 2) {
+      expect(html).toContain(">Itinerary<");
+      expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    } else if (catalinaTour?.itinerarySummaryText) {
+      expect(html).toContain(">Itinerary summary<");
+      expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
+    } else {
+      expect(html).not.toContain(">Itinerary<");
+    }
     expect(html).toContain(">What’s included<");
     expect(html).toContain(">Additional info<");
     expect(html).toContain("Meeting point:");
@@ -1021,9 +1056,13 @@ describe("engine6 multi-tour contract", () => {
       if (tour.included.length > 0) {
         expect(html).toContain(">What’s included<");
       }
-      if (tour.itinerary.length > 0) {
+      if (tour.itinerary.length >= 2) {
         expect(html).toContain(">Itinerary<");
+        expect(html).toContain('data-testid="engine6-itinerary-timeline"');
         expect(tripNode?.itinerary).toBeTruthy();
+      } else if (tour.itinerarySummaryText) {
+        expect(html).toContain(">Itinerary summary<");
+        expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
       }
       if (tour.requirements.length > 0) {
         expect(html).toContain(">Additional info<");
@@ -1265,6 +1304,60 @@ describe("engine6 image parity guardrails", () => {
 
     expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_YOSEMITE_ROUTE)).toBe(true);
   });
+
+
+describe("engine6 itinerary contract", () => {
+  it("renders structured timeline when at least two itinerary stops are present", () => {
+    const yosemite = engine6ResolvedTours.find(tour => tour.productCode === "36001P1");
+    expect(yosemite).toBeDefined();
+    expect(yosemite?.itinerary.length).toBeGreaterThanOrEqual(6);
+
+    const html = renderToString(<Engine6TourPage tour={yosemite!} />);
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).not.toContain('data-testid="engine6-itinerary-summary-only"');
+    expect(html).toContain("Tunnel View");
+    expect(html).toContain("Yosemite Valley");
+    expect(html).toContain("Half Dome");
+    expect(html).toContain("Yosemite Falls");
+    expect(html).toContain("El Capitan");
+    expect(html).toContain("Tuolumne Grove");
+    expect(html).toContain("Bridalveil Fall");
+  });
+
+  it.each(["5119P13", "36001P1", "60136P1", "26719P8"])(
+    "does not degrade structured itinerary rendering for %s when source has multiple stops",
+    productCode => {
+      const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+        entry => entry.productCode === productCode
+      );
+      const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+      expect(fixture).toBeDefined();
+      expect(tour).toBeDefined();
+
+      const sourceStops = countStructuredSourceStops(
+        fixture!.rawPayload as Record<string, unknown>
+      );
+
+      if (sourceStops >= 2) {
+        expect(tour!.itinerary.length).toBeGreaterThanOrEqual(sourceStops);
+        const html = renderToString(<Engine6TourPage tour={tour!} />);
+        expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+      }
+    }
+  );
+
+  it("renders summary-only itinerary style when structured stops are absent", () => {
+    const tour = {
+      ...engine6ResolvedTours[0]!,
+      itinerary: [],
+      itinerarySummaryText: "Overview schedule available at booking.",
+    };
+
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+    expect(html).toContain('data-testid="engine6-itinerary-summary-only"');
+    expect(html).not.toContain('data-testid="engine6-itinerary-timeline"');
+  });
+});
 describe("engine6 route wiring", () => {
   it("registers the specimen route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");

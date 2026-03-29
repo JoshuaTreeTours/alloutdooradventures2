@@ -259,9 +259,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </ContentSection>
         ) : null}
 
-        {tour.itinerary.length > 0 ? (
+        {tour.itinerary.length >= 2 ? (
           <ContentSection title="Itinerary">
-            <ul className="space-y-4">
+            <ul className="space-y-4" data-testid="engine6-itinerary-timeline">
               {tour.itinerary.map((item, index) => (
                 <li
                   key={`${item.title}-${index}`}
@@ -290,6 +290,15 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </li>
               ))}
             </ul>
+          </ContentSection>
+        ) : tour.itinerarySummaryText ? (
+          <ContentSection title="Itinerary summary">
+            <div
+              className="rounded-xl border border-amber-200 bg-amber-50 p-5 text-sm leading-6 text-amber-900"
+              data-testid="engine6-itinerary-summary-only"
+            >
+              {tour.itinerarySummaryText}
+            </div>
           </ContentSection>
         ) : null}
 

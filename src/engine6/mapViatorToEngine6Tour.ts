@@ -73,6 +73,7 @@ export const mapViatorToEngine6Tour = (
   );
   const highlights = payload.extracted.highlights ?? [];
   const itinerary = payload.extracted.itinerary ?? [];
+  const itinerarySummaryText = payload.extracted.itinerarySummaryText ?? null;
   const faqs = payload.extracted.faqs ?? [];
   const included = payload.extracted.included ?? [];
   const requirements = payload.extracted.requirements ?? [];
@@ -143,6 +144,7 @@ export const mapViatorToEngine6Tour = (
     overviewText: overviewText || null,
     highlights,
     itinerary,
+    itinerarySummaryText,
     faqs,
     included,
     requirements,
@@ -179,6 +181,8 @@ export const mapViatorToEngine6Tour = (
       itineraryFieldPath: payload.diagnostics.itineraryFieldPath,
       itineraryItemCount: payload.diagnostics.itineraryItemCount,
       itinerarySourceUsed: payload.diagnostics.itinerarySourceUsed,
+      itinerarySummaryFieldPath:
+        payload.diagnostics.itinerarySummaryFieldPath ?? null,
       faqsFieldPath: payload.diagnostics.faqsFieldPath,
       faqFieldPath: payload.diagnostics.faqFieldPath,
       faqCount: payload.diagnostics.faqCount,
