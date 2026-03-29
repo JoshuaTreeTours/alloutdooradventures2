@@ -1639,6 +1639,20 @@ describe("engine6 route wiring", () => {
     );
   });
 
+  it("registers the Anchorage greenbelt route before the united-states city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_ANCHORAGE_GREENBELT_ROUTE}"
+    );
+    const unitedStatesRouteIndex = source.indexOf(
+      'path="/destinations/united-states/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(unitedStatesRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(unitedStatesRouteIndex);
+  });
+
   it("replaces 53474P8 in-place and keeps FareHarbor /book routing", () => {
     const anchorageTour = engine6ResolvedTours.find(
       tour => tour.productCode === "53474P8"
