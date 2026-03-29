@@ -2,6 +2,7 @@ import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolv
 
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
+import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -79,7 +80,9 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const canonicalPath = buildEngine6CanonicalPath({ state, city, title });
+  const generatedCanonicalPath = buildEngine6CanonicalPath({ state, city, title });
+  const canonicalPath =
+    resolveEngine6PathForProductCode(payload.rawProductCode) ?? generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??

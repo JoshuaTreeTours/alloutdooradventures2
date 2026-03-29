@@ -2,6 +2,7 @@ import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
+import { assertEngine6CollisionPolicy } from "./collisionGuard";
 
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
@@ -31,6 +32,10 @@ const toEngine6FixturePayload = (
   };
 };
 
-export const engine6ResolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
+const resolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
   toEngine6FixturePayload
 ).map(mapViatorToEngine6Tour);
+
+assertEngine6CollisionPolicy(resolvedTours);
+
+export const engine6ResolvedTours: Engine6Tour[] = resolvedTours;
