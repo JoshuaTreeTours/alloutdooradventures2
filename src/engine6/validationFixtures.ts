@@ -6,6 +6,7 @@ import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-produc
 import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
+import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -61,5 +62,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
     rawPayload: specimen411138Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "53474P8",
+    publicUrl:
+      "https://www.viator.com/tours/Anchorage/Anchorage-Greenbelt-Bike-Tour/d4152-53474P8",
+    rawPayload: specimen53474Payload as Record<string, unknown>,
   },
 ];

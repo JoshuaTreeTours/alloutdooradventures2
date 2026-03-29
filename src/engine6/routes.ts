@@ -24,8 +24,11 @@ export const ENGINE6_ANCHORAGE_PRIVATE_PRODUCT_CODE = "411138P3";
 export const ENGINE6_ANCHORAGE_PRIVATE_ROUTE =
   "/destinations/alaska/anchorage/tours/glacier-view-and-wildlife-anchorage-adventure-tour";
 export const ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE = "100569P5";
+export const ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE = "53474P8";
 export const ENGINE6_ANCHORAGE_SUNSET_ROUTE =
   "/destinations/alaska/anchorage/tours/sunset-wilderness-wildlife-glacier-and-nature-free-photo-lessons-may-sept";
+export const ENGINE6_ANCHORAGE_GREENBELT_ROUTE =
+  "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155";
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_SPECIMEN_ROUTE]: ENGINE6_SPECIMEN_PRODUCT_CODE,
@@ -36,15 +39,16 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_YOSEMITE_ROUTE]: ENGINE6_YOSEMITE_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_PRIVATE_ROUTE]: ENGINE6_ANCHORAGE_PRIVATE_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_SUNSET_ROUTE]: ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE,
+  [ENGINE6_ANCHORAGE_GREENBELT_ROUTE]: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
 };
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
   ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
 ]);
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>
   ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH[path] ?? ENGINE6_SPECIMEN_PRODUCT_CODE;
-
 
 export const resolveEngine6PathForProductCode = (productCode: string) =>
   Object.entries(ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH).find(
