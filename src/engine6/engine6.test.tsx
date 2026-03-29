@@ -31,6 +31,7 @@ import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
   ENGINE6_EMERALD_CAVE_ROUTE,
+  ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
@@ -342,6 +343,12 @@ describe("engine6 Viator booking URLs", () => {
   it("uses the canonical Santa Barbara Viator detail URL when no preferred product URL is available", () => {
     expect(buildEngine6ViatorBookingUrl("63657P1")).toBe(
       "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1?pid=P00290915&mcid=42383&medium=link"
+    );
+  });
+
+  it("uses the canonical Anchorage product URL for 411138P3 with affiliate params", () => {
+    expect(buildEngine6ViatorBookingUrl("411138P3", null)).toBe(
+      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
     );
   });
 });
@@ -1129,7 +1136,7 @@ describe("engine6 image parity guardrails", () => {
     return { stateSlug, citySlug };
   };
 
-  it.each(["63657P1", "5119P13", "32779P2", "60136P1"])(
+  it.each(["63657P1", "5119P13", "32779P2", "60136P1", "411138P3"])(
     "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
     productCode => {
       const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
@@ -1360,7 +1367,7 @@ describe("engine6 itinerary contract", () => {
     expect(html).toContain("Bridalveil Fall");
   });
 
-  it.each(["5119P13", "36001P1", "60136P1", "26719P8"])(
+  it.each(["5119P13", "36001P1", "60136P1", "26719P8", "411138P3"])(
     "does not degrade structured itinerary rendering for %s when source has multiple stops",
     productCode => {
       const fixture = ENGINE6_VALIDATION_FIXTURES.find(
@@ -1381,6 +1388,43 @@ describe("engine6 itinerary contract", () => {
       }
     }
   );
+
+  it("renders Anchorage 411138P3 itinerary stops in source order with duration/admission details", () => {
+    const anchorage = engine6ResolvedTours.find(tour => tour.productCode === "411138P3");
+    expect(anchorage).toBeDefined();
+    expect(anchorage?.itinerary.map(item => item.title)).toEqual([
+      "Anchorage",
+      "Earthquake Park",
+      "Beluga Point",
+      "Alaska Wildlife Conservation Center",
+      "Girdwood",
+      "Turnagain Arm Drive",
+    ]);
+
+    const html = renderToString(<Engine6TourPage tour={anchorage!} />);
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
+    expect(html).toContain("1 hour");
+    expect(html).toContain("30 minutes");
+    expect(html).toContain("Admission Ticket Included");
+    expect(html).toContain("Admission Ticket Free");
+
+    const schema = buildEngine6SchemaGraph(anchorage!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const trip = graph.find(node => node["@type"] === "TouristTrip") as
+      | { itinerary?: { itemListElement?: Array<{ item?: { name?: string } }> } }
+      | undefined;
+    const names = (trip?.itinerary?.itemListElement ?? []).map(
+      item => item.item?.name
+    );
+    expect(names).toEqual([
+      "Anchorage",
+      "Earthquake Park",
+      "Beluga Point",
+      "Alaska Wildlife Conservation Center",
+      "Girdwood",
+      "Turnagain Arm Drive",
+    ]);
+  });
 
   it("renders summary-only itinerary style when structured stops are absent", () => {
     const tour = {
@@ -1423,6 +1467,20 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
+  it("registers the Anchorage private route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "<Route path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE} component={Engine6SpecimenRoute} />"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
   it("registers the Anchorage SUNSET route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
@@ -1435,6 +1493,17 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeGreaterThan(-1);
     expect(genericRouteIndex).toBeGreaterThan(-1);
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("keeps 411138P3 mapped to the Anchorage private canonical route", () => {
+    const anchorageTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "411138P3"
+    );
+    expect(anchorageTour).toBeDefined();
+    expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_PRIVATE_ROUTE);
+    expect(anchorageTour?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3?pid=P00290915&mcid=42383&medium=link"
+    );
   });
 
   it("keeps 100569P5 mapped to the Anchorage SUNSET canonical route", () => {

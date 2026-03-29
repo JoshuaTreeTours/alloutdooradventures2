@@ -250,6 +250,11 @@ export const validateEngine6CreationContract = ({
   ) {
     violations.push("structured itinerary degraded from timeline rendering");
   }
+  if (structuredStopCount >= 2 && tour.itinerary.length < 2) {
+    violations.push(
+      "structured itinerary was dropped despite reliable source stop data"
+    );
+  }
   if (
     tour.itinerary.length < 2 &&
     structuredStopCount > 0 &&
@@ -267,6 +272,16 @@ export const validateEngine6CreationContract = ({
     violations.push(
       "summary-only itinerary missing explicit summary rendering"
     );
+  }
+
+  const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+    | { itinerary?: unknown }
+    | undefined;
+  if (tour.itinerary.length >= 2 && !tripNode?.itinerary) {
+    violations.push("schema itinerary missing while visible itinerary is present");
+  }
+  if (tour.itinerary.length < 2 && tripNode?.itinerary) {
+    violations.push("schema itinerary present while visible itinerary is absent");
   }
 
   if (tour.faqs.length > 0) {

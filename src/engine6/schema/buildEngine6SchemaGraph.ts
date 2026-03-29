@@ -47,7 +47,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const departurePlaceId = `${canonicalUrl}#departure`;
 
   const itinerary =
-    tour.itinerary.length > 0
+    tour.itinerary.length >= 2
       ? {
           "@type": "ItemList",
           itemListElement: tour.itinerary.map((item, index) => ({

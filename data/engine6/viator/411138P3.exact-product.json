@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "411138P3",
+    "productUrl": "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
+    "title": "Glacier View & Wildlife Anchorage Adventure Tour",
+    "description": "This full-day small-group outing starts in Anchorage and heads into the surrounding mountains for glacier views, wildlife watching, and guided local context. You\u2019ll travel in a comfortable van, stop for an easy walk near Byron Glacier, and visit the Alaska Wildlife Conservation Center to see native animals such as bears, moose, and wolves. The format is designed for travelers who want a broad, low-stress Alaska introduction in one day with pickup and logistics handled for them.",
+    "location": {
+      "city": "Anchorage",
+      "state": "Alaska"
+    },
+    "priceFrom": "$177.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 329
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/16/4f/30/00.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Small-group day trip from Anchorage with local guiding",
+      "Easy riverside walk with glacier viewpoints near Byron Glacier",
+      "Guaranteed wildlife viewing at the Alaska Wildlife Conservation Center",
+      "Hotel pickup support in Anchorage midtown and downtown areas"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Anchorage pickups are available in midtown and downtown areas, or meet at the designated Anchorage meeting location provided after booking."
+      }
+    },
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 11 travelers"
+    ],
+    "itineraryItems": [
+      {
+        "title": "Anchorage",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Earthquake Park",
+        "duration": "30 minutes",
+        "admissionTicket": "Admission Ticket Included"
+      },
+      {
+        "title": "Beluga Point",
+        "duration": "30 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Alaska Wildlife Conservation Center",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Included"
+      },
+      {
+        "title": "Girdwood",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Turnagain Arm Drive",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      }
+    ]
+  }
+}

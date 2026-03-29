@@ -90,4 +90,26 @@ describe("engine6 creation contract validator", () => {
       ])
     );
   });
+  it("fails loudly when structured itinerary stops are dropped", () => {
+    const fixture = ENGINE6_VALIDATION_FIXTURES.find(
+      entry => entry.productCode === "411138P3"
+    );
+    expect(fixture).toBeDefined();
+
+    const payload = toPayload(fixture!);
+    const tour = mapViatorToEngine6Tour(payload);
+    expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
+
+    const report = validateEngine6CreationContract({
+      tour: { ...tour, itinerary: [] },
+      rawPayload: fixture!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining([
+        "structured itinerary was dropped despite reliable source stop data",
+      ])
+    );
+  });
+
 });
