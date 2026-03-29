@@ -73,27 +73,6 @@ function formatCategoryLabel(slug?: string): string {
   return slug.replace(/-/g, " ").replace(/\b\w/g, char => char.toUpperCase());
 }
 
-
-const resolveEngine6CardImage = (tour: Tour) => {
-  const resolvedHero = tour.heroImage?.trim() || tour.primaryImageUrl?.trim();
-  if (!resolvedHero) return "";
-
-  const normalizedHero = resolvedHero.toLowerCase();
-  const hasKnownBrokenToken = [
-    "undefined",
-    "null",
-    "about:blank",
-    "javascript:",
-    "data:",
-  ].some(token => normalizedHero.includes(token));
-  const hasProtocolOrAbsolutePath =
-    /^https?:\/\//i.test(resolvedHero) || resolvedHero.startsWith("/");
-
-  if (hasKnownBrokenToken || !hasProtocolOrAbsolutePath) return "";
-
-  return resolvedHero;
-};
-
 function getCardBlurb(tour: Tour): string {
   if (isRentalTour(tour)) {
     return buildRentalDescription({
@@ -168,7 +147,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? resolveEngine6CardImage(tour)
+        ? tour.resolvedImageUrl?.trim() || ""
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"

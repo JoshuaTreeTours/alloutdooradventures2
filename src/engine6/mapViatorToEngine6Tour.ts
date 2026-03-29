@@ -1,5 +1,3 @@
-import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
-
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
 import { resolveEngine6PathForProductCode } from "./routes";
@@ -77,8 +75,13 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
-  const heroImageUrl =
-    payload.extracted.heroImageUrl ?? ENGINE6_APPROVED_PLACEHOLDER_IMAGE;
+  const resolvedImageUrl =
+    typeof payload.extracted.heroImageUrl === "string" &&
+    /^https?:\/\//i.test(payload.extracted.heroImageUrl) &&
+    !payload.extracted.heroImageUrl.includes("/hero.jpg") &&
+    !payload.extracted.heroImageUrl.includes("/images/hiking-hero.jpg")
+      ? payload.extracted.heroImageUrl
+      : null;
   const overviewText = cleanEngine6Description(
     payload.extracted.overviewText ?? ""
   );
@@ -148,7 +151,8 @@ export const mapViatorToEngine6Tour = (
     metaDescription,
     city,
     state,
-    heroImageUrl,
+    resolvedImageUrl,
+    heroImageUrl: resolvedImageUrl ?? "",
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

@@ -415,7 +415,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.rejectedForeignHeroCandidates).toEqual([]);
   });
 
-  it("keeps rendering when the API has to fall back to the approved placeholder", () => {
+  it("keeps rendering without an image when no valid product-owned hero exists", () => {
     const resolved = resolveEngine6SpecimenResponse({
       payload: {
         ...specimenApiPayload,
@@ -438,8 +438,9 @@ describe("engine6 mapping/cards/page", () => {
 
     const html = renderToString(<Engine6TourPage tour={resolved.tour!} />);
 
-    expect(resolved.tour?.heroImageUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
+    expect(resolved.tour?.resolvedImageUrl).toBeNull();
     expect(html).not.toContain("/hero.jpg");
+    expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 });
 
@@ -1212,6 +1213,7 @@ describe("engine6 image parity guardrails", () => {
         city: "Las Vegas",
         citySlug: "las-vegas",
       },
+      resolvedImageUrl: "https://cdn.example.com/hero-canonical.jpg",
       heroImage: "https://cdn.example.com/hero-canonical.jpg",
       primaryImageUrl: "https://cdn.example.com/legacy-primary.jpg",
       galleryImages: ["https://cdn.example.com/gallery-first.jpg"],
@@ -1230,7 +1232,7 @@ describe("engine6 image parity guardrails", () => {
     expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 
-  it("uses primaryImageUrl when engine6 heroImage is absent", () => {
+  it("renders no image when Engine6 resolvedImageUrl is absent", () => {
     const tour = {
       id: "engine6-placeholder-test",
       engine: "engine6",
@@ -1245,7 +1247,6 @@ describe("engine6 image parity guardrails", () => {
         citySlug: "las-vegas",
       },
       heroImage: "",
-      primaryImageUrl: "https://cdn.example.com/engine6-primary.jpg",
       badges: {},
       activitySlugs: ["hiking"],
       bookingProvider: "viator",
@@ -1256,7 +1257,7 @@ describe("engine6 image parity guardrails", () => {
     const html = renderToString(
       <TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test" />
     );
-    expect(html).toContain('data-card-image-src="https://cdn.example.com/engine6-primary.jpg"');
+    expect(html).toContain('data-card-image-src=""');
   });
 
   it("regression: engine6 cards never emit blank or unusable image src", () => {

@@ -208,9 +208,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </a>
           </div>
 
-          {tour.heroImageUrl ? (
+          {tour.resolvedImageUrl ? (
             <img
-              src={tour.heroImageUrl}
+              src={tour.resolvedImageUrl}
               alt={tour.title}
               className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
             />
