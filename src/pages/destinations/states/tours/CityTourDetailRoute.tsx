@@ -109,7 +109,8 @@ export default function CityTourDetailRoute({
     if (
       !engine4RouteTour ||
       engine4RouteTour.bookingProvider !== "viator" ||
-      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      engine4RouteTour.id.toUpperCase() !==
+        ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
     ) {
       return;
     }
@@ -195,63 +196,61 @@ export default function CityTourDetailRoute({
         return null;
       }
 
-      return (
-        (() => {
-          const cachedFallback =
-            engine4ViatorApiFallbackByProductCode[productCode];
-          const resolvedBridge = resolve421920P2BridgeApiTour({
-            productCode,
-            runtimeApiTour: strictBridgeApiTour,
-            runtimeSource: strictBridgeSource,
-            cachedFallbackApiTour: cachedFallback,
-          });
+      return (() => {
+        const cachedFallback =
+          engine4ViatorApiFallbackByProductCode[productCode];
+        const resolvedBridge = resolve421920P2BridgeApiTour({
+          productCode,
+          runtimeApiTour: strictBridgeApiTour,
+          runtimeSource: strictBridgeSource,
+          cachedFallbackApiTour: cachedFallback,
+        });
 
-          const hasPrice = hasViatorNonZeroPrice(
-            resolvedBridge.apiTour?.fromPrice
+        const hasPrice = hasViatorNonZeroPrice(
+          resolvedBridge.apiTour?.fromPrice
+        );
+
+        if (
+          productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+          !hasPrice
+        ) {
+          return (
+            <main className="mx-auto max-w-4xl px-6 py-16">
+              <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                Pricing temporarily unavailable
+              </h1>
+              <p className="mt-4 text-[#334433]">
+                We couldn&apos;t load valid pricing for this tour right now.
+                Please try again shortly.
+              </p>
+            </main>
           );
+        }
 
-          if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
-            !hasPrice
-          ) {
-            return (
-              <main className="mx-auto max-w-4xl px-6 py-16">
-                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
-                  Pricing temporarily unavailable
-                </h1>
-                <p className="mt-4 text-[#334433]">
-                  We couldn&apos;t load valid pricing for this tour right now. Please
-                  try again shortly.
-                </p>
-              </main>
-            );
-          }
+        const mappedTour = mapViatorToEngine4Tour({
+          record: tourRecord,
+          apiTour: resolvedBridge.apiTour,
+        });
 
-          const mappedTour = mapViatorToEngine4Tour({
-            record: tourRecord,
-            apiTour: resolvedBridge.apiTour,
-          });
+        if (
+          productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+          !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
+        ) {
+          return (
+            <main className="mx-auto max-w-4xl px-6 py-16">
+              <h1 className="text-2xl font-semibold text-[#1f2a1f]">
+                Pricing temporarily unavailable
+              </h1>
+              <p className="mt-4 text-[#334433]">
+                Tour details loaded, but a valid non-zero price is not currently
+                available.
+              </p>
+            </main>
+          );
+        }
 
-          if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
-            !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
-          ) {
-            return (
-              <main className="mx-auto max-w-4xl px-6 py-16">
-                <h1 className="text-2xl font-semibold text-[#1f2a1f]">
-                  Pricing temporarily unavailable
-                </h1>
-                <p className="mt-4 text-[#334433]">
-                  Tour details loaded, but a valid non-zero price is not
-                  currently available.
-                </p>
-              </main>
-            );
-          }
-
-          return <Engine4TourPage tour={mappedTour} />;
-        })()
-      );
+        return <Engine4TourPage tour={mappedTour} />;
+      })();
     }
 
     if (
@@ -315,17 +314,28 @@ export default function CityTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
+  const currentPathname =
+    typeof window !== "undefined" ? window.location.pathname : "";
+  const isUnitedStatesPath = currentPathname.startsWith(
+    "/destinations/united-states/"
+  );
+  const isStatesPath = currentPathname.startsWith("/destinations/states/");
+  const stateHref = state
+    ? isUnitedStatesPath
+      ? `/destinations/united-states/${state.slug}`
+      : isStatesPath
+        ? `/destinations/states/${state.slug}`
+        : state.isFallback
+          ? `/destinations/united-states/${state.slug}`
+          : `/destinations/states/${state.slug}`
+    : "";
   const cityHref =
     state && city
-      ? `/destinations/states/${state.slug}/cities/${city.slug}`
+      ? stateHref.startsWith("/destinations/states/")
+        ? `${stateHref}/cities/${city.slug}`
+        : `${stateHref}/${city.slug}`
       : "";
-  const stateHref = state
-    ? state.isFallback
-      ? "/destinations"
-      : `/destinations/states/${state.slug}`
-    : "";
-  const toursHref =
-    state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
+  const toursHref = cityHref ? `${cityHref}/tours` : "";
   const fareHarborParsed = useMemo(() => {
     if (!tour || tour.bookingProvider !== "fareharbor") {
       return null;
@@ -535,7 +545,7 @@ export default function CityTourDetailRoute({
           exploring.
         </p>
         <div className="mt-6">
-          <Link href={`/destinations/${state.slug}/${city.slug}/tours`}>
+          <Link href={toursHref}>
             <a className="inline-flex items-center justify-center rounded-md bg-[#2f4a2f] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#294129]">
               Back to tours
             </a>
