@@ -177,7 +177,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? resolveEngine6CardImage(tour)
+      ? ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
