@@ -23,6 +23,11 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "100569P5": "Join one of the best experiences in Anchorage...",
 };
 
+const ENGINE6_BOOKING_URL_OVERRIDES: Record<string, string> = {
+  "53474P8":
+    "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book",
+};
+
 const pickOpeningPatternIndex = (seed: string) => {
   const override = ENGINE6_OPENING_PATTERN_OVERRIDES[seed];
   if (typeof override === "number") {
@@ -58,7 +63,9 @@ const buildEngine6OpeningSentence = ({
   const tourType =
     categoryLabel?.toLowerCase() ??
     (titleIncludesCity ? "tour" : title.toLowerCase());
-  const safeTourType = tourType.includes("tour") ? tourType : `${tourType} tour`;
+  const safeTourType = tourType.includes("tour")
+    ? tourType
+    : `${tourType} tour`;
   const pattern =
     ENGINE6_OPENING_PATTERNS[pickOpeningPatternIndex(productCode)] ??
     ENGINE6_OPENING_PATTERNS[0];
@@ -95,9 +102,14 @@ export const mapViatorToEngine6Tour = (
   const primaryCategory =
     payload.extracted.primaryCategory ?? categories[0] ?? null;
   const categoryLabel = formatEngine6CategoryLabel(primaryCategory);
-  const generatedCanonicalPath = buildEngine6CanonicalPath({ state, city, title });
+  const generatedCanonicalPath = buildEngine6CanonicalPath({
+    state,
+    city,
+    title,
+  });
   const canonicalPath =
-    resolveEngine6PathForProductCode(payload.rawProductCode) ?? generatedCanonicalPath;
+    resolveEngine6PathForProductCode(payload.rawProductCode) ??
+    generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -122,10 +134,12 @@ export const mapViatorToEngine6Tour = (
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
-  const bookingUrl = buildEngine6ViatorBookingUrl(
-    payload.rawProductCode,
-    payload.extracted.productUrl
-  );
+  const bookingUrl =
+    ENGINE6_BOOKING_URL_OVERRIDES[payload.rawProductCode] ??
+    buildEngine6ViatorBookingUrl(
+      payload.rawProductCode,
+      payload.extracted.productUrl
+    );
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,

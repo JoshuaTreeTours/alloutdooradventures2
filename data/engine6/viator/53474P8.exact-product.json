@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "53474P8",
+    "productUrl": "https://www.viator.com/tours/Anchorage/Anchorage-Greenbelt-Bike-Tour/d4152-53474P8",
+    "title": "Anchorage Greenbelt Bike Tour",
+    "description": "Ride Anchorage's connected greenbelt trail system with a local guide and a steady pace suited to active travelers. This small-group outing links forested creek corridors, coastal viewpoints, and park stops while keeping logistics simple with downtown pickup. Along the way, watch for local wildlife and get context about Anchorage neighborhoods, landscapes, and trail culture.",
+    "location": {
+      "city": "Anchorage",
+      "state": "Alaska",
+      "country": "USA"
+    },
+    "priceFrom": "$159.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 1
+    },
+    "highlights": [
+      "Explore Anchorage's greenbelt trail network on a guided bike tour",
+      "Ride through creek corridors, city parks, and coastal viewpoints",
+      "Downtown Anchorage pickup and drop-off simplify logistics",
+      "Bike, helmet, and cycling gloves are included"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Dena\u2019ina Civic and Convention Center, 600 W 7th Ave, Anchorage, AK 99501, USA. Pickup is outside the Dena'ina Convention Center."
+      },
+      "end": {
+        "description": "Returns to the meeting point."
+      }
+    },
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Travelers should have a moderate physical fitness level",
+      "Maximum of 6 travelers"
+    ],
+    "itineraryItems": [
+      {
+        "title": "Campbell Creek Greenbelt",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Chester Creek Greenbelt",
+        "duration": "1 hour",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Westchester Lagoon",
+        "duration": "5 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Earthquake Park",
+        "duration": "10 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Kincaid Park",
+        "duration": "30 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Point Woronzof",
+        "duration": "10 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Tony Knowles Coastal Trail",
+        "duration": "1 hour 30 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://cdn.filestackcontent.com/x3s6r9FHTKO8TAc98xcw",
+              "width": 1200,
+              "height": 800
+            }
+          }
+        }
+      ]
+    }
+  }
+}

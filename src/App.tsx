@@ -73,6 +73,7 @@ import {
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
+  ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
 } from "./engine6/routes";
@@ -263,10 +264,23 @@ export default function App() {
         <Route path={ENGINE6_PARAGON_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_CATALINA_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_ANTELOPE_ROUTE} component={Engine6SpecimenRoute} />
-        <Route path={ENGINE6_EMERALD_CAVE_ROUTE} component={Engine6SpecimenRoute} />
+        <Route
+          path={ENGINE6_EMERALD_CAVE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
         <Route path={ENGINE6_YOSEMITE_ROUTE} component={Engine6SpecimenRoute} />
-        <Route path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE} component={Engine6SpecimenRoute} />
-        <Route path={ENGINE6_ANCHORAGE_SUNSET_ROUTE} component={Engine6SpecimenRoute} />
+        <Route
+          path={ENGINE6_ANCHORAGE_PRIVATE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_ANCHORAGE_SUNSET_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_ANCHORAGE_GREENBELT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}

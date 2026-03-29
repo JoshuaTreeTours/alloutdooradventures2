@@ -36,10 +36,15 @@ const buildCityAwareSchemaName = ({
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
-  const offerUrl = resolveEngine6OfferUrl(affiliateUrl);
+  const offerUrl =
+    resolveEngine6OfferUrl(affiliateUrl) ??
+    (affiliateUrl?.startsWith("/") ? affiliateUrl : undefined);
   const categoryLabel = formatEngine6CategoryLabel(tour.primaryCategory);
   const description = tour.description || tour.metaDescription || tour.title;
-  const schemaName = buildCityAwareSchemaName({ title: tour.title, city: tour.city });
+  const schemaName = buildCityAwareSchemaName({
+    title: tour.title,
+    city: tour.city,
+  });
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
   const citySlug = pathSegments[2] ?? "";
@@ -56,7 +61,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
             item: {
               "@type": "TouristAttraction",
               name: item.title,
-              ...((item.description || item.admissionNote)
+              ...(item.description || item.admissionNote
                 ? {
                     description: [item.description, item.admissionNote]
                       .filter(Boolean)
