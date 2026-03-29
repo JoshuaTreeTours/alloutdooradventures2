@@ -13,10 +13,7 @@ import {
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
 
 const ENGINE6_OPENING_PATTERNS = [
-  "Join one of the best experiences in %CITY% with this %TOUR_TYPE%.",
-  "Discover one of the top-rated experiences in %CITY% on this %TOUR_TYPE%.",
-  "Experience one of the most popular things to do in %CITY% with this %TOUR_TYPE%.",
-  "Explore one of the best outdoor adventures in %CITY% on this %TOUR_TYPE%.",
+  "Join one of the best experiences in %CITY%...",
 ] as const;
 
 const pickOpeningPatternIndex = (seed: string) => {
