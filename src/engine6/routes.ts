@@ -18,8 +18,11 @@ export const ENGINE6_CATALINA_ROUTE =
   "/destinations/california/avalon/tours/yellow-semi-submarine-tour-of-catalina-island-from-avalon";
 
 export const ENGINE6_YOSEMITE_PRODUCT_CODE = "36001P1";
+export const ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE = "100569P5";
 export const ENGINE6_YOSEMITE_ROUTE =
   "/destinations/california/san-francisco/tours/yosemite-in-a-day-tour-from-san-francisco-36001p1";
+export const ENGINE6_ANCHORAGE_SUNSET_ROUTE =
+  "/destinations/alaska/anchorage/tours/sunset-wilderness-wildlife-glacier-and-nature-free-photo-lessons-may-sept-100569p5";
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_SPECIMEN_ROUTE]: ENGINE6_SPECIMEN_PRODUCT_CODE,
@@ -28,6 +31,7 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_ANTELOPE_ROUTE]: ENGINE6_ANTELOPE_PRODUCT_CODE,
   [ENGINE6_EMERALD_CAVE_ROUTE]: ENGINE6_EMERALD_CAVE_PRODUCT_CODE,
   [ENGINE6_YOSEMITE_ROUTE]: ENGINE6_YOSEMITE_PRODUCT_CODE,
+  [ENGINE6_ANCHORAGE_SUNSET_ROUTE]: ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE,
 };
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
