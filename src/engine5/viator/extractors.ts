@@ -166,6 +166,7 @@ export const extractViatorPrice = (input: unknown): ViatorExtractedPrice | null 
     ["bookableItems", 0, "price", "fromPrice"],
     ["bookingOptions", 0, "price", "fromPrice"],
     ["bookingOptions", 0, "price", "amount"],
+    ["bookingOptions", 0, "price"],
     [
       "bookableItems",
       0,
@@ -204,6 +205,51 @@ export const extractViatorPrice = (input: unknown): ViatorExtractedPrice | null 
         fieldPath: formatFieldPath(path),
       };
     }
+  }
+
+  const scanArrayPrice = (
+    collectionPath: PathSegment[],
+    nestedPricePaths: PathSegment[][]
+  ): ViatorExtractedPrice | null => {
+    const rows = readPath(product, collectionPath);
+    if (!Array.isArray(rows)) {
+      return null;
+    }
+
+    for (let index = 0; index < rows.length; index += 1) {
+      for (const nestedPath of nestedPricePaths) {
+        const fullPath: PathSegment[] = [...collectionPath, index, ...nestedPath];
+        const raw = readPath(product, fullPath);
+        const amount = parsePriceAmount(raw);
+        if (typeof amount === "number") {
+          return {
+            amount,
+            formattedPrice: typeof raw === "string" ? raw : undefined,
+            fieldPath: formatFieldPath(fullPath),
+          };
+        }
+      }
+    }
+
+    return null;
+  };
+
+  const bookingOptionsPrice = scanArrayPrice(["bookingOptions"], [["price", "fromPrice"], ["price", "amount"], ["price"]]);
+  if (bookingOptionsPrice) {
+    return bookingOptionsPrice;
+  }
+
+  const bookableItemsPrice = scanArrayPrice(
+    ["bookableItems"],
+    [
+      ["pricingSummary", "fromPrice"],
+      ["pricing", "summary", "fromPrice"],
+      ["price", "fromPrice"],
+      ["price"],
+    ]
+  );
+  if (bookableItemsPrice) {
+    return bookableItemsPrice;
   }
 
   for (const path of formattedPaths) {

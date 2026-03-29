@@ -267,4 +267,27 @@ describe("Engine4 Aspen routing/listing", () => {
     );
   });
 
+  it("owns 6896MOABCPARK under Utah/Moab route", () => {
+    const entries = getEngine4ListingEntries("utah", "moab");
+    const target = entries.find(
+      entry => entry.tour.productCode === "6896MOABCPARK"
+    );
+
+    expect(target).toBeDefined();
+    expect(target?.href).toBe(
+      "/destinations/utah/moab/tours/canyonlands-national-park-half-day-tour-from-moab-6896moabcpark"
+    );
+
+    const routed = getEngine4TourBySlugs(
+      "utah",
+      "moab",
+      "canyonlands-national-park-half-day-tour-from-moab-6896moabcpark"
+    );
+
+    expect(routed?.id).toBe("6896MOABCPARK");
+    expect(routed?.sourceCitySlug).toBe("moab");
+    expect(routed?.geo.region).toBe("Utah");
+    expect(routed?.geo.city).toBe("Moab");
+  });
+
 });

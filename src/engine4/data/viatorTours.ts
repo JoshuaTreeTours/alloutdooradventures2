@@ -294,6 +294,23 @@ export const engine4ViatorTours: readonly Engine4ViatorTourRecord[] = [
   {
     engine: "engine4",
     bookingProvider: "viator",
+    productCode: "6896MOABCPARK",
+    bookingUrl:
+      "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+    heroImage:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    destination: {
+      country: "United States",
+      state: "Utah",
+      stateSlug: "utah",
+      city: "Moab",
+      citySlug: "moab",
+    },
+    slug: "canyonlands-national-park-half-day-tour-from-moab",
+  },
+  {
+    engine: "engine4",
+    bookingProvider: "viator",
     productCode: "91782P1",
     bookingUrl:
       "https://www.viator.com/tours/Moab/Half-Day-Day-Canyoneering/d5600-91782P1?pid=P00290915&mcid=42383&medium=link",
@@ -1288,6 +1305,33 @@ export const engine4ViatorApiFallbackByProductCode: Record<
       "One-hour guided horseback trail ride in the Hollywood Hills and Mulholland area above Los Angeles.",
     whatToExpect:
       "Meet at 3204 Beachwood Dr, check in at Sunset Ranch Hollywood, and follow a guide on a one-hour Mulholland Trail ride with wide city-facing views.",
+  },
+  "6896MOABCPARK": {
+    productCode: "6896MOABCPARK",
+    title: "Canyonlands National Park Half-Day Tour from Moab",
+    sourceUrl:
+      "https://www.viator.com/tours/Moab/Canyonlands-National-Park-Half-Day-Tour-from-Moab/d5600-6896MOABCPARK",
+    exactProductImages: [
+      {
+        isCover: true,
+        variants: [
+          {
+            url: "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+            width: 1100,
+            height: 800,
+          },
+        ],
+      },
+    ],
+    primaryImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    galleryImages: [
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    ],
+    sourceDerivedImageUrl:
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/39/2a/61/caption.jpg?w=1100&h=800&s=1",
+    overview:
+      "Engine5 clean-specimen route for Canyonlands National Park Half-Day Tour from Moab. Runtime pricing and detailed commercial facts are resolved from the Engine5 Viator API path when available.",
   },
   "132218P209": {
     productCode: "132218P209",

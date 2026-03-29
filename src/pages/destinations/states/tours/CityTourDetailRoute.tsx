@@ -60,6 +60,7 @@ import {
   engine4ViatorTours,
 } from "../../../../engine4/data/viatorTours";
 import {
+  ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES,
   ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE,
   hasViatorNonZeroPrice,
   mapEngine5ProductPayloadToEngine4ApiTour,
@@ -109,7 +110,9 @@ export default function CityTourDetailRoute({
     if (
       !engine4RouteTour ||
       engine4RouteTour.bookingProvider !== "viator" ||
-      engine4RouteTour.id.toUpperCase() !== ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE
+      !ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.has(
+        engine4RouteTour.id.toUpperCase()
+      )
     ) {
       return;
     }
@@ -211,7 +214,7 @@ export default function CityTourDetailRoute({
           );
 
           if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.has(productCode) &&
             !hasPrice
           ) {
             return (
@@ -233,7 +236,7 @@ export default function CityTourDetailRoute({
           });
 
           if (
-            productCode === ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODE &&
+            ENGINE4_STRICT_ENGINE5_BRIDGE_PRODUCT_CODES.has(productCode) &&
             !hasViatorNonZeroPrice(mappedTour.facts.priceFrom)
           ) {
             return (
