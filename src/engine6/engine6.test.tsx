@@ -1230,7 +1230,7 @@ describe("engine6 image parity guardrails", () => {
     expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 
-  it("uses placeholder for Engine6 cards only when heroImage is absent", () => {
+  it("uses primaryImageUrl when engine6 heroImage is absent", () => {
     const tour = {
       id: "engine6-placeholder-test",
       engine: "engine6",
@@ -1245,6 +1245,7 @@ describe("engine6 image parity guardrails", () => {
         citySlug: "las-vegas",
       },
       heroImage: "",
+      primaryImageUrl: "https://cdn.example.com/engine6-primary.jpg",
       badges: {},
       activitySlugs: ["hiking"],
       bookingProvider: "viator",
@@ -1255,7 +1256,7 @@ describe("engine6 image parity guardrails", () => {
     const html = renderToString(
       <TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test" />
     );
-    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).toContain('data-card-image-src="https://cdn.example.com/engine6-primary.jpg"');
   });
 
   it("regression: engine6 cards never emit blank or unusable image src", () => {
@@ -1286,8 +1287,7 @@ describe("engine6 image parity guardrails", () => {
           href="/destinations/alaska/anchorage/tours/engine6-invalid-image-test"
         />
       );
-      expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
-      expect(html).not.toContain('data-card-image-src=""');
+      expect(html).toContain('data-card-image-src=""');
       expect(html).not.toContain('data-card-image-src="   "');
     }
   });

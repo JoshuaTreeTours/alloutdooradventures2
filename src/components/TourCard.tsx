@@ -15,7 +15,6 @@ type TourCardProps = {
 
 const CARD_BLURB_MAX_CHARS = 150;
 const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
-const ENGINE6_GLOBAL_PLACEHOLDER_IMAGE = "/images/hiking-hero.jpg";
 const NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX =
   /(check-?in|safety briefing|meet(ing)? point|pickup|drop-?off)/i;
 
@@ -76,10 +75,8 @@ function formatCategoryLabel(slug?: string): string {
 
 
 const resolveEngine6CardImage = (tour: Tour) => {
-  const resolvedHero = tour.heroImage?.trim();
-  if (!resolvedHero) {
-    return ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
-  }
+  const resolvedHero = tour.heroImage?.trim() || tour.primaryImageUrl?.trim();
+  if (!resolvedHero) return "";
 
   const normalizedHero = resolvedHero.toLowerCase();
   const hasKnownBrokenToken = [
@@ -92,9 +89,7 @@ const resolveEngine6CardImage = (tour: Tour) => {
   const hasProtocolOrAbsolutePath =
     /^https?:\/\//i.test(resolvedHero) || resolvedHero.startsWith("/");
 
-  if (hasKnownBrokenToken || !hasProtocolOrAbsolutePath) {
-    return ENGINE6_GLOBAL_PLACEHOLDER_IMAGE;
-  }
+  if (hasKnownBrokenToken || !hasProtocolOrAbsolutePath) return "";
 
   return resolvedHero;
 };
@@ -177,7 +172,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? ENGINE6_GLOBAL_PLACEHOLDER_IMAGE
+      ? cardImage
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
