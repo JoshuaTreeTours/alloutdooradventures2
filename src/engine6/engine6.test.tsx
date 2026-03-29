@@ -32,6 +32,8 @@ import {
   ENGINE6_EMERALD_CAVE_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
+  ENGINE6_YOSEMITE_ROUTE,
+  ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
 } from "./routes";
 import {
   buildEngine6SpecimenApiUrl,
@@ -105,6 +107,9 @@ const specimenProductPayload = {
 
 const ENGINE6_60136P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/eb/d1/48.jpg";
+
+const ENGINE6_36001P1_EXPECTED_HERO_URL =
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
 
 const specimenApiPayload = {
   source: "live-api" as const,
@@ -1214,6 +1219,52 @@ describe("engine6 image parity guardrails", () => {
   });
 });
 
+
+  it("keeps Yosemite replacement hero parity across detail, city card, filtered card, and route wiring", () => {
+    const yosemiteTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "36001P1"
+    );
+    expect(yosemiteTour).toBeDefined();
+    expect(yosemiteTour?.heroImageUrl).toBe(ENGINE6_36001P1_EXPECTED_HERO_URL);
+    expect(yosemiteTour?.canonicalPath).toBe(ENGINE6_YOSEMITE_ROUTE);
+
+    const escapedHero = ENGINE6_36001P1_EXPECTED_HERO_URL.replace(/&/g, "&amp;");
+
+    const detailHtml = renderToString(<Engine6TourPage tour={yosemiteTour!} />);
+    expect(detailHtml).toContain(escapedHero);
+
+    const cityUnified = getToursByCityUnified("california", "san-francisco");
+    const cityEntry = cityUnified.find(
+      entry => entry.tour.engine === "engine6" && entry.tour.productCode === "36001P1"
+    );
+    expect(cityEntry).toBeDefined();
+    const cityCardHtml = renderToString(<TourCard tour={cityEntry!.tour} href={cityEntry!.href} />);
+    expect(cityCardHtml).toContain(`data-card-image-src="${escapedHero}"`);
+    expect(cityCardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+
+    const previousWindow = (globalThis as unknown as { window?: Window }).window;
+    const nextWindow = {
+      location: {
+        pathname: "/tours",
+        search: "?state=california&city=san-francisco",
+      },
+      history: {
+        pushState: () => undefined,
+      },
+    } as unknown as Window;
+
+    (globalThis as unknown as { window?: Window }).window = nextWindow;
+    try {
+      const filteredHtml = renderToString(<ToursLanding />);
+      expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
+      expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+      expect(filteredHtml).toContain(ENGINE6_YOSEMITE_ROUTE);
+    } finally {
+      (globalThis as unknown as { window?: Window }).window = previousWindow;
+    }
+
+    expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_YOSEMITE_ROUTE)).toBe(true);
+  });
 describe("engine6 route wiring", () => {
   it("registers the specimen route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
