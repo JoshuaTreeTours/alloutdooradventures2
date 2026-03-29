@@ -72,4 +72,47 @@ describe("engine6 hero resolver", () => {
       ])
     );
   });
+
+  it("prefers higher-quality dynamic and clean tacdn images over splice images", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "63657P1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+      candidates: [
+        {
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "63657P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          width: 1200,
+          height: 900,
+        },
+        {
+          url: "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/dd.jpg",
+          sourceType: "api-gallery",
+          candidateProductCode: "63657P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          width: 800,
+          height: 600,
+        },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg",
+          sourceType: "api-gallery",
+          candidateProductCode: "63657P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          width: 640,
+          height: 480,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg"
+    );
+    expect(resolved.heroSourceType).toBe("api-gallery");
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
 });

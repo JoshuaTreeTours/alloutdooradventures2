@@ -63,6 +63,35 @@ export const normalizeEngine6SourceProductUrl = (
 };
 
 const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
+const isSpliceImageUrl = (value: string) =>
+  /attractions-splice-spp/i.test(value);
+
+const getHeroQualityRank = (value: string): number => {
+  let parsed: URL | null = null;
+  try {
+    parsed = new URL(value);
+  } catch {
+    return 0;
+  }
+
+  const host = parsed.hostname.toLowerCase();
+  const path = parsed.pathname.toLowerCase();
+  const splice = isSpliceImageUrl(path) || isSpliceImageUrl(host);
+
+  if (host === "dynamic-media.tacdn.com") {
+    return 3;
+  }
+
+  if (host === "media.tacdn.com" && !splice) {
+    return 2;
+  }
+
+  if (splice) {
+    return 1;
+  }
+
+  return 0;
+};
 
 const toRejectedCandidate = (
   candidate: Engine6HeroCandidate,
@@ -95,6 +124,7 @@ export const resolveProductScopedHero = ({
   );
   const rejectedForeignCandidates: Engine6RejectedHeroCandidate[] = [];
   let placeholderCandidate: Engine6HeroCandidate | null = null;
+  const validCandidates: Engine6HeroCandidate[] = [];
 
   for (const candidate of candidates) {
     if (!candidate?.url) {
@@ -172,15 +202,38 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
+    validCandidates.push({
+      ...candidate,
+      candidateProductCode,
+      candidateSourceProductUrl,
+    });
+  }
+
+  if (validCandidates.length > 0) {
+    const selectedCandidate = [...validCandidates].sort((a, b) => {
+      const qualityDiff = getHeroQualityRank(b.url) - getHeroQualityRank(a.url);
+      if (qualityDiff !== 0) {
+        return qualityDiff;
+      }
+
+      const areaDiff = (b.width ?? 0) * (b.height ?? 0) - (a.width ?? 0) * (a.height ?? 0);
+      if (areaDiff !== 0) {
+        return areaDiff;
+      }
+
+      const widthDiff = (b.width ?? 0) - (a.width ?? 0);
+      if (widthDiff !== 0) {
+        return widthDiff;
+      }
+
+      return (b.height ?? 0) - (a.height ?? 0);
+    })[0]!;
+
     return {
-      heroUrl: candidate.url,
-      heroSourceType: candidate.sourceType,
+      heroUrl: selectedCandidate.url,
+      heroSourceType: selectedCandidate.sourceType,
       fallbackTriggered: false,
-      finalCandidate: {
-        ...candidate,
-        candidateProductCode,
-        candidateSourceProductUrl,
-      },
+      finalCandidate: selectedCandidate,
       rejectedForeignCandidates,
     };
   }
