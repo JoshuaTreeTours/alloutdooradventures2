@@ -9,6 +9,8 @@ const ENGINE6_VIATOR_CANONICAL_URL_BY_PRODUCT_CODE: Record<string, string> = {
     "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
   "60136P1":
     "https://www.viator.com/tours/Las-Vegas/Antelope-Canyon-Horseshoe-Bend-Day-Tour-from-Las-Vegas/d684-60136P1",
+  "411138P3":
+    "https://www.viator.com/tours/Anchorage/Private-Anchorage-Tour-and-Wilderness-Adventure/d4152-411138P3",
 };
 
 const FALLBACK_ENGINE6_VIATOR_SEARCH_URL = "https://www.viator.com/search";

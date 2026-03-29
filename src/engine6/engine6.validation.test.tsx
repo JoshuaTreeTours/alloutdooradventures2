@@ -62,8 +62,11 @@ describe("engine6 single-tour validation harness", () => {
       const webPage = graph.find(node => node["@type"] === "WebPage") as
         | Record<string, unknown>
         | undefined;
-      const expectedHero = ((fixture.rawPayload.product as any)?.media?.images?.[0]
-        ?.variants?.FULL?.url ?? null) as string | null;
+      const rawPayload = fixture.rawPayload as any;
+      const expectedHero = ((rawPayload.product?.media?.images?.[0]?.variants?.FULL?.url ??
+        rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
+        rawPayload.images?.[0]?.variants?.[0]?.url ??
+        null) as string | null);
 
       expect(tour.productCode).toBe(fixture.productCode);
       expect(tour.heroImageUrl).toBe(expectedHero);
