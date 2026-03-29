@@ -1659,10 +1659,10 @@ describe("engine6 route wiring", () => {
     );
     expect(anchorageTour).toBeDefined();
     expect(anchorageTour?.canonicalPath).toBe(
-      "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155"
+      "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155"
     );
     expect(anchorageTour?.bookingUrl).toBe(
-      "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book"
+      "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book"
     );
   });
 

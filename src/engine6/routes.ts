@@ -28,7 +28,7 @@ export const ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE = "53474P8";
 export const ENGINE6_ANCHORAGE_SUNSET_ROUTE =
   "/destinations/alaska/anchorage/tours/sunset-wilderness-wildlife-glacier-and-nature-free-photo-lessons-may-sept";
 export const ENGINE6_ANCHORAGE_GREENBELT_ROUTE =
-  "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155";
+  "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155";
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_SPECIMEN_ROUTE]: ENGINE6_SPECIMEN_PRODUCT_CODE,

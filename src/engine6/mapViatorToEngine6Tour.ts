@@ -25,7 +25,7 @@ const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
 
 const ENGINE6_BOOKING_URL_OVERRIDES: Record<string, string> = {
   "53474P8":
-    "/destinations/united-states/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book",
+    "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book",
 };
 
 const pickOpeningPatternIndex = (seed: string) => {
