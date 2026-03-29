@@ -84,6 +84,7 @@ describe("engine6 creation contract validator", () => {
     expect(report.violations).toEqual(
       expect.arrayContaining([
         "route ownership drifted from product-code contract",
+        "product is wired to non-canonical alternate path despite explicit canonical route",
         "booking CTA lost required Viator monetization parameters",
         "schema Offer.url drifted from resolved booking target",
         "unified listing href differs from canonical path",
@@ -141,6 +142,47 @@ describe("engine6 creation contract validator", () => {
     expect(report.violations).not.toEqual(
       expect.arrayContaining([
         "structured itinerary was dropped despite reliable source stop data",
+      ])
+    );
+  });
+
+  it("fails when canonical route leaks to /destinations/united-states/... alternate path", () => {
+    const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour: {
+        ...tour,
+        canonicalPath: "/destinations/united-states/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike",
+        pagePath:
+          "/destinations/united-states/california/santa-barbara/tours/santa-barbara-vineyard-to-table-taste-tour-by-e-bike",
+      },
+      rawPayload: ENGINE6_VALIDATION_FIXTURES[0]!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining([
+        "canonical path leaked to non-canonical /destinations/united-states/... route",
+        "canonical path must use /destinations/{state}/{city}/tours/{slug}",
+      ])
+    );
+  });
+
+  it("fails when parent city route is not derivable from canonical path", () => {
+    const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const report = validateEngine6CreationContract({
+      tour: {
+        ...tour,
+        canonicalPath: "/destinations/california/santa-barbara",
+        pagePath: "/destinations/california/santa-barbara",
+      },
+      rawPayload: ENGINE6_VALIDATION_FIXTURES[0]!.rawPayload,
+    });
+
+    expect(report.violations).toEqual(
+      expect.arrayContaining([
+        "canonical path must use /destinations/{state}/{city}/tours/{slug}",
+        "parent city tours route could not be derived from canonical path",
       ])
     );
   });

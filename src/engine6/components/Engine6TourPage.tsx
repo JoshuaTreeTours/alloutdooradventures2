@@ -4,6 +4,7 @@ import Seo from "../../components/Seo";
 import TourCard from "../../components/TourCard";
 import { getToursByCityUnified } from "../../data/tours";
 import { formatEngine6AggregateRating } from "../rating";
+import { buildEngine6ParentCityToursPath } from "../routeIntegrity";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import { buildEngine6Seo, formatEngine6CategoryLabel } from "../seo";
 import type { Engine6Tour } from "../types";
@@ -27,15 +28,14 @@ const ContentSection = ({
 const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
   const pathSegments = tour.canonicalPath.split("/").filter(Boolean);
   const stateSlug = pathSegments[1] ?? "";
-  const citySlug = pathSegments[2] ?? "";
+  const parentCityToursPath =
+    buildEngine6ParentCityToursPath(tour.canonicalPath) ??
+    `/destinations/${stateSlug}/${pathSegments[2] ?? ""}/tours`;
 
   return [
     { label: "Destinations", href: "/destinations" },
     { label: tour.state, href: `/destinations/${stateSlug}` },
-    {
-      label: tour.city,
-      href: `/destinations/${stateSlug}/${citySlug}/tours`,
-    },
+    { label: tour.city, href: parentCityToursPath },
   ];
 };
 
@@ -84,6 +84,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
+  const parentCityToursPath =
+    buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
   const relatedTours = useMemo(() => {
     const [, stateSlug = "", citySlug = "", currentSlug = ""] =
       /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
@@ -381,6 +383,16 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
               ))}
             </div>
           </section>
+        ) : null}
+        {parentCityToursPath ? (
+          <div className="mt-8 text-center" data-testid="engine6-back-to-tours">
+            <a
+              href={parentCityToursPath}
+              className="inline-flex items-center rounded-full border border-green-800 px-4 py-2 text-sm font-semibold text-green-900 transition hover:bg-green-50"
+            >
+              Back to {tour.city} tours
+            </a>
+          </div>
         ) : null}
       </div>
     </main>
