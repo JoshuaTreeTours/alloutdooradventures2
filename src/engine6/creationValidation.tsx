@@ -203,6 +203,9 @@ export const validateEngine6CreationContract = ({
   }
 
   if (listingEntry) {
+    if (!listingEntry.tour.heroImage?.trim()) {
+      violations.push("unified listing emitted blank card image");
+    }
     if (listingEntry.tour.heroImage !== tour.heroImageUrl) {
       violations.push("unified listing hero differs from detail hero");
     }
@@ -214,6 +217,9 @@ export const validateEngine6CreationContract = ({
     }
     if (!filteredToursHtml.includes(tour.heroImageUrl.replace(/&/g, "&amp;"))) {
       violations.push("/tours filtered surface image differs from detail hero");
+    }
+    if (filteredToursHtml.includes('data-card-image-src=""')) {
+      violations.push("/tours filtered surface emitted blank card image src");
     }
   }
 

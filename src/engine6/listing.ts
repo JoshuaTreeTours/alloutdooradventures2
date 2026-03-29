@@ -28,8 +28,9 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
       city: tour.city,
       citySlug,
     },
-    heroImage: tour.heroImageUrl,
-    primaryImageUrl: tour.heroImageUrl,
+    heroImage: tour.resolvedImageUrl ?? "",
+    resolvedImageUrl: tour.resolvedImageUrl,
+    primaryImageUrl: tour.resolvedImageUrl ?? undefined,
     badges: {
       rating: tour.aggregateRating ?? undefined,
       reviewCount: tour.reviewCount ?? undefined,
@@ -50,7 +51,7 @@ const specimenTour =
     tour => tour.productCode === ENGINE6_SPECIMEN_PRODUCT_CODE
   ) ?? engine6ResolvedTours[0];
 
-export const ENGINE6_63657P1_CARD_IMAGE_URL = specimenTour?.heroImageUrl ?? "";
+export const ENGINE6_63657P1_CARD_IMAGE_URL = specimenTour?.resolvedImageUrl ?? "";
 
 export const engine6SpecimenTour = specimenTour!;
 

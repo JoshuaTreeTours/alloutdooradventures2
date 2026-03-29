@@ -96,6 +96,7 @@ export type Engine6Tour = {
   metaDescription: string;
   city: string;
   state: string;
+  resolvedImageUrl: string | null;
   heroImageUrl: string;
   priceAmount: number | null;
   priceFormatted: string;

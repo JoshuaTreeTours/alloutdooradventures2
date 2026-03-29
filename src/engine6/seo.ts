@@ -129,5 +129,5 @@ export const buildEngine6Seo = (tour: Engine6Tour) => ({
   title: tour.seoTitle,
   description: tour.metaDescription,
   url: tour.canonicalPath,
-  image: tour.heroImageUrl,
+  image: tour.resolvedImageUrl ?? "",
 });

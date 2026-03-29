@@ -39,6 +39,7 @@ export type Tour = {
   primaryCategory?: string;
   destination: TourDestination;
   heroImage: string;
+  resolvedImageUrl?: string | null;
   primaryImageUrl?: string;
   galleryImages?: string[];
   badges: TourBadges;

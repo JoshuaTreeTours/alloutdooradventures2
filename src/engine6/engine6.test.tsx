@@ -31,6 +31,7 @@ import {
   ENGINE6_ANTELOPE_ROUTE,
   ENGINE6_CATALINA_ROUTE,
   ENGINE6_EMERALD_CAVE_ROUTE,
+  ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -414,7 +415,7 @@ describe("engine6 mapping/cards/page", () => {
     expect(resolved.debug.rejectedForeignHeroCandidates).toEqual([]);
   });
 
-  it("keeps rendering when the API has to fall back to the approved placeholder", () => {
+  it("keeps rendering without an image when no valid product-owned hero exists", () => {
     const resolved = resolveEngine6SpecimenResponse({
       payload: {
         ...specimenApiPayload,
@@ -437,8 +438,9 @@ describe("engine6 mapping/cards/page", () => {
 
     const html = renderToString(<Engine6TourPage tour={resolved.tour!} />);
 
-    expect(resolved.tour?.heroImageUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
+    expect(resolved.tour?.resolvedImageUrl).toBeNull();
     expect(html).not.toContain("/hero.jpg");
+    expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 });
 
@@ -1211,6 +1213,7 @@ describe("engine6 image parity guardrails", () => {
         city: "Las Vegas",
         citySlug: "las-vegas",
       },
+      resolvedImageUrl: "https://cdn.example.com/hero-canonical.jpg",
       heroImage: "https://cdn.example.com/hero-canonical.jpg",
       primaryImageUrl: "https://cdn.example.com/legacy-primary.jpg",
       galleryImages: ["https://cdn.example.com/gallery-first.jpg"],
@@ -1229,7 +1232,7 @@ describe("engine6 image parity guardrails", () => {
     expect(html).not.toContain("/images/hiking-hero.jpg");
   });
 
-  it("uses placeholder for Engine6 cards only when heroImage is absent", () => {
+  it("renders no image when Engine6 resolvedImageUrl is absent", () => {
     const tour = {
       id: "engine6-placeholder-test",
       engine: "engine6",
@@ -1254,7 +1257,40 @@ describe("engine6 image parity guardrails", () => {
     const html = renderToString(
       <TourCard tour={tour} href="/destinations/nevada/las-vegas/tours/engine6-placeholder-test" />
     );
-    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).toContain('data-card-image-src=""');
+  });
+
+  it("regression: engine6 cards never emit blank or unusable image src", () => {
+    const baseTour = {
+      id: "engine6-invalid-image-test",
+      engine: "engine6",
+      productCode: "BADIMG",
+      slug: "engine6-invalid-image-test",
+      title: "Invalid Hero Guardrail",
+      destination: {
+        country: "United States",
+        state: "Alaska",
+        stateSlug: "alaska",
+        city: "Anchorage",
+        citySlug: "anchorage",
+      },
+      badges: {},
+      activitySlugs: ["wildlife"],
+      bookingProvider: "viator",
+      bookingUrl: "https://www.viator.com/search/BADIMG",
+      longDescription: "Card image guardrail test",
+    } as const;
+
+    for (const badHero of ["", "   ", "undefined", "about:blank", "javascript:void(0)"]) {
+      const html = renderToString(
+        <TourCard
+          tour={{ ...baseTour, heroImage: badHero }}
+          href="/destinations/alaska/anchorage/tours/engine6-invalid-image-test"
+        />
+      );
+      expect(html).toContain('data-card-image-src=""');
+      expect(html).not.toContain('data-card-image-src="   "');
+    }
   });
 });
 
@@ -1385,5 +1421,28 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeGreaterThan(-1);
     expect(genericRouteIndex).toBeGreaterThan(-1);
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("registers the Anchorage SUNSET route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "<Route path={ENGINE6_ANCHORAGE_SUNSET_ROUTE} component={Engine6SpecimenRoute} />"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("keeps 100569P5 mapped to the Anchorage SUNSET canonical route", () => {
+    const anchorageTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "100569P5"
+    );
+    expect(anchorageTour).toBeDefined();
+    expect(anchorageTour?.canonicalPath).toBe(ENGINE6_ANCHORAGE_SUNSET_ROUTE);
+    expect(anchorageTour?.description.startsWith("Join one of the best experiences in Anchorage...")).toBe(true);
   });
 });
