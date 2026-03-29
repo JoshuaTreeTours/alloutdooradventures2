@@ -36,6 +36,7 @@ export type Engine6DiagnosticsPaths = {
   itineraryFieldPath: string | null;
   itineraryItemCount: number;
   itinerarySourceUsed: string | null;
+  itinerarySummaryFieldPath: string | null;
   meetingPointFieldPath: string | null;
   faqsFieldPath: string | null;
   faqFieldPath: string | null;
@@ -72,6 +73,7 @@ export type Engine6Extracted = {
   overviewText: string | null;
   highlights: string[];
   itinerary: Engine6ExtractedItineraryItem[];
+  itinerarySummaryText: string | null;
   faqs: Engine6ExtractedFaq[];
   included: string[];
   requirements: string[];
@@ -285,6 +287,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   overviewText: null,
   highlights: [],
   itinerary: [],
+  itinerarySummaryText: null,
   faqs: [],
   included: [],
   requirements: [],
@@ -688,6 +691,67 @@ const extractHighlights = (product: RecordLike) => {
   return { value: [], path: null as string | null };
 };
 
+const normalizeSingleItineraryItem = (
+  row: RecordLike
+): Engine6ExtractedItineraryItem | null => {
+  const pointOfInterest = asRecord(row.pointOfInterest);
+  const stop = asRecord(row.stop);
+  const location = asRecord(row.location);
+
+  const title =
+    asNonEmptyString(row.title) ??
+    asNonEmptyString(row.name) ??
+    asNonEmptyString(row.label) ??
+    asNonEmptyString(pointOfInterest?.title) ??
+    asNonEmptyString(pointOfInterest?.name) ??
+    asNonEmptyString(stop?.name) ??
+    asNonEmptyString(stop?.title) ??
+    asNonEmptyString(location?.name);
+
+  if (!title) return null;
+
+  const description =
+    asNonEmptyString(row.description) ??
+    asNonEmptyString(row.summary) ??
+    asNonEmptyString(row.details) ??
+    asNonEmptyString(pointOfInterest?.description) ??
+    asNonEmptyString(stop?.description) ??
+    undefined;
+  const admissionNoteFromFields =
+    asNonEmptyString(row.admissionNote) ??
+    asNonEmptyString(row.admissionTicket) ??
+    asNonEmptyString(row.admission) ??
+    asNonEmptyString(row.ticketNote) ??
+    asNonEmptyString(row.ticketInfo) ??
+    asNonEmptyString(row.inclusion) ??
+    asNonEmptyString(row.inclusions);
+  const admissionNoteFromDescription =
+    description && /admission ticket/i.test(description)
+      ? description
+      : undefined;
+  const admissionNote =
+    admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
+  const duration =
+    asNonEmptyString(row.duration) ??
+    asNonEmptyString(row.durationText) ??
+    asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
+    asNonEmptyString(asRecord(row.durationInfo)?.label) ??
+    undefined;
+  const descriptionWithoutAdmission =
+    admissionNoteFromDescription && description === admissionNoteFromDescription
+      ? undefined
+      : description;
+
+  return {
+    title,
+    ...(descriptionWithoutAdmission
+      ? { description: descriptionWithoutAdmission }
+      : {}),
+    ...(duration ? { duration } : {}),
+    ...(admissionNote ? { admissionNote } : {}),
+  } satisfies Engine6ExtractedItineraryItem;
+};
+
 const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   const normalizeItinerary = (
     value: unknown
@@ -705,55 +769,7 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
     return rows
       .map(item => {
         const row = asRecord(item);
-        if (!row) return null;
-
-        const pointOfInterest = asRecord(row.pointOfInterest);
-        const title =
-          asNonEmptyString(row.title) ??
-          asNonEmptyString(row.name) ??
-          asNonEmptyString(row.label) ??
-          asNonEmptyString(pointOfInterest?.title) ??
-          asNonEmptyString(pointOfInterest?.name);
-
-        if (!title) return null;
-
-        const description =
-          asNonEmptyString(row.description) ??
-          asNonEmptyString(row.summary) ??
-          asNonEmptyString(pointOfInterest?.description) ??
-          undefined;
-        const admissionNoteFromFields =
-          asNonEmptyString(row.admissionNote) ??
-          asNonEmptyString(row.admissionTicket) ??
-          asNonEmptyString(row.admission) ??
-          asNonEmptyString(row.ticketNote) ??
-          asNonEmptyString(row.ticketInfo) ??
-          asNonEmptyString(row.inclusion) ??
-          asNonEmptyString(row.inclusions);
-        const admissionNoteFromDescription =
-          description && /admission ticket/i.test(description)
-            ? description
-            : undefined;
-        const admissionNote =
-          admissionNoteFromFields ?? admissionNoteFromDescription ?? undefined;
-        const duration =
-          asNonEmptyString(row.duration) ??
-          asNonEmptyString(row.durationText) ??
-          asNonEmptyString(asRecord(row.durationInfo)?.durationText) ??
-          undefined;
-        const descriptionWithoutAdmission =
-          admissionNoteFromDescription && description === admissionNoteFromDescription
-            ? undefined
-            : description;
-
-        return {
-          title,
-          ...(descriptionWithoutAdmission
-            ? { description: descriptionWithoutAdmission }
-            : {}),
-          ...(duration ? { duration } : {}),
-          ...(admissionNote ? { admissionNote } : {}),
-        } satisfies Engine6ExtractedItineraryItem;
+        return row ? normalizeSingleItineraryItem(row) : null;
       })
       .filter((item): item is Engine6ExtractedItineraryItem => Boolean(item));
   };
@@ -761,8 +777,11 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   for (const path of [
     ["itineraryItems"],
     ["itinerary", "itineraryItems"],
+    ["itinerary", "stops"],
+    ["itinerary", "locations"],
     ["itinerary"],
     ["whatToExpect", "items"],
+    ["whatToExpect", "stops"],
   ] as PathSegment[][]) {
     const value = normalizeItinerary(readPath(product, path));
     if (value.length > 0) {
@@ -771,6 +790,23 @@ const extractPlaybookItinerary = (product: RecordLike): ItineraryResult => {
   }
 
   return { value: [], path: "product.itineraryItems" };
+};
+
+const extractItinerarySummary = (product: RecordLike) => {
+  for (const path of [
+    ["itinerarySummary"],
+    ["itinerary", "summary"],
+    ["itinerary", "description"],
+    ["whatToExpect", "description"],
+    ["whatToExpectSummary"],
+  ] as PathSegment[][]) {
+    const value = asNonEmptyString(readPath(product, path));
+    if (value) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: null as string | null, path: null as string | null };
 };
 
 const extractMeetingPoint = (product: RecordLike) => {
@@ -1015,6 +1051,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     itineraryFieldPath: null,
     itineraryItemCount: 0,
     itinerarySourceUsed: null,
+    itinerarySummaryFieldPath: null,
     meetingPointFieldPath: null,
     faqsFieldPath: null,
     faqFieldPath: null,
@@ -1088,6 +1125,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.itinerarySourceUsed =
     itinerary.value.length > 0 ? itinerary.path : null;
 
+  const itinerarySummary = extractItinerarySummary(product);
+  diagnostics.itinerarySummaryFieldPath = itinerarySummary.path;
+
   const requirements = extractRequirements(product);
   diagnostics.requirementsFieldPath = requirements.path;
   const included = extractIncluded(product);
@@ -1147,6 +1187,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       overviewText: overview.value,
       highlights: highlights.value,
       itinerary: itinerary.value,
+      itinerarySummaryText: itinerarySummary.value,
       faqs: faqs.value,
       included: included.value,
       requirements: requirements.value,

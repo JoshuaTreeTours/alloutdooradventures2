@@ -3,6 +3,7 @@ import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
+import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -40,5 +41,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Las-Vegas/Emerald-Cave-Kayaking-Tour/d684-26719P8",
     rawPayload: specimen26719Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "36001P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+    rawPayload: specimen36001Payload as Record<string, unknown>,
   },
 ];

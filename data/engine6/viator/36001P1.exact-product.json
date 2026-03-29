@@ -1,0 +1,87 @@
+{
+  "productCode": "36001P1",
+  "title": "Yosemite In A Day Tour from San Francisco",
+  "description": "This Yosemite In A Day tour from San Francisco is structured for travelers who want to reach Yosemite National Park without driving themselves and still cover marquee stops in one long day. After an early departure, the route crosses California's Central Valley before climbing into the Sierra Nevada for guided interpretation on park history, geology, and valley landmarks. Once inside Yosemite, the itinerary prioritizes iconic viewpoints and flexible time to walk, photograph, or relax near major valley locations. Depending on seasonal access, guests may also stop in giant sequoia groves, adding a second signature Yosemite landscape to the day. The format balances transport logistics, orientation, and independent moments so visitors can maximize a single-day Yosemite window from San Francisco.",
+  "highlights": [
+    "Round-trip Yosemite National Park day trip from San Francisco",
+    "Guided transport with narration on park geology and history",
+    "Stops at iconic Yosemite Valley viewpoints",
+    "Seasonal giant sequoia grove access when conditions permit",
+    "Free cancellation up to 24 hours in advance"
+  ],
+  "faqs": [
+    {
+      "question": "Where does Yosemite In A Day meet in San Francisco?",
+      "answer": "The mapped pickup point is Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA."
+    },
+    {
+      "question": "How long is the Yosemite In A Day tour?",
+      "answer": "The mapped duration is approximately 14 hours including transit and Yosemite park time."
+    },
+    {
+      "question": "Is there free cancellation?",
+      "answer": "Yes. The mapped policy is free cancellation up to 24 hours in advance."
+    }
+  ],
+  "fromPrice": "$209.00",
+  "rating": 4.6,
+  "reviewCount": 1209,
+  "duration": "14 hours",
+  "cancellationPolicy": "Free cancellation up to 24 hours in advance.",
+  "productUrl": "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+  "images": [
+    {
+      "isCover": true,
+      "variants": [
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
+          "width": 720,
+          "height": 480
+        }
+      ]
+    }
+  ],
+  "location": {
+    "city": "San Francisco",
+    "state": "California"
+  },
+  "meetingPoint": "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA",
+  "itineraryItems": [
+    {
+      "title": "Tunnel View",
+      "description": "Panoramic first look across Yosemite Valley with El Capitan, Half Dome, and Bridalveil Fall.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Yosemite Valley",
+      "description": "Guided orientation and free time in the valley floor for photos and short walks.",
+      "duration": "60 minutes"
+    },
+    {
+      "title": "Half Dome",
+      "description": "Stop focused on Half Dome geology and major viewpoints from the valley route.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Yosemite Falls",
+      "description": "Visit Yosemite Falls area with time for viewpoints and river-side access.",
+      "duration": "30 minutes"
+    },
+    {
+      "title": "El Capitan",
+      "description": "Photo stop at El Capitan meadow and commentary on climbing history.",
+      "duration": "20 minutes"
+    },
+    {
+      "title": "Tuolumne Grove",
+      "description": "Seasonal walk among giant sequoias when road and trail conditions allow.",
+      "duration": "45 minutes"
+    },
+    {
+      "title": "Bridalveil Fall",
+      "description": "Short stop at Bridalveil Fall viewpoint before return departure.",
+      "duration": "20 minutes"
+    }
+  ],
+  "itinerarySummary": "Full-day Yosemite circuit from San Francisco with guided stops at major valley landmarks and a seasonal giant sequoia grove."
+}

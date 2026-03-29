@@ -72,6 +72,7 @@ import {
   ENGINE6_EMERALD_CAVE_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
+  ENGINE6_YOSEMITE_ROUTE,
 } from "./engine6/routes";
 import { canonicalHref, getStateGuidePath } from "./utils/guidePaths";
 
@@ -261,6 +262,7 @@ export default function App() {
         <Route path={ENGINE6_CATALINA_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_ANTELOPE_ROUTE} component={Engine6SpecimenRoute} />
         <Route path={ENGINE6_EMERALD_CAVE_ROUTE} component={Engine6SpecimenRoute} />
+        <Route path={ENGINE6_YOSEMITE_ROUTE} component={Engine6SpecimenRoute} />
         <Route
           path="/destinations/:stateSlug/:citySlug/tours/:tourSlug/book"
           component={CityTourBookingRoute}
