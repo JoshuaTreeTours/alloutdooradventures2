@@ -188,22 +188,65 @@ const getEngine2ToursForLocation = (stateSlug: string, citySlug?: string) => {
   return engine2Tours.map(toEngine2ListingTour);
 };
 
-const dedupeToursById = (entries: Tour[]) => {
-  const byId = new Map<string, Tour>();
-  for (const entry of entries) {
-    byId.set(entry.id, entry);
+const getCanonicalCityTourPath = (tour: Tour) =>
+  `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
+
+function engineRank(tour: Tour) {
+  if (tour.engine === "engine6") {
+    return 5;
   }
-  return [...byId.values()];
+
+  if (tour.engine === "engine4") {
+    return 4;
+  }
+
+  if (tour.engine === "engine3") {
+    return 3;
+  }
+
+  if (tour.engine === "engine2") {
+    return 2;
+  }
+
+  return 1;
+}
+
+const dedupeToursByCanonicalPath = (entries: Tour[]) => {
+  const byCanonicalPath = new Map<string, Tour>();
+
+  for (const entry of entries) {
+    const key = getCanonicalCityTourPath(entry);
+    const existing = byCanonicalPath.get(key);
+
+    if (!existing) {
+      byCanonicalPath.set(key, entry);
+      continue;
+    }
+
+    const nextRank = engineRank(entry);
+    const existingRank = engineRank(existing);
+
+    if (nextRank > existingRank) {
+      byCanonicalPath.set(key, entry);
+      continue;
+    }
+
+    if (nextRank === existingRank && entry.id.localeCompare(existing.id) < 0) {
+      byCanonicalPath.set(key, entry);
+    }
+  }
+
+  return [...byCanonicalPath.values()];
 };
 
 export const getToursByState = (stateSlug: string) =>
-  dedupeToursById([
+  dedupeToursByCanonicalPath([
     ...tours.filter(tour => tour.destination.stateSlug === stateSlug),
     ...getEngine2ToursForLocation(stateSlug),
   ]);
 
 export const getToursByCity = (stateSlug: string, citySlug: string) =>
-  dedupeToursById([
+  dedupeToursByCanonicalPath([
     ...tours.filter(
       tour =>
         tour.destination.stateSlug === stateSlug &&
@@ -315,6 +358,10 @@ const toUnifiedEngine2Tour = (tour: Engine2Tour): UnifiedCityTour => ({
 });
 
 const getDedupeKey = (entry: UnifiedCityTour) => {
+  if (entry.href.startsWith("/destinations/")) {
+    return `canonical:${entry.href}`;
+  }
+
   if (entry.tour.productCode) {
     return `viator:${entry.tour.productCode.toUpperCase()}`;
   }
@@ -326,26 +373,6 @@ const getDedupeKey = (entry: UnifiedCityTour) => {
   }
 
   return `${entry.href}::${entry.tour.id}`;
-};
-
-const engineRank = (tour: Tour) => {
-  if (tour.engine === "engine6") {
-    return 5;
-  }
-
-  if (tour.engine === "engine4") {
-    return 4;
-  }
-
-  if (tour.engine === "engine3") {
-    return 3;
-  }
-
-  if (tour.engine === "engine2") {
-    return 2;
-  }
-
-  return 1;
 };
 
 const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {

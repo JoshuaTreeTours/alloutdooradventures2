@@ -29,6 +29,9 @@ export const ENGINE6_ANCHORAGE_SUNSET_ROUTE =
   "/destinations/alaska/anchorage/tours/sunset-wilderness-wildlife-glacier-and-nature-free-photo-lessons-may-sept";
 export const ENGINE6_ANCHORAGE_GREENBELT_ROUTE =
   "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155";
+export const ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE = "233384P2";
+export const ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE =
+  "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853";
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_SPECIMEN_ROUTE]: ENGINE6_SPECIMEN_PRODUCT_CODE,
@@ -40,11 +43,13 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_ANCHORAGE_PRIVATE_ROUTE]: ENGINE6_ANCHORAGE_PRIVATE_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_SUNSET_ROUTE]: ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_GREENBELT_ROUTE]: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
+  [ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE]: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
 };
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
   ENGINE6_YOSEMITE_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
 ]);
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>

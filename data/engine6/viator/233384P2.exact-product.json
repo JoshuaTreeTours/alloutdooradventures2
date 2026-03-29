@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "233384P2",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Brooklyn-Bridge-Waterfront-Bike-Tour/d687-233384P2",
+    "title": "Brooklyn Bridge Waterfront Guided Bike Tour",
+    "description": "Pedal from Lower Manhattan into Brooklyn with a local guide on a route that links riverfront parks, historic bridge crossings, and neighborhood viewpoints. This small-group ride combines skyline photo stops, local history, and a manageable pace suitable for travelers who want an active city overview without planning the route themselves.",
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "country": "USA"
+    },
+    "priceFrom": "$62.12",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 76
+    },
+    "highlights": [
+      "Ride from Manhattan to Brooklyn on a guided waterfront bike route",
+      "Stop for skyline views from the Brooklyn Bridge and East River parks",
+      "See DUMBO, Brooklyn Heights, and working waterfront landmarks",
+      "Bike and helmet are included for a streamlined departure"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point details are provided after booking in Lower Manhattan, New York City."
+      },
+      "end": {
+        "description": "Returns to the original meeting point."
+      }
+    },
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Travelers should have a moderate physical fitness level"
+    ],
+    "itineraryItems": [
+      {
+        "title": "City Hall Area",
+        "description": "Begin with a quick orientation ride near City Hall before heading toward the bridge.",
+        "duration": "10 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Brooklyn Bridge",
+        "description": "Cross the bridge with stops for East River and Lower Manhattan skyline photo opportunities.",
+        "duration": "20 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Brooklyn Heights Promenade",
+        "description": "Pause for views across the harbor and discuss the history of Brooklyn's waterfront neighborhoods.",
+        "duration": "15 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Brooklyn Bridge Park",
+        "description": "Ride through the expansive waterfront park and continue along the shoreline paths.",
+        "duration": "20 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "DUMBO",
+        "description": "Explore cobblestone streets and converted warehouse blocks in one of Brooklyn's iconic districts.",
+        "duration": "20 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      },
+      {
+        "title": "Brooklyn Navy Yard",
+        "description": "Finish with context on the working docks and industrial history that shaped the East River waterfront.",
+        "duration": "15 minutes",
+        "admissionTicket": "Admission Ticket Free"
+      }
+    ],
+    "categories": [
+      "bike-tour",
+      "sightseeing-tour"
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/d8/6b/8c.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    }
+  }
+}
