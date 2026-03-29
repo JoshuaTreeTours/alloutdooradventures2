@@ -3,6 +3,7 @@ import specimen5119Payload from "../../data/engine6/viator/5119P13.exact-product
 import specimen32779Payload from "../../data/engine6/viator/32779P2.exact-product.json";
 import specimen60136Payload from "../../data/engine6/viator/60136P1.exact-product.json";
 import specimen26719Payload from "../../data/engine6/viator/26719P8.exact-product.json";
+import specimen3454Payload from "../../data/engine6/viator/3454_B0016.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -11,6 +12,12 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "3454_B0016",
+    publicUrl:
+      "https://www.viator.com/tours/San-Francisco/Small-Group-Yosemite-Tour-from-San-Francisco/d651-3454_B0016",
+    rawPayload: specimen3454Payload as Record<string, unknown>,
+  },
   {
     productCode: "63657P1",
     publicUrl:

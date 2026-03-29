@@ -1,0 +1,95 @@
+{
+  "product": {
+    "productCode": "3454_B0016",
+    "productUrl": "https://www.viator.com/tours/San-Francisco/Small-Group-Yosemite-Tour-from-San-Francisco/d651-3454_B0016",
+    "title": "Yosemite Day Tour from San Francisco",
+    "description": {
+      "text": "Known for its steep granite cliffs, waterfalls, towering sequoia groves, and diversity of wildlife, Yosemite National Park is something you don’t want to miss. On this small group day trip, you can leave the logistics to a tour guide so all you have to do is enjoy the great outdoors. You have both guided sightseeing and free time, ensuring you see the UNESCO World Heritage Site’s major attractions, like Half Dome, Yosemite Falls, and Yosemite Valley, with the chance to explore more of the park however you wish."
+    },
+    "location": {
+      "city": "San Francisco",
+      "state": "California"
+    },
+    "priceFrom": "$209.00",
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 722
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/f7/c0/fb.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        },
+        {
+          "isCover": false,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/07/ae/ea/8f.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Visit Half Dome, Yosemite Falls, and El Capitan on a guided van tour",
+      "Spend hours snapping photos of Yosemite National Park's highlights",
+      "Enjoy free time to explore Yosemite’s other natural wonders by foot or bike",
+      "Take in a breathtaking panorama from the Tunnel View overlook"
+    ],
+    "logistics": {
+      "start": {
+        "description": "Hilton San Francisco Union Square, 333 O'Farrell St, San Francisco, CA 94102, USA"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Tunnel View",
+        "description": "Breathtaking overlook with expansive views across Yosemite Valley toward El Capitan and Half Dome.",
+        "duration": "20 minutes",
+        "admission": "Admission Ticket Included"
+      },
+      {
+        "title": "Yosemite Valley",
+        "description": "Guided sightseeing through Yosemite Valley with free time for hiking, photos, and park exploration.",
+        "duration": "3 hours",
+        "admission": "Admission Ticket Included"
+      },
+      {
+        "title": "Yosemite Falls",
+        "description": "Stop at North America's tallest waterfall for major-photo viewpoints and short walks.",
+        "duration": "1 hour",
+        "admission": "Admission Ticket Included"
+      },
+      {
+        "title": "Bridalveil Fall",
+        "description": "Waterfall viewpoint stop during the valley drive segment.",
+        "duration": "30 minutes",
+        "admission": "Admission Ticket Included"
+      },
+      {
+        "title": "El Capitan Viewpoint",
+        "description": "See Yosemite's iconic granite monolith and climber routes from designated pullouts.",
+        "duration": "20 minutes",
+        "admission": "Admission Ticket Included"
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Travelers should have a moderate physical fitness level",
+      "This tour/activity will have a maximum of 15 travelers"
+    ],
+    "categories": [
+      "sightseeing-tour"
+    ]
+  }
+}
