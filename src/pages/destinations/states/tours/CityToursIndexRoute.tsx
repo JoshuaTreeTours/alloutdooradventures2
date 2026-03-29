@@ -73,23 +73,16 @@ export default function CityToursIndexRoute({
         entry.tour.activitySlugs.includes(activityFilter)
       )
     : toursOnlyWithImages;
-  const isUnitedStatesPath =
-    typeof window !== "undefined" &&
-    window.location.pathname.startsWith("/destinations/united-states/");
   const stateHref =
     basePathOverride ??
-    (state
-      ? isUnitedStatesPath
-        ? `/destinations/united-states/${state.slug}`
-        : state.isFallback
-          ? `/destinations/united-states/${state.slug}`
-          : `/destinations/states/${state.slug}`
-      : "");
+    (state?.isFallback
+      ? `/destinations/${state?.slug ?? ""}`
+      : `/destinations/states/${state?.slug ?? ""}`);
   const cityHref =
     state && city
-      ? basePathOverride || stateHref.startsWith("/destinations/states/")
-        ? `${stateHref}/cities/${city.slug}`
-        : `${stateHref}/${city.slug}`
+      ? state?.isFallback && !basePathOverride
+        ? `/destinations/${state.slug}/${city.slug}`
+        : `${stateHref}/cities/${city.slug}`
       : "";
   const toursHref = `${cityHref}/tours`;
   const heroImage =

@@ -314,28 +314,19 @@ export default function CityTourDetailRoute({
   const productDescription = tour
     ? getExpandedTourDescription(tour)[0]
     : undefined;
-  const currentPathname =
-    typeof window !== "undefined" ? window.location.pathname : "";
-  const isUnitedStatesPath = currentPathname.startsWith(
-    "/destinations/united-states/"
-  );
-  const isStatesPath = currentPathname.startsWith("/destinations/states/");
-  const stateHref = state
-    ? isUnitedStatesPath
-      ? `/destinations/united-states/${state.slug}`
-      : isStatesPath
-        ? `/destinations/states/${state.slug}`
-        : state.isFallback
-          ? `/destinations/united-states/${state.slug}`
-          : `/destinations/states/${state.slug}`
-    : "";
   const cityHref =
     state && city
-      ? stateHref.startsWith("/destinations/states/")
-        ? `${stateHref}/cities/${city.slug}`
-        : `${stateHref}/${city.slug}`
+      ? state.isFallback
+        ? `/destinations/${state.slug}/${city.slug}`
+        : `/destinations/states/${state.slug}/cities/${city.slug}`
       : "";
-  const toursHref = cityHref ? `${cityHref}/tours` : "";
+  const stateHref = state
+    ? state.isFallback
+      ? `/destinations/${state.slug}`
+      : `/destinations/states/${state.slug}`
+    : "";
+  const toursHref =
+    state && city ? `/destinations/${state.slug}/${city.slug}/tours` : "";
   const fareHarborParsed = useMemo(() => {
     if (!tour || tour.bookingProvider !== "fareharbor") {
       return null;
