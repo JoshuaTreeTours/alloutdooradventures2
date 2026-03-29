@@ -74,6 +74,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
 } from "./engine6/routes";
@@ -223,6 +224,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_ANCHORAGE_GREENBELT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}
           component={Engine6SpecimenRoute}
         />
 

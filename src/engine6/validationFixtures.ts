@@ -7,6 +7,7 @@ import specimen36001Payload from "../../data/engine6/viator/36001P1.exact-produc
 import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-product.json";
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
+import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -68,5 +69,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Anchorage/Anchorage-Greenbelt-Bike-Tour/d4152-53474P8",
     rawPayload: specimen53474Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "233384P2",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Brooklyn-Bridge-Waterfront-Bike-Tour/d687-233384P2",
+    rawPayload: specimen233384Payload as Record<string, unknown>,
   },
 ];
