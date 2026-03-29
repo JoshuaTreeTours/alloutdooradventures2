@@ -112,4 +112,37 @@ describe("engine6 creation contract validator", () => {
     );
   });
 
+  it("passes itinerary validation when source structured stops are absent and itinerary is absent", () => {
+    const payload = toPayload(ENGINE6_VALIDATION_FIXTURES[0]!);
+    const tour = mapViatorToEngine6Tour(payload);
+    const fixtureRaw = ENGINE6_VALIDATION_FIXTURES[0]!.rawPayload as {
+      product?: Record<string, unknown>;
+      [key: string]: unknown;
+    };
+
+    const rawWithoutStops = {
+      ...fixtureRaw,
+      itineraryItems: [],
+      itinerary: { itineraryItems: [] },
+      whatToExpect: { items: [], stops: [] },
+      product: {
+        ...(fixtureRaw.product ?? {}),
+        itineraryItems: [],
+        itinerary: { itineraryItems: [] },
+        whatToExpect: { items: [], stops: [] },
+      },
+    };
+
+    const report = validateEngine6CreationContract({
+      tour: { ...tour, itinerary: [], itinerarySummaryText: null },
+      rawPayload: rawWithoutStops,
+    });
+
+    expect(report.violations).not.toEqual(
+      expect.arrayContaining([
+        "structured itinerary was dropped despite reliable source stop data",
+      ])
+    );
+  });
+
 });
