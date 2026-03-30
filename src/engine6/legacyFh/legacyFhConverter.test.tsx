@@ -18,6 +18,7 @@ import { getToursByCity, getToursByCityUnified } from "../../data/tours";
 import { toEngine6Card } from "../cards";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import Engine6TourPage from "../components/Engine6TourPage";
+import TourCard from "../../components/TourCard";
 
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
@@ -133,19 +134,76 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(html).not.toContain("No ratings yet");
   });
 
-  it("flows extracted rating/review values consistently to card and schema", () => {
+  it("omits product-page/schema rating when extracted rating is below 4.5", () => {
     const tour = mapLegacyFhRecordToEngine6Tour(
       centralParkBikeToursMigratedRecord
     );
     const card = toEngine6Card(tour);
     const schema = JSON.stringify(buildEngine6SchemaGraph(tour));
 
-    expect(tour.aggregateRating).toBe(4.3);
-    expect(tour.reviewCount).toBe(390);
-    expect(card.ratingLabel).toBe("4.3 (390)");
+    expect(tour.aggregateRating).toBeNull();
+    expect(tour.reviewCount).toBeNull();
+    expect(card.ratingLabel).toBeNull();
+    expect(schema).not.toContain('"AggregateRating"');
+  });
+
+  it("shows product-page/schema rating only when rating is >= 4.5 with review count", () => {
+    const miamiRecord = miamiLegacyMigratedRecords.find(
+      record => record.slug === "miami-downtown-private-airplane-tour-371933"
+    );
+    expect(miamiRecord).toBeTruthy();
+    const tour = mapLegacyFhRecordToEngine6Tour(miamiRecord!);
+    const schema = JSON.stringify(buildEngine6SchemaGraph(tour));
+    Object.assign(globalThis, {
+      location: {
+        pathname:
+          "/destinations/florida/miami/tours/miami-downtown-private-airplane-tour-371933",
+        search: "",
+        hash: "",
+      },
+    });
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+
+    expect(tour.aggregateRating).toBeGreaterThanOrEqual(4.5);
+    expect(tour.reviewCount).toBeGreaterThan(0);
+    expect(html).toContain('data-testid="engine6-rating-summary"');
     expect(schema).toContain('"AggregateRating"');
-    expect(schema).toContain('"ratingValue":4.3');
-    expect(schema).toContain('"reviewCount":390');
+  });
+
+  it("renders city cards without rating/review display", () => {
+    const miamiRecord = miamiLegacyMigratedRecords.find(
+      record => record.slug === "miami-downtown-private-airplane-tour-371933"
+    );
+    const tour = mapLegacyFhRecordToEngine6Tour(miamiRecord!);
+    const listingTour = {
+      id: `engine6-${tour.productCode}`,
+      engine: "engine6" as const,
+      slug: miamiRecord!.slug,
+      title: tour.title,
+      shortDescription: tour.overviewText ?? tour.description,
+      categories: tour.categories,
+      primaryCategory: tour.primaryCategory,
+      destination: {
+        state: "Florida",
+        stateSlug: "florida",
+        city: "Miami",
+        citySlug: "miami",
+      },
+      heroImage: tour.resolvedImageUrl ?? "",
+      resolvedImageUrl: tour.resolvedImageUrl,
+      badges: {
+        rating: tour.aggregateRating ?? undefined,
+        reviewCount: tour.reviewCount ?? undefined,
+      },
+      activitySlugs: ["adventure"],
+      bookingProvider: "fareharbor" as const,
+      bookingUrl: tour.bookingUrl,
+      longDescription: tour.overviewText ?? tour.description,
+    };
+    const html = renderToString(<TourCard tour={listingTour} />);
+
+    expect(html).not.toContain("reviews");
+    expect(html).not.toContain("★");
   });
 
   it("normalizes the migrated specimen into a reusable record", () => {

@@ -202,27 +202,34 @@ const hasRatingConflict = (
 
 const resolveRatingSnapshot = (
   sources: ExtractedRatingSnapshot[]
-): { rating: number | null; reviewCount: number | null } => {
+): {
+  rating: number | null;
+  reviewCount: number | null;
+  confidence: "none" | "medium" | "high";
+} => {
   const detected = sources.filter(
     source => source.rating !== null || source.reviewCount !== null
   );
   if (detected.length === 0) {
-    return { rating: null, reviewCount: null };
+    return { rating: null, reviewCount: null, confidence: "none" };
   }
 
   for (let i = 0; i < detected.length; i += 1) {
     for (let j = i + 1; j < detected.length; j += 1) {
       if (hasRatingConflict(detected[i], detected[j])) {
-        return { rating: null, reviewCount: null };
+        return { rating: null, reviewCount: null, confidence: "none" };
       }
     }
   }
 
-  const selected =
-    detected.find(source => source.confidence === "high") ?? detected[0];
+  const selected = detected.find(source => source.confidence === "high");
+  if (!selected) {
+    return { rating: null, reviewCount: null, confidence: "none" };
+  }
   return {
     rating: selected.rating,
     reviewCount: selected.reviewCount,
+    confidence: selected.confidence,
   };
 };
 
@@ -538,6 +545,7 @@ export const extractLegacyFhProductRecord = (
     ratingSnapshot: {
       rating: resolvedRatingSnapshot.rating,
       reviewCount: resolvedRatingSnapshot.reviewCount,
+      confidence: resolvedRatingSnapshot.confidence,
     },
     overview: composedOverview.text,
     overviewWordCount: composedOverview.wordCount,

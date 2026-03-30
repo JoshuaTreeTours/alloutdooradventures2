@@ -139,20 +139,13 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.startingPrice,
     tour.currency
   );
-  const hasRating =
-    !tour.suppressReviews &&
-    typeof tour.badges.rating === "number" &&
-    typeof tour.badges.reviewCount === "number";
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
         ? tour.resolvedImageUrl?.trim() || ""
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
-  const fallbackImage =
-    tour.engine === "engine6"
-      ? cardImage
-      : "/hero.jpg";
+  const fallbackImage = tour.engine === "engine6" ? cardImage : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
       tour.engine === "engine6" && tag.toUpperCase() === "ENGINE6"
@@ -218,12 +211,6 @@ export default function TourCard({ tour, href }: TourCardProps) {
             </p>
           ) : categoryLabel ? (
             <p className="mt-2 text-sm text-[#405040]">{categoryLabel}</p>
-          ) : null}
-          {hasRating ? (
-            <p className="mt-3 text-sm font-medium text-[#2f4a2f]">
-              ★ {tour.badges.rating.toFixed(1)} ({tour.badges.reviewCount}{" "}
-              reviews)
-            </p>
           ) : null}
           {startingPriceLabel ? (
             <p className="mt-3 text-sm font-semibold text-[#1f2a1f]">
