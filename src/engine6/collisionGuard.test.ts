@@ -53,6 +53,11 @@ describe("engine6 collision guard", () => {
             canonicalPath: "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
             bookingPath:
               "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book",
+            eligibility: {
+              legacyTitle: "VIP Central Park Pedicab Guided Tour",
+              legacyPriceAmount: 50,
+              legacyMeetingPoint: "10 Central Park South, New York, NY",
+            },
           },
         ]
       )
@@ -75,6 +80,11 @@ describe("engine6 collision guard", () => {
       productCode: "414460P1",
       canonicalPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page",
       bookingPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page/book",
+      eligibility: {
+        legacyTitle: "VIP Central Park Pedicab Guided Tour",
+        legacyPriceAmount: 50,
+        legacyMeetingPoint: "10 Central Park South, New York, NY",
+      },
     };
 
     expect(() =>

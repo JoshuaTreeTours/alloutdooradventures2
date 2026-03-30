@@ -42,32 +42,48 @@ export const ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE = "3097SDZSP_2VISIT";
 export const ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE =
   "/destinations/california/san-diego/tours/san-diego-zoo-and-safari-park-2-visit-pass-ticket";
 
-export type Engine6ReplacementModeConfig = {
-  productCode: string;
-  canonicalPath: string;
-  bookingPath: string;
-};
+import type { Engine6ReplacementModeConfig } from "./replacementMode";
 
 const ENGINE6_REPLACEMENT_MODE_CONFIGS: Engine6ReplacementModeConfig[] = [
   {
     productCode: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
     canonicalPath: ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
     bookingPath: `${ENGINE6_ANCHORAGE_GREENBELT_ROUTE}/book`,
+    eligibility: {
+      legacyTitle: "Anchorage Greenbelt Bike Tour",
+      legacyPriceAmount: 159,
+      legacyMeetingPoint: "Dena’ina Civic and Convention Center, Anchorage, AK",
+    },
   },
   {
     productCode: ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_PEDICAB_ROUTE,
     bookingPath: `${ENGINE6_NYC_PEDICAB_ROUTE}/book`,
+    eligibility: {
+      legacyTitle: "VIP Central Park Pedicab Guided Tour",
+      legacyPriceAmount: 50,
+      legacyMeetingPoint: "10 Central Park South, New York, NY",
+    },
   },
   {
     productCode: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
     bookingPath: `${ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}/book`,
+    eligibility: {
+      legacyTitle: "Brooklyn Bridge Waterfront Guided Bike Tour",
+      legacyPriceAmount: 62,
+      legacyMeetingPoint: "Lower Manhattan, New York City",
+    },
   },
   {
     productCode: ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
     bookingPath: `${ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}/book`,
+    eligibility: {
+      legacyTitle: "Classic Manhattan Electric Bike Tour",
+      legacyPriceAmount: 103,
+      legacyMeetingPoint: "79 Chambers Street, New York, NY",
+    },
   },
 ];
 
@@ -87,11 +103,6 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_YOSEMITE_ROUTE]: ENGINE6_YOSEMITE_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_PRIVATE_ROUTE]: ENGINE6_ANCHORAGE_PRIVATE_PRODUCT_CODE,
   [ENGINE6_ANCHORAGE_SUNSET_ROUTE]: ENGINE6_ANCHORAGE_SUNSET_PRODUCT_CODE,
-  [ENGINE6_ANCHORAGE_GREENBELT_ROUTE]: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
-  [ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE]: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
-  [ENGINE6_NYC_PEDICAB_ROUTE]: ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
-  [ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE]:
-    ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_PRODUCT_CODE,
   [ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE]:
     ENGINE6_SAN_DIEGO_ZOO_COMBO_PRODUCT_CODE,
 };
