@@ -47,6 +47,9 @@ export const ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE =
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_PRODUCT_CODE = "5584233P1";
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE =
   "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay";
+export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
+export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
+  "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
 
 import type { Engine6ReplacementModeConfig } from "./replacementMode";
 
@@ -124,6 +127,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
     ENGINE6_SAN_DIEGO_SUNSET_SAILING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
+    ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE,
   ],
 ] as const;
 

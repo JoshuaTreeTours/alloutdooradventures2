@@ -34,6 +34,7 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
@@ -120,6 +121,8 @@ const ENGINE6_447234P3_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 const ENGINE6_5584233P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
+const ENGINE6_327321P1_EXPECTED_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -961,6 +964,83 @@ describe("engine6 listing surfaces", () => {
     expect(offerNode?.price).toBe(120);
     expect(offerNode?.description).toBe("Starting at $120");
     expect(tripNode?.image).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
+  });
+
+  it("routes and renders 327321P1 in Palm Springs with direct affiliate CTA, image parity, and no gallery", () => {
+    const unifiedTours = getToursByCityUnified("california", "palm-springs");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "327321P1"
+    );
+    const engine6Entry = matchingEntries[0];
+
+    expect(matchingEntries).toHaveLength(1);
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE);
+    expect(engine6Entry?.tour.heroImage).toBe(
+      ENGINE6_327321P1_EXPECTED_HERO_URL
+    );
+    expect(engine6Entry?.tour.primaryImageUrl).toBe(
+      ENGINE6_327321P1_EXPECTED_HERO_URL
+    );
+    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(engine6Entry?.tour.heroImage).not.toContain(
+      "/images/hiking-hero.jpg"
+    );
+    expect(engine6Entry?.tour.bookingUrl).toBe(
+      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $108");
+    expect(engine6Entry?.tour.badges?.rating).toBe(5);
+    expect(engine6Entry?.tour.badges?.reviewCount).toBe(92);
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "327321P1"
+    );
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_327321P1_EXPECTED_HERO_URL);
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
+    expect(detailTour?.diagnostics.finalHeroUrl).toBe(
+      ENGINE6_327321P1_EXPECTED_HERO_URL
+    );
+
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain(
+      "1500 A S Palm Canyon Dr, Palm Springs, CA 92264, USA"
+    );
+    expect(detailHtml).toContain(
+      `src="${ENGINE6_327321P1_EXPECTED_HERO_URL}"`
+    );
+    expect(detailHtml).toContain(
+      `href=\"/destinations/california/palm-springs/tours\"`
+    );
+    expect(detailHtml).not.toContain('data-testid="engine6-gallery"');
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const webpageNode = graph.find(node => node["@type"] === "WebPage") as
+      | Record<string, unknown>
+      | undefined;
+    const productNode = graph.find(node => node["@type"] === "Product") as
+      | Record<string, unknown>
+      | undefined;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    const faqNode = graph.find(node => node["@type"] === "FAQPage") as
+      | Record<string, unknown>
+      | undefined;
+
+    expect(webpageNode?.image).toBe(ENGINE6_327321P1_EXPECTED_HERO_URL);
+    expect(productNode?.image).toBe(ENGINE6_327321P1_EXPECTED_HERO_URL);
+    expect(productNode?.url).toBe(
+      "https://www.alloutdooradventures.com/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs"
+    );
+    expect(offerNode?.url).toBe(
+      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(Array.isArray(faqNode?.mainEntity)).toBe(true);
+    expect((faqNode?.mainEntity as unknown[]).length).toBe(5);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
