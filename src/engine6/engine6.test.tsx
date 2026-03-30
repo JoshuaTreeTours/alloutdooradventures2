@@ -36,6 +36,7 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -118,6 +119,8 @@ const ENGINE6_36001P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
 const ENGINE6_447234P3_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
+const ENGINE6_5584233P1_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -850,6 +853,70 @@ describe("engine6 listing surfaces", () => {
     expect(offerNode?.price).toBe(995);
     expect(offerNode?.description).toBe("From $995 per group (up to 4)");
     expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+  });
+
+  it("routes and renders 5584233P1 in San Diego with canonical affiliate CTA and image parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "san-diego");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "5584233P1"
+    );
+    const engine6Entry = matchingEntries[0];
+
+    expect(matchingEntries).toHaveLength(1);
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("San Diego");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(
+      engine6Entry?.tour.primaryImageUrl
+    );
+    expect(engine6Entry?.tour.heroImage).toBe(
+      ENGINE6_5584233P1_EXPECTED_HERO_URL
+    );
+    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(engine6Entry?.tour.heroImage).not.toContain(
+      "/images/hiking-hero.jpg"
+    );
+    expect(engine6Entry?.tour.bookingUrl).toBe(
+      "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $120");
+    expect(engine6Entry?.tour.badges?.rating).toBe(5);
+    expect(engine6Entry?.tour.badges?.reviewCount).toBe(22);
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5584233P1"
+    );
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
+    expect(detailTour?.diagnostics.heroSourceType).not.toBe(
+      "approved-placeholder"
+    );
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain('data-testid="engine6-back-to-tours"');
+    expect(detailHtml).toContain(
+      "Safe Harbor Marina, 955 Harbor Island Dr, San Diego, CA 92101"
+    );
+    expect(detailHtml).toContain(
+      `src="${ENGINE6_5584233P1_EXPECTED_HERO_URL.replaceAll("&", "&amp;")}"`
+    );
+    expect(detailHtml).toContain(
+      `href=\"/destinations/california/san-diego/tours\"`
+    );
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+    expect(offerNode?.price).toBe(120);
+    expect(offerNode?.description).toBe("Starting at $120");
+    expect(tripNode?.image).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
