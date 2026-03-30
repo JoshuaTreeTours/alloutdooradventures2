@@ -120,7 +120,7 @@ const ENGINE6_36001P1_EXPECTED_HERO_URL =
 const ENGINE6_447234P3_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 const ENGINE6_5584233P1_EXPECTED_HERO_URL =
-  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/c2/42/d3.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -900,7 +900,7 @@ describe("engine6 listing surfaces", () => {
       "Safe Harbor Marina, 955 Harbor Island Dr, San Diego, CA 92101"
     );
     expect(detailHtml).toContain(
-      `src="${ENGINE6_5584233P1_EXPECTED_HERO_URL}"`
+      `src="${ENGINE6_5584233P1_EXPECTED_HERO_URL.replaceAll("&", "&amp;")}"`
     );
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
