@@ -55,7 +55,8 @@ import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
-import { getEngine6NativeTourBySlugs } from "../../../../engine6/registry";
+import { getEngine6NativeTourByCanonicalPath } from "../../../../engine6/registry";
+import { isEngine6CanonicalPath } from "../../../../engine6/routes";
 import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
 import {
   assertEngine6CtaIntegrity,
@@ -188,17 +189,16 @@ export default function CityTourDetailRoute({
     );
   }
 
+  const requestedPath =
+    `/destinations/${params.stateSlug}/${params.citySlug}/tours/${params.tourSlug}`;
+
   const migratedLegacyEngine6Tour = getLegacyFhMigratedTourBySlugs(
     params.stateSlug,
     params.citySlug,
     params.tourSlug
   );
 
-  const nativeEngine6Tour = getEngine6NativeTourBySlugs(
-    params.stateSlug,
-    params.citySlug,
-    params.tourSlug
-  );
+  const nativeEngine6Tour = getEngine6NativeTourByCanonicalPath(requestedPath);
   const nativeTourListingEntry = getTourBySlugs(
     params.stateSlug,
     params.citySlug,
@@ -242,6 +242,12 @@ export default function CityTourDetailRoute({
 
   if (migratedLegacyEngine6Tour) {
     return <Engine6TourPage tour={migratedLegacyEngine6Tour} />;
+  }
+
+  if (isEngine6CanonicalPath(requestedPath)) {
+    throw new Error(
+      `Engine6 canonical route must resolve natively and must not fall through: ${requestedPath}`
+    );
   }
 
   const engine2Tour =

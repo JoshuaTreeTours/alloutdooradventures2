@@ -6,6 +6,10 @@ import {
   assertEngine6CollisionPolicy,
   assertEngine6ReplacementModePolicy,
 } from "./collisionGuard";
+import {
+  assertEngine6NoCanonicalSlugCollisions,
+  assertEngine6RequestedPathMatchesResolvedTour,
+} from "./routeIntegrity";
 
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
@@ -41,6 +45,7 @@ const resolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
 
 assertEngine6CollisionPolicy(resolvedTours);
 assertEngine6ReplacementModePolicy(resolvedTours);
+assertEngine6NoCanonicalSlugCollisions(resolvedTours);
 
 export const engine6ResolvedTours: Engine6Tour[] = resolvedTours;
 
@@ -49,8 +54,24 @@ export const getEngine6NativeTourBySlugs = (
   citySlug: string,
   tourSlug: string
 ) =>
-  engine6ResolvedTours.find(
-    tour =>
-      tour.canonicalPath ===
-      `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
+  getEngine6NativeTourByCanonicalPath(
+    `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
   );
+
+
+export const getEngine6NativeTourByCanonicalPath = (requestedPath: string) => {
+  const matchedTour = engine6ResolvedTours.find(
+    tour => tour.canonicalPath === requestedPath
+  );
+
+  if (!matchedTour) {
+    return null;
+  }
+
+  assertEngine6RequestedPathMatchesResolvedTour({
+    requestedPath,
+    resolvedTour: matchedTour,
+  });
+
+  return matchedTour;
+};

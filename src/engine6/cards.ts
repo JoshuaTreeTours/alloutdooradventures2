@@ -42,16 +42,16 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
       : "No ratings yet",
   priceLabel: tour.priceFormatted,
   description: buildCardDescription(tour),
-  href: tour.pagePath,
+  href: tour.canonicalPath,
 });
 
 export const buildEngine6CardSurfaces = (tour: Engine6Tour) => {
-  const card = toEngine6Card(tour);
+  const makeCard = () => ({ ...toEngine6Card(tour) });
   return {
-    city: [card],
-    state: [card],
-    guides: [card],
-    bestTours: [card],
-    search: [card],
+    city: [makeCard()],
+    state: [makeCard()],
+    guides: [makeCard()],
+    bestTours: [makeCard()],
+    search: [makeCard()],
   };
 };
