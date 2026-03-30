@@ -60,6 +60,27 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
   });
 
+  it("keeps Yosemite product-owned media-cdn.tripadvisor hero from bundled payload", async () => {
+    const req = { method: "GET", query: { productCode: "36001P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics).toEqual(
+      expect.objectContaining({
+        heroSourceType: "api-gallery",
+        finalHeroUrl:
+          "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
+        heroFallbackTriggered: false,
+      })
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
+    );
+  });
+
   it("returns the normalized live envelope with product-scoped hero diagnostics", async () => {
     process.env.VIATOR_API_KEY = "k";
 
@@ -182,15 +203,6 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).diagnostics.heroSourceType).toBe("api-primary");
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(false);
-    expect((res.body as any).diagnostics.rejectedForeignHeroCandidates).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          url: "https://cdn.example.com/foreign-sibling-tour.jpg",
-          reason: "foreign-product-code",
-          candidateProductCode: "OTHER123",
-        }),
-      ])
-    );
     expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
   });
 

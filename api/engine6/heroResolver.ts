@@ -24,7 +24,8 @@ export type Engine6RejectedHeroCandidate = {
     | "foreign-product-url"
     | "missing-product-scope"
     | "unverified-product-scope"
-    | "static-hero-disallowed";
+    | "static-hero-disallowed"
+    | "untrusted-media-host";
   candidateProductCode: string | null;
   candidateSourceProductUrl: string | null;
   fieldPath: string | null;
@@ -63,34 +64,24 @@ export const normalizeEngine6SourceProductUrl = (
 };
 
 const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
-const isSpliceImageUrl = (value: string) =>
-  /attractions-splice-spp/i.test(value);
 
-const getHeroQualityRank = (value: string): number => {
-  let parsed: URL | null = null;
+const isTrustedViatorMediaHost = (value: string) => {
   try {
-    parsed = new URL(value);
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    return (
+      host === "cdn.filestackcontent.com" ||
+      host === "www.filepicker.io" ||
+      host === "dynamic-media.tacdn.com" ||
+      host === "media.tacdn.com" ||
+      host === "media-cdn.tripadvisor.com" ||
+      host === "dynamic-media-cdn.tripadvisor.com" ||
+      (host.includes("media") && host.endsWith(".tacdn.com")) ||
+      (host.includes("media") && host.endsWith(".tripadvisor.com"))
+    );
   } catch {
-    return 0;
+    return false;
   }
-
-  const host = parsed.hostname.toLowerCase();
-  const path = parsed.pathname.toLowerCase();
-  const splice = isSpliceImageUrl(path) || isSpliceImageUrl(host);
-
-  if (host === "dynamic-media.tacdn.com") {
-    return 3;
-  }
-
-  if (host === "media.tacdn.com" && !splice) {
-    return 2;
-  }
-
-  if (splice) {
-    return 1;
-  }
-
-  return 0;
 };
 
 const toRejectedCandidate = (
@@ -149,7 +140,6 @@ export const resolveProductScopedHero = ({
       );
       continue;
     }
-
     const candidateProductCode = normalizeProductCode(
       candidate.candidateProductCode
     );
@@ -201,6 +191,12 @@ export const resolveProductScopedHero = ({
       );
       continue;
     }
+    if (!isTrustedViatorMediaHost(candidate.url)) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "untrusted-media-host")
+      );
+      continue;
+    }
 
     validCandidates.push({
       ...candidate,
@@ -210,24 +206,7 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = [...validCandidates].sort((a, b) => {
-      const qualityDiff = getHeroQualityRank(b.url) - getHeroQualityRank(a.url);
-      if (qualityDiff !== 0) {
-        return qualityDiff;
-      }
-
-      const areaDiff = (b.width ?? 0) * (b.height ?? 0) - (a.width ?? 0) * (a.height ?? 0);
-      if (areaDiff !== 0) {
-        return areaDiff;
-      }
-
-      const widthDiff = (b.width ?? 0) - (a.width ?? 0);
-      if (widthDiff !== 0) {
-        return widthDiff;
-      }
-
-      return (b.height ?? 0) - (a.height ?? 0);
-    })[0]!;
+    const selectedCandidate = validCandidates[0]!;
 
     return {
       heroUrl: selectedCandidate.url,

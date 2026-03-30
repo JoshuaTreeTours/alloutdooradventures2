@@ -73,7 +73,30 @@ describe("engine6 hero resolver", () => {
     );
   });
 
-  it("prefers higher-quality dynamic and clean tacdn images over splice images", () => {
+  it("accepts product-owned media hosts across Viator/Tripadvisor variants", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "36001P1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+      candidates: [
+        {
+          url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "36001P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
+    );
+    expect(resolved.heroSourceType).toBe("api-primary");
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
+
+  it("selects the first valid product-owned candidate", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -110,9 +133,37 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
     );
-    expect(resolved.heroSourceType).toBe("api-gallery");
+    expect(resolved.heroSourceType).toBe("api-primary");
     expect(resolved.fallbackTriggered).toBe(false);
+  });
+
+  it("rejects untrusted hosts even when the candidate appears product-scoped", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "63657P1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+      candidates: [
+        {
+          url: "https://images.example.com/media/product.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "63657P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
+    expect(resolved.fallbackTriggered).toBe(true);
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "https://images.example.com/media/product.jpg",
+          reason: "untrusted-media-host",
+        }),
+      ])
+    );
   });
 });
