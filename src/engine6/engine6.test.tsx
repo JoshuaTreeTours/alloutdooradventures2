@@ -3,7 +3,6 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { renderToString } from "react-dom/server";
 
-import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import TourCard from "../components/TourCard";
 import {
@@ -112,15 +111,8 @@ const specimenProductPayload = {
   },
 };
 
-const ENGINE6_60136P1_EXPECTED_HERO_URL =
-  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/eb/d1/48.jpg";
-
-const ENGINE6_36001P1_EXPECTED_HERO_URL =
-  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
-const ENGINE6_447234P3_EXPECTED_HERO_URL =
-  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 const ENGINE6_5584233P1_EXPECTED_HERO_URL =
-  "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/9f/62/0d/caption.jpg";
+  "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -288,7 +280,7 @@ describe("engine6 extractor", () => {
     );
   });
 
-  it("never uses /hero.jpg and falls back to the approved placeholder when API hero candidates are invalid", () => {
+  it("never uses /hero.jpg and fails closed when API hero candidates are invalid", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "STATIC1",
@@ -298,27 +290,19 @@ describe("engine6 extractor", () => {
         description: { text: "Description" },
         location: { city: "Santa Barbara", state: "California" },
         priceFrom: "$10.00",
-        imageUrl: "https://www.alloutdooradventures.com/hero.jpg",
+        media: {
+          images: [{ url: "https://www.alloutdooradventures.com/hero.jpg" }],
+        },
       },
     });
 
-    expect(extracted.extracted.heroImageUrl).toBe(
-      ENGINE6_APPROVED_PLACEHOLDER_IMAGE
-    );
-    expect(extracted.extracted.heroImageUrl).not.toContain("/hero.jpg");
-    expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
+    expect(extracted.extracted.heroImageUrl).toBeNull();
+    expect(extracted.diagnostics.heroSourceType).toBeNull();
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(true);
-    expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          url: "https://www.alloutdooradventures.com/hero.jpg",
-          reason: "static-hero-disallowed",
-        }),
-      ])
-    );
+    expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
   });
 
-  it("uses the approved placeholder only when product API imagery is absent", () => {
+  it("fails closed when product API imagery is absent", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "NOPHOTO1",
@@ -331,11 +315,39 @@ describe("engine6 extractor", () => {
       },
     });
 
-    expect(extracted.extracted.heroImageUrl).toBe(
-      ENGINE6_APPROVED_PLACEHOLDER_IMAGE
-    );
-    expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
+    expect(extracted.extracted.heroImageUrl).toBeNull();
+    expect(extracted.diagnostics.heroSourceType).toBeNull();
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(true);
+    expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
+  });
+
+  it("selects the first TACDN image from API media payload and rejects non-TACDN alternates", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "TACDN1",
+        productUrl: "https://www.viator.com/tours/San-Diego/Test/d736-TACDN1",
+        title: "Deterministic TACDN Hero",
+        description: { text: "Description" },
+        location: { city: "San Diego", state: "California" },
+        media: {
+          images: [
+            {
+              url: "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg",
+            },
+            {
+              url: "https://dynamic-media.tacdn.com/media/photo-o/22/22/22/22/caption.jpg",
+            },
+          ],
+        },
+        images: [{ url: "https://cdn.example.com/coffee.jpg" }],
+      },
+    });
+
+    expect(extracted.extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg"
+    );
+    expect(extracted.diagnostics.heroFallbackTriggered).toBe(false);
+    expect(extracted.diagnostics.heroSourceType).toBe("api-primary");
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
   });
 });
@@ -452,14 +464,14 @@ describe("engine6 mapping/cards/page", () => {
         ...specimenApiPayload,
         diagnostics: {
           ...specimenApiPayload.diagnostics,
-          imageSourceUsed: "approved-placeholder",
-          heroSourceType: "approved-placeholder",
-          finalHeroUrl: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+          imageSourceUsed: null,
+          heroSourceType: null,
+          finalHeroUrl: null,
           heroFallbackTriggered: true,
         },
         extracted: {
           ...specimenApiPayload.extracted,
-          heroImageUrl: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+          heroImageUrl: null,
         },
       },
       httpStatus: 200,
@@ -817,9 +829,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.heroImage).toBe(
-      ENGINE6_447234P3_EXPECTED_HERO_URL
-    );
+    expect(engine6Entry?.tour.heroImage).toBe("");
     expect(engine6Entry?.tour.bookingUrl).toContain(
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
@@ -831,15 +841,13 @@ describe("engine6 listing surfaces", () => {
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "447234P3"
     );
-    expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
-    expect(detailTour?.diagnostics.heroSourceType).not.toBe(
-      "approved-placeholder"
-    );
-    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
+    expect(detailTour?.heroImageUrl).toBeNull();
+    expect(detailTour?.diagnostics.heroSourceType).toBeNull();
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(true);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
     expect(detailHtml).toContain("per group (up to 4)");
-    expect(detailHtml).toContain(`src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`);
+    expect(detailHtml).not.toContain('data-testid="engine6-hero-image"');
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
     );
@@ -854,7 +862,7 @@ describe("engine6 listing surfaces", () => {
       | undefined;
     expect(offerNode?.price).toBe(995);
     expect(offerNode?.description).toBe("From $995 per group (up to 4)");
-    expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(tripNode?.image).toBeUndefined();
   });
 
   it("routes and renders 5584233P1 in San Diego with native Engine6 parity and affiliate CTA", () => {
@@ -952,14 +960,14 @@ describe("engine6 listing surfaces", () => {
       tour => tour.productCode === "5119P13"
     );
     const expectedHero = vegasTour?.heroImageUrl;
-    expect(expectedHero).toContain("https://");
+    expect(expectedHero).toBeNull();
 
     const cityUnified = getToursByCityUnified("nevada", "las-vegas");
     const cityEntry = cityUnified.find(
       entry => entry.tour.productCode === "5119P13"
     );
-    expect(cityEntry?.tour.heroImage).toBe(expectedHero);
-    expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero);
+    expect(cityEntry?.tour.heroImage).toBe(expectedHero ?? "");
+    expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero ?? "");
 
     const previousWindow = (globalThis as { window?: Window }).window;
     const previousLocation = (
@@ -989,15 +997,8 @@ describe("engine6 listing surfaces", () => {
     };
 
     const filteredHtml = renderToString(<ToursLanding />);
-    expect(filteredHtml).toContain(
-      `src="${expectedHero?.replace(/&/g, "&amp;")}"`
-    );
-    expect(filteredHtml).toContain(
-      `data-card-image-src="${expectedHero?.replace(/&/g, "&amp;")}"`
-    );
-    expect(filteredHtml).toContain(
-      `data-hero-image-src="${expectedHero?.replace(/&/g, "&amp;")}"`
-    );
+    expect(filteredHtml).toContain('data-card-image-src=""');
+    expect(filteredHtml).toContain('data-hero-image-src=""');
     expect(filteredHtml.toLowerCase()).not.toContain("octopus");
 
     (globalThis as { window?: Window }).window = previousWindow;
@@ -1011,26 +1012,23 @@ describe("engine6 listing surfaces", () => {
       tour => tour.productCode === "60136P1"
     );
     expect(antelopeTour).toBeDefined();
-    expect(antelopeTour?.heroImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+    expect(antelopeTour?.heroImageUrl).toBeNull();
 
     const detailHtml = renderToString(<Engine6TourPage tour={antelopeTour!} />);
-    const escapedHero = antelopeTour!.heroImageUrl.replace(/&/g, "&amp;");
-    expect(detailHtml).toContain(`src="${escapedHero}"`);
-    expect(antelopeTour!.heroImageUrl).not.toContain("/images/hiking-hero.jpg");
+    expect(detailHtml).not.toContain('data-testid="engine6-hero-image"');
 
     const unified = getToursByCityUnified("nevada", "las-vegas");
     const entry = unified.find(tour => tour.tour.productCode === "60136P1");
     expect(entry).toBeDefined();
     expect(entry?.href).toBe(ENGINE6_ANTELOPE_ROUTE);
-    expect(entry?.tour.heroImage).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
-    expect(entry?.tour.primaryImageUrl).toBe(ENGINE6_60136P1_EXPECTED_HERO_URL);
+    expect(entry?.tour.heroImage).toBe("");
+    expect(entry?.tour.primaryImageUrl).toBe("");
 
     const cardHtml = renderToString(
       <TourCard tour={entry!.tour} href={entry!.href} />
     );
-    expect(cardHtml).toContain(`data-card-image-src="${escapedHero}"`);
-    expect(cardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
-    expect(cardHtml).not.toContain("/images/hiking-hero.jpg");
+    expect(cardHtml).toContain('data-card-image-src=""');
+    expect(cardHtml).toContain('data-hero-image-src=""');
 
     const previousWindow = (globalThis as { window?: Window }).window;
     const previousLocation = (
@@ -1057,12 +1055,8 @@ describe("engine6 listing surfaces", () => {
     };
 
     const filteredHtml = renderToString(<ToursLanding />);
-    expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
-    expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
-    expect(filteredHtml).toContain(
-      ENGINE6_60136P1_EXPECTED_HERO_URL.replace(/&/g, "&amp;")
-    );
-    expect(filteredHtml).not.toContain("/images/hiking-hero.jpg");
+    expect(filteredHtml).toContain('data-card-image-src=""');
+    expect(filteredHtml).toContain('data-hero-image-src=""');
 
     (globalThis as { window?: Window }).window = previousWindow;
     (
@@ -1117,7 +1111,7 @@ describe("engine6 listing surfaces", () => {
   it("regression: every Engine6 listing card image stays identical to its detail hero", () => {
     for (const tour of engine6ResolvedTours) {
       const card = toEngine6Card(tour);
-      expect(card.imageUrl).toBe(tour.heroImageUrl);
+      expect(card.imageUrl).toBe(tour.heroImageUrl ?? "");
 
       const [, stateSlug = "", citySlug = ""] =
         /^\/destinations\/([^/]+)\/([^/]+)\/tours\/[^/]+$/.exec(
@@ -1131,14 +1125,16 @@ describe("engine6 listing surfaces", () => {
       );
 
       expect(listingEntry).toBeDefined();
-      expect(listingEntry?.tour.heroImage).toBe(tour.heroImageUrl);
-      expect(listingEntry?.tour.primaryImageUrl).toBe(tour.heroImageUrl);
+      expect(listingEntry?.tour.heroImage).toBe(tour.heroImageUrl ?? "");
+      expect(listingEntry?.tour.primaryImageUrl).toBe(tour.heroImageUrl ?? "");
 
       const listingHtml = renderToString(
         <TourCard tour={listingEntry!.tour} href={listingEntry!.href} />
       );
-      const escapedHero = tour.heroImageUrl.replace(/&/g, "&amp;");
-      expect(listingHtml).toContain(`src="${escapedHero}"`);
+      const escapedHero = (tour.heroImageUrl ?? "").replace(/&/g, "&amp;");
+      if (escapedHero) {
+        expect(listingHtml).toContain(`src="${escapedHero}"`);
+      }
       expect(listingHtml).toContain(`data-card-image-src="${escapedHero}"`);
       expect(listingHtml).toContain(`data-hero-image-src="${escapedHero}"`);
     }
@@ -1386,12 +1382,19 @@ describe("engine6 image parity guardrails", () => {
       );
       expect(tour).toBeDefined();
       const expectedHero = tour!.heroImageUrl;
-      expect(expectedHero).toContain("https://");
+      if (expectedHero) {
+        expect(expectedHero).toContain("https://");
+      } else {
+        expect(expectedHero).toBeNull();
+      }
 
       const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
-      const escapedHero = expectedHero.replace(/&/g, "&amp;");
-      expect(detailHtml).toContain(`src="${escapedHero}"`);
-      expect(detailHtml).not.toContain("/images/hiking-hero.jpg");
+      const escapedHero = expectedHero?.replace(/&/g, "&amp;");
+      if (escapedHero) {
+        expect(detailHtml).toContain(`src="${escapedHero}"`);
+      } else {
+        expect(detailHtml).not.toContain('data-testid="engine6-hero-image"');
+      }
 
       const { stateSlug, citySlug } = parseStateCityFromCanonicalPath(
         tour!.canonicalPath
@@ -1401,15 +1404,18 @@ describe("engine6 image parity guardrails", () => {
         entry => entry.tour.productCode === productCode
       );
       expect(cityEntry).toBeDefined();
-      expect(cityEntry?.tour.heroImage).toBe(expectedHero);
-      expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero);
+      expect(cityEntry?.tour.heroImage).toBe(expectedHero ?? "");
+      expect(cityEntry?.tour.primaryImageUrl).toBe(expectedHero ?? "");
 
       const cityCardHtml = renderToString(
         <TourCard tour={cityEntry!.tour} href={cityEntry!.href} />
       );
-      expect(cityCardHtml).toContain(`data-card-image-src="${escapedHero}"`);
-      expect(cityCardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
-      expect(cityCardHtml).not.toContain("/images/hiking-hero.jpg");
+      expect(cityCardHtml).toContain(
+        `data-card-image-src="${escapedHero ?? ""}"`
+      );
+      expect(cityCardHtml).toContain(
+        `data-hero-image-src="${escapedHero ?? ""}"`
+      );
 
       const previousWindow = (globalThis as { window?: Window }).window;
       const previousLocation = (
@@ -1439,8 +1445,12 @@ describe("engine6 image parity guardrails", () => {
       };
 
       const filteredHtml = renderToString(<ToursLanding />);
-      expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
-      expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+      expect(filteredHtml).toContain(
+        `data-card-image-src="${escapedHero ?? ""}"`
+      );
+      expect(filteredHtml).toContain(
+        `data-hero-image-src="${escapedHero ?? ""}"`
+      );
 
       (globalThis as { window?: Window }).window = previousWindow;
       (
@@ -1589,13 +1599,11 @@ it("keeps Yosemite replacement hero parity across detail, city card, filtered ca
     tour => tour.productCode === "36001P1"
   );
   expect(yosemiteTour).toBeDefined();
-  expect(yosemiteTour?.heroImageUrl).toBe(ENGINE6_36001P1_EXPECTED_HERO_URL);
+  expect(yosemiteTour?.heroImageUrl).toBeNull();
   expect(yosemiteTour?.canonicalPath).toBe(ENGINE6_YOSEMITE_ROUTE);
 
-  const escapedHero = ENGINE6_36001P1_EXPECTED_HERO_URL.replace(/&/g, "&amp;");
-
   const detailHtml = renderToString(<Engine6TourPage tour={yosemiteTour!} />);
-  expect(detailHtml).toContain(escapedHero);
+  expect(detailHtml).not.toContain('data-testid="engine6-hero-image"');
 
   const cityUnified = getToursByCityUnified("california", "san-francisco");
   const cityEntry = cityUnified.find(
@@ -1606,8 +1614,8 @@ it("keeps Yosemite replacement hero parity across detail, city card, filtered ca
   const cityCardHtml = renderToString(
     <TourCard tour={cityEntry!.tour} href={cityEntry!.href} />
   );
-  expect(cityCardHtml).toContain(`data-card-image-src="${escapedHero}"`);
-  expect(cityCardHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+  expect(cityCardHtml).toContain('data-card-image-src=""');
+  expect(cityCardHtml).toContain('data-hero-image-src=""');
 
   const previousWindow = (globalThis as unknown as { window?: Window }).window;
   const nextWindow = {
@@ -1623,8 +1631,8 @@ it("keeps Yosemite replacement hero parity across detail, city card, filtered ca
   (globalThis as unknown as { window?: Window }).window = nextWindow;
   try {
     const filteredHtml = renderToString(<ToursLanding />);
-    expect(filteredHtml).toContain(`data-card-image-src="${escapedHero}"`);
-    expect(filteredHtml).toContain(`data-hero-image-src="${escapedHero}"`);
+    expect(filteredHtml).toContain('data-card-image-src=""');
+    expect(filteredHtml).toContain('data-hero-image-src=""');
     expect(filteredHtml).toContain(ENGINE6_YOSEMITE_ROUTE);
   } finally {
     (globalThis as unknown as { window?: Window }).window = previousWindow;

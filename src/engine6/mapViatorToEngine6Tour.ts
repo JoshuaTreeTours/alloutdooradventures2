@@ -107,22 +107,19 @@ export const mapViatorToEngine6Tour = (
     title,
   });
   const replacementMode = resolveEngine6ReplacementMode(payload.rawProductCode);
-  const replacementEligibility =
-    replacementMode
-      ? evaluateEngine6ReplacementEligibility({
-          title,
-          priceAmount: payload.extracted.priceAmount,
-          meetingPointText:
-            payload.extracted.meetingPointText ?? "",
-          config: replacementMode,
-        })
-      : null;
+  const replacementEligibility = replacementMode
+    ? evaluateEngine6ReplacementEligibility({
+        title,
+        priceAmount: payload.extracted.priceAmount,
+        meetingPointText: payload.extracted.meetingPointText ?? "",
+        config: replacementMode,
+      })
+    : null;
   const shouldUseReplacementMode = replacementEligibility?.eligible ?? false;
-  const canonicalPath =
-    shouldUseReplacementMode
-      ? replacementMode?.canonicalPath
-      : resolveEngine6PathForProductCode(payload.rawProductCode) ??
-        generatedCanonicalPath;
+  const canonicalPath = shouldUseReplacementMode
+    ? replacementMode?.canonicalPath
+    : (resolveEngine6PathForProductCode(payload.rawProductCode) ??
+      generatedCanonicalPath);
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -186,7 +183,7 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     resolvedImageUrl,
-    heroImageUrl: resolvedImageUrl ?? "",
+    heroImageUrl: resolvedImageUrl,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

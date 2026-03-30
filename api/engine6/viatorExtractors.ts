@@ -1,6 +1,5 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
 import {
-  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
   type Engine6HeroCandidate,
   type Engine6HeroSourceType,
   resolveProductScopedHero,
@@ -14,8 +13,8 @@ export type Engine6DiagnosticsPaths = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: Engine6HeroSourceType;
-  heroSourceType: Engine6HeroSourceType;
+  imageSourceUsed: Engine6HeroSourceType | null;
+  heroSourceType: Engine6HeroSourceType | null;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
   rejectedForeignHeroCandidates: Array<{
@@ -296,20 +295,14 @@ const emptyExtracted = (): Engine6Extracted => ({
   categories: [],
 });
 
-const rankVariants = (
-  variants: RankedImageVariant[]
-): RankedImageVariant | null => {
-  const ranked = [...variants].sort((a, b) => {
-    if (b.area !== a.area) {
-      return b.area - a.area;
-    }
-    if ((b.width ?? 0) !== (a.width ?? 0)) {
-      return (b.width ?? 0) - (a.width ?? 0);
-    }
-    return (b.height ?? 0) - (a.height ?? 0);
-  });
-
-  return ranked[0] ?? null;
+const isTacdnImageUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    return host === "dynamic-media.tacdn.com" || host.endsWith(".tacdn.com");
+  } catch {
+    return false;
+  }
 };
 
 const collectArrayVariants = (
@@ -388,25 +381,27 @@ const resolveImageCollectionHero = (
     return null;
   }
 
-  const prioritizedImages = images
-    .map((value, index) => ({ value, index }))
-    .sort((a, b) => {
-      const aImage = asRecord(a.value);
-      const bImage = asRecord(b.value);
-      const aCover = aImage?.isCover === true || aImage?.cover === true;
-      const bCover = bImage?.isCover === true || bImage?.cover === true;
-      return Number(bCover) - Number(aCover);
-    });
+  const indexedImages = images.map((value, index) => ({ value, index }));
+  const explicitPrimaryImage =
+    indexedImages.find(entry => {
+      const image = asRecord(entry.value);
+      return (
+        image?.isPrimary === true ||
+        image?.isCover === true ||
+        image?.cover === true ||
+        image?.hero === true
+      );
+    }) ?? indexedImages[0];
 
-  for (const entry of prioritizedImages) {
+  for (const entry of explicitPrimaryImage ? [explicitPrimaryImage] : []) {
     const image = asRecord(entry.value);
     if (!image) continue;
 
     const basePath = [...basePathPrefix, entry.index];
-    const selectedVariant = rankVariants([
+    const selectedVariant = [
       ...collectRecordVariants(image, basePath),
       ...collectArrayVariants(image, basePath),
-    ]);
+    ].find(variant => isTacdnImageUrl(variant.url));
 
     if (selectedVariant) {
       return {
@@ -423,7 +418,7 @@ const resolveImageCollectionHero = (
       asImageUrl(image.url) ??
       asImageUrl(image.src) ??
       asImageUrl(image.imageUrl);
-    if (directUrl) {
+    if (directUrl && isTacdnImageUrl(directUrl)) {
       const directPath = asImageUrl(image.url)
         ? formatFieldPath([...basePath, "url"])
         : asImageUrl(image.src)
@@ -481,39 +476,6 @@ const extractPlaybookHeroCandidates = ({
   if (rootHero) {
     candidates.push(withHeroScope(rootHero, productCode, sourceProductUrl));
   }
-
-  for (const [path, value] of [
-    ["product.imageUrl", product.imageUrl],
-    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
-    ["product.thumbnailURL", product.thumbnailURL],
-  ] as const) {
-    const url = asImageUrl(value);
-    if (!url) {
-      continue;
-    }
-
-    candidates.push({
-      url,
-      sourceType: "api-gallery",
-      candidateProductCode: productCode,
-      candidateSourceProductUrl: sourceProductUrl,
-      fieldPath: path,
-      variantPath: path.replace(/\.url$/, ""),
-      width: null,
-      height: null,
-    });
-  }
-
-  candidates.push({
-    url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-    sourceType: "approved-placeholder",
-    candidateProductCode: productCode,
-    candidateSourceProductUrl: sourceProductUrl,
-    fieldPath: "engine6.approved-placeholder",
-    variantPath: "engine6.approved-placeholder",
-    width: null,
-    height: null,
-  });
 
   return candidates;
 };
@@ -1059,8 +1021,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
-    imageSourceUsed: "approved-placeholder",
-    heroSourceType: "approved-placeholder",
+    imageSourceUsed: null,
+    heroSourceType: null,
     finalHeroUrl: null,
     heroFallbackTriggered: false,
     rejectedForeignHeroCandidates: [],
@@ -1108,15 +1070,18 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       sourceProductUrl: productUrl.value,
     }),
   });
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate.variantPath ?? null;
-  diagnostics.selectedHeroWidth = heroDecision.finalCandidate.width ?? null;
-  diagnostics.selectedHeroHeight = heroDecision.finalCandidate.height ?? null;
+  diagnostics.heroImageFieldPath =
+    heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath =
+    heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
+  diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
-  diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
+  diagnostics.rejectedForeignHeroCandidates =
+    heroDecision.rejectedForeignCandidates;
 
   const price = extractPlaybookPrice(product);
   diagnostics.commercialPriceFieldPath = price.path;
@@ -1162,9 +1127,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     const [question, answer] = item.split("|||");
     return { question, answer } satisfies Engine6ExtractedFaq;
   });
-  const faqPath = baseFaqs.value.length > 0
-    ? (baseFaqs.path ?? "product.qAndA.items")
-    : null;
+  const faqPath =
+    baseFaqs.value.length > 0 ? (baseFaqs.path ?? "product.qAndA.items") : null;
   const faqs = { value: mergedFaqs, path: faqPath };
   diagnostics.faqsFieldPath = faqs.path;
   diagnostics.faqFieldPath = faqs.path;
