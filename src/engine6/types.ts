@@ -33,8 +33,8 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
-  imageSourceUsed: Engine6HeroSourceType;
-  heroSourceType: Engine6HeroSourceType;
+  imageSourceUsed: Engine6HeroSourceType | null;
+  heroSourceType: Engine6HeroSourceType | null;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
   rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
@@ -97,7 +97,7 @@ export type Engine6Tour = {
   city: string;
   state: string;
   resolvedImageUrl: string | null;
-  heroImageUrl: string;
+  heroImageUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;

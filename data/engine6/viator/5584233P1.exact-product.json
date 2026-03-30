@@ -1,0 +1,85 @@
+{
+  "product": {
+    "productCode": "5584233P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1",
+    "title": "Spectacular Sunset Sailing in San Diego",
+    "description": {
+      "text": "Set out on San Diego Bay for a sunset sail designed for travelers who want a quieter, more personal time on the water. With a small group of about six guests aboard a 35-foot sailboat, the pace feels relaxed and conversational rather than crowded. Your local captain shares context about the harbor, skyline, Coronado, and active naval waterfront while adjusting the route for evening light and wind. You can simply settle in with a blanket and watch the city shift into golden hour, or participate in basic sailing tasks if you want a hands-on moment. Wildlife sightings often include sea lions, seabirds, and occasional dolphins. Bring your own snacks and drinks, dress in layers, and enjoy a calm return to the marina after sunset."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$129.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 27
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Sunset views across San Diego Bay with changing light on the city skyline.",
+      "Small-group sailing with around six guests for an intimate atmosphere.",
+      "Harbor landmarks including Coronado and naval ships with local captain commentary.",
+      "Frequent wildlife sightings such as sea lions, dolphins, and seabirds.",
+      "Optional hands-on sailing participation, with plenty of time to relax."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Harbor Island marina area, San Diego, California."
+      },
+      "end": {
+        "description": "Returns to the original Harbor Island marina meeting point."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Boarding at Harbor Island Marina",
+        "description": "Meet your captain near Harbor Island for a short safety briefing and boarding before departure."
+      },
+      {
+        "title": "San Diego Bay Sailing Route",
+        "description": "Cruise through the harbor with views of downtown, Coronado, and working naval areas while your captain shares local perspective.",
+        "duration": "1 hour"
+      },
+      {
+        "title": "Sunset on the Water",
+        "description": "Pause into golden hour for skyline photos, calm sailing, and possible wildlife sightings including sea lions and dolphins."
+      },
+      {
+        "title": "Return to Harbor Island",
+        "description": "Sail back to the same marina after sunset for an easy finish close to where you started."
+      }
+    ],
+    "additionalInfo": [
+      "Blankets are provided on board for cooler evening conditions.",
+      "Guests may bring snacks and drinks; no food is included.",
+      "Layered clothing is recommended because temperatures drop after sunset.",
+      "This experience is weather dependent and may be adjusted for safety.",
+      "This is a small-group sailing trip, not a large-group party boat."
+    ],
+    "faqs": [
+      {
+        "question": "Can we help sail the boat?",
+        "answer": "Yes. Guests can participate in simple sailing tasks if they want, or sit back and enjoy the ride."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      },
+      {
+        "label": "Sunset Cruises"
+      },
+      {
+        "label": "Water Activities"
+      }
+    ]
+  }
+}

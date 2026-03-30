@@ -1,12 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-  resolveProductScopedHero,
-} from "./heroResolver";
+import { resolveProductScopedHero } from "./heroResolver";
 
 describe("engine6 hero resolver", () => {
-  it("accepts the current product primary API image before any placeholder", () => {
+  it("accepts the first valid TACDN image for the current product", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -19,10 +16,6 @@ describe("engine6 hero resolver", () => {
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
         },
-        {
-          url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-          sourceType: "approved-placeholder",
-        },
       ],
     });
 
@@ -33,7 +26,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("rejects foreign and static hero candidates explicitly", () => {
+  it("rejects foreign and static hero candidates explicitly and fails closed", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -56,14 +49,14 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
-    expect(resolved.heroSourceType).toBe("approved-placeholder");
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.heroSourceType).toBeNull();
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           url: "https://cdn.example.com/foreign-sibling-tour.jpg",
-          reason: "foreign-product-code",
+          reason: "unverified-product-scope",
         }),
         expect.objectContaining({
           url: "https://www.alloutdooradventures.com/hero.jpg",
@@ -73,7 +66,7 @@ describe("engine6 hero resolver", () => {
     );
   });
 
-  it("prefers higher-quality dynamic and clean tacdn images over splice images", () => {
+  it("uses deterministic first-valid ordering without rotation", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -89,15 +82,6 @@ describe("engine6 hero resolver", () => {
           height: 900,
         },
         {
-          url: "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/dd.jpg",
-          sourceType: "api-gallery",
-          candidateProductCode: "63657P1",
-          candidateSourceProductUrl:
-            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 800,
-          height: 600,
-        },
-        {
           url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg",
           sourceType: "api-gallery",
           candidateProductCode: "63657P1",
@@ -110,9 +94,9 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg"
+      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
     );
-    expect(resolved.heroSourceType).toBe("api-gallery");
+    expect(resolved.heroSourceType).toBe("api-primary");
     expect(resolved.fallbackTriggered).toBe(false);
   });
 });

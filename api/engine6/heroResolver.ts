@@ -31,10 +31,10 @@ export type Engine6RejectedHeroCandidate = {
 };
 
 export type Engine6ResolvedHero = {
-  heroUrl: string;
-  heroSourceType: Engine6HeroSourceType;
+  heroUrl: string | null;
+  heroSourceType: Engine6HeroSourceType | null;
   fallbackTriggered: boolean;
-  finalCandidate: Engine6HeroCandidate;
+  finalCandidate: Engine6HeroCandidate | null;
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
 };
 
@@ -62,35 +62,16 @@ export const normalizeEngine6SourceProductUrl = (
   }
 };
 
-const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
-const isSpliceImageUrl = (value: string) =>
-  /attractions-splice-spp/i.test(value);
-
-const getHeroQualityRank = (value: string): number => {
-  let parsed: URL | null = null;
+const isStaticHeroDisallowed = (value: string) =>
+  /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
+const isAllowedTacdnHost = (value: string) => {
   try {
-    parsed = new URL(value);
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    return host === "dynamic-media.tacdn.com" || host.endsWith(".tacdn.com");
   } catch {
-    return 0;
+    return false;
   }
-
-  const host = parsed.hostname.toLowerCase();
-  const path = parsed.pathname.toLowerCase();
-  const splice = isSpliceImageUrl(path) || isSpliceImageUrl(host);
-
-  if (host === "dynamic-media.tacdn.com") {
-    return 3;
-  }
-
-  if (host === "media.tacdn.com" && !splice) {
-    return 2;
-  }
-
-  if (splice) {
-    return 1;
-  }
-
-  return 0;
 };
 
 const toRejectedCandidate = (
@@ -111,19 +92,16 @@ export const resolveProductScopedHero = ({
   currentProductCode,
   currentSourceProductUrl,
   candidates,
-  placeholderUrl = ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
 }: {
   currentProductCode?: string | null;
   currentSourceProductUrl?: string | null;
   candidates: Engine6HeroCandidate[];
-  placeholderUrl?: string;
 }): Engine6ResolvedHero => {
   const normalizedCurrentProductCode = normalizeProductCode(currentProductCode);
   const normalizedCurrentSourceProductUrl = normalizeEngine6SourceProductUrl(
     currentSourceProductUrl
   );
   const rejectedForeignCandidates: Engine6RejectedHeroCandidate[] = [];
-  let placeholderCandidate: Engine6HeroCandidate | null = null;
   const validCandidates: Engine6HeroCandidate[] = [];
 
   for (const candidate of candidates) {
@@ -131,21 +109,15 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
-    if (candidate.sourceType === "approved-placeholder") {
-      if (candidate.url === placeholderUrl && !placeholderCandidate) {
-        placeholderCandidate = {
-          ...candidate,
-          candidateProductCode: normalizeProductCode(currentProductCode),
-          candidateSourceProductUrl:
-            normalizeEngine6SourceProductUrl(currentSourceProductUrl),
-        };
-      }
-      continue;
-    }
-
     if (isStaticHeroDisallowed(candidate.url)) {
       rejectedForeignCandidates.push(
         toRejectedCandidate(candidate, "static-hero-disallowed")
+      );
+      continue;
+    }
+    if (!isAllowedTacdnHost(candidate.url)) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "unverified-product-scope")
       );
       continue;
     }
@@ -210,24 +182,7 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = [...validCandidates].sort((a, b) => {
-      const qualityDiff = getHeroQualityRank(b.url) - getHeroQualityRank(a.url);
-      if (qualityDiff !== 0) {
-        return qualityDiff;
-      }
-
-      const areaDiff = (b.width ?? 0) * (b.height ?? 0) - (a.width ?? 0) * (a.height ?? 0);
-      if (areaDiff !== 0) {
-        return areaDiff;
-      }
-
-      const widthDiff = (b.width ?? 0) - (a.width ?? 0);
-      if (widthDiff !== 0) {
-        return widthDiff;
-      }
-
-      return (b.height ?? 0) - (a.height ?? 0);
-    })[0]!;
+    const selectedCandidate = validCandidates[0]!;
 
     return {
       heroUrl: selectedCandidate.url,
@@ -238,24 +193,11 @@ export const resolveProductScopedHero = ({
     };
   }
 
-  const fallbackCandidate =
-    placeholderCandidate ??
-    ({
-      url: placeholderUrl,
-      sourceType: "approved-placeholder",
-      candidateProductCode: normalizedCurrentProductCode,
-      candidateSourceProductUrl: normalizedCurrentSourceProductUrl,
-      fieldPath: "engine6.approved-placeholder",
-      variantPath: "engine6.approved-placeholder",
-      width: null,
-      height: null,
-    } satisfies Engine6HeroCandidate);
-
   return {
-    heroUrl: fallbackCandidate.url,
-    heroSourceType: fallbackCandidate.sourceType,
+    heroUrl: null,
+    heroSourceType: null,
     fallbackTriggered: true,
-    finalCandidate: fallbackCandidate,
+    finalCandidate: null,
     rejectedForeignCandidates,
   };
 };

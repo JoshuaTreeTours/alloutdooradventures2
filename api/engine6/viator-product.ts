@@ -51,8 +51,16 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "approved-placeholder" as const,
-  heroSourceType: "approved-placeholder" as const,
+  imageSourceUsed: null as
+    | "api-primary"
+    | "api-gallery"
+    | "approved-placeholder"
+    | null,
+  heroSourceType: null as
+    | "api-primary"
+    | "api-gallery"
+    | "approved-placeholder"
+    | null,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
   rejectedForeignHeroCandidates: [] as Array<{
@@ -239,14 +247,16 @@ const applyResolvedHero = (args: {
       preferredCandidate.sourceType !== "approved-placeholder"
         ? [preferredCandidate]
         : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType !== "approved-placeholder"
+      ...(fallbackCandidate &&
+      fallbackCandidate.sourceType !== "approved-placeholder"
         ? [fallbackCandidate]
         : []),
       ...(preferredCandidate &&
       preferredCandidate.sourceType === "approved-placeholder"
         ? [preferredCandidate]
         : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType === "approved-placeholder"
+      ...(fallbackCandidate &&
+      fallbackCandidate.sourceType === "approved-placeholder"
         ? [fallbackCandidate]
         : []),
     ],
@@ -378,7 +388,8 @@ export default async function handler(req: any, res: any) {
   }
 
   diagnostics.upstreamStatus = upstreamResponse.status;
-  diagnostics.upstreamContentType = upstreamResponse.headers.get("content-type");
+  diagnostics.upstreamContentType =
+    upstreamResponse.headers.get("content-type");
   diagnostics.upstreamOk = upstreamResponse.ok;
 
   const rawText = await upstreamResponse.text();
