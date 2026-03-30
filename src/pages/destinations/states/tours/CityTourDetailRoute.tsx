@@ -53,6 +53,8 @@ import { mapViatorToEngine3ViewModel } from "../../../../engine3/viator/mapViato
 import { viatorProductCacheByCode } from "../../../../engine3/data/viatorProductCache";
 import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
+import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
+import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -175,6 +177,16 @@ export default function CityTourDetailRoute({
         cityToursPath={`/destinations/${params.stateSlug}/${params.citySlug}/tours`}
       />
     );
+  }
+
+  const migratedLegacyEngine6Tour = getLegacyFhMigratedTourBySlugs(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+
+  if (migratedLegacyEngine6Tour) {
+    return <Engine6TourPage tour={migratedLegacyEngine6Tour} />;
   }
 
   const engine2Tour =

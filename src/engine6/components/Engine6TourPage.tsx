@@ -107,6 +107,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     });
   }, [tour.canonicalPath, tour.productCode]);
   const showRelatedTours = relatedTours.length >= 2;
+  const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -202,8 +203,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
 
             <a
               href={tour.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
+              target={isExternalBookingUrl ? "_blank" : undefined}
+              rel={isExternalBookingUrl ? "noreferrer" : undefined}
               className={`mt-6 ${BOOK_CTA_CLASSES}`}
             >
               Book now
@@ -355,8 +356,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </p>
           <a
             href={tour.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
+            target={isExternalBookingUrl ? "_blank" : undefined}
+            rel={isExternalBookingUrl ? "noreferrer" : undefined}
             className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
           >
             Book now
