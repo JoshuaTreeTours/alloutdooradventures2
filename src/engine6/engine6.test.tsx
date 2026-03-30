@@ -35,6 +35,7 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
@@ -761,6 +762,38 @@ describe("engine6 listing surfaces", () => {
       engine6Entry?.tour.primaryImageUrl
     );
     expect(engine6Entry?.tour.badges?.priceFrom).toBe("Starting at $53");
+  });
+
+  it("routes and renders 3097SDZSP_2VISIT in San Diego with canonical affiliate CTA and image parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "san-diego");
+    const engine6Entry = unifiedTours.find(
+      entry => entry.tour.productCode === "3097SDZSP_2VISIT"
+    );
+
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("San Diego");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(
+      engine6Entry?.tour.primaryImageUrl
+    );
+    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(engine6Entry?.tour.heroImage).not.toContain(
+      "/images/hiking-hero.jpg"
+    );
+    expect(engine6Entry?.tour.bookingUrl).toContain(
+      "/tours/San-Diego/San-Diego-Zoo-and-Safari-Park-Combo-Tour/d736-3097SDZSP_2VISIT"
+    );
+    expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "3097SDZSP_2VISIT"
+    );
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain(
+      `href=\"/destinations/california/san-diego/tours\"`
+    );
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {

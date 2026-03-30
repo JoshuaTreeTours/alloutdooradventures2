@@ -77,6 +77,7 @@ import {
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
+  ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
 } from "./engine6/routes";
@@ -238,6 +239,10 @@ export default function App() {
         />
         <Route
           path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
