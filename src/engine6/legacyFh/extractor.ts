@@ -35,7 +35,17 @@ const collectParagraphs = (sectionHtml: string | null) => {
     .filter(Boolean);
 };
 
-const collectItinerary = (sectionHtml: string | null): LegacyFhItineraryStop[] => {
+const countWords = (value: string | null) => {
+  if (!value) {
+    return 0;
+  }
+
+  return value.trim().split(/\s+/).filter(Boolean).length;
+};
+
+const collectItinerary = (
+  sectionHtml: string | null
+): LegacyFhItineraryStop[] => {
   if (!sectionHtml) {
     return [];
   }
@@ -114,15 +124,124 @@ const normalizeHighlights = (highlights: string[]) =>
     .filter(Boolean);
 
 const parseDuration = (sourceHtml: string) => {
-  const durationSection = firstMatchingSection(sourceHtml, ["duration", "details"]);
+  const durationSection = firstMatchingSection(sourceHtml, [
+    "duration",
+    "details",
+  ]);
   const sectionParagraph = collectParagraphs(durationSection)[0] ?? null;
   const durationText =
     sectionParagraph ??
-    extractAttribute(sourceHtml, /data-legacy=["']duration["'][^>]*>([^<]+)</i) ??
+    extractAttribute(
+      sourceHtml,
+      /data-legacy=["']duration["'][^>]*>([^<]+)</i
+    ) ??
     extractAttribute(sourceHtml, /Duration\s*:\s*([^<\n]+)(?:<|$)/i) ??
     null;
 
   return durationText?.trim() ?? null;
+};
+
+const sanitizeOverviewSentence = (value: string) =>
+  value
+    .replace(/\b(viator|fareharbor)\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const dedupeSentences = (sentences: string[]) => {
+  const seen = new Set<string>();
+  const normalized = [];
+
+  for (const sentence of sentences) {
+    const cleaned = sanitizeOverviewSentence(sentence)
+      .replace(/^[\u2022•\-*]+\s*/, "")
+      .trim();
+
+    if (!cleaned) {
+      continue;
+    }
+
+    const key = cleaned.toLowerCase();
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    normalized.push(cleaned);
+  }
+
+  return normalized;
+};
+
+const buildOverviewText = ({
+  bookingParagraphs,
+  publicParagraphs,
+  activityParagraphs,
+  highlights,
+  itinerary,
+}: {
+  bookingParagraphs: string[];
+  publicParagraphs: string[];
+  activityParagraphs: string[];
+  highlights: string[];
+  itinerary: LegacyFhItineraryStop[];
+}) => {
+  const preferredOverview =
+    bookingParagraphs.length > 0 ? bookingParagraphs : publicParagraphs;
+  const fallbackOverview =
+    bookingParagraphs.length > 0 ? publicParagraphs : bookingParagraphs;
+
+  const overviewSentences = dedupeSentences([
+    ...preferredOverview,
+    ...fallbackOverview,
+  ]);
+
+  let composed = overviewSentences.join(" ");
+
+  if (countWords(composed) < 100) {
+    const itinerarySentences = itinerary
+      .flatMap(stop => [stop.title, stop.description].filter(Boolean))
+      .map(value => value as string);
+
+    const expansionSentences = dedupeSentences([
+      ...activityParagraphs,
+      ...highlights,
+      ...itinerarySentences,
+    ]);
+
+    const mergedSentences = dedupeSentences([
+      ...overviewSentences,
+      ...expansionSentences,
+    ]);
+    composed = mergedSentences.join(" ");
+  }
+
+  const words = countWords(composed);
+  const lowConfidence = words > 0 && words < 100;
+
+  if (words === 0) {
+    return {
+      text: null,
+      wordCount: 0,
+      lowConfidence: true,
+    };
+  }
+
+  const sentenceChunks = composed
+    .split(/(?<=[.!?])\s+/)
+    .map(chunk => chunk.trim())
+    .filter(Boolean);
+  const midpoint = Math.ceil(sentenceChunks.length / 2);
+  const paragraphOne = sentenceChunks.slice(0, midpoint).join(" ");
+  const paragraphTwo = sentenceChunks.slice(midpoint).join(" ");
+  const text = paragraphTwo
+    ? `${paragraphOne}\n\n${paragraphTwo}`
+    : paragraphOne;
+
+  return {
+    text,
+    wordCount: countWords(text),
+    lowConfidence,
+  };
 };
 
 const selectDeterministicHeroImage = (images: string[]) => {
@@ -146,7 +265,9 @@ const selectDeterministicHeroImage = (images: string[]) => {
 export const extractLegacyFhProductRecord = (
   input: LegacyFhExtractionInput
 ): LegacyFhMigratedProductRecord => {
-  const sourceHtml = [input.publicHtml, input.bookingHtml].filter(Boolean).join("\n");
+  const sourceHtml = [input.publicHtml, input.bookingHtml]
+    .filter(Boolean)
+    .join("\n");
   const title =
     extractAttribute(sourceHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/i)?.trim() ||
     input.fallback.title;
@@ -158,9 +279,9 @@ export const extractLegacyFhProductRecord = (
 
   const imageCandidates = [
     heroImageFromMeta,
-    ...Array.from(sourceHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(
-      match => match[1]?.trim() ?? null
-    ),
+    ...Array.from(
+      sourceHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)
+    ).map(match => match[1]?.trim() ?? null),
     ...(input.fallback.galleryImages ?? []),
     input.fallback.heroImageUrl ?? null,
   ];
@@ -175,20 +296,43 @@ export const extractLegacyFhProductRecord = (
     heroImageFromMeta;
 
   const priceLabel =
-    extractAttribute(sourceHtml, /data-legacy=["']price["'][^>]*>\s*([^<]+)\s*</i) ??
-    collectListItems(firstMatchingSection(sourceHtml, ["pricing", "price"]))[0] ??
+    extractAttribute(
+      sourceHtml,
+      /data-legacy=["']price["'][^>]*>\s*([^<]+)\s*</i
+    ) ??
+    collectListItems(
+      firstMatchingSection(sourceHtml, ["pricing", "price"])
+    )[0] ??
     null;
 
-  const ratingValue = extractAttribute(sourceHtml, /data-legacy=["']rating["'][^>]*>([^<]+)</i);
-  const reviewValue = extractAttribute(sourceHtml, /data-legacy=["']reviews?["'][^>]*>([^<]+)</i);
+  const ratingValue = extractAttribute(
+    sourceHtml,
+    /data-legacy=["']rating["'][^>]*>([^<]+)</i
+  );
+  const reviewValue = extractAttribute(
+    sourceHtml,
+    /data-legacy=["']reviews?["'][^>]*>([^<]+)</i
+  );
 
-  const overviewParagraphs = collectParagraphs(
-    firstMatchingSection(sourceHtml, ["overview", "activity-details", "description"])
+  const bookingOverviewParagraphs = collectParagraphs(
+    firstMatchingSection(input.bookingHtml ?? "", [
+      "overview",
+      "activity-details",
+      "description",
+    ])
+  );
+
+  const publicOverviewParagraphs = collectParagraphs(
+    firstMatchingSection(input.publicHtml, [
+      "overview",
+      "activity-details",
+      "description",
+    ])
   );
 
   const highlights = normalizeHighlights(
     collectListItems(
-    firstMatchingSection(sourceHtml, ["highlights", "top-highlights"])
+      firstMatchingSection(sourceHtml, ["highlights", "top-highlights"])
     )
   );
 
@@ -209,13 +353,15 @@ export const extractLegacyFhProductRecord = (
   );
 
   const meetingInfo = normalizeMeetingPoint(
-    collectParagraphs(firstMatchingSection(sourceHtml, ["meeting", "details"]))[0] ??
-      null
+    collectParagraphs(
+      firstMatchingSection(sourceHtml, ["meeting", "details"])
+    )[0] ?? null
   );
 
   const cancellationSummary =
-    collectParagraphs(firstMatchingSection(sourceHtml, ["cancellation", "policy"]))[0] ??
-    null;
+    collectParagraphs(
+      firstMatchingSection(sourceHtml, ["cancellation", "policy"])
+    )[0] ?? null;
 
   const parsedRating =
     ratingValue && Number.isFinite(Number.parseFloat(ratingValue))
@@ -247,6 +393,20 @@ export const extractLegacyFhProductRecord = (
       : null;
   const priceAmount = priceAmountFromOptions ?? parsePrice(priceLabel);
   const durationText = parseDuration(sourceHtml);
+  const activityDetailsParagraphs = collectParagraphs(
+    firstMatchingSection(sourceHtml, [
+      "activity-details",
+      "details",
+      "description",
+    ])
+  );
+  const composedOverview = buildOverviewText({
+    bookingParagraphs: bookingOverviewParagraphs,
+    publicParagraphs: publicOverviewParagraphs,
+    activityParagraphs: activityDetailsParagraphs,
+    highlights,
+    itinerary,
+  });
 
   return {
     slug: input.slug,
@@ -266,11 +426,14 @@ export const extractLegacyFhProductRecord = (
     ratingSnapshot: {
       rating: parsedRating,
       reviewCount:
-        typeof parsedReviewCount === "number" && Number.isFinite(parsedReviewCount)
+        typeof parsedReviewCount === "number" &&
+        Number.isFinite(parsedReviewCount)
           ? parsedReviewCount
           : null,
     },
-    overview: overviewParagraphs.length > 0 ? overviewParagraphs.join("\n\n") : null,
+    overview: composedOverview.text,
+    overviewWordCount: composedOverview.wordCount,
+    overviewLowConfidence: composedOverview.lowConfidence,
     highlights,
     itinerary,
     inclusions,

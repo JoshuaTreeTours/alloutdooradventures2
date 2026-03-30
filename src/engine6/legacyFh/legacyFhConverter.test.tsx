@@ -72,6 +72,25 @@ describe("legacy FH -> Engine6 converter", () => {
     );
   });
 
+  it("flags low-confidence overview when minimum length cannot be met", () => {
+    const record = extractLegacyFhProductRecord({
+      slug: "minimal-overview-specimen",
+      canonicalPath:
+        "/destinations/florida/miami/tours/minimal-overview-specimen",
+      bookingPath:
+        "/destinations/florida/miami/tours/minimal-overview-specimen/book",
+      operator: "Test Operator",
+      publicHtml:
+        '<main><h1>Minimal Overview Specimen</h1><section data-legacy="overview"><p>Short overview.</p></section></main>',
+      bookingHtml:
+        '<main><section data-fh="overview"><p>Tiny description only.</p></section></main>',
+      fallback: { title: "Minimal Overview Specimen" },
+    });
+
+    expect(record.overviewWordCount).toBeLessThan(100);
+    expect(record.overviewLowConfidence).toBe(true);
+  });
+
   it("normalizes the migrated specimen into a reusable record", () => {
     expect(centralParkBikeToursMigratedRecord.sourceType).toBe(
       "legacy_fh_migrated"
@@ -169,6 +188,8 @@ describe("legacy FH -> Engine6 converter", () => {
       expect(migrated?.bookingUrl).toBe(
         `/destinations/florida/miami/tours/${tourSlug}/book`
       );
+      expect(record.overviewWordCount).toBeGreaterThanOrEqual(100);
+      expect(record.overviewLowConfidence).toBe(false);
     }
   });
 

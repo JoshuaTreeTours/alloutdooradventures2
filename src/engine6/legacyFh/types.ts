@@ -29,6 +29,8 @@ export type LegacyFhMigratedProductRecord = {
   priceSnapshot: LegacyFhPriceSnapshot;
   ratingSnapshot: LegacyFhRatingSnapshot;
   overview: string | null;
+  overviewWordCount: number;
+  overviewLowConfidence: boolean;
   highlights: string[];
   itinerary: LegacyFhItineraryStop[];
   inclusions: string[];

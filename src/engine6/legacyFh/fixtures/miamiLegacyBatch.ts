@@ -829,7 +829,23 @@ const buildBookHtml = (seed: MiamiLegacySeed) => {
     seed.startingPrice !== null
       ? `<section data-fh="pricing"><ul><li>Adult: $${seed.startingPrice.toFixed(0)}</li></ul></section>`
       : "";
-  return `<main>${pricing}</main>`;
+  const operatorSentence = seed.operator
+    ? `${seed.operator} operates this activity with a local team that coordinates check-in and day-of logistics in Miami.`
+    : "Local operators coordinate check-in and day-of logistics for this activity in Miami.";
+  const durationSentence = seed.duration
+    ? `Typical timing is listed as ${seed.duration}, which helps set expectations for pacing and scheduling before arrival.`
+    : "Scheduling details are confirmed during booking so travelers can match the activity window to the rest of their Miami plans.";
+  const pricingSentence =
+    seed.startingPrice !== null
+      ? `Current visible booking pricing starts at $${seed.startingPrice.toFixed(0)}, and final totals depend on selected options and departure details.`
+      : "Pricing options can vary by departure and date, so booking details should be reviewed before final confirmation.";
+  return `<main>
+    <section data-fh="overview">
+      <p>${seed.overview}</p>
+      <p>${operatorSentence} ${durationSentence} ${pricingSentence}</p>
+    </section>
+    ${pricing}
+  </main>`;
 };
 
 export const miamiLegacyMigratedRecords = miamiLegacySeeds.map(seed =>
