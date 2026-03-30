@@ -55,6 +55,15 @@ import { getEngine3TourBySlugs } from "../../../../engine3/routing";
 import { getEngine4TourBySlugs } from "../../../../engine4/routing";
 import { getLegacyFhMigratedTourBySlugs } from "../../../../engine6/legacyFh/registry";
 import Engine6TourPage from "../../../../engine6/components/Engine6TourPage";
+import { getEngine6NativeTourBySlugs } from "../../../../engine6/registry";
+import { buildEngine6SchemaGraph } from "../../../../engine6/schema/buildEngine6SchemaGraph";
+import {
+  assertEngine6CtaIntegrity,
+  assertEngine6DataSource,
+  assertEngine6ImageDeterminism,
+  assertEngine6NoFallbackContamination,
+  assertEngine6RendererSupremacy,
+} from "../../../../engine6/hardening";
 import { mapViatorToEngine4Tour } from "../../../../engine4/viator/mapViatorToEngine4Tour";
 import Engine4TourPage from "../../../../engine4/components/Engine4TourPage";
 import {
@@ -184,6 +193,52 @@ export default function CityTourDetailRoute({
     params.citySlug,
     params.tourSlug
   );
+
+  const nativeEngine6Tour = getEngine6NativeTourBySlugs(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+  const nativeTourListingEntry = getTourBySlugs(
+    params.stateSlug,
+    params.citySlug,
+    params.tourSlug
+  );
+
+  if (nativeEngine6Tour) {
+    assertEngine6RendererSupremacy({
+      tourEngine: "engine6",
+      renderer: "engine6",
+    });
+    assertEngine6DataSource("engine6-native");
+    assertEngine6NoFallbackContamination({
+      heroUrl: nativeEngine6Tour.heroImageUrl,
+      usesLegacyGallery: false,
+      usesLegacyRenderer: false,
+    });
+    assertEngine6CtaIntegrity(nativeEngine6Tour.bookingUrl);
+
+    const schema = buildEngine6SchemaGraph(nativeEngine6Tour);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const product = graph.find(node => node["@type"] === "Product");
+    const schemaImage = (
+      product as { image?: string | string[] } | undefined
+    )?.image;
+    const primarySchemaImage = Array.isArray(schemaImage)
+      ? schemaImage[0]
+      : schemaImage;
+
+    assertEngine6ImageDeterminism({
+      heroImage: nativeEngine6Tour.heroImageUrl,
+      cardImage:
+        nativeTourListingEntry?.engine === "engine6"
+          ? nativeTourListingEntry.heroImage
+          : nativeEngine6Tour.heroImageUrl,
+      schemaImage: primarySchemaImage,
+    });
+
+    return <Engine6TourPage tour={nativeEngine6Tour} />;
+  }
 
   if (migratedLegacyEngine6Tour) {
     return <Engine6TourPage tour={migratedLegacyEngine6Tour} />;
