@@ -13,7 +13,7 @@ export type Engine6FaqItem = {
 export type Engine6HeroSourceType =
   | "api-primary"
   | "api-gallery"
-  | "approved-placeholder";
+  | "none";
 
 export type Engine6RejectedHeroCandidate = {
   url: string;
@@ -97,7 +97,7 @@ export type Engine6Tour = {
   city: string;
   state: string;
   resolvedImageUrl: string | null;
-  heroImageUrl: string;
+  heroImageUrl: string | null;
   priceAmount: number | null;
   priceFormatted: string;
   aggregateRating: number | null;

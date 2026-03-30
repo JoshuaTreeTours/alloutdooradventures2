@@ -1,6 +1,5 @@
 import { renderToString } from "react-dom/server";
 
-import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { getStateCityOptions } from "../data/stateCityOptions";
 import {
@@ -153,15 +152,6 @@ export const validateEngine6CreationContract = ({
   if (hasValidResolvedHero && tour.heroImageUrl !== resolvedPrimaryHero) {
     violations.push("resolved Engine6 hero is not used as winning hero");
   }
-  if (
-    hasValidResolvedHero &&
-    tour.heroImageUrl === ENGINE6_APPROVED_PLACEHOLDER_IMAGE
-  ) {
-    violations.push(
-      "placeholder hero used even though a valid resolved hero exists"
-    );
-  }
-
   if (card.imageUrl !== tour.heroImageUrl) {
     violations.push("detail hero and card hero diverged");
   }

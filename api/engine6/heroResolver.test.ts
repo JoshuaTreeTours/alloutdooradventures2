@@ -1,12 +1,11 @@
 import { describe, expect, it } from "vitest";
 
 import {
-  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
   resolveProductScopedHero,
 } from "./heroResolver";
 
 describe("engine6 hero resolver", () => {
-  it("accepts the current product primary API image before any placeholder", () => {
+  it("accepts the current product primary API image", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -18,10 +17,6 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-        },
-        {
-          url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-          sourceType: "approved-placeholder",
         },
       ],
     });
@@ -56,14 +51,14 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
-    expect(resolved.heroSourceType).toBe("approved-placeholder");
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.heroSourceType).toBe("none");
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           url: "https://cdn.example.com/foreign-sibling-tour.jpg",
-          reason: "foreign-product-code",
+          reason: "unverified-product-scope",
         }),
         expect.objectContaining({
           url: "https://www.alloutdooradventures.com/hero.jpg",

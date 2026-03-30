@@ -29,10 +29,13 @@ export const assertEngine6NoFallbackContamination = ({
   usesLegacyGallery,
   usesLegacyRenderer,
 }: {
-  heroUrl: string;
+  heroUrl: string | null;
   usesLegacyGallery: boolean;
   usesLegacyRenderer: boolean;
 }) => {
+  if (!heroUrl) {
+    return;
+  }
   assertCondition(!FORBIDDEN_ENGINE6_HEROES.has(heroUrl), "forbidden fallback hero image detected");
   assertCondition(!usesLegacyGallery, "legacy gallery logic cannot run on engine6");
   assertCondition(!usesLegacyRenderer, "legacy renderer cannot run on engine6");
@@ -43,12 +46,12 @@ export const assertEngine6ImageDeterminism = ({
   cardImage,
   schemaImage,
 }: {
-  heroImage: string;
-  cardImage: string;
+  heroImage: string | null;
+  cardImage: string | null;
   schemaImage: string | null | undefined;
 }) => {
-  const normalizedHeroImage = heroImage.trim() || null;
-  const normalizedCardImage = cardImage.trim() || null;
+  const normalizedHeroImage = heroImage?.trim() || null;
+  const normalizedCardImage = cardImage?.trim() || null;
   const normalizedSchemaImage = schemaImage?.trim() || null;
 
   assertCondition(
