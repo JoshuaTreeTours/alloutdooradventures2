@@ -59,6 +59,17 @@ describe("engine6 collision guard", () => {
     ).toThrow(/changed public slug/i);
   });
 
+  it("accepts replacement mode mapping for 3156P13 on the existing Best of NYC slug", () => {
+    const tour = engine6ResolvedTours.find(entry => entry.productCode === "3156P13");
+    expect(tour).toBeDefined();
+    expect(tour?.canonicalPath).toBe(
+      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168"
+    );
+    expect(tour?.bookingUrl).toBe(
+      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168/book"
+    );
+  });
+
   it("fails clearly if replacement mode is configured without a legacy FareHarbor match", () => {
     const config: Engine6ReplacementModeConfig = {
       productCode: "414460P1",

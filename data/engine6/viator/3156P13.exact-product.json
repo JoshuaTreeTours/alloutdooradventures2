@@ -1,0 +1,76 @@
+{
+  "product": {
+    "productCode": "3156P13",
+    "productUrl": "https://www.viator.com/tours/New-York-City/Electric-Bike-Tour-Classic-Manhattan-and-more/d687-3156P13",
+    "title": "Classic Manhattan Electric Bike Tour",
+    "description": {
+      "text": "Ride through Manhattan with a local guide on an electric bike route built for efficient sightseeing and neighborhood context. This experience blends major skyline viewpoints with quieter side streets so you can cover more ground in about half a day without an all-day effort."
+    },
+    "location": {
+      "city": "New York",
+      "state": "New York"
+    },
+    "priceFrom": "$103.43",
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 128
+    },
+    "logistics": {
+      "start": {
+        "description": "79 Chambers St, New York, NY 10007"
+      },
+      "end": {
+        "description": "56 W 56th St, New York, NY 10019"
+      }
+    },
+    "duration": "3 hours 30 minutes to 4 hours",
+    "highlights": [
+      "Explore Lower and Midtown Manhattan on an electric bike with a licensed guide",
+      "Cover classic skyline and landmark corridors in roughly 3.5 to 4 hours",
+      "Start at 79 Chambers St and finish near 56 W 56th St for cross-town convenience",
+      "Designed for travelers who want active sightseeing with manageable effort"
+    ],
+    "itineraryItems": [
+      {
+        "title": "City Hall & Civic Center",
+        "description": "Begin in Lower Manhattan with a quick orientation and safety briefing before rolling north.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Hudson River Greenway",
+        "description": "Use protected bike lanes for a steady riverfront segment with skyline photo opportunities.",
+        "duration": "45 minutes"
+      },
+      {
+        "title": "Central Manhattan Highlights",
+        "description": "Ride through key Midtown corridors while your guide shares local history and route context.",
+        "duration": "80 minutes"
+      },
+      {
+        "title": "Finish Near Central Park South",
+        "description": "End near 56 W 56th St with recommendations for nearby food and transit connections.",
+        "duration": "20 minutes"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0c/10/74/6e.jpg",
+              "width": 720,
+              "height": 480
+            }
+          }
+        }
+      ]
+    },
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Not wheelchair accessible",
+      "Near public transportation",
+      "Most travelers can participate"
+    ]
+  }
+}

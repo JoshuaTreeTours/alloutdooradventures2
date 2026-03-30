@@ -100,11 +100,12 @@ export const buildEngine6ValidationReport = (
     card.imageUrl === tour.heroImageUrl &&
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
-  const bookingAttributionIsValid =
-    tour.bookingUrl.startsWith(fixture.publicUrl) &&
-    tour.bookingUrl.includes("pid=P00290915") &&
-    tour.bookingUrl.includes("mcid=42383") &&
-    tour.bookingUrl.includes("medium=link");
+  const bookingAttributionIsValid = tour.bookingUrl.startsWith("/destinations/")
+    ? tour.bookingUrl.endsWith("/book")
+    : tour.bookingUrl.startsWith(fixture.publicUrl) &&
+      tour.bookingUrl.includes("pid=P00290915") &&
+      tour.bookingUrl.includes("mcid=42383") &&
+      tour.bookingUrl.includes("medium=link");
 
   return {
     productCode: fixture.productCode,
