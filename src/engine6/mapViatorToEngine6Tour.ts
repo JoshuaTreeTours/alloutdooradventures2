@@ -28,6 +28,8 @@ const ENGINE6_BOOKING_URL_OVERRIDES: Record<string, string> = {
     "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book",
   "233384P2":
     "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853/book",
+  "414460P1":
+    "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book",
 };
 
 const pickOpeningPatternIndex = (seed: string) => {

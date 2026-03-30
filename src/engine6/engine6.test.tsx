@@ -32,6 +32,7 @@ import {
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
+  ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -1204,7 +1205,7 @@ describe("engine6 image parity guardrails", () => {
     return { stateSlug, citySlug };
   };
 
-  it.each(["63657P1", "5119P13", "32779P2", "60136P1", "411138P3"])(
+  it.each(["63657P1", "5119P13", "32779P2", "60136P1", "411138P3", "414460P1"])(
     "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
     productCode => {
       const tour = engine6ResolvedTours.find(
@@ -1643,6 +1644,21 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
+
+  it("registers the New York pedicab replacement route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_NYC_PEDICAB_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
   it("keeps 411138P3 mapped to the Anchorage private canonical route", () => {
     const anchorageTour = engine6ResolvedTours.find(
       tour => tour.productCode === "411138P3"
@@ -1679,6 +1695,21 @@ describe("engine6 route wiring", () => {
     expect(anchorageTour?.bookingUrl).toBe(
       "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book"
     );
+  });
+
+  it("replaces 414460P1 in-place and keeps the existing /book endpoint CTA", () => {
+    const nycPedicabTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "414460P1"
+    );
+    expect(nycPedicabTour).toBeDefined();
+    expect(nycPedicabTour?.canonicalPath).toBe(
+      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491"
+    );
+    expect(nycPedicabTour?.bookingUrl).toBe(
+      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
+    );
+    expect(nycPedicabTour?.itinerary.length).toBeGreaterThanOrEqual(2);
+    expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)).toBe(true);
   });
 
   it("replaces 233384P2 in-place and keeps the existing /book endpoint CTA", () => {

@@ -60,4 +60,26 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(cityTours[0]?.engine).toBe("engine6");
     expect(cityTours[0]?.productCode).toBe("233384P2");
   });
+
+  it("keeps only one 1 Hour Central Park Pedicab Tour listing in New York and prefers Engine6", () => {
+    const unified = getToursByCityUnified("new-york", "new-york").filter(
+      entry =>
+        entry.href ===
+        "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491"
+    );
+
+    expect(unified).toHaveLength(1);
+    expect(unified[0]?.tour.engine).toBe("engine6");
+    expect(unified[0]?.tour.productCode).toBe("414460P1");
+  });
+
+  it("removes legacy 1 Hour Central Park Pedicab Tour entries from base city collections", () => {
+    const cityTours = getToursByCity("new-york", "new-york").filter(
+      tour => tour.slug === "1-hour-central-park-pedicab-tour-27491"
+    );
+
+    expect(cityTours).toHaveLength(1);
+    expect(cityTours[0]?.engine).toBe("engine6");
+    expect(cityTours[0]?.productCode).toBe("414460P1");
+  });
 });
