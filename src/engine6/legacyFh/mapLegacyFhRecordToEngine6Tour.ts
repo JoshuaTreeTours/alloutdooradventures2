@@ -11,7 +11,8 @@ export const mapLegacyFhRecordToEngine6Tour = (
   }
 
   const [, stateSlug = "", citySlug = ""] =
-    /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(record.canonicalPath) ?? [];
+    /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(record.canonicalPath) ??
+    [];
   const city = citySlug
     .split("-")
     .map(part => part.charAt(0).toUpperCase() + part.slice(1))
@@ -29,15 +30,25 @@ export const mapLegacyFhRecordToEngine6Tour = (
     ...record.exclusions.map(item => `Not included: ${item}`),
   ];
 
+  const hasTrustedRating =
+    record.ratingSnapshot.confidence === "high" &&
+    typeof record.ratingSnapshot.rating === "number" &&
+    Number.isFinite(record.ratingSnapshot.rating) &&
+    record.ratingSnapshot.rating >= 4.5 &&
+    typeof record.ratingSnapshot.reviewCount === "number" &&
+    Number.isFinite(record.ratingSnapshot.reviewCount);
+
   return {
     productCode: `fh-${record.slug}`,
     title: record.title,
     seoTitle: `${record.title} | ${record.sourceType.replaceAll("_", " ")}`,
     seoDescription:
-      overviewText?.slice(0, 155) ?? `Book ${record.title} in ${city} with local guides.`,
+      overviewText?.slice(0, 155) ??
+      `Book ${record.title} in ${city} with local guides.`,
     description: overviewText ?? record.title,
     metaDescription:
-      overviewText?.slice(0, 155) ?? `Book ${record.title} in ${city} with local guides.`,
+      overviewText?.slice(0, 155) ??
+      `Book ${record.title} in ${city} with local guides.`,
     city: city || "Destination",
     state: state || "State",
     resolvedImageUrl: record.heroImageUrl,
@@ -48,8 +59,8 @@ export const mapLegacyFhRecordToEngine6Tour = (
       (record.priceSnapshot.amount
         ? `Starting at $${record.priceSnapshot.amount.toFixed(0)}`
         : "Check latest price"),
-    aggregateRating: record.ratingSnapshot.rating,
-    reviewCount: record.ratingSnapshot.reviewCount,
+    aggregateRating: hasTrustedRating ? record.ratingSnapshot.rating : null,
+    reviewCount: hasTrustedRating ? record.ratingSnapshot.reviewCount : null,
     meetingPointText: record.meetingInfo ?? "See booking details",
     durationText: record.durationText,
     overviewText,

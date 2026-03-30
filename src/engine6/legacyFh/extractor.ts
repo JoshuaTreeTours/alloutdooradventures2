@@ -35,7 +35,17 @@ const collectParagraphs = (sectionHtml: string | null) => {
     .filter(Boolean);
 };
 
-const collectItinerary = (sectionHtml: string | null): LegacyFhItineraryStop[] => {
+const countWords = (value: string | null) => {
+  if (!value) {
+    return 0;
+  }
+
+  return value.trim().split(/\s+/).filter(Boolean).length;
+};
+
+const collectItinerary = (
+  sectionHtml: string | null
+): LegacyFhItineraryStop[] => {
   if (!sectionHtml) {
     return [];
   }
@@ -92,6 +102,137 @@ const parsePrice = (label: string | null) => {
   return Number.isFinite(amount) ? amount : null;
 };
 
+type ExtractedRatingSnapshot = {
+  rating: number | null;
+  reviewCount: number | null;
+  confidence: "none" | "medium" | "high";
+};
+
+const parseNumericRating = (value: string | null) => {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseFloat(value);
+  if (!Number.isFinite(parsed) || parsed < 0 || parsed > 5) {
+    return null;
+  }
+  return parsed;
+};
+
+const parseReviewCount = (value: string | null) => {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseInt(value.replace(/[^\d]/g, ""), 10);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const extractVisibleRatingSnapshot = (
+  html: string
+): ExtractedRatingSnapshot => {
+  const explicitRating = parseNumericRating(
+    extractAttribute(html, /data-legacy=["']rating["'][^>]*>([^<]+)</i) ??
+      extractAttribute(html, /data-fh=["']rating["'][^>]*>([^<]+)</i)
+  );
+  const explicitReviews = parseReviewCount(
+    extractAttribute(html, /data-legacy=["']reviews?["'][^>]*>([^<]+)</i) ??
+      extractAttribute(html, /data-fh=["']reviews?["'][^>]*>([^<]+)</i)
+  );
+
+  const textRating = parseNumericRating(
+    extractAttribute(
+      html,
+      /(?:^|[^0-9])([0-5](?:\.\d)?)\s*(?:\/\s*5|out of 5)/i
+    )
+  );
+  const textReviews = parseReviewCount(
+    extractAttribute(html, /([\d,]+)\s+reviews?/i)
+  );
+
+  const rating = explicitRating ?? textRating;
+  const reviewCount = explicitReviews ?? textReviews;
+
+  return {
+    rating,
+    reviewCount,
+    confidence:
+      explicitRating !== null || explicitReviews !== null
+        ? "high"
+        : rating !== null || reviewCount !== null
+          ? "medium"
+          : "none",
+  };
+};
+
+const extractStructuredRatingSnapshot = (
+  html: string
+): ExtractedRatingSnapshot => {
+  const matches = Array.from(
+    html.matchAll(
+      /"aggregateRating"\s*:\s*\{[\s\S]*?"ratingValue"\s*:\s*"?([0-5](?:\.\d+)?)"?[\s\S]*?"reviewCount"\s*:\s*"?([\d,]+)"?/gi
+    )
+  );
+
+  if (matches.length === 0) {
+    return { rating: null, reviewCount: null, confidence: "none" };
+  }
+
+  const top = matches[0];
+  return {
+    rating: parseNumericRating(top?.[1] ?? null),
+    reviewCount: parseReviewCount(top?.[2] ?? null),
+    confidence: "medium",
+  };
+};
+
+const hasRatingConflict = (
+  a: ExtractedRatingSnapshot,
+  b: ExtractedRatingSnapshot
+) => {
+  const ratingConflict =
+    a.rating !== null &&
+    b.rating !== null &&
+    Math.abs(a.rating - b.rating) > 0.05;
+  const reviewConflict =
+    a.reviewCount !== null &&
+    b.reviewCount !== null &&
+    a.reviewCount !== b.reviewCount;
+  return ratingConflict || reviewConflict;
+};
+
+const resolveRatingSnapshot = (
+  sources: ExtractedRatingSnapshot[]
+): {
+  rating: number | null;
+  reviewCount: number | null;
+  confidence: "none" | "medium" | "high";
+} => {
+  const detected = sources.filter(
+    source => source.rating !== null || source.reviewCount !== null
+  );
+  if (detected.length === 0) {
+    return { rating: null, reviewCount: null, confidence: "none" };
+  }
+
+  for (let i = 0; i < detected.length; i += 1) {
+    for (let j = i + 1; j < detected.length; j += 1) {
+      if (hasRatingConflict(detected[i], detected[j])) {
+        return { rating: null, reviewCount: null, confidence: "none" };
+      }
+    }
+  }
+
+  const selected = detected.find(source => source.confidence === "high");
+  if (!selected) {
+    return { rating: null, reviewCount: null, confidence: "none" };
+  }
+  return {
+    rating: selected.rating,
+    reviewCount: selected.reviewCount,
+    confidence: selected.confidence,
+  };
+};
+
 const normalizeMeetingPoint = (meetingInfo: string | null) => {
   if (!meetingInfo) {
     return null;
@@ -114,15 +255,271 @@ const normalizeHighlights = (highlights: string[]) =>
     .filter(Boolean);
 
 const parseDuration = (sourceHtml: string) => {
-  const durationSection = firstMatchingSection(sourceHtml, ["duration", "details"]);
+  const durationSection = firstMatchingSection(sourceHtml, [
+    "duration",
+    "details",
+  ]);
   const sectionParagraph = collectParagraphs(durationSection)[0] ?? null;
   const durationText =
     sectionParagraph ??
-    extractAttribute(sourceHtml, /data-legacy=["']duration["'][^>]*>([^<]+)</i) ??
+    extractAttribute(
+      sourceHtml,
+      /data-legacy=["']duration["'][^>]*>([^<]+)</i
+    ) ??
     extractAttribute(sourceHtml, /Duration\s*:\s*([^<\n]+)(?:<|$)/i) ??
     null;
 
   return durationText?.trim() ?? null;
+};
+
+const sanitizeOverviewSentence = (value: string) =>
+  value
+    .replace(/\b(viator|fareharbor)\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const FORBIDDEN_OVERVIEW_PATTERNS = [
+  /is a guided outdoor experience based in [^.]+/i,
+  /keeps the logistics simple and the scenery front and center/i,
+  /expect a steady pace, local context, and a comfortable rhythm/i,
+  /lets you focus on the landscape/i,
+];
+
+const stripBoilerplate = (value: string) => {
+  let cleaned = sanitizeOverviewSentence(value);
+  for (const pattern of FORBIDDEN_OVERVIEW_PATTERNS) {
+    cleaned = cleaned.replace(pattern, " ");
+  }
+  return cleaned.replace(/\s+/g, " ").trim();
+};
+
+const dedupeSentences = (sentences: string[]) => {
+  const seen = new Set<string>();
+  const normalized = [];
+
+  for (const sentence of sentences) {
+    const cleaned = stripBoilerplate(sentence)
+      .replace(/^[\u2022•\-*]+\s*/, "")
+      .trim();
+
+    if (!cleaned) {
+      continue;
+    }
+
+    const key = cleaned.toLowerCase();
+    if (seen.has(key)) {
+      continue;
+    }
+
+    seen.add(key);
+    normalized.push(cleaned);
+  }
+
+  return normalized;
+};
+
+const SIGNAL_KEYWORDS = {
+  locations: [
+    "central park",
+    "bethesda",
+    "biscayne",
+    "everglades",
+    "miami",
+    "wynwood",
+    "downtown",
+    "key biscayne",
+    "bay",
+    "marina",
+    "island",
+  ],
+  activities: [
+    "bike",
+    "cycling",
+    "jetski",
+    "jet ski",
+    "airboat",
+    "airplane",
+    "boat",
+    "atv",
+    "yacht",
+    "parasail",
+    "rental",
+    "tour",
+  ],
+  experiences: [
+    "wildlife",
+    "landmark",
+    "skyline",
+    "views",
+    "photo",
+    "guided",
+    "stop",
+    "water",
+    "ride",
+    "show",
+  ],
+  logistics: [
+    "meeting",
+    "duration",
+    "private",
+    "group",
+    "schedule",
+    "departure",
+    "check-in",
+    "timing",
+    "booking",
+    "hours",
+  ],
+};
+
+const countSignalCategories = (text: string) => {
+  const normalized = text.toLowerCase();
+  let categories = 0;
+  if (SIGNAL_KEYWORDS.locations.some(keyword => normalized.includes(keyword))) {
+    categories += 1;
+  }
+  if (
+    SIGNAL_KEYWORDS.activities.some(keyword => normalized.includes(keyword))
+  ) {
+    categories += 1;
+  }
+  if (
+    SIGNAL_KEYWORDS.experiences.some(keyword => normalized.includes(keyword))
+  ) {
+    categories += 1;
+  }
+  if (SIGNAL_KEYWORDS.logistics.some(keyword => normalized.includes(keyword))) {
+    categories += 1;
+  }
+  return categories;
+};
+
+const buildOverviewText = ({
+  title,
+  operator,
+  bookingParagraphs,
+  publicActivityParagraphs,
+  activityParagraphs,
+  highlights,
+  itinerary,
+  durationText,
+  meetingInfo,
+}: {
+  title: string;
+  operator: string | null;
+  bookingParagraphs: string[];
+  publicActivityParagraphs: string[];
+  activityParagraphs: string[];
+  highlights: string[];
+  itinerary: LegacyFhItineraryStop[];
+  durationText: string | null;
+  meetingInfo: string | null;
+}) => {
+  const normalizeSource = (values: string[]) =>
+    dedupeSentences(values).filter(
+      sentence => countWords(sentence) >= 4 || sentence.length >= 30
+    );
+
+  const primaryOverview = normalizeSource(bookingParagraphs);
+  const fallbackOverview = primaryOverview.length
+    ? []
+    : normalizeSource(publicActivityParagraphs);
+
+  const overviewSentences = dedupeSentences([
+    ...primaryOverview,
+    ...fallbackOverview,
+  ]);
+
+  let composed = overviewSentences.join(" ");
+  const hasUniqueSignal = countSignalCategories(composed) >= 2;
+
+  if (hasUniqueSignal && countWords(composed) < 100) {
+    const itinerarySentences = itinerary
+      .flatMap(stop => [stop.title, stop.description].filter(Boolean))
+      .map(value => value as string);
+
+    const expansionSentences = dedupeSentences([
+      ...activityParagraphs,
+      ...highlights,
+      ...itinerarySentences,
+    ]);
+
+    const mergedSentences = dedupeSentences([
+      ...overviewSentences,
+      ...expansionSentences,
+    ]);
+    composed = mergedSentences.join(" ");
+  }
+
+  const words = countWords(composed);
+  let lowConfidence = words > 0 && words < 100;
+
+  if (words === 0) {
+    const fallbackFacts = dedupeSentences([
+      `${title} is offered as a published activity in this destination.`,
+      durationText
+        ? `Listed duration is ${durationText}.`
+        : "Duration varies by selected booking option.",
+      meetingInfo
+        ? `Meeting details reference ${meetingInfo}.`
+        : "Meeting instructions are provided at confirmation.",
+      ...highlights.slice(0, 2).map(item => `Published highlight: ${item}.`),
+    ]);
+    const minimalText = fallbackFacts.join(" ");
+    return {
+      text: minimalText || `${title} is offered as a published activity.`,
+      wordCount: countWords(minimalText || title),
+      lowConfidence: true,
+    };
+  }
+
+  if (operator) {
+    const operatorPattern = new RegExp(
+      `\\b${operator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`,
+      "gi"
+    );
+    composed = composed
+      .replace(operatorPattern, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  if (countSignalCategories(composed) < 2) {
+    const factual = dedupeSentences([
+      `${title} is listed as a bookable activity with operator-provided details.`,
+      durationText ? `Published duration: ${durationText}.` : "",
+      meetingInfo ? `Published meeting detail: ${meetingInfo}.` : "",
+      ...highlights.slice(0, 2).map(item => `Published highlight: ${item}.`),
+      ...itinerary
+        .slice(0, 2)
+        .flatMap(stop => [stop.title, stop.description].filter(Boolean)),
+    ]).join(" ");
+    const factualWords = countWords(factual);
+    return {
+      text: factual || `${title} is listed as a bookable activity.`,
+      wordCount: factualWords || countWords(title),
+      lowConfidence: true,
+    };
+  }
+
+  lowConfidence = lowConfidence || countSignalCategories(composed) < 2;
+
+  const sentenceChunks = composed
+    .split(/(?<=[.!?])\s+/)
+    .map(chunk => chunk.trim())
+    .filter(Boolean);
+  const midpoint = Math.ceil(sentenceChunks.length / 2);
+  const paragraphOne = sentenceChunks.slice(0, midpoint).join(" ");
+  const paragraphTwo = sentenceChunks.slice(midpoint).join(" ");
+  const text = paragraphTwo
+    ? `${paragraphOne}\n\n${paragraphTwo}`
+    : paragraphOne;
+
+  return {
+    text,
+    wordCount: countWords(text),
+    lowConfidence,
+  };
 };
 
 const selectDeterministicHeroImage = (images: string[]) => {
@@ -146,7 +543,9 @@ const selectDeterministicHeroImage = (images: string[]) => {
 export const extractLegacyFhProductRecord = (
   input: LegacyFhExtractionInput
 ): LegacyFhMigratedProductRecord => {
-  const sourceHtml = [input.publicHtml, input.bookingHtml].filter(Boolean).join("\n");
+  const sourceHtml = [input.publicHtml, input.bookingHtml]
+    .filter(Boolean)
+    .join("\n");
   const title =
     extractAttribute(sourceHtml, /<h1[^>]*>([\s\S]*?)<\/h1>/i)?.trim() ||
     input.fallback.title;
@@ -158,9 +557,9 @@ export const extractLegacyFhProductRecord = (
 
   const imageCandidates = [
     heroImageFromMeta,
-    ...Array.from(sourceHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)).map(
-      match => match[1]?.trim() ?? null
-    ),
+    ...Array.from(
+      sourceHtml.matchAll(/<img[^>]*src=["']([^"']+)["'][^>]*>/gi)
+    ).map(match => match[1]?.trim() ?? null),
     ...(input.fallback.galleryImages ?? []),
     input.fallback.heroImageUrl ?? null,
   ];
@@ -175,20 +574,37 @@ export const extractLegacyFhProductRecord = (
     heroImageFromMeta;
 
   const priceLabel =
-    extractAttribute(sourceHtml, /data-legacy=["']price["'][^>]*>\s*([^<]+)\s*</i) ??
-    collectListItems(firstMatchingSection(sourceHtml, ["pricing", "price"]))[0] ??
+    extractAttribute(
+      sourceHtml,
+      /data-legacy=["']price["'][^>]*>\s*([^<]+)\s*</i
+    ) ??
+    collectListItems(
+      firstMatchingSection(sourceHtml, ["pricing", "price"])
+    )[0] ??
     null;
 
-  const ratingValue = extractAttribute(sourceHtml, /data-legacy=["']rating["'][^>]*>([^<]+)</i);
-  const reviewValue = extractAttribute(sourceHtml, /data-legacy=["']reviews?["'][^>]*>([^<]+)</i);
+  const resolvedRatingSnapshot = resolveRatingSnapshot([
+    extractVisibleRatingSnapshot(input.publicHtml),
+    extractVisibleRatingSnapshot(input.bookingHtml ?? ""),
+    extractStructuredRatingSnapshot(sourceHtml),
+  ]);
 
-  const overviewParagraphs = collectParagraphs(
-    firstMatchingSection(sourceHtml, ["overview", "activity-details", "description"])
+  const bookingOverviewParagraphs = collectParagraphs(
+    firstMatchingSection(input.bookingHtml ?? "", ["overview", "description"])
+  );
+
+  const publicActivityParagraphs = collectParagraphs(
+    firstMatchingSection(input.publicHtml, [
+      "activity-details",
+      "details",
+      "description",
+      "overview",
+    ])
   );
 
   const highlights = normalizeHighlights(
     collectListItems(
-    firstMatchingSection(sourceHtml, ["highlights", "top-highlights"])
+      firstMatchingSection(sourceHtml, ["highlights", "top-highlights"])
     )
   );
 
@@ -209,22 +625,15 @@ export const extractLegacyFhProductRecord = (
   );
 
   const meetingInfo = normalizeMeetingPoint(
-    collectParagraphs(firstMatchingSection(sourceHtml, ["meeting", "details"]))[0] ??
-      null
+    collectParagraphs(
+      firstMatchingSection(sourceHtml, ["meeting", "details"])
+    )[0] ?? null
   );
 
   const cancellationSummary =
-    collectParagraphs(firstMatchingSection(sourceHtml, ["cancellation", "policy"]))[0] ??
-    null;
-
-  const parsedRating =
-    ratingValue && Number.isFinite(Number.parseFloat(ratingValue))
-      ? Number.parseFloat(ratingValue)
-      : (input.fallback.ratingSnapshot?.rating ?? null);
-
-  const parsedReviewCount = reviewValue
-    ? Number.parseInt(reviewValue.replace(/[^\d]/g, ""), 10)
-    : (input.fallback.ratingSnapshot?.reviewCount ?? null);
+    collectParagraphs(
+      firstMatchingSection(sourceHtml, ["cancellation", "policy"])
+    )[0] ?? null;
 
   const pricingOptions = collectListItems(
     firstMatchingSection(sourceHtml, ["pricing", "price"])
@@ -247,6 +656,24 @@ export const extractLegacyFhProductRecord = (
       : null;
   const priceAmount = priceAmountFromOptions ?? parsePrice(priceLabel);
   const durationText = parseDuration(sourceHtml);
+  const activityDetailsParagraphs = collectParagraphs(
+    firstMatchingSection(sourceHtml, [
+      "activity-details",
+      "details",
+      "description",
+    ])
+  );
+  const composedOverview = buildOverviewText({
+    title,
+    operator: input.operator,
+    bookingParagraphs: bookingOverviewParagraphs,
+    publicActivityParagraphs,
+    activityParagraphs: activityDetailsParagraphs,
+    highlights,
+    itinerary,
+    durationText,
+    meetingInfo,
+  });
 
   return {
     slug: input.slug,
@@ -264,13 +691,13 @@ export const extractLegacyFhProductRecord = (
       options: pricingOptions,
     },
     ratingSnapshot: {
-      rating: parsedRating,
-      reviewCount:
-        typeof parsedReviewCount === "number" && Number.isFinite(parsedReviewCount)
-          ? parsedReviewCount
-          : null,
+      rating: resolvedRatingSnapshot.rating,
+      reviewCount: resolvedRatingSnapshot.reviewCount,
+      confidence: resolvedRatingSnapshot.confidence,
     },
-    overview: overviewParagraphs.length > 0 ? overviewParagraphs.join("\n\n") : null,
+    overview: composedOverview.text,
+    overviewWordCount: composedOverview.wordCount,
+    overviewLowConfidence: composedOverview.lowConfidence,
     highlights,
     itinerary,
     inclusions,

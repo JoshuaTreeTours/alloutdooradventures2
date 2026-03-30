@@ -3,6 +3,8 @@ import { toEngine6Card } from "./cards";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
 import type { Engine6Tour } from "./types";
+import { legacyFhMigratedProductRecords } from "./legacyFh/registry";
+import { mapLegacyFhRecordToEngine6Tour } from "./legacyFh/mapLegacyFhRecordToEngine6Tour";
 
 const ENGINE6_CANONICAL_TOUR_PATH =
   /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/;
@@ -51,10 +53,15 @@ const specimenTour =
     tour => tour.productCode === ENGINE6_SPECIMEN_PRODUCT_CODE
   ) ?? engine6ResolvedTours[0];
 
-export const ENGINE6_63657P1_CARD_IMAGE_URL = specimenTour?.resolvedImageUrl ?? "";
+export const ENGINE6_63657P1_CARD_IMAGE_URL =
+  specimenTour?.resolvedImageUrl ?? "";
 
 export const engine6SpecimenTour = specimenTour!;
 
-export const engine6ListingTours: Tour[] = engine6ResolvedTours.map(
-  toEngine6ListingTour
+const legacyFhMigratedTours = legacyFhMigratedProductRecords.map(
+  mapLegacyFhRecordToEngine6Tour
 );
+
+export const engine6ListingTours: Tour[] = engine6ResolvedTours
+  .map(toEngine6ListingTour)
+  .concat(legacyFhMigratedTours.map(toEngine6ListingTour));

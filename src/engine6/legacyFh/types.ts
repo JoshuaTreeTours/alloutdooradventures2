@@ -11,6 +11,7 @@ export type LegacyFhPriceSnapshot = {
 export type LegacyFhRatingSnapshot = {
   rating: number | null;
   reviewCount: number | null;
+  confidence?: "none" | "medium" | "high";
 };
 
 export type LegacyFhItineraryStop = {
@@ -29,6 +30,8 @@ export type LegacyFhMigratedProductRecord = {
   priceSnapshot: LegacyFhPriceSnapshot;
   ratingSnapshot: LegacyFhRatingSnapshot;
   overview: string | null;
+  overviewWordCount: number;
+  overviewLowConfidence: boolean;
   highlights: string[];
   itinerary: LegacyFhItineraryStop[];
   inclusions: string[];

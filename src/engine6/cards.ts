@@ -6,7 +6,7 @@ export type Engine6Card = {
   imageUrl: string;
   title: string;
   locationLabel: string;
-  ratingLabel: string;
+  ratingLabel: string | null;
   priceLabel: string;
   description: string;
   href: string;
@@ -39,7 +39,7 @@ export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
   ratingLabel:
     tour.aggregateRating && tour.reviewCount
       ? `${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
-      : "No ratings yet",
+      : null,
   priceLabel: tour.priceFormatted,
   description: buildCardDescription(tour),
   href: tour.pagePath,
