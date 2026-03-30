@@ -4,6 +4,7 @@ import {
   resolveEngine6PathForProductCode,
   resolveEngine6ReplacementMode,
 } from "./routes";
+import { evaluateEngine6ReplacementEligibility } from "./replacementMode";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -106,10 +107,22 @@ export const mapViatorToEngine6Tour = (
     title,
   });
   const replacementMode = resolveEngine6ReplacementMode(payload.rawProductCode);
+  const replacementEligibility =
+    replacementMode
+      ? evaluateEngine6ReplacementEligibility({
+          title,
+          priceAmount: payload.extracted.priceAmount,
+          meetingPointText:
+            payload.extracted.meetingPointText ?? "",
+          config: replacementMode,
+        })
+      : null;
+  const shouldUseReplacementMode = replacementEligibility?.eligible ?? false;
   const canonicalPath =
-    replacementMode?.canonicalPath ??
-    resolveEngine6PathForProductCode(payload.rawProductCode) ??
-    generatedCanonicalPath;
+    shouldUseReplacementMode
+      ? replacementMode?.canonicalPath
+      : resolveEngine6PathForProductCode(payload.rawProductCode) ??
+        generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -135,11 +148,12 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.aggregateRating
   );
   const bookingUrl =
-    replacementMode?.bookingPath ??
-    buildEngine6ViatorBookingUrl(
-      payload.rawProductCode,
-      payload.extracted.productUrl
-    );
+    shouldUseReplacementMode && replacementMode
+      ? replacementMode.bookingPath
+      : buildEngine6ViatorBookingUrl(
+          payload.rawProductCode,
+          payload.extracted.productUrl
+        );
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,

@@ -9,8 +9,11 @@ import { engine4ViatorTours } from "../engine4/data/viatorTours";
 import {
   ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS,
   engine6ReplacementModeConfigs,
-  type Engine6ReplacementModeConfig,
 } from "./routes";
+import {
+  evaluateEngine6ReplacementEligibility,
+  type Engine6ReplacementModeConfig,
+} from "./replacementMode";
 import type { Engine6Tour } from "./types";
 
 const legacyTourPath = (tour: {
@@ -86,6 +89,20 @@ export const assertEngine6ReplacementModePolicy = (
     if (!matchingTour) {
       throw new Error(
         `Engine6 replacement mode misconfigured: missing Engine6 tour for product ${config.productCode}`
+      );
+    }
+
+
+    const eligibility = evaluateEngine6ReplacementEligibility({
+      title: matchingTour.title,
+      priceAmount: matchingTour.priceAmount,
+      meetingPointText: matchingTour.meetingPointText,
+      config,
+    });
+
+    if (!eligibility.titlePassed || !eligibility.pricePassed || !eligibility.meetingPointPassed) {
+      throw new Error(
+        `Engine6 replacement mode eligibility failed for ${config.productCode}: title=${eligibility.titlePassed} price=${eligibility.pricePassed} meetingPoint=${eligibility.meetingPointPassed}`
       );
     }
 

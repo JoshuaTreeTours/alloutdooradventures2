@@ -22,6 +22,10 @@ import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEn
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
 import { assertUniqueByCanonicalPath } from "../engine6/hardening";
+import {
+  suppressLegacyFareHarborTour,
+} from "../engine6/replacementMode";
+import { engine6ReplacementModeConfigs } from "../engine6/routes";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -152,7 +156,8 @@ export const tours: Tour[] = [
       !isTourRemoved({
         tourId: getEngine1FareHarborItemId(tour),
         operatorName: tour.operator,
-      })
+      }) &&
+      !suppressLegacyFareHarborTour(tour, engine6ReplacementModeConfigs)
   )
   .map(tour =>
     applyTourPricing({
