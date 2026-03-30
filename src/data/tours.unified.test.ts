@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 
-import { getToursByCity, getToursByCityUnified } from "./tours";
+import {
+  getLegacyTourBySlugs,
+  getTourBySlugs,
+  getToursByCity,
+  getToursByCityUnified,
+} from "./tours";
 
 describe("getToursByCityUnified Palm Springs dedupe", () => {
   it("dedupes viator tours by productCode and keeps Engine3 versions", () => {
@@ -71,6 +76,26 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(unified).toHaveLength(1);
     expect(unified[0]?.tour.engine).toBe("engine6");
     expect(unified[0]?.tour.productCode).toBe("414460P1");
+  });
+
+  it("preserves original FareHarbor booking endpoint data for 27491 while replacing public page", () => {
+    const engine6Tour = getTourBySlugs(
+      "new-york",
+      "new-york",
+      "1-hour-central-park-pedicab-tour-27491"
+    );
+    const legacyTour = getLegacyTourBySlugs(
+      "new-york",
+      "new-york",
+      "1-hour-central-park-pedicab-tour-27491"
+    );
+
+    expect(engine6Tour?.engine).toBe("engine6");
+    expect(engine6Tour?.bookingUrl).toBe(
+      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
+    );
+    expect(legacyTour?.bookingProvider).toBe("fareharbor");
+    expect(legacyTour?.bookingUrl).toContain("fareharbor.com/embeds/book/peterpentours/items/27491");
   });
 
   it("removes legacy 1 Hour Central Park Pedicab Tour entries from base city collections", () => {
