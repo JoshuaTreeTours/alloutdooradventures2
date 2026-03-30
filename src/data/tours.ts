@@ -21,6 +21,7 @@ import { isTourRemoved } from "../utils/tours/isTourRemoved";
 import { getEngine3ListingEntries } from "../engine3/listing/getEngine3ListingEntries";
 import { getEngine4ListingEntries } from "../engine4/listing/getEngine4ListingEntries";
 import { engine6ListingTours } from "../engine6/listing";
+import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -441,7 +442,15 @@ const dedupeUnifiedCityTours = (entries: UnifiedCityTour[]) => {
     }
   }
 
-  return [...deduped.values()].sort((a, b) => a.href.localeCompare(b.href));
+  const dedupedEntries = [...deduped.values()].sort((a, b) =>
+    a.href.localeCompare(b.href)
+  );
+  const uniqueByCanonicalPath =
+    new Set(dedupedEntries.map(entry => entry.href)).size ===
+    dedupedEntries.length;
+  assertUniqueByCanonicalPath(uniqueByCanonicalPath);
+
+  return dedupedEntries;
 };
 
 export const getToursByCityUnified = (
@@ -464,9 +473,10 @@ export const getToursByCityUnified = (
       toUnifiedEngine2Tour
     );
     return dedupeUnifiedCityTours([
-      ...engine1Tours,
+      ...engine1Tours.filter(entry => entry.tour.engine === "engine6"),
       ...engine2Tours,
       ...engine4Tours,
+      ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
     ]);
   }
 
@@ -479,10 +489,11 @@ export const getToursByCityUnified = (
     })
   );
   return dedupeUnifiedCityTours([
-    ...engine1Tours,
+    ...engine1Tours.filter(entry => entry.tour.engine === "engine6"),
     ...engine2Tours,
     ...engine3Tours,
     ...engine4Tours,
+    ...engine1Tours.filter(entry => entry.tour.engine !== "engine6"),
   ]);
 };
 

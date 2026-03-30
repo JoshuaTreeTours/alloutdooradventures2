@@ -43,3 +43,14 @@ assertEngine6CollisionPolicy(resolvedTours);
 assertEngine6ReplacementModePolicy(resolvedTours);
 
 export const engine6ResolvedTours: Engine6Tour[] = resolvedTours;
+
+export const getEngine6NativeTourBySlugs = (
+  stateSlug: string,
+  citySlug: string,
+  tourSlug: string
+) =>
+  engine6ResolvedTours.find(
+    tour =>
+      tour.canonicalPath ===
+      `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
+  );
