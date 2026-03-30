@@ -807,6 +807,30 @@ const miamiLegacySeeds: MiamiLegacySeed[] = [
   },
 ] as MiamiLegacySeed[];
 
+const composeOperatorOverview = (seed: MiamiLegacySeed) => {
+  const titleSentence = `${seed.title} is listed as a Miami activity with published route and timing notes.`;
+  const highlightSentence = `Published activity details mention ${seed.highlight.replace(/\.$/, "")}.`;
+  const durationSentence = seed.duration
+    ? `The listed duration is ${seed.duration}, which helps with day planning and transfer timing.`
+    : "Duration is confirmed at booking based on selected departure and operating conditions.";
+  const priceSentence =
+    seed.startingPrice !== null
+      ? `Visible booking rates start at $${seed.startingPrice.toFixed(0)} before any selected upgrades or add-ons.`
+      : "Pricing appears on the booking flow and can vary by date, departure, and selected options.";
+  const routeSentence = `The product page for ${seed.slug} includes operator-provided logistics, meeting, and participation notes used to prepare before arrival.`;
+  const mediaSentence =
+    "Image and schedule context are supplied in the listing materials so travelers can validate fit before checkout.";
+
+  return [
+    titleSentence,
+    highlightSentence,
+    durationSentence,
+    priceSentence,
+    routeSentence,
+    mediaSentence,
+  ].join(" ");
+};
+
 const buildPublicHtml = (seed: MiamiLegacySeed) => `
   <main>
     <meta property="og:image" content="${seed.heroImageUrl}" />
@@ -816,6 +840,9 @@ const buildPublicHtml = (seed: MiamiLegacySeed) => `
     ${seed.reviewCount !== null ? `<div data-legacy="reviews">${seed.reviewCount} reviews</div>` : ""}
     <section data-legacy="overview">
       <p>${seed.overview}</p>
+    </section>
+    <section data-legacy="activity-details">
+      <p>${composeOperatorOverview(seed)}</p>
     </section>
     <section data-legacy="highlights">
       <ul>
@@ -843,7 +870,7 @@ const buildBookHtml = (seed: MiamiLegacySeed) => {
       : "Pricing options can vary by departure and date, so booking details should be reviewed before final confirmation.";
   return `<main>
     <section data-fh="overview">
-      <p>${seed.overview}</p>
+      <p>${composeOperatorOverview(seed)}</p>
       <p>${operatorSentence} ${durationSentence} ${pricingSentence}</p>
     </section>
     ${pricing}

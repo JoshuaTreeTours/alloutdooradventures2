@@ -278,12 +278,27 @@ const sanitizeOverviewSentence = (value: string) =>
     .replace(/\s+/g, " ")
     .trim();
 
+const FORBIDDEN_OVERVIEW_PATTERNS = [
+  /is a guided outdoor experience based in [^.]+/i,
+  /keeps the logistics simple and the scenery front and center/i,
+  /expect a steady pace, local context, and a comfortable rhythm/i,
+  /lets you focus on the landscape/i,
+];
+
+const stripBoilerplate = (value: string) => {
+  let cleaned = sanitizeOverviewSentence(value);
+  for (const pattern of FORBIDDEN_OVERVIEW_PATTERNS) {
+    cleaned = cleaned.replace(pattern, " ");
+  }
+  return cleaned.replace(/\s+/g, " ").trim();
+};
+
 const dedupeSentences = (sentences: string[]) => {
   const seen = new Set<string>();
   const normalized = [];
 
   for (const sentence of sentences) {
-    const cleaned = sanitizeOverviewSentence(sentence)
+    const cleaned = stripBoilerplate(sentence)
       .replace(/^[\u2022•\-*]+\s*/, "")
       .trim();
 
@@ -304,25 +319,38 @@ const dedupeSentences = (sentences: string[]) => {
 };
 
 const buildOverviewText = ({
+  title,
+  operator,
   bookingParagraphs,
-  publicParagraphs,
+  publicActivityParagraphs,
   activityParagraphs,
   highlights,
   itinerary,
+  durationText,
+  meetingInfo,
 }: {
+  title: string;
+  operator: string | null;
   bookingParagraphs: string[];
-  publicParagraphs: string[];
+  publicActivityParagraphs: string[];
   activityParagraphs: string[];
   highlights: string[];
   itinerary: LegacyFhItineraryStop[];
+  durationText: string | null;
+  meetingInfo: string | null;
 }) => {
-  const preferredOverview =
-    bookingParagraphs.length > 0 ? bookingParagraphs : publicParagraphs;
-  const fallbackOverview =
-    bookingParagraphs.length > 0 ? publicParagraphs : bookingParagraphs;
+  const normalizeSource = (values: string[]) =>
+    dedupeSentences(values).filter(
+      sentence => countWords(sentence) >= 4 || sentence.length >= 30
+    );
+
+  const primaryOverview = normalizeSource(bookingParagraphs);
+  const fallbackOverview = primaryOverview.length
+    ? []
+    : normalizeSource(publicActivityParagraphs);
 
   const overviewSentences = dedupeSentences([
-    ...preferredOverview,
+    ...primaryOverview,
     ...fallbackOverview,
   ]);
 
@@ -347,14 +375,36 @@ const buildOverviewText = ({
   }
 
   const words = countWords(composed);
-  const lowConfidence = words > 0 && words < 100;
+  let lowConfidence = words > 0 && words < 100;
 
   if (words === 0) {
+    const fallbackFacts = dedupeSentences([
+      `${title} is offered as a published activity in this destination.`,
+      durationText
+        ? `Listed duration is ${durationText}.`
+        : "Duration varies by selected booking option.",
+      meetingInfo
+        ? `Meeting details reference ${meetingInfo}.`
+        : "Meeting instructions are provided at confirmation.",
+      ...highlights.slice(0, 2).map(item => `Published highlight: ${item}.`),
+    ]);
+    const minimalText = fallbackFacts.join(" ");
     return {
-      text: null,
-      wordCount: 0,
+      text: minimalText || `${title} is offered as a published activity.`,
+      wordCount: countWords(minimalText || title),
       lowConfidence: true,
     };
+  }
+
+  if (operator) {
+    const operatorPattern = new RegExp(
+      `\\b${operator.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`,
+      "gi"
+    );
+    composed = composed
+      .replace(operatorPattern, "")
+      .replace(/\s+/g, " ")
+      .trim();
   }
 
   const sentenceChunks = composed
@@ -443,18 +493,15 @@ export const extractLegacyFhProductRecord = (
   ]);
 
   const bookingOverviewParagraphs = collectParagraphs(
-    firstMatchingSection(input.bookingHtml ?? "", [
-      "overview",
-      "activity-details",
-      "description",
-    ])
+    firstMatchingSection(input.bookingHtml ?? "", ["overview", "description"])
   );
 
-  const publicOverviewParagraphs = collectParagraphs(
+  const publicActivityParagraphs = collectParagraphs(
     firstMatchingSection(input.publicHtml, [
-      "overview",
       "activity-details",
+      "details",
       "description",
+      "overview",
     ])
   );
 
@@ -520,11 +567,15 @@ export const extractLegacyFhProductRecord = (
     ])
   );
   const composedOverview = buildOverviewText({
+    title,
+    operator: input.operator,
     bookingParagraphs: bookingOverviewParagraphs,
-    publicParagraphs: publicOverviewParagraphs,
+    publicActivityParagraphs,
     activityParagraphs: activityDetailsParagraphs,
     highlights,
     itinerary,
+    durationText,
+    meetingInfo,
   });
 
   return {

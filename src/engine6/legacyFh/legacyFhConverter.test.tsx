@@ -305,6 +305,30 @@ describe("legacy FH -> Engine6 converter", () => {
       );
       expect(record.overviewWordCount).toBeGreaterThanOrEqual(100);
       expect(record.overviewLowConfidence).toBe(false);
+      expect(record.overview?.toLowerCase()).not.toContain(
+        "guided outdoor experience based in"
+      );
+      expect(record.overview?.toLowerCase()).not.toContain(
+        "keeps the logistics simple and the scenery front and center"
+      );
+    }
+  });
+
+  it("keeps Miami overviews unique and aligned between page overview and schema description fields", () => {
+    const seenOverviews = new Set<string>();
+    for (const record of miamiLegacyMigratedRecords) {
+      const overview = record.overview ?? "";
+      expect(overview.length).toBeGreaterThan(0);
+      expect(
+        seenOverviews.has(overview),
+        `duplicate overview for ${record.slug}`
+      ).toBe(false);
+      seenOverviews.add(overview);
+
+      const tour = mapLegacyFhRecordToEngine6Tour(record);
+      expect(tour.overviewText).toBe(record.overview);
+      expect(tour.description).toBe(record.overview);
+      expect(tour.metaDescription).toBe((record.overview ?? "").slice(0, 155));
     }
   });
 
