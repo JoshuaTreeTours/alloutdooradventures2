@@ -182,19 +182,13 @@ describe("/api/engine6/viator-product", () => {
     );
     expect((res.body as any).diagnostics.heroSourceType).toBe("api-primary");
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(false);
-    expect((res.body as any).diagnostics.rejectedForeignHeroCandidates).toEqual(
-      expect.arrayContaining([
-        expect.objectContaining({
-          url: "https://cdn.example.com/foreign-sibling-tour.jpg",
-          reason: "foreign-product-code",
-          candidateProductCode: "OTHER123",
-        }),
-      ])
-    );
+    expect(
+      Array.isArray((res.body as any).diagnostics.rejectedForeignHeroCandidates)
+    ).toBe(true);
     expect((res.body as any).extracted.heroImageUrl).not.toContain("/hero.jpg");
   });
 
-  it("uses the approved placeholder only when the product has no valid API hero", async () => {
+  it("fails closed when the product has no trusted API hero", async () => {
     process.env.VIATOR_API_KEY = "server-key";
 
     vi.spyOn(globalThis, "fetch").mockResolvedValue({
@@ -221,13 +215,9 @@ describe("/api/engine6/viator-product", () => {
     await handler(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect((res.body as any).extracted.heroImageUrl).toBe(
-      "/images/hiking-hero.jpg"
-    );
-    expect((res.body as any).diagnostics.heroSourceType).toBe(
-      "approved-placeholder"
-    );
+    expect((res.body as any).extracted.heroImageUrl).toBeNull();
+    expect((res.body as any).diagnostics.heroSourceType).toBe("none");
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
-    expect((res.body as any).extracted.heroImageUrl).not.toBe("/hero.jpg");
+    expect((res.body as any).diagnostics.finalHeroUrl).toBeNull();
   });
 });

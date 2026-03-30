@@ -97,7 +97,7 @@ export const buildEngine6ValidationReport = (
     !html.includes(">ENGINE6<");
   const cardRenderSucceeded =
     card.href === tour.pagePath &&
-    card.imageUrl === tour.heroImageUrl &&
+    card.imageUrl === (tour.heroImageUrl ?? "") &&
     !card.href.includes("east-zion-top-of-the-world-jeep-tour") &&
     !card.imageUrl.includes("img.test");
   const bookingAttributionIsValid = tour.bookingUrl.startsWith("/destinations/")
@@ -113,7 +113,7 @@ export const buildEngine6ValidationReport = (
     liveApiFetchSucceeded: false,
     pageRenderSucceeded,
     cardRenderSucceeded,
-    heroResult: `${tour.heroImageUrl} (${tour.diagnostics.heroImageFieldPath ?? "no-field-path"})`,
+    heroResult: `${tour.heroImageUrl ?? "null"} (${tour.diagnostics.heroImageFieldPath ?? "no-field-path"})`,
     priceResult: `${tour.priceFormatted} via ${tour.diagnostics.commercialPriceFieldPath ?? "no-price-field"}`,
     ratingReviewResult: `${formatEngine6AggregateRating(tour.aggregateRating) ?? "n/a"} / ${tour.reviewCount ?? "n/a"}`,
     seoTitleResult: tour.seoTitle,

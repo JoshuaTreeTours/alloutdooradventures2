@@ -1,9 +1,7 @@
-export const ENGINE6_APPROVED_PLACEHOLDER_IMAGE = "/images/hiking-hero.jpg";
-
 export type Engine6HeroSourceType =
   | "api-primary"
   | "api-gallery"
-  | "approved-placeholder";
+  | "none";
 
 export type Engine6HeroCandidate = {
   url: string;
@@ -31,10 +29,10 @@ export type Engine6RejectedHeroCandidate = {
 };
 
 export type Engine6ResolvedHero = {
-  heroUrl: string;
+  heroUrl: string | null;
   heroSourceType: Engine6HeroSourceType;
   fallbackTriggered: boolean;
-  finalCandidate: Engine6HeroCandidate;
+  finalCandidate: Engine6HeroCandidate | null;
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
 };
 
@@ -65,6 +63,22 @@ export const normalizeEngine6SourceProductUrl = (
 const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
 const isSpliceImageUrl = (value: string) =>
   /attractions-splice-spp/i.test(value);
+const TRUSTED_VIATOR_IMAGE_HOSTS = [
+  "dynamic-media.tacdn.com",
+  "media.tacdn.com",
+] as const;
+
+const isTrustedViatorImageHost = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    return TRUSTED_VIATOR_IMAGE_HOSTS.some(
+      trustedHost => host === trustedHost || host.endsWith(`.${trustedHost}`)
+    );
+  } catch {
+    return false;
+  }
+};
 
 const getHeroQualityRank = (value: string): number => {
   let parsed: URL | null = null;
@@ -111,19 +125,16 @@ export const resolveProductScopedHero = ({
   currentProductCode,
   currentSourceProductUrl,
   candidates,
-  placeholderUrl = ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
 }: {
   currentProductCode?: string | null;
   currentSourceProductUrl?: string | null;
   candidates: Engine6HeroCandidate[];
-  placeholderUrl?: string;
 }): Engine6ResolvedHero => {
   const normalizedCurrentProductCode = normalizeProductCode(currentProductCode);
   const normalizedCurrentSourceProductUrl = normalizeEngine6SourceProductUrl(
     currentSourceProductUrl
   );
   const rejectedForeignCandidates: Engine6RejectedHeroCandidate[] = [];
-  let placeholderCandidate: Engine6HeroCandidate | null = null;
   const validCandidates: Engine6HeroCandidate[] = [];
 
   for (const candidate of candidates) {
@@ -131,21 +142,15 @@ export const resolveProductScopedHero = ({
       continue;
     }
 
-    if (candidate.sourceType === "approved-placeholder") {
-      if (candidate.url === placeholderUrl && !placeholderCandidate) {
-        placeholderCandidate = {
-          ...candidate,
-          candidateProductCode: normalizeProductCode(currentProductCode),
-          candidateSourceProductUrl:
-            normalizeEngine6SourceProductUrl(currentSourceProductUrl),
-        };
-      }
-      continue;
-    }
-
     if (isStaticHeroDisallowed(candidate.url)) {
       rejectedForeignCandidates.push(
         toRejectedCandidate(candidate, "static-hero-disallowed")
+      );
+      continue;
+    }
+    if (!isTrustedViatorImageHost(candidate.url)) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "unverified-product-scope")
       );
       continue;
     }
@@ -238,24 +243,11 @@ export const resolveProductScopedHero = ({
     };
   }
 
-  const fallbackCandidate =
-    placeholderCandidate ??
-    ({
-      url: placeholderUrl,
-      sourceType: "approved-placeholder",
-      candidateProductCode: normalizedCurrentProductCode,
-      candidateSourceProductUrl: normalizedCurrentSourceProductUrl,
-      fieldPath: "engine6.approved-placeholder",
-      variantPath: "engine6.approved-placeholder",
-      width: null,
-      height: null,
-    } satisfies Engine6HeroCandidate);
-
   return {
-    heroUrl: fallbackCandidate.url,
-    heroSourceType: fallbackCandidate.sourceType,
+    heroUrl: null,
+    heroSourceType: "none",
     fallbackTriggered: true,
-    finalCandidate: fallbackCandidate,
+    finalCandidate: null,
     rejectedForeignCandidates,
   };
 };

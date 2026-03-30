@@ -51,13 +51,13 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
-  imageSourceUsed: "approved-placeholder" as const,
-  heroSourceType: "approved-placeholder" as const,
+  imageSourceUsed: "none" as const,
+  heroSourceType: "none" as const,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
   rejectedForeignHeroCandidates: [] as Array<{
     url: string;
-    sourceType: "api-primary" | "api-gallery" | "approved-placeholder";
+    sourceType: "api-primary" | "api-gallery" | "none";
     reason: string;
     candidateProductCode: string | null;
     candidateSourceProductUrl: string | null;
@@ -235,20 +235,8 @@ const applyResolvedHero = (args: {
       args.fallbackHeroExtraction?.extracted.productUrl ??
       args.preferredHeroExtraction?.extracted.productUrl,
     candidates: [
-      ...(preferredCandidate &&
-      preferredCandidate.sourceType !== "approved-placeholder"
-        ? [preferredCandidate]
-        : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType !== "approved-placeholder"
-        ? [fallbackCandidate]
-        : []),
-      ...(preferredCandidate &&
-      preferredCandidate.sourceType === "approved-placeholder"
-        ? [preferredCandidate]
-        : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType === "approved-placeholder"
-        ? [fallbackCandidate]
-        : []),
+      ...(preferredCandidate ? [preferredCandidate] : []),
+      ...(fallbackCandidate ? [fallbackCandidate] : []),
     ],
   });
 
@@ -259,10 +247,10 @@ const applyResolvedHero = (args: {
     },
     diagnostics: {
       ...args.baseExtraction.diagnostics,
-      heroImageFieldPath: heroDecision.finalCandidate.fieldPath ?? null,
-      heroVariantFieldPath: heroDecision.finalCandidate.variantPath ?? null,
-      selectedHeroWidth: heroDecision.finalCandidate.width ?? null,
-      selectedHeroHeight: heroDecision.finalCandidate.height ?? null,
+      heroImageFieldPath: heroDecision.finalCandidate?.fieldPath ?? null,
+      heroVariantFieldPath: heroDecision.finalCandidate?.variantPath ?? null,
+      selectedHeroWidth: heroDecision.finalCandidate?.width ?? null,
+      selectedHeroHeight: heroDecision.finalCandidate?.height ?? null,
       imageSourceUsed: heroDecision.heroSourceType,
       heroSourceType: heroDecision.heroSourceType,
       finalHeroUrl: heroDecision.heroUrl,

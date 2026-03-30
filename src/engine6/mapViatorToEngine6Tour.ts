@@ -186,7 +186,7 @@ export const mapViatorToEngine6Tour = (
     city,
     state,
     resolvedImageUrl,
-    heroImageUrl: resolvedImageUrl ?? "",
+    heroImageUrl: resolvedImageUrl,
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,

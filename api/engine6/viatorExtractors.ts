@@ -1,6 +1,5 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
 import {
-  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
   type Engine6HeroCandidate,
   type Engine6HeroSourceType,
   resolveProductScopedHero,
@@ -382,7 +381,7 @@ const collectRecordVariants = (
 const resolveImageCollectionHero = (
   images: unknown,
   basePathPrefix: PathSegment[],
-  sourceType: Exclude<Engine6HeroSourceType, "approved-placeholder">
+  sourceType: Exclude<Engine6HeroSourceType, "none">
 ): HeroImageResult | null => {
   if (!Array.isArray(images)) {
     return null;
@@ -503,17 +502,6 @@ const extractPlaybookHeroCandidates = ({
       height: null,
     });
   }
-
-  candidates.push({
-    url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-    sourceType: "approved-placeholder",
-    candidateProductCode: productCode,
-    candidateSourceProductUrl: sourceProductUrl,
-    fieldPath: "engine6.approved-placeholder",
-    variantPath: "engine6.approved-placeholder",
-    width: null,
-    height: null,
-  });
 
   return candidates;
 };
@@ -1059,8 +1047,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
-    imageSourceUsed: "approved-placeholder",
-    heroSourceType: "approved-placeholder",
+    imageSourceUsed: "none",
+    heroSourceType: "none",
     finalHeroUrl: null,
     heroFallbackTriggered: false,
     rejectedForeignHeroCandidates: [],
@@ -1108,10 +1096,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       sourceProductUrl: productUrl.value,
     }),
   });
-  diagnostics.heroImageFieldPath = heroDecision.finalCandidate.fieldPath ?? null;
-  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate.variantPath ?? null;
-  diagnostics.selectedHeroWidth = heroDecision.finalCandidate.width ?? null;
-  diagnostics.selectedHeroHeight = heroDecision.finalCandidate.height ?? null;
+  diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
+  diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
+  diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
+  diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
