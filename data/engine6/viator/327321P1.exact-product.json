@@ -1,0 +1,108 @@
+{
+  "product": {
+    "productCode": "327321P1",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1",
+    "title": "Mountain Sunrise Hike and Meditation in Palm Springs",
+    "description": {
+      "text": "Start your Palm Springs morning on a guided pre-dawn hike that climbs toward sunrise viewpoints above the Coachella Valley. Your guide sets a steady pace along the South Lykken Trail corridor and pauses for interpretation on local geology, desert ecosystems, and canyon terrain. At a scenic rest point, the experience shifts into a grounding meditation session designed to help you reset before the day heats up. This small-group outing balances moderate physical effort with reflective time in nature, making it a strong fit for travelers who want an active, meaningful desert experience."
+    },
+    "location": {
+      "city": "Palm Springs",
+      "state": "California"
+    },
+    "duration": "2 hours 30 minutes",
+    "priceFrom": "From $108.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 92
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Watch sunrise color spread across Indian Canyons and the Coachella Valley.",
+      "Hike a moderate route in the South Lykken Trail area with a professional guide.",
+      "Pause at a scenic overlook for a guided grounding meditation session.",
+      "Small-group format with a maximum of 8 travelers for a personal pace."
+    ],
+    "logistics": {
+      "start": {
+        "description": "1500 A S Palm Canyon Dr, Palm Springs, CA 92264, USA. Meet at The Sukha Life studio, then drive to the South Lykken Trailhead and park along the street."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "The Sukha Life (meeting point)",
+        "description": "Meet your guide at the studio, complete check-in, and prepare for trail departure."
+      },
+      {
+        "title": "South Lykken Trail ascent",
+        "description": "Begin the pre-dawn hike with regular water and pacing breaks as elevation increases.",
+        "duration": "1 hour 15 minutes"
+      },
+      {
+        "title": "Sunrise overlook and meditation",
+        "description": "Settle at a viewpoint above Indian Canyons and the Coachella Valley for guided grounding meditation.",
+        "duration": "30 minutes"
+      },
+      {
+        "title": "Return hike",
+        "description": "Descend with your guide back to the trailhead and return to the starting area.",
+        "duration": "45 minutes"
+      }
+    ],
+    "inclusions": [
+      "Bottled water",
+      "Open Spirit and Trail Guide",
+      "Guided Grounding Meditation"
+    ],
+    "additionalInfo": [
+      "Not wheelchair accessible.",
+      "Travelers should have a moderate physical fitness level.",
+      "This tour/activity will have a maximum of 8 travelers.",
+      "Not recommended for pregnant travelers or travelers with back problems.",
+      "You can cancel up to 24 hours in advance for a full refund."
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point for the hike?",
+        "answer": "The group meets at 1500 A S Palm Canyon Dr in Palm Springs (The Sukha Life studio), then drives together to the South Lykken Trailhead."
+      },
+      {
+        "question": "How difficult is this sunrise hike?",
+        "answer": "This is a moderate-effort hike with elevation gain. Travelers should be comfortable walking uphill on uneven desert terrain."
+      },
+      {
+        "question": "Is the tour wheelchair accessible?",
+        "answer": "No. The activity is not wheelchair accessible due to the trail surface and elevation profile."
+      },
+      {
+        "question": "How many people are in each group?",
+        "answer": "Group size is capped at 8 travelers, which keeps the pace manageable and guide interaction personal."
+      },
+      {
+        "question": "What is included in the experience?",
+        "answer": "Your booking includes bottled water, a guided sunrise hike, and a grounding meditation session at a scenic stop."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Hiking Tours"
+      },
+      {
+        "label": "Outdoor Activities"
+      }
+    ]
+  }
+}

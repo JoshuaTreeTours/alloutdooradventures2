@@ -36,6 +36,7 @@ const buildEngine6Breadcrumbs = (tour: Engine6Tour) => {
     { label: "Destinations", href: "/destinations" },
     { label: tour.state, href: `/destinations/${stateSlug}` },
     { label: tour.city, href: parentCityToursPath },
+    { label: "Tour", href: tour.canonicalPath },
   ];
 };
 
@@ -391,6 +392,29 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </div>
           </section>
         ) : null}
+        <section
+          className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-4 text-xs text-slate-700"
+          data-testid="engine6-debug-diagnostics"
+          aria-label="Engine6 diagnostics"
+        >
+          <p>
+            <strong>Resolved hero source:</strong>{" "}
+            {tour.diagnostics.heroSourceType}
+          </p>
+          <p>
+            <strong>Final hero URL:</strong> {tour.diagnostics.finalHeroUrl ?? "none"}
+          </p>
+          <p>
+            <strong>Fallback fired:</strong>{" "}
+            {tour.diagnostics.heroFallbackTriggered ? "yes" : "no"}
+          </p>
+          <p>
+            <strong>Final CTA URL:</strong> {tour.bookingUrl}
+          </p>
+          <p>
+            <strong>Offer URL:</strong> {tour.bookingUrl}
+          </p>
+        </section>
         {parentCityToursPath ? (
           <div className="mt-8 text-center" data-testid="engine6-back-to-tours">
             <a

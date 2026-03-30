@@ -13,6 +13,7 @@ import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
+import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -110,5 +111,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1",
     rawPayload: specimen5584233p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "327321P1",
+    publicUrl:
+      "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1",
+    rawPayload: specimen327321p1Payload as Record<string, unknown>,
   },
 ];
