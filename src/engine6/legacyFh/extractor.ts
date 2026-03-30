@@ -318,6 +318,82 @@ const dedupeSentences = (sentences: string[]) => {
   return normalized;
 };
 
+const SIGNAL_KEYWORDS = {
+  locations: [
+    "central park",
+    "bethesda",
+    "biscayne",
+    "everglades",
+    "miami",
+    "wynwood",
+    "downtown",
+    "key biscayne",
+    "bay",
+    "marina",
+    "island",
+  ],
+  activities: [
+    "bike",
+    "cycling",
+    "jetski",
+    "jet ski",
+    "airboat",
+    "airplane",
+    "boat",
+    "atv",
+    "yacht",
+    "parasail",
+    "rental",
+    "tour",
+  ],
+  experiences: [
+    "wildlife",
+    "landmark",
+    "skyline",
+    "views",
+    "photo",
+    "guided",
+    "stop",
+    "water",
+    "ride",
+    "show",
+  ],
+  logistics: [
+    "meeting",
+    "duration",
+    "private",
+    "group",
+    "schedule",
+    "departure",
+    "check-in",
+    "timing",
+    "booking",
+    "hours",
+  ],
+};
+
+const countSignalCategories = (text: string) => {
+  const normalized = text.toLowerCase();
+  let categories = 0;
+  if (SIGNAL_KEYWORDS.locations.some(keyword => normalized.includes(keyword))) {
+    categories += 1;
+  }
+  if (
+    SIGNAL_KEYWORDS.activities.some(keyword => normalized.includes(keyword))
+  ) {
+    categories += 1;
+  }
+  if (
+    SIGNAL_KEYWORDS.experiences.some(keyword => normalized.includes(keyword))
+  ) {
+    categories += 1;
+  }
+  if (SIGNAL_KEYWORDS.logistics.some(keyword => normalized.includes(keyword))) {
+    categories += 1;
+  }
+  return categories;
+};
+
 const buildOverviewText = ({
   title,
   operator,
@@ -355,8 +431,9 @@ const buildOverviewText = ({
   ]);
 
   let composed = overviewSentences.join(" ");
+  const hasUniqueSignal = countSignalCategories(composed) >= 2;
 
-  if (countWords(composed) < 100) {
+  if (hasUniqueSignal && countWords(composed) < 100) {
     const itinerarySentences = itinerary
       .flatMap(stop => [stop.title, stop.description].filter(Boolean))
       .map(value => value as string);
@@ -406,6 +483,26 @@ const buildOverviewText = ({
       .replace(/\s+/g, " ")
       .trim();
   }
+
+  if (countSignalCategories(composed) < 2) {
+    const factual = dedupeSentences([
+      `${title} is listed as a bookable activity with operator-provided details.`,
+      durationText ? `Published duration: ${durationText}.` : "",
+      meetingInfo ? `Published meeting detail: ${meetingInfo}.` : "",
+      ...highlights.slice(0, 2).map(item => `Published highlight: ${item}.`),
+      ...itinerary
+        .slice(0, 2)
+        .flatMap(stop => [stop.title, stop.description].filter(Boolean)),
+    ]).join(" ");
+    const factualWords = countWords(factual);
+    return {
+      text: factual || `${title} is listed as a bookable activity.`,
+      wordCount: factualWords || countWords(title),
+      lowConfidence: true,
+    };
+  }
+
+  lowConfidence = lowConfidence || countSignalCategories(composed) < 2;
 
   const sentenceChunks = composed
     .split(/(?<=[.!?])\s+/)

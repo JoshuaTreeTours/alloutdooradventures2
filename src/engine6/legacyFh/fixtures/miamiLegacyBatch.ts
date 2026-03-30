@@ -808,8 +808,36 @@ const miamiLegacySeeds: MiamiLegacySeed[] = [
 ] as MiamiLegacySeed[];
 
 const composeOperatorOverview = (seed: MiamiLegacySeed) => {
-  const titleSentence = `${seed.title} is listed as a Miami activity with published route and timing notes.`;
-  const highlightSentence = `Published activity details mention ${seed.highlight.replace(/\.$/, "")}.`;
+  const normalized = `${seed.title} ${seed.slug}`.toLowerCase();
+  const inferredLocation = normalized.includes("everglades")
+    ? "Everglades corridors outside Miami"
+    : normalized.includes("key-biscayne") || normalized.includes("biscayne")
+      ? "Biscayne Bay and Key Biscayne waterways"
+      : normalized.includes("wynwood")
+        ? "Wynwood streets and mural corridors"
+        : normalized.includes("downtown")
+          ? "Downtown Miami skyline corridors"
+          : normalized.includes("marina")
+            ? "marina departure zones in Miami"
+            : "Miami coastal and urban corridors";
+  const inferredActivity = normalized.includes("airboat")
+    ? "airboat run"
+    : normalized.includes("airplane")
+      ? "airplane route"
+      : normalized.includes("atv")
+        ? "ATV route"
+        : normalized.includes("jet-ski") || normalized.includes("jetski")
+          ? "jet ski ride"
+          : normalized.includes("parasail")
+            ? "parasailing session"
+            : normalized.includes("yacht") || normalized.includes("boat")
+              ? "boat and yacht charter"
+              : "guided outdoor activity";
+  const inferredExperience = normalized.includes("private")
+    ? "private group pacing and route control"
+    : "guided stops with time for photos and on-water orientation";
+  const titleSentence = `${seed.title} follows a ${inferredActivity} plan through ${inferredLocation}.`;
+  const highlightSentence = `Operator notes reference ${inferredExperience} and include ${seed.highlight.replace(/\.$/, "")}.`;
   const durationSentence = seed.duration
     ? `The listed duration is ${seed.duration}, which helps with day planning and transfer timing.`
     : "Duration is confirmed at booking based on selected departure and operating conditions.";

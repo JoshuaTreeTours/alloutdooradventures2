@@ -20,6 +20,27 @@ import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 import Engine6TourPage from "../components/Engine6TourPage";
 import TourCard from "../../components/TourCard";
 
+const countOverviewSignalCategories = (text: string) => {
+  const normalized = text.toLowerCase();
+  const locations =
+    /(central park|bethesda|biscayne|everglades|miami|wynwood|downtown|marina|island|bay)/.test(
+      normalized
+    );
+  const activities =
+    /(bike|cycling|jetski|jet ski|airboat|airplane|boat|atv|yacht|parasail|tour|rental)/.test(
+      normalized
+    );
+  const experiences =
+    /(wildlife|landmark|skyline|views|photo|guided|stop|water|ride|show)/.test(
+      normalized
+    );
+  const logistics =
+    /(meeting|duration|private|group|schedule|departure|check-in|timing|booking|hours)/.test(
+      normalized
+    );
+  return [locations, activities, experiences, logistics].filter(Boolean).length;
+};
+
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
     const record = extractLegacyFhProductRecord({
@@ -316,6 +337,7 @@ describe("legacy FH -> Engine6 converter", () => {
 
   it("keeps Miami overviews unique and aligned between page overview and schema description fields", () => {
     const seenOverviews = new Set<string>();
+    const seenFirstSentences = new Set<string>();
     for (const record of miamiLegacyMigratedRecords) {
       const overview = record.overview ?? "";
       expect(overview.length).toBeGreaterThan(0);
@@ -324,6 +346,14 @@ describe("legacy FH -> Engine6 converter", () => {
         `duplicate overview for ${record.slug}`
       ).toBe(false);
       seenOverviews.add(overview);
+      const firstSentence = overview.split(/(?<=[.!?])\s+/)[0]?.trim() ?? "";
+      expect(firstSentence.length).toBeGreaterThan(0);
+      expect(
+        seenFirstSentences.has(firstSentence),
+        `duplicate first sentence for ${record.slug}`
+      ).toBe(false);
+      seenFirstSentences.add(firstSentence);
+      expect(countOverviewSignalCategories(overview)).toBeGreaterThanOrEqual(2);
 
       const tour = mapLegacyFhRecordToEngine6Tour(record);
       expect(tour.overviewText).toBe(record.overview);
