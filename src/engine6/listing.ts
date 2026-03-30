@@ -30,7 +30,7 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     },
     heroImage: tour.resolvedImageUrl ?? "",
     resolvedImageUrl: tour.resolvedImageUrl,
-    primaryImageUrl: tour.resolvedImageUrl ?? undefined,
+    primaryImageUrl: tour.resolvedImageUrl ?? "",
     badges: {
       rating: tour.aggregateRating ?? undefined,
       reviewCount: tour.reviewCount ?? undefined,

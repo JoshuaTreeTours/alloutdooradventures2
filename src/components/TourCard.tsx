@@ -121,6 +121,23 @@ function getCardBlurb(tour: Tour): string {
   return `${snippet.trim()}…`;
 }
 
+function resolveEngine6CanonicalCardImage(value: string | undefined): string {
+  const normalized = value?.trim() ?? "";
+  if (!normalized) {
+    return "";
+  }
+  if (!/^https?:\/\//i.test(normalized)) {
+    return "";
+  }
+  if (
+    normalized.includes("/hero.jpg") ||
+    normalized.includes("/images/hiking-hero.jpg")
+  ) {
+    return "";
+  }
+  return normalized;
+}
+
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
   const isRental = isRentalTour(tour);
@@ -143,11 +160,15 @@ export default function TourCard({ tour, href }: TourCardProps) {
     !tour.suppressReviews &&
     typeof tour.badges.rating === "number" &&
     typeof tour.badges.reviewCount === "number";
+  const engine6CanonicalImage =
+    tour.engine === "engine6"
+      ? resolveEngine6CanonicalCardImage(tour.heroImage)
+      : "";
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? tour.resolvedImageUrl?.trim() || ""
+        ? engine6CanonicalImage
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
@@ -164,7 +185,11 @@ export default function TourCard({ tour, href }: TourCardProps) {
     <article
       className="flex h-full flex-col overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm"
       data-card-image-src={cardImage}
-      data-hero-image-src={tour.heroImage?.trim() || ""}
+      data-hero-image-src={
+        tour.engine === "engine6"
+          ? engine6CanonicalImage
+          : tour.heroImage?.trim() || ""
+      }
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-black/5">
         <Image

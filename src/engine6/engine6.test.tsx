@@ -35,6 +35,7 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -115,6 +116,8 @@ const ENGINE6_60136P1_EXPECTED_HERO_URL =
 
 const ENGINE6_36001P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
+const ENGINE6_447234P3_EXPECTED_HERO_URL =
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -796,6 +799,59 @@ describe("engine6 listing surfaces", () => {
     );
   });
 
+  it("routes and renders 447234P3 in San Diego with canonical affiliate CTA and image parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "san-diego");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "447234P3"
+    );
+    const engine6Entry = matchingEntries[0];
+
+    expect(matchingEntries).toHaveLength(1);
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("San Diego");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(
+      engine6Entry?.tour.primaryImageUrl
+    );
+    expect(engine6Entry?.tour.heroImage).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(engine6Entry?.tour.bookingUrl).toContain(
+      "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
+    );
+    expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe(
+      "From $995 per group (up to 4)"
+    );
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "447234P3"
+    );
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(detailTour?.diagnostics.heroSourceType).not.toBe("approved-placeholder");
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain("per group (up to 4)");
+    expect(detailHtml).toContain(
+      `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
+    );
+    expect(detailHtml).toContain(
+      `href=\"/destinations/california/san-diego/tours\"`
+    );
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+    expect(offerNode?.price).toBe(995);
+    expect(offerNode?.description).toBe("From $995 per group (up to 4)");
+    expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+  });
+
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
     for (const productCode of ["63657P1", "5119P13", "32779P2"]) {
       const { tour, relatedTours } = getRelatedToursForSpecimen(productCode);
@@ -1145,11 +1201,15 @@ describe("engine6 multi-tour contract", () => {
         | Record<string, unknown>
         | undefined;
 
-      expect(tour.heroImageUrl).toContain("http");
-      expect(tour.heroImageUrl).not.toContain("/hero.jpg");
-      expect(html).toContain(
-        `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
-      );
+      if (tour.heroImageUrl) {
+        expect(tour.heroImageUrl).toContain("http");
+        expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+        expect(html).toContain(
+          `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
+        );
+      } else {
+        expect(html).not.toContain('src="/images/hiking-hero.jpg"');
+      }
       if (tour.bookingUrl.startsWith("/destinations/")) {
         expect(tour.bookingUrl).toContain("/book");
       } else {
@@ -1192,8 +1252,13 @@ describe("engine6 multi-tour contract", () => {
       expect(offerNode?.url).toBe(tour.bookingUrl);
       expect(offerNode?.priceCurrency).toBe("USD");
       expect(offerNode?.price).toBe(tour.priceAmount ?? undefined);
-      expect(productNode?.image).toBe(tour.heroImageUrl);
-      expect(tripNode?.image).toBe(tour.heroImageUrl);
+      if (tour.heroImageUrl) {
+        expect(productNode?.image).toBe(tour.heroImageUrl);
+        expect(tripNode?.image).toBe(tour.heroImageUrl);
+      } else {
+        expect(productNode?.image).toBeUndefined();
+        expect(tripNode?.image).toBeUndefined();
+      }
       if (tour.faqs.length > 0 && faqNode) {
         const mainEntity = (faqNode.mainEntity ?? []) as Array<{
           name?: string;
@@ -1705,6 +1770,20 @@ describe("engine6 route wiring", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
       "path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("registers the San Diego Joshua Tree route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE}"
     );
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'

@@ -84,6 +84,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     ...(typeof tour.priceAmount === "number"
       ? { price: tour.priceAmount }
       : {}),
+    ...(tour.priceFormatted ? { description: tour.priceFormatted } : {}),
     availability: "https://schema.org/InStock",
     priceValidUntil: getPriceValidUntil(),
   };

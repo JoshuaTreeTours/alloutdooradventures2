@@ -55,6 +55,21 @@ describe("engine6 hardening guards", () => {
     expect(() =>
       assertEngine6DataSource("legacy-fh-migrated")
     ).toThrow(/engine6-native/i);
+
+    expect(() =>
+      assertEngine6ImageDeterminism({
+        heroImage: "",
+        cardImage: "",
+        schemaImage: undefined,
+      })
+    ).not.toThrow();
+    expect(() =>
+      assertEngine6ImageDeterminism({
+        heroImage: "",
+        cardImage: "https://cdn.viator.com/other.jpg",
+        schemaImage: undefined,
+      })
+    ).toThrow(/hero image must match listing card image/i);
   });
 
   it("enforces CTA integrity for product-level affiliate links", () => {

@@ -47,8 +47,18 @@ export const assertEngine6ImageDeterminism = ({
   cardImage: string;
   schemaImage: string | null | undefined;
 }) => {
-  assertCondition(heroImage === cardImage, "hero image must match listing card image");
-  assertCondition(schemaImage === heroImage, "schema image must match engine6 hero image");
+  const normalizedHeroImage = heroImage.trim() || null;
+  const normalizedCardImage = cardImage.trim() || null;
+  const normalizedSchemaImage = schemaImage?.trim() || null;
+
+  assertCondition(
+    normalizedHeroImage === normalizedCardImage,
+    "hero image must match listing card image"
+  );
+  assertCondition(
+    normalizedSchemaImage === normalizedHeroImage,
+    "schema image must match engine6 hero image"
+  );
 };
 
 export const assertEngine6DataSource = (dataSource: string) => {
