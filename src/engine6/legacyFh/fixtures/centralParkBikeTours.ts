@@ -7,11 +7,10 @@ export const CENTRAL_PARK_BIKE_TOURS_BOOK_PATH =
   "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book";
 
 const CENTRAL_PARK_BIKE_TOURS_PUBLIC_HTML = `
-<main>
+  <main>
   <meta property="og:image" content="https://cdn.filestackcontent.com/5lZqYu5ZTGK2gk66BLVt" />
   <h1>Central Park Bike Tours</h1>
-  <img src="https://cdn.filestackcontent.com/cpbike-cover-primary.jpg" />
-  <img src="https://cdn.filestackcontent.com/cpbike-scenic-action.jpg" />
+  <img src="https://cdn.filestackcontent.com/5lZqYu5ZTGK2gk66BLVt" />
   <div data-legacy="price">From $85</div>
   <div data-legacy="rating">4.3</div>
   <div data-legacy="reviews">390 reviews</div>
