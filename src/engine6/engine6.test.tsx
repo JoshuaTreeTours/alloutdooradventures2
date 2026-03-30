@@ -36,6 +36,7 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -118,6 +119,8 @@ const ENGINE6_36001P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
 const ENGINE6_447234P3_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
+const ENGINE6_5584233P1_EXPECTED_HERO_URL =
+  "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2f/9f/62/0d/caption.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -814,7 +817,9 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.heroImage).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(engine6Entry?.tour.heroImage).toBe(
+      ENGINE6_447234P3_EXPECTED_HERO_URL
+    );
     expect(engine6Entry?.tour.bookingUrl).toContain(
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
@@ -827,14 +832,14 @@ describe("engine6 listing surfaces", () => {
       tour => tour.productCode === "447234P3"
     );
     expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
-    expect(detailTour?.diagnostics.heroSourceType).not.toBe("approved-placeholder");
+    expect(detailTour?.diagnostics.heroSourceType).not.toBe(
+      "approved-placeholder"
+    );
     expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
     expect(detailHtml).toContain("per group (up to 4)");
-    expect(detailHtml).toContain(
-      `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
-    );
+    expect(detailHtml).toContain(`src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`);
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
     );
@@ -850,6 +855,67 @@ describe("engine6 listing surfaces", () => {
     expect(offerNode?.price).toBe(995);
     expect(offerNode?.description).toBe("From $995 per group (up to 4)");
     expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+  });
+
+  it("routes and renders 5584233P1 in San Diego with native Engine6 parity and affiliate CTA", () => {
+    const unifiedTours = getToursByCityUnified("california", "san-diego");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "5584233P1"
+    );
+    const engine6Entry = matchingEntries[0];
+
+    expect(matchingEntries).toHaveLength(1);
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("San Diego");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(
+      ENGINE6_5584233P1_EXPECTED_HERO_URL
+    );
+    expect(engine6Entry?.tour.primaryImageUrl).toBe(
+      ENGINE6_5584233P1_EXPECTED_HERO_URL
+    );
+    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(engine6Entry?.tour.heroImage).not.toContain(
+      "/images/hiking-hero.jpg"
+    );
+    expect(engine6Entry?.tour.bookingUrl).toBe(
+      "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&mcid=42383&medium=link"
+    );
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5584233P1"
+    );
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
+    expect(
+      detailTour?.overviewText?.split(/\s+/).length ?? 0
+    ).toBeGreaterThanOrEqual(100);
+    expect(detailTour?.diagnostics.source).toBe("bundled-fallback");
+    expect(detailHtml).toContain(
+      `src="${ENGINE6_5584233P1_EXPECTED_HERO_URL}"`
+    );
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+    const ratingNode = graph.find(
+      node => node["@type"] === "AggregateRating"
+    ) as Record<string, unknown> | undefined;
+
+    expect(offerNode?.url).toBe(
+      "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(tripNode?.url).toBe(
+      "https://www.alloutdooradventures.com/destinations/california/san-diego/tours/spectacular-sunset-sailing-in-san-diego"
+    );
+    expect(tripNode?.image).toBe(ENGINE6_5584233P1_EXPECTED_HERO_URL);
+    expect(ratingNode).toBeDefined();
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
@@ -1751,7 +1817,6 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
-
   it("registers the New York pedicab replacement route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
@@ -1844,7 +1909,9 @@ describe("engine6 route wiring", () => {
       "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
     );
     expect(nycPedicabTour?.itinerary.length).toBeGreaterThanOrEqual(2);
-    expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)).toBe(true);
+    expect(
+      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)
+    ).toBe(true);
   });
 
   it("replaces 233384P2 in-place and keeps the existing /book endpoint CTA", () => {
