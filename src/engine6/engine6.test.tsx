@@ -116,6 +116,8 @@ const ENGINE6_60136P1_EXPECTED_HERO_URL =
 
 const ENGINE6_36001P1_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg";
+const ENGINE6_447234P3_EXPECTED_HERO_URL =
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -812,7 +814,7 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.heroImage).toBe("");
+    expect(engine6Entry?.tour.heroImage).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
     expect(engine6Entry?.tour.bookingUrl).toContain(
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
@@ -824,13 +826,15 @@ describe("engine6 listing surfaces", () => {
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "447234P3"
     );
-    expect(detailTour?.heroImageUrl).toBe("");
-    expect(detailTour?.diagnostics.heroSourceType).toBe("approved-placeholder");
-    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(true);
+    expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(detailTour?.diagnostics.heroSourceType).not.toBe("approved-placeholder");
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
     expect(detailHtml).toContain("per group (up to 4)");
-    expect(detailHtml).not.toContain('src="/images/hiking-hero.jpg"');
+    expect(detailHtml).toContain(
+      `src="${ENGINE6_447234P3_EXPECTED_HERO_URL}"`
+    );
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
     );
@@ -845,7 +849,7 @@ describe("engine6 listing surfaces", () => {
       | undefined;
     expect(offerNode?.price).toBe(995);
     expect(offerNode?.description).toBe("From $995 per group (up to 4)");
-    expect(tripNode?.image).toBeUndefined();
+    expect(tripNode?.image).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
