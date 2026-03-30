@@ -43,6 +43,18 @@ describe("getToursByCityUnified Palm Springs dedupe", () => {
       ).toBeGreaterThan(0);
     }
   });
+
+  it("adds one native Engine6 listing entry for 445161P1 in Palm Springs without duplicate cards", () => {
+    const tours = getToursByCityUnified("california", "palm-springs").filter(
+      entry => entry.tour.productCode === "445161P1"
+    );
+
+    expect(tours).toHaveLength(1);
+    expect(tours[0]?.tour.engine).toBe("engine6");
+    expect(tours[0]?.href).toBe(
+      "/destinations/california/palm-springs/tours/professional-stargazing-tour-in-joshua-tree"
+    );
+  });
 });
 
 describe("engine6 canonical slug winner dedupe", () => {

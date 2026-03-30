@@ -38,6 +38,9 @@ export const ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE =
 export const ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_PRODUCT_CODE = "3156P13";
 export const ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE =
   "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168";
+export const ENGINE6_JOSHUA_TREE_STARGAZING_PRODUCT_CODE = "445161P1";
+export const ENGINE6_JOSHUA_TREE_STARGAZING_ROUTE =
+  "/destinations/california/palm-springs/tours/professional-stargazing-tour-in-joshua-tree";
 
 export type Engine6ReplacementModeConfig = {
   productCode: string;
@@ -89,6 +92,8 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_NYC_PEDICAB_ROUTE]: ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
   [ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE]:
     ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_PRODUCT_CODE,
+  [ENGINE6_JOSHUA_TREE_STARGAZING_ROUTE]:
+    ENGINE6_JOSHUA_TREE_STARGAZING_PRODUCT_CODE,
 };
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([

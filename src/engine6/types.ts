@@ -138,6 +138,7 @@ export type Engine6ApiResponse = {
     aggregateRating: number | null;
     reviewCount: number | null;
     meetingPointText: string | null;
+    durationText?: string | null;
     overviewText: string | null;
     highlights: string[];
     itinerary: Engine6ItineraryItem[];
