@@ -36,6 +36,37 @@ export const ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE = "233384P2";
 export const ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE =
   "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853";
 
+export type Engine6ReplacementModeConfig = {
+  productCode: string;
+  canonicalPath: string;
+  bookingPath: string;
+};
+
+const ENGINE6_REPLACEMENT_MODE_CONFIGS: Engine6ReplacementModeConfig[] = [
+  {
+    productCode: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
+    canonicalPath: ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+    bookingPath: `${ENGINE6_ANCHORAGE_GREENBELT_ROUTE}/book`,
+  },
+  {
+    productCode: ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
+    canonicalPath: ENGINE6_NYC_PEDICAB_ROUTE,
+    bookingPath: `${ENGINE6_NYC_PEDICAB_ROUTE}/book`,
+  },
+  {
+    productCode: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
+    canonicalPath: ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
+    bookingPath: `${ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}/book`,
+  },
+];
+
+const ENGINE6_REPLACEMENT_MODE_BY_PRODUCT_CODE: Record<
+  string,
+  Engine6ReplacementModeConfig
+> = Object.fromEntries(
+  ENGINE6_REPLACEMENT_MODE_CONFIGS.map(config => [config.productCode, config])
+);
+
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
   [ENGINE6_SPECIMEN_ROUTE]: ENGINE6_SPECIMEN_PRODUCT_CODE,
   [ENGINE6_PARAGON_ROUTE]: ENGINE6_PARAGON_PRODUCT_CODE,
@@ -52,9 +83,7 @@ const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> = {
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
   ENGINE6_YOSEMITE_ROUTE,
-  ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
-  ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
-  ENGINE6_NYC_PEDICAB_ROUTE,
+  ...ENGINE6_REPLACEMENT_MODE_CONFIGS.map(config => config.canonicalPath),
 ]);
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>
@@ -64,3 +93,8 @@ export const resolveEngine6PathForProductCode = (productCode: string) =>
   Object.entries(ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH).find(
     ([, code]) => code === productCode
   )?.[0] ?? null;
+
+export const resolveEngine6ReplacementMode = (productCode: string) =>
+  ENGINE6_REPLACEMENT_MODE_BY_PRODUCT_CODE[productCode] ?? null;
+
+export const engine6ReplacementModeConfigs = ENGINE6_REPLACEMENT_MODE_CONFIGS;

@@ -1,7 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import { detectEngine6LegacyCollisions, assertEngine6CollisionPolicy } from "./collisionGuard";
+import {
+  detectEngine6LegacyCollisions,
+  assertEngine6CollisionPolicy,
+  assertEngine6ReplacementModePolicy,
+} from "./collisionGuard";
 import { engine6ResolvedTours } from "./registry";
+import type { Engine6ReplacementModeConfig } from "./routes";
 
 describe("engine6 collision guard", () => {
   it("flags Yosemite as an explicit replacement for a legacy collision", () => {
@@ -31,5 +36,38 @@ describe("engine6 collision guard", () => {
         },
       ])
     ).toThrow(/collision detected/i);
+  });
+
+  it("enforces replacement mode canonical slug and /book immutability", () => {
+    expect(() => assertEngine6ReplacementModePolicy(engine6ResolvedTours)).not.toThrow();
+
+    const tour = engine6ResolvedTours.find(entry => entry.productCode === "414460P1");
+    expect(tour).toBeDefined();
+
+    expect(() =>
+      assertEngine6ReplacementModePolicy(
+        [{ ...tour!, canonicalPath: "/destinations/new-york/new-york/tours/new-slug" }],
+        [
+          {
+            productCode: "414460P1",
+            canonicalPath: "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
+            bookingPath:
+              "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book",
+          },
+        ]
+      )
+    ).toThrow(/changed public slug/i);
+  });
+
+  it("fails clearly if replacement mode is configured without a legacy FareHarbor match", () => {
+    const config: Engine6ReplacementModeConfig = {
+      productCode: "414460P1",
+      canonicalPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page",
+      bookingPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page/book",
+    };
+
+    expect(() =>
+      assertEngine6ReplacementModePolicy(engine6ResolvedTours, [config])
+    ).toThrow(/requires a known legacy page/i);
   });
 });

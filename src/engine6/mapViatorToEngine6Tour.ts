@@ -1,6 +1,9 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
-import { resolveEngine6PathForProductCode } from "./routes";
+import {
+  resolveEngine6PathForProductCode,
+  resolveEngine6ReplacementMode,
+} from "./routes";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -21,15 +24,6 @@ const ENGINE6_OPENING_PATTERN_OVERRIDES: Record<string, number> = {
 };
 const ENGINE6_OPENING_SENTENCE_OVERRIDES: Record<string, string> = {
   "100569P5": "Join one of the best experiences in Anchorage...",
-};
-
-const ENGINE6_BOOKING_URL_OVERRIDES: Record<string, string> = {
-  "53474P8":
-    "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book",
-  "233384P2":
-    "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853/book",
-  "414460P1":
-    "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book",
 };
 
 const pickOpeningPatternIndex = (seed: string) => {
@@ -111,7 +105,9 @@ export const mapViatorToEngine6Tour = (
     city,
     title,
   });
+  const replacementMode = resolveEngine6ReplacementMode(payload.rawProductCode);
   const canonicalPath =
+    replacementMode?.canonicalPath ??
     resolveEngine6PathForProductCode(payload.rawProductCode) ??
     generatedCanonicalPath;
   const rawDescription =
@@ -139,7 +135,7 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.aggregateRating
   );
   const bookingUrl =
-    ENGINE6_BOOKING_URL_OVERRIDES[payload.rawProductCode] ??
+    replacementMode?.bookingPath ??
     buildEngine6ViatorBookingUrl(
       payload.rawProductCode,
       payload.extracted.productUrl
