@@ -70,6 +70,7 @@ export type Engine6Extracted = {
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string | null;
+  durationText: string | null;
   overviewText: string | null;
   highlights: string[];
   itinerary: Engine6ExtractedItineraryItem[];
@@ -284,6 +285,7 @@ const emptyExtracted = (): Engine6Extracted => ({
   aggregateRating: null,
   reviewCount: null,
   meetingPointText: null,
+  durationText: null,
   overviewText: null,
   highlights: [],
   itinerary: [],
@@ -833,6 +835,24 @@ const extractMeetingPoint = (product: RecordLike) => {
   return { value: null, path: null as string | null };
 };
 
+const extractDurationText = (product: RecordLike) => {
+  for (const path of [
+    ["duration"],
+    ["durationText"],
+    ["durationInfo", "durationText"],
+    ["durationInfo", "label"],
+    ["durationInfo", "duration"],
+    ["durationFixed"],
+  ] as PathSegment[][]) {
+    const value = asNonEmptyString(readPath(product, path));
+    if (value) {
+      return { value, path: formatFieldPath(path) };
+    }
+  }
+
+  return { value: null, path: null as string | null };
+};
+
 const extractFaqs = (product: RecordLike) => {
   const normalizeFaqs = (value: unknown): Engine6ExtractedFaq[] => {
     if (!Array.isArray(value)) return [];
@@ -1109,6 +1129,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
 
   const meetingPoint = extractMeetingPoint(product);
   diagnostics.meetingPointFieldPath = meetingPoint.path;
+  const durationText = extractDurationText(product);
 
   const overview = extractOverview(product);
   diagnostics.overviewFieldPath = overview.path;
@@ -1184,6 +1205,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
       meetingPointText: meetingPoint.value,
+      durationText: durationText.value,
       overviewText: overview.value,
       highlights: highlights.value,
       itinerary: itinerary.value,

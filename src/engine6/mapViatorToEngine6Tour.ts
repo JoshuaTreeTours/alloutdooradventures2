@@ -173,6 +173,7 @@ export const mapViatorToEngine6Tour = (
     reviewCount: payload.extracted.reviewCount,
     meetingPointText:
       payload.extracted.meetingPointText ?? "See booking details",
+    durationText: payload.extracted.durationText ?? null,
     overviewText: overviewText || null,
     highlights,
     itinerary,

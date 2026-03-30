@@ -97,6 +97,7 @@ const EMPTY_EXTRACTED_PRODUCT = {
   aggregateRating: null,
   reviewCount: null,
   meetingPointText: null,
+  durationText: null,
   overviewText: null,
   highlights: [] as string[],
   itinerary: [] as Array<{

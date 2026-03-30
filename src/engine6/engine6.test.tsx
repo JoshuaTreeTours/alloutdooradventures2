@@ -34,6 +34,7 @@ import {
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
+  ENGINE6_JOSHUA_TREE_STARGAZING_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -944,6 +945,42 @@ describe("engine6 listing surfaces", () => {
     expect(entry?.tour.badges?.priceFrom).toBe("Starting at $109");
     expect(entry?.tour.badges?.rating).toBe(4.9);
     expect(entry?.tour.badges?.reviewCount).toBe(5060);
+  });
+
+  it("adds 445161P1 as a native Palm Springs Engine6 tour with affiliate CTA and summary experience section", () => {
+    const stargazingTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "445161P1"
+    );
+    expect(stargazingTour).toBeDefined();
+    expect(stargazingTour?.canonicalPath).toBe(
+      ENGINE6_JOSHUA_TREE_STARGAZING_ROUTE
+    );
+    expect(stargazingTour?.bookingUrl).toBe(
+      "https://www.viator.com/tours/Palm-Springs/Professional-Stargazing-in-Joshua-Tree/d648-445161P1?pid=P00290915&mcid=42383&medium=link"
+    );
+    expect(stargazingTour?.durationText).toBe("2 hours (approx.)");
+    expect(stargazingTour?.aggregateRating).toBe(4.9);
+    expect(stargazingTour?.reviewCount).toBe(138);
+    expect(stargazingTour?.meetingPointText.toLowerCase()).toContain(
+      "remote location"
+    );
+    expect(stargazingTour?.itinerary).toHaveLength(0);
+    expect(stargazingTour?.itinerarySummaryText).toContain("What to expect");
+    expect(stargazingTour?.heroImageUrl).toBe(stargazingTour?.resolvedImageUrl);
+
+    const detailHtml = renderToString(<Engine6TourPage tour={stargazingTour!} />);
+    expect(detailHtml).toContain("2 hours (approx.)");
+    expect(detailHtml).toContain("4.9");
+    expect(detailHtml).toContain("138");
+    expect(detailHtml).toContain("Itinerary summary");
+
+    const unified = getToursByCityUnified("california", "palm-springs").filter(
+      entry => entry.tour.productCode === "445161P1"
+    );
+    expect(unified).toHaveLength(1);
+    expect(unified[0]?.href).toBe(ENGINE6_JOSHUA_TREE_STARGAZING_ROUTE);
+    expect(unified[0]?.tour.heroImage).toBe(stargazingTour?.heroImageUrl);
+    expect(unified[0]?.tour.primaryImageUrl).toBe(stargazingTour?.heroImageUrl);
   });
 
   it("renders a non-empty Las Vegas city tours hero src (no alt-only fallback block)", () => {

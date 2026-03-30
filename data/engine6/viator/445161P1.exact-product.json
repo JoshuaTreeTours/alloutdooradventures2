@@ -1,0 +1,77 @@
+{
+  "product": {
+    "productCode": "445161P1",
+    "productUrl": "https://www.viator.com/tours/Palm-Springs/Professional-Stargazing-in-Joshua-Tree/d648-445161P1",
+    "title": "Professional Stargazing Tour in Joshua Tree",
+    "description": {
+      "text": "Head to a dedicated dark-sky observation site near Joshua Tree for an expert-led stargazing session. Your astronomer guide helps you spot stars, planets, and deep-sky objects through telescopes and astro-binoculars while you relax on a yogibo lounger with blankets and hot beverages. The site is remote and intentionally away from city lights, so plan ahead with downloaded directions before you drive in. Transportation is not included, and this experience returns to the same meeting point at the end."
+    },
+    "location": {
+      "city": "Palm Springs",
+      "state": "California"
+    },
+    "duration": "2 hours (approx.)",
+    "priceFrom": "$200.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 138
+    },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/14/c7/ef/67.jpg",
+              "width": 674,
+              "height": 446
+            }
+          }
+        }
+      ]
+    },
+    "highlights": [
+      "Observe desert night skies with a professional astronomer at a remote dark-sky location.",
+      "Use provided telescopes and astro-binoculars to view stars, planets, and more.",
+      "Stay comfortable with yogibo loungers, blankets, and hot beverages.",
+      "Small-group format capped at 18 travelers for a more personal experience."
+    ],
+    "inclusions": [
+      "Coffee and/or tea",
+      "Hot beverage station",
+      "Telescopes",
+      "Yogibo lounger",
+      "Astronomer guide",
+      "Astro-binoculars",
+      "Blankets"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking.",
+      "Offered in English.",
+      "Transportation is not included.",
+      "Remote observation site with no cell service.",
+      "No bathroom facilities on site.",
+      "This tour/activity will have a maximum of 18 travelers.",
+      "Supplied by Stargazing Joshua Tree.",
+      "You can cancel up to 24 hours in advance of the experience for a full refund."
+    ],
+    "meetingPoint": {
+      "name": "54490 Skyline Ranch Rd, Yucca Valley, CA 92284, USA",
+      "description": "Our observation site is in a remote location with no cell service or bathroom facilities. You will get detailed directions upon booking, and transportation is not included."
+    },
+    "itinerarySummary": "What to expect: meet at the remote Joshua Tree observation site, settle into loungers with blankets and hot drinks, then follow your astronomer through a guided sky session using telescopes and astro-binoculars before returning to the same meeting point.",
+    "faqs": [
+      {
+        "question": "Where does the tour start and end?",
+        "answer": "The experience starts at 54490 Skyline Ranch Rd in Yucca Valley and ends back at the same meeting point."
+      },
+      {
+        "question": "Is transportation included?",
+        "answer": "No. Guests are responsible for arranging their own transportation to and from the remote meeting location."
+      }
+    ],
+    "categories": [
+      "adventure-tour"
+    ]
+  }
+}
