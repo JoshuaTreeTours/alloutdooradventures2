@@ -120,7 +120,7 @@ const ENGINE6_36001P1_EXPECTED_HERO_URL =
 const ENGINE6_447234P3_EXPECTED_HERO_URL =
   "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg";
 const ENGINE6_5584233P1_EXPECTED_HERO_URL =
-  "https://dynamic-media.tacdn.com/media/attractions-splice-spp-360x240/15/07/e5/9d.jpg";
+  "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/c2/42/d3.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
