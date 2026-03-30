@@ -15,6 +15,9 @@ import {
   miamiLegacyMigratedRecords,
 } from "./fixtures/miamiLegacyBatch";
 import { getToursByCity, getToursByCityUnified } from "../../data/tours";
+import { toEngine6Card } from "../cards";
+import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
+import Engine6TourPage from "../components/Engine6TourPage";
 
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
@@ -89,6 +92,60 @@ describe("legacy FH -> Engine6 converter", () => {
 
     expect(record.overviewWordCount).toBeLessThan(100);
     expect(record.overviewLowConfidence).toBe(true);
+    expect(record.ratingSnapshot.rating).toBeNull();
+    expect(record.ratingSnapshot.reviewCount).toBeNull();
+  });
+
+  it("omits rating from card/page/schema when rating extraction is missing", () => {
+    const record = extractLegacyFhProductRecord({
+      slug: "no-rating-specimen",
+      canonicalPath: "/destinations/florida/miami/tours/no-rating-specimen",
+      bookingPath: "/destinations/florida/miami/tours/no-rating-specimen/book",
+      operator: "No Rating Operator",
+      publicHtml:
+        '<main><h1>No Rating Specimen</h1><section data-legacy="overview"><p>Overview text without rating.</p></section></main>',
+      bookingHtml:
+        '<main><section data-fh="overview"><p>Booking content also does not include rating metadata or review totals.</p></section></main>',
+      fallback: {
+        title: "No Rating Specimen",
+        ratingSnapshot: { rating: 4.8, reviewCount: 1200 },
+      },
+    });
+    const tour = mapLegacyFhRecordToEngine6Tour(record);
+    const card = toEngine6Card(tour);
+    const schema = buildEngine6SchemaGraph(tour);
+    const schemaJson = JSON.stringify(schema);
+    Object.assign(globalThis, {
+      location: {
+        pathname: "/destinations/florida/miami/tours/no-rating-specimen",
+        search: "",
+        hash: "",
+      },
+    });
+    const html = renderToString(<Engine6TourPage tour={tour} />);
+
+    expect(record.ratingSnapshot.rating).toBeNull();
+    expect(record.ratingSnapshot.reviewCount).toBeNull();
+    expect(tour.aggregateRating).toBeNull();
+    expect(tour.reviewCount).toBeNull();
+    expect(card.ratingLabel).toBeNull();
+    expect(schemaJson).not.toContain("AggregateRating");
+    expect(html).not.toContain("No ratings yet");
+  });
+
+  it("flows extracted rating/review values consistently to card and schema", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour(
+      centralParkBikeToursMigratedRecord
+    );
+    const card = toEngine6Card(tour);
+    const schema = JSON.stringify(buildEngine6SchemaGraph(tour));
+
+    expect(tour.aggregateRating).toBe(4.3);
+    expect(tour.reviewCount).toBe(390);
+    expect(card.ratingLabel).toBe("4.3 (390)");
+    expect(schema).toContain('"AggregateRating"');
+    expect(schema).toContain('"ratingValue":4.3');
+    expect(schema).toContain('"reviewCount":390');
   });
 
   it("normalizes the migrated specimen into a reusable record", () => {

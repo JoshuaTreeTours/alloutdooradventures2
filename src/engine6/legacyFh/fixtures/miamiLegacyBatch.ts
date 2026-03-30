@@ -812,6 +812,8 @@ const buildPublicHtml = (seed: MiamiLegacySeed) => `
     <meta property="og:image" content="${seed.heroImageUrl}" />
     <h1>${seed.title}</h1>
     <img src="${seed.heroImageUrl}" />
+    ${seed.rating !== null ? `<div data-legacy="rating">${seed.rating}</div>` : ""}
+    ${seed.reviewCount !== null ? `<div data-legacy="reviews">${seed.reviewCount} reviews</div>` : ""}
     <section data-legacy="overview">
       <p>${seed.overview}</p>
     </section>
@@ -860,13 +862,6 @@ export const miamiLegacyMigratedRecords = miamiLegacySeeds.map(seed =>
       title: seed.title,
       heroImageUrl: seed.heroImageUrl,
       galleryImages: seed.galleryImages,
-      ratingSnapshot:
-        seed.rating !== null || seed.reviewCount !== null
-          ? {
-              rating: seed.rating,
-              reviewCount: seed.reviewCount,
-            }
-          : undefined,
     },
   })
 );

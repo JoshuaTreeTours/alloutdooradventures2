@@ -102,6 +102,130 @@ const parsePrice = (label: string | null) => {
   return Number.isFinite(amount) ? amount : null;
 };
 
+type ExtractedRatingSnapshot = {
+  rating: number | null;
+  reviewCount: number | null;
+  confidence: "none" | "medium" | "high";
+};
+
+const parseNumericRating = (value: string | null) => {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseFloat(value);
+  if (!Number.isFinite(parsed) || parsed < 0 || parsed > 5) {
+    return null;
+  }
+  return parsed;
+};
+
+const parseReviewCount = (value: string | null) => {
+  if (!value) {
+    return null;
+  }
+  const parsed = Number.parseInt(value.replace(/[^\d]/g, ""), 10);
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+const extractVisibleRatingSnapshot = (
+  html: string
+): ExtractedRatingSnapshot => {
+  const explicitRating = parseNumericRating(
+    extractAttribute(html, /data-legacy=["']rating["'][^>]*>([^<]+)</i) ??
+      extractAttribute(html, /data-fh=["']rating["'][^>]*>([^<]+)</i)
+  );
+  const explicitReviews = parseReviewCount(
+    extractAttribute(html, /data-legacy=["']reviews?["'][^>]*>([^<]+)</i) ??
+      extractAttribute(html, /data-fh=["']reviews?["'][^>]*>([^<]+)</i)
+  );
+
+  const textRating = parseNumericRating(
+    extractAttribute(
+      html,
+      /(?:^|[^0-9])([0-5](?:\.\d)?)\s*(?:\/\s*5|out of 5)/i
+    )
+  );
+  const textReviews = parseReviewCount(
+    extractAttribute(html, /([\d,]+)\s+reviews?/i)
+  );
+
+  const rating = explicitRating ?? textRating;
+  const reviewCount = explicitReviews ?? textReviews;
+
+  return {
+    rating,
+    reviewCount,
+    confidence:
+      explicitRating !== null || explicitReviews !== null
+        ? "high"
+        : rating !== null || reviewCount !== null
+          ? "medium"
+          : "none",
+  };
+};
+
+const extractStructuredRatingSnapshot = (
+  html: string
+): ExtractedRatingSnapshot => {
+  const matches = Array.from(
+    html.matchAll(
+      /"aggregateRating"\s*:\s*\{[\s\S]*?"ratingValue"\s*:\s*"?([0-5](?:\.\d+)?)"?[\s\S]*?"reviewCount"\s*:\s*"?([\d,]+)"?/gi
+    )
+  );
+
+  if (matches.length === 0) {
+    return { rating: null, reviewCount: null, confidence: "none" };
+  }
+
+  const top = matches[0];
+  return {
+    rating: parseNumericRating(top?.[1] ?? null),
+    reviewCount: parseReviewCount(top?.[2] ?? null),
+    confidence: "medium",
+  };
+};
+
+const hasRatingConflict = (
+  a: ExtractedRatingSnapshot,
+  b: ExtractedRatingSnapshot
+) => {
+  const ratingConflict =
+    a.rating !== null &&
+    b.rating !== null &&
+    Math.abs(a.rating - b.rating) > 0.05;
+  const reviewConflict =
+    a.reviewCount !== null &&
+    b.reviewCount !== null &&
+    a.reviewCount !== b.reviewCount;
+  return ratingConflict || reviewConflict;
+};
+
+const resolveRatingSnapshot = (
+  sources: ExtractedRatingSnapshot[]
+): { rating: number | null; reviewCount: number | null } => {
+  const detected = sources.filter(
+    source => source.rating !== null || source.reviewCount !== null
+  );
+  if (detected.length === 0) {
+    return { rating: null, reviewCount: null };
+  }
+
+  for (let i = 0; i < detected.length; i += 1) {
+    for (let j = i + 1; j < detected.length; j += 1) {
+      if (hasRatingConflict(detected[i], detected[j])) {
+        return { rating: null, reviewCount: null };
+      }
+    }
+  }
+
+  const selected =
+    detected.find(source => source.confidence === "high") ?? detected[0];
+  return {
+    rating: selected.rating,
+    reviewCount: selected.reviewCount,
+  };
+};
+
 const normalizeMeetingPoint = (meetingInfo: string | null) => {
   if (!meetingInfo) {
     return null;
@@ -305,14 +429,11 @@ export const extractLegacyFhProductRecord = (
     )[0] ??
     null;
 
-  const ratingValue = extractAttribute(
-    sourceHtml,
-    /data-legacy=["']rating["'][^>]*>([^<]+)</i
-  );
-  const reviewValue = extractAttribute(
-    sourceHtml,
-    /data-legacy=["']reviews?["'][^>]*>([^<]+)</i
-  );
+  const resolvedRatingSnapshot = resolveRatingSnapshot([
+    extractVisibleRatingSnapshot(input.publicHtml),
+    extractVisibleRatingSnapshot(input.bookingHtml ?? ""),
+    extractStructuredRatingSnapshot(sourceHtml),
+  ]);
 
   const bookingOverviewParagraphs = collectParagraphs(
     firstMatchingSection(input.bookingHtml ?? "", [
@@ -362,15 +483,6 @@ export const extractLegacyFhProductRecord = (
     collectParagraphs(
       firstMatchingSection(sourceHtml, ["cancellation", "policy"])
     )[0] ?? null;
-
-  const parsedRating =
-    ratingValue && Number.isFinite(Number.parseFloat(ratingValue))
-      ? Number.parseFloat(ratingValue)
-      : (input.fallback.ratingSnapshot?.rating ?? null);
-
-  const parsedReviewCount = reviewValue
-    ? Number.parseInt(reviewValue.replace(/[^\d]/g, ""), 10)
-    : (input.fallback.ratingSnapshot?.reviewCount ?? null);
 
   const pricingOptions = collectListItems(
     firstMatchingSection(sourceHtml, ["pricing", "price"])
@@ -424,12 +536,8 @@ export const extractLegacyFhProductRecord = (
       options: pricingOptions,
     },
     ratingSnapshot: {
-      rating: parsedRating,
-      reviewCount:
-        typeof parsedReviewCount === "number" &&
-        Number.isFinite(parsedReviewCount)
-          ? parsedReviewCount
-          : null,
+      rating: resolvedRatingSnapshot.rating,
+      reviewCount: resolvedRatingSnapshot.reviewCount,
     },
     overview: composedOverview.text,
     overviewWordCount: composedOverview.wordCount,
