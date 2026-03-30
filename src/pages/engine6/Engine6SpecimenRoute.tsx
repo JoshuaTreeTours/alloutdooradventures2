@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import Engine6TourPage from "../../engine6/components/Engine6TourPage";
 import { mapViatorToEngine6Tour } from "../../engine6/mapViatorToEngine6Tour";
 import { resolveEngine6ProductCodeForPath } from "../../engine6/routes";
+import { assertEngine6RequestedPathMatchesResolvedTour } from "../../engine6/routeIntegrity";
 import type { Engine6ApiResponse, Engine6Tour } from "../../engine6/types";
 
 export type Engine6SpecimenDebug = {
@@ -607,21 +608,25 @@ const Engine6SpecimenLoadingShell = () => (
 );
 
 export default function Engine6SpecimenRoute() {
-  const requestedProductCode = useMemo(() => {
-    if (typeof window === "undefined") {
-      return resolveEngine6ProductCodeForPath("");
-    }
-
-    return resolveEngine6ProductCodeForPath(window.location.pathname);
-  }, []);
+  const requestedPath = useMemo(
+    () => (typeof window === "undefined" ? "" : window.location.pathname),
+    []
+  );
+  const requestedProductCode = useMemo(
+    () => resolveEngine6ProductCodeForPath(requestedPath),
+    [requestedPath]
+  );
   const apiUrl = useMemo(
-    () => buildEngine6SpecimenApiUrl(requestedProductCode),
+    () =>
+      requestedProductCode
+        ? buildEngine6SpecimenApiUrl(requestedProductCode)
+        : null,
     [requestedProductCode]
   );
   const [state, setState] = useState<Engine6SpecimenViewState>(() => ({
     tour: null,
     error: null,
-    debug: buildInitialEngine6SpecimenDebug(requestedProductCode, apiUrl),
+    debug: buildInitialEngine6SpecimenDebug(requestedProductCode ?? "", apiUrl ?? ""),
     isLoading: true,
   }));
   const showDiagnostics = useMemo(() => {
@@ -636,6 +641,16 @@ export default function Engine6SpecimenRoute() {
 
   useEffect(() => {
     let isDisposed = false;
+
+    if (!requestedProductCode || !apiUrl) {
+      setState({
+        tour: null,
+        error: "Requested path is not mapped to an Engine6 canonical product route.",
+        debug: buildInitialEngine6SpecimenDebug(requestedProductCode ?? "", apiUrl ?? ""),
+        isLoading: false,
+      });
+      return;
+    }
 
     (async () => {
       try {
@@ -687,6 +702,13 @@ export default function Engine6SpecimenRoute() {
         });
 
         if (!isDisposed) {
+          if (next.tour) {
+            assertEngine6RequestedPathMatchesResolvedTour({
+              requestedPath,
+              resolvedTour: next.tour,
+            });
+          }
+
           setState({
             ...next,
             isLoading: false,
@@ -713,7 +735,20 @@ export default function Engine6SpecimenRoute() {
     return () => {
       isDisposed = true;
     };
-  }, [apiUrl, requestedProductCode]);
+  }, [apiUrl, requestedPath, requestedProductCode]);
+
+  if (!requestedProductCode || !apiUrl) {
+    return (
+      <main className="mx-auto max-w-4xl px-6 py-16">
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-6 text-red-950">
+          <h1 className="text-2xl font-semibold">Engine6 route mismatch</h1>
+          <p className="mt-3 text-sm leading-6">
+            Requested path is not mapped to an Engine6 canonical product route.
+          </p>
+        </div>
+      </main>
+    );
+  }
 
   if (state.isLoading) {
     return <Engine6SpecimenLoadingShell />;

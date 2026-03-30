@@ -24,6 +24,40 @@ export const buildEngine6ParentCityToursPath = (canonicalPath: string) => {
   return `/destinations/${parsed.stateSlug}/${parsed.citySlug}/tours`;
 };
 
+export const assertEngine6RequestedPathMatchesResolvedTour = ({
+  requestedPath,
+  resolvedTour,
+}: {
+  requestedPath: string;
+  resolvedTour: Engine6Tour;
+}) => {
+  if (requestedPath !== resolvedTour.canonicalPath) {
+    throw new Error(
+      `Engine6 route integrity mismatch: requestedPath=${requestedPath} resolvedCanonicalPath=${resolvedTour.canonicalPath} productCode=${resolvedTour.productCode}`
+    );
+  }
+};
+
+export const assertEngine6NoCanonicalSlugCollisions = (tours: Engine6Tour[]) => {
+  const productCodeBySlug = new Map<string, string>();
+
+  for (const tour of tours) {
+    const parsed = parseEngine6CanonicalPath(tour.canonicalPath);
+    if (!parsed) {
+      continue;
+    }
+
+    const existingProductCode = productCodeBySlug.get(parsed.tourSlug);
+    if (existingProductCode && existingProductCode !== tour.productCode) {
+      throw new Error(
+        `Engine6 canonical slug collision: slug=${parsed.tourSlug} products=${existingProductCode},${tour.productCode}`
+      );
+    }
+
+    productCodeBySlug.set(parsed.tourSlug, tour.productCode);
+  }
+};
+
 export const validateEngine6CanonicalRouteIntegrity = (tour: Engine6Tour) => {
   const violations: string[] = [];
   if (tour.canonicalPath.includes("/united-states/")) {
