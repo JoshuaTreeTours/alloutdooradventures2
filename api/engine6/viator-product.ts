@@ -105,6 +105,7 @@ const EMPTY_EXTRACTED_PRODUCT = {
     duration?: string;
     admissionNote?: string;
   }>,
+  itinerarySummaryText: null,
   faqs: [] as Array<{ question: string; answer: string }>,
   included: [] as string[],
   requirements: [] as string[],
@@ -259,10 +260,10 @@ const applyResolvedHero = (args: {
     },
     diagnostics: {
       ...args.baseExtraction.diagnostics,
-      heroImageFieldPath: heroDecision.finalCandidate.fieldPath ?? null,
-      heroVariantFieldPath: heroDecision.finalCandidate.variantPath ?? null,
-      selectedHeroWidth: heroDecision.finalCandidate.width ?? null,
-      selectedHeroHeight: heroDecision.finalCandidate.height ?? null,
+      heroImageFieldPath: heroDecision.finalCandidate?.fieldPath ?? null,
+      heroVariantFieldPath: heroDecision.finalCandidate?.variantPath ?? null,
+      selectedHeroWidth: heroDecision.finalCandidate?.width ?? null,
+      selectedHeroHeight: heroDecision.finalCandidate?.height ?? null,
       imageSourceUsed: heroDecision.heroSourceType,
       heroSourceType: heroDecision.heroSourceType,
       finalHeroUrl: heroDecision.heroUrl,

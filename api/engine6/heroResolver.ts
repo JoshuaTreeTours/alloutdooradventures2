@@ -32,10 +32,10 @@ export type Engine6RejectedHeroCandidate = {
 };
 
 export type Engine6ResolvedHero = {
-  heroUrl: string;
+  heroUrl: string | null;
   heroSourceType: Engine6HeroSourceType;
   fallbackTriggered: boolean;
-  finalCandidate: Engine6HeroCandidate;
+  finalCandidate: Engine6HeroCandidate | null;
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
 };
 
@@ -102,19 +102,16 @@ export const resolveProductScopedHero = ({
   currentProductCode,
   currentSourceProductUrl,
   candidates,
-  placeholderUrl = ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
 }: {
   currentProductCode?: string | null;
   currentSourceProductUrl?: string | null;
   candidates: Engine6HeroCandidate[];
-  placeholderUrl?: string;
 }): Engine6ResolvedHero => {
   const normalizedCurrentProductCode = normalizeProductCode(currentProductCode);
   const normalizedCurrentSourceProductUrl = normalizeEngine6SourceProductUrl(
     currentSourceProductUrl
   );
   const rejectedForeignCandidates: Engine6RejectedHeroCandidate[] = [];
-  let placeholderCandidate: Engine6HeroCandidate | null = null;
   const validCandidates: Engine6HeroCandidate[] = [];
 
   for (const candidate of candidates) {
@@ -123,14 +120,6 @@ export const resolveProductScopedHero = ({
     }
 
     if (candidate.sourceType === "approved-placeholder") {
-      if (candidate.url === placeholderUrl && !placeholderCandidate) {
-        placeholderCandidate = {
-          ...candidate,
-          candidateProductCode: normalizeProductCode(currentProductCode),
-          candidateSourceProductUrl:
-            normalizeEngine6SourceProductUrl(currentSourceProductUrl),
-        };
-      }
       continue;
     }
 
@@ -217,24 +206,11 @@ export const resolveProductScopedHero = ({
     };
   }
 
-  const fallbackCandidate =
-    placeholderCandidate ??
-    ({
-      url: placeholderUrl,
-      sourceType: "approved-placeholder",
-      candidateProductCode: normalizedCurrentProductCode,
-      candidateSourceProductUrl: normalizedCurrentSourceProductUrl,
-      fieldPath: "engine6.approved-placeholder",
-      variantPath: "engine6.approved-placeholder",
-      width: null,
-      height: null,
-    } satisfies Engine6HeroCandidate);
-
   return {
-    heroUrl: fallbackCandidate.url,
-    heroSourceType: fallbackCandidate.sourceType,
+    heroUrl: null,
+    heroSourceType: "approved-placeholder",
     fallbackTriggered: true,
-    finalCandidate: fallbackCandidate,
+    finalCandidate: null,
     rejectedForeignCandidates,
   };
 };

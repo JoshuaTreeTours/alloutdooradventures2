@@ -3,7 +3,6 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { renderToString } from "react-dom/server";
 
-import { ENGINE6_APPROVED_PLACEHOLDER_IMAGE } from "../../api/engine6/heroResolver";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import TourCard from "../components/TourCard";
 import {
@@ -288,7 +287,7 @@ describe("engine6 extractor", () => {
     );
   });
 
-  it("never uses /hero.jpg and falls back to the approved placeholder when API hero candidates are invalid", () => {
+  it("never uses /hero.jpg and renders no hero when API candidates are invalid", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "STATIC1",
@@ -302,10 +301,7 @@ describe("engine6 extractor", () => {
       },
     });
 
-    expect(extracted.extracted.heroImageUrl).toBe(
-      ENGINE6_APPROVED_PLACEHOLDER_IMAGE
-    );
-    expect(extracted.extracted.heroImageUrl).not.toContain("/hero.jpg");
+    expect(extracted.extracted.heroImageUrl).toBeNull();
     expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(true);
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual(
@@ -318,7 +314,7 @@ describe("engine6 extractor", () => {
     );
   });
 
-  it("uses the approved placeholder only when product API imagery is absent", () => {
+  it("renders no image only when product API imagery is absent", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "NOPHOTO1",
@@ -331,12 +327,60 @@ describe("engine6 extractor", () => {
       },
     });
 
-    expect(extracted.extracted.heroImageUrl).toBe(
-      ENGINE6_APPROVED_PLACEHOLDER_IMAGE
-    );
+    expect(extracted.extracted.heroImageUrl).toBeNull();
     expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(true);
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
+  });
+
+  it("uses the next valid current-product API image for sunset/sailing when earlier candidates are invalid", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "SUNSET1",
+        productUrl:
+          "https://www.viator.com/tours/San-Diego/Sunset-Sailing-Experience/d736-SUNSET1",
+        title: "Sunset Sailing Experience",
+        description: { text: "Description" },
+        location: { city: "San Diego", state: "California" },
+        priceFrom: "$79.00",
+        media: {
+          images: [
+            {
+              isCover: true,
+              variants: {
+                FULL: {
+                  url: "https://images.example.com/invalid-cover.jpg",
+                  width: 1200,
+                  height: 800,
+                },
+              },
+            },
+            {
+              variants: {
+                FULL: {
+                  url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/dd.jpg",
+                  width: 1024,
+                  height: 683,
+                },
+              },
+            },
+          ],
+        },
+      },
+    });
+
+    expect(extracted.extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/dd.jpg"
+    );
+    expect(extracted.diagnostics.heroFallbackTriggered).toBe(false);
+    expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "https://images.example.com/invalid-cover.jpg",
+          reason: "untrusted-media-host",
+        }),
+      ])
+    );
   });
 });
 
@@ -454,12 +498,12 @@ describe("engine6 mapping/cards/page", () => {
           ...specimenApiPayload.diagnostics,
           imageSourceUsed: "approved-placeholder",
           heroSourceType: "approved-placeholder",
-          finalHeroUrl: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+          finalHeroUrl: null,
           heroFallbackTriggered: true,
         },
         extracted: {
           ...specimenApiPayload.extracted,
-          heroImageUrl: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+          heroImageUrl: null,
         },
       },
       httpStatus: 200,
