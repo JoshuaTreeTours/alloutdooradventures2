@@ -1,0 +1,79 @@
+{
+  "product": {
+    "productCode": "3097SDZSP_2VISIT",
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Zoo-and-Safari-Park-Combo-Tour/d736-3097SDZSP_2VISIT",
+    "title": "San Diego Zoo and Safari Park 2-Visit Pass Ticket",
+    "description": {
+      "text": "View over 4,000 animals roaming in large enclosures on a 2-day visit to the San Diego Zoo and San Diego Zoo Safari Park. This admission ticket allows you to spend two days at the Zoo or Safari Park or split your time between the two. Access to all shows and exhibits and all in-park transportation are included. With mobile tickets, scan your phone for direct entry into the San Diego Zoo and Safari Park."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$76",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 170
+    },
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media-cdn.tripadvisor.com/media/attractions-splice-spp-360x240/17/13/1e/0d.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Visit both the San Diego Zoo and San Diego Zoo Safari Park with one 2-visit pass.",
+      "Choose one visit per park or two visits to the same park within one year of purchase.",
+      "Includes animal exhibits, shows, and in-park transportation such as the Skyfari and guided bus tour.",
+      "Use a mobile ticket for direct entry without exchanging at Will Call."
+    ],
+    "logistics": {
+      "start": {
+        "description": "San Diego Zoo, 2929 Zoo Drive Balboa Park, San Diego, CA 92101"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "San Diego Zoo",
+        "duration": "4 hours",
+        "admissionNote": "Admission Ticket Included"
+      },
+      {
+        "title": "San Diego Zoo Safari Park",
+        "duration": "4 hours",
+        "admissionNote": "Admission Ticket Included"
+      }
+    ],
+    "inclusions": [
+      "One visit to the Zoo and Safari Park, or two visits to either park.",
+      "All animal exhibits and shows.",
+      "Unlimited use of Skyfari Aerial Tram (Zoo), Guided Bus Tour (Zoo), and Africa Tram (Safari Park), subject to availability.",
+      "Ticket valid for one year from original date of purchase."
+    ],
+    "additionalInfo": [
+      "Confirmation is received at booking, or as soon as possible when booked within one day of travel.",
+      "Wheelchair and stroller accessible; service animals allowed.",
+      "Travelers should have a moderate physical fitness level.",
+      "Safari Park is approximately 35 miles from the San Diego Zoo.",
+      "Cancellation: full refund available when canceled at least 24 hours in advance."
+    ],
+    "faqs": [
+      {
+        "question": "How do I redeem my San Diego Zoo and Safari Park Combo Ticket?",
+        "answer": "This is a direct-entry ticket. Take your ticket directly to the turnstiles for admission."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Family-Friendly"
+      },
+      {
+        "label": "Zoo and Aquarium Tickets"
+      },
+      {
+        "label": "Sightseeing"
+      }
+    ]
+  }
+}

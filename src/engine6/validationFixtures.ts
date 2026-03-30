@@ -10,6 +10,7 @@ import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-produc
 import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
+import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -89,5 +90,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Electric-Bike-Tour-Classic-Manhattan-and-more/d687-3156P13",
     rawPayload: specimen3156Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3097SDZSP_2VISIT",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/San-Diego-Zoo-and-Safari-Park-Combo-Tour/d736-3097SDZSP_2VISIT",
+    rawPayload: specimen3097sdzsp2visitPayload as Record<string, unknown>,
   },
 ];
