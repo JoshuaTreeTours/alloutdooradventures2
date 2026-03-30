@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "5584233P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1",
+    "title": "Spectacular Sunset Sail on San Diego Bay",
+    "description": {
+      "text": "Sail San Diego Bay at sunset with a captain who shares local stories and wildlife insight along the way. This approximately two-hour experience offers skyline views from the water, a relaxed pace, and the option to book a private sailing if preferred."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$120.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 22
+    },
+    "duration": "2 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/attractions-splice-spp-360x240/15/07/e5/9d.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Enjoy sunset views of San Diego Bay from the water rather than from shore.",
+      "Sail with a captain who shares area stories and wildlife commentary during the cruise.",
+      "Watch for dolphins, sea lions, and seasonal whale sightings while underway.",
+      "Choose between a shared sail or upgrade to a private option."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Safe Harbor Marina, 955 Harbor Island Dr, San Diego, CA 92101. Meet at Gate 1 Docks A through D and arrive about 20 minutes before departure."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "San Diego",
+        "description": "Pass-by views of downtown San Diego and the city waterfront during the evening sail."
+      },
+      {
+        "title": "San Diego Bay",
+        "description": "Cruise through the bay for skyline and sunset views from open water."
+      },
+      {
+        "title": "Maritime Museum of San Diego",
+        "description": "Pass by the museum area while sailing the central bay route."
+      },
+      {
+        "title": "Coronado Bridge",
+        "description": "See Coronado Bridge from the water as conditions permit."
+      },
+      {
+        "title": "Cabrillo National Monument",
+        "description": "View the Point Loma shoreline area associated with Cabrillo National Monument from the bay."
+      }
+    ],
+    "inclusions": [
+      "Sunset sail on San Diego Bay",
+      "Blankets provided",
+      "Private tour option when selected"
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking.",
+      "Not wheelchair accessible.",
+      "Near public transportation.",
+      "Not recommended for travelers with back problems.",
+      "Most travelers can participate.",
+      "Ages 9 and up.",
+      "Maximum of 6 travelers.",
+      "Bring layers, sensible shoes, and a waterproof shell; sunglasses and sunscreen are recommended.",
+      "You may bring easy-to-handle snacks and drinks."
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point?",
+        "answer": "Meet at Safe Harbor Marina, 955 Harbor Island Dr, San Diego, at Gate 1 Docks A through D. Arrive about 20 minutes before departure."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      },
+      {
+        "label": "Sunset Cruises"
+      }
+    ]
+  }
+}
