@@ -11,6 +11,7 @@ import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-prod
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
+import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -96,5 +97,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/San-Diego/San-Diego-Zoo-and-Safari-Park-Combo-Tour/d736-3097SDZSP_2VISIT",
     rawPayload: specimen3097sdzsp2visitPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "447234P3",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3",
+    rawPayload: specimen447234p3Payload as Record<string, unknown>,
   },
 ];

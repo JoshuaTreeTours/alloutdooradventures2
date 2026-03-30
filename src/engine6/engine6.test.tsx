@@ -35,6 +35,7 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
+  ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -788,6 +789,41 @@ describe("engine6 listing surfaces", () => {
 
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "3097SDZSP_2VISIT"
+    );
+    const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+    expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain(
+      `href=\"/destinations/california/san-diego/tours\"`
+    );
+  });
+
+  it("routes and renders 447234P3 in San Diego with canonical affiliate CTA and image parity", () => {
+    const unifiedTours = getToursByCityUnified("california", "san-diego");
+    const matchingEntries = unifiedTours.filter(
+      entry => entry.tour.productCode === "447234P3"
+    );
+    const engine6Entry = matchingEntries[0];
+
+    expect(matchingEntries).toHaveLength(1);
+    expect(engine6Entry).toBeDefined();
+    expect(engine6Entry?.href).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE);
+    expect(engine6Entry?.tour.destination.city).toBe("San Diego");
+    expect(engine6Entry?.tour.destination.state).toBe("California");
+    expect(engine6Entry?.tour.heroImage).toBe(
+      engine6Entry?.tour.primaryImageUrl
+    );
+    expect(engine6Entry?.tour.heroImage).toContain("http");
+    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
+    expect(engine6Entry?.tour.heroImage).not.toContain(
+      "/images/hiking-hero.jpg"
+    );
+    expect(engine6Entry?.tour.bookingUrl).toContain(
+      "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
+    );
+    expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+
+    const detailTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "447234P3"
     );
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
@@ -1705,6 +1741,20 @@ describe("engine6 route wiring", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
       "path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("registers the San Diego Joshua Tree route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE}"
     );
     const genericRouteIndex = source.indexOf(
       'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'

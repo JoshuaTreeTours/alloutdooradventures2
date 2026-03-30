@@ -1,0 +1,90 @@
+{
+  "product": {
+    "productCode": "447234P3",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3",
+    "title": "Joshua Tree National Park Day Trip from San Diego",
+    "description": {
+      "text": "Take a private day trip from San Diego to Joshua Tree National Park with hotel, airport, or cruise terminal pickup options. The route includes time at the Joshua Tree National Park Visitor Center and park landmarks including Skull Rock, Keys View, Jumbo Rocks, and Hidden Valley, with flexibility for short walks based on your group."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "fromPrice": 1750,
+    "priceFrom": "$1,750",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 3
+    },
+    "duration": "10 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/12/89/a7/caption.jpg?w=1600&h=900&s=1"
+        }
+      ]
+    },
+    "highlights": [
+      "Private full-day Joshua Tree trip departing from San Diego with direct pickup.",
+      "Visit key Joshua Tree locations including the Visitor Center, Skull Rock, Keys View, and Hidden Valley.",
+      "Flexible pacing for photo stops and short walks during the park drive.",
+      "Round-trip transportation in an air-conditioned vehicle with bottled water and snacks included."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup in San Diego (including select hotels, airport, and cruise terminal options)."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Joshua Tree National Park Visitor Center",
+        "description": "Begin at the visitor center for maps, restrooms, and orientation before entering the park."
+      },
+      {
+        "title": "Joshua Tree National Park",
+        "description": "Drive through the park with stops for views, photos, and optional short walks.",
+        "duration": "3 hours"
+      },
+      {
+        "title": "Skull Rock",
+        "description": "See the iconic granite formation shaped by desert weathering."
+      },
+      {
+        "title": "Keys View",
+        "description": "Panoramic overlook of the Coachella Valley and San Andreas Fault zone."
+      },
+      {
+        "title": "Hidden Valley",
+        "description": "Popular one-mile loop area among large boulders, suitable for a short stop."
+      }
+    ],
+    "inclusions": [
+      "Entrance fee",
+      "Air-conditioned vehicle",
+      "Private transportation",
+      "Bottled water",
+      "Snacks"
+    ],
+    "additionalInfo": [
+      "Public transportation options are available nearby.",
+      "Suitable for most travelers.",
+      "This is a private tour/activity for your group only.",
+      "For a full refund, cancel at least 24 hours before the scheduled departure time.",
+      "If canceled due to poor weather, an alternate date or full refund is offered."
+    ],
+    "faqs": [
+      {
+        "question": "Where can pickup happen in San Diego?",
+        "answer": "Pickup options include select downtown-area hotels, the San Diego cruise terminal, and airport-area pickup points shown at booking."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Day Trips"
+      },
+      {
+        "label": "Private Sightseeing Tours"
+      }
+    ]
+  }
+}
