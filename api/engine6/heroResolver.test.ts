@@ -1,9 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import {
-  ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
-  resolveProductScopedHero,
-} from "./heroResolver";
+import { resolveProductScopedHero } from "./heroResolver";
 
 describe("engine6 hero resolver", () => {
   it("accepts the current product primary API image before any placeholder", () => {
@@ -20,7 +17,7 @@ describe("engine6 hero resolver", () => {
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
         },
         {
-          url: ENGINE6_APPROVED_PLACEHOLDER_IMAGE,
+          url: "/images/hiking-hero.jpg",
           sourceType: "approved-placeholder",
         },
       ],
@@ -56,7 +53,7 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
+    expect(resolved.heroUrl).toBeNull();
     expect(resolved.heroSourceType).toBe("approved-placeholder");
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
@@ -155,12 +152,49 @@ describe("engine6 hero resolver", () => {
       ],
     });
 
-    expect(resolved.heroUrl).toBe(ENGINE6_APPROVED_PLACEHOLDER_IMAGE);
+    expect(resolved.heroUrl).toBeNull();
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           url: "https://images.example.com/media/product.jpg",
+          reason: "untrusted-media-host",
+        }),
+      ])
+    );
+  });
+
+  it("uses a later valid candidate when earlier product-scoped candidates are rejected", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "SUNSET1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+      candidates: [
+        {
+          url: "https://images.example.com/broken.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "SUNSET1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+        },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "SUNSET1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+    );
+    expect(resolved.fallbackTriggered).toBe(false);
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "https://images.example.com/broken.jpg",
           reason: "untrusted-media-host",
         }),
       ])
