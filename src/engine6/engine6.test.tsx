@@ -31,6 +31,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
@@ -1205,7 +1206,15 @@ describe("engine6 image parity guardrails", () => {
     return { stateSlug, citySlug };
   };
 
-  it.each(["63657P1", "5119P13", "32779P2", "60136P1", "411138P3", "414460P1"])(
+  it.each([
+    "63657P1",
+    "5119P13",
+    "32779P2",
+    "60136P1",
+    "411138P3",
+    "414460P1",
+    "3156P13",
+  ])(
     "keeps detail, city card, filtered card, and related slider engine6 cards aligned for %s",
     productCode => {
       const tour = engine6ResolvedTours.find(
@@ -1659,6 +1668,20 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
+  it("registers the Best of NYC electric bike replacement route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
   it("keeps 411138P3 mapped to the Anchorage private canonical route", () => {
     const anchorageTour = engine6ResolvedTours.find(
       tour => tour.productCode === "411138P3"
@@ -1725,6 +1748,26 @@ describe("engine6 route wiring", () => {
     );
     expect(
       ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE)
+    ).toBe(true);
+  });
+
+  it("replaces 3156P13 in-place at the existing Best of NYC slug and preserves /book CTA", () => {
+    const nycElectricBikeTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "3156P13"
+    );
+    expect(nycElectricBikeTour).toBeDefined();
+    expect(nycElectricBikeTour?.canonicalPath).toBe(
+      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168"
+    );
+    expect(nycElectricBikeTour?.bookingUrl).toBe(
+      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168/book"
+    );
+    expect(nycElectricBikeTour?.meetingPointText).toContain("79 Chambers St");
+    expect(nycElectricBikeTour?.itinerary.length).toBeGreaterThanOrEqual(2);
+    expect(
+      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(
+        ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE
+      )
     ).toBe(true);
   });
 
