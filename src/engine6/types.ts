@@ -103,6 +103,7 @@ export type Engine6Tour = {
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string;
+  durationText?: string | null;
   overviewText: string | null;
   highlights: string[];
   itinerary: Engine6ItineraryItem[];

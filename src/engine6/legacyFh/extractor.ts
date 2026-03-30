@@ -75,14 +75,6 @@ const firstMatchingSection = (html: string, keys: string[]) => {
   return null;
 };
 
-const pickCanonicalHero = (heroImageUrl: string | null, galleryImages: string[]) => {
-  if (heroImageUrl) {
-    return heroImageUrl;
-  }
-
-  return galleryImages.find(url => /^https?:\/\//i.test(url)) ?? null;
-};
-
 const dedupeUrls = (urls: Array<string | null | undefined>) =>
   Array.from(new Set(urls.filter((url): url is string => Boolean(url))));
 
@@ -98,6 +90,57 @@ const parsePrice = (label: string | null) => {
 
   const amount = Number.parseFloat(match[1].replace(/,/g, ""));
   return Number.isFinite(amount) ? amount : null;
+};
+
+const normalizeMeetingPoint = (meetingInfo: string | null) => {
+  if (!meetingInfo) {
+    return null;
+  }
+
+  return meetingInfo
+    .replace(/^meeting point\s*:\s*/i, "")
+    .replace(/^meeting point\s*-\s*/i, "")
+    .trim();
+};
+
+const normalizeHighlights = (highlights: string[]) =>
+  highlights
+    .map(value =>
+      value
+        .replace(/^[\u2022•\-*]+\s*/, "")
+        .replace(/\s+/g, " ")
+        .trim()
+    )
+    .filter(Boolean);
+
+const parseDuration = (sourceHtml: string) => {
+  const durationSection = firstMatchingSection(sourceHtml, ["duration", "details"]);
+  const sectionParagraph = collectParagraphs(durationSection)[0] ?? null;
+  const durationText =
+    sectionParagraph ??
+    extractAttribute(sourceHtml, /data-legacy=["']duration["'][^>]*>([^<]+)</i) ??
+    extractAttribute(sourceHtml, /Duration\s*:\s*([^<\n]+)(?:<|$)/i) ??
+    null;
+
+  return durationText?.trim() ?? null;
+};
+
+const selectDeterministicHeroImage = (images: string[]) => {
+  const preferredPrimary = images.find(url =>
+    /(cover|primary|hero|main)/i.test(url)
+  );
+  if (preferredPrimary) {
+    return preferredPrimary;
+  }
+
+  const preferredAction = images.find(url =>
+    /(bike|cycling|action|ride|trail|scenic)/i.test(url)
+  );
+  if (preferredAction) {
+    return preferredAction;
+  }
+
+  return images[0] ?? null;
 };
 
 export const extractLegacyFhProductRecord = (
@@ -126,7 +169,10 @@ export const extractLegacyFhProductRecord = (
     /^https?:\/\//i.test(url)
   );
 
-  const heroImageUrl = pickCanonicalHero(input.fallback.heroImageUrl ?? heroImageFromMeta, galleryImages);
+  const heroImageUrl =
+    selectDeterministicHeroImage(galleryImages) ??
+    input.fallback.heroImageUrl ??
+    heroImageFromMeta;
 
   const priceLabel =
     extractAttribute(sourceHtml, /data-legacy=["']price["'][^>]*>\s*([^<]+)\s*</i) ??
@@ -140,8 +186,10 @@ export const extractLegacyFhProductRecord = (
     firstMatchingSection(sourceHtml, ["overview", "activity-details", "description"])
   );
 
-  const highlights = collectListItems(
+  const highlights = normalizeHighlights(
+    collectListItems(
     firstMatchingSection(sourceHtml, ["highlights", "top-highlights"])
+    )
   );
 
   const itinerary = collectItinerary(
@@ -160,9 +208,10 @@ export const extractLegacyFhProductRecord = (
     firstMatchingSection(sourceHtml, ["additional-info", "requirements"])
   );
 
-  const meetingInfo =
+  const meetingInfo = normalizeMeetingPoint(
     collectParagraphs(firstMatchingSection(sourceHtml, ["meeting", "details"]))[0] ??
-    null;
+      null
+  );
 
   const cancellationSummary =
     collectParagraphs(firstMatchingSection(sourceHtml, ["cancellation", "policy"]))[0] ??
@@ -177,7 +226,27 @@ export const extractLegacyFhProductRecord = (
     ? Number.parseInt(reviewValue.replace(/[^\d]/g, ""), 10)
     : (input.fallback.ratingSnapshot?.reviewCount ?? null);
 
-  const priceAmount = parsePrice(priceLabel);
+  const pricingOptions = collectListItems(
+    firstMatchingSection(sourceHtml, ["pricing", "price"])
+  )
+    .map(option => ({
+      label: option,
+      amount: parsePrice(option),
+    }))
+    .filter(
+      (
+        option
+      ): option is {
+        label: string;
+        amount: number;
+      } => typeof option.amount === "number" && Number.isFinite(option.amount)
+    );
+  const priceAmountFromOptions =
+    pricingOptions.length > 0
+      ? Math.min(...pricingOptions.map(option => option.amount))
+      : null;
+  const priceAmount = priceAmountFromOptions ?? parsePrice(priceLabel);
+  const durationText = parseDuration(sourceHtml);
 
   return {
     slug: input.slug,
@@ -190,7 +259,9 @@ export const extractLegacyFhProductRecord = (
     priceSnapshot: {
       amount: priceAmount,
       currency: "USD",
-      label: priceLabel,
+      label:
+        priceAmount !== null ? `From $${priceAmount.toFixed(0)}` : priceLabel,
+      options: pricingOptions,
     },
     ratingSnapshot: {
       rating: parsedRating,
@@ -205,6 +276,7 @@ export const extractLegacyFhProductRecord = (
     inclusions,
     exclusions,
     meetingInfo,
+    durationText,
     additionalInfo,
     cancellationSummary,
     sourceType: "legacy_fh_migrated",

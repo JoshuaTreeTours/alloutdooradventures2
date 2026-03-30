@@ -29,7 +29,40 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(record.overview).toContain("Guided bike ride");
     expect(record.highlights).toContain("Bethesda Terrace photo stop");
     expect(record.priceSnapshot.amount).toBe(85);
-    expect(record.meetingInfo).toContain("Meeting point");
+    expect(record.priceSnapshot.options[0]?.amount).toBe(85);
+    expect(record.meetingInfo).toBe("Midtown Manhattan");
+  });
+
+  it("selects lowest extracted bookable price and cleans meeting point prefix", () => {
+    const record = extractLegacyFhProductRecord({
+      slug: "central-park-bike-tours-16628",
+      canonicalPath: CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH,
+      bookingPath: CENTRAL_PARK_BIKE_TOURS_BOOK_PATH,
+      operator: "Unlimited Biking",
+      publicHtml:
+        "<main><h1>Central Park Bike Tours</h1><section data-legacy=\"meeting\"><p>Meeting point: 56 W 56th St, New York, NY 10019</p></section></main>",
+      bookingHtml:
+        "<main><section data-fh=\"pricing\"><ul><li>Adults: $95</li><li>Youth: $75</li><li>VIP: $120</li></ul></section></main>",
+      fallback: { title: "Central Park Bike Tours" },
+    });
+
+    expect(record.priceSnapshot.amount).toBe(75);
+    expect(record.priceSnapshot.label).toBe("From $75");
+    expect(record.meetingInfo).toBe("56 W 56th St, New York, NY 10019");
+  });
+
+  it("uses deterministic hero selection priority", () => {
+    const record = extractLegacyFhProductRecord({
+      slug: "central-park-bike-tours-16628",
+      canonicalPath: CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH,
+      bookingPath: CENTRAL_PARK_BIKE_TOURS_BOOK_PATH,
+      operator: "Unlimited Biking",
+      publicHtml:
+        "<main><h1>Central Park Bike Tours</h1><img src=\"https://cdn.example.com/z-bike-action.jpg\" /><img src=\"https://cdn.example.com/a-cover-primary.jpg\" /><img src=\"https://cdn.example.com/m-gallery.jpg\" /></main>",
+      fallback: { title: "Central Park Bike Tours" },
+    });
+
+    expect(record.heroImageUrl).toBe("https://cdn.example.com/a-cover-primary.jpg");
   });
 
   it("normalizes the migrated specimen into a reusable record", () => {
@@ -42,6 +75,7 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(centralParkBikeToursMigratedRecord.bookingPath).toBe(
       "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book"
     );
+    expect(centralParkBikeToursMigratedRecord.durationText).toBe("2 hours");
     expect(centralParkBikeToursMigratedRecord.itinerary.length).toBeGreaterThan(
       1
     );
@@ -53,9 +87,20 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.bookingUrl).toBe(
       "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book"
     );
+    expect(tour.durationText).toBe("2 hours");
     expect(tour.canonicalPath).toBe(CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH);
     expect(tour.diagnostics.source).toBe("legacy-fh-migrated");
     expect(tour.itinerary.length).toBeGreaterThan(1);
+  });
+
+  it("enforces /book preservation for migrated records", () => {
+    expect(() =>
+      mapLegacyFhRecordToEngine6Tour({
+        ...centralParkBikeToursMigratedRecord,
+        bookingPath:
+          "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/checkout",
+      })
+    ).toThrow(/must preserve \/book endpoint/i);
   });
 
   it("renders the migrated slug in Engine6 layout instead of legacy template", () => {
@@ -90,6 +135,8 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(html).toContain(
       'href="/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book"'
     );
+    expect(html).toContain("Duration:");
+    expect(html).toContain("data-testid=\"engine6-itinerary-timeline\"");
     expect(html).not.toContain("Prices starting at");
   });
 });

@@ -83,6 +83,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.aggregateRating === "number" &&
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
+  const hasDuration = Boolean(tour.durationText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
@@ -192,6 +193,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </div>
 
                 <div className="space-y-4">
+                  {hasDuration ? (
+                    <p>
+                      <strong>Duration:</strong> {tour.durationText}
+                    </p>
+                  ) : null}
                   {hasMeetingPoint ? (
                     <p>
                       <strong>Meeting point:</strong> {tour.meetingPointText}

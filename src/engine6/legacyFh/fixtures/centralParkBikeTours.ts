@@ -10,6 +10,8 @@ const CENTRAL_PARK_BIKE_TOURS_PUBLIC_HTML = `
 <main>
   <meta property="og:image" content="https://cdn.filestackcontent.com/5lZqYu5ZTGK2gk66BLVt" />
   <h1>Central Park Bike Tours</h1>
+  <img src="https://cdn.filestackcontent.com/cpbike-cover-primary.jpg" />
+  <img src="https://cdn.filestackcontent.com/cpbike-scenic-action.jpg" />
   <div data-legacy="price">From $85</div>
   <div data-legacy="rating">4.3</div>
   <div data-legacy="reviews">390 reviews</div>
@@ -40,6 +42,9 @@ const CENTRAL_PARK_BIKE_TOURS_PUBLIC_HTML = `
   </section>
   <section data-legacy="meeting">
     <p>Meeting point: Unlimited Biking, 56 W 56th St, New York, NY 10019</p>
+  </section>
+  <section data-legacy="duration">
+    <p>2 hours</p>
   </section>
   <section data-legacy="additional-info">
     <ul>

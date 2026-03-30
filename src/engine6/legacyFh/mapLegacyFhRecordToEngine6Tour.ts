@@ -4,6 +4,12 @@ import type { LegacyFhMigratedProductRecord } from "./types";
 export const mapLegacyFhRecordToEngine6Tour = (
   record: LegacyFhMigratedProductRecord
 ): Engine6Tour => {
+  if (!record.bookingPath.endsWith("/book")) {
+    throw new Error(
+      `Legacy FH migrated booking path must preserve /book endpoint: ${record.bookingPath}`
+    );
+  }
+
   const [, stateSlug = "", citySlug = ""] =
     /^\/destinations\/([^/]+)\/([^/]+)\/tours\//.exec(record.canonicalPath) ?? [];
   const city = citySlug
@@ -45,6 +51,7 @@ export const mapLegacyFhRecordToEngine6Tour = (
     aggregateRating: record.ratingSnapshot.rating,
     reviewCount: record.ratingSnapshot.reviewCount,
     meetingPointText: record.meetingInfo ?? "See booking details",
+    durationText: record.durationText,
     overviewText,
     highlights,
     itinerary: record.itinerary.map(stop => ({

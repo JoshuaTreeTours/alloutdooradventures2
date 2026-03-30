@@ -2,6 +2,10 @@ export type LegacyFhPriceSnapshot = {
   amount: number | null;
   currency: string;
   label: string | null;
+  options: Array<{
+    label: string;
+    amount: number;
+  }>;
 };
 
 export type LegacyFhRatingSnapshot = {
@@ -30,6 +34,7 @@ export type LegacyFhMigratedProductRecord = {
   inclusions: string[];
   exclusions: string[];
   meetingInfo: string | null;
+  durationText: string | null;
   additionalInfo: string[];
   cancellationSummary: string | null;
   sourceType: "legacy_fh_migrated";

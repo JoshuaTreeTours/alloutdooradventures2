@@ -214,6 +214,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         areaServed: { "@id": destinationPlaceId },
         offers: { "@id": offerNode["@id"] },
         itinerary,
+        ...(tour.durationText ? { duration: tour.durationText } : {}),
         ...(categoryLabel ? { touristType: categoryLabel } : {}),
         ...(tour.meetingPointText
           ? {
