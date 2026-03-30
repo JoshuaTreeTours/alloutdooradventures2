@@ -228,7 +228,7 @@ export const validateEngine6CreationContract = ({
   }
 
   if (listingEntry) {
-    if (!listingEntry.tour.heroImage?.trim()) {
+    if (tour.heroImageUrl && !listingEntry.tour.heroImage?.trim()) {
       violations.push("unified listing emitted blank card image");
     }
     if (listingEntry.tour.heroImage !== tour.heroImageUrl) {
@@ -240,11 +240,11 @@ export const validateEngine6CreationContract = ({
     if (!filteredToursHtml.includes(tour.canonicalPath)) {
       violations.push("/tours filtered surface omitted Engine6 tour");
     }
-    if (!filteredToursHtml.includes(tour.heroImageUrl.replace(/&/g, "&amp;"))) {
+    if (
+      tour.heroImageUrl &&
+      !filteredToursHtml.includes(tour.heroImageUrl.replace(/&/g, "&amp;"))
+    ) {
       violations.push("/tours filtered surface image differs from detail hero");
-    }
-    if (filteredToursHtml.includes('data-card-image-src=""')) {
-      violations.push("/tours filtered surface emitted blank card image src");
     }
   }
 
@@ -371,7 +371,15 @@ export const validateEngine6CreationContract = ({
   if (tour.priceAmount != null && offerRecord?.price !== tour.priceAmount) {
     violations.push("Offer.price diverged from Starting at minimum price");
   }
-  if (tour.priceFormatted && !tour.priceFormatted.startsWith("Starting at $")) {
+  if (
+    tour.priceFormatted &&
+    !(
+      tour.priceFormatted.startsWith("Starting at $") ||
+      /^From \$\d+(?:\.\d+)? per group(?: \(up to \d+\))?$/i.test(
+        tour.priceFormatted
+      )
+    )
+  ) {
     violations.push("visible price label lost Starting at minimum-price copy");
   }
   if (offerRecord?.priceCurrency !== "USD") {

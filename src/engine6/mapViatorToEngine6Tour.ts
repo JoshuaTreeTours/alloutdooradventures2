@@ -150,9 +150,15 @@ export const mapViatorToEngine6Tour = (
   ].filter((value): value is string => Boolean(value));
 
   const formattedStartingPrice =
-    typeof payload.extracted.priceAmount === "number"
-      ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
-      : payload.extracted.priceFormatted?.replace(/^From\s+/i, "Starting at ");
+    payload.extracted.priceFormatted &&
+    /per\s+group|private/i.test(payload.extracted.priceFormatted)
+      ? payload.extracted.priceFormatted
+      : typeof payload.extracted.priceAmount === "number"
+        ? `Starting at $${payload.extracted.priceAmount.toFixed(0)}`
+        : payload.extracted.priceFormatted?.replace(
+            /^From\s+/i,
+            "Starting at "
+          );
 
   return {
     productCode: payload.rawProductCode,

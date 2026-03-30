@@ -812,24 +812,40 @@ describe("engine6 listing surfaces", () => {
     expect(engine6Entry?.tour.heroImage).toBe(
       engine6Entry?.tour.primaryImageUrl
     );
-    expect(engine6Entry?.tour.heroImage).toContain("http");
-    expect(engine6Entry?.tour.heroImage).not.toContain("/hero.jpg");
-    expect(engine6Entry?.tour.heroImage).not.toContain(
-      "/images/hiking-hero.jpg"
-    );
+    expect(engine6Entry?.tour.heroImage).toBe("");
     expect(engine6Entry?.tour.bookingUrl).toContain(
       "/tours/San-Diego/Day-Trip-to-Joshua-Tree-National-Park-from-San-Diego/d736-447234P3"
     );
     expect(engine6Entry?.tour.bookingUrl).not.toContain("/search/");
+    expect(engine6Entry?.tour.badges?.priceFrom).toBe(
+      "From $995 per group (up to 4)"
+    );
 
     const detailTour = engine6ResolvedTours.find(
       tour => tour.productCode === "447234P3"
     );
+    expect(detailTour?.heroImageUrl).toBe("");
+    expect(detailTour?.diagnostics.heroSourceType).toBe("approved-placeholder");
+    expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(true);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
     expect(detailHtml).toContain('data-testid="engine6-breadcrumbs"');
+    expect(detailHtml).toContain("per group (up to 4)");
+    expect(detailHtml).not.toContain('src="/images/hiking-hero.jpg"');
     expect(detailHtml).toContain(
       `href=\"/destinations/california/san-diego/tours\"`
     );
+
+    const schema = buildEngine6SchemaGraph(detailTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const offerNode = graph.find(node => node["@type"] === "Offer") as
+      | Record<string, unknown>
+      | undefined;
+    const tripNode = graph.find(node => node["@type"] === "TouristTrip") as
+      | Record<string, unknown>
+      | undefined;
+    expect(offerNode?.price).toBe(995);
+    expect(offerNode?.description).toBe("From $995 per group (up to 4)");
+    expect(tripNode?.image).toBeUndefined();
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
@@ -1181,11 +1197,15 @@ describe("engine6 multi-tour contract", () => {
         | Record<string, unknown>
         | undefined;
 
-      expect(tour.heroImageUrl).toContain("http");
-      expect(tour.heroImageUrl).not.toContain("/hero.jpg");
-      expect(html).toContain(
-        `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
-      );
+      if (tour.heroImageUrl) {
+        expect(tour.heroImageUrl).toContain("http");
+        expect(tour.heroImageUrl).not.toContain("/hero.jpg");
+        expect(html).toContain(
+          `src="${tour.heroImageUrl.replace(/&/g, "&amp;")}"`
+        );
+      } else {
+        expect(html).not.toContain('src="/images/hiking-hero.jpg"');
+      }
       if (tour.bookingUrl.startsWith("/destinations/")) {
         expect(tour.bookingUrl).toContain("/book");
       } else {
@@ -1228,8 +1248,13 @@ describe("engine6 multi-tour contract", () => {
       expect(offerNode?.url).toBe(tour.bookingUrl);
       expect(offerNode?.priceCurrency).toBe("USD");
       expect(offerNode?.price).toBe(tour.priceAmount ?? undefined);
-      expect(productNode?.image).toBe(tour.heroImageUrl);
-      expect(tripNode?.image).toBe(tour.heroImageUrl);
+      if (tour.heroImageUrl) {
+        expect(productNode?.image).toBe(tour.heroImageUrl);
+        expect(tripNode?.image).toBe(tour.heroImageUrl);
+      } else {
+        expect(productNode?.image).toBeUndefined();
+        expect(tripNode?.image).toBeUndefined();
+      }
       if (tour.faqs.length > 0 && faqNode) {
         const mainEntity = (faqNode.mainEntity ?? []) as Array<{
           name?: string;

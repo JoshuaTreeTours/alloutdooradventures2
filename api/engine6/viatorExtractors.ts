@@ -213,7 +213,8 @@ const parsePriceAmount = (value: unknown): number | null => {
     return null;
   }
 
-  const numeric = Number(raw.replace(/[^\d.]/g, ""));
+  const firstNumericToken = raw.match(/\d[\d,]*(?:\.\d+)?/)?.[0] ?? "";
+  const numeric = Number(firstNumericToken.replace(/,/g, ""));
   return Number.isFinite(numeric) && numeric > 0 ? numeric : null;
 };
 
@@ -605,6 +606,28 @@ const extractPlaybookPrice = (product: RecordLike): PriceResult => {
     path: null,
     rawValue: null,
   };
+};
+
+const buildPriceLabel = ({
+  amount,
+  rawValue,
+}: {
+  amount: number | null;
+  rawValue: string | number | null;
+}) => {
+  if (amount === null) {
+    return null;
+  }
+
+  const rawText =
+    typeof rawValue === "string" ? rawValue.toLowerCase().trim() : "";
+  const upToMatch = rawText.match(/\(up to [^)]+\)/i)?.[0] ?? "";
+
+  if (rawText.includes("per group")) {
+    return `From $${amount.toFixed(0)} per group${upToMatch ? ` ${upToMatch}` : ""}`;
+  }
+
+  return `From $${amount.toFixed(0)}`;
 };
 
 const extractPlaybookRating = (product: RecordLike): NumericResult => {
@@ -1179,8 +1202,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       heroImageUrl: heroDecision.heroUrl ?? null,
       productUrl: productUrl.value,
       priceAmount: price.amount,
-      priceFormatted:
-        price.amount !== null ? `From $${price.amount.toFixed(0)}` : null,
+      priceFormatted: buildPriceLabel({
+        amount: price.amount,
+        rawValue: price.rawValue,
+      }),
       aggregateRating: normalizedAggregateRating,
       reviewCount: reviewCount.value,
       meetingPointText: meetingPoint.value,
