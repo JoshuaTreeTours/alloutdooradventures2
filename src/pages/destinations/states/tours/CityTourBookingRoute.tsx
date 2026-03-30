@@ -15,6 +15,7 @@ import {
   getCityTourDetailPath,
   getTourBookingPath,
   getTourBySlugs,
+  getLegacyTourBySlugs,
   getToursByCity,
 } from "../../../../data/tours";
 import {
@@ -101,9 +102,21 @@ export default function CityTourBookingRoute({
   }
 
   const isFlagstaff = state.slug === "arizona" && city.slug === "flagstaff";
-  const tour = isFlagstaff
+  const resolvedTour = isFlagstaff
     ? getFlagstaffTourBySlug(params.tourSlug)
     : getTourBySlugs(state.slug, city.slug, params.tourSlug);
+
+  const legacyFareHarborTour = isFlagstaff
+    ? null
+    : getLegacyTourBySlugs(state.slug, city.slug, params.tourSlug);
+
+  const tour =
+    !isFlagstaff &&
+    resolvedTour?.engine === "engine6" &&
+    resolvedTour.bookingUrl.startsWith("/destinations/") &&
+    legacyFareHarborTour?.bookingProvider === "fareharbor"
+      ? legacyFareHarborTour
+      : resolvedTour;
 
   if (!tour) {
     return (

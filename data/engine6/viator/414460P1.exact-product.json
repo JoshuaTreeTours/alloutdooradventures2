@@ -1,0 +1,65 @@
+{
+  "productCode": "414460P1",
+  "productUrl": "https://www.viator.com/tours/New-York-City/Vip-Central-Park-Pedicab-Guided-Tours/d687-414460P1",
+  "title": "VIP Central Park Pedicab Guided Tour",
+  "description": {
+    "text": "<p>See the top landmarks of Central Park from the comfort of a pedicab with a licensed local guide. Cover more of the park in less time while stopping for photos at iconic locations including Bethesda Fountain, Bow Bridge, Strawberry Fields, and the Alice in Wonderland statue.</p>"
+  },
+  "highlights": [
+    "Explore Central Park by pedicab with a licensed guide",
+    "Stop for photos at Bethesda Fountain, Bow Bridge, and Strawberry Fields",
+    "Learn film, history, and architecture stories throughout the ride",
+    "Perfect for couples, families, and first-time New York visitors"
+  ],
+  "additionalInfo": [
+    "Confirmation will be received at time of booking",
+    "Not wheelchair accessible",
+    "Near public transportation",
+    "Most travelers can participate"
+  ],
+  "location": {
+    "city": "New York City",
+    "state": "New York"
+  },
+  "priceFrom": "$50.00",
+  "media": {
+    "images": [
+      {
+        "isCover": true,
+        "variants": {
+          "FULL": {
+            "url": "https://www.filepicker.io/api/file/uC6eNRvDSXmFXzotTTGk",
+            "width": 900,
+            "height": 600
+          }
+        }
+      }
+    ]
+  },
+  "reviews": {
+    "combinedAverageRating": 5,
+    "totalReviews": 525
+  },
+  "logistics": {
+    "start": {
+      "description": "10 Central Park S, New York, NY 10019, USA. Meet near the south side of Central Park close to major subway lines."
+    }
+  },
+  "itineraryItems": [
+    {
+      "title": "Bethesda Fountain",
+      "description": "Photo stop and historical narration",
+      "duration": "15 minutes"
+    },
+    {
+      "title": "Bow Bridge",
+      "description": "Scenic stop featured in many films",
+      "duration": "10 minutes"
+    },
+    {
+      "title": "Strawberry Fields, John Lennon Memorial",
+      "description": "Hear stories about the memorial and nearby landmarks",
+      "duration": "10 minutes"
+    }
+  ]
+}

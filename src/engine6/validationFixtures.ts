@@ -8,6 +8,7 @@ import specimen100569Payload from "../../data/engine6/viator/100569P5.exact-prod
 import specimen411138Payload from "../../data/engine6/viator/411138P3.exact-product.json";
 import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-product.json";
 import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-product.json";
+import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -75,5 +76,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Brooklyn-Bridge-Waterfront-Bike-Tour/d687-233384P2",
     rawPayload: specimen233384Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "414460P1",
+    publicUrl:
+      "https://www.viator.com/tours/New-York-City/Vip-Central-Park-Pedicab-Guided-Tours/d687-414460P1",
+    rawPayload: specimen414460Payload as Record<string, unknown>,
   },
 ];

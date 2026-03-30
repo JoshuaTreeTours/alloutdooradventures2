@@ -163,6 +163,44 @@ export const tours: Tour[] = [
     })
   );
 
+
+const legacyTours: Tour[] = [
+  ...toursGenerated,
+  ...manualTours,
+  ...flagstaffTours,
+  ...sedonaTours,
+  ...europeTours,
+  ...australiaTours,
+]
+  .filter(
+    tour =>
+      !isTourRemoved({
+        tourId: getEngine1FareHarborItemId(tour),
+        operatorName: tour.operator,
+      })
+  )
+  .map(tour =>
+    applyTourPricing({
+      ...tour,
+      destination: {
+        ...tour.destination,
+        country: tour.destination.country || "United States",
+      },
+    })
+  );
+
+export const getLegacyTourBySlugs = (
+  stateSlug: string,
+  citySlug: string,
+  tourSlug: string
+) =>
+  legacyTours.find(
+    tour =>
+      tour.destination.stateSlug === stateSlug &&
+      tour.destination.citySlug === citySlug &&
+      tour.slug === tourSlug
+  );
+
 const tourDescriptionCounts = tours.reduce<Map<string, number>>(
   (counts, tour) => {
     const key = normalizeDescriptionForDedupe(extractTourBaseDescription(tour));
