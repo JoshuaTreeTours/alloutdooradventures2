@@ -10,6 +10,11 @@ import {
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import { getLegacyFhMigratedTourBySlugs } from "./registry";
 import CityTourDetailRoute from "../../pages/destinations/states/tours/CityTourDetailRoute";
+import {
+  MIAMI_MIGRATION_SLUGS,
+  miamiLegacyMigratedRecords,
+} from "./fixtures/miamiLegacyBatch";
+import { getToursByCity, getToursByCityUnified } from "../../data/tours";
 
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
@@ -40,9 +45,9 @@ describe("legacy FH -> Engine6 converter", () => {
       bookingPath: CENTRAL_PARK_BIKE_TOURS_BOOK_PATH,
       operator: "Unlimited Biking",
       publicHtml:
-        "<main><h1>Central Park Bike Tours</h1><section data-legacy=\"meeting\"><p>Meeting point: 56 W 56th St, New York, NY 10019</p></section></main>",
+        '<main><h1>Central Park Bike Tours</h1><section data-legacy="meeting"><p>Meeting point: 56 W 56th St, New York, NY 10019</p></section></main>',
       bookingHtml:
-        "<main><section data-fh=\"pricing\"><ul><li>Adults: $95</li><li>Youth: $75</li><li>VIP: $120</li></ul></section></main>",
+        '<main><section data-fh="pricing"><ul><li>Adults: $95</li><li>Youth: $75</li><li>VIP: $120</li></ul></section></main>',
       fallback: { title: "Central Park Bike Tours" },
     });
 
@@ -58,11 +63,13 @@ describe("legacy FH -> Engine6 converter", () => {
       bookingPath: CENTRAL_PARK_BIKE_TOURS_BOOK_PATH,
       operator: "Unlimited Biking",
       publicHtml:
-        "<main><h1>Central Park Bike Tours</h1><img src=\"https://cdn.example.com/z-bike-action.jpg\" /><img src=\"https://cdn.example.com/a-cover-primary.jpg\" /><img src=\"https://cdn.example.com/m-gallery.jpg\" /></main>",
+        '<main><h1>Central Park Bike Tours</h1><img src="https://cdn.example.com/z-bike-action.jpg" /><img src="https://cdn.example.com/a-cover-primary.jpg" /><img src="https://cdn.example.com/m-gallery.jpg" /></main>',
       fallback: { title: "Central Park Bike Tours" },
     });
 
-    expect(record.heroImageUrl).toBe("https://cdn.example.com/a-cover-primary.jpg");
+    expect(record.heroImageUrl).toBe(
+      "https://cdn.example.com/a-cover-primary.jpg"
+    );
   });
 
   it("normalizes the migrated specimen into a reusable record", () => {
@@ -82,7 +89,9 @@ describe("legacy FH -> Engine6 converter", () => {
   });
 
   it("maps normalized record into Engine6 page data without runtime scraping", () => {
-    const tour = mapLegacyFhRecordToEngine6Tour(centralParkBikeToursMigratedRecord);
+    const tour = mapLegacyFhRecordToEngine6Tour(
+      centralParkBikeToursMigratedRecord
+    );
 
     expect(tour.bookingUrl).toBe(
       "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book"
@@ -136,7 +145,81 @@ describe("legacy FH -> Engine6 converter", () => {
       'href="/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book"'
     );
     expect(html).toContain("Duration:");
-    expect(html).toContain("data-testid=\"engine6-itinerary-timeline\"");
+    expect(html).toContain('data-testid="engine6-itinerary-timeline"');
     expect(html).not.toContain("Prices starting at");
+  });
+
+  it("migrates the entire Miami FH batch in replacement mode", () => {
+    expect(miamiLegacyMigratedRecords.length).toBe(
+      MIAMI_MIGRATION_SLUGS.length
+    );
+    expect(miamiLegacyMigratedRecords.length).toBeGreaterThan(0);
+
+    for (const record of miamiLegacyMigratedRecords) {
+      const tourSlug = record.slug;
+      const migrated = getLegacyFhMigratedTourBySlugs(
+        "florida",
+        "miami",
+        tourSlug
+      );
+      expect(migrated, `missing migrated Miami slug ${tourSlug}`).toBeTruthy();
+      expect(migrated?.canonicalPath).toBe(
+        `/destinations/florida/miami/tours/${tourSlug}`
+      );
+      expect(migrated?.bookingUrl).toBe(
+        `/destinations/florida/miami/tours/${tourSlug}/book`
+      );
+    }
+  });
+
+  it("dedupes Miami listings so Engine6 wins canonical collisions", () => {
+    const cityTours = getToursByCity("florida", "miami");
+    const unifiedTours = getToursByCityUnified("florida", "miami");
+
+    for (const slug of MIAMI_MIGRATION_SLUGS) {
+      const cityMatches = cityTours.filter(tour => tour.slug === slug);
+      expect(cityMatches, `duplicate city listing for ${slug}`).toHaveLength(1);
+      expect(cityMatches[0]?.engine).toBe("engine6");
+
+      const canonicalPath = `/destinations/florida/miami/tours/${slug}`;
+      const unifiedMatches = unifiedTours.filter(
+        entry => entry.href === canonicalPath
+      );
+      expect(
+        unifiedMatches,
+        `duplicate unified listing for ${slug}`
+      ).toHaveLength(1);
+      expect(unifiedMatches[0]?.tour.engine).toBe("engine6");
+    }
+  });
+
+  it("spot-checks Miami migrated route parity for price, hero, and CTA /book preservation", () => {
+    const slugsToCheck = MIAMI_MIGRATION_SLUGS.slice(0, 3);
+
+    for (const slug of slugsToCheck) {
+      const routePath = `/destinations/florida/miami/tours/${slug}`;
+      Object.assign(globalThis, {
+        location: {
+          pathname: routePath,
+          search: "",
+          hash: "",
+        },
+      });
+
+      const html = renderToString(
+        <CityTourDetailRoute
+          params={{
+            stateSlug: "florida",
+            citySlug: "miami",
+            tourSlug: slug,
+          }}
+        />
+      );
+
+      expect(html).toContain('data-testid="engine6-hero-banner"');
+      expect(html).toContain('data-testid="engine6-bottom-cta"');
+      expect(html).toContain(`href="${routePath}/book"`);
+      expect(html).not.toContain("Meeting point: Meeting point:");
+    }
   });
 });
