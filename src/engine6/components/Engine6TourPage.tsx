@@ -83,6 +83,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     typeof tour.aggregateRating === "number" &&
     typeof tour.reviewCount === "number";
   const hasMeetingPoint = Boolean(tour.meetingPointText?.trim());
+  const hasDuration = Boolean(tour.durationText?.trim());
   const breadcrumbs = buildEngine6Breadcrumbs(tour);
   const parentCityToursPath =
     buildEngine6ParentCityToursPath(tour.canonicalPath) ?? breadcrumbs[2]?.href;
@@ -107,6 +108,7 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
     });
   }, [tour.canonicalPath, tour.productCode]);
   const showRelatedTours = relatedTours.length >= 2;
+  const isExternalBookingUrl = /^https?:\/\//i.test(tour.bookingUrl);
 
   return (
     <main className="bg-[#f6f1e8] text-[#1f2a1f]">
@@ -191,6 +193,11 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
                 </div>
 
                 <div className="space-y-4">
+                  {hasDuration ? (
+                    <p>
+                      <strong>Duration:</strong> {tour.durationText}
+                    </p>
+                  ) : null}
                   {hasMeetingPoint ? (
                     <p>
                       <strong>Meeting point:</strong> {tour.meetingPointText}
@@ -202,8 +209,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
 
             <a
               href={tour.bookingUrl}
-              target="_blank"
-              rel="noreferrer"
+              target={isExternalBookingUrl ? "_blank" : undefined}
+              rel={isExternalBookingUrl ? "noreferrer" : undefined}
               className={`mt-6 ${BOOK_CTA_CLASSES}`}
             >
               Book now
@@ -355,8 +362,8 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           </p>
           <a
             href={tour.bookingUrl}
-            target="_blank"
-            rel="noreferrer"
+            target={isExternalBookingUrl ? "_blank" : undefined}
+            rel={isExternalBookingUrl ? "noreferrer" : undefined}
             className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#1f4d36] transition hover:bg-green-50"
           >
             Book now

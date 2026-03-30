@@ -25,7 +25,7 @@ export type Engine6RejectedHeroCandidate = {
 };
 
 export type Engine6TourDiagnostics = {
-  source: "live-api" | "bundled-fallback";
+  source: "live-api" | "bundled-fallback" | "legacy-fh-migrated";
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";
@@ -103,6 +103,7 @@ export type Engine6Tour = {
   aggregateRating: number | null;
   reviewCount: number | null;
   meetingPointText: string;
+  durationText?: string | null;
   overviewText: string | null;
   highlights: string[];
   itinerary: Engine6ItineraryItem[];
@@ -120,7 +121,7 @@ export type Engine6Tour = {
 };
 
 export type Engine6ApiResponse = {
-  source: "live-api" | "bundled-fallback";
+  source: "live-api" | "bundled-fallback" | "legacy-fh-migrated";
   diagnostics: Engine6ApiDiagnostics;
   rawProductCode: string;
   rawProduct: Record<string, unknown> | null;
