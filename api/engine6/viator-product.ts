@@ -53,6 +53,7 @@ const buildDiagnostics = (
   selectedHeroHeight: null as number | null,
   imageSourceUsed: "approved-placeholder" as const,
   heroSourceType: "approved-placeholder" as const,
+  heroQualityClassification: "placeholder" as const,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
   rejectedForeignHeroCandidates: [] as Array<{
@@ -72,6 +73,7 @@ const buildDiagnostics = (
   itineraryFieldPath: null as string | null,
   itineraryItemCount: 0,
   itinerarySourceUsed: null as string | null,
+  itinerarySummaryFieldPath: null as string | null,
   meetingPointFieldPath: null as string | null,
   faqsFieldPath: null as string | null,
   faqFieldPath: null as string | null,

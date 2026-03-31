@@ -1,6 +1,7 @@
 import { normalizeEngine6AggregateRating } from "./rating.js";
 import {
   type Engine6HeroCandidate,
+  type Engine6HeroQualityClassification,
   type Engine6HeroSourceType,
   resolveProductScopedHero,
 } from "./heroResolver.js";
@@ -15,6 +16,7 @@ export type Engine6DiagnosticsPaths = {
   selectedHeroHeight: number | null;
   imageSourceUsed: Engine6HeroSourceType;
   heroSourceType: Engine6HeroSourceType;
+  heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
   rejectedForeignHeroCandidates: Array<{
@@ -1051,6 +1053,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     selectedHeroHeight: null,
     imageSourceUsed: "approved-placeholder",
     heroSourceType: "approved-placeholder",
+    heroQualityClassification: "placeholder",
     finalHeroUrl: null,
     heroFallbackTriggered: false,
     rejectedForeignHeroCandidates: [],
@@ -1104,6 +1107,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
+  diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
   diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;

@@ -15,6 +15,12 @@ export type Engine6HeroSourceType =
   | "api-gallery"
   | "approved-placeholder";
 
+export type Engine6HeroQualityClassification =
+  | "caption"
+  | "product-media"
+  | "splice"
+  | "placeholder";
+
 export type Engine6RejectedHeroCandidate = {
   url: string;
   sourceType: Engine6HeroSourceType;
@@ -35,6 +41,7 @@ export type Engine6TourDiagnostics = {
   selectedHeroHeight: number | null;
   imageSourceUsed: Engine6HeroSourceType;
   heroSourceType: Engine6HeroSourceType;
+  heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
   rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
