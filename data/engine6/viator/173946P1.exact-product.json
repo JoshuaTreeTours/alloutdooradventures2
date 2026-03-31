@@ -1,0 +1,88 @@
+{
+  "product": {
+    "productCode": "173946P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
+    "title": "Half-Day 4x4 Adventure",
+    "description": {
+      "text": "Trade the coast for San Diego's inland backcountry on a guided 4x4 outing built for travelers who want rugged terrain and panoramic ridgeline views. The route explores dirt tracks and elevation changes in the Otay wilderness region with a guide leading the pace and terrain choices. It is an adventure-forward experience that showcases a very different side of Southern California beyond beaches and boardwalks."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$175.00",
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 73
+    },
+    "duration": "2 to 4 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Experience off-road terrain in San Diego's inland backcountry.",
+      "Guided route selection balances adventure level and safety.",
+      "Strong contrast to coastal sightseeing with rugged wilderness views.",
+      "Private format for your party."
+    ],
+    "logistics": {
+      "start": {
+        "description": "2018 Crest Dr, El Cajon, CA 92021, USA."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Otay Mountain Wilderness Area",
+        "description": "Backcountry off-road segment with climbing and descending sections depending on route conditions."
+      },
+      {
+        "title": "Guided Wilderness Route",
+        "description": "Explore changing trail surfaces and scenic overlooks with a local guide."
+      }
+    ],
+    "inclusions": [
+      "Guide-led 4x4 adventure",
+      "Exclusive use of Land Cruiser for your booking"
+    ],
+    "additionalInfo": [
+      "This is a private tour/activity.",
+      "Most travelers can participate.",
+      "Not recommended for pregnant travelers.",
+      "Not recommended for travelers with back problems."
+    ],
+    "faqs": [
+      {
+        "question": "Will I drive, or am I only a passenger?",
+        "answer": "Driving and rider roles depend on the selected option and guide rules; confirm the exact setup with the operator before departure."
+      },
+      {
+        "question": "How difficult is the terrain on this 4x4 route?",
+        "answer": "Trails can range from moderate to more technical sections, and guides adapt route choices to conditions and group comfort."
+      },
+      {
+        "question": "What safety measures are used during the trip?",
+        "answer": "The experience is guide-led with route oversight, pace control, and vehicle-based safety procedures throughout the tour."
+      },
+      {
+        "question": "Are there age restrictions for children?",
+        "answer": "Age allowances vary by operator policy and safety considerations, so check current minimum-age rules at booking."
+      },
+      {
+        "question": "What should I wear and bring for the tour?",
+        "answer": "Wear comfortable outdoor clothes and closed-toe shoes, and bring water, sun protection, and layers for changing backcountry weather."
+      }
+    ],
+    "categories": [
+      {
+        "label": "4WD Tours"
+      },
+      {
+        "label": "Extreme Sports"
+      }
+    ]
+  }
+}

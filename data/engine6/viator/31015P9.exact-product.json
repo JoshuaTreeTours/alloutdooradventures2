@@ -1,0 +1,89 @@
+{
+  "product": {
+    "productCode": "31015P9",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9",
+    "title": "Private Sailing Charter on San Diego Bay",
+    "description": {
+      "text": "Set out on a private San Diego Bay sail crafted for your group only, with a captain handling navigation while you enjoy skyline views and harbor landmarks from the water. This charter is ideal for celebrations, date nights, and small-group outings that want a more premium, uncrowded format. You can follow a captain-recommended route or tailor the pace and atmosphere to your occasion."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$975.00",
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 42
+    },
+    "duration": "3 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Private yacht charter reserved for your party.",
+      "Bay and skyline views with a flexible route format.",
+      "Great fit for birthdays, small celebrations, and premium group outings.",
+      "Captain-led experience with optional customization on the water."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Viche Marina Deli, 1880 Harbor Island Dr, San Diego, CA 92101, USA. Meet around 10 minutes before departure."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "San Diego Bay",
+        "description": "Cruise through the bay with views of the downtown waterfront and Coronado-area landmarks."
+      },
+      {
+        "title": "Harbor Highlights",
+        "description": "Typical pass-by points can include USS Midway, Coronado Bridge, and Point Loma areas."
+      }
+    ],
+    "inclusions": [
+      "Private sailing charter",
+      "Captain",
+      "Bottled water and snacks"
+    ],
+    "additionalInfo": [
+      "Maximum of 6 people per booking.",
+      "This is a private tour/activity.",
+      "Most travelers can participate.",
+      "Minimum drinking age is 21 years."
+    ],
+    "faqs": [
+      {
+        "question": "Is this a private charter or a shared sail?",
+        "answer": "This listing is for a private charter, so only your booked group is on board."
+      },
+      {
+        "question": "How many guests can join this sailing trip?",
+        "answer": "Group size is small and typically capped at six guests per booking, depending on the operator rules."
+      },
+      {
+        "question": "What is included with the charter?",
+        "answer": "A captain, private sailing time, and light refreshments such as water and snacks are generally included."
+      },
+      {
+        "question": "What happens if weather is not ideal?",
+        "answer": "The captain monitors marine conditions and can adjust routes or timing; severe conditions may require rescheduling for safety."
+      },
+      {
+        "question": "Can we bring our own food or drinks?",
+        "answer": "Basic snacks and drinks are commonly provided, and bring-your-own options may be allowed based on operator policy."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Sailing"
+      },
+      {
+        "label": "Cruises & Sailing"
+      }
+    ]
+  }
+}

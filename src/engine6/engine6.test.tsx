@@ -35,7 +35,10 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
+  ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
+  ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
@@ -123,6 +126,12 @@ const ENGINE6_5584233P1_EXPECTED_HERO_URL =
   "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1";
 const ENGINE6_327321P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-674x446/0d/07/b0/bc.jpg";
+const ENGINE6_21165P1_EXPECTED_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-360x240/0c/00/fa/45.jpg";
+const ENGINE6_31015P9_EXPECTED_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg";
+const ENGINE6_173946P1_EXPECTED_HERO_URL =
+  "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -1041,6 +1050,74 @@ describe("engine6 listing surfaces", () => {
     );
     expect(Array.isArray(faqNode?.mainEntity)).toBe(true);
     expect((faqNode?.mainEntity as unknown[]).length).toBe(5);
+  });
+
+  it("routes and renders new San Diego engine6 specimens with hero parity, direct affiliate CTA, and schema URL separation", () => {
+    const expectedByProductCode = {
+      "21165P1": {
+        route: ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
+        hero: ENGINE6_21165P1_EXPECTED_HERO_URL,
+        cta: "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1?pid=P00290915&mcid=42383&medium=link",
+      },
+      "31015P9": {
+        route: ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
+        hero: ENGINE6_31015P9_EXPECTED_HERO_URL,
+        cta: "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9?pid=P00290915&mcid=42383&medium=link",
+      },
+      "173946P1": {
+        route: ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+        hero: ENGINE6_173946P1_EXPECTED_HERO_URL,
+        cta: "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1?pid=P00290915&mcid=42383&medium=link",
+      },
+    } as const;
+
+    const cityUnified = getToursByCityUnified("california", "san-diego");
+
+    for (const [productCode, expected] of Object.entries(expectedByProductCode)) {
+      const entry = cityUnified.find(card => card.tour.productCode === productCode);
+      expect(entry?.href).toBe(expected.route);
+      expect(entry?.tour.heroImage).toBe(expected.hero);
+      expect(entry?.tour.primaryImageUrl).toBe(expected.hero);
+      expect(entry?.tour.heroImage).not.toContain("/hero.jpg");
+      expect(entry?.tour.bookingUrl).toBe(expected.cta);
+      expect(entry?.tour.bookingUrl).not.toContain("/search/");
+
+      const detailTour = engine6ResolvedTours.find(tour => tour.productCode === productCode);
+      expect(detailTour?.heroImageUrl).toBe(expected.hero);
+      expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
+      expect(detailTour?.faqs).toHaveLength(5);
+
+      const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
+      expect(detailHtml).toContain(`src=\"${expected.hero.replaceAll("&", "&amp;")}\"`);
+      expect(detailHtml).toContain(expected.cta.replaceAll("&", "&amp;"));
+      expect(detailHtml).toContain("Meeting point:");
+      expect(detailHtml).not.toContain('data-testid="engine6-gallery"');
+
+      const schema = buildEngine6SchemaGraph(detailTour!);
+      const graph = schema["@graph"] as Array<Record<string, unknown>>;
+      const webpageNode = graph.find(node => node["@type"] === "WebPage") as
+        | Record<string, unknown>
+        | undefined;
+      const productNode = graph.find(node => node["@type"] === "Product") as
+        | Record<string, unknown>
+        | undefined;
+      const offerNode = graph.find(node => node["@type"] === "Offer") as
+        | Record<string, unknown>
+        | undefined;
+
+      expect(webpageNode?.image).toBe(expected.hero);
+      expect(productNode?.image).toBe(expected.hero);
+      expect(productNode?.url).toBe(
+        `https://www.alloutdooradventures.com${expected.route}`
+      );
+      expect(offerNode?.url).toBe(expected.cta);
+    }
+
+    const heroes = Object.keys(expectedByProductCode).map(productCode => {
+      const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
+      return tour?.heroImageUrl;
+    });
+    expect(new Set(heroes).size).toBe(3);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {

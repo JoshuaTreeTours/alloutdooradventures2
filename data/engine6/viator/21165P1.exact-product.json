@@ -1,0 +1,89 @@
+{
+  "product": {
+    "productCode": "21165P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1",
+    "title": "Original Sea Cave Kayak Tour",
+    "description": {
+      "text": "Paddle the La Jolla Ecological Reserve on a guided sea-cave kayak adventure designed for first-timers and active travelers alike. Your guide leads the route through rocky shoreline features, giant kelp habitat, and wildlife-rich water where sea lions, seals, and coastal birds are common. Ocean conditions permitting, the tour approaches the sea cave zone for dramatic coastal views while keeping safety front and center."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$95.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 886
+    },
+    "duration": "1 hour 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-360x240/0c/00/fa/45.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Explore the La Jolla sea cave coastline with a local guide.",
+      "Paddle through kelp forest habitat with chances to spot marine wildlife.",
+      "Beginner-friendly format with route guidance and safety support.",
+      "All required kayaking gear is provided for the on-water portion."
+    ],
+    "logistics": {
+      "start": {
+        "description": "2261 Avenida De La Playa, La Jolla, CA 92037, USA. Arrive about 30 minutes before departure for check-in."
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "La Jolla Ecological Reserve",
+        "description": "Guided coastal paddling segment near sea caves and marine habitat.",
+        "duration": "90 minutes"
+      },
+      {
+        "title": "Sea Cave Zone",
+        "description": "Cave approach opportunities are dependent on ocean and surf conditions."
+      }
+    ],
+    "inclusions": [
+      "Professional kayaking guide",
+      "Tandem kayak and required paddle equipment"
+    ],
+    "additionalInfo": [
+      "Children must be at least 5 years old and accompanied by an adult.",
+      "Dress in swimwear or beach attire that can get wet.",
+      "Most travelers can participate.",
+      "Conditions can change access to cave areas."
+    ],
+    "faqs": [
+      {
+        "question": "Do I need to be a strong swimmer to join?",
+        "answer": "You should be comfortable around water, and guides provide safety direction, but this tour is built to accommodate many first-time paddlers."
+      },
+      {
+        "question": "Are sea cave entries guaranteed on every trip?",
+        "answer": "No. Cave access depends on surf and ocean conditions, and guides make final route calls for safety."
+      },
+      {
+        "question": "What age and fitness level is recommended?",
+        "answer": "The activity is active but beginner-friendly; children are typically allowed when accompanied by an adult and minimum age requirements are met."
+      },
+      {
+        "question": "Is gear provided, and are wetsuits included?",
+        "answer": "Core kayak gear is provided. Wetsuit availability and any rental charges are handled at check-in by the operator."
+      },
+      {
+        "question": "What wildlife might we see during the paddle?",
+        "answer": "Sightings often include sea lions, seals, and seabirds, with occasional dolphin or whale sightings depending on season and luck."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Kayaking Tours"
+      },
+      {
+        "label": "On the Water"
+      }
+    ]
+  }
+}

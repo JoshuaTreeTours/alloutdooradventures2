@@ -78,6 +78,9 @@ import {
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
+  ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+  ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
+  ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -248,6 +251,18 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
