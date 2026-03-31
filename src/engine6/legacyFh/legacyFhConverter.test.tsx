@@ -7,6 +7,10 @@ import {
   CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH,
   centralParkBikeToursMigratedRecord,
 } from "./fixtures/centralParkBikeTours";
+import {
+  FORT_LAUDERDALE_EBIKE_PUBLIC_PATH,
+  fortLauderdaleEBikeMigratedRecord,
+} from "./fixtures/fortLauderdaleEBike";
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import { getLegacyFhMigratedTourBySlugs } from "./registry";
 import CityTourDetailRoute from "../../pages/destinations/states/tours/CityTourDetailRoute";
@@ -401,5 +405,23 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(sanDiegoWhaleTour.ownership.routeOwner).toBe("fareharbor");
     expect(fortLauderdaleTour.ownership.ctaOwner).toBe("fareharbor");
     expect(sanDiegoWhaleTour.ownership.ctaOwner).toBe("fareharbor");
+  });
+
+  it("includes deduped Fort Lauderdale canonical survivor exactly once in city unified listing", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour(fortLauderdaleEBikeMigratedRecord);
+    expect(tour.canonicalPath).toBe(FORT_LAUDERDALE_EBIKE_PUBLIC_PATH);
+    expect(tour.ownership.routeOwner).toBe("fareharbor");
+    expect(tour.ownership.ctaOwner).toBe("fareharbor");
+    expect(tour.ownership.presentationOwner).toBe("engine6");
+    expect(tour.ownership.commercialOwner).toBe("viator");
+
+    const cityUnified = getToursByCityUnified("florida", "fort-lauderdale");
+    const canonicalMatches = cityUnified.filter(
+      entry => entry.href === FORT_LAUDERDALE_EBIKE_PUBLIC_PATH
+    );
+
+    expect(canonicalMatches).toHaveLength(1);
+    expect(canonicalMatches[0]?.tour.engine).toBe("engine6");
+    expect(canonicalMatches[0]?.tour.bookingProvider).toBe("fareharbor");
   });
 });
