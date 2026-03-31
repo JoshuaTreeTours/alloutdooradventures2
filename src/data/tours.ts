@@ -25,7 +25,6 @@ import { assertUniqueByCanonicalPath } from "../engine6/hardening";
 import {
   suppressLegacyFareHarborTour,
 } from "../engine6/replacementMode";
-import { engine6ReplacementModeConfigs } from "../engine6/routes";
 export { getTourBookingPath } from "./tourPaths";
 
 export { australiaTours } from "./australiaTours";
@@ -50,6 +49,11 @@ const PROVIDER_CONFIG: Record<BookingProvider, ProviderConfig> = {
       "Affiliate disclosure: We may receive a commission when you book through our Viator partner link.",
   },
 };
+
+const engine6CanonicalTourPaths = engine6ListingTours.map(
+  candidate =>
+    `/destinations/${candidate.destination.stateSlug}/${candidate.destination.citySlug}/tours/${candidate.slug}`
+);
 
 // TODO: Remaining Montana tours in data/heartland/montana.csv not yet added.
 // Bozeman: Death in Wonderland; Temple of Abyss; Dracula; KTM 350 XC-F; Honda CRF250F;
@@ -151,13 +155,14 @@ export const tours: Tour[] = [
   ...australiaTours,
   ...engine6ListingTours,
 ]
-  .filter(
-    tour =>
-      !isTourRemoved({
-        tourId: getEngine1FareHarborItemId(tour),
-        operatorName: tour.operator,
-      }) &&
-      !suppressLegacyFareHarborTour(tour, engine6ReplacementModeConfigs)
+  .filter(tour =>
+    !suppressLegacyFareHarborTour(tour, engine6CanonicalTourPaths)
+  )
+  .filter(tour =>
+    !isTourRemoved({
+      tourId: getEngine1FareHarborItemId(tour),
+      operatorName: tour.operator,
+    })
   )
   .map(tour =>
     applyTourPricing({

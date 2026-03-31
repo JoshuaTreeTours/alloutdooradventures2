@@ -148,4 +148,21 @@ describe("engine6 canonical slug winner dedupe", () => {
       expect(cityMatches[0]?.engine).toBe("engine6");
     }
   });
+
+  it("keeps only one listing for migrated FH canonical slugs and upgrades card engine to Engine6", () => {
+    const unified = getToursByCityUnified("new-york", "new-york").filter(
+      entry =>
+        entry.href ===
+        "/destinations/new-york/new-york/tours/central-park-bike-tours-16628"
+    );
+    const city = getToursByCity("new-york", "new-york").filter(
+      tour => tour.slug === "central-park-bike-tours-16628"
+    );
+
+    expect(unified).toHaveLength(1);
+    expect(unified[0]?.tour.engine).toBe("engine6");
+    expect(unified[0]?.tour.bookingProvider).toBe("fareharbor");
+    expect(city).toHaveLength(1);
+    expect(city[0]?.engine).toBe("engine6");
+  });
 });

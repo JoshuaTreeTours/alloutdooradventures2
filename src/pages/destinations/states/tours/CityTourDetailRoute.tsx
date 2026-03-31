@@ -216,7 +216,10 @@ export default function CityTourDetailRoute({
       usesLegacyGallery: false,
       usesLegacyRenderer: false,
     });
-    assertEngine6CtaIntegrity(nativeEngine6Tour.bookingUrl);
+    assertEngine6CtaIntegrity({
+      ctaOwner: nativeEngine6Tour.ownership.ctaOwner,
+      ctaUrl: nativeEngine6Tour.bookingUrl,
+    });
 
     const schema = buildEngine6SchemaGraph(nativeEngine6Tour);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;
@@ -241,6 +244,14 @@ export default function CityTourDetailRoute({
   }
 
   if (migratedLegacyEngine6Tour) {
+    assertEngine6RendererSupremacy({
+      tourEngine: "legacy-fh-migrated",
+      renderer: "engine6",
+    });
+    assertEngine6CtaIntegrity({
+      ctaOwner: migratedLegacyEngine6Tour.ownership.ctaOwner,
+      ctaUrl: migratedLegacyEngine6Tour.bookingUrl,
+    });
     return <Engine6TourPage tour={migratedLegacyEngine6Tour} />;
   }
 

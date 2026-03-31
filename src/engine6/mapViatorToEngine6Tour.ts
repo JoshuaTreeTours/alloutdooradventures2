@@ -154,6 +154,7 @@ export const mapViatorToEngine6Tour = (
           payload.rawProductCode,
           payload.extracted.productUrl
         );
+  const ctaOwner = shouldUseReplacementMode ? "fareharbor" : "viator";
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,
@@ -206,6 +207,13 @@ export const mapViatorToEngine6Tour = (
     pagePath: canonicalPath,
     canonicalPath,
     bookingUrl,
+    ownership: {
+      routeOwner: ctaOwner,
+      ctaOwner,
+      presentationOwner: "engine6",
+      commercialOwner: "viator",
+      commercialFallbackReason: "none",
+    },
     diagnostics: {
       source: payload.source,
       commercialPriceFieldPath: payload.diagnostics.commercialPriceFieldPath,

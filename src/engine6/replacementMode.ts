@@ -144,15 +144,18 @@ const getLegacyTourPathFromBookingPath = (bookingPath: string) =>
 
 export const suppressLegacyFareHarborTour = (
   tour: Tour,
-  replacementModeConfigs: Engine6ReplacementModeConfig[]
+  engine6CanonicalPaths: Iterable<string>
 ) => {
+  if (tour.engine === "engine6") {
+    return false;
+  }
+
   if (tour.bookingProvider !== "fareharbor") {
     return false;
   }
 
   const canonicalPath = `/destinations/${tour.destination.stateSlug}/${tour.destination.citySlug}/tours/${tour.slug}`;
 
-  return replacementModeConfigs.some(
-    config => getLegacyTourPathFromBookingPath(config.bookingPath) === canonicalPath
-  );
+  const canonicalSet = new Set(engine6CanonicalPaths);
+  return canonicalSet.has(canonicalPath);
 };
