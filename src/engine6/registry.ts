@@ -1,7 +1,10 @@
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import type { Engine6ApiResponse, Engine6Tour } from "./types";
-import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
+import {
+  buildEngine6FixtureRawPayload,
+  ENGINE6_VALIDATION_FIXTURES,
+} from "./validationFixtures";
 import {
   assertEngine6CollisionPolicy,
   assertEngine6ReplacementModePolicy,
@@ -14,7 +17,7 @@ import {
 const toEngine6FixturePayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ): Engine6ApiResponse => {
-  const extraction = extractEngine6Product(fixture.rawPayload);
+  const extraction = extractEngine6Product(buildEngine6FixtureRawPayload(fixture));
 
   return {
     source: "bundled-fallback",

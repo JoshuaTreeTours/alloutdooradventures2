@@ -25,6 +25,55 @@ export type Engine6ValidationFixture = {
   productCode: string;
   publicUrl: string;
   rawPayload: Record<string, unknown>;
+  heroImageUrl?: string;
+  images?: Array<Record<string, unknown>>;
+};
+
+const asRecord = (value: unknown): Record<string, unknown> | null =>
+  value && typeof value === "object" && !Array.isArray(value)
+    ? (value as Record<string, unknown>)
+    : null;
+
+const hasFixtureImages = (product: Record<string, unknown>) => {
+  const media = asRecord(product.media);
+  const mediaImages = media?.images;
+  const rootImages = product.images;
+
+  return (
+    (Array.isArray(mediaImages) && mediaImages.length > 0) ||
+    (Array.isArray(rootImages) && rootImages.length > 0)
+  );
+};
+
+export const buildEngine6FixtureRawPayload = (
+  fixture: Engine6ValidationFixture
+) => {
+  const cloned = structuredClone(fixture.rawPayload);
+  const root = asRecord(cloned);
+  const product = asRecord(root?.product);
+
+  if (!root || !product) {
+    return fixture.rawPayload;
+  }
+
+  if (!hasFixtureImages(product)) {
+    if (fixture.images && fixture.images.length > 0) {
+      const media = asRecord(product.media) ?? {};
+      media.images = fixture.images;
+      product.media = media;
+    } else if (fixture.heroImageUrl) {
+      const media = asRecord(product.media) ?? {};
+      media.images = [{ url: fixture.heroImageUrl, isCover: true }];
+      product.media = media;
+    }
+  }
+
+  if (fixture.heroImageUrl && typeof product.heroImageUrl !== "string") {
+    product.heroImageUrl = fixture.heroImageUrl;
+  }
+
+  root.product = product;
+  return root;
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
