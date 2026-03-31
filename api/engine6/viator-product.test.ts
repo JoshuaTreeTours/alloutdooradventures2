@@ -118,6 +118,11 @@ describe("/api/engine6/viator-product", () => {
                       width: 674,
                       height: 446,
                     },
+                    CAPTION: {
+                      url: "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
+                      width: 1200,
+                      height: 900,
+                    },
                   },
                 },
               ],
@@ -143,18 +148,21 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).source).toBe("live-api");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
-        heroImageFieldPath: "product.media.images[0].variants.FULL.url",
-        heroVariantFieldPath: "product.media.images[0].variants.FULL",
+        heroImageFieldPath: "product.media.images[0].variants.CAPTION.url",
+        heroVariantFieldPath: "product.media.images[0].variants.CAPTION",
         imageSourceUsed: "api-primary",
         heroSourceType: "api-primary",
         finalHeroUrl:
-          "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+          "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
         heroFallbackTriggered: false,
         rejectedForeignHeroCandidates: [],
       })
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
+      "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg"
+    );
+    expect((res.body as any).diagnostics.selectedHeroWidth).toBeGreaterThanOrEqual(
+      800
     );
   });
 
