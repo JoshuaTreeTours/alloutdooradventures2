@@ -20,6 +20,7 @@ export type Engine6HeroCandidate = {
   variantPath?: string | null;
   width?: number | null;
   height?: number | null;
+  familyKey?: string | null;
 };
 
 export type Engine6RejectedHeroCandidate = {
@@ -45,6 +46,8 @@ export type Engine6ResolvedHero = {
   fallbackTriggered: boolean;
   finalCandidate: Engine6HeroCandidate | null;
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
+  captionPrecedenceApplied: boolean;
+  candidateFamilyIdentityDeterminable: boolean;
 };
 
 const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
@@ -120,14 +123,60 @@ const getHeroQualityClassification = (
 
 const getQualityRank = (candidate: Engine6HeroCandidate) => {
   const quality = getHeroQualityClassification(candidate);
-  if (quality === "caption") return 0;
-  if (quality === "product-media") return 1;
-  if (quality === "splice") return 2;
+  if (quality === "product-media") return 0;
+  if (quality === "splice") return 1;
+  if (quality === "caption") return 2;
   return 3;
+};
+
+const extractCandidateFamilyKey = (value: string): string | null => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    const normalizedPath = parsed.pathname
+      .toLowerCase()
+      .replace(/\/+$/, "")
+      .replace(/attractions-splice-spp-\d+x\d+/g, "attractions-splice-spp");
+    const segments = normalizedPath.split("/").filter(Boolean);
+    if (segments.length < 2) {
+      return null;
+    }
+
+    const last = segments[segments.length - 1] ?? "";
+    if (/\.(?:jpg|jpeg|png|webp|avif)$/i.test(last)) {
+      segments.pop();
+    }
+
+    const familyPath = segments.join("/");
+    return familyPath ? `${host}/${familyPath}` : null;
+  } catch {
+    return null;
+  }
+};
+
+const hasCaptionPrecedence = (a: Engine6HeroCandidate, b: Engine6HeroCandidate) => {
+  const aIsCaption = getHeroQualityClassification(a) === "caption";
+  const bIsCaption = getHeroQualityClassification(b) === "caption";
+  if (aIsCaption === bIsCaption) {
+    return 0;
+  }
+
+  const aFamily = a.familyKey ?? extractCandidateFamilyKey(a.url);
+  const bFamily = b.familyKey ?? extractCandidateFamilyKey(b.url);
+  if (!aFamily || !bFamily || aFamily !== bFamily) {
+    return 0;
+  }
+
+  return aIsCaption ? -1 : 1;
 };
 
 const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
   [...candidates].sort((a, b) => {
+    const captionWithinFamily = hasCaptionPrecedence(a, b);
+    if (captionWithinFamily !== 0) {
+      return captionWithinFamily;
+    }
+
     const aQualityRank = getQualityRank(a);
     const bQualityRank = getQualityRank(b);
     const aWidth = getEffectiveWidth(a);
@@ -322,12 +371,32 @@ export const resolveProductScopedHero = ({
       ...candidate,
       candidateProductCode,
       candidateSourceProductUrl,
+      familyKey: candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
     });
   }
 
   if (validCandidates.length > 0) {
     const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
     const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
+    const selectedFamilyKey =
+      selectedCandidate.familyKey ?? extractCandidateFamilyKey(selectedCandidate.url);
+    const candidateFamilyIdentityDeterminable = validCandidates.some(
+      candidate => (candidate.familyKey ?? extractCandidateFamilyKey(candidate.url)) !== null
+    );
+    const captionPrecedenceApplied = validCandidates.some(candidate => {
+      if (candidate === selectedCandidate) {
+        return false;
+      }
+      const selectedIsCaption =
+        getHeroQualityClassification(selectedCandidate) === "caption";
+      const candidateIsCaption = getHeroQualityClassification(candidate) === "caption";
+      if (!selectedIsCaption || candidateIsCaption) {
+        return false;
+      }
+      const candidateFamily =
+        candidate.familyKey ?? extractCandidateFamilyKey(candidate.url);
+      return Boolean(selectedFamilyKey && candidateFamily && selectedFamilyKey === candidateFamily);
+    });
 
     return {
       heroUrl: normalizedUrl,
@@ -337,10 +406,13 @@ export const resolveProductScopedHero = ({
       finalCandidate: {
         ...selectedCandidate,
         url: normalizedUrl,
+        familyKey: selectedFamilyKey,
         width: selectedCandidate.width ?? getEffectiveWidth(selectedCandidate),
         height: selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
       },
       rejectedForeignCandidates,
+      captionPrecedenceApplied,
+      candidateFamilyIdentityDeterminable,
     };
   }
 
@@ -351,5 +423,7 @@ export const resolveProductScopedHero = ({
     fallbackTriggered: true,
     finalCandidate: null,
     rejectedForeignCandidates,
+    captionPrecedenceApplied: false,
+    candidateFamilyIdentityDeterminable: false,
   };
 };

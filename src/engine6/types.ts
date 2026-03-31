@@ -44,6 +44,13 @@ export type Engine6TourDiagnostics = {
   heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
+  captionPrecedenceApplied: boolean;
+  candidateFamilyIdentityDeterminable: boolean;
+  heroSurfaceParity: {
+    page: boolean;
+    card: boolean;
+    schema: boolean;
+  };
   rejectedForeignHeroCandidates: Engine6RejectedHeroCandidate[];
   productUrlFieldPath: string | null;
   bookingUrlSource: string;

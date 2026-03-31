@@ -81,7 +81,7 @@ export const mapViatorToEngine6Tour = (
     payload.extracted.title ?? `Outdoor Adventure ${payload.rawProductCode}`;
   const city = payload.extracted.city ?? "Destination";
   const state = payload.extracted.state ?? "USA";
-  const resolvedImageUrl =
+  const finalHeroImageUrl =
     typeof payload.extracted.heroImageUrl === "string" &&
     /^https?:\/\//i.test(payload.extracted.heroImageUrl) &&
     !payload.extracted.heroImageUrl.includes("/hero.jpg") &&
@@ -185,8 +185,8 @@ export const mapViatorToEngine6Tour = (
     metaDescription,
     city,
     state,
-    resolvedImageUrl,
-    heroImageUrl: resolvedImageUrl ?? "",
+    resolvedImageUrl: finalHeroImageUrl,
+    heroImageUrl: finalHeroImageUrl ?? "",
     priceAmount: payload.extracted.priceAmount,
     priceFormatted: formattedStartingPrice ?? "Check latest price",
     aggregateRating,
@@ -217,8 +217,13 @@ export const mapViatorToEngine6Tour = (
       selectedHeroHeight: payload.diagnostics.selectedHeroHeight,
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
       heroSourceType: payload.diagnostics.heroSourceType,
+      heroQualityClassification: payload.diagnostics.heroQualityClassification,
       finalHeroUrl: payload.diagnostics.finalHeroUrl,
       heroFallbackTriggered: payload.diagnostics.heroFallbackTriggered,
+      captionPrecedenceApplied: payload.diagnostics.captionPrecedenceApplied,
+      candidateFamilyIdentityDeterminable:
+        payload.diagnostics.candidateFamilyIdentityDeterminable,
+      heroSurfaceParity: payload.diagnostics.heroSurfaceParity,
       rejectedForeignHeroCandidates:
         payload.diagnostics.rejectedForeignHeroCandidates,
       productUrlFieldPath: payload.diagnostics.productUrlFieldPath,

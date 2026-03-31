@@ -56,6 +56,13 @@ const buildDiagnostics = (
   heroQualityClassification: "placeholder" as const,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
+  captionPrecedenceApplied: false,
+  candidateFamilyIdentityDeterminable: false,
+  heroSurfaceParity: {
+    page: false,
+    card: false,
+    schema: false,
+  },
   rejectedForeignHeroCandidates: [] as Array<{
     url: string;
     sourceType: "api-primary" | "api-gallery" | "approved-placeholder";
@@ -270,6 +277,14 @@ const applyResolvedHero = (args: {
       heroSourceType: heroDecision.heroSourceType,
       finalHeroUrl: heroDecision.heroUrl,
       heroFallbackTriggered: heroDecision.fallbackTriggered,
+      captionPrecedenceApplied: heroDecision.captionPrecedenceApplied,
+      candidateFamilyIdentityDeterminable:
+        heroDecision.candidateFamilyIdentityDeterminable,
+      heroSurfaceParity: {
+        page: Boolean(heroDecision.heroUrl),
+        card: Boolean(heroDecision.heroUrl),
+        schema: Boolean(heroDecision.heroUrl),
+      },
       rejectedForeignHeroCandidates: heroDecision.rejectedForeignCandidates,
     },
   };

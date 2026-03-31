@@ -96,30 +96,12 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("prefers same-product caption over larger same-product FULL/splice variants", () => {
+  it("applies caption precedence only within a determinable matching family", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
         "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
       candidates: [
-        {
-          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
-          sourceType: "api-primary",
-          candidateProductCode: "63657P1",
-          candidateSourceProductUrl:
-            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 674,
-          height: 446,
-        },
-        {
-          url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg?w=700&h=500&s=1",
-          sourceType: "api-gallery",
-          candidateProductCode: "63657P1",
-          candidateSourceProductUrl:
-            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 1200,
-          height: 900,
-        },
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg?w=1800&h=1200&s=1",
           sourceType: "api-gallery",
@@ -129,15 +111,61 @@ describe("engine6 hero resolver", () => {
           width: 1800,
           height: 1200,
         },
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/caption.jpg?w=700&h=500&s=1",
+          sourceType: "api-gallery",
+          candidateProductCode: "63657P1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          width: 1200,
+          height: 900,
+        },
       ],
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg?w=700&h=500&s=1"
+      "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/caption.jpg?w=700&h=500&s=1"
     );
     expect(resolved.heroSourceType).toBe("api-gallery");
     expect(resolved.heroQualityClassification).toBe("caption");
+    expect(resolved.captionPrecedenceApplied).toBe(true);
+    expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
     expect(resolved.fallbackTriggered).toBe(false);
+  });
+
+  it("does not allow cross-family caption to override stronger same-product media", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "447234P3",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
+      candidates: [
+        {
+          url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "447234P3",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
+          width: 720,
+          height: 480,
+        },
+        {
+          url: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/94/08/b8/caption.jpg",
+          sourceType: "api-gallery",
+          candidateProductCode: "447234P3",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
+          width: 720,
+          height: 480,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/42/c4.jpg"
+    );
+    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.captionPrecedenceApplied).toBe(false);
+    expect(resolved.candidateFamilyIdentityDeterminable).toBe(true);
   });
 
   it("normalizes TACDN media URLs to high-resolution variants where possible", () => {

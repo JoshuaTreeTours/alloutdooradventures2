@@ -126,14 +126,14 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
-    ...(tour.resolvedImageUrl
+    ...(tour.heroImageUrl
       ? {
           primaryImageOfPage: {
             "@type": "ImageObject",
             "@id": `${canonicalUrl}#primaryimage`,
-            url: tour.resolvedImageUrl,
+            url: tour.heroImageUrl,
           },
-          image: tour.resolvedImageUrl,
+          image: tour.heroImageUrl,
         }
       : {}),
     about: { "@id": `${canonicalUrl}#product` },
@@ -208,7 +208,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@id": `${canonicalUrl}#trip`,
         name: schemaName,
         description,
-        image: tour.resolvedImageUrl ?? undefined,
+        image: tour.heroImageUrl || undefined,
         url: canonicalUrl,
         provider: { "@id": SITE_ORGANIZATION_ID },
         touristDestination: { "@id": destinationPlaceId },
@@ -232,7 +232,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@type": "Product",
         "@id": `${canonicalUrl}#product`,
         name: schemaName,
-        image: tour.resolvedImageUrl ?? undefined,
+        image: tour.heroImageUrl || undefined,
         description,
         category: categoryLabel ?? undefined,
         url: canonicalUrl,
