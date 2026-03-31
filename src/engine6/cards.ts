@@ -1,4 +1,8 @@
-import { formatEngine6AggregateRating } from "./rating";
+import {
+  formatEngine6PriceLabel,
+  formatEngine6RatingLabel,
+  getEngine6CommercialSnapshot,
+} from "./commercial";
 import { formatEngine6CategoryLabel } from "./seo";
 import type { Engine6Tour } from "./types";
 
@@ -32,18 +36,19 @@ const buildCardDescription = (tour: Engine6Tour) => {
   return `Discover top outdoor highlights around ${tour.city} with a locally guided experience.`;
 };
 
-export const toEngine6Card = (tour: Engine6Tour): Engine6Card => ({
-  imageUrl: tour.heroImageUrl,
-  title: tour.title,
-  locationLabel: `${tour.city}, ${tour.state}`,
-  ratingLabel:
-    tour.aggregateRating && tour.reviewCount
-      ? `${formatEngine6AggregateRating(tour.aggregateRating)} (${tour.reviewCount})`
-      : "No ratings yet",
-  priceLabel: tour.priceFormatted,
-  description: buildCardDescription(tour),
-  href: tour.canonicalPath,
-});
+export const toEngine6Card = (tour: Engine6Tour): Engine6Card => {
+  const commercial = getEngine6CommercialSnapshot(tour);
+
+  return {
+    imageUrl: tour.heroImageUrl,
+    title: tour.title,
+    locationLabel: `${tour.city}, ${tour.state}`,
+    ratingLabel: formatEngine6RatingLabel(commercial),
+    priceLabel: formatEngine6PriceLabel(commercial.priceAmount) ?? "",
+    description: buildCardDescription(tour),
+    href: tour.canonicalPath,
+  };
+};
 
 export const buildEngine6CardSurfaces = (tour: Engine6Tour) => {
   const makeCard = () => ({ ...toEngine6Card(tour) });
