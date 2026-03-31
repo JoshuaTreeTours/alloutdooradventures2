@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "19736P3",
+    "title": "Little Havana: Authentic Food and Culture Walking Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Little-Havana-Cultural-and-Historical-Food-Tour/d662-19736P3",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 65,
+        "fromPriceFormatted": "From $65.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 600
+    },
+    "description": "Discover Miami\u2019s Cuban heritage with authentic tastings, neighborhood storytelling, and cultural stops throughout Little Havana.",
+    "highlights": [
+      "Experience Little Havana: Authentic Food and Culture Walking Tour in Miami.",
+      "Book with Viator instant confirmation.",
+      "Great option for travelers exploring Miami."
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Core activity admission"
+    ],
+    "exclusions": [
+      "Food and drinks unless specified",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "Meeting point in central Little Havana."
+    },
+    "itinerary": [
+      {
+        "title": "Check-in and introduction",
+        "description": "Meet your guide, confirm logistics, and get ready for departure."
+      },
+      {
+        "title": "Main experience",
+        "description": "Discover Miami\u2019s Cuban heritage with authentic tastings, neighborhood storytelling, and cultural stops throughout Little Havana."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Finish the tour and head back with local tips for the rest of your day."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Most departures run according to the duration shown at booking."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Meeting point in central Little Havana."
+      }
+    ],
+    "additionalInfo": [
+      "Please arrive 15 minutes early.",
+      "Weather policies and final logistics are confirmed by the operator."
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/19/73/6p/3/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "5913P5",
+    "title": "Miami Beach Bike Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Beach-Bike-Tour/d662-5913P5",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 45,
+        "fromPriceFormatted": "From $45.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 300
+    },
+    "description": "Cycle through Miami Beach with a guide and see oceanfront paths, Art Deco highlights, and coastal neighborhoods at an easy pace.",
+    "highlights": [
+      "Experience Miami Beach Bike Tour in Miami.",
+      "Book with Viator instant confirmation.",
+      "Great option for travelers exploring Miami."
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Core activity admission"
+    ],
+    "exclusions": [
+      "Food and drinks unless specified",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "Bike tour departs from Miami Beach location."
+    },
+    "itinerary": [
+      {
+        "title": "Check-in and introduction",
+        "description": "Meet your guide, confirm logistics, and get ready for departure."
+      },
+      {
+        "title": "Main experience",
+        "description": "Cycle through Miami Beach with a guide and see oceanfront paths, Art Deco highlights, and coastal neighborhoods at an easy pace."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Finish the tour and head back with local tips for the rest of your day."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Most departures run according to the duration shown at booking."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Bike tour departs from Miami Beach location."
+      }
+    ],
+    "additionalInfo": [
+      "Please arrive 15 minutes early.",
+      "Weather policies and final logistics are confirmed by the operator."
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/59/13/p5/aa/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "5304WYNW",
+    "title": "Wynwood Food & Art Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Miami-Food-and-Art-Walking-Tour-of-Wynwood-Neighborhood/d662-5304WYNW",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 85,
+        "fromPriceFormatted": "From $85.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 500
+    },
+    "description": "Blend local bites and street-art discovery on a Wynwood walking tour featuring murals, galleries, and neighborhood food tastings.",
+    "highlights": [
+      "Experience Wynwood Food & Art Tour in Miami.",
+      "Book with Viator instant confirmation.",
+      "Great option for travelers exploring Miami."
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Core activity admission"
+    ],
+    "exclusions": [
+      "Food and drinks unless specified",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "Meets in Wynwood district, Miami."
+    },
+    "itinerary": [
+      {
+        "title": "Check-in and introduction",
+        "description": "Meet your guide, confirm logistics, and get ready for departure."
+      },
+      {
+        "title": "Main experience",
+        "description": "Blend local bites and street-art discovery on a Wynwood walking tour featuring murals, galleries, and neighborhood food tastings."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Finish the tour and head back with local tips for the rest of your day."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Most departures run according to the duration shown at booking."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Meets in Wynwood district, Miami."
+      }
+    ],
+    "additionalInfo": [
+      "Please arrive 15 minutes early.",
+      "Weather policies and final logistics are confirmed by the operator."
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/53/04/wy/nw/caption.jpg?w=1100&h=800&s=1",
+          "width": 1100,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
