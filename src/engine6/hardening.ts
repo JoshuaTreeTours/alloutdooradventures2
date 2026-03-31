@@ -69,7 +69,14 @@ export const assertEngine6DataSource = (dataSource: string) => {
 };
 
 export const assertEngine6CtaIntegrity = (ctaUrl: string) => {
-  assertCondition(ctaUrl.includes("pid="), "cta URL must include affiliate pid parameter");
+  const isViatorProductCta =
+    ctaUrl.includes("viator.com") && ctaUrl.includes("pid=");
+  const isLegacyFareHarborBookCta = /^\/destinations\/.+\/book$/.test(ctaUrl);
+
+  assertCondition(
+    isViatorProductCta || isLegacyFareHarborBookCta,
+    "cta URL must be either a product-level Viator affiliate URL or a canonical FareHarbor /book path"
+  );
   assertCondition(!ctaUrl.includes("/search/"), "cta URL cannot point to a search page");
 };
 

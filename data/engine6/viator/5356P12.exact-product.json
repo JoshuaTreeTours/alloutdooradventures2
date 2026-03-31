@@ -1,0 +1,74 @@
+{
+  "product": {
+    "productCode": "5356P12",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Art-of-Balboa-Park-Walking-Tour/d736-5356P12",
+    "title": "Art of Balboa Park Walking Tour",
+    "description": {
+      "text": "Discover Balboa Park with a local guide on a walking tour focused on architecture, public art, and hidden design details across one of San Diego's landmark cultural districts."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$67.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 12
+    },
+    "duration": "3 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0b/f4/98/2f.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Guided walking route through Balboa Park's signature plazas and gardens.",
+      "Learn the stories behind landmark buildings, public art, and design motifs.",
+      "Small-group format for a relaxed pace and easy Q&A with your guide."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Plaza de Panama, 1549 El Prado, San Diego, CA 92101"
+      }
+    },
+    "itineraryItems": [
+      {
+        "title": "Plaza de Panama",
+        "description": "Meet your guide and get an overview of Balboa Park's layout and history."
+      },
+      {
+        "title": "El Prado",
+        "description": "Walk the main promenade to view Spanish Colonial Revival architecture and courtyards."
+      },
+      {
+        "title": "Botanical Building Area",
+        "description": "Pause for photos and context about landscape design and restoration efforts."
+      }
+    ],
+    "inclusions": [
+      "Local guide",
+      "Walking tour"
+    ],
+    "additionalInfo": [
+      "Operates in most weather conditions; please dress appropriately.",
+      "Comfortable walking shoes are recommended.",
+      "Public transportation options are available nearby."
+    ],
+    "faqs": [
+      {
+        "question": "Where does the tour start?",
+        "answer": "The tour meets at Plaza de Panama, 1549 El Prado, San Diego, CA 92101."
+      }
+    ],
+    "categories": [
+      {
+        "label": "Walking Tours"
+      },
+      {
+        "label": "Cultural Tours"
+      }
+    ]
+  }
+}

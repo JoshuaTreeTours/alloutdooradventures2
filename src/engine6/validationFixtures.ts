@@ -13,6 +13,7 @@ import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
+import specimen5356p12Payload from "../../data/engine6/viator/5356P12.exact-product.json";
 import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
@@ -139,6 +140,12 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
     rawPayload: specimen173946p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5356P12",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Art-of-Balboa-Park-Walking-Tour/d736-5356P12",
+    rawPayload: specimen5356p12Payload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",

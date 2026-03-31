@@ -56,6 +56,9 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE = "173946P1";
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE =
   "/destinations/california/san-diego/tours/half-day-4x4-adventure";
+export const ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE = "5356P12";
+export const ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE =
+  "/destinations/california/san-diego/tours/art-of-balboa-park-walking-tour-651385";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -103,6 +106,16 @@ const ENGINE6_REPLACEMENT_MODE_CONFIGS: Engine6ReplacementModeConfig[] = [
       legacyMeetingPoint: "79 Chambers Street, New York, NY",
     },
   },
+  {
+    productCode: ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE,
+    canonicalPath: ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE,
+    bookingPath: `${ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE}/book`,
+    eligibility: {
+      legacyTitle: "Art of Balboa Park Walking Tour",
+      legacyPriceAmount: 67,
+      legacyMeetingPoint: "Plaza de Panama, 1549 El Prado, San Diego, CA 92101",
+    },
+  },
 ];
 
 const ENGINE6_REPLACEMENT_MODE_BY_PRODUCT_CODE: Record<
@@ -148,6 +161,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE,
+    ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
