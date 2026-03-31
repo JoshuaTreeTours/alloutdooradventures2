@@ -28,6 +28,13 @@ export type LegacyFhMigratedProductRecord = {
   galleryImages: string[];
   priceSnapshot: LegacyFhPriceSnapshot;
   ratingSnapshot: LegacyFhRatingSnapshot;
+  matchedViatorCommercial?: {
+    productCode: string;
+    confidentMatch: boolean;
+    priceAmount: number | null;
+    aggregateRating: number | null;
+    reviewCount: number | null;
+  } | null;
   overview: string | null;
   highlights: string[];
   itinerary: LegacyFhItineraryStop[];

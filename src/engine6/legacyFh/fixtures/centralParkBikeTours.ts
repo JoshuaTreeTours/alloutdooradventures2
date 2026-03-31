@@ -98,3 +98,11 @@ export const centralParkBikeToursMigratedRecord = extractLegacyFhProductRecord({
     },
   },
 });
+
+centralParkBikeToursMigratedRecord.matchedViatorCommercial = {
+  productCode: "233384P2",
+  confidentMatch: true,
+  priceAmount: 52,
+  aggregateRating: 4.7,
+  reviewCount: 5060,
+};
