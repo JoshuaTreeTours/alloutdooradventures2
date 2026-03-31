@@ -1,0 +1,73 @@
+{
+  "product": {
+    "productCode": "383300P6",
+    "title": "90 min Electric Bike Tour of Fort Lauderdale (min 2)",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Guided-Electric-Bike-Tours-of-Greater-Fort-Lauderdale/d660-383300P6",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 79,
+        "fromPriceFormatted": "$79.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.9,
+      "totalReviews": 79
+    },
+    "description": "See more of the city without navigating a new area alone with this guided electric bicycle tour of the greater Fort Lauderdale area. Meet your guide at Colee Hammock Park, then ride to landmarks like Riverwalk Fort Lauderdale and Las Olas Boulevard while passing the beach and historic neighborhoods.",
+    "highlights": [
+      "Spot mega yachts and million-dollar houses along the Intracoastal",
+      "Ride to Riverwalk Fort Lauderdale, Las Olas Boulevard, and nearby beaches",
+      "No prior e-bike experience needed with a safety tutorial before departure",
+      "Light refreshments are available from your guide"
+    ],
+    "inclusions": [
+      "Electric bike with easy step-thru setup",
+      "SMITH helmet",
+      "Full instruction, tutorial, and tour briefing",
+      "Light refreshments"
+    ],
+    "meetingPoint": {
+      "description": "Colee Hammock Park, 1500 Brickell Dr, Fort Lauderdale, FL 33301, USA. Please confirm your start time 24 hours in advance."
+    },
+    "itinerary": [
+      { "title": "Colee Hammock Park", "description": "Pass by" },
+      { "title": "Las Olas Boulevard", "description": "Pass by" },
+      { "title": "Riverwalk Fort Lauderdale", "description": "Pass by" },
+      { "title": "Fort Lauderdale Beach", "description": "Pass by" }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Most travelers can participate",
+      "Not wheelchair accessible",
+      "This tour/activity will have a maximum of 8 travelers"
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point?",
+        "answer": "The suggested meeting point is Colee Hammock Park in Fort Lauderdale. Confirm your exact start details with the operator in advance."
+      },
+      {
+        "question": "Do I need e-bike experience?",
+        "answer": "No prior experience is required. The tour includes a tutorial and safety briefing before departure."
+      }
+    ],
+    "categories": [
+      { "label": "E-Bike Tours" },
+      { "label": "Sightseeing Tours" }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/FMHcQJl8R96FkChrMB9p",
+          "width": 1200,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
