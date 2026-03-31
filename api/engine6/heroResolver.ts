@@ -39,6 +39,86 @@ export type Engine6ResolvedHero = {
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
 };
 
+const getEffectiveWidth = (candidate: Engine6HeroCandidate) => {
+  if (typeof candidate.width === "number" && Number.isFinite(candidate.width)) {
+    return candidate.width;
+  }
+
+  const match = candidate.url.match(/(\d{2,5})x(\d{2,5})/);
+  if (!match) {
+    return 0;
+  }
+
+  const width = Number(match[1]);
+  return Number.isFinite(width) ? width : 0;
+};
+
+const getEffectiveHeight = (candidate: Engine6HeroCandidate) => {
+  if (typeof candidate.height === "number" && Number.isFinite(candidate.height)) {
+    return candidate.height;
+  }
+
+  const match = candidate.url.match(/(\d{2,5})x(\d{2,5})/);
+  if (!match) {
+    return 0;
+  }
+
+  const height = Number(match[2]);
+  return Number.isFinite(height) ? height : 0;
+};
+
+const normalizeHeroMediaUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    const host = parsed.hostname.toLowerCase();
+    const isTacdnOrTripadvisorHost =
+      host.endsWith(".tacdn.com") ||
+      host.endsWith(".tripadvisor.com") ||
+      host === "tacdn.com" ||
+      host === "tripadvisor.com";
+
+    if (isTacdnOrTripadvisorHost) {
+      parsed.pathname = parsed.pathname
+        .replace(/\/photo-s\//i, "/photo-o/")
+        .replace(/\/+$/, "");
+      parsed.search = "";
+      parsed.hash = "";
+    }
+
+    return parsed.toString();
+  } catch {
+    return value;
+  }
+};
+
+const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
+  [...candidates].sort((a, b) => {
+    const aWidth = getEffectiveWidth(a);
+    const bWidth = getEffectiveWidth(b);
+    const aHeight = getEffectiveHeight(a);
+    const bHeight = getEffectiveHeight(b);
+    const aArea = aWidth * aHeight;
+    const bArea = bWidth * bHeight;
+    const aPreferredWidthBucket = aWidth >= 1000 ? 2 : aWidth >= 800 ? 1 : 0;
+    const bPreferredWidthBucket = bWidth >= 1000 ? 2 : bWidth >= 800 ? 1 : 0;
+    const aCaption = /\/caption\.jpg(?:$|[?#])/i.test(a.url) ? 1 : 0;
+    const bCaption = /\/caption\.jpg(?:$|[?#])/i.test(b.url) ? 1 : 0;
+
+    if (bPreferredWidthBucket !== aPreferredWidthBucket) {
+      return bPreferredWidthBucket - aPreferredWidthBucket;
+    }
+    if (bWidth !== aWidth) {
+      return bWidth - aWidth;
+    }
+    if (bArea !== aArea) {
+      return bArea - aArea;
+    }
+    if (bCaption !== aCaption) {
+      return bCaption - aCaption;
+    }
+    return bHeight - aHeight;
+  });
+
 const normalizeProductCode = (value: string | null | undefined) => {
   const normalized = value?.trim().toUpperCase() ?? "";
   return normalized.length > 0 ? normalized : null;
@@ -195,13 +275,19 @@ export const resolveProductScopedHero = ({
   }
 
   if (validCandidates.length > 0) {
-    const selectedCandidate = validCandidates[0]!;
+    const selectedCandidate = rankHeroCandidates(validCandidates)[0]!;
+    const normalizedUrl = normalizeHeroMediaUrl(selectedCandidate.url);
 
     return {
-      heroUrl: selectedCandidate.url,
+      heroUrl: normalizedUrl,
       heroSourceType: selectedCandidate.sourceType,
       fallbackTriggered: false,
-      finalCandidate: selectedCandidate,
+      finalCandidate: {
+        ...selectedCandidate,
+        url: normalizedUrl,
+        width: selectedCandidate.width ?? getEffectiveWidth(selectedCandidate),
+        height: selectedCandidate.height ?? getEffectiveHeight(selectedCandidate),
+      },
       rejectedForeignCandidates,
     };
   }

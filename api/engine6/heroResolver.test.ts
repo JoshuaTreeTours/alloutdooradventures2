@@ -93,7 +93,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("selects the first valid product-owned candidate", () => {
+  it("selects the highest-resolution product-owned candidate instead of first/FULL defaults", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -105,17 +105,17 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 1200,
-          height: 900,
+          width: 674,
+          height: 446,
         },
         {
-          url: "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/dd.jpg",
+          url: "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/caption.jpg",
           sourceType: "api-gallery",
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 800,
-          height: 600,
+          width: 1200,
+          height: 900,
         },
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg",
@@ -123,17 +123,39 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 640,
-          height: 480,
+          width: 800,
+          height: 600,
         },
       ],
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
+      "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/caption.jpg"
     );
-    expect(resolved.heroSourceType).toBe("api-primary");
+    expect(resolved.heroSourceType).toBe("api-gallery");
     expect(resolved.fallbackTriggered).toBe(false);
+    expect((resolved.finalCandidate?.width ?? 0) >= 800).toBe(true);
+  });
+
+  it("normalizes TACDN media URLs to high-resolution variants where possible", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "SUNSET1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-s/1a/2b/3c/4d.jpg?foo=bar",
+          sourceType: "api-primary",
+          candidateProductCode: "SUNSET1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+    );
   });
 
   it("rejects untrusted hosts even when the candidate appears product-scoped", () => {
