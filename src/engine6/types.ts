@@ -74,6 +74,17 @@ export type Engine6TourDiagnostics = {
   fallbackFieldNames: string[];
 };
 
+export type Engine6OwnershipPolicy = {
+  routeOwner: "fareharbor" | "viator";
+  ctaOwner: "fareharbor" | "viator";
+  presentationOwner: "engine6";
+  commercialOwner: "fareharbor" | "viator";
+  commercialFallbackReason:
+    | "none"
+    | "no-confident-viator-match"
+    | "viator-commercial-unavailable";
+};
+
 export type Engine6ApiDiagnostics = Engine6TourDiagnostics & {
   hasViatorApiKey: boolean;
   attemptedLiveFetch: boolean;
@@ -131,6 +142,7 @@ export type Engine6Tour = {
   pagePath: string;
   canonicalPath: string;
   bookingUrl: string;
+  ownership: Engine6OwnershipPolicy;
   diagnostics: Engine6TourDiagnostics;
 };
 

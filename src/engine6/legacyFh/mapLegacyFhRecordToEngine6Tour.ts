@@ -30,16 +30,22 @@ export const mapLegacyFhRecordToEngine6Tour = (
   ];
   const shouldUseMatchedViatorCommercial =
     record.matchedViatorCommercial?.confidentMatch === true;
-  const resolvedPriceAmount = shouldUseMatchedViatorCommercial
+  const hasViatorCommercialValues =
+    typeof record.matchedViatorCommercial?.priceAmount === "number" ||
+    typeof record.matchedViatorCommercial?.aggregateRating === "number" ||
+    typeof record.matchedViatorCommercial?.reviewCount === "number";
+  const shouldUseViatorCommercial =
+    shouldUseMatchedViatorCommercial && hasViatorCommercialValues;
+  const resolvedPriceAmount = shouldUseViatorCommercial
     ? record.matchedViatorCommercial?.priceAmount ?? null
     : record.priceSnapshot.amount;
-  const resolvedAggregateRating = shouldUseMatchedViatorCommercial
+  const resolvedAggregateRating = shouldUseViatorCommercial
     ? record.matchedViatorCommercial?.aggregateRating ?? null
     : record.ratingSnapshot.rating;
-  const resolvedReviewCount = shouldUseMatchedViatorCommercial
+  const resolvedReviewCount = shouldUseViatorCommercial
     ? record.matchedViatorCommercial?.reviewCount ?? null
     : record.ratingSnapshot.reviewCount;
-  const resolvedPriceLabel = shouldUseMatchedViatorCommercial
+  const resolvedPriceLabel = shouldUseViatorCommercial
     ? typeof resolvedPriceAmount === "number"
       ? `Starting at $${resolvedPriceAmount.toFixed(0)}`
       : "Check latest price"
@@ -83,12 +89,23 @@ export const mapLegacyFhRecordToEngine6Tour = (
     pagePath: record.canonicalPath,
     canonicalPath: record.canonicalPath,
     bookingUrl: record.bookingPath,
+    ownership: {
+      routeOwner: "fareharbor",
+      ctaOwner: "fareharbor",
+      presentationOwner: "engine6",
+      commercialOwner: shouldUseViatorCommercial ? "viator" : "fareharbor",
+      commercialFallbackReason: shouldUseViatorCommercial
+        ? "none"
+        : shouldUseMatchedViatorCommercial
+          ? "viator-commercial-unavailable"
+          : "no-confident-viator-match",
+    },
     diagnostics: {
       source: "legacy-fh-migrated",
-      commercialPriceFieldPath: shouldUseMatchedViatorCommercial
+      commercialPriceFieldPath: shouldUseViatorCommercial
         ? `matchedViatorCommercial.priceAmount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
         : "legacy.price",
-      commercialPriceRawValue: shouldUseMatchedViatorCommercial
+      commercialPriceRawValue: shouldUseViatorCommercial
         ? resolvedPriceAmount
         : record.priceSnapshot.label,
       priceSourceUsed: "fallback",
@@ -111,10 +128,10 @@ export const mapLegacyFhRecordToEngine6Tour = (
       rejectedForeignHeroCandidates: [],
       productUrlFieldPath: null,
       bookingUrlSource: "legacy.bookingPath",
-      ratingFieldPath: shouldUseMatchedViatorCommercial
+      ratingFieldPath: shouldUseViatorCommercial
         ? `matchedViatorCommercial.aggregateRating:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
         : "legacy.rating",
-      reviewCountFieldPath: shouldUseMatchedViatorCommercial
+      reviewCountFieldPath: shouldUseViatorCommercial
         ? `matchedViatorCommercial.reviewCount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
         : "legacy.reviewCount",
       overviewFieldPath: "legacy.overview",

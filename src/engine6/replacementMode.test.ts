@@ -123,10 +123,16 @@ describe("engine6 replacement mode eligibility", () => {
     )!;
 
     expect(
-      suppressLegacyFareHarborTour(legacyPedicab, engine6ReplacementModeConfigs)
+      suppressLegacyFareHarborTour(
+        legacyPedicab,
+        engine6ReplacementModeConfigs.map(config => config.canonicalPath)
+      )
     ).toBe(true);
     expect(
-      suppressLegacyFareHarborTour(nonReplacementTour, engine6ReplacementModeConfigs)
+      suppressLegacyFareHarborTour(
+        nonReplacementTour,
+        engine6ReplacementModeConfigs.map(config => config.canonicalPath)
+      )
     ).toBe(false);
   });
 });

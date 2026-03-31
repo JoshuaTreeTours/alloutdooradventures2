@@ -74,13 +74,24 @@ describe("engine6 hardening guards", () => {
 
   it("enforces CTA integrity for product-level affiliate links", () => {
     expect(() =>
-      assertEngine6CtaIntegrity(
-        "https://www.viator.com/tours/San-Diego/Tour/d736-3097SDZSP_2VISIT?pid=P00290915&mcid=42383&medium=link"
-      )
+      assertEngine6CtaIntegrity({
+        ctaOwner: "viator",
+        ctaUrl:
+          "https://www.viator.com/tours/San-Diego/Tour/d736-3097SDZSP_2VISIT?pid=P00290915&mcid=42383&medium=link",
+      })
     ).not.toThrow();
     expect(() =>
-      assertEngine6CtaIntegrity("https://www.viator.com/search/all?pid=P00290915")
+      assertEngine6CtaIntegrity({
+        ctaOwner: "viator",
+        ctaUrl: "https://www.viator.com/search/all?pid=P00290915",
+      })
     ).toThrow(/search/i);
+    expect(() =>
+      assertEngine6CtaIntegrity({
+        ctaOwner: "fareharbor",
+        ctaUrl: "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book",
+      })
+    ).not.toThrow();
   });
 
   it("keeps unified listings unique by canonical path with engine6 precedence", () => {

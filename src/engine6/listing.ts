@@ -1,5 +1,6 @@
 import type { Tour } from "../data/tours.types";
 import { toEngine6Card } from "./cards";
+import { legacyFhMigratedTours } from "./legacyFh/registry";
 import { ENGINE6_SPECIMEN_PRODUCT_CODE } from "./routes";
 import { engine6ResolvedTours } from "./registry";
 import type { Engine6Tour } from "./types";
@@ -40,7 +41,7 @@ const toEngine6ListingTour = (tour: Engine6Tour): Tour => {
     currency: "USD",
     tagPills: tour.categoryLabel ? [tour.categoryLabel] : undefined,
     activitySlugs: ["bike-tours"],
-    bookingProvider: "viator",
+    bookingProvider: tour.ownership.ctaOwner,
     bookingUrl: tour.bookingUrl,
     longDescription: tour.overviewText ?? card.description,
   };
@@ -55,6 +56,20 @@ export const ENGINE6_63657P1_CARD_IMAGE_URL = specimenTour?.heroImageUrl ?? "";
 
 export const engine6SpecimenTour = specimenTour!;
 
-export const engine6ListingTours: Tour[] = engine6ResolvedTours.map(
-  toEngine6ListingTour
-);
+const dedupeEngine6ToursByCanonicalPath = (tours: Engine6Tour[]) => {
+  const byPath = new Map<string, Engine6Tour>();
+
+  for (const tour of tours) {
+    const existing = byPath.get(tour.canonicalPath);
+    if (!existing || existing.diagnostics.source === "legacy-fh-migrated") {
+      byPath.set(tour.canonicalPath, tour);
+    }
+  }
+
+  return [...byPath.values()];
+};
+
+export const engine6ListingTours: Tour[] = dedupeEngine6ToursByCanonicalPath([
+  ...engine6ResolvedTours,
+  ...legacyFhMigratedTours,
+]).map(toEngine6ListingTour);

@@ -11,6 +11,7 @@ import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour
 import { getLegacyFhMigratedTourBySlugs } from "./registry";
 import CityTourDetailRoute from "../../pages/destinations/states/tours/CityTourDetailRoute";
 import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
+import { getTourBySlugs } from "../../data/tours";
 
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
@@ -95,6 +96,11 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.priceAmount).toBe(52);
     expect(tour.aggregateRating).toBe(4.7);
     expect(tour.reviewCount).toBe(5060);
+    expect(tour.ownership.routeOwner).toBe("fareharbor");
+    expect(tour.ownership.ctaOwner).toBe("fareharbor");
+    expect(tour.ownership.presentationOwner).toBe("engine6");
+    expect(tour.ownership.commercialOwner).toBe("viator");
+    expect(tour.ownership.commercialFallbackReason).toBe("none");
     expect(tour.diagnostics.commercialPriceFieldPath).toContain(
       "matchedViatorCommercial"
     );
@@ -115,8 +121,32 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.priceAmount).toBe(75);
     expect(tour.aggregateRating).toBe(4.3);
     expect(tour.reviewCount).toBe(390);
+    expect(tour.ownership.commercialOwner).toBe("fareharbor");
+    expect(tour.ownership.commercialFallbackReason).toBe(
+      "no-confident-viator-match"
+    );
     expect(tour.diagnostics.commercialPriceFieldPath).toBe("legacy.price");
     expect(tour.diagnostics.ratingFieldPath).toBe("legacy.rating");
+  });
+
+  it("falls back to legacy commercial values when Viator match is confident but missing commercial values", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: "233384P2",
+        confidentMatch: true,
+        priceAmount: null,
+        aggregateRating: null,
+        reviewCount: null,
+      },
+    });
+
+    expect(tour.priceAmount).toBe(75);
+    expect(tour.aggregateRating).toBe(4.3);
+    expect(tour.reviewCount).toBe(390);
+    expect(tour.ownership.commercialFallbackReason).toBe(
+      "viator-commercial-unavailable"
+    );
   });
 
   it("enforces /book preservation for migrated records", () => {
@@ -167,6 +197,15 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(html).toContain("Price:</strong>");
     expect(html).toContain("$52");
     expect(html).toContain("5060");
+
+    const listingTour = getTourBySlugs(
+      "new-york",
+      "new-york",
+      "central-park-bike-tours-16628"
+    );
+    expect(listingTour?.engine).toBe("engine6");
+    expect(listingTour?.startingPrice).toBe(52);
+    expect(listingTour?.heroImage).toBe(migratedTour?.heroImageUrl);
 
     const schema = buildEngine6SchemaGraph(migratedTour!);
     const graph = schema["@graph"] as Array<Record<string, unknown>>;

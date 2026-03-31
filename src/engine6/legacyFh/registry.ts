@@ -7,11 +7,11 @@ export const legacyFhMigratedProductRecords: LegacyFhMigratedProductRecord[] = [
   centralParkBikeToursMigratedRecord,
 ];
 
-const legacyFhMigratedTourBySlug = new Map<string, Engine6Tour>(
-  legacyFhMigratedProductRecords.map(record => [
-    `${record.canonicalPath}`,
-    mapLegacyFhRecordToEngine6Tour(record),
-  ])
+export const legacyFhMigratedTours: Engine6Tour[] =
+  legacyFhMigratedProductRecords.map(mapLegacyFhRecordToEngine6Tour);
+
+const legacyFhMigratedTourByCanonicalPath = new Map<string, Engine6Tour>(
+  legacyFhMigratedTours.map(tour => [tour.canonicalPath, tour])
 );
 
 export const getLegacyFhMigratedTourBySlugs = (
@@ -19,6 +19,9 @@ export const getLegacyFhMigratedTourBySlugs = (
   citySlug: string,
   tourSlug: string
 ) =>
-  legacyFhMigratedTourBySlug.get(
+  legacyFhMigratedTourByCanonicalPath.get(
     `/destinations/${stateSlug}/${citySlug}/tours/${tourSlug}`
   ) ?? null;
+
+export const getLegacyFhMigratedTourByCanonicalPath = (canonicalPath: string) =>
+  legacyFhMigratedTourByCanonicalPath.get(canonicalPath) ?? null;

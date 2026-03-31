@@ -68,7 +68,21 @@ export const assertEngine6DataSource = (dataSource: string) => {
   );
 };
 
-export const assertEngine6CtaIntegrity = (ctaUrl: string) => {
+export const assertEngine6CtaIntegrity = ({
+  ctaOwner,
+  ctaUrl,
+}: {
+  ctaOwner: "fareharbor" | "viator";
+  ctaUrl: string;
+}) => {
+  if (ctaOwner === "fareharbor") {
+    assertCondition(
+      ctaUrl.endsWith("/book"),
+      "fareharbor canonical dedupe routes must preserve /book CTA"
+    );
+    return;
+  }
+
   assertCondition(ctaUrl.includes("pid="), "cta URL must include affiliate pid parameter");
   assertCondition(!ctaUrl.includes("/search/"), "cta URL cannot point to a search page");
 };
