@@ -19,6 +19,13 @@ export type Engine6DiagnosticsPaths = {
   heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
+  captionPrecedenceApplied: boolean;
+  candidateFamilyIdentityDeterminable: boolean;
+  heroSurfaceParity: {
+    page: boolean;
+    card: boolean;
+    schema: boolean;
+  };
   rejectedForeignHeroCandidates: Array<{
     url: string;
     sourceType: Engine6HeroSourceType;
@@ -1056,6 +1063,13 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroQualityClassification: "placeholder",
     finalHeroUrl: null,
     heroFallbackTriggered: false,
+    captionPrecedenceApplied: false,
+    candidateFamilyIdentityDeterminable: false,
+    heroSurfaceParity: {
+      page: false,
+      card: false,
+      schema: false,
+    },
     rejectedForeignHeroCandidates: [],
     productUrlFieldPath: null,
     ratingFieldPath: null,
@@ -1110,6 +1124,14 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
+  diagnostics.captionPrecedenceApplied = heroDecision.captionPrecedenceApplied;
+  diagnostics.candidateFamilyIdentityDeterminable =
+    heroDecision.candidateFamilyIdentityDeterminable;
+  diagnostics.heroSurfaceParity = {
+    page: Boolean(heroDecision.heroUrl),
+    card: Boolean(heroDecision.heroUrl),
+    schema: Boolean(heroDecision.heroUrl),
+  };
   diagnostics.rejectedForeignHeroCandidates = heroDecision.rejectedForeignCandidates;
 
   const price = extractPlaybookPrice(product);

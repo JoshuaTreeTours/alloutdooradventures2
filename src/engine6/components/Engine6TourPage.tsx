@@ -218,9 +218,9 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             </a>
           </div>
 
-          {tour.resolvedImageUrl ? (
+          {tour.heroImageUrl ? (
             <img
-              src={tour.resolvedImageUrl}
+              src={tour.heroImageUrl}
               alt={tour.title}
               className="h-80 w-full rounded-3xl object-cover shadow-2xl md:h-[440px]"
             />
@@ -407,6 +407,26 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
           <p>
             <strong>Fallback fired:</strong>{" "}
             {tour.diagnostics.heroFallbackTriggered ? "yes" : "no"}
+          </p>
+          <p>
+            <strong>Hero quality:</strong>{" "}
+            {tour.diagnostics.heroQualityClassification}
+          </p>
+          <p>
+            <strong>Caption precedence applied:</strong>{" "}
+            {tour.diagnostics.captionPrecedenceApplied ? "yes" : "no"}
+          </p>
+          <p>
+            <strong>Candidate family determinable:</strong>{" "}
+            {tour.diagnostics.candidateFamilyIdentityDeterminable ? "yes" : "no"}
+          </p>
+          <p>
+            <strong>Hero parity (page/card/schema):</strong>{" "}
+            {(tour.diagnostics.heroSurfaceParity?.page ?? false) &&
+            (tour.diagnostics.heroSurfaceParity?.card ?? false) &&
+            (tour.diagnostics.heroSurfaceParity?.schema ?? false)
+              ? "yes"
+              : "no"}
           </p>
           <p>
             <strong>Final CTA URL:</strong> {tour.bookingUrl}

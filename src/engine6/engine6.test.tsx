@@ -886,6 +886,13 @@ describe("engine6 listing surfaces", () => {
       tour => tour.productCode === "447234P3"
     );
     expect(detailTour?.heroImageUrl).toBe(ENGINE6_447234P3_EXPECTED_HERO_URL);
+    expect(detailTour?.diagnostics.captionPrecedenceApplied).toBe(false);
+    expect(detailTour?.diagnostics.candidateFamilyIdentityDeterminable).toBe(true);
+    expect(detailTour?.diagnostics.heroSurfaceParity).toEqual({
+      page: true,
+      card: true,
+      schema: true,
+    });
     expect(detailTour?.diagnostics.heroSourceType).not.toBe("approved-placeholder");
     expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
     const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
