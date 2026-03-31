@@ -1,0 +1,43 @@
+{
+  "product": {
+    "productCode": "8630P7",
+    "productUrl": "https://www.viator.com/tours/La-Jolla/Cali-Dreamin-Electric-Bike-Tour-of-La-Jolla-and-Pacific-Beach/d22636-8630P7",
+    "title": "Cali Dreaming Electric Bike Tour of La Jolla and Pacific Beach",
+    "description": {
+      "text": "Ride an electric bike along San Diego's north coast with a guide, covering La Jolla viewpoints, beachfront stretches, and neighborhood highlights with less effort and more distance than a standard bike tour."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$99.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 354
+    },
+    "duration": "2 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/7d/34/45.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Electric bike route through La Jolla and Pacific Beach.",
+      "Coastal viewpoints with local guide commentary.",
+      "Beginner-friendly e-bike support on rolling terrain.",
+      "Small-group ride with frequent scenic stops."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting point in La Jolla, San Diego."
+      }
+    },
+    "categories": [
+      { "label": "Bike Tours" },
+      { "label": "Mountain Bike Tours" },
+      { "label": "Adventure Tours" }
+    ]
+  }
+}

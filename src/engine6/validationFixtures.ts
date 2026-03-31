@@ -17,6 +17,11 @@ import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
+import specimen22443p8Payload from "../../data/engine6/viator/22443P8.exact-product.json";
+import specimen457047p1Payload from "../../data/engine6/viator/457047P1.exact-product.json";
+import specimen19989p5Payload from "../../data/engine6/viator/19989P5.exact-product.json";
+import specimen8630p7Payload from "../../data/engine6/viator/8630P7.exact-product.json";
+import specimen5170whalePayload from "../../data/engine6/viator/5170WHALE.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -132,6 +137,36 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
     rawPayload: specimen173946p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "22443P8",
+    publicUrl:
+      "https://www.viator.com/tours/La-Jolla/La-Jolla-Kayak-and-Snorkel-Tour/d22636-22443P8",
+    rawPayload: specimen22443p8Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "457047P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Jet-Ski-Rental-Adventure-in-San-Diego-Bay/d736-457047P1",
+    rawPayload: specimen457047p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "19989P5",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Private-Mountain-and-Desert-Tour-from-San-Diego/d736-19989P5",
+    rawPayload: specimen19989p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "8630P7",
+    publicUrl:
+      "https://www.viator.com/tours/La-Jolla/Cali-Dreamin-Electric-Bike-Tour-of-La-Jolla-and-Pacific-Beach/d22636-8630P7",
+    rawPayload: specimen8630p7Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5170WHALE",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/San-Diego-Whale-Watching-Cruise/d736-5170WHALE",
+    rawPayload: specimen5170whalePayload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",

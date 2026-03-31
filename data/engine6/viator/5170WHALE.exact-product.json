@@ -1,0 +1,43 @@
+{
+  "product": {
+    "productCode": "5170WHALE",
+    "productUrl": "https://www.viator.com/tours/San-Diego/San-Diego-Whale-Watching-Cruise/d736-5170WHALE",
+    "title": "San Diego Whale Watching Cruise",
+    "description": {
+      "text": "Cruise offshore from San Diego to look for gray whales, dolphins, and other marine life with expert narration from the crew. The route combines open-ocean wildlife viewing with scenic harbor departures and seasonal migration opportunities."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$149.00",
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 2361
+    },
+    "duration": "4 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0b/27/79/57.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Seasonal whale and dolphin watching in the Pacific.",
+      "Narrated cruise with marine-life interpretation.",
+      "Large viewing decks for open-water sightseeing.",
+      "Good fit for wildlife-focused adventure travelers."
+    ],
+    "logistics": {
+      "start": {
+        "description": "2050 Shelter Island Dr, San Diego, CA 92106, USA."
+      }
+    },
+    "categories": [
+      { "label": "Whale Watching" },
+      { "label": "Nature and Wildlife Tours" },
+      { "label": "Cruises & Sailing" }
+    ]
+  }
+}
