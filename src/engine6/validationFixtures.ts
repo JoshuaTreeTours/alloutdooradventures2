@@ -17,6 +17,18 @@ import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
+import specimen21428p2Payload from "../../data/engine6/viator/21428P2.exact-product.json";
+import specimen8836p1Payload from "../../data/engine6/viator/8836P1.exact-product.json";
+import specimen3587islquessPayload from "../../data/engine6/viator/3587ISLQUESS.exact-product.json";
+import specimen28744p2Payload from "../../data/engine6/viator/28744P2.exact-product.json";
+import specimen339911p12Payload from "../../data/engine6/viator/339911P12.exact-product.json";
+import specimen5304havanaPayload from "../../data/engine6/viator/5304HAVANA.exact-product.json";
+import specimen19736p3Payload from "../../data/engine6/viator/19736P3.exact-product.json";
+import specimen381607p2Payload from "../../data/engine6/viator/381607P2.exact-product.json";
+import specimen68494p1Payload from "../../data/engine6/viator/68494P1.exact-product.json";
+import specimen5304wynwPayload from "../../data/engine6/viator/5304WYNW.exact-product.json";
+import specimen5913p5Payload from "../../data/engine6/viator/5913P5.exact-product.json";
+import specimen7943p1Payload from "../../data/engine6/viator/7943P1.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 export type Engine6ValidationFixture = {
@@ -26,6 +38,78 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "21428P2",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Everglades-Tour-from-Miami-with-Transportation/d662-21428P2",
+    rawPayload: specimen21428p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "8836P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    rawPayload: specimen8836p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "3587ISLQUESS",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
+    rawPayload: specimen3587islquessPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "28744P2",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Sightseeing-Cruise-to-Millionaires-Homes/d662-28744P2",
+    rawPayload: specimen28744p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "339911P12",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-90-minute-sunset-cruise-of-Biscayne-Bay-and-South-Beach/d662-339911P12",
+    rawPayload: specimen339911p12Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5304HAVANA",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    rawPayload: specimen5304havanaPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "19736P3",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Cultural-and-Historical-Food-Tour/d662-19736P3",
+    rawPayload: specimen19736p3Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "381607P2",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Culture-Walking-Tour-Food-Cigars-Mojitos-and-more/d662-381607P2",
+    rawPayload: specimen381607p2Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "68494P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Official-Street-Art-Walking-Tour-of-The-Wynwood-Walls/d662-68494P1",
+    rawPayload: specimen68494p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5304WYNW",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Food-and-Art-Walking-Tour-of-Wynwood-Neighborhood/d662-5304WYNW",
+    rawPayload: specimen5304wynwPayload as Record<string, unknown>,
+  },
+  {
+    productCode: "5913P5",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Miami-Beach-Bike-Tour/d662-5913P5",
+    rawPayload: specimen5913p5Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "7943P1",
+    publicUrl:
+      "https://www.viator.com/tours/Miami/Biscayne-Bay-Jet-Ski-Tour/d662-7943P1",
+    rawPayload: specimen7943p1Payload as Record<string, unknown>,
+  },
   {
     productCode: "5865P8",
     publicUrl:

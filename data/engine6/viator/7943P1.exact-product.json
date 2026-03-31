@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "7943P1",
+    "title": "Biscayne Bay Jet Ski Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Biscayne-Bay-Jet-Ski-Tour/d662-7943P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 149,
+        "fromPriceFormatted": "From $149.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 260
+    },
+    "description": "Ride across Biscayne Bay on a guided jet ski tour with skyline views, warm-water adventure, and Miami waterfront scenery.",
+    "highlights": [
+      "Experience Biscayne Bay Jet Ski Tour in Miami.",
+      "Book with Viator instant confirmation.",
+      "Great option for travelers exploring Miami."
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Core activity admission"
+    ],
+    "exclusions": [
+      "Food and drinks unless specified",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "Check in at the marina before your jet ski session."
+    },
+    "itinerary": [
+      {
+        "title": "Check-in and introduction",
+        "description": "Meet your guide, confirm logistics, and get ready for departure."
+      },
+      {
+        "title": "Main experience",
+        "description": "Ride across Biscayne Bay on a guided jet ski tour with skyline views, warm-water adventure, and Miami waterfront scenery."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Finish the tour and head back with local tips for the rest of your day."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Most departures run according to the duration shown at booking."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Check in at the marina before your jet ski session."
+      }
+    ],
+    "additionalInfo": [
+      "Please arrive 15 minutes early.",
+      "Weather policies and final logistics are confirmed by the operator."
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/21428/Picture_146933696.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

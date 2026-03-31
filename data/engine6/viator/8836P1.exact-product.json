@@ -1,0 +1,80 @@
+{
+  "product": {
+    "productCode": "8836P1",
+    "title": "Miami Biscayne Bay rich and famous Sightseeing Boat Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Sightseeing-Cruise-of-Biscayne-Bay/d662-8836P1",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 35,
+        "fromPriceFormatted": "From $35.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.0,
+      "totalReviews": 3100
+    },
+    "description": "Cruise Biscayne Bay for skyline views and commentary about celebrity homes, waterfront neighborhoods, and Miami landmarks from the water.",
+    "highlights": [
+      "Experience Miami Biscayne Bay rich and famous Sightseeing Boat Tour in Miami.",
+      "Book with Viator instant confirmation.",
+      "Great option for travelers exploring Miami."
+    ],
+    "inclusions": [
+      "Professional guide or captain",
+      "Core activity admission"
+    ],
+    "exclusions": [
+      "Food and drinks unless specified",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "Check in at Bayside Marketplace before departure."
+    },
+    "itinerary": [
+      {
+        "title": "Check-in and introduction",
+        "description": "Meet your guide, confirm logistics, and get ready for departure."
+      },
+      {
+        "title": "Main experience",
+        "description": "Cruise Biscayne Bay for skyline views and commentary about celebrity homes, waterfront neighborhoods, and Miami landmarks from the water."
+      },
+      {
+        "title": "Return and wrap-up",
+        "description": "Finish the tour and head back with local tips for the rest of your day."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How long is the experience?",
+        "answer": "Most departures run according to the duration shown at booking."
+      },
+      {
+        "question": "Where do we meet?",
+        "answer": "Check in at Bayside Marketplace before departure."
+      }
+    ],
+    "additionalInfo": [
+      "Please arrive 15 minutes early.",
+      "Weather policies and final logistics are confirmed by the operator."
+    ],
+    "categories": [
+      "Outdoor Activities",
+      "Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cache-graphicslib.viator.com/graphicslib/thumbs674x446/21428/Picture_146933696.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
