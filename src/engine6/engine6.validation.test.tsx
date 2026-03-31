@@ -6,7 +6,10 @@ import { toEngine6Card } from "./cards";
 import { mapViatorToEngine6Tour } from "./mapViatorToEngine6Tour";
 import { buildEngine6SchemaGraph } from "./schema/buildEngine6SchemaGraph";
 import { buildEngine6ValidationReport } from "./validation";
-import { ENGINE6_VALIDATION_FIXTURES } from "./validationFixtures";
+import {
+  buildEngine6FixtureRawPayload,
+  ENGINE6_VALIDATION_FIXTURES,
+} from "./validationFixtures";
 import { extractEngine6Product } from "../../api/engine6/viatorExtractors";
 import { buildEngine6ParentCityToursPath } from "./routeIntegrity";
 import type { Engine6ApiResponse } from "./types";
@@ -18,7 +21,8 @@ import type { Engine6ApiResponse } from "./types";
 const toPayload = (
   fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
 ): Engine6ApiResponse => {
-  const extraction = extractEngine6Product(fixture.rawPayload);
+  const fixturePayload = buildEngine6FixtureRawPayload(fixture);
+  const extraction = extractEngine6Product(fixturePayload);
 
   return {
     source: "live-api",
@@ -58,7 +62,48 @@ const countStructuredSourceStops = (rawPayload: Record<string, unknown>) => {
   }).length;
 };
 
+const resolveExpectedFixtureHero = (rawPayload: Record<string, unknown>) => {
+  const product = ((rawPayload as Record<string, unknown>).product ??
+    rawPayload) as Record<string, unknown>;
+
+  return (
+    (product.media as any)?.images?.[0]?.variants?.FULL?.url ??
+    (product.media as any)?.images?.[0]?.variants?.[0]?.url ??
+    (product.media as any)?.images?.[0]?.url ??
+    (product.images as any)?.[0]?.variants?.FULL?.url ??
+    (product.images as any)?.[0]?.variants?.[0]?.url ??
+    (product.images as any)?.[0]?.url ??
+    (product as any)?.heroImageUrl ??
+    null
+  ) as string | null;
+};
+
 describe("engine6 single-tour validation harness", () => {
+  it("hydrates optional fixture heroImageUrl into media candidates when images are missing", () => {
+    const hydrated = buildEngine6FixtureRawPayload({
+      productCode: "TEST1",
+      publicUrl: "https://www.viator.com/tours/Test/d1-TEST1",
+      rawPayload: {
+        product: {
+          productCode: "TEST1",
+          title: "Test tour",
+          productUrl: "https://www.viator.com/tours/Test/d1-TEST1",
+          location: { city: "Test", state: "State" },
+          pricing: { summary: { fromPrice: 10, fromPriceFormatted: "$10.00" } },
+          reviews: { combinedAverageRating: 4.6, totalReviews: 10 },
+        },
+      },
+      heroImageUrl:
+        "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg",
+    });
+
+    const extraction = extractEngine6Product(hydrated);
+    expect(extraction.extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg"
+    );
+    expect(extraction.diagnostics.heroFallbackTriggered).toBe(false);
+  });
+
   it.each(ENGINE6_VALIDATION_FIXTURES)(
     "validates %s end-to-end with product-scoped hero resolution",
     fixture => {
@@ -78,16 +123,11 @@ describe("engine6 single-tour validation harness", () => {
       const webPage = graph.find(node => node["@type"] === "WebPage") as
         | Record<string, unknown>
         | undefined;
-      const rawPayload = fixture.rawPayload as any;
+      const rawPayload = buildEngine6FixtureRawPayload(fixture) as any;
       const parentCityToursPath = buildEngine6ParentCityToursPath(
         tour.canonicalPath
       );
-      const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
-        ?.FULL?.url ??
-        rawPayload.media?.images?.[0]?.variants?.FULL?.url ??
-        rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
-        rawPayload.images?.[0]?.variants?.[0]?.url ??
-        null) as string | null;
+      const expectedHero = resolveExpectedFixtureHero(rawPayload);
 
       expect(tour.productCode).toBe(fixture.productCode);
       expect(tour.heroImageUrl).toBe(expectedHero);
@@ -102,7 +142,11 @@ describe("engine6 single-tour validation harness", () => {
         expect(tour.itinerary.length).toBeGreaterThanOrEqual(2);
         expect(html).toContain('data-testid="engine6-itinerary-timeline"');
       }
-      expect(tour.priceFormatted).toMatch(/^Starting at \$/);
+      expect(
+        /^Starting at \$|^From \$\d[\d,]*(?:\.\d+)?\s+per\s+group/i.test(
+          tour.priceFormatted
+        )
+      ).toBe(true);
       expect(tour.aggregateRating).toBeGreaterThan(4);
       expect(tour.reviewCount).toBeGreaterThan(0);
       expect(tour.seoTitle).toContain(tour.title);

@@ -494,6 +494,8 @@ const extractPlaybookHeroCandidates = ({
 
   for (const [path, value] of [
     ["product.imageUrl", product.imageUrl],
+    ["product.heroImageUrl", product.heroImageUrl],
+    ["product.heroImageURL", product.heroImageURL],
     ["product.thumbnailHiResURL", product.thumbnailHiResURL],
     ["product.thumbnailURL", product.thumbnailURL],
   ] as const) {

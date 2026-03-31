@@ -30,6 +30,7 @@ import {
   ENGINE6_ANCHORAGE_PRIVATE_ROUTE,
   ENGINE6_ANCHORAGE_SUNSET_ROUTE,
   ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
+  ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE,
   ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
   ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
   ENGINE6_NYC_PEDICAB_ROUTE,
@@ -40,6 +41,7 @@ import {
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
   ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
+  ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -2055,6 +2057,34 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
   });
 
+  it("registers the Fort Lauderdale eBike replacement route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
+  it("registers the San Diego whale watch replacement route before the generic city tour detail route", () => {
+    const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
+    const engine6RouteIndex = source.indexOf(
+      "path={ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE}"
+    );
+    const genericRouteIndex = source.indexOf(
+      'path="/destinations/:stateSlug/:citySlug/tours/:tourSlug"'
+    );
+
+    expect(engine6RouteIndex).toBeGreaterThan(-1);
+    expect(genericRouteIndex).toBeGreaterThan(-1);
+    expect(engine6RouteIndex).toBeLessThan(genericRouteIndex);
+  });
+
   it("registers the San Diego Joshua Tree route before the generic city tour detail route", () => {
     const source = readFileSync(new URL("../App.tsx", import.meta.url), "utf8");
     const engine6RouteIndex = source.indexOf(
@@ -2094,7 +2124,7 @@ describe("engine6 route wiring", () => {
     expect(engine6RouteIndex).toBeLessThan(unitedStatesRouteIndex);
   });
 
-  it("replaces 53474P8 in-place and keeps FareHarbor /book routing", () => {
+  it("replaces 53474P8 in-place and uses Viator affiliate CTA", () => {
     const anchorageTour = engine6ResolvedTours.find(
       tour => tour.productCode === "53474P8"
     );
@@ -2102,12 +2132,12 @@ describe("engine6 route wiring", () => {
     expect(anchorageTour?.canonicalPath).toBe(
       "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155"
     );
-    expect(anchorageTour?.bookingUrl).toBe(
-      "/destinations/alaska/anchorage/tours/anchorage-greenbelt-bike-tour-391155/book"
-    );
+    expect(anchorageTour?.bookingUrl).toContain("viator.com");
+    expect(anchorageTour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(anchorageTour?.ownership.ctaOwner).toBe("viator");
   });
 
-  it("replaces 414460P1 in-place and keeps the existing /book endpoint CTA", () => {
+  it("replaces 414460P1 in-place and uses Viator affiliate CTA", () => {
     const nycPedicabTour = engine6ResolvedTours.find(
       tour => tour.productCode === "414460P1"
     );
@@ -2115,14 +2145,13 @@ describe("engine6 route wiring", () => {
     expect(nycPedicabTour?.canonicalPath).toBe(
       "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491"
     );
-    expect(nycPedicabTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
-    );
+    expect(nycPedicabTour?.bookingUrl).toContain("viator.com");
+    expect(nycPedicabTour?.bookingUrl.endsWith("/book")).toBe(false);
     expect(nycPedicabTour?.itinerary.length).toBeGreaterThanOrEqual(2);
     expect(ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_PEDICAB_ROUTE)).toBe(true);
   });
 
-  it("replaces 233384P2 in-place and keeps the existing /book endpoint CTA", () => {
+  it("replaces 233384P2 in-place and uses Viator affiliate CTA", () => {
     const nycTour = engine6ResolvedTours.find(
       tour => tour.productCode === "233384P2"
     );
@@ -2130,15 +2159,14 @@ describe("engine6 route wiring", () => {
     expect(nycTour?.canonicalPath).toBe(
       "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853"
     );
-    expect(nycTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/brooklyn-bridge-and-waterfront-bike-tour-264853/book"
-    );
+    expect(nycTour?.bookingUrl).toContain("viator.com");
+    expect(nycTour?.bookingUrl.endsWith("/book")).toBe(false);
     expect(
       ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE)
     ).toBe(true);
   });
 
-  it("replaces 3156P13 in-place at the existing Best of NYC slug and preserves /book CTA", () => {
+  it("replaces 3156P13 in-place at the existing Best of NYC slug and uses Viator affiliate CTA", () => {
     const nycElectricBikeTour = engine6ResolvedTours.find(
       tour => tour.productCode === "3156P13"
     );
@@ -2146,15 +2174,46 @@ describe("engine6 route wiring", () => {
     expect(nycElectricBikeTour?.canonicalPath).toBe(
       "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168"
     );
-    expect(nycElectricBikeTour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168/book"
-    );
+    expect(nycElectricBikeTour?.bookingUrl).toContain("viator.com");
+    expect(nycElectricBikeTour?.bookingUrl.endsWith("/book")).toBe(false);
     expect(nycElectricBikeTour?.meetingPointText).toContain("79 Chambers St");
     expect(nycElectricBikeTour?.itinerary.length).toBeGreaterThanOrEqual(2);
     expect(
       ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(
         ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE
       )
+    ).toBe(true);
+  });
+
+  it("replaces 383300P4 in-place at the Fort Lauderdale legacy slug with Viator CTA ownership", () => {
+    const fortLauderdaleTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "383300P4"
+    );
+    expect(fortLauderdaleTour).toBeDefined();
+    expect(fortLauderdaleTour?.canonicalPath).toBe(
+      "/destinations/florida/fort-lauderdale/tours/private-guided-ebike-tour-684831"
+    );
+    expect(fortLauderdaleTour?.bookingUrl).toContain("viator.com");
+    expect(fortLauderdaleTour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(fortLauderdaleTour?.ownership.ctaOwner).toBe("viator");
+    expect(
+      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE)
+    ).toBe(true);
+  });
+
+  it("replaces 5144WHALE in-place at the San Diego legacy slug with Viator CTA ownership", () => {
+    const sanDiegoWhaleTour = engine6ResolvedTours.find(
+      tour => tour.productCode === "5144WHALE"
+    );
+    expect(sanDiegoWhaleTour).toBeDefined();
+    expect(sanDiegoWhaleTour?.canonicalPath).toBe(
+      "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-60603"
+    );
+    expect(sanDiegoWhaleTour?.bookingUrl).toContain("viator.com");
+    expect(sanDiegoWhaleTour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(sanDiegoWhaleTour?.ownership.ctaOwner).toBe("viator");
+    expect(
+      ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS.has(ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE)
     ).toBe(true);
   });
 

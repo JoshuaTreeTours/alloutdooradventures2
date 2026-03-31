@@ -130,6 +130,60 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(cityTours[0]?.productCode).toBe("414460P1");
   });
 
+  it("replaces Fort Lauderdale eBike overlap with a single Engine6 Viator canonical listing", () => {
+    const canonicalPath =
+      "/destinations/florida/fort-lauderdale/tours/private-guided-ebike-tour-684831";
+    const unified = getToursByCityUnified("florida", "fort-lauderdale").filter(
+      entry => entry.href === canonicalPath
+    );
+    const pageTour = getTourBySlugs(
+      "florida",
+      "fort-lauderdale",
+      "private-guided-ebike-tour-684831"
+    );
+    const legacyTour = getLegacyTourBySlugs(
+      "florida",
+      "fort-lauderdale",
+      "private-guided-ebike-tour-684831"
+    );
+
+    expect(unified).toHaveLength(1);
+    expect(unified[0]?.tour.engine).toBe("engine6");
+    expect(unified[0]?.tour.productCode).toBe("383300P4");
+    expect(pageTour?.bookingUrl).toContain("viator.com");
+    expect(pageTour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(pageTour?.bookingProvider).toBe("viator");
+    expect(unified[0]?.tour.primaryImageUrl).toBe(pageTour?.heroImage);
+    expect(legacyTour?.bookingProvider).toBe("fareharbor");
+  });
+
+  it("replaces San Diego whale watching overlap with a single Engine6 Viator canonical listing", () => {
+    const canonicalPath =
+      "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-60603";
+    const unified = getToursByCityUnified("california", "san-diego").filter(
+      entry => entry.href === canonicalPath
+    );
+    const pageTour = getTourBySlugs(
+      "california",
+      "san-diego",
+      "san-diego-whale-watching-cruise-60603"
+    );
+    const legacyTour = getLegacyTourBySlugs(
+      "california",
+      "san-diego",
+      "san-diego-whale-watching-cruise-60603"
+    );
+
+    expect(unified).toHaveLength(1);
+    expect(unified[0]?.tour.engine).toBe("engine6");
+    expect(unified[0]?.tour.productCode).toBe("5144WHALE");
+    expect(pageTour?.bookingUrl).toContain("viator.com");
+    expect(pageTour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(pageTour?.bookingProvider).toBe("viator");
+    expect(unified[0]?.tour.primaryImageUrl).toBe(pageTour?.heroImage);
+    expect(legacyTour?.bookingProvider).toBe("fareharbor");
+  });
+
   it("overlap replacements render at legacy slugs and no duplicate listing card survives", () => {
     for (const config of engine6OverlapReplacementConfigs) {
       const [, stateSlug = "", citySlug = "", slug = ""] =
