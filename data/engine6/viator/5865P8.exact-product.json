@@ -1,0 +1,76 @@
+{
+  "product": {
+    "productCode": "5865P8",
+    "title": "Everglades Airboat Tour from Fort Lauderdale with transportation",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Florida-Everglades-Airboat-Tour-and-Show-from-Fort-Lauderdale-Group/d660-5865P8",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 75,
+        "fromPriceFormatted": "$75.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 589
+    },
+    "description": "Go for an immersive airboat ride through Everglades National Park\u2014and leave transit and logistics to someone else\u2014on this half-day tour from Fort Lauderdale. Choose a morning or afternoon departure, ride out to the wetlands, then cruise the waterways while looking for alligators and other native wildlife.",
+    "highlights": [
+      "Ride an airboat through Everglades waterways with a guide",
+      "Round-trip transportation from selected Fort Lauderdale pickup points",
+      "Watch for alligators, birds, and other local wildlife",
+      "Choose a morning or afternoon departure window"
+    ],
+    "inclusions": [
+      "Driver/guide",
+      "Hotel pickup and drop-off (selected hotels only)"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Gratuities"
+    ],
+    "meetingPoint": {
+      "description": "You can head directly to your preferred meeting point, or request pickup. Selected Hotels only. Please call Alligator Tours for exactly time. Morning pickups 7:45 am to 8:15 am and afternoon pickups 12:00 to 12:30 pm."
+    },
+    "itinerary": [
+      {
+        "title": "Dania Beach",
+        "duration": "2 minutes",
+        "description": "Admission Ticket Free"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can I be picked up for this tour?",
+        "answer": "Yes. Selected Fort Lauderdale hotels and pickup points are available; contact the operator in advance for exact timing."
+      },
+      {
+        "question": "How long is the tour?",
+        "answer": "The experience lasts about 4 hours including transportation and the airboat activity."
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Most travelers can participate",
+      "This tour/activity will have a maximum of 20 travelers"
+    ],
+    "categories": [
+      {
+        "label": "Nature and Wildlife Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/wt9N5qVvQEWdWNkdZsQw",
+          "width": 1200,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
