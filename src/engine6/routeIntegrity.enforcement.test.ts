@@ -6,6 +6,8 @@ import {
 } from "./routeIntegrity";
 import { getEngine6NativeTourByCanonicalPath, engine6ResolvedTours } from "./registry";
 import {
+  ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE,
+  ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE,
   ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE,
@@ -46,6 +48,19 @@ describe("engine6 route integrity enforcement", () => {
     );
     expect(tour?.productCode).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_PRODUCT_CODE);
     expect(tour?.canonicalPath).toBe(ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE);
+  });
+
+  it("test 3b: Balboa Park canonical URL resolves to 5356P12", () => {
+    expect(resolveEngine6ProductCodeForPath(ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE)).toBe(
+      ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE
+    );
+
+    const tour = getEngine6NativeTourByCanonicalPath(
+      ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE
+    );
+    expect(tour?.productCode).toBe(ENGINE6_SAN_DIEGO_BALBOA_ART_PRODUCT_CODE);
+    expect(tour?.canonicalPath).toBe(ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE);
+    expect(tour?.bookingUrl).toBe(`${ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE}/book`);
   });
 
   it("test 4: mismatch detection throws for intentional bad mapping", () => {

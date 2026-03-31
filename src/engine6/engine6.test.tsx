@@ -35,6 +35,7 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
+  ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
@@ -1125,6 +1126,26 @@ describe("engine6 listing surfaces", () => {
       return tour?.heroImageUrl;
     });
     expect(new Set(heroes).size).toBe(3);
+  });
+
+  it("keeps 5356P12 on the Balboa Park canonical slug while preserving the existing FareHarbor /book CTA", () => {
+    const tour = engine6ResolvedTours.find(entry => entry.productCode === "5356P12");
+    expect(tour).toBeDefined();
+    expect(tour?.canonicalPath).toBe(ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE);
+    expect(tour?.bookingUrl).toBe(`${ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE}/book`);
+
+    const cityUnified = getToursByCityUnified("california", "san-diego");
+    const unifiedEntry = cityUnified.find(entry => entry.tour.productCode === "5356P12");
+    expect(unifiedEntry?.href).toBe(ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE);
+    expect(unifiedEntry?.tour.bookingUrl).toBe(
+      `${ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE}/book`
+    );
+
+    const detailHtml = renderToString(<Engine6TourPage tour={tour!} />);
+    expect(detailHtml).toContain(
+      `${ENGINE6_SAN_DIEGO_BALBOA_ART_ROUTE}/book`
+    );
+    expect(detailHtml).toContain("Plaza de Panama");
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {
