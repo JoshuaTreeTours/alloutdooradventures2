@@ -56,6 +56,21 @@ export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE = "173946P1";
 export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE =
   "/destinations/california/san-diego/tours/half-day-4x4-adventure";
+export const ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_PRODUCT_CODE = "22443P8";
+export const ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_ROUTE =
+  "/destinations/california/san-diego/tours/la-jolla-kayak-and-snorkel-tour";
+export const ENGINE6_SAN_DIEGO_JET_SKI_PRODUCT_CODE = "457047P1";
+export const ENGINE6_SAN_DIEGO_JET_SKI_ROUTE =
+  "/destinations/california/san-diego/tours/jet-ski-rental-adventure-in-san-diego-bay";
+export const ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_PRODUCT_CODE = "19989P5";
+export const ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_ROUTE =
+  "/destinations/california/san-diego/tours/private-mountain-and-desert-adventure-from-san-diego";
+export const ENGINE6_SAN_DIEGO_EBIKE_PRODUCT_CODE = "8630P7";
+export const ENGINE6_SAN_DIEGO_EBIKE_ROUTE =
+  "/destinations/california/san-diego/tours/cali-dreaming-electric-bike-tour-of-la-jolla-and-pacific-beach";
+export const ENGINE6_SAN_DIEGO_WHALE_WATCH_PRODUCT_CODE = "5170WHALE";
+export const ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE =
+  "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -148,6 +163,20 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
     ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_ROUTE,
+    ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_PRODUCT_CODE,
+  ],
+  [ENGINE6_SAN_DIEGO_JET_SKI_ROUTE, ENGINE6_SAN_DIEGO_JET_SKI_PRODUCT_CODE],
+  [
+    ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_ROUTE,
+    ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_PRODUCT_CODE,
+  ],
+  [ENGINE6_SAN_DIEGO_EBIKE_ROUTE, ENGINE6_SAN_DIEGO_EBIKE_PRODUCT_CODE],
+  [
+    ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE,
+    ENGINE6_SAN_DIEGO_WHALE_WATCH_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,

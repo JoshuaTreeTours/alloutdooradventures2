@@ -1,0 +1,43 @@
+{
+  "product": {
+    "productCode": "19989P5",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Private-Mountain-and-Desert-Tour-from-San-Diego/d736-19989P5",
+    "title": "Private Mountain and Desert Adventure from San Diego",
+    "description": {
+      "text": "Head into mountain and desert terrain outside San Diego on a private guided adventure designed for travelers seeking rugged scenery and flexible pacing. The route combines scenic drives, short trail walks, and remote viewpoints."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$199.00",
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 86
+    },
+    "duration": "8 hours",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/10/4e/31/b5.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Private mountain and desert day trip from San Diego.",
+      "Remote overlooks, photo stops, and flexible itinerary.",
+      "Guided interpretation of terrain and local history.",
+      "Comfortable round-trip transportation included."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Pickup details provided by operator in San Diego."
+      }
+    },
+    "categories": [
+      { "label": "4WD Tours" },
+      { "label": "Nature and Wildlife Tours" },
+      { "label": "Adventure Tours" }
+    ]
+  }
+}

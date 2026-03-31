@@ -81,13 +81,41 @@ const normalizeHeroMediaUrl = (value: string) => {
       parsed.pathname = parsed.pathname
         .replace(/\/photo-s\//i, "/photo-o/")
         .replace(/\/+$/, "");
-      parsed.search = "";
       parsed.hash = "";
     }
 
     return parsed.toString();
   } catch {
     return value;
+  }
+};
+
+const isTacdnCaptionImage = (url: string) => {
+  try {
+    const parsed = new URL(url);
+    return (
+      parsed.hostname.toLowerCase() === "dynamic-media.tacdn.com" &&
+      /\/caption\.jpg(?:$|[?#])/i.test(parsed.pathname + parsed.search)
+    );
+  } catch {
+    return false;
+  }
+};
+
+const isTacdnUrl = (url: string) => {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    return host.endsWith(".tacdn.com") || host === "tacdn.com";
+  } catch {
+    return false;
+  }
+};
+
+const isMediaTacdnUrl = (url: string) => {
+  try {
+    return new URL(url).hostname.toLowerCase() === "media.tacdn.com";
+  } catch {
+    return false;
   }
 };
 
@@ -99,22 +127,24 @@ const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
     const bHeight = getEffectiveHeight(b);
     const aArea = aWidth * aHeight;
     const bArea = bWidth * bHeight;
-    const aPreferredWidthBucket = aWidth >= 1000 ? 2 : aWidth >= 800 ? 1 : 0;
-    const bPreferredWidthBucket = bWidth >= 1000 ? 2 : bWidth >= 800 ? 1 : 0;
-    const aCaption = /\/caption\.jpg(?:$|[?#])/i.test(a.url) ? 1 : 0;
-    const bCaption = /\/caption\.jpg(?:$|[?#])/i.test(b.url) ? 1 : 0;
+    const precedenceScore = (candidate: Engine6HeroCandidate) => {
+      if (isTacdnCaptionImage(candidate.url)) return 4;
+      if (candidate.sourceType === "api-gallery" && isTacdnUrl(candidate.url))
+        return 3;
+      if (isMediaTacdnUrl(candidate.url)) return 2;
+      return 1;
+    };
+    const aPrecedence = precedenceScore(a);
+    const bPrecedence = precedenceScore(b);
 
-    if (bPreferredWidthBucket !== aPreferredWidthBucket) {
-      return bPreferredWidthBucket - aPreferredWidthBucket;
+    if (bPrecedence !== aPrecedence) {
+      return bPrecedence - aPrecedence;
     }
     if (bWidth !== aWidth) {
       return bWidth - aWidth;
     }
     if (bArea !== aArea) {
       return bArea - aArea;
-    }
-    if (bCaption !== aCaption) {
-      return bCaption - aCaption;
     }
     return bHeight - aHeight;
   });
@@ -266,7 +296,6 @@ export const resolveProductScopedHero = ({
       );
       continue;
     }
-
     validCandidates.push({
       ...candidate,
       candidateProductCode,

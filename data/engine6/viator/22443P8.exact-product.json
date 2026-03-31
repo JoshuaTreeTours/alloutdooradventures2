@@ -1,0 +1,57 @@
+{
+  "product": {
+    "productCode": "22443P8",
+    "productUrl": "https://www.viator.com/tours/La-Jolla/La-Jolla-Kayak-and-Snorkel-Tour/d22636-22443P8",
+    "title": "La Jolla Kayak and Snorkel Tour",
+    "description": {
+      "text": "Explore La Jolla's marine reserve with a guide on a combined kayak and snorkel adventure. Paddle past sea caves and kelp beds, then snorkel in protected coves to look for Garibaldi, rays, and other local marine life."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$109.00",
+    "reviews": {
+      "combinedAverageRating": 4.6,
+      "totalReviews": 114
+    },
+    "duration": "2 hours 30 minutes",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/59/6e/86.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Kayak and snorkel in one guided outing.",
+      "Paddle near La Jolla sea caves and coastal cliffs.",
+      "Look for sea lions, leopard sharks, and colorful reef fish.",
+      "Small-group format with route and safety support."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Meeting location in La Jolla Shores, San Diego, CA. Arrive early for check-in and gear fitting."
+      }
+    },
+    "faqs": [
+      {
+        "question": "Do I need prior kayaking or snorkeling experience?",
+        "answer": "No, this experience is designed for beginners with guide support and safety instruction."
+      },
+      {
+        "question": "Is snorkel gear included?",
+        "answer": "Yes, core snorkel and kayaking equipment is provided by the operator."
+      },
+      {
+        "question": "What wildlife is common?",
+        "answer": "Guests frequently report sea lions, rays, and Garibaldi fish sightings."
+      }
+    ],
+    "categories": [
+      { "label": "Kayaking Tours" },
+      { "label": "Snorkeling" },
+      { "label": "On the Water" }
+    ]
+  }
+}

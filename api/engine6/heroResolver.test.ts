@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { resolveProductScopedHero } from "./heroResolver";
 
 describe("engine6 hero resolver", () => {
-  it("accepts the current product primary API image before any placeholder", () => {
+  it("accepts product-scoped API images when they are the only valid candidates", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -93,7 +93,7 @@ describe("engine6 hero resolver", () => {
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("selects the highest-resolution product-owned candidate instead of first/FULL defaults", () => {
+  it("prioritizes TACDN caption images over other verified candidates", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -154,7 +154,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?foo=bar"
     );
   });
 

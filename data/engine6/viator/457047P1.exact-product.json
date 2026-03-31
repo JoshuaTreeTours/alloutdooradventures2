@@ -1,0 +1,42 @@
+{
+  "product": {
+    "productCode": "457047P1",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Jet-Ski-Rental-Adventure-in-San-Diego-Bay/d736-457047P1",
+    "title": "Jet Ski Rental Adventure in San Diego Bay",
+    "description": {
+      "text": "Ride a jet ski on San Diego Bay with briefing and route recommendations from local staff. This high-energy water adventure combines skyline views, open-water speed runs, and flexible rental pacing for thrill-seekers."
+    },
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "priceFrom": "$119.00",
+    "reviews": {
+      "combinedAverageRating": 5.0,
+      "totalReviews": 23
+    },
+    "duration": "1 hour",
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/12/6e/ab/8b.jpg"
+        }
+      ]
+    },
+    "highlights": [
+      "Jet ski adventure with a safety orientation.",
+      "Fast-paced experience on San Diego Bay.",
+      "Great skyline and harbor views from the water.",
+      "Flexible format for confident and first-time riders."
+    ],
+    "logistics": {
+      "start": {
+        "description": "Departure area on San Diego Bay provided at booking confirmation."
+      }
+    },
+    "categories": [
+      { "label": "Extreme Sports" },
+      { "label": "On the Water" }
+    ]
+  }
+}
