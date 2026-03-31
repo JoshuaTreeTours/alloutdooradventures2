@@ -32,6 +32,12 @@ export type Engine6RejectedHeroCandidate = {
 
 export type Engine6TourDiagnostics = {
   source: "live-api" | "bundled-fallback" | "legacy-fh-migrated";
+  commercialConfidenceReason?:
+    | "product-code-match"
+    | "high-confidence-heuristic"
+    | "no-confident-match";
+  viatorCommercialFieldsUsed?: boolean;
+  commercialSourceWinner?: "fareharbor" | "viator";
   commercialPriceFieldPath: string | null;
   commercialPriceRawValue: string | number | null;
   priceSourceUsed: "live-price" | "fallback";
