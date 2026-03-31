@@ -1,3 +1,8 @@
+import type {
+  CommercialConfidenceReason,
+  LegacyFhCommercialMatchSignals,
+} from "./commercialConfidence";
+
 export type LegacyFhPriceSnapshot = {
   amount: number | null;
   currency: string;
@@ -30,7 +35,8 @@ export type LegacyFhMigratedProductRecord = {
   ratingSnapshot: LegacyFhRatingSnapshot;
   matchedViatorCommercial?: {
     productCode: string;
-    confidentMatch: boolean;
+    confidenceSignals?: LegacyFhCommercialMatchSignals | null;
+    confidenceReason?: CommercialConfidenceReason | null;
     priceAmount: number | null;
     aggregateRating: number | null;
     reviewCount: number | null;

@@ -101,9 +101,42 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.ownership.presentationOwner).toBe("engine6");
     expect(tour.ownership.commercialOwner).toBe("viator");
     expect(tour.ownership.commercialFallbackReason).toBe("none");
+    expect(tour.diagnostics.commercialConfidenceReason).toBe(
+      "product-code-match"
+    );
+    expect(tour.diagnostics.viatorCommercialFieldsUsed).toBe(true);
+    expect(tour.diagnostics.commercialSourceWinner).toBe("viator");
     expect(tour.diagnostics.commercialPriceFieldPath).toContain(
       "matchedViatorCommercial"
     );
+  });
+
+  it("uses Viator commercial fields on high-confidence heuristic matches", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: "233384P2",
+        confidenceSignals: {
+          productCodeMatched: false,
+          titleSimilarity: 0.51,
+          meetingPointMatched: true,
+          priceWithinDelta: true,
+        },
+        priceAmount: 60,
+        aggregateRating: 4.5,
+        reviewCount: 3200,
+      },
+    });
+
+    expect(tour.priceAmount).toBe(60);
+    expect(tour.aggregateRating).toBe(4.5);
+    expect(tour.reviewCount).toBe(3200);
+    expect(tour.ownership.commercialOwner).toBe("viator");
+    expect(tour.ownership.commercialFallbackReason).toBe("none");
+    expect(tour.diagnostics.commercialConfidenceReason).toBe(
+      "high-confidence-heuristic"
+    );
+    expect(tour.diagnostics.viatorCommercialFieldsUsed).toBe(true);
   });
 
   it("falls back to migrated FH commercial fields when no confident Viator match exists", () => {
@@ -111,7 +144,12 @@ describe("legacy FH -> Engine6 converter", () => {
       ...centralParkBikeToursMigratedRecord,
       matchedViatorCommercial: {
         productCode: "233384P2",
-        confidentMatch: false,
+        confidenceSignals: {
+          productCodeMatched: false,
+          titleSimilarity: 0.39,
+          meetingPointMatched: true,
+          priceWithinDelta: true,
+        },
         priceAmount: 52,
         aggregateRating: 4.7,
         reviewCount: 5060,
@@ -125,6 +163,11 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.ownership.commercialFallbackReason).toBe(
       "no-confident-viator-match"
     );
+    expect(tour.diagnostics.commercialConfidenceReason).toBe(
+      "no-confident-match"
+    );
+    expect(tour.diagnostics.viatorCommercialFieldsUsed).toBe(false);
+    expect(tour.diagnostics.commercialSourceWinner).toBe("fareharbor");
     expect(tour.diagnostics.commercialPriceFieldPath).toBe("legacy.price");
     expect(tour.diagnostics.ratingFieldPath).toBe("legacy.rating");
   });
@@ -134,7 +177,9 @@ describe("legacy FH -> Engine6 converter", () => {
       ...centralParkBikeToursMigratedRecord,
       matchedViatorCommercial: {
         productCode: "233384P2",
-        confidentMatch: true,
+        confidenceSignals: {
+          productCodeMatched: true,
+        },
         priceAmount: null,
         aggregateRating: null,
         reviewCount: null,
@@ -147,6 +192,10 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.ownership.commercialFallbackReason).toBe(
       "viator-commercial-unavailable"
     );
+    expect(tour.diagnostics.commercialConfidenceReason).toBe(
+      "product-code-match"
+    );
+    expect(tour.diagnostics.viatorCommercialFieldsUsed).toBe(false);
   });
 
   it("enforces /book preservation for migrated records", () => {

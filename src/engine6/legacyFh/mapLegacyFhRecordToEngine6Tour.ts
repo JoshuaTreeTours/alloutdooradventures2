@@ -1,4 +1,5 @@
 import type { Engine6Tour } from "../types";
+import { resolveLegacyFhCommercialConfidenceReason } from "./commercialConfidence";
 import type { LegacyFhMigratedProductRecord } from "./types";
 
 export const mapLegacyFhRecordToEngine6Tour = (
@@ -28,8 +29,13 @@ export const mapLegacyFhRecordToEngine6Tour = (
     ...(record.cancellationSummary ? [record.cancellationSummary] : []),
     ...record.exclusions.map(item => `Not included: ${item}`),
   ];
+  const commercialConfidenceReason =
+    record.matchedViatorCommercial?.confidenceReason ??
+    resolveLegacyFhCommercialConfidenceReason(
+      record.matchedViatorCommercial?.confidenceSignals
+    );
   const shouldUseMatchedViatorCommercial =
-    record.matchedViatorCommercial?.confidentMatch === true;
+    commercialConfidenceReason !== "no-confident-match";
   const hasViatorCommercialValues =
     typeof record.matchedViatorCommercial?.priceAmount === "number" ||
     typeof record.matchedViatorCommercial?.aggregateRating === "number" ||
@@ -102,6 +108,9 @@ export const mapLegacyFhRecordToEngine6Tour = (
     },
     diagnostics: {
       source: "legacy-fh-migrated",
+      commercialConfidenceReason,
+      viatorCommercialFieldsUsed: shouldUseViatorCommercial,
+      commercialSourceWinner: shouldUseViatorCommercial ? "viator" : "fareharbor",
       commercialPriceFieldPath: shouldUseViatorCommercial
         ? `matchedViatorCommercial.priceAmount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
         : "legacy.price",
