@@ -17,6 +17,7 @@ import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-pr
 import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
+import specimen383300p6Payload from "../../data/engine6/viator/383300P6.exact-product.json";
 
 import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 export type Engine6ValidationFixture = {
@@ -145,5 +146,11 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/Palm-Springs/Mountain-Sunrise-Hike-and-Meditation/d648-327321P1",
     rawPayload: specimen327321p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "383300P6",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Guided-Electric-Bike-Tours-of-Greater-Fort-Lauderdale/d660-383300P6",
+    rawPayload: specimen383300p6Payload as Record<string, unknown>,
   },
 ];
