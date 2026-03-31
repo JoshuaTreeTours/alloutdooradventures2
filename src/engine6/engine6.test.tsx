@@ -36,6 +36,7 @@ import {
   ENGINE6_PARAGON_ROUTE,
   ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+  ENGINE6_SAN_DIEGO_EBIKE_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
@@ -132,6 +133,8 @@ const ENGINE6_31015P9_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/b2/7b/e3.jpg";
 const ENGINE6_173946P1_EXPECTED_HERO_URL =
   "https://media.tacdn.com/media/attractions-splice-spp-360x240/0e/8f/b9/96.jpg";
+const ENGINE6_8630P7_EXPECTED_HERO_URL =
+  "https://dynamic-media.tacdn.com/media/photo-o/2f/1b/56/c0/caption.jpg?w=700&h=500&s=1";
 
 const countStructuredSourceStops = (
   rawPayload: Record<string, unknown>
@@ -1058,16 +1061,25 @@ describe("engine6 listing surfaces", () => {
         route: ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
         hero: ENGINE6_21165P1_EXPECTED_HERO_URL,
         cta: "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1?pid=P00290915&mcid=42383&medium=link",
+        faqCount: 5,
       },
       "31015P9": {
         route: ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
         hero: ENGINE6_31015P9_EXPECTED_HERO_URL,
         cta: "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9?pid=P00290915&mcid=42383&medium=link",
+        faqCount: 5,
       },
       "173946P1": {
         route: ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
         hero: ENGINE6_173946P1_EXPECTED_HERO_URL,
         cta: "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1?pid=P00290915&mcid=42383&medium=link",
+        faqCount: 5,
+      },
+      "8630P7": {
+        route: ENGINE6_SAN_DIEGO_EBIKE_ROUTE,
+        hero: ENGINE6_8630P7_EXPECTED_HERO_URL,
+        cta: "https://www.viator.com/tours/La-Jolla/Cali-Dreamin-Electric-Bike-Tour-of-La-Jolla-and-Pacific-Beach/d22636-8630P7?pid=P00290915&mcid=42383&medium=link",
+        faqCount: 0,
       },
     } as const;
 
@@ -1085,7 +1097,7 @@ describe("engine6 listing surfaces", () => {
       const detailTour = engine6ResolvedTours.find(tour => tour.productCode === productCode);
       expect(detailTour?.heroImageUrl).toBe(expected.hero);
       expect(detailTour?.diagnostics.heroFallbackTriggered).toBe(false);
-      expect(detailTour?.faqs).toHaveLength(5);
+      expect(detailTour?.faqs).toHaveLength(expected.faqCount);
 
       const detailHtml = renderToString(<Engine6TourPage tour={detailTour!} />);
       expect(detailHtml).toContain(`src=\"${expected.hero.replaceAll("&", "&amp;")}\"`);
@@ -1117,7 +1129,7 @@ describe("engine6 listing surfaces", () => {
       const tour = engine6ResolvedTours.find(entry => entry.productCode === productCode);
       return tour?.heroImageUrl;
     });
-    expect(new Set(heroes).size).toBe(3);
+    expect(new Set(heroes).size).toBe(4);
   });
 
   it("renders an Other Tours slider below bottom CTA with unified listing cards", () => {

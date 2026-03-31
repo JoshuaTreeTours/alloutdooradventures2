@@ -79,8 +79,13 @@ import {
   ENGINE6_NYC_PEDICAB_ROUTE,
   ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE,
   ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+  ENGINE6_SAN_DIEGO_JET_SKI_ROUTE,
+  ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_ROUTE,
+  ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_ROUTE,
   ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
   ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
+  ENGINE6_SAN_DIEGO_EBIKE_ROUTE,
+  ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE,
   ENGINE6_SAN_DIEGO_ZOO_COMBO_ROUTE,
   ENGINE6_SPECIMEN_ROUTE,
   ENGINE6_YOSEMITE_ROUTE,
@@ -263,6 +268,26 @@ export default function App() {
         />
         <Route
           path={ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_KAYAK_SNORKEL_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_JET_SKI_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_MOUNTAIN_DESERT_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_EBIKE_ROUTE}
+          component={Engine6SpecimenRoute}
+        />
+        <Route
+          path={ENGINE6_SAN_DIEGO_WHALE_WATCH_ROUTE}
           component={Engine6SpecimenRoute}
         />
 
