@@ -28,6 +28,25 @@ export const mapLegacyFhRecordToEngine6Tour = (
     ...(record.cancellationSummary ? [record.cancellationSummary] : []),
     ...record.exclusions.map(item => `Not included: ${item}`),
   ];
+  const shouldUseMatchedViatorCommercial =
+    record.matchedViatorCommercial?.confidentMatch === true;
+  const resolvedPriceAmount = shouldUseMatchedViatorCommercial
+    ? record.matchedViatorCommercial?.priceAmount ?? null
+    : record.priceSnapshot.amount;
+  const resolvedAggregateRating = shouldUseMatchedViatorCommercial
+    ? record.matchedViatorCommercial?.aggregateRating ?? null
+    : record.ratingSnapshot.rating;
+  const resolvedReviewCount = shouldUseMatchedViatorCommercial
+    ? record.matchedViatorCommercial?.reviewCount ?? null
+    : record.ratingSnapshot.reviewCount;
+  const resolvedPriceLabel = shouldUseMatchedViatorCommercial
+    ? typeof resolvedPriceAmount === "number"
+      ? `Starting at $${resolvedPriceAmount.toFixed(0)}`
+      : "Check latest price"
+    : record.priceSnapshot.label ??
+      (typeof record.priceSnapshot.amount === "number"
+        ? `Starting at $${record.priceSnapshot.amount.toFixed(0)}`
+        : "Check latest price");
 
   return {
     productCode: `fh-${record.slug}`,
@@ -42,14 +61,10 @@ export const mapLegacyFhRecordToEngine6Tour = (
     state: state || "State",
     resolvedImageUrl: record.heroImageUrl,
     heroImageUrl: record.heroImageUrl ?? "",
-    priceAmount: record.priceSnapshot.amount,
-    priceFormatted:
-      record.priceSnapshot.label ??
-      (record.priceSnapshot.amount
-        ? `Starting at $${record.priceSnapshot.amount.toFixed(0)}`
-        : "Check latest price"),
-    aggregateRating: record.ratingSnapshot.rating,
-    reviewCount: record.ratingSnapshot.reviewCount,
+    priceAmount: resolvedPriceAmount,
+    priceFormatted: resolvedPriceLabel,
+    aggregateRating: resolvedAggregateRating,
+    reviewCount: resolvedReviewCount,
     meetingPointText: record.meetingInfo ?? "See booking details",
     durationText: record.durationText,
     overviewText,
@@ -70,8 +85,12 @@ export const mapLegacyFhRecordToEngine6Tour = (
     bookingUrl: record.bookingPath,
     diagnostics: {
       source: "legacy-fh-migrated",
-      commercialPriceFieldPath: "legacy.price",
-      commercialPriceRawValue: record.priceSnapshot.label,
+      commercialPriceFieldPath: shouldUseMatchedViatorCommercial
+        ? `matchedViatorCommercial.priceAmount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
+        : "legacy.price",
+      commercialPriceRawValue: shouldUseMatchedViatorCommercial
+        ? resolvedPriceAmount
+        : record.priceSnapshot.label,
       priceSourceUsed: "fallback",
       heroImageFieldPath: "legacy.og:image",
       heroVariantFieldPath: null,
@@ -92,8 +111,12 @@ export const mapLegacyFhRecordToEngine6Tour = (
       rejectedForeignHeroCandidates: [],
       productUrlFieldPath: null,
       bookingUrlSource: "legacy.bookingPath",
-      ratingFieldPath: "legacy.rating",
-      reviewCountFieldPath: "legacy.reviewCount",
+      ratingFieldPath: shouldUseMatchedViatorCommercial
+        ? `matchedViatorCommercial.aggregateRating:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
+        : "legacy.rating",
+      reviewCountFieldPath: shouldUseMatchedViatorCommercial
+        ? `matchedViatorCommercial.reviewCount:${record.matchedViatorCommercial?.productCode ?? "unknown"}`
+        : "legacy.reviewCount",
       overviewFieldPath: "legacy.overview",
       highlightsFieldPath: "legacy.highlights",
       meetingPointFieldPath: "legacy.meeting",

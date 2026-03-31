@@ -10,6 +10,7 @@ import {
 import { mapLegacyFhRecordToEngine6Tour } from "./mapLegacyFhRecordToEngine6Tour";
 import { getLegacyFhMigratedTourBySlugs } from "./registry";
 import CityTourDetailRoute from "../../pages/destinations/states/tours/CityTourDetailRoute";
+import { buildEngine6SchemaGraph } from "../schema/buildEngine6SchemaGraph";
 
 describe("legacy FH -> Engine6 converter", () => {
   it("extracts stable fields from legacy public + book HTML fixtures", () => {
@@ -91,6 +92,31 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(tour.canonicalPath).toBe(CENTRAL_PARK_BIKE_TOURS_PUBLIC_PATH);
     expect(tour.diagnostics.source).toBe("legacy-fh-migrated");
     expect(tour.itinerary.length).toBeGreaterThan(1);
+    expect(tour.priceAmount).toBe(52);
+    expect(tour.aggregateRating).toBe(4.7);
+    expect(tour.reviewCount).toBe(5060);
+    expect(tour.diagnostics.commercialPriceFieldPath).toContain(
+      "matchedViatorCommercial"
+    );
+  });
+
+  it("falls back to migrated FH commercial fields when no confident Viator match exists", () => {
+    const tour = mapLegacyFhRecordToEngine6Tour({
+      ...centralParkBikeToursMigratedRecord,
+      matchedViatorCommercial: {
+        productCode: "233384P2",
+        confidentMatch: false,
+        priceAmount: 52,
+        aggregateRating: 4.7,
+        reviewCount: 5060,
+      },
+    });
+
+    expect(tour.priceAmount).toBe(75);
+    expect(tour.aggregateRating).toBe(4.3);
+    expect(tour.reviewCount).toBe(390);
+    expect(tour.diagnostics.commercialPriceFieldPath).toBe("legacy.price");
+    expect(tour.diagnostics.ratingFieldPath).toBe("legacy.rating");
   });
 
   it("enforces /book preservation for migrated records", () => {
@@ -138,5 +164,30 @@ describe("legacy FH -> Engine6 converter", () => {
     expect(html).toContain("Duration:");
     expect(html).toContain("data-testid=\"engine6-itinerary-timeline\"");
     expect(html).not.toContain("Prices starting at");
+    expect(html).toContain("Price:</strong>");
+    expect(html).toContain("$52");
+    expect(html).toContain("5060");
+
+    const schema = buildEngine6SchemaGraph(migratedTour!);
+    const graph = schema["@graph"] as Array<Record<string, unknown>>;
+    const productNode = graph.find(node => node["@type"] === "Product");
+    const offerNode = graph.find(node => node["@type"] === "Offer");
+    const aggregateRatingNode = graph.find(
+      node => node["@type"] === "AggregateRating"
+    );
+
+    expect((offerNode as { price?: number } | undefined)?.price).toBe(52);
+    expect(
+      (aggregateRatingNode as { ratingValue?: number } | undefined)?.ratingValue
+    ).toBe(4.7);
+    expect(
+      (aggregateRatingNode as { reviewCount?: number } | undefined)?.reviewCount
+    ).toBe(5060);
+    expect(
+      (productNode as { aggregateRating?: { "@id"?: string } } | undefined)
+        ?.aggregateRating?.["@id"]
+    ).toBe(
+      (aggregateRatingNode as { "@id"?: string } | undefined)?.["@id"]
+    );
   });
 });
