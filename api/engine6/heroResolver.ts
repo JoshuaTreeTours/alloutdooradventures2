@@ -5,6 +5,12 @@ export type Engine6HeroSourceType =
   | "api-gallery"
   | "approved-placeholder";
 
+export type Engine6HeroQualityClassification =
+  | "caption"
+  | "product-media"
+  | "splice"
+  | "placeholder";
+
 export type Engine6HeroCandidate = {
   url: string;
   sourceType: Engine6HeroSourceType;
@@ -24,6 +30,7 @@ export type Engine6RejectedHeroCandidate = {
     | "foreign-product-url"
     | "missing-product-scope"
     | "unverified-product-scope"
+    | "invalid-url"
     | "static-hero-disallowed"
     | "untrusted-media-host";
   candidateProductCode: string | null;
@@ -34,6 +41,7 @@ export type Engine6RejectedHeroCandidate = {
 export type Engine6ResolvedHero = {
   heroUrl: string | null;
   heroSourceType: Engine6HeroSourceType;
+  heroQualityClassification: Engine6HeroQualityClassification;
   fallbackTriggered: boolean;
   finalCandidate: Engine6HeroCandidate | null;
   rejectedForeignCandidates: Engine6RejectedHeroCandidate[];
@@ -81,7 +89,6 @@ const normalizeHeroMediaUrl = (value: string) => {
       parsed.pathname = parsed.pathname
         .replace(/\/photo-s\//i, "/photo-o/")
         .replace(/\/+$/, "");
-      parsed.search = "";
       parsed.hash = "";
     }
 
@@ -91,8 +98,38 @@ const normalizeHeroMediaUrl = (value: string) => {
   }
 };
 
+const isCaptionHeroUrl = (value: string) => /\/caption\.jpg(?:$|[?#])/i.test(value);
+
+const isSpliceHeroUrl = (value: string) =>
+  /\/attractions-splice-spp-(?:\d+x\d+)\//i.test(value);
+
+const getHeroQualityClassification = (
+  candidate: Pick<Engine6HeroCandidate, "sourceType" | "url">
+): Engine6HeroQualityClassification => {
+  if (candidate.sourceType === "approved-placeholder") {
+    return "placeholder";
+  }
+  if (isCaptionHeroUrl(candidate.url)) {
+    return "caption";
+  }
+  if (isSpliceHeroUrl(candidate.url)) {
+    return "splice";
+  }
+  return "product-media";
+};
+
+const getQualityRank = (candidate: Engine6HeroCandidate) => {
+  const quality = getHeroQualityClassification(candidate);
+  if (quality === "caption") return 0;
+  if (quality === "product-media") return 1;
+  if (quality === "splice") return 2;
+  return 3;
+};
+
 const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
   [...candidates].sort((a, b) => {
+    const aQualityRank = getQualityRank(a);
+    const bQualityRank = getQualityRank(b);
     const aWidth = getEffectiveWidth(a);
     const bWidth = getEffectiveWidth(b);
     const aHeight = getEffectiveHeight(a);
@@ -101,8 +138,9 @@ const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
     const bArea = bWidth * bHeight;
     const aPreferredWidthBucket = aWidth >= 1000 ? 2 : aWidth >= 800 ? 1 : 0;
     const bPreferredWidthBucket = bWidth >= 1000 ? 2 : bWidth >= 800 ? 1 : 0;
-    const aCaption = /\/caption\.jpg(?:$|[?#])/i.test(a.url) ? 1 : 0;
-    const bCaption = /\/caption\.jpg(?:$|[?#])/i.test(b.url) ? 1 : 0;
+    if (aQualityRank !== bQualityRank) {
+      return aQualityRank - bQualityRank;
+    }
 
     if (bPreferredWidthBucket !== aPreferredWidthBucket) {
       return bPreferredWidthBucket - aPreferredWidthBucket;
@@ -112,9 +150,6 @@ const rankHeroCandidates = (candidates: Engine6HeroCandidate[]) =>
     }
     if (bArea !== aArea) {
       return bArea - aArea;
-    }
-    if (bCaption !== aCaption) {
-      return bCaption - aCaption;
     }
     return bHeight - aHeight;
   });
@@ -144,6 +179,15 @@ export const normalizeEngine6SourceProductUrl = (
 };
 
 const isStaticHeroDisallowed = (value: string) => /(^|\/)hero\.jpg(?:$|[?#])/i.test(value);
+
+const isValidHttpImageUrl = (value: string) => {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false;
+  }
+};
 
 const isTrustedViatorMediaHost = (value: string) => {
   try {
@@ -200,6 +244,13 @@ export const resolveProductScopedHero = ({
     }
 
     if (candidate.sourceType === "approved-placeholder") {
+      continue;
+    }
+
+    if (!isValidHttpImageUrl(candidate.url)) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "invalid-url")
+      );
       continue;
     }
 
@@ -281,6 +332,7 @@ export const resolveProductScopedHero = ({
     return {
       heroUrl: normalizedUrl,
       heroSourceType: selectedCandidate.sourceType,
+      heroQualityClassification: getHeroQualityClassification(selectedCandidate),
       fallbackTriggered: false,
       finalCandidate: {
         ...selectedCandidate,
@@ -295,6 +347,7 @@ export const resolveProductScopedHero = ({
   return {
     heroUrl: null,
     heroSourceType: "approved-placeholder",
+    heroQualityClassification: "placeholder",
     fallbackTriggered: true,
     finalCandidate: null,
     rejectedForeignCandidates,

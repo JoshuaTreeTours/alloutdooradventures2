@@ -27,6 +27,7 @@ describe("engine6 hero resolver", () => {
       "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg"
     );
     expect(resolved.heroSourceType).toBe("api-primary");
+    expect(resolved.heroQualityClassification).toBe("splice");
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
@@ -55,6 +56,7 @@ describe("engine6 hero resolver", () => {
 
     expect(resolved.heroUrl).toBeNull();
     expect(resolved.heroSourceType).toBe("approved-placeholder");
+    expect(resolved.heroQualityClassification).toBe("placeholder");
     expect(resolved.fallbackTriggered).toBe(true);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
@@ -90,10 +92,11 @@ describe("engine6 hero resolver", () => {
       "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg"
     );
     expect(resolved.heroSourceType).toBe("api-primary");
+    expect(resolved.heroQualityClassification).toBe("splice");
     expect(resolved.fallbackTriggered).toBe(false);
   });
 
-  it("selects the highest-resolution product-owned candidate instead of first/FULL defaults", () => {
+  it("prefers same-product caption over larger same-product FULL/splice variants", () => {
     const resolved = resolveProductScopedHero({
       currentProductCode: "63657P1",
       currentSourceProductUrl:
@@ -109,7 +112,7 @@ describe("engine6 hero resolver", () => {
           height: 446,
         },
         {
-          url: "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/caption.jpg",
+          url: "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg?w=700&h=500&s=1",
           sourceType: "api-gallery",
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
@@ -118,23 +121,23 @@ describe("engine6 hero resolver", () => {
           height: 900,
         },
         {
-          url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg",
+          url: "https://dynamic-media.tacdn.com/media/photo-o/12/34/56/78.jpg?w=1800&h=1200&s=1",
           sourceType: "api-gallery",
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
-          width: 800,
-          height: 600,
+          width: 1800,
+          height: 1200,
         },
       ],
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://media.tacdn.com/media/attractions-content--1x-1/aa/bb/cc/caption.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/caption.jpg?w=700&h=500&s=1"
     );
     expect(resolved.heroSourceType).toBe("api-gallery");
+    expect(resolved.heroQualityClassification).toBe("caption");
     expect(resolved.fallbackTriggered).toBe(false);
-    expect((resolved.finalCandidate?.width ?? 0) >= 800).toBe(true);
   });
 
   it("normalizes TACDN media URLs to high-resolution variants where possible", () => {
@@ -154,7 +157,7 @@ describe("engine6 hero resolver", () => {
     });
 
     expect(resolved.heroUrl).toBe(
-      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
+      "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg?foo=bar"
     );
   });
 
@@ -212,12 +215,87 @@ describe("engine6 hero resolver", () => {
     expect(resolved.heroUrl).toBe(
       "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg"
     );
+    expect(resolved.heroQualityClassification).toBe("product-media");
     expect(resolved.fallbackTriggered).toBe(false);
     expect(resolved.rejectedForeignCandidates).toEqual(
       expect.arrayContaining([
         expect.objectContaining({
           url: "https://images.example.com/broken.jpg",
           reason: "untrusted-media-host",
+        }),
+      ])
+    );
+  });
+
+  it("uses same-product non-splice product media when caption is unavailable", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "MEDIA1",
+      currentSourceProductUrl: "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/6d.jpg?w=1600&h=1066&s=1",
+          sourceType: "api-gallery",
+          candidateProductCode: "MEDIA1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
+          width: 1600,
+          height: 1066,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/9a/8b/7c/6d.jpg?w=1600&h=1066&s=1"
+    );
+    expect(resolved.heroQualityClassification).toBe("product-media");
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
+
+  it("uses same-product splice media when no better same-product media exists", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "SPLICE1",
+      currentSourceProductUrl:
+        "https://www.viator.com/tours/City/Splice-Only/d1-SPLICE1",
+      candidates: [
+        {
+          url: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
+          sourceType: "api-primary",
+          candidateProductCode: "SPLICE1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Splice-Only/d1-SPLICE1",
+          width: 674,
+          height: 446,
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toContain("/attractions-splice-spp-674x446/");
+    expect(resolved.heroQualityClassification).toBe("splice");
+    expect(resolved.fallbackTriggered).toBe(false);
+  });
+
+  it("rejects malformed URLs and falls back to placeholder classification", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "BADURL1",
+      currentSourceProductUrl: "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
+      candidates: [
+        {
+          url: "not-a-url",
+          sourceType: "api-primary",
+          candidateProductCode: "BADURL1",
+          candidateSourceProductUrl:
+            "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.heroQualityClassification).toBe("placeholder");
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          url: "not-a-url",
+          reason: "invalid-url",
         }),
       ])
     );
