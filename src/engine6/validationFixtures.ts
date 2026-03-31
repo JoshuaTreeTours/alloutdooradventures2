@@ -18,6 +18,7 @@ import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-prod
 import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
 import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
 
+import specimen5865p8Payload from "../../data/engine6/viator/5865P8.exact-product.json";
 export type Engine6ValidationFixture = {
   productCode: string;
   publicUrl: string;
@@ -25,6 +26,12 @@ export type Engine6ValidationFixture = {
 };
 
 export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
+  {
+    productCode: "5865P8",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Florida-Everglades-Airboat-Tour-and-Show-from-Fort-Lauderdale-Group/d660-5865P8",
+    rawPayload: specimen5865p8Payload as Record<string, unknown>,
+  },
   {
     productCode: "63657P1",
     publicUrl:
