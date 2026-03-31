@@ -81,6 +81,11 @@ describe("engine6 hardening guards", () => {
     expect(() =>
       assertEngine6CtaIntegrity("https://www.viator.com/search/all?pid=P00290915")
     ).toThrow(/search/i);
+    expect(() =>
+      assertEngine6CtaIntegrity(
+        "/destinations/california/san-diego/tours/art-of-balboa-park-walking-tour-651385/book"
+      )
+    ).not.toThrow();
   });
 
   it("keeps unified listings unique by canonical path with engine6 precedence", () => {
