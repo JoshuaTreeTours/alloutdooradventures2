@@ -6,7 +6,7 @@ import {
   assertEngine6ReplacementModePolicy,
 } from "./collisionGuard";
 import { engine6ResolvedTours } from "./registry";
-import type { Engine6ReplacementModeConfig } from "./routes";
+import type { Engine6OverlapReplacementConfig } from "./routes";
 
 describe("engine6 collision guard", () => {
   it("flags Yosemite as an explicit replacement for a legacy collision", () => {
@@ -38,7 +38,7 @@ describe("engine6 collision guard", () => {
     ).toThrow(/collision detected/i);
   });
 
-  it("enforces replacement mode canonical slug and /book immutability", () => {
+  it("enforces overlap replacement canonical slug and Viator CTA ownership", () => {
     expect(() => assertEngine6ReplacementModePolicy(engine6ResolvedTours)).not.toThrow();
 
     const tour = engine6ResolvedTours.find(entry => entry.productCode === "414460P1");
@@ -51,13 +51,6 @@ describe("engine6 collision guard", () => {
           {
             productCode: "414460P1",
             canonicalPath: "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491",
-            bookingPath:
-              "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book",
-            eligibility: {
-              legacyTitle: "VIP Central Park Pedicab Guided Tour",
-              legacyPriceAmount: 50,
-              legacyMeetingPoint: "10 Central Park South, New York, NY",
-            },
           },
         ]
       )
@@ -70,21 +63,14 @@ describe("engine6 collision guard", () => {
     expect(tour?.canonicalPath).toBe(
       "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168"
     );
-    expect(tour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/best-of-nyc-electric-bike-tour-202168/book"
-    );
+    expect(tour?.bookingUrl).toContain("viator.com");
+    expect(tour?.bookingUrl.endsWith("/book")).toBe(false);
   });
 
-  it("fails clearly if replacement mode is configured without a legacy FareHarbor match", () => {
-    const config: Engine6ReplacementModeConfig = {
+  it("fails clearly if overlap replacement is configured without a legacy page", () => {
+    const config: Engine6OverlapReplacementConfig = {
       productCode: "414460P1",
       canonicalPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page",
-      bookingPath: "/destinations/new-york/new-york/tours/not-a-real-legacy-page/book",
-      eligibility: {
-        legacyTitle: "VIP Central Park Pedicab Guided Tour",
-        legacyPriceAmount: 50,
-        legacyMeetingPoint: "10 Central Park South, New York, NY",
-      },
     };
 
     expect(() =>

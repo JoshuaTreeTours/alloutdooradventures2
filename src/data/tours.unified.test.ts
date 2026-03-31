@@ -7,7 +7,7 @@ import {
   getToursByCityUnified,
 } from "./tours";
 import { engine6ResolvedTours } from "../engine6/registry";
-import { engine6ReplacementModeConfigs } from "../engine6/routes";
+import { engine6OverlapReplacementConfigs } from "../engine6/routes";
 
 describe("getToursByCityUnified Palm Springs dedupe", () => {
   it("dedupes viator tours by productCode and keeps Engine3 versions", () => {
@@ -46,8 +46,8 @@ describe("getToursByCityUnified Palm Springs dedupe", () => {
 });
 
 describe("engine6 canonical slug winner dedupe", () => {
-  it("keeps replacement-mode public slug and /book path immutable for every legacy FH replacement", () => {
-    for (const config of engine6ReplacementModeConfigs) {
+  it("keeps overlap replacement public slug immutable with Engine6 Viator CTA", () => {
+    for (const config of engine6OverlapReplacementConfigs) {
       const [, stateSlug = "", citySlug = "", slug = ""] =
         /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
           config.canonicalPath
@@ -59,9 +59,10 @@ describe("engine6 canonical slug winner dedupe", () => {
 
       expect(replacement).toBeDefined();
       expect(replacement?.canonicalPath).toBe(config.canonicalPath);
-      expect(replacement?.bookingUrl).toBe(config.bookingPath);
+      expect(replacement?.bookingUrl).toContain("viator.com");
+      expect(replacement?.bookingUrl.endsWith("/book")).toBe(false);
+      expect(replacement?.ownership.ctaOwner).toBe("viator");
       expect(legacy?.bookingProvider).toBe("fareharbor");
-      expect(config.bookingPath).toBe(`${config.canonicalPath}/book`);
     }
   });
 
@@ -99,7 +100,7 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(unified[0]?.tour.productCode).toBe("414460P1");
   });
 
-  it("preserves original FareHarbor booking endpoint data for 27491 while replacing public page", () => {
+  it("replaces overlapping 27491 public page with Viator CTA while leaving legacy source data intact", () => {
     const engine6Tour = getTourBySlugs(
       "new-york",
       "new-york",
@@ -112,9 +113,9 @@ describe("engine6 canonical slug winner dedupe", () => {
     );
 
     expect(engine6Tour?.engine).toBe("engine6");
-    expect(engine6Tour?.bookingUrl).toBe(
-      "/destinations/new-york/new-york/tours/1-hour-central-park-pedicab-tour-27491/book"
-    );
+    expect(engine6Tour?.bookingUrl).toContain("viator.com");
+    expect(engine6Tour?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(engine6Tour?.bookingProvider).toBe("viator");
     expect(legacyTour?.bookingProvider).toBe("fareharbor");
     expect(legacyTour?.bookingUrl).toContain("fareharbor.com/embeds/book/peterpentours/items/27491");
   });
@@ -129,8 +130,8 @@ describe("engine6 canonical slug winner dedupe", () => {
     expect(cityTours[0]?.productCode).toBe("414460P1");
   });
 
-  it("replacement mode upgrades render at legacy slugs and no duplicate listing card survives", () => {
-    for (const config of engine6ReplacementModeConfigs) {
+  it("overlap replacements render at legacy slugs and no duplicate listing card survives", () => {
+    for (const config of engine6OverlapReplacementConfigs) {
       const [, stateSlug = "", citySlug = "", slug = ""] =
         /^\/destinations\/([^/]+)\/([^/]+)\/tours\/([^/]+)$/.exec(
           config.canonicalPath
