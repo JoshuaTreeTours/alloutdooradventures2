@@ -47,6 +47,15 @@ export const ENGINE6_SAN_DIEGO_JOSHUA_TREE_ROUTE =
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_PRODUCT_CODE = "5584233P1";
 export const ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE =
   "/destinations/california/san-diego/tours/spectacular-sunset-sail-on-san-diego-bay";
+export const ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_PRODUCT_CODE = "21165P1";
+export const ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE =
+  "/destinations/california/san-diego/tours/original-sea-cave-kayak-tour";
+export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_PRODUCT_CODE = "31015P9";
+export const ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE =
+  "/destinations/california/san-diego/tours/private-sailing-charter-san-diego-bay";
+export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE = "173946P1";
+export const ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE =
+  "/destinations/california/san-diego/tours/half-day-4x4-adventure";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
@@ -127,6 +136,18 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   [
     ENGINE6_SAN_DIEGO_SUNSET_SAILING_ROUTE,
     ENGINE6_SAN_DIEGO_SUNSET_SAILING_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_ROUTE,
+    ENGINE6_SAN_DIEGO_SEA_CAVE_KAYAK_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_ROUTE,
+    ENGINE6_SAN_DIEGO_PRIVATE_SAILING_CHARTER_PRODUCT_CODE,
+  ],
+  [
+    ENGINE6_SAN_DIEGO_HALF_DAY_4X4_ROUTE,
+    ENGINE6_SAN_DIEGO_HALF_DAY_4X4_PRODUCT_CODE,
   ],
   [
     ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE,

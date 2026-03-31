@@ -14,6 +14,9 @@ import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
 import specimen327321p1Payload from "../../data/engine6/viator/327321P1.exact-product.json";
+import specimen21165p1Payload from "../../data/engine6/viator/21165P1.exact-product.json";
+import specimen31015p9Payload from "../../data/engine6/viator/31015P9.exact-product.json";
+import specimen173946p1Payload from "../../data/engine6/viator/173946P1.exact-product.json";
 
 export type Engine6ValidationFixture = {
   productCode: string;
@@ -111,6 +114,24 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/San-Diego/Spectacular-Sunset-Sailing/d736-5584233P1",
     rawPayload: specimen5584233p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "21165P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Original-Sea-Cave-Kayak-Tour/d736-21165P1",
+    rawPayload: specimen21165p1Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "31015P9",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Private-Sailing-Charter-on-San-Diego-Bay/d736-31015P9",
+    rawPayload: specimen31015p9Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "173946P1",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Half-Day-4x4-Adventure/d736-173946P1",
+    rawPayload: specimen173946p1Payload as Record<string, unknown>,
   },
   {
     productCode: "327321P1",
