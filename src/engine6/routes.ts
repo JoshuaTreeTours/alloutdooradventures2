@@ -63,6 +63,17 @@ export const ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE = "383300P6";
 export const ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE =
   "/destinations/florida/fort-lauderdale/tours/guided-electric-bike-tours-of-greater-fort-lauderdale";
 
+
+export const ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE = "5503P10";
+export const ENGINE6_MIAMI_PARASAILING_ROUTE =
+  "/destinations/florida/miami/tours/parasailing-with-miami-watersports";
+export const ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE = "231628P7";
+export const ENGINE6_MIAMI_HELICOPTER_ROUTE =
+  "/destinations/florida/miami/tours/taste-of-miami-helicopter-tour";
+export const ENGINE6_MIAMI_PIRATE_BOAT_PRODUCT_CODE = "8836P2";
+export const ENGINE6_MIAMI_PIRATE_BOAT_ROUTE =
+  "/destinations/florida/miami/tours/miami-pirate-boat-tour-skyline-and-celebrity-homes";
+
 export type Engine6OverlapReplacementConfig = {
   productCode: string;
   canonicalPath: string;
@@ -139,6 +150,9 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
     ENGINE6_FORT_LAUDERDALE_EBIKE_ROUTE,
     ENGINE6_FORT_LAUDERDALE_EBIKE_PRODUCT_CODE,
   ],
+  [ENGINE6_MIAMI_PARASAILING_ROUTE, ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE],
+  [ENGINE6_MIAMI_HELICOPTER_ROUTE, ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE],
+  [ENGINE6_MIAMI_PIRATE_BOAT_ROUTE, ENGINE6_MIAMI_PIRATE_BOAT_PRODUCT_CODE],
 ] as const;
 
 const ENGINE6_ROUTE_PRODUCT_CODE_BY_PATH: Record<string, string> =

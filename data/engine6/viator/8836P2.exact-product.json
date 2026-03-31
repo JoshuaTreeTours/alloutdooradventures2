@@ -1,0 +1,87 @@
+{
+  "product": {
+    "productCode": "8836P2",
+    "title": "Miami Pirate Boat Tour: Skyline & Celebrity Homes",
+    "productUrl": "https://www.viator.com/tours/Miami/Pirates-Adventures-Sightseeing-Tour-from-Miami/d662-8836P2",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 25,
+        "fromPriceFormatted": "$25.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 1347
+    },
+    "description": "Cruise through Biscayne Bay on a pirate-themed sightseeing boat and take in the Miami skyline from the water. The route passes well-known waterfront districts and celebrity-home zones, pairing narrated highlights with a relaxed onboard atmosphere.",
+    "highlights": [
+      "Pirate-themed sightseeing cruise on Biscayne Bay",
+      "Views of Star Island, Venetian Islands, and downtown skyline",
+      "Great option for families and first-time visitors to Miami",
+      "Onboard music and bilingual tour guidance"
+    ],
+    "meetingPoint": {
+      "name": "El Loro Pirate Ship",
+      "description": "401 Biscayne Blvd, Miami, FL 33132, USA"
+    },
+    "itineraryItems": [
+      {
+        "title": "Bayside departure",
+        "description": "Board at the Bayside area and depart with a narrated introduction to the route.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Celebrity homes and skyline cruise",
+        "description": "Pass by Star Island, Venetian Islands, and major waterfront viewpoints.",
+        "duration": "50 minutes"
+      },
+      {
+        "title": "Return to meeting point",
+        "description": "Cruise back to the original departure pier.",
+        "duration": "15 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Check-in is typically 30 minutes before departure",
+      "This activity generally operates in most weather conditions",
+      "Ages 21+ are required to consume alcohol"
+    ],
+    "faqs": [
+      {
+        "question": "Where is the departure point?",
+        "answer": "The tour departs from El Loro Pirate Ship at 401 Biscayne Blvd in Miami."
+      },
+      {
+        "question": "How long is the cruise?",
+        "answer": "The experience is approximately 1 hour 20 minutes from departure to return."
+      },
+      {
+        "question": "What landmarks are typically seen during the route?",
+        "answer": "The cruise commonly passes Star Island, Venetian Islands, Miami Beach, and downtown waterfront areas."
+      },
+      {
+        "question": "Is this tour suitable for families?",
+        "answer": "Yes. The cruise is designed as a general sightseeing experience and is popular with families and groups."
+      }
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Sightseeing Cruises",
+      "Family-Friendly"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/11/ca/85/4b.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

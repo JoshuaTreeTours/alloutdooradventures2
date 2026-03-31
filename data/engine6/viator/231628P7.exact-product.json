@@ -1,0 +1,82 @@
+{
+  "product": {
+    "productCode": "231628P7",
+    "title": "Taste of Miami Helicopter Tour",
+    "productUrl": "https://www.viator.com/tours/Miami/Taste-of-Miami-Helicopter-Tour/d662-231628P7",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 189.05,
+        "fromPriceFormatted": "$189.05"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.7,
+      "totalReviews": 112
+    },
+    "description": "See Miami from the air on a short helicopter experience that highlights the coastline, cityscape, and surrounding waterways. This private flight format is tailored to your group and includes preflight coordination and pilot-led commentary during the route.",
+    "highlights": [
+      "Private helicopter sightseeing format for your booked group",
+      "Aerial views of Miami neighborhoods, shoreline, and waterways",
+      "Pilot-guided route with scenic photo opportunities",
+      "Great fit for travelers looking for a time-efficient Miami overview"
+    ],
+    "meetingPoint": {
+      "name": "Miami Executive Airport",
+      "description": "14359 SW 127th St, Miami, FL 33186, USA"
+    },
+    "itineraryItems": [
+      {
+        "title": "Preflight arrival and briefing",
+        "description": "Arrive at the airport, check in with photo ID, and complete the flight safety briefing.",
+        "duration": "20 minutes"
+      },
+      {
+        "title": "Taste of Miami helicopter flight",
+        "description": "Fly above Miami for a scenic overview of key districts and coastal landmarks.",
+        "duration": "20 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "A minimum of two people is required per booking",
+      "A valid passport or driver license is required",
+      "This experience is weather dependent"
+    ],
+    "faqs": [
+      {
+        "question": "Where does this helicopter tour depart from?",
+        "answer": "Flights depart from Miami Executive Airport at 14359 SW 127th St, Miami."
+      },
+      {
+        "question": "Is this a private flight or shared tour?",
+        "answer": "This product is operated as a private activity for your booked group."
+      },
+      {
+        "question": "What identification is needed?",
+        "answer": "Travelers should bring a valid photo ID, such as a passport or driver license."
+      },
+      {
+        "question": "What happens in poor weather?",
+        "answer": "If weather conditions are not suitable, operators typically offer rescheduling or a full refund."
+      }
+    ],
+    "categories": [
+      "Air Tours",
+      "Helicopter Tours",
+      "Private Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0e/f4/10.jpg",
+          "width": 674,
+          "height": 446,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
