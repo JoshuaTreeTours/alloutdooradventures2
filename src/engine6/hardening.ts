@@ -75,14 +75,7 @@ export const assertEngine6CtaIntegrity = ({
   ctaOwner: "fareharbor" | "viator";
   ctaUrl: string;
 }) => {
-  if (ctaOwner === "fareharbor") {
-    assertCondition(
-      ctaUrl.endsWith("/book"),
-      "fareharbor canonical dedupe routes must preserve /book CTA"
-    );
-    return;
-  }
-
+  assertCondition(ctaOwner === "viator", "engine6 routes must use Viator CTA ownership");
   assertCondition(ctaUrl.includes("pid="), "cta URL must include affiliate pid parameter");
   assertCondition(!ctaUrl.includes("/search/"), "cta URL cannot point to a search page");
 };

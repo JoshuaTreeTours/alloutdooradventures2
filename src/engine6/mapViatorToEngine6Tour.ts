@@ -1,10 +1,6 @@
 import { buildEngine6ViatorBookingUrl } from "./buildEngine6ViatorBookingUrl";
 import { normalizeEngine6AggregateRating } from "./rating";
-import {
-  resolveEngine6PathForProductCode,
-  resolveEngine6ReplacementMode,
-} from "./routes";
-import { evaluateEngine6ReplacementEligibility } from "./replacementMode";
+import { resolveEngine6PathForProductCode } from "./routes";
 import {
   buildEngine6CanonicalPath,
   buildEngine6MetaDescription,
@@ -106,23 +102,9 @@ export const mapViatorToEngine6Tour = (
     city,
     title,
   });
-  const replacementMode = resolveEngine6ReplacementMode(payload.rawProductCode);
-  const replacementEligibility =
-    replacementMode
-      ? evaluateEngine6ReplacementEligibility({
-          title,
-          priceAmount: payload.extracted.priceAmount,
-          meetingPointText:
-            payload.extracted.meetingPointText ?? "",
-          config: replacementMode,
-        })
-      : null;
-  const shouldUseReplacementMode = replacementEligibility?.eligible ?? false;
   const canonicalPath =
-    shouldUseReplacementMode
-      ? replacementMode?.canonicalPath
-      : resolveEngine6PathForProductCode(payload.rawProductCode) ??
-        generatedCanonicalPath;
+    resolveEngine6PathForProductCode(payload.rawProductCode) ??
+    generatedCanonicalPath;
   const rawDescription =
     payload.extracted.overviewText ??
     payload.extracted.seoDescription ??
@@ -147,14 +129,11 @@ export const mapViatorToEngine6Tour = (
   const aggregateRating = normalizeEngine6AggregateRating(
     payload.extracted.aggregateRating
   );
-  const bookingUrl =
-    shouldUseReplacementMode && replacementMode
-      ? replacementMode.bookingPath
-      : buildEngine6ViatorBookingUrl(
-          payload.rawProductCode,
-          payload.extracted.productUrl
-        );
-  const ctaOwner = shouldUseReplacementMode ? "fareharbor" : "viator";
+  const bookingUrl = buildEngine6ViatorBookingUrl(
+    payload.rawProductCode,
+    payload.extracted.productUrl
+  );
+  const ctaOwner = "viator";
   const fallbackFieldNames = [
     !payload.extracted.title ? "title" : null,
     !payload.extracted.city ? "city" : null,

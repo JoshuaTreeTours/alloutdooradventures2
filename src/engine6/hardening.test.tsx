@@ -91,7 +91,7 @@ describe("engine6 hardening guards", () => {
         ctaOwner: "fareharbor",
         ctaUrl: "/destinations/new-york/new-york/tours/central-park-bike-tours-16628/book",
       })
-    ).not.toThrow();
+    ).toThrow(/viator cta ownership/i);
   });
 
   it("keeps unified listings unique by canonical path with engine6 precedence", () => {

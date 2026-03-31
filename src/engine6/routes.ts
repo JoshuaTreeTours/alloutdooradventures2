@@ -60,56 +60,35 @@ export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_PRODUCT_CODE = "327321P1";
 export const ENGINE6_PALM_SPRINGS_SUNRISE_HIKE_ROUTE =
   "/destinations/california/palm-springs/tours/mountain-sunrise-hike-and-meditation-in-palm-springs";
 
-import type { Engine6ReplacementModeConfig } from "./replacementMode";
+export type Engine6OverlapReplacementConfig = {
+  productCode: string;
+  canonicalPath: string;
+};
 
-const ENGINE6_REPLACEMENT_MODE_CONFIGS: Engine6ReplacementModeConfig[] = [
+const ENGINE6_OVERLAP_REPLACEMENT_CONFIGS: Engine6OverlapReplacementConfig[] = [
   {
     productCode: ENGINE6_ANCHORAGE_GREENBELT_PRODUCT_CODE,
     canonicalPath: ENGINE6_ANCHORAGE_GREENBELT_ROUTE,
-    bookingPath: `${ENGINE6_ANCHORAGE_GREENBELT_ROUTE}/book`,
-    eligibility: {
-      legacyTitle: "Anchorage Greenbelt Bike Tour",
-      legacyPriceAmount: 159,
-      legacyMeetingPoint: "Dena’ina Civic and Convention Center, Anchorage, AK",
-    },
   },
   {
     productCode: ENGINE6_NYC_PEDICAB_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_PEDICAB_ROUTE,
-    bookingPath: `${ENGINE6_NYC_PEDICAB_ROUTE}/book`,
-    eligibility: {
-      legacyTitle: "VIP Central Park Pedicab Guided Tour",
-      legacyPriceAmount: 50,
-      legacyMeetingPoint: "10 Central Park South, New York, NY",
-    },
   },
   {
     productCode: ENGINE6_NYC_BROOKLYN_BRIDGE_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE,
-    bookingPath: `${ENGINE6_NYC_BROOKLYN_BRIDGE_ROUTE}/book`,
-    eligibility: {
-      legacyTitle: "Brooklyn Bridge Waterfront Guided Bike Tour",
-      legacyPriceAmount: 62,
-      legacyMeetingPoint: "Lower Manhattan, New York City",
-    },
   },
   {
     productCode: ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_PRODUCT_CODE,
     canonicalPath: ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE,
-    bookingPath: `${ENGINE6_NYC_CLASSIC_MANHATTAN_EBIKE_ROUTE}/book`,
-    eligibility: {
-      legacyTitle: "Classic Manhattan Electric Bike Tour",
-      legacyPriceAmount: 103,
-      legacyMeetingPoint: "79 Chambers Street, New York, NY",
-    },
   },
 ];
 
-const ENGINE6_REPLACEMENT_MODE_BY_PRODUCT_CODE: Record<
+const ENGINE6_OVERLAP_REPLACEMENT_BY_PRODUCT_CODE: Record<
   string,
-  Engine6ReplacementModeConfig
+  Engine6OverlapReplacementConfig
 > = Object.fromEntries(
-  ENGINE6_REPLACEMENT_MODE_CONFIGS.map(config => [config.productCode, config])
+  ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => [config.productCode, config])
 );
 
 const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
@@ -167,7 +146,7 @@ const ENGINE6_PATH_BY_PRODUCT_CODE: Record<string, string> = Object.fromEntries(
 
 export const ENGINE6_EXPLICIT_ROUTE_REPLACEMENTS = new Set<string>([
   ENGINE6_YOSEMITE_ROUTE,
-  ...ENGINE6_REPLACEMENT_MODE_CONFIGS.map(config => config.canonicalPath),
+  ...ENGINE6_OVERLAP_REPLACEMENT_CONFIGS.map(config => config.canonicalPath),
 ]);
 
 export const resolveEngine6ProductCodeForPath = (path: string) =>
@@ -176,10 +155,10 @@ export const resolveEngine6ProductCodeForPath = (path: string) =>
 export const resolveEngine6PathForProductCode = (productCode: string) =>
   ENGINE6_PATH_BY_PRODUCT_CODE[productCode] ?? null;
 
-export const resolveEngine6ReplacementMode = (productCode: string) =>
-  ENGINE6_REPLACEMENT_MODE_BY_PRODUCT_CODE[productCode] ?? null;
+export const resolveEngine6OverlapReplacement = (productCode: string) =>
+  ENGINE6_OVERLAP_REPLACEMENT_BY_PRODUCT_CODE[productCode] ?? null;
 
 export const isEngine6CanonicalPath = (path: string) =>
   Boolean(resolveEngine6ProductCodeForPath(path));
 
-export const engine6ReplacementModeConfigs = ENGINE6_REPLACEMENT_MODE_CONFIGS;
+export const engine6OverlapReplacementConfigs = ENGINE6_OVERLAP_REPLACEMENT_CONFIGS;

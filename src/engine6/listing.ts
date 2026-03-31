@@ -61,12 +61,12 @@ const dedupeEngine6ToursByCanonicalPath = (tours: Engine6Tour[]) => {
 
   for (const tour of tours) {
     const existing = byPath.get(tour.canonicalPath);
-    if (!existing || existing.diagnostics.source === "legacy-fh-migrated") {
+    if (!existing || tour.diagnostics.source !== "legacy-fh-migrated") {
       byPath.set(tour.canonicalPath, tour);
     }
   }
 
-  return [...byPath.values()];
+  return Array.from(byPath.values());
 };
 
 export const engine6ListingTours: Tour[] = dedupeEngine6ToursByCanonicalPath([
