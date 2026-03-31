@@ -1,0 +1,76 @@
+{
+  "product": {
+    "productCode": "383300P4",
+    "title": "Guided eBike Tours of Fort Lauderdale",
+    "productUrl": "https://www.viator.com/tours/Fort-Lauderdale/Guided-eBike-Tours-of-Fort-Lauderdale/d660-383300P4",
+    "location": {
+      "city": "Fort Lauderdale",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 79,
+        "fromPriceFormatted": "$79.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.8,
+      "totalReviews": 124
+    },
+    "description": "Explore Fort Lauderdale by electric bike on a guided ride that blends waterfront views, neighborhood highlights, and local commentary from your guide.",
+    "highlights": [
+      "Ride an eBike through Fort Lauderdale waterfront neighborhoods",
+      "Learn city history and local context from your guide",
+      "Stop for scenic viewpoints and photo opportunities",
+      "Small-group format with personalized pacing"
+    ],
+    "inclusions": [
+      "eBike and helmet",
+      "Local guide"
+    ],
+    "exclusions": [
+      "Gratuities",
+      "Hotel pickup and drop-off"
+    ],
+    "meetingPoint": {
+      "description": "4381 N Federal Hwy, Fort Lauderdale, FL 33308, USA"
+    },
+    "itinerary": [
+      {
+        "title": "Fort Lauderdale Beach",
+        "duration": "20 minutes",
+        "description": "Cruise the beachfront promenade and enjoy Atlantic views."
+      },
+      {
+        "title": "Las Olas Boulevard",
+        "duration": "20 minutes",
+        "description": "Ride through one of Fort Lauderdale's best-known districts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do I need prior eBike experience?",
+        "answer": "No. Your guide provides a quick orientation before departure."
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Most travelers can participate"
+    ],
+    "categories": [
+      {
+        "label": "Bike Tours"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/hxEOp35Q0SpWRfL9YxVw",
+          "width": 1200,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

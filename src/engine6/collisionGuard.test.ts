@@ -67,6 +67,26 @@ describe("engine6 collision guard", () => {
     expect(tour?.bookingUrl.endsWith("/book")).toBe(false);
   });
 
+  it("accepts replacement mode mapping for 383300P4 and 5144WHALE on existing FH slugs", () => {
+    const fortLauderdale = engine6ResolvedTours.find(
+      entry => entry.productCode === "383300P4"
+    );
+    const sanDiegoWhale = engine6ResolvedTours.find(
+      entry => entry.productCode === "5144WHALE"
+    );
+
+    expect(fortLauderdale?.canonicalPath).toBe(
+      "/destinations/florida/fort-lauderdale/tours/private-guided-ebike-tour-684831"
+    );
+    expect(fortLauderdale?.bookingUrl).toContain("viator.com");
+    expect(fortLauderdale?.bookingUrl.endsWith("/book")).toBe(false);
+    expect(sanDiegoWhale?.canonicalPath).toBe(
+      "/destinations/california/san-diego/tours/san-diego-whale-watching-cruise-60603"
+    );
+    expect(sanDiegoWhale?.bookingUrl).toContain("viator.com");
+    expect(sanDiegoWhale?.bookingUrl.endsWith("/book")).toBe(false);
+  });
+
   it("fails clearly if overlap replacement is configured without a legacy page", () => {
     const config: Engine6OverlapReplacementConfig = {
       productCode: "414460P1",

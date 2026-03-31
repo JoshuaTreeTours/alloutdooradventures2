@@ -1,0 +1,76 @@
+{
+  "product": {
+    "productCode": "5144WHALE",
+    "title": "Whale Watching Cruise Guided by experts from Birch Aquarium",
+    "productUrl": "https://www.viator.com/tours/San-Diego/Whale-Watching-Cruise-Guided-by-experts-from-Birch-Aquarium/d736-5144WHALE",
+    "location": {
+      "city": "San Diego",
+      "state": "California"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 67,
+        "fromPriceFormatted": "$67.00"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 4.5,
+      "totalReviews": 962
+    },
+    "description": "Head into open Pacific waters from San Diego Bay on a whale watching cruise led by naturalists affiliated with Birch Aquarium.",
+    "highlights": [
+      "Watch for migrating whales and dolphins off the San Diego coast",
+      "Guided narration from naturalists affiliated with Birch Aquarium",
+      "Open-air viewing decks and onboard amenities",
+      "Great option for families and wildlife enthusiasts"
+    ],
+    "inclusions": [
+      "Whale watching cruise",
+      "Onboard expert naturalist commentary"
+    ],
+    "exclusions": [
+      "Food and drinks",
+      "Parking fees"
+    ],
+    "meetingPoint": {
+      "description": "990 N Harbor Dr, San Diego, CA 92101, USA"
+    },
+    "itinerary": [
+      {
+        "title": "San Diego Bay",
+        "duration": "30 minutes",
+        "description": "Depart along the waterfront before heading offshore."
+      },
+      {
+        "title": "Pacific Ocean whale migration route",
+        "duration": "2 hours",
+        "description": "Search for gray whales, dolphins, and sea birds with onboard experts."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are whales guaranteed?",
+        "answer": "Wildlife sightings vary by season and conditions, but the crew maximizes viewing opportunities."
+      }
+    ],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Most travelers can participate"
+    ],
+    "categories": [
+      {
+        "label": "On the Water"
+      }
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://cdn.filestackcontent.com/9QeVFp9TSmW7g8p4emjp",
+          "width": 1200,
+          "height": 800,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}

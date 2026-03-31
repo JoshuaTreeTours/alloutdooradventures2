@@ -10,6 +10,8 @@ import specimen53474Payload from "../../data/engine6/viator/53474P8.exact-produc
 import specimen233384Payload from "../../data/engine6/viator/233384P2.exact-product.json";
 import specimen414460Payload from "../../data/engine6/viator/414460P1.exact-product.json";
 import specimen3156Payload from "../../data/engine6/viator/3156P13.exact-product.json";
+import specimen383300p4Payload from "../../data/engine6/viator/383300P4.exact-product.json";
+import specimen5144whalePayload from "../../data/engine6/viator/5144WHALE.exact-product.json";
 import specimen3097sdzsp2visitPayload from "../../data/engine6/viator/3097SDZSP_2VISIT.exact-product.json";
 import specimen447234p3Payload from "../../data/engine6/viator/447234P3.exact-product.json";
 import specimen5584233p1Payload from "../../data/engine6/viator/5584233P1.exact-product.json";
@@ -103,6 +105,18 @@ export const ENGINE6_VALIDATION_FIXTURES: Engine6ValidationFixture[] = [
     publicUrl:
       "https://www.viator.com/tours/New-York-City/Electric-Bike-Tour-Classic-Manhattan-and-more/d687-3156P13",
     rawPayload: specimen3156Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "383300P4",
+    publicUrl:
+      "https://www.viator.com/tours/Fort-Lauderdale/Guided-eBike-Tours-of-Fort-Lauderdale/d660-383300P4",
+    rawPayload: specimen383300p4Payload as Record<string, unknown>,
+  },
+  {
+    productCode: "5144WHALE",
+    publicUrl:
+      "https://www.viator.com/tours/San-Diego/Whale-Watching-Cruise-Guided-by-experts-from-Birch-Aquarium/d736-5144WHALE",
+    rawPayload: specimen5144whalePayload as Record<string, unknown>,
   },
   {
     productCode: "3097SDZSP_2VISIT",
