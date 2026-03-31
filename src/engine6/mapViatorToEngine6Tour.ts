@@ -207,6 +207,10 @@ export const mapViatorToEngine6Tour = (
       heroQualityClassification: payload.diagnostics.heroQualityClassification,
       finalHeroUrl: payload.diagnostics.finalHeroUrl,
       heroFallbackTriggered: payload.diagnostics.heroFallbackTriggered,
+      heroCandidatesPresent: payload.diagnostics.heroCandidatesPresent,
+      heroCandidateCount: payload.diagnostics.heroCandidateCount,
+      heroPlaceholderFallbackReason:
+        payload.diagnostics.heroPlaceholderFallbackReason,
       captionPrecedenceApplied: payload.diagnostics.captionPrecedenceApplied,
       candidateFamilyIdentityDeterminable:
         payload.diagnostics.candidateFamilyIdentityDeterminable,

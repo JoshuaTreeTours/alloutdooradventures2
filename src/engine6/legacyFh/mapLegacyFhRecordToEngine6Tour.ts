@@ -127,6 +127,9 @@ export const mapLegacyFhRecordToEngine6Tour = (
       heroQualityClassification: "product-media",
       finalHeroUrl: record.heroImageUrl,
       heroFallbackTriggered: false,
+      heroCandidatesPresent: true,
+      heroCandidateCount: 1,
+      heroPlaceholderFallbackReason: null,
       captionPrecedenceApplied: false,
       candidateFamilyIdentityDeterminable: false,
       heroSurfaceParity: {

@@ -49,9 +49,12 @@ describe("/api/engine6/viator-product", () => {
         attemptedLiveFetch: false,
         usedBundledFallbackBecause: "missing-api-key",
         heroSourceType: "api-primary",
+        heroCandidatesPresent: true,
+        heroCandidateCount: 1,
         finalHeroUrl:
           "https://media.tacdn.com/media/attractions-splice-spp-674x446/0f/56/92/6e.jpg",
         heroFallbackTriggered: false,
+        heroPlaceholderFallbackReason: null,
       })
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
@@ -71,9 +74,12 @@ describe("/api/engine6/viator-product", () => {
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
         heroSourceType: "api-gallery",
+        heroCandidatesPresent: true,
+        heroCandidateCount: 1,
         finalHeroUrl:
           "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/07/31/dd/5f.jpg",
         heroFallbackTriggered: false,
+        heroPlaceholderFallbackReason: null,
       })
     );
     expect((res.body as any).extracted.heroImageUrl).toBe(
@@ -152,9 +158,12 @@ describe("/api/engine6/viator-product", () => {
         heroVariantFieldPath: "product.media.images[0].variants.CAPTION",
         imageSourceUsed: "api-primary",
         heroSourceType: "api-primary",
+        heroCandidatesPresent: true,
+        heroCandidateCount: 1,
         finalHeroUrl:
           "https://media.tacdn.com/media/attractions-content--1x-1/0f/56/92/caption.jpg",
         heroFallbackTriggered: false,
+        heroPlaceholderFallbackReason: null,
         rejectedForeignHeroCandidates: [],
       })
     );
@@ -246,6 +255,45 @@ describe("/api/engine6/viator-product", () => {
       "approved-placeholder"
     );
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);
+    expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);
+    expect((res.body as any).diagnostics.heroCandidateCount).toBe(0);
+    expect((res.body as any).diagnostics.heroPlaceholderFallbackReason).toBe(
+      "no-candidates"
+    );
     expect((res.body as any).diagnostics.finalHeroUrl).toBeNull();
+  });
+
+  it("keeps exact-product caption hero when caption + product-media are both available", async () => {
+    const req = { method: "GET", query: { productCode: "5584233P1" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe("caption");
+    expect((res.body as any).diagnostics.heroCandidateCount).toBeGreaterThanOrEqual(
+      1
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://dynamic-media.tacdn.com/media/photo-o/30/39/1f/1e/caption.jpg?w=700&h=500&s=1"
+    );
+  });
+
+  it("keeps exact-product splice hero when splice is the only same-product candidate", async () => {
+    const req = { method: "GET", query: { productCode: "26719P8" } };
+    const res = createRes();
+
+    await handler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).diagnostics.heroQualityClassification).toBe("splice");
+    expect((res.body as any).diagnostics.heroCandidateCount).toBeGreaterThanOrEqual(
+      1
+    );
+    expect((res.body as any).extracted.heroImageUrl).toBe(
+      "https://media.tacdn.com/media/attractions-splice-spp-360x240/0a/29/a2/f4.jpg"
+    );
   });
 });
