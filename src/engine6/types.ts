@@ -50,6 +50,9 @@ export type Engine6TourDiagnostics = {
   heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
+  heroCandidatesPresent: boolean;
+  heroCandidateCount: number;
+  heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
   heroSurfaceParity: {

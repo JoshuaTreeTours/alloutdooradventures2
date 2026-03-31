@@ -56,6 +56,9 @@ const buildDiagnostics = (
   heroQualityClassification: "placeholder" as const,
   finalHeroUrl: null as string | null,
   heroFallbackTriggered: false,
+  heroCandidatesPresent: false,
+  heroCandidateCount: 0,
+  heroPlaceholderFallbackReason: null as string | null,
   captionPrecedenceApplied: false,
   candidateFamilyIdentityDeterminable: false,
   heroSurfaceParity: {
@@ -134,6 +137,7 @@ const safeExtractEngine6Product = (payload: unknown) => {
   } catch {
     return {
       extracted: EMPTY_EXTRACTED_PRODUCT,
+      heroCandidates: [] as Engine6HeroCandidate[],
       diagnostics: buildDiagnostics("live-api", false),
       product: null,
     };
@@ -193,30 +197,36 @@ const respondWithErrorEnvelope = (
     ...(args.details ? { details: args.details } : {}),
   });
 
-const toHeroCandidate = (args: {
+const toHeroCandidates = (args: {
   extraction: ReturnType<typeof extractEngine6Product>;
   productCode: string;
-}): Engine6HeroCandidate | null => {
-  const heroUrl = args.extraction.extracted.heroImageUrl;
-  if (!heroUrl) {
-    return null;
+}): Engine6HeroCandidate[] => {
+  if (Array.isArray(args.extraction.heroCandidates)) {
+    return args.extraction.heroCandidates;
   }
 
-  return {
-    url: heroUrl,
-    sourceType: args.extraction.diagnostics.heroSourceType,
-    candidateProductCode:
-      typeof args.extraction.product?.productCode === "string"
-        ? args.extraction.product.productCode
-        : args.extraction.extracted.productUrl
-          ? args.productCode
-          : null,
-    candidateSourceProductUrl: args.extraction.extracted.productUrl,
-    fieldPath: args.extraction.diagnostics.heroImageFieldPath,
-    variantPath: args.extraction.diagnostics.heroVariantFieldPath,
-    width: args.extraction.diagnostics.selectedHeroWidth,
-    height: args.extraction.diagnostics.selectedHeroHeight,
-  };
+  const heroUrl = args.extraction.extracted.heroImageUrl;
+  if (!heroUrl) {
+    return [];
+  }
+
+  return [
+    {
+      url: heroUrl,
+      sourceType: args.extraction.diagnostics.heroSourceType,
+      candidateProductCode:
+        typeof args.extraction.product?.productCode === "string"
+          ? args.extraction.product.productCode
+          : args.extraction.extracted.productUrl
+            ? args.productCode
+            : null,
+      candidateSourceProductUrl: args.extraction.extracted.productUrl,
+      fieldPath: args.extraction.diagnostics.heroImageFieldPath,
+      variantPath: args.extraction.diagnostics.heroVariantFieldPath,
+      width: args.extraction.diagnostics.selectedHeroWidth,
+      height: args.extraction.diagnostics.selectedHeroHeight,
+    },
+  ];
 };
 
 const applyResolvedHero = (args: {
@@ -225,18 +235,18 @@ const applyResolvedHero = (args: {
   preferredHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
   fallbackHeroExtraction?: ReturnType<typeof extractEngine6Product> | null;
 }) => {
-  const preferredCandidate = args.preferredHeroExtraction
-    ? toHeroCandidate({
+  const preferredCandidates = args.preferredHeroExtraction
+    ? toHeroCandidates({
         extraction: args.preferredHeroExtraction,
         productCode: args.productCode,
       })
-    : null;
-  const fallbackCandidate = args.fallbackHeroExtraction
-    ? toHeroCandidate({
+    : [];
+  const fallbackCandidates = args.fallbackHeroExtraction
+    ? toHeroCandidates({
         extraction: args.fallbackHeroExtraction,
         productCode: args.productCode,
       })
-    : null;
+    : [];
 
   const heroDecision = resolveProductScopedHero({
     currentProductCode: args.productCode,
@@ -245,22 +255,33 @@ const applyResolvedHero = (args: {
       args.fallbackHeroExtraction?.extracted.productUrl ??
       args.preferredHeroExtraction?.extracted.productUrl,
     candidates: [
-      ...(preferredCandidate &&
-      preferredCandidate.sourceType !== "approved-placeholder"
-        ? [preferredCandidate]
-        : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType !== "approved-placeholder"
-        ? [fallbackCandidate]
-        : []),
-      ...(preferredCandidate &&
-      preferredCandidate.sourceType === "approved-placeholder"
-        ? [preferredCandidate]
-        : []),
-      ...(fallbackCandidate && fallbackCandidate.sourceType === "approved-placeholder"
-        ? [fallbackCandidate]
-        : []),
+      ...preferredCandidates.filter(
+        candidate => candidate.sourceType !== "approved-placeholder"
+      ),
+      ...fallbackCandidates.filter(
+        candidate => candidate.sourceType !== "approved-placeholder"
+      ),
+      ...preferredCandidates.filter(
+        candidate => candidate.sourceType === "approved-placeholder"
+      ),
+      ...fallbackCandidates.filter(
+        candidate => candidate.sourceType === "approved-placeholder"
+      ),
     ],
   });
+  const providedCandidates = [
+    ...preferredCandidates,
+    ...fallbackCandidates,
+  ].filter(candidate => candidate.sourceType !== "approved-placeholder");
+  const fallbackReason = heroDecision.fallbackTriggered
+    ? providedCandidates.length === 0
+      ? "no-candidates"
+      : heroDecision.rejectedForeignCandidates.length > 0
+        ? `all-candidates-rejected:${heroDecision.rejectedForeignCandidates
+            .map(candidate => candidate.reason)
+            .join(",")}`
+        : "hero-unresolved"
+    : null;
 
   return {
     extracted: {
@@ -275,6 +296,9 @@ const applyResolvedHero = (args: {
       selectedHeroHeight: heroDecision.finalCandidate?.height ?? null,
       imageSourceUsed: heroDecision.heroSourceType,
       heroSourceType: heroDecision.heroSourceType,
+      heroCandidatesPresent: providedCandidates.length > 0,
+      heroCandidateCount: providedCandidates.length,
+      heroPlaceholderFallbackReason: fallbackReason,
       finalHeroUrl: heroDecision.heroUrl,
       heroFallbackTriggered: heroDecision.fallbackTriggered,
       captionPrecedenceApplied: heroDecision.captionPrecedenceApplied,

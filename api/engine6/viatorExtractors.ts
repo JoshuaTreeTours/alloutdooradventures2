@@ -19,6 +19,9 @@ export type Engine6DiagnosticsPaths = {
   heroQualityClassification: Engine6HeroQualityClassification;
   finalHeroUrl: string | null;
   heroFallbackTriggered: boolean;
+  heroCandidatesPresent: boolean;
+  heroCandidateCount: number;
+  heroPlaceholderFallbackReason: string | null;
   captionPrecedenceApplied: boolean;
   candidateFamilyIdentityDeterminable: boolean;
   heroSurfaceParity: {
@@ -1063,6 +1066,9 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroQualityClassification: "placeholder",
     finalHeroUrl: null,
     heroFallbackTriggered: false,
+    heroCandidatesPresent: false,
+    heroCandidateCount: 0,
+    heroPlaceholderFallbackReason: null,
     captionPrecedenceApplied: false,
     candidateFamilyIdentityDeterminable: false,
     heroSurfaceParity: {
@@ -1091,7 +1097,12 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   };
 
   if (!product) {
-    return { extracted: emptyExtracted(), diagnostics, product: null };
+    return {
+      extracted: emptyExtracted(),
+      diagnostics,
+      heroCandidates: [] as Engine6HeroCandidate[],
+      product: null,
+    };
   }
 
   const productCode = asNonEmptyString(product.productCode);
@@ -1106,15 +1117,18 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   const productUrl = extractProductUrl(product);
   diagnostics.productUrlFieldPath = productUrl.path;
 
+  const heroCandidates = extractPlaybookHeroCandidates({
+    product,
+    productCode,
+    sourceProductUrl: productUrl.value,
+  });
   const heroDecision = resolveProductScopedHero({
     currentProductCode: productCode,
     currentSourceProductUrl: productUrl.value,
-    candidates: extractPlaybookHeroCandidates({
-      product,
-      productCode,
-      sourceProductUrl: productUrl.value,
-    }),
+    candidates: heroCandidates,
   });
+  diagnostics.heroCandidatesPresent = heroCandidates.length > 0;
+  diagnostics.heroCandidateCount = heroCandidates.length;
   diagnostics.heroImageFieldPath = heroDecision.finalCandidate?.fieldPath ?? null;
   diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
@@ -1124,6 +1138,15 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;
   diagnostics.finalHeroUrl = heroDecision.heroUrl;
   diagnostics.heroFallbackTriggered = heroDecision.fallbackTriggered;
+  diagnostics.heroPlaceholderFallbackReason = heroDecision.fallbackTriggered
+    ? heroCandidates.length === 0
+      ? "no-candidates"
+      : heroDecision.rejectedForeignCandidates.length > 0
+        ? `all-candidates-rejected:${heroDecision.rejectedForeignCandidates
+            .map(candidate => candidate.reason)
+            .join(",")}`
+        : "hero-unresolved"
+    : null;
   diagnostics.captionPrecedenceApplied = heroDecision.captionPrecedenceApplied;
   diagnostics.candidateFamilyIdentityDeterminable =
     heroDecision.candidateFamilyIdentityDeterminable;
@@ -1236,6 +1259,7 @@ export const extractEngine6Product = (rawPayload: unknown) => {
       categories: classification.categories,
     } satisfies Engine6Extracted,
     diagnostics,
+    heroCandidates,
     product,
   };
 };

@@ -409,6 +409,18 @@ export default function Engine6TourPage({ tour }: { tour: Engine6Tour }) {
             {tour.diagnostics.heroFallbackTriggered ? "yes" : "no"}
           </p>
           <p>
+            <strong>Hero candidates present:</strong>{" "}
+            {tour.diagnostics.heroCandidatesPresent ? "yes" : "no"}
+          </p>
+          <p>
+            <strong>Hero candidate count:</strong>{" "}
+            {tour.diagnostics.heroCandidateCount}
+          </p>
+          <p>
+            <strong>Placeholder fallback reason:</strong>{" "}
+            {tour.diagnostics.heroPlaceholderFallbackReason ?? "n/a"}
+          </p>
+          <p>
             <strong>Hero quality:</strong>{" "}
             {tour.diagnostics.heroQualityClassification}
           </p>
