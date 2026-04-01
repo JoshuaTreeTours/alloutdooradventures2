@@ -47,10 +47,20 @@ const hasStrictExactProductHero = (tour: Engine6Tour) =>
   Boolean(tour.diagnostics.heroHost?.trim()) &&
   tour.diagnostics.heroSourceFieldPath?.startsWith("product.media.images");
 
+const tryMapFixtureToTour = (
+  fixture: (typeof ENGINE6_VALIDATION_FIXTURES)[number]
+) => {
+  try {
+    return mapViatorToEngine6Tour(toEngine6FixturePayload(fixture));
+  } catch {
+    return null;
+  }
+};
+
 const resolvedTours: Engine6Tour[] = ENGINE6_VALIDATION_FIXTURES.map(
-  toEngine6FixturePayload
+  tryMapFixtureToTour
 )
-  .map(mapViatorToEngine6Tour)
+  .filter((tour): tour is Engine6Tour => Boolean(tour))
   .filter(hasStrictExactProductHero);
 
 assertEngine6CollisionPolicy(resolvedTours);

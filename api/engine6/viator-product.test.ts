@@ -69,8 +69,12 @@ describe("/api/engine6/viator-product", () => {
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(422);
     expect((res.body as any).source).toBe("bundled-fallback");
+    expect((res.body as any).error).toBe(
+      "Engine6 strict exact-product hero validation failed"
+    );
+    expect((res.body as any).details).toBe("null resolved hero");
     expect((res.body as any).diagnostics).toEqual(
       expect.objectContaining({
         heroSourceType: "none",
@@ -246,7 +250,11 @@ describe("/api/engine6/viator-product", () => {
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(422);
+    expect((res.body as any).error).toBe(
+      "Engine6 strict exact-product hero validation failed"
+    );
+    expect((res.body as any).details).toBe("null resolved hero");
     expect((res.body as any).extracted.heroImageUrl).toBeNull();
     expect((res.body as any).diagnostics.heroSourceType).toBe(
       "none"
@@ -326,7 +334,11 @@ describe("/api/engine6/viator-product", () => {
 
     await handler(req, res);
 
-    expect(res.statusCode).toBe(200);
+    expect(res.statusCode).toBe(422);
+    expect((res.body as any).error).toBe(
+      "Engine6 strict exact-product hero validation failed"
+    );
+    expect((res.body as any).details).toBe("null resolved hero");
     expect((res.body as any).diagnostics.heroCandidatesPresent).toBe(false);
     expect((res.body as any).diagnostics.heroCandidateCountBeforeFiltering).toBe(0);
     expect((res.body as any).diagnostics.heroFallbackTriggered).toBe(true);

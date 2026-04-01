@@ -35,6 +35,7 @@ const buildCityAwareSchemaName = ({
 };
 
 export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
+  const resolvedHeroUrl = tour.resolvedHero?.url ?? tour.heroImageUrl ?? undefined;
   const canonicalUrl = buildCanonicalUrl(tour.canonicalPath);
   const affiliateUrl = tour.bookingUrl;
   const offerUrl =
@@ -126,14 +127,14 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
     description,
     isPartOf: { "@id": SITE_WEBSITE_ID },
     publisher: { "@id": SITE_ORGANIZATION_ID },
-    ...(tour.heroImageUrl
+    ...(resolvedHeroUrl
       ? {
           primaryImageOfPage: {
             "@type": "ImageObject",
             "@id": `${canonicalUrl}#primaryimage`,
-            url: tour.heroImageUrl,
+            url: resolvedHeroUrl,
           },
-          image: tour.heroImageUrl,
+          image: resolvedHeroUrl,
         }
       : {}),
     about: { "@id": `${canonicalUrl}#product` },
@@ -208,7 +209,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@id": `${canonicalUrl}#trip`,
         name: schemaName,
         description,
-        image: tour.heroImageUrl || undefined,
+        image: resolvedHeroUrl,
         url: canonicalUrl,
         provider: { "@id": SITE_ORGANIZATION_ID },
         touristDestination: { "@id": destinationPlaceId },
@@ -232,7 +233,7 @@ export const buildEngine6SchemaGraph = (tour: Engine6Tour) => {
         "@type": "Product",
         "@id": `${canonicalUrl}#product`,
         name: schemaName,
-        image: tour.heroImageUrl || undefined,
+        image: resolvedHeroUrl,
         description,
         category: categoryLabel ?? undefined,
         url: canonicalUrl,
