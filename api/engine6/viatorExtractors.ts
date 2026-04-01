@@ -14,6 +14,8 @@ export type Engine6DiagnosticsPaths = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
+  selectedHeroSourceProductCode: string | null;
+  selectedHeroSourceProductUrl: string | null;
   imageSourceUsed: Engine6HeroSourceType;
   heroSourceType: Engine6HeroSourceType;
   heroQualityClassification: Engine6HeroQualityClassification;
@@ -456,9 +458,6 @@ const resolveImageCollectionHeroCandidates = (
   return candidates;
 };
 
-const resolveRootImages = (product: RecordLike): HeroImageResult[] =>
-  resolveImageCollectionHeroCandidates(product.images, ["images"], "api-gallery");
-
 const withHeroScope = (
   hero: HeroImageResult,
   productCode: string | null,
@@ -489,33 +488,6 @@ const extractPlaybookHeroCandidates = ({
   candidates.push(
     ...mediaHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
   );
-
-  const rootHeroes = resolveRootImages(product);
-  candidates.push(
-    ...rootHeroes.map(hero => withHeroScope(hero, productCode, sourceProductUrl))
-  );
-
-  for (const [path, value] of [
-    ["product.imageUrl", product.imageUrl],
-    ["product.thumbnailHiResURL", product.thumbnailHiResURL],
-    ["product.thumbnailURL", product.thumbnailURL],
-  ] as const) {
-    const url = asImageUrl(value);
-    if (!url) {
-      continue;
-    }
-
-    candidates.push({
-      url,
-      sourceType: "api-gallery",
-      candidateProductCode: productCode,
-      candidateSourceProductUrl: sourceProductUrl,
-      fieldPath: path,
-      variantPath: path.replace(/\.url$/, ""),
-      width: null,
-      height: null,
-    });
-  }
 
   return candidates;
 };
@@ -1061,6 +1033,8 @@ export const extractEngine6Product = (rawPayload: unknown) => {
     heroVariantFieldPath: null,
     selectedHeroWidth: null,
     selectedHeroHeight: null,
+    selectedHeroSourceProductCode: null,
+    selectedHeroSourceProductUrl: null,
     imageSourceUsed: "approved-placeholder",
     heroSourceType: "approved-placeholder",
     heroQualityClassification: "placeholder",
@@ -1133,6 +1107,10 @@ export const extractEngine6Product = (rawPayload: unknown) => {
   diagnostics.heroVariantFieldPath = heroDecision.finalCandidate?.variantPath ?? null;
   diagnostics.selectedHeroWidth = heroDecision.finalCandidate?.width ?? null;
   diagnostics.selectedHeroHeight = heroDecision.finalCandidate?.height ?? null;
+  diagnostics.selectedHeroSourceProductCode =
+    heroDecision.finalCandidate?.candidateProductCode ?? null;
+  diagnostics.selectedHeroSourceProductUrl =
+    heroDecision.finalCandidate?.candidateSourceProductUrl ?? null;
   diagnostics.imageSourceUsed = heroDecision.heroSourceType;
   diagnostics.heroSourceType = heroDecision.heroSourceType;
   diagnostics.heroQualityClassification = heroDecision.heroQualityClassification;

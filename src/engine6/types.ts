@@ -45,6 +45,8 @@ export type Engine6TourDiagnostics = {
   heroVariantFieldPath: string | null;
   selectedHeroWidth: number | null;
   selectedHeroHeight: number | null;
+  selectedHeroSourceProductCode: string | null;
+  selectedHeroSourceProductUrl: string | null;
   imageSourceUsed: Engine6HeroSourceType;
   heroSourceType: Engine6HeroSourceType;
   heroQualityClassification: Engine6HeroQualityClassification;

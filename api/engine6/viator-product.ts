@@ -51,6 +51,8 @@ const buildDiagnostics = (
   heroVariantFieldPath: null as string | null,
   selectedHeroWidth: null as number | null,
   selectedHeroHeight: null as number | null,
+  selectedHeroSourceProductCode: null as string | null,
+  selectedHeroSourceProductUrl: null as string | null,
   imageSourceUsed: "approved-placeholder" as const,
   heroSourceType: "approved-placeholder" as const,
   heroQualityClassification: "placeholder" as const,
@@ -294,6 +296,10 @@ const applyResolvedHero = (args: {
       heroVariantFieldPath: heroDecision.finalCandidate?.variantPath ?? null,
       selectedHeroWidth: heroDecision.finalCandidate?.width ?? null,
       selectedHeroHeight: heroDecision.finalCandidate?.height ?? null,
+      selectedHeroSourceProductCode:
+        heroDecision.finalCandidate?.candidateProductCode ?? null,
+      selectedHeroSourceProductUrl:
+        heroDecision.finalCandidate?.candidateSourceProductUrl ?? null,
       imageSourceUsed: heroDecision.heroSourceType,
       heroSourceType: heroDecision.heroSourceType,
       heroCandidatesPresent: providedCandidates.length > 0,

@@ -310,7 +310,7 @@ describe("engine6 extractor", () => {
     );
   });
 
-  it("never uses /hero.jpg and renders no hero when API candidates are invalid", () => {
+  it("never uses /hero.jpg and renders no hero when product media candidates are invalid", () => {
     const extracted = extractEngine6Product({
       product: {
         productCode: "STATIC1",
@@ -320,7 +320,19 @@ describe("engine6 extractor", () => {
         description: { text: "Description" },
         location: { city: "Santa Barbara", state: "California" },
         priceFrom: "$10.00",
-        imageUrl: "https://www.alloutdooradventures.com/hero.jpg",
+        media: {
+          images: [
+            {
+              variants: {
+                FULL: {
+                  url: "https://www.alloutdooradventures.com/hero.jpg",
+                  width: 1200,
+                  height: 800,
+                },
+              },
+            },
+          ],
+        },
       },
     });
 
@@ -354,6 +366,28 @@ describe("engine6 extractor", () => {
     expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
     expect(extracted.diagnostics.heroFallbackTriggered).toBe(true);
     expect(extracted.diagnostics.rejectedForeignHeroCandidates).toEqual([]);
+  });
+
+  it("ignores non-product media image fields and only accepts product.media.images", () => {
+    const extracted = extractEngine6Product({
+      product: {
+        productCode: "ROOTIMAGE1",
+        productUrl:
+          "https://www.viator.com/tours/Miami/Root-Image-Test/d662-ROOTIMAGE1",
+        title: "Root Image Test",
+        description: { text: "Description" },
+        location: { city: "Miami", state: "Florida" },
+        priceFrom: "$39.00",
+        imageUrl:
+          "https://dynamic-media.tacdn.com/media/photo-o/2f/38/e0/69/caption.jpg?w=1100&h=800&s=1",
+        thumbnailURL:
+          "https://media.tacdn.com/media/attractions-splice-spp-360x240/0c/00/fa/45.jpg",
+      },
+    });
+
+    expect(extracted.extracted.heroImageUrl).toBeNull();
+    expect(extracted.diagnostics.heroCandidateCount).toBe(0);
+    expect(extracted.diagnostics.heroSourceType).toBe("approved-placeholder");
   });
 
   it("uses the next valid current-product API image for sunset/sailing when earlier candidates are invalid", () => {
@@ -1837,8 +1871,7 @@ describe("engine6 image parity guardrails", () => {
     );
 
     expect(html).toContain('data-hero-image-src=""');
-    expect(html).toContain('data-card-image-src="/images/cycling-hero.jpg"');
-    expect(html).not.toContain('data-card-image-src="/images/hiking-hero.jpg"');
+    expect(html).toContain('data-card-image-src="/images/hiking-hero.jpg"');
     expect(html).not.toContain('data-card-image-src="/hero.jpg"');
   });
 });

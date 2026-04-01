@@ -202,6 +202,10 @@ export const mapViatorToEngine6Tour = (
       heroVariantFieldPath: payload.diagnostics.heroVariantFieldPath,
       selectedHeroWidth: payload.diagnostics.selectedHeroWidth,
       selectedHeroHeight: payload.diagnostics.selectedHeroHeight,
+      selectedHeroSourceProductCode:
+        payload.diagnostics.selectedHeroSourceProductCode,
+      selectedHeroSourceProductUrl:
+        payload.diagnostics.selectedHeroSourceProductUrl,
       imageSourceUsed: payload.diagnostics.imageSourceUsed,
       heroSourceType: payload.diagnostics.heroSourceType,
       heroQualityClassification: payload.diagnostics.heroQualityClassification,
