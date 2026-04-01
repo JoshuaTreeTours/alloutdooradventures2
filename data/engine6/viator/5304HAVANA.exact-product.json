@@ -1,0 +1,32 @@
+{
+  "product": {
+    "productCode": "5304HAVANA",
+    "productUrl": "https://www.viator.com/tours/Miami/Little-Havana-Food-and-Walking-Tour-in-Miami/d662-5304HAVANA",
+    "title": "Little Havana Food and Walking Tour in Miami",
+    "description": "Walk Calle Ocho with a local guide and sample Cuban-inspired bites.",
+    "location": { "city": "Miami", "state": "Florida" },
+    "priceFrom": "$79.00",
+    "reviews": { "combinedAverageRating": 4.8, "totalReviews": 643 },
+    "media": {
+      "images": [
+        {
+          "isCover": true,
+          "variants": {
+            "FULL": {
+              "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/03/little-havana-food-tour-hero.jpg",
+              "width": 1400,
+              "height": 933
+            }
+          }
+        }
+      ]
+    },
+    "imageUrl": "https://dynamic-media.tacdn.com/media/photo-o/99/99/99/foreign-generic-miami.jpg",
+    "highlights": ["Sample Cuban coffee and pastries", "Visit local family-run food spots"],
+    "logistics": { "start": "Calle Ocho" },
+    "itineraryItems": [
+      { "pointOfInterestLocation": { "name": "Little Havana" }, "description": "Cultural neighborhood food tour.", "duration": "2 hours 30 minutes" }
+    ],
+    "additionalInfo": ["Wear comfortable walking shoes"]
+  }
+}

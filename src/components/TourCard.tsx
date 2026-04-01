@@ -14,8 +14,6 @@ type TourCardProps = {
   href?: string;
 };
 
-const ENGINE6_SECONDARY_NEUTRAL_PLACEHOLDER_IMAGE = "/images/cycling-hero.jpg";
-
 const CARD_BLURB_MAX_CHARS = 150;
 const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
 const NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX =
@@ -124,45 +122,6 @@ function getCardBlurb(tour: Tour): string {
   return `${snippet.trim()}…`;
 }
 
-const isEngine6TrustedMediaHost = (value: string) => {
-  try {
-    const parsed = new URL(value);
-    const host = parsed.hostname.toLowerCase();
-    return (
-      host === "cdn.filestackcontent.com" ||
-      host === "www.filepicker.io" ||
-      host === "dynamic-media.tacdn.com" ||
-      host === "media.tacdn.com" ||
-      host === "media-cdn.tripadvisor.com" ||
-      host === "dynamic-media-cdn.tripadvisor.com" ||
-      (host.includes("media") && host.endsWith(".tacdn.com")) ||
-      (host.includes("media") && host.endsWith(".tripadvisor.com"))
-    );
-  } catch {
-    return false;
-  }
-};
-
-function resolveEngine6CanonicalCardImage(value: string | undefined): string {
-  const normalized = value?.trim() ?? "";
-  if (!normalized) {
-    return "";
-  }
-  if (!/^https?:\/\//i.test(normalized)) {
-    return "";
-  }
-  if (
-    normalized.includes("/hero.jpg") ||
-    normalized.includes("/images/hiking-hero.jpg")
-  ) {
-    return "";
-  }
-  if (!isEngine6TrustedMediaHost(normalized)) {
-    return "";
-  }
-  return normalized;
-}
-
 export default function TourCard({ tour, href }: TourCardProps) {
   const detailHref = href ?? getTourDetailPath(tour);
   const isRental = isRentalTour(tour);
@@ -185,24 +144,15 @@ export default function TourCard({ tour, href }: TourCardProps) {
     !tour.suppressReviews &&
     typeof tour.badges.rating === "number" &&
     typeof tour.badges.reviewCount === "number";
-  const engine6CanonicalImage =
-    tour.engine === "engine6"
-      ? resolveEngine6CanonicalCardImage(tour.heroImage)
-      : "";
-  const rejectedEngine6Image = tour.heroImage?.trim() ?? "";
-  const engine6FallbackImage =
-    rejectedEngine6Image === TOUR_FALLBACK_HERO_IMAGE
-      ? ENGINE6_SECONDARY_NEUTRAL_PLACEHOLDER_IMAGE
-      : TOUR_FALLBACK_HERO_IMAGE;
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? engine6CanonicalImage || engine6FallbackImage
+        ? tour.heroImage?.trim() || TOUR_FALLBACK_HERO_IMAGE
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? engine6FallbackImage
+      ? TOUR_FALLBACK_HERO_IMAGE
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
@@ -217,7 +167,7 @@ export default function TourCard({ tour, href }: TourCardProps) {
       data-card-image-src={cardImage}
       data-hero-image-src={
         tour.engine === "engine6"
-          ? engine6CanonicalImage
+          ? tour.heroImage?.trim() || ""
           : tour.heroImage?.trim() || ""
       }
     >

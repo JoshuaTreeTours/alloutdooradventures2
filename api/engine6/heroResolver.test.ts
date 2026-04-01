@@ -15,6 +15,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
         {
           url: "/images/hiking-hero.jpg",
@@ -43,6 +44,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "OTHER123",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Other-City/Other-Tour/d999-OTHER123",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
         {
           url: "https://www.alloutdooradventures.com/hero.jpg",
@@ -50,6 +52,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -84,6 +87,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "36001P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/San-Francisco/Yosemite-In-A-Day-Tour-from-San-Francisco/d651-36001P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -108,6 +112,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
           width: 1800,
           height: 1200,
         },
@@ -117,6 +122,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          fieldPath: "product.media.images[0].variants.CAPTION.url",
           width: 1200,
           height: 900,
         },
@@ -145,6 +151,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "447234P3",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
+          fieldPath: "product.media.images[0].variants.FULL.url",
           width: 720,
           height: 480,
         },
@@ -154,6 +161,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "447234P3",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/San-Diego/Joshua-Tree-National-Park-Day-Trip-from-San-Diego/d736-447234P3",
+          fieldPath: "product.media.images[0].variants.FULL.url",
           width: 720,
           height: 480,
         },
@@ -180,6 +188,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "SUNSET1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -201,6 +210,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "63657P1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Santa-Barbara-Vineyard-to-Table-Taste-Tour-by-Bike/d4372-63657P1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -229,6 +239,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "SUNSET1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
         {
           url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/4d.jpg",
@@ -236,6 +247,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "SUNSET1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/Santa-Barbara/Sunset-Sailing/d4372-SUNSET1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -266,6 +278,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "MEDIA1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/City/Tour/d1-MEDIA1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
           width: 1600,
           height: 1066,
         },
@@ -291,6 +304,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "SPLICE1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/City/Splice-Only/d1-SPLICE1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
           width: 674,
           height: 446,
         },
@@ -313,6 +327,7 @@ describe("engine6 hero resolver", () => {
           candidateProductCode: "BADURL1",
           candidateSourceProductUrl:
             "https://www.viator.com/tours/City/Bad-Url/d1-BADURL1",
+          fieldPath: "product.media.images[0].variants.FULL.url",
         },
       ],
     });
@@ -324,6 +339,30 @@ describe("engine6 hero resolver", () => {
         expect.objectContaining({
           url: "not-a-url",
           reason: "invalid-url",
+        }),
+      ])
+    );
+  });
+
+  it("rejects candidates missing source field path provenance", () => {
+    const resolved = resolveProductScopedHero({
+      currentProductCode: "PATH1",
+      currentSourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+      candidates: [
+        {
+          url: "https://dynamic-media.tacdn.com/media/photo-o/1a/2b/3c/pathless.jpg",
+          sourceType: "api-primary",
+          sourceProductCode: "PATH1",
+          sourceProductUrl: "https://www.viator.com/tours/City/With-Path/d1-PATH1",
+        },
+      ],
+    });
+
+    expect(resolved.heroUrl).toBeNull();
+    expect(resolved.rejectedForeignCandidates).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          reason: "missing-source-field-path",
         }),
       ])
     );

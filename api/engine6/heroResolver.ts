@@ -14,6 +14,11 @@ export type Engine6HeroQualityClassification =
 export type Engine6HeroCandidate = {
   url: string;
   sourceType: Engine6HeroSourceType;
+  sourceProductCode?: string | null;
+  sourceProductUrl?: string | null;
+  sourceFieldPath?: string | null;
+  host?: string | null;
+  qualityClassification?: Engine6HeroQualityClassification | null;
   candidateProductCode?: string | null;
   candidateSourceProductUrl?: string | null;
   fieldPath?: string | null;
@@ -30,6 +35,7 @@ export type Engine6RejectedHeroCandidate = {
     | "foreign-product-code"
     | "foreign-product-url"
     | "missing-product-scope"
+    | "missing-source-field-path"
     | "unverified-product-scope"
     | "invalid-url"
     | "static-hero-disallowed"
@@ -98,6 +104,14 @@ const normalizeHeroMediaUrl = (value: string) => {
     return parsed.toString();
   } catch {
     return value;
+  }
+};
+
+const extractHost = (value: string): string | null => {
+  try {
+    return new URL(value).hostname.toLowerCase();
+  } catch {
+    return null;
   }
 };
 
@@ -264,11 +278,13 @@ const toRejectedCandidate = (
   url: candidate.url,
   sourceType: candidate.sourceType,
   reason,
-  candidateProductCode: normalizeProductCode(candidate.candidateProductCode),
-  candidateSourceProductUrl: normalizeEngine6SourceProductUrl(
-    candidate.candidateSourceProductUrl
+  candidateProductCode: normalizeProductCode(
+    candidate.sourceProductCode ?? candidate.candidateProductCode
   ),
-  fieldPath: candidate.fieldPath ?? null,
+  candidateSourceProductUrl: normalizeEngine6SourceProductUrl(
+    candidate.sourceProductUrl ?? candidate.candidateSourceProductUrl
+  ),
+  fieldPath: candidate.sourceFieldPath ?? candidate.fieldPath ?? null,
 });
 
 export const resolveProductScopedHero = ({
@@ -310,15 +326,23 @@ export const resolveProductScopedHero = ({
       continue;
     }
     const candidateProductCode = normalizeProductCode(
-      candidate.candidateProductCode
+      candidate.sourceProductCode ?? candidate.candidateProductCode
     );
     const candidateSourceProductUrl = normalizeEngine6SourceProductUrl(
-      candidate.candidateSourceProductUrl
+      candidate.sourceProductUrl ?? candidate.candidateSourceProductUrl
     );
+    const candidateSourceFieldPath =
+      candidate.sourceFieldPath ?? candidate.fieldPath ?? null;
 
     if (!candidateProductCode && !candidateSourceProductUrl) {
       rejectedForeignCandidates.push(
         toRejectedCandidate(candidate, "missing-product-scope")
+      );
+      continue;
+    }
+    if (!candidateSourceFieldPath) {
+      rejectedForeignCandidates.push(
+        toRejectedCandidate(candidate, "missing-source-field-path")
       );
       continue;
     }
@@ -369,8 +393,15 @@ export const resolveProductScopedHero = ({
 
     validCandidates.push({
       ...candidate,
+      sourceProductCode: candidateProductCode,
+      sourceProductUrl: candidateSourceProductUrl,
+      sourceFieldPath: candidateSourceFieldPath,
+      host: candidate.host ?? extractHost(candidate.url),
+      qualityClassification:
+        candidate.qualityClassification ?? getHeroQualityClassification(candidate),
       candidateProductCode,
       candidateSourceProductUrl,
+      fieldPath: candidateSourceFieldPath,
       familyKey: candidate.familyKey ?? extractCandidateFamilyKey(candidate.url),
     });
   }
