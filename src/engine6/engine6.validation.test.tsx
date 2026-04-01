@@ -87,13 +87,8 @@ describe("engine6 single-tour validation harness", () => {
       const parentCityToursPath = buildEngine6ParentCityToursPath(
         tour.canonicalPath
       );
-      const expectedHero = (rawPayload.product?.media?.images?.[0]?.variants
-        ?.FULL?.url ??
-        rawPayload.product?.media?.images?.[0]?.url ??
-        rawPayload.media?.images?.[0]?.variants?.FULL?.url ??
+      const expectedHero = (rawPayload.product?.media?.images?.[0]?.url ??
         rawPayload.media?.images?.[0]?.url ??
-        rawPayload.media?.images?.[0]?.variants?.[0]?.url ??
-        rawPayload.images?.[0]?.variants?.[0]?.url ??
         rawPayload.images?.[0]?.url ??
         null) as string | null;
 

@@ -4,9 +4,15 @@
     "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-120303P9",
     "title": "Millionaire's Row Cruise",
     "description": "See Miami waterfront homes and skyline highlights on a narrated cruise.",
-    "location": { "city": "Miami", "state": "Florida" },
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
     "priceFrom": "$35.00",
-    "reviews": { "combinedAverageRating": 4.3, "totalReviews": 1204 },
+    "reviews": {
+      "combinedAverageRating": 4.3,
+      "totalReviews": 1204
+    },
     "media": {
       "images": [
         {
@@ -17,16 +23,32 @@
               "width": 1500,
               "height": 1000
             }
-          }
+          },
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-hero.jpg",
+          "width": 1500,
+          "height": 1000
         }
       ]
     },
     "thumbnailURL": "https://dynamic-media.tacdn.com/media/photo-o/aa/bb/cc/foreign-thumb.jpg",
-    "highlights": ["Cruise Biscayne Bay", "View mansions from the water"],
-    "logistics": { "start": "Bayside Marketplace" },
-    "itineraryItems": [
-      { "pointOfInterestLocation": { "name": "Millionaire's Row" }, "description": "Narrated waterfront cruise.", "duration": "90 minutes" }
+    "highlights": [
+      "Cruise Biscayne Bay",
+      "View mansions from the water"
     ],
-    "additionalInfo": ["Bring sun protection"]
+    "logistics": {
+      "start": "Bayside Marketplace"
+    },
+    "itineraryItems": [
+      {
+        "pointOfInterestLocation": {
+          "name": "Millionaire's Row"
+        },
+        "description": "Narrated waterfront cruise.",
+        "duration": "90 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "Bring sun protection"
+    ]
   }
 }

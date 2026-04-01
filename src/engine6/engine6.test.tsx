@@ -83,6 +83,9 @@ const specimenProductPayload = {
       images: [
         {
           isCover: true,
+          url: ENGINE6_63657P1_CARD_IMAGE_URL,
+          width: 674,
+          height: 446,
           variants: {
             FULL: {
               url: ENGINE6_63657P1_CARD_IMAGE_URL,
@@ -169,8 +172,8 @@ const specimenApiPayload = {
     commercialPriceFieldPath: "product.priceFrom",
     commercialPriceRawValue: "$199.00",
     priceSourceUsed: "live-price" as const,
-    heroImageFieldPath: "product.media.images[0].variants.FULL.url",
-    heroVariantFieldPath: "product.media.images[0].variants.FULL",
+    heroImageFieldPath: "product.media.images[0].url",
+    heroVariantFieldPath: "product.media.images[0]",
     selectedHeroWidth: 674,
     selectedHeroHeight: 446,
     imageSourceUsed: "api-primary" as const,
@@ -286,10 +289,10 @@ describe("engine6 extractor", () => {
       ENGINE6_63657P1_CARD_IMAGE_URL
     );
     expect(extracted.diagnostics.heroImageFieldPath).toBe(
-      "product.media.images[0].variants.FULL.url"
+      "product.media.images[0].url"
     );
     expect(extracted.diagnostics.heroVariantFieldPath).toBe(
-      "product.media.images[0].variants.FULL"
+      "product.media.images[0]"
     );
     expect(extracted.diagnostics.selectedHeroWidth).toBe(674);
     expect(extracted.diagnostics.selectedHeroHeight).toBe(446);

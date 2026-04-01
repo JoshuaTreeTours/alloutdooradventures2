@@ -22,7 +22,7 @@
     ],
     "logistics": {
       "start": {
-        "description": "Dena\u2019ina Civic and Convention Center, 600 W 7th Ave, Anchorage, AK 99501, USA. Pickup is outside the Dena'ina Convention Center."
+        "description": "Dena’ina Civic and Convention Center, 600 W 7th Ave, Anchorage, AK 99501, USA. Pickup is outside the Dena'ina Convention Center."
       },
       "end": {
         "description": "Returns to the meeting point."
@@ -82,7 +82,10 @@
               "width": 1200,
               "height": 800
             }
-          }
+          },
+          "url": "https://cdn.filestackcontent.com/x3s6r9FHTKO8TAc98xcw",
+          "width": 1200,
+          "height": 800
         }
       ]
     }

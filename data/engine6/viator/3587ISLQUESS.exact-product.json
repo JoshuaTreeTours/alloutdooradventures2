@@ -4,10 +4,16 @@
     "productUrl": "https://www.viator.com/tours/Miami/Millionaires-Row-Cruise/d662-3587ISLQUESS",
     "title": "Millionaire’s Row Cruise",
     "description": "Cruise past waterfront mansions and Miami skyline landmarks with live narration on Biscayne Bay.",
-    "location": { "city": "Miami", "state": "Florida" },
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
     "priceFrom": "$34.99",
     "duration": "1 hour 30 minutes",
-    "reviews": { "combinedAverageRating": 4.4, "totalReviews": 1812 },
+    "reviews": {
+      "combinedAverageRating": 4.4,
+      "totalReviews": 1812
+    },
     "media": {
       "images": [
         {
@@ -18,7 +24,10 @@
               "width": 1600,
               "height": 1066
             }
-          }
+          },
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/02/millionaires-row-cruise-hero.jpg",
+          "width": 1600,
+          "height": 1066
         },
         {
           "variants": {
@@ -27,7 +36,10 @@
               "width": 1400,
               "height": 933
             }
-          }
+          },
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2c/12/aa/04/millionaires-row-cruise-secondary.jpg",
+          "width": 1400,
+          "height": 933
         }
       ]
     },
@@ -43,11 +55,18 @@
       "Enjoy Biscayne Bay skyline views from the water",
       "Hear route narration from onboard guides"
     ],
-    "inclusions": ["Sightseeing cruise", "Onboard narration"],
-    "meetingPoint": { "description": "Bayside Marketplace, Downtown Miami" },
+    "inclusions": [
+      "Sightseeing cruise",
+      "Onboard narration"
+    ],
+    "meetingPoint": {
+      "description": "Bayside Marketplace, Downtown Miami"
+    },
     "itineraryItems": [
       {
-        "pointOfInterestLocation": { "name": "Biscayne Bay" },
+        "pointOfInterestLocation": {
+          "name": "Biscayne Bay"
+        },
         "description": "Cruise route with skyline and mansion views.",
         "duration": "1 hour 30 minutes"
       }
@@ -66,6 +85,8 @@
         "answer": "Yes, the tour includes onboard sightseeing narration."
       }
     ],
-    "additionalInfo": ["Arrive 30 minutes before departure"]
+    "additionalInfo": [
+      "Arrive 30 minutes before departure"
+    ]
   }
 }
