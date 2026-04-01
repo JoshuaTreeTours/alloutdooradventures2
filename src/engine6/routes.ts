@@ -70,6 +70,10 @@ export const ENGINE6_MIAMI_PARASAILING_ROUTE =
 export const ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE = "231628P7";
 export const ENGINE6_MIAMI_HELICOPTER_ROUTE =
   "/destinations/florida/miami/tours/taste-of-miami-helicopter-tour";
+export const ENGINE6_MIAMI_PRIVATE_BOAT_CRUISE_PRODUCT_CODE = "438341P2";
+export const ENGINE6_MIAMI_PRIVATE_BOAT_CRUISE_ROUTE =
+  "/destinations/florida/miami/tours/miami-private-boat-cruise-with-a-captain";
+
 export const ENGINE6_MIAMI_PIRATE_BOAT_PRODUCT_CODE = "8836P2";
 export const ENGINE6_MIAMI_PIRATE_BOAT_ROUTE =
   "/destinations/florida/miami/tours/miami-pirate-boat-tour-skyline-and-celebrity-homes";
@@ -152,6 +156,10 @@ const ENGINE6_ROUTE_PRODUCT_CODE_ENTRIES = [
   ],
   [ENGINE6_MIAMI_PARASAILING_ROUTE, ENGINE6_MIAMI_PARASAILING_PRODUCT_CODE],
   [ENGINE6_MIAMI_HELICOPTER_ROUTE, ENGINE6_MIAMI_HELICOPTER_PRODUCT_CODE],
+  [
+    ENGINE6_MIAMI_PRIVATE_BOAT_CRUISE_ROUTE,
+    ENGINE6_MIAMI_PRIVATE_BOAT_CRUISE_PRODUCT_CODE,
+  ],
   [ENGINE6_MIAMI_PIRATE_BOAT_ROUTE, ENGINE6_MIAMI_PIRATE_BOAT_PRODUCT_CODE],
 ] as const;
 

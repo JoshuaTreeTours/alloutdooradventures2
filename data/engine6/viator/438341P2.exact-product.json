@@ -1,0 +1,94 @@
+{
+  "product": {
+    "productCode": "438341P2",
+    "title": "Miami Private Boat Cruise with a Captain",
+    "productUrl": "https://www.viator.com/tours/Miami/Sightseeing-tour-or-party-on-a-Monterey-32ft/d662-438341P2",
+    "location": {
+      "city": "Miami",
+      "state": "Florida"
+    },
+    "pricing": {
+      "summary": {
+        "fromPrice": 190,
+        "fromPriceFormatted": "From $190.00 per group"
+      }
+    },
+    "reviews": {
+      "combinedAverageRating": 5,
+      "totalReviews": 358
+    },
+    "description": "See Miami from the water on a private captained cruise designed for your group. Choose a sightseeing option or party-boat style outing as your route moves from the Miami River toward open-water views near Bayside, Kaseya Center, Millionaires Row, Star Island, and surrounding waterfront neighborhoods based on option selected.",
+    "highlights": [
+      "Private boat cruise in Miami reserved for your group",
+      "Sightseeing route can include Miami River, Bayside, Kaseya Center, Millionaires Row, and Star Island",
+      "Open-water sightseeing and swimming-focused options available",
+      "Boat includes captain so you can relax and enjoy the skyline views"
+    ],
+    "meetingPoint": {
+      "name": "Regal Marina / Regal Lounge",
+      "description": "2215 NW 14th St, Miami, FL 33125, USA"
+    },
+    "included": [
+      "water bottled",
+      "cooler with ice",
+      "Restroom on board",
+      "Premium Audio System with bluetooth",
+      "Floating Water Mat (Only on 3 & 4 Hours Tours)"
+    ],
+    "itineraryItems": [
+      {
+        "title": "Regal Marina departure",
+        "description": "Meet at Regal Marina / Regal Lounge and board your private captained boat.",
+        "duration": "15 minutes"
+      },
+      {
+        "title": "Miami River and downtown waterfront",
+        "description": "Cruise the Miami River corridor and pass waterfront landmarks around Bayside and the Kaseya Center area.",
+        "duration": "60 minutes"
+      },
+      {
+        "title": "Island and open-water sightseeing",
+        "description": "Continue toward Millionaires Row and Star Island, with open-water sightseeing or water time depending on the option selected.",
+        "duration": "45 minutes"
+      }
+    ],
+    "additionalInfo": [
+      "This is a private tour/activity. Only your group will participate.",
+      "Most travelers can participate",
+      "Confirmation will be received at time of booking"
+    ],
+    "faqs": [
+      {
+        "question": "Where is the meeting point for this private Miami boat cruise?",
+        "answer": "The meeting point is Regal Marina / Regal Lounge, 2215 NW 14th St, Miami, FL 33125, USA."
+      },
+      {
+        "question": "How long is the experience?",
+        "answer": "The cruise options run approximately 2 to 4 hours, depending on the option you book."
+      },
+      {
+        "question": "Is this experience private or shared?",
+        "answer": "This is a private tour, so only your group participates on the boat."
+      },
+      {
+        "question": "What onboard amenities are included?",
+        "answer": "Inclusions can include bottled water, a cooler with ice, restroom on board, premium Bluetooth audio, and a floating water mat on select longer options."
+      }
+    ],
+    "categories": [
+      "Cruises & Sailing",
+      "Private Sightseeing Tours",
+      "Water Tours"
+    ],
+    "media": {
+      "images": [
+        {
+          "url": "https://dynamic-media.tacdn.com/media/photo-o/2f/71/71/b0/caption.jpg?w=700&h=500&s=1",
+          "width": 2048,
+          "height": 1365,
+          "isCover": true
+        }
+      ]
+    }
+  }
+}
