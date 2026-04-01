@@ -14,6 +14,8 @@ type TourCardProps = {
   href?: string;
 };
 
+const ENGINE6_SECONDARY_NEUTRAL_PLACEHOLDER_IMAGE = "/images/cycling-hero.jpg";
+
 const CARD_BLURB_MAX_CHARS = 150;
 const ENGINE4_OVERVIEW_SNIPPET_MAX_CHARS = 140;
 const NON_TRIVIAL_HIGHLIGHT_JUNK_REGEX =
@@ -187,15 +189,20 @@ export default function TourCard({ tour, href }: TourCardProps) {
     tour.engine === "engine6"
       ? resolveEngine6CanonicalCardImage(tour.heroImage)
       : "";
+  const rejectedEngine6Image = tour.heroImage?.trim() ?? "";
+  const engine6FallbackImage =
+    rejectedEngine6Image === TOUR_FALLBACK_HERO_IMAGE
+      ? ENGINE6_SECONDARY_NEUTRAL_PLACEHOLDER_IMAGE
+      : TOUR_FALLBACK_HERO_IMAGE;
   const cardImage =
     tour.engine === "engine4"
       ? tour.heroImage?.trim() || "/hero.jpg"
       : tour.engine === "engine6"
-        ? engine6CanonicalImage || TOUR_FALLBACK_HERO_IMAGE
+        ? engine6CanonicalImage || engine6FallbackImage
         : tour.primaryImageUrl?.trim() || tour.heroImage?.trim() || "/hero.jpg";
   const fallbackImage =
     tour.engine === "engine6"
-      ? TOUR_FALLBACK_HERO_IMAGE
+      ? engine6FallbackImage
       : "/hero.jpg";
   const renderedTagPills =
     tour.tagPills?.map(tag =>
